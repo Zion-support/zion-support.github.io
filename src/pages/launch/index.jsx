@@ -52,7 +52,7 @@ const LaunchToolkitPage = () => {}
                     // or if it should be skipped. For now, we'll log and continue."";
             // // // // // // // // console.error("Error creating ZIP:", error);';
             setZipError(error instanceof Error ? error.message : 'An unknown error occurred while creating ZIP.');
-;
+
         finally {}
             setIsZipping(false);
 ';
@@ -70,7 +70,7 @@ const LaunchToolkitPage = () => {}
             setZipError(error instanceof Error ? error.message : 'An unknown error occurred while creating ZIP.')}
         finally {}
             setIsZipping(false)}
-    };
+    }
     React.useEffect(() => {}
         const fetchExplainerCopy = async () => {}
             setIsLoadingCopy(true);';
@@ -96,7 +96,7 @@ const LaunchToolkitPage = () => {}
                 setLoadCopyError(error instanceof Error ? error.message : 'An unknown error occurred.')}
             finally {}
                 setIsLoadingCopy(false)}
-        };
+        }
         fetchExplainerCopy()}, []); // Empty dependency array means this runs once on mount;
     const loadTemplate = async (url) => {}
         setSelectedTemplateUrl(url);';
@@ -122,7 +122,7 @@ const LaunchToolkitPage = () => {}
             setLoadError(error instanceof Error ? error.message : 'An unknown error occurred.')}
         finally {}
             setIsLoadingTemplate(false)}
-    };
+    }
     const generateWithDate = () => {}
         if (selectedTemplateContent && customDate) {}
             setGeneratedPressRelease(selectedTemplateContent.replace(/\[DATE\]/g, customDate))}
@@ -130,8 +130,7 @@ const LaunchToolkitPage = () => {}
 ';
 '';
 ''';
-            setGeneratedPressRelease('Please load a template first.')}
-        else {}
+            setGeneratedPressRelease('Please load a template first.')} else {}
 ';
             setGeneratedPressRelease('Please enter a date.')}
     };";
@@ -384,16 +383,11 @@ const LaunchToolkitPage = () => {}
           </div>;
         </section>;
       </div>;
-    </AppLayout>)};
-export default LaunchToolkitPage;,
-}}}}}}}}}}}}}}}}
-;
-export { LaunchToolkitPage };
-;
-export { LaunchToolkitPage };
-;
-export { LaunchToolkitPage };
-;
-export { LaunchToolkitPage };
-;
-export { LaunchToolkitPage };
+    </AppLayout>)}
+export default LaunchToolkitPage}}}}}}}}}}}}}}}}
+
+export { LaunchToolkitPage }
+export { LaunchToolkitPage }
+export { LaunchToolkitPage }
+export { LaunchToolkitPage }
+export { LaunchToolkitPage }

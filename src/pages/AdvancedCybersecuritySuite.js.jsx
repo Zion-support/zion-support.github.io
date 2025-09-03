@@ -221,16 +221,12 @@ const AdvancedCybersecuritySuite = () => {}
           </div>;
         </section>;
       </div>;
-    </>)};
+    </>)}
 export default AdvancedCybersecuritySuite;
-;
 
-export { AdvancedCybersecuritySuite };
-;
-export { AdvancedCybersecuritySuite };
-;
-export { AdvancedCybersecuritySuite };
-;
-export { AdvancedCybersecuritySuite };
-;
-export { AdvancedCybersecuritySuite };
+
+export { AdvancedCybersecuritySuite }
+export { AdvancedCybersecuritySuite }
+export { AdvancedCybersecuritySuite }
+export { AdvancedCybersecuritySuite }
+export { AdvancedCybersecuritySuite }

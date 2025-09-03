@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from 'react';
 export default Search;
 import { motion  } from 'framer-motion';
-export default function Page() {;
+export default function Page() {
 ,;
     { id: 'equipment', name: 'Equipment', count: 0 },;
     { id: 'companies', name: 'Companies', count: 0 },;
   ];
-;
+
   const sortOptions = [{ id: 'relevance', name: 'Relevance' },;
     { id: 'newest', name: 'Newest' },;
     { id: 'rating', name: 'Highest Rated' },;
     { id: 'price - low', name: 'Price: Low to High' },;
     { id: 'price - high', name: 'Price: High to Low' },;
   ];
-;
+
   const mockResults = [{;
       id: 1,;
       title: 'AI - Powered Business Intelligence Platform',;
@@ -27,9 +27,8 @@ export default function Page() {;
       company: 'Zion Tech Group',;
       tags: ['AI', 'Analytics', 'Business Intelligence', 'Machine Learning'],;
       featured: true,;
-      date: '2024 - 12 - 01',;,
-},;
-    {;
+      date: '2024 - 12 - 01'},;
+    {
       id: 2,;
       title: 'Senior Full - Stack Developer',;
       description:;
@@ -42,9 +41,8 @@ export default function Page() {;
       company: 'Zion Tech Group',;
       tags: ['React', 'Node.js', 'Full - Stack', 'Cloud'],;
       featured: false,;
-      date: '2024 - 11 - 28',;,
-},;
-    {;
+      date: '2024 - 11 - 28'},;
+    {
       id: 3,;
       title: 'Cloud Infrastructure Setup',;
       description:;
@@ -57,9 +55,8 @@ export default function Page() {;
       company: 'Zion Tech Group',;
       tags: ['Cloud', 'Infrastructure', 'AWS', 'Azure'],;
       featured: true,;
-      date: '2024 - 11 - 25',;,
-},;
-    {;
+      date: '2024 - 11 - 25'},;
+    {
       id: 4,;
       title: 'High-Performance Computing Cluster',;
       description:;
@@ -72,38 +69,34 @@ export default function Page() {;
       company: 'Zion Tech Group',;
       tags: ['HPC', 'Computing', 'Data Processing', 'ML'],;
       featured: false,;
-      date: '2024 - 11 - 20',;,
-},;
+      date: '2024 - 11 - 20'},;
   ];
-;
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;,
-}, []);
-    if(searchQuery) {;
-      performSearch () ;,
-}
+
+  useEffect(() => {
+  // TODO: Add dependencies if needed}, []);
+    if(searchQuery) {
+      performSearch () }
   }, [searchQuery, activeCategory, sortBy]) ;
-;
-  const performSearch = async () => {;
+
+  const performSearch = async () => {
     setLoading(true) ;
     // Simulate API call delay;
     await new Promise(resolve => setTimeout (resolve, 500) ) ;
-;
+
     // Filter results based on search query and category;
-    let filteredResults = mockResults.filter(result => {;
+    let filteredResults = mockResults.filter(result => {
       const matchesQuery = result.title.toLowerCase () .includes(searchQuery.toLowerCase () ) ||;
         result.description.toLowerCase () .includes(searchQuery.toLowerCase () ) ||;
         result.tags.some((tag: string) =>;
           tag.toLowerCase () .includes(searchQuery.toLowerCase () ) ) ;
-;
+
       const matchesCategory = activeCategory === 'all' || result.type === activeCategory;
-;
-      return matchesQuery && matchesCategory;,
-}) ;
-;
+
+      return matchesQuery && matchesCategory}) ;
+
     // Sort results;
-    filteredResults.sort((a, b) => {;
-      switch(sortBy) {;
+    filteredResults.sort((a, b) => {
+      switch(sortBy) {
         case 'newest':;
           return new Date(b.date) .getTime () - new Date(a.date) .getTime () ;
         case 'rating':;
@@ -115,23 +108,18 @@ export default function Page() {;
           return (parseFloat (b.price.replace (/[^0 - 9.]/g, '') ) -;
             parseFloat(a.price.replace (/[^0 - 9.]/g, '') ) ) ;
         default:;
-          return 0;,
-}
+          return 0}
     }) ;
-;
+
     setResults(filteredResults) ;
-    setLoading(false) ;,
-};
-;
-  const handleSearch = useCallback((e: React.FormEvent) => {;
+    setLoading(false) }
+  const handleSearch = useCallback((e: React.FormEvent) => {
     e.preventDefault () ;
-    if(searchQuery.trim () ) {;
-      performSearch () ;,
-}
-  };
-;
-  const getTypeIcon = (type: string) => {;
-    switch(type) {;
+    if(searchQuery.trim () ) {
+      performSearch () }
+  }
+  const getTypeIcon = (type: string) => {
+    switch(type) {
       case 'services':;
         return < Server className="w-5 h-5 text-blue -400" />;
       case 'talent':;
@@ -139,12 +127,10 @@ export default function Page() {;
       case 'equipment':;
         return < Building className="w-5 h-5 text-orange -400" />;
       default:;
-        return < SearchIcon className="w-5 h-5 text-gray -400" />;,
-}
-  };
-;
-  const getTypeLabel = (type: string) => {;
-    switch(type) {;
+        return < SearchIcon className="w-5 h-5 text-gray -400" />}
+  }
+  const getTypeLabel = (type: string) => {
+    switch(type) {
       case 'services':;
         return 'Service';
       case 'talent':;
@@ -152,10 +138,8 @@ export default function Page() {;
       case 'equipment':;
         return 'Equipment';
       default:;
-        return 'Unknown';,
-}
-  };
-;
+        return 'Unknown'}
+  }
   return (<>;
       <SEO;
         title="Search-Zion Tech Group";
@@ -214,6 +198,5 @@ export default function Page() {;
               </Link>;
             </div>;
     </>;
-  );,
-}
+  )}
 export default Search;

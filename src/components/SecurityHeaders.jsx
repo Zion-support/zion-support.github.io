@@ -1,31 +1,28 @@
 import React from 'react';
-export function SecurityHeadersCompact({ className }) {;
-import { Shield, Lock, CheckCircle, AlertTriangle export function SecurityHeaders({ className }) {;
+export function SecurityHeadersCompact({ className }) {
+import { Shield, Lock, CheckCircle, AlertTriangle export function SecurityHeaders({ className }) {
     const securityFeatures = [{;
 
             icon: Shield,;
             title: "SOC 2 Type II Certified",";
             description: "Enterprise-grade security compliance",";
             status: "verified",";
-            color: "text-zion-cyan";,
-},;
-        {;
+            color: "text-zion-cyan"},;
+        {
 
             icon: Lock,";
             title: "End-to-End Encryption",";
             description: "256-bit AES encryption for all data",";
             status: "verified",";
-            color: "text-zion-purple";,
-},;
-        {;
+            color: "text-zion-purple"},;
+        {
 
             icon: CheckCircle,";
             title: "GDPR & CCPA Compliant",";
             description: "Full data protection compliance",";
             status: "verified",";
-            color: "text-zion-cyan";,
-},;
-        {;
+            color: "text-zion-cyan"},;
+        {
 
             icon: Shield,";
             title: "Zero-Knowledge Architecture",";
@@ -128,7 +125,7 @@ import { Shield, Lock, CheckCircle, AlertTriangle export function SecurityHeader
       </div>;
     </section>) }
 // Compact version for smaller spaces;
-export function SecurityHeadersCompact({ className }) {;
+export function SecurityHeadersCompact({ className }) {
 '`;
     return (<div className={`flex flex-wrap justify-center gap-6 ${className || ''}`}>";
       <div className="flex items-center gap-2 text-zion-cyan text-sm">";

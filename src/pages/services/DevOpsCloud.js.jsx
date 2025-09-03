@@ -566,16 +566,11 @@ export default function DevOpsCloudServices() {}
           </div>;
         </div>;
       </section>;
-    </div>);,
-}
-;
+    </div>)}
 
-export { DevOpsCloudServices };
-;
-export { DevOpsCloudServices };
-;
-export { DevOpsCloudServices };
-;
-export { DevOpsCloudServices };
-;
-export { DevOpsCloudServices };
+
+export { DevOpsCloudServices }
+export { DevOpsCloudServices }
+export { DevOpsCloudServices }
+export { DevOpsCloudServices }
+export { DevOpsCloudServices }

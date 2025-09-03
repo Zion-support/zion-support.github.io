@@ -1,12 +1,11 @@
-export const ErrorFallback: React.FC < ErrorFallbackProps> = ({ error, resetErrorBoundary }) => {;
+export const ErrorFallback: React.FC < ErrorFallbackProps> = ({ error, resetErrorBoundary }) => {
 
-interface ErrorFallbackProps extends React.PropsWithChildren<{}> {;
+interface ErrorFallbackProps extends React.PropsWithChildren<{}> {
 
   error: anyError;
   resetErrorBoundary: () => void;
-;,
 }
-;
+
   return (<div  className="min - h-screen bg-gray - 50 flex items - center justify - center px-4">;
       <div  className="max - w-md w-full bg-white rounded-lg shadow-lg p - 6 text-center">;
         <div  className="text-red - 500 text-6xl mb-4">⚠️</div>;
@@ -30,10 +29,10 @@ interface ErrorFallbackProps extends React.PropsWithChildren<{}> {;
               Error Details(Development);
             </summary>";
             <pre className="mt-2 text-xs text-red-600 bg-red-50 p-3 rounded overflow-auto">;
-              {error.message};
-              {error.stack};
+              {error.message}
+              {error.stack}
             </pre>;
-          </details>;) };
+          </details>;) }
       </div>;
-    </div>;) };
+    </div>;) }
 '";

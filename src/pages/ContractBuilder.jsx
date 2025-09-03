@@ -20,14 +20,10 @@ export default ContractBuilderPage;
 export default ContractBuilderPage;
 export default ContractBuilderPage;
 export default ContractBuilderPage;
-;
 
-export { ContractBuilderPage };
-;
-export { ContractBuilderPage };
-;
-export { ContractBuilderPage };
-;
-export { ContractBuilderPage };
-;
-export { ContractBuilderPage };
+
+export { ContractBuilderPage }
+export { ContractBuilderPage }
+export { ContractBuilderPage }
+export { ContractBuilderPage }
+export { ContractBuilderPage }

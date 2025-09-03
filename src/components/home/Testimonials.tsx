@@ -3,16 +3,14 @@
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
         <motion.div";
           className="text-center mb-16";
-          initial = {;
+          initial = {
 
   { opacity: 0,;
-  y: 30;,
-}}
-          whileInView = {;
+  y: 30}}
+          whileInView = {
 
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
 ";
@@ -33,21 +31,18 @@
           <AnimatePresence mode="wait">;
             <motion.div;
               key={currentIndex}
-              initial = {;
+              initial = {
 
   { opacity: 0,;
-  x: 100;,
-}}
-              animate = {;
+  x: 100}}
+              animate = {
 
   { opacity: 1,;
-  x: 0;,
-}}
-              exit = {;
+  x: 0}}
+              exit = {
 
   { opacity: 0,;
-  x: -100;,
-}}
+  x: -100}}
               transition={{ duration: 0.5 }}";
               className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 md:p-12 text-center relative overflow-hidden";
 
@@ -91,14 +86,14 @@
           <button;
             onClick={prevTestimonial}";
             className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-zion-slate-dark/80 backdrop-blur-xl border border-zion-cyan/20 rounded-full flex items-center justify-center text-zion-cyan hover:bg-zion-cyan hover:text-white transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50";
-            ;
+
 ";
             <ChevronLeft className="w-6 h-6"  />          </button>;
 
           <button;
             onClick={nextTestimonial}";
             className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-zion-slate-dark/80 backdrop-blur-xl border border-zion-cyan/20 rounded-full flex items-center justify-center text-zion-cyan hover:bg-zion-cyan hover:text-white transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50";
-            ;
+
 ";
             <ChevronRight className="w-6 h-6"  />          </button>;
         </div>;
@@ -111,8 +106,7 @@
               onClick={(: unknown goToTestimonial(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentIndex';
                   ? 'bg-zion-cyan scale-125'';
-                  : 'bg-zion-slate-light hover:bg-zion-cyan/50'`;,
-}`}`;
+                  : 'bg-zion-slate-light hover:bg-zion-cyan/50'`}`}`;
               aria-label={`Go to testimonial ${index + 1}`}
             />;
           ))}
@@ -121,21 +115,18 @@
         {/* Trust Indicators */}
         <motion.div";
           className="mt-16 text-center";
-          initial = {;
+          initial = {
 
   { opacity: 0,;
   y: 20 ;
-;,
-}}          whileInView = {;
+}}          whileInView = {
 
   { opacity: 1,;
   y: 0 ;
-;,
-}}          transition = {;
+}}          transition = {
 
   { duration: 0.8,;
   delay: 0.4 ;
-;,
 }}          viewport={{ once: true }}
 ";
           <p className="text-zion-slate-light text-sm mb-6">Join our growing list of satisfied clients</p>";
@@ -160,6 +151,5 @@
         </motion.div>;
       </div>;
     </section>;
-  )};
-;
+  )}
 export default Testimonials}}}'"`;

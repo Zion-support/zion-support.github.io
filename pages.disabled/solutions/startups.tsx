@@ -4,80 +4,69 @@ import MainLayout from '../../components/layout/MainLayout';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, Rocket, Lightbulb, Target } from 'lucide-react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-;
-const Startups: NextPage = () => {;
+
+const Startups: NextPage = () => {
   const solutions = [;
-    {;
+    {
       title: 'MVP Development',;
       description: 'Fast-track your product launch with our rapid MVP development services',;
       features: ['Rapid prototyping', 'User feedback integration', 'Scalable architecture', 'Launch support'],;
       icon: Rocket,;
-      price: 'Starting at $5,000';,
-},;
-    {;
+      price: 'Starting at $5,000'},;
+    {
       title: 'Technical Co-founder',;
       description: 'Get expert technical guidance and leadership for your startup',;
       features: ['Technical strategy', 'Architecture planning', 'Team building', 'Mentorship'],;
       icon: Users,;
-      price: 'Equity-based partnerships';,
-},;
-    {;
+      price: 'Equity-based partnerships'},;
+    {
       title: 'AI Integration',;
       description: 'Leverage cutting-edge AI to differentiate your product',;
       features: ['Custom AI models', 'Machine learning pipelines', 'Data analytics', 'AI strategy'],;
       icon: Lightbulb,;
-      price: 'Starting at $3,000';,
-},;
-    {;
+      price: 'Starting at $3,000'},;
+    {
       title: 'Cloud Infrastructure',;
       description: 'Scalable, cost-effective cloud solutions for growing startups',;
       features: ['Auto-scaling', 'Cost optimization', 'Security compliance', 'Monitoring'],;
       icon: Globe,;
-      price: 'Starting at $299/month';,
-}
+      price: 'Starting at $299/month'}
   ];
-;
+
   const benefits = [;
-    {;
+    {
       title: 'Speed to Market',;
       description: 'Launch faster with our proven development processes',;
-      icon: Clock;,
-},;
-    {;
+      icon: Clock},;
+    {
       title: 'Cost Effective',;
       description: 'Flexible pricing models designed for startups',;
-      icon: TrendingUp;,
-},;
-    {;
+      icon: TrendingUp},;
+    {
       title: 'Expert Guidance',;
       description: 'Access to experienced technical advisors',;
-      icon: Award;,
-},;
-    {;
+      icon: Award},;
+    {
       title: 'Scalable Solutions',;
       description: 'Build for growth from day one',;
-      icon: Target;,
-}
+      icon: Target}
   ];
-;
+
   const stages = [;
-    {;
+    {
       stage: 'Idea Validation',;
       description: 'Validate your concept with market research and prototyping',;
-      services: ['Market analysis', 'User research', 'Prototype development', 'Feasibility study'];,
-},;
-    {;
+      services: ['Market analysis', 'User research', 'Prototype development', 'Feasibility study']},;
+    {
       stage: 'MVP Development',;
       description: 'Build and launch your minimum viable product',;
-      services: ['Rapid development', 'User testing', 'Iteration cycles', 'Launch support'];,
-},;
-    {;
+      services: ['Rapid development', 'User testing', 'Iteration cycles', 'Launch support']},;
+    {
       stage: 'Growth & Scale',;
       description: 'Scale your product and team for growth',;
-      services: ['Performance optimization', 'Team expansion', 'Feature development', 'Market expansion'];,
-}
+      services: ['Performance optimization', 'Team expansion', 'Feature development', 'Market expansion']}
   ];
-;
+
   return (;
     <MainLayout;
       title="Startup Solutions - Zion Tech Group";
@@ -104,7 +93,7 @@ const Startups: NextPage = () => {;
             Accelerate your startup's success with our comprehensive technology solutions. ;
             From MVP development to scaling, we're your technical partner.;
           </motion.p>;
-          ;
+
           <motion.div ;
             className="flex flex-col sm:flex-row justify-center gap-4";
             initial={{ opacity: 0, y: 30 }}
@@ -135,7 +124,7 @@ const Startups: NextPage = () => {;
               move fast, stay lean, and scale efficiently.;
             </p>;
           </div>;
-          ;
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
             {benefits.map((benefit, index) => (;
               <motion.div;
@@ -165,7 +154,7 @@ const Startups: NextPage = () => {;
               We support startups at every stage of their journey, from idea validation to scaling.;
             </p>;
           </div>;
-          ;
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
             {stages.map((stage, index) => (;
               <motion.div;
@@ -203,7 +192,7 @@ const Startups: NextPage = () => {;
               Comprehensive technology solutions designed specifically for startups and early-stage companies.;
             </p>;
           </div>;
-          ;
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
             {solutions.map((solution, index) => (;
               <motion.div;
@@ -222,9 +211,9 @@ const Startups: NextPage = () => {;
                     <p className="text-blue-600 font-semibold">{solution.price}</p>;
                   </div>;
                 </div>;
-                ;
+
                 <p className="text-gray-600 mb-6 leading-relaxed">{solution.description}</p>;
-                ;
+
                 <div className="mb-6">;
                   <h4 className="font-semibold text-gray-900 mb-3">What's Included:</h4>;
                   <ul className="space-y-2">;
@@ -236,7 +225,7 @@ const Startups: NextPage = () => {;
                     ))}
                   </ul>;
                 </div>;
-                ;
+
                 <div className="flex space-x-3">;
                   <Link;
                     href="/contact";
@@ -264,24 +253,21 @@ const Startups: NextPage = () => {;
               See how we've helped startups achieve their goals and scale successfully.;
             </p>;
           </div>;
-          ;
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
             {[;
-              {;
+              {
                 company: "TechStart Inc.",;
                 result: "Raised $2M Series A",;
-                quote: "Zion Tech Group's technical expertise was crucial in our fundraising success.";,
-},;
-              {;
+                quote: "Zion Tech Group's technical expertise was crucial in our fundraising success."},;
+              {
                 company: "HealthTech Solutions",;
                 result: "10,000+ users in 6 months",;
-                quote: "Their MVP development helped us validate our product quickly and efficiently.";,
-},;
-              {;
+                quote: "Their MVP development helped us validate our product quickly and efficiently."},;
+              {
                 company: "FinTech Innovations",;
                 result: "Compliant and secure platform",;
-                quote: "The security and compliance expertise gave us confidence to launch.";,
-}
+                quote: "The security and compliance expertise gave us confidence to launch."}
             ].map((story, index) => (;
               <motion.div;
                 key={story.company}
@@ -344,7 +330,5 @@ const Startups: NextPage = () => {;
         </div>;
       </section>;
     </MainLayout>;
-  );,
-};
-;
+  )}
 export default Startups;

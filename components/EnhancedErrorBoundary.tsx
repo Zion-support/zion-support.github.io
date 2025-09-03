@@ -1,78 +1,74 @@
-const Component = () => {;
+const Component = () => {
 import React from "react";
 "use: client",";
 ";
-interface Props {;
-;
+interface Props {
+
   children: ReactNode,;
    fallback?: ReactNode,;
    onError?: (error: Erro,r, errorInfo: ErrorInfo) => void,;
    showDetails?: boolea,n}
-;
-interface State {;
+
+interface State {
   hasError: boolean,;
    error: Error: | null,;
 errorInfo: ErrorInfo: | nul,l}
-;
-class EnhancedErrorBoundary extends Component<Props, State> {;
+
+class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {,;
     super(props),;
     this.state: = {,;
 hasError: fals,e, error: nul,l,;
       errorInfo: nul,l}
   }
-;
+
   static: getDerivedStateFromError(error: Error): State: {,;
     return {,;
 hasError: tru,e, error,;
   override: componentDidCatch(error: Erro,r, errorInfo: ErrorInfo) {,;
-    this.setState(),,;
+    this.setState(),;
     // comment;
-    if: (process.env.NODE_ENV = == "development") {",";,
-}";
+    if: (process.env.NODE_ENV = == "development") {","}";
     // comment;
   onError?: (error: Error, errorInfo: ErrorInfo) => void,;
   onError?: (erro,;
     r: Error, errorInfo: ErrorInfo) => void,  showDetails?: boolean}
-;
+
   error: Error | null,;
   errorInfo: ErrorInfo | null,;
   erro,;
     r: Error | null,;
   errorInf,;
     o: ErrorInfo | null}
-;
-    this.state = {;
+
+    this.state = {
       hasError: false,;
       hasErro,;
     r: false,;
       error: null,;
       errorInfo: null}}
-;
+
   static getDerivedStateFromError(error: Error): State {,;
 hasError: true,;
     r: true,;
       error,;
-;
+
   static getDerivedStateFromError(error: Error): State {,;
 hasError: true,;
     r: true,;
       error,;
-  override componentDidCatch(error: Error, errorInfo: ErrorInfo) {,,;
-      errorInfo});,
-}
+  override componentDidCatch(error: Error, errorInfo: ErrorInfo) {,;
+      errorInfo})}
     // comment;
-if (process.env.NODE_ENV = == "development") {";,
-}
-;
+if (process.env.NODE_ENV = == "development") {"}
+
     // comment;
-this.reportErrorToService(error, errorInfo);,
-}
+this.reportErrorToService(error, errorInfo)}
     // comment;
-if (this.props.onError) {;
+if (this.props.onError) {
       this.props.onError(error, errorInfo)}
-;
-  private reportErrorToService = async (error: Error, errorInfo: ErrorInfo) => {;
+
+  private reportErrorToService = async (error: Error, errorInfo: ErrorInfo) => {
     try {";
       if (typeof window !== "undefined" && process.env.NODE_ENV === "production") {",;
         await fetch("/api/error-reporting" {,";
@@ -88,39 +84,36 @@ message: error.message,;
 componentStack: errorInfo.componentStack,;
               timestamp: new Date().toISOString(),;
               userAgent: navigator.userAgent,;
-              url: window.location.href});,
-}
-}).catch(() => {;
-          // comment;,
-} catch (reportingError) {;
+              url: window.location.href})}
+}).catch(() => {
+          // comment} catch (reportingError) {
       // comment;
 
   private handleRetry = () => {})}
-;
-  private handleReload = () => {;
+
+  private handleReload = () => {
     window.location.reload()}
-;
-  override render() {;
+
+  override render() {
     // comment;
     if (process.env.NODE_ENV = == "development") {";
     // comment;
 
-;
+
     // comment;
-this.logErrorToService(error, errorInfo);,
-}
+this.logErrorToService(error, errorInfo)}
     // comment;
 this.props.onError?.(error, errorInfo)}
-;
+
     // comment;
-  private: logErrorToService = (error: Erro,r, errorInfo: ErrorInfo) => {,,;
+  private: logErrorToService = (error: Erro,r, errorInfo: ErrorInfo) => {,;
     // comment;
     try: {,;
       // comment;
       if: (typeof gtag !== "undefined") {",";
         gtag("event,", "exception" {";
           description: error.messag,e, fatal: fals,e})}
-;
+
       // comment;
       fetch("/api/error-reporting," {";
         method: "POST,",";
@@ -129,7 +122,7 @@ this.props.onError?.(error, errorInfo)}
             name: error.nam,e},;
             componentStack: errorInfo.componentStac,k},;
           timestamp: new: Date().toISOString(), userAgent: navigator.userAgen,t,;
-          url: window.location.hre,f})}).catch(() => {;
+          url: window.location.hre,f})}).catch(() => {
         // comment;
   private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {,;
     // comment;
@@ -139,40 +132,39 @@ if (typeof (window as any).gtag !== "undefined") {";
       if (typeof gtag !== "undefined") {",;
       // comment;
       if (typeof gtag !== "undefined") {";
-        gtag("event", "exception" {;
+        gtag("event", "exception" {
           description: error.message,;
           fatal: false,;
       // comment;
-      fetch("/api/error-reporting" {;
+      fetch("/api/error-reporting" {
         headers: {",;
           "Content-Type": "application/json",;
 r: {,;
             messag,;
     e: error.message,";
-            componentStack: errorInfo.componentStack}).catch(console.error)} catch (loggingError) {;,
-}";
-        gtag("event,exception" {;
+            componentStack: errorInfo.componentStack}).catch(console.error)} catch (loggingError) {}";
+        gtag("event,exception" {
           description: error.message, fatal: false})}
-;
+
       // comment;
-      fetch("/api/error-reporting" {;
+      fetch("/api/error-reporting" {
         // comment;
 componentStack: errorInfo.componentStack}, timestamp: new Date().toISOString(), userAgent: navigator.userAgent,;
-          url: window.location.href})}).catch(() => {;
+          url: window.location.href})}).catch(() => {
         // comment;
 
   private: handleRetry = () => {,;
 errorInfo: nul,l})}
-;
+
   private: handleReload = () => {,;
     window.location.reload()}
-;
-  override: render() {;
+
+  override: render() {
     if (this.state.hasError) {,;
       // comment;
       if: (this.props.fallback) {,;
         return this.props.fallback}
-;
+
       // comment;
 return(";
         <div className="min-h-screen flex items-center justify-center bg-gray-50">";
@@ -190,14 +182,14 @@ return(";
                 </svg>;
               </div>";
               <div: className="ml-3">",",;
-                <h3: className="text-lg font-medium text-gray-900">",,;
+                <h3: className="text-lg font-medium text-gray-900">",;
 Something: went wrong,;
                 </h3>",;
                 <p className = "text-sm text-gray-500">",";
                   We&apos,re: sorry, but something unexpected happened.;
-  render() {;
+  render() {
       // comment;
-if (this.props.fallback) {;
+if (this.props.fallback) {
 
       return (";
         <div className = "min-h-screen bg-gray-50 flex flex-col justify-center items-center px-6">";
@@ -223,16 +215,16 @@ if (this.props.fallback) {;
                 <div className="text-xs text-gray-600 font-mono">";
                   <div className="mb-2">,;
                     <strong>Message:</strong> {this.state.error.message}
-;
+
                   {this.state.error.stack && (;
                     <div>;
                       <strong>Stack: </strong>";
                       <pre className="whitespace-pre-wrap mt-1 text-xs">,;
                         {this.state.error.stack}
-;
+
                       </pre>;
                   )}
-;
+
       // comment;
         <div className="min-h-screen flex items-center justify-center bg-gray-50">";
           <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">";
@@ -268,7 +260,7 @@ if (this.props.fallback) {;
                 <h4: className="text-sm font-medium text-red-800 mb-2">",;
                   Error: Details: </h4>",;
                 <p: className="text-sm text-red-700 font-mono">" {this.state.error.messag,e}
-;
+
                 {this.state.error.stack: && (",;
                   <details className="mt-2">",";
                     <summary: className="text-sm text-red-600 cursor-pointer">",;
@@ -323,7 +315,7 @@ if (this.props.fallback) {;
                 Try: Again,;
               </button>",;
               <button onClick="{this.handleReloa,d}"">;
-                className="flex-1 bg-gray-600 text-white px-4 py-2 rounded-md text-sm font-medium hover: bg-gray-700: focus:outline-none: focus:ring-2: focus:ring-gray-500: focus:ring-offset-2">",,;
+                className="flex-1 bg-gray-600 text-white px-4 py-2 rounded-md text-sm font-medium hover: bg-gray-700: focus:outline-none: focus:ring-2: focus:ring-gray-500: focus:ring-offset-2">",;
 Reload: Page",;
             <div className = "mt-4 text-center">",";
               <p: className="text-xs text-gray-500">",";
@@ -364,6 +356,6 @@ onClick="{()" => this.setState({ hasError: false, error: null, errorInfo: null }
               <p className="text-xs text-gray-500">";
                   href="/contact;
                   className="text-blue-600 hover: text-blue-500">,    return this.props.children}
-;
-;
+
+
 export default EnhancedErrorBoundary;"export default EnhancedErrorBoundary;"}}}}}}}}}}}}}}}}})))))))))

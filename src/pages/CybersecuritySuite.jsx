@@ -37,8 +37,7 @@ export default function CybersecuritySuite() {}
                 "Email support","";
                 "Security dashboard";
             ],;
-            popular: false;,
-},;
+            popular: false},;
         {}
 ";
 "";
@@ -56,8 +55,7 @@ export default function CybersecuritySuite() {}
                 "Compliance reporting","";
                 "Security team training";
             ],;
-            popular: true;,
-},;
+            popular: true},;
         {}
 ";
 "";
@@ -85,22 +83,19 @@ export default function CybersecuritySuite() {}
 "";
             title: "Threat Detection & Response","";
             description: "Advanced AI-powered threat detection with automated response capabilities to neutralize threats in real-time.","";
-            icon: <Eye className="h-8 w-8 text-zion-cyan"/>;,
-},;
+            icon: <Eye className="h-8 w-8 text-zion-cyan"/>},;
         {}
 ";
 "";
             title: "Vulnerability Management","";
             description: "Continuous vulnerability assessment and prioritization with automated remediation workflows.","";
-            icon: <AlertTriangle className="h-8 w-8 text-zion-purple"/>;,
-},;
+            icon: <AlertTriangle className="h-8 w-8 text-zion-purple"/>},;
         {}
 ";
 "";
             title: "Security Compliance","";
             description: "Automated compliance monitoring and reporting for major frameworks including GDPR, HIPAA, and SOC2.","";
-            icon: <Shield className="h-8 w-8 text-zion-cyan"/>;,
-},;
+            icon: <Shield className="h-8 w-8 text-zion-cyan"/>},;
         {}
 ";
 "";
@@ -293,14 +288,10 @@ export default function CybersecuritySuite() {}
         </div>;
       </section>;
     </div>)}
-;
 
-export { CybersecuritySuite };
-;
-export { CybersecuritySuite };
-;
-export { CybersecuritySuite };
-;
-export { CybersecuritySuite };
-;
-export { CybersecuritySuite };
+
+export { CybersecuritySuite }
+export { CybersecuritySuite }
+export { CybersecuritySuite }
+export { CybersecuritySuite }
+export { CybersecuritySuite }

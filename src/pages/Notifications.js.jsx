@@ -37,9 +37,8 @@ const getNotificationIcon = (type, className = 'h-5 w-5') => {}
     case 'system':'''';
       return <AlertCircle className={cn(className,text-yellow-500')} />;''';
     default:'''';
-      return <Bell className={cn(className,text-gray-500')} />;,
+      return <Bell className={cn(className,text-gray-500')} />}
 }
-};
 const getNotificationTypeBadge = type => {}
   switch (type) {}
 ';
@@ -56,19 +55,16 @@ const getNotificationTypeBadge = type => {}
     case 'system':"";
       return <Badge className="bg-yellow-500">System</Badge>;";
     default:"";
-      return <Badge variant="outline">Notification</Badge>;,
+      return <Badge variant="outline">Notification</Badge>}
 }
-};
 const NotificationCard = ({ notification, onMarkAsRead, onDismiss }) => {}
   const navigate = useNavigate();
   const handleAction = () => {}
     if (!notification.read) {}
-      onMarkAsRead(notification.id);,
-}
+      onMarkAsRead(notification.id)}
     if (notification.action_url) {}
-      router(notification.action_url);,
-}
-  };
+      router(notification.action_url)}
+  }
   return();
     <div';
       className={cn('';
@@ -139,8 +135,7 @@ const NotificationCard = ({ notification, onMarkAsRead, onDismiss }) => {}
         </div>;
       </div>;
     </div>;
-  );,
-};
+  )}
 export default function NotificationsPage() {}
   const {}
     filteredNotifications,;
@@ -226,16 +221,12 @@ export default function NotificationsPage() {}
           </Tabs>;
         </div>;
       </main>;
-      ;
-    </>)}
-;
 
-export { NotificationCard, NotificationsPage };
-;
-export { NotificationCard, NotificationsPage };
-;
-export { NotificationCard, NotificationsPage };
-;
-export { NotificationCard, NotificationsPage };
-;
-export { NotificationCard, NotificationsPage };
+    </>)}
+
+
+export { NotificationCard, NotificationsPage }
+export { NotificationCard, NotificationsPage }
+export { NotificationCard, NotificationsPage }
+export { NotificationCard, NotificationsPage }
+export { NotificationCard, NotificationsPage }

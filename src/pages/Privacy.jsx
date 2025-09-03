@@ -2,7 +2,7 @@
 import { Footer } from '@/components/Footer';''';
 import { SEO } from '@/components/SEO';''';
 import { GradientHeading } from '@/components/ui/GradientHeading';
-;
+
 export default function Privacy() {}
   return();
     <>";
@@ -46,16 +46,11 @@ export default function Privacy() {}
         </main>;
         <Footer />;
       </>;
-    );,
-}
-;
+    )}
 
-export { Privacy };
-;
-export { Privacy };
-;
-export { Privacy };
-;
-export { Privacy };
-;
-export { Privacy };
+
+export { Privacy }
+export { Privacy }
+export { Privacy }
+export { Privacy }
+export { Privacy }

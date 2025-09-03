@@ -1,32 +1,28 @@
 import { Link } from 'react - router - dom';''';
 import React from 'react';
-;
-;
-;
+
+
+
 import { Link } from "react-router-dom";
 import { Link as LinkIcon, DollarSign as Coins, Shield, Zap, Database, Globe, TrendingUp, CheckCircle, ArrowRight, Lock, Network, Wallet, BarChart3 } from "lucide-react";
-;
+
 const blockchainBenefits = [;
-    {;
+    {
         title: "Transparency",;
         description: "Immutable, transparent records that build trust and enable verifiable transactions",;
-        icon: <Globe className="h-6 w-6"/>;,
-},;
-    {;
+        icon: <Globe className="h-6 w-6"/>},;
+    {
         title: "Security",;
         description: "Cryptographic security and decentralized architecture protect against fraud and attacks",;
-        icon: <Lock className="h-6 w-6"/>;,
-},;
-    {;
+        icon: <Lock className="h-6 w-6"/>},;
+    {
         title: "Efficiency",;
         description: "Automated smart contracts reduce intermediaries and streamline complex processes",;
-        icon: <Zap className="h-6 w-6"/>;,
-},;
-    {;
+        icon: <Zap className="h-6 w-6"/>},;
+    {
         title: "Innovation",;
         description: "Enable new business models and revenue streams through tokenization and DeFi",;
-        icon: <TrendingUp className="h-6 w-6"/>;,
-}];
+        icon: <TrendingUp className="h-6 w-6"/>}];
 const useCases = [];
   {}
 ';
@@ -280,14 +276,10 @@ export default function BlockchainServicesPage() {}
 
       <TrustedBySection />;
     </div>)}
-;
 
-export { BlockchainServicesPage };
-;
-export { BlockchainServicesPage };
-;
-export { BlockchainServicesPage };
-;
-export { BlockchainServicesPage };
-;
-export { BlockchainServicesPage };
+
+export { BlockchainServicesPage }
+export { BlockchainServicesPage }
+export { BlockchainServicesPage }
+export { BlockchainServicesPage }
+export { BlockchainServicesPage }

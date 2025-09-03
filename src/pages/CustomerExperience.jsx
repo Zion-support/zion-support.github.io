@@ -69,13 +69,11 @@ import {}
   Zap,';
   Users,'';
   Settings,''';
-  Palette'''';,
-} from 'lucide-react';
-;
-    technologies["Analytics Platforms", "Data Visualization", "Machine Learning", "Reporting Tools"];,
-}
+  Palette''''} from 'lucide-react';
+
+    technologies["Analytics Platforms", "Data Visualization", "Machine Learning", "Reporting Tools"]}
 ];
-;
+
 const customerExperienceTechnologies = [];
   {}
 ";
@@ -84,8 +82,7 @@ const customerExperienceTechnologies = [];
     description: "Comprehensive tools for understanding user needs and behaviors",";
     icon: Users,"";
     useCase: "User Insights","";
-    reliability: "High";,
-},;
+    reliability: "High"},;
   {}
 ";
 "";
@@ -93,8 +90,7 @@ const customerExperienceTechnologies = [];
     description: "Consistent design frameworks for cohesive user experiences",";
     icon: Palette,"";
     useCase: "Design Consistency","";
-    reliability: "High";,
-},;
+    reliability: "High"},;
   {}
 ";
 "";
@@ -102,8 +98,7 @@ const customerExperienceTechnologies = [];
     description: "Data-driven insights for customer behavior analysis",";
     icon: BarChart3,"";
     useCase: "Customer Insights","";
-    reliability: "Critical";,
-},;
+    reliability: "Critical"},;
   {}
 ";
 "";
@@ -113,7 +108,7 @@ const customerExperienceTechnologies = [];
     useCase: "Custom Experiences","";
     reliability: "High";
 ];
-;
+
 const successStories = [];
   {}
 ";
@@ -123,8 +118,7 @@ const successStories = [];
     challenge: "Needed to improve customer satisfaction and reduce cart abandonment rates","";
     solution: "Implemented comprehensive UX redesign with customer journey mapping and personalization","";
     results: "35% increase in customer satisfaction, 25% reduction in cart abandonment, improved conversion rates","";
-    logo: "ER";,
-},;
+    logo: "ER"},;
   {}
 ";
     id: 2,"";
@@ -133,8 +127,7 @@ const successStories = [];
     challenge: "Required better customer experience for online banking and mobile apps","";
     solution: "Built customer-centric design system with personalized experiences and improved usability","";
     results: "40% improvement in user engagement, 30% reduction in support tickets, enhanced customer loyalty","";
-    logo: "FS";,
-},;
+    logo: "FS"},;
   {}
 ";
     id: 3,"";
@@ -145,7 +138,7 @@ const successStories = [];
     results: "50% increase in portal usage, 45% reduction in appointment booking time, improved patient satisfaction","";
     logo: "HP";
 ];
-;
+
 const processSteps = [];
   {}
 ";
@@ -153,24 +146,21 @@ const processSteps = [];
     title: "Customer Research","";
     description: "Understand customer needs, behaviors, and pain points",";
     icon: Users,"";
-    duration: "2-4 weeks";,
-},;
+    duration: "2-4 weeks"},;
   {}
 ";
     step: 2,"";
     title: "Journey Mapping","";
     description: "Map customer journeys and identify optimization opportunities",";
     icon: MapPin,"";
-    duration: "2-4 weeks";,
-},;
+    duration: "2-4 weeks"},;
   {}
 ";
     step: 3,"";
     title: "Design & Implementation","";
     description: "Design and implement improved customer experiences",";
     icon: Palette,"";
-    duration: "8-20 weeks";,
-},;
+    duration: "8-20 weeks"},;
   {}
 ";
     step: 4,"";
@@ -179,7 +169,7 @@ const processSteps = [];
     icon: Gauge,"";
     duration: "Ongoing";
 ];
-;
+
 const customerExperienceBenefits = [];
   {}
 ";
@@ -187,34 +177,30 @@ const customerExperienceBenefits = [];
     title: "Improved Customer Satisfaction","";
     description: "Better experiences lead to higher customer satisfaction and loyalty",";
     icon: Heart,"";
-    examples["Higher satisfaction scores", "Increased loyalty", "Positive reviews", "Word-of-mouth referrals"];,
-},;
+    examples["Higher satisfaction scores", "Increased loyalty", "Positive reviews", "Word-of-mouth referrals"]},;
   {}
 ";
 "";
     title: "Increased Conversion Rates","";
     description: "Optimized experiences drive better business outcomes",";
     icon: TrendingUp,"";
-    examples["Higher conversion rates", "Reduced abandonment", "Increased sales", "Better ROI"];,
-},;
+    examples["Higher conversion rates", "Reduced abandonment", "Increased sales", "Better ROI"]},;
   {}
 ";
 "";
     title: "Reduced Support Costs","";
     description: "Better experiences reduce the need for customer support",";
     icon: Headphones,"";
-    examples["Fewer support tickets", "Lower support costs", "Self-service adoption", "Improved efficiency"];,
-},;
+    examples["Fewer support tickets", "Lower support costs", "Self-service adoption", "Improved efficiency"]},;
   {}
 ";
 "";
     title: "Competitive Advantage","";
     description: "Superior customer experiences differentiate your brand",";
     icon: Award,"";
-    examples["Brand differentiation", "Market leadership", "Customer preference", "Sustainable advantage"];,
-}
+    examples["Brand differentiation", "Market leadership", "Customer preference", "Sustainable advantage"]}
 ];
-;
+
 export default function CustomerExperience() {}
 ';
 '';
@@ -242,30 +228,24 @@ export default function CustomerExperience() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             animate = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center max-w-4xl mx-auto";
             <motion.div;
               initial = {}
   { opacity: 0,;
-  scale: 0.8;,
-}}
+  scale: 0.8}}
               animate = {}
   { opacity: 1,;
-  scale: 1;,
-}}
+  scale: 1}}
               transition = {}
   { duration: 0.8,;
-  delay: 0.2;,
-}}
+  delay: 0.2}}
               className="inline - flex items - center justify - center w-20 h-20 bg-gradient - to - br from - zion - cyan to - zion - purple rounded-2xl mb-8";
-";,
-}}"";
+"}}"";
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"";
 "";
               <Heart className="w-10 h-10 text-white" />;
@@ -305,12 +285,10 @@ export default function CustomerExperience() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
 "";
@@ -326,19 +304,15 @@ export default function CustomerExperience() {}
                 key={benefit.title}
                 initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                 transition = {}
   { duration: 0.6,;
-  delay: index * 0.1;,
-}}
+  delay: index * 0.1}}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 8 hover:border-zion - cyan / 40 transition - all duration -300";
-";,
-}}"";
+"}}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"";
 "";
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">"";
@@ -368,12 +342,10 @@ export default function CustomerExperience() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
 "";
@@ -389,19 +361,15 @@ export default function CustomerExperience() {}
                 key={technology.name}
                 initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                 transition = {}
   { duration: 0.6,;
-  delay: index * 0.1;,
-}}
+  delay: index * 0.1}}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 text-center hover:border-zion - cyan / 40 transition - all duration -300";
-";,
-}}"";
+"}}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"";
 "";
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">"";
@@ -420,8 +388,7 @@ export default function CustomerExperience() {}
                     ? 'bg-red-500/20 text-red-400 border border-red-500/30'''''`;
                     : technology.reliability === 'High''''`'`;
                     ? 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30'''`'`'`;
-                    : 'bg-green-500/20 text-green-400 border border-green-500/30'````;,
-}`}>;
+                    : 'bg-green-500/20 text-green-400 border border-green-500/30'````}`}>;
                   {technology.reliability} Reliability;
                 </span>;
               </motion.div>;) ) }
@@ -435,12 +402,10 @@ export default function CustomerExperience() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
 "";
@@ -456,17 +421,14 @@ export default function CustomerExperience() {}
                 key={step.step}
                 initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                 transition = {}
   { duration: 0.6,;
   delay: index * 0.1;
-";,
-}}"";
+"}}"";
                 className="text-center"";
 "";
                 <div className="relative mb-6">"";
@@ -494,12 +456,10 @@ export default function CustomerExperience() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
 "";
@@ -521,9 +481,8 @@ export default function CustomerExperience() {}
 '''`;
                   selectedCategory === category'''`'`;
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'''`'`'`;
-                    : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````;,
-}`}
-;
+                    : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````}`}
+
                 {category}
               </button>) ) }
           </div>";
@@ -534,21 +493,17 @@ export default function CustomerExperience() {}
                 key={solution.id}
                 initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                 transition = {}
   { duration: 0.6,;
-  delay: index * 0.1;,
-}}
+  delay: index * 0.1}}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 hover:border-zion - cyan / 40 transition - all duration - 300 cursor -pointer";
                 onClick={ () => setSelectedSolution(solution) }
-;
-";,
-}}"";
+
+"}}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer";
                 onClick={() => setSelectedSolution(solution)}";
 "";
@@ -602,12 +557,10 @@ export default function CustomerExperience() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
 "";
@@ -623,19 +576,15 @@ export default function CustomerExperience() {}
                 key={story.id}
                 initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                 transition = {}
   { duration: 0.6,;
-  delay: index * 0.1;,
-}}
+  delay: index * 0.1}}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 hover:border-zion - cyan / 40 transition - all duration -300";
-";,
-}}"";
+"}}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"";
 "";
                 <div className="flex items-center gap-4 mb-6">"";
@@ -680,12 +629,10 @@ export default function CustomerExperience() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center max-w-4xl mx-auto"";
 "";
@@ -712,14 +659,10 @@ export default function CustomerExperience() {}
       </section>;
     </div>;
   )}
-;
 
-export { CustomerExperience };
-;
-export { CustomerExperience };
-;
-export { CustomerExperience };
-;
-export { CustomerExperience };
-;
-export { CustomerExperience };
+
+export { CustomerExperience }
+export { CustomerExperience }
+export { CustomerExperience }
+export { CustomerExperience }
+export { CustomerExperience }

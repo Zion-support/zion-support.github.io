@@ -22,13 +22,11 @@ import {}
   Code,';
   FileText,'';
   PieChart,''';
-  LineChart'''';,
-} from 'lucide-react';
-;
-    integrations["Python", "Scikit - learn", "TensorFlow", "Custom APIs"];,
-}
+  LineChart''''} from 'lucide-react';
+
+    integrations["Python", "Scikit - learn", "TensorFlow", "Custom APIs"]}
 ];
-;
+
 const aiCapabilities = [];
   {}
 ";
@@ -36,24 +34,21 @@ const aiCapabilities = [];
     title: "Machine Learning","";
     description: "Advanced algorithms that learn from data and improve over time",";
     icon: Brain,"";
-    impact: "High";,
-},;
+    impact: "High"},;
   {}
 ";
 "";
     title: "Deep Learning","";
     description: "Neural networks for complex pattern recognition and analysis",";
     icon: Code,"";
-    impact: "High";,
-},;
+    impact: "High"},;
   {}
 ";
 "";
     title: "Natural Language Processing","";
     description: "Understanding and processing human language for insights",";
     icon: FileText,"";
-    impact: "Critical";,
-},;
+    impact: "Critical"},;
   {}
 ";
 "";
@@ -62,7 +57,7 @@ const aiCapabilities = [];
     icon: Eye,"";
     impact: "High";
 ];
-;
+
 const successStories = [];
   {}
 ";
@@ -72,8 +67,7 @@ const successStories = [];
     challenge: "Needed predictive analytics for inventory management","";
     solution: "Built AI-powered forecasting system with 95% accuracy","";
     results: "30% reduction in stockouts, 25% cost savings, improved customer satisfaction","";
-    logo: "EG";,
-},;
+    logo: "EG"},;
   {}
 ";
     id: 2,"";
@@ -82,8 +76,7 @@ const successStories = [];
     challenge: "Required real-time fraud detection system","";
     solution: "Implemented AI-powered anomaly detection with machine learning","";
     results: "90% fraud detection rate, 60% reduction in false positives, $2M saved","";
-    logo: "FS";,
-},;
+    logo: "FS"},;
   {}
 ";
     id: 3,"";
@@ -94,7 +87,7 @@ const successStories = [];
     results: "40% improvement in patient outcomes, 35% reduction in readmissions","";
     logo: "HN";
 ];
-;
+
 const processSteps = [];
   {}
 ";
@@ -102,24 +95,21 @@ const processSteps = [];
     title: "Data Assessment","";
     description: "Evaluate data quality, sources, and requirements for AI implementation",";
     icon: Database,"";
-    duration: "1-2 weeks";,
-},;
+    duration: "1-2 weeks"},;
   {}
 ";
     step: 2,"";
     title: "AI Model Design","";
     description: "Design and select appropriate AI/ML models for the use case",";
     icon: Brain,"";
-    duration: "2-3 weeks";,
-},;
+    duration: "2-3 weeks"},;
   {}
 ";
     step: 3,"";
     title: "Development & Training","";
     description: "Build AI models and train them with relevant data",";
     icon: Code,"";
-    duration: "8-20 weeks";,
-},;
+    duration: "8-20 weeks"},;
   {}
 ";
     step: 4,"";
@@ -128,7 +118,7 @@ const processSteps = [];
     icon: Zap,"";
     duration: "2-4 weeks";
 ];
-;
+
 export default function AIAnalytics() {}
 ';
 '';
@@ -156,30 +146,24 @@ export default function AIAnalytics() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             animate = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center max-w-4xl mx-auto";
             <motion.div;
               initial = {}
   { opacity: 0,;
-  scale: 0.8;,
-}}
+  scale: 0.8}}
               animate = {}
   { opacity: 1,;
-  scale: 1;,
-}}
+  scale: 1}}
               transition = {}
   { duration: 0.8,;
-  delay: 0.2;,
-}}
+  delay: 0.2}}
               className="inline - flex items - center justify - center w-20 h-20 bg-gradient - to - br from - zion - cyan to - zion - purple rounded-2xl mb-8";
-";,
-}}"";
+"}}"";
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"";
 "";
               <Brain className="w-10 h-10 text-white" />;
@@ -219,12 +203,10 @@ export default function AIAnalytics() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
 "";
@@ -240,19 +222,15 @@ export default function AIAnalytics() {}
                 key={capability.title}
                 initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                 transition = {}
   { duration: 0.6,;
-  delay: index * 0.1;,
-}}
+  delay: index * 0.1}}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 text-center hover:border-zion - cyan / 40 transition - all duration -300";
-";,
-}}"";
+"}}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"";
 "";
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">"";
@@ -270,8 +248,7 @@ export default function AIAnalytics() {}
                     ? 'bg-red-500/20 text-red-400 border border-red-500/30'''''`;
                     : capability.impact === 'High''''`'`;
                     ? 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30'''`'`'`;
-                    : 'bg-green-500/20 text-green-400 border border-green-500/30'````;,
-}`}>;
+                    : 'bg-green-500/20 text-green-400 border border-green-500/30'````}`}>;
                   {capability.impact} Impact;
                 </span>;
               </motion.div>;) ) }
@@ -285,12 +262,10 @@ export default function AIAnalytics() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
 "";
@@ -306,17 +281,14 @@ export default function AIAnalytics() {}
                 key={step.step}
                 initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                 transition = {}
   { duration: 0.6,;
   delay: index * 0.1;
-";,
-}}"";
+"}}"";
                 className="text-center"";
 "";
                 <div className="relative mb-6">"";
@@ -344,12 +316,10 @@ export default function AIAnalytics() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
 "";
@@ -371,9 +341,8 @@ export default function AIAnalytics() {}
 '''`;
                   selectedCategory === category'''`'`;
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'''`'`'`;
-                    : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````;,
-}`}
-;
+                    : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````}`}
+
                 {category}
               </button>) ) }
           </div>";
@@ -384,21 +353,17 @@ export default function AIAnalytics() {}
                 key={solution.id}
                 initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                 transition = {}
   { duration: 0.6,;
-  delay: index * 0.1;,
-}}
+  delay: index * 0.1}}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 hover:border-zion - cyan / 40 transition - all duration - 300 cursor -pointer";
                 onClick={ () => setSelectedSolution(solution) }
-;
-";,
-}}"";
+
+"}}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer";
                 onClick={() => setSelectedSolution(solution)}";
 "";
@@ -452,12 +417,10 @@ export default function AIAnalytics() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
 "";
@@ -473,19 +436,15 @@ export default function AIAnalytics() {}
                 key={story.id}
                 initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                 transition = {}
   { duration: 0.6,;
-  delay: index * 0.1;,
-}}
+  delay: index * 0.1}}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 hover:border-zion - cyan / 40 transition - all duration -300";
-";,
-}}"";
+"}}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"";
 "";
                 <div className="flex items-center gap-4 mb-6">"";
@@ -530,12 +489,10 @@ export default function AIAnalytics() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center max-w-4xl mx-auto"";
 "";
@@ -562,14 +519,10 @@ export default function AIAnalytics() {}
       </section>;
     </div>;
   )}
-;
 
-export { AIAnalytics };
-;
-export { AIAnalytics };
-;
-export { AIAnalytics };
-;
-export { AIAnalytics };
-;
-export { AIAnalytics };
+
+export { AIAnalytics }
+export { AIAnalytics }
+export { AIAnalytics }
+export { AIAnalytics }
+export { AIAnalytics }

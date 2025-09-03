@@ -18,12 +18,11 @@ import { ;
   Cloud,;
   Lock,;
   Target,;
-  Rocket;,
-} from 'lucide-react';
-;
-export default function ServicesShowcase() {;
+  Rocket} from 'lucide-react';
+
+export default function ServicesShowcase() {
   const services = [;
-    {;
+    {
       id: 'ai-autonomous-code-review',;
       title: 'AI Autonomous Code Review',;
       description: 'Revolutionize your development workflow with AI-powered code analysis, security scanning, and automated quality assurance.',;
@@ -32,9 +31,8 @@ export default function ServicesShowcase() {;
       price: 'From $49/month',;
       features: ['AI-Powered Analysis', 'Security Vulnerability Detection', 'Performance Optimization', 'Code Quality Metrics'],;
       color: 'from-blue-500 to-purple-600',;
-      href: '/services/ai-autonomous-code-review';,
-},;
-    {;
+      href: '/services/ai-autonomous-code-review'},;
+    {
       id: 'ai-supply-chain-risk-management',;
       title: 'AI Supply Chain Risk Management',;
       description: 'Proactively identify, assess, and mitigate supply chain risks with intelligent AI algorithms and real-time monitoring.',;
@@ -43,9 +41,8 @@ export default function ServicesShowcase() {;
       price: 'From $99/month',;
       features: ['Real-Time Risk Detection', 'Global Supply Chain Mapping', 'Predictive Analytics', 'Supplier Performance Monitoring'],;
       color: 'from-green-500 to-blue-600',;
-      href: '/services/ai-supply-chain-risk-management';,
-},;
-    {;
+      href: '/services/ai-supply-chain-risk-management'},;
+    {
       id: 'quantum-financial-trading-platform',;
       title: 'Quantum Financial Trading Platform',;
       description: 'Revolutionize your trading strategy with quantum computing power, AI algorithms, and real-time market analysis.',;
@@ -54,9 +51,8 @@ export default function ServicesShowcase() {;
       price: 'From $299/month',;
       features: ['Quantum Computing Engine', 'AI-Powered Market Analysis', 'High-Frequency Trading', 'Advanced Risk Management'],;
       color: 'from-purple-500 to-indigo-600',;
-      href: '/services/quantum-financial-trading-platform';,
-},;
-    {;
+      href: '/services/quantum-financial-trading-platform'},;
+    {
       id: 'ai-cybersecurity-suite',;
       title: 'AI Cybersecurity Suite',;
       description: 'Advanced threat detection and prevention powered by artificial intelligence and machine learning.',;
@@ -65,9 +61,8 @@ export default function ServicesShowcase() {;
       price: 'From $199/month',;
       features: ['AI Threat Detection', 'Zero Trust Security', 'Compliance Automation', 'Security Operations'],;
       color: 'from-red-500 to-orange-600',;
-      href: '/services/ai-cybersecurity-suite';,
-},;
-    {;
+      href: '/services/ai-cybersecurity-suite'},;
+    {
       id: 'cloud-finops-optimizer',;
       title: 'Cloud FinOps Optimizer',;
       description: 'Optimize cloud costs and performance with intelligent resource management and automated optimization.',;
@@ -76,9 +71,8 @@ export default function ServicesShowcase() {;
       price: 'From $149/month',;
       features: ['Cost Optimization', 'Performance Monitoring', 'Resource Management', 'Automated Scaling'],;
       color: 'from-cyan-500 to-blue-600',;
-      href: '/services/cloud-finops-optimizer';,
-},;
-    {;
+      href: '/services/cloud-finops-optimizer'},;
+    {
       id: 'ai-healthcare-platform',;
       title: 'AI Healthcare Platform',;
       description: 'Transform healthcare delivery with AI-powered diagnostics, patient monitoring, and predictive analytics.',;
@@ -87,10 +81,9 @@ export default function ServicesShowcase() {;
       price: 'From $399/month',;
       features: ['AI Diagnostics', 'Patient Monitoring', 'Predictive Analytics', 'Healthcare Analytics'],;
       color: 'from-emerald-500 to-teal-600',;
-      href: '/services/ai-healthcare-platform';,
-}
+      href: '/services/ai-healthcare-platform'}
   ];
-;
+
   const categories = [;
     { name: 'All Services', count: services.length, active: true },;
     { name: 'AI & Development', count: services.filter(s => s.category.includes('AI & Development')).length },;
@@ -100,7 +93,7 @@ export default function ServicesShowcase() {;
     { name: 'Cloud & DevOps', count: services.filter(s => s.category.includes('Cloud & DevOps')).length },;
     { name: 'AI & Healthcare', count: services.filter(s => s.category.includes('AI & Healthcare')).length }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 pt-24">;
       {/* Hero Section */}
@@ -137,8 +130,7 @@ export default function ServicesShowcase() {;
                 className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${;
                   category.active;
                     ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white';
-                    : 'bg-zinc-800 text-gray-300 hover:bg-zinc-700 hover:text-white';,
-}`}
+                    : 'bg-zinc-800 text-gray-300 hover:bg-zinc-700 hover:text-white'}`}
               >;
                 {category.name} ({category.count});
               </button>;
@@ -272,5 +264,4 @@ export default function ServicesShowcase() {;
         </div>;
       </section>;
     </div>;
-  );,
-}
+  )}

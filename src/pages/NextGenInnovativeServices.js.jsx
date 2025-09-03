@@ -1,8 +1,8 @@
 import React, { useState, useMemo } from 'react';''';
 import { motion } from 'framer-motion';
 import { Search, Filter, Grid, List, ExternalLink, Phone, Mail, Globe, Clock, Users, CheckCircle, TrendingUp, Award } from 'lucide-react';
-;
-export default function NextGenInnovativeServices() {;
+
+export default function NextGenInnovativeServices() {
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedService, setSelectedService] = useState(null);
@@ -10,42 +10,39 @@ export default function NextGenInnovativeServices() {;
     // Get unique categories;
     const categories = useMemo(() => ['all', ...Array.from(new Set(NEXT_GEN_INNOVATIVE_SERVICES.map(s => s.category)))], []);
     // Filter services based on search and category;
-    const filteredServices = useMemo(() => {;
-        return NEXT_GEN_INNOVATIVE_SERVICES.filter(service => {;
+    const filteredServices = useMemo(() => {
+        return NEXT_GEN_INNOVATIVE_SERVICES.filter(service => {
             const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                 service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                 service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
             return matchesCategory && matchesSearch})}, [searchTerm, selectedCategory]);
-    const formatPrice = (price, currency) => {;
-        return `${currency}${price.toLocaleString()}`};
-    const getSupportLevelColor = (level) => {;
-        switch (level.toLowerCase()) {;
+    const formatPrice = (price, currency) => {
+        return `${currency}${price.toLocaleString()}`}
+    const getSupportLevelColor = (level) => {
+        switch (level.toLowerCase()) {
             case 'enterprise': return 'bg-purple-600';
             case 'premium': return 'bg-blue-600';
             case 'standard': return 'bg-green-600';
             default: return 'bg-gray-600'}
-    };
-    const containerVariants = {;
+    }
+    const containerVariants = {
         hidden: { opacity: 0 },;
-        visible: {;
+        visible: {
             opacity: 1,;
-            transition: {;
-                staggerChildren: 0.1;,
-}
+            transition: {
+                staggerChildren: 0.1}
         }
-    };
-    const itemVariants = {;
+    }
+    const itemVariants = {
   hidden: { y: 20,;
-  opacity: 0 ;,
-},;
-        visible: {;
+  opacity: 0 },;
+        visible: {
             y: 0,;
             opacity: 1,;
-            transition: {;
-                duration: 0.5;,
-}
+            transition: {
+                duration: 0.5}
         }
-    };
+    }
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">;
       {/* Header Section */}
       <div className="relative overflow-hidden">;
@@ -190,8 +187,7 @@ export default function NextGenInnovativeServices() {;
 ''';
             viewMode === 'grid''''';
               ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8''''';
-              : 'space-y-6';,
-}
+              : 'space-y-6'}
         >;
           {filteredServices.map(service => (;
             <motion.div;
@@ -276,8 +272,7 @@ export default function NextGenInnovativeServices() {;
               onClick={() => {}
 ';
                 setSearchTerm('');';
-                setSelectedCategory('all');";,
-}}"";
+                setSelectedCategory('all');"}}"";
               className="text-blue-400 hover:text-blue-300 transition-colors">;
               Clear filters;
             </button>;
@@ -549,14 +544,10 @@ export default function NextGenInnovativeServices() {;
         </motion.div>;
       </div>;
     </div>)}
-;
 
-export { NextGenInnovativeServices };
-;
-export { NextGenInnovativeServices };
-;
-export { NextGenInnovativeServices };
-;
-export { NextGenInnovativeServices };
-;
-export { NextGenInnovativeServices };
+
+export { NextGenInnovativeServices }
+export { NextGenInnovativeServices }
+export { NextGenInnovativeServices }
+export { NextGenInnovativeServices }
+export { NextGenInnovativeServices }

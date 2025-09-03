@@ -1,20 +1,20 @@
 />;
 
-export default function ComprehensiveServices(...args: unknown[]): unknown {;
+export default function ComprehensiveServices(...args: unknown[]): unknown {
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [priceRange, setPriceRange] = useState('all');
-;
+
   // Comprehensive service categories with real market prices;
   const serviceCategories = [;
-    {;
+    {
       id: 'ai-ml',;
       name: 'AI & Machine Learning',;
       icon: Brain,;
       color: 'from-blue-600 to-cyan-600',;
       description: 'Cutting-edge artificial intelligence and machine learning solutions',;
       services: [;
-        {;
+        {
           name: 'AI Business Intelligence Platform',;
           description: 'Advanced analytics with ML insights and predictive modeling',;
           price: '$2,500/month',;
@@ -24,9 +24,8 @@ export default function ComprehensiveServices(...args: unknown[]): unknown {;
           icon: BarChart3,;
           category: 'ai-ml',;
           badge: 'Popular',;
-          roi: '300%';,
-},;
-        {;
+          roi: '300%'},;
+        {
           name: 'AI Customer Experience Platform',;
           description: 'Intelligent customer engagement with personalization',;
           price: '$1,800/month',;
@@ -36,9 +35,8 @@ export default function ComprehensiveServices(...args: unknown[]): unknown {;
           icon: Users,;
           category: 'ai-ml',;
           badge: 'New',;
-          roi: '250%';,
-},;
-        {;
+          roi: '250%'},;
+        {
           name: 'AI Cybersecurity Threat Detection',;
           description: 'ML-powered threat detection and response',;
           price: '$3,200/month',;
@@ -48,18 +46,16 @@ export default function ComprehensiveServices(...args: unknown[]): unknown {;
           icon: Shield,;
           category: 'ai-ml',;
           badge: 'Featured',;
-          roi: '400%';,
-}
-      ];,
-},;
-    {;
+          roi: '400%'}
+      ]},;
+    {
       id: 'micro-saas',;
       name: 'Micro SAAS Solutions',;
       icon: Zap,;
       color: 'from-purple-600 to-pink-600',;
       description: 'Scalable software-as-a-service for specific business needs',;
       services: [;
-        {;
+        {
           name: 'AI Project Management Suite',;
           description: 'Intelligent project planning and resource optimization',;
           price: '$150/month',;
@@ -69,9 +65,8 @@ export default function ComprehensiveServices(...args: unknown[]): unknown {;
           icon: Workflow,;
           category: 'micro-saas',;
           badge: 'Best Value',;
-          roi: '200%';,
-},;
-        {;
+          roi: '200%'},;
+        {
           name: 'Smart Inventory Management',;
           description: 'AI-driven inventory optimization and forecasting',;
           price: '$200/month',;
@@ -81,9 +76,8 @@ export default function ComprehensiveServices(...args: unknown[]): unknown {;
           icon: Truck,;
           category: 'micro-saas',;
           badge: 'Popular',;
-          roi: '180%';,
-},;
-        {;
+          roi: '180%'},;
+        {
           name: 'AI Content Creation Platform',;
           description: 'Automated content generation with SEO optimization',;
           price: '$120/month',;
@@ -93,18 +87,16 @@ export default function ComprehensiveServices(...args: unknown[]): unknown {;
           icon: Brain,;
           category: 'micro-saas',;
           badge: 'New',;
-          roi: '150%';,
-}
-      ];,
-},;
-    {;
+          roi: '150%'}
+      ]},;
+    {
       id: 'it-infrastructure',;
       name: 'IT Infrastructure & Services',;
       icon: Server,;
       color: 'from-green-600 to-emerald-600',;
       description: 'Comprehensive IT solutions for modern business infrastructure',;
       services: [;
-        {;
+        {
           name: 'Cloud Migration & Optimization',;
           description: 'Seamless cloud migration with cost optimization',;
           price: '$5,000/project',;
@@ -114,9 +106,8 @@ export default function ComprehensiveServices(...args: unknown[]): unknown {;
           icon: Cloud,;
           category: 'it-infrastructure',;
           badge: 'Featured',;
-          roi: '350%';,
-},;
-        {;
+          roi: '350%'},;
+        {
           name: 'DevOps Automation Platform',;
           description: 'End-to-end DevOps automation with CI/CD pipelines',;
           price: '$2,800/month',;
@@ -126,9 +117,8 @@ export default function ComprehensiveServices(...args: unknown[]): unknown {;
           icon: Code,;
           category: 'it-infrastructure',;
           badge: 'Popular',;
-          roi: '280%';,
-},;
-        {;
+          roi: '280%'},;
+        {
           name: 'Cybersecurity Compliance Suite',;
           description: 'Comprehensive security compliance for industry standards',;
           price: '$4,500/month',;
@@ -138,18 +128,16 @@ export default function ComprehensiveServices(...args: unknown[]): unknown {;
           icon: Lock,;
           category: 'it-infrastructure',;
           badge: 'Essential',;
-          roi: '500%';,
-}
-      ];,
-},;
-    {;
+          roi: '500%'}
+      ]},;
+    {
       id: 'quantum-tech',;
       name: 'Quantum & Emerging Tech',;
       icon: Atom,;
       color: 'from-indigo-600 to-purple-600',;
       description: 'Next-generation technologies for future-ready businesses',;
       services: [;
-        {;
+        {
           name: 'Quantum Computing Solutions',;
           description: 'Quantum algorithms for optimization and cryptography',;
           price: '$15,000/month',;
@@ -159,9 +147,8 @@ export default function ComprehensiveServices(...args: unknown[]): unknown {;
           icon: Atom,;
           category: 'quantum-tech',;
           badge: 'Future Tech',;
-          roi: '1000%';,
-},;
-        {;
+          roi: '1000%'},;
+        {
           name: 'Blockchain Enterprise Platform',;
           description: 'Secure blockchain for supply chain and digital identity',;
           price: '$3,500/month',;
@@ -171,9 +158,8 @@ export default function ComprehensiveServices(...args: unknown[]): unknown {;
           icon: LinkIcon,;
           category: 'quantum-tech',;
           badge: 'Innovative',;
-          roi: '300%';,
-},;
-        {;
+          roi: '300%'},;
+        {
           name: 'IoT Edge Computing Platform',;
           description: 'Real-time data processing at the edge',;
           price: '$2,200/month',;
@@ -183,18 +169,16 @@ export default function ComprehensiveServices(...args: unknown[]): unknown {;
           icon: Cpu,;
           category: 'quantum-tech',;
           badge: 'Industrial',;
-          roi: '250%';,
-}
-      ];,
-},;
-    {;
+          roi: '250%'}
+      ]},;
+    {
       id: 'green-tech',;
       name: 'Green Technology',;
       icon: Leaf,;
       color: 'from-green-500 to-teal-600',;
       description: 'Sustainable technology solutions for environmental responsibility',;
       services: [;
-        {;
+        {
           name: 'Carbon Footprint Analytics',;
           description: 'AI-powered carbon tracking and sustainability reporting',;
           price: '$800/month',;
@@ -204,9 +188,8 @@ export default function ComprehensiveServices(...args: unknown[]): unknown {;
           icon: Leaf,;
           category: 'green-tech',;
           badge: 'Eco-Friendly',;
-          roi: '180%';,
-},;
-        {;
+          roi: '180%'},;
+        {
           name: 'Smart Energy Management',;
           description: 'Intelligent energy optimization using IoT and AI',;
           price: '$1,500/month',;
@@ -216,18 +199,16 @@ export default function ComprehensiveServices(...args: unknown[]): unknown {;
           icon: Zap,;
           category: 'green-tech',;
           badge: 'Cost-Effective',;
-          roi: '220%';,
-}
-      ];,
-},;
-    {;
+          roi: '220%'}
+      ]},;
+    {
       id: 'space-tech',;
       name: 'Space Technology',;
       icon: Satellite,;
       color: 'from-blue-500 to-indigo-600',;
       description: 'Satellite and space-based technology for global insights',;
       services: [;
-        {;
+        {
           name: 'Satellite Data Analytics',;
           description: 'Earth observation data analysis for various industries',;
           price: '$2,800/month',;
@@ -237,21 +218,17 @@ export default function ComprehensiveServices(...args: unknown[]): unknown {;
           icon: Satellite,;
           category: 'space-tech',;
           badge: 'Global',;
-          roi: '350%';,
-}
-      ];,
-}
+          roi: '350%'}
+      ]}
   ];
-;
-  const contactInfo = {;
+
+  const contactInfo = {
     phone: '+1 302 464 0950',;
     email: 'kleber@ziontechgroup.com',;
     address: '364 E Main St STE 1008, Middletown DE 19709',;
-    website: 'https://ziontechgroup.com';,
-};
-;
+    website: 'https://ziontechgroup.com'}
   const filteredServices = serviceCategories.flatMap(category => ;
-    category.services.filter(service => {;
+    category.services.filter(service => {
       const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
       const matchesSearch = searchQuery === '' || ;
         service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
@@ -260,30 +237,26 @@ export default function ComprehensiveServices(...args: unknown[]): unknown {;
         (priceRange === 'low' && parseFloat(service.price.replace(/[^0-9.]/g, '')) < 1000) ||;
         (priceRange === 'medium' && parseFloat(service.price.replace(/[^0-9.]/g, '')) >= 1000 && parseFloat(service.price.replace(/[^0-9.]/g, '')) < 5000) ||;
         (priceRange === 'high' && parseFloat(service.price.replace(/[^0-9.]/g, '')) >= 5000);
-      ;
-      return matchesCategory && matchesSearch && matchesPrice;,
-});
+
+      return matchesCategory && matchesSearch && matchesPrice});
   );
-;
-  const containerVariants = {;
+
+  const containerVariants = {
     hidden: { opacity: 0 },;
-    visible: {;
+    visible: {
       opacity: 1,;
-      transition: {;
-        staggerChildren: 0.1;,
-}
+      transition: {
+        staggerChildren: 0.1}
     }
-  };
-;
-  const itemVariants = {;
+  }
+  const itemVariants = {
     hidden: { opacity: 0, y: 20 },;
-    visible: {;
+    visible: {
       opacity: 1,;
       y: 0,;
       transition: { duration: 0.6 }
     }
-  };
-;
+  }
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">;
       <SEO ;
@@ -441,8 +414,7 @@ export default function ComprehensiveServices(...args: unknown[]): unknown {;
                                     ? 'bg-purple-500/20 text-purple-400 border border-purple-500/30'''''`;
                                     : service.badge === 'Best Value''''`'`;
                                       ? 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30'''`'`'`;
-                                      : 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30'````;,
-}`}
+                                      : 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30'````}`}
                           >;
                             {service.badge}
                           </span>) }
@@ -693,16 +665,11 @@ export default function ComprehensiveServices(...args: unknown[]): unknown {;
         </div>;
       </section>;
     </div>;
-  );,
-}
-;
+  )}
 
-export { ComprehensiveServices };
-;
-export { ComprehensiveServices };
-;
-export { ComprehensiveServices };
-;
-export { ComprehensiveServices };
-;
-export { ComprehensiveServices };
+
+export { ComprehensiveServices }
+export { ComprehensiveServices }
+export { ComprehensiveServices }
+export { ComprehensiveServices }
+export { ComprehensiveServices }

@@ -1,6 +1,6 @@
 import React from "react";
   );
-export default function Authslice() {;
+export default function Authslice() {
   return (;
     <div className="min-h-screen bg-white">;
       <div className="max-w-4xl mx-auto px-6 py-16">;
@@ -9,5 +9,4 @@ export default function Authslice() {;
           This is a placeholder component for authslice.;
         </p>;
       </div>;
-  );,
-}
+  )}

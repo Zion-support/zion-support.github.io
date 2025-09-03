@@ -1,4 +1,4 @@
-export interface SpecializedITInfrastructureService {;
+export interface SpecializedITInfrastructureService {
   id: string;
   name: string;
   tagline: string;
@@ -24,7 +24,7 @@ export interface SpecializedITInfrastructureService {;
   competitors: string[];
   marketSize: string;
   growthRate: string;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -34,18 +34,17 @@ export interface SpecializedITInfrastructureService {;
   launchDate: string;
   customers: number;
   rating: number;
-const contact = {;
+const contact = {
   mobile: "+1 302 464 0950",;
   email: "kleber@ziontechgroup.com",;
   address: "364 E Main St STE 1008 Middletown DE 19709";
-  ;
-  ;
-  ;
-  ;
-  website: "https://ziontechgroup.com";,;,
-}
+
+
+
+
+  website: "https://ziontechgroup.com"}
 export const specializedITInfrastructureServices2025: SpecializedITInfrastructureService[] = [;
-  {;
+  {
     id: "edge-computing-optimization-platform",;
     name: "Edge Computing Optimization Platform",;
     tagline: "Optimize edge computing infrastructure for maximum performance and cost efficiency",;
@@ -88,9 +87,8 @@ export const specializedITInfrastructureServices2025: SpecializedITInfrastructur
     launchDate: "2025-02-25",;
     customers: 78,;
     rating: 4.7,;
-    reviews: 56;,;,
-},;
-  {;
+    reviews: 56},;
+  {
     id: "quantum-ready-network-infrastructure",;
     name: "Quantum-Ready Network Infrastructure",;
     tagline: "Future-proof your network infrastructure for quantum computing and advanced security",;
@@ -133,9 +131,8 @@ export const specializedITInfrastructureServices2025: SpecializedITInfrastructur
     launchDate: "2025-03-01",;
     customers: 23,;
     rating: 4.9,;
-    reviews: 18;,;,
-},;
-  {;
+    reviews: 18},;
+  {
     id: "autonomous-devops-automation-platform",;
     name: "Autonomous DevOps Automation Platform",;
     tagline: "Fully automated DevOps workflows with intelligent decision-making and optimization",;
@@ -178,9 +175,8 @@ export const specializedITInfrastructureServices2025: SpecializedITInfrastructur
     launchDate: "2025-02-28",;
     customers: 134,;
     rating: 4.8,;
-    reviews: 89;,;,
-},;
-  {;
+    reviews: 89},;
+  {
     id: "zero-trust-security-framework",;
     name: "Zero Trust Security Framework",;
     tagline: "Implement comprehensive zero trust security with continuous verification and adaptive access control",;
@@ -223,9 +219,8 @@ export const specializedITInfrastructureServices2025: SpecializedITInfrastructur
     launchDate: "2025-03-05",;
     customers: 89,;
     rating: 4.9,;
-    reviews: 67;,;,
-},;
-  {;
+    reviews: 67},;
+  {
     id: "intelligent-data-center-management",;
     name: "Intelligent Data Center Management",;
     tagline: "AI-powered data center optimization for maximum efficiency and cost savings",;

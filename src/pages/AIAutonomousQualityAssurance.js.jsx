@@ -245,16 +245,12 @@ const AIAutonomousQualityAssurance = () => {}
           </div>;
         </div>;
       </div>;
-    </>)};
+    </>)}
 export default AIAutonomousQualityAssurance;
-;
 
-export { AIAutonomousQualityAssurance };
-;
-export { AIAutonomousQualityAssurance };
-;
-export { AIAutonomousQualityAssurance };
-;
-export { AIAutonomousQualityAssurance };
-;
-export { AIAutonomousQualityAssurance };
+
+export { AIAutonomousQualityAssurance }
+export { AIAutonomousQualityAssurance }
+export { AIAutonomousQualityAssurance }
+export { AIAutonomousQualityAssurance }
+export { AIAutonomousQualityAssurance }

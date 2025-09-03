@@ -18,8 +18,7 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
             responseTime: 1200,'';
             lastChecked: new Date(),''';
             parentPage: 'Homepage',''';
-            linkText: 'LinkedIn';,
-},;
+            linkText: 'LinkedIn'},;
         {}
 ';
 '';
@@ -30,8 +29,7 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
             responseTime: 800,'';
             lastChecked: new Date(),''';
             parentPage: 'Homepage',''';
-            linkText: 'Twitter';,
-},;
+            linkText: 'Twitter'},;
         {}
 ';
 '';
@@ -42,8 +40,7 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
             responseTime: 50,'';
             lastChecked: new Date(),''';
             parentPage: 'Contact',''';
-            linkText: 'Phone Number';,
-},;
+            linkText: 'Phone Number'},;
         {}
 ';
 '';
@@ -72,12 +69,12 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
             brokenLinks,;
             externalLinks,;
             averageResponseTime: avgResponseTime,;
-            lastUpdated: new Date () }) };
+            lastUpdated: new Date () }) }
     const startMonitoring = async () => {}
         setIsMonitoring(true) ;
         // Simulate link checking;
         await new Promise(resolve => setTimeout (resolve, 2000) ) ;
-        setIsMonitoring(false) };
+        setIsMonitoring(false) }
     const getStatusIcon = (status) => {}
         switch (status) {}
 ';
@@ -89,7 +86,7 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
                 return <ExternalLink className="w-4 h-4 text-blue-400"/>;";
             default:"";
                 return <RefreshCw className="w-4 h-4 text-yellow-400"/>}
-    };
+    }
     const getStatusColor = (status) => {}
         switch (status) {}
 ';
@@ -103,7 +100,7 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
                 return 'text-blue-400';''';
             default:'''';
                 return 'text-yellow-400'}
-    };
+    }
     const filteredLinks = linkStatuses.filter(link => {}
 ';
 '';
@@ -121,16 +118,13 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
       {isOpen && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4" onClick={() => setIsOpen(false)}>;
           <motion.div initial = {}
   { scale: 0.9,;
-  opacity: 0;,
-}} animate = {}
+  opacity: 0}} animate = {}
   { scale: 1,;
-  opacity: 1;,
-}} exit = {}
+  opacity: 1}} exit = {}
   { scale: 0.9,;
   opacity: 0;
 ";
-"";,
-}} className="bg-gray-900 rounded-2xl shadow-2xl w-full max-w-6xl max-h-[90vh] overflow-hidden" onClick={(e) => e.stopPropagation()}>";
+""}} className="bg-gray-900 rounded-2xl shadow-2xl w-full max-w-6xl max-h-[90vh] overflow-hidden" onClick={(e) => e.stopPropagation()}>";
             {/* Header */}"";
             <div className="bg-gradient-to-r from-cyan-500 to-blue-500 p-6 text-white">"";
               <div className="flex items-center justify-between">"";
@@ -275,16 +269,11 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
             </div>;
           </motion.div>;
         </motion.div>)}
-    </>)};
-export default LinkHealthMonitor;,
-}}}}
-;
-export { LinkHealthMonitor };
-;
-export { LinkHealthMonitor };
-;
-export { LinkHealthMonitor };
-;
-export { LinkHealthMonitor };
-;
-export { LinkHealthMonitor };
+    </>)}
+export default LinkHealthMonitor}}}}
+
+export { LinkHealthMonitor }
+export { LinkHealthMonitor }
+export { LinkHealthMonitor }
+export { LinkHealthMonitor }
+export { LinkHealthMonitor }

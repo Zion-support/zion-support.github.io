@@ -28,7 +28,7 @@ export default function ServicesOverview() {}
     visible: {}
       opacity: 1,;
       transition: {}
-        staggerChildren: 0.1}}};
+        staggerChildren: 0.1}}}
   const itemVariants = {}
     hidden: { y: 20, opacity: 0 },;
     visible: {}
@@ -36,7 +36,7 @@ export default function ServicesOverview() {}
       opacity: 1,;
       transition: {}
         duration: 0.5,';
-        ease: 'easeOut'}}};
+        ease: 'easeOut'}}}
   return();
     <div className="min-h-screen bg-background">";
       <SEO"";
@@ -288,14 +288,10 @@ export default function ServicesOverview() {}
         </div>;
       </section>;
     </div>)}
-;
 
-export { ServicesOverview };
-;
-export { ServicesOverview };
-;
-export { ServicesOverview };
-;
-export { ServicesOverview };
-;
-export { ServicesOverview };
+
+export { ServicesOverview }
+export { ServicesOverview }
+export { ServicesOverview }
+export { ServicesOverview }
+export { ServicesOverview }

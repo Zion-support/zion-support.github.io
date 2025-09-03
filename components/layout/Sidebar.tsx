@@ -1,15 +1,14 @@
 import React from 'react';
 import Link from 'next/link';
 import { X, Phone, Mail, MapPin, ArrowRight } from 'lucide-react';
-;
-interface SidebarProps {;
+
+interface SidebarProps {
   isOpen: boolean;
-  onClose: () => void;,
-}
-;
-const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
+  onClose: () => void}
+
+const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const serviceCategories = [;
-    {;
+    {
       title: 'Micro SaaS',;
       services: [;
         { name: 'AI Email Responder Pro', href: '/services/ai-email-responder' },;
@@ -18,9 +17,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
         { name: 'Smart Contract Security Auditor', href: '/services/smart-contract-auditor' },;
         { name: 'AI Video Editor Pro', href: '/services/ai-video-editor' },;
         { name: 'Smart Energy Monitor', href: '/services/smart-energy-monitor' },;
-      ];,
-},;
-    {;
+      ]},;
+    {
       title: 'IT Services',;
       services: [;
         { name: 'Zero Trust Security Implementation', href: '/services/zero-trust-security' },;
@@ -29,9 +27,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
         { name: 'API Security Gateway', href: '/services/api-security-gateway' },;
         { name: 'Edge Computing Solutions', href: '/services/edge-computing-solutions' },;
         { name: 'Quantum-Ready Security', href: '/services/quantum-ready-security' },;
-      ];,
-},;
-    {;
+      ]},;
+    {
       title: 'AI Services',;
       services: [;
         { name: 'AI Voice Synthesis Platform', href: '/services/ai-voice-synthesis' },;
@@ -40,10 +37,9 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
         { name: 'AI Autonomous Vehicle Systems', href: '/services/ai-autonomous-vehicles' },;
         { name: 'AI Robotic Process Automation', href: '/services/ai-robotic-process-automation' },;
         { name: 'AI Drug Discovery Platform', href: '/services/ai-drug-discovery' },;
-      ];,
-}
+      ]}
   ];
-;
+
   const quickLinks = [;
     { name: 'About Us', href: '/about' },;
     { name: 'Careers', href: '/careers' },;
@@ -53,7 +49,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
     { name: 'Privacy Policy', href: '/privacy' },;
     { name: 'Terms of Service', href: '/terms' },;
   ];
-;
+
   return (;
     <>;
       {/* Overlay */}
@@ -63,11 +59,10 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
           onClick={onClose}
         />;
       )}
-;
+
       {/* Sidebar */}
       <div className={`fixed top-0 right-0 h-full w-80 bg-white shadow-2xl transform transition-transform duration-300 ease-in-out z-50 lg:hidden ${;
-        isOpen ? 'translate-x-0' : 'translate-x-full';,
-}`}>;
+        isOpen ? 'translate-x-0' : 'translate-x-full'}`}>;
         <div className="flex flex-col h-full">;
           {/* Header */}
           <div className="flex items-center justify-between p-6 border-b border-gray-200">;
@@ -162,7 +157,5 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
         </div>;
       </div>;
     </>;
-  );,
-};
-;
+  )}
 export default Sidebar;

@@ -1,14 +1,13 @@
 // Comprehensive IT Services 2030 - Zion Tech Group;
 // Enterprise-grade IT infrastructure, consulting, and managed services;
-;
-export interface ServiceContact {;
+
+export interface ServiceContact {
   phone: string;
   email: string;
   website: string;
-  address: string;,
-}
-;
-export interface ITService {;
+  address: string}
+
+export interface ITService {
   id: number;
   name: string;
   category: string;
@@ -32,23 +31,20 @@ export interface ITService {;
   technologies: string[];
   useCases: string[];
   roi: string;
-  setupTime: string;,
-}
-;
+  setupTime: string}
+
 // Zion Tech Group Contact Information;
-const zionContact: ServiceContact = {;
+const zionContact: ServiceContact = {
 
   phone: "+1 302 464 0950",";
   email: "kleber@ziontechgroup.com",";
   website: "https://ziontechgroup.com",;
-  ;
-  ;
-  ;
+
+
+
   ;";
-  address: "364 E Main St STE 1008 Middletown DE 19709"};
-;,
-};
-;
+  address: "364 E Main St STE 1008 Middletown DE 19709"}
+}
 // Comprehensive IT Services 2030export const comprehensiveITServices2030: ITService[] = [{;
 
     id: 1,";
@@ -105,9 +101,8 @@ const zionContact: ServiceContact = {;
       "High-availability systems";
     ],;";
     roi: "300% within 12 months",";
-    setupTime: "2-8 weeks";,
-},;
-  {;
+    setupTime: "2-8 weeks"},;
+  {
 
     id: 2,";
     name: "Cybersecurity & Zero Trust Architecture",";
@@ -163,9 +158,8 @@ const zionContact: ServiceContact = {;
       "Threat hunting operations";
     ],;";
     roi: "400% within 18 months",";
-    setupTime: "4-12 weeks";,
-},;
-  {;
+    setupTime: "4-12 weeks"},;
+  {
 
     id: 3,";
     name: "Data Analytics & Business Intelligence",";
@@ -221,9 +215,8 @@ const zionContact: ServiceContact = {;
       "Performance monitoring";
     ],;";
     roi: "350% within 15 months",";
-    setupTime: "3-10 weeks";,
-},;
-  {;
+    setupTime: "3-10 weeks"},;
+  {
 
     id: 4,";
     name: "Digital Transformation & Legacy Modernization",";
@@ -279,9 +272,8 @@ const zionContact: ServiceContact = {;
       "Data-driven operations";
     ],;";
     roi: "500% within 24 months",";
-    setupTime: "6-24 weeks";,
-},;
-  {;
+    setupTime: "6-24 weeks"},;
+  {
 
     id: 5,";
     name: "AI & Machine Learning Implementation",";
@@ -337,9 +329,8 @@ const zionContact: ServiceContact = {;
       "Process automation";
     ],;";
     roi: "600% within 18 months",";
-    setupTime: "8-20 weeks";,
-},;
-  {;
+    setupTime: "8-20 weeks"},;
+  {
 
     id: 6,";
     name: "Network Infrastructure & SD-WAN Solutions",";
@@ -395,9 +386,8 @@ const zionContact: ServiceContact = {;
       "Disaster recovery";
     ],;";
     roi: "300% within 12 months",";
-    setupTime: "3-8 weeks";,
-},;
-  {;
+    setupTime: "3-8 weeks"},;
+  {
 
     id: 7,";
     name: "Managed IT Services & Support",";
@@ -453,9 +443,8 @@ const zionContact: ServiceContact = {;
       "Performance optimization";
     ],;";
     roi: "250% within 12 months",";
-    setupTime: "1-2 weeks";,
-},;
-  {;
+    setupTime: "1-2 weeks"},;
+  {
 
     id: 8,";
     name: "Enterprise Software Development",";
@@ -511,9 +500,8 @@ const zionContact: ServiceContact = {;
       "Integration solutions";
     ],;";
     roi: "400% within 18 months",";
-    setupTime: "8-24 weeks";,
-},;
-  {;
+    setupTime: "8-24 weeks"},;
+  {
 
     id: 9,";
     name: "Data Center & Colocation Services",";
@@ -569,9 +557,8 @@ const zionContact: ServiceContact = {;
       "Performance optimization";
     ],;";
     roi: "350% within 15 months",";
-    setupTime: "4-12 weeks";,
-},;
-  {;
+    setupTime: "4-12 weeks"},;
+  {
 
     id: 10,";
     name: "IT Strategy & Digital Consulting",";
@@ -630,5 +617,5 @@ const zionContact: ServiceContact = {;
     setupTime: "4-16 weeks";
 
 ];
-;
+
 export default comprehensiveITServices2030}}}"

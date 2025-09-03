@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import {;
+import {
   Brain,;
   Cloud,;
   Shield,;
@@ -56,10 +56,9 @@ import {;
   GraduationCap,;
   Users as UsersIcon,;
   Briefcase,;
-  ExternalLink;,
-} from 'lucide-react';
-;
-interface SitemapSection {;
+  ExternalLink} from 'lucide-react';
+
+interface SitemapSection {
   title: string;
   icon: React.ComponentType<any>;
   description: string;
@@ -68,13 +67,11 @@ interface SitemapSection {;
     href: string;
     description?: string;
     icon?: React.ComponentType<any>;
-    external?: boolean;,
-}>;,
-}
-;
-export default function ComprehensiveSitemap() {;
+    external?: boolean}>}
+
+export default function ComprehensiveSitemap() {
   const sitemapSections: SitemapSection[] = [;
-    {;
+    {
       title: 'Main Pages',;
       icon: Home,;
       description: 'Core website pages and navigation',;
@@ -89,9 +86,8 @@ export default function ComprehensiveSitemap() {;
         { name: 'Blog', href: '/blog', description: 'Latest insights and articles' },;
         { name: 'Case Studies', href: '/case-studies', description: 'Success stories and client testimonials' },;
         { name: 'Research & Development', href: '/research-development', description: 'Innovation and R&D initiatives' }
-      ];,
-},;
-    {;
+      ]},;
+    {
       title: 'Enhanced Services Showcase 2025',;
       icon: Star,;
       description: 'Our comprehensive portfolio of AI-powered micro SAAS services and solutions',;
@@ -118,9 +114,8 @@ export default function ComprehensiveSitemap() {;
         { name: 'AI Space Technology Platform', href: '/services/ai-space-technology', description: 'Space technology solutions' },;
         { name: 'AI Sustainability Technology Platform', href: '/services/ai-sustainability-tech', description: 'Sustainability solutions' },;
         { name: 'AI Cybersecurity Threat Intelligence', href: '/services/ai-cybersecurity-threat-intelligence', description: 'Advanced cybersecurity' }
-      ];,
-},;
-    {;
+      ]},;
+    {
       title: 'AI Services & Solutions',;
       icon: Brain,;
       description: 'Artificial Intelligence services and specialized solutions',;
@@ -135,9 +130,8 @@ export default function ComprehensiveSitemap() {;
         { name: 'AI Data Governance Platform', href: '/services/ai-data-governance-platform', description: 'Data protection' },;
         { name: 'AI Customer Experience Analytics', href: '/services/ai-customer-experience-analytics', description: 'Customer insights' },;
         { name: 'AI Financial Trading', href: '/services/ai-financial-trading', description: 'FinTech AI solutions' }
-      ];,
-},;
-    {;
+      ]},;
+    {
       title: 'IT Services & Infrastructure',;
       icon: Settings,;
       description: 'Information Technology services and infrastructure solutions',;
@@ -153,9 +147,8 @@ export default function ComprehensiveSitemap() {;
         { name: 'Quantum Neural Network', href: '/services/quantum-neural-network', description: 'Quantum computing' },;
         { name: 'Autonomous Business Operations', href: '/services/autonomous-business-operations', description: 'Business automation' },;
         { name: 'AI-Powered IT Asset Management', href: '/services/ai-powered-it-asset-management', description: 'Asset management' }
-      ];,
-},;
-    {;
+      ]},;
+    {
       title: 'Micro SaaS Products',;
       icon: ShoppingCart,;
       description: 'Software-as-a-Service products and solutions',;
@@ -169,9 +162,8 @@ export default function ComprehensiveSitemap() {;
         { name: 'Returns Management', href: '/services/returns-management', description: 'E-commerce returns' },;
         { name: 'AI Content Creation Studio', href: '/revolutionary-services-showcase-2034', description: 'Content generation' },;
         { name: 'Smart Project Management Platform', href: '/revolutionary-services-showcase-2034', description: 'Project management' }
-      ];,
-},;
-    {;
+      ]},;
+    {
       title: 'Specialized Solutions',;
       icon: Target,;
       description: 'Industry-specific and specialized technology solutions',;
@@ -186,9 +178,8 @@ export default function ComprehensiveSitemap() {;
         { name: 'Financial Solutions', href: '/financial-solutions', description: 'Financial technology' },;
         { name: 'Industry Solutions', href: '/industry-solutions', description: 'Industry-specific solutions' },;
         { name: 'Emerging Technology', href: '/emerging-tech', description: 'Cutting-edge technology' }
-      ];,
-},;
-    {;
+      ]},;
+    {
       title: 'Pricing & Plans',;
       icon: DollarSign,;
       description: 'Service pricing, plans, and cost information',;
@@ -200,9 +191,8 @@ export default function ComprehensiveSitemap() {;
         { name: 'Pricing Guide 2025', href: '/pricing-guide-2025', description: 'Current pricing' },;
         { name: 'Get Custom Quote', href: '/contact', description: 'Request personalized pricing' },;
         { name: 'Schedule Demo', href: '/schedule-demo', description: 'Book a product demonstration' }
-      ];,
-},;
-    {;
+      ]},;
+    {
       title: 'Resources & Learning',;
       icon: BookOpen,;
       description: 'Educational resources, documentation, and support',;
@@ -217,9 +207,8 @@ export default function ComprehensiveSitemap() {;
         { name: 'Community', href: '/community', description: 'User community and forums' },;
         { name: 'Developer Resources', href: '/developer', description: 'Developer tools and APIs' },;
         { name: 'API Documentation', href: '/api', description: 'API reference and guides' }
-      ];,
-},;
-    {;
+      ]},;
+    {
       title: 'Company & Platform',;
       icon: Building,;
       description: 'Company information and platform features',;
@@ -232,9 +221,8 @@ export default function ComprehensiveSitemap() {;
         { name: 'Talent', href: '/talent', description: 'Find experts and talent' },;
         { name: 'AI Hiring', href: '/zion-hire-ai', description: 'AI-powered hiring' },;
         { name: 'Enterprise Solutions', href: '/enterprise', description: 'Enterprise-grade solutions' }
-      ];,
-},;
-    {;
+      ]},;
+    {
       title: 'Legal & Policies',;
       icon: FileText,;
       description: 'Legal information, policies, and compliance',;
@@ -245,9 +233,8 @@ export default function ComprehensiveSitemap() {;
         { name: 'Security', href: '/security', description: 'Security measures' },;
         { name: 'Compliance', href: '/compliance', description: 'Regulatory compliance' },;
         { name: 'Accessibility', href: '/accessibility', description: 'Accessibility features' }
-      ];,
-},;
-    {;
+      ]},;
+    {
       title: 'Contact & Support',;
       icon: Phone,;
       description: 'Ways to get in touch and receive support',;
@@ -261,10 +248,9 @@ export default function ComprehensiveSitemap() {;
         { name: 'Phone: +1 (302) 464-0950', href: 'tel:+13024640950', description: 'Call us directly', external: true },;
         { name: 'Email: kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com', description: 'Send us an email', external: true },;
         { name: 'Address: 364 E Main St STE 1008, Middletown DE 19709', href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709', description: 'Visit our office', external: true }
-      ];,
-}
+      ]}
   ];
-;
+
   return (;
     <>;
       <Helmet>;
@@ -312,7 +298,7 @@ export default function ComprehensiveSitemap() {;
         <section className="py-16 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">;
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">;
-              {sitemapSections.map((section, sectionIndex) => {;
+              {sitemapSections.map((section, sectionIndex) => {
                 const Icon = section.icon;
                 return (;
                   <motion.div;
@@ -333,7 +319,7 @@ export default function ComprehensiveSitemap() {;
                     </div>;
 
                     <div className="space-y-3">;
-                      {section.links.map((link, linkIndex) => {;
+                      {section.links.map((link, linkIndex) => {
                         const LinkIcon = link.icon || ExternalLink;
                         return (;
                           <motion.div;
@@ -385,12 +371,10 @@ export default function ComprehensiveSitemap() {;
                               </Link>;
                             )}
                           </motion.div>;
-                        );,
-})}
+                        )})}
                     </div>;
                   </motion.div>;
-                );,
-})}
+                )})}
             </div>;
           </div>;
         </section>;
@@ -428,5 +412,4 @@ export default function ComprehensiveSitemap() {;
         </section>;
       </div>;
     </>;
-  );,
-}
+  )}

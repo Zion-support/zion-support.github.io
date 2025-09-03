@@ -55,14 +55,10 @@ export default function Home() {}
       <ITServiceRequestHero />;
       <FloatingCTA />;
     </>)}
-;
 
-export { Home };
-;
-export { Home };
-;
-export { Home };
-;
-export { Home };
-;
-export { Home };
+
+export { Home }
+export { Home }
+export { Home }
+export { Home }
+export { Home }

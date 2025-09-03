@@ -9,8 +9,7 @@ export default function EnterpriseAdmin() {}
   // Check if user has enterprise admin role'';
   const isEnterpriseAdmin = user?.role === 'enterprise_admin';
   if (!isEnterpriseAdmin) {}
-    return <Navigate to="/unauthorized" />;,
-}
+    return <Navigate to="/unauthorized" />}
   return();
     <ProtectedRoute>";
       <SEO"'";
@@ -21,16 +20,12 @@ export default function EnterpriseAdmin() {}
       <main className="min-h-screen bg-background">;
         <AdminDashboard />;
       </main>;
-      ;
-    </ProtectedRoute>)}
-;
 
-export { EnterpriseAdmin };
-;
-export { EnterpriseAdmin };
-;
-export { EnterpriseAdmin };
-;
-export { EnterpriseAdmin };
-;
-export { EnterpriseAdmin };
+    </ProtectedRoute>)}
+
+
+export { EnterpriseAdmin }
+export { EnterpriseAdmin }
+export { EnterpriseAdmin }
+export { EnterpriseAdmin }
+export { EnterpriseAdmin }

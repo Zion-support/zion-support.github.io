@@ -20,8 +20,7 @@ export default function NextGenServicesShowcase2025() {}
             popular: true,''';
             demoUrl: 'https://ziontechgroup.com/demo/ai-consciousness',''';
             ctaText: 'Explore AI Consciousness',''';
-            path: '/ai-consciousness-simulation';,
-},;
+            path: '/ai-consciousness-simulation'},;
         {}
 ';
 '';
@@ -38,8 +37,7 @@ export default function NextGenServicesShowcase2025() {}
             popular: false,''';
             demoUrl: 'https://ziontechgroup.com/demo/quantum-ai',''';
             ctaText: 'Experience Quantum Power',''';
-            path: '/quantum-ai-optimization';,
-},;
+            path: '/quantum-ai-optimization'},;
         {}
 ';
 '';
@@ -56,8 +54,7 @@ export default function NextGenServicesShowcase2025() {}
             popular: false,''';
             demoUrl: 'https://ziontechgroup.com/demo/edge-computing',''';
             ctaText: 'Power Your Edge',''';
-            path: '/intelligent-edge-computing';,
-},;
+            path: '/intelligent-edge-computing'},;
         {}
 ';
 '';
@@ -74,8 +71,7 @@ export default function NextGenServicesShowcase2025() {}
             popular: false,''';
             demoUrl: 'https://ziontechgroup.com/demo/multimodal-ai',''';
             ctaText: 'Unite Your AI',''';
-            path: '/multimodal-ai-platform';,
-}
+            path: '/multimodal-ai-platform'}
     ];
     const microSaasServices = [];
         {}
@@ -87,8 +83,7 @@ export default function NextGenServicesShowcase2025() {}
             price: '$149/month',''';
             features['AI content generation',Optimal posting times',Multi-platform management'],;''';
             category: 'Marketing Automation',''';
-            trial: '14 days free';,
-},;
+            trial: '14 days free'},;
         {}
 ';
 '';
@@ -98,8 +93,7 @@ export default function NextGenServicesShowcase2025() {}
             price: '$299/month',''';
             features['Demand forecasting AI',Automated reorder points',Multi-location management'],;''';
             category: 'Supply Chain',''';
-            trial: '30 days free';,
-},;
+            trial: '30 days free'},;
         {}
 ';
 '';
@@ -109,8 +103,7 @@ export default function NextGenServicesShowcase2025() {}
             price: '$399/month',''';
             features['Churn prediction modeling',Customer lifetime value',Behavioral pattern analysis'],;''';
             category: 'Customer Analytics',''';
-            trial: '21 days free';,
-}
+            trial: '21 days free'}
     ];
     const infrastructureServices = [];
         {}
@@ -121,8 +114,7 @@ export default function NextGenServicesShowcase2025() {}
             description: 'Revolutionary cloud infrastructure protected by quantum-resistant encryption for ultimate security.',''';
             price: '$25,000/month',''';
             features['Post-quantum cryptography',Quantum key distribution',Zero-trust security model'],;''';
-            category: 'Cloud Security';,
-},;
+            category: 'Cloud Security'},;
         {}
 ';
 '';
@@ -131,8 +123,7 @@ export default function NextGenServicesShowcase2025() {}
             description: 'Self-managing IT infrastructure that automatically optimizes performance and resolves issues.',''';
             price: '$12,000/month',''';
             features['Autonomous healing systems',Predictive failure analysis',24/7 automated operations'],;''';
-            category: 'Infrastructure Automation';,
-},;
+            category: 'Infrastructure Automation'},;
         {}
 ';
 '';
@@ -141,8 +132,7 @@ export default function NextGenServicesShowcase2025() {}
             description: 'Complete blockchain platform supporting multiple protocols and enterprise-grade security.',''';
             price: '$20,000/month',''';
             features['Multi-protocol blockchain support',Smart contract deployment',DeFi integration platform'],;''';
-            category: 'Blockchain Infrastructure';,
-}
+            category: 'Blockchain Infrastructure'}
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">";
       {/* Hero Section */}"";
@@ -151,12 +141,10 @@ export default function NextGenServicesShowcase2025() {}
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">;
           <motion.div initial = {}
   { opacity: 0,;
-  y: 20;,
-}} animate = {}
+  y: 20}} animate = {}
   { opacity: 1,;
   y: 0 ";
-"";,
-}} transition={{ duration: 0.8 }} className="text-center">"";
+""}} transition={{ duration: 0.8 }} className="text-center">"";
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">";
               Next-Generation"";
               <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">;
@@ -184,12 +172,10 @@ export default function NextGenServicesShowcase2025() {}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion.div initial = {}
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
+  y: 20}} whileInView = {}
   { opacity: 1,;
   y: 0 ";
-"";,
-}} transition={{ duration: 0.8 }} className="text-center mb-16">"";
+""}} transition={{ duration: 0.8 }} className="text-center mb-16">"";
             <h2 className="text-4xl font-bold text-white mb-4">;
               Revolutionary Enterprise Solutions";
             </h2>"";
@@ -201,15 +187,12 @@ export default function NextGenServicesShowcase2025() {}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
             {featuredServices.map((service, index) => (<motion.div key={service.id} initial = {}
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
+  y: 20}} whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}} transition = {}
+  y: 0}} transition = {}
   { duration: 0.8,;
   delay: index * 0.2;
-'";,
-}} className={`relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50 backdrop-blur-sm group hover:border-cyan-500/50 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400/50' : ''}`}>"";
+'"}} className={`relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50 backdrop-blur-sm group hover:border-cyan-500/50 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400/50' : ''}`}>"";
                 {service.popular && (<div className="absolute -top-3 left-8">"";
                     <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center">"";
                       <Star className="h-4 w-4 mr-1"/>;
@@ -274,12 +257,10 @@ export default function NextGenServicesShowcase2025() {}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion.div initial = {}
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
+  y: 20}} whileInView = {}
   { opacity: 1,;
   y: 0 ";
-"";,
-}} transition={{ duration: 0.8 }} className="text-center mb-16">"";
+""}} transition={{ duration: 0.8 }} className="text-center mb-16">"";
             <h2 className="text-4xl font-bold text-white mb-4">;
               Innovative Micro-SaaS Solutions";
             </h2>"";
@@ -291,15 +272,12 @@ export default function NextGenServicesShowcase2025() {}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {microSaasServices.map((service, index) => (<motion.div key={index} initial = {}
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
+  y: 20}} whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}} transition = {}
+  y: 0}} transition = {}
   { duration: 0.8,;
   delay: index * 0.2 ";
-"";,
-}} className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl p-6 border border-gray-700/50 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300">"";
+""}} className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl p-6 border border-gray-700/50 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300">"";
                 <div className="mb-4">"";
                   <span className="inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm font-semibold mb-3">;
                     {service.category}";
@@ -336,12 +314,10 @@ export default function NextGenServicesShowcase2025() {}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion.div initial = {}
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
+  y: 20}} whileInView = {}
   { opacity: 1,;
   y: 0 ";
-"";,
-}} transition={{ duration: 0.8 }} className="text-center mb-16">"";
+""}} transition={{ duration: 0.8 }} className="text-center mb-16">"";
             <h2 className="text-4xl font-bold text-white mb-4">;
               Advanced IT Infrastructure";
             </h2>"";
@@ -353,15 +329,12 @@ export default function NextGenServicesShowcase2025() {}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {infrastructureServices.map((service, index) => (<motion.div key={index} initial = {}
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
+  y: 20}} whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}} transition = {}
+  y: 0}} transition = {}
   { duration: 0.8,;
   delay: index * 0.2 ";
-"";,
-}} className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl p-6 border border-gray-700/50 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300">"";
+""}} className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl p-6 border border-gray-700/50 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300">"";
                 <div className="mb-4">"";
                   <span className="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm font-semibold mb-3">;
                     {service.category}";
@@ -398,12 +371,10 @@ export default function NextGenServicesShowcase2025() {}
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
           <motion.div initial = {}
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
+  y: 20}} whileInView = {}
   { opacity: 1,;
   y: 0;
-";,
-}} transition={{ duration: 0.8 }}>"";
+"}} transition={{ duration: 0.8 }}>"";
             <h2 className="text-4xl font-bold text-white mb-4">;
               Ready to Transform Your Business?";
             </h2>"";
@@ -464,14 +435,10 @@ export default function NextGenServicesShowcase2025() {}
         </div>;
       </section>;
     </div>)}
-;
 
-export { NextGenServicesShowcase2025 };
-;
-export { NextGenServicesShowcase2025 };
-;
-export { NextGenServicesShowcase2025 };
-;
-export { NextGenServicesShowcase2025 };
-;
-export { NextGenServicesShowcase2025 };
+
+export { NextGenServicesShowcase2025 }
+export { NextGenServicesShowcase2025 }
+export { NextGenServicesShowcase2025 }
+export { NextGenServicesShowcase2025 }
+export { NextGenServicesShowcase2025 }

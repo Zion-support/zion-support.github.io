@@ -2,7 +2,7 @@ import Head from "next/head";
 import React from "react";
   FileText,;
   MessageSquare} from 'lucide-react;
-export default function ProjectManagement() {;
+export default function ProjectManagement() {
 
   const features = [];
 
@@ -66,7 +66,7 @@ export default function ProjectManagement() {;
                 <p className="text-gray-600">{feature.description}</p>;
               </Card>;
             ))}
-;
+
           </div>;
       </section>;
       {/* comment */}";

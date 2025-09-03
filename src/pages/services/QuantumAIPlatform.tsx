@@ -19,25 +19,23 @@ import { Atom, ;
   Globe,;
   TrendingUp,;
   Users,;
-  Shield;,
-} from 'lucide-react';
+  Shield} from 'lucide-react';
 import { SEO  } from '@/components/SEO';
-;
-const QuantumAIPlatform = () => {;
+
+const QuantumAIPlatform = () => {
   const features = [;
-    {;
+    {
       icon: Atom,;
       benefits: [;
         "Molecular modeling",;
         "Chemical reaction simulation",;
         "Material property prediction",;
         "Drug discovery acceleration";
-      ];,
-};
+      ]}
   ];
-;
+
   const pricingPlans = [;
-    {;
+    {
       name: "Quantum Starter",;
       price: "$25,000",;
       period: "/month",;
@@ -51,15 +49,13 @@ const QuantumAIPlatform = () => {;
         "API access";
       ],;
       cta: "Get Started",;
-      popular: false;,
-},;
-    {;
+      popular: false},;
+    {
       icon: Brain,;
       title: "Hybrid Quantum-Classical Computing",;
       description: "Seamless integration of quantum and classical computing resources for optimal performance and practical applications.",;
-      benefits: ["Best of both worlds", "Practical quantum advantage", "Scalable solutions"];,
-},;
-    {;
+      benefits: ["Best of both worlds", "Practical quantum advantage", "Scalable solutions"]},;
+    {
       name: "Quantum Enterprise",;
       price: "$200,000",;
       period: "/month",;
@@ -75,67 +71,58 @@ const QuantumAIPlatform = () => {;
         "Quantum strategy consulting";
       ],;
       cta: "Contact Sales",;
-      popular: false;,
-};
+      popular: false}
   ];
-;
+
   const useCases = [;
-    {;
+    {
       name: "Financial Services",;
       description: "Portfolio optimization, risk assessment, and algorithmic trading with quantum advantage",;
       icon: DollarSign,;
-      examples: ["Portfolio optimization", "Risk modeling", "Option pricing", "Fraud detection"];,
-},;
-    {;
+      examples: ["Portfolio optimization", "Risk modeling", "Option pricing", "Fraud detection"]},;
+    {
       name: "Pharmaceutical Research",;
       description: "Drug discovery, molecular modeling, and protein folding simulations",;
       icon: Atom,;
-      examples: ["Drug discovery", "Molecular dynamics", "Protein folding", "Chemical reactions"];,
-},;
-    {;
+      examples: ["Drug discovery", "Molecular dynamics", "Protein folding", "Chemical reactions"]},;
+    {
       name: "Logistics & Supply Chain",;
       description: "Route optimization, inventory management, and supply chain optimization",;
       icon: Network,;
-      examples: ["Route optimization", "Inventory management", "Supply chain optimization", "Scheduling"];,
-},;
-    {;
+      examples: ["Route optimization", "Inventory management", "Supply chain optimization", "Scheduling"]},;
+    {
       industry: "Energy & Utilities",;
       applications: [;
         "Grid optimization",;
         "Energy trading",;
         "Resource allocation",;
         "Climate modeling";
-      ];,
-};
+      ]}
   ];
-;
+
   const quantumAdvantages = [;
-    {;
+    {
       title: "Exponential Speedup",;
       description: "Quantum algorithms provide exponential speedup for specific problems",;
       icon: Zap,;
-      metric: "1000x+";,
-},;
-    {;
+      metric: "1000x+"},;
+    {
       title: "Quantum Supremacy",;
       description: "Achieve computational tasks impossible for classical computers",;
       icon: Star,;
-      metric: "Unlimited";,
-},;
-    {;
+      metric: "Unlimited"},;
+    {
       title: "Parallel Processing",;
       description: "Process multiple possibilities simultaneously using superposition",;
       icon: CpuIcon,;
-      metric: "∞";,
-},;
-    {;
+      metric: "∞"},;
+    {
       title: "Quantum Entanglement",;
       description: "Leverage quantum correlations for secure communication",;
       icon: Network,;
-      metric: "100%";,
-};
+      metric: "100%"}
   ];
-;
+
   return (;
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <SEO ;
@@ -147,25 +134,23 @@ const QuantumAIPlatform = () => {;
       <section className="relative overflow-hidden py-20">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion.div;
-            initial = {;
+            initial = {
   { opacity: 0,;
   y: 20 ;
 
-;
 
-;
 
-;,
+
+
 }}
-            animate = {;
+            animate = {
   { opacity: 1,;
   y: 0 ;
 
-;
 
-;
 
-;,
+
+
 }}
             transition={{ duration: 0.8 }}
             className="text-center";
@@ -206,25 +191,23 @@ const QuantumAIPlatform = () => {;
       <section className="py-20">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion.div;
-            initial = {;
+            initial = {
   { opacity: 0,;
   y: 20 ;
 
-;
 
-;
 
-;,
+
+
 }}
-            whileInView = {;
+            whileInView = {
   { opacity: 1,;
   y: 0 ;
 
-;
 
-;
 
-;,
+
+
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16";
@@ -242,35 +225,32 @@ const QuantumAIPlatform = () => {;
             {quantumAdvantages.map((advantage, index) => (;
               <motion.div;
                 key={index}
-                initial = {;
+                initial = {
   { opacity: 0,;
   y: 20 ;
 
-;
 
-;
 
-;,
+
+
 }}
-                whileInView = {;
+                whileInView = {
   { opacity: 1,;
   y: 0 ;
 
-;
 
-;
 
-;,
+
+
 }}
-                transition = {;
+                transition = {
   { duration: 0.8,;
   delay: index * 0.1 ;
 
-;
 
-;
 
-;,
+
+
 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300 text-center";
 
@@ -291,25 +271,23 @@ const QuantumAIPlatform = () => {;
       <section className="py-20 bg-slate-800/30">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion.div;
-            initial = {;
+            initial = {
   { opacity: 0,;
   y: 20 ;
 
-;
 
-;
 
-;,
+
+
 }}
-            whileInView = {;
+            whileInView = {
   { opacity: 1,;
   y: 0 ;
 
-;
 
-;
 
-;,
+
+
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16";
@@ -327,35 +305,32 @@ const QuantumAIPlatform = () => {;
             {features.map((feature, index) => (;
               <motion.div;
                 key={index}
-                initial = {;
+                initial = {
   { opacity: 0,;
   y: 20 ;
 
-;
 
-;
 
-;,
+
+
 }}
-                whileInView = {;
+                whileInView = {
   { opacity: 1,;
   y: 0 ;
 
-;
 
-;
 
-;,
+
+
 }}
-                transition = {;
+                transition = {
   { duration: 0.8,;
   delay: index * 0.1 ;
 
-;
 
-;
 
-;,
+
+
 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-blue-500 transition-all duration-300";
 
@@ -385,25 +360,23 @@ const QuantumAIPlatform = () => {;
       <section className="py-20">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion.div;
-            initial = {;
+            initial = {
   { opacity: 0,;
   y: 20 ;
 
-;
 
-;
 
-;,
+
+
 }}
-            whileInView = {;
+            whileInView = {
   { opacity: 1,;
   y: 0 ;
 
-;
 
-;
 
-;,
+
+
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16";
@@ -421,42 +394,38 @@ const QuantumAIPlatform = () => {;
             {pricingPlans.map((plan, index) => (;
               <motion.div;
                 key={index}
-                initial = {;
+                initial = {
   { opacity: 0,;
   y: 20 ;
 
-;
 
-;
 
-;,
+
+
 }}
-                whileInView = {;
+                whileInView = {
   { opacity: 1,;
   y: 0 ;
 
-;
 
-;
 
-;,
+
+
 }}
-                transition = {;
+                transition = {
   { duration: 0.8,;
   delay: index * 0.1 ;
 
-;
 
-;
 
-;,
+
+
 }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border ${;
                   plan.popular;
                     ? 'border-blue-500 ring-2 ring-blue-500/20';
-                    : 'border-slate-700';,
-}`}
-;
+                    : 'border-slate-700'}`}
+
                 {plan.popular && (;
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">;
                     <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-medium">;
@@ -485,8 +454,7 @@ const QuantumAIPlatform = () => {;
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all ${;
                     tier.popular;
                       ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:scale-105';
-                      : 'bg-transparent border-2 border-white text-white hover:bg-white hover:text-slate-900';,
-}`}
+                      : 'bg-transparent border-2 border-white text-white hover:bg-white hover:text-slate-900'}`}
                 >;
                   Get Started;
                 </a>;
@@ -500,25 +468,23 @@ const QuantumAIPlatform = () => {;
       <section className="py-20 bg-slate-800/30">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion.div;
-            initial = {;
+            initial = {
   { opacity: 0,;
   y: 20 ;
 
-;
 
-;
 
-;,
+
+
 }}
-            whileInView = {;
+            whileInView = {
   { opacity: 1,;
   y: 0 ;
 
-;
 
-;
 
-;,
+
+
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16";
@@ -536,35 +502,32 @@ const QuantumAIPlatform = () => {;
             {useCases.map((useCase, index) => (;
               <motion.div;
                 key={index}
-                initial = {;
+                initial = {
   { opacity: 0,;
   y: 20 ;
 
-;
 
-;
 
-;,
+
+
 }}
-                whileInView = {;
+                whileInView = {
   { opacity: 1,;
   y: 0 ;
 
-;
 
-;
 
-;,
+
+
 }}
-                transition = {;
+                transition = {
   { duration: 0.8,;
   delay: index * 0.1 ;
 
-;
 
-;
 
-;,
+
+
 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300";
 
@@ -592,28 +555,26 @@ const QuantumAIPlatform = () => {;
       <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
           <motion.div;
-            initial = {;
+            initial = {
   { opacity: 0,;
   y: 20 ;
 
-;
 
-;
 
-;,
+
+
 }}
-            whileInView = {;
+            whileInView = {
   { opacity: 1,;
   y: 0 ;
 
-;
 
-;
 
-;,
+
+
 }}
             transition={{ duration: 0.8 }}
-;
+
             <h2 className="text-4xl font-bold text-white mb-6">;
               Ready for the Quantum Revolution?;
             </h2>;
@@ -641,18 +602,12 @@ const QuantumAIPlatform = () => {;
         </div>;
       </section>;
     </div>;
-  );,
-};
-;
+  )}
 export default QuantumAIPlatform;
-;
 
-export { QuantumAIPlatform };
-;
-export { QuantumAIPlatform };
-;
-export { QuantumAIPlatform };
-;
-export { QuantumAIPlatform };
-;
-export { QuantumAIPlatform };
+
+export { QuantumAIPlatform }
+export { QuantumAIPlatform }
+export { QuantumAIPlatform }
+export { QuantumAIPlatform }
+export { QuantumAIPlatform }

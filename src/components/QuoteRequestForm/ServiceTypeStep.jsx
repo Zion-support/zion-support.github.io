@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import { useEffect, useState } from 'react';
-export default function Page() {;
+export default function Page() {
  from '@/components/ListingScoreCard';";
 import { captureException } from '@/utils/sentry';";
 import { Skeleton } from '@/components/ui/skeleton';";
 import { useDebounce } from '@/hooks/useDebounce';";
 import { z } from 'zod';
-;
-export default function Page() {;
+
+export default function Page() {
 `;
             const maxRetries = 3;
-            for(let attempt = 0; attempt < maxRetries; attempt++) {;
+            for(let attempt = 0; attempt < maxRetries; attempt++) {
 
-                try {;
+                try {
                     const response = await fetch(url);
                     if(!response.ok);
                         throw new Error('Failed to fetch');
@@ -23,53 +23,48 @@ export default function Page() {;
                     setListings(parsed.data);
                     setError(null);
                     setLoading(false);
-                            // // // // // // // // console.error('Failed to load services:', err);,
-}
-                        else {;
+                            // // // // // // // // console.error('Failed to load services:', err)} else {
 
                             captureException(err);
-;
+
                         setListings([]);
                         setError('Failed to load services');
                         setLoading(false);
-;
-                    else {;
+
+                    else {
 
                         await new Promise((res) => setTimeout(res, Math.pow(2, attempt) * 500));
-;
+
                     return}
-                catch(err) {;
-                    if(attempt === maxRetries - 1) {;
+                catch(err) {
+                    if(attempt === maxRetries - 1) {
 
-                        if(process.env.NODE_ENV === 'development') {;
+                        if(process.env.NODE_ENV === 'development') {
 
-                            // console.error('Failed to load services:', err)}
-                        else {;
+                            // console.error('Failed to load services:', err)} else {
 
                             captureException(err)}
                         setListings([]);
                         setError('Failed to load services');
-                        setLoading(false)}
-                    else {;
+                        setLoading(false)} else {
 
                         await new Promise((res) => setTimeout(res, Math.pow(2, attempt) * 500))}
                 }
             }
-        };
+        }
         fetchServices()}, [formData.serviceType, debouncedQuery]);
-    const handleItemSelect = (item) => {;
+    const handleItemSelect = (item) => {
 
         updateFormData({;
 
             specificItem: item,;
             serviceCategory: item.category,;
-            serviceType: item.category.toLowerCase();,
-})};
+            serviceType: item.category.toLowerCase()})}
     const sourceListings = listings;
-    const filteredListings = sourceListings.filter(item => {;
+    const filteredListings = sourceListings.filter(item => {
 
         // Filter by category only when a service type has been selected";
-        if (formData.serviceType !== "") {;
+        if (formData.serviceType !== "") {
 
             const categoryMatch = item.category.toLowerCase() === formData.serviceType.toLowerCase();
             if(!categoryMatch);

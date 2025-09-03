@@ -1,7 +1,7 @@
 import React, { useState } from 'react';''';
 import { Link } from 'react-router-dom';
-;
-const AdvancedInnovativeServicesShowcase2025 = () => {;
+
+const AdvancedInnovativeServicesShowcase2025 = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');
     const [sortBy, setSortBy] = useState('name');
@@ -31,8 +31,8 @@ const AdvancedInnovativeServicesShowcase2025 = () => {;
         .filter(service => service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.features?.some((feature) => feature.toLowerCase().includes(searchTerm.toLowerCase())));
-        .sort((a, b) => {;
-        switch (sortBy) {;
+        .sort((a, b) => {
+        switch (sortBy) {
             case 'price':;
                 return parseFloat(a.price?.replace(/[^0-9.]/g, '') || '0') - parseFloat(b.price?.replace(/[^0-9.]/g, '') || '0');
             case 'category':;
@@ -41,8 +41,8 @@ const AdvancedInnovativeServicesShowcase2025 = () => {;
             default:;
                 return a.name.localeCompare(b.name)}
     });
-    const getCategoryIcon = (category) => {;
-        const icons = {;
+    const getCategoryIcon = (category) => {
+        const icons = {
   'Legal Tech & Compliance': '⚖️',;
             'Quantum Computing & Security': '🔐',;
             'Healthcare & Biotech': '🏥',;
@@ -57,13 +57,9 @@ const AdvancedInnovativeServicesShowcase2025 = () => {;
             'AI & Machine Learning': '🧠',;
             'AI & Analytics': '📊',;
 
-;
-export { AdvancedInnovativeServicesShowcase2025 };
-;
-export { AdvancedInnovativeServicesShowcase2025 };
-;
-export { AdvancedInnovativeServicesShowcase2025 };
-;
-export { AdvancedInnovativeServicesShowcase2025 };
-;
+
+export { AdvancedInnovativeServicesShowcase2025 }
+export { AdvancedInnovativeServicesShowcase2025 }
+export { AdvancedInnovativeServicesShowcase2025 }
+export { AdvancedInnovativeServicesShowcase2025 }
 export { AdvancedInnovativeServicesShowcase2025 };}}}

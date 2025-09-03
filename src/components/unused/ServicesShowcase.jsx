@@ -1,16 +1,15 @@
 import React from 'react';
 import { motion  } from 'framer-motion';
-export default function Page() {;
+export default function Page() {
 ,;
-        {;
+        {
 
             icon: RocketLaunchIcon,";
             title: "Micro SaaS Solutions",";
             description: "Custom SaaS platforms for specific business needs",";
             color: "from-zion-blue to-zion-cyan",";
-            href: "/micro-saas";,
-},;
-        {;
+            href: "/micro-saas"},;
+        {
 
             icon: ChartBarIcon,";
             title: "Business Intelligence",";
@@ -19,29 +18,26 @@ export default function Page() {;
             href: "/business-intelligence";
 
     ];
-    const containerVariants = {;
+    const containerVariants = {
 
         hidden: { opacity: 0 },;
-        visible: {;
+        visible: {
 
             opacity: 1,;
-            transition: {;
+            transition: {
 
-                staggerChildren: 0.1;,
-};
-    const itemVariants = {;
+                staggerChildren: 0.1}
+    const itemVariants = {
 
   hidden: { y: 20,;
-  opacity: 0;,
-},;
-        visible: {;
+  opacity: 0},;
+        visible: {
 
             y: 0,;
             opacity: 1,;
-            transition: {;
+            transition: {
 
-                duration: 0.5;,
-};    return (<section className="py-20 bg-zion-slate-dark relative overflow-hidden">;
+                duration: 0.5};    return (<section className="py-20 bg-zion-slate-dark relative overflow-hidden">;
       {/* Background Elements */}";
       <div className="absolute inset-0 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-blue-dark opacity-50"></div>;";
       <div className="absolute top-1/4 right-0 w-96 h-96 bg-zion-cyan/5 rounded-full blur-3xl"></div>";
@@ -49,15 +45,13 @@ export default function Page() {;
 ";
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">;
         {/* Section Header */}
-        <motion.div initial = {;
+        <motion.div initial = {
 
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {;
+  y: 20}} whileInView = {
 
   { opacity: 1,;
-  y: 0;,
-}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
+  y: 0}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
             Our Core Services;
           </h2>";
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">;
@@ -96,19 +90,16 @@ export default function Page() {;
         </motion.div>;
 
         {/* CTA */}
-        <motion.div initial = {;
+        <motion.div initial = {
 
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {;
+  y: 20}} whileInView = {
 
   { opacity: 1,;
-  y: 0;,
-}} viewport={{ once: true }} transition = {;
+  y: 0}} viewport={{ once: true }} transition = {
 
   { duration: 0.8,;
-  delay: 0.5;,
-}} className="text-center mt-16">          <Link to="/services" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-cyan hover:from-zion-purple-light hover:to-zion-cyan-light text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/30">;
+  delay: 0.5}} className="text-center mt-16">          <Link to="/services" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-cyan hover:from-zion-purple-light hover:to-zion-cyan-light text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/30">;
             View All Services";
             <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">";
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3"/>;

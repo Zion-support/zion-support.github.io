@@ -18,8 +18,7 @@ export const ErrorPage = ({}
             <Link to="/contact">Contact Support</Link>;
           </Button>;
         </div>;
-  );,
-}
+  )}
 };";
 export default ErrorPage"";
 export default ErrorPage"";";

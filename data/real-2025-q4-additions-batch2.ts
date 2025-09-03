@@ -1,4 +1,4 @@
-export interface AdditionalQ42025Service {;
+export interface AdditionalQ42025Service {
 	id: string;
 	name: string;
 	tagline: string;
@@ -31,8 +31,7 @@ export const real2025Q4AdditionsBatch2: AdditionalQ42025Service[] = [;
 		useCases["Pipeline security", "IaC policy", "Compliance checks"],;
 		integrations["GitHub", "GitLab", "Bitbucket", "Terraform"],;
 		trialDays: 14,;
-		setupTime: "Same day";,;,
-},;
+		setupTime: "Same day"},;
 	{;
 		id: "internal-linking-automation",;
 		name: "Internal Linking Automation",;
@@ -49,8 +48,7 @@ export const real2025Q4AdditionsBatch2: AdditionalQ42025Service[] = [;
 		useCases["SEO housekeeping", "Topic clustering", "Content ops"],;
 		integrations["Next.js", "WordPress", "Webflow"],;
 		trialDays: 7,;
-		setupTime: "1 day";,;,
-},;
+		setupTime: "1 day"},;
 	{;
 		id: "ai-contract-redaction",;
 		name: "AI Contract Redaction",;
@@ -65,8 +63,7 @@ export const real2025Q4AdditionsBatch2: AdditionalQ42025Service[] = [;
 		useCases["Vendor reviews", "DSAR responses", "Security questionnaires"],;
 		integrations["Google Drive", "SharePoint", "Box"],;
 		trialDays: 7,;
-		setupTime: "1 day";,;,
-},;
+		setupTime: "1 day"},;
 	{;
 		id: "browser-performance-optimizer",;
 		name: "Browser Performance Optimizer",;
@@ -81,8 +78,7 @@ export const real2025Q4AdditionsBatch2: AdditionalQ42025Service[] = [;
 		useCases["Web vitals SLOs", "Perf regressions", "Release quality"],;
 		integrations["GitHub", "GitLab", "Vercel", "Netlify"],;
 		trialDays: 7,;
-		setupTime: "Same day";,;,
-},;
+		setupTime: "Same day"},;
 	{;
 		id: "tenant-permissions-auditor",;
 		name: "Tenant Permissions Auditor",;
@@ -97,8 +93,7 @@ export const real2025Q4AdditionsBatch2: AdditionalQ42025Service[] = [;
 		useCases["Least privilege", "Audit support", "User lifecycle"],;
 		integrations["Okta", "Azure AD", "Google Workspace"],;
 		trialDays: 14,;
-		setupTime: "2–3 days";,;,
-},;
+		setupTime: "2–3 days"},;
 	{;
 		id: "data-quality-guardrails",;
 		name: "Data Quality Guardrails",;
@@ -113,8 +108,7 @@ export const real2025Q4AdditionsBatch2: AdditionalQ42025Service[] = [;
 		useCases["Warehouse reliability", "ETL/ELT quality", "Analytics trust"],;
 		integrations["Snowflake", "BigQuery", "Redshift", "dbt"],;
 		trialDays: 14,;
-		setupTime: "1–2 days";,;,
-},;
+		setupTime: "1–2 days"},;
 	{;
 		id: "release-notes-automation",;
 		name: "Release Notes Automation",;
@@ -129,8 +123,7 @@ export const real2025Q4AdditionsBatch2: AdditionalQ42025Service[] = [;
 		useCases["SaaS releases", "Change logs", "Customer comms"],;
 		integrations["GitHub", "Linear", "Jira"],;
 		trialDays: 7,;
-		setupTime: "Same day";,;,
-},;
+		setupTime: "Same day"},;
 	{;
 		id: "seo-schema-studio",;
 		name: "SEO Schema Studio",;
@@ -145,8 +138,7 @@ export const real2025Q4AdditionsBatch2: AdditionalQ42025Service[] = [;
 		useCases["Rich results", "Content SEO", "Publishing"],;
 		integrations["Next.js", "Gatsby", "WordPress"],;
 		trialDays: 7,;
-		setupTime: "Same day";,;,
-},;
+		setupTime: "Same day"},;
 	{;
 		id: "ai-rubric-evaluator",;
 		name: "AI Rubric Evaluator",;
@@ -161,8 +153,7 @@ export const real2025Q4AdditionsBatch2: AdditionalQ42025Service[] = [;
 		useCases["RAG evals", "Prompt quality gates", "Model tuning"],;
 		integrations["OpenAI", "Anthropic", "GitHub Actions"],;
 		trialDays: 7,;
-		setupTime: "1 day";,;,
-},;
+		setupTime: "1 day"},;
 	{;
 		id: "api-deprecation-watcher",;
 		name: "API Deprecation Watcher",;

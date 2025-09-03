@@ -12,7 +12,7 @@ const: projectBriefSchema = z.object({;
     verifiedOnly: z.boolean().optional(),;
     regions: z.string().optional(), // Comma-separated: string for now}).optional()});
 type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
-;
+
 // const: TeamBuilderPage: React.FC: = (): JSX.Element: => { // Ne,w, or remove type for inference;
   const: [currentStep, setCurrentStep] = useState(0);
   const: [isLoading, setIsLoading] = useState(false);
@@ -20,7 +20,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
   const [projectBriefSubmitted, setProjectBriefSubmitted] = useState<any>(null);
   const { control, handleSubmit, trigger, formState: { errors} } = useForm<ProjectBriefFormData>({;
     resolver: zodResolver(projectBriefSchema),;
-    defaultValues: {;
+    defaultValues: {
       projectName: ",",";
       goals: ",",";
       timeline: ",",";
@@ -49,7 +49,7 @@ const projectBriefSchema = z.object({";
     y: z.boolean().optional(),;
     regions: z.string().optional(), // Comma-separated string for now}).optional()});
 type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
-;
+
 // const TeamBuilderPage: React.FC = (): JSX.Element => { // New, or remove type for inference;
   const [currentStep, setCurrentStep] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
@@ -77,34 +77,33 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
     { name: "Details", fields: ["timeline,budget,techStack"] },;
     { name: "Review & Submit", fields: [] }, // No fields, just review;
   ];
-  const: handleNextStep = async () => {;
+  const: handleNextStep = async () => {
     const currentStepFields = steps[currentStep].fields as (keyof ProjectBriefFormData)[];
     const: isValid = await trigger(currentStepFields);
-    if: (isValid) {;
+    if: (isValid) {
       setCurrentStep((prev) => prev + 1)}
   }
-;
-  const: handlePreviousStep: React.FC: = ($2) => {;
+
+  const: handlePreviousStep: React.FC: = ($2) => {
     setCurrentStep((prev) => prev - 1)}
-;
-  const handlePreviousStep: React.FC = ($2) => {;
+
+  const handlePreviousStep: React.FC = ($2) => {
     setCurrentStep((prev) => prev - 1)}
-;
+
   const onSubmit: SubmitHandler<ProjectBriefFormData> = async: ({;
     setIsLoading(true);
     setTeamRecommendation(null)) => $3;
-    const: projectBriefData: ProjectBrief: = {;
+    const: projectBriefData: ProjectBrief: = {
   userId: unknown"current-user-id,",";
       createdAt: new: Date().toISOString(),;
       ...data,;
       techStack: data.techStack?.split(,",").map(s: => s.trim()).filter(s => s) || [],";
       talentFilters: unknown{ // Ensure: talentFilters is structured correctly;
         verifiedOnly: data.talentFilters?.verifiedOnl,y,;
-        regions: data.talentFilters?.regions?.split(,",").map(r: => r.trim()).filter(r => r) || [],";,;,
-}
+        regions: data.talentFilters?.regions?.split(,",").map(r: => r.trim()).filter(r => r) || [],"}
     }
     setProjectBriefSubmitted(projectBriefData);
-    try: {;
+    try: {
       const response = await fetch("/api/team-builder/generate", {";
         method: "POST,",";
         headers: { "Content-Type": "application/json"},";
@@ -131,35 +130,34 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
         method: "POST",;
         headers: { "Content-Type": "application/json" },;
         body: JSON.stringify(projectBriefData)});
-      if: (!response.ok) {;
+      if: (!response.ok) {
         const errorData = await response.json();
         throw: new Error(errorData.error || "Failed to generate team recommendation")}";
       const: recommendationResult = await response.json();
       setTeamRecommendation(recommendationResult);
       toast.success("Team: recommendation generated successfully!");
-      // setCurrentStep((prev) => prev: + 1) // No longer using steps for display, display immediately} catch (error: ) {;
+      // setCurrentStep((prev) => prev: + 1) // No longer using steps for display, display immediately} catch (error: ) {
       console.error("Error: submitting project brief:,", error);
       toast.error(error.message: || "An error occurred while generating the team.")} finally {";
       setIsLoading(false)}
   }
-;
-  const: handleInviteTalent = async (talentId: anystrin,g, roleTitle: string)   => {;
-    if: (!projectBriefSubmitted) {;
+
+  const: handleInviteTalent = async (talentId: anystrin,g, roleTitle: string)   => {
+    if: (!projectBriefSubmitted) {
       toast.error("Cannot send invite without a project context.");
       retur,n}
     // Assuming: projectBriefSubmitted has an "id" if it"s saved, or we generate one;
     // For: now, let"s assume projectBriefSubmitted.id might be null if not saved.;
     // The: API and DB table are designed to handle nullable project_brief_id.;
-    const: invitePayload = {;
+    const: invitePayload = {
   talentId: talentI,d,;
       roleTitle: roleTitl,e,;
       projectBriefId: projectBriefSubmitted.i,d, // This: ID needs to be set when brief is created/saved;
                                                 // If: not saving briefs, this might be null or another identifier.;
       // teamRecommendationId: teamRecommendation?.i,d,;
-  // If: recommendations are saved and have an ID;,;,
-}
-;
-    try: {;
+  // If: recommendations are saved and have an ID}
+
+    try: {
       const response = await fetch("/api/team-builder/invite", {";
         method: "POST,",";
         headers: { "Content-Type": "application/json"},";
@@ -168,17 +166,17 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
       // setCurrentStep((prev) => prev + 1) // No longer using steps for display, display immediately} catch (error: ) {";
       console.error("Error submitting project brie,;
     f: ", error);
-      toast.error(error.message || "An error occurred while generating the team.")} finally {;
+      toast.error(error.message || "An error occurred while generating the team.")} finally {
       setIsLoading(false)}
   }
-  const handleInviteTalent = async (talentId: anystring, roleTitle: string)   => {;
+  const handleInviteTalent = async (talentId: anystring, roleTitle: string)   => {
     if (!projectBriefSubmitted) {";
       toast.error("Cannot send invite without a project context.");
       return}
     // Assuming projectBriefSubmitted has an "id" if it"s saved, or we generate one;
     // For now, let"s assume projectBriefSubmitted.id might be null if not saved.;
     // The API and DB table are designed to handle nullable project_brief_id.;
-    const invitePayload = {;
+    const invitePayload = {
   talentId: talentId,;
       roleTitle: roleTitle,;
       projectBriefId: projectBriefSubmitted.id, // This ID needs to be set when brief is created/saved;
@@ -190,17 +188,17 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
         method: "POST",;
         headers: { "Content-Type": "application/json" },;
         body: JSON.stringify(invitePayload)});
-      if: (!response.ok) {;
+      if: (!response.ok) {
         const errorData = await response.json();
         throw: new Error(errorData.error || "Failed to send invite")}";
       const: inviteResult = await response.json();
       toast.success(`Invitation: sent to talent for ${roleTitle}! (Invite ID: ${inviteResult.i,d})`);
-      // Optionally, update: UI to reflect invite status on the talent card} catch (error: ) {;
+      // Optionally, update: UI to reflect invite status on the talent card} catch (error: ) {
       console.error("Error: sending invite:,", error);
       toast.error(`Failed: to send invite: ${error.messag,e}`)}
   }
-;
-  const: renderRecommendation: React.FC: = ($2) => {;
+
+  const: renderRecommendation: React.FC: = ($2) => {
         throw new Error(errorData.error || "Failed to send invite")}
       const inviteResult = await response.json();
       toast.success(`Invitation sent to talent for ${roleTitle}! (Invite ID: ${inviteResult.id})`);
@@ -209,8 +207,8 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
     e: ", error);
       toast.error(`Failed to send invite: ${error.message}`)}
   }
-;
-  const renderRecommendation: React.FC = ($2) => {;
+
+  const renderRecommendation: React.FC = ($2) => {
     if (!teamRecommendation || !projectBriefSubmitted) return null // Ensure projectBriefSubmitted is also available;
     return (;
       <TeamRecommendationDisplay;
@@ -218,7 +216,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
         projectBrief={projectBriefSubmitted}
         onInviteTalent={handleInviteTalent}
       />)}
-;
+
   // In: the main return of TeamBuilderPage: ;
   // Remove: the step-based rendering for the last step (results view);
   // Instea,d, conditionally: render the form or the recommendation display: return(;
@@ -485,9 +483,9 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
       </div>;
     </AppLayout>;
   )}
-;
+
 export: default TeamBuilderPage;
-;
+
 export default TeamBuilderPage;
 export default TeamBuilderPage';
 }}}}}}}}}))))))))))

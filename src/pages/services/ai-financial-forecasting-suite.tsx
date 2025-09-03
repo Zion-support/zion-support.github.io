@@ -4,10 +4,9 @@ import Link from "next/link";
 import { ;
   TrendingUp, Brain, DollarSign, BarChart3, CheckCircle, Star, ArrowRight, ;
   PieChart, LineChart, Activity, Target, Zap, Globe, ExternalLink, Phone, ;
-  Mail, MapPin, Calculator, CreditCard, Building, Users, Clock, Shield;,
-} from "lucide-react";
+  Mail, MapPin, Calculator, CreditCard, Building, Users, Clock, Shield} from "lucide-react";
 
-export default function AIFinancialForecastingSuite() {;
+export default function AIFinancialForecastingSuite() {
   const features = [;
     "AI-Powered Revenue Forecasting",;
     "Cash Flow Prediction Models", ;
@@ -29,39 +28,33 @@ export default function AIFinancialForecastingSuite() {;
   ];
 
   const pricing = [;
-    {;
+    {
       name: "Startup",;
       price: "$2,499/month",;
-      details: ["Up to $10M revenue", "Basic forecasting", "Email support", "Standard reports", "Monthly planning"];,
-},;
-    {;
+      details: ["Up to $10M revenue", "Basic forecasting", "Email support", "Standard reports", "Monthly planning"]},;
+    {
       name: "Growth", ;
       price: "$4,999/month",;
-      details: ["Up to $50M revenue", "Advanced AI models", "Priority support", "Real-time dashboards", "Quarterly planning", "Risk analysis"];,
-},;
-    {;
+      details: ["Up to $50M revenue", "Advanced AI models", "Priority support", "Real-time dashboards", "Quarterly planning", "Risk analysis"]},;
+    {
       name: "Enterprise",;
       price: "$9,999/month", ;
-      details: ["Unlimited revenue", "Full AI suite", "24/7 support", "Custom models", "Annual planning", "Dedicated analyst", "White-label"];,
-}
+      details: ["Unlimited revenue", "Full AI suite", "24/7 support", "Custom models", "Annual planning", "Dedicated analyst", "White-label"]}
   ];
 
   const useCases = [;
-    {;
+    {
       title: "Startup Financial Planning",;
       description: "Accurate revenue forecasting and cash flow management for growing startups and scale-ups.",;
-      icon: TrendingUp;,
-},;
-    {;
+      icon: TrendingUp},;
+    {
       title: "Enterprise Budgeting",;
       description: "Comprehensive financial planning and budget optimization for large enterprises.",;
-      icon: Building;,
-},;
-    {;
+      icon: Building},;
+    {
       title: "Investment Analysis",;
       description: "Advanced risk assessment and scenario planning for investment decisions.",;
-      icon: Target;,
-}
+      icon: Target}
   ];
 
   const industries = [;
@@ -114,7 +107,7 @@ export default function AIFinancialForecastingSuite() {;
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced Financial AI</h2>;
             <p className="text-gray-600 text-lg">Powered by machine learning and financial modeling</p>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">;
             {features.map((feature, index) => (;
               <div key={index} className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">;
@@ -144,7 +137,7 @@ export default function AIFinancialForecastingSuite() {;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Measurable Financial Impact</h2>;
               <p className="text-gray-600 text-lg">Proven results from our financial planning solutions</p>;
             </div>;
-            ;
+
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
               {benefits.map((benefit, index) => (;
                 <div key={index} className="bg-white p-6 rounded-lg shadow-sm">;
@@ -164,7 +157,7 @@ export default function AIFinancialForecastingSuite() {;
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Industry-Leading Accuracy</h2>;
             <p className="text-gray-600 text-lg">Average forecast accuracy and cost savings by industry</p>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">;
             {industries.map((industry, index) => (;
               <div key={index} className="bg-white border border-gray-200 rounded-xl p-6 text-center">;
@@ -185,7 +178,7 @@ export default function AIFinancialForecastingSuite() {;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Perfect For</h2>;
               <p className="text-gray-600 text-lg">Ideal solutions for different financial planning needs</p>;
             </div>;
-            ;
+
             <div className="grid md:grid-cols-3 gap-8">;
               {useCases.map((useCase, index) => (;
                 <div key={index} className="text-center">;
@@ -207,7 +200,7 @@ export default function AIFinancialForecastingSuite() {;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Transparent Pricing</h2>;
               <p className="text-gray-600 text-lg">Choose the plan that matches your business size</p>;
             </div>;
-            ;
+
             <div className="grid md:grid-cols-3 gap-8">;
               {pricing.map((tier, index) => (;
                 <div key={index} className={`bg-white rounded-xl p-8 shadow-lg border ${tier.name === 'Growth' ? 'ring-2 ring-green-500 relative' : ''}`}>;
@@ -266,5 +259,4 @@ export default function AIFinancialForecastingSuite() {;
         </section>;
       </div>;
     </>;
-  );,
-}
+  )}

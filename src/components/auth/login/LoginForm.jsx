@@ -1,36 +1,31 @@
 import React, { useState } from 'react';
 import { useState } from 'react';
-export default function Page() {;
+export default function Page() {
 );
-;
-  const onSubmit = async data => {;
+
+  const onSubmit = async data => {
 
     if(isSubmitting) return;
-;
-    try {;
+
+    try {
       setIsSubmitting(true);
       const result = await login(data.email, data.password);
-;
-      if(result.success) {;
 
-        navigate('/');,
-} else {;
+      if(result.success) {
 
-        form.setError('root', {;
+        navigate('/')} else {
 
-          message: 'Login failed.Please check your credentials.'});,
-}
-    } catch(error) {;
+        form.setError('root', {
 
-      form.setError('root', {;
+          message: 'Login failed.Please check your credentials.'})}
+    } catch(error) {
 
-        message: 'An error occurred.Please try again.'});,
-} finally {;
+      form.setError('root', {
 
-      setIsSubmitting(false);,
-}
-  };
-;
+        message: 'An error occurred.Please try again.'})} finally {
+
+      setIsSubmitting(false)}
+  }
   return ();
     <Form {...form}>;
       <form;
@@ -42,7 +37,7 @@ export default function Page() {;
             {form.formState.errors.root.message}
           </p>;
         )}
-;
+
         <FormField;
           control={form.control}";
           name="email";
@@ -144,18 +139,13 @@ export default function Page() {;
         </div>;
       </form>;
     </Form>;
-  );,
-}
-;
-export default LoginForm;
-;
+  )}
 
-export { LoginForm };
-;
-export { LoginForm };
-;
-export { LoginForm };
-;
-export { LoginForm };
-;
-export { Page, LoginForm };
+export default LoginForm;
+
+
+export { LoginForm }
+export { LoginForm }
+export { LoginForm }
+export { LoginForm }
+export { Page, LoginForm }

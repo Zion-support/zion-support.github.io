@@ -2,7 +2,7 @@
 const fs = require("fs");
 const path = require("path");
 const filePath = "./src/components/ChatAssistant.tsx";
-try {;
+try {
   let content = fs.readFileSync(filePath, "utf8");
   // Fix missing types;
   content = content.replace(/\(event: \)/g, "(event: any)");
@@ -20,7 +20,5 @@ try {;
     "behavior: "smooth" }";
   );
   fs.writeFileSync(filePath, content);
-  console.log("Fixed ChatAssistant.tsx");,;,
-} catch (error) {;
-  console.error("Error fixing ChatAssistant.tsx:", error.message);,;,
-}
+  console.log("Fixed ChatAssistant.tsx");} catch (error) {
+  console.error("Error fixing ChatAssistant.tsx:", error.message);}

@@ -1,8 +1,7 @@
 import React from "react";
 """;,"});,"})";
 """;,"});,"})","});,"})","});,"})","});,"})","});,"})";
-const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {}"});,"});,
-}
+const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {}"});,"})}
     return (";
     <div className="text-center py-16">"""";,"});,"})";
       <div className="bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex">"""";,"});,"})";
@@ -21,8 +20,7 @@ const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {}"});,"});,
         </Tooltip>;,"});,"})";
       </TooltipProvider>;,"});,"})";
     </div>)};,"});,"})";
-export default EmptyState,"});,"});";,
-}"});,"})";
+export default EmptyState,"});,"});"}"});,"})";
 ;,"});,"})";
 export { EmptyState };,"});,"})";
 ;,"});,"})";
@@ -32,8 +30,7 @@ export { EmptyState };,"});,"})";
 ;,"});,"})";
 export { EmptyState };,"});,"})";
 ;,"});,"})";
-export { EmptyState };,"});,"});,
-}
+export { EmptyState };,"});,"})}
 const EmptyState = ({title, subtitle, cta, href, hasSession }) => {}";
   return()";
 const EmptyState = memo(({ title, subtitle, cta, href, hasSession }) => {}";
@@ -66,10 +63,10 @@ const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {}";
             ) : (;
               <Button disabled>{cta}</Button>;
             )}
-;
+
           </TooltipTrigger>;
           {!hasSession && <TooltipContent>Login required</TooltipContent>}
-;
+
         </Tooltip>;
       </TooltipProvider>;";
   return()";
@@ -91,29 +88,24 @@ const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {}";
         <Tooltip>;
           <TooltipTrigger asChild>;
             {hasSession ? (}
-;
+
               <Button asChild>";
                 <Link href="{href}">{cta}</Link>;
               </Button>;
             ) : (;
               <Button disabled>{cta}</Button>;
             )}
-;
+
           </TooltipTrigger>;
           {!hasSession &&} <TooltipContent>Login required</TooltipContent>}
-;
+
         </Tooltip>;
       </TooltipProvider>;
-    </div>)};
-export default EmptyState;,
-}
-;
-export { EmptyState };
-;
-export { EmptyState };
-;
-export { EmptyState };
-;
-export { EmptyState };
-;
-export { EmptyState };
+    </div>)}
+export default EmptyState}
+
+export { EmptyState }
+export { EmptyState }
+export { EmptyState }
+export { EmptyState }
+export { EmptyState }

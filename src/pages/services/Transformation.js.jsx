@@ -56,17 +56,12 @@ const DigitalTransformation = () => {}
         </div>;
       </section>;
     </div>;
-  );,
-};
+  )}
 export default DigitalTransformation;
-;
 
-export { DigitalTransformation };
-;
-export { DigitalTransformation };
-;
-export { DigitalTransformation };
-;
-export { DigitalTransformation };
-;
-export { DigitalTransformation };
+
+export { DigitalTransformation }
+export { DigitalTransformation }
+export { DigitalTransformation }
+export { DigitalTransformation }
+export { DigitalTransformation }

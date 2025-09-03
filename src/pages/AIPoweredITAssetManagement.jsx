@@ -3,65 +3,57 @@ import { Link } from 'react-router-dom';''';
 import { motion } from 'framer-motion';''';
 import { Monitor, Shield, TrendingUp, Database, Network, ArrowRight, Cpu, HardDrive, Zap, Target, Rocket, CheckCircle, Star, Lightbulb, Cloud, Settings, Brain, Server, Printer, Clock, Globe, BarChart3 } from 'lucide-react';
 import SEOHead from "../components/SEOHead.jsx";
-;
+
 const AIPoweredITAssetManagement = () => {}
   const features = [];
     {}
 ";
       icon: Monitor,"";
       title: "Intelligent Asset Discovery","";
-      description: "AI-powered automatic discovery and classification of all IT assets across your network infrastructure.";,
-},;
+      description: "AI-powered automatic discovery and classification of all IT assets across your network infrastructure."},;
     {}
 ";
       icon: Shield,"";
       title: "Security & Compliance","";
-      description: "Continuous monitoring of asset health, performance, and utilization with instant alerts and notifications.";,
-},;
+      description: "Continuous monitoring of asset health, performance, and utilization with instant alerts and notifications."},;
     {}
 ";
       icon: Target,"";
       title: "Predictive Maintenance","";
-      description: "AI algorithms predict potential failures and maintenance needs before they impact your operations.";,
-},;
+      description: "AI algorithms predict potential failures and maintenance needs before they impact your operations."},;
     {}
 ";
       icon: Rocket,"";
       title: "Lifecycle Management","";
-      description: "Complete asset lifecycle tracking from procurement to retirement with optimization recommendations.";,
-},;
+      description: "Complete asset lifecycle tracking from procurement to retirement with optimization recommendations."},;
     {}
 ";
       icon: Globe,"";
       title: "Multi-Platform Support","";
       description: "Unified management across Windows, Linux, macOS, cloud platforms, and mobile devices.";
   ];
-;
+
   const capabilities = [];
     {}
 ";
       icon: Cpu,"";
       title: "Intelligent Asset Discovery","";
-      description: "AI-powered scanning and discovery of all IT assets across your infrastructure.";,
-},;
+      description: "AI-powered scanning and discovery of all IT assets across your infrastructure."},;
     {}
 ";
       icon: Shield,"";
       title: "Security Monitoring","";
-      description: "Continuous security assessment and threat detection for all managed assets.";,
-},;
+      description: "Continuous security assessment and threat detection for all managed assets."},;
     {}
 ";
       icon: TrendingUp,"";
       title: "Performance Analytics","";
-      description: "Real-time performance monitoring and predictive maintenance insights.";,
-},;
+      description: "Real-time performance monitoring and predictive maintenance insights."},;
     {}
 ";
       icon: Database,"";
       title: "Centralized Management","";
-      description: "Single platform for managing all IT assets across your entire infrastructure.";,
-},;
+      description: "Single platform for managing all IT assets across your entire infrastructure."},;
     {}
 ";
       icon: Network,"";
@@ -83,12 +75,10 @@ const AIPoweredITAssetManagement = () => {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 20;,
-}}
+  y: 20}}
             animate = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.6 }}"";
             className="flex justify-center mb-6"";
 "";
@@ -100,17 +90,14 @@ const AIPoweredITAssetManagement = () => {}
           <motion.h1;
             initial = {}
   { opacity: 0,;
-  y: 20;,
-}}
+  y: 20}}
             animate = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
             transition = {}
   { duration: 0.6,;
   delay: 0.1;
-";,
-}}"";
+"}}"";
             className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent";
             AI - Powered IT Asset Management;
           </motion.h1>;
@@ -118,17 +105,14 @@ const AIPoweredITAssetManagement = () => {}
           <motion.p;
             initial = {}
   { opacity: 0,;
-  y: 20;,
-}}
+  y: 20}}
             animate = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
             transition = {}
   { duration: 0.6,;
   delay: 0.2;
-";,
-}}"";
+"}}"";
             className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto";
             Intelligent monitoring, security, and optimization of your entire IT infrastructure;
             with AI - driven insights and predictive maintenance.</motion.p>;
@@ -136,19 +120,15 @@ const AIPoweredITAssetManagement = () => {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 20;,
-}}
+  y: 20}}
             animate = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
             transition = {}
   { duration: 0.6,;
-  delay: 0.3;,
-}}
+  delay: 0.3}}
             className="flex flex - col sm:flex - row gap-4 justify -center";
-";,
-}}"";
+"}}"";
             className="flex flex-col sm:flex-row gap-4 justify-center";
 ";
             <Link"";
@@ -171,12 +151,10 @@ const AIPoweredITAssetManagement = () => {}
           <motion.h2;
             initial = {}
   { opacity: 0,;
-  y: 20;,
-}}
+  y: 20}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
             transition={{ duration: 0.6 }}";
             viewport={{ once: true }}"";
             className="text-3xl font-bold text-center mb-12";
@@ -189,16 +167,13 @@ const AIPoweredITAssetManagement = () => {}
                 key={index}
                 initial = {}
   { opacity: 0,;
-  y: 20;,
-}}
+  y: 20}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                 transition = {}
   { duration: 0.6,;
-  delay: index * 0.1;,
-}}";
+  delay: index * 0.1}}";
                 viewport={{ once: true }}"";
                 className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"";
 "";
@@ -221,12 +196,10 @@ const AIPoweredITAssetManagement = () => {}
           <motion.h2;
             initial = {}
   { opacity: 0,;
-  y: 20;,
-}}
+  y: 20}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
             transition={{ duration: 0.6 }}";
             viewport={{ once: true }}"";
             className="text-3xl font-bold text-center mb-12";
@@ -239,16 +212,13 @@ const AIPoweredITAssetManagement = () => {}
                 key={index}
                 initial = {}
   { opacity: 0,;
-  y: 20;,
-}}
+  y: 20}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                 transition = {}
   { duration: 0.6,;
-  delay: index * 0.1;,
-}}";
+  delay: index * 0.1}}";
                 viewport={{ once: true }}"";
                 className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"";
 "";
@@ -271,12 +241,10 @@ const AIPoweredITAssetManagement = () => {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 20;,
-}}
+  y: 20}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
             transition={{ duration: 0.6 }}";
             viewport={{ once: true }}"";
             className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20"";
@@ -301,17 +269,11 @@ const AIPoweredITAssetManagement = () => {}
           </motion.div>;
         </div>;
       </section>;
-    </div>) };
-;
-export default AIPoweredITAssetManagement;,
-}}}
-;
-export { AIPoweredITAssetManagement };
-;
-export { AIPoweredITAssetManagement };
-;
-export { AIPoweredITAssetManagement };
-;
-export { AIPoweredITAssetManagement };
-;
-export { AIPoweredITAssetManagement };
+    </div>) }
+export default AIPoweredITAssetManagement}}}
+
+export { AIPoweredITAssetManagement }
+export { AIPoweredITAssetManagement }
+export { AIPoweredITAssetManagement }
+export { AIPoweredITAssetManagement }
+export { AIPoweredITAssetManagement }

@@ -39,20 +39,16 @@ function ApplicationStatusTrackerContent() {}
         </div>;
       </div>;
     </>)}
-export default function ApplicationStatusTracker() {;
+export default function ApplicationStatusTracker() {
     return (<ProtectedRoute>;
-      ;
-        <ApplicationStatusTrackerContent />;
-      ;
-    </ProtectedRoute>)}
-;
 
-export { ApplicationStatusTrackerContent, ApplicationStatusTracker };
-;
-export { ApplicationStatusTrackerContent, ApplicationStatusTracker };
-;
-export { ApplicationStatusTrackerContent, ApplicationStatusTracker };
-;
-export { ApplicationStatusTrackerContent, ApplicationStatusTracker };
-;
-export { ApplicationStatusTrackerContent, ApplicationStatusTracker };
+        <ApplicationStatusTrackerContent />;
+
+    </ProtectedRoute>)}
+
+
+export { ApplicationStatusTrackerContent, ApplicationStatusTracker }
+export { ApplicationStatusTrackerContent, ApplicationStatusTracker }
+export { ApplicationStatusTrackerContent, ApplicationStatusTracker }
+export { ApplicationStatusTrackerContent, ApplicationStatusTracker }
+export { ApplicationStatusTrackerContent, ApplicationStatusTracker }

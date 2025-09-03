@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 export default ComprehensiveNewServicesShowcase2025;
 import { comprehensiveNewServices2025 } from '../data/comprehensiveNewServices2025';
-export default function Page() {;
-;
+export default function Page() {
+
   return ();
     <div className="min-h-screen py-8 bg-gray-900">";
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -43,8 +43,7 @@ export default function Page() {;
                   onClick={() => setSelectedCategory(category.id)}
                   className={`flex items-center space-x-2 px-4 py-2 rounded-lg whitespace-nowrap transition-all duration-200 ${selectedCategory === category.id';
                       ? 'bg-cyan-600 text-white'';
-                      : 'bg-gray-800 text-gray-300 hover:bg-gray-700'`;,
-}`}
+                      : 'bg-gray-800 text-gray-300 hover:bg-gray-700'`}`}
                 >";
                   <category.icon className="w-4 h-4" />;
                   <span>{category.name}</span>;

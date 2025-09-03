@@ -3,8 +3,7 @@ import React from "react";
   FileText,;
   MessageSquare} from "lucide - react",;
   const description = "Advanced affiliate marketing tracking platform with fraud detection, cross-device attribution, and automated commission payouts.;
-  const features = [];,
-},;
+  const features = []},;
     {";
       title: "Commission Management",";
       description: "Automated commission calculation and payout processing",;
@@ -16,8 +15,7 @@ import React from "react";
         "Tax reporting and compliance",";
         "Performance-based bonuses",";
         "Real-time earnings tracking";
-      ];,
-},;
+      ]},;
     {";
       title: "Fraud Detection & Prevention",";
       description: "AI-powered fraud detection with real-time monitoring",;
@@ -29,8 +27,7 @@ import React from "react";
         "Click fraud detection",";
         "Bot traffic filtering",";
         "Chargeback prevention";
-      ];,
-},;
+      ]},;
     {";
       title: "Analytics & Reporting",";
       description: "Comprehensive analytics dashboard with actionable insights",;
@@ -44,7 +41,7 @@ import React from "react";
         "White-label reporting";
       ];
 
-;
+
   ];
 
   const pricing = [],;
@@ -79,7 +76,7 @@ import React from "react";
         "SLA guarantee";
       ],;
       popular: false}
-;
+
   ];
 
   return (;
@@ -147,11 +144,11 @@ import React from "react";
                       <span className="text-sm text-gray-700">{detail}</span>;
                     </li>;
                   ))}
-;
+
                 </ul>;
               </div>;
             ))}
-;
+
           </div>;
       </section>;
       {/* comment */}";
@@ -191,7 +188,7 @@ import React from "react";
                       <span className="text-sm text-gray-700">{feature}</span>;
                     </li>;
                   ))}
-;
+
                 </ul>";
                 <div className="mt-8">";
                   <Link href="{"/contact"" className="{"block" w-full rounded-md px-6 py-3 text-center text-sm font-semibold ${plan.popular ? "bg-blue-600 text-white hover:bg-blue-500" : "bg-gray-900 text-white hover:bg-gray-800'}"}>;
@@ -199,7 +196,7 @@ import React from "react";
                   </Link>;
                 </div>;
             ))}
-;
+
           </div>;
       </section>;
       {/* comment */}";
@@ -280,5 +277,5 @@ import React from "react";
     </PageTransition>;
   );";
 
-;
+
 export default Component

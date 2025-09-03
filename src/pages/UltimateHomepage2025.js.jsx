@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';''';
 import { SEO } from '@/components/SEO';''';
 import { Link } from 'react-router-dom';
 import { Brain, Zap, Shield, Users, TrendingUp, Globe, Rocket, CheckCircle, ArrowRight, Phone, Mail, MapPin, ChevronRight, Clock, BarChart3, Cpu, ShieldCheck, Building2 } from 'lucide-react';
-;
-export default function UltimateHomepage2025() {;
+
+export default function UltimateHomepage2025() {
     const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
     const [isVisible, setIsVisible] = useState(false);
-    useEffect(() => {;
+    useEffect(() => {
         setIsVisible(true);
-        const interval = setInterval(() => {;
+        const interval = setInterval(() => {
             setCurrentServiceIndex((prev) => (prev + 1) % ultimateInnovativeServices2025.length)}, 5000);
         return () => clearInterval(interval)}, []);
     const featuredServices = ultimateInnovativeServices2025.filter(service => service.popular).slice(0, 6);
@@ -20,30 +20,26 @@ export default function UltimateHomepage2025() {;
         { number: '24/7', label: 'Expert Support', icon: Clock }
     ];
     const benefits = [;
-        {;
+        {
             icon: Brain,;
             title: 'AI-Powered Intelligence',;
             description: 'Advanced artificial intelligence that learns, adapts, and optimizes your business processes automatically.',;
-            color: 'from-blue-500 to-cyan-500';,
-},;
-        {;
+            color: 'from-blue-500 to-cyan-500'},;
+        {
             icon: Shield,;
             title: 'Quantum-Secure Protection',;
             description: 'Unbreakable security with quantum-resistant encryption and AI-powered threat detection.',;
-            color: 'from-green-500 to-emerald-500';,
-},;
-        {;
+            color: 'from-green-500 to-emerald-500'},;
+        {
             icon: Zap,;
             title: 'Autonomous Operations',;
             description: 'Self-managing systems that run your business operations with minimal human intervention.',;
-            color: 'from-purple-500 to-indigo-500';,
-},;
-        {;
+            color: 'from-purple-500 to-indigo-500'},;
+        {
             icon: BarChart3,;
             title: 'Predictive Analytics',;
             description: 'Forecast trends, identify opportunities, and make data-driven decisions with confidence.',;
-            color: 'from-orange-500 to-red-500';,
-}
+            color: 'from-orange-500 to-red-500'}
     ];
     const industries = [;
         { name: 'Financial Services', icon: TrendingUp, color: 'from-emerald-500 to-teal-500' },;
@@ -55,7 +51,7 @@ export default function UltimateHomepage2025() {;
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
       <SEO title="Zion Tech Group - Revolutionary AI & Quantum Solutions 2025" description="Transform your business with our revolutionary AI-powered, quantum-secure, and autonomous business solutions. Leading the future of technology." keywords="AI services, quantum computing, autonomous systems, cybersecurity, business automation, Zion Tech Group, innovative solutions"/>;
-      ;
+
       {/* Hero Section */}
       <div className="relative overflow-hidden">;
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>;
@@ -125,8 +121,7 @@ export default function UltimateHomepage2025() {;
                       <span className="text-4xl">;
                         {}
                           ultimateInnovativeServices2025[currentServiceIndex];
-                            .icon;,
-}
+                            .icon}
                       </span>";
                     </div>"";
                     <h4 className="text-xl font-bold text-white mb-2">;
@@ -135,19 +130,16 @@ export default function UltimateHomepage2025() {;
                     <p className="text-gray-300 mb-4">;
                       {}
                         ultimateInnovativeServices2025[currentServiceIndex];
-                          .tagline;,
-}";
+                          .tagline}";
                     </p>"";
                     <div className="text-3xl font-bold text-blue-400 mb-4">;
                       {}
                         ultimateInnovativeServices2025[currentServiceIndex];
-                          .price";,
-}"";
+                          .price"}"";
                       <span className="text-lg text-gray-400">;
                         {}
                           ultimateInnovativeServices2025[currentServiceIndex];
-                            .period;,
-}
+                            .period}
                       </span>;
                     </div>`;
                     <Link`"`;
@@ -429,14 +421,10 @@ export default function UltimateHomepage2025() {;
         </div>;
       </div>;
     </div>)}
-;
 
-export { UltimateHomepage2025 };
-;
-export { UltimateHomepage2025 };
-;
-export { UltimateHomepage2025 };
-;
-export { UltimateHomepage2025 };
-;
-export { UltimateHomepage2025 };
+
+export { UltimateHomepage2025 }
+export { UltimateHomepage2025 }
+export { UltimateHomepage2025 }
+export { UltimateHomepage2025 }
+export { UltimateHomepage2025 }

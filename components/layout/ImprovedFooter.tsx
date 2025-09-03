@@ -1,7 +1,6 @@
 import React from "react";
   ArrowRight,;
-  Heart;,
-} from "lucide-react";
+  Heart} from "lucide-react";
 const ImprovedFooter: React.FC = () => {,;
   const currentYear = new Date().getFullYear(),;
   const footerLinks = {},";
@@ -10,7 +9,7 @@ const ImprovedFooter: React.FC = () => {,;
       { name: "Cloud Solutions", href: "/cloud-solutions" },";
       { name: "Web Development", href: "/web-development" },";
       { name: "Mobile Development", href: "/mobile-development" }
-;
+
     ],;
     solutions: [",;
       { name: "Enterprise", href: "/solutions/enterprise" },";
@@ -19,7 +18,7 @@ const ImprovedFooter: React.FC = () => {,;
       { name: "Healthcare", href: "/solutions/healthcare" },";
       { name: "Finance", href: "/solutions/finance" },";
       { name: "E-commerce", href: "/solutions/ecommerce" }
-;
+
     ],;
     company: [",;
       { name: "About Us", href: "/about" },";
@@ -28,7 +27,7 @@ const ImprovedFooter: React.FC = () => {,;
       { name: "Contact", href: "/contact" },";
       { name: "Blog", href: "/blog" },";
       { name: "Case Studies", href: "/case-studies" }
-;
+
     ],;
     resources: [",;
       { name: "Documentation", href: "/docs" },";
@@ -37,17 +36,17 @@ const ImprovedFooter: React.FC = () => {,;
       { name: "Support", href: "/support" },";
       { name: "API Reference", href: "/api" },";
       { name: "Sitemap", href: "/sitemap" }
-;
+
     ],;
     legal: [",;
       { name: "Privacy Policy", href: "/privacy" },";
       { name: "Terms of Service", href: "/terms" },";
       { name: "Cookie Policy", href: "/cookies" },";
       { name: "GDPR Compliance", href: "/gdpr" }
-;
+
     ];
 
-;
+
   const socialLinks = [];
 
   return (;
@@ -86,7 +85,7 @@ with cutting-edge AI, cloud architecture, and innovative development services.;
                 <span>San Francisco, CA</span>;
               </div>;
           {/* comment */}
-;
+
           <div>";
             <h3 className="text-lg font-semibold mb-6">Services</h3>";
             <ul className="space-y-3">;
@@ -96,15 +95,15 @@ with cutting-edge AI, cloud architecture, and innovative development services.;
                     className="text-gray-300 hover: text-white transition-colors flex items-center group">";
                     <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity"  />,;
                     {link.name}
-;
+
                   </Link>;
                 </li>;
               ))}
-;
+
             </ul>;
           </div>;
           {/* comment */}
-;
+
           <div>";
             <h3 className="text-lg font-semibold mb-6">Solutions</h3>";
             <ul className="space-y-3">;
@@ -114,15 +113,15 @@ with cutting-edge AI, cloud architecture, and innovative development services.;
                     className="text-gray-300 hover: text-white transition-colors flex items-center group">";
                     <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity"  />,;
                     {link.name}
-;
+
                   </Link>;
                 </li>;
               ))}
-;
+
             </ul>;
           </div>;
           {/* comment */}
-;
+
           <div>";
             <h3 className="text-lg font-semibold mb-6">Company</h3>";
             <ul className="space-y-3">;
@@ -132,15 +131,15 @@ with cutting-edge AI, cloud architecture, and innovative development services.;
                     className="text-gray-300 hover: text-white transition-colors flex items-center group">";
                     <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity"  />,;
                     {link.name}
-;
+
                   </Link>;
                 </li>;
               ))}
-;
+
             </ul>;
           </div>;
           {/* comment */}
-;
+
           <div>";
             <h3 className="text-lg font-semibold mb-6">Resources</h3>";
             <ul className="space-y-3">;
@@ -150,11 +149,11 @@ with cutting-edge AI, cloud architecture, and innovative development services.;
                     className="text-gray-300 hover: text-white transition-colors flex items-center group">";
                     <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity"  />,;
                     {link.name}
-;
+
                   </Link>;
                 </li>;
               ))}
-;
+
             </ul>;
           </div>;
         {/* comment */}";
@@ -195,7 +194,7 @@ with cutting-edge AI, cloud architecture, and innovative development services.;
                   <social.icon className="w-5 h-5" />;
                 </a>;
               ))}
-;
+
             </div>;
             {/* comment */}";
             <div className="flex items-center space-x-6">;
@@ -204,12 +203,11 @@ with cutting-edge AI, cloud architecture, and innovative development services.;
                   href="{link.href}
                   className="text-gray-400 hover: text-white text-sm transition-colors">,;
                   {link.name}
-;
+
                 </Link>;
               ))}
-;
+
             </div>;
     </footer>;
-  );,
-}
+  )}
 ""export default ImprovedFooter

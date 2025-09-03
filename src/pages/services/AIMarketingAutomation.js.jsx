@@ -8,29 +8,25 @@ const AIMarketingAutomation = () => {}
             icon: Brain,;
             title: "AI-Powered Campaign Optimization","";
             description: "Machine learning algorithms that automatically optimize marketing campaigns for maximum performance and ROI","";
-            benefits["Real-time optimization", "A/B testing automation", "Performance prediction", "Budget allocation"];,
-},;
+            benefits["Real-time optimization", "A/B testing automation", "Performance prediction", "Budget allocation"]},;
         {}
 ";
             icon: Users,"";
             title: "Intelligent Customer Segmentation","";
             description: "Advanced AI algorithms that automatically segment customers based on behavior, preferences, and engagement patterns","";
-            benefits["Dynamic segmentation", "Behavioral analysis", "Predictive modeling", "Personalization"];,
-},;
+            benefits["Dynamic segmentation", "Behavioral analysis", "Predictive modeling", "Personalization"]},;
         {}
 ";
             icon: BarChart3,"";
             title: "Predictive Analytics","";
             description: "Forecast customer behavior, campaign performance, and market trends using historical data and AI models","";
-            benefits["Customer lifetime value", "Churn prediction", "Demand forecasting", "Market trends"];,
-},;
+            benefits["Customer lifetime value", "Churn prediction", "Demand forecasting", "Market trends"]},;
         {}
 ";
             icon: Zap,"";
             title: "Automated Workflows","";
             description: "Intelligent automation of marketing processes, from lead generation to customer retention","";
-            benefits["Lead nurturing", "Email automation", "Social media management", "Content scheduling"];,
-}
+            benefits["Lead nurturing", "Email automation", "Social media management", "Content scheduling"]}
     ];
     const solutions = [];
         {}
@@ -44,8 +40,7 @@ const AIMarketingAutomation = () => {}
                 "Subject line optimization","";
                 "Content recommendations","";
                 "Automated drip campaigns";
-            ];,
-},;
+            ]},;
         {}
 ";
 "";
@@ -57,8 +52,7 @@ const AIMarketingAutomation = () => {}
                 "Audience engagement analysis","";
                 "Trend identification","";
                 "Automated content scheduling";
-            ];,
-},;
+            ]},;
         {}
 ";
 "";
@@ -70,8 +64,7 @@ const AIMarketingAutomation = () => {}
                 "Ad creative optimization","";
                 "Performance forecasting","";
                 "Cross-channel attribution";
-            ];,
-},;
+            ]},;
         {}
 ";
 "";
@@ -83,8 +76,7 @@ const AIMarketingAutomation = () => {}
                 "SEO optimization","";
                 "Content scheduling","";
                 "ROI measurement";
-            ];,
-}
+            ]}
     ];
     const technologies = [];
         {}
@@ -92,43 +84,37 @@ const AIMarketingAutomation = () => {}
 "";
             name: "Machine Learning","";
             description: "Advanced ML algorithms for pattern recognition and prediction",;
-            icon: Brain;,
-},;
+            icon: Brain},;
         {}
 ";
 "";
             name: "Natural Language Processing","";
             description: "AI-powered content analysis and generation",;
-            icon: MessageSquare;,
-},;
+            icon: MessageSquare},;
         {}
 ";
 "";
             name: "Predictive Analytics","";
             description: "Data-driven forecasting and optimization",;
-            icon: BarChart3;,
-},;
+            icon: BarChart3},;
         {}
 ";
 "";
             name: "Marketing Automation","";
             description: "Intelligent workflow automation",;
-            icon: Zap;,
-},;
+            icon: Zap},;
         {}
 ";
 "";
             name: "Real-time Analytics","";
             description: "Instant performance monitoring and optimization",;
-            icon: Clock;,
-},;
+            icon: Clock},;
         {}
 ";
 "";
             name: "Multi-channel Integration","";
             description: "Seamless integration across all marketing channels",;
-            icon: Globe;,
-}
+            icon: Globe}
     ];
     const benefits = [];
         {}
@@ -136,51 +122,43 @@ const AIMarketingAutomation = () => {}
 "";
             title: "Increased ROI","";
             description: "AI optimization typically delivers 20-40% improvement in marketing ROI",;
-            icon: TrendingUp;,
-},;
+            icon: TrendingUp},;
         {}
 ";
 "";
             title: "Time Savings","";
             description: "Automate repetitive tasks and save 15-20 hours per week",;
-            icon: Clock;,
-},;
+            icon: Clock},;
         {}
 ";
 "";
             title: "Better Targeting","";
             description: "Improve conversion rates by 25-35% with AI-powered segmentation",;
-            icon: Target;,
-},;
+            icon: Target},;
         {}
 ";
 "";
             title: "Scalable Growth","";
             description: "Scale marketing efforts without proportional increase in resources",;
-            icon: Users;,
-}
+            icon: Users}
     ];
     const containerVariants = {}
         hidden: { opacity: 0 },;
         visible: {}
             opacity: 1,;
             transition: {}
-                staggerChildren: 0.1;,
-}
+                staggerChildren: 0.1}
         }
-    };
+    }
     const itemVariants = {}
   hidden: { y: 20,;
-  opacity: 0;,
-},;
+  opacity: 0},;
         visible: {}
             y: 0,;
             opacity: 1,;
             transition: {}
-                duration: 0.5;,
-}
-        }";,
-};"";
+                duration: 0.5}
+        }"};"";
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
       {/* Hero Section */}"";
       <div className="relative overflow-hidden">"";
@@ -189,12 +167,10 @@ const AIMarketingAutomation = () => {}
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">;
           <motion.div initial = {}
   { opacity: 0,;
-  y: 20;,
-}} animate = {}
+  y: 20}} animate = {}
   { opacity: 1,;
   y: 0 ";
-"";,
-}} transition={{ duration: 0.8 }} className="text-center">"";
+""}} transition={{ duration: 0.8 }} className="text-center">"";
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full mb-6">"";
               <Target className="w-10 h-10 text-white"/>";
             </div>"";
@@ -259,12 +235,10 @@ const AIMarketingAutomation = () => {}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">;
           <motion.div initial = {}
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
+  y: 20}} whileInView = {}
   { opacity: 1,;
   y: 0 ";
-"";,
-}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">"";
+""}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">"";
             <h2 className="text-4xl font-bold text-white mb-6">Solutions by Marketing Channel</h2>"";
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
               Comprehensive AI automation solutions across all major marketing channels;
@@ -275,15 +249,12 @@ const AIMarketingAutomation = () => {}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
             {solutions.map((category, index) => (<motion.div key={category.category} initial = {}
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
+  y: 20}} whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}} viewport={{ once: true }} transition = {}
+  y: 0}} viewport={{ once: true }} transition = {}
   { duration: 0.5,;
   delay: index * 0.1 ";
-"";,
-}} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6">"";
+""}} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6">"";
                 <div className="flex items-center mb-6">"";
                   <div className="w-12 h-12 bg-gradient-to-r from-green-600 to-emerald-600 rounded-lg flex items-center justify-center mr-4">"";
                     <category.icon className="w-6 h-6 text-white"/>";
@@ -306,12 +277,10 @@ const AIMarketingAutomation = () => {}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">;
         <motion.div initial = {}
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
+  y: 20}} whileInView = {}
   { opacity: 1,;
   y: 0 ";
-"";,
-}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">"";
+""}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">"";
           <h2 className="text-4xl font-bold text-white mb-6">Business Benefits</h2>"";
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
             AI Marketing Automation delivers measurable results that directly impact your bottom line;
@@ -322,15 +291,12 @@ const AIMarketingAutomation = () => {}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
           {benefits.map((benefit, index) => (<motion.div key={benefit.title} initial = {}
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
+  y: 20}} whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}} viewport={{ once: true }} transition = {}
+  y: 0}} viewport={{ once: true }} transition = {}
   { duration: 0.5,;
   delay: index * 0.1 ";
-"";,
-}} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 text-center hover:border-green-500/50 transition-all duration-300">"";
+""}} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 text-center hover:border-green-500/50 transition-all duration-300">"";
               <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">"";
                 <benefit.icon className="w-8 h-8 text-white"/>";
               </div>"";
@@ -345,12 +311,10 @@ const AIMarketingAutomation = () => {}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">;
           <motion.div initial = {}
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
+  y: 20}} whileInView = {}
   { opacity: 1,;
   y: 0 ";
-"";,
-}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">"";
+""}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">"";
             <h2 className="text-4xl font-bold text-white mb-6">Technology Stack</h2>"";
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
               Built on cutting-edge AI and marketing technologies to ensure scalability, ;
@@ -361,15 +325,12 @@ const AIMarketingAutomation = () => {}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {technologies.map((tech, index) => (<motion.div key={tech.name} initial = {}
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
+  y: 20}} whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}} viewport={{ once: true }} transition = {}
+  y: 0}} viewport={{ once: true }} transition = {}
   { duration: 0.5,;
   delay: index * 0.1 ";
-"";,
-}} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 text-center hover:border-green-500/50 transition-all duration-300">"";
+""}} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 text-center hover:border-green-500/50 transition-all duration-300">"";
                 <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">"";
                   <tech.icon className="w-8 h-8 text-white"/>";
                 </div>"";
@@ -384,12 +345,10 @@ const AIMarketingAutomation = () => {}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">;
         <motion.div initial = {}
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
+  y: 20}} whileInView = {}
   { opacity: 1,;
   y: 0 ";
-"";,
-}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center">"";
+""}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center">"";
           <h2 className="text-4xl font-bold text-white mb-6">;
             Ready to Automate Your Marketing?";
           </h2>"";
@@ -407,16 +366,12 @@ const AIMarketingAutomation = () => {}
           </div>;
         </motion.div>;
       </div>;
-    </div>)};
+    </div>)}
 export default AIMarketingAutomation;
-;
 
-export { AIMarketingAutomation };
-;
-export { AIMarketingAutomation };
-;
-export { AIMarketingAutomation };
-;
-export { AIMarketingAutomation };
-;
-export { AIMarketingAutomation };
+
+export { AIMarketingAutomation }
+export { AIMarketingAutomation }
+export { AIMarketingAutomation }
+export { AIMarketingAutomation }
+export { AIMarketingAutomation }

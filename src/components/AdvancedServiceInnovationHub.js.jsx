@@ -24,8 +24,7 @@ const AdvancedServiceInnovationHub = () => {}"});,"})";
             investment: "$50B+",""";,"});,"})";
             keyPlayers["IBM",Google",Microsoft",Startups"],""";,"});,"})";
             technologies["Quantum Computing",Quantum Algorithms",Quantum Software"],""";,"});,"})";
-            status: "Emerging","});,"});";,
-},,"});,"})";
+            status: "Emerging","});,"});"},"});,"})";
         {}"});,"})";
 ";,"});,"})";
 "";,"});,"})";
@@ -40,8 +39,7 @@ const AdvancedServiceInnovationHub = () => {}"});,"})";
             investment: "$100B+",""";,"});,"})";
             keyPlayers["OpenAI",Anthropic",Research Labs",Universities"],""";,"});,"})";
             technologies["AI Consciousness",General AI",Neural Networks"],""";,"});,"})";
-            status: "Emerging","});,"});";,
-},,"});,"})";
+            status: "Emerging","});,"});"},"});,"})";
         {}"});,"})";
 ";,"});,"})";
 "";,"});,"})";
@@ -56,8 +54,7 @@ const AdvancedServiceInnovationHub = () => {}"});,"})";
             investment: "$200B+",""";,"});,"})";
             keyPlayers["SpaceX",Blue Origin",Asteroid Mining Companies"],""";,"});,"})";
             technologies["Space Robotics",Resource Processing",Space Logistics"],""";,"});,"})";
-            status: "Emerging","});,"});";,
-},,"});,"})";
+            status: "Emerging","});,"});"},"});,"})";
         {}"});,"})";
 ";,"});,"})";
 "";,"});,"})";
@@ -72,8 +69,7 @@ const AdvancedServiceInnovationHub = () => {}"});,"})";
             investment: "$500B+",""";,"});,"})";
             keyPlayers["ITER",Private Fusion Companies",Government Labs"],""";,"});,"})";
             technologies["Fusion Physics",Plasma Confinement",Energy Conversion"],""";,"});,"})";
-            status: "Growing","});,"});";,
-},,"});,"})";
+            status: "Growing","});,"});"},"});,"})";
         {}"});,"})";
 ";,"});,"})";
 "";,"});,"})";
@@ -87,9 +83,8 @@ const AdvancedServiceInnovationHub = () => {}"});,"})";
             adoption: 70,""";,"});,"})";
             investment: "$150B+",""";,"});,"})";
             keyPlayers["Ginkgo Bioworks",Twist Bioscience",Research Institutions"],""";,"});,"})";
-            technologies["DNA Programming",Genetic Engineering",Bio - Manufacturing"],,"";,"});,"})";
-            status: "Growing","});,"});";,
-},,"});,"})";
+            technologies["DNA Programming",Genetic Engineering",Bio - Manufacturing"],"";,"});,"})";
+            status: "Growing","});,"});"},"});,"})";
         {}"});,"})";
 ";,"});,"})";
 "";,"});,"})";
@@ -103,9 +98,8 @@ const AdvancedServiceInnovationHub = () => {}"});,"})";
             adoption: 40,""";,"});,"})";
             investment: "$80B+",""";,"});,"})";
             keyPlayers["Neuralink",Kernel",Medical Device Companies"],""";,"});,"})";
-            technologies["Neural Interfaces",Signal Processing",AI / ML"],,"";,"});,"})";
-            status: "Emerging","});,"});";,
-}"});,"})";
+            technologies["Neural Interfaces",Signal Processing",AI / ML"],"";,"});,"})";
+            status: "Emerging","});,"});"}"});,"})";
     ],"});,"})";
     const filteredTrends = useMemo(() => {}"});,"})";
         return innovationTrends.filter(trend => {}"});,"})";
@@ -120,8 +114,7 @@ const AdvancedServiceInnovationHub = () => {}"});,"})";
             case "High": return "bg - red-100 text-red-800",";,"});,"})";
             case "Medium": return "bg - yellow-100 text-yellow-800",";,"});,"})";
             case "Low": return "bg - green-100 text-green-800",";,"});,"})";
-            default: return "bg-gray-100 text-gray-800"}"});,"});";,
-};,"});,"})";
+            default: return "bg-gray-100 text-gray-800"}"});,"});"};,"});,"})";
     const getStatusColor = (status) => {}"});,"})";
         switch (status) {}"});,"})";
 ";,"});,"})";
@@ -131,8 +124,7 @@ const AdvancedServiceInnovationHub = () => {}"});,"})";
             case "Growing": return "bg - green-100 text-green-800",";,"});,"})";
             case "Mature": return "bg - orange-100 text-orange-800",";,"});,"})";
             case "Disruptive": return "bg - purple-100 text-purple-800",";,"});,"})";
-            default: return "bg-gray-100 text-gray-800"}"});,"});";,
-};,"});,"})";
+            default: return "bg-gray-100 text-gray-800"}"});,"});"};,"});,"})";
     const getCategoryIcon = (category) => {}"});,"})";
         switch(category) {}"});,"})";
 """;,"});,"})";
@@ -142,21 +134,17 @@ const AdvancedServiceInnovationHub = () => {}"});,"})";
             case "space-tech": return <Satellite className="w-5 h-5"  />;"""";,"});,"})";
             case "green-tech": return <Leaf className="w-5 h-5"  />;"""";,"});,"})";
             case "biotech-ai": return <Dna className="w-5 h-5"  />;"""";,"});,"})";
-            default: return <Cpu className="w-5 h-5"  />}"});,"});";,
-};""";,"});,"})";
-    const categories = []"""";,"});,"});,
-}
+            default: return <Cpu className="w-5 h-5"  />}"});,"});"};""";,"});,"})";
+    const categories = []"""";,"});,"})}
     return (";
     <div className="max-w-7xl mx-auto p-6">;,"});,"})";
       {/* comment */}"});,"})";
       <motion.div initial = {}"});,"})";
   { opacity: 0,"});,"})";
-  y: 20,"});,"});";,
-}} animate = {}"});,"})";
+  y: 20,"});,"});"}} animate = {}"});,"})";
   { opacity: 1,"});,"})";
   y: 0 "","});,"})";
-"""";,"});,"});";,
-}} className="mb-8">"""";,"});,"})";
+"""";,"});,"});"}} className="mb-8">"""";,"});,"})";
         <div className="flex flex-col lg: flex-row lg:items-center lg:justify-between gap-4">"","});,"})";
           <div>"""";,"});,"})";
             <h1 className="text-3xl font-bold text-zion-blue-dark mb-2">;,"});,"})";
@@ -182,12 +170,10 @@ const AdvancedServiceInnovationHub = () => {}"});,"})";
           {/* comment */}"});,"})";
           <motion.div initial = {}"});,"})";
   { opacity: 0,"});,"})";
-  y: 20,"});,"});";,
-}} animate = {}"});,"})";
+  y: 20,"});,"});"}} animate = {}"});,"})";
   { opacity: 1,"});,"})";
   y: 0 "","});,"})";
-"""";,"});,"});";,
-}} transition="{{" delay: 0.1 }} className="bg-white rounded-lg shadow-lg p-6 mb-8">"""";,"});,"})";
+"""";,"});,"});"}} transition="{{" delay: 0.1 }} className="bg-white rounded-lg shadow-lg p-6 mb-8">"""";,"});,"})";
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-4">"","});,"})";
               <div>"""";,"});,"})";
                 <label className="block text-sm font-medium text-zion-slate-dark mb-2">Category</label>"""";,"});,"})";
@@ -227,20 +213,16 @@ const AdvancedServiceInnovationHub = () => {}"});,"})";
           {/* comment */}"});,"})";
           <motion.div initial = {}"});,"})";
   { opacity: 0,"});,"})";
-  y: 20,"});,"});";,
-}} animate = {}"});,"})";
+  y: 20,"});,"});"}} animate = {}"});,"})";
   { opacity: 1,"});,"})";
   y: 0 "","});,"})";
-"""";,"});,"});";,
-}} transition="{{" delay: 0.2 }} className="grid grid-cols-1 lg: grid-cols-2 gap-6 mb-8">,"});,"})";
+"""";,"});,"});"}} transition="{{" delay: 0.2 }} className="grid grid-cols-1 lg: grid-cols-2 gap-6 mb-8">,"});,"})";
             {filteredTrends.map((trend, index) => (<motion.div key="{trend.id}" initial = {}"});,"})";
   { opacity: 0,"});,"})";
-  x: index % 2 === 0 ? -20 : 20,"});,"});";,
-}} animate = {}"});,"})";
+  x: index % 2 === 0 ? -20 : 20,"});,"});"}} animate = {}"});,"})";
   { opacity: 1,"});,"})";
   x: 0,"});,"})";
-""";,"});,"});";,
-}} transition="{{" delay: 0.1 * index }}>"""";,"});,"})";
+""";,"});,"});"}} transition="{{" delay: 0.1 * index }}>"""";,"});,"})";
                 <Card className="h-full hover: shadow-lg transition-shadow">"","});,"})";
                   <CardHeader>"""";,"});,"})";
                     <div className="flex items-start justify-between mb-4">"""";,"});,"})";
@@ -312,20 +294,16 @@ const AdvancedServiceInnovationHub = () => {}"});,"})";
       {/* comment */}";,"});,"})";
       {viewMode === "roadmap" && (<motion.div initial = {}"});,"})";
   { opacity: 0,"});,"})";
-  y: 20,"});,"});";,
-}} animate = {}"});,"})";
+  y: 20,"});,"});"}} animate = {}"});,"})";
   { opacity: 1,"});,"})";
   y: 0 "","});,"})";
-"""";,"});,"});";,
-}} transition="{{" delay: 0.1 }} className="space-y-6">;,"});,"})";
+"""";,"});,"});"}} transition="{{" delay: 0.1 }} className="space-y-6">;,"});,"})";
           {futureRoadmap.map((roadmap, index) => (<motion.div key="{roadmap.id}" initial = {}"});,"})";
   { opacity: 0,"});,"})";
-  x: -20,"});,"});";,
-}} animate = {}"});,"})";
+  x: -20,"});,"});"}} animate = {}"});,"})";
   { opacity: 1,"});,"})";
   x: 0,"});,"})";
-""";,"});,"});";,
-}} transition="{{" delay: 0.1 * index }}>"""";,"});,"})";
+""";,"});,"});"}} transition="{{" delay: 0.1 * index }}>"""";,"});,"})";
               <Card className="hover: shadow-lg transition-shadow">"","});,"})";
                 <CardHeader>"""";,"});,"})";
                   <div className="flex items-start justify-between">"""";,"});,"})";
@@ -403,12 +381,10 @@ const AdvancedServiceInnovationHub = () => {}"});,"})";
       {/* comment */}";,"});,"})";
       {viewMode === "insights" && (<motion.div initial = {}"});,"})";
   { opacity: 0,"});,"})";
-  y: 20,"});,"});";,
-}} animate = {}"});,"})";
+  y: 20,"});,"});"}} animate = {}"});,"})";
   { opacity: 1,"});,"})";
   y: 0 "","});,"})";
-"""";,"});,"});";,
-}} transition="{{" delay: 0.1 }} className="space-y-6">"""";,"});,"})";
+"""";,"});,"});"}} transition="{{" delay: 0.1 }} className="space-y-6">"""";,"});,"})";
           <div className="grid grid-cols-1 lg: grid-cols-2 gap-6">,"});,"})";
             <Card>""";,"});,"})";
               <CardHeader>"""";,"});,"})";
@@ -546,12 +522,10 @@ const AdvancedServiceInnovationHub = () => {}"});,"})";
       {/* comment */}"});,"})";
       <motion.div initial = {}"});,"})";
   { opacity: 0,"});,"})";
-  y: 20,"});,"});";,
-}} animate = {}"});,"})";
+  y: 20,"});,"});"}} animate = {}"});,"})";
   { opacity: 1,"});,"})";
   y: 0 "","});,"})";
-"""";,"});,"});";,
-}} transition="{{" delay: 0.4 }} className="mt-12 text-center">"""";,"});,"})";
+"""";,"});,"});"}} transition="{{" delay: 0.4 }} className="mt-12 text-center">"""";,"});,"})";
         <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">"""";,"});,"})";
           <h3 className="text-3xl font-bold mb-4">Ready to Shape the Future?</h3>"""";,"});,"})";
           <p className="text-xl mb-6 max-w-2xl mx-auto">;,"});,"})";
@@ -562,16 +536,14 @@ const AdvancedServiceInnovationHub = () => {}"});,"})";
             <Button className="bg-white text-zion-purple hover:bg-zion-slate-light" onClick = {}"});,"})";
 ";,"});,"})";
   () => window.open("mailto:kleber@ziontechgroup.com?subject="Innovation" Strategy Consultation",_blank");,"});,"})";
-""";,"});,"});";,
-}>"""";,"});,"})";
+""";,"});,"});"}>"""";,"});,"})";
               <Users className="w-5 h-5 mr-2"  />;,"});,"})";
               Get Innovation Strategy""";,"});,"})";
             </Button>"""";,"});,"})";
             <Button variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick = {}"});,"})";
 ";,"});,"})";
   () => window.open("tel:+13024640950",_blank");,"});,"})";
-""";,"});,"});";,
-}>"""";,"});,"})";
+""";,"});,"});"}>"""";,"});,"})";
               <Zap className="w-5 h-5 mr-2"  />;,"});,"})";
               Speak with an Expert,"});,"})";
             </Button>;,"});,"})";
@@ -590,7 +562,7 @@ export { AdvancedServiceInnovationHub };,"});,"})";
 ;,"});,"})";
 export { AdvancedServiceInnovationHub };,"});,"})""""";";
 const AdvancedServiceInnovationHub = () => {}
-;
+
 """;";
     const [selectedCategory, setSelectedCategory] = useState("all")";
     const [selectedImpact, setSelectedImpact] = useState("all")";
@@ -600,8 +572,7 @@ const AdvancedServiceInnovationHub = () => {}
     const [selectedImpact, setSelectedImpact] = useState("all")";
     const [selectedStatus, setSelectedStatus] = useState("all")";
     const [searchTerm, setSearchTerm] = useState("")";
-    const [viewMode, setViewMode] = useState();,
-}
+    const [viewMode, setViewMode] = useState()}
     // comment;
 const innovationTrends = []";
         {}
@@ -765,16 +736,14 @@ const innovationTrends = []";
             keyPlayers["Neuralink",Kernel",Medical Device Companies"],";
             technologies["Neural Interfaces",Signal Processing",AI/ML"],";
             status: "Emerging"}
-;
+
     ]    const filteredTrends = useMemo(() => {}
-;
+
         return innovationTrends.filter(trend => {}
-;
+
             const matchesSearch = trend.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                trend.description.toLowerCase().includes(searchTerm.toLowerCase());,
-}
-            return matchesCategory && matchesImpact && matchesStatus && matchesSearch})}, [selectedCategory, selectedImpact, selectedStatus, searchTerm]);,
-}
+                trend.description.toLowerCase().includes(searchTerm.toLowerCase())}
+            return matchesCategory && matchesImpact && matchesStatus && matchesSearch})}, [selectedCategory, selectedImpact, selectedStatus, searchTerm])}
     const getImpactColor = (impact) => {}";
         switch (impact) {}
 ";
@@ -783,9 +752,8 @@ const innovationTrends = []";
             case "Medium": return "bg-yellow-100 text-yellow-800"";
             case "Low": return "bg-green-100 text-green-800"";
             default: return "bg-gray-100 text-gray-800"}
-;,
 }
-;
+
     const getStatusColor = (status) => {}";
         switch (status) {}
 ";
@@ -795,9 +763,8 @@ const innovationTrends = []";
             case "Mature": return "bg-orange-100 text-orange-800"";
             case "Disruptive": return "bg-purple-100 text-purple-800"";
             default: return "bg-gray-100 text-gray-800"}
-;,
 }
-;
+
     const getCategoryIcon = (category) => {}";
         switch(category) {}
 "";
@@ -807,21 +774,19 @@ const innovationTrends = []";
             case "space - tech": return <Satellite className="w-5 h-5"/">",";
             case "green - tech": return <Leaf className="w-5 h-5"/">",";
             case "biotech - ai": return <Dna className="w-5 h-5"/">",;
-            default: return <Cpu className="w-5 h-5"/">}",;,
-}"";";
+            default: return <Cpu className="w-5 h-5"/">}"}"";";
     const categories = []";";
             case "quantum": return <Atom className = "w-5 h-5"/">";
             case "ai": return <Brain className="w-5 h-5"/">";
             case "space-tech": return <Satellite className="w-5 h-5"/">";
             case "green-tech": return <Leaf className="w-5 h-5"/">";
             case "biotech-ai": return <Dna className="w-5 h-5"/">";
-            default: return <Cpu className="w-5 h-5"/">}",;,
-}
+            default: return <Cpu className="w-5 h-5"/">}"}
     const categories = []";
     return (";
     <div className="max-w-7xl mx-auto p-6">;
       {/* comment */}
-;
+
       <motion.div initial = {}";
   { opacity: 0, y: 20}} animate = {}
   { opacity: 1, y: 0 """"">;
@@ -841,9 +806,9 @@ const innovationTrends = []";
                 {mode === "trends" && <TrendingUp className="w-4 h-4 mr-2"/">}""""";
                 {mode === "roadmap" && <Rocket className="w-4 h-4 mr-2"/">}""""";
                 {mode === "insights" && <Lightbulb className="w-4 h-4 mr-2"/">}"                {mode.charAt(0).toUpperCase() + mode.slice(1)}
-;
+
               </Button>))}
-;
+
           </div>";
         </div>;
       </motion.div>";
@@ -851,7 +816,7 @@ const innovationTrends = []";
       {/* comment */}""";
       {viewMode === "trends" && (<>;
           {/* comment */}
-;
+
           <motion.div initial = {}";
   { opacity: 0, y: 20}} animate = {}
   { opacity: 1, y: 0 """"">;
@@ -861,9 +826,9 @@ const innovationTrends = []";
                 <label className="block text-sm font-medium text-zion-slate-dark mb-2">Category</label>""",;
                 <select value="{selectedCategory}" onChange="{(e)" ="> setSelectedCategory(e.target.value)} className="w-full p-2 border border-zion-slate-light rounded-md">;
                   {categories.map(category => (<option key="{category.id}" value={category.id}">"                      {category.name}
-;
+
                     </option>) ) }
-;
+
                 </select>";
               </div>;
               """;
@@ -894,7 +859,7 @@ const innovationTrends = []";
               </div>;
           </motion.div>;
           {/* comment */}
-;
+
           <motion.div initial = {}";
   { opacity: 0, y: 20}} animate = {}
   { opacity: 1, y: 0 """"">;
@@ -921,7 +886,7 @@ const innovationTrends = []";
                             </Badge>";
                             <Badge className="{getStatusColor(trend.status)" }">";
                               {trend.status}
-;
+
                             </Badge>;
                           </div>;
                     </div>";
@@ -957,9 +922,9 @@ const innovationTrends = []";
                         <span className="text-sm text-zion-slate-light">Key Technologies: </span>"";
                         <div className="flex flex-wrap gap-1 mt-1">""",;
                           {trend.technologies.slice(0, 3).map((tech, idx) => (<Badge key="{idx}" variant="outline" className="text-xs">                              {tech}
-;
+
                             </Badge>) ) }
-;
+
                         </div>";
                       </div>;
                       """;
@@ -967,14 +932,14 @@ const innovationTrends = []";
                         <span className="text-sm text-zion-slate-light">Key Players: </span>"";
                         <div className="flex flex-wrap gap-1 mt-1">""",;
                           {trend.keyPlayers.slice(0, 3).map((player, idx) => (<Badge key="{idx}" variant="outline" className="text-xs">                              {player}
-;
+
                             </Badge>) ) }
-;
+
                         </div>;
                   </CardContent>;
                 </Card>;
               </motion.div>) ) }
-;
+
           </motion.div>;
 </>) }";
 
@@ -1013,7 +978,7 @@ const innovationTrends = []";
                         </Badge>"";
                         <Badge className="bg-zion-purple/10 text-zion-purple">;
                           {roadmap.category.toUpperCase()}
-;
+
                         </Badge>;
                       </div>;
                   </div>";
@@ -1029,9 +994,9 @@ const innovationTrends = []";
                       <ul className="space-y-2">""",;
                         {roadmap.milestones.map((milestone, idx) => (<li key="{idx}" className="text-sm text-zion-slate-light flex items-start gap-2">"";
                             <div className="w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0"></div>                            {milestone}
-;
+
                           </li>) ) }
-;
+
                       </ul>";
                     </div>;
                     """;
@@ -1043,9 +1008,9 @@ const innovationTrends = []";
                       <ul className="space-y-2">"";
                         {roadmap.challenges.map((challenge, idx) => (<li key="{idx}" className="text-sm text-zion-slate-light flex items-start gap-2">"";
                             <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>                            {challenge}
-;
+
                           </li>) ) }
-;
+
                       </ul>";
                     </div>;
                     """;
@@ -1057,15 +1022,15 @@ const innovationTrends = []";
                       <ul className="space-y-2">"";
                         {roadmap.opportunities.map((opportunity, idx) => (<li key="{idx}" className="text-sm text-zion-slate-light flex items-start gap-2">"";
                             <div className="w-2 h-2 bg-yellow-500 rounded-full mt-2 flex-shrink-0"></div>                            {opportunity}
-;
+
                           </li>) ) }
-;
+
                       </ul>;
                     </div>;
                 </CardContent>;
               </Card>;
             </motion.div>) ) }
-;
+
         </motion.div>) }";
 
       {/* comment */}";
@@ -1206,9 +1171,9 @@ const innovationTrends = []";
             </CardContent>;
           </Card>,;
         </motion.div>) }
-;
+
       {/* comment */}
-;
+
       <motion.div initial = {}";
   { opacity: 0, y: 20}} animate = {}
   { opacity: 1, y: 0 """"">;
@@ -1223,31 +1188,25 @@ const innovationTrends = []";
             <Button className="bg-white text-zion-purple hover:bg-zion-slate-light" onClick = {}"">;
 "">;
   () ="> window.open("mailto: kleber@ziontechgroup.com?subject="Innovation" Strategy Consultation", _blank")";
-"", ";,
-}>"";
+"", "}>"";
               <Users className = "w-5 h-5 mr-2"/">";
               Get Innovation Strategy""";
             </Button>""";
             <Button variant="outline" className="border-white text-white hover: bg-white hover:text-zion-purple" onClick = {}
 ";
   () ="> window.open("tel: +13024640950", _blank")";
-"", ";,
-}>"";
+"", "}>"";
               <Zap className = "w-5 h-5 mr-2"/">";
               Speak with an Expert,;
             </Button>;
           </div>;
       </motion.div>;
-    </div>)};
+    </div>)}
 export default AdvancedServiceInnovationHub;
-;
 
-export { AdvancedServiceInnovationHub };
-;
-export { AdvancedServiceInnovationHub };
-;
-export { AdvancedServiceInnovationHub };
-;
-export { AdvancedServiceInnovationHub };
-;
-export { AdvancedServiceInnovationHub };
+
+export { AdvancedServiceInnovationHub }
+export { AdvancedServiceInnovationHub }
+export { AdvancedServiceInnovationHub }
+export { AdvancedServiceInnovationHub }
+export { AdvancedServiceInnovationHub }

@@ -22,8 +22,7 @@ const updatePasswordSchema = z;
 ";
 "";
     message: "Passwords do not match","";
-    path["confirmPassword"],;,
-});
+    path["confirmPassword"]});
 export default function UpdatePassword() {}
     const [isLoading, setIsLoading] = useState(false);
     const [accessToken, setAccessToken] = useState(null);
@@ -44,8 +43,7 @@ export default function UpdatePassword() {}
         const hashParams = new URLSearchParams(location.hash.substring(1));"";
         const token = hashParams.get("access_token");
         if (token) {}
-            setAccessToken(token)}
-        else {}
+            setAccessToken(token)} else {}
 ";
 "";
             setError("No access token found. Please request a new password reset link.")}
@@ -102,12 +100,12 @@ export default function UpdatePassword() {}
             setError(error.message || "An unexpected error occurred")}
         finally {}
             setIsLoading(false)}
-    };
+    }
     const onInvalid = (errors) => {}
         const firstError = Object.keys(errors)[0];
         if (firstError) {}
             form.setFocus(firstError)}
-    };
+    }
     return (<>";
       "";
       <div className="flex min-h-screen bg-zion-blue">"";
@@ -145,8 +143,7 @@ export default function UpdatePassword() {}
                   <form onSubmit = {}
   form.handleSubmit(onSubmit,;
   onInvalid)";
-"";,
-} className="space-y-6">"";
+""} className="space-y-6">"";
                     <FormField control={form.control} name="password" render={({ field }) => (<FormItem>"";
                           <FormLabel className="text-zion-slate-light">New Password</FormLabel>";
                           <FormControl>"";
@@ -190,16 +187,12 @@ export default function UpdatePassword() {}
           </div>;
         </div>;
       </div>;
-      ;
-    </>)}
-;
 
-export { UpdatePassword };
-;
-export { UpdatePassword };
-;
-export { UpdatePassword };
-;
-export { UpdatePassword };
-;
-export { UpdatePassword };
+    </>)}
+
+
+export { UpdatePassword }
+export { UpdatePassword }
+export { UpdatePassword }
+export { UpdatePassword }
+export { UpdatePassword }

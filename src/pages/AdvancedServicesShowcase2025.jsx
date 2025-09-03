@@ -1,10 +1,10 @@
 import React, { useState } from 'react';''';
 import { motion } from 'framer-motion';''';
 import { Star, CheckCircle, Clock, Users, TrendingUp, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
-;
-;
+
+
 import SEOHead from "../components/SEOHead.jsx";
-const AdvancedServicesShowcase2025 = () => {;
+const AdvancedServicesShowcase2025 = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');    const [sortBy, setSortBy] = useState('name');
     // Combine all services;
@@ -17,8 +17,8 @@ const AdvancedServicesShowcase2025 = () => {;
         .filter(service => service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.tagline.toLowerCase().includes(searchTerm.toLowerCase()));
-        .sort((a, b) => {;
-        switch (sortBy) {;
+        .sort((a, b) => {
+        switch (sortBy) {
             case 'price':;
                 return parseFloat(a.price.replace('$', '').replace(',', '')) - parseFloat(b.price.replace('$', '').replace(',', ''));
             case 'rating':;
@@ -29,8 +29,8 @@ const AdvancedServicesShowcase2025 = () => {;
             default:;
                 return a.name.localeCompare(b.name)}
     });
-    const getCategoryIcon = (category) => {;
-        const icons = {;
+    const getCategoryIcon = (category) => {
+        const icons = {
   'AI & Machine Learning': '🤖',;
             'Cybersecurity': '🔐',;
             'Healthcare Technology': '🏥',;
@@ -49,13 +49,9 @@ const AdvancedServicesShowcase2025 = () => {;
             'Data Quality & Analytics': '📊',;
             'API Management': '🔌',;
 
-;
-export { AdvancedServicesShowcase2025 };
-;
-export { AdvancedServicesShowcase2025 };
-;
-export { AdvancedServicesShowcase2025 };
-;
-export { AdvancedServicesShowcase2025 };
-;
+
+export { AdvancedServicesShowcase2025 }
+export { AdvancedServicesShowcase2025 }
+export { AdvancedServicesShowcase2025 }
+export { AdvancedServicesShowcase2025 }
 export { AdvancedServicesShowcase2025 };}}}

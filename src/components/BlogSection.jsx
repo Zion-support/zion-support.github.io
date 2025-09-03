@@ -1,9 +1,9 @@
 import React from 'react';
-export function BlogSection () {;
+export function BlogSection () {
 
 import { Link  } from 'react-router-dom';
 ,;
-        {;
+        {
 
             id: '2',;
             title: 'Building Scalable Web Applications',;

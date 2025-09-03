@@ -20,45 +20,38 @@ import { ;
   LineChart,;
   Activity,;
   Globe,;
-  Lock;,
-} from 'lucide-react';
-;
-export function AIAutonomousBusinessIntelligencePlatform() {;
+  Lock} from 'lucide-react';
+
+export function AIAutonomousBusinessIntelligencePlatform() {
   const features = [;
-    {;
+    {
       icon: Brain,;
       title: "Autonomous Data Analysis",;
-      description: "AI-powered insights generation without human intervention, continuously learning and adapting to business patterns.";,
-},;
-    {;
+      description: "AI-powered insights generation without human intervention, continuously learning and adapting to business patterns."},;
+    {
       icon: BarChart3,;
       title: "Real-time Dashboards",;
-      description: "Live business metrics, KPIs, and performance indicators with instant updates and alerts.";,
-},;
-    {;
+      description: "Live business metrics, KPIs, and performance indicators with instant updates and alerts."},;
+    {
       icon: TrendingUp,;
       title: "Predictive Analytics",;
-      description: "Forecast trends, identify opportunities, and predict potential risks using advanced ML algorithms.";,
-},;
-    {;
+      description: "Forecast trends, identify opportunities, and predict potential risks using advanced ML algorithms."},;
+    {
       icon: Zap,;
       title: "Automated Reporting",;
-      description: "Generate comprehensive reports automatically, saving hours of manual work each week.";,
-},;
-    {;
+      description: "Generate comprehensive reports automatically, saving hours of manual work each week."},;
+    {
       icon: Shield,;
       title: "Data Security",;
-      description: "Enterprise-grade security with encryption, access controls, and compliance certifications.";,
-},;
-    {;
+      description: "Enterprise-grade security with encryption, access controls, and compliance certifications."},;
+    {
       icon: Users,;
       title: "Team Collaboration",;
-      description: "Share insights, create collaborative dashboards, and enable data-driven decision making across teams.";,
-}
+      description: "Share insights, create collaborative dashboards, and enable data-driven decision making across teams."}
   ];
-;
+
   const pricingPlans = [;
-    {;
+    {
       name: "Starter",;
       price: "$299",;
       period: "/month",;
@@ -71,9 +64,8 @@ export function AIAutonomousBusinessIntelligencePlatform() {;
         "5GB data storage";
       ],;
       cta: "Start Free Trial",;
-      popular: false;,
-},;
-    {;
+      popular: false},;
+    {
       name: "Professional",;
       price: "$799",;
       period: "/month",;
@@ -88,9 +80,8 @@ export function AIAutonomousBusinessIntelligencePlatform() {;
         "Advanced security";
       ],;
       cta: "Start Free Trial",;
-      popular: true;,
-},;
-    {;
+      popular: true},;
+    {
       name: "Enterprise",;
       price: "$1,999",;
       period: "/month",;
@@ -106,56 +97,47 @@ export function AIAutonomousBusinessIntelligencePlatform() {;
         "SLA guarantees";
       ],;
       cta: "Contact Sales",;
-      popular: false;,
-}
+      popular: false}
   ];
-;
+
   const benefits = [;
-    {;
+    {
       icon: Clock,;
       title: "Save 20+ Hours Weekly",;
-      description: "Automate routine reporting and analysis tasks, freeing your team to focus on strategic decisions.";,
-},;
-    {;
+      description: "Automate routine reporting and analysis tasks, freeing your team to focus on strategic decisions."},;
+    {
       icon: CheckCircle,;
       title: "Increase Revenue by 15-25%",;
-      description: "Data-driven insights help identify new opportunities and optimize existing processes.";,
-},;
-    {;
+      description: "Data-driven insights help identify new opportunities and optimize existing processes."},;
+    {
       icon: Target,;
       title: "Improve Decision Accuracy",;
-      description: "AI-powered recommendations reduce human bias and improve strategic planning outcomes.";,
-},;
-    {;
+      description: "AI-powered recommendations reduce human bias and improve strategic planning outcomes."},;
+    {
       icon: Lightbulb,;
       title: "Discover Hidden Insights",;
-      description: "Uncover patterns and correlations that traditional analysis methods might miss.";,
-}
+      description: "Uncover patterns and correlations that traditional analysis methods might miss."}
   ];
-;
+
   const useCases = [;
-    {;
+    {
       title: "Sales Performance Optimization",;
       description: "Track sales metrics, identify top performers, and optimize sales strategies in real-time.",;
-      icon: TrendingUp;,
-},;
-    {;
+      icon: TrendingUp},;
+    {
       title: "Customer Behavior Analysis",;
       description: "Understand customer patterns, preferences, and lifetime value for better marketing decisions.",;
-      icon: Users;,
-},;
-    {;
+      icon: Users},;
+    {
       title: "Financial Forecasting",;
       description: "Predict cash flow, revenue trends, and financial risks with high accuracy.",;
-      icon: ChartBar;,
-},;
-    {;
+      icon: ChartBar},;
+    {
       title: "Operational Efficiency",;
       description: "Monitor operational KPIs and identify bottlenecks for process improvement.",;
-      icon: Activity;,
-}
+      icon: Activity}
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate-darker to-zion-slate-darkest">;
       {/* Hero Section */}
@@ -311,8 +293,7 @@ export function AIAutonomousBusinessIntelligencePlatform() {;
                 className={`relative p-8 rounded-2xl border transition-all duration-300 ${;
                   plan.popular;
                     ? 'bg-gradient-to-br from-zion-purple/20 to-zion-cyan/20 border-zion-purple/50 scale-105';
-                    : 'bg-zion-slate-dark/50 border-zion-slate hover:border-zion-purple/30';,
-}`}
+                    : 'bg-zion-slate-dark/50 border-zion-slate hover:border-zion-purple/30'}`}
               >;
                 {plan.popular && (;
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">;
@@ -342,8 +323,7 @@ export function AIAutonomousBusinessIntelligencePlatform() {;
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${;
                     plan.popular;
                       ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white hover:from-zion-cyan-light hover:to-zion-blue-light';
-                      : 'bg-zion-slate border border-zion-slate-light text-white hover:bg-zion-slate-light';,
-}`}
+                      : 'bg-zion-slate border border-zion-slate-light text-white hover:bg-zion-slate-light'}`}
                 >;
                   {plan.cta}
                 </Link>;
@@ -396,7 +376,6 @@ export function AIAutonomousBusinessIntelligencePlatform() {;
         </div>;
       </footer>;
     </div>;
-  );,
-}
-;
+  )}
+
 export default AIAutonomousBusinessIntelligencePlatform;

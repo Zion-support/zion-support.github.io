@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
-;
-export default function Page() {;
+
+export default function Page() {
 ,;
-    {;
+    {
 
         id: 5,";
         name: "Lisa Patel",";
@@ -18,9 +18,8 @@ export default function Page() {;
         projects: 53,";
         location: "Washington, DC",";
         linkedin: "https://linkedin.com/in/lisa-patel",";
-        github: "https://github.com/lisapatel-sec";,
-},;
-    {;
+        github: "https://github.com/lisapatel-sec"},;
+    {
 
         id: 6,";
         name: "Alex Johnson",";
@@ -35,8 +34,7 @@ export default function Page() {;
         projects: 81,";
         location: "Denver, CO",";
         linkedin: "https://linkedin.com/in/alex-johnson",";
-        github: "https://github.com/alexjohnson-devops";,
-}
+        github: "https://github.com/alexjohnson-devops"}
 ];
 const expertiseAreas = [{;
 ";
@@ -46,9 +44,8 @@ const expertiseAreas = [{;
         description: "Machine learning, computer vision, NLP, and AI solutions",;
         experts: 12,;
         projects: 150,";
-        success: "98%";,
-},;
-    {;
+        success: "98%"},;
+    {
 ";
         name: "Cloud Infrastructure",";
         icon: <Cloud className="w-8 h-8"/>,";
@@ -56,9 +53,8 @@ const expertiseAreas = [{;
         description: "AWS, Azure, Google Cloud, and hybrid solutions",;
         experts: 18,;
         projects: 200,";
-        success: "99%";,
-},;
-    {;
+        success: "99%"},;
+    {
 ";
         name: "Web Development",";
         icon: <Globe className="w-8 h-8"/>,";
@@ -66,9 +62,8 @@ const expertiseAreas = [{;
         description: "Modern web applications and progressive web apps",;
         experts: 25,;
         projects: 300,";
-        success: "97%";,
-},;
-    {;
+        success: "97%"},;
+    {
 ";
         name: "Mobile Development",";
         icon: <Zap className="w-8 h-8"/>,";
@@ -76,9 +71,8 @@ const expertiseAreas = [{;
         description: "iOS, Android, and cross-platform solutions",;
         experts: 20,;
         projects: 180,";
-        success: "96%";,
-},;
-    {;
+        success: "96%"},;
+    {
 ";
         name: "Data Analytics",";
         icon: <Database className="w-8 h-8"/>,";
@@ -86,9 +80,8 @@ const expertiseAreas = [{;
         description: "Business intelligence and predictive analytics",;
         experts: 15,;
         projects: 120,";
-        success: "98%";,
-},;
-    {;
+        success: "98%"},;
+    {
 ";
         name: "Cybersecurity",";
         icon: <Shield className="w-8 h-8"/>,";
@@ -96,8 +89,7 @@ const expertiseAreas = [{;
         description: "Security auditing, compliance, and threat protection",;
         experts: 10,;
         projects: 80,";
-        success: "99%";,
-}
+        success: "99%"}
 ];
 const stats = [";
     { icon: <Users className="w-6 h-6"/>, value: "100+", label: "Expert Team Members" },";
@@ -107,33 +99,30 @@ const stats = [";
 ];
     const [selectedMember, setSelectedMember] = useState(null);
     const [hoveredExpertise, setHoveredExpertise] = useState(null);
-    const containerVariants = {;
+    const containerVariants = {
 
         hidden: { opacity: 0 },;
-        visible: {;
+        visible: {
 
             opacity: 1,;
-            transition: {;
+            transition: {
 
                 staggerChildren: 0.15,;
-                delayChildren: 0.1;,
-}
+                delayChildren: 0.1}
         }
-    };
-    const itemVariants = {;
+    }
+    const itemVariants = {
 
   hidden: { y: 30,;
-  opacity: 0;,
-},;
-        visible: {;
+  opacity: 0},;
+        visible: {
 
             y: 0,;
             opacity: 1,;
-            transition: {;
+            transition: {
 
                 duration: 0.6,";
-                ease: "easeOut";,
-}
+                ease: "easeOut"}
         }
     };";
     return (<section className="py-20 bg-gradient-to-br from-zion-blue via-zion-slate-dark to-zion-blue-dark relative overflow-hidden">;
@@ -146,15 +135,13 @@ const stats = [";
 ";
       <div className="container mx-auto px-4 relative z-10">;
         {/* Header */}";
-        <motion.div className="text-center mb-20" initial = {;
+        <motion.div className="text-center mb-20" initial = {
 
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {;
+  y: 20}} whileInView = {
 
   { opacity: 1,;
-  y: 0;,
-}} viewport={{ once: true }} transition={{ duration: 0.6 }}>;
+  y: 0}} viewport={{ once: true }} transition={{ duration: 0.6 }}>;
           <h2 className="text-4xl md:text-5xl lg:text-6xl font - bold text-white mb-6">;
             Meet Our < span className="bg-gradient - to - r from - zion - cyan to - zion - purple bg-clip - text text-transparent">Expert Team</span>;
           </h2>;
@@ -163,19 +150,16 @@ const stats = [";
 
           {/* Stats */}";
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">;
-            {stats.map((stat, index) => (<motion.div key={index} initial = {;
+            {stats.map((stat, index) => (<motion.div key={index} initial = {
 
   { opacity: 0,;
-  scale: 0.8;,
-}} whileInView = {;
+  scale: 0.8}} whileInView = {
 
   { opacity: 1,;
-  scale: 1;,
-}} viewport={{ once: true }} transition = {;
+  scale: 1}} viewport={{ once: true }} transition = {
 
   { duration: 0.4,;
-  delay: index * 0.1;,
-}} className="text-center p - 4 rounded-xl bg-zion - blue - dark / 40 backdrop - blur - sm border border-zion - blue -light / 20">;
+  delay: index * 0.1}} className="text-center p - 4 rounded-xl bg-zion - blue - dark / 40 backdrop - blur - sm border border-zion - blue -light / 20">;
                 <div className="text-zion - cyan mb-2 flex justify -center">                  {stat.icon}
                 </div>";
                 <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>";
@@ -185,35 +169,29 @@ const stats = [";
         </motion.div>;
 
         {/* Expertise Areas */}";
-        <motion.div className="mb-20" initial = {;
+        <motion.div className="mb-20" initial = {
 
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {;
+  y: 20}} whileInView = {
 
   { opacity: 1,;
-  y: 0;,
-}} viewport={{ once: true }} transition = {;
+  y: 0}} viewport={{ once: true }} transition = {
 
   { duration: 0.6,;
-  delay: 0.2;,
-}}>";
+  delay: 0.2}}>";
           <h3 className="text-3xl font-bold text-white text-center mb-12">";
             Areas of <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Expertise</span>;
           </h3>;
 
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-6">;
             {expertiseAreas.map((area, index) => (<motion.div key={index} initial = {  { opacity: 0,;
-  y: 20;,
-}} whileInView = {;
+  y: 20}} whileInView = {
 
   { opacity: 1,;
-  y: 0;,
-}} viewport={{ once: true }} transition = {;
+  y: 0}} viewport={{ once: true }} transition = {
 
   { duration: 0.4,;
-  delay: index * 0.1;,
-}} onHoverStart={ () => setHoveredExpertise(index) } onHoverEnd={ () => setHoveredExpertise(null) } whileHover={{ y: -4 }} className="p - 6 rounded-2xl bg-gradient - to - br from - zion - blue - dark / 80 to - zion - blue - dark / 40 backdrop - blur - sm border border-zion - blue - light / 30 hover:border-zion - cyan / 50 transition - all duration - 300 hover:shadow-lg hover:shadow-zion -cyan / 20">;
+  delay: index * 0.1}} onHoverStart={ () => setHoveredExpertise(index) } onHoverEnd={ () => setHoveredExpertise(null) } whileHover={{ y: -4 }} className="p - 6 rounded-2xl bg-gradient - to - br from - zion - blue - dark / 80 to - zion - blue - dark / 40 backdrop - blur - sm border border-zion - blue - light / 30 hover:border-zion - cyan / 50 transition - all duration - 300 hover:shadow-lg hover:shadow-zion -cyan / 20">;
                 <div className={`inline - flex items - center justify - center w-16 h-16 rounded-2xl bg-gradient - to - br ${area.color} mb-4 shadow-lg`}>;
                   <div className="text-white">;
                     {area.icon}
@@ -241,28 +219,24 @@ const stats = [";
         </motion.div>;
 
         {/* Team Members */}";
-        <motion.div className="mb-20" initial = {;
+        <motion.div className="mb-20" initial = {
 
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {;
+  y: 20}} whileInView = {
 
   { opacity: 1,;
-  y: 0;,
-}} viewport={{ once: true }} transition = {;
+  y: 0}} viewport={{ once: true }} transition = {
 
   { duration: 0.6,;
-  delay: 0.3;,
-}}>";
+  delay: 0.3}}>";
           <h3 className="text-3xl font-bold text-white text-center mb-12">";
             Leadership <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Team</span>;
           </h3>;
 
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-8">;
-            {teamMembers.map((member, index) => (<motion.div key={member.id} variants={itemVariants} whileHover={{ y: -8 }} transition = {;
+            {teamMembers.map((member, index) => (<motion.div key={member.id} variants={itemVariants} whileHover={{ y: -8 }} transition = {
   { type: "spring",;
-  stiffness: 300;,
-}} className="relative">;
+  stiffness: 300}} className="relative">;
                 <div className="h-full p - 6 rounded-2xl bg-gradient - to - br from - zion - blue - dark / 80 to - zion - blue - dark / 40 backdrop - blur - sm border border-zion - blue - light / 30 hover:border-zion - cyan / 50 transition - all duration - 300 hover:shadow-2xl hover:shadow-zion - cyan / 20 group cursor -pointer" onClick={ () => setSelectedMember(selectedMember === member.id ? null : member.id) }>;
                   {/* Header */}
                   <div className="text-center mb-6">;
@@ -313,30 +287,25 @@ const stats = [";
 
                   {/* Expanded details */}
                   <AnimatePresence>";
-                    {selectedMember === member.id && (<motion.div className="mt-6 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial = {;
+                    {selectedMember === member.id && (<motion.div className="mt-6 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial = {
 
   { opacity: 0, height: 0,;
-  y: 10;,
-}} animate = {;
+  y: 10}} animate = {
 ";
   { opacity: 1, height: "auto",;
-  y: 0;,
-}} exit = {;
+  y: 0}} exit = {
 
   { opacity: 0, height: 0,;
-  y: 10;,
-}} transition={{ duration: 0.3 }}>;
+  y: 10}} transition={{ duration: 0.3 }}>;
                         <p className="text-zion - slate - light text-sm mb-4 leading -relaxed">{member.bio}</p>;
 
                         <h5 className="text-zion - cyan font - semibold text-sm mb-2">Achievements:</h5>;
                         <div className="space - y-1 mb-4">;
                           {member.achievements.map((achievement, idx) => (<motion.div key={idx} className="flex items - center gap-2 text-zion - slate - light / 80 text-xs" initial = {  { opacity: 0,;
-  x: -10;,
-}} animate = {;
+  x: -10}} animate = {
 
   { opacity: 1,;
-  x: 0;,
-}} transition={{ delay: idx * 0.1 }}>";
+  x: 0}} transition={{ delay: idx * 0.1 }}>";
                               <CheckCircle className="w-3 h-3 text-zion-cyan"/>;
                               <span>{achievement}</span>;
                             </motion.div>) ) }
@@ -354,11 +323,10 @@ const stats = [";
                             <a href={member.github} className="text-zion-cyan hover:text-zion-cyan-light transition-colors">";
                               <Github className="w-4 h-4"/>;
                             </a>;
-                            <a href = {;
+                            <a href = {
 '`;
   `mailto:${member.name.toLowerCase().replace(' ',.');
-"`;,
-}@ziontechgroup.com`} className="text-zion-cyan hover:text-zion-cyan-light transition-colors">";
+"`}@ziontechgroup.com`} className="text-zion-cyan hover:text-zion-cyan-light transition-colors">";
                               <Mail className="w-4 h-4"/>;
                             </a>;
                           </div>;
@@ -371,19 +339,16 @@ const stats = [";
         </motion.div>;
 
         {/* Call to action */}";
-        <motion.div className="text-center" initial = {;
+        <motion.div className="text-center" initial = {
 
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {;
+  y: 20}} whileInView = {
 
   { opacity: 1,;
-  y: 0;,
-}} viewport={{ once: true }} transition = {;
+  y: 0}} viewport={{ once: true }} transition = {
 
   { duration: 0.6,;
-  delay: 0.5;,
-}}>";
+  delay: 0.5}}>";
           <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">";
             <div className="px-8 py-6 bg-zion-blue-dark rounded-xl">";
               <h3 className="text-2xl font-bold text-white mb-4">;

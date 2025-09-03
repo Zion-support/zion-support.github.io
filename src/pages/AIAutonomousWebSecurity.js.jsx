@@ -249,16 +249,12 @@ const AIAutonomousWebSecurity = () => {}
           </div>;
         </div>;
       </div>;
-    </>)};
+    </>)}
 export default AIAutonomousWebSecurity;
-;
 
-export { AIAutonomousWebSecurity };
-;
-export { AIAutonomousWebSecurity };
-;
-export { AIAutonomousWebSecurity };
-;
-export { AIAutonomousWebSecurity };
-;
-export { AIAutonomousWebSecurity };
+
+export { AIAutonomousWebSecurity }
+export { AIAutonomousWebSecurity }
+export { AIAutonomousWebSecurity }
+export { AIAutonomousWebSecurity }
+export { AIAutonomousWebSecurity }

@@ -13,8 +13,7 @@ const BusinessSolutions = [];
         icon: <CheckCircle className="h-8 w-8 text-zion-cyan"/>,"";
         category: "Strategy","";
         badge: "Popular","";
-        link: "/request-quote?service=business-strategy";,
-},;
+        link: "/request-quote?service=business-strategy"},;
     {}
 ";
 "";
@@ -25,8 +24,7 @@ const BusinessSolutions = [];
         icon: <Zap className="h-8 w-8 text-zion-purple"/>,"";
         category: "Automation","";
         badge: "Premium","";
-        link: "/request-quote?service=process-automation";,
-},;
+        link: "/request-quote?service=process-automation"},;
     {}
 ";
 "";
@@ -36,8 +34,7 @@ const BusinessSolutions = [];
         features["Technology assessment", "Migration planning", "Implementation", "Change management"],;"";
         icon: <Zap className="h-8 w-8 text-zion-blue"/>,"";
         category: "Transformation","";
-        link: "/request-quote?service=digital-transformation";,
-},;
+        link: "/request-quote?service=digital-transformation"},;
     {}
 ";
 "";
@@ -47,8 +44,7 @@ const BusinessSolutions = [];
         features["Dashboard creation", "KPI tracking", "Predictive analytics", "Custom reporting"],;"";
         icon: <BarChart3 className="h-8 w-8 text-zion-cyan"/>,"";
         category: "Analytics","";
-        link: "/request-quote?service=business-intelligence";,
-},;
+        link: "/request-quote?service=business-intelligence"},;
     {}
 ";
 "";
@@ -58,8 +54,7 @@ const BusinessSolutions = [];
         features["Change strategy", "Communication planning", "Training programs", "Success measurement"],;"";
         icon: <Users className="h-8 w-8 text-zion-purple"/>,"";
         category: "Change Management","";
-        link: "/request-quote?service=change-management";,
-},;
+        link: "/request-quote?service=change-management"},;
     {}
 ";
 "";
@@ -69,8 +64,7 @@ const BusinessSolutions = [];
         features["Budget planning", "Financial modeling", "Cash flow analysis", "Investment strategy"],;"";
         icon: <DollarSign className="h-8 w-8 text-zion-blue"/>,"";
         category: "Finance","";
-        link: "/request-quote?service=financial-planning";,
-},;
+        link: "/request-quote?service=financial-planning"},;
     {}
 ";
 "";
@@ -80,8 +74,7 @@ const BusinessSolutions = [];
         features["Customer surveys", "Competitive analysis", "Market sizing", "Trend forecasting"],;"";
         icon: <Search className="h-8 w-8 text-zion-cyan"/>,"";
         category: "Research","";
-        link: "/request-quote?service=market-research";,
-},;
+        link: "/request-quote?service=market-research"},;
     {}
 ";
 "";
@@ -91,8 +84,7 @@ const BusinessSolutions = [];
         features["Process improvement", "Quality management", "Lean methodology", "Performance metrics"],;"";
         icon: <CheckCircle className="h-8 w-8 text-zion-purple"/>,"";
         category: "Operations","";
-        link: "/request-quote?service=operational-excellence";,
-},;
+        link: "/request-quote?service=operational-excellence"},;
     {}
 ";
 "";
@@ -102,8 +94,7 @@ const BusinessSolutions = [];
         features["Journey mapping", "UX research", "Service design", "Implementation"],;"";
         icon: <Eye className="h-8 w-8 text-zion-blue"/>,"";
         category: "Customer Experience","";
-        link: "/request-quote?service=customer-experience";,
-},;
+        link: "/request-quote?service=customer-experience"},;
     {}
 ";
 "";
@@ -113,8 +104,7 @@ const BusinessSolutions = [];
         features["Supply chain audit", "Optimization strategy", "Vendor management", "Implementation"],;"";
         icon: <Globe className="h-8 w-8 text-zion-cyan"/>,"";
         category: "Supply Chain","";
-        link: "/request-quote?service=supply-chain";,
-},;
+        link: "/request-quote?service=supply-chain"},;
     {}
 ";
 "";
@@ -124,8 +114,7 @@ const BusinessSolutions = [];
         features["Risk assessment", "Compliance audit", "Policy development", "Training programs"],;"";
         icon: <Shield className="h-8 w-8 text-zion-purple"/>,"";
         category: "Risk Management","";
-        link: "/request-quote?service=risk-management";,
-},;
+        link: "/request-quote?service=risk-management"},;
     {}
 ";
 "";
@@ -135,8 +124,7 @@ const BusinessSolutions = [];
         features["KPI framework", "Performance tracking", "Feedback systems", "Improvement plans"],;"";
         icon: <Star className="h-8 w-8 text-zion-blue"/>,"";
         category: "Performance","";
-        link: "/request-quote?service=performance-management";,
-},;
+        link: "/request-quote?service=performance-management"},;
     {}
 ";
 "";
@@ -146,8 +134,7 @@ const BusinessSolutions = [];
         features["Innovation strategy", "R&D planning", "Partnership development", "IP protection"],;"";
         icon: <Lightbulb className="h-8 w-8 text-zion-cyan"/>,"";
         category: "Innovation","";
-        link: "/request-quote?service=innovation-strategy";,
-},;
+        link: "/request-quote?service=innovation-strategy"},;
     {}
 ";
 "";
@@ -157,8 +144,7 @@ const BusinessSolutions = [];
         features["Due diligence", "Valuation analysis", "Integration planning", "Post-merger support"],;"";
         icon: <Building className="h-8 w-8 text-zion-purple"/>,"";
         category: "M&A","";
-        link: "/request-quote?service=mergers-acquisitions";,
-},;
+        link: "/request-quote?service=mergers-acquisitions"},;
     {}
 ";
 "";
@@ -168,8 +154,7 @@ const BusinessSolutions = [];
         features["Market entry strategy", "Legal compliance", "Local partnerships", "Cultural adaptation"],;"";
         icon: <Globe className="h-8 w-8 text-zion-blue"/>,"";
         category: "Expansion","";
-        link: "/request-quote?service=international-expansion";,
-},;
+        link: "/request-quote?service=international-expansion"},;
     {}
 ";
 "";
@@ -180,8 +165,7 @@ const BusinessSolutions = [];
         icon: <Leaf className="h-8 w-8 text-zion-cyan"/>,"";
         category: "Sustainability","";
         badge: "New","";
-        link: "/request-quote?service=sustainability-consulting";,
-}
+        link: "/request-quote?service=sustainability-consulting"}
 ];";
 const categories = ["";
     { name: "All", value: "all", icon: <Building className="h-4 w-4"/> },"";
@@ -307,14 +291,10 @@ export default function BusinessSolutionsPage() {}
         </div>;
       </div>;
     </div>)}
-;
 
-export { BusinessSolutions, BusinessSolutionsPage };
-;
-export { BusinessSolutions, BusinessSolutionsPage };
-;
-export { BusinessSolutions, BusinessSolutionsPage };
-;
-export { BusinessSolutions, BusinessSolutionsPage };
-;
-export { BusinessSolutions, BusinessSolutionsPage };
+
+export { BusinessSolutions, BusinessSolutionsPage }
+export { BusinessSolutions, BusinessSolutionsPage }
+export { BusinessSolutions, BusinessSolutionsPage }
+export { BusinessSolutions, BusinessSolutionsPage }
+export { BusinessSolutions, BusinessSolutionsPage }

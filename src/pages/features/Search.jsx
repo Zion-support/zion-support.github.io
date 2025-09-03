@@ -5,7 +5,7 @@ import SEO from '@/components/SEO';''';
 import { GradientHeading } from '@/components/GradientHeading';''';
 import { Button } from '@/components/ui/button';''';
 import { Link } from 'react-router-dom';
-export { function };
+export { function }
 export default function SearchFeature() {}
   const schema = {}
 ';
@@ -15,7 +15,7 @@ export default function SearchFeature() {}
     name: 'Advanced Search',''';
     description:'''';
       'Quickly locate products, services and talent using intelligent search filters.',''';
-    url: 'https://app.ziontechgroup.com/features/search'};
+    url: 'https://app.ziontechgroup.com/features/search'}
   return();
     <>;
       <SEO;
@@ -83,14 +83,10 @@ export default function SearchFeature() {}
       </main>;
       <Footer />;
     </>)}
-;
 
-export { SearchFeature };
-;
-export { SearchFeature };
-;
-export { SearchFeature };
-;
-export { SearchFeature };
-;
-export { SearchFeature };
+
+export { SearchFeature }
+export { SearchFeature }
+export { SearchFeature }
+export { SearchFeature }
+export { SearchFeature }

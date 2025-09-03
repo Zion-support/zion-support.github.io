@@ -2,10 +2,10 @@ import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
 import { CheckCircle, ArrowRight, Star, Users, Zap, Shield } from 'lucide-react';
 import Link from 'next/link';
-;
-const PricingPage: NextPage = () => {;
+
+const PricingPage: NextPage = () => {
   const pricingPlans = [;
-    {;
+    {
       name: 'Starter',;
       price: '$2,999',;
       period: '/month',;
@@ -20,9 +20,8 @@ const PricingPage: NextPage = () => {;
       ],;
       popular: false,;
       cta: 'Get Started',;
-      color: 'from-gray-500 to-gray-600';,
-},;
-    {;
+      color: 'from-gray-500 to-gray-600'},;
+    {
       name: 'Professional',;
       price: '$7,999',;
       period: '/month',;
@@ -39,9 +38,8 @@ const PricingPage: NextPage = () => {;
       ],;
       popular: true,;
       cta: 'Most Popular',;
-      color: 'from-zion-cyan to-blue-600';,
-},;
-    {;
+      color: 'from-zion-cyan to-blue-600'},;
+    {
       name: 'Enterprise',;
       price: 'Custom',;
       period: '',;
@@ -59,52 +57,43 @@ const PricingPage: NextPage = () => {;
       ],;
       popular: false,;
       cta: 'Contact Sales',;
-      color: 'from-purple-500 to-purple-600';,
-}
+      color: 'from-purple-500 to-purple-600'}
   ];
-;
+
   const addOnServices = [;
-    {;
+    {
       name: 'AI Development',;
       price: '$5,000',;
-      description: 'Custom AI solutions and machine learning models';,
-},;
-    {;
+      description: 'Custom AI solutions and machine learning models'},;
+    {
       name: 'Cybersecurity Audit',;
       price: '$3,500',;
-      description: 'Comprehensive security assessment and recommendations';,
-},;
-    {;
+      description: 'Comprehensive security assessment and recommendations'},;
+    {
       name: 'Data Analytics',;
       price: '$4,000',;
-      description: 'Business intelligence and data visualization solutions';,
-},;
-    {;
+      description: 'Business intelligence and data visualization solutions'},;
+    {
       name: 'Mobile App Development',;
       price: '$8,000',;
-      description: 'Native iOS and Android applications';,
-}
+      description: 'Native iOS and Android applications'}
   ];
-;
+
   const faqs = [;
-    {;
+    {
       question: 'What\'s included in the monthly pricing?',;
-      answer: 'Our monthly pricing includes ongoing support, maintenance, monitoring, and updates. It also covers cloud infrastructure costs and security services.';,
-},;
-    {;
+      answer: 'Our monthly pricing includes ongoing support, maintenance, monitoring, and updates. It also covers cloud infrastructure costs and security services.'},;
+    {
       question: 'Can I change my plan later?',;
-      answer: 'Yes, you can upgrade or downgrade your plan at any time. We\'ll work with you to ensure a smooth transition.';,
-},;
-    {;
+      answer: 'Yes, you can upgrade or downgrade your plan at any time. We\'ll work with you to ensure a smooth transition.'},;
+    {
       question: 'Do you offer custom solutions?',;
-      answer: 'Absolutely! Our Enterprise plan is fully customizable, and we can create tailored solutions for any business size or requirement.';,
-},;
-    {;
+      answer: 'Absolutely! Our Enterprise plan is fully customizable, and we can create tailored solutions for any business size or requirement.'},;
+    {
       question: 'What about one-time projects?',;
-      answer: 'We also offer project-based pricing for specific initiatives. Contact us to discuss your project requirements.';,
-}
+      answer: 'We also offer project-based pricing for specific initiatives. Contact us to discuss your project requirements.'}
   ];
-;
+
   return (;
     <MainLayout>;
       {/* Hero Section */}
@@ -132,7 +121,6 @@ const PricingPage: NextPage = () => {;
                     </span>;
                   </div>;
                 )}
-                ;
                 <div className="text-center mb-8">;
                   <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>;
                   <div className="mb-4">;
@@ -141,7 +129,7 @@ const PricingPage: NextPage = () => {;
                   </div>;
                   <p className="text-gray-600">{plan.description}</p>;
                 </div>;
-                ;
+
                 <ul className="space-y-4 mb-8">;
                   {plan.features.map((feature, featureIndex) => (;
                     <li key={featureIndex} className="flex items-center">;
@@ -150,7 +138,7 @@ const PricingPage: NextPage = () => {;
                     </li>;
                   ))}
                 </ul>;
-                ;
+
                 <Link ;
                   href="/contact";
                   className={`w-full bg-gradient-to-r ${plan.color} text-white py-3 px-6 rounded-lg font-semibold text-center block hover:opacity-90 transition-opacity`}
@@ -172,7 +160,7 @@ const PricingPage: NextPage = () => {;
               Enhance your plan with additional services tailored to your specific needs;
             </p>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
             {addOnServices.map((service, index) => (;
               <div key={index} className="bg-white p-6 rounded-lg shadow-lg">;
@@ -194,7 +182,7 @@ const PricingPage: NextPage = () => {;
               Get answers to common questions about our pricing and services;
             </p>;
           </div>;
-          ;
+
           <div className="max-w-4xl mx-auto space-y-8">;
             {faqs.map((faq, index) => (;
               <div key={index} className="bg-gray-50 p-6 rounded-lg">;
@@ -225,7 +213,5 @@ const PricingPage: NextPage = () => {;
         </div>;
       </section>;
     </MainLayout>;
-  );,
-};
-;
+  )}
 export default PricingPage;

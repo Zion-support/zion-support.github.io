@@ -107,7 +107,7 @@ const testimonials = [];
     role: 'Security Engineer, SecureTech',;
     rating: 5}
 ];
-export { function };
+export { function }
 export default function AIAutonomousCodeReview() {}
 ";
   return ("";
@@ -203,8 +203,7 @@ export default function AIAutonomousCodeReview() {}
                     {feature.description}
                   </p>;
                 </motion.div>;
-              );,
-})}
+              )})}
           </div>;
         </div>;
       </section>;
@@ -277,8 +276,7 @@ export default function AIAutonomousCodeReview() {}
                   </h3>"";
                   <p className="text-gray-300 text-sm">{useCase.description}</p>;
                 </motion.div>;
-              );,
-})}
+              )})}
           </div>;
         </div>;
       </section>;
@@ -365,14 +363,10 @@ export default function AIAutonomousCodeReview() {}
         </div>;
       </section>;
     </div>)}
-;
 
-export { AIAutonomousCodeReview, IconComponent, IconComponent };
-;
-export { AIAutonomousCodeReview, IconComponent, IconComponent };
-;
-export { AIAutonomousCodeReview, IconComponent, IconComponent };
-;
-export { AIAutonomousCodeReview, IconComponent, IconComponent };
-;
-export { AIAutonomousCodeReview, IconComponent, IconComponent };
+
+export { AIAutonomousCodeReview, IconComponent, IconComponent }
+export { AIAutonomousCodeReview, IconComponent, IconComponent }
+export { AIAutonomousCodeReview, IconComponent, IconComponent }
+export { AIAutonomousCodeReview, IconComponent, IconComponent }
+export { AIAutonomousCodeReview, IconComponent, IconComponent }

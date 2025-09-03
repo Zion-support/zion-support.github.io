@@ -1,17 +1,16 @@
 
-interface FilterOption {;
+interface FilterOption {
   value: string;
   label: string;
-  count?: number;,
-}
-;
-interface FilterGroup {;
+  count?: number}
+
+interface FilterGroup {
   title: string;
   key: string;
   options: FilterOption[];
   type: 'checkbox' | 'radio' | 'range'}
-;
-interface FilterSidebarProps extends React.PropsWithChildren<{}> {;
+
+interface FilterSidebarProps extends React.PropsWithChildren<{}> {
 
   filters: FilterGroup[];
   selectedFilters: Record<string, any>;
@@ -19,7 +18,7 @@ interface FilterSidebarProps extends React.PropsWithChildren<{}> {;
   onClearFilters: : unknown void;
   isOpen: boolean;
   onClose: ()  => void}
-;
+
 export function FilterSidebar({;
 
   filters,;
@@ -27,8 +26,7 @@ export function FilterSidebar({;
   onFilterChange,;
   onClearFilters,;
   isOpen,;
-  onClose;,
-}: FilterSidebarProps) {;
+  onClose}: FilterSidebarProps) {
 
   return ();
     <>;
@@ -39,7 +37,7 @@ export function FilterSidebar({;
           onClick={onClose}
         />;
       )}
-;
+
       {/* Sidebar */}
       <div className={`;
         fixed lg:static inset-y-0 left-0 z-50 w-80 bg-zion-blue-dark/95 backdrop-blur-xl border-r border-zion-blue-light/20 transform transition-transform duration-300 lg:transform-none';
@@ -54,7 +52,7 @@ export function FilterSidebar({;
                           <span className="ml-2 text-zion-slate-light/60">;
                             ({option.count});
                           </span>;
-                        )};
+                        )}
                       </span>;
                     </label>;
                   )})}

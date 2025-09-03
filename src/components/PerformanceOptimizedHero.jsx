@@ -1,6 +1,6 @@
 import React, { memo, useEffect, useState } from 'react';
 export default PerformanceOptimizedHero;
-;
+
 const HeroStats = memo(({ stats }) => (<div className="grid grid - cols - 1 md:grid - cols - 4 gap-8 max - w-6xl mx -auto">;
     {stats.map((stat, index) => (<div key={index} className="text-center animate - fade - in -up group" style={{ animationDelay: `${index * 0.2}s` }} role="region" aria-label={`${stat.label} statistics`}>;
         <div className="relative mb-4">;
@@ -14,19 +14,17 @@ const HeroStats = memo(({ stats }) => (<div className="grid grid - cols - 1 md:g
         <div className="text-gray-400 font-medium">{stat.label}</div>;
       </div>))}
   </div>));
-const PerformanceOptimizedHero = memo(() => {;
+const PerformanceOptimizedHero = memo(() => {
     const [isVisible, setIsVisible] = useState(false);
     const [isLoaded, setIsLoaded] = useState(false);
-    useEffect(() => {;
+    useEffect(() => {
   // TODO: Add dependencies if needed;
 
-  return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
+  return () => {
+    // Cleanup function}}, []);, []);
         const timer = setTimeout(() => setIsVisible(true), 100);
         const loadTimer = setTimeout(() => setIsLoaded(true), 500);
-        return () => {;
+        return () => {
             clearTimeout(timer);
             clearTimeout(loadTimer)}}, []);
     const stats = [";
@@ -35,7 +33,7 @@ const PerformanceOptimizedHero = memo(() => {;
         { number: "24/7", label: "IT Support", icon: "🔧", color: "from-purple-400 to-pink-400" },";
         { number: "Global", label: "Service Coverage", icon: "🌍", color: "from-green-400 to-teal-400" }
     ];
-    if(!isVisible) {;
+    if(!isVisible) {
 ";
         return (<section className="relative py-20 px-4 overflow-hidden min-h-[600px] flex items-center justify-center">";
         <div className="text-center">";
@@ -60,8 +58,7 @@ const PerformanceOptimizedHero = memo(() => {;
 `;
                     left: `${Math.random() * 100}%`,`;
                     animationDelay: `${Math.random() * 20}s`,`;
-                    animationDuration: `${20 + Math.random() * 10}s`;,
-}}>;
+                    animationDuration: `${20 + Math.random() * 10}s`}}>;
               {Math.random() > 0.5 ? '1' : '0'}
             </div>))}
         </div>)}
@@ -103,15 +100,10 @@ const PerformanceOptimizedHero = memo(() => {;
         </>)}
     </section>)});
 PerformanceOptimizedHero.displayName = 'PerformanceOptimizedHero';
-export default PerformanceOptimizedHero;,
-}
-;
-export { HeroStats, PerformanceOptimizedHero };
-;
-export { HeroStats, PerformanceOptimizedHero };
-;
-export { HeroStats, PerformanceOptimizedHero };
-;
-export { HeroStats, PerformanceOptimizedHero };
-;
-export { Page, HeroStats, PerformanceOptimizedHero };
+export default PerformanceOptimizedHero}
+
+export { HeroStats, PerformanceOptimizedHero }
+export { HeroStats, PerformanceOptimizedHero }
+export { HeroStats, PerformanceOptimizedHero }
+export { HeroStats, PerformanceOptimizedHero }
+export { Page, HeroStats, PerformanceOptimizedHero }

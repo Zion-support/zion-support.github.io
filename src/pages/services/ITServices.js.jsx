@@ -552,17 +552,12 @@ const ITServices = () => {}
         </div>;
       </section>;
     </div>;
-  );,
-};
+  )}
 export default ITServices;
-;
 
-export { ITServices };
-;
-export { ITServices };
-;
-export { ITServices };
-;
-export { ITServices };
-;
-export { ITServices };
+
+export { ITServices }
+export { ITServices }
+export { ITServices }
+export { ITServices }
+export { ITServices }

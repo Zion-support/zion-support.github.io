@@ -1,84 +1,74 @@
 import React from 'react';
 export default ServiceCard;
 import { motion  } from 'framer-motion';
-;
-export default function Page() {;
-;
-    const iconVariants = {;
+
+export default function Page() {
+
+    const iconVariants = {
 
   hidden: { scale: 0.8,;
-  opacity: 0;,
-},;
-        visible: {;
+  opacity: 0},;
+        visible: {
 
             scale: 1,;
             opacity: 1,;
-            transition: {;
+            transition: {
 
                 duration: 0.5,";
-                ease: "easeOut";,
-},;
-        hover: {;
+                ease: "easeOut"},;
+        hover: {
 
             scale: 1.2,;
             rotate[0, -10, 10, 0],;
-            transition: {;
+            transition: {
 
                 duration: 0.6,";
-                ease: "easeInOut";,
-};
-    const featureVariants = {;
+                ease: "easeInOut"}
+    const featureVariants = {
 
-  hover: {;
+  hover: {
 
             x: 5,;
-            transition: {;
+            transition: {
 
                 duration: 0.3,";
-  ease: "easeOut";,
-}
+  ease: "easeOut"}
         }
-    };
-    const badgeVariants = {;
+    }
+    const badgeVariants = {
 
   hidden: { scale: 0,;
-  opacity: 0;,
-},;
-        visible: {;
+  opacity: 0},;
+        visible: {
 
             scale: 1,;
             opacity: 1,;
-            transition: {;
+            transition: {
 
                 duration: 0.3,";
-                ease: "backOut";,
-};";
+                ease: "backOut"};";
     return (<motion.div variants={cardVariants} initial="hidden" whileInView="visible" whileHover="hover" viewport={{ once: true }} className="group relative h-full">;
       {/* Enhanced Popular Badge */}";
-      {isPopular && (<motion.div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10" initial={{ scale: 0 }} animate={{ scale: 1 }} transition = {;
+      {isPopular && (<motion.div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10" initial={{ scale: 0 }} animate={{ scale: 1 }} transition = {
 ";
   { delay: 0.2, type: "spring",;
-  stiffness: 300;,
-}}>";
+  stiffness: 300}}>";
           <div className="bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg animate-pulse">;
             ⭐ Most Popular;
           </div>;
         </motion.div>) }
-;
+
       {/* Enhanced New Badge */}";
-      {isNew && (<motion.div className="absolute -top-3 right-4 z-10" initial = {;
+      {isNew && (<motion.div className="absolute -top-3 right-4 z-10" initial = {
 
   { scale: 0,;
-  rotate: -180;,
-}} animate = {;
+  rotate: -180}} animate = {
 
   { scale: 1,;
-  rotate: 0;,
-}} transition = {;
+  rotate: 0}} transition = {
 ";
   { delay: 0.3, type: "spring",;
-  stiffness: 300;,
-}}>";
+  stiffness: 300}}>";
           <div className="bg-gradient-to-r from-zion-purple via-zion-cyan to-zion-blue text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg animate-bounce">;
             🆕 New;
           </div>;
@@ -89,14 +79,12 @@ export default function Page() {;
         <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(34,221,210,0.05)_25%,rgba(34,221,210,0.05)_50%,transparent_50%,transparent_75%,rgba(34,221,210,0.05)_75%)] bg-[size:20px_20px] opacity-0 group-hover:opacity-100 transition-all duration-500 group-hover:animate-pulse"/>;
 
         {/* Enhanced Icon with Floating Animation */}";
-        <motion.div className="relative z-10 text-6xl mb-6 text-center" variants={iconVariants} whileHover="hover" animate = {;
+        <motion.div className="relative z-10 text-6xl mb-6 text-center" variants={iconVariants} whileHover="hover" animate = {
 
   { y: [0, -5,;
-  0];,
-}} transition = {;
+  0]}} transition = {
   { duration: 3, repeat: Infinity,;
-  ease: "easeInOut";,
-}}>;
+  ease: "easeInOut"}}>;
           {icon}
         </motion.div>;
 
@@ -128,7 +116,7 @@ export default function Page() {;
                   </motion.li>) ) }
               </ul>;
             </div>) }
-;
+
           {/* Enhanced Price */}";
           <div className="text-center mb-6">";
             <motion.div className="text-2xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent mb-2" whileHover={{ scale: 1.1 }}>;
@@ -141,15 +129,13 @@ export default function Page() {;
           <div className="text-center">";
             <Link to={href} className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-zion-cyan/20 via-zion-blue/20 to-zion-purple/20 text-zion-cyan border border-zion-cyan/30 rounded-xl text-sm font-medium hover:from-zion-cyan/30 hover:via-zion-blue/30 hover:to-zion-purple/30 hover:border-zion-cyan/50 transition-all duration-300 group-hover:shadow-zion-glow hover:scale-105">;
               <span>Learn More</span>";
-              <motion.span className="group-hover:translate-x-2 transition-transform duration-300" animate = {;
+              <motion.span className="group-hover:translate-x-2 transition-transform duration-300" animate = {
 
   { x: [0, 5,;
-  0];,
-}} transition = {;
+  0]}} transition = {
 
   { duration: 2,;
-  repeat: Infinity;,
-}}>;
+  repeat: Infinity}}>;
                 →;
               </motion.span>;
             </Link>;
@@ -172,16 +158,11 @@ export default function Page() {;
         <div className="absolute bottom-4 left-4 w-1.5 h-1.5 bg-zion-purple/50 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-float transition-all duration-500 delay-200"/>";
         <div className="absolute top-1/2 left-2 w-1 h-1 bg-zion-blue/50 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-float transition-all duration-500 delay-400"/>;
       </div>;
-    </motion.div>)};
-export default ServiceCard;,
-}}}}}}}}}}
-;
-export { ServiceCard };
-;
-export { ServiceCard };
-;
-export { ServiceCard };
-;
-export { ServiceCard };
-;
-export { ServiceCard };
+    </motion.div>)}
+export default ServiceCard}}}}}}}}}}
+
+export { ServiceCard }
+export { ServiceCard }
+export { ServiceCard }
+export { ServiceCard }
+export { ServiceCard }

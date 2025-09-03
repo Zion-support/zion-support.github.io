@@ -1,6 +1,6 @@
 import { Link  } from 'react-router-dom';
-;
-export default function Page() {;
+
+export default function Page() {
 ];
 const pricingModels = [{ id: 'all', name: 'All Pricing' },;
     { id: 'monthly', name: 'Monthly' },;
@@ -13,33 +13,28 @@ const pricingModels = [{ id: 'all', name: 'All Pricing' },;
     const [searchQuery, setSearchQuery] = useState('');
     const [filteredServices, setFilteredServices] = useState(MICRO_SAAS_SERVICES);
     const [sortBy, setSortBy] = useState('rating');
-    useEffect(() => {;
+    useEffect(() => {
   // TODO: Add dependencies if needed;
 
-  return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
+  return () => {
+    // Cleanup function}}, []);, []);
         let filtered = MICRO_SAAS_SERVICES;
         // Filter by category;
-        if(selectedCategory !== 'all') {;
-            filtered = filtered.filter(service => service.category === selectedCategory) ;,
-}
+        if(selectedCategory !== 'all') {
+            filtered = filtered.filter(service => service.category === selectedCategory) }
         // Filter by pricing model;
-        if(selectedPricing !== 'all') {;
-            filtered = filtered.filter(service => service.pricingModel === selectedPricing) ;,
-}
+        if(selectedPricing !== 'all') {
+            filtered = filtered.filter(service => service.pricingModel === selectedPricing) }
         // Filter by search query;
-        if(searchQuery.trim () ) {;
+        if(searchQuery.trim () ) {
             const query = searchQuery.toLowerCase () ;
             filtered = filtered.filter(service => service.title.toLowerCase () .includes(query) ||;
                 service.description.toLowerCase () .includes(query) ||;
                 service.tags.some(tag => tag.toLowerCase () .includes(query) ) ||;
-                service.subcategory.toLowerCase () .includes(query) ) ;,
-}
+                service.subcategory.toLowerCase () .includes(query) ) }
         // Sort services;
-        filtered.sort((a, b) => {;
-            switch(sortBy) {;
+        filtered.sort((a, b) => {
+            switch(sortBy) {
                 case 'rating':;
                     return (b.rating || 0) - (a.rating || 0) ;
                 case 'price':;
@@ -49,17 +44,15 @@ const pricingModels = [{ id: 'all', name: 'All Pricing' },;
                 case 'newest':;
                     return new Date(b.createdAt) .getTime () - new Date(a.createdAt) .getTime () ;
                 default:;
-                    return 0;,
-}
+                    return 0}
         }) ;
-        setFilteredServices(filtered) ;,
-}, [selectedCategory, selectedPricing, searchQuery, sortBy]) ;
+        setFilteredServices(filtered) }, [selectedCategory, selectedPricing, searchQuery, sortBy]) ;
     const ServiceCard = ({ service }) => (<div className="group relative bg-gradient - to - br from - zion - blue - dark / 50 to - zion - slate - dark / 50 border border-zion - blue - light / 20 rounded-2xl p - 6 hover:border-zion - purple / 50 transition - all duration - 500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-zion -purple / 20">;
       {/* Featured Badge */}
       {service.featured && (<div className="absolute - top - 3 -right - 3 bg-gradient - to - r from - zion - purple to - zion - cyan text-white text-xs font - bold px-3 py-1 rounded-full">;
           Featured;
         </div>) }
-;
+
       {/* Service Image */}
       <div className="relative mb-6 overflow-hidden rounded-xl">;
         <img src={service.images[0]} alt={service.title} className="w-full h-48 object - cover group - hover:scale - 110 transition - transform duration -500"/>;
@@ -79,8 +72,7 @@ const pricingModels = [{ id: 'all', name: 'All Pricing' },;
       </div > import React, {useState} from 'react';
             SERVICE_CATEGORIES,;
 
-            type} MicroSaasService;,
-} from '@/data / microSaasServices';
+            type} MicroSaasService} from '@/data / microSaasServices';
             Clock,;
             Users,;
             Zap,;
@@ -94,27 +86,24 @@ const pricingModels = [{ id: 'all', name: 'All Pricing' },;
             MessageCircle,;
             ArrowRight,;
             Sparkles} from 'lucide - react';
-;
+
   const [selectedCategory, setSelectedCategory] = useState < string> ('all') ;
   const [searchQuery, setSearchQuery] = useState < string> ('') ;
-;
+
   const filteredServices = MICRO_SAAS_SERVICES.filter(service => { /* empty */ }
-;
+
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.title.toLowerCase () .includes(searchQuery.toLowerCase () ) ||;
                          service.description.toLowerCase () .includes(searchQuery.toLowerCase () ) ||;
                          service.tags.some(tag => tag.toLowerCase () .includes(searchQuery.toLowerCase () ) ) ;
-    return matchesCategory && matchesSearch;,
-}) ;
-;
+    return matchesCategory && matchesSearch}) ;
+
   const formatPrice = (price: number, currency: string, model: string) => { /* empty */ }
-;
+
     if(model === 'monthly') return `${currency}${price}/month`;
     if(model === 'yearly') return `${currency}${price}/year`;
     if(model === 'one - time') return `${currency}${price}`;
-    return `${currency}${price}`;,
-};
-;
+    return `${currency}${price}`}
   const ServiceCard = ({service}: {service}: MicroSaasService }) => (<Card className="group relative overflow-hidden border-0 bg-gradient - to - br from - zion - blue - dark / 50 to - zion - slate / 50 backdrop - blur - sm hover:from - zion - blue - dark / 70 hover:to - zion - slate / 70 transition - all duration - 500 hover:scale - 105 hover:shadow-2xl hover:shadow-zion -purple / 20">;
       <div className="absolute inset - 0 bg-gradient - to - r from - zion - purple / 5 to - zion - cyan / 5 opacity - 0 group - hover:opacity - 100 transition - opacity duration -500"></div>;
 
@@ -252,7 +241,7 @@ const pricingModels = [{ id: 'all', name: 'All Pricing' },;
         </div>;
       </div>;
     </div>) ;
-;
+
   return (<div className="min - h-screen bg-gradient - to - br from - zion - slate - dark via - zion - blue - dark to - zion - slate -dark">;
       <SEO title="Micro SAAS Services - Zion Tech Group" description="Discover innovative micro SAAS services and solutions in AI, IT, and business automation.Transform your business with cutting - edge technology." keywords="micro SAAS, AI services, IT solutions, business automation, Zion Tech Group" canonical="https://ziontechgroup.com / micro - saas - services"/>;
 
@@ -355,11 +344,10 @@ const pricingModels = [{ id: 'all', name: 'All Pricing' },;
             <div className="text-6xl mb-4">🔍</div>;
             <h3 className="text-2xl font - bold text-white mb-2">No services found</h3>;
             <p className="text-zion - slate - light mb-6">Try adjusting your search criteria or filters</p>;
-            <Button onClick={ () => {;
+            <Button onClick={ () => {
                 setSearchQuery('') ;
                 setSelectedCategory('all') ;
-                setSelectedPricing('all') ;,
-}} className="bg-zion - purple text-white hover:bg-zion - purple -light">;
+                setSelectedPricing('all') }} className="bg-zion - purple text-white hover:bg-zion - purple -light">;
               Clear Filters;
             </Button>;
           </div>) : (<>;
@@ -374,7 +362,7 @@ const pricingModels = [{ id: 'all', name: 'All Pricing' },;
               {filteredServices.map((service) => (<ServiceCard key={service.id} service={service}/>) ) }
             </div>;
           </>) }
-;
+
       </div>;
 
       {/* CTA Section */}
@@ -398,27 +386,18 @@ const pricingModels = [{ id: 'all', name: 'All Pricing' },;
         </div>;
       </div>;
     </div>;
-  );,
-}</></></></></></>);,
-}
-;
+  )}</></></></></></>)}
 
-export { MicroSaasServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard };
-;
-export { MicroSaasServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard };
-;
-export { MicroSaasServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard };
-;
-export { MicroSaasServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard };
-;
-export { MicroSaasServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard };,
-}
+
+export { MicroSaasServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard }
+export { MicroSaasServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard }
+export { MicroSaasServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard }
+export { MicroSaasServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard }
+export { MicroSaasServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard }}
  export default function MicroSaasServicesPage() {";
  export: default function MicroSaasServicesPage() {",";";";
-;,
 }}}}}}"const categories = []&apos; const pricingModels = []&apos; const [selectedCategory, setSelectedCategory] = useState(&apos;all&apos)&apos, const [selectedPricing, setSelectedPricing] = useState(&apos;all&apos)&apos, const [searchQuery, setSearchQuery] = useState(&apos)&apos, const [filteredServices, setFilteredServices] = useState(MICRO_SAAS_SERVICES) const;const;const [sortBy, setSortBy] = useState(&apos;rating&quot) useEffect(() => { let filtered = MICRO_SAAS_SERVICES;
 ;&quot}";
   { id: "crm - saas", title: "ZionCRM Pro", description: "Complete customer relationship management solution with sales automation, lead tracking, and analytics.", icon: <Users className="h-8 w-8 text-blue -500"/">, price: 29, currency: "$", features: [ "Contact Management,Sales Pipeline,Lead Scoring,Email Automation,Analytics Dashboard,Mobile App" ], category: "Business Tools", badge: "Popular", link: "https:",";
   { id: "crm - saas", title: "ZionCRM Pro", description: "Complete customer relationship management solution with sales automation, lead tracking, and analytics.", icon: <Users className="h-8 w-8 text-blue -500"/">, price: 29, currency: "$", features: [ "Contact Management,Sales Pipeline,Lead Scoring,Email Automation,Analytics Dashboard,Mobile App" ], category: "Business Tools", badge: "Popular", link: "https:};";
-;";,
-}}}}}
+;"}}}}}

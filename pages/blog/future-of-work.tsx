@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
-;
-export default function FutureOfWork() {;
+
+export default function FutureOfWork() {
   return (;
     <>;
       <Head>;
@@ -11,7 +11,7 @@ export default function FutureOfWork() {;
         <meta property="og:description" content="How autonomous systems are reshaping the workplace and enhancing human capabilities." />;
         <meta name="twitter:card" content="summary_large_image" />;
       </Head>;
-      ;
+
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">;
         <main className="container mx-auto px-6 py-12">;
           <nav className="mb-8">;
@@ -19,7 +19,7 @@ export default function FutureOfWork() {;
               ← Back to Blog;
             </a>;
           </nav>;
-          ;
+
           <article className="max-w-4xl mx-auto">;
             <header className="mb-12">;
               <div className="flex items-center gap-3 mb-4">;
@@ -38,7 +38,7 @@ export default function FutureOfWork() {;
                 opportunities for human-AI collaboration.;
               </p>;
             </header>;
-            ;
+
             <div className="prose prose-invert prose-lg max-w-none">;
               <section className="mb-12">;
                 <h2 className="text-3xl font-bold mb-6 text-cyan-400">The Collaboration Revolution</h2>;
@@ -51,7 +51,7 @@ export default function FutureOfWork() {;
                   collaboration seamless, productive, and empowering.;
                 </p>;
               </section>;
-              ;
+
               <section className="mb-12">;
                 <h2 className="text-3xl font-bold mb-6 text-fuchsia-400">Augmenting Human Capabilities</h2>;
                 <p className="text-white/80 mb-4">;
@@ -64,7 +64,7 @@ export default function FutureOfWork() {;
                   high-value, creative work that truly matters.;
                 </p>;
               </section>;
-              ;
+
               <section className="mb-12">;
                 <h2 className="text-3xl font-bold mb-6 text-green-400">New Job Opportunities</h2>;
                 <p className="text-white/80 mb-4">;
@@ -77,7 +77,7 @@ export default function FutureOfWork() {;
                   compete with them.;
                 </p>;
               </section>;
-              ;
+
               <section className="mb-12">;
                 <h2 className="text-3xl font-bold mb-6 text-blue-400">Workplace Transformation</h2>;
                 <p className="text-white/80 mb-4">;
@@ -90,7 +90,7 @@ export default function FutureOfWork() {;
                   that embrace AI collaboration.;
                 </p>;
               </section>;
-              ;
+
               <section className="mb-12">;
                 <h2 className="text-3xl font-bold mb-6 text-purple-400">Skills for the Future</h2>;
                 <p className="text-white/80 mb-4">;
@@ -104,7 +104,7 @@ export default function FutureOfWork() {;
                   <li>• Continuous learning and adaptation</li>;
                 </ul>;
               </section>;
-              ;
+
               <section className="mb-12">;
                 <h2 className="text-3xl font-bold mb-6 text-yellow-400">Building the Future Together</h2>;
                 <p className="text-white/80 mb-4">;
@@ -118,7 +118,7 @@ export default function FutureOfWork() {;
                 </p>;
               </section>;
             </div>;
-            ;
+
             <footer className="mt-16 pt-8 border-t border-white/20">;
               <div className="flex items-center justify-between">;
                 <div className="text-white/60 text-sm">;
@@ -138,5 +138,4 @@ export default function FutureOfWork() {;
         </main>;
       </div>;
     </>;
-  );,
-}
+  )}

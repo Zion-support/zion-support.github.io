@@ -2,15 +2,13 @@ import React from 'react';
 import Image from 'next/image';
 import { Card } from './Card';
 import { Badge } from './Badge';
-;
-type EnhancedMarketplaceCardProps = {;
+
+type EnhancedMarketplaceCardProps = {
   title: string;
   description: string;
   price?: string;
-  image?: string;,
-};
-;
-export default function EnhancedMarketplaceCard({ title, description, price, image }: EnhancedMarketplaceCardProps) {;
+  image?: string}
+export default function EnhancedMarketplaceCard({ title, description, price, image }: EnhancedMarketplaceCardProps) {
   return (;
     <Card className="flex flex-col h-full">;
       <div className="relative w-full h-40 mb-3 overflow-hidden rounded-md bg-gray-100">;
@@ -27,6 +25,5 @@ export default function EnhancedMarketplaceCard({ title, description, price, ima
         {price && <span className="text-sm font-semibold text-gray-900">{price}</span>}
       </div>;
     </Card>;
-  );,
-}
-;
+  )}
+

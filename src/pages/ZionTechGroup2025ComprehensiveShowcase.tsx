@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
-const ZionTechGroup2025ComprehensiveShowcase = () => {;
+const ZionTechGroup2025ComprehensiveShowcase = () => {
   return (;
     <>;
       <Head>;
@@ -45,6 +45,5 @@ const ZionTechGroup2025ComprehensiveShowcase = () => {;
               </Link>;
             </div>;
     </>;
-  );,
-}
+  )}
 export default ZionTechGroup2025ComprehensiveShowcase;

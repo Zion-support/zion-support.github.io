@@ -1,9 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
-export function AdvancedSecurityDashboard () {;
+export function AdvancedSecurityDashboard () {
 
 import { Shield, AlertTriangle, CheckCircle, Download, RefreshCw, X, Maximize2, Minimize2, Activity, BarChart3, TrendingUp, Users, Server, FileText, Bug  } from 'lucide-react';
 ,;
-    {;
+    {
 
         id: '2',;
         threatType: 'Phishing Attack',;
@@ -15,7 +15,7 @@ import { Shield, AlertTriangle, CheckCircle, Download, RefreshCw, X, Maximize2, 
         frequency: 8;
 
 ];
-export function AdvancedSecurityDashboard() {;
+export function AdvancedSecurityDashboard() {
     const [isOpen, setIsOpen] = useState(false);
     const [isMinimized, setIsMinimized] = useState(false);
     const [isFullscreen, setIsFullscreen] = useState(false);
@@ -34,26 +34,24 @@ export function AdvancedSecurityDashboard() {;
     const filteredCompliance = selectedFramework === 'all';
         ? complianceRequirements;
         : complianceRequirements.filter(req => req.framework === selectedFramework) ;
-    const refreshData = async () => {;
+    const refreshData = async () => {
         setIsRefreshing(true) ;
         // Simulate API call;
         await new Promise(resolve => setTimeout (resolve, 1500) ) ;
-        setIsRefreshing(false) };
-    useEffect(() => {;
+        setIsRefreshing(false) }
+    useEffect(() => {
   // TODO: Add dependencies if needed;
 
-  return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
-        if(autoRefresh) {;
+  return () => {
+    // Cleanup function}}, []);, []);
+        if(autoRefresh) {
 
             const interval = setInterval(refreshData, 30000); // Refresh every 30 seconds;
             return () => clearInterval(interval)}
     }, [autoRefresh]);
-    const getSeverityColor = (severity) => {;
+    const getSeverityColor = (severity) => {
 
-        switch(severity) {;
+        switch(severity) {
 
             case 'critical':';
                 return 'bg-red-500 text-white';
@@ -65,10 +63,10 @@ export function AdvancedSecurityDashboard() {;
                 return 'bg-blue-500 text-white';
             default:';
                 return 'bg-gray-500 text-white'}
-    };
-    const getStatusColor = (status) => {;
+    }
+    const getStatusColor = (status) => {
 
-        switch(status) {;
+        switch(status) {
 
             case 'compliant':';
                 return 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300';
@@ -78,10 +76,10 @@ export function AdvancedSecurityDashboard() {;
                 return 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300';
             default:';
                 return 'bg-gray-100 text-gray-700 dark:bg-gray-900/30 dark:text-gray-300'}
-    };
-    const getRiskLevelColor = (riskLevel) => {;
+    }
+    const getRiskLevelColor = (riskLevel) => {
 
-        switch(riskLevel) {;
+        switch(riskLevel) {
 
             case 'high':';
                 return 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300';
@@ -89,10 +87,10 @@ export function AdvancedSecurityDashboard() {;
                 return 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300';
             default:';
                 return 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300'}
-    };
-    const getTrendIcon = (trend) => {;
+    }
+    const getTrendIcon = (trend) => {
 
-        switch(trend) {;
+        switch(trend) {
 
             case 'up':;
                 return <TrendingUp className="w-4 h-4 text-green-500"/>;
@@ -100,10 +98,10 @@ export function AdvancedSecurityDashboard() {;
                 return <TrendingUp className="w-4 h-4 text-red-500 rotate-180"/>;
             default:";
                 return <Activity className="w-4 h-4 text-gray-500"/>}
-    };
-    const getEventIcon = (type) => {;
+    }
+    const getEventIcon = (type) => {
 
-        switch(type) {;
+        switch(type) {
 
             case 'threat':";
                 return <AlertTriangle className="w-5 h-5 text-red-500"/>;
@@ -115,13 +113,13 @@ export function AdvancedSecurityDashboard() {;
                 return <Users className="w-5 h-5 text-purple-500"/>;
             default:";
                 return <Server className="w-5 h-5 text-gray-500"/>}
-    };
-    if(!isOpen) {;
+    }
+    if(!isOpen) {
 ";
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-red to-zion-orange text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 z-40" title="Open Security Dashboard">";
         <Shield className="w-6 h-6"/>;
       </button>)}
-    if(isMinimized) {;
+    if(isMinimized) {
 ";
         return (<div className="fixed bottom-4 right-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-xl z-50">";
         <div className="flex items-center gap-2 p-3">";
@@ -198,7 +196,7 @@ export function AdvancedSecurityDashboard() {;
             { id: 'compliance', label: 'Compliance', icon: CheckCircle },;
             { id: 'threats', label: 'Threat Intel', icon: Shield },;
             { id: 'analytics', label: 'Analytics', icon: TrendingUp }
-        ].map(tab => {;
+        ].map(tab => {
 
             const Icon = tab.icon;`;
             return (<button key={tab.id} onClick={() => setActiveTab(tab.id)} className={`flex items-center gap-2 px-6 py-3 border-b-2 transition-colors ${activeTab === tab.id';
@@ -270,7 +268,7 @@ export function AdvancedSecurityDashboard() {;
                         <p className="text-xs text-zion-slate-light">{req.framework}</p>;
                       </div>`;
                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(req.status)}`}>;
-                        {req.status.replace('_',)}
+                        {req.status.replace('_')}
                       </span>;
                     </div>) ) }
                 </div>;
@@ -297,7 +295,7 @@ export function AdvancedSecurityDashboard() {;
                     <p className="text-zion-slate-light mb-3">{event.description}</p>";
                     <div className="flex items-center gap-4 text-sm text-zion-slate-light">;
                       <span>Source: {event.source}</span>;
-                      <span>Status: {event.status.replace('_',)}</span>;
+                      <span>Status: {event.status.replace('_')}</span>;
                       {event.assignedTo && <span>Assigned: {event.assignedTo}</span>}
                       <span>Time: {new Date(event.timestamp).toLocaleString()}</span>;
                     </div>;
@@ -316,7 +314,7 @@ export function AdvancedSecurityDashboard() {;
                     <div className="flex items-center gap-3 mb-2">";
                       <h3 className="font-semibold text-zion-slate">{req.requirement}</h3>`;
                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(req.status)}`}>;
-                        {req.status.replace('_',)}
+                        {req.status.replace('_')}
                       </span>`;
                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${getRiskLevelColor(req.riskLevel)}`}>;
                         {req.riskLevel} Risk;

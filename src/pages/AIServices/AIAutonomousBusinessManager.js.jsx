@@ -2,32 +2,28 @@ import React from 'react';''';
 import { motion } from 'framer-motion';''';
 import { Link } from 'react-router-dom';
 import { Brain, TrendingUp, Zap, Users, BarChart3, Target, CheckCircle, ArrowRight, Play, Star } from 'lucide-react';
-;
+
 const features = [;
-    {;
+    {
         title: "Intelligent Decision Making",;
         description: "AI-powered decision engine that analyzes market trends, customer behavior, and business metrics to make optimal business decisions.",;
         icon: Brain,;
-        color: "from-purple-500 to-pink-500";,
-},;
-    {;
+        color: "from-purple-500 to-pink-500"},;
+    {
         title: "Real-time Analytics",;
         description: "Continuous monitoring and analysis of business performance with instant insights and actionable recommendations.",;
         icon: BarChart3,;
-        color: "from-blue-500 to-cyan-500";,
-},;
-    {;
+        color: "from-blue-500 to-cyan-500"},;
+    {
         title: "Automated Operations",;
         description: "Streamline business processes with intelligent automation that adapts to changing business conditions.",;
         icon: Zap,;
-        color: "from-green-500 to-emerald-500";,
-},;
-    {;
+        color: "from-green-500 to-emerald-500"},;
+    {
         title: "Predictive Insights",;
         description: "Forecast market trends, customer needs, and business opportunities with advanced predictive analytics.",;
         icon: TrendingUp,;
-        color: "from-orange-500 to-red-500";,
-}];
+        color: "from-orange-500 to-red-500"}];
 const useCases = [];
   {}
 ';
@@ -80,7 +76,7 @@ const testimonials = [];
     role: 'COO, InnovateCorp',;
     rating: 5}
 ];
-export { function };
+export { function }
 export default function AIAutonomousBusinessManager() {}
 ";
   return ("";
@@ -176,8 +172,7 @@ export default function AIAutonomousBusinessManager() {}
                     {feature.description}
                   </p>;
                 </motion.div>;
-              );,
-})}
+              )})}
           </div>;
         </div>;
       </section>;
@@ -252,8 +247,7 @@ export default function AIAutonomousBusinessManager() {}
                     {useCase.description}
                   </p>;
                 </motion.div>;
-              );,
-})}
+              )})}
           </div>;
         </div>;
       </section>;
@@ -340,14 +334,10 @@ export default function AIAutonomousBusinessManager() {}
         </div>;
       </section>;
     </div>)}
-;
 
-export { AIAutonomousBusinessManager, IconComponent, IconComponent };
-;
-export { AIAutonomousBusinessManager, IconComponent, IconComponent };
-;
-export { AIAutonomousBusinessManager, IconComponent, IconComponent };
-;
-export { AIAutonomousBusinessManager, IconComponent, IconComponent };
-;
-export { AIAutonomousBusinessManager, IconComponent, IconComponent };
+
+export { AIAutonomousBusinessManager, IconComponent, IconComponent }
+export { AIAutonomousBusinessManager, IconComponent, IconComponent }
+export { AIAutonomousBusinessManager, IconComponent, IconComponent }
+export { AIAutonomousBusinessManager, IconComponent, IconComponent }
+export { AIAutonomousBusinessManager, IconComponent, IconComponent }

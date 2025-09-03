@@ -7,7 +7,7 @@ import { toast } from "@/hooks/use-toast";"";
 import { supabase } from "@/integrations/supabase/client";";
 // Import refactored components"";
 import { FraudStatsCards, FraudFilters, FraudFlagsTable, FraudTabContent } from "@/components/admin/fraud-detection";
-export { function };
+export { function }
 export default function FraudDetection() {}
     const [flags, setFlags] = useState([]);
     const [filteredFlags, setFilteredFlags] = useState([]);";
@@ -45,13 +45,9 @@ export default function FraudDetection() {}
                 false_positives: data?.filter(flag => flag.is_false_positive).length || 0,;
                 actioned_count: data?.filter(flag => flag.action_taken && flag.action_taken !== 'none').length || 0,;
 
-;
-export { FraudDetection };
-;
-export { FraudDetection };
-;
-export { FraudDetection };
-;
-export { FraudDetection };
-;
-export { FraudDetection };
+
+export { FraudDetection }
+export { FraudDetection }
+export { FraudDetection }
+export { FraudDetection }
+export { FraudDetection }

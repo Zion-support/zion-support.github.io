@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 export /**;
 export default BenefitsSection;}}}}</motion.div></motion.div></motion.div>}
 import { GradientHeading } from './ui / GradientHeading';
-export default function Page() {;
+export default function Page() {
 ,;
-  {;
+  {
 ";
     title: "24/7 Support",";
     description: "Our dedicated team is available around the clock to assist with any questions or issues you might encounter during your journey.",";
@@ -16,9 +16,8 @@ export default function Page() {;
       "Expert technical support",";
       "Rapid response times",";
       "Proactive monitoring";
-    ];,
-},;
-  {;
+    ]},;
+  {
 ";
     title: "Cost Reduction",";
     description: "Eliminate middlemen and reduce costs by up to 40% through direct connections with service providers and product vendors.",";

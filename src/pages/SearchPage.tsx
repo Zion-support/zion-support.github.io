@@ -1,7 +1,7 @@
 import { Link, useSearchParams  } from 'react-router-dom';
-export default function Page() {;
+export default function Page() {
 ,;
-    {;
+    {
       id: 'ai - sales',;
       title: 'AI Sales Copilot',;
       description: 'Intelligent sales optimization platform that enhances sales performance through AI - driven insights, lead scoring, and automated follow-up sequences.',;
@@ -11,11 +11,10 @@ export default function Page() {;
       tags: ['AI', 'Sales', 'CRM', 'Automation', 'Lead Generation'],;
       relevance: 0.89,;
       lastUpdated: '2024 - 11 - 25',;
-      icon: Users;,
-},;
+      icon: Users},;
 
     // Cloud Services;
-    {;
+    {
       id: 'cloud - devops',;
       title: 'Cloud DevOps Platform',;
       description: 'Comprehensive cloud DevOps solution that automates infrastructure deployment, scaling, and management across multiple cloud providers.',;
@@ -25,9 +24,8 @@ export default function Page() {;
       tags: ['Cloud', 'DevOps', 'Automation', 'Infrastructure', 'AWS', 'Azure'],;
       relevance: 0.87,;
       lastUpdated: '2024 - 11 - 20',;
-      icon: Cloud;,
-},;
-    {;
+      icon: Cloud},;
+    {
       id: 'it - infrastructure',;
       title: 'IT Infrastructure Management',;
       description: 'Enterprise - grade IT infrastructure solutions including server management, network optimization, and disaster recovery planning.',;
@@ -37,11 +35,10 @@ export default function Page() {;
       tags: ['Infrastructure', 'IT', 'Enterprise', 'Networking', 'Security'],;
       relevance: 0.84,;
       lastUpdated: '2024 - 11 - 18',;
-      icon: Server;,
-},;
+      icon: Server},;
 
     // Security Services;
-    {;
+    {
       id: 'ai - cybersecurity',;
       title: 'AI Cybersecurity Platform',;
       description: 'Next - generation cybersecurity solution powered by artificial intelligence for advanced threat detection, prevention, and response.',;
@@ -52,9 +49,8 @@ export default function Page() {;
       relevance: 0.91,;
       lastUpdated: '2024 - 11 - 22',;
       icon: Shield,;
-      featured: true;,
-},;
-    {;
+      featured: true},;
+    {
       id: 'zero - trust',;
       title: 'Zero Trust Network Access',;
       description: 'Modern security architecture that implements zero - trust principles for enhanced network security and access control.',;
@@ -64,11 +60,10 @@ export default function Page() {;
       tags: ['Zero Trust', 'Security', 'Network', 'Access Control', 'Compliance'],;
       relevance: 0.86,;
       lastUpdated: '2024 - 11 - 15',;
-      icon: Lock;,
-},;
+      icon: Lock},;
 
     // Quantum Computing;
-    {;
+    {
       id: 'quantum - computing',;
       title: 'Quantum Computing Solutions',;
       description: 'Cutting - edge quantum computing services for optimization problems, cryptography, and scientific simulations.',;
@@ -78,11 +73,10 @@ export default function Page() {;
       tags: ['Quantum Computing', 'Optimization', 'Cryptography', 'AI', 'Research'],;
       relevance: 0.88,;
       lastUpdated: '2024 - 11 - 10',;
-      icon: Atom;,
-},;
+      icon: Atom},;
 
     // Blog Posts;
-    {;
+    {
       id: 'ai - trends - 2024',;
       title: 'AI Trends to Watch in 2024',;
       description: 'Explore the latest artificial intelligence trends that will shape the technology landscape in 2024 and beyond.',;
@@ -92,9 +86,8 @@ export default function Page() {;
       tags: ['AI', 'Trends', 'Technology', '2024', 'Innovation'],;
       relevance: 0.82,;
       lastUpdated: '2024 - 12 - 01',;
-      icon: BookOpen;,
-},;
-    {;
+      icon: BookOpen},;
+    {
       id: 'cloud - migration - guide',;
       title: 'Complete Guide to Cloud Migration',;
       description: 'A comprehensive guide to migrating your infrastructure to the cloud, including best practices and common pitfalls.',;
@@ -104,11 +97,10 @@ export default function Page() {;
       tags: ['Cloud Migration', 'Guide', 'Best Practices', 'Infrastructure'],;
       relevance: 0.79,;
       lastUpdated: '2024 - 11 - 28',;
-      icon: Cloud;,
-},;
+      icon: Cloud},;
 
     // Case Studies;
-    {;
+    {
       id: 'healthcare - ai - case - study',;
       title: 'AI Transformation in Healthcare',;
       description: 'How a leading healthcare provider leveraged AI to improve patient outcomes and operational efficiency.',;
@@ -118,10 +110,9 @@ export default function Page() {;
       tags: ['AI', 'Healthcare', 'Case Study', 'Transformation', 'Patient Care'],;
       relevance: 0.85,;
       lastUpdated: '2024 - 11 - 20',;
-      icon: FileText;,
-}
+      icon: FileText}
   ];
-;
+
   const filterOptions = [{ id: 'ai - services', name: 'AI Services', icon: Brain, count: 0 },;
     { id: 'cloud - infrastructure', name: 'Cloud & Infrastructure', icon: Cloud, count: 0 },;
     { id: 'security', name: 'Security & Compliance', icon: Shield, count: 0 },;
@@ -131,122 +122,97 @@ export default function Page() {;
     { id: 'case - studies', name: 'Case Studies', icon: FileText, count: 0 },;
     { id: 'documentation', name: 'Documentation', icon: Code, count: 0 }
   ];
-;
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;,
-}, []);
-    if(searchQuery) {;
-      performSearch () ;,
-}
+
+  useEffect(() => {
+  // TODO: Add dependencies if needed}, []);
+    if(searchQuery) {
+      performSearch () }
   }, [searchQuery, selectedFilters, sortBy]) ;
-;
-  const performSearch = async () => {;
+
+  const performSearch = async () => {
     setIsSearching(true) ;
-;
+
     // Simulate API call delay;
     await new Promise(resolve => setTimeout (resolve, 800) ) ;
-;
-    let filtered = mockSearchResults.filter(result => {;
+
+    let filtered = mockSearchResults.filter(result => {
       const matchesQuery = result.title.toLowerCase () .includes(searchQuery.toLowerCase () ) ||;
                           result.description.toLowerCase () .includes(searchQuery.toLowerCase () ) ||;
                           result.tags.some(tag => tag.toLowerCase () .includes(searchQuery.toLowerCase () ) ) ;
-;
+
       const matchesFilters = selectedFilters.size === 0 ||;
                            selectedFilters.has(result.category.toLowerCase () .replace(/\s+/g, '-') ) ||;
                            selectedFilters.has(result.type) ;
-;
-      return matchesQuery && matchesFilters;,
-}) ;
-;
+
+      return matchesQuery && matchesFilters}) ;
+
     // Sort results;
-    filtered.sort((a, b) => {;
-      switch(sortBy) {;
+    filtered.sort((a, b) => {
+      switch(sortBy) {
         case 'date':;
           return new Date(b.lastUpdated) .getTime () - new Date(a.lastUpdated) .getTime () ;
         case 'popularity':;
           return b.relevance - a.relevance;
         default:;
-          return b.relevance - a.relevance;,
-}
+          return b.relevance - a.relevance}
     }) ;
-;
+
     setSearchResults(filtered) ;
-    setIsSearching(false) ;,
-};
-;
-  const toggleFilter = (filterType: keyof typeof activeFilters, value: string) => {;
+    setIsSearching(false) }
+  const toggleFilter = (filterType: keyof typeof activeFilters, value: string) => {
     setActiveFilters(prev => ({;
       ...prev,;
-      [filterType]: prev[filterType].includes (value) ? prev[filterType].filter(v => v !== value) : [...prev[filterType], value];,
-}) ) ;,
-};
-;
-  const clearAllFilters = () => {;
+      [filterType]: prev[filterType].includes (value) ? prev[filterType].filter(v => v !== value) : [...prev[filterType], value]}) ) }
+  const clearAllFilters = () => {
     setActiveFilters({;
       type: [],;
       category: [],;
       location: [],;
       priceRange: [],;
-      rating: [];,
-}) ;,
-};
-;
+      rating: []}) }
   // Handle search;
-  const handleSearch = useCallback((e: React.FormEvent) => {;
+  const handleSearch = useCallback((e: React.FormEvent) => {
     e.preventDefault () ;
-    if(searchQuery.trim () ) {;
+    if(searchQuery.trim () ) {
       setSearchParams({ q: searchQuery.trim () }) ;
       setIsSearching(true) ;
-      setTimeout(() => setIsSearching(false) , 1000) ;,
-}
-  };
-;
-  const toggleFilter = (filterId: string) => {;
+      setTimeout(() => setIsSearching(false) , 1000) }
+  }
+  const toggleFilter = (filterId: string) => {
     const newFilters = new Set(selectedFilters) ;
-    if(newFilters.has (filterId) ) {;
-      newFilters.delete(filterId) ;,
-} else {;
-      newFilters.add(filterId) ;,
-}
-    setSelectedFilters(newFilters) ;,
-};
-;
+    if(newFilters.has (filterId) ) {
+      newFilters.delete(filterId) } else {
+      newFilters.add(filterId) }
+    setSelectedFilters(newFilters) }
   // Clear all filters;
-  const clearFilters = () => {;
+  const clearFilters = () => {
     setSelectedCategory('all') ;
     setSelectedTags([]) ;
     setSearchQuery('') ;
-    setSearchParams({}) ;,
-};
-;
-  const getResultIcon = (type: string) => {;
-    switch(type) {;
+    setSearchParams({}) }
+  const getResultIcon = (type: string) => {
+    switch(type) {
       case 'service': return Zap;
       case 'page': return FileText;
       case 'blog': return BookOpen;
       case 'case - study': return FileText;
       case 'documentation': return Code;
-      default: return FileText;,
-}
-  };
-;
-  const getResultColor = (type: string) => {;
-    switch(type) {;
+      default: return FileText}
+  }
+  const getResultColor = (type: string) => {
+    switch(type) {
       case 'service': return 'from - blue - 500 to - indigo - 500';
       case 'blog': return 'from - green - 500 to - emerald - 500';
       case 'case - study': return 'from - purple - 500 to - pink - 500';
       case 'documentation': return 'from - orange - 500 to - red - 500';
-      default: return 'from - gray - 500 to - slate - 500';,
-}
-  };
-;
+      default: return 'from - gray - 500 to - slate - 500'}
+  }
   // Calculate filter counts;
-  filterOptions.forEach(filter => {;
+  filterOptions.forEach(filter => {
     filter.count = mockSearchResults.filter (result =>;
       result.category.toLowerCase () .replace(/\s+/g, '-') === filter.id ||;
-      result.type === filter.id) .length;,
-}) ;
-;
+      result.type === filter.id) .length}) ;
+
   return (<div  className="min - h-screen bg-gradient - to - br from - slate - 50 via - blue - 50 to - indigo -50">;
       {/* Header */}
       <div  className="bg-white border-b border-gray -200">;
@@ -319,8 +285,7 @@ export default function Page() {;
                 {filterOptions.map(filter => (<button     key={filter.id}
                     onClick={ () => toggleFilter(filter.id) }
                     className={`w-full flex items - center justify - between p - 3 rounded-lg transition - colors ${selectedFilters.has(filter.id) ? 'bg-blue - 50 border border-blue - 200';
-                        : 'hover:bg-gray - 50';,
-}`}
+                        : 'hover:bg-gray - 50'}`}
                   >;
                     <div  className="flex items - center space - x-3">;
                       <filter.icon className="h-5 w-5 text-gray -600" />;
@@ -372,6 +337,5 @@ export default function Page() {;
               </Link>;
             </div>;
     </>;
-  );,
-}
+  )}
 export default SearchPage;

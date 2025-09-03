@@ -15,11 +15,10 @@ export default function IntegrationsFeature() {}
     name: 'API & Integrations',''';
     description:'''';
       'Connect Zion with Slack, your website and other tools via our API and widgets.',''';
-    url: 'https://app.ziontechgroup.com/features/integrations'};
+    url: 'https://app.ziontechgroup.com/features/integrations'}
   const { markSlackConnected } = useAdvancedOnboardingStatus();
   useEffect(() => {}
-    markSlackConnected();,
-}, [markSlackConnected]);
+    markSlackConnected()}, [markSlackConnected]);
   return();
     <>;
       <SEO;
@@ -85,14 +84,10 @@ export default function IntegrationsFeature() {}
       </main>;
       <Footer />;
     </>)}
-;
 
-export { IntegrationsFeature };
-;
-export { IntegrationsFeature };
-;
-export { IntegrationsFeature };
-;
-export { IntegrationsFeature };
-;
-export { IntegrationsFeature };
+
+export { IntegrationsFeature }
+export { IntegrationsFeature }
+export { IntegrationsFeature }
+export { IntegrationsFeature }
+export { IntegrationsFeature }

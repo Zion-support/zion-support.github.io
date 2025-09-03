@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
-const RevolutionaryServicesShowcase2030 = () => {;
+const RevolutionaryServicesShowcase2030 = () => {
   return (;
     <>;
       <Head>;
@@ -45,6 +45,5 @@ const RevolutionaryServicesShowcase2030 = () => {;
               </Link>;
             </div>;
     </>;
-  );,
-}
+  )}
 export default RevolutionaryServicesShowcase2030;

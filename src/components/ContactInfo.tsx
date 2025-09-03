@@ -1,25 +1,22 @@
 import React from 'react';
 import { Phone, Mail, MapPin, Globe } from 'lucide-react';
 
-interface ContactInfoProps {;
+interface ContactInfoProps {
   className?: string;
   showTitle?: boolean;
-  variant?: 'default' | 'compact' | 'detailed';,
-}
-;
+  variant?: 'default' | 'compact' | 'detailed'}
+
 export default function ContactInfo({ ;
   className = '', ;
   showTitle = true, ;
-  variant = 'default' ;,
-}: ContactInfoProps) {;
-  const contactDetails = {;
+  variant = 'default' }: ContactInfoProps) {
+  const contactDetails = {
     phone: '+1 302 464 0950',;
     email: 'kleber@ziontechgroup.com',;
     address: '364 E Main St STE 1008, Middletown DE 19709',;
-    website: 'https://ziontechgroup.com';,
-}
-;
-  if (variant === 'compact') {;
+    website: 'https://ziontechgroup.com'}
+
+  if (variant === 'compact') {
     return (;
       <div className={`flex flex-wrap gap-4 text-sm ${className}`}>;
         <div className="flex items-center">;
@@ -31,10 +28,9 @@ export default function ContactInfo({ ;
           <span>{contactDetails.email}</span>;
         </div>;
       </div>;
-    );,
-}
-;
-  if (variant === 'detailed') {;
+    )}
+
+  if (variant === 'detailed') {
     return (;
       <div className={`space-y-4 ${className}`}>;
         {showTitle && (;
@@ -79,9 +75,8 @@ export default function ContactInfo({ ;
           </div>;
         </div>;
       </div>;
-    );,
-}
-;
+    )}
+
   // Default variant;
   return (;
     <div className={`space-y-4 ${className}`}>;
@@ -103,5 +98,4 @@ export default function ContactInfo({ ;
         </div>;
       </div>;
     </div>;
-  );,
-}
+  )}

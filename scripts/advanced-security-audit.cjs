@@ -1,309 +1,268 @@
-#!/usr/bin/env node;
-const fs = require("$1");
-const path = require("$1");
+#!/usr/bin/env node
+const fs = require("fs");
+const path = require("fs");
 const { execSync } = require("child_process");
-class AdvancedSecurityAudit {;
-  constructor() {;
+class AdvancedSecurityAudit {
+  constructor() {
     this.projectRoot = process.cwd();
     this.reportsDir = path.join(this.projectRoot, "automation-reports");
     this.logFile = path.join(this.reportsDir, "advanced-security.log");
-    this.ensureDirectories(),;,
-}
-;
-  ensureDirectories() {;
-    if (!fs.existsSync(this.reportsDir)) {;
-      fs.mkdirSync(this.reportsDir, { recursive: true }),;,
-}
+    this.ensureDirectories()}
+
+  ensureDirectories() {
+    if (!fs.existsSync(this.reportsDir)) {
+      fs.mkdirSync(this.reportsDir, { recursive: true })}
   }
-;
-  log(message) {;
+
+  log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}`;
     console.log(logMessage);
-    fs.appendFileSync(this.logFile, logMessage + "\n"),;,
-}
-;
-  async checkDependencies() {;
+    fs.appendFileSync(this.logFile, logMessage + "\n")}
+
+  async checkDependencies() {
     this.log("🔍 Checking dependencies for vulnerabilities...");
-    try {;
-      const result = execSync("npm audit --json", {;
+    try {
+      const result = execSync("npm audit --json", {
         cwd: this.projectRoot,;
         encoding: "utf8",;
-        timeout: 60000,,;,
-});
+        timeout: 60000});
       const auditData = JSON.parse(result);
       this.log(;
         `📊 Dependencies audit: ${auditData.vulnerabilities?.total || 0} vulnerabilities found`);
-      return {;
+      return {
         success: true,;
         vulnerabilities: auditData.vulnerabilities?.total || 0,;
-        data: auditData,,;,
-}
-    } catch (error) {;
+        data: auditData}
+    } catch (error) {
       this.log(`❌ Dependencies audit failed: ${error.message}`);
-      return {;
+      return {
         success: false,;
-        error: error.message,,;,
-}
+        error: error.message}
     }
   }
-;
-  async checkCodeSecurity() {;
+
+  async checkCodeSecurity() {
     this.log("🔍 Checking code for security issues...");
     const securityPatterns = [;
-      {;
+      {
         pattern: /eval\s*\(/g,;
         severity: "high",;
-        message: "Use of eval() detected",,;,
-},;
-      {;
+        message: "Use of eval() detected"},;
+      {
         pattern: /innerHTML\s*=/g,;
         severity: "medium",;
-        message: "Direct innerHTML assignment detected",,;,
-},;
-      {;
+        message: "Direct innerHTML assignment detected"},;
+      {
         pattern: /document\.write/g,;
         severity: "medium",;
-        message: "Use of document.write detected",,;,
-},;
-      {;
+        message: "Use of document.write detected"},;
+      {
         pattern: /localStorage\.setItem/g,;
         severity: "low",;
-        message: "localStorage usage detected",,;,
-},;
-      {;
+        message: "localStorage usage detected"},;
+      {
         pattern: /sessionStorage\.setItem/g,;
         severity: "low",;
-        message: "sessionStorage usage detected",,;,
-},;
-      {;
+        message: "sessionStorage usage detected"},;
+      {
         pattern: /password.*=.*[""]/g,;
         severity: "high",;
-        message: "Potential hardcoded password",,;,
-},;
-      {;
+        message: "Potential hardcoded password"},;
+      {
         pattern: /api[_-]?key.*=.*[""]/g,;
         severity: "high",;
-        message: "Potential hardcoded API key",,;,
-},];
+        message: "Potential hardcoded API key"}];
     const issues = [];
     const files = this.getAllFiles(this.projectRoot, [;
       ".js",;
       ".jsx",;
       ".ts",;
-      ".tsx",]);
-    for (const file of files) {;
-      try {;
+      ".tsx"]);
+    for (const file of files) {
+      try {
         const content = fs.readFileSync(file, "utf8");
-        for (const check of securityPatterns) {;
+        for (const check of securityPatterns) {
           const matches = content.match(check.pattern);
-          if (matches) {;
+          if (matches) {
             issues.push({;
               file: path.relative(this.projectRoot, file),;
               severity: check.severity,;
               message: check.message,;
-              matches: matches.length,,;,
-}),;,
-}
+              matches: matches.length})}
         }
-      } catch (error) {;
-        // Skip files that can"t be read,;,
-}
+      } catch (error) {
+        // Skip files that can"t be read}
     }
-;
+
     this.log(`📊 Code security check: ${issues.length} issues found`);
-    return {;
+    return {
       success: true,;
       issues: issues,;
-      totalIssues: issues.length,,;,
-}
+      totalIssues: issues.length}
   }
-;
-  async checkEnvironmentVariables() {;
+
+  async checkEnvironmentVariables() {
     this.log("🔍 Checking environment variables...");
     const envFiles = [;
       ".env",;
       ".env.local",;
       ".env.production",;
-      ".env.development",];
+      ".env.development"];
     const issues = [];
-    for (const envFile of envFiles) {;
+    for (const envFile of envFiles) {
       const envPath = path.join(this.projectRoot, envFile);
-      if (fs.existsSync(envPath)) {;
-        try {;
+      if (fs.existsSync(envPath)) {
+        try {
           const content = fs.readFileSync(envPath, "utf8");
           const lines = content.split("\n");
-          for (const line of lines) {;
-            if (line.includes("=") && !line.startsWith("#")) {;
+          for (const line of lines) {
+            if (line.includes("=") && !line.startsWith("#")) {
               const [key, value] = line.split("=");
-              if (value && value.trim() !== "") {;
+              if (value && value.trim() !== "") {
                 // Check for potential sensitive data;
                 if (;
                   key.toLowerCase().includes("password") ||;
                   key.toLowerCase().includes("secret") ||;
                   key.toLowerCase().includes("key") ||;
-                  key.toLowerCase().includes("token")) {;
+                  key.toLowerCase().includes("token")) {
                   issues.push({;
                     file: envFile,;
                     key: key.trim(),;
-                    message: "Potential sensitive environment variable",,;,
-}),;,
-}
+                    message: "Potential sensitive environment variable"})}
               }
             }
           }
-        } catch (error) {;
-          // Skip files that can"t be read,;,
-}
+        } catch (error) {
+          // Skip files that can"t be read}
       }
     }
-;
+
     this.log(;
       `📊 Environment variables check: ${issues.length} potential issues found`);
-    return {;
+    return {
       success: true,;
       issues: issues,;
-      totalIssues: issues.length,,;,
-}
+      totalIssues: issues.length}
   }
-;
-  async checkFilePermissions() {;
+
+  async checkFilePermissions() {
     this.log("🔍 Checking file permissions...");
     const sensitiveFiles = [;
       "package.json",;
       "package-lock.json",;
       ".env",;
       ".env.local",;
-      ".env.production",];
+      ".env.production"];
     const issues = [];
-    for (const file of sensitiveFiles) {;
+    for (const file of sensitiveFiles) {
       const filePath = path.join(this.projectRoot, file);
-      if (fs.existsSync(filePath)) {;
-        try {;
+      if (fs.existsSync(filePath)) {
+        try {
           const stats = fs.statSync(filePath);
           const mode = stats.mode;
           const permissions = (mode & parseInt("777", 8)).toString(8);
           // Check if file is world-readable (permissions include 4, 2, or 1 for others);
-          if (permissions.length >= 3 && parseInt(permissions[2]) > 0) {;
+          if (permissions.length >= 3 && parseInt(permissions[2]) > 0) {
             issues.push({;
               file: file,;
               permissions: permissions,;
-              message: "File is world-readable",,;,
-}),;,
-}
-        } catch (error) {;
-          // Skip files that can"t be accessed,;,
-}
+              message: "File is world-readable"})}
+        } catch (error) {
+          // Skip files that can"t be accessed}
       }
     }
-;
+
     this.log(`📊 File permissions check: ${issues.length} issues found`);
-    return {;
+    return {
       success: true,;
       issues: issues,;
-      totalIssues: issues.length,,;,
-}
+      totalIssues: issues.length}
   }
-;
-  getAllFiles(dir, extensions = []) {;
+
+  getAllFiles(dir, extensions = []) {
     let files = [];
-    try {;
+    try {
       const items = fs.readdirSync(dir);
-      for (const item of items) {;
+      for (const item of items) {
         const fullPath = path.join(dir, item);
         const stat = fs.statSync(fullPath);
         if (;
           stat.isDirectory() &&;
           !item.startsWith(".") &&;
-          item !== "node_modules") {;
-          files = files.concat(this.getAllFiles(fullPath, extensions)),;,
-} else if (stat.isFile()) {;
+          item !== "node_modules") {
+          files = files.concat(this.getAllFiles(fullPath, extensions))} else if (stat.isFile()) {
           if (;
             extensions.length === 0 ||;
-            extensions.includes(path.extname(item))) {;
-            files.push(fullPath),;,
-}
+            extensions.includes(path.extname(item))) {
+            files.push(fullPath)}
         }
       }
-    } catch (error) {;
-      // Skip directories that can"t be read,;,
-}
-;
-    return files,;,
-}
-;
-  async generateSecurityReport() {;
+    } catch (error) {
+      // Skip directories that can"t be read}
+
+    return files}
+
+  async generateSecurityReport() {
     this.log("📊 Generating security report...");
-    const report = {;
+    const report = {
       timestamp: new Date().toISOString(),;
       dependencies: await this.checkDependencies(),;
       codeSecurity: await this.checkCodeSecurity(),;
       environmentVariables: await this.checkEnvironmentVariables(),;
       filePermissions: await this.checkFilePermissions(),;
-      recommendations: [],,;,
-}
+      recommendations: []}
     // Generate recommendations;
     if (;
       report.dependencies.success &&;
-      report.dependencies.vulnerabilities > 0) {;
+      report.dependencies.vulnerabilities > 0) {
       report.recommendations.push({;
         type: "dependencies",;
         message: `${report.dependencies.vulnerabilities} vulnerabilities found in dependencies`,;
-        action: "Run npm audit fix to resolve vulnerabilities",,;,
-}),;,
-}
-;
+        action: "Run npm audit fix to resolve vulnerabilities"})}
+
     const highSeverityIssues = report.codeSecurity.issues.filter(;
       issue => issue.severity === "high");
-    if (highSeverityIssues.length > 0) {;
+    if (highSeverityIssues.length > 0) {
       report.recommendations.push({;
         type: "code",;
         message: `${highSeverityIssues.length} high severity security issues found`,;
-        action: "Review and fix high severity security issues in code",,;,
-}),;,
-}
-;
-    if (report.environmentVariables.totalIssues > 0) {;
+        action: "Review and fix high severity security issues in code"})}
+
+    if (report.environmentVariables.totalIssues > 0) {
       report.recommendations.push({;
         type: "environment",;
         message: `${report.environmentVariables.totalIssues} potential sensitive environment variables found`,;
         action:;
-          "Review environment variables and ensure sensitive data is properly secured",,;,
-}),;,
-}
-;
+          "Review environment variables and ensure sensitive data is properly secured"})}
+
     const reportPath = path.join(;
       this.reportsDir,;
       "advanced-security-report.json");
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2), "utf8");
     this.log(`📊 Security report generated: ${reportPath}`);
-    return report,;,
-}
-;
-  async run() {;
+    return report}
+
+  async run() {
     this.log("🎯 Starting Advanced Security Audit");
-    try {;
+    try {
       const report = await this.generateSecurityReport();
       this.log("🎉 Advanced Security Audit Completed");
       this.log(`📊 Recommendations: ${report.recommendations.length}`);
-      return report,;,
-} catch (error) {;
+      return report} catch (error) {
       this.log(`❌ Fatal error in security audit: ${error.message}`);
-      throw error,;,
-}
+      throw error}
   }
 }
-;
+
 // Run the advanced security audit;
 const audit = new AdvancedSecurityAudit();
 audit;
   .run();
-  .then(report => {;
+  .then(report => {
     console.log("✅ Advanced Security Audit completed successfully!");
     console.log(`📊 Recommendations: ${report.recommendations.length}`);
-    process.exit(0),;,
-});
-  .catch(error => {;
+    process.exit(0)});
+  .catch(error => {
     console.error("❌ Security audit failed:", error);
-    process.exit(1),;,
-}))
+    process.exit(1)}))

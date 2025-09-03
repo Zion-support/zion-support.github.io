@@ -8,8 +8,7 @@ import { MICRO_SAAS_SERVICES, MICRO_SAAS_CATEGORIES, PRICING_TIERS, CONTACT_INFO
 import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Star, CheckCircle, X, Phone, Mail, MapPin, Globe, ArrowRight, Zap, Users, TrendingUp import { Link } from "react-router-dom";
 const categoryIcons = {}
 ';
-  'AI Business Solutions': Brain,IT Infrastructure': Cloud,Data Analytics': BarChart3,AI Development': Code,FinTech': DollarSign,HealthTech': Heart,E-commerce': ShoppingCart,EdTech': GraduationCap;,
-};
+  'AI Business Solutions': Brain,IT Infrastructure': Cloud,Data Analytics': BarChart3,AI Development': Code,FinTech': DollarSign,HealthTech': Heart,E-commerce': ShoppingCart,EdTech': GraduationCap}
 const pricingFeatures = {}
 ";
   basic[;"";
@@ -37,8 +36,7 @@ const pricingFeatures = {}
         "On-site training","";
         "Custom contracts","";
   "Dedicated infrastructure";
-    ];,
-};";
+    ]};";
 const comparisonFeatures = ["";
     "AI-Powered Automation","";
     "Real-time Analytics","";
@@ -271,22 +269,19 @@ export default function PricingPage() {}
 "";
                 icon: <Zap className="h-8 w-8"/>,"";
                 title: "Immediate Deployment","";
-                description: "All services ready for instant deployment";,
-},;
+                description: "All services ready for instant deployment"},;
             {}
 ";
 "";
                 icon: <Shield className="h-8 w-8"/>,"";
                 title: "Enterprise Security","";
-                description: "SOC 2 compliance and 24/7 monitoring";,
-},;
+                description: "SOC 2 compliance and 24/7 monitoring"},;
             {}
 ";
 "";
                 icon: <Users className="h-8 w-8"/>,"";
                 title: "Dedicated Support","";
-                description: "24/7 technical support with account managers";,
-},;
+                description: "24/7 technical support with account managers"},;
             {}
 ";
 "";
@@ -403,14 +398,10 @@ export default function PricingPage() {}
         </div>;
       </section>;
     </div>)}
-;
 
-export { PricingPage, IconComponent };
-;
-export { PricingPage, IconComponent };
-;
-export { PricingPage, IconComponent };
-;
-export { PricingPage, IconComponent };
-;
-export { PricingPage, IconComponent };
+
+export { PricingPage, IconComponent }
+export { PricingPage, IconComponent }
+export { PricingPage, IconComponent }
+export { PricingPage, IconComponent }
+export { PricingPage, IconComponent }

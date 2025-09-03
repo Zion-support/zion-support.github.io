@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-;
-const ComprehensiveServicesOverview2025 = () => {;
+
+const ComprehensiveServicesOverview2025 = () => {
     const [selectedService, setSelectedService] = useState(null);
     const [selectedCategory, setSelectedCategory] = useState('all');
     const categories = [;
@@ -20,8 +20,8 @@ const ComprehensiveServicesOverview2025 = () => {;
         'Logistics & Transportation';
     ];
     const filteredServices = allEnhancedServices.filter(service => selectedCategory === 'all' || service.category === selectedCategory);
-    const getCategoryIcon = (category) => {;
-        const icons = {;
+    const getCategoryIcon = (category) => {
+        const icons = {
   'AI & Business Intelligence': '🧠',;
             'Cybersecurity & Quantum Computing': '🔒',;
             'DevOps & Infrastructure': '⚙️',;
@@ -34,11 +34,10 @@ const ComprehensiveServicesOverview2025 = () => {;
             'Marketing & AI': '📢',;
             'Energy & Sustainability': '⚡',;
   'Logistics & Transportation': '🚚';
-        ;,
-};
-        return icons[category] || '🚀'};
-    const getCategoryColor = (category) => {;
-        const colors = {;
+        }
+        return icons[category] || '🚀'}
+    const getCategoryColor = (category) => {
+        const colors = {
   'AI & Business Intelligence': 'from-blue-500 to-cyan-500',;
             'Cybersecurity & Quantum Computing': 'from-red-500 to-pink-500',;
             'DevOps & Infrastructure': 'from-green-500 to-emerald-500',;
@@ -51,9 +50,8 @@ const ComprehensiveServicesOverview2025 = () => {;
             'Marketing & AI': 'from-pink-500 to-rose-500',;
             'Energy & Sustainability': 'from-green-500 to-teal-500',;
   'Logistics & Transportation': 'from-orange-500 to-red-500';
-        ;,
-};
-        return colors[category] || 'from-gray-500 to-slate-500'};
+        }
+        return colors[category] || 'from-gray-500 to-slate-500'}
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">;
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
@@ -107,8 +105,7 @@ const ComprehensiveServicesOverview2025 = () => {;
 ';
                     selectedCategory === category'';
                       ? 'bg-blue-500/20 border-blue-400 text-blue-400'''`;
-                      : 'bg-white/10 border-white/20 hover:border-blue-400 hover:text-blue-400'``;,
-}`}">"";
+                      : 'bg-white/10 border-white/20 hover:border-blue-400 hover:text-blue-400'``}`}">"";
                   <div className="text-2xl mb-1">;
                     {getCategoryIcon(category)}";
                   </div>"";
@@ -523,8 +520,7 @@ const ComprehensiveServicesOverview2025 = () => {;
                       </div>;
                     </div>;
                   </>;
-                );,
-})()}
+                )})()}
             </div>;
           </div>;
         </div>;
@@ -554,16 +550,12 @@ const ComprehensiveServicesOverview2025 = () => {;
           </div>;
         </div>;
       </section>;
-    </div>)};
+    </div>)}
 export default ComprehensiveServicesOverview2025;
-;
 
-export { ComprehensiveServicesOverview2025 };
-;
-export { ComprehensiveServicesOverview2025 };
-;
-export { ComprehensiveServicesOverview2025 };
-;
-export { ComprehensiveServicesOverview2025 };
-;
-export { ComprehensiveServicesOverview2025 };
+
+export { ComprehensiveServicesOverview2025 }
+export { ComprehensiveServicesOverview2025 }
+export { ComprehensiveServicesOverview2025 }
+export { ComprehensiveServicesOverview2025 }
+export { ComprehensiveServicesOverview2025 }

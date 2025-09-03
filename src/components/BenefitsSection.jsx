@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 import {  import { motion, AnimatePresence  } from 'framer-motion';
  from 'lucide-react';
-;
+
 const benefits = [{;
 
     icon: <Zap className="w-10 h-10" />,;
@@ -15,7 +15,7 @@ const benefits = [{;
     features: [';
       'Agile development methodology',Parallel development teams',Automated testing pipeline',Continuous deployment',;
     ]},;
-  {;
+  {
 ";
     icon: <Shield className="w-10 h-10" />,;
     title: 'Enterprise Security',;
@@ -27,7 +27,7 @@ const benefits = [{;
     features: [';
       'SOC 2 Type II compliant',End-to-end encryption',Regular security audits',GDPR compliance',;
     ]},;
-  {;
+  {
 ";
     icon: <TrendingUp className="w-10 h-10" />,;
     title: 'Proven ROI',;
@@ -38,7 +38,7 @@ const benefits = [{;
     features: [';
       'Performance optimization',Cost reduction strategies',Revenue growth solutions',Efficiency improvements',;
     ]},;
-  {;
+  {
 ";
     icon: <CheckCircle className="w-10 h-10" />,;
     title: 'Quality Guaranteed',;
@@ -50,7 +50,7 @@ const benefits = [{;
       'Comprehensive testing',Code quality standards',Performance benchmarks',User experience focus',;
     ]},;
 ];
-;
+
 const additionalStats = [{;
 ";
     icon: <Users className="w-8 h-8" />,;
@@ -60,45 +60,42 @@ const additionalStats = [{;
   { icon: <Star className="w-8 h-8" />, value: '4.9/5', label: 'Rating' },";
   { icon: <Award className="w-8 h-8" />, value: '50+', label: 'Awards' },;
 ];
-;
-export function BenefitsSection() {;
+
+export function BenefitsSection() {
   const [hoveredIndex, setHoveredIndex] = (useState < number) | (null > null);
-;
-  const containerVariants = {;
+
+  const containerVariants = {
 
     hidden: { opacity: 0 },;
-    visible: {;
+    visible: {
 
       opacity: 1,;
-      transition: {;
+      transition: {
 
         staggerChildren: 0.2,;
-        delayChildren: 0.1}}};
-;
-  const itemVariants = {;
+        delayChildren: 0.1}}}
+  const itemVariants = {
 
     hidden: { y: 30, opacity: 0 },;
-    visible: {;
+    visible: {
 
       y: 0,;
       opacity: 1,;
-      transition: {;
+      transition: {
 
         duration: 0.6,;
-        ease: 'easeOut'}}};
-;
-  const statsVariants = {;
+        ease: 'easeOut'}}}
+  const statsVariants = {
 
     hidden: { scale: 0.8, opacity: 0 },;
-    visible: {;
+    visible: {
 
       scale: 1,;
       opacity: 1,;
-      transition: {;
+      transition: {
 
         duration: 0.4,;
-        ease: 'easeOut'}}};
-;
+        ease: 'easeOut'}}}
   return (";
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">;
       {/* Enhanced background pattern */}";
@@ -305,6 +302,5 @@ export function BenefitsSection() {;
         </motion.div>;
       </div>;
     </section>;
-  );,
-}
+  )}
 '"`}

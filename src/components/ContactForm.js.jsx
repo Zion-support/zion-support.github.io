@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button } from "./ui/Button.jsx";
-const ContactForm = () => {;
+const ContactForm = () => {
     const [formData, setFormData] = useState({;
         firstName: '',;
         lastName: '',;
@@ -8,21 +8,19 @@ const ContactForm = () => {;
         comp: '',;
         phone: '',;
         service: '',;
-        message: '';,
-});
+        message: ''});
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitStatus, setSubmitStatus] = useState('idle');
-    const handleInputChange = (e) => {;
+    const handleInputChange = (e) => {
         const { name, value } = e.target;
         setFormData(prev => ({;
             ...prev,;
-            [name]: value;,
-}))};
-    const handleSubmit = async (e) => {;
+            [name]: value}))}
+    const handleSubmit = async (e) => {
         e.preventDefault();
         setIsSubmitting(true);
         setSubmitStatus('idle');
-        try {;
+        try {
             // Simulate API call;
             await new Promise(resolve => setTimeout(resolve, 2000));
             // Reset form on success;
@@ -33,16 +31,15 @@ const ContactForm = () => {;
                 comp: '',;
                 phone: '',;
                 service: '',;
-                message: '';,
-});
+                message: ''});
             setSubmitStatus('success');
             setTimeout(() => setSubmitStatus('idle'), 5000)}
-        catch (error) {;
+        catch (error) {
             setSubmitStatus('error');
             setTimeout(() => setSubmitStatus('idle'), 5000)}
-        finally {;
+        finally {
             setIsSubmitting(false)}
-    };
+    }
     const isFormValid = formData.firstName && formData.lastName && formData.email && formData.message;
     return (<div className="max-w-2xl mx-auto">;
       {submitStatus === 'success' && (<div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">;
@@ -82,7 +79,7 @@ const ContactForm = () => {;
           </div>;
     </div>;,;
   )}
-;
+
           <div>";
             <label"";
               htmlFor="lastName"";
@@ -227,16 +224,12 @@ const ContactForm = () => {;
           </a>;
           .</p>;
       </form>;
-    </div>)};
+    </div>)}
 export default ContactForm;
-;
 
-export { ContactForm };
-;
-export { ContactForm };
-;
-export { ContactForm };
-;
-export { ContactForm };
-;
-export { ContactForm };
+
+export { ContactForm }
+export { ContactForm }
+export { ContactForm }
+export { ContactForm }
+export { ContactForm }

@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-;
-;
-const ServicesMarketingPage = () => {;
+
+
+const ServicesMarketingPage = () => {
     const allServices = [;
         ...REVOLUTIONARY_2025_ADVANCED_SERVICES,;
         ...EMERGING_TECH_2025_SPECIALIZED_SERVICES;
     ];
-    const serviceCategories = {;
+    const serviceCategories = {
   'Micro SAAS': allServices.filter(s => s.category === 'Micro SAAS'),;
         'IT Services': allServices.filter(s => s.category === 'IT Services'),;
         'AI Solutions': allServices.filter(s => s.category === 'AI Solutions'),;
@@ -17,14 +17,8 @@ const ServicesMarketingPage = () => {;
         'Space Technology': allServices.filter(s => s.category === 'Space Technology'),;
         'Biotechnology': allServices.filter(s => s.category === 'Biotechnology'),;
   'Quantum Technology': allServices.filter(s => s.category === 'Quantum Technology');
-    ;
 
-;
-
-;
-
-;,
-};
+}
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20">;
@@ -413,16 +407,12 @@ const ServicesMarketingPage = () => {;
           </div>;
         </div>;
       </section>;
-    </div>)};
+    </div>)}
 export default ServicesMarketingPage;
-;
 
-export { ServicesMarketingPage };
-;
-export { ServicesMarketingPage };
-;
-export { ServicesMarketingPage };
-;
-export { ServicesMarketingPage };
-;
-export { ServicesMarketingPage };
+
+export { ServicesMarketingPage }
+export { ServicesMarketingPage }
+export { ServicesMarketingPage }
+export { ServicesMarketingPage }
+export { ServicesMarketingPage }

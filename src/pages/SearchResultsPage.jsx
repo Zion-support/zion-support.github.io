@@ -1,29 +1,26 @@
 import { useInfiniteQuery } from '@tanstack / react -query';
-export default function Page() {;
+export default function Page() {
 &limit=${LIMIT}`) ;
             if(!res.ok) throw new Error("Failed to fetch") ;
             return (await res.json () ) },;
         enabled: !!query,;
         initialPageParam: 1,;
-        getNextPageParam: (lastPage, pages) => lastPage.length < LIMIT ? null : pages.length + 1;,
-}) ;
+        getNextPageParam: (lastPage, pages) => lastPage.length < LIMIT ? null : pages.length + 1}) ;
     // Refetch when the URL param changes;
-    useEffect(() => {;
-  // TODO: Add dependencies if needed;,
-}, []);
-        if(initialQuery !== query) {;
+    useEffect(() => {
+  // TODO: Add dependencies if needed}, []);
+        if(initialQuery !== query) {
             setQuery(initialQuery) ;
             refetch () }
     }, [initialQuery]) ;
     const allResults = data?.pages.flat () ?? [];
     const loader = useRef(null) ;
-    useEffect(() => {;
-  // TODO: Add dependencies if needed;,
-}, []);
+    useEffect(() => {
+  // TODO: Add dependencies if needed}, []);
         const el = loader.current;
         if(!el) return;
-        const observer = new IntersectionObserver((entries) => {;
-            if(entries[0].isIntersecting && hasNextPage && !isFetchingNextPage) {;
+        const observer = new IntersectionObserver((entries) => {
+            if(entries[0].isIntersecting && hasNextPage && !isFetchingNextPage) {
                 fetchNextPage () }
         }) ;
         observer.observe(el) ;
@@ -49,14 +46,10 @@ export default function Page() {;
       <div ref={loader} className="h-1"/>;
       {isFetchingNextPage && <p className="text-center mt-4">Loading more...</p>}
     </main>)}
-;
 
-export { LIMIT, SearchResultsPage };
-;
-export { LIMIT, SearchResultsPage };
-;
-export { LIMIT, SearchResultsPage };
-;
-export { LIMIT, SearchResultsPage };
-;
-export { LIMIT, SearchResultsPage };
+
+export { LIMIT, SearchResultsPage }
+export { LIMIT, SearchResultsPage }
+export { LIMIT, SearchResultsPage }
+export { LIMIT, SearchResultsPage }
+export { LIMIT, SearchResultsPage }

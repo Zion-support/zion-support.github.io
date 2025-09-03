@@ -1,27 +1,24 @@
 
-      description: "Get exclusive access to tech trends and analysis";,
-},;    {;
+      description: "Get exclusive access to tech trends and analysis"},;    {
       icon: Zap,;";
       title: "Early Access",;";
-      description: "Be the first to know about beta programs and launches"};
+      description: "Be the first to know about beta programs and launches"}
   ];
-;
-  if(isSubscribed) {;
+
+  if(isSubscribed) {
 
     return (";
       <section className="py-20 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-800">";
         <div className="max-w-4xl mx-auto px-6 text-center">;
           <motion.div;
-            initial = {;
+            initial = {
 
   { opacity: 0,;
-  scale: 0.8;,
-}}
-            animate = {;
+  scale: 0.8}}
+            animate = {
 
   { opacity: 1,;
-  scale: 1;,
-}}
+  scale: 1}}
             transition={{ duration: 0.5 }}";
             className="bg-gradient-to-r from-green-500/10 to-emerald-500/10 rounded-3xl p-12 border border-green-500/20";
 ";
@@ -45,16 +42,14 @@
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">;
           {/* Left Column - Content */}
           <motion.div;
-            initial = {;
+            initial = {
 
   { opacity: 0,;
-  x: -30;,
-}}
-            whileInView = {;
+  x: -30}}
+            whileInView = {
 
   { opacity: 1,;
-  x: 0;,
-}}
+  x: 0}}
             transition={{ duration: 0.6 }}
 ";
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
@@ -67,21 +62,18 @@
               {benefits.map((benefit, index) => (;
                 <motion.div;
                   key={index}
-                  initial = {;
+                  initial = {
 
   { opacity: 0,;
-  x: -20;,
-}}
-                  whileInView = {;
+  x: -20}}
+                  whileInView = {
 
   { opacity: 1,;
-  x: 0;,
-}}
-                  transition = {;
+  x: 0}}
+                  transition = {
 
   { duration: 0.5,;
-  delay: index * 0.1;,
-}}";
+  delay: index * 0.1}}";
                   className="flex items-start";
 ";
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full mr-4 flex-shrink-0">";
@@ -101,21 +93,18 @@
 
           {/* Right Column - Newsletter Form */}
           <motion.div;
-            initial = {;
+            initial = {
 
   { opacity: 0,;
-  x: 30;,
-}}
-            whileInView = {;
+  x: 30}}
+            whileInView = {
 
   { opacity: 1,;
-  x: 0;,
-}}
-            transition = {;
+  x: 0}}
+            transition = {
 
   { duration: 0.6,;
-  delay: 0.2;,
-}}
+  delay: 0.2}}
           >";
             <div className="bg-gradient-to-br from-slate-700 to-slate-600 rounded-3xl p-8 border border-slate-500">";
               <div className="text-center mb-6">";
@@ -175,6 +164,5 @@
           </motion.div>;
         </div>;
       </div>;
-    </section>;) };
-;
+    </section>;) }
 export default NewsletterSection}}}'";

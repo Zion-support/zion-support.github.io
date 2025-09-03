@@ -20,8 +20,7 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
             severity: 'high',''';
             description: 'Short or missing title, No headings found, Missing meta description, Meta description too short',''';
             recommendation: 'Add proper page title, headings, and meta description for better SEO',''';
-            status: 'open';,
-},;
+            status: 'open'},;
         {}
 ';
 '';
@@ -33,8 +32,7 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
             severity: 'high',''';
             description: 'Short or missing title, No headings found, Missing meta description, Meta description too short',''';
             recommendation: 'Add proper page title, headings, and meta description for better SEO',''';
-            status: 'open';,
-},;
+            status: 'open'},;
         {}
 ';
 '';
@@ -46,8 +44,7 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
             severity: 'medium',''';
             description: 'Suspiciously small HTML content',''';
             recommendation: 'Add more meaningful content, headings, and images to improve user experience',''';
-            status: 'open';,
-},;
+            status: 'open'},;
         {}
 ';
 '';
@@ -80,12 +77,12 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
             averageContentLength: 5000, // Sample data;
             pagesWithImages: 45, // Sample data;
             pagesWithMetaDescriptions: 32, // Sample data;
-            lastUpdated: new Date () }) };
+            lastUpdated: new Date () }) }
     const startAnalysis = async () => {}
         setIsAnalyzing(true) ;
         // Simulate content analysis;
         await new Promise(resolve => setTimeout (resolve, 3000) ) ;
-        setIsAnalyzing(false) };
+        setIsAnalyzing(false) }
     const getSeverityIcon = (severity) => {}
         switch (severity) {}
 ';
@@ -97,7 +94,7 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
                 return <Info className="w-4 h-4 text-blue-400"/>;";
             default:"";
                 return <Info className="w-4 h-4 text-gray-400"/>}
-    };
+    }
     const getSeverityColor = (severity) => {}
         switch (severity) {}
 ';
@@ -111,7 +108,7 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
                 return 'text-blue-400';''';
             default:'''';
                 return 'text-gray-400'}
-    };
+    }
     const getStatusColor = (status) => {}
         switch (status) {}
 ';
@@ -125,7 +122,7 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
                 return 'text-red-400';''';
             default:'''';
                 return 'text-gray-400'}
-    };
+    }
     const filteredIssues = contentIssues.filter(issue => {}
         const matchesSearch = issue.pageTitle.toLowerCase().includes(searchTerm.toLowerCase()) ||;
             issue.description.toLowerCase().includes(searchTerm.toLowerCase());
@@ -147,7 +144,7 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
                 return 'No Images';
             default: any;
                 return type}
-    };
+    }
     return (<>";
       {/* Floating Action Button */}"";
       <motion.button onClick={() => setIsOpen(true)} className="fixed bottom-6 right-24 z-50 bg-gradient-to-r from-purple-500 to-pink-500 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>"";
@@ -158,16 +155,13 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
       {isOpen && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4" onClick={() => setIsOpen(false)}>;
           <motion.div initial = {}
   { scale: 0.9,;
-  opacity: 0;,
-}} animate = {}
+  opacity: 0}} animate = {}
   { scale: 1,;
-  opacity: 1;,
-}} exit = {}
+  opacity: 1}} exit = {}
   { scale: 0.9,;
   opacity: 0;
 ";
-"";,
-}} className="bg-gray-900 rounded-2xl shadow-2xl w-full max-w-7xl max-h-[90vh] overflow-hidden" onClick={(e) => e.stopPropagation()}>";
+""}} className="bg-gray-900 rounded-2xl shadow-2xl w-full max-w-7xl max-h-[90vh] overflow-hidden" onClick={(e) => e.stopPropagation()}>";
             {/* Header */}"";
             <div className="bg-gradient-to-r from-purple-500 to-pink-500 p-6 text-white">"";
               <div className="flex items-center justify-between">"";
@@ -306,7 +300,7 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
                           </td>""`;
                           <td className="px-6 py-4 whitespace-nowrap">``;
                             <span className={`text-sm font-medium ${getStatusColor(issue.status)}`}>';
-                              {issue.status.replace('_',).charAt(0).toUpperCase() + issue.status.replace('_',).slice(1)}
+                              {issue.status.replace('_').charAt(0).toUpperCase() + issue.status.replace('_').slice(1)}
                             </span>";
                           </td>"";
                           <td className="px-6 py-4 whitespace-nowrap">"";
@@ -369,16 +363,11 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
             </div>;
           </motion.div>;
         </motion.div>)}
-    </>)};
-export default ContentQualityAnalyzer;,
-}}}}}}
-;
-export { ContentQualityAnalyzer };
-;
-export { ContentQualityAnalyzer };
-;
-export { ContentQualityAnalyzer };
-;
-export { ContentQualityAnalyzer };
-;
-export { ContentQualityAnalyzer };
+    </>)}
+export default ContentQualityAnalyzer}}}}}}
+
+export { ContentQualityAnalyzer }
+export { ContentQualityAnalyzer }
+export { ContentQualityAnalyzer }
+export { ContentQualityAnalyzer }
+export { ContentQualityAnalyzer }

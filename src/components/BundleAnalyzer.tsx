@@ -1,28 +1,26 @@
 import React, { useEffect, useCallback, useState } from 'react';
 export const BundleAnalyzer: React.FC < BundleAnalyzerProps> = ({;
 
-interface BundleAnalyzerProps extends React.PropsWithChildren<{}> {;
+interface BundleAnalyzerProps extends React.PropsWithChildren<{}> {
 
   enabled?: boolean;
   showUI?: boolean;
-;,
 }
-;
-interface BundleMetrics {;
+
+interface BundleMetrics {
 
   totalSize: number;
   chunkCount: number;
-largestChunk: {;
+largestChunk: {
     name: string;
     size: number;
-;,
 };  averageChunkSize: number;
   gzipSavings: number}
-;
+
 export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({;
 
   enabled = true,;
-  showUI = false}) => {;
+  showUI = false}) => {
 
   const [metrics, setMetrics] = useState<any>({;
 
@@ -30,33 +28,31 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({;
     chunkCount: 0,;
     largestChunk: { name: '', size: 0 },;
     averageChunkSize: 0,;
-    gzipSavings: 0;,
-}) ;
-;
-    try {;
+    gzipSavings: 0}) ;
+
+    try {
       // Get performance entries;
       const navigationEntries = performance.getEntriesByType('navigation') ;
       const resourceEntries = performance.getEntriesByType('resource') ;
       // Calculate bundle metrics;
       let totalSize = 0;
       let chunkCount = 0;
-      let largestChunk = { name: any'', size: 0 };
-;
-      resourceEntries.forEach((entry:) => {;
-        if(entry.name.includes ('.js') || entry.name.includes('.css') ) {;
+      let largestChunk = { name: any'', size: 0 }
+      resourceEntries.forEach((entry:) => {
+        if(entry.name.includes ('.js') || entry.name.includes('.css') ) {
           const size = entry.transferSize || entry.encodedBodySize || 0;
-          totalSize += size;      resourceEntries.forEach((entry: )  => {;
+          totalSize += size;      resourceEntries.forEach((entry: )  => {
 
-        if(entry.name.includes('.js') || entry.name.includes('.css')) {;
+        if(entry.name.includes('.js') || entry.name.includes('.css')) {
 
           const size = entry.transferSize || entry.encodedBodySize || 0;          totalSize += size;
           chunkCount++;
-;
-          if(size > largestChunk.size) {;
+
+          if(size > largestChunk.size) {
 
             largestChunk = { name: entry.name, size }}        }
       }) ;
-;
+
       const gzipSavings = totalSize * 0.7; // Estimate 70% savings with gzip;
 
       setMetrics({;
@@ -65,9 +61,8 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({;
         chunkCount,;
         largestChunk,;
         averageChunkSize,;
-        gzipSavings;,
-}) ;
-;
+        gzipSavings}) ;
+
       // Log performance insights;
       console.group('🚀 Bundle Analysis') ;
       console.log(`Total Bundle Size: ${(totalSize / 1024 / 1024) .toFixed(2) } MB`) ;
@@ -75,74 +70,65 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({;
       console.log(`Largest Chunk: ${largestChunk.name} (${(largestChunk.size / 1024 / 1024) .toFixed(2) } MB) `) ;
       console.log(`Average Chunk Size: ${(averageChunkSize / 1024 / 1024) .toFixed(2) } MB`) ;
       console.log(`Estimated Gzip Savings: ${(gzipSavings / 1024 / 1024) .toFixed(2) } MB`) ;
-;
+
       // Performance recommendations;
       if(totalSize > 5 * 1024 * 1024) { // 5MB;
-        console.warn('⚠️ Bundle size is large.Consider code splitting and lazy loading.') ;,
-}
-;
-      if(chunkCount > 20) {;
-        console.warn('⚠️ Too many chunks.Consider consolidating small chunks.') ;,
-}
-;
+        console.warn('⚠️ Bundle size is large.Consider code splitting and lazy loading.') }
+
+      if(chunkCount > 20) {
+        console.warn('⚠️ Too many chunks.Consider consolidating small chunks.') }
+
       if(largestChunk.size > 2 * 1024 * 1024) { // 2MB;
-        console.warn('⚠️ Largest chunk is too big.Consider splitting it further.') ;,
-}
-;
-      console.groupEnd () ;,
-} catch(error) {;
-      console.error('Bundle analysis failed:', error) ;,
-}  }, [enabled]) ;
-;
+        console.warn('⚠️ Largest chunk is too big.Consider splitting it further.') }
+
+      console.groupEnd () } catch(error) {
+      console.error('Bundle analysis failed:', error) }  }, [enabled]) ;
+
     // Implement bundle optimization strategies;
     const optimizations: string[] = [];
-;
-    if(metrics.totalSize > 5 * 1024 * 1024) {;
+
+    if(metrics.totalSize > 5 * 1024 * 1024) {
 
       optimizations.push('Implement code splitting for routes');
       optimizations.push('Use dynamic imports for heavy components');
       optimizations.push('Optimize third-party library imports')}
-;
-    if(metrics.chunkCount > 20) {;
+
+    if(metrics.chunkCount > 20) {
 
       optimizations.push('Consolidate small chunks');
       optimizations.push('Use webpack chunk optimization')}
-;
-    if(metrics.largestChunk.size > 2 * 1024 * 1024) {;
+
+    if(metrics.largestChunk.size > 2 * 1024 * 1024) {
 
       optimizations.push('Split large components');
       optimizations.push('Implement tree shaking')}
-;
+
     // Apply optimizations;
-    optimizations.forEach(optimization => {;
+    optimizations.forEach(optimization => {
 `;
       // console.log(`🔧 Optimization: any${optimization}`)});
-;
+
     return optimizations}, [enabled, metrics]) ;
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;,
-}, []);
+  useEffect(() => {
+  // TODO: Add dependencies if needed}, []);
     if(!enabled) return;
-;
+
     // Analyze bundle after page load;
     const timer = setTimeout(analyzeBundle, 2000) ;
-;
-    return () => clearTimeout(timer) ;,
-}, [enabled, analyzeBundle]) ;
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;,
-}, []);
+
+    return () => clearTimeout(timer) }, [enabled, analyzeBundle]) ;
+  useEffect(() => {
+  // TODO: Add dependencies if needed}, []);
     if(!enabled) return;
-;
+
     // Run optimization analysis;
     const optimizations = optimizeBundle () ;
-    if(optimizations && optimizations.length > 0) {;
+    if(optimizations && optimizations.length > 0) {
 
-      // console.log('📊 Bundle optimization recommendations:', optimizations);,
-}
+      // console.log('📊 Bundle optimization recommendations:', optimizations)}
   }, [enabled, optimizeBundle]);
   // Don't render UI unless explicitly requested;
-  if(!showUI) {;
+  if(!showUI) {
 
     return null}
   return ();

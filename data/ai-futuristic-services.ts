@@ -1,4 +1,4 @@
-export interface AIFuturisticService {;
+export interface AIFuturisticService {
   id: string;
   name: string;
   tagline: string;
@@ -25,7 +25,7 @@ export interface AIFuturisticService {;
   marketSize: string;
   growthRate: string;
   variant: "default" | "holographic" | "quantum" | "cyberpunk" | "neural" | "quantum-holographic" | "quantum-advanced" | "holographic-advanced" | "neural-quantum" | "quantum-cyberpunk" | "holographic-neural" | "quantum-holographic-advanced" | "quantum-matrix" | "neural-cyberpunk" | "holographic-quantum" | "quantum-neural-advanced" | "cyberpunk-holographic" | "quantum-space" | "ai-futuristic" | "quantum-entanglement" | "holographic-matrix" | "neural-quantum-cyberpunk";
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -37,7 +37,7 @@ export interface AIFuturisticService {;
   rating: number;
 export const aiFuturisticServices: AIFuturisticService[] = [;
   // AI-Powered Quantum Blockchain Analytics;
-  {;
+  {
     id: "ai-powered-quantum-blockchain-analytics",;
     name: "AI-Powered Quantum Blockchain Analytics",;
     tagline: "Quantum AI analysis of blockchain data with predictive insights",;
@@ -75,21 +75,19 @@ export const aiFuturisticServices: AIFuturisticService[] = [;
     marketSize: "$2B blockchain analytics market, quantum AI segment growing 600% annually",;
     growthRate: "600% annual growth",;
     variant: "quantum-cyberpunk",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced quantum AI blockchain analytics platform with real-time monitoring, fraud detection, and predictive insights. Includes comprehensive analytics tools and compliance features.",;
     launchDate: "2024-12-15",;
     customers: 180,;
     rating: 4.8,;
-    reviews: 95;,;,
-},;
+    reviews: 95},;
   // AI-Powered Quantum Code Review Copilot;
-  {;
+  {
     id: "ai-powered-quantum-code-review-copilot",;
     name: "AI-Powered Quantum Code Review Copilot",;
     tagline: "Quantum AI-powered code review with 99% accuracy",;
@@ -127,21 +125,19 @@ export const aiFuturisticServices: AIFuturisticService[] = [;
     marketSize: "$1.5B code review market, quantum AI segment growing 500% annually",;
     growthRate: "500% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced quantum AI code review platform with real-time analysis, bug detection, and security scanning. Includes IDE integration and team collaboration features.",;
     launchDate: "2024-11-01",;
     customers: 420,;
     rating: 4.7,;
-    reviews: 198;,;,
-},;
+    reviews: 198},;
   // AI-Powered Quantum Data Analytics;
-  {;
+  {
     id: "ai-powered-quantum-data-analytics",;
     name: "AI-Powered Quantum Data Analytics",;
     tagline: "Quantum AI data analysis with real-time insights",;
@@ -179,21 +175,19 @@ export const aiFuturisticServices: AIFuturisticService[] = [;
     marketSize: "$25B data analytics market, quantum AI segment growing 700% annually",;
     growthRate: "700% annual growth",;
     variant: "quantum-matrix",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced quantum AI data analytics platform with real-time processing, predictive modeling, and automated insights. Includes comprehensive visualization and reporting tools.",;
     launchDate: "2024-10-15",;
     customers: 280,;
     rating: 4.8,;
-    reviews: 145;,;,
-},;
+    reviews: 145},;
   // AI-Powered Quantum Evaluations;
-  {;
+  {
     id: "ai-powered-quantum-evaluations",;
     name: "AI-Powered Quantum Evaluations",;
     tagline: "Quantum AI-powered evaluation and assessment platform",;
@@ -231,21 +225,19 @@ export const aiFuturisticServices: AIFuturisticService[] = [;
     marketSize: "$8B assessment market, quantum AI segment growing 600% annually",;
     growthRate: "600% annual growth",;
     variant: "neural-quantum",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced quantum AI evaluation platform with real-time assessment, personalized feedback, and skill gap analysis. Includes comprehensive analytics and reporting tools.",;
     launchDate: "2024-09-15",;
     customers: 195,;
     rating: 4.8,;
-    reviews: 102;,;,
-},;
+    reviews: 102},;
   // AI-Powered Quantum Guardrails;
-  {;
+  {
     id: "ai-powered-quantum-guardrails",;
     name: "AI-Powered Quantum Guardrails",;
     tagline: "Quantum AI-powered safety and governance for AI systems",;
@@ -283,21 +275,19 @@ export const aiFuturisticServices: AIFuturisticService[] = [;
     marketSize: "$3B AI safety market, quantum AI segment growing 800% annually",;
     growthRate: "800% annual growth",;
     variant: "quantum-advanced",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced quantum AI safety platform with real-time monitoring, ethical governance, and risk assessment. Includes comprehensive safety features and compliance tools.",;
     launchDate: "2024-08-01",;
     customers: 85,;
     rating: 4.9,;
-    reviews: 48;,;,
-},;
+    reviews: 48},;
   // AI-Powered Quantum HR Recruitment;
-  {;
+  {
     id: "ai-powered-quantum-hr-recruitment",;
     name: "AI-Powered Quantum HR Recruitment",;
     tagline: "Quantum AI-powered recruitment with 90% accuracy",;
@@ -335,21 +325,19 @@ export const aiFuturisticServices: AIFuturisticService[] = [;
     marketSize: "$30B HR technology market, quantum AI segment growing 600% annually",;
     growthRate: "600% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced quantum AI recruitment platform with automated screening, skill assessment, and performance prediction. Includes comprehensive HR features and compliance tools.",;
     launchDate: "2024-07-15",;
     customers: 320,;
     rating: 4.7,;
-    reviews: 167;,;,
-},;
+    reviews: 167},;
   // AI-Powered Quantum IoT Platform;
-  {;
+  {
     id: "ai-powered-quantum-iot-platform",;
     name: "AI-Powered Quantum IoT Platform",;
     tagline: "Quantum AI-powered Internet of Things management",;
@@ -387,21 +375,19 @@ export const aiFuturisticServices: AIFuturisticService[] = [;
     marketSize: "$1.5T IoT market, quantum AI segment growing 700% annually",;
     growthRate: "700% annual growth",;
     variant: "quantum-cyberpunk",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced quantum AI IoT platform with real-time management, predictive maintenance, and security monitoring. Includes comprehensive IoT features and analytics tools.",;
     launchDate: "2024-06-01",;
     customers: 450,;
     rating: 4.8,;
-    reviews: 234;,;,
-},;
+    reviews: 234},;
   // AI-Powered Quantum Legal Contract Analyzer;
-  {;
+  {
     id: "ai-powered-quantum-legal-contract-analyzer",;
     name: "AI-Powered Quantum Legal Contract Analyzer",;
     tagline: "Quantum AI-powered contract analysis with 98% accuracy",;
@@ -439,21 +425,19 @@ export const aiFuturisticServices: AIFuturisticService[] = [;
     marketSize: "$20B legal technology market, quantum AI segment growing 700% annually",;
     growthRate: "700% annual growth",;
     variant: "quantum-holographic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced quantum AI legal platform with automated contract review, risk assessment, and compliance checking. Includes comprehensive legal features and collaboration tools.",;
     launchDate: "2024-05-15",;
     customers: 165,;
     rating: 4.8,;
-    reviews: 89;,;,
-},;
+    reviews: 89},;
   // AI-Powered Quantum Market Research;
-  {;
+  {
     id: "ai-powered-quantum-market-research",;
     name: "AI-Powered Quantum Market Research",;
     tagline: "Quantum AI-powered market research with real-time insights",;
@@ -491,21 +475,19 @@ export const aiFuturisticServices: AIFuturisticService[] = [;
     marketSize: "$75B market research market, quantum AI segment growing 600% annually",;
     growthRate: "600% annual growth",;
     variant: "holographic-matrix",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced quantum AI market research platform with real-time analysis, trend prediction, and consumer insights. Includes comprehensive research tools and analytics.",;
     launchDate: "2024-04-01",;
     customers: 280,;
     rating: 4.7,;
-    reviews: 145;,;,
-},;
+    reviews: 145},;
   // AI-Powered Quantum Phone Agent;
-  {;
+  {
     id: "ai-powered-quantum-phone-agent",;
     name: "AI-Powered Quantum Phone Agent",;
     tagline: "Quantum AI-powered phone agents with human-like conversations",;
@@ -543,12 +525,11 @@ export const aiFuturisticServices: AIFuturisticService[] = [;
     marketSize: "$40B contact center market, quantum AI segment growing 700% annually",;
     growthRate: "700% annual growth",;
     variant: "neural-quantum-cyberpunk",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced quantum AI phone agent platform with natural language processing and human-like conversations. Includes comprehensive phone features and analytics tools.",;
     launchDate: "2024-03-15",;

@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
-const Resources = () => {;
+const Resources = () => {
   return (;
     <>;
       <Head>;
@@ -45,6 +45,5 @@ const Resources = () => {;
               </Link>;
             </div>;
     </>;
-  );,
-}
+  )}
 export default Resources;

@@ -1,6 +1,6 @@
 import React from 'react';
 import EnhancedComprehensiveServicesShowcase from "../components/EnhancedComprehensiveServicesShowcase.jsx";
-const InnovativeServicesShowcase2025 = () => {;
+const InnovativeServicesShowcase2025 = () => {
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">;
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
@@ -368,16 +368,12 @@ const InnovativeServicesShowcase2025 = () => {;
           </div>;
         </div>;
       </section>;
-    </div>)};
+    </div>)}
 export default InnovativeServicesShowcase2025;
-;
 
-export { InnovativeServicesShowcase2025 };
-;
-export { InnovativeServicesShowcase2025 };
-;
-export { InnovativeServicesShowcase2025 };
-;
-export { InnovativeServicesShowcase2025 };
-;
-export { InnovativeServicesShowcase2025 };
+
+export { InnovativeServicesShowcase2025 }
+export { InnovativeServicesShowcase2025 }
+export { InnovativeServicesShowcase2025 }
+export { InnovativeServicesShowcase2025 }
+export { InnovativeServicesShowcase2025 }

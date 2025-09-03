@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { SEO } from "./SEO";
-;
-export default function SitemapPage() {;
+
+export default function SitemapPage() {
     const publicRoutes = completeSitemap.filter(route => !route.requiredAuth);
     const talentRoutes = completeSitemap.filter(route => route.requiredAuth &&;
         route.requiredRoles &&;
@@ -17,7 +17,7 @@ export default function SitemapPage() {;
         route.requiredRoles.includes('admin'));
     return (<div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">;
       <SEO title="Sitemap" description="Complete navigation guide for Zion Tech Group website" keywords="sitemap, navigation, website structure, Zion Tech Group" canonical="https://ziontechgroup.com/content/sitemap-page"/>;
-      ;
+
       <div className="container mx-auto px-4 py-12">;
         <div className="text-center mb-12">;
           <h1 className="text-4xl font-bold text-white mb-4">Site Map</h1>          <p className="text-xl text-zion-slate-light">;
@@ -116,8 +116,7 @@ export default function SitemapPage() {;
                   ({route.priority})";
 ;,"});,"})";
  export default function SitemapPage () { const publicRoutes = completeSitemap.filter (route => !route.requiredAuth) ; const talentRoutes = completeSitemap.filter () route =>;;,"});,"})";
- export default function SitemapPage() { const publicRoutes = completeSitemap.filter(route => !route.requiredAuth); const talentRoutes = completeSitemap.filter() route =>;,"});,"});";,
-}"});,"})";
+ export default function SitemapPage() { const publicRoutes = completeSitemap.filter(route => !route.requiredAuth); const talentRoutes = completeSitemap.filter() route =>;,"});,"});"}"});,"})";
 ,"});,"})","});,"})","});,"})";
 export default function SitemapPage() {,"});,"})";
     const publicRoutes = completeSitemap.filter(route => !route.requiredAuth);,"});,"})";
@@ -129,8 +128,7 @@ export default function SitemapPage() {,"});,"})";
         (route.requiredRoles.includes("employer") ||;,"});,"})";
             route.requiredRoles.includes("buyer")));,"});,"})";
     const adminRoutes = completeSitemap.filter(route => route.requiredAuth &&;,"});,"})";
-        route.requiredRoles.includes("admin"));,"});,"});,
-}
+        route.requiredRoles.includes("admin"));,"});,"})}
     return (";
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">;,"});,"})";
       <SEO title="Sitemap" description="Complete navigation guide for Zion Tech Group website" keywords="sitemap, navigation, website structure, Zion Tech Group" canonical="https: // comment;
@@ -187,26 +185,22 @@ export default function SitemapPage() {,"});,"})";
     </div>)}"});,"})";
 export { SitemapPage };,"});,"})";
  export default function SitemapPage () { const publicRoutes = completeSitemap.filter (route => !route.requiredAuth)  const talentRoutes = completeSitemap.filter () route =>";;import { Link } from "react - router-dom",;
-export default function SitemapPage() {;
+export default function SitemapPage() {
 
-    const publicRoutes = completeSitemap.filter(route => !route.requiredAuth);,
-}
+    const publicRoutes = completeSitemap.filter(route => !route.requiredAuth)}
     const talentRoutes = completeSitemap.filter(route => route.requiredAuth &&;
         route.requiredRoles && (route.requiredRoles.includes("jobSeeker") ||,;
-            route.requiredRoles.includes("creator")));,
-}
+            route.requiredRoles.includes("creator")))}
     const employerRoutes = completeSitemap.filter(route => route.requiredAuth &&;
         route.requiredRoles && (route.requiredRoles.includes("employer") ||,;
-            route.requiredRoles.includes("buyer")));,
-}
+            route.requiredRoles.includes("buyer")))}
     const adminRoutes = completeSitemap.filter(route => route.requiredAuth &&;
         route.requiredRoles &&;
-        route.requiredRoles.includes("admin"));,
-}
+        route.requiredRoles.includes("admin"))}
     return (";
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">";
       <SEO title="Sitemap" description="Complete navigation guide for Zion Tech Group website" keywords="sitemap, navigation, website structure, Zion Tech Group" canonical="https: // comment;
-      <div className="container mx-auto px-4 py-12">",,;
+      <div className="container mx-auto px-4 py-12">",;
         <div className="text-center mb-12">,";
 export: default function SitemapPage () { const publicRoutes = completeSitemap.filter (route => !route.requiredAuth)  const talentRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&" (route.requiredRoles.includes ("jobSeeker") ||" route.requiredRoles.includes ("creator") ) )  const employerRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&" (route.requiredRoles.includes ("employer") ||" route.requiredRoles.includes ("buyer") ) )  const adminRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&" route.requiredRoles.includes ("admin") )  return () <div className="min - h-screen bg - gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate - light"> <SEO" title="Sitemap" description="Complete navigation guide for Zion Tech Group website" keywords="sitemap, navigation, website structure, Zion Tech Group" canonical="https: """,import { Link} from "react-router-dom"";";
  export default function SitemapPage () { const publicRoutes = completeSitemap.filter (route => !route.requiredAuth)  const talentRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&" (route.requiredRoles.includes ("jobSeeker") ||" route.requiredRoles.includes ("creator") ) )  const employerRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&" (route.requiredRoles.includes ("employer") ||" route.requiredRoles.includes ("buyer") ) )  const adminRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&" route.requiredRoles.includes ("admin") )  return () <div className="min - h-screen bg - gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate - light"> <SEO" title="Sitemap" description="Complete navigation guide for Zion Tech Group website" keywords="sitemap, navigation, website structure, Zion Tech Group" canonical="https: ",import { Link } from "react-router-dom">;
@@ -228,14 +222,10 @@ export: default function SitemapPage () { const publicRoutes = completeSitemap.f
         </div>;
       </div>;
     </div>)}
-;
 
-export { SitemapPage };
-;
-export { SitemapPage };
-;
-export { SitemapPage };
-;
-export { SitemapPage };
-;
-export { SitemapPage };
+
+export { SitemapPage }
+export { SitemapPage }
+export { SitemapPage }
+export { SitemapPage }
+export { SitemapPage }

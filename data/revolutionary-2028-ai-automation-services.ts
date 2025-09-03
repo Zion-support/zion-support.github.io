@@ -1,5 +1,5 @@
 import { ServiceVariant  } from "../types/service-variants";
-export interface Revolutionary2028AIAutomationService {;
+export interface Revolutionary2028AIAutomationService {
   id: string;
   name: string;
   tagline: string;
@@ -26,7 +26,7 @@ export interface Revolutionary2028AIAutomationService {;
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -38,7 +38,7 @@ export interface Revolutionary2028AIAutomationService {;
   rating: number;
 export const revolutionary2028AIAutomationServices: Revolutionary2028AIAutomationService[] = [;
   // AI-Powered Autonomous Manufacturing;
-  {;
+  {
     id: "ai-autonomous-manufacturing-2028",;
     name: "AI Autonomous Manufacturing 2028",;
     tagline: "Revolutionize manufacturing with fully autonomous AI-powered production systems",;
@@ -76,21 +76,19 @@ export const revolutionary2028AIAutomationServices: Revolutionary2028AIAutomatio
     marketSize: "$45.8B market",;
     growthRate: "320% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "AI-powered autonomous manufacturing platform with computer vision, predictive maintenance, and full production line automation.",;
     launchDate: "2028-01-15",;
     customers: 180,;
     rating: 4.9,;
-    reviews: 120;,;,
-},;
+    reviews: 120},;
   // AI-Powered Autonomous Agriculture;
-  {;
+  {
     id: "ai-autonomous-agriculture-2028",;
     name: "AI Autonomous Agriculture 2028",;
     tagline: "Transform farming with AI-powered autonomous agricultural systems",;
@@ -128,21 +126,19 @@ export const revolutionary2028AIAutomationServices: Revolutionary2028AIAutomatio
     marketSize: "$18.9B market",;
     growthRate: "280% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "AI-powered autonomous agriculture platform with crop monitoring, automated irrigation, and comprehensive farm management.",;
     launchDate: "2028-03-20",;
     customers: 320,;
     rating: 4.8,;
-    reviews: 240;,;,
-},;
+    reviews: 240},;
   // AI-Powered Autonomous Healthcare;
-  {;
+  {
     id: "ai-autonomous-healthcare-2028",;
     name: "AI Autonomous Healthcare 2028",;
     tagline: "Revolutionize healthcare delivery with AI-powered autonomous medical systems",;
@@ -180,21 +176,19 @@ export const revolutionary2028AIAutomationServices: Revolutionary2028AIAutomatio
     marketSize: "$65.2B market",;
     growthRate: "350% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "AI-powered autonomous healthcare platform with patient monitoring, diagnosis assistance, and comprehensive medical automation.",;
     launchDate: "2028-02-10",;
     customers: 95,;
     rating: 4.9,;
-    reviews: 75;,;,
-},;
+    reviews: 75},;
   // AI-Powered Autonomous Logistics;
-  {;
+  {
     id: "ai-autonomous-logistics-2028",;
     name: "AI Autonomous Logistics 2028",;
     tagline: "Transform logistics with fully autonomous AI-powered supply chain management",;
@@ -232,21 +226,19 @@ export const revolutionary2028AIAutomationServices: Revolutionary2028AIAutomatio
     marketSize: "$32.7B market",;
     growthRate: "295% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "AI-powered autonomous logistics platform with warehouse automation, route optimization, and comprehensive supply chain management.",;
     launchDate: "2028-04-15",;
     customers: 280,;
     rating: 4.7,;
-    reviews: 210;,;,
-},;
+    reviews: 210},;
   // AI-Powered Autonomous Energy Management;
-  {;
+  {
     id: "ai-autonomous-energy-management-2028",;
     name: "AI Autonomous Energy Management 2028",;
     tagline: "Optimize energy systems with AI-powered autonomous management and sustainability",;
@@ -284,12 +276,11 @@ export const revolutionary2028AIAutomationServices: Revolutionary2028AIAutomatio
     marketSize: "$28.5B market",;
     growthRate: "265% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "AI-powered autonomous energy management platform with power optimization, grid management, and comprehensive sustainability tracking.",;
     launchDate: "2028-06-20",;

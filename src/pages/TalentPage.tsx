@@ -18,51 +18,44 @@ import { ;
   Shield,;
   Cloud,;
   Brain,;
-  Zap;,
-} from 'lucide-react';
-;
-export function TalentPage() {;
+  Zap} from 'lucide-react';
+
+export function TalentPage() {
   const talentCategories = [;
-    {;
+    {
       title: 'AI & Machine Learning',;
       icon: Brain,;
       count: 45,;
-      skills: ['TensorFlow', 'PyTorch', 'Computer Vision', 'NLP', 'Deep Learning'];,
-},;
-    {;
+      skills: ['TensorFlow', 'PyTorch', 'Computer Vision', 'NLP', 'Deep Learning']},;
+    {
       title: 'Cloud & DevOps',;
       icon: Cloud,;
       count: 32,;
-      skills: ['AWS', 'Azure', 'Kubernetes', 'Docker', 'Terraform'];,
-},;
-    {;
+      skills: ['AWS', 'Azure', 'Kubernetes', 'Docker', 'Terraform']},;
+    {
       title: 'Cybersecurity',;
       icon: Shield,;
       count: 28,;
-      skills: ['Penetration Testing', 'SOC', 'Compliance', 'Risk Assessment', 'Incident Response'];,
-},;
-    {;
+      skills: ['Penetration Testing', 'SOC', 'Compliance', 'Risk Assessment', 'Incident Response']},;
+    {
       title: 'Full Stack Development',;
       icon: Code,;
       count: 67,;
-      skills: ['React', 'Node.js', 'Python', 'TypeScript', 'PostgreSQL'];,
-},;
-    {;
+      skills: ['React', 'Node.js', 'Python', 'TypeScript', 'PostgreSQL']},;
+    {
       title: 'Data Science',;
       icon: Database,;
       count: 23,;
-      skills: ['Python', 'R', 'SQL', 'Tableau', 'Machine Learning'];,
-},;
-    {;
+      skills: ['Python', 'R', 'SQL', 'Tableau', 'Machine Learning']},;
+    {
       title: 'Blockchain',;
       icon: Zap,;
       count: 15,;
-      skills: ['Solidity', 'Web3', 'DeFi', 'Smart Contracts', 'Ethereum'];,
-}
+      skills: ['Solidity', 'Web3', 'DeFi', 'Smart Contracts', 'Ethereum']}
   ];
-;
+
   const featuredProfessionals = [;
-    {;
+    {
       name: 'Sarah Chen',;
       title: 'Senior AI Engineer',;
       location: 'San Francisco, CA',;
@@ -71,9 +64,8 @@ export function TalentPage() {;
       skills: ['Machine Learning', 'Python', 'TensorFlow', 'Computer Vision'],;
       availability: 'Available',;
       hourlyRate: '$120-150',;
-      avatar: '👩‍💻';,
-},;
-    {;
+      avatar: '👩‍💻'},;
+    {
       name: 'Marcus Rodriguez',;
       title: 'Cloud Solutions Architect',;
       location: 'Austin, TX',;
@@ -82,9 +74,8 @@ export function TalentPage() {;
       skills: ['AWS', 'Kubernetes', 'Terraform', 'DevOps'],;
       availability: 'Available',;
       hourlyRate: '$100-130',;
-      avatar: '👨‍💻';,
-},;
-    {;
+      avatar: '👨‍💻'},;
+    {
       name: 'Dr. Emily Watson',;
       title: 'Cybersecurity Expert',;
       location: 'New York, NY',;
@@ -93,9 +84,8 @@ export function TalentPage() {;
       skills: ['Penetration Testing', 'SOC', 'Compliance', 'Risk Assessment'],;
       availability: 'Available',;
       hourlyRate: '$150-200',;
-      avatar: '👩‍🔬';,
-},;
-    {;
+      avatar: '👩‍🔬'},;
+    {
       name: 'Alex Kim',;
       title: 'Full Stack Developer',;
       location: 'Seattle, WA',;
@@ -104,10 +94,9 @@ export function TalentPage() {;
       skills: ['React', 'Node.js', 'TypeScript', 'PostgreSQL'],;
       availability: 'Available',;
       hourlyRate: '$80-120',;
-      avatar: '👨‍💻';,
-}
+      avatar: '👨‍💻'}
   ];
-;
+
   return (;
     <div className="min-h-screen bg-zion-slate-dark">;
       {/* Hero Section */}
@@ -121,7 +110,7 @@ export function TalentPage() {;
               Connect with vetted professionals, AI experts, and technology specialists ;
               ready to accelerate your projects and drive innovation.;
             </p>;
-            ;
+
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto mb-8">;
               <div className="relative">;
@@ -184,7 +173,7 @@ export function TalentPage() {;
                     {category.count} available;
                   </span>;
                 </div>;
-                ;
+
                 <div className="flex flex-wrap gap-2 mb-4">;
                   {category.skills.map((skill, skillIndex) => (;
                     <span key={skillIndex} className="text-xs bg-zion-blue-dark text-zion-cyan px-2 py-1 rounded">;
@@ -192,7 +181,7 @@ export function TalentPage() {;
                     </span>;
                   ))}
                 </div>;
-                ;
+
                 <Link;
                   to={`/talent?category=${category.title.toLowerCase().replace(/\s+/g, '-')}`}
                   className="text-zion-cyan hover:text-zion-cyan-light transition-colors flex items-center group-hover:translate-x-1 transform duration-300">;
@@ -238,17 +227,17 @@ export function TalentPage() {;
                       <span className="text-sm text-white">{professional.rating}</span>;
                     </div>;
                   </div>;
-                  ;
+
                   <div className="flex items-center justify-between">;
                     <span className="text-sm text-zion-slate-light">Projects</span>;
                     <span className="text-sm text-white">{professional.projects}</span>;
                   </div>;
-                  ;
+
                   <div className="flex items-center justify-between">;
                     <span className="text-sm text-zion-slate-light">Rate</span>;
                     <span className="text-sm text-zion-cyan">{professional.hourlyRate}/hr</span>;
                   </div>;
-                  ;
+
                   <div className="flex items-center justify-between">;
                     <span className="text-sm text-zion-slate-light">Status</span>;
                     <span className="text-xs bg-green-500/20 text-green-400 px-2 py-1 rounded">;
@@ -346,7 +335,6 @@ export function TalentPage() {;
         </div>;
       </section>;
     </div>;
-  );,
-}
-;
+  )}
+
 export default TalentPage;

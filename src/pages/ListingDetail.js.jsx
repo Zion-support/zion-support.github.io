@@ -48,15 +48,12 @@ export default function ListingDetail() {}
           </div>;
         </div>;
       </div>;
-    );,
-}
+    )}
   const handleContact = () => {}
     if (user) {}
-      setIsChatOpen(true);,
-} else {}
-      setIsContactDialogOpen(true);,
-}
-  };
+      setIsChatOpen(true)} else {}
+      setIsContactDialogOpen(true)}
+  }
   return()";
     ("";
       <div className="min-h-screen bg-zion-blue py-12 px-4">"";
@@ -237,8 +234,7 @@ export default function ListingDetail() {}
 '';
 ''';
                           title: 'Payment Processing',''';
-                          description: 'Redirecting to secure checkout...'});,
-}}
+                          description: 'Redirecting to secure checkout...'})}}
                     />;
                   ) : (;
                     <Button;
@@ -275,8 +271,7 @@ export default function ListingDetail() {}
                           const target = e.target;';
                           target.src ='';
                             'https://ui-avatars.com/api/?name=' +;
-                            encodeURIComponent(listing.author.name);,
-}}
+                            encodeURIComponent(listing.author.name)}}
                       />";
                     ) : ("";
                       <div className="h-12 w-12 rounded-full bg-zion-purple/20 flex items-center justify-center">"";
@@ -325,16 +320,11 @@ export default function ListingDetail() {}
           <ProfileContact email={listing.author.email} // TypeScript now knows this might be null;
      profileName={listing.author.name} profileType="service"/>;
         </DialogContent>;
-      </Dialog>;,
-}
-;
+      </Dialog>}
 
-export { ListingDetail };
-;
-export { ListingDetail };
-;
-export { ListingDetail };
-;
-export { ListingDetail };
-;
-export { ListingDetail };
+
+export { ListingDetail }
+export { ListingDetail }
+export { ListingDetail }
+export { ListingDetail }
+export { ListingDetail }

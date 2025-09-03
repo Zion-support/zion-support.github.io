@@ -3,73 +3,63 @@ import type { NextPage } from 'next';
 import MainLayout from '../../components/layout/MainLayout';
 import { Brain, Zap, Target, CheckCircle, ArrowRight, Code, Database, Cpu, Eye, TrendingUp } from 'lucide-react';
 import Link from 'next/link';
-;
-const AIDevelopment: NextPage = () => {;
+
+const AIDevelopment: NextPage = () => {
   const services = [;
-    {;
+    {
       icon: Brain,;
       title: "Machine Learning Models",;
       description: "Custom ML models tailored to your business needs, from predictive analytics to recommendation systems.",;
-      features: ["Custom algorithm development", "Model training and optimization", "Performance monitoring", "Continuous learning systems"];,
-},;
-    {;
+      features: ["Custom algorithm development", "Model training and optimization", "Performance monitoring", "Continuous learning systems"]},;
+    {
       icon: Eye,;
       title: "Computer Vision",;
       description: "Advanced image and video analysis solutions for automation, quality control, and security applications.",;
-      features: ["Object detection and recognition", "Facial recognition systems", "Medical image analysis", "Autonomous vehicle vision"];,
-},;
-    {;
+      features: ["Object detection and recognition", "Facial recognition systems", "Medical image analysis", "Autonomous vehicle vision"]},;
+    {
       icon: Database,;
       title: "Natural Language Processing",;
       description: "Intelligent text analysis, language understanding, and automated content generation solutions.",;
-      features: ["Chatbot development", "Sentiment analysis", "Language translation", "Content generation"];,
-},;
-    {;
+      features: ["Chatbot development", "Sentiment analysis", "Language translation", "Content generation"]},;
+    {
       icon: Cpu,;
       title: "AI Automation",;
       description: "Intelligent process automation to streamline operations and reduce manual workload.",;
-      features: ["Workflow automation", "Document processing", "Data extraction", "Decision support systems"];,
-}
+      features: ["Workflow automation", "Document processing", "Data extraction", "Decision support systems"]}
   ];
-;
+
   const technologies = [;
     "TensorFlow", "PyTorch", "Scikit-learn", "OpenCV", "NLTK", "SpaCy", ;
     "Hugging Face", "AWS SageMaker", "Google AI Platform", "Azure ML";
   ];
-;
+
   const process = [;
-    {;
+    {
       step: "01",;
       title: "Discovery & Analysis",;
-      description: "We analyze your business requirements and identify AI opportunities that can drive real value.";,
-},;
-    {;
+      description: "We analyze your business requirements and identify AI opportunities that can drive real value."},;
+    {
       step: "02", ;
       title: "Data Assessment",;
-      description: "We evaluate your data quality, availability, and structure to determine the best AI approach.";,
-},;
-    {;
+      description: "We evaluate your data quality, availability, and structure to determine the best AI approach."},;
+    {
       step: "03",;
       title: "Model Development",;
-      description: "Our team develops and trains custom AI models using cutting-edge algorithms and frameworks.";,
-},;
-    {;
+      description: "Our team develops and trains custom AI models using cutting-edge algorithms and frameworks."},;
+    {
       step: "04",;
       title: "Testing & Validation",;
-      description: "Rigorous testing ensures your AI solution meets performance requirements and business objectives.";,
-},;
-    {;
+      description: "Rigorous testing ensures your AI solution meets performance requirements and business objectives."},;
+    {
       step: "05",;
       title: "Deployment & Integration",;
-      description: "Seamless integration with your existing systems and infrastructure for immediate impact.";,
-},;
-    {;
+      description: "Seamless integration with your existing systems and infrastructure for immediate impact."},;
+    {
       step: "06",;
       title: "Monitoring & Optimization",;
-      description: "Continuous monitoring and optimization to ensure peak performance and ongoing improvement.";,
-}
+      description: "Continuous monitoring and optimization to ensure peak performance and ongoing improvement."}
   ];
-;
+
   return (;
     <MainLayout;
       title="AI Development Services - Zion Tech Group";
@@ -213,17 +203,14 @@ const AIDevelopment: NextPage = () => {;
         </section>;
       </div>;
     </MainLayout>;
-  );,
-};
-;
+  )}
 export default AIDevelopment;
-;
-export default function AIDevelopment() {;
+
+export default function AIDevelopment() {
   return (;
     <main className="max-w-4xl mx-auto px-4 py-16">;
       <h1 className="text-3xl font-bold mb-4">AI Development</h1>;
       <p className="text-gray-700">Custom AI solutions for enterprises.</p>;
     </main>;
-  );,
-}
-;
+  )}
+

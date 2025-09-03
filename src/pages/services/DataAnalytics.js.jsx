@@ -1,7 +1,7 @@
 import React from 'react';''';
 import { Link } from 'react-router-dom';''';
 import { Helmet } from 'react-helmet-async';
-import { Check, BarChart3, TrendingUp, Database, Users, Shield, Zap, Target export { function };
+import { Check, BarChart3, TrendingUp, Database, Users, Shield, Zap, Target export { function }
 export default function DataAnalyticsServices() {}
     const analyticsServices = [];
         {}
@@ -15,8 +15,7 @@ export default function DataAnalyticsServices() {}
             ],';
             benefits: ['';
                 'Faster decision-making with real-time insights',Reduced manual reporting time by 80%',Improved data accuracy and consistency',Enhanced stakeholder communication';
-            ];,
-},;
+            ]},;
         {}
             icon: TrendingUp,';
             title: 'Predictive Analytics & Forecasting',';
@@ -28,8 +27,7 @@ export default function DataAnalyticsServices() {}
             ],';
             benefits: ['';
                 'Proactive business planning',Risk mitigation and opportunity identification',Improved resource allocation',Competitive advantage through foresight';
-            ];,
-},;
+            ]},;
         {}
             icon: Database,';
             title: 'Data Engineering & ETL',';
@@ -41,8 +39,7 @@ export default function DataAnalyticsServices() {}
             ],';
             benefits: ['';
                 'Centralized data access and management',Improved data quality and reliability',Faster data processing and delivery',Reduced data silos and duplication';
-            ];,
-},;
+            ]},;
         {}
             icon: Users,';
             title: 'Customer Analytics & Segmentation',';
@@ -54,8 +51,7 @@ export default function DataAnalyticsServices() {}
             ],';
             benefits: ['';
                 'Improved customer retention and loyalty',Higher marketing ROI through targeting',Better product-market fit',Enhanced customer experience';
-            ];,
-},;
+            ]},;
         {}
             icon: Shield,';
             title: 'Data Governance & Compliance',';
@@ -67,8 +63,7 @@ export default function DataAnalyticsServices() {}
             ],';
             benefits: ['';
                 'Reduced compliance risks and penalties',Enhanced data security and trust',Streamlined audit processes',Protection of sensitive information';
-            ];,
-},;
+            ]},;
         {}
             icon: Zap,';
             title: 'Real-Time Analytics & Monitoring',';
@@ -327,15 +322,10 @@ export default function DataAnalyticsServices() {}
           </div>;
         </div>;
       </section>;
-    </div>);,
-}}}
-;
-export { DataAnalyticsServices };
-;
-export { DataAnalyticsServices };
-;
-export { DataAnalyticsServices };
-;
-export { DataAnalyticsServices };
-;
-export { DataAnalyticsServices };
+    </div>)}}}
+
+export { DataAnalyticsServices }
+export { DataAnalyticsServices }
+export { DataAnalyticsServices }
+export { DataAnalyticsServices }
+export { DataAnalyticsServices }

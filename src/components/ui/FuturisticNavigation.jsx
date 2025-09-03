@@ -27,13 +27,11 @@ import { motion } from &apos;framer-motion"}&apos; const navigationItems = [] } 
           {/* Logo */}
           <motion.div initial = {}
   { opacity: 0,;
-  x: -20;,
-}} animate = {}
+  x: -20}} animate = {}
   { opacity: 1,;
   x: 0;
 ";
-"";,
-}} className="flex items-center space-x-3">"";
+""}} className="flex items-center space-x-3">"";
             <div className="relative">"";
               <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center">"";
                 <Zap className="w-6 h-6 text-white"/>";
@@ -53,13 +51,11 @@ import { motion } from &apos;framer-motion"}&apos; const navigationItems = [] } 
             {navigationItems.map((item, index) => (<div key={item.name} className="relative group">;
                 <motion.button initial = {}
   { opacity: 0,;
-  y: -20;,
-}} animate = {}
+  y: -20}} animate = {}
   { opacity: 1,;
   y: 0;
 ";
-"";,
-}} transition={{ delay: index * 0.1 }} onMouseEnter={() => setActiveDropdown(item.name)} onMouseLeave={() => setActiveDropdown(null)} className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group-hover:text-cyan-400">;
+""}} transition={{ delay: index * 0.1 }} onMouseEnter={() => setActiveDropdown(item.name)} onMouseLeave={() => setActiveDropdown(null)} className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group-hover:text-cyan-400">;
                   {item.icon}";
                   <span>{item.name}</span>"";
                   {item.children && <ChevronDown className="w-4 h-4"/>}
@@ -68,16 +64,13 @@ import { motion } from &apos;framer-motion"}&apos; const navigationItems = [] } 
                 {/* Dropdown Menu */}
                 {item.children && activeDropdown === item.name && (<motion.div initial = {}
   { opacity: 0, y: 10,;
-  scale: 0.95;,
-}} animate = {}
+  scale: 0.95}} animate = {}
   { opacity: 1, y: 0,;
-  scale: 1;,
-}} exit = {}
+  scale: 1}} exit = {}
   { opacity: 0, y: 10,;
   scale: 0.95;
 ";
-"";,
-}} className="absolute top-full left-0 mt-2 w-64 bg-black/90 backdrop-blur-md border border-cyan-500/20 rounded-xl shadow-2xl shadow-cyan-500/10">"";
+""}} className="absolute top-full left-0 mt-2 w-64 bg-black/90 backdrop-blur-md border border-cyan-500/20 rounded-xl shadow-2xl shadow-cyan-500/10">"";
                     <div className="p-4 space-y-2">"";
                       {item.children.map((child) => (<a key={child.name} href={child.href} className="flex items-center space-x-3 p-3 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-all duration-200">;
                           {child.icon}
@@ -91,13 +84,11 @@ import { motion } from &apos;framer-motion"}&apos; const navigationItems = [] } 
           {/* CTA Button */}
           <motion.div initial = {}
   { opacity: 0,;
-  x: 20;,
-}} animate = {}
+  x: 20}} animate = {}
   { opacity: 1,;
   x: 0;
 ";
-"";,
-}} className="hidden lg:block">"";
+""}} className="hidden lg:block">"";
             <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25">;
               Get Started;
             </button>;
@@ -116,16 +107,13 @@ import { motion } from &apos;framer-motion"}&apos; const navigationItems = [] } 
       <AnimatePresence>;
         {isOpen && (<motion.div initial = {}
   { opacity: 0,;
-  height: 0;,
-}} animate = {}
+  height: 0}} animate = {}
   { opacity: 1,';
-  height: 'auto' ;,
-}} exit = {}
+  height: 'auto' }} exit = {}
   { opacity: 0,;
   height: 0;
 ";
-"";,
-}} className="lg:hidden bg-black/95 backdrop-blur-md border-t border-cyan-500/20">"";
+""}} className="lg:hidden bg-black/95 backdrop-blur-md border-t border-cyan-500/20">"";
             <div className="px-4 py-6 space-y-4">";
               {navigationItems.map((item) => (<div key={item.name}>"";
                   <a href={item.href} onClick={closeMenu} className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-200 p-3 rounded-lg hover:bg-cyan-500/10">;
@@ -148,15 +136,11 @@ import { motion } from &apos;framer-motion"}&apos; const navigationItems = [] } 
           </motion.div>)}
       </AnimatePresence>;
     </nav>)}
-;
 
-export { FuturisticNavigation };
-;
-export { FuturisticNavigation };
-;
-export { FuturisticNavigation };
-;
-export { FuturisticNavigation };
-;
-export { FuturisticNavigation };
+
+export { FuturisticNavigation }
+export { FuturisticNavigation }
+export { FuturisticNavigation }
+export { FuturisticNavigation }
+export { FuturisticNavigation }
 ))))))))))))))

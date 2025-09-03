@@ -1,27 +1,27 @@
 import React, { useState, useEffect } from 'react';
 import { CheckCircle, XCircle, Info, X, AlertTriangle  } from 'lucide-react';
 ,;
-  error: {;
+  error: {
 
     icon: XCircle,;
     bgColor: 'bg-red-500/10',;
     borderColor: 'border-red-500/20',;
     textColor: 'text-red-500',;
     iconColor: 'text-red-500'},;
-  info: {;
+  info: {
 
     icon: Info,;
     bgColor: 'bg-zion-blue/10',;
     borderColor: 'border-zion-blue/20',;
     textColor: 'text-zion-blue',;
     iconColor: 'text-zion-blue'},;
-  warning: {;
+  warning: {
 
     icon: AlertTriangle,;
     bgColor: 'bg-zion-gold/10',;
     borderColor: 'border-zion-gold/20',;
     textColor: 'text-zion-gold',;
-    iconColor: 'text-zion-gold'}};
+    iconColor: 'text-zion-gold'}}
 export function Notification({;
 
   id,;
@@ -29,30 +29,25 @@ export function Notification({;
   title,;
   message,;
   duration = 5000,;
-  onClose}) {;
+  onClose}) {
 
   const [isVisible, setIsVisible] = useState(true);
   const styles = notificationStyles[type];
   const Icon = styles.icon;
-  useEffect(() => {;
+  useEffect(() => {
   // TODO: Add dependencies if needed;
 
-  return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
-    if(duration > 0) {;
+  return () => {
+    // Cleanup function}}, []);, []);
+    if(duration > 0) {
 
-      const timer = setTimeout(() => {;
-        handleClose();,
-}, duration);
-      return () => clearTimeout(timer);,
-}
+      const timer = setTimeout(() => {
+        handleClose()}, duration);
+      return () => clearTimeout(timer)}
   }, [duration]);
-  const handleClose = () => {;
+  const handleClose = () => {
     setIsVisible(false);
-    setTimeout(() => onClose(id), 300);,
-};
+    setTimeout(() => onClose(id), 300)}
   if(!isVisible) return null;
   return ();
     <div;
@@ -72,9 +67,8 @@ export function Notification({;
         </button>;
       </div>;
     </div>;
-  );,
-}
-export function NotificationContainer({ notifications, onClose }) {;
+  )}
+export function NotificationContainer({ notifications, onClose }) {
 
   return (";
     <div className="fixed top-20 right-4 z-50 space-y-2">;
@@ -86,6 +80,5 @@ export function NotificationContainer({ notifications, onClose }) {;
         />;
       ))}
     </div>;
-  );,
-}
+  )}
 '"`

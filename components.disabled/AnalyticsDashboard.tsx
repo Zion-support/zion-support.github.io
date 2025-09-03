@@ -1,31 +1,27 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-;
-interface AnalyticsData {;
+
+interface AnalyticsData {
 
   pageViews: number;
   uniqueVisitors: number;
   bounceRate: number;
   avgSessionDuration: number;
-  topPages: { path: string; views: number ;,
-}[];
-  performance: {;
+  topPages: { path: string; views: number }[];
+  performance: {
 
     fcp: number;
     lcp: number;
     fid: number;
     cls: number;
-    ttfb: number;,
-};
-  userBehavior: {;
+    ttfb: number}
+  userBehavior: {
 
-    deviceType: { mobile: number; desktop: number; tablet: number };
-    browser: { [key: string]: number };
-    country: { [key: string]: number };,
-};,
-}
-;
-export default function AnalyticsDashboard() {;
+    deviceType: { mobile: number; desktop: number; tablet: number }
+    browser: { [key: string]: number }
+    country: { [key: string]: number }}}
+
+export default function AnalyticsDashboard() {
 
   const [analyticsData, setAnalyticsData] = useState<AnalyticsData | null>(;
     null;
@@ -34,15 +30,15 @@ export default function AnalyticsDashboard() {;
   const [timeRange, setTimeRange] = useState<'24h' | '7d' | '30d' | '90d'>(';
     '7d';
   );
-;
-  useEffect(: unknown {;
+
+  useEffect(: unknown {
 
     // Simulate fetching analytics data;
-    const fetchAnalytics = async : unknown {;
+    const fetchAnalytics = async : unknown {
 
       setIsLoading(true);
       await new Promise(resolve => setTimeout(resolve, 1500));
-;
+
       // Mock data - in production, this would come from your analytics service;
       setAnalyticsData({;
 
@@ -57,32 +53,29 @@ export default function AnalyticsDashboard() {;
           { path: '/services', views: 1560 },;
           { path: '/technologies', views: 890 },;
         ],;
-        performance: {;
+        performance: {
 
           fcp: 1200,;
           lcp: 2800,;
           fid: 45,;
           cls: 0.08,;
           ttfb: 180},;
-        userBehavior: {;
+        userBehavior: {
 
           deviceType: { mobile: 45, desktop: 48, tablet: 7 },;
           browser: { Chrome: 65, Safari: 20, Firefox: 10, Edge: 5 },;
-          country: {;
+          country: {
 
             'United States': 60,;
             Canada: 15,United Kingdom': 10,;
             Germany: 8,;
             Other: 7}}});
-      setIsLoading(false);,
-};
-;
-    fetchAnalytics();,
-}, [timeRange]);
-;
-  const getPerformanceScore = (metrics: AnalyticsData['performance']) => {;
+      setIsLoading(false)}
+    fetchAnalytics()}, [timeRange]);
 
-    const scores = {;
+  const getPerformanceScore = (metrics: AnalyticsData['performance']) => {
+
+    const scores = {
 
       fcp:;
         metrics.fcp < 1800;
@@ -94,19 +87,14 @@ export default function AnalyticsDashboard() {;
           : Math.max(0, 100 - (metrics.lcp - 2500) / 100),;
       fid:;
         metrics.fid < 100 ? 100 : Math.max(0, 100 - (metrics.fid - 100) / 10),;
-      cls: metrics.cls < 0.1 ? 100 : Math.max(0, 100 - metrics.cls * 1000)};
-;
-    return Math.round(Object.values(scores).reduce((a, b) => a + b, 0) / 4);,
-};
-;
-  const getPerformanceColor = (score: number) => {;
+      cls: metrics.cls < 0.1 ? 100 : Math.max(0, 100 - metrics.cls * 1000)}
+    return Math.round(Object.values(scores).reduce((a, b) => a + b, 0) / 4)}
+  const getPerformanceColor = (score: number) => {
 
     if (score >= 90) return 'text-green-500';
     if (score >= 70) return 'text-yellow-500';
-    return 'text-red-500';,
-};
-;
-  if (isLoading) {;
+    return 'text-red-500'}
+  if (isLoading) {
 
     return();
       <div className="min-h-screen bg-gray-900 flex items-center justify-center">";
@@ -115,10 +103,9 @@ export default function AnalyticsDashboard() {;
           <p className="text-gray-300">Loading analytics...</p>;
         </div>;
       </div>;
-    );,
-}
-;
-  if (!analyticsData) {;
+    )}
+
+  if (!analyticsData) {
 
     return (";
       <div className="min-h-screen bg-gray-900 flex items-center justify-center">";
@@ -126,11 +113,10 @@ export default function AnalyticsDashboard() {;
           <p>Failed to load analytics data</p>;
         </div>;
       </div>;
-    );,
-}
-;
+    )}
+
   const performanceScore = getPerformanceScore(analyticsData.performance);
-;
+
   return (";
     <div className="min-h-screen bg-gray-900 text-white p-6">";
       <div className="max-w-7xl mx-auto">;
@@ -224,8 +210,7 @@ export default function AnalyticsDashboard() {;
 
                       analyticsData.performance.fcp < 1800';
                         ? 'text-green-400'';
-                        : 'text-red-400';,
-}
+                        : 'text-red-400'}
                   >;
                     {analyticsData.performance.fcp}ms;
                   </span>;
@@ -237,8 +222,7 @@ export default function AnalyticsDashboard() {;
 
                       analyticsData.performance.lcp < 2500';
                         ? 'text-green-400'';
-                        : 'text-red-400';,
-}
+                        : 'text-red-400'}
                   >;
                     {analyticsData.performance.lcp}ms;
                   </span>;
@@ -250,8 +234,7 @@ export default function AnalyticsDashboard() {;
 
                       analyticsData.performance.fid < 100';
                         ? 'text-green-400'';
-                        : 'text-red-400';,
-}
+                        : 'text-red-400'}
                   >;
                     {analyticsData.performance.fid}ms;
                   </span>;
@@ -263,8 +246,7 @@ export default function AnalyticsDashboard() {;
 
                       analyticsData.performance.cls < 0.1';
                         ? 'text-green-400'';
-                        : 'text-red-400';,
-}
+                        : 'text-red-400'}
                   >;
                     {analyticsData.performance.cls}
                   </span>;
@@ -363,6 +345,5 @@ export default function AnalyticsDashboard() {;
         </motion.div>;
       </div>;
     </div>;
-  );,
-}
+  )}
 '"`

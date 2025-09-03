@@ -1,124 +1,115 @@
 
-interface PWAUpdaterProps {;
+interface PWAUpdaterProps {
   autoCheck?: boolean;
   checkInterval?: number;
-  showUpdatePrompt?: boolean;,
-}
-;
+  showUpdatePrompt?: boolean}
+
 const PWAUpdater: React.FC < PWAUpdaterProps> = ({;
   autoCheck = true,;
   checkInterval = 300000, // 5 minutes;
-  showUpdatePrompt = true}) => {;
+  showUpdatePrompt = true}) => {
 
   const [updateAvailable, setUpdateAvailable] = useState(false);
   const [updating, setUpdating] = useState(false);
   const [updateComplete, setUpdateComplete] = useState(false);
   const [registration, setRegistration] = useState<ServiceWorkerRegistration | null>(null);
   const [showPrompt, setShowPrompt] = useState(false);
-;
-  useEffect(() => {;
+
+  useEffect(() => {
   // TODO: Add dependencies if needed;
 
-  return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
+  return () => {
+    // Cleanup function}}, []);, []);
     // Check if service worker is supported';
-    if('serviceWorker' in navigator) {;
+    if('serviceWorker' in navigator) {
 
       // // // // // // // // console.log('Service worker not available');
       // Register service worker';
       navigator.serviceWorker.register('/sw.js');
-        .then((reg) => {;
+        .then((reg) => {
 
           setRegistration(reg);
           // console.log('Service Worker registered successfully:', reg);
-          ;
-          // Check for updates;
-          if(autoCheck) {;
 
-            checkForUpdates(reg)}          ;
+          // Check for updates;
+          if(autoCheck) {
+
+            checkForUpdates(reg)}
           // Listen for updates';
-          reg.addEventListener('updatefound', () => {;
+          reg.addEventListener('updatefound', () => {
 
             // console.log('Service Worker update found');
-            ;
-            if(newWorker) {;
 
-              newWorker.addEventListener('statechange', () => {;
+            if(newWorker) {
 
-                if(newWorker.state === 'installed' && navigator.serviceWorker.controller) {;
+              newWorker.addEventListener('statechange', () => {
+
+                if(newWorker.state === 'installed' && navigator.serviceWorker.controller) {
 
                   setUpdateAvailable(true);
-                  if(showUpdatePrompt) {;
+                  if(showUpdatePrompt) {
 
                     setShowPrompt(true)}
                 }
               }) }          });
-          ;
+
           // Listen for controller change(update applied);
-          navigator.serviceWorker.addEventListener('controllerchange', () => {;
+          navigator.serviceWorker.addEventListener('controllerchange', () => {
 
             // console.log('Service Worker controller changed - update applied');
             setUpdateComplete(true);
             setUpdateAvailable(false);
             setUpdating(false);
-            ;
+
             // Hide prompt after a delay;
-            setTimeout(() => {;
+            setTimeout(() => {
               setShowPrompt(false);
               setUpdateComplete(false)}, 3000)})});
-        .catch((error) => {;
+        .catch((error) => {
 
           // console.error('Service Worker registration failed:', error)})}
   }, [autoCheck, showUpdatePrompt]) ;
-  useEffect(() => {;
+  useEffect(() => {
   // TODO: Add dependencies if needed;
 
-  return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
-    if(autoCheck && registration) {;,
-}, checkInterval);
-      ;
+  return () => {
+    // Cleanup function}}, []);, []);
+    if(autoCheck && registration) {}, checkInterval);
+
       return () => clearInterval(interval)}
   }, [autoCheck, checkInterval, registration]) ;
-;
-      // console.log('Service Worker update check completed')} catch(error) {;
+
+      // console.log('Service Worker update check completed')} catch(error) {
 
       // console.error('Service Worker update check failed:', error)}
-  };
-;
+  }
     setUpdating(true) ;
     setShowPrompt(false) ;
-;
-    try {;
+
+    try {
       // Send message to service worker to skip waiting;
-      if(registration.waiting) {;
+      if(registration.waiting) {
 
         registration.waiting.postMessage({ type: 'SKIP_WAITING' })}
       // Reload the page to apply the update;
-      setTimeout(() => {;
-        window.location.reload () }, 1000) } catch(error) {;
+      setTimeout(() => {
+        window.location.reload () }, 1000) } catch(error) {
 
       // // // // // // // // console.error('Update failed:', error);
       setIsUpdating(false);
-;
+
       // console.error('Failed to apply update:', error);
       setUpdating(false);
       setShowPrompt(true)}
-  };
-;
+  }
     // Auto - show again after 1 hour;
-    setTimeout(() => {;
-      if(updateAvailable) {;
+    setTimeout(() => {
+      if(updateAvailable) {
 
         setShowPrompt(true)}
-    }, 3600000) };
-;
+    }, 3600000) }
   // Don't render anything if no update is available;
-  if(!updateAvailable && !updating && !updateComplete) {;
+  if(!updateAvailable && !updating && !updateComplete) {
 
     return null}
   return ();
@@ -234,6 +225,6 @@ const PWAUpdater: React.FC < PWAUpdaterProps> = ({;
             </div>;
           </div>;
         </motion.div>) }
-    </>) };
+    </>) }
 export default PWAUpdater;
 '";

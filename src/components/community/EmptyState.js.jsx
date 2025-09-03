@@ -1,7 +1,7 @@
 """;,"});,"})";
 """;,"});,"})","});,"})","});,"})","})";
-  Tooltip,,"});,"})";
-  TooltipContent,,"});,"})";
+  Tooltip,"});,"})";
+  TooltipContent,"});,"})";
   TooltipProvider,";,"});,"})";
   TooltipTrigger} from "@/components/ui/tooltip";,"});,"})";
 const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {}"});,"})";
@@ -57,22 +57,18 @@ export { EmptyState };,"});,"})";
             ) : (";
               <Button disabled">{cta}</Button>";
             )}
-;
+
           </TooltipTrigger>;
           {!hasSession && <TooltipContent>Login required</TooltipContent>}
-;
+
         </Tooltip>;
       </TooltipProvider>;
-    </div>)};
+    </div>)}
 export default EmptyState;
-;
 
-export { EmptyState };
-;
-export { EmptyState };
-;
-export { EmptyState };
-;
-export { EmptyState };
-;
-export { EmptyState };
+
+export { EmptyState }
+export { EmptyState }
+export { EmptyState }
+export { EmptyState }
+export { EmptyState }

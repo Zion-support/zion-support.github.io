@@ -42,14 +42,12 @@ const ServiceComparison = () => {}
 "";
             icon: <Target className="w-6 h-6 text-zion-purple"/>,';
             title: 'Smart Comparison',';
-            description: 'Compare multiple services side-by-side with detailed feature analysis';,
-},;
+            description: 'Compare multiple services side-by-side with detailed feature analysis'},;
         {}
 ";
 "";
             icon: <TrendingUp className="w-6 h-6 text-zion-green"/>,';
-            description: 'Real-time ratings and popularity indicators to guide your decision';,
-},;
+            description: 'Real-time ratings and popularity indicators to guide your decision'},;
         {}
 ";
 "";
@@ -75,12 +73,10 @@ const ServiceComparison = () => {}
         <div className="max - w-4xl mx - auto text-center relative z -10">;
           <motion.div initial = {}
   { opacity: 0,;
-  y: 20;,
-}} animate = {}
+  y: 20}} animate = {}
   { opacity: 1,;
   y: 0;
-";,
-}} transition={{ duration: 0.6 }}>"";
+"}} transition={{ duration: 0.6 }}>"";
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">;
               Service Comparison";
             </h1>"";
@@ -97,8 +93,7 @@ const ServiceComparison = () => {}
 ';
 '';
 ''';
-  () => window.open('mailto:kleber@ziontechgroup.com?subject=Service Comparison Help',_blank');,
-}>;
+  () => window.open('mailto:kleber@ziontechgroup.com?subject=Service Comparison Help',_blank')}>;
                 Get Expert Help;
               </Button>;
             </div>;
@@ -111,13 +106,11 @@ const ServiceComparison = () => {}
         <div className="max-w-6xl mx-auto">;
           <motion.div initial = {}
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
+  y: 20}} whileInView = {}
   { opacity: 1,;
   y: 0;
 ";
-"";,
-}} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-12">"";
+""}} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-12">"";
             <h2 className="text-3xl font-bold text-zion-blue-dark mb-4">;
               Why Use Our Comparison Tool?";
             </h2>"";
@@ -132,15 +125,12 @@ const ServiceComparison = () => {}
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap-6">;
             {features.map((feature, index) => (<motion.div key={index} initial = {}
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
+  y: 20}} whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}} transition = {}
+  y: 0}} transition = {}
   { duration: 0.6,;
   delay: index * 0.1;
-";,
-}} viewport={{ once: true }}>"";
+"}} viewport={{ once: true }}>"";
                 <Card className="h-full text-center hover:shadow-lg transition-shadow">";
                   <CardHeader>"";
                     <div className="mx-auto w-12 h-12 bg-zion-blue-light/10 rounded-full flex items-center justify-center mb-4">;
@@ -166,13 +156,11 @@ const ServiceComparison = () => {}
         <div className="max-w-4xl mx-auto">;
           <motion.div initial = {}
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
+  y: 20}} whileInView = {}
   { opacity: 1,;
   y: 0;
 ";
-"";,
-}} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-12">"";
+""}} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-12">"";
             <h2 className="text-3xl font-bold text-zion-blue-dark mb-4">;
               Key Benefits";
             </h2>"";
@@ -186,16 +174,13 @@ const ServiceComparison = () => {}
           <div className="space - y-4">;
             {benefits.map((benefit, index) => (<motion.div key={index} initial = {}
   { opacity: 0,;
-  x: -20;,
-}} whileInView = {}
+  x: -20}} whileInView = {}
   { opacity: 1,;
-  x: 0;,
-}} transition = {}
+  x: 0}} transition = {}
   { duration: 0.6,;
   delay: index * 0.1;
 ";
-"";,
-}} viewport={{ once: true }} className="flex items-start gap-3">"";
+""}} viewport={{ once: true }} className="flex items-start gap-3">"";
                 <CheckCircle className="w-5 h-5 text-zion-cyan mt-1 flex-shrink-0"/>"";
                 <span className="text-zion-slate-dark">{benefit}</span>;
               </motion.div>))}
@@ -208,13 +193,11 @@ const ServiceComparison = () => {}
         <div className="max-w-7xl mx-auto">;
           <motion.div initial = {}
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
+  y: 20}} whileInView = {}
   { opacity: 1,;
   y: 0;
 ";
-"";,
-}} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-12">"";
+""}} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-12">"";
             <h2 className="text-3xl font-bold text-zion-blue-dark mb-4">;
               Start Comparing Services";
             </h2>"";
@@ -232,12 +215,10 @@ const ServiceComparison = () => {}
         <div className="max-w-4xl mx-auto text-center">;
           <motion.div initial = {}
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
+  y: 20}} whileInView = {}
   { opacity: 1,;
   y: 0;
-";,
-}} transition={{ duration: 0.6 }} viewport={{ once: true }}>"";
+"}} transition={{ duration: 0.6 }} viewport={{ once: true }}>"";
             <h2 className="text-4xl font-bold text-white mb-6">;
               Need Help Choosing?";
             </h2>"";
@@ -252,8 +233,7 @@ const ServiceComparison = () => {}
 ''';
   () => window.open('mailto:kleber@ziontechgroup.com?subject=Service Selection Help',_blank');
 
-";,
-}>"";
+"}>"";
                 <Users className="w-5 h-5 mr-2"/>;
                 Get Expert Consultation";
               </Button>"";
@@ -263,8 +243,7 @@ const ServiceComparison = () => {}
 ''';
   () => window.open('tel:+13024640950',_blank');
 
-";,
-}>"";
+"}>"";
                 <Zap className="w-5 h-5 mr-2"/>;
                 Call Now;
               </Button>;
@@ -272,17 +251,12 @@ const ServiceComparison = () => {}
           </motion.div>;
         </div>;
       </section>;
-    </div>)};
-export default ServiceComparison;,
-}}
-;
-export { ServiceComparison };
-;
-export { ServiceComparison };
-;
-export { ServiceComparison };
-;
-export { ServiceComparison };
-;
-export { ServiceComparison };
+    </div>)}
+export default ServiceComparison}}
+
+export { ServiceComparison }
+export { ServiceComparison }
+export { ServiceComparison }
+export { ServiceComparison }
+export { ServiceComparison }
 ))))

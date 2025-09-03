@@ -115,8 +115,7 @@ export default function DigitalTransformation() {}
                   </div>"";
                   <div className="text-zion-slate-light">{stat.label}</div>;
                 </motion.div>;
-              );,
-})}
+              )})}
           </div>;
         </div>;
       </section>";
@@ -174,8 +173,7 @@ export default function DigitalTransformation() {}
                     <ArrowRight className="w-4 h-4" />;
                   </Link>;
                 </motion.div>;
-              );,
-})}
+              )})}
           </div>;
         </div>;
       </section>";
@@ -293,8 +291,7 @@ export default function DigitalTransformation() {}
                     </div>;
                   </div>;
                 </motion.div>;
-              );,
-})}
+              )})}
           </div>;
         </div>;
       </section>";
@@ -380,14 +377,10 @@ export default function DigitalTransformation() {}
         </div>;
       </section>;
     </div>)}
-;
 
-export { DigitalTransformation, IconComponent, IconComponent, IconComponent };
-;
-export { DigitalTransformation, IconComponent, IconComponent, IconComponent };
-;
-export { DigitalTransformation, IconComponent, IconComponent, IconComponent };
-;
-export { DigitalTransformation, IconComponent, IconComponent, IconComponent };
-;
-export { DigitalTransformation, IconComponent, IconComponent, IconComponent };
+
+export { DigitalTransformation, IconComponent, IconComponent, IconComponent }
+export { DigitalTransformation, IconComponent, IconComponent, IconComponent }
+export { DigitalTransformation, IconComponent, IconComponent, IconComponent }
+export { DigitalTransformation, IconComponent, IconComponent, IconComponent }
+export { DigitalTransformation, IconComponent, IconComponent, IconComponent }

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button } from "./ui/Button.jsx";
-const ContactForm = () => {;
+const ContactForm = () => {
     const [formData, setFormData] = useState({;
         firstName: '',;
         lastName: '',;
@@ -8,15 +8,13 @@ const ContactForm = () => {;
         comp: '',;
         phone: '',;
         service: '',;
-        message: '';,
-});
+        message: ''});
     const [isSubmitting, setIsSubmitting] = useState(false);    const [submitStatus, setSubmitStatus] = useState('idle');
     const handleInputChange = (e) => {}
         const { name, value } = e.target;
         setFormData(prev => ({}
             ...prev,;
-            [name]: value;,
-}) ) };
+            [name]: value}) ) }
     const handleSubmit = async (e) => {}
         e.preventDefault();
         setIsSubmitting(true);';
@@ -35,8 +33,7 @@ const ContactForm = () => {;
                 comp: '',''';
                 phone: '',''';
                 service: '',''';
-                message: '''';,
-});''';
+                message: ''''});''';
             setSubmitStatus('success');''';
             setTimeout(() => setSubmitStatus('idle'), 5000)}
         catch (error) {}
@@ -149,16 +146,11 @@ const ContactForm = () => {;
           </a>;
           .</p>;
       </form>;
-    </div>)};
-export default ContactForm;,
-}}}
-;
-export { ContactForm };
-;
-export { ContactForm };
-;
-export { ContactForm };
-;
-export { ContactForm };
-;
-export { ContactForm };
+    </div>)}
+export default ContactForm}}}
+
+export { ContactForm }
+export { ContactForm }
+export { ContactForm }
+export { ContactForm }
+export { ContactForm }

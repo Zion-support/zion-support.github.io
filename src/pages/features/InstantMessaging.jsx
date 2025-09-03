@@ -5,7 +5,7 @@ import SEO from '@/components/SEO';''';
 import { GradientHeading } from '@/components/GradientHeading';''';
 import { Button } from '@/components/ui/button';''';
 import { Link } from 'react-router-dom';
-export { function };
+export { function }
 export default function InstantMessaging() {}
   const schema = {}
 ';
@@ -15,7 +15,7 @@ export default function InstantMessaging() {}
     name: 'Instant Messaging',''';
     description:'''';
       'Chat in real time with clients and freelancers using Socket.IO based messaging.',''';
-    url: 'https://app.ziontechgroup.com/features/instant-messaging'};
+    url: 'https://app.ziontechgroup.com/features/instant-messaging'}
   return();
     <>;
       <SEO;
@@ -81,14 +81,10 @@ export default function InstantMessaging() {}
       </main>;
       <Footer />;
     </>)}
-;
 
-export { InstantMessaging };
-;
-export { InstantMessaging };
-;
-export { InstantMessaging };
-;
-export { InstantMessaging };
-;
-export { InstantMessaging };
+
+export { InstantMessaging }
+export { InstantMessaging }
+export { InstantMessaging }
+export { InstantMessaging }
+export { InstantMessaging }

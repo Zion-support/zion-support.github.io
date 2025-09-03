@@ -1,9 +1,9 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
-;
-export default function Page() {;
+
+export default function Page() {
 []}
-;
-const heroSlides: HeroSlide[] = [  {;
+
+const heroSlides: HeroSlide[] = [  {
 
     id: 'ai-solutions',;
     title: 'AI-Powered Business Solutions',;
@@ -24,7 +24,7 @@ const heroSlides: HeroSlide[] = [  {;
       { label: 'ROI Increase', value: '450%', icon: TrendingUp },;
       { label: 'Market Growth', value: '280%', icon: Rocket },;
     ]},;
-  {;
+  {
 
     id: 'it-services',;
     title: 'Comprehensive IT Services',;
@@ -44,7 +44,7 @@ const heroSlides: HeroSlide[] = [  {;
       { label: 'Cost Savings', value: '700%', icon: TrendingUp },;
       { label: 'Response Time', value: '<5min', icon: Rocket },;
     ]},;
-  {;
+  {
 
     id: 'green-it',;
     title: 'Green IT Solutions',;
@@ -64,80 +64,71 @@ const heroSlides: HeroSlide[] = [  {;
       { label: 'Carbon Reduction', value: '75%', icon: TrendingUp },;
       { label: 'Cost Reduction', value: '40%', icon: Rocket },;
     ]},;
-];,
-};
+]}
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const [direction, setDirection] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
-;
+
   // Memoize slides to prevent unnecessary re - renders;
-  ;
+
   // Optimized slide navigation with useCallback;
-  ;
+
     setCurrentSlide(prev => (prev + 1) % memoizedSlides.length);
     setIsAutoPlaying(false)}, [memoizedSlides.length]);
-;
+
     setCurrentSlide();
       prev => (prev - 1 + memoizedSlides.length) % memoizedSlides.length;
     );
     setIsAutoPlaying(false)}, [memoizedSlides.length]);
-;
+
       setCurrentSlide(index);
       setIsAutoPlaying(false)},;
     [currentSlide];
   );
   // Auto-play functionality with pause on hover;
-  useEffect(() => {;
+  useEffect(() => {
   // TODO: Add dependencies if needed;
 
-  return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
+  return () => {
+    // Cleanup function}}, []);, []);
     if(!isAutoPlaying) return;
-;
+
       setCurrentSlide(prev => (prev + 1) % memoizedSlides.length)}, 6000);
-;
+
     return () => clearInterval(interval) }, [isAutoPlaying, memoizedSlides.length]) ;
-;
+
   // Handle keyboard navigation;
-  useEffect(() => {;
+  useEffect(() => {
   // TODO: Add dependencies if needed;
 
-  return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
-    ;
+  return () => {
+    // Cleanup function}}, []);, []);
+
       if(e.key === 'ArrowRight') nextSlide();
-      if(e.key === ' ') {;
+      if(e.key === ' ') {
         e.preventDefault();
         setIsAutoPlaying(!isAutoPlaying)}
-    };
-;
+    }
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown)}, [prevSlide, nextSlide, isAutoPlaying]);
-;
+
   // Handle image loading;
-  useEffect(() => {;
+  useEffect(() => {
   // TODO: Add dependencies if needed;
 
-  return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
-    ;
+  return () => {
+    // Cleanup function}}, []);, []);
+
           img.onload = resolve;
           img.onerror = resolve;
           img.src = slide.image}) }) ;
-;
+
       await Promise.all(imagePromises) ;
-      setIsLoading(false) };
-;
+      setIsLoading(false) }
     preloadImages () }, [memoizedSlides]) ;
-;
-  if(isLoading) {;
+
+  if(isLoading) {
 
     return (";
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">";
@@ -231,8 +222,7 @@ const heroSlides: HeroSlide[] = [  {;
                 className="inline-flex items-center justify-center px-6 py-4 border border-slate-600 hover:border-cyan-400 text-slate-300 hover:text-cyan-400 font-medium rounded-lg transition-all duration-300";
                 aria-label={;
 
-                  isAutoPlaying ? 'Pause slideshow' : 'Play slideshow';,
-}
+                  isAutoPlaying ? 'Pause slideshow' : 'Play slideshow'}
               >;
                 {isAutoPlaying ? (";
                   <Pause className="w-5 h-5"  />;
@@ -291,8 +281,7 @@ const heroSlides: HeroSlide[] = [  {;
               onClick={() => goToSlide(index)}`;
               className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentSlide';
                   ? 'bg-cyan-400 scale-125'';
-                  : 'bg-slate-600 hover:bg-slate-500'`;,
-}`}`;
+                  : 'bg-slate-600 hover:bg-slate-500'`}`}`;
               aria-label={`Go to slide ${index + 1}`}
             />;
           ))}
@@ -311,5 +300,5 @@ const heroSlides: HeroSlide[] = [  {;
         <ChevronRight className="w-6 h-6"  />;
       </button>;
     </section>) }
-export { HeroSection };
+export { HeroSection }
 '"`;

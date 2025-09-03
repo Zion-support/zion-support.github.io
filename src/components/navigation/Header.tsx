@@ -2,23 +2,21 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone, Mail, MapPin, ChevronDown, Search, User, ShoppingCart } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-;
-const Header: React.FC = () => {;
+
+const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const location = useLocation();
-;
-  useEffect(() => {;
-    const handleScroll = () => {;
-      setIsScrolled(window.scrollY > 10);,
-};
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10)}
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);,
-}, []);
-;
+    return () => window.removeEventListener('scroll', handleScroll)}, []);
+
   const navigationItems = [;
-    {;
+    {
       name: 'Services',;
       href: '/services',;
       dropdown: [;
@@ -108,9 +106,8 @@ const Header: React.FC = () => {;
         { name: 'Sustainable Technology Solutions', href: '/services/sustainable-technology' },;
         { name: 'Webinars & Training', href: '/services/webinars' },;
         { name: 'Zion Hire AI', href: '/services/zion-hire-ai' }
-      ];,
-},;
-    {;
+      ]},;
+    {
       name: 'Solutions',;
       href: '/solutions',;
       dropdown: [;
@@ -124,9 +121,8 @@ const Header: React.FC = () => {;
         { name: 'Retail Solutions', href: '/solutions/retail' },;
         { name: 'Education Solutions', href: '/solutions/education' },;
         { name: 'Non-Profit Solutions', href: '/solutions/non-profit' }
-      ];,
-},;
-    {;
+      ]},;
+    {
       name: 'About',;
       href: '/about',;
       dropdown: [;
@@ -137,9 +133,8 @@ const Header: React.FC = () => {;
         { name: 'Press', href: '/press' },;
         { name: 'Case Studies', href: '/case-studies' },;
         { name: 'Research & Development', href: '/research-development' }
-      ];,
-},;
-    {;
+      ]},;
+    {
       name: 'Resources',;
       href: '/resources',;
       dropdown: [;
@@ -150,9 +145,8 @@ const Header: React.FC = () => {;
         { name: 'Community', href: '/community' },;
         { name: 'Training', href: '/training' },;
         { name: 'Webinars', href: '/webinars' }
-      ];,
-},;
-    {;
+      ]},;
+    {
       name: 'Support',;
       href: '/support',;
       dropdown: [;
@@ -161,22 +155,18 @@ const Header: React.FC = () => {;
         { name: 'Request Quote', href: '/request-quote' },;
         { name: 'Status Page', href: '/status' },;
         { name: 'Knowledge Base', href: '/knowledge-base' }
-      ];,
-}
+      ]}
   ];
-;
-  const contactInfo = {;
+
+  const contactInfo = {
     phone: '+1 302 464 0950',;
     email: 'kleber@ziontechgroup.com',;
-    address: '364 E Main St STE 1008 Middletown DE 19709';,
-};
-;
+    address: '364 E Main St STE 1008 Middletown DE 19709'}
   return (;
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${;
       isScrolled ;
         ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200' ;
-        : 'bg-white';,
-}`}>;
+        : 'bg-white'}`}>;
       {/* Top contact bar */}
       <div className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white py-2 px-4">;
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between text-sm">;
@@ -232,7 +222,7 @@ const Header: React.FC = () => {;
                   <span>{item.name}</span>;
                   {item.dropdown && <ChevronDown className="w-4 h-4" />}
                 </button>;
-                ;
+
                 {item.dropdown && activeDropdown === item.name && (;
                   <div;
                     className="absolute top-full left-0 w-80 bg-white border border-gray-200 rounded-lg shadow-xl py-2 z-50";
@@ -343,7 +333,5 @@ const Header: React.FC = () => {;
         )}
       </AnimatePresence>;
     </header>;
-  );,
-};
-;
+  )}
 export default Header;

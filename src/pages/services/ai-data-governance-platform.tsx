@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from "lucide-react";
-export default function AiDataGovernancePlatform() {;
+export default function AiDataGovernancePlatform() {
   const features = [;
     "Feature 1",;
     "Feature 2",;
@@ -17,21 +17,18 @@ export default function AiDataGovernancePlatform() {;
     "Use Case 2",;
     "Use Case 3";
   ];
-  const pricing = [;,
-}
+  const pricing = [}
 ];
-    {;
+    {
       name: "Professional",;
       price: "$799/mo",;
-      details: ["Up to 50 users", "Advanced features", "Priority support", "99.9% SLA"];,
-}
+      details: ["Up to 50 users", "Advanced features", "Priority support", "99.9% SLA"]}
   ];
-    {;
+    {
       name: "Enterprise",;
-      price: "$1,999/mo",;,
-}
+      price: "$1,999/mo"}
   ];
-;
+
   ];
   return (;
     <div className="min-h-screen bg-white">;
@@ -58,7 +55,7 @@ export default function AiDataGovernancePlatform() {;
                   <span className="text-gray-700">{feature}</span>;
                 </li>;
               ))}
-;
+
             </ul>;
             <div className="mt-6 text-sm text-gray-600">;
               Built with enterprise-grade security, SOC 2 compliance, and 99.9% uptime SLA.;
@@ -74,11 +71,11 @@ export default function AiDataGovernancePlatform() {;
                     {tier.details.map((detail, detailIndex) => (;
                       <li key={detailIndex}>{detail}</li>;
                     ))}
-;
+
                   </ul>;
                 </div>;
               ))}
-;
+
             </div>;
             <div className="mt-6 flex flex-wrap gap-3">;
               <Link href="/pricing" className="px-5 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors inline-flex items-center">;
@@ -102,7 +99,7 @@ export default function AiDataGovernancePlatform() {;
                 <p className="text-gray-600">{benefit}</p>;
               </div>;
             ))}
-;
+
           </div>;
       </section>;
       <section className="py-16">;
@@ -118,7 +115,7 @@ export default function AiDataGovernancePlatform() {;
                 <p className="text-gray-600">Comprehensive ai data governance platform solutions tailored for {industry.toLowerCase()}.</p>;
               </div>;
             ))}
-;
+
           </div>;
       </section>;
       <section className="py-16 bg-indigo-600">;

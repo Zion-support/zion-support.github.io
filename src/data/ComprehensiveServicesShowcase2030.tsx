@@ -1,12 +1,12 @@
 
-const ComprehensiveServicesShowcase2030: React.FC = () => {;
+const ComprehensiveServicesShowcase2030: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'microsaas' | 'it' | 'ai'>('microsaas');
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-;
-  const getFilteredServices = () => {;
+
+  const getFilteredServices = () => {
     let services: any[] = [];
-    switch(activeTab) {;
+    switch(activeTab) {
 
       case 'microsaas':;
         services = innovativeMicroSaasServices2030;
@@ -17,23 +17,21 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
       case 'ai':;
         services = comprehensiveAIServices2030;
         break}
-;
-    if(searchTerm) {;
+
+    if(searchTerm) {
 
       services = services.filter(service => ;
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.tags.some(tag: string tag.toLowerCase().includes(searchTerm.toLowerCase()));
       )}
-;
-    if(selectedCategory !== 'all') {;
-      services = services.filter(service => service.category === selectedCategory)};
-;
-    return services};
-;
-  const getCategories = () => {;
+
+    if(selectedCategory !== 'all') {
+      services = services.filter(service => service.category === selectedCategory)}
+    return services}
+  const getCategories = () => {
     let services: any[] = [];
-    switch(activeTab) {;
+    switch(activeTab) {
 
       case 'microsaas':;
         services = innovativeMicroSaasServices2030;
@@ -44,12 +42,11 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
       case 'ai':;
         services = comprehensiveAIServices2030;
         break}
-;
-    return categories};
-;
-  const renderServiceCard = (service)  => {;
 
-    if(activeTab === 'microsaas') {;
+    return categories}
+  const renderServiceCard = (service)  => {
+
+    if(activeTab === 'microsaas') {
 
       return (";
         <div key={service.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden">";
@@ -153,7 +150,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
             </div>;
           </div>;
         </div>;
-      )} else if(activeTab = == 'it') {;
+      )} else if(activeTab = == 'it') {
 
       return (";
         <div key={service.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden">";
@@ -254,7 +251,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
             </div>;
           </div>;
         </div>;
-      )} else {;
+      )} else {
 
       return (";
         <div key = {service.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden">";
@@ -368,8 +365,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
           </div>;
         </div>;
       )}
-  };
-;
+  }
   return ();
     <>;
       <SEO";
@@ -468,27 +464,24 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
                 onClick={() => setActiveTab('microsaas')}`;
                 className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${activeTab === 'microsaas'';
                     ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'';
-                    : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'`;,
-}`}
-;
+                    : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'`}`}
+
                 Micro SAAS Services({innovativeMicroSaasServices2030.length});
               </button>;
               <button';
                 onClick={() => setActiveTab('it')}`;
                 className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${activeTab === 'it'';
                     ? 'bg-gradient-to-r from-green-600 to-blue-600 text-white shadow-lg'';
-                    : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'`;,
-}`}
-;
+                    : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'`}`}
+
                 IT Services({comprehensiveITServices2030.length});
               </button>;
               <button';
                 onClick={() => setActiveTab('ai')}`;
                 className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${activeTab === 'ai'';
                     ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'';
-                    : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'`;,
-}`}
-;
+                    : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'`}`}
+
                 AI Services({comprehensiveAIServices2030.length});
               </button>;
             </div>;
@@ -498,20 +491,20 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">;
             {getFilteredServices().map(renderServiceCard)}
           </div>;
-;
-          {/* No Results */};
+
+          {/* No Results */}
           {getFilteredServices().length === 0 && (;";
             <div className="text-center py-12">;";
               <div className="text-gray-500 text-lg mb-4">No services found matching your criteria</div>;
               <button;
-                onClick={() => {;
+                onClick={() => {
                   setSearchTerm('');
                   setSelectedCategory('all')}}"                className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">;
                 Clear Filters;
               </button>;
             </div>;
           )}
-;
+
           {/* Contact CTA */}";
           <div className="mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white text-center">";
             <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>";
@@ -535,6 +528,5 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
         </div>;
       </div>;
     </>;
-  )};
-;
+  )}
 export default ComprehensiveServicesShowcase2030}}}}}'"`;

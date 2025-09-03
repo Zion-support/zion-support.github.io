@@ -1,14 +1,14 @@
 import {  import { motion  } from 'framer-motion';
  from 'lucide-react';
-;
-export function ServicesOverview(...args[]):  {;
+
+export function ServicesOverview(...args[]):  {
 
       icon: Heart,;
       color: 'from-zion-pink to-zion-purple',;
       description: 'Healthcare artificial intelligence solutions',;
-      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category.includes('Healthcare'))};
+      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category.includes('Healthcare'))}
   ];
-;
+
   return ();
     <div className="py-20 bg-futuristic relative overflow-hidden">;
       {/* Background effects */}";
@@ -20,16 +20,14 @@ export function ServicesOverview(...args[]):  {;
         {/* Header */}
         <motion.div";
           className="text-center mb-16";
-          initial = {;
+          initial = {
 
   { opacity: 0,;
-  y: 20;,
-}}
-          whileInView = {;
+  y: 20}}
+          whileInView = {
 
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
           transition={{ duration: 0.6 }}
 ";
           <h1 className="heading-responsive font-bold mb-6">";
@@ -48,21 +46,18 @@ export function ServicesOverview(...args[]):  {;
             <motion.div;
               key={category.id}";
               className="group";
-              initial = {;
+              initial = {
 
   { opacity: 0,;
-  y: 30;,
-}}
-              whileInView = {;
+  y: 30}}
+              whileInView = {
 
   { opacity: 1,;
-  y: 0;,
-}}
-              transition = {;
+  y: 0}}
+              transition = {
 
   { duration: 0.6,;
-  delay: index * 0.1;,
-}}
+  delay: index * 0.1}}
               whileHover={{ y: -10 }}
 ";
               <Link to={`/services/${category.id}`} className="block">";
@@ -102,16 +97,14 @@ export function ServicesOverview(...args[]):  {;
         {/* Featured Services */}
         <motion.div";
           className="mb-16";
-          initial = {;
+          initial = {
 
   { opacity: 0,;
-  y: 20;,
-}}
-          whileInView = {;
+  y: 20}}
+          whileInView = {
 
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
           transition={{ duration: 0.6 }}
 ";
           <h2 className="heading-responsive font-bold mb-8 text-center">";
@@ -123,21 +116,18 @@ export function ServicesOverview(...args[]):  {;
               <motion.div;
                 key={service.id}";
                 className="card-futuristic group";
-                initial = {;
+                initial = {
 
   { opacity: 0,;
-  x: index % 2 === 0 ? -30 : 30;,
-}}
-                whileInView = {;
+  x: index % 2 === 0 ? -30 : 30}}
+                whileInView = {
 
   { opacity: 1,;
-  x: 0;,
-}}
-                transition = {;
+  x: 0}}
+                transition = {
 
   { duration: 0.6,;
-  delay: index * 0.1;,
-}}
+  delay: index * 0.1}}
                 whileHover={{ y: -5 }}
 ";
                 <div className="flex items-start justify-between mb-4">";
@@ -160,8 +150,7 @@ export function ServicesOverview(...args[]):  {;
                     <span className="text-zion-cyan font-medium">{service.category}</span>`;
                     <span className={`px-2 py-1 rounded-full text-xs font-medium ${service.innovationLevel === 'Cutting-edge'';
                         ? 'bg-zion-cyan/20 text-zion-cyan'';
-                        : 'bg-zion-purple/20 text-zion-purple'`;,
-}`}>;
+                        : 'bg-zion-purple/20 text-zion-purple'`}`}>;
                       {service.innovationLevel}
                     </span>;
                   </div>;
@@ -201,10 +190,10 @@ export function ServicesOverview(...args[]):  {;
         {/* CTA Section */}
         <motion.div";
           className="text-center";
-          initial = {;
+          initial = {
 
   { opacity: 0,;
-  y: 30 }}          whileInView = {;
+  y: 30 }}          whileInView = {
 
   { opacity: 1,;
   y: 0 }}          transition={{ duration: 0.8 }}

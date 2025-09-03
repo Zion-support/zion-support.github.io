@@ -1,34 +1,28 @@
 import React, { useState } from 'react';                <Clock className="w-5 h-5 text-cyan-400"/>;
                 <span>24-Hour Response</span>;
               </motion.div>;
-              <motion.div initial = {;
+              <motion.div initial = {
 
   { opacity: 0,;
-  y: 20;,
-}} animate = {;
+  y: 20}} animate = {
 
   { opacity: 1,;
-  y: 0;,
-}} transition = {;
+  y: 0}} transition = {
 
   { duration: 0.6,;
-  delay: 0.2;,
-}} className="flex items-center justify-center space-x-3 text-white/80">                <CheckCircle className="w-5 h-5 text-green-400"/>;
+  delay: 0.2}} className="flex items-center justify-center space-x-3 text-white/80">                <CheckCircle className="w-5 h-5 text-green-400"/>;
                 <span>Free Consultation</span>;
               </motion.div>;
-              <motion.div initial = {;
+              <motion.div initial = {
 
   { opacity: 0,;
-  y: 20;,
-}} animate = {;
+  y: 20}} animate = {
 
   { opacity: 1,;
-  y: 0;,
-}} transition = {;
+  y: 0}} transition = {
 
   { duration: 0.6,;
-  delay: 0.3;,
-}} className="flex items-center justify-center space-x-3 text-white/80">                <Calculator className="w-5 h-5 text-purple-400"/>;
+  delay: 0.3}} className="flex items-center justify-center space-x-3 text-white/80">                <Calculator className="w-5 h-5 text-purple-400"/>;
                 <span>Detailed Estimate</span>;
               </motion.div>;
             </div>;
@@ -42,15 +36,13 @@ import React, { useState } from 'react';                <Clock className="w-5 h-
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">;
             {/* Form */}";
             <div className="lg:col-span-2">;
-              <motion.div initial = {;
+              <motion.div initial = {
 
   { opacity: 0,;
-  x: -30;,
-}} whileInView = {;
+  x: -30}} whileInView = {
 
   { opacity: 1,;
-  x: 0;,
-}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">                <h2 className="text-3xl font-bold text-white mb-8">Project Details</h2>;
+  x: 0}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">                <h2 className="text-3xl font-bold text-white mb-8">Project Details</h2>;
 ";
                 <form onSubmit={handleSubmit} className="space-y-6">;
                   {/* Personal Information */}";
@@ -163,28 +155,24 @@ import React, { useState } from 'react';                <Clock className="w-5 h-
                   </button>;
 
                   {/* Status Messages */}
-                  {submissionStatus === 'success' && (<motion.div initial = {;
+                  {submissionStatus === 'success' && (<motion.div initial = {
 
   { opacity: 0,;
-  y: 10;,
-}} animate = {;
+  y: 10}} animate = {
 
   { opacity: 1,;
-  y: 0;,
-}} className="flex items-center p-4 bg-green-500/20 border border-green-500/50 rounded-lg">;
+  y: 0}} className="flex items-center p-4 bg-green-500/20 border border-green-500/50 rounded-lg">;
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3"/>                      <span className="text-green-400">;
                         Thank you! We've received your quote request and will respond within 24 hours.</span>;
                     </motion.div>)}
-;
-                  {submissionStatus === 'error' && (<motion.div initial = {;
+
+                  {submissionStatus === 'error' && (<motion.div initial = {
 
   { opacity: 0,;
-  y: 10;,
-}} animate = {;
+  y: 10}} animate = {
 
   { opacity: 1,;
-  y: 0;,
-}} className="flex items-center p-4 bg-red-500/20 border border-red-500/50 rounded-lg">;
+  y: 0}} className="flex items-center p-4 bg-red-500/20 border border-red-500/50 rounded-lg">;
                       <AlertCircle className="w-5 h-5 text-red-400 mr-3"/>                      <span className="text-red-400">;
                         Something went wrong.Please try again or contact us directly.</span>;
                     </motion.div>)}
@@ -195,15 +183,13 @@ import React, { useState } from 'react';                <Clock className="w-5 h-
             {/* Sidebar */}";
             <div className="space-y-8">;
               {/* Contact Information */}
-              <motion.div initial = {;
+              <motion.div initial = {
 
   { opacity: 0,;
-  x: 30;,
-}} whileInView = {;
+  x: 30}} whileInView = {
 
   { opacity: 1,;
-  x: 0;,
-}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">;
+  x: 0}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">;
                 <h3 className="text-xl font-bold text-white mb-4">Get in Touch</h3>;
                 <div className="space-y-4">;
                   <a href="tel:+13024640950" className="flex items-center text-white/80 hover:text-cyan-400 transition-colors">                    <Phone className="w-5 h-5 mr-3 text-cyan-400"/>;
@@ -221,19 +207,16 @@ import React, { useState } from 'react';                <Clock className="w-5 h-
               </motion.div>;
 
               {/* Why Choose Us */}
-              <motion.div initial = {;
+              <motion.div initial = {
 
   { opacity: 0,;
-  x: 30;,
-}} whileInView = {;
+  x: 30}} whileInView = {
 
   { opacity: 1,;
-  x: 0;,
-}} viewport={{ once: true }} transition = {;
+  x: 0}} viewport={{ once: true }} transition = {
 
   { duration: 0.8,;
-  delay: 0.2;,
-}} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">;
+  delay: 0.2}} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">;
                 <h3 className="text-xl font-bold text-white mb-4">Why Choose Us</h3>;
                 <div className="space-y-4">;
                   <div className="flex items-start">                    <Star className="w-5 h-5 text-yellow-400 mr-3 mt-1 flex-shrink-0"/>;
@@ -267,19 +250,16 @@ import React, { useState } from 'react';                <Clock className="w-5 h-
               </motion.div>;
 
               {/* Process */}
-              <motion.div initial = {;
+              <motion.div initial = {
 
   { opacity: 0,;
-  x: 30;,
-}} whileInView = {;
+  x: 30}} whileInView = {
 
   { opacity: 1,;
-  x: 0;,
-}} viewport={{ once: true }} transition = {;
+  x: 0}} viewport={{ once: true }} transition = {
 
   { duration: 0.8,;
-  delay: 0.4;,
-}} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">;
+  delay: 0.4}} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">;
                 <h3 className="text-xl font-bold text-white mb-4">Our Process</h3>;
                 <div className="space-y-4">;
                   <div className="flex items-start">                    <div className="w-6 h-6 bg-cyan-400 rounded-full flex items-center justify-center text-black text-xs font-bold mr-3 mt-1">1</div>;
@@ -316,14 +296,10 @@ import React, { useState } from 'react';                <Clock className="w-5 h-
         </div>;
       </section>;
     </div>)}
-;
 
-export { RequestQuote };
-;
-export { RequestQuote };
-;
-export { RequestQuote };
-;
-export { RequestQuote };
-;
-export { RequestQuote };
+
+export { RequestQuote }
+export { RequestQuote }
+export { RequestQuote }
+export { RequestQuote }
+export { RequestQuote }

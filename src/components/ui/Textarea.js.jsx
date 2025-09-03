@@ -10,18 +10,11 @@ const Textarea = React.forwardRef(({ className, ...props }, ref) => {}
       ref={ref}
       {...props}
     />;
-  );,
-});';
+  )});';
 Textarea.displayName = 'Textarea';
-export { Textarea };
-;
-
-export { Textarea };
-;
-export { Textarea };
-;
-export { Textarea };
-;
-export { Textarea };
-;
-export { Textarea };
+export { Textarea }
+export { Textarea }
+export { Textarea }
+export { Textarea }
+export { Textarea }
+export { Textarea }

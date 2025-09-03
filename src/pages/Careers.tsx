@@ -1,7 +1,7 @@
 import React from 'react';
 import { SEO } from '../components/SEO';
-;
-const Careers: React.FC = () => {;
+
+const Careers: React.FC = () => {
   return(<>;
       <SEO title="Careers - Zion Tech Group" />;
       <div className="min-h-screen bg-white py-20">;
@@ -11,7 +11,5 @@ const Careers: React.FC = () => {;
         </div>;
       </div>;
     </>;
-  );,
-};
-;
+  )}
 export default Careers;

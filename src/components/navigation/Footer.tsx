@@ -1,19 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Youtube, Github, ArrowRight } from 'lucide-react';
-;
-const Footer: React.FC = () => {;
+
+const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
-  ;
-  const contactInfo = {;
+
+  const contactInfo = {
     phone: '+1 302 464 0950',;
     email: 'kleber@ziontechgroup.com',;
     address: '364 E Main St STE 1008 Middletown DE 19709',;
-    website: 'https://ziontechgroup.com';,
-};
-;
+    website: 'https://ziontechgroup.com'}
   const footerSections = [;
-    {;
+    {
       title: 'Services',;
       links: [;
         { name: 'AI & Machine Learning', href: '/services/ai-services' },;
@@ -102,9 +100,8 @@ const Footer: React.FC = () => {;
         { name: 'Sustainable Technology Solutions', href: '/services/sustainable-technology' },;
         { name: 'Webinars & Training', href: '/services/webinars' },;
         { name: 'Zion Hire AI', href: '/services/zion-hire-ai' }
-      ];,
-},;
-    {;
+      ]},;
+    {
       title: 'Solutions',;
       links: [;
         { name: 'Enterprise Solutions', href: '/solutions/enterprise' },;
@@ -117,9 +114,8 @@ const Footer: React.FC = () => {;
         { name: 'Retail Solutions', href: '/solutions/retail' },;
         { name: 'Education Solutions', href: '/solutions/education' },;
         { name: 'Non-Profit Solutions', href: '/solutions/non-profit' }
-      ];,
-},;
-    {;
+      ]},;
+    {
       title: 'Company',;
       links: [;
         { name: 'About Us', href: '/about' },;
@@ -130,9 +126,8 @@ const Footer: React.FC = () => {;
         { name: 'Press', href: '/press' },;
         { name: 'Case Studies', href: '/case-studies' },;
         { name: 'Research & Development', href: '/research-development' }
-      ];,
-},;
-    {;
+      ]},;
+    {
       title: 'Resources',;
       links: [;
         { name: 'Blog', href: '/blog' },;
@@ -143,9 +138,8 @@ const Footer: React.FC = () => {;
         { name: 'Training', href: '/training' },;
         { name: 'Webinars', href: '/webinars' },;
         { name: 'Knowledge Base', href: '/knowledge-base' }
-      ];,
-},;
-    {;
+      ]},;
+    {
       title: 'Support',;
       links: [;
         { name: 'Help Center', href: '/help' },;
@@ -153,10 +147,9 @@ const Footer: React.FC = () => {;
         { name: 'Request Quote', href: '/request-quote' },;
         { name: 'Status Page', href: '/status' },;
         { name: 'Support Portal', href: '/support' }
-      ];,
-}
+      ]}
   ];
-;
+
   const socialLinks = [;
     { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },;
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },;
@@ -165,7 +158,7 @@ const Footer: React.FC = () => {;
     { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube },;
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }
   ];
-;
+
   return (;
     <footer className="bg-gray-900 text-white">;
       {/* Main Footer Content */}
@@ -187,7 +180,7 @@ const Footer: React.FC = () => {;
               Empowering businesses with cutting-edge technology and comprehensive ;
               digital transformation services.;
             </p>;
-            ;
+
             {/* Contact Information */}
             <div className="space-y-3">;
               <div className="flex items-center space-x-3 text-gray-300">;
@@ -319,7 +312,5 @@ const Footer: React.FC = () => {;
         </div>;
       </div>;
     </footer>;
-  );,
-};
-;
+  )}
 export default Footer;

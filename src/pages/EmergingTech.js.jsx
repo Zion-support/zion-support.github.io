@@ -16,8 +16,7 @@ const EmergingTech = () => {}
                     description: "AI systems powered by quantum computing for complex pattern recognition","";
                     href: "/quantum-neural-network-platform","";
                     features["Quantum Algorithms", "Superior Performance", "Future-Proof Architecture"],;"";
-                    status: "Research & Development";,
-},;
+                    status: "Research & Development"},;
                 {}
 ";
 "";
@@ -25,10 +24,8 @@ const EmergingTech = () => {}
                     description: "Quantum processing at the edge for real-time applications","";
                     href: "/quantum-edge-computing-platform","";
                     features["Low Latency", "High Security", "Scalable Infrastructure"],;"";
-                    status: "Emerging Technology";,
-}
-            ];,
-},;
+                    status: "Emerging Technology"}
+            ]},;
         {}
 ";
 "";
@@ -43,8 +40,7 @@ const EmergingTech = () => {}
                     description: "Global IoT connectivity through satellite constellations","";
                     href: "/space-tech","";
                     features["Global Coverage", "Low Power", "Real-time Data"],;"";
-                    status: "Active Development";,
-},;
+                    status: "Active Development"},;
                 {}
 ";
 "";
@@ -52,10 +48,8 @@ const EmergingTech = () => {}
                     description: "AI-powered analysis of space data and satellite imagery","";
                     href: "/space-tech","";
                     features["Earth Observation", "Climate Monitoring", "Resource Management"],;"";
-                    status: "Production Ready";,
-}
-            ];,
-},;
+                    status: "Production Ready"}
+            ]},;
         {}
 ";
 "";
@@ -70,8 +64,7 @@ const EmergingTech = () => {}
                     description: "Enterprise-grade 5G network optimization and management","";
                     href: "/5g-enterprise-solutions","";
                     features["Network Slicing", "Edge Computing", "IoT Integration"],;"";
-                    status: "Deployment Ready";,
-},;
+                    status: "Deployment Ready"},;
                 {}
 ";
 "";
@@ -79,10 +72,8 @@ const EmergingTech = () => {}
                     description: "AI processing at the network edge for real-time applications","";
                     href: "/services/edge-computing","";
                     features["Low Latency", "High Bandwidth", "Distributed Processing"],;"";
-                    status: "Production Ready";,
-}
-            ];,
-},;
+                    status: "Production Ready"}
+            ]},;
         {}
 ";
 "";
@@ -97,8 +88,7 @@ const EmergingTech = () => {}
                     description: "AI-driven business process automation platform","";
                     href: "/autonomous-business-operations-platform","";
                     features["Process Automation", "Decision Support", "Performance Analytics"],;"";
-                    status: "Production Ready";,
-},;
+                    status: "Production Ready"},;
                 {}
 ";
 "";
@@ -106,10 +96,8 @@ const EmergingTech = () => {}
                     description: "Intelligent research and development automation","";
                     href: "/ai-autonomous-research-assistant","";
                     features["Research Automation", "Data Analysis", "Insight Generation"],;"";
-                    status: "Research & Development";,
-}
-            ];,
-},;
+                    status: "Research & Development"}
+            ]},;
         {}
 ";
 "";
@@ -124,8 +112,7 @@ const EmergingTech = () => {}
                     description: "Intelligent IT asset lifecycle management","";
                     href: "/ai-powered-it-asset-management","";
                     features["Asset Tracking", "Predictive Maintenance", "Cost Optimization"],;"";
-                    status: "Production Ready";,
-},;
+                    status: "Production Ready"},;
                 {}
 ";
 "";
@@ -133,10 +120,8 @@ const EmergingTech = () => {}
                     description: "Intelligent business process automation","";
                     href: "/services/ai-workflow-automation","";
                     features["Process Optimization", "Error Reduction", "Efficiency Gains"],;"";
-                    status: "Production Ready";,
-}
-            ];,
-},;
+                    status: "Production Ready"}
+            ]},;
         {}
 ";
 "";
@@ -151,8 +136,7 @@ const EmergingTech = () => {}
                     description: "Enterprise-grade blockchain implementation and consulting","";
                     href: "/services/blockchain-enterprise-solutions","";
                     features["Smart Contracts", "Supply Chain", "Digital Identity"],;"";
-                    status: "Production Ready";,
-},;
+                    status: "Production Ready"},;
                 {}
 ";
 "";
@@ -160,10 +144,8 @@ const EmergingTech = () => {}
                     description: "Decentralized finance infrastructure and solutions","";
                     href: "/services/blockchain-defi-solutions","";
                     features["DeFi Protocols", "Liquidity Management", "Risk Assessment"],;"";
-                    status: "Active Development";,
-}
-            ];,
-}
+                    status: "Active Development"}
+            ]}
     ];
     const researchAreas = [];
         {}
@@ -172,54 +154,47 @@ const EmergingTech = () => {}
             title: "Quantum-Classical Hybrid Systems","";
             description: "Researching the integration of quantum and classical computing for practical applications",";
             progress: 75,"";
-            timeline: "2025-2026";,
-},;
+            timeline: "2025-2026"},;
         {}
 ";
 "";
             title: "AI-Quantum Synergy","";
             description: "Exploring how AI can enhance quantum computing and vice versa",";
             progress: 60,"";
-            timeline: "2025-2027";,
-},;
+            timeline: "2025-2027"},;
         {}
 ";
 "";
             title: "Space-Based Quantum Networks","";
             description: "Developing quantum communication networks using satellite technology",";
             progress: 40,"";
-            timeline: "2026-2028";,
-},;
+            timeline: "2026-2028"},;
         {}
 ";
 "";
             title: "Autonomous AI Systems","";
             description: "Creating truly autonomous AI systems with minimal human intervention",";
             progress: 80,"";
-            timeline: "2025-2026";,
-}
+            timeline: "2025-2026"}
     ];
     const containerVariants = {}
         hidden: { opacity: 0 },;
         visible: {}
             opacity: 1,;
             transition: {}
-                staggerChildren: 0.1;,
-}
+                staggerChildren: 0.1}
         }
-    };
+    }
     const itemVariants = {}
   hidden: { y: 20,;
-  opacity: 0;,
-},;
+  opacity: 0},;
         visible: {}
             y: 0,;
             opacity: 1,;
             transition: {}
-                duration: 0.5;,
-}
+                duration: 0.5}
         }
-    };
+    }
     const getStatusColor = (status) => {}
         switch (status) {}
 ";
@@ -233,8 +208,7 @@ const EmergingTech = () => {}
             case "Emerging Technology":"";
                 return "text-purple-400 bg-purple-400/20";";
             default:"";
-                return "text-gray-400 bg-gray-400/20"}";,
-};"";
+                return "text-gray-400 bg-gray-400/20"}"};"";
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
       {/* Hero Section */}"";
       <div className="relative overflow-hidden">"";
@@ -243,12 +217,10 @@ const EmergingTech = () => {}
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">;
           <motion.div initial = {}
   { opacity: 0,;
-  y: 20;,
-}} animate = {}
+  y: 20}} animate = {}
   { opacity: 1,;
   y: 0 ";
-"";,
-}} transition={{ duration: 0.8 }} className="text-center">"";
+""}} transition={{ duration: 0.8 }} className="text-center">"";
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">"";
               <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">;
                 Emerging Technologies;
@@ -325,12 +297,10 @@ const EmergingTech = () => {}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">;
           <motion.div initial = {}
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
+  y: 20}} whileInView = {}
   { opacity: 1,;
   y: 0 ";
-"";,
-}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">"";
+""}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">"";
             <h2 className="text-4xl font-bold text-white mb-6">;
               Research & Development";
             </h2>"";
@@ -343,15 +313,12 @@ const EmergingTech = () => {}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
             {researchAreas.map((area, index) => (<motion.div key={area.title} initial = {}
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
+  y: 20}} whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}} viewport={{ once: true }} transition = {}
+  y: 0}} viewport={{ once: true }} transition = {}
   { duration: 0.5,;
   delay: index * 0.1 ";
-"";,
-}} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6">"";
+""}} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6">"";
                 <div className="flex items-center justify-between mb-4">"";
                   <h3 className="text-lg font-semibold text-white">{area.title}</h3>"";
                   <span className="text-sm text-purple-400">{area.timeline}</span>;
@@ -377,12 +344,10 @@ const EmergingTech = () => {}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">;
         <motion.div initial = {}
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
+  y: 20}} whileInView = {}
   { opacity: 1,;
   y: 0 ";
-"";,
-}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center">"";
+""}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center">"";
           <h2 className="text-4xl font-bold text-white mb-6">;
             Ready to Explore the Future?";
           </h2>"";
@@ -400,16 +365,12 @@ const EmergingTech = () => {}
           </div>;
         </motion.div>;
       </div>;
-    </div>)};
+    </div>)}
 export default EmergingTech;
-;
 
-export { EmergingTech };
-;
-export { EmergingTech };
-;
-export { EmergingTech };
-;
-export { EmergingTech };
-;
-export { EmergingTech };
+
+export { EmergingTech }
+export { EmergingTech }
+export { EmergingTech }
+export { EmergingTech }
+export { EmergingTech }

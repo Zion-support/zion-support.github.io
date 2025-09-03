@@ -3,60 +3,53 @@
  * @param {*} params - Function parameters;
  * @returns {*} Function return value;
  */;
-function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {;
+function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
 
 const categories = [{;
     title: "AI Services",;
     description: "Cutting - edge AI solutions, chatbots, and machine learning",;
     icon: "🤖",;
     link: "/ai - services",;
-    color: "from - purple - 500 to - indigo - 600",;,
-},;
-  {;
+    color: "from - purple - 500 to - indigo - 600"},;
+  {
     title: "Micro SAAS",;
     description: "Cloud - based software solutions for modern businesses",;
     icon: "☁️",;
     link: "/micro - saas",;
-    color: "from - cyan - 500 to - blue - 600",;,
-},;
-  {;
+    color: "from - cyan - 500 to - blue - 600"},;
+  {
     title: "IT Services",;
     description: "Infrastructure, security, and technical consulting",;
     icon: "⚡",;
     link: "/all - services",;
-    color: "from - amber - 500 to - orange - 600",;,
-},;
-  {;
+    color: "from - amber - 500 to - orange - 600"},;
+  {
     title: "Digital Transformation",;
     description: "Business modernization and digital strategy",;
     icon: "📈",;
     link: "/all - services",;
-    color: "from - emerald - 500 to - green - 600",;,
-},;
+    color: "from - emerald - 500 to - green - 600"},;
 ];
-;
+
 const specialServices = [{;
     title: "IT Onsite Services",;
-    link: "/it - onsite - services";,
-},;
-  {;
+    link: "/it - onsite - services"},;
+  {
     title: "Comprehensive Services",;
-    link: "/comprehensive - services";,
-},;
-  {;
+    link: "/comprehensive - services"},;
+  {
     title: "Services Comparison",;
-    link: "/services - comparison";,
-}
+    link: "/services - comparison"}
 ];
-interface CategoriesSectionProps {;
+interface CategoriesSectionProps {
   // Add your props here;
 
   showTitle?: boolean}
-;
-;
-;
-;
-export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {;
+
+
+
+
+export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
 
   return (";
     <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden">;
@@ -65,8 +58,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
         <div className="absolute inset-0" style={{;
 
           backgroundImage: `radial-gradient(circle at 25% 25%, #8ab1f3 2px, transparent 2px)`,;
-          backgroundSize: '50px 50px';,
-}}></div>;
+          backgroundSize: '50px 50px'}}></div>;
       </div>;
 
       <div className="container mx - auto px-4 relative z -10">;
@@ -83,7 +75,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
               Discover our comprehensive ecosystem of tech services, talent, equipment, and innovation;
             </p>;
           </motion.div>;) }
-;
+
         <motion.div;
           className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 4 gap-6";
           variants={containerVariants}          initial="hidden";

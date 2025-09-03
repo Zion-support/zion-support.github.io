@@ -1,8 +1,7 @@
 
-      newExpanded.delete(section) } else {;
+      newExpanded.delete(section) } else {
       newExpanded.add(section) }
-    setExpandedSections(newExpanded) };
-;
+    setExpandedSections(newExpanded) }
   const navigationSections = [{;
 
       title: "Main",;
@@ -13,9 +12,8 @@
         { name: "Contact", href: "/contact", icon: MessageCircle },";
         { name: "Partners", href: "/partners", icon: Users },";
         { name: "Careers", href: "/careers", icon: Briefcase }
-      ];,
-},;
-    {;
+      ]},;
+    {
 ";
       title: "Services",;
       icon: Zap,;
@@ -24,9 +22,8 @@
         { name: "Micro SAAS Solutions", href: "/micro-saas", icon: Cloud },";
         { name: "IT Infrastructure", href: "/it-services", icon: Server },";
         { name: "Emerging Technologies", href: "/emerging-tech", icon: Rocket }
-      ];,
-},;
-    {;
+      ]},;
+    {
 ";
       title: "Solutions",;
       icon: Target,;
@@ -35,9 +32,8 @@
         { name: "Blockchain & Web3", href: "/emerging-tech/blockchain", icon: Cloud },";
         { name: "Edge Computing", href: "/emerging-tech/edge", icon: Server },";
         { name: "IoT Solutions", href: "/emerging-tech/iot", icon: Brain }
-      ];,
-},;
-    {;
+      ]},;
+    {
 ";
       title: "Resources",;
       icon: BookOpen,;
@@ -45,15 +41,15 @@
         { name: "Documentation", href: "/docs", icon: FileText },;";
         { name: "API Reference", href: "/api", icon: FileText },;";
         { name: "Developer Portal", href: "/developer", icon: Server },;";
-        { name: "Support Center", href: "/support", icon: HelpCircle };
-      ]};
+        { name: "Support Center", href: "/support", icon: HelpCircle }
+      ]}
   ];
-;
+
   const quickActions = [;";
     { name: "Get Quote", href: "/contact", icon: MessageCircle, variant: "primary" },;";
-    { name: "Book Demo", href: "/demo", icon: Users, variant: "secondary" },;"    { name: "Support", href: "/support", icon: HelpCircle, variant: "secondary" };
+    { name: "Book Demo", href: "/demo", icon: Users, variant: "secondary" },;"    { name: "Support", href: "/support", icon: HelpCircle, variant: "secondary" }
   ];
-;
+
   return ();
     <>;
       {/* Mobile Menu Button */}
@@ -83,11 +79,10 @@
               initial={{ x: '-100%' }}
               animate={{ x: 0 }}
               exit={{ x: '-100%' }}
-              transition = {;
+              transition = {
 
   { duration: 0.3,;
-  ease: 'easeOut';,
-}}";
+  ease: 'easeOut'}}";
               className="fixed left-0 top-0 h-full w-80 bg-zion-slate-dark/95 backdrop-blur-xl border-r border-zion-cyan/20 z-50 lg:hidden overflow-y-auto";
 ";
               <div className="p-6">;
@@ -118,29 +113,25 @@
                     {quickActions.map((action, index) => (;
                       <motion.div;
                         key={action.name}
-                        initial = {;
+                        initial = {
 
   { opacity: 0,;
-  x: -20;,
-}}
-                        animate = {;
+  x: -20}}
+                        animate = {
 
   { opacity: 1,;
-  x: 0;,
-}}
-                        transition = {;
+  x: 0}}
+                        transition = {
 
   { duration: 0.3,;
-  delay: index * 0.1;,
-}}
+  delay: index * 0.1}}
                       >;
                         <Link;
                           to={action.href}
                           onClick={() => setIsOpen(false)}
                           className={`flex items-center space-x-3 p-3 rounded-lg transition-all duration-300 group ${action.variant === 'primary'';
                               ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white hover:from-zion-cyan/90 hover:to-zion-blue/90 shadow-lg shadow-zion-cyan/25'';
-                              : 'bg-zion-slate-dark/50 text-zion-slate-light hover:text-white hover:bg-zion-cyan/10 border border-zion-cyan/20 hover:border-zion-cyan/40'`;,
-}`}
+                              : 'bg-zion-slate-dark/50 text-zion-slate-light hover:text-white hover:bg-zion-cyan/10 border border-zion-cyan/20 hover:border-zion-cyan/40'`}`}
 ";
                           <action.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />";
                           <span className="font-medium">{action.name}</span>;
@@ -154,21 +145,18 @@
                   {navigationSections.map((section, sectionIndex) => (;
                     <motion.div;
                       key={section.title}
-                      initial = {;
+                      initial = {
 
   { opacity: 0,;
-  y: -20;,
-}}
-                      animate = {;
+  y: -20}}
+                      animate = {
 
   { opacity: 1,;
-  y: 0;,
-}}
-                      transition = {;
+  y: 0}}
+                      transition = {
 
   { duration: 0.5,;
-  delay: sectionIndex * 0.1;,
-}}
+  delay: sectionIndex * 0.1}}
                     >;
                       <button;
                         onClick={() => toggleSection(section.title)}";
@@ -186,50 +174,43 @@
 
                       <AnimatePresence>;
                         {expandedSections.has(section.title) && (<motion.div;
-                            initial = {;
+                            initial = {
 
   { opacity: 0,;
-  height: 0;,
-}}
-                            animate = {;
+  height: 0}}
+                            animate = {
 
   { opacity: 1,;
-  height: 'auto';,
-}}
-                            exit = {;
+  height: 'auto'}}
+                            exit = {
 
   { opacity: 0,;
-  height: 0;,
-}}
+  height: 0}}
                             transition={{ duration: 0.3 }}";
                             className="ml-7 mt-2 space-y-1";
 
                             {section.items.map((item, itemIndex) => (;
                               <motion.div;
                                 key={item.name}
-                                initial = {;
+                                initial = {
 
   { opacity: 0,;
-  x: -20;,
-}}
-                                animate = {;
+  x: -20}}
+                                animate = {
 
   { opacity: 1,;
-  x: 0;,
-}}
-                                transition = {;
+  x: 0}}
+                                transition = {
 
   { duration: 0.2,;
-  delay: itemIndex * 0.05;,
-}}
+  delay: itemIndex * 0.05}}
                               >;
                                 <Link;
                                   to={item.href}
                                   onClick={() => setIsOpen(false)}`;
                                   className={`flex items-center space-x-3 p-2 rounded-lg transition-all duration-300 group ${isActive(item.href);
                                       ? 'text-zion-cyan bg-zion-cyan/10 border border-zion-cyan/30'';
-                                      : 'text-zion-slate-light hover:text-white hover:bg-zion-cyan/5'`;,
-}`}
+                                      : 'text-zion-slate-light hover:text-white hover:bg-zion-cyan/5'`}`}
 ";
                                   <item.icon className="w-3 h-3 group-hover:scale-110 transition-transform duration-300" />";
                                   <span className="text-sm">{item.name}</span>;
@@ -258,8 +239,8 @@
               </div>;
             </motion.div>;
           </>;
-        )};
+        )}
       </AnimatePresence>;
     </>;
-  )};
+  )}
 '"`;

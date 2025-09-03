@@ -156,8 +156,7 @@ export default function HealthcareSolutions() {}
                     ))}
                   </ul>;
                 </div>;
-              );,
-})}
+              )})}
           </div>;
         </div>;
       </section>;
@@ -269,16 +268,11 @@ export default function HealthcareSolutions() {}
           </div>;
         </div>;
       </section>;
-    </div>);,
-}
-;
+    </div>)}
 
-export { HealthcareSolutions, Icon };
-;
-export { HealthcareSolutions, Icon };
-;
-export { HealthcareSolutions, Icon };
-;
-export { HealthcareSolutions, Icon };
-;
-export { HealthcareSolutions, Icon };
+
+export { HealthcareSolutions, Icon }
+export { HealthcareSolutions, Icon }
+export { HealthcareSolutions, Icon }
+export { HealthcareSolutions, Icon }
+export { HealthcareSolutions, Icon }

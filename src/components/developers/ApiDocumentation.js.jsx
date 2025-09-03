@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Badge } from "@/components/ui/badge";
 import CodeBlock from "./CodeBlock.jsx";
-export function ApiDocumentation() {;
+export function ApiDocumentation() {
     return (<Card className="bg-zinc-900 border-zinc-800 text-white">;
       <CardHeader>;
         <CardTitle className="text-xl flex items-center">;
@@ -90,8 +90,7 @@ export function ApiDocumentation() {;
 ';
 '';
 ''';
-    'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json';,
-}
+    'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json'}
 });
 `;
 const data = await response.json();``;
@@ -101,8 +100,7 @@ headers = {}
 ';
 '';
 ''';
-  'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json'';,
-}'';
+  'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json''}'';
 ''';
 response = requests.get('''';
     'https://ziontechgroup.com/api/v1/jobs',;
@@ -110,8 +108,7 @@ response = requests.get('''';
 ';
 '';
 ''';
-  'limit': 10,category': 'development';,
-},;
+  'limit': 10,category': 'development'},;
     headers = headers;`;
 )``;
 ```;
@@ -138,12 +135,10 @@ print(data)`}}
         "min": 5000,"";
         "max": 10000,"";
   "currency": "USD";
-";,
-},"";
+"},"";
       "status": "active","";
       "client_id": "user_xyz789","";
-      "created_at": "2025-05-15T10:30:00Z";,
-},;
+      "created_at": "2025-05-15T10:30:00Z"},;
     // More jobs...";
   ],"";
   "meta": {}
@@ -151,9 +146,7 @@ print(data)`}}
 "";
     "total": 42,"";
     "page": 1,"";
-    "limit": 10`;,
-}``;,
-}`}}
+    "limit": 10`}``}`}}
             />;
 ";
             <EndpointSection"";
@@ -179,8 +172,7 @@ print(data)`}}
   -H "Content-Type: application/json"`,`'`;
                 javascript: `const jobId = 'job_abc123';``;
 const response = await fetch(\`https://ziontechgroup.com/api/v1/jobs/\${jobId`;
-``;,
-}\`, {}
+``}\`, {}
 ';
 '';
 ''';
@@ -189,8 +181,7 @@ const response = await fetch(\`https://ziontechgroup.com/api/v1/jobs/\${jobId`;
 ';
 '';
 ''';
-    'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json';,
-}
+    'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json'}
 });
 `;
 const data = await response.json();``;
@@ -200,8 +191,7 @@ headers = {}
 ';
 '';
 ''';
-  'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json'';,
-}'';
+  'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json''}'';
 ''';
 job_id = 'job_abc123'''';
 response = requests.get('''';
@@ -231,15 +221,12 @@ print(data)`}}
       "min": 5000,"";
       "max": 10000,"";
   "currency": "USD";
-";,
-},"";
+"},"";
     "status": "active","";
     "client_id": "user_xyz789","";
     "created_at": "2025-05-15T10:30:00Z","";
     "deadline": "2025-06-30T23:59:59Z","";
-    "application_count": 12`;,
-}``;,
-}`}}
+    "application_count": 12`}``}`}}
             />;
 ";
             <EndpointSection"";
@@ -326,10 +313,8 @@ print(data)`}}
       "min": 5000,"";
       "max": 10000,"";
   "currency": "USD";
-";,
-},"'"`;
-    "deadline": "2025-06-30T23:59:59Z"'`'`;,
-}'`,`'`;
+"},"'"`;
+    "deadline": "2025-06-30T23:59:59Z"'`'`}'`,`'`;
                 javascript: `const response = await fetch('https://ziontechgroup.com/api/v1/jobs', {}
 ';
 '';
@@ -339,8 +324,7 @@ print(data)`}}
 ';
 '';
 ''';
-    'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json';,
-},;
+    'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json'},;
   body: JSON.stringify({}
 ';
 '';
@@ -352,11 +336,8 @@ print(data)`}}
     budget: {}
       min: 5000,;
       max: 10000,';
-      currency: 'USD';,
-},';
-    deadline: '2025-06-30T23:59:59Z';,
-});,
-});
+      currency: 'USD'},';
+    deadline: '2025-06-30T23:59:59Z'})});
 `;
 const data = await response.json();``;
 // console.log(data);`,``;
@@ -366,8 +347,7 @@ headers = {}
 ';
 '';
 ''';
-  'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json';,
-}
+  'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json'}
 payload = {}
 ';
   'title': 'Senior React Developer',description': 'We need an experienced React developer...',category': 'development',skills'['react',typescript',node.js'],budget': {}
@@ -375,9 +355,7 @@ payload = {}
 '';
 ''';
         'min': 5000,max': 10000,currency': 'USD''';
-''';,
-},deadline': '2025-06-30T23:59:59Z'';,
-}'';
+'''},deadline': '2025-06-30T23:59:59Z''}'';
 ''';
 response = requests.post('''';
     'https://ziontechgroup.com/api/v1/jobs',;
@@ -407,14 +385,11 @@ print(data)`}}
       "min": 5000,"";
       "max": 10000,"";
   "currency": "USD";
-";,
-},"";
+"},"";
     "status": "new","";
     "client_id": "user_xyz789","";
     "created_at": "2025-05-16T14:22:10Z","";
-    "deadline": "2025-06-30T23:59:59Z"`;,
-}``;,
-}`}}
+    "deadline": "2025-06-30T23:59:59Z"`}``}`}}
             />;
           </TabsContent>";
 "";
@@ -468,8 +443,7 @@ print(data)`}}
 ';
 '';
 ''';
-    'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json';,
-}
+    'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json'}
 });
 `;
 const data = await response.json();``;
@@ -479,8 +453,7 @@ headers = {}
 ';
 '';
 ''';
-  'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json'';,
-}'';
+  'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json''}'';
 ''';
 response = requests.get('''';
     'https://ziontechgroup.com/api/v1/talent',;
@@ -489,8 +462,7 @@ response = requests.get('''';
 '';
 ''';
   'skills': 'react,''';
-  typescript';,
-},;
+  typescript'},;
     headers = headers;`;
 )``;
 ```;
@@ -512,8 +484,7 @@ print(data)`}}
       "skills"["react", "typescript", "javascript"],"";
       "availability": "available","";
       "average_rating": 4.8,"";
-  "rating_count": 15;,
-},;
+  "rating_count": 15},;
     // More talent profiles...";
   ],"";
   "meta": {}
@@ -521,9 +492,7 @@ print(data)`}}
 "";
     "total": 28,"";
     "page": 1,"";
-    "limit": 20`;,
-}``;,
-}`}}
+    "limit": 20`}``}`}}
             />;
 ";
             <EndpointSection"";
@@ -549,8 +518,7 @@ print(data)`}}
   -H "Content-Type: application/json"`,`'`;
                 javascript: `const talentId = 'talent_abc123';``;
 const response = await fetch(\`https://ziontechgroup.com/api/v1/talent/\${talentId`;
-``;,
-}\`, {}
+``}\`, {}
 ';
 '';
 ''';
@@ -559,8 +527,7 @@ const response = await fetch(\`https://ziontechgroup.com/api/v1/talent/\${talent
 ';
 '';
 ''';
-    'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json';,
-}
+    'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json'}
 });
 `;
 const data = await response.json();``;
@@ -570,8 +537,7 @@ headers = {}
 ';
 '';
 ''';
-  'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json'';,
-}'';
+  'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json''}'';
 ''';
 talent_id = 'talent_abc123'''';
 response = requests.get('''';
@@ -606,8 +572,7 @@ print(data)`}}
         "title": "E-commerce Platform","";
         "description": "Built a modern e-commerce platform using React...","";
         "technologies"["react", "redux", "node.js"],"";
-  "image_url": "https://example.com/portfolio/123.jpg";,
-}";
+  "image_url": "https://example.com/portfolio/123.jpg"}";
     ],"";
     "certifications"[];
       {}
@@ -615,11 +580,8 @@ print(data)`}}
 "";
         "name": "AWS Certified Developer","";
         "issuing_organization": "Amazon Web Services","";
-        "issue_date": "2024-01-15";,
-}
-    ]`;,
-}``;,
-}`}}
+        "issue_date": "2024-01-15"}
+    ]`}``}`}}
             />;
           </TabsContent>";
 "";
@@ -719,8 +681,7 @@ print(data)`}}
     "requester_name": "John Doe","";
   "requester_email": "john@example.com";
   '`;
-'`'`;,
-}'`,`'`;
+'`'`}'`,`'`;
                 javascript: `const response = await fetch('https://ziontechgroup.com/api/v1/quotes', {}
 ';
 '';
@@ -730,8 +691,7 @@ print(data)`}}
 ';
 '';
 ''';
-    'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json';,
-},;
+    'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json'},;
   body: JSON.stringify({}
 ';
 '';
@@ -744,9 +704,7 @@ print(data)`}}
     budget_min: 8000,'';
     budget_max: 12000,''';
     requester_name: 'John Doe',''';
-    requester_email: 'john@example.com';,
-});,
-});
+    requester_email: 'john@example.com'})});
 `;
 const data = await response.json();``;
 // console.log(data);`,``;
@@ -756,14 +714,12 @@ headers = {}
 ';
 '';
 ''';
-  'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json';,
-}
+  'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json'}
 payload = {}
 ';
 '';
 ''';
-  'talent_id': 'talent_abc123',project_name': 'E-commerce Website Redesign',project_summary': 'Redesign our outdated e-commerce website with modern UI',project_description': 'Our current website is 5 years old and needs a complete overhaul...',timeline': '2-3 months',budget_min': 8000,budget_max': 12000,requester_name': 'John Doe',requester_email': 'john@example.com'';,
-}'';
+  'talent_id': 'talent_abc123',project_name': 'E-commerce Website Redesign',project_summary': 'Redesign our outdated e-commerce website with modern UI',project_description': 'Our current website is 5 years old and needs a complete overhaul...',timeline': '2-3 months',budget_min': 8000,budget_max': 12000,requester_name': 'John Doe',requester_email': 'john@example.com''}'';
 ''';
 response = requests.post('''';
     'https://ziontechgroup.com/api/v1/quotes',;
@@ -796,9 +752,7 @@ print(data)`}}
     "requester_email": "john@example.com","";
     "status": "new","";
   "created_at": "2025-05-16T14:30:15Z";
-`;,
-}``;,
-}`}}
+`}``}`}}
             />;
 ";
             <EndpointSection"";
@@ -844,8 +798,7 @@ print(data)`}}
 ';
 '';
 ''';
-    'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json';,
-}
+    'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json'}
 });
 `;
 const data = await response.json();``;
@@ -855,8 +808,7 @@ headers = {}
 ';
 '';
 ''';
-  'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json'';,
-}'';
+  'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json''}'';
 ''';
 response = requests.get('''';
     'https://ziontechgroup.com/api/v1/quotes',;
@@ -883,8 +835,7 @@ print(data)`}}
       "status": "new","";
       "created_at": "2025-05-16T14:30:15Z","";
       "viewed_at": null,"";
-  "replied_at": null;,
-},;
+  "replied_at": null},;
     // More quotes...";
   ],"";
   "meta": {}
@@ -892,9 +843,7 @@ print(data)`}}
 "";
     "total": 5,"";
     "page": 1,"";
-    "limit": 20`;,
-}``;,
-}`}}
+    "limit": 20`}``}`}}
             />;
           </TabsContent>";
 "";
@@ -935,8 +884,7 @@ function verifyWebhookSignature(payload, signature, secret) {}
   return crypto.timingSafeEqual();
     Buffer.from(signature),;
   Buffer.from(expectedSignature);
-  );,
-}
+  )}
 ';
 // Example usage in Express.js'';
 app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {}
@@ -1030,9 +978,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {}
     "applied_at": "2025-05-16T15:28:30Z","";
     "status": "new","";
   "match_score": 85;
-`;,
-}`"`;,
-}`}"";
+`}`"`}`}"";
                 language="json";
                 showLineNumbers={true}
               />;
@@ -1172,11 +1118,8 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {}
 ";
 "";
         "field": "project_name","";
-  "message": "Project name is required";,
-}
-    ]`;,
-}`"`;,
-}`}"";
+  "message": "Project name is required"}
+    ]`}`"`}`}"";
                 language="json";
               />";
 "";
@@ -1221,8 +1164,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {}
         </Tabs>;
       </CardContent>;
     </Card>;
-  );,
-}
+  )}
 // Helper component for API endpoint documentation;
 function EndpointSection({}
   method,;
@@ -1250,8 +1192,7 @@ function EndpointSection({}
                   ? 'border-blue-500 text-blue-400 font-mono''''';
                   : method === 'PUT''''';
                     ? 'border-yellow-500 text-yellow-400 font-mono''''';
-                    : 'border-red-500 text-red-400 font-mono';,
-}
+                    : 'border-red-500 text-red-400 font-mono'}
           >;
             {method}";
           </Badge>"";
@@ -1283,8 +1224,7 @@ function EndpointSection({}
                   key={index}
                   className={}
 ';
-                    index < params.length - 1 ? 'border-b border-zinc-800' : '';,
-}">"";
+                    index < params.length - 1 ? 'border-b border-zinc-800' : ''}">"";
                   <td className="py-2 font-mono text-sm">";
                     {param.name}"";
                     {param.required && <span className="text-red-500">*</span>}";
@@ -1314,8 +1254,7 @@ function EndpointSection({}
 '''`;
                     activeTab === lang'''`'`;
                       ? 'bg-zinc-700 text-white'''`'`'`;
-                      : 'text-zinc-400 hover:bg-zinc-800'````;,
-}`}';
+                      : 'text-zinc-400 hover:bg-zinc-800'````}`}';
                   onClick={() => setActiveTab(lang)}'';
                 >''';
                   {lang === 'curl''''';
@@ -1341,6 +1280,5 @@ function EndpointSection({}
         </div>;
       )}
     </div>;
-  );,
-}'"`;
+  )}'"`;
 '"`'"`;

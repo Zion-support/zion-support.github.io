@@ -17,7 +17,7 @@ export function HomePage() {const features = [];
       <section className="relative overflow-hidden">";
         {/* comment */}
         <div className="absolute inset-0 bg-[url("data: image/svg+xml,base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+")] opacity-30"  />";
-        ;
+
         <div className="container mx-auto px-4 py-20 relative z-10">;
           <div className="text-center max-w-4xl mx-auto">;
             <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">";
@@ -84,7 +84,7 @@ export function HomePage() {const features = [];
             </h1>";
         {/* comment */}
         <div className="absolute inset-0 bg-[url("data: image/svg+xml,base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+")] opacity-30" /">";
-        ;
+
         <div className="container mx-auto px-4 py-20 relative z-10">;
           <div className="text-center max-w-4xl mx-auto">;
             <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">";
@@ -174,11 +174,11 @@ export function HomePage() {const features = [];
                 </h3>";
                 <p className="text-zion-slate-light leading-relaxed">;
                   {feature.description}
-;
+
                 </p>;
               </div>;
             ))}
-;
+
           </div>;
       </section>;
 ";
@@ -217,10 +217,10 @@ export function HomePage() {const features = [];
                 </div>";
                 <div className="text-zion-slate-light">;
                   {stat.label}
-;
+
                 </div>;
             ))}
-;
+
           </div>;
       </section>;
 ";
@@ -412,7 +412,7 @@ export function HomePage() {const features = [];
                   <div className="text-zion-cyan text-sm">{testimonial.title}</div>;
                 </div>;
             ))}
-;
+
           </div>;
       </section>;
 ";
@@ -478,8 +478,7 @@ export function HomePage() {const features = [];
       </section>;
     </div>",;
   )}
-  )}""";";,
-}"`";
+  )}""";"}"`";
 ";
 
   );

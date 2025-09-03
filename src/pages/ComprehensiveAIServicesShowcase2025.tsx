@@ -6,8 +6,7 @@
       price: "From $1,999/month","";
       features["Predictive Diagnostics", "Patient Monitoring", "Population Analytics", "Treatment Optimization"],;"";
       link: "/services/ai-healthcare-predictive-analytics","";
-      category: "Healthcare";,
-},;
+      category: "Healthcare"},;
     {}
 ";
       icon: TrendingUp,"";
@@ -16,8 +15,7 @@
       price: "From $2,999/month","";
       features["AI Trading Algorithms", "Risk Management", "Market Analysis", "High-Frequency Trading"],;"";
       link: "/services/ai-financial-trading-risk-management","";
-      category: "FinTech";,
-},;
+      category: "FinTech"},;
     {}
 ";
       icon: Truck,"";
@@ -26,8 +24,7 @@
       price: "From $2,499/month","";
       features["Demand Forecasting", "Route Optimization", "Risk Management", "Real-time Monitoring"],;"";
       link: "/services/ai-supply-chain-optimization","";
-      category: "Logistics";,
-},;
+      category: "Logistics"},;
     {}
 ";
       icon: Shield,"";
@@ -36,8 +33,7 @@
       price: "From $1,999/month","";
       features["Threat Detection", "Automated Response", "Vulnerability Assessment", "Compliance Monitoring"],;"";
       link: "/services/ai-cybersecurity-suite","";
-      category: "Security";,
-},;
+      category: "Security"},;
     {}
 ";
       icon: BarChart3,"";
@@ -46,11 +42,11 @@
       price: "From $1,499/month",;"";
       features: ["Data Analytics", "Predictive Insights", "Custom Dashboards", "Real-time Reporting"],;"";
       link: "/services/ai-business-intelligence-platform",;"";
-      category: "Analytics"};
+      category: "Analytics"}
   ]},;";
-    {;"";
+    {"";
       title: "Energy & Utilities",;"      description: "Predictive maintenance, energy optimization, and grid management",;
-      icon: Zap};
+      icon: Zap}
   ];
 ";
   const advancedTechnologies: unknown = ["";
@@ -62,7 +58,7 @@
     "Edge Computing & IoT Integration",;"";
     "Blockchain & Distributed Systems",;"    "Quantum Computing Solutions";
   ];
-;
+
   return();
     <>";
       <SEO "";
@@ -79,12 +75,10 @@
             <motion.div;
               initial = {}
   { opacity: 0,;
-  y: 20;,
-}}
+  y: 20}}
               animate = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
               transition={{ duration: 0.6 }}";
 "";
               <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">;
@@ -118,12 +112,10 @@
             <motion.div;
               initial = {}
   { opacity: 0,;
-  y: 20;,
-}}
+  y: 20}}
               whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
               transition={{ duration: 0.6 }}"";
               className="text-center mb-16"";
 "";
@@ -142,19 +134,15 @@
                   key={index}
                   initial = {}
   { opacity: 0,;
-  y: 20;,
-}}
+  y: 20}}
                   whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                   transition = {}
   { duration: 0.6,;
-  delay: index * 0.1;,
-}}
+  delay: index * 0.1}}
                   className="bg-white / 5 backdrop - blur - sm rounded-xl p - 6 border border-white / 10 hover:border-cyan - 500 / 50 transition - all duration -300";
-";,
-}}"";
+"}}"";
                   className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-cyan-500/50 transition-all duration-300"";
 "";
                   <div className="flex items-center justify-between mb-4">"";
@@ -199,12 +187,10 @@
             <motion.div;
               initial = {}
   { opacity: 0,;
-  y: 20;,
-}}
+  y: 20}}
               whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
               transition={{ duration: 0.6 }}"";
               className="text-center mb-16"";
 "";
@@ -223,19 +209,15 @@
                   key={index}
                   initial = {}
   { opacity: 0,;
-  y: 20;,
-}}
+  y: 20}}
                   whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                   transition = {}
   { duration: 0.6,;
-  delay: index * 0.1;,
-}}
+  delay: index * 0.1}}
                   className="bg-white / 5 backdrop - blur - sm rounded-xl p - 6 border border-white / 10 hover:border-cyan - 500 / 50 transition - all duration -300";
-";,
-}}"";
+"}}"";
                   className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-cyan-500/50 transition-all duration-300"";
 "";
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">"";
@@ -255,12 +237,10 @@
             <motion.div;
               initial = {}
   { opacity: 0,;
-  y: 20;,
-}}
+  y: 20}}
               whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
               transition={{ duration: 0.6 }}"";
               className="text-center mb-16"";
 "";
@@ -279,19 +259,15 @@
                   key={index}
                   initial = {}
   { opacity: 0,;
-  y: 20;,
-}}
+  y: 20}}
                   whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                   transition = {}
   { duration: 0.6,;
-  delay: index * 0.1;,
-}}
+  delay: index * 0.1}}
                   className="bg-white / 5 backdrop - blur - sm rounded-lg p - 4 border border-white / 10 text-center";
-";,
-}}"";
+"}}"";
                   className="bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 text-center"";
 "";
                   <Brain className="w-8 h-8 text-cyan-400 mx-auto mb-3"  />"                  <p className="text-white font-medium text-sm">{tech}</p>;
@@ -307,12 +283,10 @@
             <motion.h2;
               initial = {}
   { opacity: 0,;
-  y: 20;,
-}}
+  y: 20}}
               whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
               transition={{ duration: 0.6 }}"";
               className="text-4xl md:text-5xl font-bold mb-6 text-white";
               Ready to Transform Your Business?;
@@ -320,17 +294,14 @@
             <motion.p;
               initial = {}
   { opacity: 0,;
-  y: 20;,
-}}
+  y: 20}}
               whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
               transition = {}
   { duration: 0.6,;
   delay: 0.2;
-";,
-}}"";
+"}}"";
               className="text-xl text-cyan-100 mb-8";
               Join leading organizations that have already revolutionized;
               their operations with AI - powered solutions;
@@ -338,17 +309,14 @@
             <motion.div;
               initial = {}
   { opacity: 0,;
-  y: 20;,
-}}
+  y: 20}}
               whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
               transition = {}
   { duration: 0.6,;
   delay: 0.4;
-";,
-}}"";
+"}}"";
               className="flex flex-col sm:flex-row gap-4 justify-center";
               <motion.button;
                 whileHover={{ scale: 1.05 }}";
@@ -372,12 +340,10 @@
             <motion.div;
               initial = {}
   { opacity: 0,;
-  y: 20;,
-}}
+  y: 20}}
               whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
               transition={{ duration: 0.6 }}"";
               className="text-center mb-16"";
 "";
@@ -394,12 +360,10 @@
               <motion.div;
                 initial = {}
   { opacity: 0,;
-  y: 20;,
-}}
+  y: 20}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
                 transition={{ duration: 0.6 }}"";
                 className="text-center"";
 "";
@@ -410,17 +374,14 @@
               <motion.div;
                 initial = {}
   { opacity: 0,;
-  y: 20;,
-}}
+  y: 20}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                 transition = {}
   { duration: 0.6,;
   delay: 0.2;
-";,
-}}"";
+"}}"";
                 className="text-center"";
 "";
                 <Mail className="w-12 h-12 text-cyan-400 mx-auto mb-4"  />"";
@@ -430,17 +391,14 @@
               <motion.div;
                 initial = {}
   { opacity: 0,;
-  y: 20;,
-}}
+  y: 20}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                 transition = {}
   { duration: 0.6,;
   delay: 0.4;
-";,
-}}"";
+"}}"";
                 className="text-center"";
 "";
                 <Globe className="w-12 h-12 text-cyan-400 mx-auto mb-4"  />"";
@@ -451,17 +409,14 @@
             <motion.div;
               initial = {}
   { opacity: 0,;
-  y: 20;,
-}}
+  y: 20}}
               whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
               transition = {}
   { duration: 0.6,;
   delay: 0.6;
-";,
-}}"";
+"}}"";
               className="text-center mt-12"";
 "";
               <h3 className="text-2xl font-semibold mb-4 text-white">Address</h3>"";
@@ -474,14 +429,10 @@
         </section>;
       </div>;
     </>;
-  );,
-}
-;
+  )}
 
-export { ComprehensiveAIServicesShowcase2025 };
-;
-export { ComprehensiveAIServicesShowcase2025 };
-;
-export { ComprehensiveAIServicesShowcase2025 };
-;
-export { ComprehensiveAIServicesShowcase2025 };
+
+export { ComprehensiveAIServicesShowcase2025 }
+export { ComprehensiveAIServicesShowcase2025 }
+export { ComprehensiveAIServicesShowcase2025 }
+export { ComprehensiveAIServicesShowcase2025 }

@@ -10,7 +10,7 @@ import {}
   ArrowRight,'';
   ChevronDown,''';
   ChevronRight} from 'lucide-react';
-;
+
 export default function HelpCenter() {}
 ';
   const [searchQuery, setSearchQuery] = useState('');';
@@ -22,9 +22,7 @@ export default function HelpCenter() {}
       prev.includes(category);
         ? prev.filter(c => c !== category);
         : [...prev, category];
-    );,
-};
-;
+    )}
   const helpCategories = {}
 ';
     'getting-started': {}
@@ -329,16 +327,11 @@ export default function HelpCenter() {}
         </section>;
       </div>;
     </>;
-  );,
-}
-;
+  )}
 
-export { HelpCenter };
-;
-export { HelpCenter };
-;
-export { HelpCenter };
-;
-export { HelpCenter };
-;
-export { HelpCenter };
+
+export { HelpCenter }
+export { HelpCenter }
+export { HelpCenter }
+export { HelpCenter }
+export { HelpCenter }

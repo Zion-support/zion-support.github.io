@@ -3,8 +3,8 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 import { ArrowRight, CheckCircle, Brain, Zap, Users, Shield, TrendingUp, BarChart3, MessageCircle, Star } from 'lucide-react';
-;
-const AICustomerSentimentAnalyzerPage: NextPage = () => {;
+
+const AICustomerSentimentAnalyzerPage: NextPage = () => {
   const features = [;
     'Real-time sentiment monitoring across all channels',;
     'Multi-channel data integration (social media, reviews, surveys, support tickets)',;
@@ -15,7 +15,7 @@ const AICustomerSentimentAnalyzerPage: NextPage = () => {;
     'API integration with CRM systems',;
     'White-label reporting capabilities';
   ];
-;
+
   const benefits = [;
     'Improve customer satisfaction by 40%',;
     'Reduce churn through early warning system',;
@@ -23,7 +23,7 @@ const AICustomerSentimentAnalyzerPage: NextPage = () => {;
     'Data-driven customer experience decisions',;
     'Competitive advantage through sentiment insights';
   ];
-;
+
   const useCases = [;
     'Brand reputation monitoring',;
     'Product feedback analysis',;
@@ -31,9 +31,9 @@ const AICustomerSentimentAnalyzerPage: NextPage = () => {;
     'Marketing campaign effectiveness',;
     'Competitor sentiment tracking';
   ];
-;
+
   const pricingPlans = [;
-    {;
+    {
       name: 'Starter',;
       price: 199,;
       period: 'month',;
@@ -45,9 +45,8 @@ const AICustomerSentimentAnalyzerPage: NextPage = () => {;
         'Email alerts',;
         'Standard dashboard',;
         'Email support';
-      ];,
-},;
-    {;
+      ]},;
+    {
       name: 'Professional',;
       price: 499,;
       period: 'month',;
@@ -60,9 +59,8 @@ const AICustomerSentimentAnalyzerPage: NextPage = () => {;
         'Custom dashboard',;
         'API access',;
         'Priority support';
-      ];,
-},;
-    {;
+      ]},;
+    {
       name: 'Enterprise',;
       price: 1299,;
       period: 'month',;
@@ -75,10 +73,9 @@ const AICustomerSentimentAnalyzerPage: NextPage = () => {;
         'White-label reporting',;
         'Dedicated account manager',;
         '24/7 phone support';
-      ];,
-}
+      ]}
   ];
-;
+
   return (;
     <>;
       <Head>;
@@ -230,8 +227,7 @@ const AICustomerSentimentAnalyzerPage: NextPage = () => {;
                   <span className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-colors cursor-pointer block ${;
                     index === 1 ;
                       ? 'bg-blue-600 text-white hover:bg-blue-700' ;
-                      : 'bg-gray-100 text-gray-900 hover:bg-gray-200';,
-}`}>;
+                      : 'bg-gray-100 text-gray-900 hover:bg-gray-200'}`}>;
                     Get Started;
                   </span>;
                 </Link>;
@@ -264,7 +260,5 @@ const AICustomerSentimentAnalyzerPage: NextPage = () => {;
         </div>;
       </section>;
     </>;
-  );,
-};
-;
+  )}
 export default AICustomerSentimentAnalyzerPage;

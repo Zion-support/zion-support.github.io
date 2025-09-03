@@ -59,8 +59,7 @@ export default function EnhancedServicesPage() {}
         service.price > 2000 &&''';
         service.price <= 8000) ||'''';
       (selectedPriceRange === 'enterprise' && service.price > 8000);
-    return matchesSearch && matchesCategory && matchesPrice;,
-});
+    return matchesSearch && matchesCategory && matchesPrice});
   const getCategoryIcon = category => {}
     switch (category.toLowerCase()) {}
 ';
@@ -92,15 +91,13 @@ export default function EnhancedServicesPage() {}
       case 'quantum computing':"";
         return <Zap className="w-5 h-5" />;";
       default:"";
-        return <Code className="w-5 h-5" />;,
-}
-  };
+        return <Code className="w-5 h-5" />}
+  }
   const getPriceRange = price => {}
 ';
     if (price <= 2000) return 'basic';';
     if (price <= 8000) return 'professional';';
-    return 'enterprise';,
-};";
+    return 'enterprise'};";
   return ("";
     <div className="min-h-screen bg-background">";
       <SEO"";
@@ -127,8 +124,7 @@ export default function EnhancedServicesPage() {}
               onClick={() =>';
                 document'';
                   .getElementById('services-grid')';
-                  ?.scrollIntoView({ behavior: 'smooth' });,
-}
+                  ?.scrollIntoView({ behavior: 'smooth' })}
             >;
               Explore Services;
             </Button>";
@@ -139,8 +135,7 @@ export default function EnhancedServicesPage() {}
               onClick={() =>';
                 document'';
                   .getElementById('contact-section')';
-                  ?.scrollIntoView({ behavior: 'smooth' });,
-}
+                  ?.scrollIntoView({ behavior: 'smooth' })}
             >;
               Get in Touch;
             </Button>;
@@ -246,8 +241,7 @@ export default function EnhancedServicesPage() {}
 ''';
                           getPriceRange(service.price) === 'enterprise''''';
                             ? 'default''''';
-                            : 'secondary';,
-}
+                            : 'secondary'}
                       >;
                         {getPriceRange(service.price) }
                       </Badge>;
@@ -317,8 +311,7 @@ export default function EnhancedServicesPage() {}
                         onClick={() =>';
                           document'';
                             .getElementById('contact-section')';
-                            ?.scrollIntoView({ behavior: 'smooth' });,
-}
+                            ?.scrollIntoView({ behavior: 'smooth' })}
                       >;
                         Get Quote;
                       </Button>;
@@ -490,8 +483,7 @@ export default function EnhancedServicesPage() {}
                 size="lg"";
                 className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light";
                 onClick={() =>';
-                  window.open(`tel:${CONTACT_INFO.mobile}`,_self');,
-}">"";
+                  window.open(`tel:${CONTACT_INFO.mobile}`,_self')}">"";
                 <Phone className="w-5 h-5 mr-2" />;
                 Call Now;
               </Button>";
@@ -500,8 +492,7 @@ export default function EnhancedServicesPage() {}
                 variant="outline"";
                 className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"'`;
                 onClick={() =>'`'`;
-                  window.open(`mailto:${CONTACT_INFO.email}`,_self');,
-}">"";
+                  window.open(`mailto:${CONTACT_INFO.email}`,_self')}">"";
                 <Mail className="w-5 h-5 mr-2" />;
                 Send Email;
               </Button>";
@@ -529,8 +520,7 @@ export default function EnhancedServicesPage() {}
                 onClick={() =>`;
                   window.open()`'`;
                     `mailto:${CONTACT_INFO.email}?subject=Enterprise%20Inquiry`,_self';
-                  );,
-}
+                  )}
               >;
                 Request Enterprise Consultation;
               </Button>;
@@ -539,14 +529,10 @@ export default function EnhancedServicesPage() {}
         </div>;
       </section>;
     </div>)}
-;
 
-export { EnhancedServicesPage };
-;
-export { EnhancedServicesPage };
-;
-export { EnhancedServicesPage };
-;
-export { EnhancedServicesPage };
-;
-export { EnhancedServicesPage };
+
+export { EnhancedServicesPage }
+export { EnhancedServicesPage }
+export { EnhancedServicesPage }
+export { EnhancedServicesPage }
+export { EnhancedServicesPage }

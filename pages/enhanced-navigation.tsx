@@ -1,93 +1,81 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-;
-const EnhancedNavigation: React.FC = () => {;
+
+const EnhancedNavigation: React.FC = () => {
   const [activeSection, setActiveSection] = useState('overview');
-;
+
   const navigationFeatures = [;
-    {;
+    {
       title: 'Smart Search',;
       description: 'Intelligent search with autocomplete, filters, and recent searches',;
       icon: '🔍',;
-      benefits: ['Faster content discovery', 'Relevant results', 'Search history'];,
-},;
-    {;
+      benefits: ['Faster content discovery', 'Relevant results', 'Search history']},;
+    {
       title: 'Breadcrumb Navigation',;
       description: 'Clear path indicators showing user location within the site',;
       icon: '🍞',;
-      benefits: ['Easy navigation back', 'Context awareness', 'SEO friendly'];,
-},;
-    {;
+      benefits: ['Easy navigation back', 'Context awareness', 'SEO friendly']},;
+    {
       title: 'Mega Menus',;
       description: 'Rich dropdown menus with categorized content and quick actions',;
       icon: '📋',;
-      benefits: ['Reduced clicks', 'Better organization', 'Visual hierarchy'];,
-},;
-    {;
+      benefits: ['Reduced clicks', 'Better organization', 'Visual hierarchy']},;
+    {
       title: 'Mobile-First Design',;
       description: 'Responsive navigation that works seamlessly across all devices',;
       icon: '📱',;
-      benefits: ['Touch-friendly', 'Adaptive layouts', 'Consistent experience'];,
-},;
-    {;
+      benefits: ['Touch-friendly', 'Adaptive layouts', 'Consistent experience']},;
+    {
       title: 'Keyboard Navigation',;
       description: 'Full keyboard support for accessibility and power users',;
       icon: '⌨️',;
-      benefits: ['Accessibility compliance', 'Faster navigation', 'No mouse required'];,
-},;
-    {;
+      benefits: ['Accessibility compliance', 'Faster navigation', 'No mouse required']},;
+    {
       title: 'Analytics Integration',;
       description: 'Track navigation patterns to continuously improve user experience',;
       icon: '📊',;
-      benefits: ['Data-driven decisions', 'User behavior insights', 'Performance metrics'];,
-}
+      benefits: ['Data-driven decisions', 'User behavior insights', 'Performance metrics']}
   ];
-;
+
   const implementationSteps = [;
-    {;
+    {
       step: 1,;
       title: 'Audit Current Navigation',;
       description: 'Analyze existing navigation structure and identify pain points',;
-      duration: '1-2 days';,
-},;
-    {;
+      duration: '1-2 days'},;
+    {
       step: 2,;
       title: 'Design New Structure',;
       description: 'Create wireframes and user flows for improved navigation',;
-      duration: '3-5 days';,
-},;
-    {;
+      duration: '3-5 days'},;
+    {
       step: 3,;
       title: 'Implement Core Features',;
       description: 'Build the main navigation components and functionality',;
-      duration: '1-2 weeks';,
-},;
-    {;
+      duration: '1-2 weeks'},;
+    {
       step: 4,;
       title: 'Add Advanced Features',;
       description: 'Implement search, filters, and interactive elements',;
-      duration: '1-2 weeks';,
-},;
-    {;
+      duration: '1-2 weeks'},;
+    {
       step: 5,;
       title: 'Testing & Optimization',;
       description: 'User testing, performance optimization, and accessibility checks',;
-      duration: '3-5 days';,
-}
+      duration: '3-5 days'}
   ];
-;
-  const codeExamples = {;
+
+  const codeExamples = {
     search: `// Smart search component;
-const SmartSearch = () => {;
+const SmartSearch = () => {
   const [query, setQuery] = useState('');
   const [results, setResults] = useState([]);
-  ;
-  const handleSearch = async (searchTerm) => {;
+
+  const handleSearch = async (searchTerm) => {
     const searchResults = await searchAPI(searchTerm);
-    setResults(searchResults);,
-};
-  ;
+    setResults(searchResults)}
+
   return (;
     <div className="search-container">;
       <input;
@@ -105,13 +93,12 @@ const SmartSearch = () => {;
         </div>;
       )}
     </div>;
-  );,
-};`,;
-    ;
+  )};`,;
+
     breadcrumbs: `// Breadcrumb navigation;
-const Breadcrumbs = ({ path }) => {;
+const Breadcrumbs = ({ path }) => {
   const breadcrumbItems = path.split('/').filter(Boolean);
-  ;
+
   return (;
     <nav className="breadcrumbs" aria-label="Breadcrumb">;
       <ol className="breadcrumb-list">;
@@ -129,11 +116,10 @@ const Breadcrumbs = ({ path }) => {;
         ))}
       </ol>;
     </nav>;
-  );,
-};`,;
-    ;
+  )};`,;
+
     megaMenu: `// Mega menu component;
-const MegaMenu = ({ isOpen, onClose }) => {;
+const MegaMenu = ({ isOpen, onClose }) => {
   return (;
     <div className={\`mega-menu \${isOpen ? 'open' : ''}\`}>;
       <div className="mega-menu-content">;
@@ -155,10 +141,7 @@ const MegaMenu = ({ isOpen, onClose }) => {;
         </div>;
       </div>;
     </div>;
-  );,
-};`;,
-};
-;
+  )};`}
   return (;
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">;
       <Head>;
@@ -188,8 +171,7 @@ const MegaMenu = ({ isOpen, onClose }) => {;
                   className={`px-4 py-2 rounded-lg font-medium transition-colors ${;
                     activeSection === tab;
                       ? 'bg-blue-600 text-white';
-                      : 'bg-gray-200 text-gray-700 hover:bg-gray-300';,
-}`}
+                      : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`}
                 >;
                   {tab.charAt(0).toUpperCase() + tab.slice(1)}
                 </button>;
@@ -215,7 +197,7 @@ const MegaMenu = ({ isOpen, onClose }) => {;
                     </p>;
                   </div>;
                 </div>;
-                ;
+
                 <div className="bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg p-6 text-white text-center">;
                   <h3 className="text-xl font-semibold mb-2">Key Benefits</h3>;
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">;
@@ -235,7 +217,7 @@ const MegaMenu = ({ isOpen, onClose }) => {;
                 </div>;
               </div>;
             )}
-;
+
             {/* Features Section */}
             {activeSection === 'features' && (;
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
@@ -256,7 +238,7 @@ const MegaMenu = ({ isOpen, onClose }) => {;
                 ))}
               </div>;
             )}
-;
+
             {/* Implementation Section */}
             {activeSection === 'implementation' && (;
               <div className="space-y-6">;
@@ -278,7 +260,7 @@ const MegaMenu = ({ isOpen, onClose }) => {;
                       ))}
                     </div>;
                   </div>;
-                  ;
+
                   <div className="bg-yellow-50 p-6 rounded-lg">;
                     <h3 className="text-lg font-semibold text-yellow-800 mb-3">Best Practices</h3>;
                     <ul className="space-y-2 text-yellow-700 text-sm">;
@@ -292,7 +274,7 @@ const MegaMenu = ({ isOpen, onClose }) => {;
                 </div>;
               </div>;
             )}
-;
+
             {/* Code Section */}
             {activeSection === 'code' && (;
               <div className="space-y-6">;
@@ -318,7 +300,7 @@ const MegaMenu = ({ isOpen, onClose }) => {;
                 </div>;
               </div>;
             )}
-;
+
             {/* Benefits Section */}
             {activeSection === 'benefits' && (;
               <div className="space-y-6">;
@@ -333,7 +315,7 @@ const MegaMenu = ({ isOpen, onClose }) => {;
                       <li>• Better mobile experience</li>;
                     </ul>;
                   </div>;
-                  ;
+
                   <div className="bg-white border border-gray-200 rounded-lg p-6">;
                     <h3 className="text-lg font-semibold text-gray-800 mb-4">Business Impact</h3>;
                     <ul className="space-y-2 text-gray-600">;
@@ -345,7 +327,7 @@ const MegaMenu = ({ isOpen, onClose }) => {;
                     </ul>;
                   </div>;
                 </div>;
-                ;
+
                 <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-6 text-white text-center">;
                   <h3 className="text-xl font-semibold mb-4">Ready to Transform Your Navigation?</h3>;
                   <p className="mb-6">;
@@ -366,7 +348,5 @@ const MegaMenu = ({ isOpen, onClose }) => {;
         </div>;
       </div>;
     </div>;
-  );,
-};
-;
+  )}
 export default EnhancedNavigation;

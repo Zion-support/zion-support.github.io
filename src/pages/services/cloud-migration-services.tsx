@@ -16,10 +16,9 @@ import { ;
   TrendingUp,;
   Server,;
   Database,;
-  Lock;,
-} from 'lucide-react';
-;
-const CloudMigrationServices = () => {;
+  Lock} from 'lucide-react';
+
+const CloudMigrationServices = () => {
   const features = [;
     'Zero-downtime migration',;
     'Data security & encryption',;
@@ -30,7 +29,7 @@ const CloudMigrationServices = () => {;
     'Compliance & governance',;
     'Training & documentation';
   ];
-;
+
   const benefits = [;
     'Reduce infrastructure costs by 40%',;
     'Improve scalability & flexibility',;
@@ -41,72 +40,61 @@ const CloudMigrationServices = () => {;
     'Better performance & reliability',;
     'Future-proof technology stack';
   ];
-;
+
   const migrationSteps = [;
-    {;
+    {
       step: '1',;
       title: 'Assessment & Planning',;
       description: 'Comprehensive analysis of your current infrastructure and migration requirements',;
-      duration: '1-2 weeks';,
-},;
-    {;
+      duration: '1-2 weeks'},;
+    {
       step: '2',;
       title: 'Strategy Development',;
       description: 'Custom migration strategy tailored to your business needs and goals',;
-      duration: '1 week';,
-},;
-    {;
+      duration: '1 week'},;
+    {
       step: '3',;
       title: 'Pilot Migration',;
       description: 'Small-scale migration to test and validate the process',;
-      duration: '2-3 weeks';,
-},;
-    {;
+      duration: '2-3 weeks'},;
+    {
       step: '4',;
       title: 'Full Migration',;
       description: 'Complete migration with zero downtime and data integrity',;
-      duration: '2-4 weeks';,
-},;
-    {;
+      duration: '2-4 weeks'},;
+    {
       step: '5',;
       title: 'Optimization & Support',;
       description: 'Performance tuning, monitoring setup, and ongoing support',;
-      duration: 'Ongoing';,
-}
+      duration: 'Ongoing'}
   ];
-;
-  const pricing = {;
-    small: {;
+
+  const pricing = {
+    small: {
       name: 'Small Business',;
       price: '$2,999',;
       description: 'Up to 10 servers, basic migration',;
       features: ['Assessment & planning', 'Basic migration', '30 days support', 'Documentation'],;
-      marketPrice: '$5,000';,
-},;
-    medium: {;
+      marketPrice: '$5,000'},;
+    medium: {
       name: 'Medium Business',;
       price: '$7,999',;
       description: 'Up to 50 servers, advanced migration',;
       features: ['Comprehensive assessment', 'Advanced migration', '90 days support', 'Training', 'Monitoring setup'],;
       marketPrice: '$12,000',;
-      popular: true;,
-},;
-    enterprise: {;
+      popular: true},;
+    enterprise: {
       name: 'Enterprise',;
       price: 'Custom',;
       description: 'Unlimited servers, enterprise-grade migration',;
       features: ['Full assessment', 'Enterprise migration', '1 year support', 'Dedicated team', 'Custom solutions', 'SLA guarantee'],;
-      marketPrice: '$25,000+';,
-}
-  };
-;
-  const contactInfo = {;
+      marketPrice: '$25,000+'}
+  }
+  const contactInfo = {
     phone: '+1 302 464 0950',;
     email: 'kleber@ziontechgroup.com',;
     address: '364 E Main St STE 1008 Middletown DE 19709',;
-    website: 'https://ziontechgroup.com';,
-};
-;
+    website: 'https://ziontechgroup.com'}
   return (;
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">;
       {/* Header */}
@@ -161,7 +149,7 @@ const CloudMigrationServices = () => {;
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Comprehensive Migration Features</h2>;
           <p className="text-xl text-gray-600">Everything you need for a successful cloud migration</p>;
         </div>;
-        ;
+
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
           {features.map((feature, index) => (;
             <div;
@@ -184,7 +172,7 @@ const CloudMigrationServices = () => {;
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Migration Process</h2>;
             <p className="text-xl text-gray-600">A proven 5-step approach to successful cloud migration</p>;
           </div>;
-          ;
+
           <div className="space-y-8">;
             {migrationSteps.map((step, index) => (;
               <div;
@@ -215,7 +203,7 @@ const CloudMigrationServices = () => {;
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Our Cloud Migration?</h2>;
           <p className="text-xl text-gray-600">Measurable results that drive business growth</p>;
         </div>;
-        ;
+
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
           {benefits.map((benefit, index) => (;
             <div;
@@ -240,7 +228,7 @@ const CloudMigrationServices = () => {;
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Migration Pricing Plans</h2>;
             <p className="text-xl text-gray-600">Choose the plan that fits your migration needs</p>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-3 gap-8">;
             {Object.entries(pricing).map(([key, plan], index) => (;
               <div;
@@ -249,8 +237,7 @@ const CloudMigrationServices = () => {;
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 className={`bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 relative border-2 ${;
-                  plan.popular ? 'border-blue-500' : 'border-gray-200';,
-}`}
+                  plan.popular ? 'border-blue-500' : 'border-gray-200'}`}
               >;
                 {plan.popular && (;
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">;
@@ -259,7 +246,6 @@ const CloudMigrationServices = () => {;
                     </span>;
                   </div>;
                 )}
-                ;
                 <div className="text-center mb-6">;
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>;
                   <div className="text-4xl font-bold text-blue-600 mb-2">{plan.price}</div>;
@@ -267,7 +253,7 @@ const CloudMigrationServices = () => {;
                   <p className="text-green-600 font-semibold">Save up to 40%</p>;
                   <p className="text-gray-600 mt-2">{plan.description}</p>;
                 </div>;
-                ;
+
                 <ul className="space-y-3 mb-8">;
                   {plan.features.map((feature, featureIndex) => (;
                     <li key={featureIndex} className="flex items-center text-gray-600">;
@@ -276,14 +262,13 @@ const CloudMigrationServices = () => {;
                     </li>;
                   ))}
                 </ul>;
-                ;
+
                 <a;
                   href={`tel:${contactInfo.phone}`}
                   className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-colors ${;
                     plan.popular;
                       ? 'bg-blue-600 text-white hover:bg-blue-700';
-                      : 'bg-gray-200 text-gray-900 hover:bg-gray-300';,
-}`}
+                      : 'bg-gray-200 text-gray-900 hover:bg-gray-300'}`}
                 >;
                   Get Started;
                 </a>;
@@ -300,7 +285,7 @@ const CloudMigrationServices = () => {;
             <h2 className="text-4xl font-bold mb-4">Ready to Migrate to the Cloud?</h2>;
             <p className="text-xl text-gray-300">Contact us today for a free migration assessment</p>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
             <div className="text-center">;
               <Phone className="w-8 h-8 text-blue-400 mx-auto mb-4" />;
@@ -342,7 +327,5 @@ const CloudMigrationServices = () => {;
         </div>;
       </footer>;
     </div>;
-  );,
-};
-;
+  )}
 export default CloudMigrationServices;

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 // import { ultimateInnovativeServices2026 } from '../data/ultimateInnovativeServices2026';
 // ;
-const UltimateServicesShowcase2026 = () => {;
+const UltimateServicesShowcase2026 = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');    const [sortBy, setSortBy] = useState('name');
     // Combine all services;
@@ -20,59 +20,47 @@ const UltimateServicesShowcase2026 = () => {;
             switch (sortBy) {}
 ';
                 case 'price':';
-                    return parseInt(a.price.replace(/[^0-9]/g,)) - parseInt(b.price.replace(/[^0-9]/g,));';
+                    return parseInt(a.price.replace(/[^0-9]/g)) - parseInt(b.price.replace(/[^0-9]/g));';
                 case 'category': any;
                     return a.category.localeCompare(b.category);';
                 case 'rating': any;
                     return b.rating - a.rating;';
                 case 'name': any;
                 default: any;
-                    return a.name.localeCompare(b.name);,
-}
+                    return a.name.localeCompare(b.name)}
         });
     const getCategoryIcon = (category) => {}
         const icons = {}
 ';
 '';
 ''';
-  'Business Intelligence': '📊',Marketing Automation': '🎯',Customer Service': '🤖',Supply Chain Management': '📦',Financial Technology': '💰',Healthcare Technology': '🏥',Legal Technology': '⚖️',Workflow Automation': '⚡',Blockchain Technology': '🔗',Internet of Things': '🌐',Quantum Computing': '🔮',Cybersecurity': '🛡️',Cloud Infrastructure': '☁️',DevOps': '⚡',Data Center Management': '🏢',Network Security': '🌐',Storage Management': '💾',Virtualization': '🖥️',IT Asset Management': '📱',Performance Monitoring': '📊''';,
-};''';
-        return icons[category] || '🚀';';,
-};'';
-    return icons[category] || '🚀';,
-};
-;
+  'Business Intelligence': '📊',Marketing Automation': '🎯',Customer Service': '🤖',Supply Chain Management': '📦',Financial Technology': '💰',Healthcare Technology': '🏥',Legal Technology': '⚖️',Workflow Automation': '⚡',Blockchain Technology': '🔗',Internet of Things': '🌐',Quantum Computing': '🔮',Cybersecurity': '🛡️',Cloud Infrastructure': '☁️',DevOps': '⚡',Data Center Management': '🏢',Network Security': '🌐',Storage Management': '💾',Virtualization': '🖥️',IT Asset Management': '📱',Performance Monitoring': '📊'''};''';
+        return icons[category] || '🚀';'};'';
+    return icons[category] || '🚀'}
   const containerVariants = {}
     hidden: { opacity: 0 },;
     visible: {}
       opacity: 1,;
       transition: {}
-        staggerChildren: 0.1;,
-}
+        staggerChildren: 0.1}
     }
-  };
-;
+  }
             opacity: 1,;
             transition: {}
-                staggerChildren: 0.1;,
-}
+                staggerChildren: 0.1}
         }
-    };
-;
+    }
     const itemVariants = {}
         hidden: {}
             y: 20,;
-            opacity: 0;,
-},;
+            opacity: 0},;
         visible: {}
             y: 0,;
             opacity: 1,;
             transition: {}
                 duration: 0.5,;
-                ease: "easeOut"";,
-}
-        }";,
-};"";
+                ease: "easeOut""}
+        }"};"";
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">";
       {/* Hero Section */}"";
       <section className="py-20 px-4 sm:px-6 lg:px-8">"";
@@ -118,7 +106,7 @@ const UltimateServicesShowcase2026 = () => {;
             </div>;
           </motion.div>;
 ";
-const UltimateServicesShowcase2026: React.FC = () => {;
+const UltimateServicesShowcase2026: React.FC = () => {
   return (";
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
       <SEO title="UltimateServicesShowcase2026 - Zion Tech Group;
@@ -176,14 +164,12 @@ const UltimateServicesShowcase2026: React.FC = () => {;
           <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" variants={containerVariants} initial="hidden" animate="visible">"";
             {filteredServices.map((service, index) => (<motion.div key={service.id} variants={itemVariants} className="group" whileHover = {}
   { scale: 1.02,;
-  y: -5;,
-}} transition = {}
+  y: -5}} transition = {}
 ";
 "";
   { type: "spring",;
   stiffness: 300;
-";,
-}}>"";
+"}}>"";
                 <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 hover:border-cyan-400/50 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/25 h-full">";
                   {/* Service Header */}"";
                   <div className="flex items-start justify-between mb-4">"";
@@ -280,12 +266,10 @@ const UltimateServicesShowcase2026: React.FC = () => {;
         <div className="max-w-4xl mx-auto text-center">;
           <motion.div initial = {}
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
+  y: 20}} whileInView = {}
   { opacity: 1,;
   y: 0;
-";,
-}} viewport={{ once: true }} transition={{ duration: 0.8 }}>"";
+"}} viewport={{ once: true }} transition={{ duration: 0.8 }}>"";
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">"";
               Ready to <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Transform</span> Your Business?";
             </h2>"";
@@ -335,18 +319,12 @@ const UltimateServicesShowcase2026: React.FC = () => {;
           </div>;
         </div>;
       </section>;
-    </div>) ;,
-};
-;
+    </div>) }
 export default UltimateServicesShowcase2026;
-;
-export { UltimateServicesShowcase2026 };
-;
-export { UltimateServicesShowcase2026 };
-;
-export { UltimateServicesShowcase2026 };
-;
-export { UltimateServicesShowcase2026 };
-;
-export { UltimateServicesShowcase2026 };
+
+export { UltimateServicesShowcase2026 }
+export { UltimateServicesShowcase2026 }
+export { UltimateServicesShowcase2026 }
+export { UltimateServicesShowcase2026 }
+export { UltimateServicesShowcase2026 }
 )

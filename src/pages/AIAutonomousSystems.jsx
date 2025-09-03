@@ -575,13 +575,11 @@ import {}
   CheckCircle,';
   Shield,'';
   Zap,''';
-  Cpu'''';,
-} from 'lucide-react';
-;
-    technologies["Computer Vision", "Robotics", "AI", "Medical Imaging"];,
-}
+  Cpu''''} from 'lucide-react';
+
+    technologies["Computer Vision", "Robotics", "AI", "Medical Imaging"]}
 ];
-;
+
 const autonomousTechnologies = [];
   {}
 ";
@@ -590,8 +588,7 @@ const autonomousTechnologies = [];
     description: "Advanced image recognition and processing capabilities",";
     icon: Eye,"";
     useCase: "Visual Perception","";
-    reliability: "Critical";,
-},;
+    reliability: "Critical"},;
   {}
 ";
 "";
@@ -599,8 +596,7 @@ const autonomousTechnologies = [];
     description: "AI algorithms for autonomous decision making",";
     icon: Brain,"";
     useCase: "Intelligence","";
-    reliability: "Critical";,
-},;
+    reliability: "Critical"},;
   {}
 ";
 "";
@@ -608,8 +604,7 @@ const autonomousTechnologies = [];
     description: "Integration of multiple sensor data sources",";
     icon: Activity,"";
     useCase: "Environmental Awareness","";
-    reliability: "Critical";,
-},;
+    reliability: "Critical"},;
   {}
 ";
 "";
@@ -619,7 +614,7 @@ const autonomousTechnologies = [];
     useCase: "Physical Control","";
     reliability: "Critical";
 ];
-;
+
 const successStories = [];
   {}
 ";
@@ -629,8 +624,7 @@ const successStories = [];
     challenge: "Needed autonomous driving system for next-generation vehicles","";
     solution: "Built comprehensive autonomous system with computer vision, sensor fusion, and AI decision making","";
     results: "Level 4 autonomy achieved, 99.9% safety record, reduced accidents by 80%, improved efficiency","";
-    logo: "AM";,
-},;
+    logo: "AM"},;
   {}
 ";
     id: 2,"";
@@ -639,8 +633,7 @@ const successStories = [];
     challenge: "Required autonomous robots for 24/7 production line operation","";
     solution: "Implemented AI-powered industrial robots with computer vision and safety systems","";
     results: "100% uptime, 50% production increase, improved quality, reduced costs","";
-    logo: "MC";,
-},;
+    logo: "MC"},;
   {}
 ";
     id: 3,"";
@@ -651,7 +644,7 @@ const successStories = [];
     results: "30% yield increase, 40% water savings, reduced labor costs, improved sustainability","";
     logo: "AC";
 ];
-;
+
 const processSteps = [];
   {}
 ";
@@ -659,24 +652,21 @@ const processSteps = [];
     title: "System Requirements","";
     description: "Define autonomous system requirements and constraints",";
     icon: FileText,"";
-    duration: "2-4 weeks";,
-},;
+    duration: "2-4 weeks"},;
   {}
 ";
     step: 2,"";
     title: "AI Development","";
     description: "Develop AI algorithms and machine learning models",";
     icon: Code,"";
-    duration: "8-16 weeks";,
-},;
+    duration: "8-16 weeks"},;
   {}
 ";
     step: 3,"";
     title: "Hardware Integration","";
     description: "Integrate sensors, actuators, and control systems",";
     icon: Wrench,"";
-    duration: "12-24 weeks";,
-},;
+    duration: "12-24 weeks"},;
   {}
 ";
     step: 4,"";
@@ -685,7 +675,7 @@ const processSteps = [];
     icon: Shield,"";
     duration: "8-16 weeks";
 ];
-;
+
 const autonomousBenefits = [];
   {}
 ";
@@ -693,34 +683,30 @@ const autonomousBenefits = [];
     title: "Increased Efficiency","";
     description: "24/7 operation with consistent performance and reduced human error",";
     icon: Zap,"";
-    examples["24/7 operation", "Consistent performance", "Reduced errors", "Faster processing"];,
-},;
+    examples["24/7 operation", "Consistent performance", "Reduced errors", "Faster processing"]},;
   {}
 ";
 "";
     title: "Enhanced Safety","";
     description: "Advanced safety systems and risk mitigation capabilities",";
     icon: Shield,"";
-    examples["Risk mitigation", "Safety protocols", "Emergency systems", "Predictive safety"];,
-},;
+    examples["Risk mitigation", "Safety protocols", "Emergency systems", "Predictive safety"]},;
   {}
 ";
 "";
     title: "Cost Reduction","";
     description: "Lower operational costs and improved resource utilization",";
     icon: TrendingUp,"";
-    examples["Lower labor costs", "Resource optimization", "Reduced waste", "Improved ROI"];,
-},;
+    examples["Lower labor costs", "Resource optimization", "Reduced waste", "Improved ROI"]},;
   {}
 ";
 "";
     title: "Scalability","";
     description: "Systems that can scale and adapt to changing requirements",";
     icon: Rocket,"";
-    examples["Easy scaling", "Adaptive systems", "Modular design", "Future-proof technology"];,
-}
+    examples["Easy scaling", "Adaptive systems", "Modular design", "Future-proof technology"]}
 ];
-;
+
 export default function AIAutonomousSystems() {}
 ';
 '';
@@ -748,30 +734,24 @@ export default function AIAutonomousSystems() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             animate = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center max-w-4xl mx-auto";
             <motion.div;
               initial = {}
   { opacity: 0,;
-  scale: 0.8;,
-}}
+  scale: 0.8}}
               animate = {}
   { opacity: 1,;
-  scale: 1;,
-}}
+  scale: 1}}
               transition = {}
   { duration: 0.8,;
-  delay: 0.2;,
-}}
+  delay: 0.2}}
               className="inline - flex items - center justify - center w-20 h-20 bg-gradient - to - br from - zion - cyan to - zion - purple rounded-2xl mb-8";
-";,
-}}"";
+"}}"";
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"";
 "";
               <Cpu className="w-10 h-10 text-white" />;
@@ -811,12 +791,10 @@ export default function AIAutonomousSystems() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
 "";
@@ -832,19 +810,15 @@ export default function AIAutonomousSystems() {}
                 key={benefit.title}
                 initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                 transition = {}
   { duration: 0.6,;
-  delay: index * 0.1;,
-}}
+  delay: index * 0.1}}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 8 hover:border-zion - cyan / 40 transition - all duration -300";
-";,
-}}"";
+"}}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"";
 "";
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">"";
@@ -874,12 +848,10 @@ export default function AIAutonomousSystems() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
 "";
@@ -895,19 +867,15 @@ export default function AIAutonomousSystems() {}
                 key={technology.name}
                 initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                 transition = {}
   { duration: 0.6,;
-  delay: index * 0.1;,
-}}
+  delay: index * 0.1}}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 text-center hover:border-zion - cyan / 40 transition - all duration -300";
-";,
-}}"";
+"}}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"";
 "";
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">"";
@@ -926,8 +894,7 @@ export default function AIAutonomousSystems() {}
                     ? 'bg-red-500/20 text-red-400 border border-red-500/30'''''`;
                     : technology.reliability === 'High''''`'`;
                     ? 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30'''`'`'`;
-                    : 'bg-green-500/20 text-green-400 border border-green-500/30'````;,
-}`}>;
+                    : 'bg-green-500/20 text-green-400 border border-green-500/30'````}`}>;
                   {technology.reliability} Reliability;
                 </span>;
               </motion.div>;) ) }
@@ -941,12 +908,10 @@ export default function AIAutonomousSystems() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
 "";
@@ -962,17 +927,14 @@ export default function AIAutonomousSystems() {}
                 key={step.step}
                 initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                 transition = {}
   { duration: 0.6,;
   delay: index * 0.1;
-";,
-}}"";
+"}}"";
                 className="text-center"";
 "";
                 <div className="relative mb-6">"";
@@ -1000,12 +962,10 @@ export default function AIAutonomousSystems() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
 "";
@@ -1027,9 +987,8 @@ export default function AIAutonomousSystems() {}
 '''`;
                   selectedCategory === category'''`'`;
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'''`'`'`;
-                    : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````;,
-}`}
-;
+                    : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````}`}
+
                 {category}
               </button>) ) }
           </div>";
@@ -1040,21 +999,17 @@ export default function AIAutonomousSystems() {}
                 key={solution.id}
                 initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                 transition = {}
   { duration: 0.6,;
-  delay: index * 0.1;,
-}}
+  delay: index * 0.1}}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 hover:border-zion - cyan / 40 transition - all duration - 300 cursor -pointer";
                 onClick={ () => setSelectedSolution(solution) }
-;
-";,
-}}"";
+
+"}}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer";
                 onClick={() => setSelectedSolution(solution)}";
 "";
@@ -1108,12 +1063,10 @@ export default function AIAutonomousSystems() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
 "";
@@ -1129,19 +1082,15 @@ export default function AIAutonomousSystems() {}
                 key={story.id}
                 initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                 transition = {}
   { duration: 0.6,;
-  delay: index * 0.1;,
-}}
+  delay: index * 0.1}}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 hover:border-zion - cyan / 40 transition - all duration -300";
-";,
-}}"";
+"}}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"";
 "";
                 <div className="flex items-center gap-4 mb-6">"";
@@ -1186,12 +1135,10 @@ export default function AIAutonomousSystems() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center max-w-4xl mx-auto"";
 "";
@@ -1218,14 +1165,10 @@ export default function AIAutonomousSystems() {}
       </section>;
     </div>;
   )}
-;
 
-export { AIAutonomousSystems };
-;
-export { AIAutonomousSystems };
-;
-export { AIAutonomousSystems };
-;
-export { AIAutonomousSystems };
-;
-export { AIAutonomousSystems };
+
+export { AIAutonomousSystems }
+export { AIAutonomousSystems }
+export { AIAutonomousSystems }
+export { AIAutonomousSystems }
+export { AIAutonomousSystems }

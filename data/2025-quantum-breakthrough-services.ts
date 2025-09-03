@@ -1,5 +1,5 @@
 export const quantumBreakthroughServices2025 = [;
-  {;
+  {
     id: "quantum-internet-security-platform",;
     name: "Quantum Internet Security Platform",;
     description: "Revolutionary quantum internet platform providing unhackable communication channels, quantum key distribution, and post-quantum cryptography for secure enterprise communications.",;
@@ -15,15 +15,13 @@ export const quantumBreakthroughServices2025 = [;
       "API for enterprise integration and automation",;
       "24/7 quantum security operations center";
     ],;
-    pricing: {;,;,
-},;
+    pricing: {},;
     category: "Quantum Internet & Security",;
     tags["Quantum Computing", "Internet Security", "Cryptography", "Network Security", "Government Compliance"],;
     website: "https://ziontechgroup.com/quantum-internet-security-platform",;
-    contact: {;
+    contact: {
       phone: "+1 302 464 0950",;
-      email: "kleber@ziontechgroup.com";,;,
-},;
+      email: "kleber@ziontechgroup.com"},;
     marketSize: "$150B",;
     targetAudience: "Government agencies, military organizations, financial institutions, healthcare providers, energy companies",;
     competitiveAdvantage: "First-to-market quantum internet security platform, quantum-level protection, government compliance",;
@@ -35,9 +33,8 @@ export const quantumBreakthroughServices2025 = [;
       "Critical infrastructure protection";
     ],;
     integrations["Government systems", "Military networks", "Financial platforms", "Healthcare systems", "Energy grids"],;
-    compliance["FIPS 140-3", "NIST standards", "SOC2", "ISO 27001", "Government security standards"];,;,
-},;
-  {;
+    compliance["FIPS 140-3", "NIST standards", "SOC2", "ISO 27001", "Government security standards"]},;
+  {
     id: "quantum-bio-computing-platform",;
     name: "Quantum Bio-Computing Platform",;
     description: "Breakthrough platform combining quantum computing with biological systems for unprecedented drug discovery, protein folding, and medical research capabilities.",;
@@ -53,15 +50,13 @@ export const quantumBreakthroughServices2025 = [;
       "Custom quantum bio-algorithms",;
       "API access for research institutions";
     ],;
-    pricing: {;,;,
-},;
+    pricing: {},;
     category: "Quantum Biology",;
     tags["Quantum Computing", "Biology", "Drug Discovery", "Medical Research", "Protein Folding"],;
     website: "https://ziontechgroup.com/quantum-bio-computing-platform",;
-    contact: {;
+    contact: {
       phone: "+1 302 464 0950",;
-      email: "kleber@ziontechgroup.com";,;,
-},;
+      email: "kleber@ziontechgroup.com"},;
     marketSize: "$180B",;
     targetAudience: "Pharmaceutical companies, research institutions, medical device companies, biotechnology firms",;
     competitiveAdvantage: "First quantum bio-computing platform, quantum accuracy in molecular simulation, accelerated drug discovery",;
@@ -73,9 +68,8 @@ export const quantumBreakthroughServices2025 = [;
       "Biotechnology innovation";
     ],;
     integrations["Medical databases", "Research platforms", "Laboratory systems", "Clinical trial platforms", "Genetic databases"],;
-    compliance["HIPAA", "FDA regulations", "SOC2", "ISO 27001", "Medical research standards"];,;,
-},;
-  {;
+    compliance["HIPAA", "FDA regulations", "SOC2", "ISO 27001", "Medical research standards"]},;
+  {
     id: "brain-computer-interface-platform",;
     name: "Brain-Computer Interface Platform",;
     description: "Revolutionary platform for developing neural interfaces that connect human brains directly to computers, enabling next-generation human-AI collaboration.",;
@@ -91,15 +85,13 @@ export const quantumBreakthroughServices2025 = [;
       "Research and development tools",;
       "API for custom applications";
     ],;
-    pricing: {;,;,
-},;
+    pricing: {},;
     category: "Neural Interfaces",;
     tags["Brain-Computer Interface", "Neural Networks", "AI", "Medical Technology", "Human-AI Collaboration"],;
     website: "https://ziontechgroup.com/brain-computer-interface-platform",;
-    contact: {;
+    contact: {
       phone: "+1 302 464 0950",;
-      email: "kleber@ziontechgroup.com";,;,
-},;
+      email: "kleber@ziontechgroup.com"},;
     marketSize: "$5B",;
     targetAudience: "Research institutions, medical device companies, technology companies, government agencies",;
     competitiveAdvantage: "First comprehensive neural interface platform, advanced AI integration, safety-focused development",;
@@ -111,9 +103,8 @@ export const quantumBreakthroughServices2025 = [;
       "Next-generation computing interfaces";
     ],;
     integrations["Medical systems", "AI platforms", "Research tools", "Monitoring systems", "Safety protocols"],;
-    compliance["FDA regulations", "Medical device standards", "SOC2", "ISO 27001", "Research ethics standards"];,;,
-},;
-  {;
+    compliance["FDA regulations", "Medical device standards", "SOC2", "ISO 27001", "Research ethics standards"]},;
+  {
     id: "space-mining-platform",;
     name: "Space Mining Platform",;
     description: "Advanced platform for autonomous space mining operations, resource extraction, and space resource management with AI-powered optimization.",;
@@ -129,15 +120,13 @@ export const quantumBreakthroughServices2025 = [;
       "Custom mining mission planning",;
       "API for space operations";
     ],;
-    pricing: {;,;,
-},;
+    pricing: {},;
     category: "Space Technology",;
     tags["Space Mining", "Autonomous Systems", "AI", "Robotics", "Resource Extraction"],;
     website: "https://ziontechgroup.com/space-mining-platform",;
-    contact: {;
+    contact: {
       phone: "+1 302 464 0950",;
-      email: "kleber@ziontechgroup.com";,;,
-},;
+      email: "kleber@ziontechgroup.com"},;
     marketSize: "$3.5T",;
     targetAudience: "Space agencies, mining companies, technology companies, government organizations",;
     competitiveAdvantage: "First autonomous space mining platform, AI-powered optimization, comprehensive mission control",;
@@ -149,9 +138,8 @@ export const quantumBreakthroughServices2025 = [;
       "Resource transportation logistics";
     ],;
     integrations["Space agency systems", "Satellite networks", "Ground control systems", "AI platforms", "Robotic systems"],;
-    compliance["Space regulations", "International space law", "SOC2", "ISO 27001", "Space safety standards"];,;,
-},;
-  {;
+    compliance["Space regulations", "International space law", "SOC2", "ISO 27001", "Space safety standards"]},;
+  {
     id: "quantum-energy-platform",;
     name: "Quantum Energy Platform",;
     description: "Revolutionary platform leveraging quantum computing for energy optimization, grid management, and renewable energy integration with unprecedented efficiency.",;
@@ -167,15 +155,13 @@ export const quantumBreakthroughServices2025 = [;
       "Custom energy optimization models",;
       "API for energy management systems";
     ],;
-    pricing: {;,;,
-},;
+    pricing: {},;
     category: "Quantum Energy",;
     tags["Quantum Computing", "Energy Management", "Smart Grid", "Renewable Energy", "Optimization"],;
     website: "https://ziontechgroup.com/quantum-energy-platform",;
-    contact: {;
+    contact: {
       phone: "+1 302 464 0950",;
-      email: "kleber@ziontechgroup.com";,;,
-},;
+      email: "kleber@ziontechgroup.com"},;
     marketSize: "$2.5T",;
     targetAudience: "Utility companies, energy providers, government agencies, industrial companies",;
     competitiveAdvantage: "First quantum energy optimization platform, quantum accuracy in energy management, comprehensive grid optimization",;

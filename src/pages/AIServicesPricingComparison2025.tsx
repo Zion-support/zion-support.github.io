@@ -2,11 +2,9 @@ import React, { useState } from "react";
   Search,;
   Filter} from "lucide-react";
 
-const AIServicesPricingComparison2025: React.FC = () => {",,;
-  const [activeCategory, setActiveCategory] = useState();,
-}
-  const [searchTerm, setSearchTerm] = useState("");,
-}
+const AIServicesPricingComparison2025: React.FC = () => {",;
+  const [activeCategory, setActiveCategory] = useState()}
+  const [searchTerm, setSearchTerm] = useState("")}
   const categories = [];
 
   const pricingComparison = [],;
@@ -15,8 +13,7 @@ const AIServicesPricingComparison2025: React.FC = () => {",,;
 name: "DoNotPay",;
           price: 12000,";
           features: ["Basic Legal Forms", "Limited Automation", "No Risk Assessment", "Basic Support"],";
-          missing: ["Advanced AI", "Custom Solutions", "Enterprise Features"];,
-},;
+          missing: ["Advanced AI", "Custom Solutions", "Enterprise Features"]},;
         {";
           name: "LegalZoom",;
           price: 15000,";
@@ -45,8 +42,7 @@ name: "DoNotPay",;
 name: "Workday",;
           price: 25000,";
           features: ["Basic HR Management", "Standard Reporting", "Traditional Support", "Limited AI"],";
-          missing: ["AI Automation", "Predictive Analytics", "Cost Optimization"];,
-},;
+          missing: ["AI Automation", "Predictive Analytics", "Cost Optimization"]},;
         {";
           name: "BambooHR",;
           price: 18000,";
@@ -75,8 +71,7 @@ name: "Workday",;
 name: "HubSpot",;
           price: 32000,";
           features: ["Basic Marketing Tools", "Standard Automation", "Limited AI", "Basic Analytics"],";
-          missing: ["Advanced AI", "ROI Optimization", "Intelligent Insights"];,
-},;
+          missing: ["Advanced AI", "ROI Optimization", "Intelligent Insights"]},;
         {";
           name: "Marketo",;
           price: 45000,";
@@ -105,8 +100,7 @@ name: "HubSpot",;
 name: "Salesforce",;
           price: 36000,";
           features: ["CRM Database", "Basic Reporting", "Standard Automation", "Limited AI"],";
-          missing: ["AI Prediction", "Process Optimization", "Intelligent Coaching"];,
-},;
+          missing: ["AI Prediction", "Process Optimization", "Intelligent Coaching"]},;
         {";
           name: "HubSpot Sales",;
           price: 24000,";
@@ -135,8 +129,7 @@ name: "Salesforce",;
 name: "QuickBooks Enterprise",;
           price: 15000,";
           features: ["Basic Accounting", "Standard Reporting", "Limited Automation", "No AI"],";
-          missing: ["AI Automation", "Intelligence", "Risk Assessment"];,
-},;
+          missing: ["AI Automation", "Intelligence", "Risk Assessment"]},;
         {";
           name: "Xero",;
           price: 12000,";
@@ -165,8 +158,7 @@ name: "QuickBooks Enterprise",;
 name: "CrowdStrike",;
           price: 50000,";
           features: ["Basic Security", "Standard Monitoring", "Limited AI", "Basic Support"],";
-          missing: ["AI Intelligence", "Autonomous Response", "Advanced Analytics"];,
-},;
+          missing: ["AI Intelligence", "Autonomous Response", "Advanced Analytics"]},;
         {";
           name: "SentinelOne",;
           price: 45000,";
@@ -195,8 +187,7 @@ name: "CrowdStrike",;
 name: "Tableau",;
           price: 35000,";
           features: ["Data Visualization", "Basic Analytics", "Standard Reporting", "Limited AI"],";
-          missing: ["AI Intelligence", "Predictive Analytics", "Autonomous Insights"];,
-},;
+          missing: ["AI Intelligence", "Predictive Analytics", "Autonomous Insights"]},;
         {";
           name: "Power BI",;
           price: 25000,";
@@ -225,8 +216,7 @@ name: "Tableau",;
 name: "Jenkins Enterprise",;
           price: 40000,";
           features: ["Basic CI/CD", "Standard Tools", "Limited Automation", "No AI"],";
-          missing: ["AI Intelligence", "Advanced Optimization", "Intelligent Automation"];,
-},;
+          missing: ["AI Intelligence", "Advanced Optimization", "Intelligent Automation"]},;
         {";
           name: "GitLab CI",;
           price: 30000,";
@@ -255,8 +245,7 @@ name: "Jenkins Enterprise",;
 name: "AWS CloudFormation",;
           price: 50000,";
           features: ["Basic Cloud Tools", "Standard Management", "Limited AI", "Basic Support"],";
-          missing: ["AI Intelligence", "Cost Optimization", "Intelligent Orchestration"];,
-},;
+          missing: ["AI Intelligence", "Cost Optimization", "Intelligent Orchestration"]},;
         {";
           name: "Terraform Enterprise",;
           price: 45000,";
@@ -285,8 +274,7 @@ name: "AWS CloudFormation",;
 name: "Ethereum Enterprise",;
           price: 100000,";
           features: ["Basic Blockchain", "Standard Tools", "Limited AI", "Basic Support"],";
-          missing: ["AI Intelligence", "Advanced Analytics", "Autonomous Operations"];,
-},;
+          missing: ["AI Intelligence", "Advanced Analytics", "Autonomous Operations"]},;
         {";
           name: "Hyperledger",;
           price: 80000,";
@@ -315,8 +303,7 @@ name: "Ethereum Enterprise",;
 name: "IBM Quantum",;
           price: 200000,";
           features: ["Basic Quantum", "Standard Tools", "Limited AI", "Basic Support"],";
-          missing: ["AI Intelligence", "Advanced Analytics", "Autonomous Operations"];,
-},;
+          missing: ["AI Intelligence", "Advanced Analytics", "Autonomous Operations"]},;
         {";
           name: "Google Quantum",;
           price: 180000,";
@@ -330,33 +317,27 @@ name: "IBM Quantum",;
 
   ];
 
-  const filteredServices = pricingComparison.filter(service => {;
+  const filteredServices = pricingComparison.filter(service => {
     const matchesCategory = activeCategory === "all" || service.category === activeCategory;
     const matchesSearch = service.service.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase());,
-}
-    return matchesCategory && matchesSearch});,
-}
+                         service.category.toLowerCase().includes(searchTerm.toLowerCase())}
+    return matchesCategory && matchesSearch})}
   const containerVariants = {},;
     visible: {,;
 opacity: 1,;
       transition: {,staggerChildren: 0.1}
-;,
 }
-;,
 }
-;
+
   const itemVariants = {},;
     visible: {,;
 y: 0,;
       opacity: 1,;
       transition: {,;
 duration: 0.5,"        ease: "easeOut"}
-;,
 }
-;,
 }
-;
+
   return (;
     <>;
       <Helmet>;
@@ -427,14 +408,14 @@ initial="{{" opacity: 0, y: 30 }}";
                   {categories.map((category) => (",;
                     <option key="{category.id}" value="{category.id}">;
                       {category.icon} {category.name}
-;
+
                     </option>;
                   ))}
-;
+
                 </select>;
               </div>;
             {/* comment */}
-;
+
             <motion.div,";
 variants="{containerVariants}
               initial="hidden;
@@ -457,12 +438,12 @@ key="{service.id}
                         <h4 className="text-2xl font-bold text-white mb-2">Zion Tech Group</h4>";
                         <div className="{"text-4xl" font-bold text-green-400 mb-2">;
                           ${service.zionPrice.toLocaleString()}
-;
+
                         </div>";
                         <div className=""text-sm" text-gray-300 mb-4"}>One-time setup</div>";
                         <div className="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm font-semibold">;
                           {service.roi}
-;
+
                         </div>;
 ";
                       <div className="space-y-3 mb-6">";
@@ -473,7 +454,7 @@ key="{service.id}
                             <span className="text-gray-300 text-sm">{feature}</span>;
                           </div>;
                         ))}
-;
+
                       </div>;
 ";
                       <div className="text-center">";
@@ -486,14 +467,14 @@ key="{service.id}
                       </div>;
 ,;
                     {/* comment */}
-;
+
                     {service.competitors.map((competitor, index) => (";
                       <div key="{index}" className="bg-white/5 border border-gray-600 rounded-lg p-6">";
                         <div className="text-center mb-6">";
                           <h4 className="text-xl font-bold text-white mb-2">{competitor.name}</h4>";
                           <div className="{"text-3xl" font-bold text-red-400 mb-2">;
                             ${competitor.price.toLocaleString()}
-;
+
                           </div>";
                           <div className=""text-sm" text-gray-300 mb-4"}>Annual subscription</div>";
                           <div className="bg-red-500/20 text-red-400 px-3 py-1 rounded-full text-sm font-semibold">;
@@ -508,7 +489,7 @@ key="{service.id}
                               <span className="text-gray-400 text-sm">{feature}</span>;
                             </div>;
                           ))}
-;
+
                         </div>;
 ";
                         <div className="space-y-3 mb-6">";
@@ -519,10 +500,10 @@ key="{service.id}
                               <span className="text-gray-400 text-sm">{feature}</span>;
                             </div>;
                           ))}
-;
+
                         </div>;
                     ))}
-;
+
                   </div>;
 ";
                   <div className="mt-8 text-center">";
@@ -543,7 +524,7 @@ key="{service.id}
                         </div>;
                 </motion.div>;
               ))}
-;
+
             </motion.div>;
           </div>;
         </section>;
@@ -555,7 +536,7 @@ initial="{{" opacity: 0, y: 30 }}";
               whileInView="{{" opacity: 1, y: 0 }}";
               transition="{{" duration: 0.8 }}";
               viewport="{{" once: true }}
-;
+
             >";
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">;
                 Ready to Save Money & Get Better Results?;
@@ -581,6 +562,6 @@ Call: +1 302 464 0950,;
       </div>;
     </>;
   )}
-;
+
 ");
 export default AIServicesPricingComparison2025;"}}}}}}}}}}}}}}

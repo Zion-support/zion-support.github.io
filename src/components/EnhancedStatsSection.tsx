@@ -1,16 +1,15 @@
 import {  import { motion, useAnimation  } from 'framer-motion';
  from 'lucide-react';
-;
-interface Stat {;
+
+interface Stat {
   id: string;
   icon: React.ComponentType < any>;
   value: string;
   label: string;
   description: string;
   color: string;
-  gradient: string;,
-}
-;
+  gradient: string}
+
 const stats: Stat[] = [{;
 
     id: 'clients',;
@@ -19,9 +18,8 @@ const stats: Stat[] = [{;
     label: 'Global Clients',;
     description: 'Serving businesses across 50+ countries',;
     color: 'zion-cyan',;
-    gradient: 'from-zion-cyan to-zion-blue';,
-},;
-  {;
+    gradient: 'from-zion-cyan to-zion-blue'},;
+  {
 
     id: 'uptime',;
     icon: Shield,;
@@ -29,9 +27,8 @@ const stats: Stat[] = [{;
     label: 'Uptime Guarantee',;
     description: 'Enterprise-grade reliability and performance',;
     color: 'zion-purple',;
-    gradient: 'from-zion-purple to-zion-cyan';,
-},;
-  {;
+    gradient: 'from-zion-purple to-zion-cyan'},;
+  {
 
     id: 'roi',;
     icon: TrendingUp,;
@@ -39,9 +36,8 @@ const stats: Stat[] = [{;
     label: 'Average ROI',;
     description: 'Proven business impact and cost savings',;
     color: 'zion-blue',;
-    gradient: 'from-zion-blue to-zion-purple';,
-},;
-  {;
+    gradient: 'from-zion-blue to-zion-purple'},;
+  {
 
     id: 'satisfaction',;
     icon: Star,;
@@ -49,9 +45,8 @@ const stats: Stat[] = [{;
     label: 'Client Satisfaction',;
     description: 'Consistently exceeding expectations',;
     color: 'zion-cyan',;
-    gradient: 'from-zion-cyan to-zion-purple';,
-},;
-  {;
+    gradient: 'from-zion-cyan to-zion-purple'},;
+  {
 
     id: 'innovation',;
     icon: Zap,;
@@ -59,9 +54,8 @@ const stats: Stat[] = [{;
     label: 'Patents & Innovations',;
     description: 'Leading edge technology development',;
     color: 'zion-purple',;
-    gradient: 'from-zion-purple to-zion-blue';,
-},;
-  {;
+    gradient: 'from-zion-purple to-zion-blue'},;
+  {
 
     id: 'growth',;
     icon: Rocket,;
@@ -72,46 +66,42 @@ const stats: Stat[] = [{;
     gradient: 'from-zion-blue to-zion-cyan';
 
 ];
-;
-export default function EnhancedStatsSection(...args[]):  {;
+
+export default function EnhancedStatsSection(...args[]):  {
 
   const [countedValues, setCountedValues] = useState<any>({});
-  ;
+
   const [ref, inView] = useInView({;
 
     threshold: 0.3,;
-    triggerOnce: true;,
-}) ;
-;
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;,
-}, []);
-    if(inView) {;
+    triggerOnce: true}) ;
+
+  useEffect(() => {
+  // TODO: Add dependencies if needed}, []);
+    if(inView) {
 
       controls.start('visible')}
   }, [controls, inView]);
-;
+
     const increment = numericValue / (duration / 16) ; // 60fps;
 
     let current = start;
-    ;
+
       current += increment;
-      if(current >= numericValue) {;
+      if(current >= numericValue) {
 
         current = numericValue;
         clearInterval(timer) }
 setCountedValues(prev:  > ({;
         ...prev,;
         [target]: Math.floor (current) }) ) }, 16) ;
-;
-    return timer};
-;
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;,
-}, []);
-    if(inView) {;
 
-      stats.forEach((stat) => {;
+    return timer}
+  useEffect(() => {
+  // TODO: Add dependencies if needed}, []);
+    if(inView) {
+
+      stats.forEach((stat) => {
 
           animateCount(stat.value)}, stats.indexOf(stat) * 200);
         return () => clearTimeout(timer)})}
@@ -129,24 +119,22 @@ setCountedValues(prev:  > ({;
         {/* Section Header */}
         <motion.div;
           ref={ref}
-          initial = {;
+          initial = {
 
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
           animate={controls}
-          variants = {;
+          variants = {
 
-  {;
+  {
 
-            visible: {;
+            visible: {
 
               opacity: 1,;
               y: 0,;
-  transition: {;
+  transition: {
 
-                duration: 0.6;,
-}
+                duration: 0.6}
             }
           }}";
           className="text-center mb-16";
@@ -164,25 +152,23 @@ setCountedValues(prev:  > ({;
           {stats.map((stat, index)  => (;
             <motion.div;
               key={stat.id}
-              initial = {;
+              initial = {
 
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
               animate={controls}
-              variants = {;
+              variants = {
 
-  {;
+  {
 
-                visible: {;
+                visible: {
 
                   opacity: 1,;
                   y: 0,;
-                  transition: {;
+                  transition: {
 
                     duration: 0.6,;
-  delay: index * 0.1;,
-}
+  delay: index * 0.1}
                 }
               }}";
               className="group relative";
@@ -194,10 +180,9 @@ setCountedValues(prev:  > ({;
                   y: -10,;
                   scale: 1.02,;
                   borderColor: `rgba(34, 221, 210,`;
-  0.5)`;,
-}}
+  0.5)`}}
                 transition={{ duration: 0.3 }}
-;
+
                 {/* Background gradient overlay */}`;
                 <div className={`absolute inset-0 bg-gradient-to-br ${stat.gradient} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>;
 
@@ -207,8 +192,7 @@ className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-
                   whileHover={{;
 
                     rotate: 360,;
-  scale: 1.1;,
-}}
+  scale: 1.1}}
                   transition={{ duration: 0.6 }}
 `;
                   <stat.icon className={`w-10 h-10 text-${stat.color}`} />;
@@ -219,11 +203,10 @@ className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-
                   className="mb-4 relative z-10";
                   initial={{ scale: 0.8 }}
                   animate={{ scale: 1 }}
-                  transition = {;
+                  transition = {
 
   { duration: 0.5,;
-  delay: index * 0.1;,
-}}
+  delay: index * 0.1}}
                 >";
                   <span className="text-5xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">;
                     {countedValues[stat.value] || 0}
@@ -253,19 +236,19 @@ className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-
 
         {/* Bottom Achievement Section */}
         <motion.div;
-          initial = {;
+          initial = {
 
   { opacity: 0,;
   y: 30 }}          animate={controls}
-          variants = {;
+          variants = {
 
-  {;
+  {
 
-            visible: {;
+            visible: {
 
               opacity: 1,;
               y: 0,;
-              transition: {;
+              transition: {
 
                 duration: 0.6,;
   delay: 0.6}            }

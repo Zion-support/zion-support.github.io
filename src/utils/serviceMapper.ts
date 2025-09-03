@@ -1,6 +1,6 @@
 // comment;
 export const serviceMapper = {}
-;
+
     // Interface for the existing service structure;
     id: string;
     title: string;
@@ -20,28 +20,25 @@ export const serviceMapper = {}
     marketPrice: string;
     roi: string;
     innovationLevel: string;
-    contactInfo: {;
+    contactInfo: {
       phone: string;
       email: string;
-      website: string;,
-};
-    technicalSpecs?: {;
+      website: string}
+    technicalSpecs?: {
       technology: string[];
       integrations: string[];
       apiEndpoints: number;
       uptime: string;
-      security: string[];,
-};
+      security: string[]}
     competitors?: string[];
     marketSize?: string;
-    compliance?: string[];,
-}
+    compliance?: string[]}
     id: service.id,;
     title: service.name,;
     description: service.description,;
     category: service.category,;
     subcategory: service.category, // Use category as subcategory for now';
-    price: parseInt(service.price.replace(/[$,]/g,)), // Convert "$18,999" to 18999';
+    price: parseInt(service.price.replace(/[$]/g)), // Convert "$18,999" to 18999';
     currency: '$',;
     pricingModel: 'monthly',;
     features: service.features,;
@@ -54,21 +51,19 @@ export const serviceMapper = {}
     marketPrice: service.price + service.period,;
     roi: service.roi,;
     innovationLevel: 'Advanced',;
-    contactInfo: {;
+    contactInfo: {
 
       phone: service.contactInfo.mobile,;
       email: service.contactInfo.email,;
       website: service.contactInfo.website},;
-    technicalSpecs: {;
+    technicalSpecs: {
 
       technology: service.technology,;
       integrations: service.integrations,;
       apiEndpoints: 200, // Default value';
       uptime: '99.9%', // Default value';
-      security: ['SOC 2',ISO 27001',Data encryption'], // Default security;,
-},;
+      security: ['SOC 2',ISO 27001',Data encryption'], // Default security},;
     competitors: service.competitors,;
     marketSize: service.marketSize,;
-    compliance: ['SOC 2',ISO 27001'], // Default compliance;,
-}))}
+    compliance: ['SOC 2',ISO 27001'], // Default compliance}))}
 '";

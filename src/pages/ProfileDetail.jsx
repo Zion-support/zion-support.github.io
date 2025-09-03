@@ -49,7 +49,7 @@ export default function ProfileDetail() {}
                     variant: "destructive"})}
             finally {}
                 setIsLoading(false) }
-        };
+        }
         fetchProfile () }, [profileId]) ;
     if (isLoading) {}
 ";
@@ -173,8 +173,7 @@ export default function ProfileDetail() {}
             id: profileData?.id || '',''';
             full_name: profileData?.full_name || '',''';
             professional_title: profileData?.professional_title || '',;
-  hourly_rate: profileData?.hourly_rate || 0;,
-}}/>";
+  hourly_rate: profileData?.hourly_rate || 0}}/>";
             {/* Contact Information */}"";
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">"";
               <h3 className="text-xl font-bold mb-4">Contact</h3>"";
@@ -217,16 +216,12 @@ export default function ProfileDetail() {}
           </div>;
         </div>;
       </div>;
-      ;
-    </>)}
-;
 
-export { ProfileDetail };
-;
-export { ProfileDetail };
-;
-export { ProfileDetail };
-;
-export { ProfileDetail };
-;
-export { ProfileDetail };
+    </>)}
+
+
+export { ProfileDetail }
+export { ProfileDetail }
+export { ProfileDetail }
+export { ProfileDetail }
+export { ProfileDetail }

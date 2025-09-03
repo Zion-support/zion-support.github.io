@@ -1,25 +1,21 @@
 import Head from "next/head";
 import React from "react";
 import dynamic from "next/dynamic";
-const Component = () => {;
-const Head = dynamic(() => import("next/head"), { ssr: false });,
-}
-const Link = dynamic(() => import("next/link"), { ssr: false });,
-}
+const Component = () => {
+const Head = dynamic(() => import("next/head"), { ssr: false })}
+const Link = dynamic(() => import("next/link"), { ssr: false })}
       type: "Full-time",";
       experience: "3+ years",";
-      description: "Build modern web applications using React, Node.js, and cloud technologies.";,
-},;
-    {;
+      description: "Build modern web applications using React, Node.js, and cloud technologies."},;
+    {
       id: 4,";
       title: "DevOps Engineer",";
       department: "Engineering",";
       location: "Remote",";
       type: "Full-time",";
       experience: "4+ years",";
-      description: "Manage infrastructure, CI/CD pipelines, and ensure system reliability.";,
-},;
-    {;
+      description: "Manage infrastructure, CI/CD pipelines, and ensure system reliability."},;
+    {
       id: 5,";
       title: "Business Development Manager",";
       department: "Sales",";
@@ -27,7 +23,7 @@ const Link = dynamic(() => import("next/link"), { ssr: false });,
       type: "Full-time",";
       experience: "5+ years",";
       description: "Drive growth by building relationships with enterprise clients and partners."},;
-    {;
+    {
       id: 6,";
       title: "UX/UI Designer",";
       department: "Design",";
@@ -35,7 +31,7 @@ const Link = dynamic(() => import("next/link"), { ssr: false });,
       type: "Full-time",";
       experience: "3+ years",";
       description: "Create intuitive and beautiful user experiences for our digital products."}
-;
+
   ];
 
   const benefits = [];
@@ -130,7 +126,7 @@ vision of creating meaningful impact.;
                 <span className="text-gray-700">{benefit}</span>;
               </div>;
             ))}
-;
+
           </div>;
       </section>;
       {/* comment */}";
@@ -157,35 +153,35 @@ vision of creating meaningful impact.;
                       <div className="flex items-center">";
                         <MapPin className="h-4 w-4 mr-1"  />;
                         {position.location}
-;
+
                       </div>";
                       <div className="flex items-center">";
                         <Clock className="h-4 w-4 mr-1"  />;
                         {position.type}
-;
+
                       </div>";
                       <div className="flex items-center">";
                         <Users className="h-4 w-4 mr-1"  />;
                         {position.experience}
-;
+
                       </div>";
                       <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-medium">;
                         {position.department}
-;
+
                       </span>;
                     </div>;
                   ";
                   <div className="{"mt-4" lg: mt-0 lg:ml-6">",;
                     <Link href="{"/talent/${position.id}"}
                       className=""inline-flex" items-center px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors"}
-;
+
                     >;
                       Apply Now";
                       <ArrowRight className="h-4 w-4 ml-2"  />;
                     </Link>;
                   </div>;
             ))}
-;
+
           </div>;
       </section>;
       {/* comment */}";
@@ -205,5 +201,5 @@ vision of creating meaningful impact.;
       </section>;
     </PageTransition>",;
   )}
-;
+
 export default Component

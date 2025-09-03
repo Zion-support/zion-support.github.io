@@ -7,9 +7,8 @@ import { cn } from '@/lib/utils';
                 { key: 'services', href: '/services', icon: <Settings className="w-4 h-4"/>, label: 'Services' },";
                 { key: 'talent', href: '/talent', icon: <Users className="w-4 h-4"/>, label: 'Talent' },";
                 { key: 'equipment', href: '/equipment', icon: <BarChart3 className="w-4 h-4"/>, label: 'Equipment' },;
-            ];,
-},;
-        {;
+            ]},;
+        {
 
             title: 'Comp',;
             items[;'";
@@ -17,9 +16,8 @@ import { cn } from '@/lib/utils';
                 { key: 'careers', href: '/careers', icon: <Briefcase className="w-4 h-4"/>, label: 'Careers' },";
                 { key: 'partners', href: '/partners', icon: <Users className="w-4 h-4"/>, label: 'Partners' },";
                 { key: 'contact', href: '/contact', icon: <Mail className="w-4 h-4"/>, label: 'Contact' },;
-            ];,
-},;
-        {;
+            ]},;
+        {
 
             title: 'Resources',;
             items[;'";
@@ -27,9 +25,8 @@ import { cn } from '@/lib/utils';
                 { key: 'community', href: '/community', icon: <Globe className="w-4 h-4"/>, label: 'Community' },";
                 { key: 'green-it', href: '/green-it', icon: <Leaf className="w-4 h-4"/>, label: 'Green IT' },";
                 { key: 'zion-hire-ai', href: '/zion-hire-ai', icon: <Zap className="w-4 h-4"/>, label: 'AI Hiring' },;
-            ];,
-},;
-        {;
+            ]},;
+        {
 
             title: 'Support',;
             items[;'";
@@ -40,9 +37,9 @@ import { cn } from '@/lib/utils';
             ];
 
     ];
-    const isActive = (href) => {;
+    const isActive = (href) => {
 
-        if(href === '/') {;
+        if(href === '/') {
 
             return location.pathname === '/'}
         return location.pathname.startsWith(href)};";
@@ -65,13 +62,12 @@ import { cn } from '@/lib/utils';
             </h3>";
             <ul className="space-y-1">;
               {section.items.map((item) => (<li key={item.key}>;
-                  <Link to={item.href} className = {;
+                  <Link to={item.href} className = {
 ";
   cn("flex items-center space-x-3 px-3 py-2 rounded-md text-sm font-medium transition-colors",;
   isActive(item.href)";
                     ? "bg-zion-purple/20 text-zion-cyan";
-                    : "text-zion-slate-light hover:bg-zion-purple/10 hover:text-zion-cyan");,
-}>;
+                    : "text-zion-slate-light hover:bg-zion-purple/10 hover:text-zion-cyan")}>;
                     {item.icon}
                     <span>{item.label}</span>;
                   </Link>;

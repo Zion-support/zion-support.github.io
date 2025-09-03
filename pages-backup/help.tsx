@@ -1,10 +1,8 @@
 import React from "react";
 import type { NextPage } from "next";
-const Layout = dynamic(() => import("../components/Layout"), { ssr: false });,
-}
-const Link = dynamic(() => import("next/link"), { ssr: false });,
-}
-const Help: NextPage = () => {;
+const Layout = dynamic(() => import("../components/Layout"), { ssr: false })}
+const Link = dynamic(() => import("next/link"), { ssr: false })}
+const Help: NextPage = () => {
 
   const supportOptions = [];
   return (";
@@ -38,11 +36,11 @@ const Help: NextPage = () => {;
                 <p className="text-gray-600 mb-4">{option.description}</p>";
                 <button className="text-blue-600 hover: text-blue-700 font-medium">,;
                   {option.action}
-;
+
                 </button>;
               </div>;
             ))}
-;
+
           </div>;
           {/* comment */}";
           <div className="max-w-4xl mx-auto">";
@@ -60,7 +58,7 @@ const Help: NextPage = () => {;
                     <p className="text-gray-600">{faq.answer}</p>;
                   </div>;
               ))}
-;
+
             </div>;
           {/* comment */}";
           <div className="max-w-4xl mx-auto mt-12 bg-blue-600 rounded-lg p-8 text-white text-center">";
@@ -80,5 +78,5 @@ const Help: NextPage = () => {;
             </div>;
     </Layout>;,;
   )}
-;
+
 "export default Help'

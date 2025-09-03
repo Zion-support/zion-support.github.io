@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion  } from 'framer-motion';
-export default function Page() {;
-;
+export default function Page() {
+
     return (<section className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-purple-dark to-zion-blue-dark relative overflow-hidden">;
       {/* Background Elements */}";
       <div className="absolute inset-0 bg-quantum-mesh opacity-30"></div>;";
@@ -10,15 +10,13 @@ export default function Page() {;
 ";
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">;
         {/* Main CTA */}
-        <motion.div initial = {;
+        <motion.div initial = {
 
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {;
+  y: 20}} whileInView = {
 
   { opacity: 1,;
-  y: 0;,
-}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">;
+  y: 0}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">;
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-zion-cyan/10 border border-zion-cyan/30 rounded-full text-zion-cyan text-sm font-medium mb-6">            <RocketLaunchIcon className="w-4 h-4"/>;
             Ready to Get Started?;
           </div>;
@@ -74,19 +72,16 @@ export default function Page() {;
         </motion.div>;
 
         {/* Additional Info */}
-        <motion.div initial = {;
+        <motion.div initial = {
 
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {;
+  y: 20}} whileInView = {
 
   { opacity: 1,;
-  y: 0;,
-}} viewport={{ once: true }} transition = {;
+  y: 0}} viewport={{ once: true }} transition = {
 
   { duration: 0.8,;
-  delay: 0.5;,
-}} className="text-center mt-16">;
+  delay: 0.5}} className="text-center mt-16">;
           <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md rounded-full px-6 py-3 border border-white/20">;
             <div className="w-2 h-2 bg-zion-cyan rounded-full animate-pulse"></div>            <span className="text-zion-slate-light text-sm">;
               Response within 2 hours • Free initial consultation;

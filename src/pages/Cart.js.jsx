@@ -13,8 +13,7 @@ export default function CartPage() {}
     useEffect(() => {}
         if (reduxItems.length > 0) {}
             setItems(reduxItems);
-            setCartLoading(false)}
-        else {}
+            setCartLoading(false)} else {}
 ';
 '';
 ''';
@@ -24,11 +23,9 @@ export default function CartPage() {}
                     dispatch(setItemsAction(JSON.parse(stored)))}
                 catch {}
                     dispatch(setItemsAction([]))}
-            }
-            else {}
+            } else {}
                 dispatch(setItemsAction([]))}
         }
-        ;
         load()}, [user, dispatch]);
     const updateQuantity = async (id, qty) => {}
         dispatch(updateQuantityAction({ id, quantity: qty }));
@@ -54,14 +51,14 @@ export default function CartPage() {}
             setShowEmpty(true)}
     }, [cartLoading, items]);
     const updateQuantity = (id, qty) => {}
-        dispatch(updateQuantityAction({ id, quantity: qty }))};
+        dispatch(updateQuantityAction({ id, quantity: qty }))}
     const removeItem = (id) => {}
-        dispatch(removeItemAction(id))};
+        dispatch(removeItemAction(id))}
     const handleCheckout = () => {}
 ';
 '';
 ''';
-        router.push('/checkout')};
+        router.push('/checkout')}
     const applyCode = async () => {}
         try {}
 ';
@@ -71,7 +68,7 @@ export default function CartPage() {}
             setDiscount(res.data.discount || 0)}
         catch (e) {}
             setDiscount(0)}
-    };
+    }
     const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
     const total = subtotal - discount;
     if (cartLoading) {}
@@ -103,8 +100,7 @@ export default function CartPage() {}
 ';
   e => updateQuantity(item.id, parseInt(e.target.value || '1',;
   10))";
-"";,
-} className="w-16 bg-transparent border border-input rounded p-1 text-center"/>"";
+""} className="w-16 bg-transparent border border-input rounded p-1 text-center"/>"";
               <Button variant="outline" size="sm" onClick={() => removeItem(item.id)}>;
                 Remove;
               </Button>;
@@ -125,14 +121,10 @@ export default function CartPage() {}
         {user ? 'Checkout' : 'Login to Checkout'}
       </Button>;
     </div>)}
-;
 
-export { CartPage };
-;
-export { CartPage };
-;
-export { CartPage };
-;
-export { CartPage };
-;
-export { CartPage };
+
+export { CartPage }
+export { CartPage }
+export { CartPage }
+export { CartPage }
+export { CartPage }

@@ -1,4 +1,4 @@
-export interface AdvancedCybersecurityService {;
+export interface AdvancedCybersecurityService {
   id: string;
   name: string;
   tagline: string;
@@ -25,7 +25,7 @@ export interface AdvancedCybersecurityService {;
   marketSize: string;
   growthRate: string;
   variant: string;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -37,7 +37,7 @@ export interface AdvancedCybersecurityService {;
   rating: number;
 export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [;
   // Advanced Threat Intelligence Platform;
-  {;
+  {
     id: "advanced-threat-intelligence-platform",;
     name: "Advanced Threat Intelligence Platform",;
     tagline: "AI-powered threat intelligence with predictive analytics",;
@@ -75,21 +75,19 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [;
     marketSize: "$15B threat intelligence market",;
     growthRate: "300% annual growth",;
     variant: "cyberpunk-holographic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced threat intelligence platform with AI-powered detection, predictive analytics, and automated response capabilities. Includes comprehensive threat hunting and risk assessment tools.",;
     launchDate: "2024-12-01",;
     customers: 180,;
     rating: 4.8,;
-    reviews: 95;,;,
-},;
+    reviews: 95},;
   // Zero Trust Security Architecture;
-  {;
+  {
     id: "zero-trust-security-architecture",;
     name: "Zero Trust Security Architecture",;
     tagline: "Comprehensive zero trust security implementation",;
@@ -127,21 +125,19 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [;
     marketSize: "$25B zero trust market",;
     growthRate: "350% annual growth",;
     variant: "cyberpunk-advanced",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Comprehensive zero trust architecture with identity verification, device trust scoring, and continuous monitoring. Includes compliance frameworks and security automation.",;
     launchDate: "2024-11-15",;
     customers: 95,;
     rating: 4.9,;
-    reviews: 58;,;,
-},;
+    reviews: 58},;
   // AI-Powered Security Operations Center;
-  {;
+  {
     id: "ai-powered-security-operations-center",;
     name: "AI-Powered Security Operations Center",;
     tagline: "24/7 AI-driven security monitoring and response",;
@@ -179,21 +175,19 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [;
     marketSize: "$30B SOC market",;
     growthRate: "250% annual growth",;
     variant: "cyberpunk-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced AI-powered SOC with 24/7 monitoring, automated response, and comprehensive security tools. Includes compliance reporting and security consulting.",;
     launchDate: "2024-10-01",;
     customers: 120,;
     rating: 4.8,;
-    reviews: 75;,;,
-},;
+    reviews: 75},;
   // Quantum-Resistant Cryptography;
-  {;
+  {
     id: "quantum-resistant-cryptography",;
     name: "Quantum-Resistant Cryptography",;
     tagline: "Post-quantum cryptography for future-proof security",;
@@ -231,21 +225,19 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [;
     marketSize: "$5B quantum cryptography market",;
     growthRate: "400% annual growth",;
     variant: "quantum-cyberpunk",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced quantum-resistant cryptography platform with post-quantum algorithms, key management, and comprehensive security tools. Includes compliance frameworks and performance optimization.",;
     launchDate: "2024-09-15",;
     customers: 85,;
     rating: 4.7,;
-    reviews: 52;,;,
-},;
+    reviews: 52},;
   // AI-Powered Vulnerability Management;
-  {;
+  {
     id: "ai-powered-vulnerability-management",;
     name: "AI-Powered Vulnerability Management",;
     tagline: "Intelligent vulnerability assessment and remediation",;
@@ -283,21 +275,19 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [;
     marketSize: "$20B vulnerability management market",;
     growthRate: "250% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced vulnerability management platform with AI-powered assessment, intelligent prioritization, and automated remediation. Includes compliance reporting and performance monitoring.",;
     launchDate: "2024-08-01",;
     customers: 150,;
     rating: 4.6,;
-    reviews: 88;,;,
-},;
+    reviews: 88},;
   // Cloud Security Posture Management;
-  {;
+  {
     id: "cloud-security-posture-management",;
     name: "Cloud Security Posture Management",;
     tagline: "Comprehensive cloud security and compliance management",;
@@ -335,21 +325,19 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [;
     marketSize: "$35B cloud security market",;
     growthRate: "300% annual growth",;
     variant: "cyberpunk-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced cloud security platform with multi-cloud monitoring, compliance management, and risk assessment. Includes security automation and incident response.",;
     launchDate: "2024-07-15",;
     customers: 110,;
     rating: 4.7,;
-    reviews: 65;,;,
-},;
+    reviews: 65},;
   // AI-Powered Penetration Testing;
-  {;
+  {
     id: "ai-powered-penetration-testing",;
     name: "AI-Powered Penetration Testing",;
     tagline: "Intelligent security testing and vulnerability assessment",;
@@ -387,21 +375,19 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [;
     marketSize: "$15B penetration testing market",;
     growthRate: "200% annual growth",;
     variant: "cyberpunk-advanced",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced penetration testing platform with AI-powered testing, automated vulnerability discovery, and intelligent attack simulation. Includes compliance reporting and security consulting.",;
     launchDate: "2024-06-01",;
     customers: 95,;
     rating: 4.8,;
-    reviews: 58;,;,
-},;
+    reviews: 58},;
   // Blockchain Security Platform;
-  {;
+  {
     id: "blockchain-security-platform",;
     name: "Blockchain Security Platform",;
     tagline: "Comprehensive blockchain security and compliance",;
@@ -439,21 +425,19 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [;
     marketSize: "$10B blockchain security market",;
     growthRate: "400% annual growth",;
     variant: "cyberpunk-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced blockchain security platform with smart contract auditing, security monitoring, and compliance management. Includes security automation and incident response.",;
     launchDate: "2024-05-15",;
     customers: 75,;
     rating: 4.7,;
-    reviews: 45;,;,
-},;
+    reviews: 45},;
   // IoT Security Platform;
-  {;
+  {
     id: "iot-security-platform",;
     name: "IoT Security Platform",;
     tagline: "Comprehensive IoT security and device management",;
@@ -491,12 +475,11 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [;
     marketSize: "$25B IoT security market",;
     growthRate: "300% annual growth",;
     variant: "cyberpunk-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced IoT security platform with device discovery, security monitoring, and threat detection. Includes device management and compliance management.",;
     launchDate: "2024-04-01",;

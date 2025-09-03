@@ -4,28 +4,24 @@ import { BarChart3, PieChart, TrendingUp, Globe, ArrowRight, CheckCircle, Rocket
 import AdvancedServicePortfolioDashboard from "../components/AdvancedServicePortfolioDashboard.jsx";
 import { Button } from "../components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
-const ServicePortfolioDashboard = () => {;
+const ServicePortfolioDashboard = () => {
     const features = [;
-        {;
+        {
             icon: <BarChart3 className="w-6 h-6 text-zion-cyan"/>,;
             title: 'Comprehensive Analytics',;
-            description: 'Real-time insights into service performance, revenue, and growth metrics';,
-},;
-        {;
+            description: 'Real-time insights into service performance, revenue, and growth metrics'},;
+        {
             icon: <PieChart className="w-6 h-6 text-zion-purple"/>,;
             title: 'Portfolio Visualization',;
-            description: 'Interactive charts and graphs showing service distribution and trends';,
-},;
-        {;
+            description: 'Interactive charts and graphs showing service distribution and trends'},;
+        {
             icon: <TrendingUp className="w-6 h-6 text-zion-green"/>,;
             title: 'Performance Tracking',;
-            description: 'Monitor service performance, client satisfaction, and market demand';,
-},;
-        {;
+            description: 'Monitor service performance, client satisfaction, and market demand'},;
+        {
             icon: <Target className="w-6 h-6 text-zion-orange"/>,;
             title: 'Strategic Insights',;
-            description: 'Data-driven recommendations for portfolio optimization and growth';,
-}
+            description: 'Data-driven recommendations for portfolio optimization and growth'}
     ];
     const benefits = [;
         'Comprehensive view of all service offerings and their performance',;
@@ -36,30 +32,26 @@ const ServicePortfolioDashboard = () => {;
         'Technology maturity assessment and innovation tracking';
     ];
     const portfolioStats = [;
-        {;
+        {
             label: 'Total Services',;
             value: '52+',;
             description: 'Cutting-edge technology solutions',;
-            icon: <Rocket className="w-8 h-8 text-zion-cyan"/>;,
-},;
-        {;
+            icon: <Rocket className="w-8 h-8 text-zion-cyan"/>},;
+        {
             label: 'Technology Categories',;
             value: '12+',;
             description: 'Major technology sectors covered',;
-            icon: <Brain className="w-8 h-8 text-zion-purple"/>;,
-},;
-        {;
+            icon: <Brain className="w-8 h-8 text-zion-purple"/>},;
+        {
             label: 'Price Range',;
             value: '$5K-$2M',;
             description: 'Monthly service pricing',;
-            icon: <DollarSign className="w-8 h-8 text-zion-green"/>;,
-},;
-        {;
+            icon: <DollarSign className="w-8 h-8 text-zion-green"/>},;
+        {
             label: 'Market Coverage',;
             value: '95%+',;
             description: 'Technology market segments',;
-            icon: <Globe className="w-8 h-8 text-zion-orange"/>;,
-}
+            icon: <Globe className="w-8 h-8 text-zion-orange"/>}
     ];
     return (<div className="min-h-screen bg-zion-blue-dark">;
       {/* Hero Section */}
@@ -88,8 +80,7 @@ const ServicePortfolioDashboard = () => {;
                 onClick={() =>';
                   document'';
                     .getElementById('portfolio-dashboard')';
-                    ?.scrollIntoView({ behavior: 'smooth' });,
-}
+                    ?.scrollIntoView({ behavior: 'smooth' })}
               >";
                 View Dashboard"";
                 <ArrowRight className="w-5 h-5 ml-2" />;
@@ -99,8 +90,7 @@ const ServicePortfolioDashboard = () => {;
                 onClick={() =>';
                   window.open('';
                     'mailto:kleber@ziontechgroup.com?subject=Portfolio Strategy Consultation',_blank';
-                  );,
-}
+                  )}
               >;
                 Get Consultation;
               </Button>;
@@ -288,8 +278,7 @@ const ServicePortfolioDashboard = () => {;
                 onClick={() =>';
                   window.open('';
                     'mailto:kleber@ziontechgroup.com?subject=Portfolio Optimization Consultation',_blank';
-                  );,
-}">"";
+                  )}">"";
                 <Rocket className="w-5 h-5 mr-2" />;
                 Get Portfolio Strategy;
               </Button>";
@@ -303,16 +292,12 @@ const ServicePortfolioDashboard = () => {;
           </motion.div>;
         </div>;
       </section>;
-    </div>)};
+    </div>)}
 export default ServicePortfolioDashboard;
-;
 
-export { ServicePortfolioDashboard };
-;
-export { ServicePortfolioDashboard };
-;
-export { ServicePortfolioDashboard };
-;
-export { ServicePortfolioDashboard };
-;
-export { ServicePortfolioDashboard };
+
+export { ServicePortfolioDashboard }
+export { ServicePortfolioDashboard }
+export { ServicePortfolioDashboard }
+export { ServicePortfolioDashboard }
+export { ServicePortfolioDashboard }

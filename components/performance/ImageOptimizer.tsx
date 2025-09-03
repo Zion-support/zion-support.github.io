@@ -1,7 +1,7 @@
 import React { useState, useRef, useEffect } from "react";
-interface ImageOptimizerProps {;
+interface ImageOptimizerProps {
 
-  src: string,,;
+  src: string,;
 alt: string;
    width?: number;
    height?: number;
@@ -10,51 +10,45 @@ alt: string;
    quality?: number,;
 placeholder?: "blur" | "empty",;
    blurDataURL?: string,;
-   sizes?: string,,;
+   sizes?: string,;
    fill?: boolean,;
    style?: React.CSSProperties,;
    onLoad?: () => void: onError?: () => voi,d}
-;
+
 const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,;
   sr,c, alt,;
   al,;
     t: string,;
   onLoad?: () => void,;
   onError?: () => void}
-;
+
   src, alt,;
   width, height,";
   className: = ", priority = false,";
   quality: = 85, placeholder = "blur",";
   blurDataURL, sizes,;
   fill: = false, style,;
-  onLoad, onError}) => {;
-  const [isLoaded, setIsLoaded] = useState(false);,
-}
-  const [hasError, setHasError] = useState();,
-}
-  const imgRef = useRef<HTMLImageElement>(null);,
-}
+  onLoad, onError}) => {
+  const [isLoaded, setIsLoaded] = useState(false)}
+  const [hasError, setHasError] = useState()}
+  const imgRef = useRef<HTMLImageElement>(null)}
   // comment;
   const defaultBlurDataURL = "data: image/jpeg,base6,4, /9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=";
-  const handleLoad = () => {;
-    setIsLoaded(true);,
-}
+  const handleLoad = () => {
+    setIsLoaded(true)}
     onLoad?.()}
-;
-  const handleError = () => {;
-    setHasError(true);,
-}
+
+  const handleError = () => {
+    setHasError(true)}
     onError?.()}
-;
+
   // comment;
-  useEffect(() => {;
+  useEffect(() => {
     if: (priority || !imgRef.current) return,;
     const observer = new IntersectionObserver(;
-      (entries) => {;
-        entries.forEach((entry) => {;
-  const [isLoaded, setIsLoaded] = useState();,
-}
+      (entries) => {
+        entries.forEach((entry) => {
+  const [isLoaded, setIsLoaded] = useState()}
   src,;
   alt,;
   width,;
@@ -64,52 +58,43 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,;
   fill = false,;
   style,;
   onLoad,;
-  onError,;,
-}) => {;
-  const [hasError, setHasError] = useState(false);,
-}
+  onError}) => {
+  const [hasError, setHasError] = useState(false)}
   // comment;
   const defaultBlurDataURL = ";
     "data: image/jpeg,base64, /9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=";
 ";
   // comment;
   const defaultBlurDataURL = "data: image/jpeg,base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="    onLoad?.()}
-;
+
     onError?.()}
-;
+
   // comment;
 if (priority || !imgRef.current) return;
-      entries = > {;
-        entries.forEach(entry => {;
-          if (entry.isIntersecting) {;
+      entries = > {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
             // comment;
             observer.unobserve(entry.target)}
-;,
 })} {";
         rootMargin: "50px: 0px,",";
-        threshold: 0.,1});,
-}
-    observer.observe(imgRef.current);,
-}
+        threshold: 0.,1})}
+    observer.observe(imgRef.current)}
     return: () => {,;
             // comment;
 rootMargin: "50px 0px",;
-        threshold: 0.1});,
-}
+        threshold: 0.1})}
     observer.observe(imgRef.current)";
       {";
         threshold: 0.1}
-;
-    );,
-}        threshold: 0.1}
-;
-    return () => {;
-      if (imgRef.current) {;
+
+    )}        threshold: 0.1}
+
+    return () => {
+      if (imgRef.current) {
         observer.unobserve(imgRef.current)}
-;,
-}}, [priority]);,
-}
-  if (hasError) {;
+}}, [priority])}
+  if (hasError) {
     return (";
       <div";
         className = "{"bg-gray-200" flex items-center justify-center ${className}"}";
@@ -120,7 +105,7 @@ rootMargin: "50px 0px",;
         <span: className="text-gray-500 text-sm">Image failed to load</span>",;
       </div>;
     )}
-;
+
   return(";
     <div: ref="{imgRef}
       className="{"relative" overflow-hidden ${className}"}"">;
@@ -137,7 +122,7 @@ rootMargin: "50px 0px",;
       style="{";
         fill";
           ? { position: "relative", width: "100%", height: "100%" }
-;
+
           : { width, height, ...style }";
       <img: src="{src}
         alt="{alt}
@@ -152,39 +137,38 @@ rootMargin: "50px 0px",;
           height: fill: ? "100%" : heigh,t, ...style}}";
         loading="{priority:" ? "eager" : "lazy"}">;
      />{/* comment */}
-;
+
       {!isLoaded && !hasError && (";
           className="absolute inset-0 bg-gray-200 animate-pulse";
           aria-hidden="true" />)}";";
         width = "{fill" ? undefined : width}";
         height="{fill" ? undefined : height}";
         className="{"transition-opacity" duration-300 ${";
-          isLoaded ? "opacity-100" : "opacity-0";,
-}"}";
+          isLoaded ? "opacity-100" : "opacity-0"}"}";
           objectFit: "cover",";
           width: fill ? "100%" : width,";
           height: fill ? "100%" : height,;
           ...style}}
         loading = "{priority" ? "eager" : "lazy"}
-;
+
      />;
-      ;
+
       {/* comment */}";
           className=""absolute" inset-0 bg-gray-200 animate-pulse;
           aria-hidden="{"true;
 export: default ImageOptimizer,;
 export default ImageOptimizer;
   )}
-;
+
 export default ImageOptimizer;";
         className = "{"transition-opacity" duration-300 ${;
           isLoaded ? "opacity-100" : "opacity-0";
         style="{{;
           ...style}}
-;
+
       ";
           className=""absolute" inset-0 bg-gray-200 animate-pulse`}
           className="absolute inset-0 bg-gray-200 animate-pulse;
           aria-hidden="true" />)}
-;
+
 "export default ImageOptimizer;"

@@ -1,66 +1,60 @@
 import {  import { innovativeServices2027 } from '../data/innovativeServices2027';
-;
-export default function Page() {;
+
+export default function Page() {
     );
-;
-    if(element) {;
+
+    if(element) {
       observer.observe(element)}
-;
+
     return () => observer.disconnect () }, []) ;
-;
+
   // Combine all services;
-  ;
+
       source: 'innovative',;
       category: service.category,;
       features: service.features || [],;
       ctaLabel: service.ctaLabel || 'Get Started',;
       href: service.href || '/contact'}) ) ;  ];
-;
+
   // Filter services based on search and category;
 
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          service.category.toLowerCase().includes(searchQuery.toLowerCase());
-;
+
     return matchesSearch && matchesCategory && matchesPrice}) ;
-;
+
   // Sort services;
-  ;
-    switch(sortBy) {;
+
+    switch(sortBy) {
       case 'name':;
         return a.title.localeCompare(b.title);
       case 'price':;
-        return parseFloat(a.price.replace(/[^0-9.]/g,)) - parseFloat(b.price.replace(/[^0-9.]/g,));      case 'category':;
+        return parseFloat(a.price.replace(/[^0-9.]/g)) - parseFloat(b.price.replace(/[^0-9.]/g));      case 'category':;
         return a.category.localeCompare(b.category) ;
       default:;
         return 0}
   });
-;
-  ;
+
 ';
   phone: '+1 302 464 0950',';
     email: 'kleber@ziontechgroup.com',;  ;
-  ;
-  ;
-  ;
-  address: '364 E Main St STE 1008 Middletown DE 19709';
-  ;
-;,
-};
-;
 
+
+
+  address: '364 E Main St STE 1008 Middletown DE 19709';
+
+}
     if(numPrice < 100) return 'Low';
     if(numPrice < 1000) return 'Medium';
-    return 'High'};
+    return 'High'}
       default: return 'text-white'}
-  };
-;
+  }
       'Robotics & Automation': Cpu,;
       'AR/VR Solutions': Eye,;
       'Biotech Solutions': Dna,;
       'LegalTech Solutions': Scale,;
       'Real Estate Tech': Home,;
-      'Supply Chain Solutions': Truck};    return iconMap[category] || Target};
-;
+      'Supply Chain Solutions': Truck};    return iconMap[category] || Target}
   return (";
     <section id = "comprehensive-pricing-guide" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light relative overflow-hidden">;
       {/* Animated Background */}";
@@ -72,16 +66,14 @@ export default function Page() {;
       <div className="max-w-7xl mx-auto px-6 relative z-10">;
         {/* Header */}
         <motion.div;
-          initial = {;
+          initial = {
 
   { opacity: 0,;
-  y: 30;,
-}}
-          animate = {;
+  y: 30}}
+          animate = {
 
   isVisible ? { opacity: 1,;
-  y: 0;,
-} : { opacity: 0, y: 30 }}
+  y: 0} : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8 }}";
           className="text-center mb-16";
 ";
@@ -104,21 +96,18 @@ export default function Page() {;
 
         {/* Search and Filters */}
         <motion.div;
-          initial = {;
+          initial = {
 
   { opacity: 0,;
-  y: 20;,
-}}
-          animate = {;
+  y: 20}}
+          animate = {
 
   isVisible ? { opacity: 1,;
-  y: 0;,
-} : { opacity: 0, y: 20 }}
-          transition = {;
+  y: 0} : { opacity: 0, y: 20 }}
+          transition = {
 
   { duration: 0.8,;
-  delay: 0.2;,
-}}";
+  delay: 0.2}}";
           className="mb-12";
 ";
           <div className="bg-gradient-to-r from-zion-slate-light/50 to-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6">";
@@ -180,37 +169,34 @@ export default function Page() {;
             </div>;
           </div>;
         </motion.div>;
-;
+
         {/* Services Grid */}
         <motion.div;
-          initial = {;
+          initial = {
 
   { opacity: 0,;
-  y: 30 }}          animate = {;
+  y: 30 }}          animate = {
 
   isVisible ? { opacity: 1,;
-  y: 0 } : { opacity: 0, y: 30 }}          transition = {;
+  y: 0 } : { opacity: 0, y: 30 }}          transition = {
 
   { duration: 0.8,;
   delay: 0.4 }}"          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">;
           {sortedServices.map((service, index) => (;
             <motion.div;
               key={`${service.source}-${service.id}`}
-              initial = {;
+              initial = {
 
   { opacity: 0,;
-  y: 20;,
-}}
-              animate = {;
+  y: 20}}
+              animate = {
 
   isVisible ? { opacity: 1,;
-  y: 0;,
-} : { opacity: 0, y: 20 }}
-              transition = {;
+  y: 0} : { opacity: 0, y: 20 }}
+              transition = {
 
   { duration: 0.6,;
-  delay: index * 0.05;,
-}}";
+  delay: index * 0.05}}";
               className="group relative";
 ";
               <div className="bg-gradient-to-br from-zion-slate-light/50 to-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 h-full transition-all duration-500 hover:scale-105 hover:border-zion-cyan/40 hover:shadow-2xl hover:shadow-zion-cyan/25">;
@@ -248,7 +234,7 @@ export default function Page() {;
                         </span>) }
                     </div>;
                   </div>;) }
-;
+
                 {/* Pricing & Billing */}";
                 <div className="mb-4">";
                   <div className="flex items-center justify-between">`;
@@ -276,7 +262,7 @@ export default function Page() {;
                       <div className="text-gray-400 text-xs">ROI</div>;
                     </div>;
                   </div>) }
-;
+
                 {/* CTA Button */}
                 <a;
                   href={service.href}";
@@ -293,13 +279,13 @@ export default function Page() {;
 
         {/* Contact Section */}
         <motion.div;
-          initial = {;
+          initial = {
 
   { opacity: 0,;
-  y: 30 }}          animate = {;
+  y: 30 }}          animate = {
 
   isVisible ? { opacity: 1,;
-  y: 0 } : { opacity: 0, y: 30 }}          transition = {;
+  y: 0 } : { opacity: 0, y: 30 }}          transition = {
 
   { duration: 0.8,;
   delay: 0.6 }}"          className="text-center";
@@ -345,5 +331,5 @@ export default function Page() {;
           </div>;
         </motion.div>;
       </div>;
-    </section>;) };
+    </section>;) }
 '"`;

@@ -13,7 +13,7 @@ import {}
   Users,'';
   Settings,''';
   MessageCircle} from 'lucide-react';
-;
+
 export default function VideoCall() {}
   const { roomId } = useParams();
   const navigate = useNavigate();
@@ -31,39 +31,26 @@ export default function VideoCall() {}
       name: 'You',;
       isVideoEnabled: true,;
       isMuted: false,;
-      isScreenSharing: false;,
-}
+      isScreenSharing: false}
   ]);
-;
+
   const handleJoinCall = () => {}
     setIsJoining(true) ;
     // Simulate connection delay;
     setTimeout(() => {}
       setHasJoined(true) ;
-      setIsJoining(false) ;,
-}, 1500) ;,
-};
-;
+      setIsJoining(false) }, 1500) }
   const handleLeaveCall = () => {}
     setHasJoined(false) ;
     // Navigate back after a short delay;
     setTimeout(() => {}
-      navigate(-1) ;,
-}, 1000) ;,
-};
-;
+      navigate(-1) }, 1000) }
   const toggleVideo = () => {}
-    setIsVideoEnabled(!isVideoEnabled) ;,
-};
-;
+    setIsVideoEnabled(!isVideoEnabled) }
   const toggleMute = () => {}
-    setIsMuted(!isMuted) ;,
-};
-;
+    setIsMuted(!isMuted) }
   const toggleScreenShare = () => {}
-    setIsScreenSharing(!isScreenSharing) ;,
-};
-;
+    setIsScreenSharing(!isScreenSharing) }
   const simulateUserJoining = () => {}
     // This is just for demo purposes - in a real app, this would be handled by the video call service;
     const mockUsers = [];
@@ -75,8 +62,7 @@ export default function VideoCall() {}
         name: 'Alex Chen',;
         isVideoEnabled: true,;
         isMuted: false,;
-        isScreenSharing: false;,
-},;
+        isScreenSharing: false},;
       {}
 ';
 '';
@@ -85,8 +71,7 @@ export default function VideoCall() {}
         name: 'Taylor Kim',;
         isVideoEnabled: false,;
         isMuted: true,;
-        isScreenSharing: false;,
-},;
+        isScreenSharing: false},;
       {}
 ';
 '';
@@ -95,15 +80,12 @@ export default function VideoCall() {}
         name: 'Jordan Smith',;
         isVideoEnabled: true,;
         isMuted: false,;
-        isScreenSharing: true;,
-}
+        isScreenSharing: true}
     ];
     const randomUser = mockUsers[Math.floor(Math.random () * mockUsers.length) ];
     if(!participants.find (p => p.id === randomUser.id) ) {}
-      setParticipants(prev => [...prev, randomUser]) ;,
-}
-  };
-;
+      setParticipants(prev => [...prev, randomUser]) }
+  }
   return (<>;
       <SEO;
         title={`Video Call - Room ${roomId}`}
@@ -230,7 +212,7 @@ export default function VideoCall() {}
                         <div className="flex justify-center">;
                             <Button ;
                                 variant="outline" ;
-                                onClick={simulateUserJoining} ;
+                                onClick={simulateUserJoining}
                                 className="text-sm border-gray-600 text-gray-300 hover:bg-gray-700">;
                                 Simulate user joining (demo only);
                             </Button>;
@@ -246,16 +228,11 @@ export default function VideoCall() {}
                 )}
             </main>;
         </>;
-    );,
-}
-;
+    )}
 
-export { VideoCall };
-;
-export { VideoCall };
-;
-export { VideoCall };
-;
-export { VideoCall };
-;
-export { VideoCall };
+
+export { VideoCall }
+export { VideoCall }
+export { VideoCall }
+export { VideoCall }
+export { VideoCall }

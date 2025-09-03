@@ -322,17 +322,12 @@ const AIContentGeneration = () => {}
         </div>;
       </section>;
     </div>;
-  );,
-};
+  )}
 export default AIContentGeneration;
-;
 
-export { AIContentGeneration };
-;
-export { AIContentGeneration };
-;
-export { AIContentGeneration };
-;
-export { AIContentGeneration };
-;
-export { AIContentGeneration };
+
+export { AIContentGeneration }
+export { AIContentGeneration }
+export { AIContentGeneration }
+export { AIContentGeneration }
+export { AIContentGeneration }

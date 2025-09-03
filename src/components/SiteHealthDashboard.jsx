@@ -1,18 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, Eye, Users, TrendingUp, AlertTriangle export function SiteHealthDashboard () {;
+import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, Eye, Users, TrendingUp, AlertTriangle export function SiteHealthDashboard () {
 
     const [healthData, setHealthData] = useState([]);
     const [overallScore, setOverallScore] = useState(0);
     const [isLoading, setIsLoading] = useState(true);
-    useEffect(() => {;
+    useEffect(() => {
   // TODO: Add dependencies if needed;
 
-  return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
+  return () => {
+    // Cleanup function}}, []);, []);
         // Simulate health check data collection;
-        const performHealthCheck = async () => {;
+        const performHealthCheck = async () => {
             setIsLoading(true) ;
             // Simulate API calls to various monitoring services;
             await new Promise(resolve => setTimeout (resolve, 2000) ) ;
@@ -22,210 +20,198 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
                     icon: Zap,;
                     overallScore: 88,;
                     metrics[;
-                        {;
+                        {
 
                             name: 'Page Load Time',;
                             value: 2.1,;
                             status: 'good',;
                             description: 'Average page load time across all pages',;
-                            recommendation: 'Optimize images and enable compression to reach < 2s';,
-},;
-                        {;
+                            recommendation: 'Optimize images and enable compression to reach < 2s'},;
+                        {
 
                             name: 'First Contentful Paint',;
                             value: 1.4,;
                             status: 'excellent',;
                             description: 'Time until first content appears'},;
-                        {;
+                        {
 
                             name: 'Largest Contentful Paint',;
                             value: 2.8,;
                             status: 'good',;
                             description: 'Time until largest content element loads'},;
-                        {;
+                        {
 
                             name: 'Core Web Vitals Score',;
                             value: 85,;
                             status: 'good',;
                             description: 'Overall Google Core Web Vitals performance',;
 
-                    ];,
-},;
-                {;
+                    ]},;
+                {
 
                     name: 'SEO Health',;
                     icon: Search,;
                     overallScore: 82,;
                     metrics[;
-                        {;
+                        {
 
                             name: 'Meta Descriptions',;
                             value: 78,;
                             status: 'good',;
                             description: 'Percentage of pages with proper meta descriptions',;
-                            recommendation: 'Add meta descriptions to remaining 22% of pages';,
-},;
-                        {;
+                            recommendation: 'Add meta descriptions to remaining 22% of pages'},;
+                        {
 
                             name: 'Title Tags',;
                             value: 95,;
                             status: 'excellent',;
                             description: 'Percentage of pages with optimized title tags'},;
-                        {;
+                        {
 
                             name: 'Internal Linking',;
                             value: 72,;
                             status: 'warning',;
                             description: 'Internal link structure and distribution',;
-                            recommendation: 'Improve internal linking between related services';,
-},;
-                        {;
+                            recommendation: 'Improve internal linking between related services'},;
+                        {
 
                             name: 'Mobile Friendliness',;
                             value: 98,;
                             status: 'excellent',;
                             description: 'Mobile optimization score'},;
-                        {;
+                        {
 
                             name: 'Schema Markup',;
                             value: 85,;
                             status: 'good',;
                             description: 'Structured data implementation',;
 
-                    ];,
-},;
-                {;
+                    ]},;
+                {
 
                     name: 'Accessibility',;
                     icon: Eye,;
                     overallScore: 91,;
                     metrics[;
-                        {;
+                        {
 
                             name: 'ARIA Implementation',;
                             value: 88,;
                             status: 'good',;
                             description: 'ARIA labels and roles implementation',;
-                            recommendation: 'Add ARIA labels to interactive elements';,
-},;
-                        {;
+                            recommendation: 'Add ARIA labels to interactive elements'},;
+                        {
 
                             name: 'Keyboard Navigation',;
                             value: 95,;
                             status: 'excellent',;
                             description: 'Keyboard accessibility support'},;
-                        {;
+                        {
 
                             name: 'Color Contrast',;
                             value: 92,;
                             status: 'excellent',;
                             description: 'Text contrast ratio compliance'},;
-                        {;
+                        {
 
                             name: 'Screen Reader Support',;
                             value: 89,;
                             status: 'good',;
                             description: 'Screen reader compatibility',;
 
-                    ];,
-},;
-                {;
+                    ]},;
+                {
 
                     name: 'Security',;
                     icon: Shield,;
                     overallScore: 94,;
                     metrics[;
-                        {;
+                        {
 
                             name: 'HTTPS Implementation',;
                             value: 100,;
                             status: 'excellent',;
                             description: 'SSL certificate and HTTPS enforcement'},;
-                        {;
+                        {
 
                             name: 'Security Headers',;
                             value: 92,;
                             status: 'excellent',;
                             description: 'Security headers implementation'},;
-                        {;
+                        {
 
                             name: 'Vulnerability Scan',;
                             value: 88,;
                             status: 'good',;
                             description: 'Security vulnerability assessment',;
-                            recommendation: 'Update dependencies with known vulnerabilities';,
-},;
-                        {;
+                            recommendation: 'Update dependencies with known vulnerabilities'},;
+                        {
 
                             name: 'Content Security Policy',;
                             value: 95,;
                             status: 'excellent',;
                             description: 'CSP header implementation',;
 
-                    ];,
-},;
-                {;
+                    ]},;
+                {
 
                     name: 'Content Quality',;
                     icon: Globe,;
                     overallScore: 76,;
                     metrics[;
-                        {;
+                        {
 
                             name: 'Content Completeness',;
                             value: 68,;
                             status: 'warning',;
                             description: 'Percentage of pages with complete content',;
-                            recommendation: 'Add comprehensive content to 32% of service pages';,
-},;
-                        {;
+                            recommendation: 'Add comprehensive content to 32% of service pages'},;
+                        {
 
                             name: 'Broken Links',;
                             value: 45,;
                             status: 'critical',;
                             description: 'Link health across the website',;
-                            recommendation: 'Fix 278 broken links identified in audit';,
-},;
-                        {;
+                            recommendation: 'Fix 278 broken links identified in audit'},;
+                        {
 
                             name: 'Image Optimization',;
                             value: 82,;
                             status: 'good',;
                             description: 'Image optimization and alt text'},;
-                        {;
+                        {
 
                             name: 'Content Freshness',;
                             value: 89,;
                             status: 'good',;
                             description: 'Recently updated content percentage',;
 
-                    ];,
-},;
-                {;
+                    ]},;
+                {
 
                     name: 'User Experience',;
                     icon: Users,;
                     overallScore: 85,;
                     metrics[;
-                        {;
+                        {
 
                             name: 'Mobile Responsiveness',;
                             value: 96,;
                             status: 'excellent',;
                             description: 'Mobile device compatibility'},;
-                        {;
+                        {
 
                             name: 'Navigation Clarity',;
                             value: 88,;
                             status: 'good',;
                             description: 'Navigation structure and usability'},;
-                        {;
+                        {
 
                             name: 'Form Usability',;
                             value: 79,;
                             status: 'good',;
                             description: 'Contact and service forms usability'},;
-                        {;
+                        {
 
                             name: 'Error Handling',;
                             value: 77,;
@@ -239,29 +225,29 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
             // Calculate overall score;
             const totalScore = healthCategories.reduce((sum, category) => sum + category.overallScore, 0) ;
             setOverallScore(Math.round (totalScore / healthCategories.length) ) ;
-            setIsLoading(false) };
+            setIsLoading(false) }
         performHealthCheck () }, []) ;
-    const getStatusColor = (status) => {;
+    const getStatusColor = (status) => {
 
-        switch(status) {;
+        switch(status) {
 
             case 'excellent': return 'text-green-500 bg-green-50 border-green-200';
             case 'good': return 'text-blue-500 bg-blue-50 border-blue-200';
             case 'warning': return 'text-yellow-500 bg-yellow-50 border-yellow-200';
             case 'critical': return 'text-red-500 bg-red-50 border-red-200';
             default: return 'text-gray-500 bg-gray-50 border-gray-200'}
-    };
-    const getStatusIcon = (status) => {;
+    }
+    const getStatusIcon = (status) => {
 
-        switch(status) {;
+        switch(status) {
 
             case 'excellent': return <CheckCircle className="w-4 h-4"/>;'";
             case 'good': return <CheckCircle className="w-4 h-4"/>;'";
             case 'warning': return <AlertTriangle className="w-4 h-4"/>;'";
             case 'critical': return <AlertCircle className="w-4 h-4"/>;";
             default: return <Clock className="w-4 h-4"/>}
-    };
-    const getScoreColor = (score) => {;
+    }
+    const getScoreColor = (score) => {
 
         if(score >= 90);
             return 'text-green-500';
@@ -269,8 +255,8 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
             return 'text-blue-500';
         if(score >= 60);
             return 'text-yellow-500';
-        return 'text-red-500'};
-    if(isLoading) {;
+        return 'text-red-500'}
+    if(isLoading) {
 ";
         return (<div className="max-w-7xl mx-auto p-6">";
         <div className="text-center py-12">";
@@ -309,7 +295,7 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
 
       {/* Health Categories */}";
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
-        {healthData.map((category, index) => {;
+        {healthData.map((category, index) => {
 
             const IconComponent = category.icon;";
             return (<div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden">";

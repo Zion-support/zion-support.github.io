@@ -1,24 +1,21 @@
 import React from "react";
       icon: Heart,;
       title: "Health & Wellness",;
-      description: "Comprehensive health insurance, dental, vision, and wellness programs.;,
-},;
-    {;
+      description: "Comprehensive health insurance, dental, vision, and wellness programs.},;
+    {
       icon: GraduationCap,";
       title: "Learning & Development",";
-      description: "Annual learning budget, conference attendance, and skill development programs.;,
-},;
-    {;
+      description: "Annual learning budget, conference attendance, and skill development programs.},;
+    {
       icon: Briefcase,";
       title: "Flexible Work",";
-      description: "Remote work options, flexible hours, and work-life balance initiatives.;,
-},;
-    {;
+      description: "Remote work options, flexible hours, and work-life balance initiatives.},;
+    {
       icon: Users,";
       title: "Team Culture",";
       description: "Collaborative environment, team events, and inclusive workplace culture.;
 
-;
+
   ];
 
   return (;
@@ -45,8 +42,8 @@ individuals who want to make a difference.;
             </p>;
           </div>;
           ";
-          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">,,;
-            {benefits.map((benefit, index) => {;
+          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">,;
+            {benefits.map((benefit, index) => {
               const IconComponent = benefit.icon;
               return (";
                 <div key = "{index}" className="text-center">";
@@ -56,10 +53,9 @@ individuals who want to make a difference.;
                   <h3 className="text-lg font-semibold mb-2">{benefit.title}</h3>";
                   <p className="text-gray-600">{benefit.description}</p>;
                 </div>;
-              );,
-}
+              )}
             })}
-;
+
           </div>;
       </section>;
       {/* comment */}";
@@ -82,17 +78,17 @@ individuals who want to make a difference.;
                       <div className="flex items-center gap-1">";
                         <MapPin className="h-4 w-4"  />;
                         {job.location}
-;
+
                       </div>";
                       <div className="flex items-center gap-1">";
                         <Clock className="h-4 w-4"  />;
                         {job.type}
-;
+
                       </div>";
                       <div className="flex items-center gap-1">";
                         <Briefcase className="h-4 w-4"  />;
                         {job.department}
-;
+
                       </div>;
                   </div>";
                   <button className="mt-4 lg: mt-0 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors flex items-center">;
@@ -109,14 +105,14 @@ individuals who want to make a difference.;
                       <li key="{reqIndex}" className="flex items-center text-gray-600">";
                         <CheckCircle className="h-4 w-4 text-green-500 mr-3 flex-shrink-0"  />;
                         {requirement}
-;
+
                       </li>;
                     ))}
-;
+
                   </ul>;
                 </div>;
             ))}
-;
+
           </div>;
       </section>;
       {/* comment */}";
@@ -168,7 +164,7 @@ that make a real difference in the world.;
           </Link>;
         </div>;
       </section>;
-    </MainLayout>,,;
+    </MainLayout>,;
   )}
-;
+
 "export default TalentIndex

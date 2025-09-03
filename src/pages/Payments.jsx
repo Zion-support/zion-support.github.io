@@ -40,8 +40,7 @@ export default function Payments() {}
   () => window.open('https://stripe.com',_blank');
 
 ";
-"";,
-} className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">;
+""} className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">;
                       Manage Payment Methods;
                     </Button>;
                   </div>";
@@ -85,21 +84,16 @@ export default function Payments() {}
           </Tabs>;
         </div>;
       </div>;
-      ;
+
     </>)}
 // Import UI components for Payment Settings tab;
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
-import { Checkbox } from "@/components/ui/checkbox";,
-}
-;
-export { Payments };
-;
-export { Payments };
-;
-export { Payments };
-;
-export { Payments };
-;
-export { Payments };
+import { Checkbox } from "@/components/ui/checkbox"}
+
+export { Payments }
+export { Payments }
+export { Payments }
+export { Payments }
+export { Payments }

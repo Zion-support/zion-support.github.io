@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import {;
+import {
   FlaskConical,;
   Brain,;
   Shield,;
@@ -37,13 +37,12 @@ import {;
   Microscope,;
   TestTube,;
   Satellite,;
-  Telescope;,
-} from 'lucide-react';
-;
-export default function ResearchDevelopment() {;
+  Telescope} from 'lucide-react';
+
+export default function ResearchDevelopment() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedArea, setSelectedArea] = useState('all');
-;
+
   const researchAreas = [;
     'all',;
     'AI & Machine Learning',;
@@ -57,9 +56,9 @@ export default function ResearchDevelopment() {;
     'Data Science',;
     'Biotechnology';
   ];
-;
+
   const projects = [;
-    {;
+    {
       id: 1,;
       title: "Quantum Machine Learning Algorithms",;
       description: "Developing quantum algorithms for machine learning applications that can process complex data exponentially faster than classical computers.",;
@@ -81,9 +80,8 @@ export default function ResearchDevelopment() {;
         "Improved accuracy on complex datasets",;
         "Novel quantum algorithms",;
         "Published research papers";
-      ];,
-},;
-    {;
+      ]},;
+    {
       id: 2,;
       title: "Advanced Cybersecurity Framework",;
       description: "Creating next-generation cybersecurity solutions using AI and machine learning to detect and prevent sophisticated cyber threats.",;
@@ -105,9 +103,8 @@ export default function ResearchDevelopment() {;
         "Reduced false positives by 60%",;
         "Patented security algorithms",;
         "Industry recognition";
-      ];,
-},;
-    {;
+      ]},;
+    {
       id: 3,;
       title: "Edge Computing Infrastructure",;
       description: "Building distributed computing infrastructure that brings processing power closer to data sources for real-time applications.",;
@@ -129,9 +126,8 @@ export default function ResearchDevelopment() {;
         "Reduced bandwidth usage",;
         "Improved reliability",;
         "Scalable architecture";
-      ];,
-},;
-    {;
+      ]},;
+    {
       id: 4,;
       title: "Biomedical AI Platform",;
       description: "Developing AI-powered platform for medical diagnosis, drug discovery, and personalized treatment recommendations.",;
@@ -153,9 +149,8 @@ export default function ResearchDevelopment() {;
         "Faster drug development",;
         "Better patient outcomes",;
         "Regulatory approval";
-      ];,
-},;
-    {;
+      ]},;
+    {
       id: 5,;
       title: "Autonomous Systems Research",;
       description: "Researching and developing autonomous systems for various applications including drones, vehicles, and industrial robots.",;
@@ -177,9 +172,8 @@ export default function ResearchDevelopment() {;
         "Improved safety",;
         "Better efficiency",;
         "Commercial applications";
-      ];,
-},;
-    {;
+      ]},;
+    {
       id: 6,;
       title: "Blockchain Scalability Solutions",;
       description: "Developing next-generation blockchain technologies that can handle high transaction volumes while maintaining security and decentralization.",;
@@ -201,24 +195,22 @@ export default function ResearchDevelopment() {;
         "Reduced energy consumption",;
         "Enhanced security",;
         "Industry partnerships";
-      ];,
-}
+      ]}
   ];
-;
-  const filteredProjects = projects.filter(project => {;
+
+  const filteredProjects = projects.filter(project => {
     const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          project.description.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesArea = selectedArea === 'all' || project.area === selectedArea;
-    return matchesSearch && matchesArea;,
-});
-;
+    return matchesSearch && matchesArea});
+
   const stats = [;
     { number: "25+", label: "Active Projects", icon: FlaskConical },;
     { number: "$15M+", label: "Research Funding", icon: DollarSign },;
     { number: "50+", label: "Research Team", icon: Users },;
     { number: "100+", label: "Publications", icon: BookOpen }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gray-50">;
       {/* Header */}
@@ -304,7 +296,7 @@ export default function ResearchDevelopment() {;
               <div className={`h-48 bg-gradient-to-br ${project.color} flex items-center justify-center`}>;
                 <project.icon className="w-16 h-16 text-white" />;
               </div>;
-              ;
+
               <div className="p-6">;
                 <div className="flex items-center gap-2 mb-3">;
                   <span className="px-2 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded">;
@@ -313,20 +305,19 @@ export default function ResearchDevelopment() {;
                   <span className={`px-2 py-1 text-xs font-medium rounded ${;
                     project.status === 'Completed' ? 'bg-green-100 text-green-800' :;
                     project.status === 'In Progress' ? 'bg-yellow-100 text-yellow-800' :;
-                    'bg-gray-100 text-gray-800';,
-}`}>;
+                    'bg-gray-100 text-gray-800'}`}>;
                     {project.status}
                   </span>;
                 </div>;
-                ;
+
                 <h2 className="text-2xl font-bold text-gray-900 mb-3">;
                   {project.title}
                 </h2>;
-                ;
+
                 <p className="text-gray-600 mb-6">;
                   {project.description}
                 </p>;
-                ;
+
                 <div className="grid grid-cols-2 gap-4 mb-6">;
                   <div className="text-center">;
                     <div className="text-lg font-bold text-gray-900">{project.funding}</div>;
@@ -337,7 +328,7 @@ export default function ResearchDevelopment() {;
                     <div className="text-sm text-gray-500">Duration</div>;
                   </div>;
                 </div>;
-                ;
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">;
                   <div>;
                     <h4 className="font-semibold text-gray-900 mb-2">Key Features</h4>;
@@ -350,7 +341,7 @@ export default function ResearchDevelopment() {;
                       ))}
                     </ul>;
                   </div>;
-                  ;
+
                   <div>;
                     <h4 className="font-semibold text-gray-900 mb-2">Expected Outcomes</h4>;
                     <ul className="space-y-1">;
@@ -363,13 +354,13 @@ export default function ResearchDevelopment() {;
                     </ul>;
                   </div>;
                 </div>;
-                ;
+
                 <div className="flex items-center justify-between">;
                   <div className="flex items-center text-sm text-gray-500">;
                     <Users className="h-4 w-4 mr-1" />;
                     {project.team} team members;
                   </div>;
-                  ;
+
                   <button className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium">;
                     Learn More;
                     <ArrowRight className="ml-2 h-4 w-4" />;
@@ -384,10 +375,9 @@ export default function ResearchDevelopment() {;
           <div className="text-center py-12">;
             <div className="text-gray-500 text-lg">No research projects found matching your criteria.</div>;
             <button;
-              onClick={() => {;
+              onClick={() => {
                 setSearchTerm('');
-                setSelectedArea('all');,
-}}
+                setSelectedArea('all')}}
               className="mt-4 text-blue-600 hover:text-blue-700 font-medium">;
               Clear filters;
             </button>;
@@ -395,5 +385,4 @@ export default function ResearchDevelopment() {;
         )}
       </div>;
     </div>;
-  );,
-}
+  )}

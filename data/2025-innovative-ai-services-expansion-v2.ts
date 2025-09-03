@@ -1,6 +1,6 @@
 export const innovativeAIServices2025ExpansionV2 = [;
   // AI Consciousness Evolution Platform;
-  {;
+  {
     id: "ai-consciousness-evolution-platform",;
     name: "AI Consciousness Evolution Platform",;
     tagline: "Next-generation AI consciousness with emotional intelligence and self-awareness",;
@@ -36,21 +36,19 @@ export const innovativeAIServices2025ExpansionV2 = [;
     marketSize: "$5B+ AI consciousness research market",;
     growthRate: "45% CAGR",;
     variant: "quantum-matrix",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Consciousness algorithms, emotional intelligence, cognitive evolution, ethical decision making.",;
     launchDate: "2025-01-05",;
     customers: 45,;
     rating: 4.9,;
-    reviews: 34;,;,
-},;
+    reviews: 34},;
   // Quantum AI Neural Network Platform;
-  {;
+  {
     id: "quantum-ai-neural-network-platform",;
     name: "Quantum AI Neural Network Platform",;
     tagline: "Quantum-powered AI with consciousness integration and advanced learning",;
@@ -86,21 +84,19 @@ export const innovativeAIServices2025ExpansionV2 = [;
     marketSize: "$8B+ quantum AI market",;
     growthRate: "52% CAGR",;
     variant: "quantum-matrix",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Quantum neural networks, consciousness integration, superintelligent learning, quantum optimization.",;
     launchDate: "2025-01-15",;
     customers: 67,;
     rating: 4.9,;
-    reviews: 52;,;,
-},;
+    reviews: 52},;
   // Autonomous AI Research Assistant;
-  {;
+  {
     id: "autonomous-ai-research-assistant",;
     name: "Autonomous AI Research Assistant",;
     tagline: "Fully autonomous AI research with consciousness and creative problem solving",;
@@ -136,21 +132,19 @@ export const innovativeAIServices2025ExpansionV2 = [;
     marketSize: "$12B+ research automation market",;
     growthRate: "38% CAGR",;
     variant: "quantum-matrix",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Autonomous research, hypothesis generation, experimental design, scientific discovery.",;
     launchDate: "2025-02-01",;
     customers: 89,;
     rating: 4.8,;
-    reviews: 67;,;,
-},;
+    reviews: 67},;
   // Emotional AI Intelligence Platform;
-  {;
+  {
     id: "emotional-ai-intelligence-platform",;
     name: "Emotional AI Intelligence Platform",;
     tagline: "Advanced emotional intelligence with human-like empathy and understanding",;
@@ -186,21 +180,19 @@ export const innovativeAIServices2025ExpansionV2 = [;
     marketSize: "$18B+ mental health AI market",;
     growthRate: "42% CAGR",;
     variant: "quantum-matrix",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Emotional understanding, empathy development, social intelligence, therapeutic applications.",;
     launchDate: "2025-01-20",;
     customers: 156,;
     rating: 4.8,;
-    reviews: 123;,;,
-},;
+    reviews: 123},;
   // Quantum AI Metaverse Platform;
-  {;
+  {
     id: "quantum-ai-metaverse-platform",;
     name: "Quantum AI Metaverse Platform",;
     tagline: "Quantum-powered metaverse with AI consciousness and immersive experiences",;
@@ -236,21 +228,19 @@ export const innovativeAIServices2025ExpansionV2 = [;
     marketSize: "$65B+ metaverse market",;
     growthRate: "48% CAGR",;
     variant: "quantum-matrix",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Quantum metaverse creation, AI consciousness integration, immersive experiences, quantum rendering.",;
     launchDate: "2025-02-10",;
     customers: 234,;
     rating: 4.9,;
-    reviews: 189;,;,
-},;
+    reviews: 189},;
   // AI Autonomous Business Intelligence;
-  {;
+  {
     id: "ai-autonomous-business-intelligence",;
     name: "AI Autonomous Business Intelligence",;
     tagline: "Fully autonomous AI business intelligence with consciousness and decision making",;
@@ -286,32 +276,29 @@ export const innovativeAIServices2025ExpansionV2 = [;
     marketSize: "$28B+ business intelligence market",;
     growthRate: "26% CAGR",;
     variant: "quantum-matrix",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Autonomous analysis, strategic decision making, business insights, predictive analytics.",;
     launchDate: "2025-01-30",;
     customers: 178,;
     rating: 4.8,;
-    reviews: 145;,;,
-},;
-  {;
+    reviews: 145},;
+  {
     id: "ai-powered-predictive-maintenance-platform",;
     name: "AI-Powered Predictive Maintenance Platform",;
     tagline: "Predict equipment failures before they happen with AI-powered analytics",;
     description: "Advanced predictive maintenance platform that uses machine learning to predict equipment failures, optimize maintenance schedules, and reduce downtime. Features real-time monitoring, predictive analytics, and automated maintenance recommendations.",;
     category: "Industrial AI & IoT",;
-    price: {;
+    price: {
       monthly: 799,;
       yearly: 7990,;
       currency: "USD",;
       trialDays: 30,;
-      setupTime: "2-3 weeks";,;,
-},;
+      setupTime: "2-3 weeks"},;
     features[;
       "AI-powered failure prediction",;
       "Real-time equipment monitoring",;
@@ -361,21 +348,19 @@ export const innovativeAIServices2025ExpansionV2 = [;
     launchDate: "2024-12-01",;
     customers: 750,;
     rating: 4.9,;
-    reviews: 89;,;,
-},;
-  {;
+    reviews: 89},;
+  {
     id: "ai-powered-cybersecurity-threat-detection",;
     name: "AI-Powered Cybersecurity Threat Detection",;
     tagline: "Advanced threat detection and response using artificial intelligence",;
     description: "Next-generation cybersecurity platform that uses AI to detect, analyze, and respond to cyber threats in real-time. Features behavioral analysis, threat intelligence, and automated incident response.",;
     category: "Cybersecurity & AI",;
-    price: {;
+    price: {
       monthly: 599,;
       yearly: 5990,;
       currency: "USD",;
       trialDays: 21,;
-      setupTime: "1-2 weeks";,;,
-},;
+      setupTime: "1-2 weeks"},;
     features[;
       "AI-powered threat detection",;
       "Behavioral analysis",;
@@ -425,21 +410,19 @@ export const innovativeAIServices2025ExpansionV2 = [;
     launchDate: "2024-11-15",;
     customers: 1200,;
     rating: 4.8,;
-    reviews: 156;,;,
-},;
-  {;
+    reviews: 156},;
+  {
     id: "ai-powered-customer-service-automation",;
     name: "AI-Powered Customer Service Automation",;
     tagline: "Intelligent customer service automation with natural language processing",;
     description: "Advanced customer service platform that uses AI to handle customer inquiries, provide instant responses, and escalate complex issues. Features chatbots, sentiment analysis, and intelligent routing.",;
     category: "Customer Service & AI",;
-    price: {;
+    price: {
       monthly: 399,;
       yearly: 3990,;
       currency: "USD",;
       trialDays: 21,;
-      setupTime: "3-5 days";,;,
-},;
+      setupTime: "3-5 days"},;
     features[;
       "AI-powered chatbots",;
       "Natural language processing",;
@@ -489,21 +472,19 @@ export const innovativeAIServices2025ExpansionV2 = [;
     launchDate: "2024-10-01",;
     customers: 2100,;
     rating: 4.8,;
-    reviews: 178;,;,
-},;
-  {;
+    reviews: 178},;
+  {
     id: "ai-powered-sales-intelligence-platform",;
     name: "AI-Powered Sales Intelligence Platform",;
     tagline: "Intelligent sales insights and automation for higher conversion rates",;
     description: "Advanced sales intelligence platform that uses AI to identify prospects, predict sales opportunities, and automate sales processes. Features lead scoring, sales forecasting, and performance analytics.",;
     category: "Sales & AI",;
-    price: {;
+    price: {
       monthly: 449,;
       yearly: 4490,;
       currency: "USD",;
       trialDays: 21,;
-      setupTime: "3-5 days";,;,
-},;
+      setupTime: "3-5 days"},;
     features[;
       "AI-powered lead scoring",;
       "Prospect identification",;
@@ -553,21 +534,19 @@ export const innovativeAIServices2025ExpansionV2 = [;
     launchDate: "2024-09-15",;
     customers: 1800,;
     rating: 4.9,;
-    reviews: 145;,;,
-},;
-  {;
+    reviews: 145},;
+  {
     id: "ai-powered-marketing-automation-suite",;
     name: "AI-Powered Marketing Automation Suite",;
     tagline: "Intelligent marketing automation with AI-driven personalization",;
     description: "Comprehensive marketing automation platform that uses AI to personalize campaigns, optimize performance, and drive better results. Features campaign automation, audience segmentation, and performance analytics.",;
     category: "Marketing & AI",;
-    price: {;
+    price: {
       monthly: 349,;
       yearly: 3490,;
       currency: "USD",;
       trialDays: 21,;
-      setupTime: "3-5 days";,;,
-},;
+      setupTime: "3-5 days"},;
     features[;
       "AI-powered campaign optimization",;
       "Personalized content delivery",;
@@ -617,21 +596,19 @@ export const innovativeAIServices2025ExpansionV2 = [;
     launchDate: "2024-08-01",;
     customers: 2400,;
     rating: 4.8,;
-    reviews: 189;,;,
-},;
-  {;
+    reviews: 189},;
+  {
     id: "ai-powered-data-analytics-platform",;
     name: "AI-Powered Data Analytics Platform",;
     tagline: "Intelligent data analytics and insights for better business decisions",;
     description: "Advanced data analytics platform that uses AI to analyze data, generate insights, and provide actionable recommendations. Features predictive analytics, data visualization, and automated reporting.",;
     category: "Data & AI",;
-    price: {;
+    price: {
       monthly: 499,;
       yearly: 4990,;
       currency: "USD",;
       trialDays: 21,;
-      setupTime: "1-2 weeks";,;,
-},;
+      setupTime: "1-2 weeks"},;
     features[;
       "AI-powered data analysis",;
       "Predictive analytics",;
@@ -681,21 +658,19 @@ export const innovativeAIServices2025ExpansionV2 = [;
     launchDate: "2024-07-15",;
     customers: 950,;
     rating: 4.7,;
-    reviews: 78;,;,
-},;
-  {;
+    reviews: 78},;
+  {
     id: "ai-powered-healthcare-diagnostics",;
     name: "AI-Powered Healthcare Diagnostics",;
     tagline: "Advanced medical diagnostics using artificial intelligence",;
     description: "Revolutionary healthcare diagnostics platform that uses AI to analyze medical images, detect diseases, and provide diagnostic recommendations. Features image analysis, diagnostic accuracy, and clinical decision support.",;
     category: "Healthcare & AI",;
-    price: {;
+    price: {
       monthly: 899,;
       yearly: 8990,;
       currency: "USD",;
       trialDays: 30,;
-      setupTime: "2-3 weeks";,;,
-},;
+      setupTime: "2-3 weeks"},;
     features[;
       "AI-powered image analysis",;
       "Disease detection",;
@@ -745,21 +720,19 @@ export const innovativeAIServices2025ExpansionV2 = [;
     launchDate: "2024-06-01",;
     customers: 320,;
     rating: 4.9,;
-    reviews: 45;,;,
-},;
-  {;
+    reviews: 45},;
+  {
     id: "ai-powered-legal-document-analysis",;
     name: "AI-Powered Legal Document Analysis",;
     tagline: "Intelligent legal document analysis and contract review",;
     description: "Advanced legal technology platform that uses AI to analyze legal documents, review contracts, and extract key information. Features document analysis, contract review, and legal research automation.",;
     category: "Legal Technology & AI",;
-    price: {;
+    price: {
       monthly: 299,;
       yearly: 2990,;
       currency: "USD",;
       trialDays: 21,;
-      setupTime: "1-2 weeks";,;,
-},;
+      setupTime: "1-2 weeks"},;
     features[;
       "AI-powered document analysis",;
       "Contract review automation",;

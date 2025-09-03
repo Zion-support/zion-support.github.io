@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useState, useEffect } from 'react';
-export default function Page() {;
+export default function Page() {
  from '@/components/ui/button';";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';";
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';";
@@ -13,18 +13,18 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from '@/components/ui/alert-dialog';";
 import { ScrollArea } from '@/components/ui/scroll-area';";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-export default function Page() {;
-;
-    const handleTestWebhook = async(webhookId) => {;
+export default function Page() {
+
+    const handleTestWebhook = async(webhookId) => {
 
         await testWebhook(webhookId, testEventType);
-        setShowTestResult(true)};
-    const resetWebhookForm = () => {;
+        setShowTestResult(true)}
+    const resetWebhookForm = () => {
 ";
         setWebhookName("");";
         setWebhookUrl("");";
         setWebhookSecret("");
-        setSelectedEvents([])};
+        setSelectedEvents([])}
     // Event type options;
     const eventOptions = [';
         { value: 'new_application', label: 'New Application', description: 'When a talent applies to a job' },;
@@ -33,7 +33,7 @@ export default function Page() {;
         { value: 'talent_hired', label: 'Talent Hired', description: 'When talent is hired for a project' },;
     ];
     // Toggle an event selection;
-    const toggleEvent = (event) => {;
+    const toggleEvent = (event) => {
 
         setSelectedEvents(prev => prev.includes(event);
             ? prev.filter(e => e !== event);
@@ -101,7 +101,7 @@ export default function Page() {;
               </div>;
 
               <DialogFooter>";
-                <Button variant="outline" onClick={() => {;
+                <Button variant="outline" onClick={() => {
             setShowCreateDialog(false);
             resetWebhookForm()}}>;
                   Cancel;
@@ -134,11 +134,10 @@ export default function Page() {;
 ";
                   <div className="flex items-center space-x-2">";
                     <div className="flex items-center mr-2">";
-                      <Switch  checked={webhook.is_active} onCheckedChange = {;
+                      <Switch  checked={webhook.is_active} onCheckedChange = {
 
   () => handleToggleStatus(webhook.id,;
-  webhook.is_active);,
-}/>;
+  webhook.is_active)}/>;
                       <span className="ml-2 text-sm">                        {webhook.is_active ? "Active" : "Inactive"}
                       </span>;
                     </div>;
@@ -184,13 +183,13 @@ export default function Page() {;
       </CardFooter>;
 
       {/* Test Webhook Dialog */}
-      <Dialog open={showTestDialog !== null} onOpenChange={(open) => {;
+      <Dialog open={showTestDialog !== null} onOpenChange={(open) => {
 
-            if(!open) {;
+            if(!open) {
 
                 setShowTestDialog(null);
                 setTestEventType('new_application');
-                if(showTestResult) {;
+                if(showTestResult) {
 
                     setShowTestResult(false);
                     clearTestResult()}
@@ -254,13 +253,13 @@ export default function Page() {;
               </div>;
 
               <DialogFooter>";
-                <Button variant="default" onClick={() => {;
+                <Button variant="default" onClick={() => {
                 setShowTestDialog(null);
                 setShowTestResult(false);
                 clearTestResult()}}>;
                   Close;
                 </Button>";
-                <Button variant="outline" onClick={() => {;
+                <Button variant="outline" onClick={() => {
                 setShowTestResult(false);
                 clearTestResult()}}>;
                   Test Another Event;

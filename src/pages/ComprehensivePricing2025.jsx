@@ -1,20 +1,16 @@
 import React, {useState } from "react";
 ";
   );
-export default function ComprehensivePricing2025() {;
-  const [billingCycle, setBillingCycle] = useState();,
-}
-  const [selectedPlan, setSelectedPlan] = useState("professional");,
-}
-  const plans = [] = useState();,
-}
-  const [selectedPlan, setSelectedPlan] = useState("professional");,
-}
+export default function ComprehensivePricing2025() {
+  const [billingCycle, setBillingCycle] = useState()}
+  const [selectedPlan, setSelectedPlan] = useState("professional")}
+  const plans = [] = useState()}
+  const [selectedPlan, setSelectedPlan] = useState("professional")}
   const plans = [],;
       icon: Zap,";
       color: "from-blue-500 to-cyan-500",;
       popular: false},";
-    {;
+    {
       id: "professional",";
       name: "Professional",";
       description: "Ideal for growing businesses and enterprises",;
@@ -39,7 +35,7 @@ export default function ComprehensivePricing2025() {;
       icon: Shield,";
       color: "from-purple-500 to-pink-500",;
       popular: true},";
-    {;
+    {
       id: "enterprise",";
       name: "Enterprise",";
       description: "Comprehensive solutions for large organizations",;
@@ -67,7 +63,7 @@ export default function ComprehensivePricing2025() {;
       icon: Building,";
       color: "from-orange-500 to-red-500",;
       popular: false}
-;
+
   ];
 
   const addOns = [];
@@ -84,10 +80,9 @@ export default function ComprehensivePricing2025() {;
               Transparent Pricing";
             </h1>",;
             <p className="text-xl m,";
-    d: text-2xl text-zion-slate-light mb-8 leading-relaxed">",,;
+    d: text-2xl text-zion-slate-light mb-8 leading-relaxed">",;
     {name: "Digital Transformation","""""";
-  const [selectedPlan, setSelectedPlan] = useState("professional");,
-}
+  const [selectedPlan, setSelectedPlan] = useState("professional")}
   const plans = [], icon: Zap,";
       color: "from-blue-500 to-cyan-500", popular: false}, {";
       id: "professional",";
@@ -173,7 +168,7 @@ export default function ComprehensivePricing2025() {;
         "Training & Certification,;
         "Strategic Consulting"], icon: Building,;
       color: "from-orange-500 to-red-500", popular: false}
-;
+
   ];
 
   const addOns = []";
@@ -206,13 +201,11 @@ with flexible options to scale as you grow.;
               <button;
                 onClick="{()" => setBillingCycle(billingCycle === "monthly" ? "yearly" : "monthly")}";
                 className="{"relative" w-16 h-8 rounded-full transition-colors duration-300 ${";
-                  billingCycle === "yearly" ? "bg-zion-cyan" : "bg-zion-purple/30";,
-}"}
-;
+                  billingCycle === "yearly" ? "bg-zion-cyan" : "bg-zion-purple/30"}"}
+
               >;
                 <div className = "{"absolute" top-1 w-6 h-6 bg-white rounded-full transition-transform duration-300 ${";
-                  billingCycle === "yearly" ? "translate-x-8" : "translate-x-1">;,
-}"} />;
+                  billingCycle === "yearly" ? "translate-x-8" : "translate-x-1">}"} />;
               </button>;
               <span className = "{"text-lg" ${billingCycle === "yearly" ? "text-white" : "text-zion-slate-light"}"}>;
                 Yearly;
@@ -224,9 +217,8 @@ with flexible options to scale as you grow.;
               </span>";
               <button onClick="{()" => setBillingCycle(billingCycle === "monthly" ? "yearly" : "monthly")}";
                 className="{"relative" w-16 h-8 rounded-full transition-colors duration-300 ${;
-                  billingCycle === "yearly" ? "bg-zion-cyan" : "bg-zion-purple/30;,
-}"}
-;
+                  billingCycle === "yearly" ? "bg-zion-cyan" : "bg-zion-purple/30}"}
+
               >";
                 <div className = "{"absolute" top-1 w-6 h-6 bg-white rounded-full transition-transform duration-300 ${ billingCycle === "yearly" ? "translate-x-8" : "translate-x-1" }"}       />;
               </button>";
@@ -236,13 +228,11 @@ with flexible options to scale as you grow.;
               <button ";
                 onClick="{()" ="> setBillingCycle(billingCycle === "monthly" ? "yearly" : "monthly")}";
                 className="{"relative" w-16 h-8 rounded-full transition-colors duration-300 ${;
-                  billingCycle === "yearly" ? "bg-zion-cyan" : "bg-zion-purple/30", ";,
-}"}
-;
+                  billingCycle === "yearly" ? "bg-zion-cyan" : "bg-zion-purple/30", "}"}
+
               >;
                 <div className = "{"absolute" top-1 w-6 h-6 bg-white rounded-full transition-transform duration-300 ${"">;
-                  billingCycle === "yearly" ? "translate-x-8" : "translate-x-1",";";,
-}"} /">;
+                  billingCycle === "yearly" ? "translate-x-8" : "translate-x-1",";"}"} /">;
               </button>"";
               <span className = "{"text-lg" ${billingCycle === "yearly" ? "text-white" : "text-zion-slate-light"}"}">;
                 Yearly";
@@ -251,7 +241,7 @@ with flexible options to scale as you grow.;
                     Save {savings}%;
                   </span>;
                 )}
-;
+
               </span>;
             </div>;
       </section>;
@@ -266,7 +256,7 @@ with flexible options to scale as you grow.;
                   plan.popular;
                     ? "bg-gradient-to-br from-zion-purple/20 to-zion-cyan/20 border-2 border-zion-cyan scale-105";
                     : "bg-zion-blue-dark/50 border border-zion-purple/20 hover: border-zion-purple/40""}"}
-;
+
               >;
                 {plan.popular && (;
                   <div className=""absolute" -top-4 left-1/2 transform -translate-x-1/2">";
@@ -287,8 +277,7 @@ with flexible options to scale as you grow.;
                 className="{"relative" rounded-2xl p-8 transition-all duration-300 ${";
                   plan.popular;
                     ? "bg-gradient-to-br from-zion-purple/20 to-zion-cyan/20 border-2 border-zion-cyan scale-105";
-                    : "bg-zion-blue-dark/50 border border-zion-purple/20 hover:border-zion-purple/40", ">;,
-}"}">"}";
+                    : "bg-zion-blue-dark/50 border border-zion-purple/20 hover:border-zion-purple/40", ">}"}">"}";
                 {plan.popular && (";
                   <div className = "absolute -top-4 left-1/2 transform -translate-x-1/2">";
                     <div className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white px-4 py-2 rounded-full text-sm font-semibold">;
@@ -302,11 +291,11 @@ with flexible options to scale as you grow.;
                   </div>;
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>;
                   <p className="text-zion-slate-light mb-6">{plan.description}</p>";
-                  ;
+
                   <div className="mb-6">;
                     <span className="{"text-4xl" font-bold text-white">;
                       ${plan.price[billingCycle]}
-;
+
                     </span>;
                     <span className=""}text-zion-slate-light" ml-2">;
 ";
@@ -320,11 +309,11 @@ with flexible options to scale as you grow.;
                   <div className="mb-6">";
                     <span className="{"text-4xl" font-bold text-white">;
                       ${plan.price[billingCycle]}
-;
+
                     </span>""}";
                     <span className="text-zion-slate-light ml-2">";
                       /{billingCycle === "monthly" ? "month" : "year"}
-;
+
                     </span>;
                   </div>;
 ";
@@ -338,10 +327,10 @@ with flexible options to scale as you grow.;
                       plan.popular";
                         ? "bg-gradient-to-r from-zion-purple to-zion-cyan text-white hover: from-zion-purple/80 hover:to-zion-cyan/80",;
                         : "bg-zion-purple/20 text-zion-cyan border border-zion-purple/30 hover:bg-zion-purple/30"}"}
-;
+
                   >;
                     {selectedPlan === plan.id ? "Current Plan" : "Choose Plan"}
-;
+
                   </button>;
                 </div>";
 ";
@@ -359,11 +348,10 @@ with flexible options to scale as you grow.;
                   <button onClick="{()" ="> setSelectedPlan(plan.id)}";
                     className="{"w-full" py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${";
                       plan.popular;
-                        ? "bg-gradient-to-r from-zion-purple to-zion-cyan text-white hover: from-zion-purple/80 hover:to-zion-cyan/80",,;
-                        : "bg-zion-purple/20 text-zion-cyan border border-zion-purple/30 hover:bg-zion-purple/30", ";,
-}"}">;
+                        ? "bg-gradient-to-r from-zion-purple to-zion-cyan text-white hover: from-zion-purple/80 hover:to-zion-cyan/80",;
+                        : "bg-zion-purple/20 text-zion-cyan border border-zion-purple/30 hover:bg-zion-purple/30", "}"}">;
                     {selectedPlan = == plan.id ? "Current Plan" : "Choose Plan"}
-;
+
                   </button>;
                 </div>";
 ";
@@ -375,10 +363,10 @@ with flexible options to scale as you grow.;
                       <span className="text-zion-slate-light text-sm">{feature}</span>;
                     </div>;
                   ))}
-;
+
                 </div>;
             ))}
-;
+
           </div>;
       </section>;
 ";
@@ -413,7 +401,7 @@ with flexible options to scale as you grow.;
                 <div className="text-center">;
                   <div className="{"text-2xl" font-bold text-white mb-2">;
                     ${addon.price[billingCycle]}
-;
+
                   </div>;
                   <span className=""}text-zion-slate-light" text-sm">";
 ";
@@ -438,15 +426,15 @@ with flexible options to scale as you grow.;
                 <div className="text-center">";
                   <div className="{"text-2xl" font-bold text-white mb-2">;
                     ${addon.price[billingCycle]}
-;
+
                   </div>""}";
                   <span className="text-zion-slate-light text-sm">;
                     /{billingCycle === "monthly" ? "month" : "year"}
-;
+
                   </span>;
                 </div>;
             ))}
-;
+
           </div>;
       </section>;
       {/* comment */}";
@@ -472,19 +460,17 @@ with flexible options to scale as you grow.;
             {[";
               {";
                 question: "Can I change my plan at any time?",;
-                answer: "Yes, you can upgrade or downgrade your plan at any time. Changes will be prorated and reflected in your next billing cycle.;,
-},";
-              {;
+                answer: "Yes, you can upgrade or downgrade your plan at any time. Changes will be prorated and reflected in your next billing cycle.},";
+              {
                 question: "Do you offer custom pricing for enterprise clients?",";
                 answer: "Absolutely! We provide custom pricing and solutions for enterprise clients with specific requirements. Contact our sales team for a personalized quote."},";
-              {;
+              {
                 question: "What payment methods do you accept?",";
-                answer: "We accept all major credit cards, PayPal, and bank transfers for annual plans. Enterprise clients can also arrange for invoicing.;,
-},";
-              {;
+                answer: "We accept all major credit cards, PayPal, and bank transfers for annual plans. Enterprise clients can also arrange for invoicing.},";
+              {
                 question: "Is there a setup fee?",";
                 answer: "No setup fees for our standard plans. Custom enterprise solutions may have one-time implementation fees depending on complexity."},";
-              {;
+              {
                 question: "What happens if I exceed my plan limits?",";
                 answer: "We"ll notify you before any limits are exceeded. You can either upgrade your plan or purchase additional add-ons as needed."}";
             ].map((faq, index) => (";
@@ -494,18 +480,16 @@ with flexible options to scale as you grow.;
           <div className="max-w-4xl mx-auto space-y-6">;
             {[{";
                 question: "Can I change my plan at any time?",;
-                answer: "Yes, you can upgrade or downgrade your plan at any time. Changes will be prorated and reflected in your next billing cycle.;,
-},";
+                answer: "Yes, you can upgrade or downgrade your plan at any time. Changes will be prorated and reflected in your next billing cycle.},";
               {question: "Do you offer custom pricing for enterprise clients?",";
                 answer: "Absolutely! We provide custom pricing and solutions for enterprise clients with specific requirements. Contact our sales team for a personalized quote."},";
               {question: "What payment methods do you accept?",";
-                answer: "We accept all major credit cards, PayPal, and bank transfers for annual plans. Enterprise clients can also arrange for invoicing.;,
-},";
+                answer: "We accept all major credit cards, PayPal, and bank transfers for annual plans. Enterprise clients can also arrange for invoicing.},";
               {question: "Is there a setup fee?",";
                 answer: "No setup fees for our standard plans. Custom enterprise solutions may have one-time implementation fees depending on complexity."},";
               {question: "What happens if I exceed my plan limits?",";
                 answer: "We"ll notify you before any limits are exceeded. You can either upgrade your plan or purchase additional add-ons as needed."}
-;
+
             ].map((faq, index) => (";
               <div key = "{index}" className="bg-zion-blue-dark/50 border border-zion-purple/20 rounded-xl p-6">";
                 <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>;
@@ -544,7 +528,7 @@ with flexible options to scale as you grow.;
                 <p className="text-zion-slate-light">{faq.answer}</p>;
               </div>;
             ))}
-;
+
           </div>;
       </section>;
 ";

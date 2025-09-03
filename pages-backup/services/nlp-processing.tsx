@@ -1,6 +1,5 @@
 import React from "react";
-	return();,
-}
+	return()}
 						</h1>";
 						<p className="mt-6 text-lg leading-8 text-gray-600">;
 							Unlock the power of language with advanced NLP technology. From sentiment analysis to language translation, transform text into actionable insights.;

@@ -1,5 +1,5 @@
 
-;
+
 import React from 'react';
 import { createRoot, hydrateRoot } from 'react-dom/client';
 import App from "./App.tsx";
@@ -12,33 +12,30 @@ import './utils/consoleErrorToast';
 // Import i18n configuration;
 import './i18n';
 import { LanguageProvider } from '@/context/LanguageContext';
-;
+
 import { WhitelabelProvider } from '@/context/WhitelabelContext';
 import { AppLayout } from '@/layout/AppLayout';
 // Import auth and notification providers;
 import { AuthProvider } from "./context/auth/AuthProvider.jsx";
-;
+
 // Import analytics provider;
 
-;
-;
-;
-;
+
+
+
+
 // Initialize a React Query client with global error handling;
 const queryClient = new QueryClient({;
-    defaultOptions: {;
-        queries: {;
+    defaultOptions: {
+        queries: {
             retry: 1,;
-            refetchOnWindowFocus: false,;,
-},;,
-},;,
-});
-;
+            refetchOnWindowFocus: false}}});
+
 
 const rootElement = document.getElementById('root');
-;
 
-const renderApp = () => {;
+
+const renderApp = () => {
     const app = (;
         <React.StrictMode>;
             <HelmetProvider>;
@@ -50,8 +47,7 @@ const renderApp = () => {;
                                     <AnalyticsProvider>;
                                         <LanguageProvider authState={{;
                                             isAuthenticated: false,;
-                                            user: null;,
-}}>;
+                                            user: null}}>;
                                             <ViewModeProvider>;
                                                 <AppLayout>;
                                                     <App />;
@@ -68,38 +64,30 @@ const renderApp = () => {;
             </HelmetProvider>;
         </React.StrictMode>;
     );
-;
 
-    if (rootElement?.hasChildNodes()) {;
-        hydrateRoot(rootElement, app);,
-} else if (rootElement) {;
-        createRoot(rootElement).render(app);,
+
+    if (rootElement?.hasChildNodes()) {
+        hydrateRoot(rootElement, app)} else if (rootElement) {
+        createRoot(rootElement).render(app)}
 }
-};
-;
-
-function displayFatalError(message) {;
-    if (rootElement) {;
+function displayFatalError(message) {
+    if (rootElement) {
         rootElement.innerHTML = `;
 
-;
+
             <div style="padding:20px;text-align:center;font-family:sans-serif;">;
                 <h1>Application Error</h1>;
                 <p>${message}</p>;
-            </div>`;,
+            </div>`}
 }
-}
-;
-try {;
-    renderApp();,
-} catch (error) {;
+
+try {
+    renderApp()} catch (error) {
     console.error('Global error caught in main.jsx:', error);
-    displayFatalError(error.message);,
-}
-;
-window.addEventListener('error', (e) => {;
+    displayFatalError(error.message)}
+
+window.addEventListener('error', (e) => {
 
     console.error('Unhandled error:', e.error || e.message);
-    displayFatalError(e.message);,
-});
-;
+    displayFatalError(e.message)});
+

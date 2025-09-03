@@ -36,105 +36,88 @@ import { ;
   TrendingUp,;
   Globe,;
   Building2,;
-  ShoppingCart;,
-} from 'lucide-react';
-;
-const AISolutions: React.FC = () => {;
+  ShoppingCart} from 'lucide-react';
+
+const AISolutions: React.FC = () => {
   const solutions = [;
-    {;
+    {
       icon: Brain,;
       title: 'Machine Learning & AI',;
       description: 'Advanced machine learning algorithms and AI models for predictive analytics and automation',;
-      features: ['Predictive modeling', 'Natural language processing', 'Computer vision', 'Deep learning'];,
-},;
-    {;
+      features: ['Predictive modeling', 'Natural language processing', 'Computer vision', 'Deep learning']},;
+    {
       icon: Workflow,;
       title: 'AI Workflow Automation',;
       description: 'Streamline business processes with intelligent automation and workflow optimization',;
-      features: ['Process automation', 'Decision intelligence', 'Smart routing', 'Performance analytics'];,
-},;
-    {;
+      features: ['Process automation', 'Decision intelligence', 'Smart routing', 'Performance analytics']},;
+    {
       icon: Database,;
       title: 'Data Analytics & Insights',;
       description: 'Transform raw data into actionable insights with AI-powered analytics',;
-      features: ['Real-time analytics', 'Predictive insights', 'Data visualization', 'Business intelligence'];,
-},;
-    {;
+      features: ['Real-time analytics', 'Predictive insights', 'Data visualization', 'Business intelligence']},;
+    {
       icon: Bot,;
       title: 'Intelligent Chatbots',;
       description: 'AI-powered conversational agents for customer service and support',;
-      features: ['Natural conversations', 'Multi-language support', 'Integration capabilities', 'Learning algorithms'];,
-},;
-    {;
+      features: ['Natural conversations', 'Multi-language support', 'Integration capabilities', 'Learning algorithms']},;
+    {
       icon: Eye,;
       title: 'Computer Vision',;
       description: 'Advanced image and video analysis for various industry applications',;
-      features: ['Object detection', 'Facial recognition', 'Quality inspection', 'Video analytics'];,
-},;
-    {;
+      features: ['Object detection', 'Facial recognition', 'Quality inspection', 'Video analytics']},;
+    {
       icon: Network,;
       title: 'AI Infrastructure',;
       description: 'Scalable AI infrastructure and cloud solutions for enterprise deployment',;
-      features: ['Cloud AI platforms', 'Edge computing', 'GPU optimization', 'Scalable architecture'];,
-}
+      features: ['Cloud AI platforms', 'Edge computing', 'GPU optimization', 'Scalable architecture']}
   ];
-;
+
   const industries = [;
-    {;
+    {
       name: 'Healthcare',;
       icon: Activity,;
-      description: 'AI-powered diagnostics, patient care, and medical research';,
-},;
-    {;
+      description: 'AI-powered diagnostics, patient care, and medical research'},;
+    {
       name: 'Finance',;
       icon: Coins,;
-      description: 'Risk assessment, fraud detection, and algorithmic trading';,
-},;
-    {;
+      description: 'Risk assessment, fraud detection, and algorithmic trading'},;
+    {
       name: 'Manufacturing',;
       icon: Building2,;
-      description: 'Predictive maintenance, quality control, and supply chain optimization';,
-},;
-    {;
+      description: 'Predictive maintenance, quality control, and supply chain optimization'},;
+    {
       name: 'Retail',;
       icon: ShoppingCart,;
-      description: 'Customer analytics, inventory management, and personalized experiences';,
-},;
-    {;
+      description: 'Customer analytics, inventory management, and personalized experiences'},;
+    {
       name: 'Transportation',;
       icon: Globe,;
-      description: 'Autonomous vehicles, route optimization, and traffic management';,
-},;
-    {;
+      description: 'Autonomous vehicles, route optimization, and traffic management'},;
+    {
       name: 'Energy',;
       icon: Zap,;
-      description: 'Smart grid management, predictive maintenance, and energy optimization';,
-}
+      description: 'Smart grid management, predictive maintenance, and energy optimization'}
   ];
-;
+
   const benefits = [;
-    {;
+    {
       icon: TrendingUp,;
       title: 'Increased Efficiency',;
-      description: 'Automate repetitive tasks and optimize business processes';,
-},;
-    {;
+      description: 'Automate repetitive tasks and optimize business processes'},;
+    {
       icon: Target,;
       title: 'Better Decision Making',;
-      description: 'Data-driven insights for informed strategic decisions';,
-},;
-    {;
+      description: 'Data-driven insights for informed strategic decisions'},;
+    {
       icon: Users2,;
       title: 'Enhanced Customer Experience',;
-      description: 'Personalized interactions and improved service delivery';,
-},;
-    {;
+      description: 'Personalized interactions and improved service delivery'},;
+    {
       icon: Rocket,;
       title: 'Competitive Advantage',;
-      description: 'Stay ahead with cutting-edge AI technology';,
-}
+      description: 'Stay ahead with cutting-edge AI technology'}
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-purple-50">;
       {/* Hero Section */}
@@ -182,7 +165,7 @@ const AISolutions: React.FC = () => {;
           </div>;
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {solutions.map((solution, index) => {;
+            {solutions.map((solution, index) => {
               const Icon = solution.icon;
               return (;
                 <div;
@@ -206,8 +189,7 @@ const AISolutions: React.FC = () => {;
                     ))}
                   </ul>;
                 </div>;
-              );,
-})}
+              )})}
           </div>;
         </div>;
       </section>;
@@ -225,7 +207,7 @@ const AISolutions: React.FC = () => {;
           </div>;
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {industries.map((industry, index) => {;
+            {industries.map((industry, index) => {
               const Icon = industry.icon;
               return (;
                 <div;
@@ -241,8 +223,7 @@ const AISolutions: React.FC = () => {;
                     {industry.description}
                   </p>;
                 </div>;
-              );,
-})}
+              )})}
           </div>;
         </div>;
       </section>;
@@ -260,7 +241,7 @@ const AISolutions: React.FC = () => {;
           </div>;
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-            {benefits.map((benefit, index) => {;
+            {benefits.map((benefit, index) => {
               const Icon = benefit.icon;
               return (;
                 <div key={index} className="text-center">;
@@ -274,8 +255,7 @@ const AISolutions: React.FC = () => {;
                     {benefit.description}
                   </p>;
                 </div>;
-              );,
-})}
+              )})}
           </div>;
         </div>;
       </section>;
@@ -305,7 +285,5 @@ const AISolutions: React.FC = () => {;
         </div>;
       </section>;
     </div>;
-  );,
-};
-;
+  )}
 export default AISolutions;

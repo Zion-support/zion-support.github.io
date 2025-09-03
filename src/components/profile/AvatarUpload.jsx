@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useState } from 'react';
-export default function Page() {;
+export default function Page() {
 ";
           alt="Avatar preview";
           className="h-20 w-20 rounded-full";
@@ -18,6 +18,5 @@ export default function Page() {;
           Image upload feature is currently unavailable.</p>;
       )}
     </div>;
-  );,
-}
+  )}
 '"

@@ -1,48 +1,46 @@
 import React, { useState, useEffect } from 'react';
 import { BarChart3, TrendingUp, Activity, Eye, Clock, Target, RefreshCw } from 'lucide-react';
-;
-export const AnalyticsDashboard = ({ className = '', showRealTime = true, refreshInterval = 5000 }) => {;
+
+export const AnalyticsDashboard = ({ className = '', showRealTime = true, refreshInterval = 5000 }) => {
     const { isTracking, currentSession, performanceMetrics, events, getAnalyticsSummary, trackEvent, trackConversion } = useAnalytics({;
         enableTracking: true,;
         enablePerformanceTracking: true,;
         enableUserBehaviorTracking: true,;
-        enableHeatmapTracking: false;,
-});
+        enableHeatmapTracking: false});
     const [isExpanded, setIsExpanded] = useState(false);
     const [selectedTimeRange, setSelectedTimeRange] = useState('24h');
     const [analyticsSummary, setAnalyticsSummary] = useState(null);
     // Auto-refresh analytics data;
-    useEffect(() => {;
+    useEffect(() => {
         if (!showRealTime);
             return;
-        const interval = setInterval(() => {;
+        const interval = setInterval(() => {
             updateAnalyticsSummary()}, refreshInterval);
         return () => clearInterval(interval)}, [showRealTime, refreshInterval]);
     // Update analytics summary;
-    const updateAnalyticsSummary = () => {;
+    const updateAnalyticsSummary = () => {
         const summary = getAnalyticsSummary();
-        if (summary) {;
+        if (summary) {
             setAnalyticsSummary(summary)}
-    };
+    }
     // Update summary when events change;
-    useEffect(() => {;
+    useEffect(() => {
         updateAnalyticsSummary()}, [events, currentSession]);
     // Track dashboard interactions;
-    const handleDashboardInteraction = (action, metadata) => {;
-        trackEvent('dashboard', action, 'dashboard_interaction', null, metadata)};
+    const handleDashboardInteraction = (action, metadata) => {
+        trackEvent('dashboard', action, 'dashboard_interaction', null, metadata)}
     // Track conversion goal;
-    const handleTrackConversion = () => {;
-        trackConversion('dashboard_engagement', 1, { timeRange: selectedTimeRange })};
+    const handleTrackConversion = () => {
+        trackConversion('dashboard_engagement', 1, { timeRange: selectedTimeRange })}
     // Get events by category for chart;
-    const getEventsByCategory = () => {;
+    const getEventsByCategory = () => {
         if (!analyticsSummary?.eventsByCategory);
             return [];
         return Object.entries(analyticsSummary.eventsByCategory).map(([category, count]) => ({;
             category,;
-            count: count;,
-}))};
+            count: count}))}
     // Get performance score;
-    const getPerformanceScore = () => {;
+    const getPerformanceScore = () => {
         if (!performanceMetrics);
             return 0;
         let score = 100;
@@ -59,82 +57,71 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
             score -= 25;
         else if (performanceMetrics.cumulativeLayoutShift > 0.05);
             score -= 10;
-        return Math.max(0, score)};
+        return Math.max(0, score)}
     // Format duration;
-    const formatDuration = (seconds) => {;
+    const formatDuration = (seconds) => {
         if (seconds < 60);
             return `${seconds}s`;
         const minutes = Math.floor(seconds / 60);
         const remainingSeconds = seconds % 60;
-        return `${minutes}m ${remainingSeconds}s`};
+        return `${minutes}m ${remainingSeconds}s`}
     // Format number with K/M suffix;
-    const formatNumber = (num) => {;
+    const formatNumber = (num) => {
         if (num >= 1000000);
             return `${(num / 1000000).toFixed(1)}M`;
         if (num >= 1000);
             return `${(num / 1000).toFixed(1)}K`;
-        return num.toString()};
+        return num.toString()}
     return (<div className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>      {/* Header */}
-;
+
     // comment;
-useEffect(() => {;
-        updateAnalyticsSummary()}, [events, currentSession]);,
-}
+useEffect(() => {
+        updateAnalyticsSummary()}, [events, currentSession])}
     // comment;
-const handleDashboardInteraction = (action, metadata) => {;
+const handleDashboardInteraction = (action, metadata) => {
         trackEvent("dashboard", action, "dashboard_interaction", null, metadata)}
-;
+
     // comment;
 const handleTrackConversion = () => {";
         trackConversion("dashboard_engagement", 1, { timeRange: selectedTimeRange })}
-;
+
     // comment;
-const getEventsByCategory = () => {;
-        if();,
-}
+const getEventsByCategory = () => {
+        if()}
             return [];
         return Object.entries(analyticsSummary.eventsByCategory).map(([category, count]) => ({;
             category, count: count}))}
-;
+
     // comment;
-const getPerformanceScore = () => {;
-        if();,
-}
+const getPerformanceScore = () => {
+        if()}
             return 0,;
 let score = 100;
         // comment;
-if();,
-}
+if()}
             score -= 20,;
-else if();,
-}
+else if()}
             score -= 10,;
-if();,
-}
+if()}
             score -= 15,;
-else if();,
-}
+else if()}
             score -= 5,;
-if();,
-}
+if()}
             score -= 25,;
-else if();,
-}
+else if()}
             score -= 10,;
 return Math.max(0, score)}
-;
+
     // comment;
-const formatDuration = () => {;
-        if();,
-}
+const formatDuration = () => {
+        if()}
             return "${seconds}s";
-        const minutes = Math.floor();,
-}
+        const minutes = Math.floor()}
         const remainingSeconds = seconds % 60";
         return "${minutes}m ${remainingSeconds}s"}
-;
+
     // comment;
-const formatNumber = () => {;
+const formatNumber = () => {
         if (num >= 1000000)";
             return "${(num / 1000000).toFixed(1)}M";
         if (num >= 1000)";
@@ -155,16 +142,16 @@ const formatNumber = () => {;
               <div """""";
                 className="{"w-2" h-2 rounded-full ${isTracking ? "bg-green-400" : "bg-red-400"}"}""></div>";
               {isTracking ? "Tracking" : "Stopped"}
-;
+
             </div>;
             {/* comment */}";
             <select value="{selectedTimeRange}"">;
               onChange = "{e" ="> {}",;
                 setSelectedTimeRange(e.target.value)"";";
-                handleDashboardInteraction("time_range_changed", {};
+                handleDashboardInteraction("time_range_changed", {}
                   timeRange: e.target.value})";"}}""";
               className = "px-2 py-1 bg-white/20 rounded text-xs focus: outline-none focus:ring-2 focus:ring-white/50""";
-                setSelectedTimeRange(e.target.value)",,;
+                setSelectedTimeRange(e.target.value)",;
                 handleDashboardInteraction("time_range_changed", {};";
                   timeRange: e.target.value})}}""";
               className = "px-2 py-1 bg-white/20 rounded text-xs focus: outline-none focus:ring-2 focus:ring-white/50;
@@ -186,10 +173,9 @@ const formatNumber = () => {;
 
 ";
 "";
-                isExpanded ? "Collapse dashboard"  : "Expand dashboard", ",;,
-}">""";
+                isExpanded ? "Collapse dashboard"  : "Expand dashboard", "}">""";
               {isExpanded ? "−" : }
-;
+
             </button>;
           </div>;
         </div>";
@@ -265,8 +251,7 @@ const formatNumber = () => {;
 "";
         <div className="space-y-2 max-h-32 overflow-y-auto">;
           {events,;
-            .slice();,
-}
+            .slice()}
             .reverse()";
             .map(event => (;
               <div """;
@@ -283,8 +268,7 @@ const formatNumber = () => {;
                           ? "bg-green-500"";
                           : event.category === "error"""";
                             ? "bg-red-500"""""""">;
-                            : "bg-gray-500""", "";";,
-}"}"""></span>"""";
+                            : "bg-gray-500""", "";"}"}"""></span>"""";
                   <span className = "text-gray-600 dark: text-gray-400">",;
                     {event.category}""";
                   </span>"";
@@ -294,7 +278,7 @@ const formatNumber = () => {;
                 </div>"";
                 <span className="text-xs text-gray-500">;
                   {new Date(event.timestamp).toLocaleTimeString()}
-;
+
                 </span>;
               </div>";
             ))}
@@ -304,7 +288,7 @@ const formatNumber = () => {;
               No events tracked yet,;
             </div>;
           )}
-;
+
         </div>";
       </div>;
       {/* comment */}""";
@@ -350,7 +334,7 @@ const formatNumber = () => {;
                   </span>"";
                   <span className="font-medium">,;
                     {performanceMetrics.cumulativeLayoutShift.toFixed(3)}
-;
+
                   </span>;
                 </div>;
             </div>";
@@ -384,11 +368,11 @@ const formatNumber = () => {;
                     </div>"";
                     <span className="text-green-700 dark: text-green-300 text-sm font-medium w-8 text-right">,;
                       {item.count}
-;
+
                     </span>;
                   </div>;
               ))}
-;
+
             </div>";
           </div>;
           {/* comment */}""";
@@ -429,11 +413,11 @@ Referrer: """;
                   </span>"";
                   <span className="font-medium text-xs max-w-32 truncate">"",;
                     {currentSession.referrer || "Direct"}
-;
+
                   </span>;
                 </div>;
           )}
-;
+
         </div>";
       )}
 """;
@@ -466,8 +450,7 @@ Referrer: """;
           </button>;
         </div>;
     </div>";,;
-  )","";";,
-}""""";
+  )","";"}""""";
 """""""";
 ";
 

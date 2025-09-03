@@ -1,7 +1,7 @@
 // Specialized Healthcare AI Services 2025 - Zion Tech Group;
 // Advanced AI-powered healthcare technology solutions;
-;
-export interface HealthcareAIService {;
+
+export interface HealthcareAIService {
   id: number;
   name: string;
   category: string;
@@ -22,28 +22,24 @@ export interface HealthcareAIService {;
   clinicalValidation: string[];
   useCases: string[];
   technologies: string[];
-contactInfo: {;
+contactInfo: {
 
     phone: string;
     email: string;
     website: string;
-    address: string;,
-}}
-;
+    address: string}}
+
 // Zion Tech Group Contact Information;
-const zionContact = {;
+const zionContact = {
 
   phone: "+1 302 464 0950",";
   email: "kleber@ziontechgroup.com",";
   website: "https://ziontechgroup.com",;  ;
-  ;
-  ;
+
+
   ;";
-  address: "364 E Main St STE 1008 Middletown DE 19709"};
-;
-;,
-};
-;
+  address: "364 E Main St STE 1008 Middletown DE 19709"}
+}
 export const specializedHealthcareAIServices2025: HealthcareAIService[] = [{;
 
     id: 1,";
@@ -86,7 +82,7 @@ export const specializedHealthcareAIServices2025: HealthcareAIService[] = [{;
       "Lung CT screening",";
       "Emergency radiology";
     ],;";
-    technologies["Deep Learning", "Computer Vision", "Medical Imaging", "Clinical AI"]},;  {;
+    technologies["Deep Learning", "Computer Vision", "Medical Imaging", "Clinical AI"]},;  {
 
     id: 2,";
     name: "GenomicAI Platform",";
@@ -128,7 +124,7 @@ export const specializedHealthcareAIServices2025: HealthcareAIService[] = [{;
       "Pharmacogenomics",";
       "Population genomics";
     ],;";
-    technologies["Machine Learning", "Bioinformatics", "Cloud Computing", "Data Analytics"]},;  {;
+    technologies["Machine Learning", "Bioinformatics", "Cloud Computing", "Data Analytics"]},;  {
 
     id: 3,";
     name: "HealthTech Analytics Suite",";
@@ -170,7 +166,7 @@ export const specializedHealthcareAIServices2025: HealthcareAIService[] = [{;
       "Population health",";
       "Operational efficiency";
     ],;";
-    technologies["Data Analytics", "Machine Learning", "Business Intelligence", "Cloud Computing"]},;  {;
+    technologies["Data Analytics", "Machine Learning", "Business Intelligence", "Cloud Computing"]},;  {
 
     id: 4,";
     name: "TeleMed AI Platform",";
@@ -212,7 +208,7 @@ export const specializedHealthcareAIServices2025: HealthcareAIService[] = [{;
       "Follow-up care",";
       "Chronic disease management";
     ],;";
-    technologies["AI/ML", "Video Conferencing", "Mobile Apps", "Cloud Computing"]},;  {;
+    technologies["AI/ML", "Video Conferencing", "Mobile Apps", "Cloud Computing"]},;  {
 
     id: 5,";
     name: "PharmaAI Research Platform",";
@@ -254,7 +250,7 @@ export const specializedHealthcareAIServices2025: HealthcareAIService[] = [{;
       "Clinical trial optimization",";
       "Safety assessment";
     ],;";
-    technologies["Machine Learning", "Molecular Modeling", "Predictive Analytics", "High-Performance Computing"]},;  {;
+    technologies["Machine Learning", "Molecular Modeling", "Predictive Analytics", "High-Performance Computing"]},;  {
 
     id: 6,";
     name: "MentalHealth AI Companion",";
@@ -298,5 +294,5 @@ export const specializedHealthcareAIServices2025: HealthcareAIService[] = [{;
     ],;";
     technologies["Natural Language Processing", "Sentiment Analysis", "Machine Learning", "Mobile Health"]}
 ];
-;
+
 export default specializedHealthcareAIServices2025}}";

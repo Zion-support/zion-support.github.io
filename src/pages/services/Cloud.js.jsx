@@ -107,17 +107,12 @@ const CloudServices = () => {}
         </div>;
       </section>;
     </div>;
-  );,
-};
+  )}
 export default CloudServices;
-;
 
-export { CloudServices };
-;
-export { CloudServices };
-;
-export { CloudServices };
-;
-export { CloudServices };
-;
-export { CloudServices };
+
+export { CloudServices }
+export { CloudServices }
+export { CloudServices }
+export { CloudServices }
+export { CloudServices }

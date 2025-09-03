@@ -2,7 +2,7 @@ import React from 'react';
 import { SEO } from "@/components/SEO";
 import Link from 'next/link';
 import { Check, Wifi, Cpu, Database, Shield, Zap, Globe, Target } from 'lucide-react';
-export default function IoTEdgeComputingServices() {;
+export default function IoTEdgeComputingServices() {
     const industries = [;
         'Smart Cities & Municipalities',;
         'Manufacturing & Industry 4.0',;
@@ -32,30 +32,26 @@ export default function IoTEdgeComputingServices() {;
         'Predictive maintenance and optimization';
     ];
     const useCases = [;
-        {;
+        {
             title: 'Smart Manufacturing',;
             description: 'Real-time monitoring of production lines, predictive maintenance, and quality control automation.',;
             roi: '25-40% cost reduction',;
-            implementation: '8-12 weeks';,
-},;
-        {;
+            implementation: '8-12 weeks'},;
+        {
             title: 'Smart Cities',;
             description: 'Traffic management, environmental monitoring, public safety, and utility optimization.',;
             roi: '30-50% efficiency improvement',;
-            implementation: '12-20 weeks';,
-},;
-        {;
+            implementation: '12-20 weeks'},;
+        {
             title: 'Healthcare IoT',;
             description: 'Patient monitoring, medical device management, and healthcare facility optimization.',;
             roi: '20-35% operational improvement',;
-            implementation: '10-16 weeks';,
-},;
-        {;
+            implementation: '10-16 weeks'},;
+        {
             title: 'Agricultural IoT',;
             description: 'Precision farming, crop monitoring, irrigation control, and livestock management.',;
             roi: '15-30% yield improvement',;
-            implementation: '6-10 weeks';,
-}
+            implementation: '6-10 weeks'}
     ];
     return (<div className="min-h-screen bg-background">;
       <SEO title="IoT & Edge Computing Services - Zion Tech Group" description="Comprehensive IoT solutions, edge computing infrastructure, and smart device management platforms for connected ecosystems." keywords="IoT services, edge computing, smart devices, IoT platform, device management, IoT analytics, smart cities" canonical="https://ziontechgroup.com/services/iot-edge-computing"/>;
@@ -153,7 +149,7 @@ export default function IoTEdgeComputingServices() {;
                 Our IoT expertise combined with cutting-edge edge computing technologies enables us to deliver ;
                 solutions that provide real business value and competitive advantage.;
               </p>;
-              ;
+
               <div className="space-y-4">;
                 {benefits.map((benefit, index) => (<div key={index} className="flex items-start">;
                     <Check className="w-6 h-6 text-green-500 mr-3 mt-0.5 flex-shrink-0"/>;
@@ -321,16 +317,11 @@ export default function IoTEdgeComputingServices() {;
           </div>;
         </div>;
       </section>;
-    </div>);,
-}
-;
+    </div>)}
 
-export { IoTEdgeComputingServices };
-;
-export { IoTEdgeComputingServices };
-;
-export { IoTEdgeComputingServices };
-;
-export { IoTEdgeComputingServices };
-;
-export { IoTEdgeComputingServices };
+
+export { IoTEdgeComputingServices }
+export { IoTEdgeComputingServices }
+export { IoTEdgeComputingServices }
+export { IoTEdgeComputingServices }
+export { IoTEdgeComputingServices }

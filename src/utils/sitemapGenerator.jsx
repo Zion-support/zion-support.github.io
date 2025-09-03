@@ -1,35 +1,33 @@
 import React, { useState, useEffect } from 'react';
 import { motion  } from 'framer-motion';
-;
-export default function Page() {;
+
+export default function Page() {
 ${url.url}</loc>'`;
         ${url.lastmod ? `<lastmod>${url.lastmod}</lastmod>` : ''}'`;
         ${url.changefreq ? `<changefreq>${url.changefreq}</changefreq>` : ''}'`;
         ${url.priority ? `<priority>${url.priority}</priority>` : ''}`;
       </url>`;
-            return urlElement.replace(/\s+/g,).trim();,
-}).join('');`;
+            return urlElement.replace(/\s+/g).trim()}).join('');`;
         return `${xmlHeader}\n${urlsetOpen}\n${urlElements}\n${urlsetClose}`;
-;
+
     /**;
      * Generate sitemap index for large sites;
      */;
-    generateIndex(sitemaps) {;
+    generateIndex(sitemaps) {
 '";
         const xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>;
-        const sitemapElements = sitemaps.map(sitemap => {;
+        const sitemapElements = sitemaps.map(sitemap => {
 `;
             return `<sitemap>;
         <loc>${sitemap}</loc>;
         <lastmod>${new Date().toISOString()}</lastmod>`;
-      </sitemap>`;,
-}).join('');`;
+      </sitemap>`}).join('');`;
         return `${xmlHeader}\n${sitemapindexOpen}\n${sitemapElements}\n${sitemapindexClose}`;
-;
+
     /**;
      * Generate robots.txt content;
      */;
-    generateRobotsTxt() {;
+    generateRobotsTxt() {
         const { baseUrl } = this.config;`;
         return `User-agent: *;
 Allow: /;
@@ -37,17 +35,16 @@ Allow: /;
 # Sitemaps;
 Sitemap: ${baseUrl}/sitemap.xml;
 
-  const generateSitemap = async () => {;
+  const generateSitemap = async () => {
     setIsGenerating(true) ;
-;
+
     // Simulate sitemap generation;
-    setTimeout(() => {;
-      const sitemap = {;
+    setTimeout(() => {
+      const sitemap = {
 
   pages: [';
           { url: '/', priority: '1.0',;
-  changefreq: 'daily';,
-},;
+  changefreq: 'daily'},;
           { url: '/services', priority: '0.9', changefreq: 'weekly' },;
           { url: '/about', priority: '0.8', changefreq: 'monthly' },;
           { url: '/contact', priority: '0.8', changefreq: 'monthly' },;
@@ -61,18 +58,14 @@ Sitemap: ${baseUrl}/sitemap.xml;
           { url: '/services/micro-saas', priority: '0.8', changefreq: 'weekly' }
         ],;
         totalUrls: 10,;
-        generatedAt: new Date () .toISOString () };
-;
+        generatedAt: new Date () .toISOString () }
       setSitemapData(sitemap) ;
       setIsGenerating(false) ;
-;
-      if(onGenerate) {;
 
-        onGenerate(sitemap);,
-}
-    }, 2000) ;,
-};
-;
+      if(onGenerate) {
+
+        onGenerate(sitemap)}
+    }, 2000) }
   return (";
     <div className="space-y-4">;
       <button;
@@ -83,16 +76,14 @@ Sitemap: ${baseUrl}/sitemap.xml;
       </button>;
 
       {sitemapData && (<motion.div;
-          initial = {;
+          initial = {
 
   { opacity: 0,;
-  y: 20;,
-}}
-          animate = {;
+  y: 20}}
+          animate = {
 
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
           className="space-y-4">";
           <div className="bg-indigo-50 p-4 rounded-lg">";
             <h3 className="text-lg font-semibold mb-2">Sitemap Generated Successfully!</h3>";
@@ -105,8 +96,7 @@ Sitemap: ${baseUrl}/sitemap.xml;
               </div>;
         // // // // // // // // console.error('Error generating sitemaps:', error);
         throw error;
-;,
-};
+}
             </div>;
           </div>;
 
@@ -129,11 +119,9 @@ Sitemap: ${baseUrl}/sitemap.xml;
                 </div>) ) }            </div>;
           </div>;
         </motion.div>) }
-    </div>) ;,
-};
-;
+    </div>) }
 export default SitemapGenerator;
-;
+
 export default to;
 export default to;
 '"`

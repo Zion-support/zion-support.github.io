@@ -1,38 +1,33 @@
 import React from 'react';
 import { Target, TrendingUp, Users, Globe, Cpu, Lightbulb, FileText, PenTool, Image, Video, Music } from 'lucide-react';
-const AIContentGeneration = () => {;
+const AIContentGeneration = () => {
     const contentTypes = [;
-        {;
+        {
             title: "Marketing Content",;
             description: "Engaging marketing materials and campaigns",;
             icon: Target,;
-            capabilities: ["Social media posts", "Email campaigns", "Ad copy", "Brand messaging"];,
-},;
-        {;
+            capabilities: ["Social media posts", "Email campaigns", "Ad copy", "Brand messaging"]},;
+        {
             title: "Educational Content",;
             description: "Learning materials and educational resources",;
             icon: Users,;
-            capabilities: ["Course materials", "Tutorials", "Documentation", "Learning guides"];,
-},;
-        {;
+            capabilities: ["Course materials", "Tutorials", "Documentation", "Learning guides"]},;
+        {
             title: "Creative Writing",;
             description: "Fiction, poetry, and creative content",;
             icon: PenTool,;
-            capabilities: ["Story generation", "Poetry creation", "Character development", "Plot generation"];,
-},;
-        {;
+            capabilities: ["Story generation", "Poetry creation", "Character development", "Plot generation"]},;
+        {
             title: "Technical Content",;
             description: "Technical documentation and specifications",;
             icon: Cpu,;
-            capabilities: ["API documentation", "User manuals", "Technical guides", "Specifications"];,
-},;
-        {;
+            capabilities: ["API documentation", "User manuals", "Technical guides", "Specifications"]},;
+        {
             title: "Business Content",;
             description: "Professional business communications",;
             icon: TrendingUp,;
-            capabilities: ["Reports", "Presentations", "Proposals", "Business plans"];,
-},;
-        {;
+            capabilities: ["Reports", "Presentations", "Proposals", "Business plans"]},;
+        {
             title: "Multimedia Content",;
             description: "Combined text, image, and video content",;
             icon: Globe,;
@@ -48,32 +43,27 @@ const AIContentGeneration = () => {;
         "24/7 content creation availability";
     ];
     const implementation = [;
-        {;
+        {
             phase: "Content Strategy",;
             description: "Define content goals and requirements",;
-            duration: "1-2 weeks";,
-},;
-        {;
+            duration: "1-2 weeks"},;
+        {
             phase: "AI Training",;
             description: "Train AI models on your brand and content style",;
-            duration: "2-4 weeks";,
-},;
-        {;
+            duration: "2-4 weeks"},;
+        {
             phase: "Content Templates",;
             description: "Create templates and guidelines for different content types",;
-            duration: "2-3 weeks";,
-},;
-        {;
+            duration: "2-3 weeks"},;
+        {
             phase: "Integration",;
             description: "Integrate AI content generation into your workflow",;
-            duration: "3-5 weeks";,
-},;
-        {;
+            duration: "3-5 weeks"},;
+        {
             phase: "Testing & Refinement",;
             description: "Test content quality and refine AI parameters",;
-            duration: "2-4 weeks";,
-},;
-        {;
+            duration: "2-4 weeks"},;
+        {
             phase: "Deployment",;
             description: "Full deployment and team training",;
             duration: "1-2 weeks";
@@ -252,17 +242,11 @@ const AIContentGeneration = () => {;
           </div>;
         </div>;
       </section>;
-    </div>);,
-};
-export default AIContentGeneration;,
-}}}}
-;
-export { AIContentGeneration };
-;
-export { AIContentGeneration };
-;
-export { AIContentGeneration };
-;
-export { AIContentGeneration };
-;
-export { AIContentGeneration };
+    </div>)}
+export default AIContentGeneration}}}}
+
+export { AIContentGeneration }
+export { AIContentGeneration }
+export { AIContentGeneration }
+export { AIContentGeneration }
+export { AIContentGeneration }

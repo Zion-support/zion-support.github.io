@@ -11,7 +11,7 @@ export default function CreatePostPage() {}
 ';
 '';
 ''';
-    categoryId: initialCategory || 'project-help'};
+    categoryId: initialCategory || 'project-help'}
   const handleSubmit = async values => {}
     try {}
 ';
@@ -20,7 +20,7 @@ export default function CreatePostPage() {}
       // Here we would normally save to the database'''';
       // For now, we'll just simulate a successful post creation''';
       // Parse tags into an array'''';
-      const tagsArray = values.tags.split(',).map(tag => tag.trim());
+      const tagsArray = values.tags.split(').map(tag => tag.trim());
       toast({}
 ';
 '';
@@ -28,17 +28,15 @@ export default function CreatePostPage() {}
         title: 'Post created',''';
         description: 'Your post has been published successfully'});
       // Redirect to the forum category;
-      router(`/community/category/${values.categoryId}`);,
-} catch (error) {}
+      router(`/community/category/${values.categoryId}`)} catch (error) {}
       toast({}
 ';
 '';
 ''';
         title: 'Error',''';
         description: 'There was a problem creating your post',''';
-        variant: 'destructive'});,
-}
-  };
+        variant: 'destructive'})}
+  }
   return();
     (;
       <SEO;
@@ -63,14 +61,10 @@ export default function CreatePostPage() {}
 
         <PostForm initialValues={initialValues} onSubmit={handleSubmit}/>;
       </div>)}
-;
 
-export { CreatePostPage };
-;
-export { CreatePostPage };
-;
-export { CreatePostPage };
-;
-export { CreatePostPage };
-;
-export { CreatePostPage };
+
+export { CreatePostPage }
+export { CreatePostPage }
+export { CreatePostPage }
+export { CreatePostPage }
+export { CreatePostPage }

@@ -1,5 +1,5 @@
 import { ServiceVariant  } from "../types/service-variants";
-export interface RevolutionaryAIInnovationService2029 {;
+export interface RevolutionaryAIInnovationService2029 {
   id: string;
   name: string;
   tagline: string;
@@ -26,7 +26,7 @@ export interface RevolutionaryAIInnovationService2029 {;
   marketSize: string;
   growthRate: string;
   variant: string;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string}
@@ -41,7 +41,7 @@ export interface RevolutionaryAIInnovationService2029 {;
 export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationService2029[] =;
   [;
     // AI-Powered Autonomous Code Review;
-    {;
+    {
       id: "ai-autonomous-code-reviewer",;
       name: "AI Autonomous Code Reviewer",;
       tagline: "Automated code review with human-level understanding",;
@@ -85,11 +85,10 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
       marketSize: "$8B Code Quality Tools",;
       growthRate: "20% CAGR",;
       variant: "ai-development",;
-      contactInfo: {;
+      contactInfo: {
         mobile: "+1 302 464 0950",;
         email: "kleber@ziontechgroup.com",;
-        address: "364 E Main St STE 1008 Middletown DE 19709",;,;,
-},;
+        address: "364 E Main St STE 1008 Middletown DE 19709"},;
       realImplementation: true,;
       implementationDetails:;
         "AI models, code analysis engine, CI/CD integration",;
@@ -97,10 +96,9 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
       customers: 67,;
       rating: 4.8,;
       reviews: 34,;
-      isPopular: true,;,;,
-},;
+      isPopular: true},;
     // AI-Powered Content Creation Suite;
-    {;
+    {
       id: "ai-content-creation-suite",;
       name: "AI Content Creation Suite",;
       tagline: "Create engaging content across all channels with AI",;
@@ -140,11 +138,10 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
       marketSize: "$15B Content Marketing",;
       growthRate: "18% CAGR",;
       variant: "ai-content",;
-      contactInfo: {;
+      contactInfo: {
         mobile: "+1 302 464 0950",;
         email: "kleber@ziontechgroup.com",;
-        address: "364 E Main St STE 1008 Middletown DE 19709",;,;,
-},;
+        address: "364 E Main St STE 1008 Middletown DE 19709"},;
       realImplementation: true,;
       implementationDetails:;
         "AI models, content templates, optimization engine",;
@@ -152,10 +149,9 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
       customers: 89,;
       rating: 4.7,;
       reviews: 45,;
-      isPopular: true,;,;,
-},;
+      isPopular: true},;
     // AI-Powered Project Management;
-    {;
+    {
       id: "ai-project-management",;
       name: "AI Project Management",;
       tagline: "Intelligent project management with predictive insights",;
@@ -199,21 +195,19 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
       marketSize: "$12B Project Management",;
       growthRate: "16% CAGR",;
       variant: "ai-project-management",;
-      contactInfo: {;
+      contactInfo: {
         mobile: "+1 302 464 0950",;
         email: "kleber@ziontechgroup.com",;
-        address: "364 E Main St STE 1008 Middletown DE 19709",;,;,
-},;
+        address: "364 E Main St STE 1008 Middletown DE 19709"},;
       realImplementation: true,;
       implementationDetails: "AI models, project analytics, automation engine",;
       launchDate: "2025-01-15",;
       customers: 52,;
       rating: 4.8,;
       reviews: 28,;
-      isNew: true,;,;,
-},;
+      isNew: true},;
     // AI-Powered SEO Optimization;
-    {;
+    {
       id: "ai-powered-seo",;
       name: "AI-Powered SEO Optimization",;
       tagline: "Optimize your website with AI-driven insights",;
@@ -258,20 +252,18 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
       marketSize: "$20B SEO Tools",;
       growthRate: "22% CAGR",;
       variant: "ai-seo",;
-      contactInfo: {;
+      contactInfo: {
         mobile: "+1 302 464 0950",;
         email: "kleber@ziontechgroup.com",;
-        address: "364 E Main St STE 1008 Middletown DE 19709",;,;,
-},;
+        address: "364 E Main St STE 1008 Middletown DE 19709"},;
       realImplementation: true,;
       implementationDetails: "AI models, SEO analytics, optimization engine",;
       launchDate: "2025-01-18",;
       customers: 73,;
       rating: 4.6,;
-      reviews: 38,;,;,
-},;
+      reviews: 38},;
     // AI-Powered Marketing Automation;
-    {;
+    {
       id: "ai-marketing-automation",;
       name: "AI Marketing Automation",;
       tagline: "Automate marketing with intelligent AI insights",;
@@ -322,20 +314,18 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
       marketSize: "$25B Marketing Automation",;
       growthRate: "20% CAGR",;
       variant: "ai-marketing",;
-      contactInfo: {;
+      contactInfo: {
         mobile: "+1 302 464 0950",;
         email: "kleber@ziontechgroup.com",;
-        address: "364 E Main St STE 1008 Middletown DE 19709",;,;,
-},;
+        address: "364 E Main St STE 1008 Middletown DE 19709"},;
       realImplementation: true,;
       implementationDetails: "AI models, automation engine, analytics platform",;
       launchDate: "2025-01-20",;
       customers: 61,;
       rating: 4.7,;
-      reviews: 32,;,;,
-},;
+      reviews: 32},;
     // AI-Powered Customer Support;
-    {;
+    {
       id: "ai-customer-support-automation",;
       name: "AI Customer Support Automation",;
       tagline: "Automate customer support with intelligent AI",;
@@ -381,21 +371,19 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
       marketSize: "$18B Customer Support",;
       growthRate: "16% CAGR",;
       variant: "ai-support",;
-      contactInfo: {;
+      contactInfo: {
         mobile: "+1 302 464 0950",;
         email: "kleber@ziontechgroup.com",;
-        address: "364 E Main St STE 1008 Middletown DE 19709",;,;,
-},;
+        address: "364 E Main St STE 1008 Middletown DE 19709"},;
       realImplementation: true,;
       implementationDetails: "AI models, chatbot platform, analytics dashboard",;
       launchDate: "2025-01-22",;
       customers: 48,;
       rating: 4.8,;
       reviews: 26,;
-      isPopular: true,;,;,
-},;
+      isPopular: true},;
     // AI-Powered Financial Analytics;
-    {;
+    {
       id: "ai-financial-analytics",;
       name: "AI Financial Analytics",;
       tagline: "Transform financial data into actionable insights",;
@@ -445,11 +433,10 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
       marketSize: "$35B Financial Analytics",;
       growthRate: "18% CAGR",;
       variant: "ai-finance",;
-      contactInfo: {;
+      contactInfo: {
         mobile: "+1 302 464 0950",;
         email: "kleber@ziontechgroup.com",;
-        address: "364 E Main St STE 1008 Middletown DE 19709",;,;,
-},;
+        address: "364 E Main St STE 1008 Middletown DE 19709"},;
       realImplementation: true,;
       implementationDetails:;
         "AI models, financial data connectors, analytics engine",;
@@ -457,10 +444,9 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
       customers: 35,;
       rating: 4.9,;
       reviews: 19,;
-      isNew: true,;,;,
-},;
+      isNew: true},;
     // AI-Powered Legal Document Automation;
-    {;
+    {
       id: "ai-legal-document-automation",;
       name: "AI Legal Document Automation",;
       tagline: "Automate legal document creation and review",;
@@ -501,21 +487,19 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
       marketSize: "$12B Legal Tech",;
       growthRate: "25% CAGR",;
       variant: "ai-legal",;
-      contactInfo: {;
+      contactInfo: {
         mobile: "+1 302 464 0950",;
         email: "kleber@ziontechgroup.com",;
-        address: "364 E Main St STE 1008 Middletown DE 19709",;,;,
-},;
+        address: "364 E Main St STE 1008 Middletown DE 19709"},;
       realImplementation: true,;
       implementationDetails:;
         "AI models, document processing, compliance engine",;
       launchDate: "2025-01-28",;
       customers: 22,;
       rating: 4.7,;
-      reviews: 15,;,;,
-},;
+      reviews: 15},;
     // AI-Powered Interview Assessment;
-    {;
+    {
       id: "ai-interview-assessment",;
       name: "AI Interview Assessment",;
       tagline: "Assess candidates with AI-powered insights",;
@@ -559,36 +543,31 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
       marketSize: "$8B HR Tech",;
       growthRate: "20% CAGR",;
       variant: "ai-hr",;
-      contactInfo: {;
+      contactInfo: {
         mobile: "+1 302 464 0950",;
         email: "kleber@ziontechgroup.com",;
-        address: "364 E Main St STE 1008 Middletown DE 19709",;,;,
-},;
+        address: "364 E Main St STE 1008 Middletown DE 19709"},;
       realImplementation: true,;
       implementationDetails: "AI models, video analysis, assessment engine",;
       launchDate: "2025-01-30",;
       customers: 41,;
       rating: 4.6,;
-      reviews: 23,;,;,
-},;
+      reviews: 23},;
   ];
-export const getAIServicesByCategory = (category: string) => {;
+export const getAIServicesByCategory = (category: string) => {
   return revolutionaryAIInnovationServices2029.filter(;
     service => service.category === category;
   )}
-export const getPopularAIServices = () => {;
+export const getPopularAIServices = () => {
   return revolutionaryAIInnovationServices2029.filter(;
     service => service.isPopular;
-  );,;,
-}
-export const getNewAIServices = () => {;
-  return revolutionaryAIInnovationServices2029.filter(service => service.isNew);,;,
-}
+  )}
+export const getNewAIServices = () => {
+  return revolutionaryAIInnovationServices2029.filter(service => service.isNew)}
 export const getAIServicesByPriceRange = (;
   minPrice: number,;
   maxPrice: number;
-) => {;
-  return revolutionaryAIInnovationServices2029.filter(service => {;
+) => {
+  return revolutionaryAIInnovationServices2029.filter(service => {
     const price = parseInt(service.price.replace("$", "").replace(",", ""));
-    return price >= minPrice && price <= maxPrice});,;,
-}>
+    return price >= minPrice && price <= maxPrice})}>

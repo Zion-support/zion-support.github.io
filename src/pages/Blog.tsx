@@ -29,11 +29,9 @@ import { ;
   Heart,;
   Share2,;
   MessageCircle,;
-  ExternalLink;,
-} from 'lucide-react';
+  ExternalLink} from 'lucide-react';
 import React from "react";
-import { motion } from "framer - motion",,"});,"});,
-}
+import { motion } from "framer - motion","});,"})}
 export default function Blog() {return (";
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">";
       <SEO title="Blog - Zion Tech Group" description="Professional Blog services by Zion Tech Group"  />";
@@ -47,17 +45,17 @@ export default function Blog() {return (";
   Calendar, User, ArrowRight, Tag, Clock, TrendingUp,;
   Brain, Atom, Rocket, Shield, Globe, Code} from &apos;lucide-react";&apos;&apos;
 export default function Blog() {}
-;
+
   const blogPosts = [],;
       image: &quot,/api/placeholder/600/400&quot,";
   Calendar, User, ArrowRight, Tag, Clock, TrendingUp,;
   Brain, Atom, Rocket, Shield, Globe, Code} from "lucide-react;
-export default function Blog() {;
-;
+export default function Blog() {
+
   const blogPosts = [],";
       image: "/api/placeholder/600/400",;
 featured: true},;
-    {;
+    {
       id: 2,";
 title: "Quantum Computing Breakthrough: What It Means for Your Business;
       excerpt: "Understanding the latest quantum computing advances and their practical applications in solving complex business problems.;
@@ -68,7 +66,7 @@ title: "Quantum Computing Breakthrough: What It Means for Your Business;
 tags: ["Quantum", "Computing", "Innovation"],";
       image: "/api/placeholder/600/400",;
 featured: true},;
-    {;
+    {
       id: 3,";
 title: "Micro SaaS Revolution: Building Scalable Solutions;
       excerpt: "How micro SaaS platforms are changing the software landscape and creating new opportunities for businesses.;
@@ -79,7 +77,7 @@ title: "Micro SaaS Revolution: Building Scalable Solutions;
 tags: ["SaaS", "Software", "Business"],";
       image: "/api/placeholder/600/400",;
 featured: false},;
-    {;
+    {
       id: 4,";
 title: "Cybersecurity in the Age of AI: New Threats and Solutions;
       excerpt: "Examining how AI is both creating new security challenges and providing innovative solutions to protect enterprise data.;
@@ -90,7 +88,7 @@ title: "Cybersecurity in the Age of AI: New Threats and Solutions;
 tags: ["Security", "AI", "Enterprise"],";
       image: "/api/placeholder/600/400",;
 featured: false},;
-    {;
+    {
       id: 5,";
 title: "Digital Transformation: A Complete Guide for 2025;
       excerpt: "Comprehensive strategies for successful digital transformation initiatives in modern enterprises.;
@@ -101,7 +99,7 @@ title: "Digital Transformation: A Complete Guide for 2025;
 tags: ["Digital", "Transformation", "Strategy"],";
       image: "/api/placeholder/600/400",;
 featured: false},;
-    {;
+    {
       id: 6,";
 title: "Cloud Infrastructure Best Practices for Global Enterprises;
       excerpt: "Essential guidelines for designing and managing cloud infrastructure that scales with your business needs.;
@@ -112,8 +110,8 @@ title: "Cloud Infrastructure Best Practices for Global Enterprises;
 tags: ["Cloud", "Infrastructure", "Enterprise"],";
       image: "/api/placeholder/600/400",;
 featured: false}
-;
-  const filteredPosts = blogPosts.filter(post => {;
+
+  const filteredPosts = blogPosts.filter(post => {
     const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
@@ -122,12 +120,10 @@ featured: false}
 
   const categories = [];
 
-  const featuredPosts = blogPosts.filter(post => post.featured);,
-}
-  const regularPosts = blogPosts.filter(post => !post.featured);,
-}
+  const featuredPosts = blogPosts.filter(post => post.featured)}
+  const regularPosts = blogPosts.filter(post => !post.featured)}
   return (;
-    ;
+
     <>";
       <SEO ;";
         title="Blog - Zion Tech Group | Technology Insights & Industry News";";
@@ -146,7 +142,7 @@ featured: false}
               className="text-center max-w-4xl mx-auto">;
             >;";
               <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">,;
-                Technology Insights,,;
+                Technology Insights,;
               </h1>,";
               <p className = "text-xl text-gray-300 mb-8">,;
                 Stay ahead of the curve with expert insights on AI, quantum computing,;
@@ -159,9 +155,9 @@ featured: false}
                     className="px-4 py-2 bg-blue-600/20 border border-blue-400/30 rounded-full text-blue-300 text-sm">;
                   >;
                     {category.name}
-;
+
                   </span>;
-export default function Blog() {;
+export default function Blog() {
 
   const blogPosts = [], image: "/api/placeholder/600/400",;
   {";
@@ -169,7 +165,7 @@ export default function Blog() {;
       excerpt: "Explore the latest AI trends transforming enterprise operations and how businesses can leverage these technologies for competitive advantage.", author: "Dr. Sarah Chen",";
       date: "2025-01-15", readTime: "8 min read",";
       category: "AI & Machine Learning", tags: ["AI,Enterprise,Technology"], image: "/api/placeholder/600/400",;
-      featured: true}, { id: 2}, {;
+      featured: true}, { id: 2}, {
       id: 2,;
       title: &quot,Quantum Computing Breakthroug,h: What It Means for Your Business&quot,;
       excerpt: &quot,Understanding the latest quantum computing advances and their practical applications in solving complex business problems.&quot,;
@@ -184,7 +180,7 @@ export default function Blog() {;
       readTime: "12 min read", category: "Quantum Computing",";
       tags: ["Quantum", "Computing", "Innovation"], image: "/api/placeholder/600/400",";
       tags: ["Quantum,Computing,Innovation"], image: "/api/placeholder/600/400",;
-      featured: true}, { id: 3}, {;
+      featured: true}, { id: 3}, {
       id: 3,;
       title: &quot,Micro SaaS Revolutio,n: Building Scalable Solutions&quot,;
       excerpt: &quot,How micro SaaS platforms are changing the software landscape and creating new opportunities for businesses.&quot,;
@@ -199,7 +195,7 @@ export default function Blog() {;
       readTime: "6 min read", category: "Micro SaaS",";
       tags: ["SaaS", "Software", "Business"], image: "/api/placeholder/600/400",";
       tags: ["SaaS,Software,Business"], image: "/api/placeholder/600/400",;
-      featured: false}, { id: 4}, {;
+      featured: false}, { id: 4}, {
       id: 4,;
       title: &quot,Cybersecurity in the Age of A,I: New Threats and Solutions&quot,;
       excerpt: &quot,Examining how AI is both creating new security challenges and providing innovative solutions to protect enterprise data.&quot,;
@@ -214,7 +210,7 @@ export default function Blog() {;
       readTime: "10 min read", category: "Cybersecurity",";
       tags: ["Security", "AI", "Enterprise"], image: "/api/placeholder/600/400",";
       tags: ["Security,AI,Enterprise"], image: "/api/placeholder/600/400",;
-      featured: false}, { id: 5}, {;
+      featured: false}, { id: 5}, {
       id: 5,;
       title: &quot,Digital Transformatio,n: A Complete Guide for 2025&quot,;
       excerpt: &quot,Comprehensive strategies for successful digital transformation initiatives in modern enterprises.&quot,;
@@ -229,7 +225,7 @@ export default function Blog() {;
       readTime: "15 min read", category: "Digital Transformation",";
       tags: ["Digital", "Transformation", "Strategy"], image: "/api/placeholder/600/400",";
       tags: ["Digital,Transformation,Strategy"], image: "/api/placeholder/600/400",;
-      featured: false}, { id: 6}, {;
+      featured: false}, { id: 6}, {
       id: 6,;
       title: &quot,Cloud Infrastructure Best Practices for Global Enterprises&quot,;
       excerpt: &quot,Essential guidelines for designing and managing cloud infrastructure that scales with your business needs.&quot,;
@@ -240,7 +236,7 @@ export default function Blog() {;
       tags: [&quot,Cloud&quot, &quot;Infrastructure&quot, &quot;Enterprise&quot],;
       image: &quot,/api/placeholder/600/400&quot,;
       featured: false}
-;
+
   ]&quot;
   const categories = []&quot;
 ";
@@ -250,13 +246,11 @@ export default function Blog() {;
       tags: ["Cloud", "Infrastructure", "Enterprise"], image: "/api/placeholder/600/400",";
       tags: ["Cloud,Infrastructure,Enterprise"], image: "/api/placeholder/600/400",;
       featured: false}
-;
+
   ];
   const categories = [];
-  const featuredPosts = blogPosts.filter(post => post.featured);,
-}
-  const regularPosts = blogPosts.filter();,
-}
+  const featuredPosts = blogPosts.filter(post => post.featured)}
+  const regularPosts = blogPosts.filter()}
   return (;
     <>";
       <SEO title="&quot;Blog" - Zion Tech Group | Technology Insights & Industry News&quot;";
@@ -300,7 +294,7 @@ transition="{{" duration: 0.8 }}";
                     {category.name}&quot;
                   </span>;
                 ))}
-;
+
               </div>;
             </motion.div>;
           </div>;
@@ -311,7 +305,7 @@ transition="{{" duration: 0.8 }}";
             {/* comment */}";
             <div className="lg: col-span-3">,;
               {/* comment */}
-;
+
               {featuredPosts.length > 0 && (;";
                 <section className="mb-16">;";
                   <h2 className="text-3xl font-bold text-white mb-8 flex items-center">;";
@@ -330,7 +324,7 @@ transition="{{" duration: 0.8 }}";
             {/* comment */}";
             <div className="lg: col-span-3">,;
               {/* comment */}
-;
+
               {featuredPosts.length > 0 && (&quot}";
                 <section className="&quot;mb-16&quot;">&quot;
                   <h2 className="&quot;text-3xl" font-bold text-white mb-8 flex items-center&quot;>&quot;
@@ -339,7 +333,7 @@ transition="{{" duration: 0.8 }}";
                   </h2>";
                   <div className="&quot;grid" grid-cols-1 md: grid-cols-2 gap-8&quot,>;
                     {featuredPosts.map((post, index) => (&quot}
-;
+
                       <motion.article,";
 key = "{post.id}
                         initial="{{" opacity: 0, y: 20 }}";
@@ -353,14 +347,14 @@ key = "{post.id}
                             {post.category === "Quantum Computing" && <Atom  />}";
                             {post.category === "Micro SaaS" && <Rocket  />}";
                             {post.category === "Cybersecurity" && <Shield  />}
-;
+
                           </div>;
                         </div>;";
                         <div className="p-6">;";
                           <div className="flex items-center gap-4 mb-3">;";
                             <span className="px-3 py-1 bg-blue-600/20 border border-blue-400/30 rounded-full text-blue-300 text-xs">;
                               {post.category}
-;
+
                             </span>;";
                             <span className="text-yellow-400 text-xs font-medium">Featured</span>;
                           </div>;";
@@ -373,18 +367,18 @@ key = "{post.id}
                               <span className="flex items-center">;";
                                 <User className="w-4 h-4 mr-1"  />;
                                 {post.author}
-;
+
                               </span>;";
                               <span className="flex items-center">;";
                                 <Calendar className="w-4 h-4 mr-1"  />;
                                 {new Date(post.date).toLocaleDateString()}
-;
+
                               </span>;
                             </div>;";
                             <span className="flex items-center">;";
                               <Clock className="w-4 h-4 mr-1"  />;
                               {post.readTime}
-;
+
                             </span>;
                           </div>;
                       </motion.article>;";
@@ -396,7 +390,7 @@ key = "{post.id}
                             {post.category === &quot;Quantum Computing&quot; &&"}&quot; <Atom  />}";
                             {post.category === &quot;Micro SaaS&quot; &&"}&quot; <Rocket  />}";
                             {post.category === &quot;Cybersecurity&quot; &&"}&quot; <Shield  />}
-;
+
                           </div>;
                         </div>";
                         <div className="&quot;p-6&quot;">&quot;
@@ -428,13 +422,13 @@ key = "{post.id}
                           </div>;
                       </motion.article>;
                     ))}
-;
+
                   </div>;
                 </section>;
               )}
-;
+
               {/* comment */}
-;
+
               <section>;";
                 <h2 className="text-3xl font-bold text-white mb-8">Latest Articles</h2>;";
                 <div className="space-y-8">;
@@ -444,7 +438,7 @@ key = "{post.id}
                 <h2 className="&quot;text-3xl" font-bold text-white mb-8&quot;>Latest Articles&quot;</h2>";
                 <div className="&quot;space-y-8&quot;">;
                   {regularPosts.map((post, index) => (&quot}
-;
+
                     <motion.article,";
 key = "{post.id}
                       initial="{{" opacity: 0, y: 20 }}";
@@ -461,14 +455,14 @@ key = "{post.id}
                             {post.category === "Cybersecurity" && <Shield  />}";
                             {post.category === "Digital Transformation" && <Globe  />}";
                             {post.category === "Cloud Computing" && <Code  />}
-;
+
                           </div>;
                         </div>;";
                         <div className="flex-1">;";
                           <div className="flex items-center gap-4 mb-3">;";
                             <span className="px-3 py-1 bg-blue-600/20 border border-blue-400/30 rounded-full text-blue-300 text-xs">;
                               {post.category}
-;
+
                             </span>;
                           </div>;";
                           <h3 className = "{"text-xl" font-bold text-white mb-3 hover: text-blue-400 transition-colors">,";
@@ -480,17 +474,17 @@ key = "{post.id}
                               <span className="flex items-center">;";
                                 <User className="w-4 h-4 mr-1"  />;
                                 {post.author}
-;
+
                               </span>;";
                               <span className="flex items-center">;";
                                 <Calendar className="w-4 h-4 mr-1"  />;
                                 {new Date(post.date).toLocaleDateString()}
-;
+
                               </span>;";
                               <span className="flex items-center">;";
                                 <Clock className="{"w-4" h-4 mr-1"  />;
                                 {post.readTime}
-;
+
                               </span>;
                             </div>;
                             <Link;";
@@ -513,7 +507,7 @@ key = "{post.id}
                             {post.category === &quot;Cybersecurity&quot; &&"}&quot; <Shield  />}";
                             {post.category === &quot;Digital Transformation&quot; &&"}&quot; <Globe  />}";
                             {post.category === &quot;Cloud Computing&quot; &&"}&quot; <Code  />}
-;
+
                           </div>;
                         </div>";
                         <div className="&quot;flex-1&quot;">&quot;
@@ -550,7 +544,7 @@ key = "{post.id}
                           </div>;
                     </motion.article>;
                   ))}
-;
+
                 </div>;
               </section>;
             </div>;
@@ -591,7 +585,7 @@ key = "{post.id}
                       </Link>;";
                         to = "{"/blog/category/${category.name.toLowerCase().replace(/\s+/g," "-')}"}";
                         className=""flex" items-center justify-between p-3 rounded-lg hover: bg-slate-700/50 transition-colors group"}
-;
+
                       >";
                         <div className="flex items-center">";
                           <category.icon className="w-5 h-5 text-blue-400 mr-3 group-hover: text-blue-300" />",;
@@ -600,7 +594,7 @@ key = "{post.id}
                         <span className="&quot;text-sm" text-gray-400&quot;>{category.count}&quot;</span>;
                       </Link>;
                     ))}
-;
+
                   </div>;
                 {/* comment */}";
                 <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-xl p-6 border border-blue-400/30">;";

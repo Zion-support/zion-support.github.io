@@ -1,5 +1,5 @@
 import { ServiceVariant  } from "../types/service-variants";
-export interface Revolutionary2026FintechBlockchainService {;
+export interface Revolutionary2026FintechBlockchainService {
   id: string;
   name: string;
   tagline: string;
@@ -26,7 +26,7 @@ export interface Revolutionary2026FintechBlockchainService {;
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -38,7 +38,7 @@ export interface Revolutionary2026FintechBlockchainService {;
   rating: number;
 export const revolutionary2026FintechBlockchainServices: Revolutionary2026FintechBlockchainService[] = [;
   // Autonomous Supply Chain Optimization AI;
-  {;
+  {
     id: "autonomous-supply-chain-optimization-ai",;
     name: "Autonomous Supply Chain Optimization AI",;
     tagline: "AI-powered supply chain optimization and automation",;
@@ -76,21 +76,19 @@ export const revolutionary2026FintechBlockchainServices: Revolutionary2026Fintec
     marketSize: "$45.2B market",;
     growthRate: "21.7% annual growth",;
     variant: "quantum-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete autonomous supply chain platform with AI optimization, real-time monitoring, and comprehensive management capabilities.",;
     launchDate: "2024-12-01",;
     customers: 456,;
     rating: 4.7,;
-    reviews: 234;,;,
-},;
+    reviews: 234},;
   // Autonomous Marketing AI Platform;
-  {;
+  {
     id: "autonomous-marketing-ai-platform",;
     name: "Autonomous Marketing AI Platform",;
     tagline: "Self-optimizing marketing with AI intelligence",;
@@ -128,21 +126,19 @@ export const revolutionary2026FintechBlockchainServices: Revolutionary2026Fintec
     marketSize: "$56.8B market",;
     growthRate: "24.3% annual growth",;
     variant: "quantum-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete autonomous marketing platform with AI optimization, content generation, and comprehensive campaign management.",;
     launchDate: "2024-12-01",;
     customers: 789,;
     rating: 4.8,;
-    reviews: 456;,;,
-},;
+    reviews: 456},;
   // AI Cybersecurity Platform;
-  {;
+  {
     id: "ai-cybersecurity-platform",;
     name: "AI Cybersecurity Platform",;
     tagline: "Next-generation AI-powered cybersecurity",;
@@ -180,21 +176,19 @@ export const revolutionary2026FintechBlockchainServices: Revolutionary2026Fintec
     marketSize: "$78.9B market",;
     growthRate: "28.7% annual growth",;
     variant: "quantum-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete AI cybersecurity platform with threat detection, automated response, and predictive security intelligence.",;
     launchDate: "2024-12-01",;
     customers: 345,;
     rating: 4.9,;
-    reviews: 234;,;,
-},;
+    reviews: 234},;
   // Autonomous Business Intelligence Network;
-  {;
+  {
     id: "autonomous-business-intelligence-network",;
     name: "Autonomous Business Intelligence Network",;
     tagline: "Self-evolving business intelligence with AI",;
@@ -232,21 +226,19 @@ export const revolutionary2026FintechBlockchainServices: Revolutionary2026Fintec
     marketSize: "$67.3B market",;
     growthRate: "22.8% annual growth",;
     variant: "quantum-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete autonomous business intelligence platform with self-evolving insights, predictive analytics, and comprehensive decision support.",;
     launchDate: "2024-12-01",;
     customers: 567,;
     rating: 4.7,;
-    reviews: 345;,;,
-},;
+    reviews: 345},;
   // Quantum Blockchain Infrastructure Platform;
-  {;
+  {
     id: "quantum-blockchain-infrastructure-platform",;
     name: "Quantum Blockchain Infrastructure Platform",;
     tagline: "Quantum-secured blockchain infrastructure",;
@@ -284,12 +276,11 @@ export const revolutionary2026FintechBlockchainServices: Revolutionary2026Fintec
     marketSize: "$89.4B market",;
     growthRate: "42.1% annual growth",;
     variant: "quantum-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete quantum blockchain platform with quantum security, smart contracts, and comprehensive infrastructure capabilities.",;
     launchDate: "2024-12-01",;

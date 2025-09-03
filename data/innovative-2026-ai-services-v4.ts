@@ -1,5 +1,5 @@
 import { ServiceVariant  } from "../types/service-variants";
-export interface Innovative2026AIServiceV4 {;
+export interface Innovative2026AIServiceV4 {
   id: string;
   name: string;
   tagline: string;
@@ -26,7 +26,7 @@ export interface Innovative2026AIServiceV4 {;
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -38,7 +38,7 @@ export interface Innovative2026AIServiceV4 {;
   rating: number;
 export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [;
   // AI Consciousness Simulation Platform;
-  {;
+  {
     id: "ai-consciousness-simulation-platform",;
     name: "AI Consciousness Simulation Platform",;
     tagline: "Simulate human consciousness for research and development",;
@@ -76,21 +76,19 @@ export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [;
     marketSize: "$8B AI research market",;
     growthRate: "300% annual growth",;
     variant: "ai-consciousness",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Full AI consciousness simulation platform with cognitive modeling, emotional intelligence, and comprehensive research tools.",;
     launchDate: "2024-12-01",;
     customers: 23,;
     rating: 4.9,;
-    reviews: 67;,;,
-},;
+    reviews: 67},;
   // Autonomous AI Agents Platform 2026;
-  {;
+  {
     id: "autonomous-ai-agents-platform-2026",;
     name: "Autonomous AI Agents Platform 2026",;
     tagline: "Create autonomous AI agents that work independently",;
@@ -128,21 +126,19 @@ export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [;
     marketSize: "$12B AI automation market",;
     growthRate: "250% annual growth",;
     variant: "ai-autonomous",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Full autonomous AI agents platform with learning capabilities, multi-agent coordination, and comprehensive automation features.",;
     launchDate: "2024-11-15",;
     customers: 156,;
     rating: 4.8,;
-    reviews: 289;,;,
-},;
+    reviews: 289},;
   // AI Healthcare Companion 2026;
-  {;
+  {
     id: "ai-healthcare-companion-2026",;
     name: "AI Healthcare Companion 2026",;
     tagline: "Revolutionary AI healthcare companion for personalized care",;
@@ -180,21 +176,19 @@ export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [;
     marketSize: "$18B digital health market",;
     growthRate: "200% annual growth",;
     variant: "ai-healthcare",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Full AI healthcare companion platform with personalized monitoring, health insights, and comprehensive healthcare integration.",;
     launchDate: "2024-10-01",;
     customers: 234,;
     rating: 4.9,;
-    reviews: 456;,;,
-},;
+    reviews: 456},;
   // AI Content Creation Revolution;
-  {;
+  {
     id: "ai-content-creation-revolution",;
     name: "AI Content Creation Revolution",;
     tagline: "Unlimited AI content generation for all your needs",;
@@ -232,21 +226,19 @@ export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [;
     marketSize: "$15B content creation market",;
     growthRate: "220% annual growth",;
     variant: "ai-creative",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Full AI content creation platform with unlimited generation, multi-format support, and comprehensive content optimization.",;
     launchDate: "2024-09-15",;
     customers: 567,;
     rating: 4.8,;
-    reviews: 892;,;,
-},;
+    reviews: 892},;
   // AI Emotional Intelligence Platform;
-  {;
+  {
     id: "ai-emotional-intelligence-platform",;
     name: "AI Emotional Intelligence Platform",;
     tagline: "AI that understands and responds to human emotions",;
@@ -284,12 +276,11 @@ export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [;
     marketSize: "$10B emotional AI market",;
     growthRate: "280% annual growth",;
     variant: "ai-emotional",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Full AI emotional intelligence platform with emotion recognition, sentiment analysis, and comprehensive emotional response capabilities.",;
     launchDate: "2024-08-01",;

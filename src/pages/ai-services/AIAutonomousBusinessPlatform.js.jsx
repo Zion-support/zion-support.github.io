@@ -108,7 +108,7 @@ const testimonials = [];
     role: 'VP Engineering, ScaleUp Inc',;
     rating: 5}
 ];
-export { function };
+export { function }
 export default function AIAutonomousBusinessPlatform() {}
   return();
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 relative overflow-hidden">";
@@ -203,8 +203,7 @@ export default function AIAutonomousBusinessPlatform() {}
                     {feature.description}
                   </p>;
                 </motion.div>;
-              );,
-})}
+              )})}
           </div>;
         </div>;
       </section>;
@@ -277,8 +276,7 @@ export default function AIAutonomousBusinessPlatform() {}
                   </h3>"";
                   <p className="text-gray-300 text-sm">{useCase.description}</p>;
                 </motion.div>;
-              );,
-})}
+              )})}
           </div>;
         </div>;
       </section>;
@@ -365,14 +363,10 @@ export default function AIAutonomousBusinessPlatform() {}
         </div>;
       </section>;
     </div>)}
-;
 
-export { AIAutonomousBusinessPlatform, IconComponent, IconComponent };
-;
-export { AIAutonomousBusinessPlatform, IconComponent, IconComponent };
-;
-export { AIAutonomousBusinessPlatform, IconComponent, IconComponent };
-;
-export { AIAutonomousBusinessPlatform, IconComponent, IconComponent };
-;
-export { AIAutonomousBusinessPlatform, IconComponent, IconComponent };
+
+export { AIAutonomousBusinessPlatform, IconComponent, IconComponent }
+export { AIAutonomousBusinessPlatform, IconComponent, IconComponent }
+export { AIAutonomousBusinessPlatform, IconComponent, IconComponent }
+export { AIAutonomousBusinessPlatform, IconComponent, IconComponent }
+export { AIAutonomousBusinessPlatform, IconComponent, IconComponent }

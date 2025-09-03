@@ -1,65 +1,60 @@
 import React, { useState, useEffect } from 'react';
 export default ContentQualityAnalyzer;
 import { motion  } from 'framer-motion';
-;
-export default function Page() {;
-;
-;
-    generateSummary(pageMetrics, topIssues) {;
+
+export default function Page() {
+
+
+    generateSummary(pageMetrics, topIssues) {
 
         const totalPages = pageMetrics.length;
         const excellentPages = pageMetrics.filter(page => page.overallScore >= 80) .length;
         const goodPages = pageMetrics.filter(page => page.overallScore >= 60) .length;
         const poorPages = pageMetrics.filter(page => page.overallScore < 40) .length;
         let summary = `Analyzed ${totalPages} pages.`;
-        if(excellentPages > 0) {;
+        if(excellentPages > 0) {
 `;
             summary += `${excellentPages} pages have excellent content quality.`;
-;
-        if(goodPages > 0) {;
+
+        if(goodPages > 0) {
 `;
             summary += `${goodPages} pages have good content quality.`;
-;
-        if(poorPages > 0) {;
+
+        if(poorPages > 0) {
 `;
             summary += `${poorPages} pages need significant improvement.`;
-;
-        if(topIssues.length > 0) {;
+
+        if(topIssues.length > 0) {
 `;
-            summary += `Top issues to address: ${topIssues.slice(0, 3).join(',)}.`;
-;
+            summary += `Top issues to address: ${topIssues.slice(0, 3).join(')}.`;
+
         return summary;
-;
-    getPageMetrics(pageUrl) {;
+
+    getPageMetrics(pageUrl) {
 
         return this.analyzedPages.get(pageUrl);
-;
-    getAllPageMetrics () {;
+
+    getAllPageMetrics () {
         return Array.from(this.analyzedPages.values () ) ;
-;
-    clearCache () {;
-        this.analyzedPages.clear () ;,
-}
+
+    clearCache () {
+        this.analyzedPages.clear () }
 }
 import React, { useState, useEffect } from 'react';
 import { motion  } from 'framer-motion';
-;
-export default function Page() {;
-      if(paragraphCount < 3) {;
 
-        analysisResult.suggestions.push('Add more paragraphs to improve content structure');,
-}
-;
+export default function Page() {
+      if(paragraphCount < 3) {
+
+        analysisResult.suggestions.push('Add more paragraphs to improve content structure')}
+
       setAnalysis(analysisResult) ;
       setIsAnalyzing(false) ;
-;
-      if(onAnalysisComplete) {;
 
-        onAnalysisComplete(analysisResult);,
-}
-    }, 2000) ;,
-};
-;
+      if(onAnalysisComplete) {
+
+        onAnalysisComplete(analysisResult)}
+    }, 2000) }
   return ();
     <div className="space-y-4">;
       <button;
@@ -70,16 +65,14 @@ export default function Page() {;
       </button>;
 
       {analysis && (<motion.div;
-          initial = {;
+          initial = {
 
   { opacity: 0,;
-  y: 20;,
-}}
-          animate = {;
+  y: 20}}
+          animate = {
 
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
           className="space-y-4">";
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">";
             <div className="text-center p-4 bg-blue-50 rounded-lg">";
@@ -109,18 +102,11 @@ export default function Page() {;
               </ul>;
             </div>) }
         </motion.div>) }
-    </div>) ;,
-};
-;
-export default ContentQualityAnalyzer;,
-}}}}}}}}}}}}}}}}
-;
-export { ContentQualityAnalyzer };
-;
-export { ContentQualityAnalyzer };
-;
-export { ContentQualityAnalyzer };
-;
-export { ContentQualityAnalyzer };
-;
-export { Page, ContentQualityAnalyzer };
+    </div>) }
+export default ContentQualityAnalyzer}}}}}}}}}}}}}}}}
+
+export { ContentQualityAnalyzer }
+export { ContentQualityAnalyzer }
+export { ContentQualityAnalyzer }
+export { ContentQualityAnalyzer }
+export { Page, ContentQualityAnalyzer }

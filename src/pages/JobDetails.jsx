@@ -39,24 +39,23 @@ export default function JobDetails() {}
 "";
             toast.error("Please log in to apply for this job");';
             router('/login?redirect=' + encodeURIComponent(`/jobs/${jobId}`));
-            return;";,
-}"";
+            return;"}"";
         if (user?.userType !== "jobSeeker" && user?.userType !== "talent") {}
 ";
 "";
             toast.error("Only job seekers can apply for jobs");
             return}
-        setIsApplyModalOpen (true) };
+        setIsApplyModalOpen (true) }
     const handleApplySuccess = async (appliedJobId) => {}
 ";
 "";
         toast.success("Application submitted successfully!");
-        setIsApplyModalOpen(false)};
+        setIsApplyModalOpen(false)}
     const formatBudget = (budget) => {}
 ";
         if (!budget)""`;
             return "Not specified";``;
-        return `$${budget.min} - $${budget.max}`};
+        return `$${budget.min} - $${budget.max}`}
     const isOwnJob = user?.id === job.client_id;'`;
     return (<>'`'`;
       <SEO title={`${job.title} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`} description = {}
@@ -64,8 +63,7 @@ export default function JobDetails() {}
   160) }/>;
 
   job.description.substring(0,;
-  160);,
-}/>";
+  160)}/>";
       "";
       <main className="container mx-auto px-4 py-8">"'";
         <div className="mb-6">'"'";
@@ -160,14 +158,10 @@ export default function JobDetails() {}
                 comp_name: job.comp_name || "Comp",;
                 budget: job.budget,;
 
-;
-export { JobDetails };
-;
-export { JobDetails };
-;
-export { JobDetails };
-;
-export { JobDetails };
-;
-export { JobDetails };
+
+export { JobDetails }
+export { JobDetails }
+export { JobDetails }
+export { JobDetails }
+export { JobDetails }
 ))

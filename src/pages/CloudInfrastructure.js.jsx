@@ -15,8 +15,7 @@ export default function CloudInfrastructure() {}
             title: 'Infrastructure as Code',''';
             description: 'Automate cloud infrastructure deployment and management','';
             icon: Code,''';
-            features['Terraform',CloudFormation',ARM Templates',Deployment Automation'];,
-},;
+            features['Terraform',CloudFormation',ARM Templates',Deployment Automation']},;
         {}
 ';
 '';
@@ -24,8 +23,7 @@ export default function CloudInfrastructure() {}
             title: 'Container Orchestration',''';
             description: 'Manage and scale containerized applications','';
             icon: Cpu,''';
-            features['Kubernetes',Docker',ECS/EKS',Azure AKS',GKE'];,
-},;
+            features['Kubernetes',Docker',ECS/EKS',Azure AKS',GKE']},;
         {}
 ';
 '';
@@ -33,8 +31,7 @@ export default function CloudInfrastructure() {}
             title: 'Serverless Computing',''';
             description: 'Build and run applications without managing servers','';
             icon: Zap,''';
-            features['AWS Lambda',Azure Functions',Cloud Functions',Event-driven Architecture'];,
-},;
+            features['AWS Lambda',Azure Functions',Cloud Functions',Event-driven Architecture']},;
         {}
 ';
 '';
@@ -42,8 +39,7 @@ export default function CloudInfrastructure() {}
             title: 'Database Solutions',''';
             description: 'Managed database services for optimal performance','';
             icon: Database,''';
-            features['RDS, Aurora',Azure SQL',Cloud SQL',NoSQL Options'];,
-},;
+            features['RDS, Aurora',Azure SQL',Cloud SQL',NoSQL Options']},;
         {}
 ';
 '';
@@ -51,8 +47,7 @@ export default function CloudInfrastructure() {}
             title: 'Security & Compliance',''';
             description: 'Enterprise-grade security and compliance features','';
             icon: Shield,''';
-            features['IAM & Access Control',Encryption',Compliance Frameworks',Security Monitoring'];,
-},;
+            features['IAM & Access Control',Encryption',Compliance Frameworks',Security Monitoring']},;
         {}
 ';
 '';
@@ -60,8 +55,7 @@ export default function CloudInfrastructure() {}
             title: 'Monitoring & Analytics',''';
             description: 'Comprehensive monitoring and observability','';
             icon: BarChart3,''';
-            features['CloudWatch',Azure Monitor',Stackdriver',Log Management'];';,
-}'';
+            features['CloudWatch',Azure Monitor',Stackdriver',Log Management'];'}'';
     ];''';
     const benefits = ['''';
         { title: 'Scalability', description: 'Scale resources up or down based on demand', icon: TrendingUp },''';
@@ -83,12 +77,10 @@ export default function CloudInfrastructure() {}
         <div className="max-w-7xl mx-auto px-4 py-20">;
           <motion.div initial = {}
   { opacity: 0,;
-  y: 20;,
-}} animate = {}
+  y: 20}} animate = {}
   { opacity: 1,;
   y: 0 ";
-"";,
-}} className="text-center mb-16">"";
+""}} className="text-center mb-16">"";
             <div className="flex justify-center mb-6">"";
               <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-full flex items-center justify-center">"";
                 <Cloud className="w-10 h-10 text-white"/>;
@@ -120,20 +112,16 @@ export default function CloudInfrastructure() {}
           {/* Stats Grid */}
           <motion.div initial = {}
   { opacity: 0,;
-  y: 20;,
-}} animate = {}
+  y: 20}} animate = {}
   { opacity: 1,;
   y: 0 ";
-"";,
-}} transition={{ delay: 0.2 }} className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">;
+""}} transition={{ delay: 0.2 }} className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">;
             {stats.map((stat, index) => (<motion.div key={stat.label} initial = {}
   { opacity: 0,;
-  y: 20;,
-}} animate = {}
+  y: 20}} animate = {}
   { opacity: 1,;
   y: 0 ";
-"";,
-}} transition={{ delay: 0.2 + index * 0.1 }} className="text-center p-6 bg-white/10 backdrop-blur-md rounded-lg border border-white/20">"";
+""}} transition={{ delay: 0.2 + index * 0.1 }} className="text-center p-6 bg-white/10 backdrop-blur-md rounded-lg border border-white/20">"";
                 <div className="flex justify-center mb-3">"";
                   <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">"";
                     <stat.icon className="w-6 h-6 text-white"/>;
@@ -151,12 +139,10 @@ export default function CloudInfrastructure() {}
         <div className="max-w-7xl mx-auto px-4">;
           <motion.div initial = {}
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
+  y: 20}} whileInView = {}
   { opacity: 1,;
   y: 0 ";
-"";,
-}} viewport={{ once: true }} className="text-center mb-16">"";
+""}} viewport={{ once: true }} className="text-center mb-16">"";
             <h2 className="text-4xl font-bold text-white mb-6">Multi-Cloud Expertise</h2>"";
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">;
               We work with all major cloud providers to give you the best solution for your needs;
@@ -166,12 +152,10 @@ export default function CloudInfrastructure() {}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">;
             {cloudProviders.map((provider, index) => (<motion.button key={provider.id} initial = {}
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
+  y: 20}} whileInView = {}
   { opacity: 1,;
   y: 0;
-';,
-}} viewport={{ once: true }} transition={{ delay: index * 0.1 }} onClick={() => setSelectedProvider(provider.id)} className={`p-6 rounded-lg transition-all duration-200 text-left ${selectedProvider === provider.id''`;
+'}} viewport={{ once: true }} transition={{ delay: index * 0.1 }} onClick={() => setSelectedProvider(provider.id)} className={`p-6 rounded-lg transition-all duration-200 text-left ${selectedProvider === provider.id''`;
                 ? 'bg-gradient-to-r from-cyan-400/20 to-purple-600/20 border-cyan-400/50''`'"`;
                 : 'bg-white/10 hover:bg-white/20 border-white/20'} border`}>""`;
                 <div className="flex items-center space-x-4">`'`;
@@ -194,18 +178,16 @@ export default function CloudInfrastructure() {}
           {/* Provider Details */}
           <motion.div key={selectedProvider} initial = {}
   { opacity: 0,;
-  y: 20;,
-}} animate = {}
+  y: 20}} animate = {}
   { opacity: 1,;
   y: 0 ";
-"";,
-}} className="p-8 bg-white/10 backdrop-blur-md rounded-lg border border-white/20">"";
+""}} className="p-8 bg-white/10 backdrop-blur-md rounded-lg border border-white/20">"";
             <div className="text-center mb-8">"";
               <h3 className="text-3xl font-bold text-white mb-4">;
                 {cloudProviders.find(p => p.id === selectedProvider)?.name} Solutions";
               </h3>"";
               <p className="text-gray-300 max-w-2xl mx-auto">;
-                Comprehensive cloud infrastructure solutions tailored for {cloudProviders.find(p => p.id === selectedProvider)?.name} ;
+                Comprehensive cloud infrastructure solutions tailored for {cloudProviders.find(p => p.id === selectedProvider)?.name}
                 with best practices, security, and cost optimization.;
               </p>;
             </div>";
@@ -231,12 +213,10 @@ export default function CloudInfrastructure() {}
         <div className="max-w-7xl mx-auto px-4">;
           <motion.div initial = {}
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
+  y: 20}} whileInView = {}
   { opacity: 1,;
   y: 0 ";
-"";,
-}} viewport={{ once: true }} className="text-center mb-16">"";
+""}} viewport={{ once: true }} className="text-center mb-16">"";
             <h2 className="text-4xl font-bold text-white mb-6">Why Choose Cloud Infrastructure?</h2>"";
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">;
               Modern cloud solutions provide unprecedented flexibility, security, and cost efficiency;
@@ -246,12 +226,10 @@ export default function CloudInfrastructure() {}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
             {benefits.map((benefit, index) => (<motion.div key={benefit.title} initial = {}
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
+  y: 20}} whileInView = {}
   { opacity: 1,;
   y: 0 ";
-"";,
-}} viewport={{ once: true }} transition={{ delay: index * 0.1 }} className="p-6 bg-white/10 backdrop-blur-md rounded-lg border border-white/20 hover:border-cyan-400/50 transition-all duration-200 group">"";
+""}} viewport={{ once: true }} transition={{ delay: index * 0.1 }} className="p-6 bg-white/10 backdrop-blur-md rounded-lg border border-white/20 hover:border-cyan-400/50 transition-all duration-200 group">"";
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">"";
                   <benefit.icon className="w-8 h-8 text-white"/>";
                 </div>"";
@@ -267,12 +245,10 @@ export default function CloudInfrastructure() {}
         <div className="max-w-4xl mx-auto px-4 text-center">;
           <motion.div initial = {}
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
+  y: 20}} whileInView = {}
   { opacity: 1,;
   y: 0;
-";,
-}} viewport={{ once: true }}>"";
+"}} viewport={{ once: true }}>"";
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Move to the Cloud?</h2>"";
             <p className="text-xl text-gray-300 mb-8">';
               Let's design and implement a cloud infrastructure that grows with your business";
@@ -297,12 +273,10 @@ export default function CloudInfrastructure() {}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">;
             <motion.div initial = {}
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
+  y: 20}} whileInView = {}
   { opacity: 1,;
   y: 0 ";
-"";,
-}} viewport={{ once: true }} className="p-6 bg-white/10 backdrop-blur-md rounded-lg border border-white/20">"";
+""}} viewport={{ once: true }} className="p-6 bg-white/10 backdrop-blur-md rounded-lg border border-white/20">"";
               <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">"";
                 <Phone className="w-8 h-8 text-white"/>";
               </div>"";
@@ -312,12 +286,10 @@ export default function CloudInfrastructure() {}
 
             <motion.div initial = {}
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
+  y: 20}} whileInView = {}
   { opacity: 1,;
   y: 0 ";
-"";,
-}} viewport={{ once: true }} transition={{ delay: 0.1 }} className="p-6 bg-white/10 backdrop-blur-md rounded-lg border border-white/20">"";
+""}} viewport={{ once: true }} transition={{ delay: 0.1 }} className="p-6 bg-white/10 backdrop-blur-md rounded-lg border border-white/20">"";
               <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">"";
                 <Mail className="w-8 h-8 text-white"/>";
               </div>"";
@@ -327,12 +299,10 @@ export default function CloudInfrastructure() {}
 
             <motion.div initial = {}
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
+  y: 20}} whileInView = {}
   { opacity: 1,;
   y: 0 ";
-"";,
-}} viewport={{ once: true }} transition={{ delay: 0.2 }} className="p-6 bg-white/10 backdrop-blur-md rounded-lg border border-white/20">"";
+""}} viewport={{ once: true }} transition={{ delay: 0.2 }} className="p-6 bg-white/10 backdrop-blur-md rounded-lg border border-white/20">"";
               <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">"";
                 <Globe className="w-8 h-8 text-white"/>";
               </div>"";
@@ -343,14 +313,10 @@ export default function CloudInfrastructure() {}
         </div>;
       </section>;
     </div>)}
-;
 
-export { CloudInfrastructure };
-;
-export { CloudInfrastructure };
-;
-export { CloudInfrastructure };
-;
-export { CloudInfrastructure };
-;
-export { CloudInfrastructure };
+
+export { CloudInfrastructure }
+export { CloudInfrastructure }
+export { CloudInfrastructure }
+export { CloudInfrastructure }
+export { CloudInfrastructure }

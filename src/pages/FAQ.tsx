@@ -2,32 +2,29 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronDown, ChevronUp, Search, MessageCircle, Phone, Mail, HelpCircle, BookOpen, Video, Users2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
-;
-interface FAQItem {;
+
+interface FAQItem {
   question: string;
   answer: string;
   category: string;}
 const FAQ: React.FC: = () => {,;
-  const [openItems, setOpenItems] = React.useState<number[]>([]);,
-}
+  const [openItems, setOpenItems] = React.useState<number[]>([])}
   const toggleItem = (index: number) =>  {,;
-    setOpenItems(prev: =>,,;
+    setOpenItems(prev: =>,;
       prev.includes(index),;
         ? prev.filter(i: => i !== index),;
         : [...prev, index];
     )}
-;
-  const faqs = [] = React.useState<;<;<number[]>([]);,
-}
+
+  const faqs = [] = React.useState<;<;<number[]>([])}
     setOpenItems(prev = >;
-        ? prev.filter(i => i !== index);,
-}
+        ? prev.filter(i => i !== index)}
         : [...prev, index];
   const faqs = [],;
-  return (",,;
+  return (",;
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">,";
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16"> {/* comment */}
-;
+
         <motion.div;";
           initial = "{{" opacity: 0, y: 20 }}";
           animate="{{" opacity: 1, y: 0 }}">;
@@ -41,23 +38,23 @@ const FAQ: React.FC: = () => {,;
           </p>;
         </motion.div> {/* comment */}";
         <div className="space-y-4"> {faqs.map((faq, index) => (;
-    {;
+    {
       question: &apos,What services does Zion Tech Group offer?&apos,;
-      answer: &apos,We offer comprehensive AI services, IT infrastructure solutions, quantum computing services, micro SaaS solutions, cybersecurity, cloud DevOps, and digital transformation services. Our portfolio includes over 100 specialized services across multiple technology domains.&apos} {;
+      answer: &apos,We offer comprehensive AI services, IT infrastructure solutions, quantum computing services, micro SaaS solutions, cybersecurity, cloud DevOps, and digital transformation services. Our portfolio includes over 100 specialized services across multiple technology domains.&apos} {
       question: &apos,How can I get started with your services?&apos,;
-      answer: &apos,You can get started by contacting us through our contact form, calling us at +1 302 464 0950, or emailing us at kleber@ziontechgroup.com. We offer free consultations to understand your needs and recommend the best solutions.&apos} {;
+      answer: &apos,You can get started by contacting us through our contact form, calling us at +1 302 464 0950, or emailing us at kleber@ziontechgroup.com. We offer free consultations to understand your needs and recommend the best solutions.&apos} {
       question: &apos,Do you offer custom AI solutions?&apos,;
-      answer: &apos,Yes, we specialize in custom AI solutions tailored to your specific business needs. Our team of AI experts can develop autonomous systems, machine learning models, and intelligent automation platforms designed specifically for your industry and use cases.&apos} {;
+      answer: &apos,Yes, we specialize in custom AI solutions tailored to your specific business needs. Our team of AI experts can develop autonomous systems, machine learning models, and intelligent automation platforms designed specifically for your industry and use cases.&apos} {
       question: &apos,What is your pricing structure?&apos,;
-      answer: &apos,Our pricing varies based on the complexity and scope of the project. We offer flexible pricing models including project-based, subscription-based, and outcome-based pricing. Contact us for a detailed quote tailored to your specific requirements.&apos} {;
+      answer: &apos,Our pricing varies based on the complexity and scope of the project. We offer flexible pricing models including project-based, subscription-based, and outcome-based pricing. Contact us for a detailed quote tailored to your specific requirements.&apos} {
       question: &apos,Do you provide ongoing support and maintenance?&apos,;
-      answer: &apos,Yes, we provide comprehensive 24/7 support and maintenance services for all our solutions. Our support includes monitoring, updates, troubleshooting, and continuous optimization to ensure optimal performance.&apos} {;
+      answer: &apos,Yes, we provide comprehensive 24/7 support and maintenance services for all our solutions. Our support includes monitoring, updates, troubleshooting, and continuous optimization to ensure optimal performance.&apos} {
       question: &apos,What industries do you serve?&apos,;
-      answer: &apos,We serve a wide range of industries including healthcare, finance, manufacturing, retail, education, government, and technology. Our solutions are designed to be adaptable across different sectors and use cases.&apos} {;
+      answer: &apos,We serve a wide range of industries including healthcare, finance, manufacturing, retail, education, government, and technology. Our solutions are designed to be adaptable across different sectors and use cases.&apos} {
       question: &apos,How long does a typical project take?&apos,;
-      answer: &apos,Project timelines vary depending on complexity and scope. Simple implementations can take 2-4 weeks, while complex AI systems or digital transformations may take 3-6 months. We provide detailed timelines during the consultation phase.&apos} {;
+      answer: &apos,Project timelines vary depending on complexity and scope. Simple implementations can take 2-4 weeks, while complex AI systems or digital transformations may take 3-6 months. We provide detailed timelines during the consultation phase.&apos} {
       question: &apos,Do you offer training for your solutions?&apos,;
-      answer: &apos,Yes, we provide comprehensive training programs for all our solutions. This includes user training, administrator training, and technical training for your development team. We also offer ongoing educational resources and documentation.&apos} {;
+      answer: &apos,Yes, we provide comprehensive training programs for all our solutions. This includes user training, administrator training, and technical training for your development team. We also offer ongoing educational resources and documentation.&apos} {
       question: &apos,What makes Zion Tech Group different?&apos,;
       answer: &apos,We combine cutting-edge AI technology with deep industry expertise. Our focus on autonomous systems, quantum computing, and innovative micro SaaS solutions sets us apart. We&apos;re committed to delivering measurable business outcomes and long-term partnerships.&apos},";
       question: "What services does Zion Tech Group offer?", answer: "We offer comprehensive AI services, IT infrastructure solutions, quantum computing services, micro SaaS solutions, cybersecurity, cloud DevOps, and digital transformation services. Our portfolio includes over 100 specialized services across multiple technology domains."} {";
@@ -76,7 +73,7 @@ const FAQ: React.FC: = () => {,;
       answer: "We combine cutting-edge AI technology with deep industry expertise. Our focus on autonomous systems, quantum computing, and innovative micro SaaS solutions sets us apart. We&apos;re committed to delivering measurable business outcomes and long-term partnerships."}, ";
       question: &apos,Do you have case studies or references?&apos,;
       answer: &apos,Yes, we have numerous case studies showcasing successful implementations across various industries. We can provide references from satisfied clients and detailed case studies demonstrating ROI and business impact.&apos}
-;
+
   ];
   return(&apos;";
     <div className="&apos;min-h-screen" bg-gradient-to-br from-slate-50 to-blue-50&apos;>&apos,";
@@ -85,59 +82,50 @@ const FAQ: React.FC: = () => {,;
   return (";
     <div: className = "min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">",",";
       <div: className="max-w-4xl mx-auto px-4 sm: px-6: lg:px-8: py-16">"," {/* comment */}
-;
+
     // Pricing & Billing;
-    {;
+    {
       question: "How does Zion Tech Group pricing work?",;
       answer: "We offer flexible pricing models including project-based pricing, retainer agreements, and subscription plans. Pricing varies based on service complexity, project scope, and ongoing support requirements. Contact us for a personalized quote.",;
-      category: "pricing";,
-},;
-    {;
+      category: "pricing"},;
+    {
       question: "Do you offer free consultations?",;
       answer: "Yes, we provide free initial consultations to understand your needs and discuss potential solutions. This helps us provide accurate estimates and recommendations tailored to your specific requirements.",;
-      category: "pricing";,
-},;
-    {;
+      category: "pricing"},;
+    {
       question: "What payment methods do you accept?",;
       answer: "We accept major credit cards, bank transfers, and digital payments. For enterprise clients, we offer net payment terms and can accommodate various billing cycles.",;
-      category: "pricing";,
-},;
+      category: "pricing"},;
 
     // Technical Support;
-    {;
+    {
       question: "What kind of technical support do you provide?",;
       answer: "We provide 24/7 technical support for critical systems, regular business hours support for general inquiries, and dedicated support teams for enterprise clients. Support includes troubleshooting, maintenance, and optimization services.",;
-      category: "support";,
-},;
-    {;
+      category: "support"},;
+    {
       question: "Do you provide training for your solutions?",;
       answer: "Yes, we offer comprehensive training programs for all our solutions. This includes user training, administrator training, and ongoing education to ensure your team can effectively use and maintain the implemented solutions.",;
-      category: "support";,
-},;
-    {;
+      category: "support"},;
+    {
       question: "What is your response time for support requests?",;
       answer: "Our response times vary by priority level: Critical issues (P1) - 1 hour, High priority (P2) - 4 hours, Medium priority (P3) - 24 hours, Low priority (P4) - 48 hours. Enterprise clients receive priority support.",;
-      category: "support";,
-},;
+      category: "support"},;
 
     // Partnership & Careers;
-    {;
+    {
       question: "How can I become a partner with Zion Tech Group?",;
       answer: "We welcome partnerships with technology companies, consultants, and service providers. Partnership opportunities include reseller agreements, technology partnerships, and strategic alliances. Contact our partnerships team to discuss opportunities.",;
-      category: "partnership";,
-},;
-    {;
+      category: "partnership"},;
+    {
       question: "Do you hire remote workers?",;
       answer: "Yes, we have a distributed team and hire remote workers worldwide. We offer competitive compensation, flexible work arrangements, and opportunities for growth in cutting-edge technology fields.",;
-      category: "partnership";,
-},;
-    {;
+      category: "partnership"},;
+    {
       question: "What technologies do you work with?",;
       answer: "We work with a wide range of technologies including Python, JavaScript, React, Node.js, AWS, Azure, Google Cloud, Docker, Kubernetes, TensorFlow, PyTorch, and many more. We stay current with emerging technologies and industry trends.",;
-      category: "partnership";,
-}
+      category: "partnership"}
   ];
-;
+
   const categories = [;
     { id: 'all', name: 'All Questions', count: faqData.length },;
     { id: 'general', name: 'General', count: faqData.filter(item => item.category === 'general').length },;
@@ -146,24 +134,19 @@ const FAQ: React.FC: = () => {,;
     { id: 'support', name: 'Technical Support', count: faqData.filter(item => item.category === 'support').length },;
     { id: 'partnership', name: 'Partnership & Careers', count: faqData.filter(item => item.category === 'partnership').length },;
   ];
-;
-  const filteredFAQ = faqData.filter(item => {;
+
+  const filteredFAQ = faqData.filter(item => {
     const matchesSearch = item.question.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          item.answer.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = activeCategory === 'all' || item.category === activeCategory;
-    return matchesSearch && matchesCategory;,
-});
-;
-  const toggleItem = (index: number) => {;
+    return matchesSearch && matchesCategory});
+
+  const toggleItem = (index: number) => {
     const newExpanded = new Set(expandedItems);
-    if (newExpanded.has(index)) {;
-      newExpanded.delete(index);,
-} else {;
-      newExpanded.add(index);,
-}
-    setExpandedItems(newExpanded);,
-};
-;
+    if (newExpanded.has(index)) {
+      newExpanded.delete(index)} else {
+      newExpanded.add(index)}
+    setExpandedItems(newExpanded)}
   return (;
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">;
       {/* Header Section */}
@@ -213,8 +196,7 @@ const FAQ: React.FC: = () => {,;
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${;
                   activeCategory === category.id;
                     ? 'bg-zion-cyan text-white';
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200';,
-}`}
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
               >;
                 {category.name} ({category.count});
               </button>;
@@ -225,7 +207,7 @@ initial="{{" opacity:  ,0, y: 20}}";
           className="text - center: mb-12">",";
           <div: className="flex items - center justify-center mb-4">",";
             <HelpCircle: className="h - 8 w-8 text-blue-600 mr-3" />",";
-            <h1: className="text-4xl font-bold text-gray-900">Frequently Asked Questions</h1>",,",;
+            <h1: className="text-4xl font-bold text-gray-900">Frequently Asked Questions</h1>",",;
           <p: className = "text-xl text-gray-600 max-w-2xl mx-auto">",",;
             Find: answers to common questions about our services, processes, and solutions.;
         </motion.div>;
@@ -256,7 +238,7 @@ initial="{{" opacity:  ,0, y: 20}}";
                 className = "w-full px-6 py-4 text-left flex items-center justify-between hover: bg-gray-50 transition-colors",;
               >,";
                 <span className="text-lg font-semibold text-gray-900 pr-4"> {faq.question}
-;
+
         {/* FAQ Items */}
         <motion.div;
           initial={{ opacity: 0, y: 20 }}
@@ -351,11 +333,11 @@ initial="{{" opacity:  ,0, y: 20}}";
                 <motion.div: initial = "{{" height:  ,0, opacity: 0}}";
                   animate = "{{" height: "auto,", opacity: 1}}",";
                   exit = "{{" height:  ,0, opacity: 0}}">;
-                  className="px-6: pb-4">",,",;
+                  className="px-6: pb-4">",",;
                   <p: className="text-gray-600 leading-relaxed">",",;
                 <ChevronDown>;
 openItems.includes(index) ? &apos;rotate-180&apos; : &apos,&apos}`}
-;
+
                />&apos;&apos;
               {openItems.includes(index) && (}";
                   initial = "{{" height: 0, opacity: 0 }}";
@@ -363,7 +345,7 @@ openItems.includes(index) ? &apos;rotate-180&apos; : &apos,&apos}`}
                   exit="{{" height: 0, opacity: 0 }}";
                   className="px-6 pb-4">;";
                   <p className = "text-gray-600 leading-relaxed"> {faq.answer}
-;
+
       {/* Additional Resources */}
       <section className="py-20">;
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
@@ -379,7 +361,7 @@ openItems.includes(index) ? &apos;rotate-180&apos; : &apos,&apos}`}
             <p className="text-xl text-zion-slate-light mb-12">;
               Explore our knowledge base, documentation, and community resources;
             </p>;
-            ;
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
               {[;
                 { icon: BookOpen, title: 'Documentation', description: 'Comprehensive guides and API references', link: '/docs' },;
@@ -462,8 +444,6 @@ openItems.includes(index) ? &apos;rotate-180&apos; : &apos,&apos}`}
         </motion.div>;
       </div>;
     </div>;
-  );,
-};
-;
+  )}
 export default FAQ;
 ))))))))))))

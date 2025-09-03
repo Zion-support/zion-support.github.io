@@ -1,38 +1,33 @@
 import React from 'react';
 import { Brain, Zap, Shield, Users, Cpu, Database, Lightbulb, BarChart3, Network, Link } from 'lucide-react';
-const AIAutonomousEcosystem = () => {;
+const AIAutonomousEcosystem = () => {
     const ecosystemComponents = [;
-        {;
+        {
             title: "AI Core Engine",;
             description: "Central AI processing and decision-making engine",;
             icon: Brain,;
-            capabilities: ["Machine learning models", "Neural networks", "Decision algorithms", "Learning optimization"];,
-},;
-        {;
+            capabilities: ["Machine learning models", "Neural networks", "Decision algorithms", "Learning optimization"]},;
+        {
             title: "Data Management",;
             description: "Comprehensive data handling and processing systems",;
             icon: Database,;
-            capabilities: ["Data ingestion", "Storage optimization", "Processing pipelines", "Quality management"];,
-},;
-        {;
+            capabilities: ["Data ingestion", "Storage optimization", "Processing pipelines", "Quality management"]},;
+        {
             title: "Integration Layer",;
             description: "Connectivity and communication between systems",;
             icon: Network,;
-            capabilities: ["API management", "Message queuing", "Event streaming", "Service mesh"];,
-},;
-        {;
+            capabilities: ["API management", "Message queuing", "Event streaming", "Service mesh"]},;
+        {
             title: "User Interface",;
             description: "Intuitive interfaces for all user types",;
             icon: Users,;
-            capabilities: ["Dashboard views", "Mobile apps", "Web interfaces", "Voice interfaces"];,
-},;
-        {;
+            capabilities: ["Dashboard views", "Mobile apps", "Web interfaces", "Voice interfaces"]},;
+        {
             title: "Analytics & Insights",;
             description: "Comprehensive reporting and analytics capabilities",;
             icon: BarChart3,;
-            capabilities: ["Real-time analytics", "Predictive insights", "Performance metrics", "Business intelligence"];,
-},;
-        {;
+            capabilities: ["Real-time analytics", "Predictive insights", "Performance metrics", "Business intelligence"]},;
+        {
             title: "Management Console",;
             description: "Centralized control and monitoring system",;
             icon: Cpu,;
@@ -48,32 +43,27 @@ const AIAutonomousEcosystem = () => {;
         "Enhanced security and compliance posture";
     ];
     const implementation = [;
-        {;
+        {
             phase: "Assessment",;
             description: "Evaluate current systems and identify integration points",;
-            duration: "2-4 weeks";,
-},;
-        {;
+            duration: "2-4 weeks"},;
+        {
             phase: "Architecture",;
             description: "Design ecosystem architecture and integration strategy",;
-            duration: "4-6 weeks";,
-},;
-        {;
+            duration: "4-6 weeks"},;
+        {
             phase: "Development",;
             description: "Build and configure ecosystem components",;
-            duration: "8-16 weeks";,
-},;
-        {;
+            duration: "8-16 weeks"},;
+        {
             phase: "Integration",;
             description: "Connect existing systems and validate functionality",;
-            duration: "4-8 weeks";,
-},;
-        {;
+            duration: "4-8 weeks"},;
+        {
             phase: "Testing",;
             description: "Comprehensive testing and performance validation",;
-            duration: "2-4 weeks";,
-},;
-        {;
+            duration: "2-4 weeks"},;
+        {
             phase: "Deployment",;
             description: "Production deployment and user training",;
             duration: "2-4 weeks";
@@ -252,17 +242,11 @@ const AIAutonomousEcosystem = () => {;
           </div>;
         </div>;
       </section>;
-    </div>);,
-};
-export default AIAutonomousEcosystem;,
-}}}}
-;
-export { AIAutonomousEcosystem };
-;
-export { AIAutonomousEcosystem };
-;
-export { AIAutonomousEcosystem };
-;
-export { AIAutonomousEcosystem };
-;
-export { AIAutonomousEcosystem };
+    </div>)}
+export default AIAutonomousEcosystem}}}}
+
+export { AIAutonomousEcosystem }
+export { AIAutonomousEcosystem }
+export { AIAutonomousEcosystem }
+export { AIAutonomousEcosystem }
+export { AIAutonomousEcosystem }

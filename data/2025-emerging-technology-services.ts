@@ -1,4 +1,4 @@
-export interface EmergingTechnologyService {;
+export interface EmergingTechnologyService {
   id: string;
   name: string;
   tagline: string;
@@ -24,7 +24,7 @@ export interface EmergingTechnologyService {;
   competitors: string[];
   marketSize: string;
   growthRate: string;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -34,18 +34,17 @@ export interface EmergingTechnologyService {;
   launchDate: string;
   customers: number;
   rating: number;
-const contact = {;
+const contact = {
   mobile: "+1 302 464 0950",;
   email: "kleber@ziontechgroup.com",;
   address: "364 E Main St STE 1008 Middletown DE 19709";
-  ;
-  ;
-  ;
-  ;
-  website: "https://ziontechgroup.com";,;,
-}
+
+
+
+
+  website: "https://ziontechgroup.com"}
 export const emergingTechnologyServices2025: EmergingTechnologyService[] = [;
-  {;
+  {
     id: "metaverse-business-platform",;
     name: "Metaverse Business Platform",;
     tagline: "Create immersive virtual business experiences and digital twin solutions",;
@@ -88,9 +87,8 @@ export const emergingTechnologyServices2025: EmergingTechnologyService[] = [;
     launchDate: "2025-03-15",;
     customers: 34,;
     rating: 4.8,;
-    reviews: 23;,;,
-},;
-  {;
+    reviews: 23},;
+  {
     id: "quantum-machine-learning-platform",;
     name: "Quantum Machine Learning Platform",;
     tagline: "Accelerate AI training and optimization with quantum computing power",;
@@ -133,9 +131,8 @@ export const emergingTechnologyServices2025: EmergingTechnologyService[] = [;
     launchDate: "2025-04-01",;
     customers: 12,;
     rating: 4.9,;
-    reviews: 8;,;,
-},;
-  {;
+    reviews: 8},;
+  {
     id: "autonomous-robotics-platform",;
     name: "Autonomous Robotics Platform",;
     tagline: "Deploy intelligent robots for automation, inspection, and autonomous operations",;
@@ -178,9 +175,8 @@ export const emergingTechnologyServices2025: EmergingTechnologyService[] = [;
     launchDate: "2025-03-20",;
     customers: 45,;
     rating: 4.7,;
-    reviews: 32;,;,
-},;
-  {;
+    reviews: 32},;
+  {
     id: "brain-computer-interface-platform",;
     name: "Brain-Computer Interface Platform",;
     tagline: "Revolutionary brain-computer interface for medical applications and research",;
@@ -223,9 +219,8 @@ export const emergingTechnologyServices2025: EmergingTechnologyService[] = [;
     launchDate: "2025-04-15",;
     customers: 8,;
     rating: 4.9,;
-    reviews: 6;,;,
-},;
-  {;
+    reviews: 6},;
+  {
     id: "space-technology-platform",;
     name: "Space Technology Platform",;
     tagline: "Access space technology solutions for satellite operations and space data analytics",;

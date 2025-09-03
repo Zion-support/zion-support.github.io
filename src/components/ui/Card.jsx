@@ -6,8 +6,7 @@ const Card = ({ children, className = '' }) => {}
     >;
       {children}
     </div>;
-  );,
-};';
+  )};';
 const CardHeader = ({ children, className = '' }) => {}
 `;
 ``;
@@ -16,8 +15,7 @@ const CardHeader = ({ children, className = '' }) => {}
     <div className={`flex flex-col space-y-1.5 p-6 ${className}`}>;
       {children}
     </div>;
-  );,
-};';
+  )};';
 const CardTitle = ({ children, className = '' }) => {}
   return()`;
     <h3``;
@@ -25,38 +23,34 @@ const CardTitle = ({ children, className = '' }) => {}
     >;
       {children}
     </h3>;
-  );,
-};';
+  )};';
 const CardDescription = ({ children, className = '' }) => {}
 `;
   return()``;
     <p className={`text-sm text-muted-foreground ${className}`}>{children}</p>;
-  );,
-};';
+  )};';
 const CardContent = ({ children, className = '' }) => {}
 `;
 ``;
-  return <div className={`p-6 pt-0 ${className}`}>{children}</div>;,
-};';
+  return <div className={`p-6 pt-0 ${className}`}>{children}</div>};';
 const CardFooter = ({ children, className = '' }) => {}
 `;
 ``;
 ```;
   return()````;
     <div className={`flex items-center p-6 pt-0 ${className}`}>{children}</div>;
-  );,
-};
+  )}
 export {}
   Card,;
   CardHeader,;
   CardTitle,;
   CardDescription,;
   CardContent,;
-  CardFooter};
+  CardFooter}
 var __rest =;
   (this && this.__rest) ||;
   function (s, e) {}
-    var t = {};
+    var t = {}
     for (var p in s)';
       if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)'';
         t[p] = s[p];''';
@@ -66,10 +60,8 @@ var __rest =;
           e.indexOf(p[i]) < 0 &&;
           Object.prototype.propertyIsEnumerable.call(s, p[i]);
         );
-          t[p[i]] = s[p[i]];,
-}';
-    return t;'';,
-};''';
+          t[p[i]] = s[p[i]]}';
+    return t;''};''';
 import { jsx as _jsx } from 'react/jsx-runtime';''';
 import React from 'react';''';
 import { cn } from '@/lib/utils';
@@ -86,8 +78,7 @@ const Card = React.forwardRef((_a, ref) => {}
         )},;
       props;
     );
-  );,
-});';
+  )});';
 Card.displayName = 'Card';
 const CardHeader = React.forwardRef((_a, ref) => {}
   var { className } = _a,';
@@ -98,8 +89,7 @@ const CardHeader = React.forwardRef((_a, ref) => {}
       { ref: ref, className: cn('flex flex-col space-y-1.5 p-6', className) },;
       props;
     );
-  );,
-});';
+  )});';
 CardHeader.displayName = 'CardHeader';
 const CardTitle = React.forwardRef((_a, ref) => {}
   var { className } = _a,';
@@ -114,8 +104,7 @@ const CardTitle = React.forwardRef((_a, ref) => {}
         )},;
       props;
     );
-  );,
-});';
+  )});';
 CardTitle.displayName = 'CardTitle';
 const CardDescription = React.forwardRef((_a, ref) => {}
   var { className } = _a,';
@@ -126,8 +115,7 @@ const CardDescription = React.forwardRef((_a, ref) => {}
       { ref: ref, className: cn('text-sm text-muted-foreground', className) },;
       props;
     );
-  );,
-});';
+  )});';
 CardDescription.displayName = 'CardDescription';
 const CardContent = React.forwardRef((_a, ref) => {}
   var { className } = _a,';
@@ -135,8 +123,7 @@ const CardContent = React.forwardRef((_a, ref) => {}
   return _jsx('';
     'div',';
     Object.assign({ ref: ref, className: cn('p-6 pt-0', className) }, props);
-  );,
-});';
+  )});';
 CardContent.displayName = 'CardContent';
 const CardFooter = React.forwardRef((_a, ref) => {}
   var { className } = _a,';
@@ -147,18 +134,11 @@ const CardFooter = React.forwardRef((_a, ref) => {}
       { ref: ref, className: cn('flex items-center p-6 pt-0', className) },;
       props;
     );
-  );,
-});';
+  )});';
 CardFooter.displayName = 'CardFooter';
-export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
-;
-
-export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };
-;
-export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };
-;
-export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };
-;
-export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };
-;
-export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };
+export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
+export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter }
+export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter }
+export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter }
+export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter }
+export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter }

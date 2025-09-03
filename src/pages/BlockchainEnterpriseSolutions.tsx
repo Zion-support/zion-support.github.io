@@ -72,9 +72,9 @@ id: 2,"";
     price: "From $200,000",;"";
     timeline: "18-30 weeks",;"";
     category: "Integration",;"";
-    technologies: ["Integration", "APIs", "Migration", "Legacy Systems"]};
+    technologies: ["Integration", "APIs", "Migration", "Legacy Systems"]}
 ];
-;
+
 const blockchainTechnologies: unknown = [];
   {}
 ";
@@ -83,8 +83,7 @@ const blockchainTechnologies: unknown = [];
     description: "Enterprise blockchain platforms and frameworks",";
     icon: Building,"";
     useCase: "Platform Development","";
-    reliability: "Critical";,
-},;
+    reliability: "Critical"},;
   {}
 ";
 "";
@@ -92,8 +91,7 @@ const blockchainTechnologies: unknown = [];
     description: "Self-executing contracts with business logic",";
     icon: Code,"";
     useCase: "Business Automation","";
-    reliability: "Critical";,
-},;
+    reliability: "Critical"},;
   {}
 ";
 "";
@@ -101,16 +99,15 @@ const blockchainTechnologies: unknown = [];
     description: "Blockchain consensus and validation protocols",";
     icon: Network,"";
     useCase: "Network Security","";
-    reliability: "High";,
-},";
-  {;"";
+    reliability: "High"},";
+  {"";
     name: "Cryptography",;"";
     description: "Advanced cryptographic security solutions",;";
     icon: Lock,;"";
     useCase: "Security & Privacy",;"";
-    reliability: "High"};
+    reliability: "High"}
 ];
-;
+
 const successStories: unknown = [];
   {}
 ";
@@ -120,8 +117,7 @@ const successStories: unknown = [];
     challenge: "Needed transparent supply chain tracking across 50+ countries","";
     solution: "Built comprehensive blockchain supply chain platform with IoT integration","";
     results: "100% supply chain transparency, 40% cost reduction, 60% efficiency improvement, better compliance","";
-    logo: "GSC";,
-},;
+    logo: "GSC"},;
   {}
 ";
     id: 2,"";
@@ -130,8 +126,7 @@ const successStories: unknown = [];
     challenge: "Required blockchain-based cross-border payment system","";
     solution: "Implemented blockchain payment platform with smart contracts","";
     results: "80% faster payments, 70% cost reduction, 100% transparency, better compliance","";
-    logo: "DBI";,
-},;
+    logo: "DBI"},;
   {}
 ";
     id: 3,"";
@@ -140,17 +135,16 @@ const successStories: unknown = [];
     challenge: "Needed secure patient identity management system",;"";
     solution: "Built blockchain-based identity management platform",;"";
     results: "100% data security, 90% faster verification, better privacy, improved compliance",;"";
-    logo: "HIS"};
+    logo: "HIS"}
 ];
-;
+
 ";
     step: 4,;"";
     title: "Testing & Deployment",;"";
     description: "Test blockchain systems and deploy to production",;";
     icon: Gauge,;"";
-    duration: "4-8 weeks"};
-];,
-},;  {}
+    duration: "4-8 weeks"}
+]},;  {}
 ";
 "";
     title: "Security & Privacy","";
@@ -171,38 +165,33 @@ const successStories: unknown = [];
     description: "Blockchain eliminates intermediaries and reduces operational costs",;";
     icon: TrendingUp,;"";
     examples: ["No intermediaries", "Reduced costs", "Better efficiency", "Improved ROI"]};];
-;
+
 const blockchainBenefits: unknown = [{}
     title: "Transparency & Trust",;
     description: "Blockchain provides immutable, transparent records that build trust",;
     icon: Eye,;
-    examples["Immutable records", "Transparent transactions", "Audit trails", "Trust building"];,
-},;
+    examples["Immutable records", "Transparent transactions", "Audit trails", "Trust building"]},;
   {}
     title: "Security & Privacy",;
     description: "Advanced cryptography ensures data security and privacy protection",;
     icon: Shield,;
-    examples["Cryptographic security", "Data privacy", "Access control", "Fraud prevention"];,
-},;
+    examples["Cryptographic security", "Data privacy", "Access control", "Fraud prevention"]},;
   {}
     title: "Automation & Efficiency",;
     description: "Smart contracts automate business processes and reduce manual effort",;
     icon: Zap,;
-    examples["Process automation", "Smart contracts", "Reduced errors", "Faster execution"];,
-},;
+    examples["Process automation", "Smart contracts", "Reduced errors", "Faster execution"]},;
   {}
-    examples["No intermediaries", "Reduced costs", "Better efficiency", "Improved ROI"];,
-};
+    examples["No intermediaries", "Reduced costs", "Better efficiency", "Improved ROI"]}
     title: "Cost Reduction",;
     description: "Blockchain eliminates intermediaries and reduces operational costs",;
     icon: TrendingUp,;
-    examples: ["No intermediaries", "Reduced costs", "Better efficiency", "Improved ROI"];,
-};
+    examples: ["No intermediaries", "Reduced costs", "Better efficiency", "Improved ROI"]}
 ];
-;
+
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
-;
+
   ";
   return ("    <div className = "min-h-screen bg-futuristic">";
       {/* Hero Section */}"";
@@ -217,33 +206,27 @@ const blockchainBenefits: unknown = [{}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             animate = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center max-w-4xl mx-auto";
             <motion.div;
               initial = {}
   { opacity: 0,;
-  scale: 0.8;,
-}}
+  scale: 0.8}}
               animate = {}
   { opacity: 1,;
-  scale: 1;,
-}}
+  scale: 1}}
               transition = {}
   { duration: 0.8,;
-  delay: 0.2;,
-}}
+  delay: 0.2}}
               className="inline - flex items - center justify - center w-20 h-20 bg-gradient - to - br from - zion - cyan to - zion - purple rounded-2xl mb-8";
               <Building className="w-10 h-10 text-white" />;
             </motion.div>;
 
-";,
-}}"";
+"}}"";
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"";
 "";
               <Building className="w-10 h-10 text-white"  />            </motion.div>";
@@ -281,12 +264,10 @@ const blockchainBenefits: unknown = [{}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
 "";
@@ -302,19 +283,15 @@ const blockchainBenefits: unknown = [{}
                 key={benefit.title}
                 initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                 transition = {}
   { duration: 0.6,;
-  delay: index * 0.1;,
-}}
+  delay: index * 0.1}}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 8 hover:border-zion - cyan / 40 transition - all duration -300";
-";,
-}}"";
+"}}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"";
 "";
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">"";
@@ -343,12 +320,10 @@ const blockchainBenefits: unknown = [{}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
 "";
@@ -364,19 +339,15 @@ const blockchainBenefits: unknown = [{}
                 key={technology.name}
                 initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                 transition = {}
   { duration: 0.6,;
-  delay: index * 0.1;,
-}}
+  delay: index * 0.1}}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 text-center hover:border-zion - cyan / 40 transition - all duration -300";
-";,
-}}"";
+"}}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"";
 "";
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">"";
@@ -395,8 +366,7 @@ const blockchainBenefits: unknown = [{}
                     ? 'bg-red-500/20 text-red-400 border border-red-500/30'''''`;
                     : technology.reliability === 'High''''`'`;
                     ? 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30'''`'`'`;
-                    : 'bg-green-500/20 text-green-400 border border-green-500/30'````;,
-}`}>;
+                    : 'bg-green-500/20 text-green-400 border border-green-500/30'````}`}>;
                   {technology.reliability} Reliability;
                 </span>;
               </motion.div>;) ) }
@@ -410,12 +380,10 @@ const blockchainBenefits: unknown = [{}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
 "";
@@ -431,17 +399,14 @@ const blockchainBenefits: unknown = [{}
                 key={step.step}
                 initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                 transition = {}
   { duration: 0.6,;
   delay: index * 0.1;
-";,
-}}"";
+"}}"";
                 className="text-center"";
 "";
                 <div className="relative mb-6">"";
@@ -469,12 +434,10 @@ const blockchainBenefits: unknown = [{}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
 "";
@@ -496,9 +459,8 @@ const blockchainBenefits: unknown = [{}
 '''`;
                   selectedCategory === category'''`'`;
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'''`'`'`;
-                    : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````;,
-}`}
-;
+                    : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````}`}
+
                 {category}
               </button>) ) }
           </div>";
@@ -509,21 +471,17 @@ const blockchainBenefits: unknown = [{}
                 key={solution.id}
                 initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                 transition = {}
   { duration: 0.6,;
-  delay: index * 0.1;,
-}}
+  delay: index * 0.1}}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 hover:border-zion - cyan / 40 transition - all duration - 300 cursor -pointer";
                 onClick={ () => setSelectedSolution(solution) }
-;
-";,
-}}"";
+
+"}}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer";
                 onClick={() => setSelectedSolution(solution)}";
 "";
@@ -575,12 +533,10 @@ const blockchainBenefits: unknown = [{}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
 "";
@@ -596,19 +552,15 @@ const blockchainBenefits: unknown = [{}
                 key={story.id}
                 initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                 transition = {}
   { duration: 0.6,;
-  delay: index * 0.1;,
-}}
+  delay: index * 0.1}}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 hover:border-zion - cyan / 40 transition - all duration -300";
-";,
-}}"";
+"}}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"";
 "";
                 <div className="flex items-center gap-4 mb-6">"";
@@ -652,12 +604,10 @@ const blockchainBenefits: unknown = [{}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center max-w-4xl mx-auto"";
 "";
@@ -683,14 +633,10 @@ const blockchainBenefits: unknown = [{}
         </div>;
       </section>;
     </div>;
-  );,
-}
-;
+  )}
 
-export { BlockchainEnterpriseSolutions };
-;
-export { BlockchainEnterpriseSolutions };
-;
-export { BlockchainEnterpriseSolutions };
-;
-export { BlockchainEnterpriseSolutions };
+
+export { BlockchainEnterpriseSolutions }
+export { BlockchainEnterpriseSolutions }
+export { BlockchainEnterpriseSolutions }
+export { BlockchainEnterpriseSolutions }

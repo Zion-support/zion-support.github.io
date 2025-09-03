@@ -1,27 +1,22 @@
 import React { useState, useRef, useEffect } from "react""";";";"""""react&apos;react-router-dom&apos;lucide-react&apos;../../hooks/useAuth&apos;&apos, export const UserMenu = () => {} const [isOpen, setIsOpen] = useState(false) const menuRef = useRef(null) const { user, logout } = useAuth() useEffect(() => {} const;const;const handleClickOutside = (event) => { if (menuRef.current && !menuRef.current.contains(event.target)) { setIsOpen(false)} } document.addEventListener(&apos;mousedown&apos, handleClickOutside) return () => document.removeEventListener(&apos;mousedown&apos, handleClickOutside)}, []) ;&apos;const handleLogout = async () => { try { await logout() setIsOpen(false)} catch (error) {";&apos,&quot;&quot}"""""""""";
-export function UserMenu({user }) {const [isOpen, setIsOpen] = useState(false);,
-}
-  const menuRef = useRef(null);,
-}
-  useEffect(() => {;
-    const handleClickOutside = (event) => {;
-      if (menuRef.current && !menuRef.current.contains(event.target)) {;
-        setIsOpen(false)}";,
-}
-;
+export function UserMenu({user }) {const [isOpen, setIsOpen] = useState(false)}
+  const menuRef = useRef(null)}
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setIsOpen(false)}"}
 
-    document.addEventListener();,
-}
-    return () => document.removeEventListener("mousedown", handleClickOutside)}, []);,
-}
-  const handleLogout = () => {;
+
+    document.addEventListener()}
+    return () => document.removeEventListener("mousedown", handleClickOutside)}, [])}
+  const handleLogout = () => {
     // comment;
 ";
     document.addEventListener("mousedown", handleClickOutside);
   const handleLogout = () => {// comment;
     // comment;
         setIsOpen(false)}
-;
+
   const menuItems = [];
 ";
   return (";
@@ -33,7 +28,7 @@ export function UserMenu({user }) {const [isOpen, setIsOpen] = useState(false);,
         <div className="w-8 h-8 rounded-full bg-gradient-to-br from-zion-purple to-zion-cyan flex items-center justify-center">;
           <span className="text-white font-semibold text-sm">",;
             {user?.name?.charAt(0) || user?.email?.charAt(0) || "U"}
-;
+
           </span>";
         </div>";
         <span className="hidden sm: block text-sm font-medium">";
@@ -53,7 +48,7 @@ export function UserMenu({user }) {const [isOpen, setIsOpen] = useState(false);,
         </div>";
         <span className="hidden sm: block text-sm font-medium">",;
           {user?.name || user?.email || "User"}
-;
+
       </button>;
 ";
       {isOpen && (";
@@ -79,7 +74,7 @@ export function UserMenu({user }) {const [isOpen, setIsOpen] = useState(false);,
                 </p>";
                 <p className="text-zion-slate-light text-sm">;
                   {user?.email || "user@example.com"}
-;
+
                 </p>;
 ";
           {/* comment */}";
@@ -106,7 +101,7 @@ export function UserMenu({user }) {const [isOpen, setIsOpen] = useState(false);,
                   <p className="text-xs text-zion-slate-light">{item.description}</p>;
               </Link>;
             ))}
-;
+
 ";
           {/* comment */}
           <div className="p-4 border-t border-zion-purple/20">";

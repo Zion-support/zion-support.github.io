@@ -1,7 +1,7 @@
 import { jsx as _jsx, jsxs as _jsxs } from 'react/jsx-runtime';
-export default function Page() {;
+export default function Page() {
 ,;
-        {;
+        {
 
             id: '4',;
             type: 'page',;
@@ -9,53 +9,49 @@ export default function Page() {;
             description: 'Comprehensive cybersecurity solutions for enterprise protection',;
             url: '/services/cybersecurity',;
             category: 'Security',;
-            tags['Security',Cybersecurity',Enterprise',Protection'];,
-}
+            tags['Security',Cybersecurity',Enterprise',Protection']}
     ];
-    useEffect(() => {;
-  // TODO: Add dependencies if needed;,
-}, []);
-        if(isOpen && searchInputRef.current) {;
+    useEffect(() => {
+  // TODO: Add dependencies if needed}, []);
+        if(isOpen && searchInputRef.current) {
 
             searchInputRef.current.focus()}
     }, [isOpen]);
-    useEffect(() => {;
-  // TODO: Add dependencies if needed;,
-}, []);
-        if(query.trim()) {;
+    useEffect(() => {
+  // TODO: Add dependencies if needed}, []);
+        if(query.trim()) {
 
-            performSearch()}
-        else {;
+            performSearch()} else {
 
             setResults([])}
     }, [query, activeFilter]);
-    const performSearch = async () => {;
+    const performSearch = async () => {
         setIsLoading(true) ;
         // Simulate API call delay;
         await new Promise(resolve => setTimeout (resolve, 300) ) ;
         // Filter results based on query and active filter;
-        const filteredResults = mockSearchResults.filter(result => {;
+        const filteredResults = mockSearchResults.filter(result => {
 
             const matchesFilter = activeFilter === 'all' || result.type === activeFilter;
             return matchesQuery && matchesFilter}) ;
         setResults(filteredResults) ;
-        setIsLoading(false) };
-    const handleSearch = (searchQuery) => {;
+        setIsLoading(false) }
+    const handleSearch = (searchQuery) => {
 
-        if(searchQuery.trim()) {;
+        if(searchQuery.trim()) {
 
             setQuery(searchQuery);
             addToRecentSearches(searchQuery)}
-    };
-    const addToRecentSearches = (searchQuery) => {;
+    }
+    const addToRecentSearches = (searchQuery) => {
 
-        setRecentSearches(prev => {;
+        setRecentSearches(prev => {
 
             const filtered = prev.filter(s => s !== searchQuery);
-            return [searchQuery, ...filtered].slice(0, 5)})};
-    const getTypeIcon = (type) => {;
+            return [searchQuery, ...filtered].slice(0, 5)})}
+    const getTypeIcon = (type) => {
 
-        switch(type) {;
+        switch(type) {
 
             case 'service':";
                 return _jsx(Briefcase, { className: "h-4 w-4" });
@@ -67,10 +63,10 @@ export default function Page() {;
                 return _jsx(Search, { className: "h-4 w-4" });
             default:";
                 return _jsx(Search, { className: "h-4 w-4" })}
-    };
-    const getTypeColor = (type) => {;
+    }
+    const getTypeColor = (type) => {
 
-        switch(type) {;
+        switch(type) {
 
             case 'service':';
                 return 'bg-blue-100 text-blue-700';
@@ -82,7 +78,7 @@ export default function Page() {;
                 return 'bg-gray-100 text-gray-700';
             default:';
                 return 'bg-gray-100 text-gray-700'}
-    };
+    }
     if(!isOpen);
         return null;";
     return (_jsx("div", { className: "fixed inset-0 z-50 bg-black/50 backdrop-blur-sm", children: _jsx("div", { className: "flex items-start justify-center pt-20 px-4", children: _jsxs("div", { className: "bg-white rounded-lg shadow-2xl w-full max-w-4xl max-h-[80vh] overflow-hidden", children[_jsxs("div", { className: "flex items-center justify-between p-6 border-b border-gray-200", children[_jsx("div", { className: "flex-1 max-w-2xl", children: _jsxs("div", { className: "relative", children[_jsx(Search, { className: "absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" }), _jsx(Input, { ref: searchInputRef, type: "text", placeholder: "Search for services, talent, equipment, or pages...", value: query, onChange: (e) => setQuery(e.target.value), className: "pl-10 pr-4 py-3 text-lg border-0 focus:ring-2 focus:ring-zion-blue" })] }) }), _jsx(Button, { variant: "ghost", size: "sm", onClick: onClose, className: "ml-4 p-2 hover:bg-gray-100", children: _jsx(X, { className: "h-6 w-6" }) })] }), _jsx("div", { className: "px-6 py-4 border-b border-gray-200", children: _jsxs("div", { className: "flex items-center space-x-4", children[_jsx("span", { className: "text-sm font-medium text-gray-700", children: "Filter by:" }), [;

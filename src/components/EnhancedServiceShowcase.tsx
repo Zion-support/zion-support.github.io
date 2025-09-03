@@ -1,8 +1,8 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
-;
-export default function Page() {;
+
+export default function Page() {
 ,;
-  {;
+  {
 
     id: 'quantum-computing-suite',;
     title: 'Quantum Computing Suite',;
@@ -14,9 +14,8 @@ export default function Page() {;
     rating: 4.8,;
     reviews: 89,;
     color: 'from-purple-500 to-pink-500',;
-    link: '/emerging-tech/quantum-computing';,
-},;
-  {;
+    link: '/emerging-tech/quantum-computing'},;
+  {
 
     id: 'cybersecurity-platform',;
     title: 'AI-Powered Cybersecurity Platform',;
@@ -29,9 +28,8 @@ export default function Page() {;
     reviews: 234,;
     color: 'from-red-500 to-orange-500',;
     popular: true,;
-    link: '/it-services/cybersecurity';,
-},;
-  {;
+    link: '/it-services/cybersecurity'},;
+  {
 
     id: 'cloud-devops-automation',;
     title: 'Cloud & DevOps Automation',;
@@ -43,9 +41,8 @@ export default function Page() {;
     rating: 4.7,;
     reviews: 189,;
     color: 'from-green-500 to-emerald-500',;
-    link: '/it-services/cloud-devops';,
-},;
-  {;
+    link: '/it-services/cloud-devops'},;
+  {
 
     id: 'blockchain-defi-platform',;
     title: 'Blockchain & DeFi Platform',;
@@ -57,9 +54,8 @@ export default function Page() {;
     rating: 4.6,;
     reviews: 123,;
     color: 'from-yellow-500 to-orange-500',;
-    link: '/emerging-tech/blockchain-defi';,
-},;
-  {;
+    link: '/emerging-tech/blockchain-defi'},;
+  {
 
     id: 'digital-transformation',;
     title: 'Digital Transformation Consulting',;
@@ -71,9 +67,8 @@ export default function Page() {;
     rating: 4.8,;
     reviews: 167,;
     color: 'from-indigo-500 to-purple-500',;
-    link: '/services/digital-transformation';,
-},;
-  {;
+    link: '/services/digital-transformation'},;
+  {
 
     id: 'micro-saas-platform',;
     title: 'Micro SaaS Development Platform',;
@@ -85,9 +80,8 @@ export default function Page() {;
     rating: 4.7,;
     reviews: 98,;
     color: 'from-cyan-500 to-blue-500',;
-    link: '/micro-saas/development-platform';,
-},;
-  {;
+    link: '/micro-saas/development-platform'},;
+  {
 
     id: 'healthcare-ai',;
     title: 'Healthcare AI Solutions',;
@@ -102,7 +96,7 @@ export default function Page() {;
     link: '/ai-services/healthcare';
 
 ];
-;
+
   'Cybersecurity',;
   'Cloud & DevOps',;
   'Blockchain & Web3',;
@@ -113,34 +107,31 @@ export default function Page() {;
       },;
       { threshold: 0.1 }
     );
-;
-    if(element) {;
+
+    if(element) {
       observer.observe(element)}
-;
+
     return () => observer.disconnect()}, []);
-;
+
       />;
-    ))};
+    ))}
           i < Math.floor(rating) ;
             ? 'text-yellow-400 fill-current' ;
-            : 'text-gray-400';`;,
-}`};
-      />;) ) };
+            : 'text-gray-400';`}`}
+      />;) ) }
   return ();
     <section id = "service-showcase" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">";
       <div className="max-w-7xl mx-auto px-6">;
         {/* Header */}
         <motion.div;
-          initial = {;
+          initial = {
 
   { opacity: 0,;
-  y: 20;,
-}}
-          animate = {;
+  y: 20}}
+          animate = {
 
   isVisible ? { opacity: 1,;
-  y: 0;,
-} : { opacity: 0, y: 20 }}
+  y: 0} : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}";
           className="text-center mb-16";
 ";
@@ -156,21 +147,18 @@ export default function Page() {;
 
         {/* Category Filter */}
         <motion.div;
-          initial = {;
+          initial = {
 
   { opacity: 0,;
-  y: 20;,
-}}
-          animate = {;
+  y: 20}}
+          animate = {
 
   isVisible ? { opacity: 1,;
-  y: 0;,
-} : { opacity: 0, y: 20 }}
-          transition = {;
+  y: 0} : { opacity: 0, y: 20 }}
+          transition = {
 
   { duration: 0.6,;
-  delay: 0.2;,
-}}";
+  delay: 0.2}}";
           className="flex flex-wrap justify-center gap-3 mb-12";
 
           {categories.map((category, index) => (;
@@ -179,9 +167,8 @@ export default function Page() {;
               onClick={() => setSelectedCategory(category)}`;
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${selectedCategory === category';
                   ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-lg shadow-zion-cyan/25'';
-                  : 'bg-zion-slate-light text-gray-300 hover:bg-zion-cyan/10 hover:text-zion-cyan border border-zion-slate'`;,
-}`}
-;
+                  : 'bg-zion-slate-light text-gray-300 hover:bg-zion-cyan/10 hover:text-zion-cyan border border-zion-slate'`}`}
+
               {category}
             </button>) ) }
         </motion.div>;
@@ -190,11 +177,10 @@ export default function Page() {;
         <motion.div;
           initial={{ opacity: 0 }}
           animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
-          transition = {;
+          transition = {
 
   { duration: 0.6,;
-  delay: 0.4;,
-}}";
+  delay: 0.4}}";
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";
 ";
           <AnimatePresence mode="wait">;
@@ -208,8 +194,7 @@ export default function Page() {;
                   duration: 0.6,;
                   delay: index * 0.1,";
                   type: "spring",;
-  stiffness: 100;,
-}}
+  stiffness: 100}}
                 whileHover={{ y: -10 }}
                 onHoverStart={() => setHoveredService(service.id)}
                 onHoverEnd={() => setHoveredService(null)}";
@@ -222,7 +207,7 @@ export default function Page() {;
                       <div className="absolute -top-3 -right-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-black px-4 py-1 rounded-full text-sm font-bold">;
                         Popular;
                       </div>) }
-;
+
                     {/* Service Icon */}`;
                     <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>;";
                       <service.icon className="w-8 h-8 text-white" />;
@@ -279,21 +264,18 @@ export default function Page() {;
 
         {/* CTA Section */}
         <motion.div;
-          initial = {;
+          initial = {
 
   { opacity: 0,;
-  y: 20;,
-}}
-          animate = {;
+  y: 20}}
+          animate = {
 
   isVisible ? { opacity: 1,;
-  y: 0;,
-} : { opacity: 0, y: 20 }}
-          transition = {;
+  y: 0} : { opacity: 0, y: 20 }}
+          transition = {
 
   { duration: 0.6,;
-  delay: 0.6;,
-}}";
+  delay: 0.6}}";
           className="text-center mt-16";
 ";
           <div className="bg-gradient-to-r from-zion-slate to-zion-slate-light border border-zion-cyan/20 rounded-2xl p-8">";
@@ -321,5 +303,5 @@ export default function Page() {;
           </div>;
         </motion.div>;
       </div>;
-    </section>;) };
+    </section>;) }
 '"`;

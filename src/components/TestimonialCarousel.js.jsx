@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Star, Quote, ArrowRight  } from 'lucide-react';
 ,;
-  {;
+  {
 
     id: 2,;
     name: 'Michael Chen',;
@@ -14,7 +14,7 @@ import { ChevronLeft, ChevronRight, Star, Quote, ArrowRight  } from 'lucide-reac
     rating: 5,;
     category: 'Freelancer',;
     project: 'Machine Learning Solutions'},;
-  {;
+  {
 
     id: 3,;
     name: 'Dr.Emily Rodriguez',;
@@ -26,7 +26,7 @@ import { ChevronLeft, ChevronRight, Star, Quote, ArrowRight  } from 'lucide-reac
     rating: 5,;
     category: 'Research',;
     project: 'AI Research Platform'},;
-  {;
+  {
 
     id: 4,;
     name: 'David Kim',;
@@ -38,7 +38,7 @@ import { ChevronLeft, ChevronRight, Star, Quote, ArrowRight  } from 'lucide-reac
     rating: 5,;
     category: 'Startup',;
     project: 'SaaS Platform'},;
-  {;
+  {
 
     id: 5,;
     name: 'Lisa Thompson',;
@@ -50,7 +50,7 @@ import { ChevronLeft, ChevronRight, Star, Quote, ArrowRight  } from 'lucide-reac
     rating: 5,;
     category: 'Enterprise',;
     project: 'Digital Transformation'},;
-  {;
+  {
 
     id: 6,;
     name: 'Alex Patel',;
@@ -63,38 +63,31 @@ import { ChevronLeft, ChevronRight, Star, Quote, ArrowRight  } from 'lucide-reac
     category: 'Infrastructure',;
     project: 'Cloud Infrastructure'},;
 ];
-export function TestimonialCarousel() {;
+export function TestimonialCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
-  useEffect(() => {;
+  useEffect(() => {
   // TODO: Add dependencies if needed;
 
-  return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
-    const timer = setInterval(() => {;
+  return () => {
+    // Cleanup function}}, []);, []);
+    const timer = setInterval(() => {
       setDirection(1);
-      setCurrentIndex(prev => (prev + 1) % testimonials.length);,
-}, 5000);
-    return () => clearInterval(timer);,
-}, []);
-  const swipePower = (offset, velocity) => {;
+      setCurrentIndex(prev => (prev + 1) % testimonials.length)}, 5000);
+    return () => clearInterval(timer)}, []);
+  const swipePower = (offset, velocity) => {
 
-    return Math.abs(offset) * velocity;,
-};
-  const paginate = newDirection => {;
+    return Math.abs(offset) * velocity}
+  const paginate = newDirection => {
 
     setDirection(newDirection);
     setCurrentIndex();
       prev => (prev + newDirection + testimonials.length) % testimonials.length;
-    );,
-};
-  const goToSlide = index => {;
+    )}
+  const goToSlide = index => {
 
     setDirection(index > currentIndex ? 1 : -1);
-    setCurrentIndex(index);,
-};
+    setCurrentIndex(index)}
   return (";
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">;
       {/* Background decorative elements */}";

@@ -56,17 +56,12 @@ const InfrastructureServices = () => {}
         </div>;
       </section>;
     </div>;
-  );,
-};
+  )}
 export default InfrastructureServices;
-;
 
-export { InfrastructureServices };
-;
-export { InfrastructureServices };
-;
-export { InfrastructureServices };
-;
-export { InfrastructureServices };
-;
-export { InfrastructureServices };
+
+export { InfrastructureServices }
+export { InfrastructureServices }
+export { InfrastructureServices }
+export { InfrastructureServices }
+export { InfrastructureServices }

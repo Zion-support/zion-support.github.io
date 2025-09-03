@@ -1,4 +1,4 @@
-export interface QuantumSpaceService {;
+export interface QuantumSpaceService {
   id: string;
   name: string;
   tagline: string;
@@ -8,11 +8,11 @@ export interface QuantumSpaceService {;
   link: string;
   category: string;
   realImplementation: boolean;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
 export const quantumSpaceServices: QuantumSpaceService[] = [;
-  {;
+  {
     id: "quantum-computing-platform",;
     name: "Quantum Computing Platform",;
     tagline: "Next-generation quantum computing solutions",;
@@ -28,7 +28,7 @@ export const quantumSpaceServices: QuantumSpaceService[] = [;
     link: "/services/quantum-computing-platform",;
     category: "Quantum Computing",;
     realImplementation: true,;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709";

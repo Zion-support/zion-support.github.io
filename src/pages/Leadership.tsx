@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
-const Leadership = () => {;
+const Leadership = () => {
   return (;
     <>;
       <Head>;
@@ -45,6 +45,5 @@ const Leadership = () => {;
               </Link>;
             </div>;
     </>;
-  );,
-}
+  )}
 export default Leadership;

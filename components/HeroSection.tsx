@@ -1,16 +1,15 @@
 import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, Play, Star, Users, Award, Globe } from 'lucide-react';
-;
-const HeroSection: React.FC = () => {;
+
+const HeroSection: React.FC = () => {
   return (;
     <>;
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">;
       {/* Animated Background */}
       <div className="absolute inset-0">;
         <div className="absolute inset-0 opacity-20" style={{;
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`;,
-}}></div>;
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`}}></div>;
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent via-transparent to-black/20"></div>;
       </div>;
 
@@ -82,7 +81,5 @@ const HeroSection: React.FC = () => {;
       <div className="absolute bottom-40 right-10 w-28 h-28 bg-indigo-500/20 rounded-full blur-xl animate-pulse delay-3000"></div>;
       </section>;
     </>;
-  );,
-};
-;
+  )}
 export default HeroSection;

@@ -24,13 +24,11 @@ import {}
   Store,';
   Tag,'';
   Brain,''';
-  Code'''';,
-} from 'lucide-react';
-;
-    integrations["E - commerce", "POS Systems", "Mobile Apps", "CRM"];,
-}
+  Code''''} from 'lucide-react';
+
+    integrations["E - commerce", "POS Systems", "Mobile Apps", "CRM"]}
 ];
-;
+
 const retailTrends = [];
   {}
 ";
@@ -38,24 +36,21 @@ const retailTrends = [];
     title: "AI-Powered Personalization","";
     description: "Machine learning algorithms that provide personalized shopping experiences",";
     icon: Brain,"";
-    impact: "High";,
-},;
+    impact: "High"},;
   {}
 ";
 "";
     title: "Omnichannel Integration","";
     description: "Seamless experience across online, mobile, and physical stores",";
     icon: Globe,"";
-    impact: "High";,
-},;
+    impact: "High"},;
   {}
 ";
 "";
     title: "Mobile-First Shopping","";
     description: "Mobile devices driving majority of online retail traffic",";
     icon: Smartphone,"";
-    impact: "Critical";,
-},;
+    impact: "Critical"},;
   {}
 ";
 "";
@@ -64,7 +59,7 @@ const retailTrends = [];
     icon: BarChart3,"";
     impact: "High";
 ];
-;
+
 const successStories = [];
   {}
 ";
@@ -74,8 +69,7 @@ const successStories = [];
     challenge: "Needed omnichannel platform to connect online and physical stores","";
     solution: "Built integrated e-commerce and POS system with unified inventory","";
     results: "40% increase in online sales, 25% reduction in inventory costs","";
-    logo: "FF";,
-},;
+    logo: "FF"},;
   {}
 ";
     id: 2,"";
@@ -84,8 +78,7 @@ const successStories = [];
     challenge: "Required mobile app for enhanced customer engagement","";
     solution: "Developed feature-rich mobile shopping app with AR product preview","";
     results: "60% mobile traffic increase, 35% higher conversion rate","";
-    logo: "TG";,
-},;
+    logo: "TG"},;
   {}
 ";
     id: 3,"";
@@ -96,7 +89,7 @@ const successStories = [];
     results: "30% reduction in stockouts, 20% improvement in order fulfillment","";
     logo: "HG";
 ];
-;
+
 const processSteps = [];
   {}
 ";
@@ -104,24 +97,21 @@ const processSteps = [];
     title: "Retail Assessment","";
     description: "Analyze current retail operations and identify improvement opportunities",";
     icon: Target,"";
-    duration: "1-2 weeks";,
-},;
+    duration: "1-2 weeks"},;
   {}
 ";
     step: 2,"";
     title: "Solution Design","";
     description: "Design customized retail technology solution based on requirements",";
     icon: FileText,"";
-    duration: "2-3 weeks";,
-},;
+    duration: "2-3 weeks"},;
   {}
 ";
     step: 3,"";
     title: "Development & Testing","";
     description: "Build and thoroughly test the retail solution",";
     icon: Code,"";
-    duration: "8-24 weeks";,
-},;
+    duration: "8-24 weeks"},;
   {}
 ";
     step: 4,"";
@@ -130,7 +120,7 @@ const processSteps = [];
     icon: Users,"";
     duration: "1-2 weeks";
 ];
-;
+
 export default function RetailSolutions() {}
 ';
 '';
@@ -158,30 +148,24 @@ export default function RetailSolutions() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             animate = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center max-w-4xl mx-auto";
             <motion.div;
               initial = {}
   { opacity: 0,;
-  scale: 0.8;,
-}}
+  scale: 0.8}}
               animate = {}
   { opacity: 1,;
-  scale: 1;,
-}}
+  scale: 1}}
               transition = {}
   { duration: 0.8,;
-  delay: 0.2;,
-}}
+  delay: 0.2}}
               className="inline - flex items - center justify - center w-20 h-20 bg-gradient - to - br from - zion - cyan to - zion - purple rounded-2xl mb-8";
-";,
-}}"";
+"}}"";
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"";
 "";
               <ShoppingCart className="w-10 h-10 text-white" />;
@@ -222,12 +206,10 @@ export default function RetailSolutions() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
 "";
@@ -243,19 +225,15 @@ export default function RetailSolutions() {}
                 key={trend.title}
                 initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                 transition = {}
   { duration: 0.6,;
-  delay: index * 0.1;,
-}}
+  delay: index * 0.1}}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 text-center hover:border-zion - cyan / 40 transition - all duration -300";
-";,
-}}"";
+"}}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"";
 "";
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">"";
@@ -273,8 +251,7 @@ export default function RetailSolutions() {}
                     ? 'bg-red-500/20 text-red-400 border border-red-500/30'''''`;
                     : trend.impact === 'High''''`'`;
                     ? 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30'''`'`'`;
-                    : 'bg-green-500/20 text-green-400 border border-green-500/30'````;,
-}`}>;
+                    : 'bg-green-500/20 text-green-400 border border-green-500/30'````}`}>;
                   {trend.impact} Impact;
                 </span>;
               </motion.div>;) ) }
@@ -288,12 +265,10 @@ export default function RetailSolutions() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
 "";
@@ -309,17 +284,14 @@ export default function RetailSolutions() {}
                 key={step.step}
                 initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                 transition = {}
   { duration: 0.6,;
   delay: index * 0.1;
-";,
-}}"";
+"}}"";
                 className="text-center"";
 "";
                 <div className="relative mb-6">"";
@@ -347,12 +319,10 @@ export default function RetailSolutions() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
 "";
@@ -374,9 +344,8 @@ export default function RetailSolutions() {}
 '''`;
                   selectedCategory === category'''`'`;
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'''`'`'`;
-                    : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````;,
-}`}
-;
+                    : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````}`}
+
                 {category}
               </button>) ) }
           </div>";
@@ -387,21 +356,17 @@ export default function RetailSolutions() {}
                 key={solution.id}
                 initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                 transition = {}
   { duration: 0.6,;
-  delay: index * 0.1;,
-}}
+  delay: index * 0.1}}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 hover:border-zion - cyan / 40 transition - all duration - 300 cursor -pointer";
                 onClick={ () => setSelectedSolution(solution) }
-;
-";,
-}}"";
+
+"}}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer";
                 onClick={() => setSelectedSolution(solution)}";
 "";
@@ -455,12 +420,10 @@ export default function RetailSolutions() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
 "";
@@ -476,19 +439,15 @@ export default function RetailSolutions() {}
                 key={story.id}
                 initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                 transition = {}
   { duration: 0.6,;
-  delay: index * 0.1;,
-}}
+  delay: index * 0.1}}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 hover:border-zion - cyan / 40 transition - all duration -300";
-";,
-}}"";
+"}}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"";
 "";
                 <div className="flex items-center gap-4 mb-6">"";
@@ -533,12 +492,10 @@ export default function RetailSolutions() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center max-w-4xl mx-auto"";
 "";
@@ -565,14 +522,10 @@ export default function RetailSolutions() {}
       </section>;
     </div>;
   )}
-;
 
-export { RetailSolutions };
-;
-export { RetailSolutions };
-;
-export { RetailSolutions };
-;
-export { RetailSolutions };
-;
-export { RetailSolutions };
+
+export { RetailSolutions }
+export { RetailSolutions }
+export { RetailSolutions }
+export { RetailSolutions }
+export { RetailSolutions }

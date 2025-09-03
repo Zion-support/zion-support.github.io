@@ -1,8 +1,7 @@
 import React from "react";
 import type { NextPage } from "next";
-const MainLayout = dynamic(() => import("../components/layout/MainLayout"), { ssr: false });,
-}
-const PrivacyPolicy: NextPage = () => {;
+const MainLayout = dynamic(() => import("../components/layout/MainLayout"), { ssr: false })}
+const PrivacyPolicy: NextPage = () => {
   return (;
     <MainLayout title="Privacy Policy - Zion Tech Group"">;
       description="Privacy Policy for Zion Tech Group. Learn how we collect, use, and protect your personal information.">";
@@ -14,7 +13,7 @@ const PrivacyPolicy: NextPage = () => {;
             <div className="prose prose-lg max-w-none">";
               <p className="text-gray-600 mb-6">,;
                 <strong>Last updated:</strong> {new Date().toLocaleDateString()}
-;
+
               </p>;
               ";
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Information We Collect</h2>";

@@ -35,10 +35,8 @@ export default function ProfilePage() {}
           .eq('id', profileId);
           .single();
         if (error) {}
-          throw error;,
-}
-        setProfileData(data);,
-} catch (error) {}
+          throw error}
+        setProfileData(data)} catch (error) {}
         // console.error("Error fetching profile:", error);
         setIsError(true);
         toast({}
@@ -47,14 +45,11 @@ export default function ProfilePage() {}
 ''';
           title: 'Error',''';
           description: 'Failed to load profile. Please try again later.',''';
-          variant: 'destructive'});,
-} finally {}
-        setIsLoading(false);,
-}
-    };
+          variant: 'destructive'})} finally {}
+        setIsLoading(false)}
+    }
     if (profileId) {}
-      fetchProfile();,
-}
+      fetchProfile()}
   }, [profileId]);
   if (isLoading) {}
 ";
@@ -62,24 +57,21 @@ export default function ProfilePage() {}
       <div className="min-h-screen flex items-center justify-center">"";
         <span className="loading loading-ring loading-lg"></span>;
       </div>;
-    );,
-}
+    )}
   if (isError || !profileData) {}
 ";
     return ("";
       <div className="min-h-screen flex items-center justify-center">"";
         <p className="text-red-500">Failed to load profile.</p>;
       </div>;
-    );,
-}
+    )}
   return();
     <>;
       <SEO;
         title={`${profileData.full_name} | Talent Profile`}
         description={}
 ';
-          profileData.bio || 'View the profile of this talented individual.';,
-}
+          profileData.bio || 'View the profile of this talented individual.'}
       />";
 "";
       <div className="container mx-auto px-4 py-8">"";
@@ -249,16 +241,12 @@ export default function ProfilePage() {}
           </div>;
         </div>;
       </div>;
-      ;
-    </>)}
-;
 
-export { ProfilePage };
-;
-export { ProfilePage };
-;
-export { ProfilePage };
-;
-export { ProfilePage };
-;
-export { ProfilePage };
+    </>)}
+
+
+export { ProfilePage }
+export { ProfilePage }
+export { ProfilePage }
+export { ProfilePage }
+export { ProfilePage }

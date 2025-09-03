@@ -1,10 +1,9 @@
 import React from "react";
-export function SiteFooter() {;
-;
+export function SiteFooter() {
+
   const currentYear = new Date().getFullYear()";
 
-  const navSections = [];,
-},;
+  const navSections = []},;
     {";
       title: "Services",;
       links: [",;
@@ -13,9 +12,8 @@ export function SiteFooter() {;
         { label: "IT Services", href: "/services/it-services" },";
         { label: "Micro SaaS", href: "/services/micro-saas" },";
         { label: "Pricing", href: "/pricing" }
-;
-];,
-},;
+
+]},;
     {";
       title: "Resources",;
       links: [",;
@@ -24,19 +22,18 @@ export function SiteFooter() {;
         { label: "White Papers", href: "/white-papers" },";
         { label: "Webinars", href: "/webinars" },";
         { label: "Documentation", href: "/documentation" }
-;
-];,
-},;
+
+]},;
     {";
       title: "Legal",;
       links: [",;
         { label: "Privacy Policy", href: "/privacy" },";
         { label: "Terms of Service", href: "/terms" },";
         { label: "Sitemap", href: "/sitemap' }
-;
+
 ];
 
-;
+
 ];
 
   const social = [];
@@ -69,7 +66,7 @@ export function SiteFooter() {;
               <div>Middletown DE 19709</div>;
             </div>;
           {/* comment */}
-;
+
           {navSections.map((section) => (";
             <div key="{section.title}">";
               <h3 className="text-lg font-semibold mb-4">{section.title}</h3>";
@@ -79,15 +76,15 @@ export function SiteFooter() {;
                     <Link href="{link.href}
                       className="text-gray-300 hover: text-white transition-colors">,;
                       {link.label}
-;
+
                     </Link>;
                   </li>;
                 ))}
-;
+
               </ul>;
             </div>;
           ))}
-;
+
         </div>;
         {/* comment */}";
         <div className="border-t border-slate-800 mt-12 pt-8">";
@@ -103,10 +100,10 @@ export function SiteFooter() {;
                   rel="noopener noreferrer;
                   className="text-gray-400 hover: text-white transition-colors">,;
                   {item.label}
-;
+
                 </a>;
               ))}
-;
+
             </div>;
     </footer>;
   )}

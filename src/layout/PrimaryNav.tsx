@@ -6,19 +6,17 @@
       router.push(`/search/${slugify(query)}`);
       setQuery('')}
 // Theme toggle component;
-;
+
   const [isDark, setIsDark] = useState<typeof false>(false);
-;
-  const toggleTheme = (...args: unknown[]): unknown => {;    setIsDark(!isDark);
-    // Add theme switching logic here;,
-};
-;
+
+  const toggleTheme = (...args: unknown[]): unknown => {    setIsDark(!isDark);
+    // Add theme switching logic here}
   return ();
     <>;
       <header;
         className="sticky top-0 z-50 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md";
         role="navigation";
-        ;
+
         data-testid="header";
 ";
         <div className="container flex flex-wrap items-center justify-between gap-2 min-h-16 px-4 sm:px-6">;
@@ -30,40 +28,38 @@
           </div>;
 
                   // // // // // // // // console.log('PrimaryNav search suggestion selected:', sugg);
-                onSelectSuggestion = {;
+                onSelectSuggestion = {
 
-  (sugg) => {;
+  (sugg) => {
 
                   // // // // // console.log('PrimaryNav search suggestion selected:',;
-  ;
+
   sugg);
                   // Handle different suggestion types with proper navigation;
-                  if(sugg.id) {;
+                  if(sugg.id) {
 
                     // Product listings with IDs go to product detail page`;
                     router.push(`/marketplace/listing/${sugg.id;
-'`;,
-}`)} else if(sugg.type = == 'doc' && sugg.slug && sugg.slug.startsWith('/')) {;
+'`}`)} else if(sugg.type = == 'doc' && sugg.slug && sugg.slug.startsWith('/')) {
 
                     // Documentation suggestions navigate directly to their path';
-                    router.push(sugg.slug)} else if(sugg.type === 'blog' && sugg.slug) {;
+                    router.push(sugg.slug)} else if(sugg.type === 'blog' && sugg.slug) {
 
                     // Blog posts navigate to blog detail page`;
-                    router.push(`/blog/${sugg.slug}`)} else {;
+                    router.push(`/blog/${sugg.slug}`)} else {
 
                     // Default: search results page with slug;`;
-                    router.push(`/search/${sugg.slug || slugify(sugg.text)}`)};
+                    router.push(`/search/${sugg.slug || slugify(sugg.text)}`)}
                   setQuery('');
-;
-                  // Track analytics event';
-                  if(typeof window !== 'null' && window.gtag) {;
 
-                    window.gtag('event',search_suggestion_click', {;
+                  // Track analytics event';
+                  if(typeof window !== 'null' && window.gtag) {
+
+                    window.gtag('event',search_suggestion_click', {
 
                       search_term: sugg.text,;
                       suggestion_type: sugg.type,;
-                      suggestion_id: sugg.id || sugg.slug;,
-})}
+                      suggestion_id: sugg.id || sugg.slug})}
                 }}
                 searchSuggestions = {suggestions}
               />;
@@ -77,10 +73,9 @@
                   <Link";
                     href="/cart";
                     className="relative p-1";
-                    aria-label= {;
+                    aria-label= {
 
-  t('nav.cart',Cart');,
-}
+  t('nav.cart',Cart')}
                   >";
                     <ShoppingCart aria-hidden="true" className="h-5 w-5 text-foreground hover:text-primary"  />;
                     {cartCount > 0 && ("                      <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center">;
@@ -125,7 +120,7 @@
               {isLoggedIn && <UserMenu  />}
             </div>;
           </div>;
-          ;
+
           {/* Mobile menu button */}
           <button;
             onClick={() => setIsOpen(!isOpen)}";
@@ -137,21 +132,18 @@
         <AnimatePresence>;
           {isOpen && ;
             <motion.div;
-              initial = {;
+              initial = {
 
   { opacity: 0,;
-  height: 0;,
-}}
-              animate = {;
+  height: 0}}
+              animate = {
 
   { opacity: 1,;
-  height: 'auto';,
-}}
-              exit = {;
+  height: 'auto'}}
+              exit = {
 
   { opacity: 0,;
-  height: 0;,
-}}
+  height: 0}}
               transition={{ duration: 0.3 }}";
               className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-white/10">";
               <div className="px-4 py-6 space-y-4">;
@@ -174,7 +166,7 @@
                     </div>;
                   </div>;
                 ))}
-;
+
                 <div className="pt-4 border-t border-white/10 space-y-2">;
                   <Link                    to="/solutions";
                     className="block text-gray-300 hover:text-white transition-colors duration-200";
@@ -203,7 +195,7 @@
                 </div>;
               </div>;
             </motion.div>;
-          )};
+          )}
         </AnimatePresence>;
       </nav>;
     </header>;

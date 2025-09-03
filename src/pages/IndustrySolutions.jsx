@@ -27,7 +27,7 @@ import { Search, Zap, CreditCard, Truck, Phone, Mail, MapPin, Building, Factory,
                 return `$${price.toLocaleString()}`;`;
             default:``;
                 return `$${price.toLocaleString()}`}
-    };
+    }
     const getIndustryColor = (score) => {}
         if (score >= 95)';
             return 'text-green-500';
@@ -35,7 +35,7 @@ import { Search, Zap, CreditCard, Truck, Phone, Mail, MapPin, Building, Factory,
             return 'text-blue-500';
         if (score >= 85)';
             return 'text-yellow-500';';
-        return 'text-orange-500'};
+        return 'text-orange-500'}
     const getIndustryIcon = (industry) => {}
         switch (industry) {}
 ';
@@ -47,8 +47,7 @@ import { Search, Zap, CreditCard, Truck, Phone, Mail, MapPin, Building, Factory,
             case 'Logistics': return <Truck className="w-6 h-6"/>;'"'";
             case 'Real Estate': return <Home className="w-6 h-6"/>;'"'";
             case 'Energy': return <Zap className="w-6 h-6"/>;"";
-            default: return <Building className="w-6 h-6"/>}";,
-};"";
+            default: return <Building className="w-6 h-6"/>}"};"";
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">"";
       <div className="container mx-auto px-4 py-8">";
         {/* Header */}"";
@@ -111,7 +110,7 @@ import { Search, Zap, CreditCard, Truck, Phone, Mail, MapPin, Building, Factory,
                 <div className="text-2xl font-bold text-white mb-2">;
                   {formatPrice(solution.price, solution.pricingModel)}'";
                 </div>'"'";
-                <div className="text-sm text-gray-400">{solution.pricingModel.replace('-',)}</div>;
+                <div className="text-sm text-gray-400">{solution.pricingModel.replace('-')}</div>;
               </div>";
 "";
               <div className="mb-4">"";
@@ -170,16 +169,11 @@ import { Search, Zap, CreditCard, Truck, Phone, Mail, MapPin, Building, Factory,
           </div>;
         </div>;
       </div>;
-    </div>)};
-export default IndustrySolutions;,
-}}}}}}}}}}}}}}}}
-;
-export { IndustrySolutions };
-;
-export { IndustrySolutions };
-;
-export { IndustrySolutions };
-;
-export { IndustrySolutions };
-;
-export { IndustrySolutions };
+    </div>)}
+export default IndustrySolutions}}}}}}}}}}}}}}}}
+
+export { IndustrySolutions }
+export { IndustrySolutions }
+export { IndustrySolutions }
+export { IndustrySolutions }
+export { IndustrySolutions }

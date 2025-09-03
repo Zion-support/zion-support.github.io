@@ -1,6 +1,5 @@
 import React from "react";
-;,"});,"});,
-}
+;,"});,"})}
 export default function Help() {return (";
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">";
       <SEO title="Help - Zion Tech Group" description="Professional Help services by Zion Tech Group"  />";
@@ -10,23 +9,18 @@ export default function Help() {return (";
           Professional Help services to help your business grow.;
         </p>;
       </div>;
-  );,
-}
+  )}
 }"react"framer - motion",../components/SEO";"""";
   Search, MessageCircle, Phone, Mail, Clock, BookOpen, Video, FileText, Users, ChevronDown,;
-  ChevronUp, HelpCircle, CheckCircle, ArrowRight";,
-} from "lucide-react";";
-  ChevronUp, HelpCircle, CheckCircle, ArrowRight;", ";";,
-} from "lucide-react";";
+  ChevronUp, HelpCircle, CheckCircle, ArrowRight"} from "lucide-react";";
+  ChevronUp, HelpCircle, CheckCircle, ArrowRight;", ";"} from "lucide-react";";
   Search, MessageCircle, Phone, Mail, Clock,;
   BookOpen, Video, FileText, Users, ChevronDown,;
   ChevronUp, HelpCircle, CheckCircle, ArrowRight} from "lucide-react;
 ";
 export default function Help() {";
-  const [searchQuery, setSearchQuery] = useState(");,
-}
-  const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);,
-}
+  const [searchQuery, setSearchQuery] = useState(")}
+  const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null)}
   const faqs = [];
 
   const helpCategories = [];
@@ -34,9 +28,9 @@ export default function Help() {";
   const contactMethods = [];
   const toggleFAQ = (id: number) => {,;
     setExpandedFAQ(expandedFAQ === id ? null : id)}
-;
+
   return (;
-    ;
+
     <>;
       <SEO ;";
         title="Help Center - Zion Tech Group | Support & Documentation";";
@@ -55,12 +49,12 @@ export default function Help() {";
               className="text-center max-w-4xl mx-auto">;
             >;";
               <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">,;
-                Help Center,,;
+                Help Center,;
               </h1>,";
               <p className = "text-xl text-gray-300 mb-8">,;
                 Find answers to your questions, access documentation, and get support from our expert team;
               </p>;
-              ;
+
               {/*   */}";
               <div className="max-w-2xl mx-auto">;";
                 <div className="relative">;";
@@ -73,12 +67,12 @@ export default function Help() {";
                     className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent";
                   />;
                 </div>,;
-            </motion.div>,,;
+            </motion.div>,;
           </div>,;
         </section>,;
-;
+
   return (;
-    ;
+
     <>;
       <SEO ;";
         title="Help Center - Zion Tech Group | Support & Documentation";";
@@ -97,7 +91,7 @@ export default function Help() {";
               className="text-center max-w-4xl mx-auto">;
             >;";
               <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">,;
-                Help Center,,;
+                Help Center,;
               </h1>,";
               <p className = "text-xl text-gray-300 mb-8">,;
                 Find answers to your questions, access documentation, and get support from our expert team;
@@ -113,7 +107,7 @@ export default function Help() {";
                     onChange="{(e)" => setSearchQuery(e.target.value)}";
                     className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />;
                 </div>,;
-            </motion.div>,,;
+            </motion.div>,;
           </div>,;
         </section>,;
         {/* comment */}";
@@ -137,17 +131,15 @@ export default function Help() {";
   Search, MessageCircle, Phone, Mail, Clock, BookOpen, Video, FileText, Users, ChevronDown>;
   ChevronUp, HelpCircle, CheckCircle, ArrowRight} from &apos;lucide-react";&apos;&apos;
 export default function Help() ;{}
-;
+
   const [searchQuery, setSearchQuery] = useState(&apos;&apos);&apos;&apos>;
-  const [expandedFAQ, setExpandedFAQ] = useState<;<;<number | null>(null);,
-}
+  const [expandedFAQ, setExpandedFAQ] = useState<;<;<number | null>(null)}
   const faqs = []&quot;
   const helpCategories = []&quot;
   const contactMethods = []&quot;
-  const toggleFAQ = (id: number) => {,,    setExpandedFAQ(expandedFAQ === id ? null : id)}
-;,
+  const toggleFAQ = (id: number) => {,    setExpandedFAQ(expandedFAQ === id ? null : id)}
 }
-;
+
   return (;
     <>";
       <SEO title="&quot;Help" Center - Zion Tech Group | Support & Documentation&quot;";
@@ -213,7 +205,7 @@ transition="{{" duration: 0.8 }}";
 ";
             <div className="&quot;grid" grid-cols-1 md:grid-cols-2 l,g: grid-cols-4 gap-8&quot,>;
               {helpCategories.map((category, index) => (&quot}
-;
+
                 <motion.div,";
 key = "{category.title}
                   initial="{{" opacity: 0, y: 20 }}";
@@ -244,7 +236,7 @@ key = "{category.title}
                   </div>;
                 </motion.div>;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";
@@ -286,7 +278,7 @@ transition="{{" duration: 0.8 }}";
 ";
             <div className="&quot;max-w-4xl" mx-auto space-y-4&quot;>;
               {faqs.map((faq, index) => (&quot}
-;
+
                 <motion.div,";
 key = "{faq.id}
                   initial="{{" opacity: 0, y: 20 }}";
@@ -302,7 +294,7 @@ key = "{faq.id}
                       <div className = "flex items-center mb-2">,";
                         <span className="px-3 py-1 bg-blue-600/20 border border-blue-400/30 rounded-full text-blue-300 text-xs mr-3">,;
                           {faq.category}
-;
+
                         </span>;
                       </div>;";
                       <h3 className="text-lg font-semibold text-white">{faq.question}</h3>;
@@ -312,7 +304,7 @@ key = "{faq.id}
                     ) : (;";
                       <ChevronDown className="w-6 h-6 text-gray-400"  />;
                     )}
-;
+
                   </button>;
                   {expandedFAQ === faq.id && (;
                     <motion.div;";
@@ -330,7 +322,7 @@ key = "{faq.id}
                       <div className="flex items-center mb-2">";
                         <span className="px-3 py-1 bg-blue-600/20 border border-blue-400/30 rounded-full text-blue-300 text-xs mr-3">,;
                           {faq.category}
-;
+
                         </span>;
                       </div>";
                       <h3 className="&quot;text-lg" font-semibold text-white&quot;>{faq.question}&quot;</h3>;
@@ -342,7 +334,7 @@ key = "{faq.id}
                     )}&quot;
                   </button>;
                   {expandedFAQ = == faq.id && (}
-;
+
                     <motion.div,";
 initial="{{" opacity: 0, height: 0 }}";
                       animate="{{" opacity: 1, height: &quot,auto&quot}}";
@@ -359,10 +351,10 @@ initial="{{" opacity: 0, height: 0 }}";
                       <p className="&quot;text-gray-300" leading-relaxed&quot;>{faq.answer}&quot;</p>;
                     </motion.div>;
                   )}
-;
+
                 </motion.div>;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";
@@ -425,21 +417,21 @@ key="{method.title}
                     <div className="flex items-center text-sm text-gray-400">;";
                       <Clock className="w-4 h-4 mr-2"  />;
                       {method.availability}
-;
+
                     </div>;";
                     <div className="flex items-center text-sm text-gray-400">;";
                       <CheckCircle className="w-4 h-4 mr-2"  />;
                       Response: {method.responseTime}
-;
+
                     </div>;
                   </div>;";
                   <button className = "w-full px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover: from-blue-700 hover:to-purple-700 transition-all duration-200">,;
                     {method.title}
-;
+
                   </button>;
                 </motion.div>;
               ))}
-;
+
             </div>;
         </section>;
       </div>;
@@ -466,14 +458,12 @@ key="{method.title}
                   </button>;
                 </motion.div>;
               ))}
-;
+
             </div>;
         </section>;
       </div>;
 </>;
-  );,
-}
-  );,
-}
+  )}
+  )}
 }";
   ChevronUp, HelpCircle, CheckCircle, ArrowRight;"} from 'lucide-react))))))

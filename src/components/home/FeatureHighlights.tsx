@@ -1,89 +1,66 @@
 import React from 'react';
 import { motion  } from 'framer-motion';
-;
+
 ,;
-  {;
+  {
     icon: "⚡",;
     title: "Lightning Fast Performance",;
-    description: "Optimized solutions that deliver exceptional speed and efficiency for your business needs";,
-},;
-  {;
+    description: "Optimized solutions that deliver exceptional speed and efficiency for your business needs"},;
+  {
     icon: "🔒",;
     title: "Enterprise Security",;
-    description: "Bank-level security protocols and compliance standards to protect your valuable data";,
-},;
-  {;
+    description: "Bank-level security protocols and compliance standards to protect your valuable data"},;
+  {
     icon: "🌐",;
     title: "Global Scalability",;
-    description: "Solutions that scale seamlessly from startup to enterprise across multiple regions";,
-},;
-  {;
+    description: "Solutions that scale seamlessly from startup to enterprise across multiple regions"},;
+  {
     icon: "🤖",;
     title: "AI-Powered Intelligence",;
-    description: "Smart automation and predictive analytics that adapt to your business requirements";,
-},;
-  {;
+    description: "Smart automation and predictive analytics that adapt to your business requirements"},;
+  {
     icon: "📊",;
     title: "Real-Time Analytics",;
-    description: "Comprehensive insights and reporting to make data-driven decisions instantly";,
-};
+    description: "Comprehensive insights and reporting to make data-driven decisions instantly"}
 ];
-;,
-};,
-};,
-};
-;
-  const itemVariants = {;
+}}}
+  const itemVariants = {
   hidden: { opacity: 0, y: 30,;
-  scale: 0.95;,
-},;
-    visible: {;
+  scale: 0.95},;
+    visible: {
       opacity: 1,;
       y: 0,;
       scale: 1,;
-      transition: {;
+      transition: {
         duration: 0.6,;
-        ease: "easeOut";,
-};,
-};,
-};
-;
-  const achievementVariants = {;
+        ease: "easeOut"}}}
+  const achievementVariants = {
   hidden: { opacity: 0,;
-  scale: 0.8;,
-},;
-    visible: {;
+  scale: 0.8},;
+    visible: {
       opacity: 1,;
       scale: 1,;
-      transition: { duration: 0.5 };,
-};,
-};
-;
-  const techVariants = {;
+      transition: { duration: 0.5 }}}
+  const techVariants = {
   hidden: { opacity: 0,;
-  x: -20;,
-},;
-    visible: {;
+  x: -20},;
+    visible: {
       opacity: 1,;
       x: 0,;
-      transition: { duration: 0.5 };,
-};,
-};
-export function FeatureHighlights() {;
+      transition: { duration: 0.5 }}}
+export function FeatureHighlights() {
   return (";
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
       <div className="max-w-7xl mx-auto px-6">;
         <motion.div          className="text-center mb-16";
-          initial = {;
+          initial = {
 
   { opacity: 0,;
-  y: 20;,
-}}
-          whileInView = {;
+  y: 20}}
+          whileInView = {
 
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >";
@@ -141,11 +118,10 @@ export function FeatureHighlights() {;
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition = {;
+          transition = {
 
   { duration: 0.6,;
-  delay: 0.4;,
-}}
+  delay: 0.4}}
         >";
           <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">;
             <span>Experience the difference</span>";
@@ -155,7 +131,7 @@ export function FeatureHighlights() {;
       </div>;
     </section>;
   )}
-;
+
 
 '"`;
 )

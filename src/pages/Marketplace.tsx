@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
-const Marketplace = () => {;
+const Marketplace = () => {
   return (;
     <>;
       <Head>;
@@ -45,6 +45,5 @@ const Marketplace = () => {;
               </Link>;
             </div>;
     </>;
-  );,
-}
+  )}
 export default Marketplace;

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 export /**;
 import { motion, AnimatePresence  } from 'framer-motion';
-;
-export default function Page() {;
+
+export default function Page() {
 ,;
-  {;
+  {
 ";
     icon: <FileText className="w-8 h-8"  />,";
     title: "Plan",";
@@ -18,9 +18,8 @@ export default function Page() {;
       "Risk assessment";
     ],";
     duration: "4-8 hours",";
-    success: "90% on-time delivery";,
-},;
-  {;
+    success: "90% on-time delivery"},;
+  {
 ";
     icon: <Rocket className="w-8 h-8"  />,";
     title: "Execute",";
@@ -34,9 +33,8 @@ export default function Page() {;
       "Performance monitoring";
     ],";
     duration: "1-4 weeks",";
-    success: "99% quality score";,
-},;
-  {;
+    success: "99% quality score"},;
+  {
 ";
     icon: <CheckCircle className="w-8 h-8"  />,";
     title: "Deliver",";
@@ -50,88 +48,79 @@ export default function Page() {;
       "Post-launch support";
     ],;";
     duration: "Ongoing",;";
-    success: "100% client retention"};
+    success: "100% client retention"}
 ];
-;
+
 const stats = [;";
   { icon: <Clock className="w-6 h-6"  />, value: "3x Faster", label: "Project Delivery" },;";
   { icon: <Target className="w-6 h-6"  />, value: "99.9%", label: "Success Rate" },;";
   { icon: <TrendingUp className="w-6 h-6"  />, value: "50%", label: "Cost Reduction" },;";
   { icon: <Award className="w-6 h-6"  />, value: "1000+", label: "Projects Completed" };];
-;
+
   const [hoveredStep, setHoveredStep] = useState < number | null> (null) ;
   const [activeStep, setActiveStep] = useState < number> (0) ;
-;
-      transition: {;
+
+      transition: {
         staggerChildren: 0.2,;
-        delayChildren: 0.1}}};
-;
-  const statsVariants = {;
+        delayChildren: 0.1}}}
+  const statsVariants = {
   hidden: { opacity: 0,;
-  scale: 0.8;,
-},;
-    visible: {;
+  scale: 0.8},;
+    visible: {
       opacity: 1,;      scale: 1,;
-      transition: {;
+      transition: {
         duration: 0.5,;";
-        ease: "easeOut"}}};
+        ease: "easeOut"}}}
   return (";
     <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-slate-dark to-zion-blue-dark relative overflow-hidden">;
       {/* Enhanced background pattern */}";
       <div className="absolute inset-0 opacity-5">";
-        <div className="absolute inset-0" style = {;
+        <div className="absolute inset-0" style = {
 
-  {;
+  {
 
           backgroundImage: `radial-gradient(circle at 50% 50%, currentColor 1px, transparent 1px)`,;
-  backgroundSize: '40px 40px';,
-}} />;
+  backgroundSize: '40px 40px'}} />;
       </div>;
       {/* Floating decorative elements */}";
       <div className="absolute inset-0">;
         <motion.div";
           className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan/20 rounded-full opacity-30";
           animate={{ rotate: 360 }}
-          transition = {;
+          transition = {
   { duration: 20, repeat: Infinity,;
-  ease: "linear";,
-}}
+  ease: "linear"}}
         />;
         <motion.div";
           className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple/20 rounded-full opacity-30";
           animate={{ rotate: -360 }}
-          transition = {;
+          transition = {
   { duration: 25, repeat: Infinity,;
-  ease: "linear";,
-}}
+  ease: "linear"}}
         />;
         <motion.div";
           className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light/20 rounded-full opacity-20";
-          animate = {;
+          animate = {
 
   { scale: [1, 1.2,;
-  1];,
-}}
-          transition = {;
+  1]}}
+          transition = {
   { duration: 3, repeat: Infinity,;
-  ease: "easeInOut";,
-}}
+  ease: "easeInOut"}}
         />;
       </div>;
 ";
       <div className="container mx-auto px-4 relative z-10">;
         <motion.div";
           className="text-center mb-20";
-          initial = {;
+          initial = {
 
   { opacity: 0,;
-  y: 20;,
-}}
-          whileInView = {;
+  y: 20}}
+          whileInView = {
 
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >";
@@ -148,7 +137,7 @@ const stats = [;";
           initial="hidden";
           whileInView="visible";
           viewport={{ once: true }}
-;
+
           {stats.map((stat, index) => (;
             <motion.div;
               key={index}
@@ -168,10 +157,10 @@ const stats = [;";
           initial="hidden";
           whileInView="visible";
           viewport={{ once: true }}
-;
+
           {/* Enhanced connection line */}";
           <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue transform -translate-y-1/2 hidden lg:block">";
-            <motion.div className="h-full bg-gradient-to-r from-zion-cyan to-zion-purple" initial={{ width: "0%" }} whileInView={{ width: "100%" }} viewport={{ once: true }} transition = {;
+            <motion.div className="h-full bg-gradient-to-r from-zion-cyan to-zion-purple" initial={{ width: "0%" }} whileInView={{ width: "100%" }} viewport={{ once: true }} transition = {
 
   { duration: 2,;
   delay: 0.5;
@@ -186,11 +175,10 @@ const stats = [;";
                 onHoverStart={ () => setHoveredStep(index) }
                 onHoverEnd={ () => setHoveredStep(null) }
                 whileHover={{ y: -8 }}
-                transition = {;
+                transition = {
 ";
   { type: "spring",;
-  stiffness: 300;,
-}}
+  stiffness: 300}}
               >";
                 <div className="text-center h-full">;
                   {/* Step number with enhanced styling */}";
@@ -224,37 +212,32 @@ const stats = [;";
                   {/* Interactive details on hover */}
                   <AnimatePresence>;
                     {hoveredStep === index && (<motion.div;
-                        className="mt-4 p - 4 rounded-xl bg-zion - blue - dark / 60 backdrop - blur - sm border border-zion -cyan / 30"                        initial = {;
+                        className="mt-4 p - 4 rounded-xl bg-zion - blue - dark / 60 backdrop - blur - sm border border-zion -cyan / 30"                        initial = {
 
   { opacity: 0, height: 0,;
-  y: 10;,
-}}
-                        animate = {;
+  y: 10}}
+                        animate = {
 ";
   { opacity: 1, height: "auto",;
-  y: 0;,
-}}
-                        exit = {;
+  y: 0}}
+                        exit = {
 
   { opacity: 0, height: 0,;
-  y: 10;,
-}}
+  y: 10}}
                         transition={{ duration: 0.3 }}
                       >;
                         <h4 className="text-zion - cyan font - semibold text-sm mb-3">Key Features:</h4>;
                         <div className="space - y-2">;
                           {step.details.map((detail, idx) => (<motion.div;
                               key={idx}
-                              className="flex items - center gap-2 text-zion - slate - light / 80 text-xs"                              initial = {;
+                              className="flex items - center gap-2 text-zion - slate - light / 80 text-xs"                              initial = {
 
   { opacity: 0,;
-  x: -10;,
-}}
-                              animate = {;
+  x: -10}}
+                              animate = {
 
   { opacity: 1,;
-  x: 0;,
-}}
+  x: 0}}
                               transition={{ delay: idx * 0.1 }}
                             >";
                               <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>;
@@ -274,21 +257,18 @@ const stats = [;";
                   {hoveredStep === index && (;
                     <motion.div";
                       className="absolute top-full left-1/2 transform -translate-x-1/2 mt-4 p-4 bg-zion-blue-dark rounded-xl border border-zion-cyan/30 shadow-2xl shadow-zion-cyan/20 backdrop-blur-sm z-10 min-w-[280px]";
-                      initial = {;
+                      initial = {
 
   { opacity: 0, y: 10,;
-  scale: 0.95;,
-}}
-                      animate = {;
+  scale: 0.95}}
+                      animate = {
 
   { opacity: 1, y: 0,;
-  scale: 1;,
-}}
-                      exit = {;
+  scale: 1}}
+                      exit = {
 
   { opacity: 0, y: 10,;
-  scale: 0.95;,
-}}
+  scale: 0.95}}
                       transition={{ duration: 0.2 }}
 ";
                       <h4 className="text-white font-semibold mb-3">Key Features:</h4>";
@@ -312,14 +292,14 @@ const stats = [;";
         {/* Call to action */}
         <motion.div";
           className="text-center mt-16";
-          initial = {;
+          initial = {
 
   { opacity: 0,;
-  y: 20 }}          whileInView = {;
+  y: 20 }}          whileInView = {
 
   { opacity: 1,;
   y: 0 }}          viewport={{ once: true }}
-          transition = {;
+          transition = {
 
   { duration: 0.6,;
   delay: 0.5 }}
@@ -336,6 +316,5 @@ const stats = [;";
         </motion.div>;
       </div>;
     </section>;) }
-;,
 }
 '"`;

@@ -1,7 +1,7 @@
 import {  import { EMERGING_TECH_SERVICES_2025 } from '../data/emergingTechServices2025';
-;
-export default function Page() {;
-const ComprehensiveServicesShowcase: React.FC = () => {;
+
+export default function Page() {
+const ComprehensiveServicesShowcase: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedInnovationLevel, setSelectedInnovationLevel] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState<string>('');  // Combine all services;
@@ -9,18 +9,18 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
     ...EMERGING_TECH_SERVICES_2025;
   ];
   // Get unique categories';
-  ;
+
     return cats}, [allServices]) ;
   // Get unique innovation levels;
 
     return levels}, [allServices]);  // Filter services;
-  ;
-    return allServices.filter(service => {;
-      ;
+
+    return allServices.filter(service => {
+
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
       return matchesCategory && matchesInnovationLevel && matchesSearch})}, [allServices, selectedCategory, selectedInnovationLevel, searchTerm]);
-  ;
+
       case 'AI & Customer Experience':;
       case 'AI & Supply Chain':;
       case 'AI & Legal Tech':;
@@ -56,9 +56,8 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
       case 'Autonomous Vehicles & Fleet Management':";
         return <Rocket className="h-6 w-6"  />;
       default:";
-        return <Star className="h-6 w-6"  />};,
-};
-        return 'bg-gradient-to-r from-gray-600 to-slate-600'}  };
+        return <Star className="h-6 w-6"  />}}
+        return 'bg-gradient-to-r from-gray-600 to-slate-600'}  }
   return (";
     <div className="min-h-screen bg-gradient-to-br from-zinc-50 to-zinc-100">;
       {/* Hero Section */}";
@@ -168,21 +167,18 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
             {filteredServices.map((service, index)  => (;
               <motion.div;
                 key={service.id}
-                initial = {;
+                initial = {
 
   { opacity: 0,;
-  y: 20;,
-}}
-                animate = {;
+  y: 20}}
+                animate = {
 
   { opacity: 1,;
-  y: 0;,
-}}
-                transition = {;
+  y: 0}}
+                transition = {
 
   { duration: 0.5,;
-  delay: index * 0.1;,
-}}";
+  delay: index * 0.1}}";
                 className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100";
 
                 {/* Service Header */}";
@@ -288,13 +284,13 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
                     </Link>;
                   </div>;
                 </div>;
-              </motion.div>) ) };
+              </motion.div>) ) }
           </div>;
           {filteredServices.length === 0 && (;";
             <div className="text-center py-16">;";
               <div className="text-gray-500 text-lg mb-4">No services found matching your criteria</div>;
               <button;
-                onClick={() => {;
+                onClick={() => {
                   setSelectedCategory('all');
                   setSelectedInnovationLevel('all');
                   setSearchTerm('')}}"                className="text-zion-cyan hover:text-zion-cyan-light font-medium">;
@@ -327,5 +323,5 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
           </div>;
         </div>;
       </section>;
-    </div>;) };
+    </div>;) }
 export default ComprehensiveServicesShowcase}}}}'"`;

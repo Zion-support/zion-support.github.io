@@ -1,7 +1,7 @@
 import React from 'react';
 import { SEO } from '../components/SEO';
-;
-const News: React.FC = () => {;
+
+const News: React.FC = () => {
   return(<>;
       <SEO title="News - Zion Tech Group" />;
       <div className="min-h-screen bg-white py-20">;
@@ -11,7 +11,5 @@ const News: React.FC = () => {;
         </div>;
       </div>;
     </>;
-  );,
-};
-;
+  )}
 export default News;

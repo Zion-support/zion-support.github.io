@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
-const QuantumTechnology = () => {;
+const QuantumTechnology = () => {
   return (;
     <>;
       <Head>;
@@ -45,6 +45,5 @@ const QuantumTechnology = () => {;
               </Link>;
             </div>;
     </>;
-  );,
-}
+  )}
 export default QuantumTechnology;

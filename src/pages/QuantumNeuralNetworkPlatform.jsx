@@ -5,18 +5,15 @@ import { Brain, Zap, Shield, TrendingUp, ArrowRight const QuantumNeuralNetworkPl
         {}
             icon: Brain,';
             title: 'Quantum Neural Networks',';
-            description: 'Advanced neural network architectures leveraging quantum computing principles for unprecedented processing power.';,
-},;
+            description: 'Advanced neural network architectures leveraging quantum computing principles for unprecedented processing power.'},;
         {}
             icon: Zap,';
             title: 'Real-time Processing',';
-            description: 'Lightning-fast data processing and analysis with quantum-enhanced algorithms and parallel computing.';,
-},;
+            description: 'Lightning-fast data processing and analysis with quantum-enhanced algorithms and parallel computing.'},;
         {}
             icon: Target,';
             title: 'Precision Optimization',';
-            description: 'Quantum-inspired optimization algorithms that find optimal solutions in complex, multi-dimensional spaces.';,
-},;
+            description: 'Quantum-inspired optimization algorithms that find optimal solutions in complex, multi-dimensional spaces.'},;
         {}
             icon: Shield,';
             title: 'Quantum Security',';
@@ -30,24 +27,21 @@ import { Brain, Zap, Shield, TrendingUp, ArrowRight const QuantumNeuralNetworkPl
 ''';
             title: 'Financial Modeling',''';
             description: 'Advanced risk assessment, portfolio optimization, and market prediction using quantum neural networks.',;
-            icon: TrendingUp;,
-},;
+            icon: TrendingUp},;
         {}
 ';
 '';
 ''';
             title: 'Drug Discovery',''';
             description: 'Accelerated molecular simulation and drug candidate screening for pharmaceutical research.',;
-            icon: Globe;,
-},;
+            icon: Globe},;
         {}
 ';
 '';
 ''';
             title: 'Climate Modeling',''';
             description: 'Complex climate pattern analysis and prediction with quantum-enhanced computational power.',;
-            icon: Globe;,
-},;
+            icon: Globe},;
         {}
 ';
 '';
@@ -274,16 +268,11 @@ import { Brain, Zap, Shield, TrendingUp, ArrowRight const QuantumNeuralNetworkPl
           </div>;
         </div>;
       </section>;
-    </div>)};
-export default QuantumNeuralNetworkPlatform;,
-}}}
-;
-export { QuantumNeuralNetworkPlatform, IconComponent, IconComponent };
-;
-export { QuantumNeuralNetworkPlatform, IconComponent, IconComponent };
-;
-export { QuantumNeuralNetworkPlatform, IconComponent, IconComponent };
-;
-export { QuantumNeuralNetworkPlatform, IconComponent, IconComponent };
-;
-export { QuantumNeuralNetworkPlatform, IconComponent, IconComponent };
+    </div>)}
+export default QuantumNeuralNetworkPlatform}}}
+
+export { QuantumNeuralNetworkPlatform, IconComponent, IconComponent }
+export { QuantumNeuralNetworkPlatform, IconComponent, IconComponent }
+export { QuantumNeuralNetworkPlatform, IconComponent, IconComponent }
+export { QuantumNeuralNetworkPlatform, IconComponent, IconComponent }
+export { QuantumNeuralNetworkPlatform, IconComponent, IconComponent }

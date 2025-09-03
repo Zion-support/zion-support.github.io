@@ -23,13 +23,12 @@ import { ;
   ChevronRight,;
   Bookmark,;
   Share2,;
-  Eye;,
-} from 'lucide-react';
-;
-export function EventsPage() {;
+  Eye} from 'lucide-react';
+
+export function EventsPage() {
   const [selectedType, setSelectedType] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
-;
+
   const eventTypes = [;
     { id: 'all', name: 'All Events', icon: Calendar },;
     { id: 'webinar', name: 'Webinars', icon: Play },;
@@ -38,9 +37,9 @@ export function EventsPage() {;
     { id: 'meetup', name: 'Meetups', icon: Globe },;
     { id: 'training', name: 'Training', icon: Award }
   ];
-;
+
   const events = [;
-    {;
+    {
       id: 1,;
       title: 'AI-Powered Business Intelligence: Transforming Data into Actionable Insights',;
       description: 'Join our CTO Sarah Chen as she demonstrates how AI is revolutionizing business intelligence and helping organizations make data-driven decisions.',;
@@ -59,9 +58,8 @@ export function EventsPage() {;
       tags: ['AI', 'Business Intelligence', 'Data Analytics', 'Machine Learning'],;
       isFeatured: true,;
       isUpcoming: true,;
-      registrationUrl: '/register/ai-bi-webinar';,
-},;
-    {;
+      registrationUrl: '/register/ai-bi-webinar'},;
+    {
       id: 2,;
       title: 'Enterprise Security in the Age of AI: Best Practices and Emerging Threats',;
       description: 'Learn about the latest cybersecurity challenges and how AI is being used both to protect and threaten enterprise systems.',;
@@ -80,9 +78,8 @@ export function EventsPage() {;
       tags: ['Cybersecurity', 'AI Security', 'Enterprise', 'Compliance'],;
       isFeatured: true,;
       isUpcoming: true,;
-      registrationUrl: '/register/security-conference';,
-},;
-    {;
+      registrationUrl: '/register/security-conference'},;
+    {
       id: 3,;
       title: 'Cloud FinOps Workshop: Optimizing Your Cloud Infrastructure Costs',;
       description: 'Hands-on workshop where you\'ll learn practical techniques to reduce cloud costs while maintaining performance and reliability.',;
@@ -101,9 +98,8 @@ export function EventsPage() {;
       tags: ['Cloud', 'FinOps', 'Cost Optimization', 'AWS'],;
       isFeatured: false,;
       isUpcoming: true,;
-      registrationUrl: '/register/cloud-finops-workshop';,
-},;
-    {;
+      registrationUrl: '/register/cloud-finops-workshop'},;
+    {
       id: 4,;
       title: 'DevOps Automation: Building Efficient CI/CD Pipelines',;
       description: 'Learn how to automate your development workflows and build robust CI/CD pipelines that accelerate your software delivery.',;
@@ -122,9 +118,8 @@ export function EventsPage() {;
       tags: ['DevOps', 'CI/CD', 'Automation', 'Development'],;
       isFeatured: false,;
       isUpcoming: true,;
-      registrationUrl: '/register/devops-training';,
-},;
-    {;
+      registrationUrl: '/register/devops-training'},;
+    {
       id: 5,;
       title: 'The Future of AI in Healthcare: Opportunities and Challenges',;
       description: 'Explore how artificial intelligence is transforming healthcare delivery and what the future holds for AI-powered medical solutions.',;
@@ -143,9 +138,8 @@ export function EventsPage() {;
       tags: ['AI', 'Healthcare', 'Research', 'Innovation'],;
       isFeatured: false,;
       isUpcoming: true,;
-      registrationUrl: '/register/ai-healthcare-meetup';,
-},;
-    {;
+      registrationUrl: '/register/ai-healthcare-meetup'},;
+    {
       id: 6,;
       title: 'Data Analytics Masterclass: From Raw Data to Business Insights',;
       description: 'Comprehensive training on data analytics techniques, tools, and best practices for extracting meaningful insights from your data.',;
@@ -164,21 +158,19 @@ export function EventsPage() {;
       tags: ['Data Analytics', 'Business Intelligence', 'Machine Learning', 'Statistics'],;
       isFeatured: true,;
       isUpcoming: true,;
-      registrationUrl: '/register/data-analytics-masterclass';,
-}
+      registrationUrl: '/register/data-analytics-masterclass'}
   ];
-;
-  const filteredEvents = events.filter(event => {;
+
+  const filteredEvents = events.filter(event => {
     const matchesType = selectedType === 'all' || event.type === selectedType;
     const matchesSearch = event.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          event.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          event.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    return matchesType && matchesSearch;,
-});
-;
+    return matchesType && matchesSearch});
+
   const upcomingEvents = filteredEvents.filter(event => event.isUpcoming);
   const featuredEvents = upcomingEvents.filter(event => event.isFeatured);
-;
+
   return (;
     <div className="min-h-screen bg-zion-slate-dark">;
       {/* Hero Section */}
@@ -192,7 +184,7 @@ export function EventsPage() {;
               Join our expert-led events, webinars, and workshops to stay ahead of the latest ;
               technology trends and learn from industry leaders.;
             </p>;
-            ;
+
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto mb-8">;
               <div className="relative">;
@@ -241,8 +233,7 @@ export function EventsPage() {;
                 className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 ${;
                   selectedType === type.id;
                     ? 'bg-zion-cyan text-white';
-                    : 'bg-zion-slate-dark text-zion-slate-light hover:bg-zion-purple/20 hover:text-white';,
-}`}
+                    : 'bg-zion-slate-dark text-zion-slate-light hover:bg-zion-purple/20 hover:text-white'}`}
               >;
                 <type.icon className="w-4 h-4" />;
                 <span>{type.name}</span>;
@@ -296,7 +287,7 @@ export function EventsPage() {;
                     <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-zion-cyan transition-colors">;
                       {event.title}
                     </h3>;
-                    ;
+
                     <p className="text-zion-slate-light mb-4 leading-relaxed">;
                       {event.description}
                     </p>;
@@ -343,7 +334,7 @@ export function EventsPage() {;
           </div>;
         </section>;
       )}
-;
+
       {/* All Events */}
       <section className="py-16 bg-zion-slate-darker">;
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
@@ -378,7 +369,7 @@ export function EventsPage() {;
                   <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-zion-cyan transition-colors line-clamp-2">;
                     {event.title}
                   </h3>;
-                  ;
+
                   <p className="text-zion-slate-light text-sm mb-4 leading-relaxed line-clamp-3">;
                     {event.description}
                   </p>;
@@ -437,10 +428,9 @@ export function EventsPage() {;
                 Try adjusting your search terms or browse different event types.;
               </p>;
               <button;
-                onClick={() => {;
+                onClick={() => {
                   setSearchTerm('');
-                  setSelectedType('all');,
-}}
+                  setSelectedType('all')}}
                 className="text-zion-cyan hover:text-zion-cyan-light transition-colors">;
                 Clear filters;
               </button>;
@@ -460,7 +450,7 @@ export function EventsPage() {;
               Subscribe to our events newsletter and be the first to know about upcoming webinars, ;
               workshops, and conferences.;
             </p>;
-            ;
+
             <div className="max-w-md mx-auto">;
               <div className="flex space-x-2">;
                 <input;
@@ -505,7 +495,6 @@ export function EventsPage() {;
         </div>;
       </section>;
     </div>;
-  );,
-}
-;
+  )}
+
 export default EventsPage;

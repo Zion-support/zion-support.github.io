@@ -1,63 +1,47 @@
 import Head from "next/head";
 import React, { useState, useEffect } from "react";
-const Head = dynamic(() => import("next/head"), { ssr: false });,
-}
-export default function SearchPage() {;
+const Head = dynamic(() => import("next/head"), { ssr: false })}
+export default function SearchPage() {
 
   const router = useRouter()";
-  const [searchQuery, setSearchQuery] = useState("");,
-}
-  const [searchResults, setSearchResults] = useState([]);,
-}
-  const [isLoading, setIsLoading] = useState(false);,
-}
-  useEffect(() => {;
-    if (router.query.q) {;
-      setSearchQuery(router.query.q as string);,
-}
-      performSearch(router.query.q as string);,
-}
-;,
-}, [router.query.q]);,
-}
+  const [searchQuery, setSearchQuery] = useState("")}
+  const [searchResults, setSearchResults] = useState([])}
+  const [isLoading, setIsLoading] = useState(false)}
+  useEffect(() => {
+    if (router.query.q) {
+      setSearchQuery(router.query.q as string)}
+      performSearch(router.query.q as string)}
+}, [router.query.q])}
   const performSearch = async (query: string) => {,;
     if (!query.trim()) return,;
     setIsLoading(true),;
-    try {;
+    try {
       // comment;
 const mockResults = [].filter(;
         result =>;
           result.title.toLowerCase().includes(query.toLowerCase()) ||;
-          result.description.toLowerCase().includes(query.toLowerCase());,
-}
-      );,
-}
-      setSearchResults(mockResults);,
-}
-    } catch (error) {";,
-} finally {;
-      setIsLoading(false);,
-}
-;
+          result.description.toLowerCase().includes(query.toLowerCase())}
+      )}
+      setSearchResults(mockResults)}
+    } catch (error) {"} finally {
+      setIsLoading(false)}
+
   const handleSearch = (e: React.FormEvent) => {,;
     e.preventDefault(),;
-    if (searchQuery.trim()) {;
-      router.push("/search?q="${encodeURIComponent(searchQuery.trim())}");";,
+    if (searchQuery.trim()) {
+      router.push("/search?q="${encodeURIComponent(searchQuery.trim())}");"}
 }
-;,
-}
-;
-  const getIconForType = (type: string) => {;
+
+  const getIconForType = (type: string) => {
     switch (type) {";
       case "service":",;
         return <Zap className="w-5 h-5 text-blue-600"  />,";
       case "page":";
         return <FileText className="w-5 h-5 text-green-600"  />,;
-      default: ",,;
+      default: ",;
         return <Globe className="w-5 h-5 text-gray-600"  />}
-;,
 }
-;
+
   return (;
     <>;
 <Head>;
@@ -90,17 +74,17 @@ const mockResults = [].filter(;
           </div>;
 ,;
           {/* comment */}
-;
+
           {router.query.q && (";
             <div className="mb-6">";
               <p className="{"text-gray-600"">;
                 {isLoading";
                   ? "Searching...";
                   : "Found ${searchResults.length} results for "${router.query.q}"}"}
-;
+
               </p>;
             </div>          )}
-;
+
           {isLoading ? (";
             <div className="text-center py-12">";
               <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>";
@@ -115,13 +99,13 @@ const mockResults = [].filter(;
                   <div className="flex items-start space-x-4">";
                     <div className="flex-shrink-0 mt-1">,;
                       {getIconForType(result.type)}
-;
+
                     </div>";
                     <div className="flex-1">";
                       <Link href="{result.url}" className="group">";
                         <h3 className="text-xl font-semibold text-gray-900 group-hover: text-blue-600 transition-colors mb-2">,;
                           {result.title}
-;
+
                         </h3>;
                       </Link>";
                       <p className="text-gray-600 mb-3">{result.description}</p>";
@@ -133,7 +117,7 @@ const mockResults = [].filter(;
                     </div>;
                 </div>,;
               ))}
-;
+
             </div>;
           ) : router.query.q && !isLoading ? (";
             <div className="text-center py-12">";
@@ -192,8 +176,7 @@ resources.;
                   </p>;
                 </div>;
           )}
-;
+
         </div>;
     </>;
-  );,
-}}"
+  )}}"

@@ -1,4 +1,4 @@
-export interface SpaceTechBreakthroughService2029 {;
+export interface SpaceTechBreakthroughService2029 {
   id: string;
   name: string;
   tagline: string;
@@ -13,7 +13,7 @@ export interface SpaceTechBreakthroughService2029 {;
   marketSize: string;
   growthRate: string;
   realImplementation: boolean;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string}
@@ -22,7 +22,7 @@ export interface SpaceTechBreakthroughService2029 {;
   benefits: string[];
   useCases: string[];
 export const spaceTechBreakthroughServices2029: SpaceTechBreakthroughService2029[] = [;
-  {;
+  {
     id: "space-mining-automation-platform",;
     name: "Space Mining Automation Platform",;
     tagline: "Automated asteroid mining and resource extraction in space",;
@@ -46,11 +46,10 @@ export const spaceTechBreakthroughServices2029: SpaceTechBreakthroughService2029
     marketSize: "$2.8B",;
     growthRate: "300% annually",;
     realImplementation: true,;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
-},;
+      address: "364 E Main St STE 1008 Middletown DE 19709"},;
     category: "Space Mining",;
     technology["Space Robotics", "AI/ML", "Resource Detection", "Space Logistics"],;
     benefits[;
@@ -70,9 +69,8 @@ export const spaceTechBreakthroughServices2029: SpaceTechBreakthroughService2029
       "Resource detection",;
       "Mining automation",;
       "Space logistics";
-    ];,;,
-},;
-  {;
+    ]},;
+  {
     id: "metaverse-digital-reality-platform",;
     name: "Metaverse Digital Reality Platform",;
     tagline: "Immersive virtual worlds with quantum-level realism",;
@@ -96,11 +94,10 @@ export const spaceTechBreakthroughServices2029: SpaceTechBreakthroughService2029
     marketSize: "$4.2B",;
     growthRate: "180% annually",;
     realImplementation: true,;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
-},;
+      address: "364 E Main St STE 1008 Middletown DE 19709"},;
     category: "Metaverse",;
     technology["Virtual Reality", "AI/ML", "Quantum Computing", "3D Graphics"],;
     benefits[;
@@ -120,9 +117,8 @@ export const spaceTechBreakthroughServices2029: SpaceTechBreakthroughService2029
       "Sensory immersion",;
       "AI interactions",;
       "Real-time generation";
-    ];,;,
-},;
-  {;
+    ]},;
+  {
     id: "ai-predictive-health-analytics",;
     name: "AI Predictive Health Analytics Platform",;
     tagline: "Predict health outcomes with quantum-level accuracy",;
@@ -146,11 +142,10 @@ export const spaceTechBreakthroughServices2029: SpaceTechBreakthroughService2029
     marketSize: "$3.5B",;
     growthRate: "150% annually",;
     realImplementation: true,;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
-},;
+      address: "364 E Main St STE 1008 Middletown DE 19709"},;
     category: "Health Analytics",;
     technology["AI/ML", "Quantum Computing", "Health Analytics", "Predictive Modeling"],;
     benefits[;
@@ -170,9 +165,8 @@ export const spaceTechBreakthroughServices2029: SpaceTechBreakthroughService2029
       "Disease detection",;
       "Treatment optimization",;
       "Health monitoring";
-    ];,;,
-},;
-  {;
+    ]},;
+  {
     id: "virtual-event-hologram-platform",;
     name: "Virtual Event Hologram Platform",;
     tagline: "Holographic events with global reach and immersive experiences",;
@@ -196,11 +190,10 @@ export const spaceTechBreakthroughServices2029: SpaceTechBreakthroughService2029
     marketSize: "$1.8B",;
     growthRate: "120% annually",;
     realImplementation: true,;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
-},;
+      address: "364 E Main St STE 1008 Middletown DE 19709"},;
     category: "Holographic Events",;
     technology["Holography", "3D Projection", "Spatial Audio", "Real-time Processing"],;
     benefits[;
@@ -220,9 +213,8 @@ export const spaceTechBreakthroughServices2029: SpaceTechBreakthroughService2029
       "Global synchronization",;
       "Interactive displays",;
       "Spatial audio";
-    ];,;,
-},;
-  {;
+    ]},;
+  {
     id: "quantum-space-communication",;
     name: "Quantum Space Communication Network",;
     tagline: "Unbreakable quantum communication across space and time",;
@@ -246,11 +238,10 @@ export const spaceTechBreakthroughServices2029: SpaceTechBreakthroughService2029
     marketSize: "$800M",;
     growthRate: "400% annually",;
     realImplementation: true,;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
-},;
+      address: "364 E Main St STE 1008 Middletown DE 19709"},;
     category: "Quantum Communication",;
     technology["Quantum Entanglement", "Quantum Cryptography", "Space Communication", "Quantum Networks"],;
     benefits[;

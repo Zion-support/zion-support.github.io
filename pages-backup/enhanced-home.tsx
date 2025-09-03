@@ -1,27 +1,23 @@
 import Head from "next/head";
 import React from "react";
 import dynamic from "next/dynamic";
-const Component = () => {;
-  Award,;,
-} from "lucide-react";
+const Component = () => {
+  Award} from "lucide-react";
 
-const EnhancedHome: NextPage = () => {;
+const EnhancedHome: NextPage = () => {
   const features = [];
 
-  const services = [];,
-},;
+  const services = []},;
     {";
       title: "Cloud Services",";
       description: "Comprehensive cloud infrastructure and management",;
       icon: Cloud,";
-      features: ["AWS/Azure/GCP", "DevOps", "Microservices", "Containerization"];,
-},;
+      features: ["AWS/Azure/GCP", "DevOps", "Microservices", "Containerization"]},;
     {";
       title: "Web Development",";
       description: "Modern, responsive web applications",;
       icon: Code,";
-      features: ["React/Next.js", "Node.js", "TypeScript", "Progressive Web Apps"];,
-},;
+      features: ["React/Next.js", "Node.js", "TypeScript", "Progressive Web Apps"]},;
     {";
       title: "Mobile Development",";
       description: "Native and cross-platform mobile solutions",;
@@ -52,25 +48,23 @@ const EnhancedHome: NextPage = () => {;
 className="absolute top-20 left-20 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl;
               animate="{{";
                 x: [0, 100, 0],;
-                y: [0, -100, 0],>;,
-}}";
+                y: [0, -100, 0],>}}";
               transition = "{{";
                 duration: 20,;
                 repeat: Infinity,";
                 ease: "linear"}}
-;
+
            />;
             <motion.div,";
 className="absolute bottom-20 right-20 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl;
               animate="{{";
                 x: [0, -100, 0],;
-                y: [0, 100, 0],>;,
-}}";
+                y: [0, 100, 0],>}}";
               transition = "{{";
                 duration: 25,;
                 repeat: Infinity,";
                 ease: "linear"}}
-;
+
            />;
           </div>;
 ";
@@ -79,7 +73,7 @@ className="absolute bottom-20 right-20 w-96 h-96 bg-purple-500/20 rounded-full b
 initial="{{" opacity: 0, y: 30 }}";
               animate="{{" opacity: 1, y: 0 }}";
               transition="{{" duration: 0.8 }}
-;
+
             >";
               <h1 className="text-6xl md: text-8xl font-bold mb-6">";
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">;
@@ -133,7 +127,7 @@ key="{index}
                   <p className="text-gray-600">{feature.description}</p>;
                 </motion.div>;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";
@@ -168,14 +162,14 @@ key="{index}
                       <li key="{i}" className="flex items-center text-gray-600">";
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0"  />;
                         {feature}
-;
+
                       </li>;
                     ))}
-;
+
                   </ul>;
                 </motion.div>;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";
@@ -200,7 +194,7 @@ key="{index}
                   <div className="text-gray-200">{stat.label}</div>;
                 </motion.div>;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";
@@ -211,7 +205,7 @@ initial="{{" opacity: 0, y: 30 }}";
               whileInView="{{" opacity: 1, y: 0 }}";
               transition="{{" duration: 0.8 }}";
               viewport="{{" once: true }}
-;
+
             >";
               <h2 className="text-4xl font-bold text-gray-900 mb-6">Ready to Transform Your Business?</h2>";
               <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">";
@@ -238,5 +232,5 @@ whileHover="{{" scale: 1.05 }}";
       </Layout>;
     </>;
   )}
-;
+
 "export default EnhancedHome

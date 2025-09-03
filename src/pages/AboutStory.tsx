@@ -15,148 +15,128 @@ import { ;
   Calendar,;
   TrendingUp,;
   Building,;
-  Eye;,
-} from 'lucide-react';
-;
-const AboutStory = () => {;
+  Eye} from 'lucide-react';
+
+const AboutStory = () => {
   const timeline = [;
-    {;
+    {
       year: '2009',;
       title: 'The Beginning',;
       description: 'Founded in a small garage by three Stanford PhD students with a vision to democratize AI technology.',;
       milestone: 'Company Founded',;
       icon: Rocket,;
-      achievements: ['3 Co-founders', 'First AI prototype', 'Initial funding secured'];,
-},;
-    {;
+      achievements: ['3 Co-founders', 'First AI prototype', 'Initial funding secured']},;
+    {
       year: '2012',;
       title: 'First Breakthrough',;
       description: 'Developed our first commercial AI solution for natural language processing, serving 10 enterprise clients.',;
       milestone: 'First Product Launch',;
       icon: Target,;
-      achievements: ['10 Enterprise Clients', 'NLP breakthrough', 'Series A funding'];,
-},;
-    {;
+      achievements: ['10 Enterprise Clients', 'NLP breakthrough', 'Series A funding']},;
+    {
       year: '2015',;
       title: 'Global Expansion',;
       description: 'Expanded operations to Europe and Asia, establishing regional headquarters and local teams.',;
       milestone: 'International Growth',;
       icon: Globe,;
-      achievements: ['25 Countries', '500+ Team Members', 'Series B funding'];,
-},;
-    {;
+      achievements: ['25 Countries', '500+ Team Members', 'Series B funding']},;
+    {
       year: '2018',;
       title: 'AI Revolution',;
       description: 'Launched our flagship AI platform, revolutionizing how businesses integrate artificial intelligence.',;
       milestone: 'AI Platform Launch',;
       icon: Lightbulb,;
-      achievements: ['1000+ Clients', 'AI Platform', 'Unicorn Status'];,
-},;
-    {;
+      achievements: ['1000+ Clients', 'AI Platform', 'Unicorn Status']},;
+    {
       year: '2021',;
       title: 'Industry Leadership',;
       description: 'Recognized as a leader in AI technology, serving Fortune 500 companies across all major industries.',;
       milestone: 'Market Leadership',;
       icon: Award,;
-      achievements: ['Fortune 500 Clients', 'Industry Awards', '5000+ Team Members'];,
-},;
-    {;
+      achievements: ['Fortune 500 Clients', 'Industry Awards', '5000+ Team Members']},;
+    {
       year: '2024',;
       title: 'Future Forward',;
       description: 'Pioneering next-generation AI solutions and expanding into emerging markets and technologies.',;
       milestone: 'Innovation Leader',;
       icon: Star,;
-      achievements: ['Next-gen AI', 'Emerging Markets', '10,000+ Projects'];,
-}
+      achievements: ['Next-gen AI', 'Emerging Markets', '10,000+ Projects']}
   ];
-;
+
   const missionValues = [;
-    {;
+    {
       icon: Target,;
       title: 'Our Mission',;
       description: 'To democratize artificial intelligence and make cutting-edge technology accessible to businesses of all sizes, enabling them to solve complex problems and drive innovation.',;
-      color: 'from-blue-500 to-cyan-500';,
-},;
-    {;
+      color: 'from-blue-500 to-cyan-500'},;
+    {
       icon: Eye,;
       title: 'Our Vision',;
       description: 'A world where AI is seamlessly integrated into every business process, creating unprecedented opportunities for growth, efficiency, and human advancement.',;
-      color: 'from-purple-500 to-pink-500';,
-},;
-    {;
+      color: 'from-purple-500 to-pink-500'},;
+    {
       icon: Heart,;
       title: 'Our Purpose',;
       description: 'To empower organizations with intelligent solutions that enhance human capabilities, foster innovation, and create sustainable value for society.',;
-      color: 'from-red-500 to-orange-500';,
-}
+      color: 'from-red-500 to-orange-500'}
   ];
-;
+
   const keyAchievements = [;
-    {;
+    {
       number: '15+',;
       label: 'Years of Innovation',;
       description: 'Pioneering AI solutions since 2009',;
-      icon: Calendar;,
-},;
-    {;
+      icon: Calendar},;
+    {
       number: '10,000+',;
       label: 'Projects Delivered',;
       description: 'Successfully completed across industries',;
-      icon: Building;,
-},;
-    {;
+      icon: Building},;
+    {
       number: '500+',;
       label: 'Enterprise Clients',;
       description: 'Including Fortune 500 companies',;
-      icon: Users;,
-},;
-    {;
+      icon: Users},;
+    {
       number: '50+',;
       label: 'Countries Served',;
       description: 'Global presence and impact',;
-      icon: Globe;,
-},;
-    {;
+      icon: Globe},;
+    {
       number: '99.9%',;
       label: 'Client Satisfaction',;
       description: 'Consistently exceeding expectations',;
-      icon: Star;,
-},;
-    {;
+      icon: Star},;
+    {
       number: '5000+',;
       label: 'Team Members',;
       description: 'Global talent and expertise',;
-      icon: Users;,
-}
+      icon: Users}
   ];
-;
+
   const companyCulture = [;
-    {;
+    {
       title: 'Innovation at Core',;
       description: 'We encourage creative thinking and experimentation, constantly pushing the boundaries of what\'s possible with AI technology.',;
       icon: Lightbulb,;
-      color: 'from-yellow-500 to-orange-500';,
-},;
-    {;
+      color: 'from-yellow-500 to-orange-500'},;
+    {
       title: 'Customer Success First',;
       description: 'Every decision we make is guided by how it will benefit our clients and help them achieve their goals.',;
       icon: Heart,;
-      color: 'from-red-500 to-pink-500';,
-},;
-    {;
+      color: 'from-red-500 to-pink-500'},;
+    {
       title: 'Continuous Learning',;
       description: 'We foster a culture of lifelong learning, encouraging our team to stay ahead of emerging technologies and industry trends.',;
       icon: TrendingUp,;
-      color: 'from-green-500 to-emerald-500';,
-},;
-    {;
+      color: 'from-green-500 to-emerald-500'},;
+    {
       title: 'Collaboration & Diversity',;
       description: 'We believe the best solutions come from diverse perspectives working together in an inclusive, collaborative environment.',;
       icon: Users,;
-      color: 'from-blue-500 to-indigo-500';,
-}
+      color: 'from-blue-500 to-indigo-500'}
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
       {/* Hero Section */}
@@ -245,7 +225,7 @@ const AboutStory = () => {;
           <div className="relative">;
             {/* Timeline Line */}
             <div className="absolute left-1/2 transform -translate-x-px w-0.5 h-full bg-gradient-to-b from-cyan-500 to-purple-500"></div>;
-            ;
+
             <div className="space-y-16">;
               {timeline.map((item, index) => (;
                 <motion.div;
@@ -255,12 +235,11 @@ const AboutStory = () => {;
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className={`relative flex items-center ${;
-                    index % 2 === 0 ? 'flex-row' : 'flex-row-reverse';,
-}`}
+                    index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}
                 >;
                   {/* Timeline Dot */}
                   <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-gradient-to-br from-cyan-500 to-purple-500 rounded-full border-4 border-slate-900 z-10"></div>;
-                  ;
+
                   {/* Content */}
                   <div className={`w-5/12 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>;
                     <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300">;
@@ -273,10 +252,10 @@ const AboutStory = () => {;
                           <div className="text-sm text-gray-400">{item.milestone}</div>;
                         </div>;
                       </div>;
-                      ;
+
                       <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>;
                       <p className="text-gray-300 mb-4">{item.description}</p>;
-                      ;
+
                       <div className="space-y-2">;
                         {item.achievements.map((achievement, idx) => (;
                           <div key={idx} className="flex items-center gap-2 text-sm text-gray-400">;
@@ -473,7 +452,5 @@ const AboutStory = () => {;
         </div>;
       </section>;
     </div>;
-  );,
-};
-;
+  )}
 export default AboutStory;

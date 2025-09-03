@@ -1,6 +1,6 @@
 import React from 'react';
-;
-;
+
+
 const InnovationServicesMarketing = () => {    const allServices = [...cuttingEdgeInnovations2025, ...specializedIndustrySolutions2025];
     const categories = Array.from (new Set (allServices.map (service => service.category) ) ) ;
     const industries = Array.from (new Set (specializedIndustrySolutions2025.map (service => service.industry) ) ) ;
@@ -33,12 +33,10 @@ const InnovationServicesMarketing = () => {    const allServices = [...cuttingEd
 ``;
 ```;
 ````;
-            return `$${price}/attorney/month`}
-        else {}
+            return `$${price}/attorney/month`} else {}
 `;
 ``;
-            return `$${price}/${model}`}";,
-};"";
+            return `$${price}/${model}`}"};"";
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 pt-32">"";
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">";
         {/* Hero Section */}"";
@@ -307,16 +305,11 @@ const InnovationServicesMarketing = () => {    const allServices = [...cuttingEd
           </div>;
         </div>;
       </div>;
-    </div>)};
-export default InnovationServicesMarketing;,
-}}}}}}}}
-;
-export { InnovationServicesMarketing };
-;
-export { InnovationServicesMarketing };
-;
-export { InnovationServicesMarketing };
-;
-export { InnovationServicesMarketing };
-;
-export { InnovationServicesMarketing };
+    </div>)}
+export default InnovationServicesMarketing}}}}}}}}
+
+export { InnovationServicesMarketing }
+export { InnovationServicesMarketing }
+export { InnovationServicesMarketing }
+export { InnovationServicesMarketing }
+export { InnovationServicesMarketing }

@@ -1,6 +1,6 @@
 import Head from 'next/head';
-;
-interface SEOHeadProps {;
+
+interface SEOHeadProps {
   title: string;
   description: string;
   keywords?: string[];
@@ -9,9 +9,8 @@ interface SEOHeadProps {;
   ogType?: 'website' | 'article' | 'service';
   structuredData?: object;
   noIndex?: boolean;
-  noFollow?: boolean;,
-}
-;
+  noFollow?: boolean}
+
 export default function SEOHead({ ;
   title, ;
   description, ;
@@ -21,18 +20,17 @@ export default function SEOHead({ ;
   ogType = 'website', ;
   structuredData, ;
   noIndex = false, ;
-  noFollow = false ;,
-}: SEOHeadProps) {;
+  noFollow = false }: SEOHeadProps) {
   const fullTitle = `${title} | Zion Tech Group - AI & Technology Solutions`;
-  ;
+
   const defaultKeywords = [;
     'AI services,technology solutions,enterprise automation,cybersecurity,quantum computing,blockchain solutions,cloud services,digital transformation,Zion Tech Group';
   ];
-  ;
+
   const safeKeywords = Array.isArray(keywords) ? keywords : [];
   const allKeywords = [...defaultKeywords, ...safeKeywords];
   const uniqueKeywords = [...new Set(allKeywords)];
-  ;
+
   return (;
     <Head>;
       <title>{fullTitle}</title>;
@@ -40,9 +38,8 @@ export default function SEOHead({ ;
       <meta name="keywords" content={uniqueKeywords.join(',')} />;
       <meta name="author" content="Zion Tech Group" />;
       <meta name="robots" content={`${noIndex ? 'noindex' : 'index'}, ${noFollow ? 'nofollow' : 'follow'}`} />;
-      ;
+
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-      ;
       {/* Open Graph tags */}
       <meta property="og:title" content={fullTitle} />;
       <meta property="og:description" content={description} />;
@@ -51,26 +48,24 @@ export default function SEOHead({ ;
       <meta property="og:url" content={canonicalUrl || 'https://ziontechgroup.com'} />;
       <meta property="og:site_name" content="Zion Tech Group" />;
       <meta property="og:locale" content="en_US" />;
-      ;
+
       {/* Twitter Card tags */}
       <meta name="twitter:card" content="summary_large_image" />;
       <meta name="twitter:title" content={fullTitle} />;
       <meta name="twitter:description" content={description} />;
       <meta name="twitter:image" content={ogImage} />;
       <meta name="twitter:site" content="@ziontechgroup" />;
-      ;
+
       {/* Additional meta tags */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />;
       <meta name="theme-color" content="#0ea5e9" />;
       <meta name="msapplication-TileColor" content="#0ea5e9" />;
-      ;
+
       {/* Structured Data */}
       {structuredData && (;
         <script type="application/ld+json" dangerouslySetInnerHTML={{;
-          __html: JSON.stringify(structuredData);,
-}} />;
+          __html: JSON.stringify(structuredData)}} />;
       )}
-      ;
       {/* Default organization structured data */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{;
         __html: JSON.stringify({;
@@ -80,19 +75,15 @@ export default function SEOHead({ ;
           "url": "https://ziontechgroup.com",;
           "logo": "https://ziontechgroup.com/images/zion-tech-group-logo.png",;
           "description": "Leading provider of AI services, IT solutions, and innovative technology consulting for enterprise digital transformation.",;
-          "contactPoint": {;
+          "contactPoint": {
             "@type": "ContactPoint",;
             "telephone": "+1-302-464-0950",;
             "contactType": "Customer Service",;
-            "availableLanguage": "English";,
-},;
+            "availableLanguage": "English"},;
           "sameAs": [;
             "https://linkedin.com/company/ziontechgroup",;
             "https://twitter.com/ziontechgroup",;
             "https://github.com/ziontechgroup";
-          ];,
-});,
-}} />;
+          ]})}} />;
     </Head>;
-  );,
-}
+  )}

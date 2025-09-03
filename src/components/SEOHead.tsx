@@ -1,16 +1,15 @@
 import React from 'react';
 import Head from 'next/head';
-;
-interface SEOHeadProps {;
+
+interface SEOHeadProps {
   title?: string;
   description?: string;
   keywords?: string;
   image?: string;
   url?: string;
   type?: 'website' | 'article' | 'service';
-  structuredData?: object;,
-}
-;
+  structuredData?: object}
+
 <<<<<<< HEAD;
 export default function SEOHead({;
   title = 'Zion Tech Group - Leading AI, Quantum Computing & Advanced Technology Solutions',;
@@ -19,8 +18,7 @@ export default function SEOHead({;
   image = '/images/zion-tech-group-og.jpg',;
   url = 'https://ziontechgroup.com',;
   type = 'website',;
-  structuredData;,
-}: SEOHeadProps) {;
+  structuredData}: SEOHeadProps) {
   return (;
     <Head>;
       <title>{title}</title>;
@@ -41,5 +39,4 @@ export default function SEOHead({;
         </script>;
       )}
     </Head>;
-  );,
-}
+  )}

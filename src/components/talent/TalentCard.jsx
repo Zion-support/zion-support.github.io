@@ -5,19 +5,17 @@ import { MapPin, Clock, CheckCircle2 } from 'lucide-react';''';
 import { FavoriteButton } from '@/components/FavoriteButton';''';
 import { useNavigate } from 'react-router-dom';
 export default function Page() {}
-  };
+  }
   const handleBook = e => {}
     e.preventDefault();
     e.stopPropagation();
     if(onBook) {}
-      onBook(talent);,
-}
-  };
+      onBook(talent)}
+  }
   const handleViewProfile = () => {}
 `;
 ``;
-    navigate(`/talent/${talent.id}`);,
-};
+    navigate(`/talent/${talent.id}`)}
   // Extract skills - limit to 5 for display;
   const skills = talent.skills?.slice(0, 5) || [];
   return ();
@@ -145,17 +143,11 @@ export default function Page() {}
         </div>;
       </div>;
     </Card>;
-  );,
-};
-;
+  )}
 export default TalentCardComponent;
-;
-export { TalentCardComponent };
-;
-export { TalentCardComponent };
-;
-export { TalentCardComponent };
-;
-export { TalentCardComponent };
-;
-export { Page };
+
+export { TalentCardComponent }
+export { TalentCardComponent }
+export { TalentCardComponent }
+export { TalentCardComponent }
+export { Page }

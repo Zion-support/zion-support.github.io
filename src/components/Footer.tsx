@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import {;
+import {
   Twitter,;
   Linkedin,;
   Facebook,;
@@ -56,55 +56,41 @@ import {;
   Users2,;
   Settings,;
   Palette,;
-  ChevronDown;,
-} from 'lucide-react';
-;
-export function Footer() {;
+  ChevronDown} from 'lucide-react';
+
+export function Footer() {
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['company']));
-;
+
   // Handle scroll to show/hide scroll to top button;
-  React.useEffect(() => {;
-  // TODO: Add dependencies if needed;,
-}, []);
-    const handleScroll = () => {;
+  React.useEffect(() => {
+  // TODO: Add dependencies if needed}, []);
+    const handleScroll = () => {
       const scrollToTopButton = document.getElementById('scroll-to-top');
-      if (scrollToTopButton) {;
-        if (window.pageYOffset > 300) {;
-          scrollToTopButton.classList.remove('hidden');,
-} else {;
-          scrollToTopButton.classList.add('hidden');,
-}
+      if (scrollToTopButton) {
+        if (window.pageYOffset > 300) {
+          scrollToTopButton.classList.remove('hidden')} else {
+          scrollToTopButton.classList.add('hidden')}
       }
-    };
-;
+    }
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);,
-}, []);
-;
+    return () => window.removeEventListener('scroll', handleScroll)}, []);
+
   // Toggle section expansion (for mobile);
-  const toggleSection = (title: string) => {;
-    setExpandedSections(prev => {;
+  const toggleSection = (title: string) => {
+    setExpandedSections(prev => {
       const newSet = new Set(prev);
-      if (newSet.has(title)) {;
-        newSet.delete(title);,
-} else {;
-        newSet.add(title);,
-}
-      return newSet;,
-});,
-};
-;
+      if (newSet.has(title)) {
+        newSet.delete(title)} else {
+        newSet.add(title)}
+      return newSet})}
   // Scroll to top function;
-  const scrollToTop = () => {;
+  const scrollToTop = () => {
     window.scrollTo({;
       top: 0,;
-      behavior: 'smooth';,
-});,
-};
-;
-export default function Footer() {;
+      behavior: 'smooth'})}
+export default function Footer() {
   const footerSections = [;
-    {;
+    {
       title: 'Company',;
       links: [;
         { name: 'About Us', href: '/about' },;
@@ -113,9 +99,8 @@ export default function Footer() {;
         { name: 'Careers', href: '/careers' },;
         { name: 'Press & News', href: '/press' },;
         { name: 'Partners', href: '/partners' }
-      ];,
-},;
-    {;
+      ]},;
+    {
       title: 'Services',;
       links: [;
         { name: 'AI Solutions', href: '/services/ai' },;
@@ -124,9 +109,8 @@ export default function Footer() {;
         { name: 'Digital Transformation', href: '/services/digital' },;
         { name: 'IT Consulting', href: '/services/consulting' },;
         { name: 'Micro SAAS', href: '/services/micro-saas' }
-      ];,
-},;
-    {;
+      ]},;
+    {
       title: 'Solutions',;
       links: [;
         { name: 'Enterprise', href: '/solutions/enterprise' },;
@@ -135,9 +119,8 @@ export default function Footer() {;
         { name: 'Government', href: '/solutions/government' },;
         { name: 'Manufacturing', href: '/solutions/manufacturing' },;
         { name: 'Retail', href: '/solutions/retail' }
-      ];,
-},;
-    {;
+      ]},;
+    {
       title: 'Resources',;
       links: [;
         { name: 'Blog', href: '/blog' },;
@@ -146,9 +129,8 @@ export default function Footer() {;
         { name: 'Webinars', href: '/webinars' },;
         { name: 'Documentation', href: '/docs' },;
         { name: 'API Reference', href: '/api' }
-      ];,
-},;
-    {;
+      ]},;
+    {
       title: 'Support',;
       links: [;
         { name: 'Help Center', href: '/help' },;
@@ -157,8 +139,7 @@ export default function Footer() {;
         { name: 'Community', href: '/community' },;
         { name: 'System Status', href: '/status' },;
         { name: 'Request Quote', href: '/request-quote' }
-      ];,
-}
+      ]}
 import { Heart, Mail, Phone, MapPin, Globe, ArrowUp, ArrowRight } from 'lucide-react';
 ursor/automate-test-fix-improve-and-merge-code-99d1,"});,"})";
   Linkedin,;
@@ -239,27 +220,24 @@ icon: Atom,";
 services: [ { name: "AI-Quantum Hybrid Computing Platform", href: "/services/ai-quantum-hybrid-platform" }, { name: "Quantum Computing as a Service", href: "/services/quantum-computing-as-a-service" }, { name: "AI Space Technology Platform", href: "/services/ai-space-technology-platform" }, { name: "AI IoT Edge Computing Platform", href: "/services/ai-iot-edge-computing-platform" }";
       title: "Resources",";
 links: [ { name: "Documentation", href: "/docs" }, { name: "White Papers", href: "/white-papers" }, { name: "Support Center", href: "/help" }, { name: "Training", href: "/training" }, { name: "Blog", href: "/blog" }, { name: "Research", href: "/research-development" }
-;
+
       ]}
-;
+
   ]";
   const solutions = [];
 
-;
+
   const contactInfo = [;
     { icon: Mail, label: "Email", value: "kleber@ziontechgroup.com", href: "mailto:kleber@ziontechgroup.com" },;
     { icon: Phone, label: "Phone", value: "+1 302 464 0950", href: "tel:+13024640950" },;
     { icon: MapPin, label: "Address", value: "364 E Main St STE 1008, Middletown DE 19709", href: "#" },;
     { icon: Globe, label: "Website", value: "ziontechgroup.com", href: "https://ziontechgroup.com" }
   ];
-;
-  const scrollToTop = () => {;
-    window.scrollTo({ top: 0, behavior: 'smooth' });,
-};
-  const scrollToTop = () => {;
-    window.scrollTo({ top: 0, behavior: 'smooth' });,
-};
-;
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })}
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })}
   return (;
     <footer className="bg-slate-900 text-white">;
       {/* Main Footer Content */}
@@ -316,7 +294,7 @@ links: [ { name: "Documentation", href: "/docs" }, { name: "White Papers", href:
                   <div>;
                     <span className="text-slate-400 text-sm">{contact.label}: </span>;
                     <a ;
-                      href={contact.href} ;
+                      href={contact.href}
                       className="text-slate-300 hover:text-cyan-400 transition-colors duration-200">;
                       {contact.value}
                     </a>;
@@ -430,5 +408,4 @@ links: [ { name: "Documentation", href: "/docs" }, { name: "White Papers", href:
         </div>;
       </div>;
     </footer>;
-  );,
-}
+  )}

@@ -5,29 +5,25 @@ const AffiliateAttributionHub = () => {}
         {}
             title: "Multi-Touch Attribution","";
             description: "Track customer journey across all touchpoints and channels","";
-            icon: "🔄";,
-},;
+            icon: "🔄"},;
         {}
 ";
 "";
             title: "Real-time Analytics","";
             description: "Live insights into affiliate performance and conversions","";
-            icon: "📊";,
-},;
+            icon: "📊"},;
         {}
 ";
 "";
             title: "Fraud Detection","";
             description: "Advanced algorithms to detect and prevent affiliate fraud","";
-            icon: "🛡️";,
-},;
+            icon: "🛡️"},;
         {}
 ";
 "";
             title: "Commission Management","";
             description: "Automated commission calculation and payment processing","";
-            icon: "💰";,
-}
+            icon: "💰"}
     ];
     const attributionModels = [];
         {}
@@ -35,81 +31,69 @@ const AffiliateAttributionHub = () => {}
 "";
             name: "First-Touch Attribution","";
             description: "Credit goes to the first affiliate that introduced the customer","";
-            useCase: "Brand awareness campaigns";,
-},;
+            useCase: "Brand awareness campaigns"},;
         {}
 ";
 "";
             name: "Last-Touch Attribution","";
             description: "Credit goes to the last affiliate before conversion","";
-            useCase: "Direct response campaigns";,
-},;
+            useCase: "Direct response campaigns"},;
         {}
 ";
 "";
             name: "Linear Attribution","";
             description: "Equal credit distribution across all touchpoints","";
-            useCase: "Multi-channel marketing";,
-},;
+            useCase: "Multi-channel marketing"},;
         {}
 ";
 "";
             name: "Time-Decay Attribution","";
             description: "More recent touchpoints receive higher credit","";
-            useCase: "Long sales cycles";,
-}
+            useCase: "Long sales cycles"}
     ];
     const platformFeatures = [];
         {}
 ";
 "";
             category: "Affiliate Management","";
-            features["Affiliate onboarding", "Performance tracking", "Commission rules", "Payment processing"];,
-},;
+            features["Affiliate onboarding", "Performance tracking", "Commission rules", "Payment processing"]},;
         {}
 ";
 "";
             category: "Analytics & Reporting","";
-            features["Real-time dashboards", "Custom reports", "ROI analysis", "Conversion tracking"];,
-},;
+            features["Real-time dashboards", "Custom reports", "ROI analysis", "Conversion tracking"]},;
         {}
 ";
 "";
             category: "Fraud Prevention","";
-            features["Click fraud detection", "Conversion validation", "IP monitoring", "Behavioral analysis"];,
-},;
+            features["Click fraud detection", "Conversion validation", "IP monitoring", "Behavioral analysis"]},;
         {}
 ";
 "";
             category: "Integration & APIs","";
-            features["CRM integration", "E-commerce platforms", "Marketing tools", "Custom webhooks"];,
-}
+            features["CRM integration", "E-commerce platforms", "Marketing tools", "Custom webhooks"]}
     ];
     const benefits = [];
         {}
 ";
 "";
             title: "Increased Revenue","";
-            description: "Optimize affiliate performance and maximize conversions";,
-},;
+            description: "Optimize affiliate performance and maximize conversions"},;
         {}
 ";
 "";
             title: "Better ROI","";
-            description: "Accurate attribution leads to better marketing decisions";,
-},;
+            description: "Accurate attribution leads to better marketing decisions"},;
         {}
 ";
 "";
             title: "Fraud Prevention","";
-            description: "Protect your budget from fraudulent affiliate activities";,
-},;
+            description: "Protect your budget from fraudulent affiliate activities"},;
         {}
 ";
 "";
             title: "Data Insights","";
-            description: "Deep understanding of customer journey and attribution patterns";,
-}";
+            description: "Deep understanding of customer journey and attribution patterns"}";
     ];"";
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">"";
       <section className="py-20 px-4 sm:px-6 lg:px-8">"";
@@ -264,16 +248,12 @@ const AffiliateAttributionHub = () => {}
           </div>;
         </div>;
       </section>;
-    </div>)};
+    </div>)}
 export default AffiliateAttributionHub;
-;
 
-export { AffiliateAttributionHub };
-;
-export { AffiliateAttributionHub };
-;
-export { AffiliateAttributionHub };
-;
-export { AffiliateAttributionHub };
-;
-export { AffiliateAttributionHub };
+
+export { AffiliateAttributionHub }
+export { AffiliateAttributionHub }
+export { AffiliateAttributionHub }
+export { AffiliateAttributionHub }
+export { AffiliateAttributionHub }

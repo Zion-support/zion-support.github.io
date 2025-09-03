@@ -30,45 +30,38 @@ import { ;
   Activity,;
   CreditCard,;
   UserCheck,;
-  Settings;,
-} from 'lucide-react';
-;
-const AIAffiliateMarketingTrackingPlatform = () => {;
+  Settings} from 'lucide-react';
+
+const AIAffiliateMarketingTrackingPlatform = () => {
   const features = [;
-    {;
+    {
       icon: <Link className="w-6 h-6" />,;
       title: "Smart Link Generation",;
-      description: "AI-powered link generation with automatic UTM tracking, custom domains, and dynamic parameter insertion for maximum conversion tracking.";,
-},;
-    {;
+      description: "AI-powered link generation with automatic UTM tracking, custom domains, and dynamic parameter insertion for maximum conversion tracking."},;
+    {
       icon: <Target className="w-6 h-6" />,;
       title: "Intelligent Attribution",;
-      description: "Advanced attribution modeling that accurately tracks customer journeys across multiple touchpoints and devices using machine learning.";,
-},;
-    {;
+      description: "Advanced attribution modeling that accurately tracks customer journeys across multiple touchpoints and devices using machine learning."},;
+    {
       icon: <Bot className="w-6 h-6" />,;
       title: "AI Fraud Detection",;
-      description: "Real-time fraud detection using AI to identify suspicious activities, click farms, and invalid traffic to protect your budget.";,
-},;
-    {;
+      description: "Real-time fraud detection using AI to identify suspicious activities, click farms, and invalid traffic to protect your budget."},;
+    {
       icon: <BarChart3 className="w-6 h-6" />,;
       title: "Predictive Analytics",;
-      description: "Machine learning algorithms predict campaign performance, optimize budgets, and identify high-value affiliate opportunities.";,
-},;
-    {;
+      description: "Machine learning algorithms predict campaign performance, optimize budgets, and identify high-value affiliate opportunities."},;
+    {
       icon: <Zap className="w-6 h-6" />,;
       title: "Automated Payments",;
-      description: "Streamlined payment processing with automated calculations, tax handling, and multi-currency support for global affiliates.";,
-},;
-    {;
+      description: "Streamlined payment processing with automated calculations, tax handling, and multi-currency support for global affiliates."},;
+    {
       icon: <Shield className="w-6 h-6" />,;
       title: "Compliance Management",;
-      description: "Built-in compliance tools for FTC guidelines, GDPR, and regional advertising regulations with automated reporting.";,
-}
+      description: "Built-in compliance tools for FTC guidelines, GDPR, and regional advertising regulations with automated reporting."}
   ];
-;
+
   const pricingTiers = [;
-    {;
+    {
       name: "Starter",;
       price: "$149",;
       period: "/month",;
@@ -82,9 +75,8 @@ const AIAffiliateMarketingTrackingPlatform = () => {;
         "Up to 10,000 clicks/month";
       ],;
       cta: "Start Free Trial",;
-      popular: false;,
-},;
-    {;
+      popular: false},;
+    {
       name: "Professional",;
       price: "$399",;
       period: "/month",;
@@ -100,9 +92,8 @@ const AIAffiliateMarketingTrackingPlatform = () => {;
         "White-label options";
       ],;
       cta: "Start Free Trial",;
-      popular: true;,
-},;
-    {;
+      popular: true},;
+    {
       name: "Enterprise",;
       price: "$999",;
       period: "/month",;
@@ -118,33 +109,28 @@ const AIAffiliateMarketingTrackingPlatform = () => {;
         "SLA guarantee";
       ],;
       cta: "Contact Sales",;
-      popular: false;,
-}
+      popular: false}
   ];
-;
+
   const benefits = [;
-    {;
+    {
       icon: <TrendingUp className="w-8 h-8 text-green-500" />,;
       title: "35% Higher Conversions",;
-      description: "AI-optimized tracking and attribution improve conversion rates significantly.";,
-},;
-    {;
+      description: "AI-optimized tracking and attribution improve conversion rates significantly."},;
+    {
       icon: <Shield className="w-8 h-8 text-red-500" />,;
       title: "90% Fraud Reduction",;
-      description: "Advanced AI detection prevents fraudulent clicks and protects your budget.";,
-},;
-    {;
+      description: "Advanced AI detection prevents fraudulent clicks and protects your budget."},;
+    {
       icon: <Clock className="w-8 h-8 text-blue-500" />,;
       title: "75% Time Savings",;
-      description: "Automated tracking, payments, and reporting reduce manual work by 75%.";,
-},;
-    {;
+      description: "Automated tracking, payments, and reporting reduce manual work by 75%."},;
+    {
       icon: <DollarSign className="w-8 h-8 text-purple-500" />,;
       title: "40% Better ROI",;
-      description: "Predictive analytics and optimization recommendations boost campaign ROI.";,
-}
+      description: "Predictive analytics and optimization recommendations boost campaign ROI."}
   ];
-;
+
   const integrations = [;
     { name: "Shopify", logo: "🛍️" },;
     { name: "WooCommerce", logo: "🛒" },;
@@ -159,7 +145,7 @@ const AIAffiliateMarketingTrackingPlatform = () => {;
     { name: "PayPal", logo: "💰" },;
     { name: "Zapier", logo: "⚡" }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       {/* Hero Section */}
@@ -331,8 +317,7 @@ const AIAffiliateMarketingTrackingPlatform = () => {;
                 className={`bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 relative ${;
                   tier.popular ;
                     ? 'border-green-500 ring-2 ring-green-500/20' ;
-                    : 'border-slate-700';,
-}`}
+                    : 'border-slate-700'}`}
               >;
                 {tier.popular && (;
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">;
@@ -341,7 +326,6 @@ const AIAffiliateMarketingTrackingPlatform = () => {;
                     </span>;
                   </div>;
                 )}
-                ;
                 <div className="text-center mb-8">;
                   <h3 className="text-2xl font-bold text-white mb-2">;
                     {tier.name}
@@ -371,8 +355,7 @@ const AIAffiliateMarketingTrackingPlatform = () => {;
                 <button className={`w-full py-3 rounded-lg font-semibold transition-colors ${;
                   tier.popular;
                     ? 'bg-green-600 hover:bg-green-700 text-white';
-                    : 'bg-slate-700 hover:bg-slate-600 text-white';,
-}`}>;
+                    : 'bg-slate-700 hover:bg-slate-600 text-white'}`}>;
                   {tier.cta}
                 </button>;
               </motion.div>;
@@ -462,7 +445,5 @@ const AIAffiliateMarketingTrackingPlatform = () => {;
         </div>;
       </section>;
     </div>;
-  );,
-};
-;
+  )}
 export default AIAffiliateMarketingTrackingPlatform;

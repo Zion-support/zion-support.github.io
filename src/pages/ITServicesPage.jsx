@@ -49,7 +49,7 @@ import {}
   Cpu as CpuIcon,'';
   Lock as LockIcon,''';
   Wifi as WifiIcon} from 'lucide-react';
-;
+
 const ITServicesPage = () => {}
   const itServices = [];
     {}
@@ -272,7 +272,7 @@ const ITServicesPage = () => {}
   const categories = ['';
     'All Services',Cloud',Security',DevOps',Database',Networking',Consulting',Managed Services',Data Center',Development',AI/ML',Blockchain',IoT',Analytics',Recovery';
   ];
-;
+
   return();
     <>";
       <SEO"";
@@ -357,18 +357,12 @@ const ITServicesPage = () => {}
           </div>;
         </div>;
       </div>;
-    </>) ;,
-};
-;
+    </>) }
 export default ITServicesPage;
-;
 
-export { ITServicesPage };
-;
-export { ITServicesPage };
-;
-export { ITServicesPage };
-;
-export { ITServicesPage };
-;
-export { ITServicesPage };
+
+export { ITServicesPage }
+export { ITServicesPage }
+export { ITServicesPage }
+export { ITServicesPage }
+export { ITServicesPage }

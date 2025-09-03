@@ -43,9 +43,9 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {}
       url: '/services/ai-iot-edge-computing-platform',''';
       icon: '🌐',''';
       category: 'IoT & Edge Computing',''';
-      benefits['Reduce latency by 90%',Lower bandwidth costs by 70%',Real-time decision making']};
+      benefits['Reduce latency by 90%',Lower bandwidth costs by 70%',Real-time decision making']}
   ];
-;
+
   return();
     <>;
       <SEO title = "AI-Powered Micro SAAS Services Showcase | Zion Tech Group"";
@@ -60,12 +60,10 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {}
             <motion.div;
               initial = {}
   { opacity: 0,;
-  y: 20;,
-}}
+  y: 20}}
               animate = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
               transition={{ duration: 0.8 }}">"";
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">;
                 AI-Powered Micro SAAS Services";
@@ -96,12 +94,10 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {}
             <motion.div;
               initial = {}
   { opacity: 0,;
-  y: 20;,
-}}
+  y: 20}}
               whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
               transition={{ duration: 0.8 }}";
               viewport={{ once: true }}"";
               className="text-center mb-16"">"";
@@ -118,16 +114,13 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {}
                   key={service.id}
                   initial = {}
   { opacity: 0,;
-  y: 20;,
-}}
+  y: 20}}
                   whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                   transition = {}
   { duration: 0.6,;
-  delay: index * 0.1;,
-}}";
+  delay: index * 0.1}}";
                   viewport={{ once: true }}"";
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 group"">"";
                   <div className="flex items-start justify-between mb-6">"";
@@ -195,12 +188,10 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {}
             <motion.div;
               initial = {}
   { opacity: 0,;
-  y: 20;,
-}}
+  y: 20}}
               whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
               transition={{ duration: 0.8 }}";
               viewport={{ once: true }}"";
               className="text-center mb-16"">"";
@@ -214,7 +205,7 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {}
 
             <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3 gap-8">;
               {[;
-                {;
+                {
                   title: "AI-First Approach",;
                   description: "All our services leverage the latest AI/ML technology for maximum effectiveness and automation.",;
                   icon: "🧠"                },;
@@ -223,50 +214,42 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {}
 "";
                   title: "Proven Results","";
                   description: "Measurable outcomes with quantifiable business impact across all our solutions.","";
-                  icon: "📈";,
-},;
+                  icon: "📈"},;
                 {}
 ";
 "";
                   title: "Industry Expertise","";
                   description: "Deep understanding of various industries with specialized solutions for specific sectors.","";
-                  icon: "🏢";,
-},;
+                  icon: "🏢"},;
                 {}
 ";
 "";
                   title: "Scalable Architecture","";
                   description: "Solutions that grow with your business, from startup to enterprise scale.","";
-                  icon: "⚡";,
-},;
+                  icon: "⚡"},;
                 {}
 ";
 "";
                   title: "Compliance Ready","";
                   description: "Built-in security and compliance features for regulated industries.","";
-                  icon: "🔒";,
-},;
+                  icon: "🔒"},;
                 {}
 ";
 "";
                   title: "24/7 Support","";
                   description: "Dedicated support team available around the clock for enterprise customers.","";
-                  icon: "🛟";,
-}
+                  icon: "🛟"}
               ].map ( (feature, index) => (<motion.div;
                   key={index}
                   initial = {}
   { opacity: 0,;
-  y: 20;,
-}}
+  y: 20}}
                   whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                   transition = {}
   { duration: 0.6,;
-  delay: index * 0.1;,
-}}";
+  delay: index * 0.1}}";
                   viewport={{ once: true }}"";
                   className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"">"";
                   <div className="text-4xl mb-4">{feature.icon}</div>"";
@@ -284,12 +267,10 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {}
             <motion.div;
               initial = {}
   { opacity: 0,;
-  y: 20;,
-}}
+  y: 20}}
               whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}">"";
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">;
@@ -333,16 +314,11 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {}
         </section>;
       </div>;
     </>;
-  )};
-;
+  )}
 export default AIServicesShowcase;
-;
-export { AIServicesShowcase };
-;
-export { AIServicesShowcase };
-;
-export { AIServicesShowcase };
-;
-export { AIServicesShowcase };
-;
-export { AIServicesShowcase };
+
+export { AIServicesShowcase }
+export { AIServicesShowcase }
+export { AIServicesShowcase }
+export { AIServicesShowcase }
+export { AIServicesShowcase }

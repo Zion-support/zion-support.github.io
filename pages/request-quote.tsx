@@ -1,8 +1,8 @@
 import React from 'react';
 import SEOHead from '../src/components/SEOHead';
 import ContactForm from '../src/components/ContactForm';
-;
-const RequestQuotePage = () => {;
+
+const RequestQuotePage = () => {
   return (;
     <>;
       <SEOHead title="Request a Quote - Zion Tech Group" description="Request a custom quote for your project." />;
@@ -12,8 +12,6 @@ const RequestQuotePage = () => {;
         <ContactForm />;
       </main>;
     </>;
-  );,
-};
-;
+  )}
 export default RequestQuotePage;
-;
+

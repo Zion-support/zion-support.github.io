@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation  } from 'react-router-dom';
-export default function Page() {;
+export default function Page() {
 ,;
         { name: 'Services', href: '/services', icon: Briefcase },;
         { name: 'Solutions', href: '/solutions', icon: Target },;
@@ -11,9 +11,8 @@ export default function Page() {;
         { name: 'News', href: '/news', icon: Newspaper },;
         { name: 'Contact', href: '/contact', icon: Mail },;
         { name: 'Blog', href: '/blog', icon: FileText },;
-      ];,
-},;
-    {;
+      ]},;
+    {
 
       name: 'Core Services',;
       href: '#',;
@@ -23,32 +22,27 @@ export default function Page() {;
           name: 'Cloud & DevOps',;
           href: '/services/cloud-devops',;
           icon: Cloud,;
-          description: 'Infrastructure & Automation';,
-},;
-        {;
+          description: 'Infrastructure & Automation'},;
+        {
 
           name: 'Digital Twin',;
           href: '/services/digital-twin',;
           icon: Globe,;
-          description: 'Simulation & Monitoring';,
-},;
-        {;
+          description: 'Simulation & Monitoring'},;
+        {
 
           name: 'Data Analytics',;
           href: '/services/data-analytics',;
           icon: BarChart3,;
-          description: 'Business Intelligence';,
-},;
-        {;
+          description: 'Business Intelligence'},;
+        {
 
           name: 'IT Infrastructure',;
           href: '/services/it-infrastructure',;
           icon: Server,;
-          description: 'Hardware & Network';,
-}
-      ];,
-},;
-    {;
+          description: 'Hardware & Network'}
+      ]},;
+    {
 
       name: 'AI Products',;
       href: '#',;
@@ -58,32 +52,27 @@ export default function Page() {;
           name: 'AI Sales Copilot',;
           href: '/services/ai-sales-copilot',;
           icon: Users,;
-          description: 'Sales Intelligence';,
-},;
-        {;
+          description: 'Sales Intelligence'},;
+        {
 
           name: 'AI Compliance Assistant',;
           href: '/services/ai-compliance-assistant',;
           icon: Shield,;
-          description: 'Regulatory Compliance';,
-},;
-        {;
+          description: 'Regulatory Compliance'},;
+        {
 
           name: 'AI Auto Email Responder',;
           href: '/services/ai-auto-email-responder',;
           icon: MessageCircle,;
-          description: 'Email Automation';,
-},;
-        {;
+          description: 'Email Automation'},;
+        {
 
           name: 'LLM Content Studio',;
           href: '/services/llm-content-studio',;
           icon: PenTool,;
-          description: 'Content Creation';,
-}
-      ];,
-},;
-    {;
+          description: 'Content Creation'}
+      ]},;
+    {
 
       name: 'Emerging Tech',;
       href: '#',;
@@ -93,32 +82,27 @@ export default function Page() {;
           name: 'Quantum Computing',;
           href: '/services/quantum-computing',;
           icon: Atom,;
-          description: 'Next-gen Computing';,
-},;
-        {;
+          description: 'Next-gen Computing'},;
+        {
 
           name: 'AI Cybersecurity',;
           href: '/services/ai-cybersecurity',;
           icon: Lock,;
-          description: 'Intelligent Security';,
-},;
-        {;
+          description: 'Intelligent Security'},;
+        {
 
           name: 'IoT Edge Computing',;
           href: '/services/iot-edge-computing',;
           icon: Smartphone,;
-          description: 'Connected Ecosystems';,
-},;
-        {;
+          description: 'Connected Ecosystems'},;
+        {
 
           name: 'AI Content Creation',;
           href: '/services/ai-content-creation',;
           icon: Video,;
-          description: 'Creative AI';,
-}
-      ];,
-},;
-    {;
+          description: 'Creative AI'}
+      ]},;
+    {
 
       name: 'Business Solutions',;
       href: '#',;
@@ -128,32 +112,27 @@ export default function Page() {;
           name: 'Marketplace',;
           href: '/marketplace',;
           icon: ShoppingCart,;
-          description: 'Product & Service Hub';,
-},;
-        {;
+          description: 'Product & Service Hub'},;
+        {
 
           name: 'Talent Solutions',;
           href: '/talent',;
           icon: Users,;
-          description: 'HR & Recruitment';,
-},;
-        {;
+          description: 'HR & Recruitment'},;
+        {
 
           name: 'Equipment Services',;
           href: '/equipment',;
           icon: Server,;
-          description: 'Hardware Solutions';,
-},;
-        {;
+          description: 'Hardware Solutions'},;
+        {
 
           name: 'Request Quote',;
           href: '/request-quote',;
           icon: MessageCircle,;
-          description: 'Get Pricing';,
-}
-      ];,
-},;
-    {;
+          description: 'Get Pricing'}
+      ]},;
+    {
 
       name: 'Company',;
       href: '#',;
@@ -163,32 +142,27 @@ export default function Page() {;
           name: 'About Us',;
           href: '/about',;
           icon: Info,;
-          description: 'Our Story';,
-},;
-        {;
+          description: 'Our Story'},;
+        {
 
           name: 'Team',;
           href: '/team',;
           icon: Users,;
-          description: 'Meet Our Team';,
-},;
-        {;
+          description: 'Meet Our Team'},;
+        {
 
           name: 'Careers',;
           href: '/careers',;
           icon: Briefcase,;
-          description: 'Join Us';,
-},;
-        {;
+          description: 'Join Us'},;
+        {
 
           name: 'Partners',;
           href: '/partners',;
           icon: Users,;
-          description: 'Partnerships';,
-}
-      ];,
-},;
-    {;
+          description: 'Partnerships'}
+      ]},;
+    {
 
       name: 'Resources',;
       href: '#',;
@@ -198,39 +172,33 @@ export default function Page() {;
           name: 'Blog',;
           href: '/blog',;
           icon: FileText,;
-          description: 'Latest Insights';,
-},;
-        {;
+          description: 'Latest Insights'},;
+        {
 
           name: 'FAQ',;
           href: '/faq',;
           icon: HelpCircle,;
-          description: 'Common Questions';,
-},;
-        {;
+          description: 'Common Questions'},;
+        {
 
           name: 'Help Center',;
           href: '/help',;
           icon: MessageCircle,;
-          description: 'Support Resources';,
-},;
-        {;
+          description: 'Support Resources'},;
+        {
 
           name: 'Documentation',;
           href: '/docs',;
           icon: BookOpen,;
-          description: 'Technical Docs';,
-}
-      ];,
-},;
-    {;
+          description: 'Technical Docs'}
+      ]},;
+    {
 
       name: 'Contact',;
       href: '/contact',;
-      icon: Phone;,
-}
+      icon: Phone}
   ];
-;
+
     return ()      <div key={item.name} className="mb-1">;
         {hasChildren ? (;
           <div>;
@@ -265,8 +233,7 @@ export default function Page() {;
                 ? 'text-cyan-400 bg-cyan-400/10 border border-cyan-400/20';
                 : level === 0';
                 ? 'text-slate-300 hover:text-white hover:bg-slate-700/50'';
-                : 'text-slate-400 hover:text-slate-300'`;,
-}`}
+                : 'text-slate-400 hover:text-slate-300'`}`}
             onClick={() => setIsOpen(false)}
           >";
             <item.icon className="w-4 h-4" />;
@@ -276,8 +243,7 @@ export default function Page() {;
           </Link>;
         )}
       </div>;
-    )};
-;
+    )}
   return ();
     <>;
       {/* Mobile menu button */}
@@ -334,7 +300,7 @@ export default function Page() {;
         />;
       )}
     </>;
-  )};
+  )}
             </div>;
           </div>;
         </div>;

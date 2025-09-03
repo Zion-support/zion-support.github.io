@@ -2,114 +2,96 @@ import type { NextPage } from 'next';
 import MainLayout from '../../components/layout/MainLayout';
 import { Shield, Lock, Eye, AlertTriangle, CheckCircle, ArrowRight, Users, Globe, Database, Zap } from 'lucide-react';
 import Link from 'next/link';
-;
-const CybersecurityPage: NextPage = () => {;
+
+const CybersecurityPage: NextPage = () => {
   const securityServices = [;
-    {;
+    {
       icon: <Shield className="w-8 h-8" />,;
       title: 'Security Assessment',;
       description: 'Comprehensive security audits to identify vulnerabilities and risks',;
-      features: ['Penetration Testing', 'Vulnerability Scanning', 'Risk Assessment', 'Compliance Review'];,
-},;
-    {;
+      features: ['Penetration Testing', 'Vulnerability Scanning', 'Risk Assessment', 'Compliance Review']},;
+    {
       icon: <Lock className="w-8 h-8" />,;
       title: 'Identity & Access Management',;
       description: 'Secure user authentication and authorization systems',;
-      features: ['Multi-Factor Authentication', 'Single Sign-On', 'Role-Based Access', 'Privileged Access Management'];,
-},;
-    {;
+      features: ['Multi-Factor Authentication', 'Single Sign-On', 'Role-Based Access', 'Privileged Access Management']},;
+    {
       icon: <Eye className="w-8 h-8" />,;
       title: 'Security Monitoring',;
       description: '24/7 monitoring and threat detection services',;
-      features: ['SIEM Implementation', 'Threat Detection', 'Incident Response', 'Security Analytics'];,
-},;
-    {;
+      features: ['SIEM Implementation', 'Threat Detection', 'Incident Response', 'Security Analytics']},;
+    {
       icon: <Database className="w-8 h-8" />,;
       title: 'Data Protection',;
       description: 'Comprehensive data security and privacy solutions',;
-      features: ['Data Encryption', 'Backup & Recovery', 'Data Loss Prevention', 'Privacy Compliance'];,
-}
+      features: ['Data Encryption', 'Backup & Recovery', 'Data Loss Prevention', 'Privacy Compliance']}
   ];
-;
+
   const complianceFrameworks = [;
-    {;
+    {
       name: 'SOC 2',;
       description: 'Security, availability, and confidentiality controls',;
-      icon: <CheckCircle className="w-6 h-6" />;,
-},;
-    {;
+      icon: <CheckCircle className="w-6 h-6" />},;
+    {
       name: 'ISO 27001',;
       description: 'Information security management system',;
-      icon: <CheckCircle className="w-6 h-6" />;,
-},;
-    {;
+      icon: <CheckCircle className="w-6 h-6" />},;
+    {
       name: 'GDPR',;
       description: 'General Data Protection Regulation compliance',;
-      icon: <CheckCircle className="w-6 h-6" />;,
-},;
-    {;
+      icon: <CheckCircle className="w-6 h-6" />},;
+    {
       name: 'HIPAA',;
       description: 'Healthcare information privacy and security',;
-      icon: <CheckCircle className="w-6 h-6" />;,
-},;
-    {;
+      icon: <CheckCircle className="w-6 h-6" />},;
+    {
       name: 'PCI DSS',;
       description: 'Payment card industry data security standards',;
-      icon: <CheckCircle className="w-6 h-6" />;,
-},;
-    {;
+      icon: <CheckCircle className="w-6 h-6" />},;
+    {
       name: 'NIST',;
       description: 'National Institute of Standards and Technology',;
-      icon: <CheckCircle className="w-6 h-6" />;,
-}
+      icon: <CheckCircle className="w-6 h-6" />}
   ];
-;
+
   const threats = [;
-    {;
+    {
       icon: <AlertTriangle className="w-8 h-8" />,;
       title: 'Ransomware Protection',;
-      description: 'Advanced protection against ransomware attacks and data encryption threats';,
-},;
-    {;
+      description: 'Advanced protection against ransomware attacks and data encryption threats'},;
+    {
       icon: <Users className="w-8 h-8" />,;
       title: 'Phishing Prevention',;
-      description: 'Employee training and technical controls to prevent phishing attacks';,
-},;
-    {;
+      description: 'Employee training and technical controls to prevent phishing attacks'},;
+    {
       icon: <Globe className="w-8 h-8" />,;
       title: 'DDoS Mitigation',;
-      description: 'Protection against distributed denial-of-service attacks';,
-},;
-    {;
+      description: 'Protection against distributed denial-of-service attacks'},;
+    {
       icon: <Database className="w-8 h-8" />,;
       title: 'Data Breach Prevention',;
-      description: 'Comprehensive measures to prevent unauthorized data access';,
-}
+      description: 'Comprehensive measures to prevent unauthorized data access'}
   ];
-;
+
   const benefits = [;
-    {;
+    {
       icon: <Shield className="w-8 h-8" />,;
       title: 'Enhanced Security',;
-      description: 'Protect your business from cyber threats with enterprise-grade security solutions';,
-},;
-    {;
+      description: 'Protect your business from cyber threats with enterprise-grade security solutions'},;
+    {
       icon: <CheckCircle className="w-8 h-8" />,;
       title: 'Compliance',;
-      description: 'Meet regulatory requirements and industry standards with our compliance solutions';,
-},;
-    {;
+      description: 'Meet regulatory requirements and industry standards with our compliance solutions'},;
+    {
       icon: <Zap className="w-8 h-8" />,;
       title: 'Peace of Mind',;
-      description: '24/7 monitoring and support give you confidence in your security posture';,
-},;
-    {;
+      description: '24/7 monitoring and support give you confidence in your security posture'},;
+    {
       icon: <Users className="w-8 h-8" />,;
       title: 'Expert Support',;
-      description: 'Access to certified security professionals and incident response teams';,
-}
+      description: 'Access to certified security professionals and incident response teams'}
   ];
-;
+
   return (;
     <MainLayout>;
       {/* Hero Section */}
@@ -141,7 +123,7 @@ const CybersecurityPage: NextPage = () => {;
               Comprehensive cybersecurity solutions to protect your business from evolving threats;
             </p>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-2 gap-8">;
             {securityServices.map((service, index) => (;
               <div key={index} className="bg-gray-50 p-8 rounded-lg hover:shadow-lg transition-shadow">;
@@ -173,7 +155,7 @@ const CybersecurityPage: NextPage = () => {;
               Advanced protection against the most common and dangerous cyber threats;
             </p>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
             {threats.map((threat, index) => (;
               <div key={index} className="bg-white p-6 rounded-lg shadow-lg text-center">;
@@ -197,7 +179,7 @@ const CybersecurityPage: NextPage = () => {;
               We help you meet industry standards and regulatory requirements;
             </p>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {complianceFrameworks.map((framework, index) => (;
               <div key={index} className="bg-gray-50 p-6 rounded-lg">;
@@ -223,7 +205,7 @@ const CybersecurityPage: NextPage = () => {;
               Comprehensive protection with expert support and proven results;
             </p>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
             {benefits.map((benefit, index) => (;
               <div key={index} className="text-center p-6 bg-white rounded-lg shadow-lg">;
@@ -257,9 +239,7 @@ const CybersecurityPage: NextPage = () => {;
         </div>;
       </section>;
     </MainLayout>;
-  );,
-};
-;
+  )}
 export default CybersecurityPage;
 import React from 'react';
 import Link from 'next/link';
@@ -267,23 +247,21 @@ import Navigation from '../../src/components/Navigation';
 import Footer from '../../src/components/Footer';
 import SEOHead from '../../src/components/SEOHead';
 import { Shield, Lock, Eye, AlertTriangle, CheckCircle, ArrowRight, Phone, Mail, Users, Zap, Globe, Database, Network, Target, Award, Clock, Brain, Cloud, Server, FileText, BarChart3 } from 'lucide-react';
-;
-const Cybersecurity = () => {;
-  const structuredData = {;
+
+const Cybersecurity = () => {
+  const structuredData = {
     "@context": "https://schema.org",;
     "@type": "WebPage",;
     "name": "Cybersecurity Services - Zion Tech Group",;
     "url": "https://ziontechgroup.com/services/cybersecurity",;
     "description": "Comprehensive cybersecurity services including threat detection, vulnerability assessment, and security monitoring",;
-    "publisher": {;
+    "publisher": {
       "@type": "Organization",;
       "name": "Zion Tech Group",;
-      "url": "https://ziontechgroup.com";,
-}
-  };
-;
+      "url": "https://ziontechgroup.com"}
+  }
   const services = [;
-    {;
+    {
       title: 'Threat Detection & Response',;
       description: 'Advanced threat detection and incident response services',;
       icon: AlertTriangle,;
@@ -294,9 +272,8 @@ const Cybersecurity = () => {;
         'Forensic Analysis',;
         'Threat Intelligence';
       ],;
-      pricing: 'Starting at $5,000/month';,
-},;
-    {;
+      pricing: 'Starting at $5,000/month'},;
+    {
       title: 'Vulnerability Assessment',;
       description: 'Comprehensive security assessments and penetration testing',;
       icon: Target,;
@@ -307,9 +284,8 @@ const Cybersecurity = () => {;
         'Social Engineering Tests',;
         'Compliance Audits';
       ],;
-      pricing: 'Starting at $3,000/assessment';,
-},;
-    {;
+      pricing: 'Starting at $3,000/assessment'},;
+    {
       title: 'Security Architecture',;
       description: 'Design and implement secure infrastructure and systems',;
       icon: Shield,;
@@ -320,9 +296,8 @@ const Cybersecurity = () => {;
         'Cloud Security Implementation',;
         'Security Policy Development';
       ],;
-      pricing: 'Starting at $10,000/project';,
-},;
-    {;
+      pricing: 'Starting at $10,000/project'},;
+    {
       title: 'Compliance & Governance',;
       description: 'Ensure compliance with industry standards and regulations',;
       icon: FileText,;
@@ -333,9 +308,8 @@ const Cybersecurity = () => {;
         'HIPAA Security',;
         'PCI DSS Compliance';
       ],;
-      pricing: 'Starting at $7,500/project';,
-},;
-    {;
+      pricing: 'Starting at $7,500/project'},;
+    {
       title: 'Security Training',;
       description: 'Comprehensive security awareness and training programs',;
       icon: Users,;
@@ -346,9 +320,8 @@ const Cybersecurity = () => {;
         'Executive Security Briefings',;
         'Technical Security Training';
       ],;
-      pricing: 'Starting at $2,500/session';,
-},;
-    {;
+      pricing: 'Starting at $2,500/session'},;
+    {
       title: 'Managed Security Services',;
       description: 'Ongoing security management and monitoring services',;
       icon: Server,;
@@ -359,17 +332,16 @@ const Cybersecurity = () => {;
         'Patch Management',;
         'Security Operations Center';
       ],;
-      pricing: 'Starting at $8,000/month';,
-}
+      pricing: 'Starting at $8,000/month'}
   ];
-;
+
   const stats = [;
     { number: '99.9%', label: 'Threat Detection Rate' },;
     { number: '< 15 min', label: 'Average Response Time' },;
     { number: '500+', label: 'Security Assessments' },;
     { number: '24/7', label: 'Monitoring Coverage' }
   ];
-;
+
   const complianceStandards = [;
     'SOC 2 Type II',;
     'ISO 27001',;
@@ -380,7 +352,7 @@ const Cybersecurity = () => {;
     'CIS Controls',;
     'OWASP Top 10';
   ];
-;
+
   return (;
     <>;
       <SEOHead ;
@@ -390,7 +362,7 @@ const Cybersecurity = () => {;
         structuredData={structuredData}
       />;
       <Navigation />;
-      ;
+
       <main className="min-h-screen bg-gray-900 text-white">;
         {/* Hero Section */}
         <section className="pt-24 pb-16 bg-gradient-to-b from-gray-900 to-gray-800">;
@@ -452,10 +424,10 @@ const Cybersecurity = () => {;
                   <div className="w-16 h-16 bg-cyan-400/20 rounded-full flex items-center justify-center mb-6">;
                     <service.icon className="w-8 h-8 text-cyan-400" />;
                   </div>;
-                  ;
+
                   <h3 className="text-xl font-bold mb-3">{service.title}</h3>;
                   <p className="text-gray-300 mb-6">{service.description}</p>;
-                  ;
+
                   <ul className="space-y-3 mb-6">;
                     {service.features.map((feature, featureIndex) => (;
                       <li key={featureIndex} className="flex items-center">;
@@ -464,9 +436,9 @@ const Cybersecurity = () => {;
                       </li>;
                     ))}
                   </ul>;
-                  ;
+
                   <div className="text-cyan-400 font-semibold mb-4">{service.pricing}</div>;
-                  ;
+
                   <Link;
                     href="/contact";
                     className="w-full bg-gradient-to-r from-cyan-400 to-blue-500 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 flex items-center justify-center">;
@@ -581,7 +553,5 @@ const Cybersecurity = () => {;
 
       <Footer />;
     </>;
-  );,
-};
-;
+  )}
 export default Cybersecurity;

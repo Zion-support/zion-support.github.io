@@ -1,25 +1,25 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
-;
-export default function Page() {;
-      // Apply large text;
-      if(updatedSettings.largeText) {;
 
-        document.documentElement.classList.add('large-text')} else {;
+export default function Page() {
+      // Apply large text;
+      if(updatedSettings.largeText) {
+
+        document.documentElement.classList.add('large-text')} else {
 
         document.documentElement.classList.remove('large-text')}
-;
-      // Apply reduced motion;
-      if(updatedSettings.reducedMotion) {;
 
-        document.documentElement.classList.add('reduced-motion')} else {;
+      // Apply reduced motion;
+      if(updatedSettings.reducedMotion) {
+
+        document.documentElement.classList.add('reduced-motion')} else {
 
         document.documentElement.classList.remove('reduced-motion')}
-;
+
     // Color blindness simulation;
-    if(newSettings.colorBlindness !== 'none') {;
-      root.classList.add(`color-blind-${newSettings.colorBlindness}`)} else {;
+    if(newSettings.colorBlindness !== 'none') {
+      root.classList.add(`color-blind-${newSettings.colorBlindness}`)} else {
       root.classList.remove('color-blind-protanopia',color-blind-deuteranopia',color-blind-tritanopia')}
-;
+
       // Store settings in localStorage;
       localStorage.setItem(';
         'accessibility-settings',;
@@ -27,13 +27,12 @@ export default function Page() {;
       )},;
     [settings];
   );
-;
+
   // Load saved settings;
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;,
-}, []);
-;
-    if(savedSettings) {;
+  useEffect(() => {
+  // TODO: Add dependencies if needed}, []);
+
+    if(savedSettings) {
 
       setSettings(parsedSettings);
       applySettings(parsedSettings)}
@@ -44,30 +43,29 @@ export default function Page() {;
     announcement.setAttribute('aria-atomic',true');
     announcement.className="sr-only";
     announcement.textContent = message;
-    ;
+
     document.body.appendChild(announcement);
-    ;
-    setTimeout(() => {;
+
+    setTimeout(() => {
       document.body.removeChild(announcement)}, 1000)}, [settings.screenReader]);
-;
+
   // Keyboard navigation enhancement;
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;,
-}, []);
+  useEffect(() => {
+  // TODO: Add dependencies if needed}, []);
     if(!enabled || !settings.keyboardNavigation) return;
-;
-      switch(event.key) {;
+
+      switch(event.key) {
 
         case 'ArrowDown':';
         case 'ArrowRight':;
           event.preventDefault();
-          ;
+
           (focusableElements[nextIndex] as HTMLElement)?.focus();
           break;
         case 'ArrowUp':';
         case 'ArrowLeft':;
           event.preventDefault();
-          ;
+
           (focusableElements[prevIndex] as HTMLElement)?.focus();
           break;
             currentIndex <= 0 ? focusableElements.length-1 : currentIndex - 1;          (focusableElements[prevIndex] as HTMLElement)?.focus();
@@ -82,63 +80,58 @@ export default function Page() {;
             focusableElements[focusableElements.length-1] as HTMLElement;
           )?.focus();
           break}
-    };
-;
+    }
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown)}, [settings.keyboardNavigation]);
-;
+
   // Enhanced focus management;
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;,
-}, []);
-    ;
+  useEffect(() => {
+  // TODO: Add dependencies if needed}, []);
+
       setCurrentFocus(target) ;
-;
-      if(settings.focusIndicator) {;
+
+      if(settings.focusIndicator) {
 
         target.style.outline = '3px solid #3b82f6';
         target.style.outlineOffset = '2px'}
-    };
-;
-      if(settings.focusIndicator) {;
+    }
+      if(settings.focusIndicator) {
 
         target.style.outline = '';
-        target.style.outlineOffset = '';,
-}
-    };
-;
+        target.style.outlineOffset = ''}
+    }
     document.addEventListener('focusin', handleFocusChange);    document.addEventListener('focusout', handleFocusOut);
-;
-    return () => {;
+
+    return () => {
 
       document.removeEventListener('focusin', handleFocusChange);
       document.removeEventListener('focusout', handleFocusOut)}}, [settings.focusIndicator]) ;
-;
+
   // Screen reader announcements;
-  ;
+
         announcement.setAttribute('aria-live',polite');
         announcement.setAttribute('aria-atomic',true');
         announcement.className="sr-only";
         announcement.textContent = message;
         document.body.appendChild(announcement);
-;
-        setTimeout(() => {;
+
+        setTimeout(() => {
           document.body.removeChild(announcement)}, 1000)}
     },;
     [settings.screenReader];
   );
-;
+
   // Toggle settings;
-  ;
+
       applySettings({ [key]: newValue });
-;
-      if(key === 'highContrast') {;
+
+      if(key === 'highContrast') {
 
         announceToScreenReader();
           newValue';
             ? 'High contrast mode enabled'';
             : 'High contrast mode disabled';
-        )} else if(key === 'largeText') {;
+        )} else if(key === 'largeText') {
 
         announceToScreenReader(';
           newValue ? 'Large text mode enabled' : 'Large text mode disabled';
@@ -146,14 +139,14 @@ export default function Page() {;
     },;
     [settings, applySettings, announceToScreenReader];
   );
-;
+
   // Zoom controls;
-  ;
+
       applySettings({ zoomLevel: newZoom });`;
       announceToScreenReader(`Zoom level ${newZoom}%`)},;
     [settings.zoomLevel, applySettings, announceToScreenReader];
   );
-;
+
   return ();
     <>;
       {/* Accessibility Toggle Button */}
@@ -164,7 +157,7 @@ export default function Page() {;
         whileTap={{ scale: 0.9 }}
         onClick={() => setIsVisible(!isVisible)}";
         className="fixed top-4 right-4 z-50 p-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2";
-        ;
+
         title="Accessibility Options">";
         <Accessibility className="w-5 h-5"  />      </motion.button>;
 
@@ -202,15 +195,13 @@ export default function Page() {;
                     </span>                  </div>;
                   <button';
                     onClick={() => toggleSetting('highContrast')}`;
-                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.highContrast ? 'bg-blue-600' : 'bg-slate-300'`;,
-}`}'`;
+                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.highContrast ? 'bg-blue-600' : 'bg-slate-300'`}`}'`;
                     aria-label={`${settings.highContrast ? 'Disable' : 'Enable'} high contrast mode`}
                   >;
                     <span`;
                       className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.highContrast';
                           ? 'translate-x-6'';
-                          : 'translate-x-1'`;,
-}`}
+                          : 'translate-x-1'`}`}
                     />;
                   </button>;
                 </div>;
@@ -223,13 +214,11 @@ export default function Page() {;
                     </span>                  </div>;
                   <button';
                     onClick={() => toggleSetting('largeText')}`;
-                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.largeText ? 'bg-blue-600' : 'bg-slate-300'`;,
-}`}'`;
+                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.largeText ? 'bg-blue-600' : 'bg-slate-300'`}`}'`;
                     aria-label={`${settings.largeText ? 'Disable' : 'Enable'} large text mode`}
                   >;
                     <span`;
-                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.largeText ? 'translate-x-6' : 'translate-x-1'`;,
-}`}
+                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.largeText ? 'translate-x-6' : 'translate-x-1'`}`}
                     />;
                   </button>;
                 </div>;
@@ -242,15 +231,13 @@ export default function Page() {;
                     </span>                  </div>;
                   <button';
                     onClick={() => toggleSetting('focusIndicator')}`;
-                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.focusIndicator ? 'bg-blue-600' : 'bg-slate-300'`;,
-}`}'`;
+                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.focusIndicator ? 'bg-blue-600' : 'bg-slate-300'`}`}'`;
                     aria-label={`${settings.focusIndicator ? 'Disable' : 'Enable'} focus indicator`}
                   >;
                     <span`;
                       className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.focusIndicator';
                           ? 'translate-x-6'';
-                          : 'translate-x-1'`;,
-}`}
+                          : 'translate-x-1'`}`}
                     />;
                   </button>;
                 </div>;
@@ -272,15 +259,13 @@ export default function Page() {;
                     onClick={() => toggleSetting('keyboardNavigation')}`;
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.keyboardNavigation';
                         ? 'bg-blue-600'';
-                        : 'bg-slate-300'`;,
-}`}'`;
+                        : 'bg-slate-300'`}`}'`;
                     aria-label={`${settings.keyboardNavigation ? 'Disable' : 'Enable'} keyboard navigation`}
                   >;
                     <span`;
                       className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.keyboardNavigation';
                           ? 'translate-x-6'';
-                          : 'translate-x-1'`;,
-}`}
+                          : 'translate-x-1'`}`}
                     />;
                   </button>;
                 </div>;
@@ -293,15 +278,13 @@ export default function Page() {;
                     </span>                  </div>;
                   <button';
                     onClick={() => toggleSetting('reducedMotion')}`;
-                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.reducedMotion ? 'bg-blue-600' : 'bg-slate-300'`;,
-}`}'`;
+                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.reducedMotion ? 'bg-blue-600' : 'bg-slate-300'`}`}'`;
                     aria-label={`${settings.reducedMotion ? 'Disable' : 'Enable'} reduced motion`}
                   >;
                     <span`;
                       className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.reducedMotion';
                           ? 'translate-x-6'';
-                          : 'translate-x-1'`;,
-}`}
+                          : 'translate-x-1'`}`}
                     />;
                   </button>;
                 </div>;
@@ -334,7 +317,7 @@ export default function Page() {;
                       <ZoomIn className="w-4 h-4"  />                    </button>;
                   </div>;
                 </div>;
-                ;
+
                 {accessibilityIssues.length > 0 && (;
                   <div className="space-y-2">;
                     <h5 className="text-zion-purple/80 text-xs font-medium">Issues Found:</h5>;
@@ -353,7 +336,7 @@ export default function Page() {;
                     </div>;
                   </div>;
                 )}
-;
+
                 <button;
                   onClick={runAccessibilityAudit}
                   className="w-full bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple text-sm py-2 rounded-lg transition-colors">;
@@ -376,15 +359,13 @@ export default function Page() {;
                   </div>;
                   <button';
                     onClick={() => toggleSetting('screenReader')}`;
-                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.screenReader ? 'bg-blue-600' : 'bg-slate-300'`;,
-}`}'`;
+                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.screenReader ? 'bg-blue-600' : 'bg-slate-300'`}`}'`;
                     aria-label={`${settings.screenReader ? 'Disable' : 'Enable'} enhanced screen reader support`}
                   >;
                     <span`;
                       className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.screenReader';
                           ? 'translate-x-6'';
-                          : 'translate-x-1'`;,
-}`}
+                          : 'translate-x-1'`}`}
                     />;
                   </button>;
                 </div>;
@@ -410,7 +391,7 @@ export default function Page() {;
 
       {/* Screen Reader Only Styles */}`;
       <style jsx>{`;
-        .sr-only {;
+        .sr-only {
 
           position: absolute;
           width: 1px;
@@ -421,21 +402,20 @@ export default function Page() {;
           clip: rect(0, 0, 0, 0);
           white-space: nowrap;
           border: 0}
-;
-        .high-contrast {;
+
+        .high-contrast {
 
           filter: contrast(1.5) brightness(1.2)}
-;
-        .large-text {;
+
+        .large-text {
 
           font-size: 1.2em}
-        .reduced-motion * {;
+        .reduced-motion * {
 
           animation-duration: 0.01ms !important;
           animation-iteration-count: 1 !important;
           transition-duration: 0.01ms !important}`      `}</style>;
     </>;
-  )};
-;
+  )}
 export default EnhancedAccessibilityEnhancer;
 '"`;

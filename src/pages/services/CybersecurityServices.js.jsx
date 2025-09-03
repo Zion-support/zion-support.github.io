@@ -12,8 +12,7 @@ import { Shield, Lock, Eye, Users, Network, ArrowRight, CheckCircle, Cloud const
                 "Incident Response","";
                 "Forensic Analysis","";
                 "Threat Hunting";
-            ];,
-},;
+            ]},;
         {}
 ";
 "";
@@ -26,8 +25,7 @@ import { Shield, Lock, Eye, Users, Network, ArrowRight, CheckCircle, Cloud const
                 "VPN Solutions","";
                 "Network Segmentation","";
                 "Traffic Analysis";
-            ];,
-},;
+            ]},;
         {}
 ";
 "";
@@ -40,8 +38,7 @@ import { Shield, Lock, Eye, Users, Network, ArrowRight, CheckCircle, Cloud const
                 "Role-Based Access Control","";
                 "Privileged Access Management","";
                 "Identity Governance";
-            ];,
-},;
+            ]},;
         {}
 ";
 "";
@@ -54,8 +51,7 @@ import { Shield, Lock, Eye, Users, Network, ArrowRight, CheckCircle, Cloud const
                 "Data Loss Prevention","";
                 "Backup Security","";
                 "Compliance Monitoring";
-            ];,
-},;
+            ]},;
         {}
 ";
 "";
@@ -68,8 +64,7 @@ import { Shield, Lock, Eye, Users, Network, ArrowRight, CheckCircle, Cloud const
                 "Compliance Auditing","";
                 "Risk Assessments","";
                 "Security Training";
-            ];,
-},;
+            ]},;
         {}
 ";
 "";
@@ -260,17 +255,11 @@ import { Shield, Lock, Eye, Users, Network, ArrowRight, CheckCircle, Cloud const
           </div>;
         </div>;
       </section>;
-    </div>);,
-};
-export default CybersecurityServices;,
-}}
-;
-export { CybersecurityServices };
-;
-export { CybersecurityServices };
-;
-export { CybersecurityServices };
-;
-export { CybersecurityServices };
-;
-export { CybersecurityServices };
+    </div>)}
+export default CybersecurityServices}}
+
+export { CybersecurityServices }
+export { CybersecurityServices }
+export { CybersecurityServices }
+export { CybersecurityServices }
+export { CybersecurityServices }

@@ -22,12 +22,11 @@ import { ;
   Users,;
   Clock,;
   DollarSign,;
-  Phone;,
-} from "lucide-react";
+  Phone} from "lucide-react";
 
-export default function InnovativeServices() {;
+export default function InnovativeServices() {
   const services = [;
-    {;
+    {
       id: 1,;
       name: "AI-Powered Email Automation Suite",;
       description: "Intelligent email marketing platform with advanced segmentation, personalization, and automated workflows.",;
@@ -43,9 +42,8 @@ export default function InnovativeServices() {;
       delivery: "2-4 weeks",;
       category: "AI Automation",;
       benefits: "Increase email engagement by 300% and reduce manual work by 80%",;
-      roi: "Expected ROI: 400-600% within 6 months";,
-},;
-    {;
+      roi: "Expected ROI: 400-600% within 6 months"},;
+    {
       id: 2,;
       name: "Smart Inventory Management System",;
       description: "AI-driven inventory optimization with predictive analytics and automated reordering capabilities.",;
@@ -61,9 +59,8 @@ export default function InnovativeServices() {;
       delivery: "3-5 weeks",;
       category: "AI Analytics",;
       benefits: "Reduce inventory costs by 25% and prevent stockouts by 95%",;
-      roi: "Expected ROI: 250-400% within 4 months";,
-},;
-    {;
+      roi: "Expected ROI: 250-400% within 4 months"},;
+    {
       id: 3,;
       name: "AI Customer Support Chatbot",;
       description: "Advanced conversational AI that handles customer inquiries with human-like understanding and response.",;
@@ -79,9 +76,8 @@ export default function InnovativeServices() {;
       delivery: "2-3 weeks",;
       category: "AI Customer Service",;
       benefits: "Reduce support costs by 60% and improve response time by 90%",;
-      roi: "Expected ROI: 300-500% within 3 months";,
-},;
-    {;
+      roi: "Expected ROI: 300-500% within 3 months"},;
+    {
       id: 4,;
       name: "Blockchain Document Verification",;
       description: "Immutable document verification system using blockchain technology for secure and tamper-proof records.",;
@@ -97,9 +93,8 @@ export default function InnovativeServices() {;
       delivery: "4-6 weeks",;
       category: "Blockchain Security",;
       benefits: "Eliminate document fraud and reduce verification time by 70%",;
-      roi: "Expected ROI: 200-350% within 6 months";,
-},;
-    {;
+      roi: "Expected ROI: 200-350% within 6 months"},;
+    {
       id: 5,;
       name: "IoT Device Management Platform",;
       description: "Comprehensive IoT device monitoring, management, and analytics platform for connected devices.",;
@@ -115,9 +110,8 @@ export default function InnovativeServices() {;
       delivery: "5-8 weeks",;
       category: "IoT Solutions",;
       benefits: "Reduce device downtime by 40% and optimize maintenance costs by 30%",;
-      roi: "Expected ROI: 180-300% within 8 months";,
-},;
-    {;
+      roi: "Expected ROI: 180-300% within 8 months"},;
+    {
       id: 6,;
       name: "AI-Powered Social Media Manager",;
       description: "Intelligent social media management with content creation, scheduling, and performance optimization.",;
@@ -133,9 +127,8 @@ export default function InnovativeServices() {;
       delivery: "2-4 weeks",;
       category: "AI Marketing",;
       benefits: "Increase social media engagement by 250% and save 15 hours/week",;
-      roi: "Expected ROI: 350-500% within 4 months";,
-},;
-    {;
+      roi: "Expected ROI: 350-500% within 4 months"},;
+    {
       id: 7,;
       name: "Smart Contract Development Platform",;
       description: "No-code platform for creating, deploying, and managing smart contracts on multiple blockchains.",;
@@ -151,9 +144,8 @@ export default function InnovativeServices() {;
       delivery: "6-10 weeks",;
       category: "Blockchain Development",;
       benefits: "Reduce development time by 80% and eliminate coding errors",;
-      roi: "Expected ROI: 400-700% within 6 months";,
-},;
-    {;
+      roi: "Expected ROI: 400-700% within 6 months"},;
+    {
       id: 8,;
       name: "AI-Powered Lead Scoring System",;
       description: "Advanced lead qualification and scoring system using machine learning to identify high-value prospects.",;
@@ -169,9 +161,8 @@ export default function InnovativeServices() {;
       delivery: "3-5 weeks",;
       category: "AI Sales",;
       benefits: "Increase conversion rates by 200% and reduce sales cycle by 35%",;
-      roi: "Expected ROI: 300-450% within 5 months";,
-},;
-    {;
+      roi: "Expected ROI: 300-450% within 5 months"},;
+    {
       id: 9,;
       name: "Quantum-Safe Encryption Service",;
       description: "Future-proof encryption solution using quantum-resistant algorithms to protect against quantum computing threats.",;
@@ -187,9 +178,8 @@ export default function InnovativeServices() {;
       delivery: "8-12 weeks",;
       category: "Quantum Security",;
       benefits: "Future-proof security and meet compliance requirements",;
-      roi: "Expected ROI: 150-250% within 12 months";,
-},;
-    {;
+      roi: "Expected ROI: 150-250% within 12 months"},;
+    {
       id: 10,;
       name: "AI-Powered Code Review Assistant",;
       description: "Intelligent code analysis and review system that identifies bugs, security vulnerabilities, and optimization opportunities.",;
@@ -205,8 +195,7 @@ export default function InnovativeServices() {;
       delivery: "3-5 weeks",;
       category: "AI Development",;
       benefits: "Reduce bugs by 70% and improve code quality by 50%",;
-      roi: "Expected ROI: 250-400% within 4 months";,
-}
+      roi: "Expected ROI: 250-400% within 4 months"}
   ];
 
   return (;
@@ -247,7 +236,7 @@ export default function InnovativeServices() {;
           <div className="max-w-7xl mx-auto">;
             <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">Our Innovative Services</h2>;
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {services.map((service) => {;
+              {services.map((service) => {
                 const IconComponent = service.icon;
                 return (;
                   <div key={service.id} className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">;
@@ -258,9 +247,9 @@ export default function InnovativeServices() {;
                         <span className="text-sm text-blue-600 font-medium">{service.category}</span>;
                       </div>;
                     </div>;
-                    ;
+
                     <p className="text-gray-600 mb-4">{service.description}</p>;
-                    ;
+
                     <div className="mb-4">;
                       <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>;
                       <ul className="text-sm text-gray-600 space-y-1">;
@@ -298,8 +287,7 @@ export default function InnovativeServices() {;
                       <ArrowRight className="w-4 h-4 ml-2" />;
                     </Link>;
                   </div>;
-                );,
-})}
+                )})}
             </div>;
           </div>;
         </section>;
@@ -338,5 +326,4 @@ export default function InnovativeServices() {;
         </section>;
       </div>;
     </>;
-  );,
-}
+  )}

@@ -24,8 +24,7 @@ export default function AccountSettings() {}
                 const parsed = JSON.parse(saved);
                 setDisplayWeb3(!!parsed.displayWeb3);';
                 setDidHandle(parsed.didHandle || '');';
-            // // // // // // // // console.error('Error loading account settings', e);,
-}
+            // // // // // // // // console.error('Error loading account settings', e)}
                 setEnableBackup (!!parsed.enableBackup) }
         }
         catch (e) {}
@@ -45,21 +44,19 @@ export default function AccountSettings() {}
                 localStorage.setItem('account_settings', JSON.stringify({ displayWeb3, didHandle, enableBackup }));''';
                 // // // // // // // // console.log('Saved settings', { displayWeb3, didHandle, enableBackup });''';
                 toast.success('Account settings updated successfully');
-;
+
             catch (e) {}
 ';
 '';
 ''';
                 // // // // // // // // console.error('Failed to save settings', e);''';
                 toast.error('Failed to save settings');
-;
+
             finally {}
                 setIsSubmitting(false) ;
-;
+
                 setIsSubmitting(false);
-';,
-}, 1000);'';,
-};''';
+'}, 1000);''};''';
                 // console.log('Saved settings', { displayWeb3, didHandle, enableBackup });''';
                 toast.success('Account settings updated successfully')}
             catch (e) {}
@@ -70,7 +67,7 @@ export default function AccountSettings() {}
                 toast.error('Failed to save settings')}
             finally {}
                 setIsSubmitting(false) }
-        }, 1000) };
+        }, 1000) }
     const handleConnectWallet = async () => {}
         try {}
             // Check if wallet is available;
@@ -90,8 +87,7 @@ export default function AccountSettings() {}
 '';
 ''';
                 method: 'personal_sign',;
-                params[address, message];,
-}) ;
+                params[address, message]}) ;
             // Auto - set DID handle if ENS is available;
             try {}
                 const provider = new window.ethers.providers.Web3Provider (ethereum) ;
@@ -100,16 +96,15 @@ export default function AccountSettings() {}
 ';
 ''`;
 ''`'`;
-                // // // // // // // // console.error('ENS lookup error:', error);```;,
-}````;
+                // // // // // // // // console.error('ENS lookup error:', error);```}````;
             toast.success(`Wallet connected: ${address.slice(0, 6)}...${address.slice(-4)}`);
-;
+
         catch (error) {}
 ';
 '';
 ''';
             toast.error(error.message || 'Failed to connect wallet');
-;
+
                     setDidHandle (ensName) }
             }
             catch (error) {}
@@ -123,7 +118,7 @@ export default function AccountSettings() {}
 '';
 ''';
             toast.error(error.message || 'Failed to connect wallet')}
-    };
+    }
     return (<>;
       <SEO title="Account Settings" description="Manage your account"/>";
 "";
@@ -196,16 +191,12 @@ export default function AccountSettings() {}
           </Card>;
         </div>;
       </main>;
-      ;
-    </>)}
-;
 
-export { AccountSettings };
-;
-export { AccountSettings };
-;
-export { AccountSettings };
-;
-export { AccountSettings };
-;
-export { AccountSettings };
+    </>)}
+
+
+export { AccountSettings }
+export { AccountSettings }
+export { AccountSettings }
+export { AccountSettings }
+export { AccountSettings }

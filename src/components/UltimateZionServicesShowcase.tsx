@@ -1,8 +1,8 @@
 
-const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {;
+const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
-;
+
   const categories = [{ id: 'all', name: 'All Services', icon: '🌟', color: 'from - purple - 600 to - pink - 600' },;
     { id: 'quantum - computing', name: 'Quantum Computing', icon: '⚛️', color: 'from - blue - 600 to - cyan - 600' },;
     { id: 'blockchain - web3', name: 'Blockchain & Web3', icon: '🔗', color: 'from - green - 600 to - emerald - 600' },;
@@ -11,43 +11,35 @@ const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {;
     { id: 'emerging - tech', name: 'Emerging Tech', icon: '🚀', color: 'from - orange - 600 to - red - 600' },;
     { id: 'micro - saas', name: 'Micro SAAS', icon: '💻', color: 'from - blue - 600 to - indigo - 600' },;
     { id: 'it - services', name: 'IT Services', icon: '🖥️', color: 'from - gray - 600 to - slate - 600' };  ];
-;
+
       service.description.toLowerCase () .includes(searchTerm.toLowerCase () ) ||;
       service.tagline.toLowerCase () .includes(searchTerm.toLowerCase () ) ;
     return matchesCategory && matchesSearch}) ;
-;
-      transition: {;
+
+      transition: {
         staggerChildren: 0.1,;
-        delayChildren: 0.2;,
-};,
-};,
-};
-;
-  const itemVariants = {;
+        delayChildren: 0.2}}}
+  const itemVariants = {
   hidden: { opacity: 0,;
   y: 20;
 
-;,
 },;
-    visible: {;      opacity: 1,;
+    visible: {      opacity: 1,;
       y: 0,;
-      transition: { duration: 0.5 }}};
-;
+      transition: { duration: 0.5 }}}
   return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - purple - 900 to - slate - 900 text-white">;
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div  className="max - w-7xl mx - auto text-center">;
           <motion.h1;
-            className="text-4xl md:text-6xl font - bold mb-6"            initial = {;
+            className="text-4xl md:text-6xl font - bold mb-6"            initial = {
 
   { opacity: 0,;
-  y: 20;,
-}}
-            whileInView = {;
+  y: 20}}
+            whileInView = {
 
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
             transition={{ duration: 0.6 }}
           >;
             Ultimate";
@@ -61,21 +53,18 @@ const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {;
           </motion.h1>;
 
           <motion.p;
-            className="text-xl text-gray - 300 mb-8 max - w-4xl mx -auto"            initial = {;
+            className="text-xl text-gray - 300 mb-8 max - w-4xl mx -auto"            initial = {
 
   { opacity: 0,;
-  y: 20;,
-}}
-            whileInView = {;
+  y: 20}}
+            whileInView = {
 
   { opacity: 1,;
-  y: 0;,
-}}
-            transition = {;
+  y: 0}}
+            transition = {
 
   { duration: 0.6,;
-  delay: 0.2;,
-}}
+  delay: 0.2}}
           >;
             Discover our revolutionary portfolio of cutting - edge micro SAAS services, quantum computing solutions,;
             blockchain innovations, space technology, and AI - powered services designed to transform industries and;
@@ -83,21 +72,18 @@ const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {;
 
           {/* Contact Information */}
           <motion.div;
-            className="bg-white / 10 backdrop - blur - lg rounded-xl p - 6 mb-8 max - w-4xl mx - auto border border-white / 20"            initial = {;
+            className="bg-white / 10 backdrop - blur - lg rounded-xl p - 6 mb-8 max - w-4xl mx - auto border border-white / 20"            initial = {
 
   { opacity: 0,;
-  y: 20;,
-}}
-            whileInView = {;
+  y: 20}}
+            whileInView = {
 
   { opacity: 1,;
-  y: 0;,
-}}
-            transition = {;
+  y: 0}}
+            transition = {
 
   { duration: 0.6,;
-  delay: 0.4;,
-}}
+  delay: 0.4}}
           >";
             <h3 className="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">;
               🚀 Ready to Transform Your Business?;
@@ -132,21 +118,18 @@ const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {;
 
           {/* Search and Filter */}
           <motion.div;
-            className="flex flex - col md:flex - row gap-4 justify - center items - center mb-12"            initial = {;
+            className="flex flex - col md:flex - row gap-4 justify - center items - center mb-12"            initial = {
 
   { opacity: 0,;
-  y: 20;,
-}}
-            whileInView = {;
+  y: 20}}
+            whileInView = {
 
   { opacity: 1,;
-  y: 0;,
-}}
-            transition = {;
+  y: 0}}
+            transition = {
 
   { duration: 0.6,;
-  delay: 0.6;,
-}}
+  delay: 0.6}}
           >;
             <input;
               type="text";
@@ -191,7 +174,7 @@ const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {;
                   </div>";
                   <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>";
                   <p className="text-sm text-purple-400 font-medium mb-2">;
-                    {service.category.replace('-',).toUpperCase()}
+                    {service.category.replace('-').toUpperCase()}
                   </p>";
                   <div className="inline-block px-3 py-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-xs font-semibold">;
                     {service.innovationLevel}
@@ -267,7 +250,7 @@ const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {;
                       </p>;
                     </div>;
                   </div>) }
-;
+
                 {/* Trial and Setup */}";
                 <div className="flex justify-between items-center mb-6 text-sm">";
                   <div className="text-center">";
@@ -309,16 +292,14 @@ const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {;
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div  className="max - w-4xl mx - auto text-center">;
           <motion.div;
-            className="bg-gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 backdrop - blur - lg rounded-2xl p - 8 border border-purple -400 / 30"            initial = {;
+            className="bg-gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 backdrop - blur - lg rounded-2xl p - 8 border border-purple -400 / 30"            initial = {
 
   { opacity: 0,;
-  y: 20;,
-}}
-            whileInView = {;
+  y: 20}}
+            whileInView = {
 
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
             transition={{ duration: 0.6 }}
           >";
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">;
@@ -340,5 +321,5 @@ const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {;
           </motion.div>;
         </div>;
       </section>;
-    </div>;) };
+    </div>;) }
 export default UltimateZionServicesShowcase;'"`;

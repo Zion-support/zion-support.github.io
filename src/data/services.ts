@@ -1,12 +1,10 @@
-export const contactInfo = {;
+export const contactInfo = {
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup.com',;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
-  website: 'https://ziontechgroup.com';,
-};
-;
+  website: 'https://ziontechgroup.com'}
 export const microSAASServices = [;
-  {;
+  {
     id: 'ai-sales-copilot',;
     name: 'AI Sales Copilot',;
     description: 'Intelligent sales automation platform that boosts conversion rates and streamlines sales processes',;
@@ -23,15 +21,13 @@ export const microSAASServices = [;
       'Improve lead conversion rates',;
       'Automate repetitive tasks';
     ],;
-    pricing: {;
+    pricing: {
       starter: '$99/month',;
       professional: '$299/month',;
-      enterprise: '$799/month';,
-},;
+      enterprise: '$799/month'},;
     link: '/services/ai-sales-copilot',;
-    category: 'Sales & Marketing';,
-},;
-  {;
+    category: 'Sales & Marketing'},;
+  {
     id: 'ai-compliance-assistant',;
     name: 'AI Compliance Assistant',;
     description: 'Automated compliance monitoring and reporting for regulatory requirements across industries',;
@@ -48,15 +44,13 @@ export const microSAASServices = [;
       'Stay ahead of regulatory changes',;
       'Improve audit readiness';
     ],;
-    pricing: {;
+    pricing: {
       starter: '$149/month',;
       professional: '$399/month',;
-      enterprise: '$999/month';,
-},;
+      enterprise: '$999/month'},;
     link: '/services/ai-compliance-assistant',;
-    category: 'Compliance & Risk';,
-},;
-  {;
+    category: 'Compliance & Risk'},;
+  {
     id: 'cloud-finops-optimizer',;
     name: 'Cloud FinOps Optimizer',;
     description: 'Cloud cost optimization and financial operations management platform',;
@@ -73,15 +67,13 @@ export const microSAASServices = [;
       'Better budget planning',;
       'Transparent cost visibility';
     ],;
-    pricing: {;
+    pricing: {
       starter: '$79/month',;
       professional: '$199/month',;
-      enterprise: '$499/month';,
-},;
+      enterprise: '$499/month'},;
     link: '/services/cloud-finops-optimizer',;
-    category: 'Cloud & DevOps';,
-},;
-  {;
+    category: 'Cloud & DevOps'},;
+  {
     id: 'ai-workflow-automation',;
     name: 'AI Workflow Automation',;
     description: 'Intelligent process automation platform that learns and optimizes business workflows',;
@@ -98,15 +90,13 @@ export const microSAASServices = [;
       'Faster decision making',;
       'Scalable automation';
     ],;
-    pricing: {;
+    pricing: {
       starter: '$129/month',;
       professional: '$349/month',;
-      enterprise: '$899/month';,
-},;
+      enterprise: '$899/month'},;
     link: '/services/ai-workflow-automation',;
-    category: 'Automation';,
-},;
-  {;
+    category: 'Automation'},;
+  {
     id: 'ai-customer-support-automation',;
     name: 'AI Customer Support Automation',;
     description: 'Intelligent customer service platform with automated responses and human escalation',;
@@ -123,18 +113,16 @@ export const microSAASServices = [;
       'Improve customer satisfaction',;
       '24/7 support availability';
     ],;
-    pricing: {;
+    pricing: {
       starter: '$89/month',;
       professional: '$249/month',;
-      enterprise: '$649/month';,
-},;
+      enterprise: '$649/month'},;
     link: '/services/ai-customer-support-automation',;
-    category: 'Customer Service';,
-}
+    category: 'Customer Service'}
 ];
-;
+
 export const itServices = [;
-  {;
+  {
     id: 'quantum-neural-network-platform',;
     name: 'Quantum Neural Network Platform',;
     description: 'Next-generation quantum computing platform for complex AI and machine learning tasks',;
@@ -151,15 +139,13 @@ export const itServices = [;
       'Quantum advantage for optimization problems',;
       'Future-proof technology investment';
     ],;
-    pricing: {;
+    pricing: {
       starter: '$2,999/month',;
       professional: '$7,999/month',;
-      enterprise: 'Custom pricing';,
-},;
+      enterprise: 'Custom pricing'},;
     link: '/services/quantum-neural-network-platform',;
-    category: 'Quantum Computing';,
-},;
-  {;
+    category: 'Quantum Computing'},;
+  {
     id: 'autonomous-business-operations-platform',;
     name: 'Autonomous Business Operations Platform',;
     description: 'Self-managing business operations platform with AI-driven decision making',;
@@ -176,15 +162,13 @@ export const itServices = [;
       '24/7 autonomous operation',;
       'Proactive issue resolution';
     ],;
-    pricing: {;
+    pricing: {
       starter: '$1,999/month',;
       professional: '$4,999/month',;
-      enterprise: 'Custom pricing';,
-},;
+      enterprise: 'Custom pricing'},;
     link: '/services/autonomous-business-operations-platform',;
-    category: 'Business Operations';,
-},;
-  {;
+    category: 'Business Operations'},;
+  {
     id: 'ai-powered-it-asset-management',;
     name: 'AI-Powered IT Asset Management',;
     description: 'Intelligent IT asset tracking and lifecycle management platform',;
@@ -201,15 +185,13 @@ export const itServices = [;
       'Optimize resource allocation',;
       'Compliance automation';
     ],;
-    pricing: {;
+    pricing: {
       starter: '$199/month',;
       professional: '$499/month',;
-      enterprise: '$1,299/month';,
-},;
+      enterprise: '$1,299/month'},;
     link: '/services/ai-powered-it-asset-management',;
-    category: 'IT Management';,
-},;
-  {;
+    category: 'IT Management'},;
+  {
     id: 'enhanced-cloud-devops',;
     name: 'Enhanced Cloud & DevOps Services',;
     description: 'Comprehensive cloud infrastructure and DevOps automation services',;
@@ -226,15 +208,13 @@ export const itServices = [;
       'Cost optimization',;
       'Enhanced security';
     ],;
-    pricing: {;
+    pricing: {
       starter: '$299/month',;
       professional: '$799/month',;
-      enterprise: '$1,999/month';,
-},;
+      enterprise: '$1,999/month'},;
     link: '/services/enhanced-cloud-devops',;
-    category: 'Cloud & DevOps';,
-},;
-  {;
+    category: 'Cloud & DevOps'},;
+  {
     id: 'it-onsite-services',;
     name: 'IT Onsite Support Services',;
     description: 'Professional IT support and consulting services at your location',;
@@ -251,18 +231,16 @@ export const itServices = [;
       'Knowledge transfer',;
       'Preventive maintenance';
     ],;
-    pricing: {;
+    pricing: {
       hourly: '$150/hour',;
       daily: '$1,200/day',;
-      project: 'Custom pricing';,
-},;
+      project: 'Custom pricing'},;
     link: '/services/it-onsite-services',;
-    category: 'Support Services';,
-}
+    category: 'Support Services'}
 ];
-;
+
 export const aiServices = [;
-  {;
+  {
     id: 'ai-business-intelligence',;
     name: 'AI Business Intelligence Platform',;
     description: 'Advanced analytics and business intelligence powered by artificial intelligence',;
@@ -279,15 +257,13 @@ export const aiServices = [;
       'Predict market trends',;
       'Improve operational efficiency';
     ],;
-    pricing: {;
+    pricing: {
       starter: '$399/month',;
       professional: '$899/month',;
-      enterprise: '$2,499/month';,
-},;
+      enterprise: '$2,499/month'},;
     link: '/services/ai-business-intelligence',;
-    category: 'Analytics';,
-},;
-  {;
+    category: 'Analytics'},;
+  {
     id: 'ai-cybersecurity-platform',;
     name: 'AI Cybersecurity Platform',;
     description: 'Next-generation cybersecurity with AI-powered threat detection and response',;
@@ -304,15 +280,13 @@ export const aiServices = [;
       'Automated response to threats',;
       '24/7 security monitoring';
     ],;
-    pricing: {;
+    pricing: {
       starter: '$299/month',;
       professional: '$699/month',;
-      enterprise: '$1,899/month';,
-},;
+      enterprise: '$1,899/month'},;
     link: '/services/ai-cybersecurity-platform',;
-    category: 'Cybersecurity';,
-},;
-  {;
+    category: 'Cybersecurity'},;
+  {
     id: 'ai-healthcare-platform',;
     name: 'AI Healthcare Analytics Platform',;
     description: 'Intelligent healthcare analytics and patient care optimization',;
@@ -329,15 +303,13 @@ export const aiServices = [;
       'Optimize treatment plans',;
       'Predict health risks';
     ],;
-    pricing: {;
+    pricing: {
       starter: '$599/month',;
       professional: '$1,299/month',;
-      enterprise: '$3,999/month';,
-},;
+      enterprise: '$3,999/month'},;
     link: '/services/ai-healthcare-platform',;
-    category: 'Healthcare';,
-},;
-  {;
+    category: 'Healthcare'},;
+  {
     id: 'ai-supply-chain-optimization',;
     name: 'AI Supply Chain Optimization',;
     description: 'Intelligent supply chain management with predictive analytics and automation',;
@@ -354,15 +326,13 @@ export const aiServices = [;
       'Optimize supplier relationships',;
       'Predict supply chain disruptions';
     ],;
-    pricing: {;
+    pricing: {
       starter: '$499/month',;
       professional: '$1,099/month',;
-      enterprise: '$2,999/month';,
-},;
+      enterprise: '$2,999/month'},;
     link: '/services/ai-supply-chain-optimization',;
-    category: 'Supply Chain';,
-},;
-  {;
+    category: 'Supply Chain'},;
+  {
     id: 'ai-quantum-hybrid-platform',;
     name: 'AI Quantum Hybrid Platform',;
     description: 'Revolutionary platform combining AI and quantum computing for breakthrough solutions',;
@@ -379,66 +349,57 @@ export const aiServices = [;
       'Future-proof technology investment',;
       'Competitive advantage';
     ],;
-    pricing: {;
+    pricing: {
       starter: '$4,999/month',;
       professional: '$12,999/month',;
-      enterprise: 'Custom pricing';,
-},;
+      enterprise: 'Custom pricing'},;
     link: '/services/ai-quantum-hybrid-platform',;
-    category: 'Quantum AI';,
-}
+    category: 'Quantum AI'}
 ];
-;
+
 export const allServices = [;
   ...microSAASServices,;
   ...itServices,;
   ...aiServices;
 ];
-;
+
 export const serviceCategories = [;
-  {;
+  {
     name: 'Micro SAAS Services',;
     description: 'Scalable software solutions for growing businesses',;
     services: microSAASServices,;
-    icon: '🚀';,
-},;
-  {;
+    icon: '🚀'},;
+  {
     name: 'IT Services',;
     description: 'Professional IT consulting and infrastructure services',;
     services: itServices,;
-    icon: '💻';,
-},;
-  {;
+    icon: '💻'},;
+  {
     name: 'AI Services',;
     description: 'Cutting-edge artificial intelligence solutions',;
     services: aiServices,;
-    icon: '🤖';,
-}
+    icon: '🤖'}
 ];
-;
+
 export const industrySolutions = [;
-  {;
+  {
     name: 'Healthcare',;
     description: 'AI-powered healthcare solutions for improved patient care',;
     services: ['ai-healthcare-platform', 'ai-compliance-assistant'],;
-    icon: '🏥';,
-},;
-  {;
+    icon: '🏥'},;
+  {
     name: 'Financial Services',;
     description: 'Secure and compliant financial technology solutions',;
     services: ['ai-compliance-assistant', 'ai-cybersecurity-platform'],;
-    icon: '💰';,
-},;
-  {;
+    icon: '💰'},;
+  {
     name: 'Manufacturing',;
     description: 'Smart manufacturing and supply chain optimization',;
     services: ['ai-supply-chain-optimization', 'ai-workflow-automation'],;
-    icon: '🏭';,
-},;
-  {;
+    icon: '🏭'},;
+  {
     name: 'Government',;
     description: 'Secure and compliant government technology solutions',;
     services: ['ai-compliance-assistant', 'ai-cybersecurity-platform'],;
-    icon: '🏛️';,
-}
+    icon: '🏛️'}
 ];

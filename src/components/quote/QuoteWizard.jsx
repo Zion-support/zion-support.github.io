@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert';
  from '@/hooks/use-toast';
-) {;
+) {
 
   const progress = (step / WIZARD_STEPS.length) * 100;
   return ();
@@ -24,9 +24,8 @@ import { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert';
         />;
       </div>;
     </div>;
-  );,
-}
-export function QuoteWizard({ category }) {;
+  )}
+export function QuoteWizard({ category }) {
 
   const [step, setStep] = useState(1);
   const [selectedItemId, setSelectedItemId] = useState(null);
@@ -35,53 +34,45 @@ export function QuoteWizard({ category }) {;
   const { data, error, mutate, isLoading } = useQuoteWizard(category);
   const delayedError = useDelayedError(error);
   const { toast } = useToast();
-  useEffect(() => {;
+  useEffect(() => {
   // TODO: Add dependencies if needed;
 
-  return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
-    if(delayedError) {;
+  return () => {
+    // Cleanup function}}, []);, []);
+    if(delayedError) {
 
       toast({;
 
         title: 'Unable to load services',;
-        variant: 'destructive'});,
-}
+        variant: 'destructive'})}
   }, [delayedError, toast]);
   // Use isLoading from SWR for a more direct loading state;
   const loading = isLoading;
-  const selectedItem = useMemo(() => {;
+  const selectedItem = useMemo(() => {
     if(!data || !selectedItemId) return null;
-    return data.find(item => item.id === selectedItemId);,
-}, [data, selectedItemId]);
-  const handleSelect = id => {;
+    return data.find(item => item.id === selectedItemId)}, [data, selectedItemId]);
+  const handleSelect = id => {
 
     setSelectedItemId(id);
-    setStep(2);,
-};
-  const handleContinue = () => {;
-    if(!selectedItemId) {;
+    setStep(2)}
+  const handleContinue = () => {
+    if(!selectedItemId) {
 
       setSelectionError()`;
         `Please choose a ${category === 'services'';
             ? 'service'';
             : category === 'talent'';
               ? 'talent'';
-              : 'item'`;,
-} to continue.`;
+              : 'item'`} to continue.`;
       );
-      return;,
-}
+      return}
     setSelectionError('');
-    setStep(2);,
-};
-  const handleSubmit = async () => {;
+    setStep(2)}
+  const handleSubmit = async () => {
     if(!selectedItemId) return;
     let endpoint = '/api/quotes';
-    const payload = { user_message: message };
-    switch(category) {;
+    const payload = { user_message: message }
+    switch(category) {
 
       case 'services':';
         endpoint = '/api/services/quotes';
@@ -97,16 +88,14 @@ export function QuoteWizard({ category }) {;
         break;
       default:;
         payload.item_id = selectedItemId;
-        payload.category = category;,
-}
-    await fetch(endpoint, {;
+        payload.category = category}
+    await fetch(endpoint, {
 
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' },;
       body: JSON.stringify(payload)});
-    setStep(3);,
-};
-  if(step === 1) {;
+    setStep(3)}
+  if(step === 1) {
 
     return (";
       <div className="space-y-6">;
@@ -120,7 +109,7 @@ export function QuoteWizard({ category }) {;
             ))}
           </div>;
         )}
-;
+
         {delayedError && (";
           <div className="space-y-2" data-testid="fetch-error-alert">";
             <Alert variant="destructive">;
@@ -137,12 +126,12 @@ export function QuoteWizard({ category }) {;
             </Button>;
           </div>;
         )}
-;
+
         {!loading && !delayedError && data && data.length === 0 && (";
           <div className="text-center text-muted-foreground py-12">;
             No {category} found.</div>;
         )}
-;
+
         {!loading && !delayedError && data && data.length > 0 && (";
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">;
             {data.map(item => (;
@@ -152,13 +141,12 @@ export function QuoteWizard({ category }) {;
                 className={`p-4 space-y-2 cursor-pointer border-2 transition-colors rounded-lg shadow-sm ${selectedItemId === item.id ? 'border-zion-purple ring-2 ring-zion-purple' : 'hover:border-zion-purple/70'} focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple`}
                 onClick={() => setSelectedItemId(item.id)}
                 tabIndex={0}
-                onKeyDown={e => {;
+                onKeyDown={e => {
 
-                  if(e.key === 'Enter' || e.key === ' ') {;
+                  if(e.key === 'Enter' || e.key === ' ') {
 
                     e.preventDefault();
-                    setSelectedItemId(item.id);,
-}
+                    setSelectedItemId(item.id)}
                 }}
               >";
                 <div className="font-semibold text-lg">{item.name}</div>;
@@ -173,11 +161,10 @@ export function QuoteWizard({ category }) {;
                   size="sm";
                   variant="outline"`;
                   data-testid={`select-item-${item.id}`}
-                  onClick={e => {;
+                  onClick={e => {
 
                     e.stopPropagation();
-                    handleSelect(item.id);,
-}}";
+                    handleSelect(item.id)}}";
                   className="w-full mt-2">;
                   Select this{' '}
                   {category === 'services'';
@@ -190,7 +177,7 @@ export function QuoteWizard({ category }) {;
             ))}
           </div>;
         )}
-;
+
         {selectionError && (;
           <p";
             className="text-red-500 text-sm mt-2";
@@ -205,9 +192,8 @@ export function QuoteWizard({ category }) {;
           Continue;
         </Button>;
       </div>;
-    );,
-}
-  if(step === 2) {;
+    )}
+  if(step === 2) {
 
     return (";
       <div data-testid="details-step" className="space-y-4">;
@@ -246,9 +232,8 @@ export function QuoteWizard({ category }) {;
           </Button>;
         </div>;
       </div>;
-    );,
-}
-  if(step === 3) {;
+    )}
+  if(step === 3) {
 
     return (";
       <div data-testid="success-step" className="space-y-4 text-center py-12">;
@@ -261,17 +246,14 @@ export function QuoteWizard({ category }) {;
           {selectedItem?.name || 'the selected item'}.We will get back to you;
           shortly.</p>;
         <Button;
-          onClick={() => {;
+          onClick={() => {
             setStep(1);
             setSelectedItemId(null);
-            setMessage('');,
-}}
+            setMessage('')}}
         >;
           Request Another Quote;
         </Button>;
       </div>;
-    );,
-}
-  return null;,
-}
+    )}
+  return null}
 '"`

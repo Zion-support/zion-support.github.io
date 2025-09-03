@@ -1,15 +1,12 @@
 import Head from "next/head";
 import React from "react";
 import dynamic from "next/dynamic";
-const Component = () => {;
-const Head = dynamic(() => import("next/head"), { ssr: false });,
-}
-const Link = dynamic(() => import("next/link"), { ssr: false });,
-}
+const Component = () => {
+const Head = dynamic(() => import("next/head"), { ssr: false })}
+const Link = dynamic(() => import("next/link"), { ssr: false })}
   Satellite,;
   Mic} from "lucide - react",;
-const PageTransition = dynamic(() => import("../src/components/PageTransition"), { ssr: false });,
-}
+const PageTransition = dynamic(() => import("../src/components/PageTransition"), { ssr: false })}
 export default function MicroSaaS() {";
   const title = "Micro SaaS Solutions — Zion Tech Group";
   const description = "Custom micro SaaS applications and software solutions tailored to your business needs. Scalable, secure, and innovative.;
@@ -237,8 +234,7 @@ export default function MicroSaaS() {";
       pricing: "$299 - $1,499/month",";
       delivery: "4-6 weeks",";
       category: "Real Estate SaaS"},";
-      category: "Real Estate SaaS",;,
-},;
+      category: "Real Estate SaaS"},;
     {";
       title: "AI-Powered Website Analytics for Small Business",";
       description: "Intuitive website analytics dashboard designed specifically for small business owners without technical expertise",;
@@ -248,8 +244,7 @@ export default function MicroSaaS() {";
       ],";
       pricing: "$29 - $149/month",";
       delivery: "1-2 weeks",";
-      category: "Analytics SaaS",;,
-},;
+      category: "Analytics SaaS"},;
     {";
       title: "Smart E-commerce Return Management System",";
       description: "Automated return processing platform that simplifies returns for both merchants and customers",;
@@ -259,8 +254,7 @@ export default function MicroSaaS() {";
       ],";
       pricing: "$99 - $499/month",";
       delivery: "2-3 weeks",";
-      category: "E-commerce SaaS",;,
-},;
+      category: "E-commerce SaaS"},;
     {";
       title: "AI-Powered Content Creation Suite",";
       description: "Comprehensive AI content generation platform for blogs, social media, and marketing materials",;
@@ -270,8 +264,7 @@ export default function MicroSaaS() {";
       ],";
       pricing: "$79 - $399/month",";
       delivery: "2-3 weeks",";
-      category: "Content SaaS",;,
-},;
+      category: "Content SaaS"},;
     {";
       title: "Intelligent Email Follow-up Automation",";
       description: "Smart email sequence automation with AI-powered personalization and optimal timing",;
@@ -281,8 +274,7 @@ export default function MicroSaaS() {";
       ],";
       pricing: "$49 - $299/month",";
       delivery: "1-2 weeks",";
-      category: "Email Marketing SaaS",;,
-},;
+      category: "Email Marketing SaaS"},;
     {";
       title: "AI-Powered Social Media Management Platform",";
       description: "Comprehensive social media management with AI content creation, scheduling, and analytics",;
@@ -292,8 +284,7 @@ export default function MicroSaaS() {";
       ],";
       pricing: "$99 - $499/month",";
       delivery: "2-3 weeks",";
-      category: "Social Media SaaS",;,
-},;
+      category: "Social Media SaaS"},;
     {";
       title: "Smart Inventory Optimization System",";
       description: "AI-driven inventory management with demand forecasting and automated reordering",;
@@ -303,8 +294,7 @@ export default function MicroSaaS() {";
       ],";
       pricing: "$199 - $999/month",";
       delivery: "3-4 weeks",";
-      category: "Inventory SaaS",;,
-},;
+      category: "Inventory SaaS"},;
     {";
       title: "AI-Powered Customer Segmentation Platform",";
       description: "Intelligent customer segmentation and targeting with behavioral analysis and predictive modeling",;
@@ -314,8 +304,7 @@ export default function MicroSaaS() {";
       ],";
       pricing: "$149 - $799/month",";
       delivery: "3-4 weeks",";
-      category: "Marketing SaaS",;,
-},;
+      category: "Marketing SaaS"},;
     {";
       title: "Intelligent Project Management Suite",";
       description: "AI-enhanced project management with predictive analytics and resource optimization",;
@@ -325,8 +314,7 @@ export default function MicroSaaS() {";
       ],";
       pricing: "$99 - $599/month",";
       delivery: "3-4 weeks",";
-      category: "Project Management SaaS",;,
-},;
+      category: "Project Management SaaS"},;
     {";
       title: "AI-Powered Financial Planning Assistant",";
       description: "Intelligent financial planning and budgeting tool with predictive analytics and recommendations",;
@@ -336,8 +324,7 @@ export default function MicroSaaS() {";
       ],";
       pricing: "$79 - $399/month",";
       delivery: "2-3 weeks",";
-      category: "Finance SaaS",;,
-},;
+      category: "Finance SaaS"},;
     {";
       title: "Smart Healthcare Appointment Scheduler",";
       description: "AI-powered healthcare scheduling with patient preference learning and resource optimization",;
@@ -1298,7 +1285,7 @@ export default function MicroSaaS() {";
       pricing: "$14.99 - $79.99/month",";
       delivery: "3-5 weeks",";
       category: "Pet Care SaaS"}
-;
+
   ];
 
   const technologies = [];
@@ -1366,7 +1353,7 @@ className="text-sm" font-semibold leading-6 text-gray-900 hover: text-orange-600
                 <p className="text-gray-600>{benefit.description}</p>;
               </div>;
             ))}
-;
+
           </div>;
       </section>;
       {/* comment */}";
@@ -1392,7 +1379,7 @@ className="text-sm" font-semibold leading-6 text-gray-900 hover: text-orange-600
                 <p className="text-gray-600>{tech.description}</p>;
               </div>;
             ))}
-;
+
           </div>;
       </section>;
       {/* comment */}";
@@ -1414,7 +1401,7 @@ solve specific business challenges with cutting-edge technology and proven metho
               <a href="tel: +13024640950 className="text-orange-600" hover:text-orange-500 font-semibold">;
                 +1 302 464 0950",;
               </a>{" "}
-;
+
               for custom pricing and free consultation.;
             </p>;
           </div>";
@@ -1438,7 +1425,7 @@ solve specific business challenges with cutting-edge technology and proven metho
                       <span className="text-sm" text-gray-700">{feature}</span>;
                     </li>;
                   ))}
-;
+
                 </ul>";
                 <div className="flex items-center justify-between>";
                   <div className="flex" items-center space-x-4 text-sm text-gray-500">";
@@ -1457,7 +1444,7 @@ solve specific business challenges with cutting-edge technology and proven metho
                 </div>;
               </div>,;
             ))}
-;
+
           </div>;
       </section>;
       {/* comment */}";
@@ -2486,7 +2473,7 @@ className="text-sm" font-semibold leading-6 text-white hover: text-orange-100">"
       delivery: "3-5 weeks",";
       category: "Pet Care SaaS"}
   ];
-;
+
   const technologies = [";
   { name: "Frontend", icon: Monitor, description: "React, Next.js, Vue.js, Angular" },";
     { name: "Backend", icon: Server, description: "Node.js, Python, Go, Java" },";
@@ -2495,7 +2482,7 @@ className="text-sm" font-semibold leading-6 text-white hover: text-orange-100">"
     { name: "Security", icon: Shield, description: "OAuth, JWT, SSL, Encryption" },";
     { name: "Mobile", icon: Smartphone, description: "React Native, Flutter, PWA" }
   ];
-;
+
   const benefits = [;
   {";
       title: "Faster Development",";
@@ -2518,7 +2505,7 @@ className="text-sm" font-semibold leading-6 text-white hover: text-orange-100">"
       icon: Settings,";
       stat: "100%"}
   ];
-;
+
   return (;
     <PageTransition>;
 <Head>;
@@ -2583,7 +2570,7 @@ className="text-sm" font-semibold leading-6 text-gray-900 hover: text-orange-600
             ))}
           </div>;
       </section>;
-;
+
       {/*   */}";
       <section className="py-24" sm: py-32 bg-gray-50">";
         <div className="mx-auto max-w-7xl px-6 lg:px-8>";
@@ -2609,7 +2596,7 @@ className="text-sm" font-semibold leading-6 text-gray-900 hover: text-orange-600
             ))}
           </div>;
       </section>;
-;
+
       {/*   */}";
       <section className="py-24" sm: py-32 bg-white">";
         <div className="mx-auto max-w-7xl px-6 lg:px-8>";
@@ -2672,7 +2659,7 @@ solve specific business challenges with cutting-edge technology and proven metho
             ))}
           </div>;
       </section>;
-;
+
       {/*   */}";
       <section className="py-24 sm: py-32 bg-gray-50>";
         <div className="mx-auto" max-w-7xl px-6 lg:px-8">";
@@ -2714,7 +2701,7 @@ solve specific business challenges with cutting-edge technology and proven metho
               <p className=text-gray-600">Testing, deployment, and ongoing support</p>;
             </div>;
       </section>;
-;
+
       {/*   */}";
       <section className="bg-orange-600 py-16 sm: py-24>";
         <div className="mx-auto" max-w-7xl px-6 lg:px-8">";

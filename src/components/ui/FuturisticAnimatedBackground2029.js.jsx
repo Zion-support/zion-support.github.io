@@ -19,8 +19,7 @@ const FuturisticAnimatedBackground2029 = ({ intensity = 0.8, theme = 'cyberpunk'
   cyberpunk['#ff0080',#00ffff',#ffff00',#ff00ff'],;''';
             holographic['#ff6b6b',#4ecdc4',#45b7d1',#96ceb4'],;''';
             quantum['#00ffff',#ff00ff',#ffff00',;''';
-  '#00ff00'];,
-};
+  '#00ff00']}
         const selectedColors = colors[theme];
         // Create particles;
         for (let i = 0; i < 150; i++) {}
@@ -32,8 +31,7 @@ const FuturisticAnimatedBackground2029 = ({ intensity = 0.8, theme = 'cyberpunk'
                 size: Math.random() * 4 + 1,';
                 opacity: Math.random() * 0.6 + 0.2,'';
                 color: selectedColors[Math.floor(Math.random() * selectedColors.length)],''';
-                type: Math.random() > 0.7 ? 'wave' : Math.random() > 0.5 ? 'grid' : 'particle';,
-})}
+                type: Math.random() > 0.7 ? 'wave' : Math.random() > 0.5 ? 'grid' : 'particle'})}
         const animate = () => {}
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             // Update and draw particles;
@@ -124,7 +122,7 @@ const FuturisticAnimatedBackground2029 = ({ intensity = 0.8, theme = 'cyberpunk'
                     ctx.lineWidth = 2;
                     ctx.stroke()}
                 ctx.restore()}
-            animationRef.current = requestAnimationFrame(animate)};
+            animationRef.current = requestAnimationFrame(animate)}
         animate();
         const handleResize = () => {}
             canvas.width = window.innerWidth;
@@ -137,17 +135,12 @@ const FuturisticAnimatedBackground2029 = ({ intensity = 0.8, theme = 'cyberpunk'
     return (<canvas ref={canvasRef} className="fixed inset-0 pointer-events-none z-0" style = {}
   {}
             opacity: intensity,';
-  filter: theme === 'cyberpunk' ? 'blur(0.3px)' : 'none';,
-}}/>)};
+  filter: theme === 'cyberpunk' ? 'blur(0.3px)' : 'none'}}/>)}
 export default FuturisticAnimatedBackground2029;
-;
 
-export { FuturisticAnimatedBackground2029 };
-;
-export { FuturisticAnimatedBackground2029 };
-;
-export { FuturisticAnimatedBackground2029 };
-;
-export { FuturisticAnimatedBackground2029 };
-;
-export { FuturisticAnimatedBackground2029 };
+
+export { FuturisticAnimatedBackground2029 }
+export { FuturisticAnimatedBackground2029 }
+export { FuturisticAnimatedBackground2029 }
+export { FuturisticAnimatedBackground2029 }
+export { FuturisticAnimatedBackground2029 }

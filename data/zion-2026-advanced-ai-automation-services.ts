@@ -1,5 +1,5 @@
 import { ServiceVariant  } from "../src/types/service-variants";
-export interface Zion2026AdvancedAIAutomationService {;
+export interface Zion2026AdvancedAIAutomationService {
   id: string;
   name: string;
   tagline: string;
@@ -26,7 +26,7 @@ export interface Zion2026AdvancedAIAutomationService {;
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -37,19 +37,18 @@ export interface Zion2026AdvancedAIAutomationService {;
   customers: number;
   rating: number;
   reviews: number}
-const contact = {;
+const contact = {
   mobile: "+1 302 464 0950",;
   email: "kleber@ziontechgroup.com",;
   address: "364 E Main St STE 1008 Middletown DE 19709";
-  ;
-  ;
-  ;
-  ;
-  website: "https://ziontechgroup.com";,;,
-}
+
+
+
+
+  website: "https://ziontechgroup.com"}
 export const zion2026AdvancedAIAutomationServices: Zion2026AdvancedAIAutomationService[] = [;
   // AI-Powered Autonomous Customer Success Platform;
-  {;
+  {
     id: "ai-autonomous-customer-success-platform-2026",;
     name: "AI Autonomous Customer Success Platform 2026",;
     tagline: "Fully autonomous customer success with AI-driven engagement and retention optimization",;
@@ -93,10 +92,9 @@ export const zion2026AdvancedAIAutomationServices: Zion2026AdvancedAIAutomationS
     launchDate: "2026-01-10",;
     customers: 1800,;
     rating: 4.9,;
-    reviews: 920;,;,
-},;
+    reviews: 920},;
   // AI-Powered Autonomous HR and Recruitment Platform;
-  {;
+  {
     id: "ai-autonomous-hr-recruitment-platform-2026",;
     name: "AI Autonomous HR and Recruitment Platform 2026",;
     tagline: "Fully autonomous HR operations with AI-driven recruitment and employee management",;
@@ -140,10 +138,9 @@ export const zion2026AdvancedAIAutomationServices: Zion2026AdvancedAIAutomationS
     launchDate: "2026-01-15",;
     customers: 2200,;
     rating: 4.8,;
-    reviews: 1100;,;,
-},;
+    reviews: 1100},;
   // AI-Powered Autonomous Sales Intelligence Platform;
-  {;
+  {
     id: "ai-autonomous-sales-intelligence-platform-2026",;
     name: "AI Autonomous Sales Intelligence Platform 2026",;
     tagline: "Fully autonomous sales operations with AI-driven intelligence and optimization",;
@@ -187,10 +184,9 @@ export const zion2026AdvancedAIAutomationServices: Zion2026AdvancedAIAutomationS
     launchDate: "2026-01-20",;
     customers: 1950,;
     rating: 4.9,;
-    reviews: 980;,;,
-},;
+    reviews: 980},;
   // AI-Powered Autonomous Research and Development Platform;
-  {;
+  {
     id: "ai-autonomous-research-development-platform-2026",;
     name: "AI Autonomous Research and Development Platform 2026",;
     tagline: "Fully autonomous R&D operations with AI-driven innovation and discovery",;
@@ -234,10 +230,9 @@ export const zion2026AdvancedAIAutomationServices: Zion2026AdvancedAIAutomationS
     launchDate: "2026-02-01",;
     customers: 850,;
     rating: 4.9,;
-    reviews: 420;,;,
-},;
+    reviews: 420},;
   // AI-Powered Autonomous Quality Assurance Platform;
-  {;
+  {
     id: "ai-autonomous-quality-assurance-platform-2026",;
     name: "AI Autonomous Quality Assurance Platform 2026",;
     tagline: "Fully autonomous quality assurance with AI-driven testing and optimization",;
@@ -281,10 +276,9 @@ export const zion2026AdvancedAIAutomationServices: Zion2026AdvancedAIAutomationS
     launchDate: "2026-01-25",;
     customers: 2800,;
     rating: 4.8,;
-    reviews: 1400;,;,
-},;
+    reviews: 1400},;
   // AI-Powered Autonomous Compliance and Governance Platform;
-  {;
+  {
     id: "ai-autonomous-compliance-governance-platform-2026",;
     name: "AI Autonomous Compliance and Governance Platform 2026",;
     tagline: "Fully autonomous compliance operations with AI-driven governance and risk management",;
@@ -328,10 +322,9 @@ export const zion2026AdvancedAIAutomationServices: Zion2026AdvancedAIAutomationS
     launchDate: "2026-02-05",;
     customers: 1200,;
     rating: 4.9,;
-    reviews: 580;,;,
-},;
+    reviews: 580},;
   // AI-Powered Autonomous Energy Management Platform;
-  {;
+  {
     id: "ai-autonomous-energy-management-platform-2026",;
     name: "AI Autonomous Energy Management Platform 2026",;
     tagline: "Fully autonomous energy operations with AI-driven optimization and sustainability",;
@@ -375,10 +368,9 @@ export const zion2026AdvancedAIAutomationServices: Zion2026AdvancedAIAutomationS
     launchDate: "2026-01-30",;
     customers: 1650,;
     rating: 4.8,;
-    reviews: 820;,;,
-},;
+    reviews: 820},;
   // AI-Powered Autonomous Transportation and Logistics Platform;
-  {;
+  {
     id: "ai-autonomous-transportation-logistics-platform-2026",;
     name: "AI Autonomous Transportation and Logistics Platform 2026",;
     tagline: "Fully autonomous transportation operations with AI-driven optimization and route planning",;

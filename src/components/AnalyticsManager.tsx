@@ -1,9 +1,9 @@
 import {  import { motion  } from 'framer-motion';
-;
+
  params - Function parameters;
  * @returns {*} Function return value;
  */;
-function AnalyticsManager () {;
+function AnalyticsManager () {
 
   BarChart3,;
   Users,;
@@ -16,36 +16,34 @@ function AnalyticsManager () {;
   Globe,;
   Smartphone,;
   Monitor} from 'lucide-react';
-;
-interface AnalyticsData {;
+
+interface AnalyticsData {
 
   pageViews: number;
   uniqueVisitors: number;
   sessionDuration: number;
   bounceRate: number;
   conversionRate: number;
-  topPages: { path: string; views: number ;,
-}[];
+  topPages: { path: string; views: number }[];
   userAgents: { device: string; count: number }[];
-  performance: {;
+  performance: {
 
     fcp: number;
     lcp: number;
     fid: number;
-    cls: number};
+    cls: number}
   events: { name: string; count: number; timestamp: string }[]}
-interface UserSession {;
+interface UserSession {
 
   id: string;
   startTime: number;
   lastActivity: number;
   pageViews: string[];
-  events: { name: string; timestamp: number; data?: unknown ;,
-}[];
+  events: { name: string; timestamp: number; data?: unknown }[];
   userAgent: string;
   referrer: string}
-;
-export function AnalyticsManager() {;
+
+export function AnalyticsManager() {
   const [analyticsData, setAnalyticsData] = useState<AnalyticsData | null>(;
     null;
   );
@@ -54,24 +52,22 @@ export function AnalyticsManager() {;
   );
   const [isTracking, setIsTracking] = useState(false);
   const [showAnalytics, setShowAnalytics] = useState(false);
-;
+
   // Initialize analytics tracking;
-  useEffect(() => {;
+  useEffect(() => {
   // TODO: Add dependencies if needed;
 
-  return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
+  return () => {
+    // Cleanup function}}, []);, []);
     initializeAnalytics();
     return () => cleanupAnalytics()}, []);
-;
+
     // Create or retrieve session;
-    ;
+
     localStorage.setItem('zion_session_id', sessionId);
       localStorage.getItem('zion_session_id') || generateSessionId();'    localStorage.setItem('zion_session_id', sessionId);
-;
-    const session: UserSession = {;
+
+    const session: UserSession = {
 
       id: sessionId,;
       startTime: Date.now () ,;
@@ -79,61 +75,59 @@ export function AnalyticsManager() {;
       pageViews: [window.location.pathname],;
       events: [],;
       userAgent: navigator.userAgent,;
-      referrer: document.referrer};
-;
+      referrer: document.referrer}
     setCurrentSession(session);
-;
+
     // Track page view;
     trackPageView(window.location.pathname);
-;
+
     // Track user agent;
     trackUserAgent(navigator.userAgent);
-;
+
     // Track referrer;
-    if(document.referrer) {;
+    if(document.referrer) {
 
       trackReferrer(document.referrer)}
     // Set up event listeners;
     setupEventListeners();
-;
+
     // Set up performance monitoring;
     setupPerformanceMonitoring();
-;
+
     // Set up session tracking;
     setupSessionTracking();
-;
+
     // console.log('Analytics initialized for session:', sessionId)}, []);
-;
+
     document.removeEventListener('scroll', handleScroll);
     window.removeEventListener('beforeunload', handleBeforeUnload);
     document.removeEventListener('click', handleClick);';
     document.removeEventListener('scroll', handleScroll);'    window.removeEventListener('beforeunload', handleBeforeUnload);
-;
+
     // Save session data;
-    if(currentSession) {;
+    if(currentSession) {
 
       saveSessionData(currentSession)}
-  }, [currentSession]) };
-;
+  }, [currentSession]) }
     // Scroll tracking';
     document.addEventListener('scroll', handleScroll, { passive: true });
-;
+
     // Page unload tracking';
     window.addEventListener('beforeunload', handleBeforeUnload)}, []);
-;
+
     // Track button clicks';
-    if(target.tagName === 'BUTTON' || target.closest('button')) {;
-      trackEvent('button_click', {;
+    if(target.tagName === 'BUTTON' || target.closest('button')) {
+      trackEvent('button_click', {
 
         text: target.textContent || target.innerText,;
         className: target.className,;
         id: target.id})}
-;
-    // Track link clicks';
-    if(target.tagName === 'A' || target.closest('a')) {;
 
-      trackEvent('link_click', {;
-          : (target.closest('a') as HTMLAnchorElement);'      trackEvent('link_click', {;
+    // Track link clicks';
+    if(target.tagName === 'A' || target.closest('a')) {
+
+      trackEvent('link_click', {
+          : (target.closest('a') as HTMLAnchorElement);'      trackEvent('link_click', {
 
         href: link.href,;
         text: link.textContent || link.innerText})}
@@ -142,50 +136,50 @@ export function AnalyticsManager() {;
       target.tagName === 'INPUT' ||';
       target.tagName === 'SELECT' ||';
       target.tagName === 'TEXTAREA';
-    ) {;
+    ) {
 
-      trackEvent('form_interaction', {;
+      trackEvent('form_interaction', {
 
         type: target.tagName.toLowerCase(),;
         name: (target as HTMLInputElement).name,;
         id: target.id})}
   }, []) ;
-;
-    if(scrollDepth % 25 === 0) {;
+
+    if(scrollDepth % 25 === 0) {
 
       // Track at 25%, 50%, 75%, 100%';
       trackEvent('scroll_depth', { depth: scrollDepth })}
   }, []) }
   }, [currentSession]) ;
-;
-        if(fcp) {;
+
+        if(fcp) {
 
           trackPerformance('fcp', fcp.startTime)}
       });
       fcpObserver.observe({ entryTypes: ['paint'] });
-;
+
       // Largest Contentful Paint;
 
-        if(lcp) {;
+        if(lcp) {
 
           trackPerformance('lcp', lcp.startTime)}
       });
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-;
+
       // First Input Delay;
 
-        if(fid) {;
+        if(fid) {
 
           trackPerformance('fid', fid.processingStart - fid.startTime)}
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
-;
+
       // Cumulative Layout Shift;
-      const clsObserver = new PerformanceObserver(list => {;
+      const clsObserver = new PerformanceObserver(list => {
 
-        let clsValue = 0;        for (const entry of list.getEntries()) {;
+        let clsValue = 0;        for (const entry of list.getEntries()) {
 
-          if(!entry.hadRecentInput) {;
+          if(!entry.hadRecentInput) {
 
             clsValue += (entry as any).value}
         }
@@ -193,54 +187,54 @@ export function AnalyticsManager() {;
       clsObserver.observe({ entryTypes: ['layout-shift'] })}
   }, []) }
     }, 30000) ;
-;
+
     return () => clearInterval(activityInterval) }, [currentSession]) ;
-;
+
         trackEvent('page_view', { path });
-;
+
         // Send to analytics endpoint';
         sendAnalyticsData('page_view', { path, timestamp: Date.now() })}
     },;
     [currentSession];
   );
-;
+
         setCurrentSession(prev =>;
           prev;
-            ? {;
+            ? {
 
                 ...prev,;
                 events: [...prev.events, event],;
                 lastActivity: Date.now()}
             : null;
         );
-;
+
         // Send to analytics endpoint';
         sendAnalyticsData('event', event)}
     },;
     [currentSession];
   )}, [])}, [])}, []);
-;
+
         // For now, just log to console';
-        // console.log('Analytics Event:', { type, data, sessionId: currentSession?.id })} catch(error) {;
+        // console.log('Analytics Event:', { type, data, sessionId: currentSession?.id })} catch(error) {
 
         // console.error('Failed to send analytics data:', error)}
     },;
     [currentSession];
   );
-;
+
         // Send to analytics endpoint';
-        await sendAnalyticsData('session_end', session)} catch(error) {;
+        await sendAnalyticsData('session_end', session)} catch(error) {
 
         // console.error('Failed to save session data:', error)}
     },;
     [sendAnalyticsData];
   );
-;
+
     // Calculate bounce rate(single page view sessions);
-    ;
+
     // Calculate conversion rate(sessions with specific events);
 
-    return {;
+    return {
 
       pageViews,;
       uniqueVisitors: 1, // Single session;
@@ -248,7 +242,7 @@ export function AnalyticsManager() {;
       bounceRate,;
       conversionRate: Math.round(conversionRate),;
       topPages: currentSession.pageViews.reduce();
-        (acc, path) => {;
+        (acc, path) => {
 
           acc[path] = (acc[path] || 0) + 1;
           return acc},;
@@ -261,25 +255,22 @@ export function AnalyticsManager() {;
 
         name: e.name,;
         count: 1,;
-        timestamp: new Date(e.timestamp).toISOString()}))}}, [currentSession])} else if(/Tablet|iPad/.test(userAgent)) {;
+        timestamp: new Date(e.timestamp).toISOString()}))}}, [currentSession])} else if(/Tablet|iPad/.test(userAgent)) {
 
-      return 'Tablet'} else {;
+      return 'Tablet'} else {
 
-      return 'Desktop'}  };
-;
+      return 'Desktop'}  }
   // Update analytics data when session changes;
-  useEffect(() => {;
+  useEffect(() => {
   // TODO: Add dependencies if needed;
 
-  return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
-    if(currentSession) {;
+  return () => {
+    // Cleanup function}}, []);, []);
+    if(currentSession) {
 
       setAnalyticsData(report)}
   }, [currentSession, generateAnalyticsReport]) ;
-  if(!showAnalytics) {;
+  if(!showAnalytics) {
 
     return ();
       <motion.button;
@@ -291,7 +282,7 @@ export function AnalyticsManager() {;
         <BarChart3 className="w-6 h-6" />;
       </motion.button>;
     )}
-;
+
   return ();
     <motion.div;
       initial={{ opacity: 0, y: 20 }}
@@ -359,8 +350,8 @@ export function AnalyticsManager() {;
 ";
       <div className="mt-4 pt-4 border-t border-gray-600">;
         <button;
-          onClick={() => {;
-            if(currentSession) {;
+          onClick={() => {
+            if(currentSession) {
 
               saveSessionData(currentSession)}
           }}"          className="w-full px-3 py-2 bg-cyan-600 hover:bg-cyan-700 text-white text-xs rounded transition-colors duration-200">;

@@ -1,5 +1,5 @@
 import { ServiceVariant  } from "../types/service-variants";
-export interface EmergingTech2026Service {;
+export interface EmergingTech2026Service {
   id: string;
   name: string;
   tagline: string;
@@ -26,7 +26,7 @@ export interface EmergingTech2026Service {;
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -38,7 +38,7 @@ export interface EmergingTech2026Service {;
   rating: number;
 export const emergingTech2026Services: EmergingTech2026Service[] = [;
   // Neural Interface Development Platform;
-  {;
+  {
     id: "neural-interface-dev-platform",;
     name: "Neural Interface Development Platform",;
     tagline: "Build brain-computer interfaces with AI-powered neural networks",;
@@ -76,21 +76,19 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [;
     marketSize: "$1.7B market (projected)",;
     growthRate: "500% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced neural interface platform with real-time signal processing, AI-powered analysis, and comprehensive development tools.",;
     launchDate: "2026-04-01",;
     customers: 45,;
     rating: 4.9,;
-    reviews: 23;,;,
-},;
+    reviews: 23},;
   // Quantum Consciousness Simulation;
-  {;
+  {
     id: "quantum-consciousness-simulation",;
     name: "Quantum Consciousness Simulation",;
     tagline: "Simulate consciousness using quantum computing algorithms",;
@@ -128,21 +126,19 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [;
     marketSize: "$500M market (emerging)",;
     growthRate: "800% annual growth",;
     variant: "quantum-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced quantum consciousness simulation platform with research-grade algorithms and comprehensive collaboration tools.",;
     launchDate: "2026-04-15",;
     customers: 25,;
     rating: 5.0,;
-    reviews: 18;,;,
-},;
+    reviews: 18},;
   // Holographic Metaverse Platform;
-  {;
+  {
     id: "holographic-metaverse-platform",;
     name: "Holographic Metaverse Platform",;
     tagline: "Create immersive 3D holographic worlds with AI",;
@@ -180,21 +176,19 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [;
     marketSize: "$74.2B market",;
     growthRate: "400% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Full-featured holographic metaverse platform with AI-powered world generation and comprehensive collaboration tools.",;
     launchDate: "2026-05-01",;
     customers: 180,;
     rating: 4.8,;
-    reviews: 95;,;,
-},;
+    reviews: 95},;
   // Autonomous Manufacturing AI;
-  {;
+  {
     id: "autonomous-manufacturing-ai",;
     name: "Autonomous Manufacturing AI",;
     tagline: "AI-powered autonomous manufacturing with zero human intervention",;
@@ -232,21 +226,19 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [;
     marketSize: "$198.4B market",;
     growthRate: "250% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Production autonomous manufacturing platform with comprehensive AI capabilities and equipment integration.",;
     launchDate: "2026-05-15",;
     customers: 120,;
     rating: 4.9,;
-    reviews: 78;,;,
-},;
+    reviews: 78},;
   // Space Technology AI Platform;
-  {;
+  {
     id: "space-technology-ai-platform",;
     name: "Space Technology AI Platform",;
     tagline: "AI-powered space exploration and satellite management",;
@@ -284,21 +276,19 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [;
     marketSize: "$469.0B market",;
     growthRate: "350% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced space technology platform with AI-powered satellite management and comprehensive space operations tools.",;
     launchDate: "2026-06-01",;
     customers: 65,;
     rating: 4.9,;
-    reviews: 42;,;,
-},;
+    reviews: 42},;
   // Quantum Energy Management;
-  {;
+  {
     id: "quantum-energy-management",;
     name: "Quantum Energy Management",;
     tagline: "Quantum AI-powered energy optimization and management",;
@@ -336,21 +326,19 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [;
     marketSize: "$125.3B market",;
     growthRate: "280% annual growth",;
     variant: "quantum-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Production quantum energy management platform with advanced optimization algorithms and comprehensive utility integration.",;
     launchDate: "2026-06-15",;
     customers: 95,;
     rating: 4.8,;
-    reviews: 67;,;,
-},;
+    reviews: 67},;
   // AI-Powered Robotics Platform;
-  {;
+  {
     id: "ai-robotics-platform-elite",;
     name: "AI Robotics Platform Elite",;
     tagline: "Intelligent robotics with advanced AI and machine learning",;
@@ -388,21 +376,19 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [;
     marketSize: "$43.8B market",;
     growthRate: "300% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Full-featured AI robotics platform with comprehensive robot programming and coordination tools.",;
     launchDate: "2026-07-01",;
     customers: 150,;
     rating: 4.8,;
-    reviews: 98;,;,
-},;
+    reviews: 98},;
   // Quantum Logistics Platform;
-  {;
+  {
     id: "quantum-logistics-platform",;
     name: "Quantum Logistics Platform",;
     tagline: "Quantum AI-powered logistics optimization and supply chain management",;
@@ -440,21 +426,19 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [;
     marketSize: "$15.5B market",;
     growthRate: "250% annual growth",;
     variant: "quantum-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Production quantum logistics platform with advanced optimization algorithms and comprehensive supply chain integration.",;
     launchDate: "2026-07-15",;
     customers: 180,;
     rating: 4.8,;
-    reviews: 112;,;,
-},;
+    reviews: 112},;
   // AI-Powered Virtual Events Platform;
-  {;
+  {
     id: "ai-virtual-events-platform",;
     name: "AI Virtual Events Platform",;
     tagline: "Intelligent virtual events with AI-powered engagement",;
@@ -492,12 +476,11 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [;
     marketSize: "$18.6B market",;
     growthRate: "220% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Full-featured virtual events platform with AI-powered engagement and comprehensive event management tools.",;
     launchDate: "2026-08-01",;

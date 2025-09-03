@@ -10,10 +10,9 @@ import { ;
   AlertCircle,;
   Clock,;
   Activity,;
-  Bot;,
-} from "lucide-react";
-;
-interface AIConversation {;
+  Bot} from "lucide-react";
+
+interface AIConversation {
   id: string;
   type: "chat" | "task" | "analysis" | "recommendation";
   title: string;
@@ -21,10 +20,9 @@ interface AIConversation {;
   status: "active" | "completed" | "archived";
   priority: "low" | "medium" | "high" | "critical";
   createdAt: string;
-  lastUpdated: string;,
-}
-;
-interface AIInsight {;
+  lastUpdated: string}
+
+interface AIInsight {
   id: string;
   title: string;
   description: string;
@@ -32,82 +30,74 @@ interface AIInsight {;
   impact: "high" | "medium" | "low";
   confidence: number;
   data: Record<string, string | number | boolean>;
-  createdAt: string;,
-}
-;
-interface AIFeature {;
+  createdAt: string}
+
+interface AIFeature {
   id: string;
   name: string;
   description: string;
   icon: React.ReactNode;
   status: "active" | "beta" | "coming-soon";
   usage: number;
-  accuracy: number;,
-}
-;
-const AdvancedAIAssistant: React.FC = () => {;
+  accuracy: number}
+
+const AdvancedAIAssistant: React.FC = () => {
   const [selectedView, setSelectedView] = useState<"overview" | "conversations" | "insights" | "features">("overview");
   const [searchQuery, setSearchQuery] = useState("");
-;
+
   const aiFeatures: AIFeature[] = [;
-    {;
+    {
       id: "1",;
       name: "Natural Language Processing",;
       description: "Advanced NLP for understanding complex queries and context",;
       icon: <Brain className="w-6 h-6" />,;
       status: "active",;
       usage: 95,;
-      accuracy: 94;,
-},;
-    {;
+      accuracy: 94},;
+    {
       id: "2",;
       name: "Predictive Analytics",;
       description: "AI-powered predictions for project outcomes and resource needs",;
       icon: <TrendingUp className="w-6 h-6" />,;
       status: "active",;
       usage: 87,;
-      accuracy: 89;,
-},;
-    {;
+      accuracy: 89},;
+    {
       id: "3",;
       name: "Intelligent Automation",;
       description: "Smart automation of repetitive tasks and workflows",;
       icon: <Zap className="w-6 h-6" />,;
       status: "active",;
       usage: 92,;
-      accuracy: 91;,
-},;
-    {;
+      accuracy: 91},;
+    {
       id: "4",;
       name: "Sentiment Analysis",;
       description: "Real-time analysis of client and team sentiment",;
       icon: <MessageCircle className="w-6 h-6" />,;
       status: "beta",;
       usage: 73,;
-      accuracy: 87;,
-},;
-    {;
+      accuracy: 87},;
+    {
       id: "5",;
       name: "Resource Optimization",;
       description: "AI-driven resource allocation and optimization",;
       icon: <Users className="w-6 h-6" />,;
       status: "active",;
       usage: 89,;
-      accuracy: 93;,
-},;
-    {;
+      accuracy: 93},;
+    {
       id: "6",;
       name: "Risk Assessment",;
       description: "Intelligent risk identification and mitigation strategies",;
       icon: <Shield className="w-6 h-6" />,;
       status: "beta",;
       usage: 68,;
-      accuracy: 85;,
-}
+      accuracy: 85}
   ];
-;
+
   const aiInsights: AIInsight[] = [;
-    {;
+    {
       id: "1",;
       title: "Project Timeline Optimization",;
       description: "AI analysis suggests 15% timeline compression is possible for the E-commerce project through parallel development and resource optimization.",;
@@ -115,9 +105,8 @@ const AdvancedAIAssistant: React.FC = () => {;
       impact: "high",;
       confidence: 0.91,;
       data: { compression: 15, savings: "2 weeks", risk: "low" },;
-      createdAt: "2025-01-27 16:00";,
-},;
-    {;
+      createdAt: "2025-01-27 16:00"},;
+    {
       id: "2",;
       title: "Resource Allocation Warning",;
       description: "Current resource allocation shows 23% underutilization in the Mobile App project, indicating potential efficiency improvements.",;
@@ -125,9 +114,8 @@ const AdvancedAIAssistant: React.FC = () => {;
       impact: "medium",;
       confidence: 0.87,;
       data: { underutilization: 23, potentialSavings: "$8,500", timeframe: "2 weeks" },;
-      createdAt: "2025-01-27 15:45";,
-},;
-    {;
+      createdAt: "2025-01-27 15:45"},;
+    {
       id: "3",;
       title: "Client Satisfaction Trend",;
       description: "Client satisfaction scores have increased by 12% over the last quarter, with AI-powered communication contributing to 8% of this improvement.",;
@@ -135,12 +123,11 @@ const AdvancedAIAssistant: React.FC = () => {;
       impact: "high",;
       confidence: 0.94,;
       data: { improvement: 12, aiContribution: 8, trend: "positive" },;
-      createdAt: "2025-01-27 15:30";,
-}
+      createdAt: "2025-01-27 15:30"}
   ];
-;
-  const getInsightIcon = (type: string) => {;
-    switch (type) {;
+
+  const getInsightIcon = (type: string) => {
+    switch (type) {
       case "positive":;
         return <CheckCircle className="w-6 h-6 text-green-400" />;
       case "warning":;
@@ -148,10 +135,8 @@ const AdvancedAIAssistant: React.FC = () => {;
       case "critical":;
         return <AlertCircle className="w-6 h-6 text-red-400" />;
       default:;
-        return <Activity className="w-6 h-6 text-blue-400" />;,
-}
-  };
-;
+        return <Activity className="w-6 h-6 text-blue-400" />}
+  }
   return (;
     <section className="py-20 bg-gradient-to-br from-gray-900 via-black to-gray-900">;
       <div className="container mx-auto px-4">;
@@ -179,8 +164,7 @@ const AdvancedAIAssistant: React.FC = () => {;
               className={`px-6 py-3 mx-2 mb-2 rounded-lg font-medium transition-colors ${;
                 selectedView === tab.id;
                   ? "bg-blue-600 text-white";
-                  : "bg-gray-800 text-gray-300 hover:bg-gray-700";,
-}`}
+                  : "bg-gray-800 text-gray-300 hover:bg-gray-700"}`}
             >;
               {tab.label}
             </button>;
@@ -216,8 +200,7 @@ const AdvancedAIAssistant: React.FC = () => {;
                       ? "bg-green-900 text-green-300";
                       : feature.status === "beta";
                       ? "bg-yellow-900 text-yellow-300";
-                      : "bg-gray-700 text-gray-300";,
-}`}>;
+                      : "bg-gray-700 text-gray-300"}`}>;
                     {feature.status}
                   </span>;
                   <div className="text-right">;
@@ -229,7 +212,7 @@ const AdvancedAIAssistant: React.FC = () => {;
             ))}
           </div>;
         )}
-;
+
         {selectedView === "insights" && (;
           <div className="space-y-6">;
             {aiInsights.map((insight) => (;
@@ -248,8 +231,7 @@ const AdvancedAIAssistant: React.FC = () => {;
                             ? "bg-red-900 text-red-300";
                             : insight.impact === "medium";
                             ? "bg-yellow-900 text-yellow-300";
-                            : "bg-green-900 text-green-300";,
-}`}>;
+                            : "bg-green-900 text-green-300"}`}>;
                           {insight.impact} impact;
                         </span>;
                         <span className="text-sm text-gray-400">;
@@ -266,7 +248,7 @@ const AdvancedAIAssistant: React.FC = () => {;
             ))}
           </div>;
         )}
-;
+
         {selectedView === "features" && (;
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">;
             {aiFeatures.map((feature) => (;
@@ -306,7 +288,5 @@ const AdvancedAIAssistant: React.FC = () => {;
         )}
       </div>;
     </section>;
-  );,
-};
-;
+  )}
 export default AdvancedAIAssistant;

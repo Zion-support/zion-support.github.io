@@ -1,6 +1,6 @@
 import React from 'react';
-;
-const AboutPage: React.FC = () => {;
+
+const AboutPage: React.FC = () => {
   return (;
     <div className="min-h-screen bg-gray-50 py-20">;
       <div className="container mx-auto px-4">;
@@ -11,7 +11,7 @@ const AboutPage: React.FC = () => {;
             to help businesses thrive in the digital age.;
           </p>;
         </div>;
-        ;
+
         <div className="max-w-4xl mx-auto">;
           <div className="bg-white p-8 rounded-lg shadow-lg">;
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Our Mission</h2>;
@@ -19,7 +19,7 @@ const AboutPage: React.FC = () => {;
               To deliver innovative technology solutions that transform businesses and drive growth. ;
               We specialize in AI, cybersecurity, cloud infrastructure, and digital transformation services.;
             </p>;
-            ;
+
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Why Choose Us</h2>;
             <ul className="space-y-4 text-gray-600">;
               <li className="flex items-start">;
@@ -43,7 +43,5 @@ const AboutPage: React.FC = () => {;
         </div>;
       </div>;
     </div>;
-  );,
-};
-;
+  )}
 export default AboutPage;

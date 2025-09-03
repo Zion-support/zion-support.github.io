@@ -1,17 +1,16 @@
 import React from 'react';
 import { SEO } from '../components/SEO';
-;
+
 export default function Services(...args: any[]): any {): unknown {): unknown {}
   const [activeCategory, setActiveCategory] = useState(0);';
   const [searchTerm, setSearchTerm] = useState('');
-;
+
   const filteredServices: unknown = allServices.filter(service => {}
     const matchesSearch: unknown = service.name.toLowerCase () .includes(searchQuery.toLowerCase () ) ||;
                          service.description.toLowerCase () .includes(searchQuery.toLowerCase () ) ;
     const matchesCategory: unknown = selectedCategory === 'all' || service.category === selectedCategory;
-    return matchesSearch && matchesCategory;,
-}) ;
-;
+    return matchesSearch && matchesCategory}) ;
+
   return();
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">"";
       <div className="container mx-auto px-4 py-24 text-center text-white">"        <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">;
@@ -200,14 +199,13 @@ export default function Services(...args: any[]): any {): unknown {): unknown {}
         </div>;
       </div>;
     </>;
-  )};
+  )}
 export default Services;'";
 '"'";
-export { Services };
-;
-export default function Services() {;
+export { Services }
+export default function Services() {
   const services = [;
-    {;
+    {
       id: 'ai',;
       title: "AI Solutions",;
       description: "Transform your business with cutting-edge artificial intelligence and machine learning solutions",;
@@ -227,9 +225,8 @@ export default function Services() {;
         "Gain competitive advantage with AI insights",;
         "Scale operations without proportional cost increase";
       ],;
-      link: "/services/ai";,
-},;
-    {;
+      link: "/services/ai"},;
+    {
       id: 'talent',;
       title: "Tech Talent",;
       description: "Access world-class developers, engineers, and IT professionals for your projects",;
@@ -248,9 +245,8 @@ export default function Services() {;
         "Flexible engagement models",;
         "Proven track record of success";
       ],;
-      link: "/talent";,
-},;
-    {;
+      link: "/talent"},;
+    {
       id: 'equipment',;
       title: "Equipment & Infrastructure",;
       description: "High-performance technology infrastructure and hardware solutions for modern businesses",;
@@ -270,9 +266,8 @@ export default function Services() {;
         "Scale with business growth",;
         "Enhanced security and compliance";
       ],;
-      link: "/equipment";,
-},;
-    {;
+      link: "/equipment"},;
+    {
       id: 'consulting',;
       title: "Technology Consulting",;
       description: "Strategic guidance for digital transformation and technology optimization",;
@@ -292,9 +287,8 @@ export default function Services() {;
         "Optimize IT investments",;
         "Accelerate digital transformation";
       ],;
-      link: "/consulting";,
-},;
-    {;
+      link: "/consulting"},;
+    {
       id: 'cybersecurity',;
       title: "Cybersecurity Services",;
       description: "Comprehensive security solutions to protect your digital assets and ensure compliance",;
@@ -314,9 +308,8 @@ export default function Services() {;
         "Reduce security risks",;
         "Build customer trust";
       ],;
-      link: "/services/cybersecurity";,
-},;
-    {;
+      link: "/services/cybersecurity"},;
+    {
       id: 'cloud',;
       title: "Cloud Services",;
       description: "Scalable cloud solutions and DevOps services for modern application development",;
@@ -338,55 +331,47 @@ export default function Services() {;
       ],;
       link: "/services/cloud"    }
   ];
-;
+
   const stats = [;
-    {;
+    {
       icon: Globe,;
       value: "500+",;
       label: "Projects Delivered",;
-      description: "Across 25+ countries";,
-},;
-    {;
+      description: "Across 25+ countries"},;
+    {
       icon: Code,;
       value: "50+",;
       label: "Technologies",;
-      description: "Modern tech stack";,
-},;
-    {;
+      description: "Modern tech stack"},;
+    {
       icon: Star,;
       value: "99.9%",;
       label: "Client Satisfaction",;
-      description: "Proven track record";,
-},;
-    {;
+      description: "Proven track record"},;
+    {
       icon: Lock,;
       value: "100%",;
       label: "Security",;
-      description: "Zero breaches";,
-}
+      description: "Zero breaches"}
   ];
-;
-  const containerVariants = {;
+
+  const containerVariants = {
     hidden: { opacity: 0 },;
-    visible: {;
+    visible: {
       opacity: 1,;
-      transition: {;
-        staggerChildren: 0.1;,
-}
+      transition: {
+        staggerChildren: 0.1}
     }
-  };
-;
-  const itemVariants = {;
+  }
+  const itemVariants = {
     hidden: { opacity: 0, y: 20 },;
-    visible: {;
+    visible: {
       opacity: 1,;
       y: 0,;
-      transition: {;
-        duration: 0.6;,
-}
+      transition: {
+        duration: 0.6}
     }
-  };
-;
+  }
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       {/* Hero Section */}
@@ -395,7 +380,7 @@ export default function Services() {;
           <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl"></div>;
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>;
         </div>;
-        ;
+
         <div className="container mx-auto px-4 text-center relative z-10">;
           <motion.div ;
             variants={containerVariants}
@@ -443,7 +428,7 @@ export default function Services() {;
             className="grid grid-cols-2 md:grid-cols-4 gap-8">;
             {stats.map((stat, index) => (;
               <motion.div ;
-                key={index} ;
+                key={index}
                 variants={itemVariants}
                 className="text-center group">;
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">;
@@ -481,10 +466,10 @@ export default function Services() {;
                     <ArrowRight className="w-5 h-5 group-hover/link:translate-x-1 transition-transform" />;
                   </Link>;
                 </div>;
-                ;
+
                 <h3 className="text-2xl font-semibold text-white mb-4">{service.title}</h3>;
                 <p className="text-gray-400 mb-6">{service.description}</p>;
-                ;
+
                 {/* Features */}
                 <div className="mb-6">;
                   <h4 className="text-white font-medium mb-3">Key Features</h4>;
@@ -576,6 +561,5 @@ export default function Services() {;
               </Link>;
             </div>;
     </>;
-  );,
-}
+  )}
 export default Services;

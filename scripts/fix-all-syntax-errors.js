@@ -1,31 +1,27 @@
 #!/usr/bin/env node;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-class SyntaxErrorFixer {;
-  constructor() {;
+class SyntaxErrorFixer {
+  constructor() {
 
     this.projectRoot = process.cwd();
     this.scriptsDir = path.join(this.projectRoot, "scripts");
     this.fixedCount = 0;
-    this.errorCount = 0,;,
-}
-  async fixAllScripts() {;
+    this.errorCount = 0}
+  async fixAllScripts() {
 
     console.log("🔧 Starting comprehensive syntax error fixing...");
     const files = fs.readdirSync(this.scriptsDir));
     const jsFiles = files.filter(file => file.endsWith(".js") || file.endsWith(".cjs"));
-    for (const file of jsFiles) {;
-      await this.fixScript(file)),;,
-}
-    ;
+    for (const file of jsFiles) {
+      await this.fixScript(file))}
     console.log(`\n✅ Syntax fixing completed!`);
     console.log(`📊 Fixed: ${this.fixedCount} files`);
-    console.log(`❌ Errors: ${this.errorCount} files`),;,
-}
-;
-  async fixScript(filename) {;
+    console.log(`❌ Errors: ${this.errorCount} files`)}
+
+  async fixScript(filename) {
     const filePath = path.join(this.scriptsDir, filename));
-    try {;
+    try {
       console.log(`🔍 Checking: ${filename}`);
       let content = fs.readFileSync(filePath, "utf8");
       let originalContent = content;
@@ -36,21 +32,17 @@ class SyntaxErrorFixer {;
       content = this.fixObjectSyntax(content));
       content = this.fixFunctionSyntax(content));
       content = this.fixConditionalSyntax(content));
-      if (content !== originalContent) {;
+      if (content !== originalContent) {
         fs.writeFileSync(filePath, content));
         console.log(`✅ Fixed: ${filename}`);
-        this.fixedCount++,;,
-} else {;
-        console.log(`✓ No issues: ${filename}`),;,
-}
-      ,;,
-} catch (error) {;
+        this.fixedCount++} else {
+        console.log(`✓ No issues: ${filename}`)}
+      } catch (error) {
       console.log(`❌ Error fixing ${filename}: ${error.message}`);
-      this.errorCount++,;,
-}
+      this.errorCount++}
   }
-;
-  fixImportStatements(content) {;
+
+  fixImportStatements(content) {
     // Fix broken;
     content = content.replace(/import\s+(\w+)\s+from\s*;\s*[""`]([^""`]+)[""`]/g, "import $1 from "$2"");
     content = content.replace(/import\s+(\w+)\s+from\s*,\s*[""`]([^""`]+)[""`]/g, "import $1 from "$2"");
@@ -58,9 +50,8 @@ class SyntaxErrorFixer {;
     content = content.replace(/import\s+(\w+)\s+from\s*,\s*\n\s*[""`]([^""`]+)[""`]/g, "import $1 from "$2"");
     // Fix incomplete;
     content = content.replace(/import\s+(\w+)\s+from\s*$/gm, "import $1 from "$1"");
-    return content,;,
-}
-  fixSemicolonIssues(content) {;
+    return content}
+  fixSemicolonIssues(content) {
     // Fix misplaced semicolons;
     content = content.replace(/;\s*$/gm, "");
     content = content.replace(/;\s*\n\s*[""`]/g, "\n  \"");
@@ -69,37 +60,32 @@ class SyntaxErrorFixer {;
     // Fix missing semicolons where needed;
     content = content.replace(/(\w+)\s*}\s*$/gm, "$1;\n}");
     content = content.replace(/(\w+)\s*\)\s*$/gm, "$1;\n)");
-    return content,;,
-}
-  fixStringConcatenation(content) {;
+    return content}
+  fixStringConcatenation(content) {
     // Fix broken string concatenation;
     content = content.replace(/[""`]\s*;\s*\n\s*[""`]/g, """);
     content = content.replace(/[""`]\s*,\s*\n\s*[""`]/g, """);
     content = content.replace(/[""`]\s*;\s*[""`]/g, """);
     content = content.replace(/[""`]\s*,\s*[""`]/g, """);
-    return content,;,
-}
-  fixObjectSyntax(content) {;
+    return content}
+  fixObjectSyntax(content) {
     // Fix object syntax issues;
-    content = content.replace(/(\w+):\s*([^,}]+)\s*;\s*}/g, "$1: $2\n}");
-    content = content.replace(/(\w+):\s*([^,}]+)\s*;\s*\)/g, "$1: $2\n)");
-    content = content.replace(/(\w+):\s*([^,}]+)\s*;\s*]/g, "$1: $2\n]");
-    return content,;,
-}
-  fixFunctionSyntax(content) {;
+    content = content.replace(/(\w+):\s*([^}]+)\s*;\s*}/g, "$1: $2\n}");
+    content = content.replace(/(\w+):\s*([^}]+)\s*;\s*\)/g, "$1: $2\n)");
+    content = content.replace(/(\w+):\s*([^}]+)\s*;\s*]/g, "$1: $2\n]");
+    return content}
+  fixFunctionSyntax(content) {
     // Fix function syntax issues;
     content = content.replace(/function\s+(\w+)\s*\(\s*\)\s*{\s*$/gm, "function $1() {\n");
     content = content.replace(/(\w+)\s*\(\s*\)\s*{\s*$/gm, "$1() {\n");
-    return content,;,
-}
-  fixConditionalSyntax(content) {;
+    return content}
+  fixConditionalSyntax(content) {
     // Fix conditional syntax issues;
     content = content.replace(/\?\s*([^:]+)\s*;\s*$/gm, "? $1 :");
     content = content.replace(/\?\s*([^:]+)\s*;\s*\n/gm, "? $1 :\n");
-    return content,;,
+    return content}
 }
-}
-;
+
 // Run the syntax fixer;
 const fixer = new SyntaxErrorFixer();
 fixer.fixAllScripts().catch(console.error))

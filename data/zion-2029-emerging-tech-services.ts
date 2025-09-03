@@ -1,4 +1,4 @@
-export interface ZionEmergingTechService2029 {;
+export interface ZionEmergingTechService2029 {
   id: string;
   name: string;
   tagline: string;
@@ -25,7 +25,7 @@ export interface ZionEmergingTechService2029 {;
   isPopular?: boolean;
   isNew?: boolean;
   link: string;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -44,7 +44,7 @@ export interface ZionEmergingTechService2029 {;
   reviews: number}
 export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
   // Space Technology Solutions;
-  {;
+  {
     id: "space-tech-satellite-platform",;
     name: "Space Tech Satellite Platform",;
     tagline: "Revolutionary satellite technology for global connectivity",;
@@ -75,12 +75,11 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     isPopular: true,;
     isNew: true,;
     link: "https://ziontechgroup.com/services/space-tech-satellite-platform",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     technology: [;
       "CubeSat technology",;
@@ -112,10 +111,9 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     launchDate: "2024-01-10",;
     customers: 23,;
     rating: 4.9,;
-    reviews: 45,;,;,
-},;
+    reviews: 45},;
   // Renewable Energy AI Platform;
-  {;
+  {
     id: "renewable-energy-ai-platform",;
     name: "Renewable Energy AI Platform",;
     tagline: "AI-powered renewable energy optimization and management",;
@@ -145,12 +143,11 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     icon: "⚡",;
     isPopular: true,;
     link: "https://ziontechgroup.com/services/renewable-energy-ai-platform",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     technology: [;
       "Machine learning algorithms",;
@@ -179,10 +176,9 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     launchDate: "2023-12-15",;
     customers: 89,;
     rating: 4.8,;
-    reviews: 67,;,;,
-},;
+    reviews: 67},;
   // Autonomous Vehicle Technology;
-  {;
+  {
     id: "autonomous-vehicle-technology",;
     name: "Autonomous Vehicle Technology Platform",;
     tagline: "Next-generation autonomous vehicle systems and infrastructure",;
@@ -212,12 +208,11 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     icon: "🚗",;
     isPopular: true,;
     link: "https://ziontechgroup.com/services/autonomous-vehicle-technology",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     technology: [;
       "Computer vision",;
@@ -245,10 +240,9 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     launchDate: "2024-02-20",;
     customers: 45,;
     rating: 4.7,;
-    reviews: 78,;,;,
-},;
+    reviews: 78},;
   // Biotechnology AI Platform;
-  {;
+  {
     id: "biotech-ai-platform",;
     name: "Biotechnology AI Platform",;
     tagline: "AI-driven biotechnology research and development",;
@@ -278,12 +272,11 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     icon: "🧬",;
     isPopular: true,;
     link: "https://ziontechgroup.com/services/biotech-ai-platform",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     technology: [;
       "Deep learning",;
@@ -316,10 +309,9 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     launchDate: "2023-11-25",;
     customers: 34,;
     rating: 4.9,;
-    reviews: 56,;,;,
-},;
+    reviews: 56},;
   // Advanced Robotics Platform;
-  {;
+  {
     id: "advanced-robotics-platform",;
     name: "Advanced Robotics Platform",;
     tagline: "Intelligent robotics for industrial and service applications",;
@@ -349,12 +341,11 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     icon: "🤖",;
     isPopular: true,;
     link: "https://ziontechgroup.com/services/advanced-robotics-platform",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     technology: [;
       "ROS (Robot Operating System)",;
@@ -382,10 +373,9 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     launchDate: "2024-01-30",;
     customers: 78,;
     rating: 4.8,;
-    reviews: 89,;,;,
-},;
+    reviews: 89},;
   // Augmented Reality Enterprise Platform;
-  {;
+  {
     id: "ar-enterprise-platform",;
     name: "Augmented Reality Enterprise Platform",;
     tagline: "Transform business operations with AR technology",;
@@ -415,12 +405,11 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     icon: "🥽",;
     isPopular: true,;
     link: "https://ziontechgroup.com/services/ar-enterprise-platform",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     technology: [;
       "Unity 3D",;
@@ -455,10 +444,9 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     launchDate: "2023-12-05",;
     customers: 156,;
     rating: 4.7,;
-    reviews: 123,;,;,
-},;
+    reviews: 123},;
   // Quantum Computing as a Service;
-  {;
+  {
     id: "quantum-computing-service",;
     name: "Quantum Computing as a Service",;
     tagline: "Access quantum computing power through the cloud",;
@@ -488,12 +476,11 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     icon: "⚛️",;
     isPopular: true,;
     link: "https://ziontechgroup.com/services/quantum-computing-service",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     technology: [;
       "IBM Qiskit",;
@@ -527,10 +514,9 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     launchDate: "2024-02-15",;
     customers: 23,;
     rating: 4.9,;
-    reviews: 34,;,;,
-},;
+    reviews: 34},;
   // Nanotechnology Manufacturing Platform;
-  {;
+  {
     id: "nanotech-manufacturing-platform",;
     name: "Nanotechnology Manufacturing Platform",;
     tagline: "Revolutionary nanoscale manufacturing and materials",;
@@ -560,12 +546,11 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     icon: "🔬",;
     isPopular: true,;
     link: "https://ziontechgroup.com/services/nanotech-manufacturing-platform",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     technology: [;
       "Atomic force microscopy",;
@@ -598,10 +583,9 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     launchDate: "2024-01-25",;
     customers: 12,;
     rating: 4.8,;
-    reviews: 23,;,;,
-},;
+    reviews: 23},;
   // Smart Cities Infrastructure Platform;
-  {;
+  {
     id: "smart-cities-infrastructure",;
     name: "Smart Cities Infrastructure Platform",;
     tagline: "Intelligent urban infrastructure and management",;
@@ -631,12 +615,11 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     icon: "🏙️",;
     isPopular: true,;
     link: "https://ziontechgroup.com/services/smart-cities-infrastructure",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     technology: [;
       "IoT sensors",;
@@ -671,10 +654,9 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     launchDate: "2023-11-15",;
     customers: 45,;
     rating: 4.8,;
-    reviews: 78,;,;,
-},;
+    reviews: 78},;
   // Digital Twin Technology Platform;
-  {;
+  {
     id: "digital-twin-platform",;
     name: "Digital Twin Technology Platform",;
     tagline: "Create virtual replicas of physical systems",;
@@ -704,12 +686,11 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     icon: "🔄",;
     isPopular: true,;
     link: "https://ziontechgroup.com/services/digital-twin-platform",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     technology: [;
       "IoT sensors",;
@@ -744,10 +725,9 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     launchDate: "2024-01-20",;
     customers: 89,;
     rating: 4.7,;
-    reviews: 67,;,;,
-},;
+    reviews: 67},;
   // Metaverse Development Platform;
-  {;
+  {
     id: "metaverse-development-platform",;
     name: "Metaverse Development Platform",;
     tagline: "Build immersive virtual worlds and experiences",;
@@ -777,12 +757,11 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     icon: "🌍",;
     isPopular: true,;
     link: "https://ziontechgroup.com/services/metaverse-development-platform",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     technology: [;
       "Unity 3D",;
@@ -816,18 +795,15 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     launchDate: "2024-02-10",;
     customers: 234,;
     rating: 4.6,;
-    reviews: 156,;,;,
-},;
+    reviews: 156},;
 ];
 export const getServicesByCategory = (;
   category: ZionEmergingTechService2029["category"];
-) => {;
+) => {
   return zionEmergingTechServices2029.filter(;
     service => service.category === category;
   )}
-export const getPopularServices = () => {;
-  return zionEmergingTechServices2029.filter(service => service.isPopular);,;,
-}
-export const getNewServices = () => {;
-  return zionEmergingTechServices2029.filter(service => service.isNew);,;,
-}
+export const getPopularServices = () => {
+  return zionEmergingTechServices2029.filter(service => service.isPopular)}
+export const getNewServices = () => {
+  return zionEmergingTechServices2029.filter(service => service.isNew)}

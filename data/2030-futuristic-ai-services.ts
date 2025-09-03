@@ -1,5 +1,5 @@
 import { ServiceVariant  } from "../types/service-variants";
-export interface FuturisticAIService2030 {;
+export interface FuturisticAIService2030 {
   id: string;
   name: string;
   tagline: string;
@@ -26,7 +26,7 @@ export interface FuturisticAIService2030 {;
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -38,7 +38,7 @@ export interface FuturisticAIService2030 {;
   rating: number;
 export const futuristicAIServices2030: FuturisticAIService2030[] = [;
   // AI Consciousness & Evolution 2030;
-  {;
+  {
     id: "ai-consciousness-evolution-2030",;
     name: "AI Consciousness Evolution 2030",;
     tagline: "Next-generation AI consciousness development",;
@@ -76,21 +76,19 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [;
     marketSize: "Emerging market - $100B+ potential",;
     growthRate: "800%+ annual growth potential",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced AI consciousness development platform with real-time monitoring, ethical frameworks, and consciousness validation protocols.",;
     launchDate: "2030-01-01",;
     customers: 8,;
     rating: 5.0,;
-    reviews: 5;,;,
-},;
+    reviews: 5},;
   // Quantum AI Computing 2030;
-  {;
+  {
     id: "quantum-ai-computing-2030",;
     name: "Quantum AI Computing 2030",;
     tagline: "Quantum-powered AI computation",;
@@ -128,21 +126,19 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [;
     marketSize: "Emerging market - $200B+ potential",;
     growthRate: "1500%+ annual growth potential",;
     variant: "quantum-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced quantum AI computing platform with real-time quantum AI processing and validation.",;
     launchDate: "2030-01-15",;
     customers: 5,;
     rating: 5.0,;
-    reviews: 3;,;,
-},;
+    reviews: 3},;
   // AI Autonomous Operations 2030;
-  {;
+  {
     id: "ai-autonomous-operations-2030",;
     name: "AI Autonomous Operations 2030",;
     tagline: "Fully autonomous AI operations",;
@@ -180,21 +176,19 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [;
     marketSize: "Growing market - $400B+ potential",;
     growthRate: "2000%+ annual growth potential",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced AI autonomous operations platform with autonomous decision-making, self-optimization, and AI evolution.",;
     launchDate: "2030-02-01",;
     customers: 12,;
     rating: 4.9,;
-    reviews: 8;,;,
-},;
+    reviews: 8},;
   // AI Metaverse Integration 2030;
-  {;
+  {
     id: "ai-metaverse-integration-2030",;
     name: "AI Metaverse Integration 2030",;
     tagline: "AI-powered metaverse experiences",;
@@ -232,21 +226,19 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [;
     marketSize: "Growing market - $300B+ potential",;
     growthRate: "1200%+ annual growth potential",;
     variant: "metaverse-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced AI metaverse integration platform with AI-powered experiences, virtual beings, and intelligent virtual worlds.",;
     launchDate: "2030-02-15",;
     customers: 18,;
     rating: 4.8,;
-    reviews: 12;,;,
-},;
+    reviews: 12},;
   // AI Space Technology 2030;
-  {;
+  {
     id: "ai-space-technology-2030",;
     name: "AI Space Technology 2030",;
     tagline: "AI-powered space exploration",;
@@ -284,12 +276,11 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [;
     marketSize: "Emerging market - $800B+ potential",;
     growthRate: "3000%+ annual growth potential",;
     variant: "space-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced AI space technology platform with autonomous space missions, AI-powered exploration, and intelligent space operations.",;
     launchDate: "2030-01-10",;

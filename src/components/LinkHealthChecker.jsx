@@ -1,74 +1,67 @@
 import React, { useState, useEffect } from 'react';
-import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthChecker = ({ links, className = '' }) => {;
+import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthChecker = ({ links, className = '' }) => {
 
     const [linkStatuses, setLinkStatuses] = useState([]);
-    const [isChecking, setIsChecking] = useState(false);    const checkLinkHealth = async(url) => {;
+    const [isChecking, setIsChecking] = useState(false);    const checkLinkHealth = async(url) => {
 
         const startTime = Date.now();
-        try {;
+        try {
 
             // Check if it's an external link';
-            if(url.startsWith('http') && !url.includes('ziontechgroup.com')) {;
+            if(url.startsWith('http') && !url.includes('ziontechgroup.com')) {
 
-                return {;
+                return {
 
                     url,;
                     status: 'external',;
-                    responseTime: Date.now() - startTime;,
-}}
+                    responseTime: Date.now() - startTime}}
             // Check if it's a mailto or tel link';
-            if(url.startsWith('mailto:') || url.startsWith('tel:')) {;
+            if(url.startsWith('mailto:') || url.startsWith('tel:')) {
 
-                return {;
+                return {
 
                     url,;
                     status: 'healthy',;
-                    responseTime: Date.now() - startTime;,
-}}
+                    responseTime: Date.now() - startTime}}
             // For internal links, we'll assume they're healthy since they're part of our app';
-            if(url.startsWith('/') || url.includes('ziontechgroup.com')) {;
+            if(url.startsWith('/') || url.includes('ziontechgroup.com')) {
 
-                return {;
+                return {
 
                     url,;
                     status: 'healthy',;
-                    responseTime: Date.now () - startTime;,
-}}
+                    responseTime: Date.now () - startTime}}
             // For external links, we could implement actual health checking';
             // For now, we'll mark them as external;
-            return {;
+            return {
 
                 url,;
                 status: 'external',;
-                responseTime: Date.now () - startTime;,
-}}
-        catch(error) {;
-            return {;
+                responseTime: Date.now () - startTime}}
+        catch(error) {
+            return {
 
                 url,;
                 status: 'broken',;
                 responseTime: Date.now() - startTime,;
-                error: error instanceof Error ? error.message : 'Unknown error';,
-}}
-    };
-    const checkAllLinks = async () => {;
+                error: error instanceof Error ? error.message : 'Unknown error'}}
+    }
+    const checkAllLinks = async () => {
         setIsChecking(true);
         setLinkStatuses(links.map(link => ({ url: link.url, status: 'checking' })));
         const statuses = await Promise.all(links.map(link => checkLinkHealth(link.url)));
         setLinkStatuses(statuses);
-        setIsChecking(false)};
-    useEffect(() => {;
+        setIsChecking(false)}
+    useEffect(() => {
   // TODO: Add dependencies if needed;
 
-  return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
+  return () => {
+    // Cleanup function}}, []);, []);
         // Auto-check links when component mounts;
         checkAllLinks()}, [links]);
-    const getStatusIcon = (status) => {;
+    const getStatusIcon = (status) => {
 
-        switch(status) {;
+        switch(status) {
 
             case 'healthy':;
                 return <CheckCircle className="w-5 h-5 text-green-500"/>;
@@ -80,10 +73,10 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
                 return <AlertTriangle className="w-5 h-5 text-yellow-500 animate-pulse"/>;
             default:";
                 return <AlertTriangle className="w-5 h-5 text-gray-500"/>}
-    };
-    const getStatusText = (status) => {;
+    }
+    const getStatusText = (status) => {
 
-        switch(status) {;
+        switch(status) {
 
             case 'healthy':';
                 return 'Healthy';
@@ -95,10 +88,10 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
                 return 'Checking...';
             default:';
                 return 'Unknown'}
-    };
-    const getStatusColor = (status) => {;
+    }
+    const getStatusColor = (status) => {
 
-        switch(status) {;
+        switch(status) {
 
             case 'healthy':';
                 return 'text-green-500';
@@ -110,7 +103,7 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
                 return 'text-yellow-500';
             default:';
                 return 'text-gray-500'}
-    };
+    }
     const healthyCount = linkStatuses.filter(s => s.status === 'healthy').length;
     const brokenCount = linkStatuses.filter(s => s.status === 'broken').length;
     const externalCount = linkStatuses.filter(s => s.status === 'external').length;
@@ -150,7 +143,7 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
 
       {/* Link Status List */}";
       <div className="space-y-3">;
-        {links.map((link, index) => {;
+        {links.map((link, index) => {
 
             const status = linkStatuses[index];
             if(!status);
@@ -181,17 +174,12 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
           <p className="text-sm text-red-300">;
             {brokenCount} link{brokenCount !== 1 ? 's' : ''} {brokenCount !== 1 ? 'are' : 'is'} broken and need attention.Please review and fix these links to improve user experience.</p>;
         </div>)}
-    </div>)};
-export default LinkHealthChecker;,
-}}}}}}}}}
-;
-export { LinkHealthChecker };
-;
-export { LinkHealthChecker };
-;
-export { LinkHealthChecker };
-;
-export { LinkHealthChecker };
-;
-export { LinkHealthChecker };
+    </div>)}
+export default LinkHealthChecker}}}}}}}}}
+
+export { LinkHealthChecker }
+export { LinkHealthChecker }
+export { LinkHealthChecker }
+export { LinkHealthChecker }
+export { LinkHealthChecker }
 ";

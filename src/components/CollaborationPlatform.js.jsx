@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Video, VideoOff, Mic, MicOff, Monitor, Users, MessageSquare, X, Maximize2, Minimize2, PhoneOff  } from 'lucide-react';
 ,;
-  {;
+  {
 
     id: '2',;
     name: 'Sarah Johnson',;
@@ -10,7 +10,7 @@ import { Video, VideoOff, Mic, MicOff, Monitor, Users, MessageSquare, X, Maximiz
     isScreenSharing: true,;
     isSpeaking: false,;
     avatar: '👩‍💻'},;
-  {;
+  {
 
     id: '3',;
     name: 'Mike Chen',;
@@ -19,7 +19,7 @@ import { Video, VideoOff, Mic, MicOff, Monitor, Users, MessageSquare, X, Maximiz
     isScreenSharing: false,;
     isSpeaking: false,;
     avatar: '👨‍🔬'},;
-  {;
+  {
 
     id: '4',;
     name: 'Emily Davis',;
@@ -29,7 +29,7 @@ import { Video, VideoOff, Mic, MicOff, Monitor, Users, MessageSquare, X, Maximiz
     isSpeaking: false,;
     avatar: '👩‍🎨'},;
 ];
-export function CollaborationPlatform() {;
+export function CollaborationPlatform() {
   const [isOpen, setIsOpen] = useState(false);
   const [isMinimized, setIsMinimized] = useState(false);
   const [isFullscreen, setIsFullscreen] = useState(false);
@@ -47,7 +47,7 @@ export function CollaborationPlatform() {;
       user: 'John Smith',;
       message: 'Great presentation!',;
       timestamp: new Date()},;
-    {;
+    {
 
       id: '2',;
       user: 'Sarah Johnson',;
@@ -58,48 +58,39 @@ export function CollaborationPlatform() {;
   const [isRecording, setIsRecording] = useState(false);
   const [meetingDuration, setMeetingDuration] = useState(0);
   const containerRef = useRef(null);
-  useEffect(() => {;
+  useEffect(() => {
   // TODO: Add dependencies if needed;
 
-  return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
-    const interval = setInterval(() => {;
-      setMeetingDuration(prev => prev + 1);,
-}, 1000);
-    return () => clearInterval(interval);,
-}, []);
-  const toggleMute = () => {;
-    setLocalUser(prev => ({ ...prev, isMuted: !prev.isMuted }));,
-};
-  const toggleRecording = () => {;
-    setIsRecording(!isRecording);,
-};
-  const sendMessage = () => {;
-    if(newMessage.trim()) {;
+  return () => {
+    // Cleanup function}}, []);, []);
+    const interval = setInterval(() => {
+      setMeetingDuration(prev => prev + 1)}, 1000);
+    return () => clearInterval(interval)}, []);
+  const toggleMute = () => {
+    setLocalUser(prev => ({ ...prev, isMuted: !prev.isMuted }))}
+  const toggleRecording = () => {
+    setIsRecording(!isRecording)}
+  const sendMessage = () => {
+    if(newMessage.trim()) {
 
-      const message = {;
+      const message = {
 
         id: Date.now().toString(),;
         user: 'You',;
         message: newMessage,;
-        timestamp: new Date()};
+        timestamp: new Date()}
       setChatMessages(prev => [...prev, message]);
-      setNewMessage('');,
-}
-  };
-  const formatTime = seconds => {;
+      setNewMessage('')}
+  }
+  const formatTime = seconds => {
 
     const hours = Math.floor(seconds / 3600);
     const minutes = Math.floor((seconds % 3600) / 60);
     const secs = seconds % 60;
-    return `${hours.toString().padStart(2,0')}:${minutes.toString().padStart(2,0')}:${secs.toString().padStart(2,0')}`;,
-};
-  const toggleChat = () => {;
-    setActiveChat(!activeChat);,
-};
-  if(!isOpen) {;
+    return `${hours.toString().padStart(2,0')}:${minutes.toString().padStart(2,0')}:${secs.toString().padStart(2,0')}`}
+  const toggleChat = () => {
+    setActiveChat(!activeChat)}
+  if(!isOpen) {
 
     return ();
       <button;
@@ -108,9 +99,8 @@ export function CollaborationPlatform() {;
         title="Start Collaboration Session">";
         <Users className="w-5 h-5" />;
       </button>;
-    );,
-}
-  if(isMinimized) {;
+    )}
+  if(isMinimized) {
 
     return (";
       <div className="fixed bottom-4 right-20 z-50">";
@@ -128,8 +118,7 @@ export function CollaborationPlatform() {;
           </div>;
         </div>;
       </div>;
-    );,
-}
+    )}
   return ();
     <div'`;
       className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[800px] h-[600px]'}`}
@@ -154,8 +143,7 @@ export function CollaborationPlatform() {;
             onClick={toggleRecording}`;
             className={`p-2 rounded-lg transition-all duration-200 ${isRecording';
                 ? 'bg-red-500 text-white animate-pulse'';
-                : 'bg-zion-slate-light/20 text-zion-slate hover:bg-zion-slate-light/30'`;,
-}`}
+                : 'bg-zion-slate-light/20 text-zion-slate hover:bg-zion-slate-light/30'`}`}
             title={isRecording ? 'Stop Recording' : 'Start Recording'}
           >";
             <div className="w-4 h-4 rounded-full border-2 border-current"></div>;

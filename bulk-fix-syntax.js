@@ -2,7 +2,7 @@
 
 const fs = require('fs');
 const path = require('path');
-;
+
 // Get all service files with syntax errors;
 const serviceFiles = [;
   'src/pages/services/AIIncidentResponse.tsx',;
@@ -72,16 +72,16 @@ const serviceFiles = [;
   'src/pages/services/AIVirtualReality.tsx',;
   'src/pages/services/AIVulnerabilityManagement.tsx';
 ];
-;
+
 // Template for a basic service page;
-function createServiceTemplate(serviceName, icon = 'Brain') {;
+function createServiceTemplate(serviceName, icon = 'Brain') {
   const componentName = serviceName.replace(/[^a-zA-Z0-9]/g, '');
   const displayName = serviceName.replace(/AI|ai/, '').replace(/([A-Z])/g, ' $1').trim();
-  ;
+
   return `import React from 'react';
 import { ${icon}, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Activity, BarChart3 } from 'lucide-react';
-;
-export default function ${componentName}() {;
+
+export default function ${componentName}() {
   const features = [;
     'Advanced AI-powered automation',;
     'Real-time analytics and insights',;
@@ -90,13 +90,13 @@ export default function ${componentName}() {;
     '24/7 monitoring and support',;
     'Custom integration capabilities';
   ];
-;
+
   const tiers = [;
     { name: 'Starter', price: '$199/mo', details: ['Basic features', 'Email support', 'Up to 100 users'] },;
     { name: 'Professional', price: '$599/mo', details: ['Advanced features', 'Priority support', 'Up to 1,000 users'] },;
     { name: 'Enterprise', price: '$1,999/mo', details: ['All features', '24/7 support', 'Unlimited users', 'Custom integration'] }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-white">;
       <section className="bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-600 py-20 text-center">;
@@ -153,24 +153,20 @@ export default function ${componentName}() {;
         </div>;
       </section>;
     </div>;
-  );,
-}`;,
-}
-;
+  )}`}
+
 // Fix all service files;
 let fixedCount = 0;
-for (const filePath of serviceFiles) {;
-  try {;
-    if (fs.existsSync(filePath)) {;
+for (const filePath of serviceFiles) {
+  try {
+    if (fs.existsSync(filePath)) {
       const serviceName = path.basename(filePath, '.tsx');
       const content = createServiceTemplate(serviceName);
       fs.writeFileSync(filePath, content);
       console.log(`Fixed: ${filePath}`);
-      fixedCount++;,
+      fixedCount++}
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message)}
 }
-  } catch (error) {;
-    console.error(`Error fixing ${filePath}:`, error.message);,
-}
-}
-;
+
 console.log(`Fixed ${fixedCount} service files.`);

@@ -1,5 +1,5 @@
 import { ServiceVariant  } from "../types/service-variants";
-export interface InnovativeNewService2025 {;
+export interface InnovativeNewService2025 {
   id: string;
   name: string;
   tagline: string;
@@ -26,7 +26,7 @@ export interface InnovativeNewService2025 {;
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -38,7 +38,7 @@ export interface InnovativeNewService2025 {;
   rating: number;
 export const innovativeNewServices2025: InnovativeNewService2025[] = [;
   // AI-Powered Content Intelligence Platform;
-  {;
+  {
     id: "ai-content-intelligence-platform",;
     name: "AI Content Intelligence Platform",;
     tagline: "Transform content creation with AI-powered intelligence and analytics",;
@@ -76,21 +76,19 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [;
     marketSize: "$15B+ content marketing market",;
     growthRate: "150%+ annual growth",;
     variant: "ai-creative",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Full-stack AI content intelligence platform with real-time analytics, predictive modeling, and automated optimization.",;
     launchDate: "2025-01-15",;
     customers: 45,;
     rating: 4.8,;
-    reviews: 23;,;,
-},;
+    reviews: 23},;
   // Quantum-Secure Communication Network;
-  {;
+  {
     id: "quantum-secure-communication-network",;
     name: "Quantum-Secure Communication Network",;
     tagline: "Unbreakable communication infrastructure powered by quantum cryptography",;
@@ -128,21 +126,19 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [;
     marketSize: "$8B+ quantum security market",;
     growthRate: "400%+ annual growth",;
     variant: "quantum-security",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete quantum-secure communication infrastructure with QKD, quantum networks, and post-quantum cryptography.",;
     launchDate: "2025-02-01",;
     customers: 12,;
     rating: 5.0,;
-    reviews: 8;,;,
-},;
+    reviews: 8},;
   // Autonomous AI Operations Center;
-  {;
+  {
     id: "autonomous-ai-operations-center",;
     name: "Autonomous AI Operations Center",;
     tagline: "Self-managing AI infrastructure that runs your business operations 24/7",;
@@ -180,21 +176,19 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [;
     marketSize: "$25B+ AI operations market",;
     growthRate: "200%+ annual growth",;
     variant: "ai-autonomous",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete autonomous AI operations center with self-managing infrastructure, predictive analytics, and automated optimization.",;
     launchDate: "2025-01-20",;
     customers: 28,;
     rating: 4.9,;
-    reviews: 15;,;,
-},;
+    reviews: 15},;
   // Blockchain-Powered Supply Chain Intelligence;
-  {;
+  {
     id: "blockchain-supply-chain-intelligence",;
     name: "Blockchain Supply Chain Intelligence",;
     tagline: "Transparent, traceable, and intelligent supply chain management with blockchain",;
@@ -232,21 +226,19 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [;
     marketSize: "$18B+ blockchain supply chain market",;
     growthRate: "250%+ annual growth",;
     variant: "supply-chain-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete blockchain supply chain platform with AI intelligence, IoT integration, and comprehensive tracking capabilities.",;
     launchDate: "2025-02-15",;
     customers: 35,;
     rating: 4.7,;
-    reviews: 19;,;,
-},;
+    reviews: 19},;
   // Metaverse Development Platform;
-  {;
+  {
     id: "metaverse-development-platform",;
     name: "Metaverse Development Platform",;
     tagline: "Build immersive 3D worlds and experiences with AI-powered tools",;
@@ -284,21 +276,19 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [;
     marketSize: "$12B+ metaverse market",;
     growthRate: "300%+ annual growth",;
     variant: "metaverse-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete metaverse development platform with 3D tools, AI content generation, and VR/AR integration.",;
     launchDate: "2025-01-30",;
     customers: 42,;
     rating: 4.6,;
-    reviews: 21;,;,
-},;
+    reviews: 21},;
   // Quantum Financial Trading Platform;
-  {;
+  {
     id: "quantum-financial-trading-platform",;
     name: "Quantum Financial Trading Platform",;
     tagline: "Revolutionary trading platform powered by quantum computing and AI",;
@@ -336,21 +326,19 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [;
     marketSize: "$35B+ financial technology market",;
     growthRate: "500%+ annual growth",;
     variant: "quantum-ai-finance",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete quantum financial trading platform with quantum computing integration, AI algorithms, and comprehensive trading tools.",;
     launchDate: "2025-02-10",;
     customers: 18,;
     rating: 5.0,;
-    reviews: 12;,;,
-},;
+    reviews: 12},;
   // AI-Powered Healthcare Diagnostics;
-  {;
+  {
     id: "ai-healthcare-diagnostics-platform",;
     name: "AI Healthcare Diagnostics Platform",;
     tagline: "Revolutionary medical diagnostics powered by artificial intelligence",;
@@ -388,21 +376,19 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [;
     marketSize: "$45B+ AI healthcare market",;
     growthRate: "350%+ annual growth",;
     variant: "ai-healthcare",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete AI healthcare diagnostics platform with medical imaging analysis, diagnosis generation, and treatment recommendations.",;
     launchDate: "2025-01-25",;
     customers: 25,;
     rating: 4.9,;
-    reviews: 14;,;,
-},;
+    reviews: 14},;
   // Edge Computing Orchestration Platform;
-  {;
+  {
     id: "edge-computing-orchestration-platform",;
     name: "Edge Computing Orchestration Platform",;
     tagline: "Intelligent edge computing management for distributed infrastructure",;
@@ -440,12 +426,11 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [;
     marketSize: "$20B+ edge computing market",;
     growthRate: "280%+ annual growth",;
     variant: "edge-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete edge computing orchestration platform with distributed management, IoT integration, and AI-powered optimization.",;
     launchDate: "2025-02-05",;

@@ -13,8 +13,7 @@ export default function CaseStudy() {}
       <div className="min-h-screen bg-zion-blue flex items-center justify-center text-white">;
         Case study not found.;
       </div>;
-    );,
-}
+    )}
   return();
     <>";
       <SEO title={study.title} description={study.excerpt} />"";
@@ -46,14 +45,10 @@ export default function CaseStudy() {}
         </div>;
       </div>;
     </>)}
-;
 
-export { CaseStudy };
-;
-export { CaseStudy };
-;
-export { CaseStudy };
-;
-export { CaseStudy };
-;
-export { CaseStudy };
+
+export { CaseStudy }
+export { CaseStudy }
+export { CaseStudy }
+export { CaseStudy }
+export { CaseStudy }

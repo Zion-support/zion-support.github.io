@@ -41,12 +41,10 @@ export default function TenantOnboarding() {}
   // Check if user has admin role'''';
   const isAdmin = user?.role === 'admin';
   if (!isAdmin) {}
-    return <Navigate to="/unauthorized" />;,
-}
+    return <Navigate to="/unauthorized" />}
   const handleInputChange = e => {}
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));,
-};
+    setFormData(prev => ({ ...prev, [name]: value }))}
   const handleSubmit = async e => {}
     e.preventDefault();
     setIsSubmitting(true);
@@ -54,7 +52,7 @@ export default function TenantOnboarding() {}
       // Generate subdomain if not provided;
       const subdomain =';
         formData.subdomain ||';
-        formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g,);
+        formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g);
       // Create landing page copy;
       const landingPageCopy = {}
 ';
@@ -65,8 +63,7 @@ export default function TenantOnboarding() {}
 '`;
 '`'`;
 '`'`'`;
-          formData.industry || 'comp'``'`'`;,
-}`,''';
+          formData.industry || 'comp'``'`'`}`,''';
         cta: 'Get Started'};'';
       // Submit to Supabase''';
       const { data, error } = await supabase'''';
@@ -105,17 +102,14 @@ export default function TenantOnboarding() {}
         comp_size: '',''';
         industry: '',''';
         custom_domain: '',;
-        is_co_branded: true});,
-} catch (error) {}
+        is_co_branded: true})} catch (error) {}
 ";
 "";
       // console.error("Error creating tenant:", error);';
       toast.error('Failed to create tenant', {}
-        description: error.message});,
-} finally {}
-      setIsSubmitting(false);,
-}
-  };
+        description: error.message})} finally {}
+      setIsSubmitting(false)}
+  }
   return();
     <>";
       <SEO"";
@@ -173,8 +167,7 @@ export default function TenantOnboarding() {}
                         name="industry";
                         value={formData.industry}
                         onValueChange={value =>';
-                          handleSelectChange('industry', value);,
-}
+                          handleSelectChange('industry', value)}
                       >";
                         <SelectTrigger>"";
                           <SelectValue placeholder="Select industry" />;
@@ -202,8 +195,7 @@ export default function TenantOnboarding() {}
                         name="comp_size";
                         value={formData.comp_size}
                         onValueChange={value =>';
-                          handleSelectChange('comp_size', value);,
-}
+                          handleSelectChange('comp_size', value)}
                       >";
                         <SelectTrigger>"";
                           <SelectValue placeholder="Select comp size" />;
@@ -268,8 +260,7 @@ export default function TenantOnboarding() {}
                         name="theme_preset";
                         value={formData.theme_preset}
                         onValueChange={value =>';
-                          handleSelectChange('theme_preset', value);,
-}
+                          handleSelectChange('theme_preset', value)}
                       >";
                         <SelectTrigger>"";
                           <SelectValue placeholder="Select theme" />;
@@ -295,8 +286,7 @@ export default function TenantOnboarding() {}
                         id="is_co_branded";
                         checked={formData.is_co_branded}
                         onCheckedChange={checked =>';
-                          handleSwitchChange('is_co_branded', checked);,
-}
+                          handleSwitchChange('is_co_branded', checked)}
                       />;
                     </div>;
                   </TabsContent>";
@@ -314,9 +304,8 @@ export default function TenantOnboarding() {}
                             formData.brand_name;
                               ? formData.brand_name;
                                   .toLowerCase();
-                                  .replace(/[^a-z0-9]/g,)';
-                              : 'comp'";,
-}"";
+                                  .replace(/[^a-z0-9]/g)';
+                              : 'comp'"}"";
                           className="rounded-r-none"";
                         />"";
                         <div className="bg-muted px-3 py-2 border border-l-0 border-input rounded-r-md text-muted-foreground">;
@@ -364,16 +353,12 @@ export default function TenantOnboarding() {}
           </Card>;
         </div>;
       </main>;
-      ;
-    </>)}
-;
 
-export { TenantOnboarding };
-;
-export { TenantOnboarding };
-;
-export { TenantOnboarding };
-;
-export { TenantOnboarding };
-;
-export { TenantOnboarding };
+    </>)}
+
+
+export { TenantOnboarding }
+export { TenantOnboarding }
+export { TenantOnboarding }
+export { TenantOnboarding }
+export { TenantOnboarding }

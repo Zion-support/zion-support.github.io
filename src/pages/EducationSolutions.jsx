@@ -23,13 +23,11 @@ import {}
   Headphones,';
   Monitor,'';
   Brain,''';
-  Code'''';,
-} from 'lucide-react';
-;
-    integrations["Google Analytics", "Tableau", "Power BI", "Custom APIs"];,
-}
+  Code''''} from 'lucide-react';
+
+    integrations["Google Analytics", "Tableau", "Power BI", "Custom APIs"]}
 ];
-;
+
 const edTechTrends = [];
   {}
 ";
@@ -37,24 +35,21 @@ const edTechTrends = [];
     title: "Personalized Learning","";
     description: "AI-driven adaptive learning that customizes content for each student",";
     icon: Brain,"";
-    impact: "High";,
-},;
+    impact: "High"},;
   {}
 ";
 "";
     title: "Hybrid Learning Models","";
     description: "Combination of in-person and online learning experiences",";
     icon: Globe,"";
-    impact: "Critical";,
-},;
+    impact: "Critical"},;
   {}
 ";
 "";
     title: "Immersive Technologies","";
     description: "VR/AR for enhanced learning experiences and engagement",";
     icon: Monitor,"";
-    impact: "High";,
-},;
+    impact: "High"},;
   {}
 ";
 "";
@@ -63,7 +58,7 @@ const edTechTrends = [];
     icon: BarChart3,"";
     impact: "High";
 ];
-;
+
 const successStories = [];
   {}
 ";
@@ -73,8 +68,7 @@ const successStories = [];
     challenge: "Needed comprehensive LMS for 50,000+ students","";
     solution: "Built custom LMS with AI-powered personalization","";
     results: "30% improvement in student engagement, 25% higher completion rates","";
-    logo: "TU";,
-},;
+    logo: "TU"},;
   {}
 ";
     id: 2,"";
@@ -83,8 +77,7 @@ const successStories = [];
     challenge: "Required mobile learning platform for remote students","";
     solution: "Developed cross-platform mobile app with offline capabilities","";
     results: "40% increase in mobile learning, 90% student satisfaction","";
-    logo: "GL";,
-},;
+    logo: "GL"},;
   {}
 ";
     id: 3,"";
@@ -95,7 +88,7 @@ const successStories = [];
     results: "60% faster skill acquisition, 80% reduction in training costs","";
     logo: "CT";
 ];
-;
+
 const processSteps = [];
   {}
 ";
@@ -103,24 +96,21 @@ const processSteps = [];
     title: "Educational Assessment","";
     description: "Analyze learning objectives and technology requirements",";
     icon: Target,"";
-    duration: "1-2 weeks";,
-},;
+    duration: "1-2 weeks"},;
   {}
 ";
     step: 2,"";
     title: "Solution Design","";
     description: "Design customized educational technology solution",";
     icon: FileText,"";
-    duration: "2-3 weeks";,
-},;
+    duration: "2-3 weeks"},;
   {}
 ";
     step: 3,"";
     title: "Development & Testing","";
     description: "Build and thoroughly test the educational solution",";
     icon: Code,"";
-    duration: "12-32 weeks";,
-},;
+    duration: "12-32 weeks"},;
   {}
 ";
     step: 4,"";
@@ -129,7 +119,7 @@ const processSteps = [];
     icon: Users,"";
     duration: "1-2 weeks";
 ];
-;
+
 export default function EducationSolutions() {}
 ';
 '';
@@ -157,30 +147,24 @@ export default function EducationSolutions() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             animate = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center max-w-4xl mx-auto";
             <motion.div;
               initial = {}
   { opacity: 0,;
-  scale: 0.8;,
-}}
+  scale: 0.8}}
               animate = {}
   { opacity: 1,;
-  scale: 1;,
-}}
+  scale: 1}}
               transition = {}
   { duration: 0.8,;
-  delay: 0.2;,
-}}
+  delay: 0.2}}
               className="inline - flex items - center justify - center w-20 h-20 bg-gradient - to - br from - zion - cyan to - zion - purple rounded-2xl mb-8";
-";,
-}}"";
+"}}"";
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"";
 "";
               <GraduationCap className="w-10 h-10 text-white" />;
@@ -221,12 +205,10 @@ export default function EducationSolutions() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
 "";
@@ -242,19 +224,15 @@ export default function EducationSolutions() {}
                 key={trend.title}
                 initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                 transition = {}
   { duration: 0.6,;
-  delay: index * 0.1;,
-}}
+  delay: index * 0.1}}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 text-center hover:border-zion - cyan / 40 transition - all duration -300";
-";,
-}}"";
+"}}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"";
 "";
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">"";
@@ -272,8 +250,7 @@ export default function EducationSolutions() {}
                     ? 'bg-red-500/20 text-red-400 border border-red-500/30'''''`;
                     : trend.impact === 'High''''`'`;
                     ? 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30'''`'`'`;
-                    : 'bg-green-500/20 text-green-400 border border-green-500/30'````;,
-}`}>;
+                    : 'bg-green-500/20 text-green-400 border border-green-500/30'````}`}>;
                   {trend.impact} Impact;
                 </span>;
               </motion.div>;) ) }
@@ -287,12 +264,10 @@ export default function EducationSolutions() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
 "";
@@ -308,17 +283,14 @@ export default function EducationSolutions() {}
                 key={step.step}
                 initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                 transition = {}
   { duration: 0.6,;
   delay: index * 0.1;
-";,
-}}"";
+"}}"";
                 className="text-center"";
 "";
                 <div className="relative mb-6">"";
@@ -346,12 +318,10 @@ export default function EducationSolutions() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
 "";
@@ -373,9 +343,8 @@ export default function EducationSolutions() {}
 '''`;
                   selectedCategory === category'''`'`;
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'''`'`'`;
-                    : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````;,
-}`}
-;
+                    : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````}`}
+
                 {category}
               </button>) ) }
           </div>";
@@ -386,21 +355,17 @@ export default function EducationSolutions() {}
                 key={solution.id}
                 initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                 transition = {}
   { duration: 0.6,;
-  delay: index * 0.1;,
-}}
+  delay: index * 0.1}}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 hover:border-zion - cyan / 40 transition - all duration - 300 cursor -pointer";
                 onClick={ () => setSelectedSolution(solution) }
-;
-";,
-}}"";
+
+"}}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer";
                 onClick={() => setSelectedSolution(solution)}";
 "";
@@ -454,12 +419,10 @@ export default function EducationSolutions() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
 "";
@@ -475,19 +438,15 @@ export default function EducationSolutions() {}
                 key={story.id}
                 initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                 transition = {}
   { duration: 0.6,;
-  delay: index * 0.1;,
-}}
+  delay: index * 0.1}}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 hover:border-zion - cyan / 40 transition - all duration -300";
-";,
-}}"";
+"}}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"";
 "";
                 <div className="flex items-center gap-4 mb-6">"";
@@ -532,12 +491,10 @@ export default function EducationSolutions() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center max-w-4xl mx-auto"";
 "";
@@ -564,14 +521,10 @@ export default function EducationSolutions() {}
       </section>;
     </div>;
   )}
-;
 
-export { EducationSolutions };
-;
-export { EducationSolutions };
-;
-export { EducationSolutions };
-;
-export { EducationSolutions };
-;
-export { EducationSolutions };
+
+export { EducationSolutions }
+export { EducationSolutions }
+export { EducationSolutions }
+export { EducationSolutions }
+export { EducationSolutions }

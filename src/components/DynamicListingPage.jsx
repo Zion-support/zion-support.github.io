@@ -1,51 +1,42 @@
 import { useNavigate  } from 'react-router-dom';
-export default function Page() {;
+export default function Page() {
 , [allListings]) ;
     const [currentPriceFilter, setCurrentPriceFilter] = useState([0,;
         initialPrice.max;
     ]);
-    const handleSliderChange = (values) => {;
-        setCurrentPriceFilter([values[0], values[1]]) ;,
-};
-    const filteredListings = allListings.filter(listing => {;
+    const handleSliderChange = (values) => {
+        setCurrentPriceFilter([values[0], values[1]]) }
+    const filteredListings = allListings.filter(listing => {
         const matchesRating = selectedRating === null || (listing.rating !== null && listing.rating >= selectedRating) ;
-        return matchesSearch && matchesCategory && matchesPrice && matchesRating;,
-}) ;
+        return matchesSearch && matchesCategory && matchesPrice && matchesRating}) ;
     const totalPages = itemsPerPage;
         ? Math.ceil(filteredListings.length / itemsPerPage) : 1;
     const paginatedListings = itemsPerPage;
         ? filteredListings.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage) : filteredListings;
-    useEffect(() => {;
+    useEffect(() => {
   // TODO: Add dependencies if needed;
 
-  return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
-        setCurrentPage(1) ;,
-}, [searchQuery, selectedCategory, currentPriceFilter, selectedRating]) ;
-    const handleRequestQuote = (listingId) => {;
+  return () => {
+    // Cleanup function}}, []);, []);
+        setCurrentPage(1) }, [searchQuery, selectedCategory, currentPriceFilter, selectedRating]) ;
+    const handleRequestQuote = (listingId) => {
         setIsLoading(true) ;
         const listing = allListings.find(item => item.id === listingId) ;
-        setTimeout(() => {;
+        setTimeout(() => {
             setIsLoading(false) ;
-            if(listing) {;
+            if(listing) {
                 toast({;
                     title: "Quote Requested",;
-                    description: `Your quote request for ${listing.title} has been sent.`;,
-}) ;
-                router("/request - quote", {;
-                    state: {;
+                    description: `Your quote request for ${listing.title} has been sent.`}) ;
+                router("/request - quote", {
+                    state: {
                         serviceType: categorySlug,;
-                        specificItem: {;
+                        specificItem: {
                             id: listing.id,;
                             title: listing.title,;
                             category: listing.category,;
-                            image: listing.images?.[0];,
-}) ;
-;,
-}, 500) ;,
-};
+                            image: listing.images?.[0]}) ;
+}, 500) }
     return (<div className="min - h-screen bg-zion - blue py-12 px-4">;
       <div className="container mx -auto">;
         <div className="text-center mb-12">;
@@ -67,11 +58,10 @@ export default function Page() {;
                   Category;
                 </label>;
             // // // // // // // console.log ("Category selected:", value) ;
-                <Select value={selectedCategory} onValueChange = { (value) => {;
+                <Select value={selectedCategory} onValueChange = { (value) => {
             console.log("Category selected:",;
   value) ;
             setSelectedCategory(value) ;
-;,
 }}>;
                   <SelectTrigger className="bg-zion - blue border border-zion - blue - light text-white">;
                     <SelectValue placeholder="Select Category"/>;
@@ -90,10 +80,9 @@ export default function Page() {;
                   Price Range;
                 </label>;
                 <div className="mt-6 px-2">;
-                  <Slider  defaultValue = {;
+                  <Slider  defaultValue = {
   [0,;
-  priceRange.max];,
-} min={0} max={priceRange.max} step={priceRange.max / 100} value={currentPriceFilter} onValueChange={handleSliderChange} className="mb-4"/>;
+  priceRange.max]} min={0} max={priceRange.max} step={priceRange.max / 100} value={currentPriceFilter} onValueChange={handleSliderChange} className="mb-4"/>;
                   <div className="flex justify - between text-sm text-zion - slate -light">;
                     <span>${currentPriceFilter[0].toLocaleString () }</span>;
                     <span>${currentPriceFilter[1].toLocaleString () }</span>;
@@ -107,11 +96,10 @@ export default function Page() {;
                 </label>;
                 <div className="flex flex - wrap gap-2">;
                 // // // // // // // console.log("Rating selected:", rating) ;
-                  {[null, 3, 4, 5].map((rating) => (<Button key={rating === null ? 'any' : rating} variant="outline" size="sm" onClick = { () => {;
+                  {[null, 3, 4, 5].map((rating) => (<Button key={rating === null ? 'any' : rating} variant="outline" size="sm" onClick = { () => {
                 console.log("Rating selected:",;
   rating) ;
                 setSelectedRating(rating) ;
-;,
 }} aria-pressed={selectedRating === rating} className={`${selectedRating === rating;
                 ? "bg-zion - purple / 30 border-zion - purple text-zion - purple";
                 : "border-zion - blue - light text-zion - slate - light"} focus - visible:ring - zion - purple`}>;
@@ -123,15 +111,14 @@ export default function Page() {;
                 </div>;
               </div>;
             // // // // // // // console.log("Resetting filters") ;
-;
-              <Button variant="outline" className="w-full border-zion - purple text-zion - purple hover:bg-zion -purple / 10" onClick = { () => {;
+
+              <Button variant="outline" className="w-full border-zion - purple text-zion - purple hover:bg-zion -purple / 10" onClick = { () => {
             console.log("Resetting filters") ;
             setSearchQuery("") ;
             setSelectedCategory("all") ;
             setCurrentPriceFilter([0,;
   priceRange.max]) ;
             setSelectedRating(null) ;
-;,
 }}>;
                 Reset Filters;
               </Button>;
@@ -144,11 +131,10 @@ export default function Page() {;
                 <div className="relative flex -grow">;
                   <Search className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text-zion - slate h-4 w-4"/>;
             // // // // // // // console.log("Search query:", e.target.value) ;
-                  <Input type="text" placeholder="Search listings..." value={searchQuery} onChange = { (e) => {;
+                  <Input type="text" placeholder="Search listings..." value={searchQuery} onChange = { (e) => {
             console.log("Search query:",;
   e.target.value) ;
             setSearchQuery(e.target.value) ;
-;,
 }} className="pl - 10 bg-zion - blue border border-zion - blue - light text-white"/>;
                 </div>;
 
@@ -206,43 +192,39 @@ export default function Page() {;
               </div>) : (<div className="text-center py-20">;
                 <h3 className="text-xl font - bold text-white mb-2">No listings found</h3>;
                 <p className="text-zion - slate - light mb-6">Try adjusting your filters or search query</p>;
-                <Button variant="outline" onClick = { () => {;
+                <Button variant="outline" onClick = { () => {
                   setSearchQuery("") ;
                   setSelectedCategory("all") ;
                   setCurrentPriceFilter([0,;
   priceRange.max]) ;
                   setSelectedRating(null) ;
-;,
 }} className="border-zion - purple text-zion - purple hover:bg-zion -purple / 10">;
                   Clear all filters;
                 </Button>;
               </div>) }
-;
+
             {totalPages > 1 && (<div className="mt-8">;
                 <Pagination className="justify -center">;
                   <PaginationContent>;
                     <PaginationItem>;
-                      <PaginationPrevious href="#" onClick = { (e) => {;
+                      <PaginationPrevious href="#" onClick = { (e) => {
                         e.preventDefault () ;
                         setCurrentPage(Math.max (1,;
   currentPage - 1) ) ;
-;,
 }}/>;
                     </PaginationItem>;
                     {Array.from({ length: totalPages }, (_, i) => i + 1) .map((page) => (<PaginationItem key={page}>;
-                        <PaginationLink href="#" isActive={page === currentPage} onClick={ (e) => {;
+                        <PaginationLink href="#" isActive={page === currentPage} onClick={ (e) => {
                           e.preventDefault () ;
-                          setCurrentPage(page) ;,
-}}>;
+                          setCurrentPage(page) }}>;
                           {page}
                         </PaginationLink>;
                       </PaginationItem>) ) }
                     <PaginationItem>;
-                      <PaginationNext href="#" onClick = { (e) => {;
+                      <PaginationNext href="#" onClick = { (e) => {
                         e.preventDefault () ;
                         setCurrentPage(Math.min (totalPages,;
   currentPage + 1) ) ;
-;,
 }}/>;
                     </PaginationItem>;
                   </PaginationContent>;
@@ -251,5 +233,4 @@ export default function Page() {;
           </div>;
         </div>;
       </div>;
-    </div>) ;,
-}}}}}}
+    </div>) }}}}}}

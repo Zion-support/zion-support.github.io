@@ -11,7 +11,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { toast } from "sonner";"";
 import { supabase } from "@/integrations/supabase/client";"";
 import { Switch } from "@/components/ui/switch";
-export { function };
+export { function }
 export default function TenantOnboarding() {}
 ";
     const { user } = useAuth();"";
@@ -28,8 +28,7 @@ export default function TenantOnboarding() {}
         comp_size: ","";
         industry: ","";
         custom_domain: ",;
-        is_co_branded: true;,
-});";
+        is_co_branded: true});";
     // Check if user has admin role"";
     const isAdmin = user?.role === "admin";
     if (!isAdmin) {}
@@ -38,23 +37,19 @@ export default function TenantOnboarding() {}
         return <Navigate to="/unauthorized"/>}
     const handleInputChange = (e) => {}
         const { name, value } = e.target;
-        setFormData(prev => ({ ...prev, [name]: value }))};
+        setFormData(prev => ({ ...prev, [name]: value }))}
     const handleSubmit = async (e) => {}
         e.preventDefault();
         setIsSubmitting(true);
-        try {;
+        try {
             // Generate subdomain if not provided;
             const subdomain = formData.subdomain || formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, '');
             // Create landing page copy;
-            const landingPageCopy = {;
+            const landingPageCopy = {
 
-;
-export { TenantOnboarding };
-;
-export { TenantOnboarding };
-;
-export { TenantOnboarding };
-;
-export { TenantOnboarding };
-;
-export { TenantOnboarding };
+
+export { TenantOnboarding }
+export { TenantOnboarding }
+export { TenantOnboarding }
+export { TenantOnboarding }
+export { TenantOnboarding }

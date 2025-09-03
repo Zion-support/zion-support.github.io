@@ -32,9 +32,7 @@ export default function VideoCall() {}
 ``;
 ```;
 ````;
-        description: `You have joined meeting room ${roomId}`});,
-}, 1500);,
-};
+        description: `You have joined meeting room ${roomId}`})}, 1500)}
   const handleLeaveCall = () => {}
     setHasJoined(false);';
     toast.info('Call ended', {}
@@ -44,9 +42,7 @@ export default function VideoCall() {}
       description: 'You have left the meeting'});
     // Navigate back after a short delay;
     setTimeout(() => {}
-      router(-1);,
-}, 1500);,
-};
+      router(-1)}, 1500)}
   const simulateUserJoining = () => {}
     // This is just for demo purposes - in a real app, this would be handled by the video call service';
     const mockUsers = ['';
@@ -75,8 +71,7 @@ export default function VideoCall() {}
 ``;
 ```;
       setParticipants(prev => [...prev, randomUser]);````;
-      toast(`${randomUser.name} joined the call`);,
-}
+      toast(`${randomUser.name} joined the call`)}
   };`;
   return()``;
     <>```;
@@ -120,16 +115,12 @@ export default function VideoCall() {}
           </div>;
         )}
       </main>;
-      ;
-    </>)}
-;
 
-export { VideoCall };
-;
-export { VideoCall };
-;
-export { VideoCall };
-;
-export { VideoCall };
-;
-export { VideoCall };
+    </>)}
+
+
+export { VideoCall }
+export { VideoCall }
+export { VideoCall }
+export { VideoCall }
+export { VideoCall }

@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import {;
+import {
   Brain,;
   Code,;
   Cloud,;
@@ -16,22 +16,21 @@ import {;
   MessageSquare,;
   CheckCircle,;
   ArrowRight,;
-  DollarSign;,
-} from 'lucide-react';
+  DollarSign} from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
-;
-export default function AdditionalServices() {;
+
+export default function AdditionalServices() {
   const title = 'Expanded Services Catalog — Zion Tech Group';
   const description = 'New micro SaaS, IT, and AI solutions added to our production-ready catalog with transparent pricing and fast delivery.';
-;
+
   const sections = [;
-    {;
+    {
       id: 'micro-saas',;
       title: 'Micro SaaS — New Products',;
       icon: Code,;
       color: 'orange',;
       items: [;
-        {;
+        {
           name: 'Cloud Cost Guard (FinOps Assistant)',;
           blurb: 'Automated cloud cost anomaly detection, budget alerts, rightsizing, and savings recommendations.',;
           price: '$299 - $1,499/month',;
@@ -42,9 +41,8 @@ export default function AdditionalServices() {;
             'Forecasting and budget guardrails with alerts',;
             'Exec-ready savings reports and benchmarks';
           ],;
-          link: '/micro-saas';,
-},;
-        {;
+          link: '/micro-saas'},;
+        {
           name: 'LLM Evaluation & Safety Suite',;
           blurb: 'Red-teaming, prompt evaluation, and policy guardrails for safer generative AI deployments.',;
           price: '$799 - $3,500/month',;
@@ -55,9 +53,8 @@ export default function AdditionalServices() {;
             'Guardrail policies and observability dashboards',;
             'CI integration for pre-release gating';
           ],;
-          link: '/ai-services';,
-},;
-        {;
+          link: '/ai-services'},;
+        {
           name: 'Headless Commerce Accelerator',;
           blurb: 'Composable storefront, payments, and catalog with analytics and SEO built-in.',;
           price: '$2,500 - $12,000/month',;
@@ -68,9 +65,8 @@ export default function AdditionalServices() {;
             'CMS-driven content and merchandising',;
             'A/B testing and conversion analytics';
           ],;
-          link: '/micro-saas';,
-},;
-        {;
+          link: '/micro-saas'},;
+        {
           name: 'AI Localization & Multilingual SEO',;
           blurb: 'Translate, localize, and optimize content for global audiences with workflows.',;
           price: '$399 - $1,999/month',;
@@ -81,17 +77,15 @@ export default function AdditionalServices() {;
             'Editorial approval flows and QA checks',;
             'Market-specific keyword research';
           ],;
-          link: '/micro-saas';,
-}
-      ];,
-},;
-    {;
+          link: '/micro-saas'}
+      ]},;
+    {
       id: 'ai',;
       title: 'AI Services — New Capabilities',;
       icon: Brain,;
       color: 'blue',;
       items: [;
-        {;
+        {
           name: 'RAG Platform-in-a-Box',;
           blurb: 'End-to-end retrieval augmented generation stack with governance and analytics.',;
           price: '$4,000 - $18,000/month',;
@@ -102,9 +96,8 @@ export default function AdditionalServices() {;
             'Citations, feedback loops, and analytics',;
             'PII scrubbers and policy guardrails';
           ],;
-          link: '/ai-services';,
-},;
-        {;
+          link: '/ai-services'},;
+        {
           name: 'MLOps as a Service',;
           blurb: 'Managed pipelines for training, evaluation, deployment, and monitoring.',;
           price: '$3,500 - $16,000/month',;
@@ -115,9 +108,8 @@ export default function AdditionalServices() {;
             'Model cards, lineage, and reproducibility',;
             'Compliance-ready audit trails';
           ],;
-          link: '/ai-services';,
-},;
-        {;
+          link: '/ai-services'},;
+        {
           name: 'Call Center Voice Intelligence',;
           blurb: 'Real-time transcription, summarization, QA scoring, and agent coaching.',;
           price: '$1,200 - $6,000/month',;
@@ -128,17 +120,15 @@ export default function AdditionalServices() {;
             'Sentiment and compliance QA scoring',;
             'Multilingual, low-latency streaming';
           ],;
-          link: '/ai-services';,
-}
-      ];,
-},;
-    {;
+          link: '/ai-services'}
+      ]},;
+    {
       id: 'it',;
       title: 'IT Services — New Offers',;
       icon: Cloud,;
       color: 'green',;
       items: [;
-        {;
+        {
           name: 'Platform Engineering for Kubernetes',;
           blurb: 'Golden paths, templates, and paved roads for secure, fast delivery.',;
           price: '$6,000 - $28,000/month',;
@@ -149,9 +139,8 @@ export default function AdditionalServices() {;
             'GitOps, secrets, and SSO baked-in',;
             'SRE dashboards and runbooks';
           ],;
-          link: '/it-services';,
-},;
-        {;
+          link: '/it-services'},;
+        {
           name: 'Data Compliance Toolkit (SOC 2/HIPAA/GDPR)',;
           blurb: 'Blueprints, controls, and automation to reach and maintain compliance.',;
           price: '$2,500 - $14,000/month',;
@@ -162,9 +151,8 @@ export default function AdditionalServices() {;
             'Continuous controls monitoring',;
             'Audit-ready reports and gap analysis';
           ],;
-          link: '/it-services';,
-},;
-        {;
+          link: '/it-services'},;
+        {
           name: 'Observability Stack (OpenTelemetry + Grafana)',;
           blurb: 'Unified logs, metrics, traces, and SLOs with cost-efficient pipelines.',;
           price: '$1,800 - $9,500/month',;
@@ -175,15 +163,13 @@ export default function AdditionalServices() {;
             'Cost controls and retention policies',;
             'Incident workflows with on-call integration';
           ],;
-          link: '/it-services';,
-}
-      ];,
-}
+          link: '/it-services'}
+      ]}
   ];
-;
+
   const phoneHref = 'tel:+13024640950';
   const emailHref = 'mailto:kleber@ziontechgroup.com';
-;
+
   return (;
     <PageTransition>;
       <Head>;
@@ -273,6 +259,5 @@ export default function AdditionalServices() {;
         </div>;
       </section>;
     </PageTransition>;
-  );,
-}
-;
+  )}
+

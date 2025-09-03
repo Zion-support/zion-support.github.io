@@ -10,8 +10,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
         largestContentfulPaint: 0,;
         cumulativeLayoutShift: 0,;
         firstInputDelay: 0,;
-        timeToInteractive: 0;,
-});
+        timeToInteractive: 0});
     const [seoAnalysis, setSeoAnalysis] = useState({}
         score: 0,;
         issues[],;
@@ -22,15 +21,13 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
             keywords: false,;
             canonical: false,;
             ogTags: false,;
-            twitterTags: false;,
-});
+            twitterTags: false});
     const [accessibilityReport, setAccessibilityReport] = useState({}
         score: 0,;
         issues[],;';
         wcagCompliance: 'Non-Compliant',;
         criticalIssues: 0,;
-        warnings: 0;,
-});
+        warnings: 0});
     const [isAnalyzing, setIsAnalyzing] = useState(false);
     // Analyze website performance;
     const analyzePerformance = useCallback(async () => {}
@@ -45,8 +42,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
             cumulativeLayoutShift: Math.random() * 0.1, // 0-0.1;
             firstInputDelay: Math.random() * 100 + 50,;
   // 50-150ms;
-            timeToInteractive: Math.random() * 4000 + 2000 // 2-6 seconds;,
-};
+            timeToInteractive: Math.random() * 4000 + 2000 // 2-6 seconds}
         setMetrics(mockMetrics);
         setIsAnalyzing(false)}, []);
     // Analyze SEO;
@@ -54,16 +50,12 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
         setIsAnalyzing(true);
         await new Promise(resolve => setTimeout(resolve, 1500));
         // Mock SEO analysis;
-        const mockSEO = {;
+        const mockSEO = {
 
-;
-export { WebsiteImprovementDashboard };
-;
-export { WebsiteImprovementDashboard };
-;
-export { WebsiteImprovementDashboard };
-;
-export { WebsiteImprovementDashboard };
-;
-export { WebsiteImprovementDashboard };
+
+export { WebsiteImprovementDashboard }
+export { WebsiteImprovementDashboard }
+export { WebsiteImprovementDashboard }
+export { WebsiteImprovementDashboard }
+export { WebsiteImprovementDashboard }
 )

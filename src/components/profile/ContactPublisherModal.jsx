@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Dialog, DialogContent, DialogHeader, DialogTitle, } from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogHeader, DialogTitle} from '@/components/ui/dialog';
  from '@/components/ui/dialog';
  from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -8,7 +8,7 @@ import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from '
 import { useForm } from 'react-hook-form';
 import { Mail, PaperPlane import api from '@/services/apiClient'; import { toast } from '@/hooks/use-toast';
 );
-export function ContactPublisherModal({ isOpen, onClose, publisherName, publisherEmail}) {;
+export function ContactPublisherModal({ isOpen, onClose, publisherName, publisherEmail}) {
 
   );
 export default Component}}

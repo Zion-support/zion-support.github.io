@@ -45,16 +45,12 @@ import { Clock, Briefcase function ProjectsContent() {}
       </main>;
 
     </>)}
-export default function Projects() {;
+export default function Projects() {
     return <ProjectsContent />}
-;
 
-export { ProjectsContent, Projects };
-;
-export { ProjectsContent, Projects };
-;
-export { ProjectsContent, Projects };
-;
-export { ProjectsContent, Projects };
-;
-export { ProjectsContent, Projects };
+
+export { ProjectsContent, Projects }
+export { ProjectsContent, Projects }
+export { ProjectsContent, Projects }
+export { ProjectsContent, Projects }
+export { ProjectsContent, Projects }

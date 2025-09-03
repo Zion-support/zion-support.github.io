@@ -21,7 +21,7 @@ export default function ForgotPassword() {}
         // Simulate API call;
         setTimeout ( () => {}
             setIsSubmitted (true) ;
-            setIsLoading (false) }, 2000) };
+            setIsLoading (false) }, 2000) }
     if (isSubmitted) {}
 ";
         return (<>"";
@@ -130,16 +130,12 @@ export default function ForgotPassword() {}
           </div>;
         </div>;
       </div>;
-      ;
-    </>)}
-;
 
-export { ForgotPassword };
-;
-export { ForgotPassword };
-;
-export { ForgotPassword };
-;
-export { ForgotPassword };
-;
-export { ForgotPassword };
+    </>)}
+
+
+export { ForgotPassword }
+export { ForgotPassword }
+export { ForgotPassword }
+export { ForgotPassword }
+export { ForgotPassword }

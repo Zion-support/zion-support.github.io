@@ -1,7 +1,7 @@
 import React, { useState } from 'react';''';
 import { Link } from 'react-router-dom';
-;
-const ComprehensiveServicesLanding2025 = () => {;
+
+const ComprehensiveServicesLanding2025 = () => {
     const [selectedIndustry, setSelectedIndustry] = useState('all');
     const industries = [;
         { id: 'all', name: 'All Industries', icon: '🏢', description: 'Comprehensive solutions across all sectors' },;
@@ -29,8 +29,7 @@ const ComprehensiveServicesLanding2025 = () => {;
             'logistics'['Logistics & Transportation'],;''';
             'legal'['Legal Tech & AI'],;''';
   'marketing'['Marketing & AI'];
-;,
-};
+}
         return allEnhancedServices.filter(service => industryMap[industry]?.includes(service.category))};";
     const filteredServices = getServicesByIndustry(selectedIndustry);"";
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">";
@@ -424,16 +423,12 @@ const ComprehensiveServicesLanding2025 = () => {;
           </div>;
         </div>;
       </section>;
-    </div>)};
+    </div>)}
 export default ComprehensiveServicesLanding2025;
-;
 
-export { ComprehensiveServicesLanding2025 };
-;
-export { ComprehensiveServicesLanding2025 };
-;
-export { ComprehensiveServicesLanding2025 };
-;
-export { ComprehensiveServicesLanding2025 };
-;
-export { ComprehensiveServicesLanding2025 };
+
+export { ComprehensiveServicesLanding2025 }
+export { ComprehensiveServicesLanding2025 }
+export { ComprehensiveServicesLanding2025 }
+export { ComprehensiveServicesLanding2025 }
+export { ComprehensiveServicesLanding2025 }

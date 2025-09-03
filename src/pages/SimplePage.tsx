@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
-const SimplePage = () => {;
+const SimplePage = () => {
   return (;
     <>;
       <Head>;
@@ -45,6 +45,5 @@ const SimplePage = () => {;
               </Link>;
             </div>;
     </>;
-  );,
-}
+  )}
 export default SimplePage;

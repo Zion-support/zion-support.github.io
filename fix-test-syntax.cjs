@@ -1,38 +1,32 @@
 #!/usr/bin/env node;
-;
+
 const fs = require("fs");
 const path = require("path");
 const glob = require("glob");
-class $1 {;
-  constructor() {;
+class $1 {
+  constructor() {
   this.projectRoot = process.cwd();
-    this.testDir = path.join(this.projectRoot, "__tests__");,;,
-}
-;
-  async fixAllTestFiles() {;
+    this.testDir = path.join(this.projectRoot, "__tests__");}
+
+  async fixAllTestFiles() {
   console.log("🔧 Starting test syntax fixes...");
     const testFiles = glob.sync("**/*.test.js", { cwd: this.testDir });
-    for (const testFile of testFiles) {;
+    for (const testFile of testFiles) {
   const filePath = path.join(this.testDir, testFile);
-      await this.fixTestFile(filePath);,;,
-}
-    ;
-    console.log("✅ Test syntax fixes completed");,;,
-}
-;
-  async fixTestFile(filePath) {;
-  try {;
+      await this.fixTestFile(filePath);}
+    console.log("✅ Test syntax fixes completed");}
+
+  async fixTestFile(filePath) {
+  try {
   let content = fs.readFileSync(filePath, "utf8");
       // Fix common syntax issues;
       content = this.fixSyntaxIssues(content);
       fs.writeFileSync(filePath, content);
-      console.log(`✅ Fixed: ${path.relative(this.projectRoot, filePath)}`);,;,
-} catch (error) {;
-  console.error(`❌ Failed to fix ${filePath}:`, error.message);,;,
-}
+      console.log(`✅ Fixed: ${path.relative(this.projectRoot, filePath)}`);} catch (error) {
+  console.error(`❌ Failed to fix ${filePath}:`, error.message);}
   }
-;
-  fixSyntaxIssues(content) {;
+
+  fixSyntaxIssues(content) {
   // Fix missing semicolons after expect statements;
     content = content.replace(/expect\([^)]+\)\.toBeInTheDocument\(\)\s*\)\s*}/g, ;
       (match) => match.replace(/\)\s*}/, ");\n  }"));
@@ -45,16 +39,13 @@ class $1 {;
     // Fix missing semicolons after render statements;
     content = content.replace(/render\(<[^>]+>\/>\);\s*$/gm, "render(<$1 />);");
     // Fix missing semicolons after comments;
-    content = content.replace(/\/\/ [^}]+}\s*$/gm, (match) => {;
-  if (!match.endsWith(";")) {;
-  return match.replace(/}\s*$/, ";\n  }");,;,
+    content = content.replace(/\/\/ [^}]+}\s*$/gm, (match) => {
+  if (!match.endsWith(";")) {
+  return match.replace(/}\s*$/, ";\n  }");}
+      return match;});
+    return content;}
 }
-      return match;,;,
-});
-    return content;,;,
-}
-}
-;
+
 // Run the fixer;
 const fixer = new TestSyntaxFixer();
 fixer.fixAllTestFiles().catch(console.error)

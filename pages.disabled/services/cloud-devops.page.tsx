@@ -4,23 +4,21 @@ import Navigation from '../../src/components/Navigation';
 import Footer from '../../src/components/Footer';
 import SEOHead from '../../src/components/SEOHead';
 import { Cloud, Server, Zap, CheckCircle, ArrowRight, Phone, Mail, Users, Globe, Database, Network, Target, Award, Clock, Brain, Shield, BarChart3, Code, Settings, Monitor, GitBranch } from 'lucide-react';
-;
-const CloudDevOps = () => {;
-  const structuredData = {;
+
+const CloudDevOps = () => {
+  const structuredData = {
     "@context": "https://schema.org",;
     "@type": "WebPage",;
     "name": "Cloud & DevOps Services - Zion Tech Group",;
     "url": "https://ziontechgroup.com/services/cloud-devops",;
     "description": "Comprehensive cloud migration, DevOps automation, and infrastructure management services",;
-    "publisher": {;
+    "publisher": {
       "@type": "Organization",;
       "name": "Zion Tech Group",;
-      "url": "https://ziontechgroup.com";,
-}
-  };
-;
+      "url": "https://ziontechgroup.com"}
+  }
   const services = [;
-    {;
+    {
       title: 'Cloud Migration',;
       description: 'Seamless migration to cloud platforms with zero downtime',;
       icon: Cloud,;
@@ -31,9 +29,8 @@ const CloudDevOps = () => {;
         'Application Modernization',;
         'Cost Optimization';
       ],;
-      pricing: 'Starting at $15,000/project';,
-},;
-    {;
+      pricing: 'Starting at $15,000/project'},;
+    {
       title: 'DevOps Automation',;
       description: 'Automate your development and deployment processes',;
       icon: Zap,;
@@ -44,9 +41,8 @@ const CloudDevOps = () => {;
         'Deployment Automation',;
         'Monitoring & Alerting';
       ],;
-      pricing: 'Starting at $8,000/month';,
-},;
-    {;
+      pricing: 'Starting at $8,000/month'},;
+    {
       title: 'Container Orchestration',;
       description: 'Kubernetes and Docker container management',;
       icon: Server,;
@@ -57,9 +53,8 @@ const CloudDevOps = () => {;
         'Service Mesh Implementation',;
         'Auto-scaling Configuration';
       ],;
-      pricing: 'Starting at $12,000/project';,
-},;
-    {;
+      pricing: 'Starting at $12,000/project'},;
+    {
       title: 'Infrastructure Management',;
       description: 'Complete infrastructure monitoring and management',;
       icon: Monitor,;
@@ -70,9 +65,8 @@ const CloudDevOps = () => {;
         'Disaster Recovery',;
         'Backup & Restore';
       ],;
-      pricing: 'Starting at $5,000/month';,
-},;
-    {;
+      pricing: 'Starting at $5,000/month'},;
+    {
       title: 'Security & Compliance',;
       description: 'Secure cloud infrastructure and compliance management',;
       icon: Shield,;
@@ -83,9 +77,8 @@ const CloudDevOps = () => {;
         'Security Monitoring',;
         'Vulnerability Management';
       ],;
-      pricing: 'Starting at $7,500/month';,
-},;
-    {;
+      pricing: 'Starting at $7,500/month'},;
+    {
       title: 'Monitoring & Analytics',;
       description: 'Advanced monitoring and analytics solutions',;
       icon: BarChart3,;
@@ -96,10 +89,9 @@ const CloudDevOps = () => {;
         'Predictive Analytics',;
         'Cost Monitoring';
       ],;
-      pricing: 'Starting at $3,000/month';,
-}
+      pricing: 'Starting at $3,000/month'}
   ];
-;
+
   const technologies = [;
     { name: 'AWS', icon: Cloud },;
     { name: 'Azure', icon: Cloud },;
@@ -114,37 +106,33 @@ const CloudDevOps = () => {;
     { name: 'Grafana', icon: BarChart3 },;
     { name: 'ELK Stack', icon: Database }
   ];
-;
+
   const stats = [;
     { number: '99.9%', label: 'Uptime Guarantee' },;
     { number: '50%', label: 'Cost Reduction' },;
     { number: '10x', label: 'Faster Deployments' },;
     { number: '24/7', label: 'Monitoring' }
   ];
-;
+
   const process = [;
-    {;
+    {
       step: 'Assessment',;
       title: 'Infrastructure Assessment',;
-      description: 'Analyze current infrastructure and identify optimization opportunities';,
-},;
-    {;
+      description: 'Analyze current infrastructure and identify optimization opportunities'},;
+    {
       step: 'Strategy',;
       title: 'Migration Strategy',;
-      description: 'Develop comprehensive migration and automation strategy';,
-},;
-    {;
+      description: 'Develop comprehensive migration and automation strategy'},;
+    {
       step: 'Implementation',;
       title: 'Implementation',;
-      description: 'Execute migration and set up DevOps pipelines';,
-},;
-    {;
+      description: 'Execute migration and set up DevOps pipelines'},;
+    {
       step: 'Optimization',;
       title: 'Optimization',;
-      description: 'Continuous optimization and performance tuning';,
-}
+      description: 'Continuous optimization and performance tuning'}
   ];
-;
+
   return (;
     <>;
       <SEOHead ;
@@ -154,7 +142,7 @@ const CloudDevOps = () => {;
         structuredData={structuredData}
       />;
       <Navigation />;
-      ;
+
       <main className="min-h-screen bg-gray-900 text-white">;
         {/* Hero Section */}
         <section className="pt-24 pb-16 bg-gradient-to-b from-gray-900 to-gray-800">;
@@ -216,10 +204,10 @@ const CloudDevOps = () => {;
                   <div className="w-16 h-16 bg-cyan-400/20 rounded-full flex items-center justify-center mb-6">;
                     <service.icon className="w-8 h-8 text-cyan-400" />;
                   </div>;
-                  ;
+
                   <h3 className="text-xl font-bold mb-3">{service.title}</h3>;
                   <p className="text-gray-300 mb-6">{service.description}</p>;
-                  ;
+
                   <ul className="space-y-3 mb-6">;
                     {service.features.map((feature, featureIndex) => (;
                       <li key={featureIndex} className="flex items-center">;
@@ -228,9 +216,9 @@ const CloudDevOps = () => {;
                       </li>;
                     ))}
                   </ul>;
-                  ;
+
                   <div className="text-cyan-400 font-semibold mb-4">{service.pricing}</div>;
-                  ;
+
                   <Link;
                     href="/contact";
                     className="w-full bg-gradient-to-r from-cyan-400 to-blue-500 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 flex items-center justify-center">;
@@ -356,7 +344,5 @@ const CloudDevOps = () => {;
 
       <Footer />;
     </>;
-  );,
-};
-;
+  )}
 export default CloudDevOps;

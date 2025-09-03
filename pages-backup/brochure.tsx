@@ -1,15 +1,11 @@
 import Head from "next/head";
 import React from "react";
 import dynamic from "next/dynamic";
-const Component = () => {;
-const Head = dynamic(() => import("next/head"), { ssr: false });,
-}
-const Link = dynamic(() => import("next/link"), { ssr: false });,
-}
-const Navigation = dynamic(() => import("../src/components/Navigation"), { ssr: false });,
-}
-const Footer = dynamic(() => import("../src/components/Footer"), { ssr: false });,
-}
+const Component = () => {
+const Head = dynamic(() => import("next/head"), { ssr: false })}
+const Link = dynamic(() => import("next/link"), { ssr: false })}
+const Navigation = dynamic(() => import("../src/components/Navigation"), { ssr: false })}
+const Footer = dynamic(() => import("../src/components/Footer"), { ssr: false })}
   return (;
     <>;
 <Head>;
@@ -69,10 +65,10 @@ const Footer = dynamic(() => import("../src/components/Footer"), { ssr: false })
                           <li key="{itemIndex}" className="flex" items-center text-gray-600">";
                             <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0       />;
                             {item}
-;
+
                           </li>;
                         ))}
-;
+
                       </ul>;
                     </div>;
 ";
@@ -85,7 +81,7 @@ className="w-full" bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hov
                   </div>;
                 </div>,;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";
@@ -108,7 +104,7 @@ className="w-full" bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hov
                   <p className=text-gray-600">{benefit.description}</p>;
                 </div>;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";
@@ -128,7 +124,7 @@ className="w-full" bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hov
                     {[...Array(testimonial.rating)].map((_, i) => (";
                       <Star key="{i}" className="w-5 h-5 text-yellow-400 fill-current       />;
                     ))}
-;
+
                   </div>";
                   <p className="text-gray-600" mb-4">"{testimonial.content}</p>;
                   <div>";
@@ -136,7 +132,7 @@ className="w-full" bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hov
                     <p className="text-sm text-gray-600>{testimonial.role}, {testimonial.company}</p>;
                   </div>;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";
@@ -163,6 +159,6 @@ className="w-full" bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hov
       <Footer  />;
     </>;
   )}
-;
+
 ";
 export default Brochure

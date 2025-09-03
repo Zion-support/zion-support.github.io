@@ -2,8 +2,8 @@ import Head from "next/head";
 import React from "react";
   Globe,;
   Clock} from "lucide-react";
-export default function WorkflowAutomation() {;
-;
+export default function WorkflowAutomation() {
+
   const features = [];
 
   return (;
@@ -66,7 +66,7 @@ export default function WorkflowAutomation() {;
                 <p className="text-gray-600">{feature.description}</p>;
               </Card>;
             ))}
-;
+
           </div>;
       </section>;
       {/* comment */}";

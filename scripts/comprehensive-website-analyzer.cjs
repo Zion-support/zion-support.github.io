@@ -1,9 +1,9 @@
-#!/usr/bin/env node;
-const axios = require("$1");
+#!/usr/bin/env node
+const axios = require("fs");
 const fs = require("fs").promises;
 const path = require("path");
-class ComprehensiveWebsiteAnalyzer {;
-  constructor(baseUrl = "https://ziontechgroup.com") {;
+class ComprehensiveWebsiteAnalyzer {
+  constructor(baseUrl = "https://ziontechgroup.com") {
     this.baseUrl = baseUrl;
     this.checkedUrls = new Set();
     this.brokenLinks = [];
@@ -11,209 +11,162 @@ class ComprehensiveWebsiteAnalyzer {;
     this.missingPages = [];
     this.errors = [];
     this.warnings = [];
-    this.startTime = Date.now(),;,
-}
-;
-  log(message, level = "info") {;
+    this.startTime = Date.now()}
+
+  log(message, level = "info") {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`;
-    console.log(logMessage),;,
-}
-;
-  async checkUrl(url, parentUrl = null) {;
-    if (this.checkedUrls.has(url)) {;
-      return,;,
-}
-    ;
+    console.log(logMessage)}
+
+  async checkUrl(url, parentUrl = null) {
+    if (this.checkedUrls.has(url)) {
+      return}
     this.checkedUrls.add(url);
     this.log(`🔍 Checking: ${url}`);
-    ;
-    try {;
-      const response = await axios.get(url, {;
+
+    try {
+      const response = await axios.get(url, {
         timeout: 10000,;
         maxRedirects: 5,;
-        validateStatus: (status) => status < 500 // Accept redirects and client errors,;,
-});
-      ;
-      if (response.status >= 200 && response.status < 400) {;
+        validateStatus: (status) => status < 500 // Accept redirects and client errors});
+
+      if (response.status >= 200 && response.status < 400) {
         this.workingLinks.push({;
           url,;
           status: response.status,;
           parentUrl,;
-          responseTime: response.headers["x-response-time"] || "unknown",;,
-});
-        this.log(`✅ Working: ${url} (${response.status})`),;,
-} else {;
+          responseTime: response.headers["x-response-time"] || "unknown"});
+        this.log(`✅ Working: ${url} (${response.status})`)} else {
         this.brokenLinks.push({;
           url,;
           status: response.status,;
           parentUrl,;
-          error: `HTTP ${response.status}`,;,
-});
-        this.log(`❌ Broken: ${url} (${response.status})`, "error"),;,
-}
-    } catch (error) {;
+          error: `HTTP ${response.status}`});
+        this.log(`❌ Broken: ${url} (${response.status})`, "error")}
+    } catch (error) {
       this.brokenLinks.push({;
         url,;
         status: "error",;
         parentUrl,;
-        error: error.message,;,
-});
-      this.log(`❌ Error: ${url} - ${error.message}`, "error"),;,
-}
+        error: error.message});
+      this.log(`❌ Error: ${url} - ${error.message}`, "error")}
   }
-;
-  async analyzePerformance(url) {;
+
+  async analyzePerformance(url) {
     this.log(`⚡ Analyzing performance: ${url}`);
-    ;
-    try {;
+
+    try {
       const startTime = Date.now();
       const response = await axios.get(url, { timeout: 30000 });
       const endTime = Date.now();
       const responseTime = endTime - startTime;
-      ;
-      const performanceData = {;
+
+      const performanceData = {
         url,;
         responseTime,;
         status: response.status,;
         contentLength: response.headers["content-length"] || "unknown",;
-        contentType: response.headers["content-type"] || "unknown",;,
-}
-      ;
-      if (responseTime > 3000) {;
+        contentType: response.headers["content-type"] || "unknown"}
+      if (responseTime > 3000) {
         this.warnings.push({;
           type: "performance",;
           message: `Slow response time: ${responseTime}ms for ${url}`,;
-          data: performanceData,;,
-}),;,
-}
-      ;
-      return performanceData,;,
-} catch (error) {;
+          data: performanceData})}
+      return performanceData} catch (error) {
       this.errors.push({;
         type: "performance",;
         message: `Performance analysis failed for ${url}: ${error.message}`,;
-        url,;,
-});
-      return null,;,
-}
+        url});
+      return null}
   }
-;
-  async checkSEO(url) {;
+
+  async checkSEO(url) {
     this.log(`🔍 Checking SEO: ${url}`);
-    ;
-    try {;
+
+    try {
       const response = await axios.get(url, { timeout: 10000 });
       const html = response.data;
-      ;
+
       const seoIssues = [];
-      ;
+
       // Check for title tag;
-      if (!html.includes("<title>") || html.includes("<title></title>")) {;
-        seoIssues.push("Missing or empty title tag"),;,
-}
-      ;
+      if (!html.includes("<title>") || html.includes("<title></title>")) {
+        seoIssues.push("Missing or empty title tag")}
       // Check for meta description;
-      if (!html.includes("name="description"")) {;
-        seoIssues.push("Missing meta description"),;,
-}
-      ;
+      if (!html.includes("name="description"")) {
+        seoIssues.push("Missing meta description")}
       // Check for h1 tag;
-      if (!html.includes("<h1>")) {;
-        seoIssues.push("Missing h1 tag"),;,
-}
-      ;
+      if (!html.includes("<h1>")) {
+        seoIssues.push("Missing h1 tag")}
       // Check for alt attributes on images;
       const imgTags = html.match(/<img[^>]*>/g) || [];
       const imagesWithoutAlt = imgTags.filter(img => !img.includes("alt="));
-      if (imagesWithoutAlt.length > 0) {;
-        seoIssues.push(`${imagesWithoutAlt.length} images without alt attributes`),;,
-}
-      ;
-      if (seoIssues.length > 0) {;
+      if (imagesWithoutAlt.length > 0) {
+        seoIssues.push(`${imagesWithoutAlt.length} images without alt attributes`)}
+      if (seoIssues.length > 0) {
         this.warnings.push({;
           type: "seo",;
           message: `SEO issues found on ${url}`,;
           issues: seoIssues,;
-          url,;,
-}),;,
-}
-      ;
+          url})}
       return { url, seoIssues }
-    } catch (error) {;
+    } catch (error) {
       this.errors.push({;
         type: "seo",;
         message: `SEO check failed for ${url}: ${error.message}`,;
-        url,;,
-});
-      return null,;,
-}
+        url});
+      return null}
   }
-;
-  async generateReport() {;
+
+  async generateReport() {
     this.log("📊 Generating website analysis report...");
-    ;
+
     const totalDuration = Date.now() - this.startTime;
-    const report = {;
+    const report = {
       timestamp: new Date().toISOString(),;
       baseUrl: this.baseUrl,;
-      summary: {;
+      summary: {
         totalUrlsChecked: this.checkedUrls.size,;
         workingLinks: this.workingLinks.length,;
         brokenLinks: this.brokenLinks.length,;
         errors: this.errors.length,;
         warnings: this.warnings.length,;
-        analysisDuration: totalDuration,;,
-},;
+        analysisDuration: totalDuration},;
       workingLinks: this.workingLinks,;
       brokenLinks: this.brokenLinks,;
       errors: this.errors,;
       warnings: this.warnings,;
-      recommendations: this.generateRecommendations(),;,
-}
-    ;
+      recommendations: this.generateRecommendations()}
     const reportsDir = path.join(process.cwd(), "reports");
-    if (!(await fs.access(reportsDir).then(() => true).catch(() => false))) {;
-      await fs.mkdir(reportsDir, { recursive: true }),;,
-}
-    ;
+    if (!(await fs.access(reportsDir).then(() => true).catch(() => false))) {
+      await fs.mkdir(reportsDir, { recursive: true })}
     const reportFile = path.join(reportsDir, `website-analysis-report-${Date.now()}.json`);
     await fs.writeFile(reportFile, JSON.stringify(report, null, 2));
     this.log(`📄 Report saved to: ${reportFile}`);
-    return reportFile,;,
-}
-;
-  generateRecommendations() {;
+    return reportFile}
+
+  generateRecommendations() {
     const recommendations = [];
-    ;
-    if (this.brokenLinks.length > 0) {;
+
+    if (this.brokenLinks.length > 0) {
       recommendations.push({;
         type: "critical",;
-        message: `Fix ${this.brokenLinks.length} broken links`,;,
-}),;,
-}
-    ;
-    if (this.warnings.length > 0) {;
+        message: `Fix ${this.brokenLinks.length} broken links`})}
+    if (this.warnings.length > 0) {
       recommendations.push({;
         type: "warning",;
-        message: `Address ${this.warnings.length} warnings`,;,
-}),;,
-}
-    ;
+        message: `Address ${this.warnings.length} warnings`})}
     recommendations.push({;
       type: "improvement",;
-      message: "Implement automated link checking",;,
-});
-    ;
+      message: "Implement automated link checking"});
+
     recommendations.push({;
       type: "improvement",;
-      message: "Add performance monitoring",;,
-});
-    ;
-    return recommendations,;,
-}
-;
-  displaySummary() {;
+      message: "Add performance monitoring"});
+
+    return recommendations}
+
+  displaySummary() {
     console.log("\n" + "=".repeat(70));
     console.log("🌐 COMPREHENSIVE WEBSITE ANALYZER SUMMARY");
     console.log("=".repeat(70));
@@ -225,32 +178,27 @@ class ComprehensiveWebsiteAnalyzer {;
     console.log(`💥 Errors: ${this.errors.length}`);
     console.log(`⏱️ Analysis Duration: ${Math.round((Date.now() - this.startTime) / 1000)}s`);
     console.log("=".repeat(70));
-    ;
-    if (this.brokenLinks.length > 0) {;
+
+    if (this.brokenLinks.length > 0) {
       console.log("\n❌ BROKEN LINKS:");
-      this.brokenLinks.slice(0, 10).forEach((link, index) => {;
-        console.log(`${index + 1}. ${link.url} (${link.status})`),;,
-});
-      if (this.brokenLinks.length > 10) {;
-        console.log(`... and ${this.brokenLinks.length - 10} more`),;,
-}
+      this.brokenLinks.slice(0, 10).forEach((link, index) => {
+        console.log(`${index + 1}. ${link.url} (${link.status})`)});
+      if (this.brokenLinks.length > 10) {
+        console.log(`... and ${this.brokenLinks.length - 10} more`)}
     }
-    ;
-    if (this.warnings.length > 0) {;
+    if (this.warnings.length > 0) {
       console.log("\n⚠️ WARNINGS:");
-      this.warnings.slice(0, 5).forEach((warning, index) => {;
-        console.log(`${index + 1}. ${warning.message}`),;,
-});
-      if (this.warnings.length > 5) {;
-        console.log(`... and ${this.warnings.length - 5} more`),;,
-}
+      this.warnings.slice(0, 5).forEach((warning, index) => {
+        console.log(`${index + 1}. ${warning.message}`)});
+      if (this.warnings.length > 5) {
+        console.log(`... and ${this.warnings.length - 5} more`)}
     }
   }
-;
-  async run() {;
-    try {;
+
+  async run() {
+    try {
       this.log("🎯 Starting Comprehensive Website Analysis");
-      ;
+
       // Check main pages;
       const mainPages = [;
         this.baseUrl,;
@@ -258,25 +206,22 @@ class ComprehensiveWebsiteAnalyzer {;
         `${this.baseUrl}/services`,;
         `${this.baseUrl}/contact`,;
         `${this.baseUrl}/blog`];
-      ;
-      for (const page of mainPages) {;
+
+      for (const page of mainPages) {
         await this.checkUrl(page);
         await this.analyzePerformance(page);
-        await this.checkSEO(page),;,
-}
-      ;
+        await this.checkSEO(page)}
       await this.generateReport();
       this.displaySummary();
-      ;
+
       this.log("🎉 Website analysis completed successfully");
-      return {;
+      return {
         success: true, ;
         workingLinks: this.workingLinks.length,;
         brokenLinks: this.brokenLinks.length,;
         warnings: this.warnings.length,;
-        errors: this.errors.length,;,
-}
-    } catch (error) {;
+        errors: this.errors.length}
+    } catch (error) {
       this.log(`💥 Website analysis failed: ${error.message}`, "error");
       await this.generateReport();
       this.displaySummary();
@@ -284,13 +229,11 @@ class ComprehensiveWebsiteAnalyzer {;
     }
   }
 }
-;
+
 // Run the analyzer;
-if (require.main === module) {;
+if (require.main === module) {
   const analyzer = new ComprehensiveWebsiteAnalyzer();
-  analyzer.run().then(result => {;
-    process.exit(result.success ? 0 : 1),;,
-}),;,
-}
-;
+  analyzer.run().then(result => {
+    process.exit(result.success ? 0 : 1)})}
+
 module.exports = ComprehensiveWebsiteAnalyzer

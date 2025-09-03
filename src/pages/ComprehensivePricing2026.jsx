@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 // ;
 // ;
-const ComprehensivePricing2026 = () => {;
+const ComprehensivePricing2026 = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [billingCycle, setBillingCycle] = useState('monthly');
     // Combine all services;
@@ -16,8 +16,8 @@ const ComprehensivePricing2026 = () => {;
         'Cloud & DevOps',;
         'Specialized Industry';
     ];
-    const getCategoryServices = (category) => {;
-        switch (category) {;
+    const getCategoryServices = (category) => {
+        switch (category) {
             case 'AI & Business Solutions':;
                 return allServices.filter(service => ['Business Intelligence', 'Marketing Automation', 'Customer Service', 'Workflow Automation'].includes(service.category));
             case 'IT Infrastructure':;
@@ -29,35 +29,31 @@ const ComprehensivePricing2026 = () => {;
             case 'Specialized Industry':;
                 return allServices.filter(service => ['Supply Chain Management', 'Financial Technology', 'Healthcare Technology', 'Legal Technology', 'Blockchain Technology', 'Internet of Things', 'Quantum Computing'].includes(service.category));
             default:;
-                return allServices;,
-}
-    };
+                return allServices}
+    }
     const filteredServices = getCategoryServices(selectedCategory);
-    const getAnnualPrice = (monthlyPrice) => {;
+    const getAnnualPrice = (monthlyPrice) => {
         const price = parseInt(monthlyPrice.replace(/[^0-9]/g, ''));
         const annualPrice = price * 12 * 0.8; // 20% discount for annual;
-        return `$${annualPrice.toLocaleString()}`;,
-};
-    const containerVariants = {;
+        return `$${annualPrice.toLocaleString()}`}
+    const containerVariants = {
         hidden: { opacity: 0 },;
-        visible: {;
+        visible: {
             opacity: 1,;
-            transition: {;
-                staggerChildren: 0.1;,
-}
+            transition: {
+                staggerChildren: 0.1}
         }
-    };
-    const itemVariants = {;
+    }
+    const itemVariants = {
         hidden: { y: 20, opacity: 0 },;
-        visible: {;
+        visible: {
             y: 0,;
             opacity: 1,;
-            transition: {;
+            transition: {
                 duration: 0.5,;
-                ease: "easeOut";,
-}
+                ease: "easeOut"}
         }
-    };
+    }
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">;
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
@@ -92,7 +88,7 @@ const ComprehensivePricing2026 = () => {;
           </div>;
     </div>;,;
   )}
-;
+
           {/* No Results */}
           {filteredServices.length === 0 && (";
             <motion.div"";
@@ -269,17 +265,12 @@ const ComprehensivePricing2026 = () => {;
           </div>;
         </div>;
       </section>;
-    </div>);,
-};
+    </div>)}
 export default ComprehensivePricing2026;
-;
 
-export { ComprehensivePricing2026 };
-;
-export { ComprehensivePricing2026 };
-;
-export { ComprehensivePricing2026 };
-;
-export { ComprehensivePricing2026 };
-;
-export { ComprehensivePricing2026 };
+
+export { ComprehensivePricing2026 }
+export { ComprehensivePricing2026 }
+export { ComprehensivePricing2026 }
+export { ComprehensivePricing2026 }
+export { ComprehensivePricing2026 }

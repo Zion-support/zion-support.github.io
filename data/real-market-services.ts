@@ -1,4 +1,4 @@
-export interface RealMarketService {;
+export interface RealMarketService {
   id: string;
   name: string;
   tagline: string;
@@ -8,11 +8,11 @@ export interface RealMarketService {;
   link: string;
   category: string;
   realImplementation: boolean;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
 export const realMarketServices: RealMarketService[] = [;
-  {;
+  {
     id: "market-analysis-platform",;
     name: "Market Analysis Platform",;
     tagline: "Comprehensive market research and analysis",;
@@ -28,12 +28,12 @@ export const realMarketServices: RealMarketService[] = [;
     link: "/services/market-analysis-platform",;
     category: "Market Services",;
     realImplementation: true,;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709";
   ,;
-  {;
+  {
     id: "ecommerce-returns-manager",;
     name: "E‑commerce Returns Manager",;
     tagline: "Automate RMAs, labels, and refund workflows for Shopify/Woo",;
@@ -66,20 +66,18 @@ export const realMarketServices: RealMarketService[] = [;
     competitors["Loop", "Returnly", "Happy Returns"],;
     marketSize: "$9B returns tech",;
     growthRate: "18% YoY",;
-    variant: "growth-futuristic" as , contactInfo: {;
+    variant: "growth-futuristic" as , contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Embedded portal, label API wiring, policy engine and analytics.",;
     launchDate: "2025-02-08",;
     customers: 52,;
     rating: 4.6,;
-    reviews: 24;,;,
-},;
-  {;
+    reviews: 24},;
+  {
     id: "automated-email-followups",;
     name: "Automated Email Follow‑ups",;
     tagline: "Sequenced follow‑ups with inbox rotation and reply detection",;
@@ -112,20 +110,18 @@ export const realMarketServices: RealMarketService[] = [;
     competitors["Mailshake", "Lemlist", "Apollo"],;
     marketSize: "$6B sales engagement",;
     growthRate: "20% YoY",;
-    variant: "growth-futuristic" as , contactInfo: {;
+    variant: "growth-futuristic" as , contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Sequence engine, deliverability checks, reply webhooks.",;
     launchDate: "2025-02-06",;
     customers: 78,;
     rating: 4.5,;
-    reviews: 33;,;,
-},;
-  {;
+    reviews: 33},;
+  {
     id: "podcast-transcribe-chapters",;
     name: "Podcast Transcribe & Chapters",;
     tagline: "Accurate transcripts, speakers, summaries, chapters and clips",;
@@ -158,20 +154,18 @@ export const realMarketServices: RealMarketService[] = [;
     competitors["Descript", "Castmagic", "Capsho"],;
     marketSize: "$2B podcast tooling",;
     growthRate: "19% YoY",;
-    variant: "ai-futuristic" as , contactInfo: {;
+    variant: "ai-futuristic" as , contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Batch ASR, diarization, topic modeling, clip renderers.",;
     launchDate: "2025-02-02",;
     customers: 140,;
     rating: 4.7,;
-    reviews: 58;,;,
-},;
-  {;
+    reviews: 58},;
+  {
     id: "freelancer-portfolio-studio",;
     name: "Freelancer Portfolio Studio",;
     tagline: "Stunning portfolios and case studies with leads tracking",;
@@ -204,20 +198,18 @@ export const realMarketServices: RealMarketService[] = [;
     competitors["Webflow", "Squarespace", "Wix"],;
     marketSize: "$4B creator sites",;
     growthRate: "11% YoY",;
-    variant: "growth-futuristic" as , contactInfo: {;
+    variant: "growth-futuristic" as , contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Template presets, CMS‑like editing, lead capture widgets.",;
     launchDate: "2025-02-04",;
     customers: 210,;
     rating: 4.6,;
-    reviews: 64;,;,
-},;
-  {;
+    reviews: 64},;
+  {
     id: "local-micro-crm",;
     name: "Local Micro CRM",;
     tagline: "Simple contacts, reminders, and pipeline for small shops",;
@@ -250,20 +242,18 @@ export const realMarketServices: RealMarketService[] = [;
     competitors["HubSpot Starter", "Pipedrive Essentials"],;
     marketSize: "$20B SMB CRM",;
     growthRate: "10% YoY",;
-    variant: "analytics-futuristic" as , contactInfo: {;
+    variant: "analytics-futuristic" as , contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Minimal CRM with reminders and basic pipeline views.",;
     launchDate: "2025-02-03",;
     customers: 320,;
     rating: 4.5,;
-    reviews: 77;,;,
-},;
-  {;
+    reviews: 77},;
+  {
     id: "subjectline-optimizer-ai",;
     name: "Subject Line Optimizer AI",;
     tagline: "Generate and score email subjects with live benchmarks",;
@@ -296,20 +286,18 @@ export const realMarketServices: RealMarketService[] = [;
     competitors["Copy.ai", "Jasper", "Headline analyzers"],;
     marketSize: "$3B marketing AI",;
     growthRate: "24% YoY",;
-    variant: "ai-futuristic" as , contactInfo: {;
+    variant: "ai-futuristic" as , contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Prompting templates, scoring heuristics, and ESP exports.",;
     launchDate: "2025-02-07",;
     customers: 95,;
     rating: 4.4,;
-    reviews: 28;,;,
-},;
-  {;
+    reviews: 28},;
+  {
     id: "dev-workflow-analytics",;
     name: "Developer Workflow Analytics",;
     tagline: "Visualize reviews, velocity, and bottlenecks across repos",;
@@ -342,20 +330,18 @@ export const realMarketServices: RealMarketService[] = [;
     competitors["LinearB", "Swarmia", "Velocity"],;
     marketSize: "$5B dev analytics",;
     growthRate: "21% YoY",;
-    variant: "analytics-futuristic" as , contactInfo: {;
+    variant: "analytics-futuristic" as , contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Quota enforcer, advisor engine, and GitOps PR flow with alerts.",;
     launchDate: "2025-08-22",;
     customers: 13,;
     rating: 4.5,;
-    reviews: 7;,;,
-},;
-  {;
+    reviews: 7},;
+  {
     id: "mdm-intune-starter",;
     name: "MDM/MAM with Microsoft Intune Starter",;
     tagline: "Zero‑touch enrollment, app protection, device compliance",;
@@ -386,20 +372,18 @@ export const realMarketServices: RealMarketService[] = [;
     competitors["Jamf, Kandji, Intune turnkey partners"],;
     marketSize: "$6B+ MDM",;
     growthRate: "18% YoY",;
-    variant: "cloud-futuristic" as , contactInfo: {;
+    variant: "cloud-futuristic" as , contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Policy baselines, enrollment automation, reporting dashboards.",;
     launchDate: "2025-02-20",;
     customers: 19,;
     rating: 4.5,;
-    reviews: 8;,;,
-},;
-  {;
+    reviews: 8},;
+  {
     id: "ai-meeting-to-ticket",;
     name: "AI Meeting‑to‑Ticket Copilot",;
     tagline: "Turn meetings into tracked tickets, actions, and follow‑ups",;
@@ -430,20 +414,18 @@ export const realMarketServices: RealMarketService[] = [;
     competitors["Supernormal, Tactiq + custom flows"],;
     marketSize: "$3B productivity AI",;
     growthRate: "25% YoY",;
-    variant: "ai-futuristic" as , contactInfo: {;
+    variant: "ai-futuristic" as , contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Speech‑to‑text pipeline, action classifiers, and ticket APIs.",;
     launchDate: "2025-02-22",;
     customers: 23,;
     rating: 4.6,;
-    reviews: 12;,;,
-},;
-  {;
+    reviews: 12},;
+  {
     id: "feature-flag-auditor",;
     name: "Feature Flag Auditor",;
     tagline: "Catch stale flags, drift, and experiment hygiene issues",;
@@ -474,12 +456,11 @@ export const realMarketServices: RealMarketService[] = [;
     competitors["Native vendor hygiene, manual audits"],;
     marketSize: "$2B experimentation",;
     growthRate: "18% YoY",;
-    variant: "devops-futuristic" as , contactInfo: {;
+    variant: "devops-futuristic" as , contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Repo scanner, config parser, pull‑request bot.",;
     launchDate: "2025-02-22",;

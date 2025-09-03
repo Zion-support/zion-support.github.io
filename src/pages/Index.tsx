@@ -1,7 +1,6 @@
 import React from "react";
 import { SEO } from "@/components/SEO";
-;,"});,"});,
-}
+;,"});,"})}
 export default function Index() {return (";
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">";
       <SEO title="Index - Zion Tech Group" description="Professional Index services by Zion Tech Group"  />";
@@ -11,6 +10,5 @@ export default function Index() {return (";
           Professional Index services to help your business grow.;
         </p>;
       </div>;
-  );,
-}
+  )}
 }

@@ -1,16 +1,15 @@
-export interface EnhancedService {;
+export interface EnhancedService {
   id: string;
   name: string;
   tagline: string;
   description: string;
   category: 'micro-saas' | 'it-services' | 'ai-services' | 'emerging-tech';
-pricing: {;
+pricing: {
 
     monthly: string;
     yearly: string;
     enterprise: string;
-    setup: string;,
-};
+    setup: string}
   features: string[];
   benefits: string[];
   technology: string[];
@@ -25,14 +24,14 @@ pricing: {;
   icon: string;
   color: string;
   link: string;
-  contactInfo: {;
+  contactInfo: {
 
     mobile: string;
     email: string;
     address: string;
-    website: string}};
+    website: string}}
 export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [// AI-Powered Autonomous Services;
-  {;
+  {
 
     id: "ai-autonomous-business-manager",";
     title: "AI Autonomous Business Manager",";
@@ -41,7 +40,7 @@ export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [// AI-Powered Auto
     price: 2999,";
     currency: "$",";
     tags["Autonomous Operations", "AI Decision Making", "Business Intelligence", "Strategic Planning"],;
-    author: {;
+    author: {
 ";
       name: "Zion AI Labs",";
       id: "zion-ai-labs",";
@@ -64,20 +63,17 @@ export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [// AI-Powered Auto
     targetAudience: "Enterprise businesses, Fortune 500 companies, tech startups",;
     trialDays: 30,";
     setupTime: "2-4 weeks",;
-    contactInfo: {;
+    contactInfo: {
 
         mobile: string;
         email: string;
         address: string;
-        website: string};
-;
-;,
-};
-  ;
-  ;
-  ;
-  website: 'https://ziontechgroup.com'};
-;
+        website: string}
+}
+
+
+
+  website: 'https://ziontechgroup.com'}
 export const enhancedServices2025: EnhancedService[] = [{;
 
         id: 'ai-powered-code-review-assistant',;
@@ -104,9 +100,8 @@ export const enhancedServices2025: EnhancedService[] = [{;
         targetAudience: 'Engineering teams and platform engineering',;
         marketPosition: 'AI-first code review companion',;
         competitors: ['SonarQube',CodeClimate',Snyk Code'],;
-        contactInfo: CONTACT;,
-},;
-    {;
+        contactInfo: CONTACT},;
+    {
 
         id: 'intelligent-incident-response-platform',;
         name: 'Intelligent Incident Response Platform',;
@@ -126,9 +121,8 @@ export const enhancedServices2025: EnhancedService[] = [{;
         link: '/services/incident-response-platform',;
         technology: ['AI/ML',Automation'],;
         integrations: ['SIEM',EDR',Slack',Teams',Jira'],;
-        contactInfo: CONTACT;,
-},;
-    {;
+        contactInfo: CONTACT},;
+    {
 
         id: 'smart-invoice-management-system',;
         name: 'Smart Invoice Management System',;
@@ -144,9 +138,8 @@ export const enhancedServices2025: EnhancedService[] = [{;
         icon: '📄',;
         color: 'from-green-600 to-emerald-700',;
         link: '/services/invoice-management',;
-        contactInfo: CONTACT;,
-},;
-    {;
+        contactInfo: CONTACT},;
+    {
 
         id: 'ai-customer-success-automation',;
         name: 'AI Customer Success Automation',;
@@ -162,9 +155,8 @@ export const enhancedServices2025: EnhancedService[] = [{;
         icon: '🎯',;
         color: 'from-purple-600 to-violet-700',;
         link: '/services/customer-success-automation',;
-        contactInfo: CONTACT;,
-},;
-    {;
+        contactInfo: CONTACT},;
+    {
 
         id: 'intelligent-data-analytics-dashboard',;
         name: 'Intelligent Data Analytics Dashboard',;
@@ -180,10 +172,9 @@ export const enhancedServices2025: EnhancedService[] = [{;
         icon: '📊',;
         color: 'from-cyan-600 to-blue-700',;
         link: '/services/analytics-dashboard',;
-        contactInfo: CONTACT;,
-},;
+        contactInfo: CONTACT},;
     // IT services;
-    {;
+    {
 
         id: 'network-security-monitoring',;
         name: 'Network Security Monitoring',;
@@ -199,9 +190,8 @@ export const enhancedServices2025: EnhancedService[] = [{;
         icon: '🛡️',;
         color: 'from-red-600 to-orange-700',;
         link: '/services/network-security-monitoring',;
-        contactInfo: CONTACT;,
-},;
-    {;
+        contactInfo: CONTACT},;
+    {
 
         id: 'data-backup-recovery-solutions',;
         name: 'Data Backup & Recovery Solutions',;
@@ -217,9 +207,8 @@ export const enhancedServices2025: EnhancedService[] = [{;
         icon: '💾',;
         color: 'from-blue-600 to-indigo-700',;
         link: '/services/backup-recovery',;
-        contactInfo: CONTACT;,
-},;
-    {;
+        contactInfo: CONTACT},;
+    {
 
         id: 'it-asset-management-platform',;
         name: 'IT Asset Management Platform',;
@@ -235,10 +224,9 @@ export const enhancedServices2025: EnhancedService[] = [{;
         icon: '🏷️',;
         color: 'from-green-600 to-emerald-700',;
         link: '/services/asset-management',;
-        contactInfo: CONTACT;,
-},;
+        contactInfo: CONTACT},;
     // AI services;
-    {;
+    {
 
         id: 'ai-chatbot-development',;
         name: 'AI Chatbot Development',;
@@ -254,9 +242,8 @@ export const enhancedServices2025: EnhancedService[] = [{;
         icon: '🤖',;
         color: 'from-purple-600 to-violet-700',;
         link: '/services/ai-chatbot',;
-        contactInfo: CONTACT;,
-},;
-    {;
+        contactInfo: CONTACT},;
+    {
 
         id: 'predictive-analytics-platform',;
         name: 'Predictive Analytics Platform',;
@@ -272,9 +259,8 @@ export const enhancedServices2025: EnhancedService[] = [{;
         icon: '🔮',;
         color: 'from-indigo-600 to-purple-700',;
         link: '/services/predictive-analytics',;
-        contactInfo: CONTACT;,
-},;
-    {;
+        contactInfo: CONTACT},;
+    {
 
         id: 'computer-vision-solutions',;
         name: 'Computer Vision Solutions',;
@@ -290,10 +276,9 @@ export const enhancedServices2025: EnhancedService[] = [{;
         icon: '👁️',;
         color: 'from-cyan-600 to-blue-700',;
         link: '/services/computer-vision',;
-        contactInfo: CONTACT;,
-},;
+        contactInfo: CONTACT},;
     // Emerging tech;
-    {;
+    {
 
         id: 'quantum-computing-solutions',;
         name: 'Quantum Computing Solutions',;
@@ -309,9 +294,8 @@ export const enhancedServices2025: EnhancedService[] = [{;
         icon: '⚛️',;
         color: 'from-violet-600 to-purple-700',;
         link: '/services/quantum-computing',;
-        contactInfo: CONTACT;,
-},;
-    {;
+        contactInfo: CONTACT},;
+    {
 
         id: 'blockchain-web3-solutions',;
         name: 'Blockchain & Web3 Solutions',;
@@ -327,10 +311,9 @@ export const enhancedServices2025: EnhancedService[] = [{;
         icon: '🔗',;
         color: 'from-orange-600 to-red-700',;
         link: '/services/blockchain-web3',;
-        contactInfo: CONTACT;,
-},;
+        contactInfo: CONTACT},;
     // New additions;
-    {;
+    {
 
         id: 'seo-content-optimizer',;
         name: 'SEO Content Optimizer',;
@@ -346,9 +329,8 @@ export const enhancedServices2025: EnhancedService[] = [{;
         icon: '🧭',;
         color: 'from-emerald-600 to-teal-700',;
         link: '/services/seo-content-optimizer',;
-        contactInfo: CONTACT;,
-},;
-    {;
+        contactInfo: CONTACT},;
+    {
 
         id: 'ai-sales-email-copilot',;
         name: 'AI Sales Email Copilot',;
@@ -364,9 +346,8 @@ export const enhancedServices2025: EnhancedService[] = [{;
         icon: '✉️',;
         color: 'from-sky-600 to-blue-700',;
         link: '/services/ai-sales-email-copilot',;
-        contactInfo: CONTACT;,
-},;
-    {;
+        contactInfo: CONTACT},;
+    {
 
         id: 'cloud-cost-optimizer',;
         name: 'Cloud Cost Optimizer',;
@@ -382,9 +363,8 @@ export const enhancedServices2025: EnhancedService[] = [{;
         icon: '☁️',;
         color: 'from-slate-600 to-gray-700',;
         link: '/services/cloud-cost-optimizer',;
-        contactInfo: CONTACT;,
-},;
-    {;
+        contactInfo: CONTACT},;
+    {
 
         id: 'data-governance-suite',;
         name: 'Data Governance Suite',;
@@ -400,9 +380,8 @@ export const enhancedServices2025: EnhancedService[] = [{;
         icon: '🧭',;
         color: 'from-amber-600 to-yellow-700',;
         link: '/services/data-governance-suite',;
-        contactInfo: CONTACT;,
-},;
-    {;
+        contactInfo: CONTACT},;
+    {
 
         id: 'ai-rag-knowledge-base',;
         name: 'AI RAG Knowledge Base',;
@@ -418,9 +397,8 @@ export const enhancedServices2025: EnhancedService[] = [{;
         icon: '📚',;
         color: 'from-fuchsia-600 to-rose-700',;
         link: '/services/ai-rag-knowledge-base',;
-        contactInfo: CONTACT;,
-},;
-    {;
+        contactInfo: CONTACT},;
+    {
 
         id: 'edge-iot-observability',;
         name: 'Edge IoT Observability',;
@@ -436,18 +414,17 @@ export const enhancedServices2025: EnhancedService[] = [{;
         icon: '📡',;
         color: 'from-lime-600 to-green-700',;
         link: '/services/edge-iot-observability',;
-        contactInfo: CONTACT;,
-}
+        contactInfo: CONTACT}
   },;
   // Quantum Computing Services;
-  {;
+  {
 
     id: 'ai-powered-code-review-assistant',;
     name: 'AI-Powered Code Review Assistant',;
     tagline: 'Automated code quality analysis, security scanning, and best practice recommendations',;
     description: 'Intelligent code review system that analyzes pull requests, identifies security vulnerabilities, suggests improvements, and maintains code quality standards across your development team.',;
     category: 'micro-saas',;
-    pricing: {;
+    pricing: {
 
       monthly: '$199/month',;
       yearly: '$1,999/year',;
@@ -470,17 +447,16 @@ export const enhancedServices2025: EnhancedService[] = [{;
     icon: '🔍',;
     color: 'from-blue-600 to-indigo-700',;
     link: '/services/ai-code-review-assistant',;
-    contactInfo;,
-},;
+    contactInfo},;
   // Advanced Cybersecurity Services;
-  {;
+  {
 
     id: 'intelligent-incident-response-platform',;
     name: 'Intelligent Incident Response Platform',;
     tagline: 'AI-driven incident detection, automated response, and post-mortem analysis',;
     description: 'Comprehensive incident management platform that uses AI to detect, respond to, and analyze security incidents in real-time, reducing response time and improving resolution quality.',;
     category: 'micro-saas',;
-    pricing: {;
+    pricing: {
 
       monthly: '$299/month',;
       yearly: '$2,999/year',;
@@ -494,14 +470,14 @@ export const enhancedServices2025: EnhancedService[] = [{;
     targetAudience: "Large enterprises, government agencies, financial institutions",;
     trialDays: 30,;";
     setupTime: "3-5 weeks",;
-    contactInfo: {;
+    contactInfo: {
 ";
       mobile: "+1 302 464 0950",";
       email: "kleber@ziontechgroup.com",;";
       address: "364 E Main St STE 1008 Middletown DE 19709",;";
       website: "https://ziontechgroup.com"}  },;
   // Edge Computing & IoT Services;
-  {;
+  {
 ";
     id: "edge-computing-platform",";
     title: "Edge Computing Platform",;";
@@ -510,11 +486,11 @@ export const enhancedServices2025: EnhancedService[] = [{;
     price: 149,;";
     currency: "$",;";
     tags["Edge Computing", "IoT Integration", "Real-time Processing", "Global Network"],;
-    author: {;
+    author: {
 ";
       name: "Zion Edge Computing",";
       id: "zion-edge-computing",;";
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto = format&fit=crop&w=100&h=100",},";
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto = format&fit=crop&w=100&h=100"},";
     images["https://images.unsplash.com/photo-1545997331-9d517f5ab3b4?auto=format&fit=crop&w=800&h=500"],"    createdAt: "2025-01-26T08:45:00.000Z",;
     aiScore: 94,;
     rating: 4.7,;
@@ -538,17 +514,16 @@ export const enhancedServices2025: EnhancedService[] = [{;
     icon: '🚨',;
     color: 'from-red-600 to-pink-700',;
     link: '/services/incident-response-platform',;
-    contactInfo;,
-},;
+    contactInfo},;
   // AI-Powered Healthcare Services;
-  {;
+  {
 
     id: 'smart-invoice-management-system',;
     name: 'Smart Invoice Management System',;
     tagline: 'AI-powered invoice processing, approval workflows, and payment tracking',;
     description: 'Intelligent invoice management platform that automates the entire invoice lifecycle from receipt to payment, reducing processing time and improving accuracy.',;
     category: 'micro-saas',;
-    pricing: {;
+    pricing: {
 
       monthly: '$79/month',;
       yearly: '$799/year',;
@@ -571,17 +546,16 @@ export const enhancedServices2025: EnhancedService[] = [{;
     icon: '📄',;
     color: 'from-green-600 to-emerald-700',;
     link: '/services/invoice-management',;
-    contactInfo;,
-},;
+    contactInfo},;
   // Financial AI Services;
-  {;
+  {
 
     id: 'ai-customer-success-automation',;
     name: 'AI Customer Success Automation',;
     tagline: 'Intelligent customer onboarding, support, and retention automation',;
     description: 'AI-driven platform that automates customer success processes, predicts churn, and optimizes customer experience to improve retention and satisfaction.',;
     category: 'micro-saas',;
-    pricing: {;
+    pricing: {
 
       monthly: '$149/month',;
       yearly: '$1,499/year',;
@@ -595,14 +569,14 @@ export const enhancedServices2025: EnhancedService[] = [{;
     targetAudience: "Individual investors, financial advisors, wealth management firms",;
     trialDays: 30,;";
     setupTime: "1-2 weeks",;
-    contactInfo: {;
+    contactInfo: {
 ";
       mobile: "+1 302 464 0950",";
       email: "kleber@ziontechgroup.com",;";
       address: "364 E Main St STE 1008 Middletown DE 19709",;";
       website: "https://ziontechgroup.com"}  },;
   // Legal AI Services;
-  {;
+  {
 ";
     id: "ai-legal-review",";
     title: "AI Legal Document Review",;";
@@ -611,11 +585,11 @@ export const enhancedServices2025: EnhancedService[] = [{;
     price: 149,;";
     currency: "$",;";
     tags["Legal Review", "Contract Analysis", "Risk Assessment", "Compliance"],;
-    author: {;
+    author: {
 ";
       name: "Zion Legal Tech",";
       id: "zion-legal-tech",;";
-      avatarUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto = format&fit=crop&w=100&h=100",},";
+      avatarUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto = format&fit=crop&w=100&h=100"},";
     images["https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=800&h=500"],"    createdAt: "2025-01-19T12:15:00.000Z",;
     aiScore: 93,;
     rating: 4.7,;
@@ -639,17 +613,16 @@ export const enhancedServices2025: EnhancedService[] = [{;
     icon: '🎯',;
     color: 'from-purple-600 to-violet-700',;
     link: '/services/customer-success-automation',;
-    contactInfo;,
-},;
+    contactInfo},;
   // Marketing AI Services;
-  {;
+  {
 
     id: 'intelligent-data-analytics-dashboard',;
     name: 'Intelligent Data Analytics Dashboard',;
     tagline: 'Real-time business intelligence and KPI monitoring platform',;
     description: 'Advanced analytics platform that provides real-time insights, custom dashboards, and predictive analytics to drive data-driven decision making.',;
     category: 'micro-saas',;
-    pricing: {;
+    pricing: {
 
       monthly: '$199/month',;
       yearly: '$1,999/year',;
@@ -672,17 +645,16 @@ export const enhancedServices2025: EnhancedService[] = [{;
     icon: '📊',;
     color: 'from-cyan-600 to-blue-700',;
     link: '/services/analytics-dashboard',;
-    contactInfo;,
-},;
+    contactInfo},;
   // Supply Chain AI Services;
-  {;
+  {
 
     id: 'network-security-monitoring',;
     name: 'Network Security Monitoring',;
     tagline: '24/7 network security monitoring and threat detection',;
     description: 'Comprehensive network security monitoring service that provides real-time threat detection, incident response, and compliance reporting for enterprise networks.',;
     category: 'it-services',;
-    pricing: {;
+    pricing: {
 
       monthly: '$1,500/month',;
       yearly: '$15,000/year',;
@@ -705,17 +677,16 @@ export const enhancedServices2025: EnhancedService[] = [{;
     icon: '🛡️',;
     color: 'from-red-600 to-orange-700',;
     link: '/services/network-security-monitoring',;
-    contactInfo;,
-},;
+    contactInfo},;
   // Education AI Services;
-  {;
+  {
 
     id: 'data-backup-recovery-solutions',;
     name: 'Data Backup & Recovery Solutions',;
     tagline: 'Automated backup solutions with disaster recovery planning',;
     description: 'Comprehensive data protection service that includes automated backups, cloud storage, disaster recovery planning, and business continuity solutions.',;
     category: 'it-services',;
-    pricing: {;
+    pricing: {
 
       monthly: '$800/month',;
       yearly: '$8,000/year',;
@@ -738,16 +709,15 @@ export const enhancedServices2025: EnhancedService[] = [{;
     icon: '💾',;
     color: 'from-blue-600 to-indigo-700',;
     link: '/services/backup-recovery',;
-    contactInfo;,
-},;
-  {;
+    contactInfo},;
+  {
 
     id: 'it-asset-management-platform',;
     name: 'IT Asset Management Platform',;
     tagline: 'Comprehensive IT asset tracking and lifecycle management',;
     description: 'Complete IT asset management solution that tracks hardware, software, licenses, and provides lifecycle management, cost optimization, and compliance reporting.',;
     category: 'it-services',;
-    pricing: {;
+    pricing: {
 
       monthly: '$500/month',;
       yearly: '$5,000/year',;
@@ -770,17 +740,16 @@ export const enhancedServices2025: EnhancedService[] = [{;
     icon: '🏷️',;
     color: 'from-green-600 to-emerald-700',;
     link: '/services/asset-management',;
-    contactInfo;,
-},;
+    contactInfo},;
   // AI SERVICES;
-  {;
+  {
 
     id: 'ai-chatbot-development',;
     name: 'AI Chatbot Development',;
     tagline: 'Custom AI chatbots for customer service and support',;
     description: 'Intelligent chatbot solutions that provide 24/7 customer support, handle complex queries, and integrate seamlessly with your existing systems.',;
     category: 'ai-services',;
-    pricing: {;
+    pricing: {
 
       monthly: '$2,000/month',;
       yearly: '$20,000/year',;
@@ -803,16 +772,15 @@ export const enhancedServices2025: EnhancedService[] = [{;
     icon: '🤖',;
     color: 'from-purple-600 to-violet-700',;
     link: '/services/ai-chatbot',;
-    contactInfo;,
-},;
-  {;
+    contactInfo},;
+  {
 
     id: 'predictive-analytics-platform',;
     name: 'Predictive Analytics Platform',;
     tagline: 'AI-powered predictive analytics for business forecasting',;
     description: 'Advanced predictive analytics platform that uses machine learning to forecast trends, identify opportunities, and optimize business decisions.',;
     category: 'ai-services',;
-    pricing: {;
+    pricing: {
 
       monthly: '$3,500/month',;
       yearly: '$35,000/year',;
@@ -835,16 +803,15 @@ export const enhancedServices2025: EnhancedService[] = [{;
     icon: '🔮',;
     color: 'from-indigo-600 to-purple-700',;
     link: '/services/predictive-analytics',;
-    contactInfo;,
-},;
-  {;
+    contactInfo},;
+  {
 
     id: 'computer-vision-solutions',;
     name: 'Computer Vision Solutions',;
     tagline: 'AI-powered image and video analysis for various industries',;
     description: 'Advanced computer vision solutions that analyze images and videos for quality control, process automation, and business intelligence across multiple industries.',;
     category: 'ai-services',;
-    pricing: {;
+    pricing: {
 
       monthly: '$4,000/month',;
       yearly: '$40,000/year',;
@@ -867,17 +834,16 @@ export const enhancedServices2025: EnhancedService[] = [{;
     icon: '👁️',;
     color: 'from-cyan-600 to-blue-700',;
     link: '/services/computer-vision',;
-    contactInfo;,
-},;
+    contactInfo},;
   // EMERGING TECH SERVICES;
-  {;
+  {
 
     id: 'quantum-computing-solutions',;
     name: 'Quantum Computing Solutions',;
     tagline: 'Next-generation quantum computing services for complex problem solving',;
     description: 'Cutting-edge quantum computing solutions that solve complex optimization problems, cryptography challenges, and scientific simulations.',;
     category: 'emerging-tech',;
-    pricing: {;
+    pricing: {
 
       monthly: '$10,000/month',;
       yearly: '$100,000/year',;
@@ -900,16 +866,15 @@ export const enhancedServices2025: EnhancedService[] = [{;
     icon: '⚛️',;
     color: 'from-violet-600 to-purple-700',;
     link: '/services/quantum-computing',;
-    contactInfo;,
-},;
-  {;
+    contactInfo},;
+  {
 
     id: 'blockchain-web3-solutions',;
     name: 'Blockchain & Web3 Solutions',;
     tagline: 'Decentralized applications and blockchain infrastructure development',;
     description: 'Comprehensive blockchain and Web3 solutions including smart contract development, DeFi applications, NFT platforms, and decentralized infrastructure.',;
     category: 'emerging-tech',;
-    pricing: {;
+    pricing: {
 
       monthly: '$5,000/month',;
       yearly: '$50,000/year',;
@@ -932,8 +897,7 @@ export const enhancedServices2025: EnhancedService[] = [{;
     icon: '🔗',;
     color: 'from-orange-600 to-red-700',;
     link: '/services/blockchain-web3',;
-    contactInfo;,
-}
+    contactInfo}
 ];
-;
+
 export default enhancedServices2025}}'"

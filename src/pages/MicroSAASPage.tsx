@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
-const MicroSAASPage = () => {;
+const MicroSAASPage = () => {
   return (;
     <>;
       <Head>;
@@ -45,6 +45,5 @@ const MicroSAASPage = () => {;
               </Link>;
             </div>;
     </>;
-  );,
-}
+  )}
 export default MicroSAASPage;

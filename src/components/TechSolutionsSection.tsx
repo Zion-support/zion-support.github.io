@@ -1,25 +1,23 @@
 import {  import { motion  } from 'framer-motion';
-;
+
  params - Function parameters;
  * @returns {*} Function return value;
  */;
-function TechSolutionsSection () {;
-export function TechSolutionsSection() {;
+function TechSolutionsSection () {
+export function TechSolutionsSection() {
   return (";
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
       <div className="max-w-7xl mx-auto px-6">;
         <motion.div ";
           className="text-center mb-16";
-          initial = {;
+          initial = {
 
   { opacity: 0,;
-  y: 20;,
-}}
-          whileInView = {;
+  y: 20}}
+          whileInView = {
 
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >";
@@ -36,22 +34,19 @@ export function TechSolutionsSection() {;
             <motion.div;
               key={solution.title}";
               className="bg-slate-800 border border-slate-700 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 group";
-              initial = {;
+              initial = {
 
   { opacity: 0,;
-  y: 30;,
-}}
-              whileInView = {;
+  y: 30}}
+              whileInView = {
 
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
               viewport={{ once: true }}
-              transition = {;
+              transition = {
 
   { duration: 0.6,;
-  delay: index * 0.1;,
-}}
+  delay: index * 0.1}}
             >;
               <div className={`w-16 h-16 bg-gradient-to-br ${solution.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>";
                 <span className="text-3xl">{solution.icon}</span>;
@@ -98,22 +93,19 @@ export function TechSolutionsSection() {;
         </div>;
 
         <motion.div;
-          className="mt-16 text-center"          initial = {;
+          className="mt-16 text-center"          initial = {
 
   { opacity: 0,;
-  y: 20;,
-}}
-          whileInView = {;
+  y: 20}}
+          whileInView = {
 
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
           viewport={{ once: true }}
-          transition = {;
+          transition = {
 
   { duration: 0.6,;
-  delay: 0.4;,
-}}
+  delay: 0.4}}
         >";
           <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8">";
             <h3 className="text-2xl font-bold text-gray-900 mb-4">;
@@ -140,8 +132,7 @@ export function TechSolutionsSection() {;
           </div>;
         </motion.div>;
       </div>;
-    </section>;) };
-;
+    </section>;) }
 export default TechSolutionsSection;";
             <span className="text-2xl">→</span>;
           </div>;

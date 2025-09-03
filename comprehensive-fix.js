@@ -1,5 +1,5 @@
 #!/usr/bin/env node;
-;
+
 import fs from "fs";
 import path from "path";
 import { fileURLToPath  } from "url";
@@ -61,20 +61,20 @@ const corruptedFiles = [;
   "src/pages/services/AIHealthcare.tsx";
 ];
 // Function to create a proper React component;
-function createServiceComponent(serviceName) {;
+function createServiceComponent(serviceName) {
   const componentName = serviceName.replace(/[^a-zA-Z0-9]/g, "");
   const displayName = serviceName.replace(/AI|\.tsx|\.jsx/g, "").replace(/([A-Z])/g, " $1").trim();
   return `import React from "react";
 import Link from "next/link";
 import Head from "next/head";
-const ${componentName} = () => {;
+const ${componentName} = () => {
   return (;
     <>;
       <Head>;
         <title>${displayName} - AI Services</title>;
         <meta name="description" content="Professional ${displayName} services powered by AI" />;
       </Head>;
-      ;
+
       <div className="min-h-screen bg-gray-50">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">;
           <div className="text-center">;
@@ -84,7 +84,7 @@ const ${componentName} = () => {;
             <p className="text-xl text-gray-600 mb-12">;
               Professional ${displayName} services powered by artificial intelligence;
             </p>;
-            ;
+
             <div className="grid md:grid-cols-2 gap-8 mb-12">;
               <div className="bg-white p-6 rounded-lg shadow-md">;
                 <h2 className="text-2xl font-semibold mb-4">Our Services</h2>;
@@ -95,7 +95,7 @@ const ${componentName} = () => {;
                   <li>• Expert Consultation</li>;
                 </ul>;
               </div>;
-              ;
+
               <div className="bg-white p-6 rounded-lg shadow-md">;
                 <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>;
                 <ul className="text-gray-600 space-y-2">;
@@ -106,7 +106,7 @@ const ${componentName} = () => {;
                 </ul>;
               </div>;
             </div>;
-            ;
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
               <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">;
                 View Pricing;
@@ -119,24 +119,20 @@ const ${componentName} = () => {;
         </div>;
       </div>;
     </>;
-  );,;,
-}
-export default ${componentName};`;,;,
-}
-;
+  )}
+export default ${componentName};`}
+
 // Function to fix Next.js Link issues;
-function fixNextLinks(filePath) {;
-  try {;
+function fixNextLinks(filePath) {
+  try {
   let content = fs.readFileSync(filePath, "utf8");
     // Add Link import if not present and file has href attributes;
-    if (content.includes("href="/") && !content.includes("import Link")) {;
+    if (content.includes("href="/") && !content.includes("import Link")) {
   content = content.replace(;
         /import React from "react";/,;
         `import React from "react";
 import Link from "next/link";`;
-      );,;,
-}
-    ;
+      )}
     // Replace <a href="/..."> with <Link href="/...">;
     content = content.replace(;
       /<a href="(\/[^"]*)"([^>]*)>/g,;
@@ -145,22 +141,20 @@ import Link from "next/link";`;
     // Replace </a> with </Link>;
     content = content.replace(/<\/a>/g, "</Link>");
     fs.writeFileSync(filePath, content);
-    console.log(`Fixed Next.js links in: ${filePath}`);,;,
-} catch (error) {;
-  console.error(`Error fixing links in ${filePath}:`, error.message);,;,
+    console.log(`Fixed Next.js links in: ${filePath}`)} catch (error) {
+  console.error(`Error fixing links in ${filePath}:`, error.message)}
 }
-}
-;
+
 // Function to fix Redux/TypeScript files;
-function $1() {;
+function $1() {
   const reduxFiles = [;
   "src/store/hooks.ts",;
     "src/store/index.ts",;
     "src/store/wishlistSlice.ts";
   ];
-  reduxFiles.forEach(filePath => {;
-  try {;
-  if (fs.existsSync(filePath)) {;
+  reduxFiles.forEach(filePath => {
+  try {
+  if (fs.existsSync(filePath)) {
   let content = fs.readFileSync(filePath, "utf8");
         // Fix common TypeScript syntax errors;
         content = content.replace(/import\s*{([^}]*)\s*}\s*from\s*[""]react-redux[""];/, ;
@@ -169,62 +163,52 @@ function $1() {;
         content = content.replace(/useSelector<([^>]*)>/g, "useSelector<$1>");
         content = content.replace(/useDispatch<([^>]*)>/g, "useDispatch<$1>");
         fs.writeFileSync(filePath, content);
-        console.log(`Fixed Redux file: ${filePath}`);,;,
-}
-    } catch (error) {;
-  console.error(`Error fixing Redux file ${filePath}:`, error.message);,;,
-}
-  });,;,
-}
-;
+        console.log(`Fixed Redux file: ${filePath}`)}
+    } catch (error) {
+  console.error(`Error fixing Redux file ${filePath}:`, error.message)}
+  })}
+
 // Function to fix test files;
-function fixTestFiles() {;
+function fixTestFiles() {
   const testFiles = [;
   "src/test/App.test.tsx";
   ];
-  testFiles.forEach(filePath => {;
-  try {;
-  if (fs.existsSync(filePath)) {;
+  testFiles.forEach(filePath => {
+  try {
+  if (fs.existsSync(filePath)) {
   let content = fs.readFileSync(filePath, "utf8");
         // Fix common test syntax errors;
         content = content.replace(/import\s*{([^}]*)\s*}\s*from\s*[""]@testing-library\/react[""];/, ;
           "import { $1  } from "@testing-library/react";");
         fs.writeFileSync(filePath, content);
-        console.log(`Fixed test file: ${filePath}`);,;,
-}
-    } catch (error) {;
-  console.error(`Error fixing test file ${filePath}:`, error.message);,;,
-}
-  });,;,
-}
-;
+        console.log(`Fixed test file: ${filePath}`)}
+    } catch (error) {
+  console.error(`Error fixing test file ${filePath}:`, error.message)}
+  })}
+
 // Main execution;
 console.log("Starting comprehensive fix...");
 // 1. Fix corrupted files by rewriting them;
 console.log("Fixing corrupted files...");
-corruptedFiles.forEach(filePath => {;
-  try {;
+corruptedFiles.forEach(filePath => {
+  try {
   const serviceName = path.basename(filePath, path.extname(filePath));
     const newContent = createServiceComponent(serviceName);
     fs.writeFileSync(filePath, newContent);
-    console.log(`Rewrote corrupted file: ${filePath}`);,;,
-} catch (error) {;
-  console.error(`Error rewriting ${filePath}:`, error.message);,;,
-}
+    console.log(`Rewrote corrupted file: ${filePath}`)} catch (error) {
+  console.error(`Error rewriting ${filePath}:`, error.message)}
 });
 // 2. Fix Next.js Link issues in all service files;
 console.log("Fixing Next.js Link issues...");
 const serviceDir = "src/pages/services";
-if (fs.existsSync(serviceDir)) {;
+if (fs.existsSync(serviceDir)) {
   const files = fs.readdirSync(serviceDir);
-  files.forEach(file => {;
-  if (file.endsWith(".tsx") || file.endsWith(".jsx")) {;
+  files.forEach(file => {
+  if (file.endsWith(".tsx") || file.endsWith(".jsx")) {
   const filePath = path.join(serviceDir, file);
-      fixNextLinks(filePath);,;,
-}
-  });,;,
-}
-;
+      fixNextLinks(filePath)}
+  })}
+
 // 3. Fix Redux files;
 console.log("Fixing Redux files...");
 fixReduxFiles();
@@ -237,14 +221,12 @@ const problematicFiles = [;
   "src/pages/services/AICustomerServiceAutomation.js.jsx",;
   "src/pages/services/EnterpriseIT.js.jsx";
 ];
-problematicFiles.forEach(filePath => {;
-  try {;
-  if (fs.existsSync(filePath)) {;
+problematicFiles.forEach(filePath => {
+  try {
+  if (fs.existsSync(filePath)) {
   fs.unlinkSync(filePath);
-      console.log(`Removed problematic file: ${filePath}`);,;,
-}
-  } catch (error) {;
-  console.error(`Error removing ${filePath}:`, error.message);,;,
-}
+      console.log(`Removed problematic file: ${filePath}`)}
+  } catch (error) {
+  console.error(`Error removing ${filePath}:`, error.message)}
 });
 console.log("Comprehensive fix completed!")

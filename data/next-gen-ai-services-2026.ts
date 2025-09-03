@@ -1,5 +1,5 @@
 import { ServiceVariant  } from "../types/service-variants";
-export interface NextGenAIService2026 {;
+export interface NextGenAIService2026 {
   id: string;
   name: string;
   tagline: string;
@@ -26,7 +26,7 @@ export interface NextGenAIService2026 {;
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -38,7 +38,7 @@ export interface NextGenAIService2026 {;
   rating: number;
 export const nextGenAIServices2026: NextGenAIService2026[] = [;
   // AI Creative Studio Platform;
-  {;
+  {
     id: "ai-creative-studio-platform",;
     name: "AI Creative Studio Platform",;
     tagline: "Unlimited AI-powered creativity for content creators",;
@@ -76,21 +76,19 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
     marketSize: "$15.3B market",;
     growthRate: "350% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete AI creative platform with multiple AI models, content management, collaboration tools, and enterprise features. Includes mobile apps and API access.",;
     launchDate: "2026-01-25",;
     customers: 1800,;
     rating: 4.9,;
-    reviews: 950;,;,
-},;
+    reviews: 950},;
   // AI Autonomous Business Platform 2026;
-  {;
+  {
     id: "ai-autonomous-business-platform-2026",;
     name: "AI Autonomous Business Platform 2026",;
     tagline: "Run your business with autonomous AI systems",;
@@ -128,21 +126,19 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
     marketSize: "$67.8B market",;
     growthRate: "280% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete autonomous business platform with AI-powered systems for all business functions. Includes enterprise features, custom AI training, and comprehensive integration.",;
     launchDate: "2026-02-10",;
     customers: 450,;
     rating: 4.8,;
-    reviews: 280;,;,
-},;
+    reviews: 280},;
   // AI Emotional Intelligence Platform;
-  {;
+  {
     id: "ai-emotional-intelligence-platform",;
     name: "AI Emotional Intelligence Platform",;
     tagline: "Understand and respond to human emotions with AI",;
@@ -180,21 +176,19 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
     marketSize: "$3.2B market",;
     growthRate: "180% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete emotional intelligence platform with real-time emotion analysis, response generation, and analytics. Includes privacy protection and compliance features.",;
     launchDate: "2026-03-01",;
     customers: 650,;
     rating: 4.7,;
-    reviews: 320;,;,
-},;
+    reviews: 320},;
   // AI Multimodal Fusion Platform;
-  {;
+  {
     id: "ai-multimodal-fusion-platform",;
     name: "AI Multimodal Fusion Platform",;
     tagline: "Unified AI processing across text, image, audio, and video",;
@@ -232,21 +226,19 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
     marketSize: "$12.5B market",;
     growthRate: "320% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete multimodal AI platform with unified processing across all data types. Includes custom model training, API access, and enterprise features.",;
     launchDate: "2026-02-20",;
     customers: 280,;
     rating: 4.8,;
-    reviews: 150;,;,
-},;
+    reviews: 150},;
   // AI Quantum Hybrid Computing;
-  {;
+  {
     id: "ai-quantum-hybrid-computing",;
     name: "AI Quantum Hybrid Computing",;
     tagline: "Combine AI and quantum computing for breakthrough solutions",;
@@ -284,12 +276,11 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
     marketSize: "$6.8B market",;
     growthRate: "400% annual growth",;
     variant: "quantum-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete AI-quantum hybrid platform with access to multiple quantum computers, custom algorithm development, and comprehensive support services.",;
     launchDate: "2026-03-10",;

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useState } from 'react';
-;
-export default function Page() {;
+
+export default function Page() {
             alt={project.title}";
             className="w-full h-full object-cover";
           />;
@@ -21,7 +21,7 @@ export default function Page() {;
               {project.description}
             </p>;
           )}
-;
+
           {project.technologies && project.technologies.length > 0 && (";
             <div className="flex flex-wrap gap-1 mt-2">;
               {project.technologies.map((tech, index) => (";
@@ -41,20 +41,20 @@ export default function Page() {;
               href={project.github_url}";
               target="_blank";
               rel="noopener noreferrer";
-              ;
+
               title="GitHub">";
               <Button variant="ghost" size="icon">";
                 <Github className="h-4 w-4" />;
               </Button>;
             </a>;
           )}
-;
+
           {project.demo_url && (;
             <a;
               href={project.demo_url}";
               target="_blank";
               rel="noopener noreferrer";
-              ;
+
               title="Live demo">";
               <Button variant="ghost" size="icon">";
                 <Link className="h-4 w-4" />;
@@ -98,6 +98,5 @@ export default function Page() {;
         </AlertDialogContent>;
       </AlertDialog>;
     </Card>;
-  );,
-}
+  )}
 '"

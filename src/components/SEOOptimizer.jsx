@@ -1,13 +1,11 @@
-;,"});,"});";,
-}) }"});,"})";
+;,"});,"});"}) }"});,"})";
         catch (error) {}"});,"})";
 ";,"});,"})";
 "";,"});,"})";
 """;,"});,"})";
             // comment;
         finally {}"});,"})";
-            setIsAnalyzing(false)}"});,"});";,
-}, []);,"});,"})";
+            setIsAnalyzing(false)}"});,"});"}, []);,"});,"})";
     useEffect(() => {}"});,"})";
         // comment;
         analyzeSEO()}, [analyzeSEO]);,"});,"})";
@@ -42,8 +40,7 @@
         if (page.url === "/" || page.url.includes("-")) {}"});,"})";
         else if(page.url.length > 0) {}"});,"})";
             score += 8,"});,"})";
-        return Math.round((score / maxScore) * 100) ;,"});,"});";,
-};,"});,"})";
+        return Math.round((score / maxScore) * 100) ;,"});,"});"};,"});,"})";
     const issues = [];,"});,"})";
         if (!page.title || page.title.length < 30) {}"});,"})";
             issues.push("Title is too short (should be 30-60 characters))}"});,"})";
@@ -109,7 +106,7 @@
     const exportSEOReport = () => {}"});,"})";
         if (!report);,"});,"})";
             return,"});,"})";
-        const csvContent = [],,"});,"})";
+        const csvContent = [],"});,"})";
             ...report.pageAnalyses.map(page => [page.pageUrl,";,"});,"})";
                 page.title,"";,"});,"})";
                 page.score.toString(),"""";,"});,"})";
@@ -136,8 +133,7 @@
             return "Excellent";,"});,"})";
             return "Good";,"});,"})";
             return "Fair";""";,"});,"})";
-        return "Poor"};"""";,"});,"});,
-}
+        return "Poor"};"""";,"});,"})}
     return (";
     <div className="fixed bottom-6 right-24 z-50">""";,"});,"})";
       {/* comment */}"""";,"});,"})";
@@ -263,37 +259,29 @@
               <Download className="w-4 h-4"  />;,"});,"})";
               Export,"});,"})";
         </div>)}"});,"})";
-    </div>)};,"});,"})";,
-} catch (error) {;
-    console.error(error);,
-}
-export default SEOOptimizer,"});,"});";,
-}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}"});,"})";
+    </div>)};,"});,"})"} catch (error) {
+    console.error(error)}
+export default SEOOptimizer,"});,"});"}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}"});,"})";
 export { SEOOptimizer };,"});,"})";
  const SEOOptimizer = () => { const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {";import React { useState, useEffect, useCallback } from "react";
  const SEOOptimizer = () => {const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {"";import React { useState, useEffect, useCallback } from "react"";""const;const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {&apos;import React { useState, useEffect, useCallback } from &apos;react&apos,lucide-react";&apos;&apos,;
  const SEOOptimizer = () => { const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {"";import React { useState, useEffect, useCallback } from "react"";";
 ""}}}
-;
+
 const SEOOptimizer = () => {}
-;
-    const;const;const [isOpen, setIsOpen] = useState (false);,
-}
-    const [isAnalyzing, setIsAnalyzing] = useState (false);,
-}
-    const [report, setReport] = useState (null);,
-}
-    const [selectedPage, setSelectedPage] = useState (null);,
-}
+
+    const;const;const [isOpen, setIsOpen] = useState (false)}
+    const [isAnalyzing, setIsAnalyzing] = useState (false)}
+    const [report, setReport] = useState (null)}
+    const [selectedPage, setSelectedPage] = useState (null)}
     const analyzeSEO = useCallback (async () => {}
-;
-        setIsAnalyzing (true);,
-}
+
+        setIsAnalyzing (true)}
         try {}
-;
+
             // comment;
             const samplePages = []{}
-;
+
 ";
 
                     url: "/",;
@@ -325,8 +313,7 @@ const SEOOptimizer = () => {}
                     headings[&apos;AI - Powered Business Solutions&apos,Comprehensive IT Services&apos,Micro-SaaS Solutions&apos],",;
                     images[&apos;/images/hero - ai-solutions.jpg&apos,/images/hero-it-services.jpg&apos],",;
                     links[&apos;/services&apos,/ai-solutions&apos,/about&apos,/contact&apos],;
-                    keywords[&apos;AI solutions&apos,quantum computing&apos,cybersecurity&apos,digital transformation&apos];,
-} {}";
+                    keywords[&apos;AI solutions&apos,quantum computing&apos,cybersecurity&apos,digital transformation&apos]} {}";
                     url: &apos,/services&apos,"&apos,;
                     title: &apos,Our Services - Comprehensive Technology Solutions&apos,"&apos,;
                     metaDescription: &apos,Comprehensive technology services including AI solutions, cloud infrastructure, cybersecurity, and digital transformation.&apos,"&apos,;
@@ -365,18 +352,15 @@ const SEOOptimizer = () => {}
                     links["/services", /about",/contact"], ",;
                     keywords["artificial intelligence", machine learning",predictive analytics", AI automation"];
 
-;
+
             ]&apos;&apos;
             const pageAnalyses = samplePages.map(page => {}
-;
-                const;const;const score = calculateSEOScore(page);,
-}
-                const issues = identifySEOIssues(page);,
-}
-                const recommendations = generateSEORecommendations(issues);,
-}
+
+                const;const;const score = calculateSEOScore(page)}
+                const issues = identifySEOIssues(page)}
+                const recommendations = generateSEORecommendations(issues)}
                 return {}
-;
+
                     pageUrl: page.url,;
 title: page.title,;
 metaDescription: page.metaDescription,;
@@ -386,68 +370,55 @@ links: page.links,;
 keywords: page.keywords,;
 score,;
 issues,;
-                    recommendations}});,
-}
+                    recommendations}})}
                     pageUrl: page.url, title: page.title,;
                     metaDescription: page.metaDescription, headings: page.headings,;
                     images: page.images, links: page.links,;
                     keywords: page.keywords, score,;
-                    issues, recommendations}});,
-}
+                    issues, recommendations}})}
             const totalPages = pageAnalyses.length;
-            const averageScore = Math.round(pageAnalyses.reduce ( (sum, page) => sum + page.score, 0) / totalPages);,
-}
+            const averageScore = Math.round(pageAnalyses.reduce ( (sum, page) => sum + page.score, 0) / totalPages)}
             const pagesWithIssues = pageAnalyses.filter(page => page.issues.length > 0) .length;
             // comment            const issueCounts = {}
-;
+
             pageAnalyses.forEach(page => {}
-;
+
                 page.issues.forEach(issue => {}
-;
-                    issueCounts[issue] = (issueCounts[issue] || 0) + 1})});,
-}
-            const topIssues = Object.entries(issueCounts);,
-}
-                    issueCounts[issue] = (issueCounts[issue] || 0) + 1})});,
-}
-            const;const;const topIssues = Object.entries(issueCounts);,
-}
-                .sort(([, a], [, b]) => b - a);,
-}
-                .slice(0, 5);,
-}
-                .map(([issue]) => issue);,
-}
-            const summary = generateSummary(pageAnalyses, topIssues);,
-}
+
+                    issueCounts[issue] = (issueCounts[issue] || 0) + 1})})}
+            const topIssues = Object.entries(issueCounts)}
+                    issueCounts[issue] = (issueCounts[issue] || 0) + 1})})}
+            const;const;const topIssues = Object.entries(issueCounts)}
+                .sort(([, a], [, b]) => b - a)}
+                .slice(0, 5)}
+                .map(([issue]) => issue)}
+            const summary = generateSummary(pageAnalyses, topIssues)}
             setReport({}
-;
+
                 totalPages,;
                 averageScore,;
                 pagesWithIssues,;
                 topIssues,;
                 pageAnalyses,;
                 summary})}
-;
+
                 totalPages, averageScore,;
                 pagesWithIssues, topIssues,;
                 pageAnalyses, summary})}
-;
+
         catch (error) {}";
             // comment;
 
             // comment;
         finally {}
-;
+
             setIsAnalyzing(false)}
     }, []);
-    useEffect(() => {;
+    useEffect(() => {
   // TODO: Add dependencies if needed;
 
-  return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
+  return () => {
+    // Cleanup function}}, []);, []);
         // Auto-analyze SEO when component mounts;
         analyzeSEO()}, [analyzeSEO]);
-    const calculateSEOScore = (page) => {;
+    const calculateSEOScore = (page) => {

@@ -1,5 +1,5 @@
 import { ServiceVariant  } from "../types/service-variants";
-export interface Revolutionary2026HealthcareBiotechService {;
+export interface Revolutionary2026HealthcareBiotechService {
   id: string;
   name: string;
   tagline: string;
@@ -26,7 +26,7 @@ export interface Revolutionary2026HealthcareBiotechService {;
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -38,7 +38,7 @@ export interface Revolutionary2026HealthcareBiotechService {;
   rating: number;
 export const revolutionary2026HealthcareBiotechServices: Revolutionary2026HealthcareBiotechService[] = [;
   // AI Drug Discovery Platform;
-  {;
+  {
     id: "ai-drug-discovery-platform",;
     name: "AI Drug Discovery Platform",;
     tagline: "Accelerate drug development with AI intelligence",;
@@ -76,21 +76,19 @@ export const revolutionary2026HealthcareBiotechServices: Revolutionary2026Health
     marketSize: "$45.6B market",;
     growthRate: "28.9% annual growth",;
     variant: "quantum-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete AI drug discovery platform with molecular analysis, drug prediction, and clinical trial optimization.",;
     launchDate: "2024-12-01",;
     customers: 156,;
     rating: 4.8,;
-    reviews: 89;,;,
-},;
+    reviews: 89},;
   // Autonomous Healthcare AI Platform;
-  {;
+  {
     id: "autonomous-healthcare-ai-platform",;
     name: "Autonomous Healthcare AI Platform",;
     tagline: "Self-learning healthcare AI for medical breakthroughs",;
@@ -128,21 +126,19 @@ export const revolutionary2026HealthcareBiotechServices: Revolutionary2026Health
     marketSize: "$67.4B market",;
     growthRate: "25.3% annual growth",;
     variant: "quantum-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete autonomous healthcare AI platform with self-learning capabilities, continuous improvement, and comprehensive healthcare support.",;
     launchDate: "2024-12-01",;
     customers: 289,;
     rating: 4.7,;
-    reviews: 167;,;,
-},;
+    reviews: 167},;
   // Quantum Machine Learning Platform;
-  {;
+  {
     id: "quantum-machine-learning-platform",;
     name: "Quantum Machine Learning Platform",;
     tagline: "Quantum AI research for breakthrough discoveries",;
@@ -180,21 +176,19 @@ export const revolutionary2026HealthcareBiotechServices: Revolutionary2026Health
     marketSize: "$78.9B market",;
     growthRate: "31.2% annual growth",;
     variant: "quantum-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete quantum machine learning platform with quantum AI integration, research acceleration, and breakthrough capabilities.",;
     launchDate: "2024-12-01",;
     customers: 78,;
     rating: 4.9,;
-    reviews: 56;,;,
-},;
+    reviews: 56},;
   // AI Legal Research Platform;
-  {;
+  {
     id: "ai-legal-research-platform",;
     name: "AI Legal Research Platform",;
     tagline: "Revolutionary legal research with AI intelligence",;
@@ -232,21 +226,19 @@ export const revolutionary2026HealthcareBiotechServices: Revolutionary2026Health
     marketSize: "$23.7B market",;
     growthRate: "19.8% annual growth",;
     variant: "quantum-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete AI legal research platform with case analysis, outcome prediction, and comprehensive legal insights.",;
     launchDate: "2024-12-01",;
     customers: 567,;
     rating: 4.6,;
-    reviews: 234;,;,
-},;
+    reviews: 234},;
   // Biotech AI Research Platform;
-  {;
+  {
     id: "biotech-ai-research-platform",;
     name: "Biotech AI Research Platform",;
     tagline: "AI-powered biotechnology research and development",;
@@ -284,12 +276,11 @@ export const revolutionary2026HealthcareBiotechServices: Revolutionary2026Health
     marketSize: "$34.8B market",;
     growthRate: "26.4% annual growth",;
     variant: "quantum-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete biotech AI research platform with genetic analysis, protein prediction, and personalized medicine capabilities.",;
     launchDate: "2024-12-01",;

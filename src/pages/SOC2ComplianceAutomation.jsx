@@ -575,9 +575,8 @@ import {}
   CheckCircle,';
   Shield,'';
   Zap,''';
-  Brain'''';,
-} from 'lucide-react';
-;
+  Brain''''} from 'lucide-react';
+
 const successStories = [];
   {}
     id: 1,;
@@ -586,8 +585,7 @@ const successStories = [];
     challenge: "Needed automated SOC2 compliance monitoring for regulatory requirements","";
     solution: "Built comprehensive SOC2 compliance automation platform with monitoring and reporting","";
     results: "80% faster compliance checks, 90% reduced manual effort, 100% audit success, better security","";
-    logo: "FSC";,
-},;
+    logo: "FSC"},;
   {}
 ";
     id: 2,"";
@@ -596,8 +594,7 @@ const successStories = [];
     challenge: "Required automated SOC2 policy management and enforcement","";
     solution: "Implemented AI-driven SOC2 policy automation system","";
     results: "70% faster policy updates, 85% improved compliance, better risk management, reduced violations","";
-    logo: "HTL";,
-},;
+    logo: "HTL"},;
   {}
 ";
     id: 3,"";
@@ -608,7 +605,7 @@ const successStories = [];
     results: "75% faster audit preparation, 90% automated security controls, better compliance, improved security","";
     logo: "CSP";
 ];
-;
+
 const processSteps = [];
   {}
 ";
@@ -616,24 +613,21 @@ const processSteps = [];
     title: "Compliance Assessment","";
     description: "Evaluate current SOC2 compliance status and identify automation opportunities",";
     icon: FileText,"";
-    duration: "2-4 weeks";,
-},;
+    duration: "2-4 weeks"},;
   {}
 ";
     step: 2,"";
     title: "Automation Strategy","";
     description: "Develop SOC2 automation strategy and implementation roadmap",";
     icon: Code,"";
-    duration: "4-8 weeks";,
-},;
+    duration: "4-8 weeks"},;
   {}
 ";
     step: 3,"";
     title: "System Implementation","";
     description: "Build and deploy SOC2 compliance automation systems",";
     icon: Wrench,"";
-    duration: "18-40 weeks";,
-},;
+    duration: "18-40 weeks"},;
   {}
 ";
     step: 4,"";
@@ -642,7 +636,7 @@ const processSteps = [];
     icon: Gauge,"";
     duration: "4-8 weeks";
 ];
-;
+
 const soc2Benefits = [];
   {}
 ";
@@ -650,34 +644,30 @@ const soc2Benefits = [];
     title: "Automated Compliance","";
     description: "AI-powered automation reduces manual compliance effort",";
     icon: Zap,"";
-    examples["Automated monitoring", "Policy enforcement", "Compliance checking", "Audit preparation"];,
-},;
+    examples["Automated monitoring", "Policy enforcement", "Compliance checking", "Audit preparation"]},;
   {}
 ";
 "";
     title: "Improved Security","";
     description: "Automated security controls enhance overall security posture",";
     icon: Shield,"";
-    examples["Security automation", "Control monitoring", "Threat detection", "Incident response"];,
-},;
+    examples["Security automation", "Control monitoring", "Threat detection", "Incident response"]},;
   {}
 ";
 "";
     title: "Cost Reduction","";
     description: "Automation reduces compliance costs and resource requirements",";
     icon: TrendingUp,"";
-    examples["Reduced manual effort", "Faster compliance", "Better efficiency", "Lower costs"];,
-},;
+    examples["Reduced manual effort", "Faster compliance", "Better efficiency", "Lower costs"]},;
   {}
 ";
 "";
     title: "Audit Success","";
     description: "Automated systems improve audit preparation and success rates",";
     icon: CheckCircle,"";
-    examples["Better preparation", "Automated evidence", "Compliance reporting", "Audit success"];,
-}
+    examples["Better preparation", "Automated evidence", "Compliance reporting", "Audit success"]}
 ];
-;
+
 export default function SOC2ComplianceAutomation() {}
 ';
 '';
@@ -705,30 +695,24 @@ export default function SOC2ComplianceAutomation() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             animate = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center max-w-4xl mx-auto";
             <motion.div;
               initial = {}
   { opacity: 0,;
-  scale: 0.8;,
-}}
+  scale: 0.8}}
               animate = {}
   { opacity: 1,;
-  scale: 1;,
-}}
+  scale: 1}}
               transition = {}
   { duration: 0.8,;
-  delay: 0.2;,
-}}
+  delay: 0.2}}
               className="inline - flex items - center justify - center w-20 h-20 bg-gradient - to - br from - zion - cyan to - zion - purple rounded-2xl mb-8";
-";,
-}}"";
+"}}"";
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"";
 "";
               <Shield className="w-10 h-10 text-white" />;
@@ -768,12 +752,10 @@ export default function SOC2ComplianceAutomation() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
 "";
@@ -789,19 +771,15 @@ export default function SOC2ComplianceAutomation() {}
                 key={benefit.title}
                 initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                 transition = {}
   { duration: 0.6,;
-  delay: index * 0.1;,
-}}
+  delay: index * 0.1}}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 8 hover:border-zion - cyan / 40 transition - all duration -300";
-";,
-}}"";
+"}}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"";
 "";
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">"";
@@ -831,12 +809,10 @@ export default function SOC2ComplianceAutomation() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
 "";
@@ -852,19 +828,15 @@ export default function SOC2ComplianceAutomation() {}
                 key={technology.name}
                 initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                 transition = {}
   { duration: 0.6,;
-  delay: index * 0.1;,
-}}
+  delay: index * 0.1}}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 text-center hover:border-zion - cyan / 40 transition - all duration -300";
-";,
-}}"";
+"}}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"";
 "";
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">"";
@@ -883,8 +855,7 @@ export default function SOC2ComplianceAutomation() {}
                     ? 'bg-red-500/20 text-red-400 border border-red-500/30'''''`;
                     : technology.reliability === 'High''''`'`;
                     ? 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30'''`'`'`;
-                    : 'bg-green-500/20 text-green-400 border border-green-500/30'````;,
-}`}>;
+                    : 'bg-green-500/20 text-green-400 border border-green-500/30'````}`}>;
                   {technology.reliability} Reliability;
                 </span>;
               </motion.div>;) ) }
@@ -898,12 +869,10 @@ export default function SOC2ComplianceAutomation() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
 "";
@@ -919,17 +888,14 @@ export default function SOC2ComplianceAutomation() {}
                 key={step.step}
                 initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                 transition = {}
   { duration: 0.6,;
   delay: index * 0.1;
-";,
-}}"";
+"}}"";
                 className="text-center"";
 "";
                 <div className="relative mb-6">"";
@@ -957,12 +923,10 @@ export default function SOC2ComplianceAutomation() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
 "";
@@ -984,9 +948,8 @@ export default function SOC2ComplianceAutomation() {}
 '''`;
                   selectedCategory === category'''`'`;
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'''`'`'`;
-                    : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````;,
-}`}
-;
+                    : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````}`}
+
                 {category}
               </button>) ) }
           </div>";
@@ -997,21 +960,17 @@ export default function SOC2ComplianceAutomation() {}
                 key={solution.id}
                 initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                 transition = {}
   { duration: 0.6,;
-  delay: index * 0.1;,
-}}
+  delay: index * 0.1}}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 hover:border-zion - cyan / 40 transition - all duration - 300 cursor -pointer";
                 onClick={ () => setSelectedSolution(solution) }
-;
-";,
-}}"";
+
+"}}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer";
                 onClick={() => setSelectedSolution(solution)}";
 "";
@@ -1065,12 +1024,10 @@ export default function SOC2ComplianceAutomation() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
 "";
@@ -1086,19 +1043,15 @@ export default function SOC2ComplianceAutomation() {}
                 key={story.id}
                 initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                 transition = {}
   { duration: 0.6,;
-  delay: index * 0.1;,
-}}
+  delay: index * 0.1}}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 hover:border-zion - cyan / 40 transition - all duration -300";
-";,
-}}"";
+"}}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"";
 "";
                 <div className="flex items-center gap-4 mb-6">"";
@@ -1143,12 +1096,10 @@ export default function SOC2ComplianceAutomation() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center max-w-4xl mx-auto"";
 "";
@@ -1175,14 +1126,10 @@ export default function SOC2ComplianceAutomation() {}
       </section>;
     </div>;
   )}
-;
 
-export { SOC2ComplianceAutomation };
-;
-export { SOC2ComplianceAutomation };
-;
-export { SOC2ComplianceAutomation };
-;
-export { SOC2ComplianceAutomation };
-;
-export { SOC2ComplianceAutomation };
+
+export { SOC2ComplianceAutomation }
+export { SOC2ComplianceAutomation }
+export { SOC2ComplianceAutomation }
+export { SOC2ComplianceAutomation }
+export { SOC2ComplianceAutomation }

@@ -1,5 +1,5 @@
 import { ServiceVariant  } from "../types/service-variants";
-export interface AdvancedFintechSolution2025 {;
+export interface AdvancedFintechSolution2025 {
   id: string;
   name: string;
   tagline: string;
@@ -26,7 +26,7 @@ export interface AdvancedFintechSolution2025 {;
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -37,7 +37,7 @@ export interface AdvancedFintechSolution2025 {;
   customers: number;
   rating: number;
 export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
-  {;
+  {
     id: "ai-powered-credit-risk-assessment",;
     name: "AI-Powered Credit Risk Assessment",;
     tagline: "Intelligent credit scoring with alternative data analysis",;
@@ -75,20 +75,18 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
     marketSize: "$35B credit scoring market",;
     growthRate: "25% annual growth",;
     variant: "fintech",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Production-ready AI credit risk platform with advanced ML models and comprehensive compliance features.",;
     launchDate: "2025-01-22",;
     customers: 67,;
     rating: 4.8,;
-    reviews: 45;,;,
-},;
-  {;
+    reviews: 45},;
+  {
     id: "blockchain-payment-processing-platform",;
     name: "Blockchain Payment Processing Platform",;
     tagline: "Secure cross-border payments with blockchain technology",;
@@ -126,20 +124,18 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
     marketSize: "$28B blockchain payments market",;
     growthRate: "55% annual growth",;
     variant: "blockchain-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Production-ready blockchain payment platform with enterprise-grade security and compliance features.",;
     launchDate: "2025-01-28",;
     customers: 89,;
     rating: 4.7,;
-    reviews: 56;,;,
-},;
-  {;
+    reviews: 56},;
+  {
     id: "quantum-financial-modeling-platform",;
     name: "Quantum Financial Modeling Platform",;
     tagline: "Quantum computing for advanced financial modeling",;
@@ -177,20 +173,18 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
     marketSize: "$8B quantum computing market",;
     growthRate: "65% annual growth",;
     variant: "quantum-financial",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Production-ready quantum financial platform with advanced algorithms and enterprise integration.",;
     launchDate: "2025-02-03",;
     customers: 23,;
     rating: 4.9,;
-    reviews: 18;,;,
-},;
-  {;
+    reviews: 18},;
+  {
     id: "ai-powered-insurance-underwriting",;
     name: "AI-Powered Insurance Underwriting",;
     tagline: "Intelligent insurance risk assessment and pricing",;
@@ -228,20 +222,18 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
     marketSize: "$20B insurtech market",;
     growthRate: "30% annual growth",;
     variant: "fintech",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Production-ready AI insurance platform with advanced ML models and comprehensive underwriting capabilities.",;
     launchDate: "2025-02-08",;
     customers: 134,;
     rating: 4.6,;
-    reviews: 78;,;,
-},;
-  {;
+    reviews: 78},;
+  {
     id: "regtech-compliance-automation-platform",;
     name: "RegTech Compliance Automation Platform",;
     tagline: "Automated regulatory compliance and reporting",;
@@ -279,12 +271,11 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
     marketSize: "$15B RegTech market",;
     growthRate: "40% annual growth",;
     variant: "fintech",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Production-ready RegTech platform with comprehensive compliance automation and monitoring capabilities.",;
     launchDate: "2025-02-12",;

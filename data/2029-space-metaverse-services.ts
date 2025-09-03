@@ -1,4 +1,4 @@
-export interface SpaceMetaverseService2029 {;
+export interface SpaceMetaverseService2029 {
   id: string;
   name: string;
   description: string;
@@ -32,12 +32,12 @@ export interface SpaceMetaverseService2029 {;
   partnership: string;
   funding: string;
   exit: string;
-  contact: {;
+  contact: {
     mobile: string;
     email: string;
     website: string;
 export const spaceMetaverseServices2029: SpaceMetaverseService2029[] = [;
-  {;
+  {
     id: "space-mining-automation-platform",;
     name: "Space Mining Automation Platform",;
     description: "Revolutionary space mining automation platform that uses AI and robotics to autonomously extract valuable resources from asteroids, moons, and other celestial bodies with minimal human intervention.",;
@@ -94,13 +94,12 @@ export const spaceMetaverseServices2029: SpaceMetaverseService2029[] = [;
     partnership: "Strategic space partnerships",;
     funding: "Series D funding, $2B valuation",;
     exit: "IPO or space acquisition",;
-    contact: {;
+    contact: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       website: "https://ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
-},;
-  {;
+      address: "364 E Main St STE 1008 Middletown DE 19709"},;
+  {
     id: "metaverse-digital-reality-platform",;
     name: "Metaverse Digital Reality Platform",;
     description: "Next-generation metaverse platform that creates immersive digital realities with photorealistic graphics, AI-powered interactions, and seamless integration between virtual and physical worlds.",;
@@ -157,13 +156,12 @@ export const spaceMetaverseServices2029: SpaceMetaverseService2029[] = [;
     partnership: "Strategic metaverse partnerships",;
     funding: "Series B funding, $300M valuation",;
     exit: "IPO or tech acquisition",;
-    contact: {;
+    contact: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       website: "https://ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
-},;
-  {;
+      address: "364 E Main St STE 1008 Middletown DE 19709"},;
+  {
     id: "ai-predictive-health-analytics",;
     name: "AI Predictive Health Analytics",;
     description: "Advanced AI-powered health analytics platform that predicts health outcomes, identifies risk factors, and provides personalized health recommendations using comprehensive data analysis and machine learning.",;
@@ -220,13 +218,12 @@ export const spaceMetaverseServices2029: SpaceMetaverseService2029[] = [;
     partnership: "Healthcare provider partnerships",;
     funding: "Series C funding, $200M valuation",;
     exit: "IPO or healthcare acquisition",;
-    contact: {;
+    contact: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       website: "https://ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
-},;
-  {;
+      address: "364 E Main St STE 1008 Middletown DE 19709"},;
+  {
     id: "ai-autonomous-business-manager",;
     name: "AI Autonomous Business Manager",;
     description: "Fully autonomous AI business management platform that handles day-to-day operations, decision-making, and strategic planning while continuously learning and optimizing business processes.",;
@@ -283,7 +280,7 @@ export const spaceMetaverseServices2029: SpaceMetaverseService2029[] = [;
     partnership: "Strategic business partnerships",;
     funding: "Series B funding, $100M valuation",;
     exit: "IPO or enterprise acquisition",;
-    contact: {;
+    contact: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       website: "https://ziontechgroup.com",;

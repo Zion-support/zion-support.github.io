@@ -11,7 +11,7 @@ import {}
   BarChart3,'';
   Globe,''';
   Rocket} from 'lucide-react';
-;
+
 const AISolutions = () => {}
   const aiServices = [];
     {}
@@ -223,17 +223,11 @@ const AISolutions = () => {}
           </div>;
         </div>;
       </section>;
-    </div>) ;,
-};
-;
+    </div>) }
 export default AISolutions;
-;
-export { AISolutions };
-;
-export { AISolutions };
-;
-export { AISolutions };
-;
-export { AISolutions };
-;
-export { AISolutions };
+
+export { AISolutions }
+export { AISolutions }
+export { AISolutions }
+export { AISolutions }
+export { AISolutions }

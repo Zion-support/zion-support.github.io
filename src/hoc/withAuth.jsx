@@ -10,43 +10,35 @@ function withAuth(Component) {}
 ';
 '';
 ''';
-                navigate('/login?next=/community/new');,
-}
+                navigate('/login?next=/community/new')}
         }, [isLoggedIn, router]);
         if (!isLoggedIn) {}
             return null;
-;
-        return <Component {...props}/>;,
-};
+
+        return <Component {...props}/>}
     return Wrapped;
-;
+
 export { withAuth };';
-export default withAuth;'';,
-}}}''';
-                router('/login?next=/community/new');,
-}
+export default withAuth;''}}}''';
+                router('/login?next=/community/new')}
         }, [isLoggedIn, router]);
         if(!isLoggedIn) {}
             return null}
-        return <Component {...props}/>};
-    return Wrapped};
+        return <Component {...props}/>}
+    return Wrapped}
 export default withAuth;
-;
-export default withAuth;
-export default withAuth;
-export default withAuth;
-export default withAuth;
-export default withAuth;
-export default withAuth;
-export default withAuth;
-;
 
-export { Wrapped };
-;
-export { Wrapped };
-;
-export { Wrapped };
-;
-export { Wrapped };
-;
-export { Wrapped };
+export default withAuth;
+export default withAuth;
+export default withAuth;
+export default withAuth;
+export default withAuth;
+export default withAuth;
+export default withAuth;
+
+
+export { Wrapped }
+export { Wrapped }
+export { Wrapped }
+export { Wrapped }
+export { Wrapped }

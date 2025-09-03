@@ -46,8 +46,7 @@ export default function Pricing() {}
             ],;";
             popular: false,"";
             cta: "Start Free Trial","";
-            link: "/signup?plan=starter";,
-},;
+            link: "/signup?plan=starter"},;
         {}
 ";
 "";
@@ -69,8 +68,7 @@ export default function Pricing() {}
             ],;";
             popular: true,"";
             cta: "Start Free Trial","";
-            link: "/signup?plan=professional";,
-},;
+            link: "/signup?plan=professional"},;
         {}
 ";
 "";
@@ -96,8 +94,7 @@ export default function Pricing() {}
             ],;";
             popular: false,"";
             cta: "Start Free Trial","";
-            link: "/signup?plan=business";,
-},;
+            link: "/signup?plan=business"},;
         {}
 ";
 "";
@@ -123,8 +120,7 @@ export default function Pricing() {}
             ],;";
             popular: false,"";
             cta: "Contact Sales","";
-            link: "/contact";,
-}
+            link: "/contact"}
     ];
     const serviceCategories = [];
         {}
@@ -137,8 +133,7 @@ export default function Pricing() {}
                 { name: "AI Image & Video Editor", price: "$19/month", features["Background removal", "Quality enhancement", "Style transfer", "Batch processing"] },;"";
                 { name: "AI Code Assistant", price: "$39/month", features["50+ languages", "IDE integrations", "Code review", "Debugging assistance"] },;"";
                 { name: "AI Data Analytics", price: "$199/month", features["Predictive analytics", "Real-time insights", "Custom dashboards", "Automated reporting"] }
-            ];,
-},;
+            ]},;
         {}
 ";
 "";
@@ -148,8 +143,7 @@ export default function Pricing() {}
                 { name: "AI Threat Detection", price: "$99/month", features["24/7 monitoring", "Instant alerts", "Automated response", "Threat intelligence"] },;"";
                 { name: "Zero Trust Security", price: "$499/month", features["Identity verification", "Network segmentation", "Continuous monitoring", "Compliance tools"] },;"";
                 { name: "Penetration Testing", price: "$299/month", features["Monthly assessments", "Detailed reports", "Remediation guidance", "Compliance support"] }
-            ];,
-},;
+            ]},;
         {}
 ";
 "";
@@ -159,8 +153,7 @@ export default function Pricing() {}
                 { name: "Multi-Cloud Management", price: "$79/month", features["Unified dashboard", "Cost optimization", "Security compliance", "Performance monitoring"] },;"";
                 { name: "DevOps Automation", price: "$49/month", features["CI/CD pipelines", "Infrastructure as code", "Automated testing", "Deployment automation"] },;"";
                 { name: "Edge Computing", price: "$149/month", features["Global edge network", "IoT integration", "Real-time processing", "Low latency"] }
-            ];,
-},;
+            ]},;
         {}
 ";
 "";
@@ -170,8 +163,7 @@ export default function Pricing() {}
                 { name: "AI-Powered CRM", price: "$39/user/month", features["Lead scoring", "Sales forecasting", "Automated follow-ups", "Predictive analytics"] },;"";
                 { name: "Business Automation", price: "$29/month", features["Workflow automation", "100+ integrations", "Document processing", "Process optimization"] },;"";
                 { name: "AI Market Research", price: "$199/month", features["Competitor analysis", "Trend prediction", "Real-time monitoring", "Market insights"] }
-            ];,
-},;
+            ]},;
         {}
 ";
 "";
@@ -181,8 +173,7 @@ export default function Pricing() {}
                 { name: "AI Meeting Assistant", price: "$19/month", features["Real-time transcription", "Smart summaries", "Action tracking", "Automated follow-ups"] },;"";
                 { name: "Virtual Event Platform", price: "$99/month", features["Interactive features", "AI engagement", "Event analytics", "1000 attendees"] },;"";
                 { name: "AI Translation", price: "$29/month", features["100+ languages", "Cultural adaptation", "Real-time translation", "API access"] }
-            ];,
-},;
+            ]},;
         {}
 ";
 "";
@@ -192,8 +183,7 @@ export default function Pricing() {}
                 { name: "AI Legal Review", price: "$149/month", features["Contract analysis", "Risk assessment", "Compliance monitoring", "Legal insights"] },;"";
                 { name: "AI Financial Advisor", price: "$39/month", features["Portfolio optimization", "Risk assessment", "Financial planning", "Investment advice"] },;"";
                 { name: "AI Healthcare Assistant", price: "$29/month", features["Health monitoring", "Symptom analysis", "Wellness coaching", "HIPAA compliant"] }
-            ];,
-}";
+            ]}";
     ];"";
     return (<div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-purple-dark">";
       {/* Hero Section */}"";
@@ -409,14 +399,10 @@ export default function Pricing() {}
         </div>;
       </div>;
     </div>)}
-;
 
-export { Pricing };
-;
-export { Pricing };
-;
-export { Pricing };
-;
-export { Pricing };
-;
-export { Pricing };
+
+export { Pricing }
+export { Pricing }
+export { Pricing }
+export { Pricing }
+export { Pricing }

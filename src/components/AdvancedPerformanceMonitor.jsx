@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
-import {  Activity, BarChart3, TrendingUp, Zap, Database, Network, Cpu, HardDrive, X, Maximize2, Minimize2, RefreshCw, AlertTriangle, CheckCircle, Download,  } from 'lucide-react';
+import {  Activity, BarChart3, TrendingUp, Zap, Database, Network, Cpu, HardDrive, X, Maximize2, Minimize2, RefreshCw, AlertTriangle, CheckCircle, Download} from 'lucide-react';
  from 'lucide-react';
-;
+
 const mockSystemMetrics = [{;
 
     id: '1',;
@@ -14,7 +14,7 @@ const mockSystemMetrics = [{;
     change: 5.2,;
     category: 'Processor',;
     lastUpdated: '2024-01-15T10:00:00.000Z'},;
-  {;
+  {
 
     id: '2',;
     name: 'Memory Usage',;
@@ -26,7 +26,7 @@ const mockSystemMetrics = [{;
     change: 0.8,;
     category: 'Memory',;
     lastUpdated: '2024-01-15T10:00:00.000Z'},;
-  {;
+  {
 
     id: '3',;
     name: 'Disk I/O',;
@@ -38,7 +38,7 @@ const mockSystemMetrics = [{;
     change: -2.1,;
     category: 'Storage',;
     lastUpdated: '2024-01-15T10:00:00.000Z'},;
-  {;
+  {
 
     id: '4',;
     name: 'Network Latency',;
@@ -50,7 +50,7 @@ const mockSystemMetrics = [{;
     change: 0.5,;
     category: 'Network',;
     lastUpdated: '2024-01-15T10:00:00.000Z'},;
-  {;
+  {
 
     id: '5',;
     name: 'Database Connections',;
@@ -62,7 +62,7 @@ const mockSystemMetrics = [{;
     change: 8.7,;
     category: 'Database',;
     lastUpdated: '2024-01-15T10:00:00.000Z'},;
-  {;
+  {
 
     id: '6',;
     name: 'Response Time',;
@@ -75,7 +75,7 @@ const mockSystemMetrics = [{;
     category: 'Performance',;
     lastUpdated: '2024-01-15T10:00:00.000Z'},;
 ];
-;
+
 const mockPerformanceAlerts = [{;
 
     id: '1',;
@@ -90,7 +90,7 @@ const mockPerformanceAlerts = [{;
       'Scale horizontally',Optimize database queries',Review background processes',;
     ],;
     status: 'active'},;
-  {;
+  {
 
     id: '2',;
     type: 'scalability',;
@@ -105,8 +105,8 @@ const mockPerformanceAlerts = [{;
     ],;
     status: 'active'},;
 ];
-;
-export function AdvancedPerformanceMonitor({ enabled = true }) {;
+
+export function AdvancedPerformanceMonitor({ enabled = true }) {
 
   const [isExpanded, setIsExpanded] = useState(false);
   const [isMinimized, setIsMinimized] = useState(false);
@@ -118,35 +118,29 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {;
   const [trendData, setTrendData] = useState([]);
   const [systemHealth, setSystemHealth] = useState('good');
   const [optimizationSuggestions, setOptimizationSuggestions] = useState([]);
-;
+
   const containerRef = useRef(null) ;
-;
-  useEffect(() => {;
+
+  useEffect(() => {
   // TODO: Add dependencies if needed;
 
-  return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
+  return () => {
+    // Cleanup function}}, []);, []);
     if(!enabled) return;
-;
-    const interval = setInterval(() => {;
-      refreshMetrics () ;,
-}, refreshInterval) ;
-;
-    return () => clearInterval(interval) ;,
-}, [enabled, refreshInterval]) ;
-;
-  const refreshMetrics = async () => {;
+
+    const interval = setInterval(() => {
+      refreshMetrics () }, refreshInterval) ;
+
+    return () => clearInterval(interval) }, [enabled, refreshInterval]) ;
+
+  const refreshMetrics = async () => {
     setIsRefreshing(true) ;
     // Simulate API call;
     await new Promise(resolve => setTimeout (resolve, 1000) ) ;
-    setIsRefreshing(false) ;,
-};
-;
-  const getStatusColor = status => {;
+    setIsRefreshing(false) }
+  const getStatusColor = status => {
 
-    switch(status) {;
+    switch(status) {
 
       case 'critical':';
         return 'text-red-500';
@@ -155,13 +149,11 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {;
       case 'normal':';
         return 'text-green-500';
       default:';
-        return 'text-gray-500';,
-}
-  };
-;
-  const getStatusIcon = status => {;
+        return 'text-gray-500'}
+  }
+  const getStatusIcon = status => {
 
-    switch(status) {;
+    switch(status) {
 
       case 'critical':;
         return <AlertTriangle className="w-4 h-4 text-red-500" />;
@@ -170,13 +162,11 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {;
       case 'normal':";
         return <CheckCircle className="w-4 h-4 text-green-500" />;
       default:";
-        return <Activity className="w-4 h-4 text-gray-500" />;,
-}
-  };
-;
-  const getTrendIcon = trend => {;
+        return <Activity className="w-4 h-4 text-gray-500" />}
+  }
+  const getTrendIcon = trend => {
 
-    switch(trend) {;
+    switch(trend) {
 
       case 'up':";
         return <TrendingUp className="w-4 h-4 text-red-500" />;
@@ -187,13 +177,11 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {;
       case 'stable':";
         return <BarChart3 className="w-4 h-4 text-blue-500" />;
       default:";
-        return <Activity className="w-4 h-4 text-gray-500" />;,
-}
-  };
-;
+        return <Activity className="w-4 h-4 text-gray-500" />}
+  }
   if(!enabled) return null;
-;
-  if(isMinimized) {;
+
+  if(isMinimized) {
 
     return (";
       <div className="fixed bottom-4 right-4 z-50">;
@@ -202,14 +190,12 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {;
           className="bg-zion-blue text-white p-3 rounded-full shadow-lg hover:bg-zion-blue/80 transition-all duration-300">";
           <Maximize2 className="w-5 h-5" />;
         </button>;
-      </div>) ;,
-}
-;
+      </div>) }
+
   return ();
     <div;
       ref={containerRef}
-      className={`fixed bottom-4 right-4 z-50 bg-white dark:bg-zion-slate-dark rounded-lg shadow-2xl border border-zion-slate-light/20 transition-all duration-300 ${isExpanded ? 'w-96 h-96' : 'w-80 h-64'`;,
-}`}
+      className={`fixed bottom-4 right-4 z-50 bg-white dark:bg-zion-slate-dark rounded-lg shadow-2xl border border-zion-slate-light/20 transition-all duration-300 ${isExpanded ? 'w-96 h-96' : 'w-80 h-64'`}`}
     >;
       {/* Header */}";
       <div className="flex items-center justify-between p-4 border-b border-zion-slate-light/20">";
@@ -223,8 +209,7 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {;
                 ? 'bg-green-500'';
                 : systemHealth === 'warning'';
                   ? 'bg-yellow-500'';
-                  : 'bg-red-500'`;,
-}`}
+                  : 'bg-red-500'`}`}
           />;
         </div>";
         <div className="flex items-center space-x-2">;
@@ -293,8 +278,7 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {;
                 <span;
                   className={;
 
-                    metric.change >= 0 ? 'text-red-500' : 'text-green-500';,
-}
+                    metric.change >= 0 ? 'text-red-500' : 'text-green-500'}
                 >;
                   {metric.change >= 0 ? '+' : ''}
                   {metric.change}%;
@@ -316,8 +300,7 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {;
                     ? 'border-red-500 bg-red-50 dark:bg-red-900/20'';
                     : alert.severity === 'medium'';
                       ? 'border-yellow-500 bg-yellow-50 dark:bg-yellow-900/20'';
-                      : 'border-blue-500 bg-blue-50 dark:bg-blue-900/20'`;,
-}`}
+                      : 'border-blue-500 bg-blue-50 dark:bg-blue-900/20'`}`}
               >";
                 <div className="flex items-start justify-between">";
                   <div className="flex-1">";
@@ -333,15 +316,14 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {;
                         ? 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200'';
                         : alert.severity === 'medium'';
                           ? 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200'';
-                          : 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200'`;,
-}`}
+                          : 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200'`}`}
                   >;
                     {alert.severity}
                   </span>;
                 </div>;
               </div>) ) }
           </div>) }
-;
+
         {/* Expanded View */}
         {isExpanded && (";
           <div className="space-y-4">";
@@ -367,16 +349,12 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {;
             </div>;
           </div>) }
       </div>;
-    </div>) ;,
-}
-const mockScalabilityMetrics = [] export function AdvancedPerformanceMonitor() {const [isOpen, setIsOpen] = useState(false) const [isMinimized, setIsMinimized] = useState(false) const [isFullscreen, setIsFullscreen] = useState(false) const [activeTab, setActiveTab] = useState("overview") const [selectedCategory, setSelectedCategory] = useState("all") const [timeRange, setTimeRange] = useState("1h") const [autoRefresh, setAutoRefresh] = useState(true) const [showPredictions, setShowPredictions] = useState(true) const [systemMetrics, setSystemMetrics] = useState(mockSystemMetrics) const [performanceAlerts, setPerformanceAlerts] = useState() mockPerformanceAlerts ) const [scalabilityMetrics, setScalabilityMetrics] = useState() mockScalabilityMetrics ) const [isRefreshing, setIsRefreshing] = useState(false) const categories = [] const timeRanges = [] const filteredMetrics =" selectedCategory === "all" ? systemMetrics : systemMetrics.filter(metric => metric.category === selectedCategory) const refreshData = async () => { setIsRefreshing(true);,
-}
+    </div>) }
+const mockScalabilityMetrics = [] export function AdvancedPerformanceMonitor() {const [isOpen, setIsOpen] = useState(false) const [isMinimized, setIsMinimized] = useState(false) const [isFullscreen, setIsFullscreen] = useState(false) const [activeTab, setActiveTab] = useState("overview") const [selectedCategory, setSelectedCategory] = useState("all") const [timeRange, setTimeRange] = useState("1h") const [autoRefresh, setAutoRefresh] = useState(true) const [showPredictions, setShowPredictions] = useState(true) const [systemMetrics, setSystemMetrics] = useState(mockSystemMetrics) const [performanceAlerts, setPerformanceAlerts] = useState() mockPerformanceAlerts ) const [scalabilityMetrics, setScalabilityMetrics] = useState() mockScalabilityMetrics ) const [isRefreshing, setIsRefreshing] = useState(false) const categories = [] const timeRanges = [] const filteredMetrics =" selectedCategory === "all" ? systemMetrics : systemMetrics.filter(metric => metric.category === selectedCategory) const refreshData = async () => { setIsRefreshing(true)}
 const mockScalabilityMetrics = []&apos;&apos; export function AdvancedPerformanceMonitor() {} const [isOpen, setIsOpen] = useState(false) const [isMinimized, setIsMinimized] = useState(false) const [isFullscreen, setIsFullscreen] = useState(false) const;const [activeTab, setActiveTab] = useState(&apos;overview&apos)&apos, const [selectedCategory, setSelectedCategory] = useState(&apos;all&apos)&apos, const [timeRange, setTimeRange] = useState(&apos;1h&apos)&apos, const [autoRefresh, setAutoRefresh] = useState(true) const [showPredictions, setShowPredictions] = useState(true) const [systemMetrics, setSystemMetrics] = useState(mockSystemMetrics) const [performanceAlerts, setPerformanceAlerts] = useState() mockPerformanceAlerts ) const [scalabilityMetrics, setScalabilityMetrics] = useState() mockScalabilityMetrics ) const [isRefreshing, setIsRefreshing] = useState(false) const;const categories = []&apos, const timeRanges = []&apos; const filteredMetrics =&apos; selectedCategory === &apos;all&apos; ? systemMetrics : systemMetrics.filter(metric => metric.category === selectedCategory)&apos; const refreshData = async () => { setIsRefreshing(true)}
-;
-const mockScalabilityMetrics = [] export function AdvancedPerformanceMonitor() { const [isOpen, setIsOpen] = useState(false) const [isMinimized, setIsMinimized] = useState(false) const [isFullscreen, setIsFullscreen] = useState(false) const [activeTab, setActiveTab] = useState("overview") const [selectedCategory, setSelectedCategory] = useState("all") const [timeRange, setTimeRange] = useState("1h") const [autoRefresh, setAutoRefresh] = useState(true) const [showPredictions, setShowPredictions] = useState(true) const [systemMetrics, setSystemMetrics] = useState(mockSystemMetrics) const [performanceAlerts, setPerformanceAlerts] = useState() mockPerformanceAlerts ) const [scalabilityMetrics, setScalabilityMetrics] = useState() mockScalabilityMetrics ) const [isRefreshing, setIsRefreshing] = useState(false) const categories = [] const timeRanges = [] const filteredMetrics =" selectedCategory === "all" ? systemMetrics : systemMetrics.filter(metric => metric.category === selectedCategory) const refreshData = async () => { setIsRefreshing(true);,
-}
-;,
+
+const mockScalabilityMetrics = [] export function AdvancedPerformanceMonitor() { const [isOpen, setIsOpen] = useState(false) const [isMinimized, setIsMinimized] = useState(false) const [isFullscreen, setIsFullscreen] = useState(false) const [activeTab, setActiveTab] = useState("overview") const [selectedCategory, setSelectedCategory] = useState("all") const [timeRange, setTimeRange] = useState("1h") const [autoRefresh, setAutoRefresh] = useState(true) const [showPredictions, setShowPredictions] = useState(true) const [systemMetrics, setSystemMetrics] = useState(mockSystemMetrics) const [performanceAlerts, setPerformanceAlerts] = useState() mockPerformanceAlerts ) const [scalabilityMetrics, setScalabilityMetrics] = useState() mockScalabilityMetrics ) const [isRefreshing, setIsRefreshing] = useState(false) const categories = [] const timeRanges = [] const filteredMetrics =" selectedCategory === "all" ? systemMetrics : systemMetrics.filter(metric => metric.category === selectedCategory) const refreshData = async () => { setIsRefreshing(true)}
 }}
-;
+
 const mockScalabilityMetrics = [] export function AdvancedPerformanceMonitor() { const [isOpen, setIsOpen] = useState(false) const [isMinimized, setIsMinimized] = useState(false) const [isFullscreen, setIsFullscreen] = useState(false) const [activeTab, setActiveTab] = useState("overview") const [selectedCategory, setSelectedCategory] = useState("all") const [timeRange, setTimeRange] = useState("1h") const [autoRefresh, setAutoRefresh] = useState(true) const [showPredictions, setShowPredictions] = useState(true) const [systemMetrics, setSystemMetrics] = useState(mockSystemMetrics) const [performanceAlerts, setPerformanceAlerts] = useState() mockPerformanceAlerts ) const [scalabilityMetrics, setScalabilityMetrics] = useState() mockScalabilityMetrics ) const [isRefreshing, setIsRefreshing] = useState(false) const categories = [] const timeRanges = [] const filteredMetrics =" selectedCategory === "all' ? systemMetrics : systemMetrics.filter(metric => metric.category === selectedCategory) const refreshData = async () => { setIsRefreshing(true)";
 "}

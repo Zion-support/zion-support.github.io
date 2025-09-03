@@ -400,7 +400,7 @@ const InnovativeServices2025 = () => {}
                               Use Cases:";
                             </span>"";
                             <p className="text-gray-300">';
-                              {service.useCases.join(',)}
+                              {service.useCases.join(')}
                             </p>;
                           </div>";
                           <div>"";
@@ -408,7 +408,7 @@ const InnovativeServices2025 = () => {}
                               Competitors:";
                             </span>"";
                             <p className="text-gray-300">';
-                              {service.competitors.join(',)}
+                              {service.competitors.join(')}
                             </p>;
                           </div>";
                           <div>"";
@@ -473,17 +473,11 @@ const InnovativeServices2025 = () => {}
         </div>;
       </section>;
     </div>;
-  );,
-};
-;
+  )}
 export default InnovativeServices2025;
-;
-export { InnovativeServices2025 };
-;
-export { InnovativeServices2025 };
-;
-export { InnovativeServices2025 };
-;
-export { InnovativeServices2025 };
-;
-export { InnovativeServices2025 };
+
+export { InnovativeServices2025 }
+export { InnovativeServices2025 }
+export { InnovativeServices2025 }
+export { InnovativeServices2025 }
+export { InnovativeServices2025 }

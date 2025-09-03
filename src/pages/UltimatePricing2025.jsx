@@ -25,8 +25,7 @@ const UltimatePricing2025 = () => {}
                     benefits["70% faster hiring", "Reduced bias", "40% retention improvement"],;"";
                     marketPosition: "Leading AI HR solution for mid-market","";
                     competitors["BambooHR", "Workday", "Zenefits"],;"";
-                    competitiveAdvantage: "Advanced AI, comprehensive automation, bias-free processes";,
-},;
+                    competitiveAdvantage: "Advanced AI, comprehensive automation, bias-free processes"},;
                 {}
 ";
 "";
@@ -46,8 +45,7 @@ const UltimatePricing2025 = () => {}
                     benefits["30% inventory reduction", "Zero stockouts", "Cost optimization"],;"";
                     marketPosition: "Next-gen inventory management","";
                     competitors["TradeGecko", "Zoho Inventory", "Fishbowl"],;"";
-                    competitiveAdvantage: "AI forecasting, real-time optimization, ERP integration";,
-},;
+                    competitiveAdvantage: "AI forecasting, real-time optimization, ERP integration"},;
                 {}
 ";
 "";
@@ -67,8 +65,7 @@ const UltimatePricing2025 = () => {}
                     benefits["90% faster review", "Risk identification", "Compliance assurance"],;"";
                     marketPosition: "Cutting-edge legal AI","";
                     competitors["Kira Systems", "Luminance", "eBrevia"],;"";
-                    competitiveAdvantage: "Advanced NLP, comprehensive risk assessment, workflow integration";,
-},;
+                    competitiveAdvantage: "Advanced NLP, comprehensive risk assessment, workflow integration"},;
                 {}
 ";
 "";
@@ -89,8 +86,7 @@ const UltimatePricing2025 = () => {}
                     marketPosition: "AI financial planning platform","";
                     competitors["Personal Capital", "Betterment", "Wealthfront"],;"";
                     competitiveAdvantage: "AI optimization, comprehensive planning, expert support";
-            ];,
-},;
+            ]},;
         {}
 ";
 "";
@@ -116,8 +112,7 @@ const UltimatePricing2025 = () => {}
                     benefits["99.9% detection accuracy", "Real-time prevention", "80% fewer false positives"],;"";
                     marketPosition: "Leading AI fraud detection","";
                     competitors["Sift", "Signifyd", "Forter"],;"";
-                    competitiveAdvantage: "Advanced ML algorithms, real-time processing, industry-leading accuracy";,
-},;
+                    competitiveAdvantage: "Advanced ML algorithms, real-time processing, industry-leading accuracy"},;
                 {}
 ";
 "";
@@ -137,8 +132,7 @@ const UltimatePricing2025 = () => {}
                     benefits["25% cost reduction", "Improved delivery", "Enhanced relationships"],;"";
                     marketPosition: "Advanced supply chain optimization","";
                     competitors["Llamasoft", "AnyLogic", "FlexSim"],;"";
-                    competitiveAdvantage: "AI optimization, real-time visibility, comprehensive risk management";,
-},;
+                    competitiveAdvantage: "AI optimization, real-time visibility, comprehensive risk management"},;
                 {}
 ";
 "";
@@ -159,8 +153,7 @@ const UltimatePricing2025 = () => {}
                     marketPosition: "Leading healthcare AI","";
                     competitors["IBM Watson Health", "Google Health", "Microsoft Healthcare"],;"";
                     competitiveAdvantage: "Advanced medical AI, healthcare integration, regulatory compliance";
-            ];,
-},;
+            ]},;
         {}
 ";
 "";
@@ -186,8 +179,7 @@ const UltimatePricing2025 = () => {}
                     benefits["Future-ready strategy", "Competitive advantage", "Innovation leadership"],;"";
                     marketPosition: "Premier quantum consulting","";
                     competitors["McKinsey", "BCG", "Deloitte"],;"";
-                    competitiveAdvantage: "Deep quantum expertise, practical experience, strategic focus";,
-},;
+                    competitiveAdvantage: "Deep quantum expertise, practical experience, strategic focus"},;
                 {}
 ";
 "";
@@ -207,8 +199,7 @@ const UltimatePricing2025 = () => {}
                     benefits["Innovation leadership", "New revenue streams", "Enhanced engagement"],;"";
                     marketPosition: "Leading metaverse development","";
                     competitors["Meta", "Microsoft", "Unity"],;"";
-                    competitiveAdvantage: "Custom development, rapid prototyping, comprehensive solutions";,
-},;
+                    competitiveAdvantage: "Custom development, rapid prototyping, comprehensive solutions"},;
                 {}
 ";
 "";
@@ -229,8 +220,7 @@ const UltimatePricing2025 = () => {}
                     marketPosition: "Expert Web3 development","";
                     competitors["Consensys", "Chainlink Labs", "Alchemy"],;"";
                     competitiveAdvantage: "Full-stack development, rapid deployment, blockchain expertise";
-            ];,
-},;
+            ]},;
         {}
 ";
 "";
@@ -256,8 +246,7 @@ const UltimatePricing2025 = () => {}
                     benefits["Enhanced security", "Reduced attack surface", "Improved compliance"],;"";
                     marketPosition: "Leading zero trust implementation","";
                     competitors["Palo Alto Networks", "Cisco", "Microsoft"],;"";
-                    competitiveAdvantage: "Comprehensive implementation, rapid deployment, ongoing optimization";,
-},;
+                    competitiveAdvantage: "Comprehensive implementation, rapid deployment, ongoing optimization"},;
                 {}
 ";
 "";
@@ -277,8 +266,7 @@ const UltimatePricing2025 = () => {}
                     benefits["Proactive protection", "Zero-day prevention", "Automated response"],;"";
                     marketPosition: "Advanced AI cybersecurity","";
                     competitors["Darktrace", "CrowdStrike", "SentinelOne"],;"";
-                    competitiveAdvantage: "Advanced AI algorithms, real-time protection, comprehensive intelligence";,
-},;
+                    competitiveAdvantage: "Advanced AI algorithms, real-time protection, comprehensive intelligence"},;
                 {}
 ";
 "";
@@ -472,16 +460,11 @@ const UltimatePricing2025 = () => {}
           </div>;
         </div>;
       </section>;
-    </div>)};
-export default UltimatePricing2025;,
-}}}}}
-;
-export { UltimatePricing2025 };
-;
-export { UltimatePricing2025 };
-;
-export { UltimatePricing2025 };
-;
-export { UltimatePricing2025 };
-;
-export { UltimatePricing2025 };
+    </div>)}
+export default UltimatePricing2025}}}}}
+
+export { UltimatePricing2025 }
+export { UltimatePricing2025 }
+export { UltimatePricing2025 }
+export { UltimatePricing2025 }
+export { UltimatePricing2025 }

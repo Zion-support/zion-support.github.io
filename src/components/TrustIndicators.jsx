@@ -1,28 +1,25 @@
 import React from 'react';
-export function TrustIndicatorsCompact({ className }) {;
-import { Shield, Lock, Award, Users, Globe, CheckCircle, Star, Zap export function TrustIndicators({ className, showStats = true, showCertifications = true }) {;
+export function TrustIndicatorsCompact({ className }) {
+import { Shield, Lock, Award, Users, Globe, CheckCircle, Star, Zap export function TrustIndicators({ className, showStats = true, showCertifications = true }) {
     const indicators = [{;
 
             icon: Shield,;
             title: "Enterprise Security",";
             description: "SOC 2 Type II certified with end-to-end encryption",";
-            color: "text-zion-cyan";,
-},;
-        {;
+            color: "text-zion-cyan"},;
+        {
 
             icon: Lock,";
             title: "Data Protection",";
             description: "GDPR & CCPA compliant with zero-knowledge architecture",";
-            color: "text-zion-purple";,
-},;
-        {;
+            color: "text-zion-purple"},;
+        {
 
             icon: Award,";
             title: "Industry Leader",";
             description: "Recognized by Gartner & Forrester as market leader",";
-            color: "text-zion-cyan";,
-},;
-        {;
+            color: "text-zion-cyan"},;
+        {
 
             icon: Users,";
             title: "Verified Community",";
@@ -85,7 +82,7 @@ import { Shield, Lock, Award, Users, Globe, CheckCircle, Star, Zap export functi
                 </div>) ) }
             </div>;
           </div>) }
-;
+
         {/* Certifications Section */}";
         {showCertifications && (<div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">";
             <h3 className="text-2xl font-bold text-white text-center mb-8">;
@@ -102,7 +99,7 @@ import { Shield, Lock, Award, Users, Globe, CheckCircle, Star, Zap export functi
                 </div>))}
             </div>;
           </div>) }
-;
+
         {/* Customer Testimonials Preview */}";
         <div className="mt-16 text-center">";
           <div className="flex justify-center items-center gap-2 mb-4">";
@@ -116,7 +113,7 @@ import { Shield, Lock, Award, Users, Globe, CheckCircle, Star, Zap export functi
       </div>;
     </section>) }
 // Compact version for smaller spaces;
-export function TrustIndicatorsCompact({ className }) {;
+export function TrustIndicatorsCompact({ className }) {
 '`;
     return (<div className={`flex flex-wrap justify-center gap-6 ${className || ''}`}>";
       <div className="flex items-center gap-2 text-zion-cyan text-sm">";

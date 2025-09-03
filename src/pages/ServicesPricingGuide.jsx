@@ -51,8 +51,7 @@ export default function ServicesPricingGuide() {}
 ''';
     if (price < 10000) return 'Starter';''';
     if (price < 25000) return 'Professional';''';
-    return 'Enterprise';,
-};
+    return 'Enterprise'}
   const getPriceTierColor = tier => {}
     switch (tier) {}
 ';
@@ -65,9 +64,8 @@ export default function ServicesPricingGuide() {}
       case 'Enterprise':'''';
         return 'bg-purple-500';''';
       default:'''';
-        return 'bg-gray-500';,
-}
-  };
+        return 'bg-gray-500'}
+  }
   const getServiceIcon = category => {}
     switch (category) {}
 ';
@@ -88,8 +86,7 @@ export default function ServicesPricingGuide() {}
       case 'AR/VR & Metaverse':"";
         return <Globe className="w-5 h-5 text-pink-500" />;";
       default:"";
-        return <TrendingUp className="w-5 h-5 text-gray-500" />;,
-}
+        return <TrendingUp className="w-5 h-5 text-gray-500" />}
   };";
   return ("";
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light">";
@@ -172,8 +169,7 @@ export default function ServicesPricingGuide() {}
 ''';
                 selectedCategory === 'all''''';
                   ? 'bg-zion-purple text-white''''';
-                  : 'border-zion-purple/50 text-zion-purple hover:bg-zion-purple/10';,
-}
+                  : 'border-zion-purple/50 text-zion-purple hover:bg-zion-purple/10'}
             >;
               All Services;
             </Button>;
@@ -183,8 +179,7 @@ export default function ServicesPricingGuide() {}
 ';
 '';
 ''';
-                  selectedCategory === category.value ? 'default' : 'outline';,
-}
+                  selectedCategory === category.value ? 'default' : 'outline'}
                 onClick={ () => setSelectedCategory(category.value) }
                 className={}
 ';
@@ -192,8 +187,7 @@ export default function ServicesPricingGuide() {}
 ''';
                   selectedCategory === category.value'''';
                     ? 'bg-zion-purple text-white''''';
-                    : 'border-zion-purple/50 text-zion-purple hover:bg-zion-purple/10';,
-}
+                    : 'border-zion-purple/50 text-zion-purple hover:bg-zion-purple/10'}
               >;
                 {category.label}
               </Button>) ) }
@@ -506,14 +500,10 @@ export default function ServicesPricingGuide() {}
         </div>;
       </div>;
     </div>)}
-;
 
-export { ServicesPricingGuide };
-;
-export { ServicesPricingGuide };
-;
-export { ServicesPricingGuide };
-;
-export { ServicesPricingGuide };
-;
-export { ServicesPricingGuide };
+
+export { ServicesPricingGuide }
+export { ServicesPricingGuide }
+export { ServicesPricingGuide }
+export { ServicesPricingGuide }
+export { ServicesPricingGuide }

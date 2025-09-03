@@ -3,14 +3,12 @@
       icon: Phone,;
       title: "Phone",;
       value: "+1 302 464 0950",;
-      link: "tel:+13024640950";,
-},;
-    {;
+      link: "tel:+13024640950"},;
+    {
       icon: Mail,;
       title: "Email",;
       value: "kleber@ziontechgroup.com",;
-      link: "mailto:kleber@ziontechgroup.com";,
-},;    {;
+      link: "mailto:kleber@ziontechgroup.com"},;    {
       icon: MapPin,;";
       title: "Address",;";
       value: "364 E Main St STE 1008 Middletown DE 19709",;";
@@ -19,16 +17,14 @@
     <section className="py-16 px-4 sm:px-6 lg:px-8">";
       <div className="max-w-7xl mx-auto">;
         <motion.div;
-          initial = {;
+          initial = {
 
   { opacity: 0,;
-  y: 20;,
-}}
-          whileInView = {;
+  y: 20}}
+          whileInView = {
 
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}";
           className="text-center mb-16";
@@ -44,21 +40,18 @@
           {contactInfo.map((contact, index)  => (;
             <motion.div;
               key={index}
-              initial = {;
+              initial = {
 
   { opacity: 0,;
-  y: 20;,
-}}
-              whileInView = {;
+  y: 20}}
+              whileInView = {
 
   { opacity: 1,;
-  y: 0;,
-}}
-              transition = {;
+  y: 0}}
+              transition = {
 
   { duration: 0.6,;
-  delay: index * 0.1;,
-}}
+  delay: index * 0.1}}
               viewport={{ once: true }}";
               className="text-center";
 
@@ -74,16 +67,14 @@
           ))}
         </div>;
         <motion.div;
-          initial = {;
+          initial = {
 
   { opacity: 0,;
-  y: 20;,
-}}
-          whileInView = {;
+  y: 20}}
+          whileInView = {
 
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}";
           className="text-center";

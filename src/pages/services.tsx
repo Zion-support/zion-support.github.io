@@ -3,39 +3,36 @@ import React from "react";
 import Link from "next/link";
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3, Users, Globe, Star, Award, Rocket, Lightbulb } from "lucide-react";
 
-export default function Services() {;
+export default function Services() {
   const serviceCategories = [;
-    {;
+    {
       name: "AI-Powered Solutions",;
       description: "Revolutionary AI services that transform business operations",;
       icon: Brain,;
       count: 25,;
       color: "from-purple-400 to-pink-500",;
       href: "/ai-services",;
-      services: ["AI Revenue Optimization", "AI Customer Experience", "AI Autonomous DevOps", "AI Business Intelligence"];,
-},;
-    {;
+      services: ["AI Revenue Optimization", "AI Customer Experience", "AI Autonomous DevOps", "AI Business Intelligence"]},;
+    {
       name: "Micro SAAS Platforms",;
       description: "Innovative software solutions for modern businesses",;
       icon: Database,;
       count: 35,;
       color: "from-blue-400 to-cyan-500",;
       href: "/micro-saas",;
-      services: ["Content Creation Studio", "Project Management", "Customer Support", "Sales Analytics"];,
-},;
-    {;
+      services: ["Content Creation Studio", "Project Management", "Customer Support", "Sales Analytics"]},;
+    {
       name: "IT Infrastructure",;
       description: "Enterprise-grade technology solutions and services",;
       icon: Shield,;
       count: 20,;
       color: "from-green-400 to-emerald-500",;
       href: "/it-services",;
-      services: ["Quantum Secure Infrastructure", "Edge Computing", "Cloud Migration", "Cybersecurity"];,
-}
+      services: ["Quantum Secure Infrastructure", "Edge Computing", "Cloud Migration", "Cybersecurity"]}
   ];
 
   const featuredServices = [;
-    {;
+    {
       title: "AI Revenue Optimization Platform",;
       description: "Increase revenue by 25-40% with AI-powered optimization that intelligently manages pricing, forecasting, and customer analytics.",;
       price: "From $2,999/month",;
@@ -43,53 +40,46 @@ export default function Services() {;
       href: "/services/ai-revenue-optimization-platform",;
       color: "from-purple-400 to-pink-500",;
       popular: true,;
-      benefits: ["Increase revenue by 25-40%", "Reduce revenue leakage by 60%", "Optimize pricing strategies", "Improve customer retention"];,
-},;
-    {;
+      benefits: ["Increase revenue by 25-40%", "Reduce revenue leakage by 60%", "Optimize pricing strategies", "Improve customer retention"]},;
+    {
       title: "AI Autonomous DevOps Platform",;
       description: "Eliminate 95% of manual DevOps tasks and reduce deployment time by 80% with intelligent automation.",;
       price: "From $1,999/month",;
       features: ["Autonomous Code Deployment", "AI-Powered Infrastructure Management", "Intelligent Monitoring", "Self-Healing Infrastructure"],;
       href: "/services/ai-autonomous-devops-platform",;
       color: "from-blue-400 to-cyan-500",;
-      benefits: ["Reduce deployment time by 80%", "Eliminate 95% of manual tasks", "Improve reliability by 99.9%", "Reduce costs by 40%"];,
-},;
-    {;
+      benefits: ["Reduce deployment time by 80%", "Eliminate 95% of manual tasks", "Improve reliability by 99.9%", "Reduce costs by 40%"]},;
+    {
       title: "Quantum Secure Infrastructure",;
       description: "Future-proof your organization with quantum-secure infrastructure that protects against quantum computing threats.",;
       price: "From $15,000",;
       features: ["Quantum-Resistant Encryption", "Post-Quantum Cryptography", "Quantum Key Distribution", "Zero-Trust Architecture"],;
       href: "/services/quantum-secure-infrastructure",;
       color: "from-indigo-400 to-purple-500",;
-      benefits: ["Protect against quantum threats", "Future-proof security", "Reduce vulnerabilities by 99.9%", "Military-grade standards"];,
-},;
-    {;
+      benefits: ["Protect against quantum threats", "Future-proof security", "Reduce vulnerabilities by 99.9%", "Military-grade standards"]},;
+    {
       title: "Edge Computing Orchestration",;
       description: "Reduce latency by 90% and improve performance by 70% with intelligent edge computing orchestration.",;
       price: "From $3,999/month",;
       features: ["Distributed Edge Computing", "Real-time Data Processing", "Intelligent Load Balancing", "Edge AI Inference"],;
       href: "/services/edge-computing-orchestration-platform",;
       color: "from-green-400 to-teal-500",;
-      benefits: ["Reduce latency by 90%", "Improve performance by 70%", "Lower bandwidth costs by 60%", "Enable real-time decisions"];,
-}
+      benefits: ["Reduce latency by 90%", "Improve performance by 70%", "Lower bandwidth costs by 60%", "Enable real-time decisions"]}
   ];
 
   const pricing = [;
-    {;
+    {
       name: "Starter",;
       price: "$1,999/month",;
-      details: ["Basic AI features", "Standard support", "Up to 10 users", "99.5% uptime SLA"];,
-},;
-    {;
+      details: ["Basic AI features", "Standard support", "Up to 10 users", "99.5% uptime SLA"]},;
+    {
       name: "Professional",;
       price: "$4,999/month",;
-      details: ["Advanced AI features", "Priority support", "Up to 100 users", "99.9% uptime SLA"];,
-},;
-    {;
+      details: ["Advanced AI features", "Priority support", "Up to 100 users", "99.9% uptime SLA"]},;
+    {
       name: "Enterprise",;
       price: "$9,999/month",;
-      details: ["Full AI suite", "24/7 dedicated support", "Unlimited users", "99.99% uptime SLA"];,
-}
+      details: ["Full AI suite", "24/7 dedicated support", "Unlimited users", "99.99% uptime SLA"]}
   ];
 
   return (;
@@ -122,7 +112,7 @@ export default function Services() {;
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Service Categories</h2>;
           <p className="text-gray-600 text-lg">Comprehensive technology solutions for modern businesses</p>;
         </div>;
-        ;
+
         <div className="grid md:grid-cols-3 gap-8">;
           {serviceCategories.map((category, index) => (;
             <Link key={index} href={category.href} className="group">;
@@ -162,7 +152,7 @@ export default function Services() {;
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Featured Services</h2>;
             <p className="text-gray-600 text-lg">Our most innovative and impactful solutions</p>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-2 gap-8">;
             {featuredServices.map((service, index) => (;
               <Link key={index} href={service.href} className="group">;
@@ -202,7 +192,7 @@ export default function Services() {;
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Flexible Pricing Plans</h2>;
           <p className="text-gray-600 text-lg">Choose the plan that fits your business needs</p>;
         </div>;
-        ;
+
         <div className="grid md:grid-cols-3 gap-8">;
           {pricing.map((tier, index) => (;
             <div key={index} className={`rounded-xl p-6 shadow-lg ${tier.name === 'Professional' ? 'border-2 border-indigo-500 bg-indigo-50' : 'border border-gray-200 bg-white'}`}>;
@@ -224,8 +214,7 @@ export default function Services() {;
               <Link href="#contact" className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${;
                 tier.name === 'Professional' ;
                   ? 'bg-indigo-600 text-white hover:bg-indigo-700' ;
-                  : 'bg-gray-900 text-white hover:bg-gray-800';,
-}`}>;
+                  : 'bg-gray-900 text-white hover:bg-gray-800'}`}>;
                 Get Started;
               </Link>;
             </div>;
@@ -240,7 +229,7 @@ export default function Services() {;
             <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>;
             <p className="text-gray-300 text-lg">Contact our technology experts today</p>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-2 gap-8">;
             <div>;
               <h3 className="text-2xl font-semibold mb-6">Get in Touch</h3>;
@@ -263,7 +252,7 @@ export default function Services() {;
                 </div>;
               </div>;
             </div>;
-            ;
+
             <div className="bg-white rounded-xl p-6">;
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">Schedule a Consultation</h3>;
               <p className="text-gray-600 mb-4">Get a personalized consultation to discuss your technology needs</p>;
@@ -275,7 +264,6 @@ export default function Services() {;
         </div>;
       </section>;
     </div>;
-  );,
-}
-;
+  )}
+
 export default Services;

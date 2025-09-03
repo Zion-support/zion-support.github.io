@@ -1,7 +1,7 @@
 
-const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
+const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {
   const [selectedCategory, setSelectedCategory] = useState('all');
-;
+
   const categories = [{;
       id: 'quantum - computing',;
       name: 'Quantum Computing & AI',;
@@ -9,67 +9,60 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
       color: 'from - blue - 600 to - cyan - 600',;
       description: 'Revolutionary quantum computing solutions that solve previously impossible problems',;
       marketSize: '$65.4 billion by 2027',;
-      growthRate: '500% annually';,
-},;
-    {;
+      growthRate: '500% annually'},;
+    {
       id: 'blockchain - web3',;
       name: 'Blockchain & Web3',;
       icon: '🔗',;
       color: 'from - green - 600 to - emerald - 600',;
       description: 'Next - generation decentralized solutions with AI optimization',;
       marketSize: '$67.4 billion by 2027',;
-      growthRate: '400% annually';,
-},;
-    {;
+      growthRate: '400% annually'},;
+    {
       id: 'space - tech',;
       name: 'Space Technology',;
       icon: '🛰️',;
       color: 'from - indigo - 600 to - purple - 600',;
       description: 'AI - powered satellite and space mission management',;
       marketSize: '$469.8 billion by 2027',;
-      growthRate: '300% annually';,
-},;
-    {;
+      growthRate: '300% annually'},;
+    {
       id: 'biotech-ai',;
       name: 'Biotech & AI',;
       icon: '🧬',;
       color: 'from - red - 600 to - pink - 600',;
       description: 'Revolutionary biomedical research and drug discovery',;
       marketSize: '$67.8 billion by 2027',;
-      growthRate: '600% annually';,
-},;
-    {;
+      growthRate: '600% annually'},;
+    {
       id: 'emerging - tech',;
       name: 'Emerging Technology',;
       icon: '🚀',;
       color: 'from - orange - 600 to - red - 600',;
       description: 'Cutting - edge technologies that define the future',;
       marketSize: '$3.7 billion by 2027',;
-      growthRate: '800% annually';,
-},;
-    {;
+      growthRate: '800% annually'},;
+    {
       id: 'micro - saas',;
       name: 'Micro SAAS Solutions',;
       icon: '💻',;
       color: 'from - blue - 600 to - indigo - 600',;
       description: 'Intelligent business automation and optimization',;
       marketSize: '$15.8 billion by 2027',;
-      growthRate: '200% annually';,
-},;
-    {;
+      growthRate: '200% annually'},;
+    {
       id: 'it - services',;
       name: 'Enterprise IT Services', ;      icon: '🖥️', ;
       color: 'from-gray-600 to-slate-600',;
       description: 'Advanced infrastructure and DevOps solutions',;
       marketSize: '$25.2 billion by 2027',;
-      growthRate: '150% annually'};
+      growthRate: '150% annually'}
   ];
-;
+
     if(categoryId === 'all') return ultimateZionServices2025;
-    return ultimateZionServices2025.filter(service => service.category === categoryId) };
-;
+    return ultimateZionServices2025.filter(service => service.category === categoryId) }
   const selectedServices = getServicesByCategory(selectedCategory) ;
-;
+
   return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - purple - 900 to - slate - 900 text-white">;
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
@@ -80,16 +73,14 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
         <div className="max-w-7xl mx-auto text-center">;
           <motion.h1 ";
             className="text-4xl md:text-6xl font-bold mb-6" ;
-            initial = {;
+            initial = {
 
   { opacity: 0,;
-  y: 20;,
-}}
-            whileInView = {;
+  y: 20}}
+            whileInView = {
 
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
             transition={{ duration: 0.6 }}
           >;
             Zion Technology Group;
@@ -100,42 +91,36 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
           </motion.h1>;
 
           <motion.p;
-            className="text-xl text-gray - 300 mb-8 max - w-4xl mx -auto"            initial = {;
+            className="text-xl text-gray - 300 mb-8 max - w-4xl mx -auto"            initial = {
 
   { opacity: 0,;
-  y: 20;,
-}}
-            whileInView = {;
+  y: 20}}
+            whileInView = {
 
   { opacity: 1,;
-  y: 0;,
-}}
-            transition = {;
+  y: 0}}
+            transition = {
 
   { duration: 0.6,;
-  delay: 0.2;,
-}}
+  delay: 0.2}}
           >;
             Leading the future with revolutionary quantum computing, AI - powered solutions, blockchain innovations,;
             and cutting - edge technology services that transform industries and create unprecedented value.</motion.p>;
 
           {/* Comp Highlights */}
           <motion.div;
-            className="grid grid - cols - 1 md:grid - cols - 4 gap-6 mb-12"            initial = {;
+            className="grid grid - cols - 1 md:grid - cols - 4 gap-6 mb-12"            initial = {
 
   { opacity: 0,;
-  y: 20;,
-}}
-            whileInView = {;
+  y: 20}}
+            whileInView = {
 
   { opacity: 1,;
-  y: 0;,
-}}
-            transition = {;
+  y: 0}}
+            transition = {
 
   { duration: 0.6,;
-  delay: 0.4;,
-}}
+  delay: 0.4}}
           >";
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-4 border border-white/20">";
               <div className="text-3xl mb-2">🚀</div>";
@@ -161,21 +146,18 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
 
           {/* Contact Information */}
           <motion.div;
-            className="bg-gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 backdrop - blur - lg rounded-xl p - 6 mb-8 max - w-4xl mx - auto border border-purple -400 / 30"            initial = {;
+            className="bg-gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 backdrop - blur - lg rounded-xl p - 6 mb-8 max - w-4xl mx - auto border border-purple -400 / 30"            initial = {
 
   { opacity: 0,;
-  y: 20;,
-}}
-            whileInView = {;
+  y: 20}}
+            whileInView = {
 
   { opacity: 1,;
-  y: 0;,
-}}
-            transition = {;
+  y: 0}}
+            transition = {
 
   { duration: 0.6,;
-  delay: 0.6;,
-}}
+  delay: 0.6}}
           >";
             <h3 className="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">;
               🚀 Ready to Transform Your Business?;
@@ -214,16 +196,14 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
       <section className="py-12 px-4 sm:px-6 lg:px-8">;
         <div  className="max - w-7xl mx -auto">;
           <motion.div;
-            className="flex flex - wrap gap-4 justify -center"            initial = {;
+            className="flex flex - wrap gap-4 justify -center"            initial = {
 
   { opacity: 0,;
-  y: 20;,
-}}
-            whileInView = {;
+  y: 20}}
+            whileInView = {
 
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
             transition={{ duration: any0.6 }}
           >;
             {categories.map((category) => (<button     key={category.id}
@@ -238,26 +218,24 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
           </motion.div>;
         </div>;
       </section>;
-;
-      {/* Category Overview */};
+
+      {/* Category Overview */}
       {selectedCategory !== 'all' && (;";
         <section className="py-12 px-4 sm:px-6 lg:px-8">;";
           <div className="max-w-7xl mx-auto">;
-            {(() => {;
-              ;
+            {(() => {
+
               if(!category) return null;
-;
+
               return (<motion.div;
-                  className="bg-gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 backdrop - blur - lg rounded-2xl p - 8 border border-purple -400 / 30"                  initial = {;
+                  className="bg-gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 backdrop - blur - lg rounded-2xl p - 8 border border-purple -400 / 30"                  initial = {
 
   { opacity: 0,;
-  y: 20;,
-}}
-                  whileInView = {;
+  y: 20}}
+                  whileInView = {
 
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                   transition={{ duration: 0.6 }}
                 >";
                   <div className="text-center mb-8">";
@@ -281,21 +259,19 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
                   </div>;
                 </motion.div>;) }) () }          </div>;
         </section>) }
-;
+
       {/* Services Grid */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div  className="max - w-7xl mx -auto">;
           <motion.h2;
-            className="text-3xl md:text-4xl font - bold text-center mb-12 text-transparent bg-clip - text bg-gradient - to - r from - purple - 400 to - pink -400"            initial = {;
+            className="text-3xl md:text-4xl font - bold text-center mb-12 text-transparent bg-clip - text bg-gradient - to - r from - purple - 400 to - pink -400"            initial = {
 
   { opacity: 0,;
-  y: 20;,
-}}
-            whileInView = {;
+  y: 20}}
+            whileInView = {
 
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
             transition={{ duration: 0.6 }}
           >'`;
             {selectedCategory === 'all' ? 'All Revolutionary Services' : `${categories.find(c => c.id === selectedCategory)?.name} Services`}
@@ -305,14 +281,13 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
             className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-8"            variants={{;
 
               hidden: { opacity: 0 },;
-              visible: {;
+              visible: {
 
                 opacity: 1,;
-                transition: {;
+                transition: {
 
                   staggerChildren: 0.1,;
-                  delayChildren: 0.2;,
-}
+                  delayChildren: 0.2}
               }
             }}
             initial="hidden";
@@ -320,14 +295,13 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
           >;
             {selectedServices.map((service, index) => (<motion.div;
                 key={service.id}
-                variants = {;
+                variants = {
 
-  {;
+  {
 
                   hidden: { opacity: 0,;
-  y: 20;,
-},;
-                  visible: {;
+  y: 20},;
+                  visible: {
 
                     opacity: 1,;
                     y: 0,;
@@ -345,7 +319,7 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
                     {service.innovationLevel}
                   </div>";
                   <p className="text-sm text-purple-400 font-medium">;
-                    {service.category.replace('-',).toUpperCase()}
+                    {service.category.replace('-').toUpperCase()}
                   </p>;
                 </div>;
 
@@ -418,7 +392,7 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
                       </p>;
                     </div>;
                   </div>) }
-;
+
                 {/* Trial and Setup */}";
                 <div className="flex justify-between items-center mb-6 text-sm">";
                   <div className="text-center">";
@@ -460,16 +434,14 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div  className="max - w-4xl mx - auto text-center">;
           <motion.div;
-            className="bg-gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 backdrop - blur - lg rounded-2xl p - 8 border border-purple -400 / 30"            initial = {;
+            className="bg-gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 backdrop - blur - lg rounded-2xl p - 8 border border-purple -400 / 30"            initial = {
 
   { opacity: 0,;
-  y: 20;,
-}}
-            whileInView = {;
+  y: 20}}
+            whileInView = {
 
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
             transition={{ duration: 0.6 }}
           >";
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">;
@@ -492,5 +464,5 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
           </motion.div>;
         </div>;
       </section>;
-    </div>;) };
+    </div>;) }
 export default UltimateZionServicesMarketing;'"`;

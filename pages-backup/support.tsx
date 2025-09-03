@@ -1,48 +1,40 @@
 import Head from "next/head";
 import React from "react";
 import dynamic from "next/dynamic";
-const Component = () => {;
-const Head = dynamic(() => import("next/head"), { ssr: false });,
-}
-const Link = dynamic(() => import("next/link"), { ssr: false });,
-}
-          answer: "You can create an account by visiting our sign-up page and providing your email address and basic information. We"ll send you a verification email to complete the process."}, {;
+const Component = () => {
+const Head = dynamic(() => import("next/head"), { ssr: false })}
+const Link = dynamic(() => import("next/link"), { ssr: false })}
+          answer: "You can create an account by visiting our sign-up page and providing your email address and basic information. We"ll send you a verification email to complete the process."}, {
           question: "What services do you offer?",;
-          answer: "We offer AI services, cloud solutions, cybersecurity, and micro SaaS development. Visit our services page for detailed information about each offering.;,
-},;
+          answer: "We offer AI services, cloud solutions, cybersecurity, and micro SaaS development. Visit our services page for detailed information about each offering.},;
         {";
           question: "How do I get my API key?", answer: "Once you"ve created an account, you can find your API key in the dashboard under the "API Keys" section. You can generate new keys or revoke existing ones as needed.;
 
-      ];,
-}, {";
+      ]}, {";
       title: "Billing & Pricing",;
       questions: [,;
         {,";
-question: "What payment methods do you accept?", answer: "We accept all major credit cards, PayPal, and bank transfers. Enterprise customers can also arrange for invoicing and payment terms.;,
-},;
+question: "What payment methods do you accept?", answer: "We accept all major credit cards, PayPal, and bank transfers. Enterprise customers can also arrange for invoicing and payment terms.},;
         {";
-          question: "Can I change my plan anytime?", answer: "Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we"ll prorate any billing differences.;,
-},;
+          question: "Can I change my plan anytime?", answer: "Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we"ll prorate any billing differences.},;
         {";
           question: "Do you offer refunds?", answer: "We offer a 30-day money-back guarantee for all our services. If you"re not satisfied, contact our support team for a full refund.;
 
-;
-      ];,
-}, {";
+
+      ]}, {";
       title: "Technical Support",;
       questions: [,;
         {,";
 question: "How do I integrate your API?", answer: "We provide comprehensive documentation and SDKs for popular programming languages. Check our API documentation for detailed integration guides."},;
         {";
-          question: "What are your API rate limits?", answer: "Rate limits vary by plan. Free plans have 1,000 requests per month, Professional plans have 100,000 requests per month, and Enterprise plans have unlimited requests.;,
-},;
+          question: "What are your API rate limits?", answer: "Rate limits vary by plan. Free plans have 1,000 requests per month, Professional plans have 100,000 requests per month, and Enterprise plans have unlimited requests.},;
         {";
           question: "How do I report a bug?", answer: "You can report bugs through our support portal, email support@ziontechgroup.com, or use the feedback form in your dashboard.;
 
-;
+
       ];
 
-;
+
   ];
 
   const supportTiers = [], price: "Free"},;
@@ -85,7 +77,7 @@ name: "Community Support",";
         "Dedicated support manager,24/7 phone support,Priority ticket handling,Custom integrations,SLA guarantees,On-site support";
       ],";
       price: "Custom Pricing"}
-;
+
   ];
 
   const contactMethods = [];
@@ -145,7 +137,7 @@ name: "Community Support",";
                         <span className="text-gray-700">{feature}</span>;
                       </li>;
                     ))}
-;
+
                   </ul>";
                   <Link href="{option.link}">";
                     <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover: from-blue-700 hover:to-purple-700 transition-all duration-300">;
@@ -155,7 +147,7 @@ name: "Community Support",";
                   </Link>;
                 </div>,;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";
@@ -181,10 +173,10 @@ name: "Community Support",";
                         <p className="text-gray-600">{faq.answer}</p>;
                       </div>;
                     ))}
-;
+
                   </div>;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";
@@ -202,8 +194,7 @@ name: "Community Support",";
             <div className="{"grid" grid-cols-1 md:grid-cols-3 gap-8">,;
               {supportTiers.map((tier, index) => (";
                 <div key="{index}" className="{"bg-white" rounded-xl shadow-lg p-8 ${;
-                  tier.name === "Standard Support" ? "ring-2 ring-blue-500 transform scale-105" : ">;,
-}"}>";
+                  tier.name === "Standard Support" ? "ring-2 ring-blue-500 transform scale-105" : ">}"}>";
                   {tier.name = == "Standard Support" && (";
                     <div className=""text-center" mb-4"}>";
                       <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">;
@@ -218,7 +209,7 @@ name: "Community Support",";
                     <div className="flex items-center justify-center text-sm text-gray-500">";
                       <Clock className="w-4 h-4 mr-1"  />;
                       Response time: {tier.responseTime}
-;
+
                     </div>;
                   </div>";
                   <ul className="space-y-3 mb-6">;
@@ -228,18 +219,18 @@ name: "Community Support",";
                         <span className="{"text-gray-700"">{feature}</span>;
                       </li>;
                     ))}
-;
+
                   </ul>";
                   <button className="{"w-full" py-3 px-4 rounded-lg font-semibold transition-all duration-300 ${";
                     tier.name === "Standard Support" ";
                       ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white hover: from-blue-700 hover:to-purple-700" ">;
                       : "bg-gray-100 text-gray-900 hover:bg-gray-200"}"}>";
                     {tier.price === "Free" ? "Get Started" : "Contact Sales"}
-;
+
                   </button>;
                 </div>;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";
@@ -263,14 +254,14 @@ name: "Community Support",";
                       <Mail className="{"w-5" h-5 text-blue-600 mr-2"  />";
                       <a href="{"mailto:" ${method.email}"} className=""text-blue-600" hover:text-blue-700"}>;
                         {method.email}
-;
+
                       </a>;
                     </div>";
                     <div className="flex items-center justify-center">";
                       <Phone className="{"w-5" h-5 text-blue-600 mr-2"  />";
                       <a href="{"tel:${method.phone}"}" className=""text-blue-600" hover:text-blue-700"}>;
                         {method.phone}
-;
+
                       </a>;
                     </div>";
                     <div className="flex items-center justify-center">";
@@ -278,7 +269,7 @@ name: "Community Support",";
                       <span className="text-gray-600 text-sm">{method.hours}</span>;
                     </div>;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";
@@ -307,5 +298,5 @@ name: "Community Support",";
       </main>;
 </>",;
   )}
-;
+
 export default Component

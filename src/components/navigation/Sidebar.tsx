@@ -38,29 +38,25 @@ import { ;
   Car,;
   Eye,;
   Leaf,;
-  Handshake;,
-} from 'lucide-react';
+  Handshake} from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-;
-interface SidebarProps {;
+
+interface SidebarProps {
   isOpen: boolean;
-  onToggle: () => void;,
-}
-;
-const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {;
+  onToggle: () => void}
+
+const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
   const location = useLocation();
   const [expandedSections, setExpandedSections] = useState<string[]>([]);
-;
-  const toggleSection = (section: string) => {;
+
+  const toggleSection = (section: string) => {
     setExpandedSections(prev => ;
       prev.includes(section) ;
         ? prev.filter(s => s !== section);
         : [...prev, section];
-    );,
-};
-;
+    )}
   const navigationSections = [;
-    {;
+    {
       id: 'main',;
       title: 'Main',;
       items: [;
@@ -70,9 +66,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {;
         { name: 'About Us', href: '/about', icon: Users },;
         { name: 'Contact', href: '/contact', icon: MessageCircle },;
         { name: 'Pricing', href: '/pricing', icon: BarChart3 }
-      ];,
-},;
-    {;
+      ]},;
+    {
       id: 'ai-services',;
       title: 'AI & Machine Learning',;
       icon: Brain,;
@@ -117,9 +112,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {;
         { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator', icon: Zap },;
         { name: 'Autonomous Digital Twin Management', href: '/services/autonomous-digital-twin-management-system', icon: Monitor },;
         { name: 'Zion Hire AI', href: '/services/zion-hire-ai', icon: Users }
-      ];,
-},;
-    {;
+      ]},;
+    {
       id: 'it-services',;
       title: 'IT & Infrastructure',;
       icon: Server,;
@@ -136,9 +130,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {;
         { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Zap },;
         { name: 'FinOps Advisor', href: '/services/finops-advisor', icon: BarChart3 },;
         { name: 'AI Powered IT Asset Management', href: '/services/ai-powered-it-asset-management', icon: Monitor }
-      ];,
-},;
-    {;
+      ]},;
+    {
       id: 'cybersecurity',;
       title: 'Cybersecurity',;
       icon: Shield,;
@@ -152,9 +145,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {;
         { name: 'AI Autonomous Web Security', href: '/services/ai-autonomous-web-security', icon: Lock },;
         { name: 'AI Autonomous Zero Trust Security', href: '/services/ai-autonomous-zero-trust-security', icon: Shield },;
         { name: 'SOC2 Compliance Automation', href: '/services/soc2-compliance-automation', icon: Award }
-      ];,
-},;
-    {;
+      ]},;
+    {
       id: 'blockchain',;
       title: 'Blockchain & Web3',;
       icon: Network,;
@@ -162,9 +154,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {;
         { name: 'Blockchain Development Platform', href: '/services/blockchain-development-platform', icon: Code },;
         { name: 'Blockchain Enterprise Solutions', href: '/services/blockchain-enterprise-solutions', icon: Building },;
         { name: 'Blockchain Supply Chain Platform', href: '/services/blockchain-supply-chain-platform', icon: Network }
-      ];,
-},;
-    {;
+      ]},;
+    {
       id: 'quantum',;
       title: 'Quantum Computing',;
       icon: Cpu,;
@@ -174,9 +165,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {;
         { name: 'Quantum AI Hybrid Platform', href: '/services/quantum-ai-hybrid-platform', icon: Brain },;
         { name: 'Quantum AI Trading Platform', href: '/services/quantum-ai-trading-platform', icon: TrendingUp },;
         { name: 'Quantum Machine Learning', href: '/services/quantum-machine-learning', icon: Brain }
-      ];,
-},;
-    {;
+      ]},;
+    {
       id: 'specialized',;
       title: 'Specialized Solutions',;
       icon: Star,;
@@ -196,9 +186,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {;
         { name: 'Micro SaaS Solutions Comprehensive', href: '/services/micro-saas-solutions-comprehensive', icon: Rocket },;
         { name: 'Webinars & Training', href: '/services/webinars', icon: Video },;
         { name: 'Revolutionary Services 2030', href: '/services/revolutionary-services-2030', icon: Rocket }
-      ];,
-},;
-    {;
+      ]},;
+    {
       id: 'support',;
       title: 'Support & Resources',;
       icon: HelpCircle,;
@@ -217,15 +206,12 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {;
         { name: 'Press', href: '/press', icon: FileText },;
         { name: 'Careers', href: '/careers', icon: Users },;
         { name: 'Partners', href: '/partners', icon: Handshake }
-      ];,
-}
+      ]}
   ];
-;
-  const contactInfo = {;
+
+  const contactInfo = {
     phone: '+1 302 464 0950',;
-    email: 'kleber@ziontechgroup.com';,
-};
-;
+    email: 'kleber@ziontechgroup.com'}
   return (;
     <AnimatePresence>;
       {isOpen && (;
@@ -238,7 +224,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {;
             className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden";
             onClick={onToggle}
           />;
-          ;
+
           {/* Sidebar */}
           <motion.div;
             initial={{ x: '-100%' }}
@@ -297,12 +283,11 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {;
                     {section.items && (;
                       <ChevronRight ;
                         className={`w-4 h-4 text-gray-400 transition-transform ${;
-                          expandedSections.includes(section.id) ? 'rotate-90' : '';,
-}`} ;
+                          expandedSections.includes(section.id) ? 'rotate-90' : ''}`}
                       />;
                     )}
                   </button>;
-                  ;
+
                   {section.items && expandedSections.includes(section.id) && (;
                     <motion.div;
                       initial={{ opacity: 0, height: 0 }}
@@ -316,8 +301,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {;
                           className={`flex items-center space-x-3 p-2 text-sm rounded-md transition-colors ${;
                             location.pathname === item.href;
                               ? 'bg-cyan-50 text-cyan-700';
-                              : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900';,
-}`}
+                              : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'}`}
                         >;
                           {item.icon && <item.icon className="w-4 h-4" />}
                           <span>{item.name}</span>;
@@ -346,7 +330,5 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {;
         </>;
       )}
     </AnimatePresence>;
-  );,
-};
-;
+  )}
 export default Sidebar;

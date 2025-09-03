@@ -30,13 +30,12 @@ import { ;
   TrendingUp,;
   Lightbulb,;
   Target,;
-  CheckCircle;,
-} from 'lucide-react';
-;
-export function ResourcesPage() {;
+  CheckCircle} from 'lucide-react';
+
+export function ResourcesPage() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
-;
+
   const categories = [;
     { id: 'all', name: 'All Resources', icon: BookOpen },;
     { id: 'whitepapers', name: 'White Papers', icon: FileText },;
@@ -47,9 +46,9 @@ export function ResourcesPage() {;
     { id: 'research', name: 'Research', icon: Brain },;
     { id: 'tools', name: 'Tools', icon: Code }
   ];
-;
+
   const resources = [;
-    {;
+    {
       id: 1,;
       title: 'AI-Powered Business Intelligence: A Comprehensive Guide',;
       description: 'Learn how to implement AI-driven business intelligence solutions that transform raw data into actionable insights for enterprise decision-making.',;
@@ -65,9 +64,8 @@ export function ResourcesPage() {;
       tags: ['AI', 'Business Intelligence', 'Data Analytics', 'Enterprise'],;
       isFeatured: true,;
       isNew: false,;
-      downloadUrl: '/downloads/ai-bi-guide.pdf';,
-},;
-    {;
+      downloadUrl: '/downloads/ai-bi-guide.pdf'},;
+    {
       id: 2,;
       title: 'Enterprise Security Best Practices: 2025 Edition',;
       description: 'Comprehensive security guidelines for enterprise organizations, covering threat detection, compliance, and incident response strategies.',;
@@ -83,9 +81,8 @@ export function ResourcesPage() {;
       tags: ['Security', 'Compliance', 'Enterprise', 'Best Practices'],;
       isFeatured: true,;
       isNew: true,;
-      downloadUrl: '/downloads/security-best-practices-2025.pdf';,
-},;
-    {;
+      downloadUrl: '/downloads/security-best-practices-2025.pdf'},;
+    {
       id: 3,;
       title: 'Cloud FinOps Optimization: Case Study',;
       description: 'Real-world case study showing how a Fortune 500 company reduced cloud costs by 40% using our FinOps optimization platform.',;
@@ -101,9 +98,8 @@ export function ResourcesPage() {;
       tags: ['Cloud', 'FinOps', 'Case Study', 'Cost Optimization'],;
       isFeatured: false,;
       isNew: false,;
-      downloadUrl: '/downloads/cloud-finops-case-study.pdf';,
-},;
-    {;
+      downloadUrl: '/downloads/cloud-finops-case-study.pdf'},;
+    {
       id: 4,;
       title: 'DevOps Automation Toolkit Template',;
       description: 'Ready-to-use templates and scripts for implementing DevOps automation in your organization.',;
@@ -119,9 +115,8 @@ export function ResourcesPage() {;
       tags: ['DevOps', 'Automation', 'Templates', 'CI/CD'],;
       isFeatured: false,;
       isNew: true,;
-      downloadUrl: '/downloads/devops-automation-toolkit.zip';,
-},;
-    {;
+      downloadUrl: '/downloads/devops-automation-toolkit.zip'},;
+    {
       id: 5,;
       title: 'The Future of AI in Healthcare: Research Report',;
       description: 'In-depth research on AI applications in healthcare, including trends, opportunities, and implementation challenges.',;
@@ -137,9 +132,8 @@ export function ResourcesPage() {;
       tags: ['AI', 'Healthcare', 'Research', 'Innovation'],;
       isFeatured: true,;
       isNew: false,;
-      downloadUrl: '/downloads/ai-healthcare-research.pdf';,
-},;
-    {;
+      downloadUrl: '/downloads/ai-healthcare-research.pdf'},;
+    {
       id: 6,;
       title: 'Data Analytics Implementation Guide',;
       description: 'Step-by-step guide for implementing data analytics solutions in enterprise environments.',;
@@ -155,9 +149,8 @@ export function ResourcesPage() {;
       tags: ['Data Analytics', 'Implementation', 'Enterprise', 'Guide'],;
       isFeatured: false,;
       isNew: false,;
-      downloadUrl: '/downloads/data-analytics-guide.pdf';,
-},;
-    {;
+      downloadUrl: '/downloads/data-analytics-guide.pdf'},;
+    {
       id: 7,;
       title: 'AI Security Assessment Tool',;
       description: 'Interactive tool for assessing AI security risks and compliance requirements in your organization.',;
@@ -173,9 +166,8 @@ export function ResourcesPage() {;
       tags: ['AI Security', 'Assessment', 'Tool', 'Compliance'],;
       isFeatured: false,;
       isNew: true,;
-      downloadUrl: '/tools/ai-security-assessment';,
-},;
-    {;
+      downloadUrl: '/tools/ai-security-assessment'},;
+    {
       id: 8,;
       title: 'Cloud Migration Checklist Template',;
       description: 'Comprehensive checklist for planning and executing cloud migration projects.',;
@@ -191,21 +183,19 @@ export function ResourcesPage() {;
       tags: ['Cloud Migration', 'Checklist', 'Template', 'Planning'],;
       isFeatured: false,;
       isNew: false,;
-      downloadUrl: '/downloads/cloud-migration-checklist.pdf';,
-}
+      downloadUrl: '/downloads/cloud-migration-checklist.pdf'}
   ];
-;
-  const filteredResources = resources.filter(resource => {;
+
+  const filteredResources = resources.filter(resource => {
     const matchesCategory = selectedCategory === 'all' || resource.category === selectedCategory;
     const matchesSearch = resource.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          resource.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          resource.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    return matchesCategory && matchesSearch;,
-});
-;
+    return matchesCategory && matchesSearch});
+
   const featuredResources = filteredResources.filter(resource => resource.isFeatured);
   const regularResources = filteredResources.filter(resource => !resource.isFeatured);
-;
+
   return (;
     <div className="min-h-screen bg-zion-slate-dark">;
       {/* Hero Section */}
@@ -219,7 +209,7 @@ export function ResourcesPage() {;
               Access our comprehensive library of white papers, case studies, guides, and tools ;
               to help you stay ahead of technology trends and implement best practices.;
             </p>;
-            ;
+
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto mb-8">;
               <div className="relative">;
@@ -268,8 +258,7 @@ export function ResourcesPage() {;
                 className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 ${;
                   selectedCategory === category.id;
                     ? 'bg-zion-cyan text-white';
-                    : 'bg-zion-slate-dark text-zion-slate-light hover:bg-zion-purple/20 hover:text-white';,
-}`}
+                    : 'bg-zion-slate-dark text-zion-slate-light hover:bg-zion-purple/20 hover:text-white'}`}
               >;
                 <category.icon className="w-4 h-4" />;
                 <span>{category.name}</span>;
@@ -328,7 +317,7 @@ export function ResourcesPage() {;
                     <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-zion-cyan transition-colors">;
                       {resource.title}
                     </h3>;
-                    ;
+
                     <p className="text-zion-slate-light mb-4 leading-relaxed">;
                       {resource.description}
                     </p>;
@@ -367,7 +356,7 @@ export function ResourcesPage() {;
           </div>;
         </section>;
       )}
-;
+
       {/* All Resources */}
       <section className="py-16 bg-zion-slate-darker">;
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
@@ -409,7 +398,7 @@ export function ResourcesPage() {;
                   <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-zion-cyan transition-colors line-clamp-2">;
                     {resource.title}
                   </h3>;
-                  ;
+
                   <p className="text-zion-slate-light text-sm mb-4 leading-relaxed line-clamp-3">;
                     {resource.description}
                   </p>;
@@ -466,10 +455,9 @@ export function ResourcesPage() {;
                 Try adjusting your search terms or browse different categories.;
               </p>;
               <button;
-                onClick={() => {;
+                onClick={() => {
                   setSearchTerm('');
-                  setSelectedCategory('all');,
-}}
+                  setSelectedCategory('all')}}
                 className="text-zion-cyan hover:text-zion-cyan-light transition-colors">;
                 Clear filters;
               </button>;
@@ -489,7 +477,7 @@ export function ResourcesPage() {;
               Subscribe to our newsletter and be the first to access new white papers, ;
               case studies, and tools as they're released.;
             </p>;
-            ;
+
             <div className="max-w-md mx-auto">;
               <div className="flex space-x-2">;
                 <input;
@@ -534,7 +522,6 @@ export function ResourcesPage() {;
         </div>;
       </section>;
     </div>;
-  );,
-}
-;
+  )}
+
 export default ResourcesPage;

@@ -32,10 +32,8 @@ export default function ServicesPricingPage() {}
       service => service.category === category;
     );
     if (categoryServices.length > 0) {}
-      acc[category] = categoryServices;,
-}
-    return acc;,
-}, {});
+      acc[category] = categoryServices}
+    return acc}, {});
   return();
     <div className="min-h-screen bg-zion-blue-dark">";
       <SEO"";
@@ -322,14 +320,10 @@ export default function ServicesPricingPage() {}
         </div>;
       </div>;
     </div>)}
-;
 
-export { ServicesPricingPage };
-;
-export { ServicesPricingPage };
-;
-export { ServicesPricingPage };
-;
-export { ServicesPricingPage };
-;
-export { ServicesPricingPage };
+
+export { ServicesPricingPage }
+export { ServicesPricingPage }
+export { ServicesPricingPage }
+export { ServicesPricingPage }
+export { ServicesPricingPage }

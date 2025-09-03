@@ -1,21 +1,20 @@
 // Innovative Cybersecurity Services 2030 - Zion Tech Group;
 // Advanced security solutions for the digital age;
-;
-export interface CybersecurityService {;
+
+export interface CybersecurityService {
   id: string;
   title: string;
   description: string;
   category: string;
   subcategory: string;
-pricing: {;
+pricing: {
 
     monthly: number;
     yearly: number;
     custom: string;
     currency: string;
     pricingModel: string;
-    marketPrice: string;,
-};
+    marketPrice: string}
   features: string[];
   benefits: string[];
   useCases: string[];
@@ -49,21 +48,18 @@ pricing: {;
   createdAt: string;
   featured: boolean;
   trending: boolean}
-;
+
 // Zion Tech Group Contact Information;
-const zionContact = {;
+const zionContact = {
 
   phone: "+1 302 464 0950",";
   email: "kleber@ziontechgroup.com",";
   website: "https://ziontechgroup.com",;  ;
-  ;
-  ;
+
+
   ;";
-  address: "364 E Main St STE 1008 Middletown DE 19709"};
-;
-;,
-};
-;
+  address: "364 E Main St STE 1008 Middletown DE 19709"}
+}
 export const innovativeCybersecurityServices2030: CybersecurityService[] = [{;
 ";
     id: "quantum-resistant-encryption",";
@@ -71,15 +67,14 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [{;
     description: "Next-generation encryption platform that provides quantum-resistant cryptographic algorithms, ensuring data security against future quantum computing threats while maintaining high performance.",";
     category: "Cybersecurity Services",";
     subcategory: "Encryption & Cryptography",;
-    pricing: {;
+    pricing: {
 
       monthly: 899,;
       yearly: 8990,";
       custom: "Enterprise encryption solutions",";
       currency: "$",";
       pricingModel: "Monthly subscription with data volume pricing",";
-      marketPrice: "$899-1,799/month";,
-},;
+      marketPrice: "$899-1,799/month"},;
     features[;";
       "Post-quantum cryptography algorithms",";
       "Hybrid encryption systems",";
@@ -156,25 +151,23 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [{;
     image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto = format&fit=crop&w=800&h=500",";
     createdAt: "2030-01-15T10:00:00.000Z",;
     featured: true,;
-    trending: true;,
-},;
+    trending: true},;
 
-  {;
+  {
 ";
     id: "ai-threat-hunting-platform",";
     title: "Zion AI Threat Hunting Platform",";
     description: "Advanced AI-powered threat hunting platform that proactively identifies, analyzes, and neutralizes cybersecurity threats before they can cause damage to your organization.",";
     category: "Cybersecurity Services",";
     subcategory: "Threat Detection & Response",;
-    pricing: {;
+    pricing: {
 
       monthly: 699,;
       yearly: 6990,";
       custom: "Enterprise threat hunting solutions",";
       currency: "$",";
       pricingModel: "Monthly subscription with endpoint-based pricing",";
-      marketPrice: "$699-1,399/month";,
-},;
+      marketPrice: "$699-1,399/month"},;
     features[;";
       "AI-powered threat detection",";
       "Behavioral analysis",";
@@ -251,25 +244,23 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [{;
     image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&h=500",";
     createdAt: "2030-01-15T10:00:00.000Z",;
     featured: true,;
-    trending: true;,
-},;
+    trending: true},;
 
-  {;
+  {
 ";
     id: "zero-trust-network-access",";
     title: "Zion Zero Trust Network Access Platform",";
     description: "Comprehensive zero-trust network access solution that provides secure, granular access control to applications and resources without traditional VPN limitations.",";
     category: "Cybersecurity Services",";
     subcategory: "Network Security",;
-    pricing: {;
+    pricing: {
 
       monthly: 499,;
       yearly: 4990,";
       custom: "Enterprise ZTNA solutions",";
       currency: "$",";
       pricingModel: "Monthly subscription with user-based pricing",";
-      marketPrice: "$499-999/month";,
-},;
+      marketPrice: "$499-999/month"},;
     features[;";
       "Identity-based access control",";
       "Application-level security",";
@@ -346,25 +337,23 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [{;
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500",";
     createdAt: "2030-01-15T10:00:00.000Z",;
     featured: true,;
-    trending: true;,
-},;
+    trending: true},;
 
-  {;
+  {
 ";
     id: "ai-powered-vulnerability-management",";
     title: "Zion AI-Powered Vulnerability Management",";
     description: "Intelligent vulnerability management platform that uses AI to prioritize security risks, automate patch management, and provide actionable insights for proactive security posture improvement.",";
     category: "Cybersecurity Services",";
     subcategory: "Vulnerability Management",;
-    pricing: {;
+    pricing: {
 
       monthly: 399,;
       yearly: 3990,";
       custom: "Enterprise vulnerability management",";
       currency: "$",";
       pricingModel: "Monthly subscription with asset-based pricing",";
-      marketPrice: "$399-799/month";,
-},;
+      marketPrice: "$399-799/month"},;
     features[;";
       "AI-powered risk prioritization",";
       "Automated vulnerability scanning",";
@@ -441,25 +430,23 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [{;
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500",";
     createdAt: "2030-01-15T10:00:00.000Z",;
     featured: true,;
-    trending: true;,
-},;
+    trending: true},;
 
-  {;
+  {
 ";
     id: "blockchain-security-audit",";
     title: "Zion Blockchain Security Audit Platform",";
     description: "Comprehensive blockchain security auditing platform that identifies vulnerabilities in smart contracts, DeFi protocols, and blockchain applications to ensure secure digital asset operations.",";
     category: "Cybersecurity Services",";
     subcategory: "Blockchain Security",;
-    pricing: {;
+    pricing: {
 
       monthly: 799,;
       yearly: 7990,";
       custom: "Enterprise blockchain security",";
       currency: "$",";
       pricingModel: "Monthly subscription with audit-based pricing",";
-      marketPrice: "$799-1,599/month";,
-},;
+      marketPrice: "$799-1,599/month"},;
     features[;";
       "Smart contract auditing",";
       "DeFi protocol analysis",";
@@ -536,7 +523,7 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [{;
     image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500",;";
     createdAt: "2030-01-15T10:00:00.000Z",;
     featured: true,;
-    trending: true};
+    trending: true}
 ];
-;
+
 export default innovativeCybersecurityServices2030}}";

@@ -17,26 +17,22 @@ const QuantumEdgeComputingPlatform = () => {}
 ";
             icon: Zap,"";
             title: "Quantum Performance","";
-            description: "Leverage quantum computing principles for unprecedented processing speed and efficiency";,
-},;
+            description: "Leverage quantum computing principles for unprecedented processing speed and efficiency"},;
         {}
 ";
             icon: Users,"";
             title: "Global Edge Network","";
-            description: "Distributed quantum nodes across strategic global locations for optimal performance";,
-},;
+            description: "Distributed quantum nodes across strategic global locations for optimal performance"},;
         {}
 ";
             icon: Users,"";
             title: "Quantum Security","";
-            description: "Advanced quantum encryption and security protocols for maximum data protection";,
-},;
+            description: "Advanced quantum encryption and security protocols for maximum data protection"},;
         {}
 ";
             icon: Users,"";
             title: "Scalable Architecture","";
-            description: "Flexible scaling from small deployments to enterprise-wide quantum networks";,
-}
+            description: "Flexible scaling from small deployments to enterprise-wide quantum networks"}
     ];
     const pricingPlans = [];
         {}
@@ -52,8 +48,7 @@ const QuantumEdgeComputingPlatform = () => {}
                 "Standard security protocols","";
                 "Email support","";
                 "Basic analytics dashboard";
-            ];,
-},;
+            ]},;
         {}
 ";
 "";
@@ -69,8 +64,7 @@ const QuantumEdgeComputingPlatform = () => {}
                 "Advanced analytics & reporting","";
                 "Custom integration support";
             ],;
-            popular: true;,
-},;
+            popular: true},;
         {}
 ";
 "";
@@ -86,8 +80,7 @@ const QuantumEdgeComputingPlatform = () => {}
                 "Custom analytics & AI models","";
                 "On-site implementation support","";
                 "SLA guarantees";
-            ];,
-}
+            ]}
     ];
     const useCases = [];
         {}
@@ -95,29 +88,25 @@ const QuantumEdgeComputingPlatform = () => {}
 "";
             title: "Financial Services","";
             description: "Real-time risk assessment and algorithmic trading with quantum speed",;
-            icon: Users;,
-},;
+            icon: Users},;
         {}
 ";
 "";
             title: "Healthcare","";
             description: "Instant medical imaging analysis and drug discovery acceleration",;
-            icon: Users;,
-},;
+            icon: Users},;
         {}
 ";
 "";
             title: "Manufacturing","";
             description: "Predictive maintenance and quality control with quantum precision",;
-            icon: Server;,
-},;
+            icon: Server},;
         {}
 ";
 "";
             title: "Research & Development","";
             description: "Complex simulations and data analysis at quantum speeds",;
-            icon: Server;,
-}";
+            icon: Server}";
     ];"";
     return (<div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">";
       {/* Hero Section */}"";
@@ -296,16 +285,12 @@ const QuantumEdgeComputingPlatform = () => {}
           </div>;
         </div>;
       </section>;
-    </div>)};
+    </div>)}
 export default QuantumEdgeComputingPlatform;
-;
 
-export { QuantumEdgeComputingPlatform };
-;
-export { QuantumEdgeComputingPlatform };
-;
-export { QuantumEdgeComputingPlatform };
-;
-export { QuantumEdgeComputingPlatform };
-;
-export { QuantumEdgeComputingPlatform };
+
+export { QuantumEdgeComputingPlatform }
+export { QuantumEdgeComputingPlatform }
+export { QuantumEdgeComputingPlatform }
+export { QuantumEdgeComputingPlatform }
+export { QuantumEdgeComputingPlatform }

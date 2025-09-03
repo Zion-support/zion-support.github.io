@@ -2,33 +2,29 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Code, Shield, Zap, CheckCircle, ArrowRight, Play } from 'lucide-react';
-;
+
 const features = [;
-    {;
+    {
         title: "Automated Code Analysis",;
         description: "AI-powered code review that automatically detects bugs, security vulnerabilities, and code quality issues.",;
         icon: Code,;
-        color: "from-purple-500 to-pink-500";,
-},;
-    {;
+        color: "from-purple-500 to-pink-500"},;
+    {
         title: "Security Vulnerability Detection",;
         description: "Advanced security scanning that identifies potential security risks and compliance violations.",;
         icon: Shield,;
-        color: "from-blue-500 to-cyan-500";,
-},;
-    {;
+        color: "from-blue-500 to-cyan-500"},;
+    {
         title: "Performance Optimization",;
         description: "Intelligent suggestions for code optimization and performance improvements.",;
         icon: Zap,;
-        color: "from-green-500 to-emerald-500";,
-},;
-    {;
+        color: "from-green-500 to-emerald-500"},;
+    {
         title: "Code Quality Metrics",;
         description: "Comprehensive code quality analysis with detailed metrics and improvement recommendations.",;
         icon: CheckCircle,;
-        color: "from-orange-500 to-red-500";,
-}];
-export { function };
+        color: "from-orange-500 to-red-500"}];
+export { function }
 export default function AIAutonomousCodeReview() {}
   return();
     <div className="min-h-screen bg-background relative overflow-hidden">";
@@ -123,8 +119,7 @@ export default function AIAutonomousCodeReview() {}
                     {feature.description}
                   </p>;
                 </motion.div>;
-              );,
-})}
+              )})}
           </div>;
         </div>;
       </section>;
@@ -229,14 +224,10 @@ export default function AIAutonomousCodeReview() {}
         </div>;
       </section>;
     </div>)}
-;
 
-export { AIAutonomousCodeReview, IconComponent };
-;
-export { AIAutonomousCodeReview, IconComponent };
-;
-export { AIAutonomousCodeReview, IconComponent };
-;
-export { AIAutonomousCodeReview, IconComponent };
-;
-export { AIAutonomousCodeReview, IconComponent };
+
+export { AIAutonomousCodeReview, IconComponent }
+export { AIAutonomousCodeReview, IconComponent }
+export { AIAutonomousCodeReview, IconComponent }
+export { AIAutonomousCodeReview, IconComponent }
+export { AIAutonomousCodeReview, IconComponent }

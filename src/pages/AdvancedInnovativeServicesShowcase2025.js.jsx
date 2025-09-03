@@ -1,7 +1,7 @@
 import React, { useState } from 'react';''';
 import { Link } from 'react-router-dom';
-;
-const AdvancedInnovativeServicesShowcase2025 = () => {;
+
+const AdvancedInnovativeServicesShowcase2025 = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');
     const [sortBy, setSortBy] = useState('name');
@@ -35,7 +35,7 @@ const AdvancedInnovativeServicesShowcase2025 = () => {;
         switch (sortBy) {}
 ';
             case 'price':'';
-                return parseFloat(a.price?.replace(/[^0-9.]/g,) || '0') - parseFloat(b.price?.replace(/[^0-9.]/g,) || '0');';
+                return parseFloat(a.price?.replace(/[^0-9.]/g) || '0') - parseFloat(b.price?.replace(/[^0-9.]/g) || '0');';
             case 'category': any;
                 return a.category.localeCompare(b.category);';
             case 'name': any;
@@ -47,9 +47,8 @@ const AdvancedInnovativeServicesShowcase2025 = () => {;
 ';
 '';
 ''';
-  'Legal Tech & Compliance': '⚖️',Quantum Computing & Security': '🔐',Healthcare & Biotech': '🏥',Energy & Sustainability': '🌱',Cybersecurity': '🛡️',Fintech & Trading': '📈',Quantum Computing & AI': '🔮',Supply Chain & Logistics': '🚚',Edge Computing & IoT': '🌐',Marketing & Automation': '📢',Quantum Technology': '🔮',AI & Machine Learning': '🧠',AI & Analytics': '📊',AI & Customer Experience': '💬';,
-};';
-        return icons[category] || '🚀'};
+  'Legal Tech & Compliance': '⚖️',Quantum Computing & Security': '🔐',Healthcare & Biotech': '🏥',Energy & Sustainability': '🌱',Cybersecurity': '🛡️',Fintech & Trading': '📈',Quantum Computing & AI': '🔮',Supply Chain & Logistics': '🚚',Edge Computing & IoT': '🌐',Marketing & Automation': '📢',Quantum Technology': '🔮',AI & Machine Learning': '🧠',AI & Analytics': '📊',AI & Customer Experience': '💬'};';
+        return icons[category] || '🚀'}
     const getServiceTypeColor = (type) => {}
         switch (type) {}
 ';
@@ -60,8 +59,7 @@ const AdvancedInnovativeServicesShowcase2025 = () => {;
             case 'AI Service':'';
                 return 'bg-purple-100 text-purple-800 border-purple-200';';
             default:'';
-                return 'bg-gray-100 text-gray-800 border-gray-200'}";,
-};"";
+                return 'bg-gray-100 text-gray-800 border-gray-200'}"};"";
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">";
       {/* Hero Section */}"";
       <section className="py-20 px-4 sm:px-6 lg:px-8">"";
@@ -231,7 +229,7 @@ const AdvancedInnovativeServicesShowcase2025 = () => {;
                   {service.benefits && (<div>"";
                       <span className="text-xs font-semibold text-blue-400">Benefits: </span>"";
                       <span className="text-xs text-gray-300">';
-                        {service.benefits.slice(0, 2).join(',)}';
+                        {service.benefits.slice(0, 2).join(')}';
                         {service.benefits.length > 2 && '...'}
                       </span>;
                     </div>) }
@@ -280,16 +278,12 @@ const AdvancedInnovativeServicesShowcase2025 = () => {;
           </div>;
         </div>;
       </section>;
-    </div>)};
+    </div>)}
 export default AdvancedInnovativeServicesShowcase2025;
-;
 
-export { AdvancedInnovativeServicesShowcase2025 };
-;
-export { AdvancedInnovativeServicesShowcase2025 };
-;
-export { AdvancedInnovativeServicesShowcase2025 };
-;
-export { AdvancedInnovativeServicesShowcase2025 };
-;
-export { AdvancedInnovativeServicesShowcase2025 };
+
+export { AdvancedInnovativeServicesShowcase2025 }
+export { AdvancedInnovativeServicesShowcase2025 }
+export { AdvancedInnovativeServicesShowcase2025 }
+export { AdvancedInnovativeServicesShowcase2025 }
+export { AdvancedInnovativeServicesShowcase2025 }

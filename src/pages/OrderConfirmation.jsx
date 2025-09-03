@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';''';
 import { Link } from 'react-router-dom';''';
 import CheckoutProgress from '@/components/checkout/CheckoutProgress';
-export default function OrderConfirmation() {;
+export default function OrderConfirmation() {
     const router = useNavigate();
     const { orderId } = router.query;
     if (!orderId);
@@ -12,14 +12,10 @@ export default function OrderConfirmation() {;
       <p className="mb-6">Your order ID is {orderId}.</p>;
       <Link href="/orders" className="text-zion-purple underline">View Orders</Link>;
     </div>)}
-;
 
-export { OrderConfirmation };
-;
-export { OrderConfirmation };
-;
-export { OrderConfirmation };
-;
-export { OrderConfirmation };
-;
-export { OrderConfirmation };
+
+export { OrderConfirmation }
+export { OrderConfirmation }
+export { OrderConfirmation }
+export { OrderConfirmation }
+export { OrderConfirmation }

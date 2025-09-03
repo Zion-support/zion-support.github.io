@@ -1,6 +1,6 @@
-const Component = () => {;
+const Component = () => {
 import React from "react";
-      description: "Track record of successful implementations with measurable ROI for our clients.",,;
+      description: "Track record of successful implementations with measurable ROI for our clients.",;
   ];
   return (";
     <MainLayout title = "Micro SaaS Solutions - Zion Tech Group;
@@ -48,7 +48,7 @@ and streamline your operations with cutting-edge technology.;
                 <p className="text-gray-600">{benefit.description}</p>;
               </div>;
             ))}
-;
+
           </div>;
       </section>;
       {/* comment */}";
@@ -82,13 +82,13 @@ and streamline your operations with cutting-edge technology.;
                         <span className="leading-relaxed">{feature}</span>;
                       </li>;
                     ))}
-;
+
                     {service.features.length > 4 && (";
                       <li className="text-blue-600 text-sm font-medium">;
                         +{service.features.length - 4} more features,;
                       </li>;
                     )}
-;
+
                   </ul>;
                 </div>;
 ";
@@ -101,7 +101,7 @@ and streamline your operations with cutting-edge technology.;
                         <span className="leading-relaxed">{benefit}</span>;
                       </li>;
                     ))}
-;
+
                   </ul>;
                 </div>;
 ";
@@ -111,10 +111,10 @@ and streamline your operations with cutting-edge technology.;
                     {service.useCases.slice(0, 3).map((useCase, index) => (";
                       <span key="{index}" className="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-xs md: text-sm font-medium">,;
                         {useCase}
-;
+
                       </span>;
                     ))}
-;
+
                   </div>;
 ";
                 <div className="flex flex-col sm: flex-row gap-3 pt-4 border-t border-gray-200">",;
@@ -132,7 +132,7 @@ and streamline your operations with cutting-edge technology.;
                 </div>;
               </div>,;
             ))}
-;
+
           </div>;
       </section>;
       {/* comment */}";

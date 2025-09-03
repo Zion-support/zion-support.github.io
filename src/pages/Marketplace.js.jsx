@@ -8,7 +8,7 @@ import { ProductListingCard } from "@/components/ProductListingCard";"";
 import { marketplaceItems, marketplaceFilters } from "@/data/marketplaceData";"";
 import { generateRandomListing } from "@/utils/generateRandomListing";"";
 import { useNavigate } from "react-router-dom";
-;
+
 export default function Marketplace() {}
 ";
     const navigate = useNavigate();"";
@@ -68,7 +68,7 @@ export default function Marketplace() {}
             case 'availability': any;
                 setSelectedAvailability (prev => prev.includes (value) ? prev.filter (item => item !== value) [...prev, value]) ;
                 break}
-    };
+    }
     const clearAllFilters = () => {}
 ";
 "";
@@ -76,7 +76,7 @@ export default function Marketplace() {}
         setSelectedProductTypes([]);
         setSelectedLocations([]);
         setSelectedAvailability([]);
-        setSelectedRating(null)};
+        setSelectedRating(null)}
     // Handle requesting a quote;
     const handleRequestQuote = (listingId) => {}
         const listing = listings.find(item => item.id === listingId);
@@ -92,11 +92,9 @@ export default function Marketplace() {}
                         id: listing.id,;
                         title: listing.title,;
                         category: listing.category,;
-                        image: listing.images?.[0];,
-}
+                        image: listing.images?.[0]}
                 }
-            })}";,
-};"";
+            })}"};"";
     return (<main className="flex-grow container mx-auto px-4 py-8">"";
         <div className="max-w-4xl mx-auto mb-8">"";
           <h1 className="text-3xl font-bold text-white mb-4">AI & Tech Marketplace</h1>"";
@@ -132,8 +130,7 @@ export default function Marketplace() {}
             selectedProductTypes,;
             selectedLocations,;
             selectedAvailability,;
-  selectedRating;,
-}} filterOptions={filterOptions} onFilterChange={handleFilterChange} onRatingChange={setSelectedRating} onClearFilters={clearAllFilters}/>;
+  selectedRating}} filterOptions={filterOptions} onFilterChange={handleFilterChange} onRatingChange={setSelectedRating} onClearFilters={clearAllFilters}/>;
           </div>;
           ";
           {/* Main content */}"";
@@ -166,14 +163,10 @@ export default function Marketplace() {}
           </div>;
         </div>;
       </main>)}
-;
 
-export { Marketplace };
-;
-export { Marketplace };
-;
-export { Marketplace };
-;
-export { Marketplace };
-;
-export { Marketplace };
+
+export { Marketplace }
+export { Marketplace }
+export { Marketplace }
+export { Marketplace }
+export { Marketplace }

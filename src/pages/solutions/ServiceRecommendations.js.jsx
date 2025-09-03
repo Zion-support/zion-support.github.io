@@ -26,17 +26,12 @@ const ServiceRecommendations = () => {}
         </div>;
       </section>;
     </div>;
-  );,
-};
+  )}
 export default ServiceRecommendations;
-;
 
-export { ServiceRecommendations };
-;
-export { ServiceRecommendations };
-;
-export { ServiceRecommendations };
-;
-export { ServiceRecommendations };
-;
-export { ServiceRecommendations };
+
+export { ServiceRecommendations }
+export { ServiceRecommendations }
+export { ServiceRecommendations }
+export { ServiceRecommendations }
+export { ServiceRecommendations }

@@ -1,4 +1,4 @@
-export interface InnovativeITService2024 {;
+export interface InnovativeITService2024 {
   id: string;
   name: string;
   tagline: string;
@@ -8,7 +8,7 @@ export interface InnovativeITService2024 {;
   rating: number;
   customers: string}
 export const innovativeITServices2024: InnovativeITService2024[] = [;
-  {;
+  {
     id: "autonomous-devops-platform",;
     name: "Autonomous DevOps Platform",;
     tagline: "Self-healing infrastructure with zero downtime",;
@@ -53,22 +53,20 @@ export const innovativeITServices2024: InnovativeITService2024[] = [;
     marketSize: "$8.2B market",;
     growthRate: "20.1% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails:;
       "Production-ready DevOps platform with AI-powered automation, real-time monitoring, and comprehensive infrastructure management capabilities.",;
     launchDate: "2024-01-15",;
     customers: 950,;
     rating: 4.8,;
-    reviews: 520,;,;,
-},;
+    reviews: 520},;
   // Zero Trust Network Architecture;
-  {;
+  {
     id: "zero-trust-network-architecture",;
     name: "Zero Trust Network Architecture",;
     tagline: "Never trust, always verify - secure by design",;
@@ -115,22 +113,20 @@ export const innovativeITServices2024: InnovativeITService2024[] = [;
     marketSize: "$19.6B market",;
     growthRate: "17.8% annual growth",;
     variant: "security-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails:;
       "Production-ready zero trust platform with comprehensive security features, compliance tools, and enterprise-grade monitoring.",;
     launchDate: "2024-02-01",;
     customers: 650,;
     rating: 4.9,;
-    reviews: 380,;,;,
-},;
+    reviews: 380},;
   // Edge Computing Orchestration;
-  {;
+  {
     id: "edge-computing-orchestration",;
     name: "Edge Computing Orchestration",;
     tagline: "Distributed computing at the edge of the network",;
@@ -177,22 +173,20 @@ export const innovativeITServices2024: InnovativeITService2024[] = [;
     marketSize: "$15.7B market",;
     growthRate: "23.4% annual growth",;
     variant: "edge-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails:;
       "Production-ready edge computing platform with global node distribution, real-time processing, and comprehensive orchestration tools.",;
     launchDate: "2024-01-20",;
     customers: 750,;
     rating: 4.7,;
-    reviews: 420,;,;,
-},;
+    reviews: 420},;
   // AI-Powered IT Operations Center;
-  {;
+  {
     id: "ai-powered-it-operations-center",;
     name: "AI-Powered IT Operations Center",;
     tagline: "Intelligent IT operations with predictive insights",;
@@ -239,22 +233,20 @@ export const innovativeITServices2024: InnovativeITService2024[] = [;
     marketSize: "$12.8B market",;
     growthRate: "18.9% annual growth",;
     variant: "it-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails:;
       "Production-ready IT operations platform with AI-powered monitoring, predictive analytics, and comprehensive automation tools.",;
     launchDate: "2024-02-10",;
     customers: 850,;
     rating: 4.8,;
-    reviews: 480,;,;,
-},;
+    reviews: 480},;
   // Quantum-Secure Database Platform;
-  {;
+  {
     id: "quantum-secure-database-platform",;
     name: "Quantum-Secure Database Platform",;
     tagline: "Future-proof database security for quantum threats",;
@@ -303,22 +295,20 @@ export const innovativeITServices2024: InnovativeITService2024[] = [;
     marketSize: "$63.1B market",;
     growthRate: "16.8% annual growth",;
     variant: "quantum-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails:;
       "Production-ready database platform with quantum-resistant encryption, distributed architecture, and comprehensive security features.",;
     launchDate: "2024-01-05",;
     customers: 450,;
     rating: 4.9,;
-    reviews: 280,;,;,
-},;
+    reviews: 280},;
   // AI-Powered API Management;
-  {;
+  {
     id: "ai-powered-api-management",;
     name: "AI-Powered API Management",;
     tagline: "Intelligent API lifecycle management",;
@@ -367,22 +357,20 @@ export const innovativeITServices2024: InnovativeITService2024[] = [;
     marketSize: "$4.1B market",;
     growthRate: "19.7% annual growth",;
     variant: "api-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails:;
       "Production-ready API management platform with AI-powered optimization, comprehensive security, and developer-friendly tools.",;
     launchDate: "2024-02-15",;
     customers: 1100,;
     rating: 4.7,;
-    reviews: 620,;,;,
-},;
+    reviews: 620},;
   // Intelligent Cloud Cost Optimization;
-  {;
+  {
     id: "intelligent-cloud-cost-optimization",;
     name: "Intelligent Cloud Cost Optimization",;
     tagline: "AI-powered cloud cost reduction and optimization",;
@@ -431,22 +419,20 @@ export const innovativeITServices2024: InnovativeITService2024[] = [;
     marketSize: "$6.8B market",;
     growthRate: "21.3% annual growth",;
     variant: "cloud-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails:;
       "Production-ready cost optimization platform with AI-powered analysis, automated optimization, and comprehensive cost management tools.",;
     launchDate: "2024-01-25",;
     customers: 1800,;
     rating: 4.8,;
-    reviews: 950,;,;,
-},;
+    reviews: 950},;
   // AI-Powered Network Security;
-  {;
+  {
     id: "ai-powered-network-security",;
     name: "AI-Powered Network Security",;
     tagline: "Intelligent threat detection and prevention",;
@@ -495,18 +481,16 @@ export const innovativeITServices2024: InnovativeITService2024[] = [;
     marketSize: "$22.4B market",;
     growthRate: "18.7% annual growth",;
     variant: "security-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails:;
       "Production-ready network security platform with AI-powered threat detection, automated response, and comprehensive security features.",;
     launchDate: "2024-02-01",;
     customers: 720,;
     rating: 4.8,;
-    reviews: 410,;,;,
-},;
+    reviews: 410},;
 ]

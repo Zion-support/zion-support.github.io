@@ -1,7 +1,7 @@
 import React from 'react';
 import { SEO } from '../components/SEO';
-;
-const CloudServices: React.FC = () => {;
+
+const CloudServices: React.FC = () => {
   return(<>;
       <SEO title="CloudServices - Zion Tech Group" />;
       <div className="min-h-screen bg-white py-20">;
@@ -11,7 +11,5 @@ const CloudServices: React.FC = () => {;
         </div>;
       </div>;
     </>;
-  );,
-};
-;
+  )}
 export default CloudServices;

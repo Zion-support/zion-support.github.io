@@ -221,16 +221,11 @@ import { BarChart3, TrendingUp, Target, Users, Zap, Shield, ArrowRight, CheckCir
           </div>;
         </section>;
       </div>;
-    </>)};
-export default AIBusinessIntelligence;,
-}
-;
-export { AIBusinessIntelligence };
-;
-export { AIBusinessIntelligence };
-;
-export { AIBusinessIntelligence };
-;
-export { AIBusinessIntelligence };
-;
-export { AIBusinessIntelligence };
+    </>)}
+export default AIBusinessIntelligence}
+
+export { AIBusinessIntelligence }
+export { AIBusinessIntelligence }
+export { AIBusinessIntelligence }
+export { AIBusinessIntelligence }
+export { AIBusinessIntelligence }

@@ -1,4 +1,4 @@
-export type EnhancedRealMicroSaasService = {;
+export type EnhancedRealMicroSaasService = {
 	id: string;
 	name: string;
 	category?: string;
@@ -25,7 +25,7 @@ export type EnhancedRealMicroSaasService = {;
 	marketSize?: string;
 	growthRate?: string;
 	variant?: string;
-	contactInfo?: {;
+	contactInfo?: {
 		mobile: string;
 		email: string;
 		address: string;

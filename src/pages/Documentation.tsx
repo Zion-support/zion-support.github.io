@@ -2,18 +2,18 @@ import React from "react";
   BookOpen, Code, FileText, Video, Download,;
   Search, ArrowRight, ExternalLink, Star, Users} from "lucide-react;
   );
-export default function Documentation() {;
+export default function Documentation() {
   const docCategories = [];
 
   const popularDocs = []&quot;
 ";
-export default function Documentation() {;
+export default function Documentation() {
 
   const docCategories = [];
   const popularDocs = [];
 
   return (;
-    ;
+
     <>;
       <SEO ;";
         title="Documentation - Zion Tech Group | Technical Guides & API Reference";";
@@ -33,7 +33,7 @@ export default function Documentation() {;
               className="text-center max-w-4xl mx-auto">;
             >;";
               <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">,;
-                Documentation,,;
+                Documentation,;
               </h1>,";
               <p className = "text-xl text-gray-300 mb-8">,;
                 Comprehensive guides, API references, and technical resources ;
@@ -49,7 +49,7 @@ export default function Documentation() {;
                     className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">;
                  />;
                 </div>,;
-            </motion.div>,,;
+            </motion.div>,;
           </div>,;
         </section>,;
         {/* comment */}";
@@ -142,7 +142,7 @@ initial = "{{" opacity: 0, y: 20 }}";
 ";
             <div className="&quot;grid" grid-cols-1 md:grid-cols-2 l,g: grid-cols-4 gap-8&quot,>;
               {docCategories.map((category, index) => (&quot}
-;
+
                 <motion.div,";
 key = "{category.title}
                   initial="{{" opacity: 0, y: 20 }}";
@@ -182,7 +182,7 @@ key = "{category.title}
                   </div>;
                 </motion.div>;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";
@@ -227,7 +227,7 @@ initial = "{{" opacity: 0, y: 20 }}";
 ";
             <div className="&quot;grid" grid-cols-1 md: grid-cols-2 gap-8&quot,>;
               {popularDocs.map((doc, index) => (&quot}
-;
+
                 <motion.div,";
 key = "{doc.title}
                   initial="{{" opacity: 0, y: 20 }}";
@@ -238,12 +238,12 @@ key = "{doc.title}
                   <div className = "flex items-start justify-between mb-4">,";
                     <span className="px-3 py-1 bg-blue-600/20 border border-blue-400/30 rounded-full text-blue-300 text-xs">,;
                       {doc.category}
-;
+
                     </span>;";
                     <div className="flex items-center text-gray-400 text-sm">;";
                       <Users className="w-4 h-4 mr-1"  />;
                       {doc.views}
-;
+
                     </div>;
                   ;";
                   <h3 className="text-xl font-bold text-white mb-2">{doc.title}</h3>;";
@@ -269,7 +269,7 @@ key = "{doc.title}
                   <div className="flex items-start justify-between mb-4">";
                     <span className="px-3 py-1 bg-blue-600/20 border border-blue-400/30 rounded-full text-blue-300 text-xs">,;
                       {doc.category}
-;
+
                     </span>";
                     <div className="&quot;flex" items-center text-gray-400 text-sm&quot;>&quot;
                       <Users className="&quot;w-4" h-4 mr-1&quot;       />;
@@ -296,7 +296,7 @@ key = "{doc.title}
                   </div>;
                 </motion.div>,;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";
@@ -331,7 +331,7 @@ key = "{doc.title}
                 </p>;";
                 <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors">,;
                   Download SDKs,;
-                </button>,,;
+                </button>,;
               </motion.div>,;
               <motion.div,";
                 initial = "{{" opacity: 0, y: 20 }}";
@@ -348,7 +348,7 @@ key = "{doc.title}
                 </p>;";
                 <button className="px-4 py-2 bg-green-600 text-white rounded-lg hover: bg-green-700 transition-colors">,;
                   View Examples,;
-                </button>,,;
+                </button>,;
               </motion.div>,;
               <motion.div,";
                 initial = "{{" opacity: 0, y: 20 }}";
@@ -367,7 +367,7 @@ key = "{doc.title}
                   Visit Portal;
                 </button>,;
               </motion.div>,;
-            </div>,,;
+            </div>,;
           </div>,;
         </section>,;
         {/* comment */}";
@@ -567,6 +567,5 @@ you get the most out of our platform.;
         </section>;
       </div>;
 </>;
-  );,
-}
+  )}
   )}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}))))

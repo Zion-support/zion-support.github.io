@@ -13,8 +13,7 @@ const ServiceInnovationHub = () => {}
             title: 'Quantum Technology',';
             description: 'Revolutionary quantum computing, cryptography, and quantum internet solutions',';
             trends['Quantum Supremacy',Quantum Internet',Quantum Materials'],;';
-            investment: '$150B+';,
-},;
+            investment: '$150B+'},;
         {}
 ";
 "";
@@ -22,8 +21,7 @@ const ServiceInnovationHub = () => {}
             title: 'Artificial Intelligence',';
             description: 'Advanced AI consciousness, governance, and neural network optimization',';
             trends['AI Consciousness',AI Governance',Neural Optimization'],;';
-            investment: '$300B+';,
-},;
+            investment: '$300B+'},;
         {}
 ";
 "";
@@ -31,8 +29,7 @@ const ServiceInnovationHub = () => {}
             title: 'Space Technology',';
             description: 'Space mining, propulsion, habitats, and debris cleanup systems',';
             trends['Space Mining',Space Propulsion',Space Habitats'],;';
-            investment: '$200B+';,
-},;
+            investment: '$200B+'},;
         {}
 ";
 "";
@@ -40,8 +37,7 @@ const ServiceInnovationHub = () => {}
             title: 'Biotech AI',';
             description: 'Synthetic biology, brain-computer interfaces, and AI-powered drug discovery',';
             trends['Synthetic Biology',Brain-Computer Interfaces',AI Drug Discovery'],;';
-            investment: '$100B+';,
-},;
+            investment: '$100B+'},;
         {}
 ";
 "";
@@ -49,8 +45,7 @@ const ServiceInnovationHub = () => {}
             title: 'Green Technology',';
             description: 'Fusion energy, climate engineering, and sustainable technology solutions',';
             trends['Fusion Energy',Climate Engineering',Sustainable Tech'],;';
-            investment: '$500B+';,
-},;
+            investment: '$500B+'},;
         {}
 ";
 "";
@@ -58,8 +53,7 @@ const ServiceInnovationHub = () => {}
             title: 'Advanced Computing',';
             description: 'Neuromorphic computing, edge AI, and model compression technologies',';
             trends['Neuromorphic Computing',Edge AI',Model Compression'],;';
-            investment: '$80B+';,
-}
+            investment: '$80B+'}
     ];
     const keyInsights = [];
         {}
@@ -69,8 +63,7 @@ const ServiceInnovationHub = () => {}
             title: 'Quantum Revolution',''';
             description: 'Quantum computing will transform industries from finance to pharmaceuticals within the next decade',''';
             impact: 'High',''';
-            timeline: '2025-2035';,
-},;
+            timeline: '2025-2035'},;
         {}
 ';
 '';
@@ -78,8 +71,7 @@ const ServiceInnovationHub = () => {}
             title: 'AI Consciousness',''';
             description: 'The development of self-aware AI systems will create new ethical and technological paradigms',''';
             impact: 'High',''';
-            timeline: '2030-2040';,
-},;
+            timeline: '2030-2040'},;
         {}
 ';
 '';
@@ -87,15 +79,13 @@ const ServiceInnovationHub = () => {}
             title: 'Space Economy',''';
             description: 'Space mining and colonization will create trillion-dollar economic opportunities',''';
             impact: 'High',''';
-            timeline: '2030-2060';,
-},;
+            timeline: '2030-2060'},;
         {}
 ';
             title: 'Synthetic Biology',';
             description: 'Custom organisms and bio-manufacturing will revolutionize industrial processes',';
             impact: 'High',';
-            timeline: '2025-2035';,
-}";
+            timeline: '2025-2035'}";
     ];"";
     return (<div className="min-h-screen bg-zion-blue-dark">";
       {/* Hero Section */}"";
@@ -109,12 +99,10 @@ const ServiceInnovationHub = () => {}
         <div className="max-w-4xl mx-auto text-center relative z-10">;
           <motion.div initial = {}
   { opacity: 0,;
-  y: 20;,
-}} animate = {}
+  y: 20}} animate = {}
   { opacity: 1,;
   y: 0;
-";,
-}} transition={{ duration: 0.6 }}>"";
+"}} transition={{ duration: 0.6 }}>"";
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">;
               Service Innovation Hub";
             </h1>"";
@@ -131,8 +119,7 @@ const ServiceInnovationHub = () => {}
 ';
 '';
 ''';
-  () => window.open('mailto:kleber@ziontechgroup.com?subject=Innovation Strategy Consultation',_blank');,
-}>;
+  () => window.open('mailto:kleber@ziontechgroup.com?subject=Innovation Strategy Consultation',_blank')}>;
                 Get Innovation Strategy;
               </Button>;
             </div>;
@@ -145,12 +132,10 @@ const ServiceInnovationHub = () => {}
         <div className="max-w-6xl mx-auto">;
           <motion.div initial = {}
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
+  y: 20}} whileInView = {}
   { opacity: 1,;
   y: 0 ";
-"";,
-}} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-12">"";
+""}} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-12">"";
             <h2 className="text-3xl font-bold text-zion-blue-dark mb-4">;
               Innovation Areas";
             </h2>"";
@@ -163,15 +148,12 @@ const ServiceInnovationHub = () => {}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
             {innovationAreas.map((area, index) => (<motion.div key={index} initial = {}
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
+  y: 20}} whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}} transition = {}
+  y: 0}} transition = {}
   { duration: 0.6,;
   delay: index * 0.1;
-";,
-}} viewport={{ once: true }}>"";
+"}} viewport={{ once: true }}>"";
                 <Card className="h-full hover:shadow-lg transition-shadow">";
                   <CardHeader>"";
                     <div className="mx-auto w-16 h-16 bg-zion-blue-light/10 rounded-full flex items-center justify-center mb-4">;
@@ -213,12 +195,10 @@ const ServiceInnovationHub = () => {}
         <div className="max-w-4xl mx-auto">;
           <motion.div initial = {}
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
+  y: 20}} whileInView = {}
   { opacity: 1,;
   y: 0 ";
-"";,
-}} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-12">"";
+""}} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-12">"";
             <h2 className="text-3xl font-bold text-zion-blue-dark mb-4">;
               Key Innovation Insights";
             </h2>"";
@@ -230,15 +210,12 @@ const ServiceInnovationHub = () => {}
           <div className="space-y-6">;
             {keyInsights.map((insight, index) => (<motion.div key={index} initial = {}
   { opacity: 0,;
-  x: -20;,
-}} whileInView = {}
+  x: -20}} whileInView = {}
   { opacity: 1,;
-  x: 0;,
-}} transition = {}
+  x: 0}} transition = {}
   { duration: 0.6,;
   delay: index * 0.1;
-";,
-}} viewport={{ once: true }}>"";
+"}} viewport={{ once: true }}>"";
                 <Card className="hover:shadow-lg transition-shadow">"";
                   <CardContent className="p-6">"";
                     <div className="flex items-start gap-4">"";
@@ -274,12 +251,10 @@ const ServiceInnovationHub = () => {}
         <div className="max-w-7xl mx-auto">;
           <motion.div initial = {}
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
+  y: 20}} whileInView = {}
   { opacity: 1,;
   y: 0 ";
-"";,
-}} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-12">"";
+""}} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-12">"";
             <h2 className="text-3xl font-bold text-zion-blue-dark mb-4">;
               Interactive Innovation Hub";
             </h2>"";
@@ -298,12 +273,10 @@ const ServiceInnovationHub = () => {}
         <div className="max-w-4xl mx-auto text-center">;
           <motion.div initial = {}
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
+  y: 20}} whileInView = {}
   { opacity: 1,;
   y: 0;
-";,
-}} transition={{ duration: 0.6 }} viewport={{ once: true }}>"";
+"}} transition={{ duration: 0.6 }} viewport={{ once: true }}>"";
             <h2 className="text-4xl font-bold text-white mb-6">;
               Ready to Lead the Innovation Revolution?";
             </h2>"";
@@ -315,16 +288,14 @@ const ServiceInnovationHub = () => {}
               <Button className="bg-white text-zion-purple hover:bg-zion-slate-light text-lg px-8 py-4" onClick = {}
 ';
   () => window.open('mailto:kleber@ziontechgroup.com?subject=Innovation Leadership Consultation',_blank');
-";,
-}>"";
+"}>"";
                 <Rocket className="w-5 h-5 mr-2"/>;
                 Lead Innovation";
               </Button>"";
               <Button className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4" onClick = {}
 ';
   () => window.open('tel:+13024640950',_blank');
-";,
-}>"";
+"}>"";
                 <Shield className="w-5 h-5 mr-2"/>;
                 Speak with an Expert;
               </Button>;
@@ -332,16 +303,12 @@ const ServiceInnovationHub = () => {}
           </motion.div>;
         </div>;
       </section>;
-    </div>)};
+    </div>)}
 export default ServiceInnovationHub;
-;
 
-export { ServiceInnovationHub };
-;
-export { ServiceInnovationHub };
-;
-export { ServiceInnovationHub };
-;
-export { ServiceInnovationHub };
-;
-export { ServiceInnovationHub };
+
+export { ServiceInnovationHub }
+export { ServiceInnovationHub }
+export { ServiceInnovationHub }
+export { ServiceInnovationHub }
+export { ServiceInnovationHub }

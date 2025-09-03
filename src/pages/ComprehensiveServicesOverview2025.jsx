@@ -1,7 +1,7 @@
 import React, { useState } from 'react';''';
 import { Link } from 'react-router-dom';
-;
-const ComprehensiveServicesOverview2025 = () => {;
+
+const ComprehensiveServicesOverview2025 = () => {
     const [selectedService, setSelectedService] = useState(null);
     const [selectedCategory, setSelectedCategory] = useState('all');
     const categories = [;
@@ -20,8 +20,8 @@ const ComprehensiveServicesOverview2025 = () => {;
         'Logistics & Transportation';
     ];
     const filteredServices = allEnhancedServices.filter(service => selectedCategory === 'all' || service.category === selectedCategory);
-    const getCategoryIcon = (category) => {;
-        const icons = {;
+    const getCategoryIcon = (category) => {
+        const icons = {
   'AI & Business Intelligence': '🧠',;
             'Cybersecurity & Quantum Computing': '🔒',;
             'DevOps & Infrastructure': '⚙️',;
@@ -34,13 +34,9 @@ const ComprehensiveServicesOverview2025 = () => {;
             'Marketing & AI': '📢',;
             'Energy & Sustainability': '⚡',;
 
-;
-export { ComprehensiveServicesOverview2025 };
-;
-export { ComprehensiveServicesOverview2025 };
-;
-export { ComprehensiveServicesOverview2025 };
-;
-export { ComprehensiveServicesOverview2025 };
-;
+
+export { ComprehensiveServicesOverview2025 }
+export { ComprehensiveServicesOverview2025 }
+export { ComprehensiveServicesOverview2025 }
+export { ComprehensiveServicesOverview2025 }
 export { ComprehensiveServicesOverview2025 };}}}

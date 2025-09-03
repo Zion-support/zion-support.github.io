@@ -2,9 +2,9 @@ import React from 'react';
 import { SEO } from "@/components/SEO";
 import { Link } from 'react-router-dom';
 import { Check, Cloud, Zap, Shield, Database, Users, Target, Server } from 'lucide-react';
-export default function DevOpsCloudServices() {;
+export default function DevOpsCloudServices() {
     const devopsServices = [;
-        {;
+        {
             icon: Cloud,;
             title: 'Cloud Migration & Strategy',;
             description: 'Comprehensive cloud migration services with multi-cloud strategy and cost optimization.',;
@@ -23,9 +23,8 @@ export default function DevOpsCloudServices() {;
                 'Improved scalability and flexibility',;
                 'Enhanced disaster recovery',;
                 'Better resource utilization';
-            ];,
-},;
-        {;
+            ]},;
+        {
             icon: Zap,;
             title: 'CI/CD Pipeline Development',;
             description: 'Automated continuous integration and deployment pipelines for faster, reliable software delivery.',;
@@ -44,9 +43,8 @@ export default function DevOpsCloudServices() {;
                 'Reduced deployment errors',;
                 'Improved code quality',;
                 'Enhanced team productivity';
-            ];,
-},;
-        {;
+            ]},;
+        {
             icon: Shield,;
             title: 'Infrastructure as Code (IaC)',;
             description: 'Automated infrastructure provisioning and management using modern IaC tools and practices.',;
@@ -65,9 +63,8 @@ export default function DevOpsCloudServices() {;
                 'Reduced manual configuration errors',;
                 'Faster environment provisioning',;
                 'Better cost control and visibility';
-            ];,
-},;
-        {;
+            ]},;
+        {
             icon: Database,;
             title: 'Container Orchestration & Kubernetes',;
             description: 'Enterprise-grade container management and orchestration with Kubernetes and Docker.',;
@@ -86,9 +83,8 @@ export default function DevOpsCloudServices() {;
                 'Better resource utilization',;
                 'Enhanced deployment flexibility',;
                 'Reduced operational overhead';
-            ];,
-},;
-        {;
+            ]},;
+        {
             icon: Users,;
             title: 'DevOps Consulting & Training',;
             description: 'Strategic DevOps consulting and comprehensive team training for organizational transformation.',;
@@ -107,9 +103,8 @@ export default function DevOpsCloudServices() {;
                 'Better team collaboration',;
                 'Reduced operational costs',;
                 'Enhanced software quality';
-            ];,
-},;
-        {;
+            ]},;
+        {
             icon: Server,;
             title: 'Monitoring & Observability',;
             description: 'Comprehensive monitoring, logging, and observability solutions for modern applications.',;
@@ -132,25 +127,22 @@ export default function DevOpsCloudServices() {;
 
     ];
     const cloudProviders = [;
-        {;
+        {
             name: 'Amazon Web Services (AWS)',;
             services: 'EC2, S3, Lambda, RDS, EKS',;
             strengths: 'Market leader, extensive services',;
-            pricing: 'Competitive, pay-as-you-use';,
-},;
-        {;
+            pricing: 'Competitive, pay-as-you-use'},;
+        {
             name: 'Microsoft Azure',;
             services: 'Virtual Machines, Blob Storage, Functions, AKS',;
             strengths: 'Enterprise integration, hybrid cloud',;
-            pricing: 'Enterprise discounts, reserved instances';,
-},;
-        {;
+            pricing: 'Enterprise discounts, reserved instances'},;
+        {
             name: 'Google Cloud Platform (GCP)',;
             services: 'Compute Engine, Cloud Storage, Cloud Functions, GKE',;
             strengths: 'AI/ML capabilities, global network',;
-            pricing: 'Sustained use discounts, committed use';,
-},;
-        {;
+            pricing: 'Sustained use discounts, committed use'},;
+        {
             name: 'Multi-Cloud Strategy',;
             services: 'Cross-platform orchestration, hybrid solutions',;
             strengths: 'Vendor independence, best-of-breed',;
@@ -186,25 +178,22 @@ export default function DevOpsCloudServices() {;
         'Improved team collaboration and productivity';
     ];
     const useCases = [;
-        {;
+        {
             title: 'Microservices Migration',;
             description: 'Legacy monolithic application migration to microservices architecture with container orchestration.',;
             roi: '40-60% cost reduction',;
-            implementation: '20-32 weeks';,
-},;
-        {;
+            implementation: '20-32 weeks'},;
+        {
             title: 'Multi-Cloud Strategy',;
             description: 'Implementation of multi-cloud architecture for improved resilience and cost optimization.',;
             roi: '25-45% cost savings',;
-            implementation: '16-24 weeks';,
-},;
-        {;
+            implementation: '16-24 weeks'},;
+        {
             title: 'DevOps Transformation',;
             description: 'Complete organizational DevOps transformation with process optimization and tool implementation.',;
             roi: '30-50% efficiency improvement',;
-            implementation: '24-36 weeks';,
-},;
-        {;
+            implementation: '24-36 weeks'},;
+        {
             title: 'Cloud-Native Development',;
             description: 'Modern cloud-native application development with CI/CD and infrastructure automation.',;
             roi: '35-55% faster delivery',;
@@ -507,15 +496,10 @@ export default function DevOpsCloudServices() {;
           </div>;
         </div>;
       </section>;
-    </div>);,
-}}}}}
-;
-export { DevOpsCloudServices };
-;
-export { DevOpsCloudServices };
-;
-export { DevOpsCloudServices };
-;
-export { DevOpsCloudServices };
-;
-export { DevOpsCloudServices };
+    </div>)}}}}}
+
+export { DevOpsCloudServices }
+export { DevOpsCloudServices }
+export { DevOpsCloudServices }
+export { DevOpsCloudServices }
+export { DevOpsCloudServices }

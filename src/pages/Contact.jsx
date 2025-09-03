@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import {;
+import {
   Phone,;
   Mail,;
   MapPin,;
@@ -8,10 +8,9 @@ import {;
   Send,;
   CheckCircle,;
   Building,;
-  MessageSquare;,
-} from 'lucide-react';
-;
-export default function Contact() {;
+  MessageSquare} from 'lucide-react';
+
+export default function Contact() {
   const [formData, setFormData] = useState({;
     firstName: '',;
     lastName: '',;
@@ -19,42 +18,37 @@ export default function Contact() {;
     phone: '',;
     company: '',;
     service: '',;
-    message: '';,
-});
+    message: ''});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
-;
+
   const contactMethods = [;
-    {;
+    {
       icon: Phone,;
       title: "Phone",;
       value: "+1 302 464 0950",;
       description: "Call us during business hours",;
-      action: "tel:+13024640950";,
-},;
-    {;
+      action: "tel:+13024640950"},;
+    {
       icon: Mail,;
       title: "Email",;
       value: "kleber@ziontechgroup.com",;
       description: "Send us a message anytime",;
-      action: "mailto:kleber@ziontechgroup.com";,
-},;
-    {;
+      action: "mailto:kleber@ziontechgroup.com"},;
+    {
       icon: MapPin,;
       title: "Address",;
       value: "364 E Main St STE 1008",;
       description: "Middletown, DE 19709",;
-      action: "https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709";,
-},;
-    {;
+      action: "https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709"},;
+    {
       icon: Clock,;
       title: "Business Hours",;
       value: "Mon - Fri: 9:00 AM - 6:00 PM",;
       description: "Eastern Time Zone",;
-      action: null;,
-}
+      action: null}
   ];
-;
+
   const services = [;
     "AI & Machine Learning",;
     "Cloud Solutions",;
@@ -64,27 +58,24 @@ export default function Contact() {;
     "Consulting",;
     "Other";
   ];
-;
-  const handleInputChange = (e) => {;
+
+  const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({;
       ...prev,;
-      [name]: value;,
-}));,
-};
-;
-  const handleSubmit = async (e) => {;
+      [name]: value}))}
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    ;
+
     // Simulate form submission;
     await new Promise(resolve => setTimeout(resolve, 2000));
-    ;
+
     setIsSubmitting(false);
     setSubmitSuccess(true);
-    ;
+
     // Reset form after 3 seconds;
-    setTimeout(() => {;
+    setTimeout(() => {
       setSubmitSuccess(false);
       setFormData({;
         firstName: '',;
@@ -93,11 +84,7 @@ export default function Contact() {;
         phone: '',;
         company: '',;
         service: '',;
-        message: '';,
-});,
-}, 3000);,
-};
-;
+        message: ''})}, 3000)}
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       {/* Hero Section */}
@@ -408,14 +395,10 @@ export default function Contact() {;
         </div>;
       </section>;
     </div>;
-  );,
-}
-;
+  )}
 
-export { Contact };
-;
-export { Contact };
-;
-export { Contact };
-;
-export { Contact };
+
+export { Contact }
+export { Contact }
+export { Contact }
+export { Contact }

@@ -71,8 +71,7 @@ import {}
   Cpu as CpuIcon,;
   Database as DatabaseIcon,;
   Users as UsersIcon,;
-  X'''';,
-} from 'lucide-react';
+  X''''} from 'lucide-react';
 interface Service {}
   id: string;
   name: string;
@@ -83,7 +82,7 @@ interface Service {}
   pricing: {}
     starter: string;
     professional: string;
-    enterprise: string};
+    enterprise: string}
   benefits: string[];';
   useCases: string[];'';
   link: string;''';
@@ -108,8 +107,7 @@ interface Service {}
 ''';
       starter: '$299/month',''';
       professional: '$799/month',''';
-      enterprise: 'Custom''';,
-},''';
+      enterprise: 'Custom'''},''';
     benefits: ['''';
       'Reduce research time by 80%',Improve accuracy with AI validation',Scale research operations',Generate actionable insights',Maintain research quality standards''';
     ],''';
@@ -117,8 +115,7 @@ interface Service {}
       'Market research and analysis',Academic research projects',Competitive intelligence',Product development research',Scientific research collaboration''';
     ],''';
     link: '/services/ai-autonomous-research-assistant',''';
-    status: 'available';,
-},;
+    status: 'available'},;
   {}
 ';
 '';
@@ -137,8 +134,7 @@ interface Service {}
 ''';
       starter: '$499/month',''';
       professional: '$1,299/month',''';
-      enterprise: 'Custom''';,
-},''';
+      enterprise: 'Custom'''},''';
     benefits: ['''';
       'Detect threats 10x faster',Reduce false positives by 90%',Automate security responses',Predict and prevent attacks',Compliance automation''';
     ],''';
@@ -146,8 +142,7 @@ interface Service {}
       'Enterprise security operations',Financial institutions',Healthcare organizations',Government agencies',Critical infrastructure''';
     ],''';
     link: '/services/ai-cybersecurity-platform',''';
-    status: 'available';,
-},;
+    status: 'available'},;
   {}
 ';
 '';
@@ -166,8 +161,7 @@ interface Service {}
 ''';
       starter: '$399/month',''';
       professional: '$999/month',''';
-      enterprise: 'Custom''';,
-},''';
+      enterprise: 'Custom'''},''';
     benefits: ['''';
       'Improve diagnostic accuracy',Reduce healthcare costs',Enhance patient outcomes',Streamline workflows',Enable preventive care''';
     ],''';
@@ -175,8 +169,7 @@ interface Service {}
       'Hospitals and clinics',Medical imaging centers',Pharmaceutical companies',Health insurance providers',Research institutions''';
     ],''';
     link: '/services/ai-healthcare-platform',''';
-    status: 'available';,
-},;
+    status: 'available'},;
   {}
 ';
 '';
@@ -195,8 +188,7 @@ interface Service {}
 ''';
       starter: '$599/month',''';
       professional: '$1,499/month',''';
-      enterprise: 'Custom''';,
-},''';
+      enterprise: 'Custom'''},''';
     benefits: ['''';
       'Reduce costs by 15-25%',Improve delivery times',Minimize inventory waste',Enhance supplier relationships',Increase operational efficiency''';
     ],''';
@@ -204,8 +196,7 @@ interface Service {}
       'Manufacturing companies',Retail chains',Logistics providers',E-commerce platforms',Distribution networks''';
     ],''';
     link: '/services/ai-supply-chain-optimization',''';
-    status: 'available';,
-},;
+    status: 'available'},;
   {}
 ';
 '';
@@ -224,8 +215,7 @@ interface Service {}
 ''';
       starter: '$1,999/month',''';
       professional: '$4,999/month',''';
-      enterprise: 'Custom''';,
-},''';
+      enterprise: 'Custom'''},''';
     benefits: ['''';
       'Solve previously intractable problems',Exponential performance improvements',Advanced research capabilities',Competitive advantage',Future-proof technology''';
     ],''';
@@ -233,8 +223,7 @@ interface Service {}
       'Research institutions',Financial services',Pharmaceutical research',Climate modeling',Cryptography and security''';
     ],''';
     link: '/services/ai-quantum-hybrid-platform',''';
-    status: 'beta';,
-},;
+    status: 'beta'},;
   // IT Services;
   {}
 ';
@@ -254,8 +243,7 @@ interface Service {}
 ''';
       starter: '$299/month',''';
       professional: '$799/month',''';
-      enterprise: 'Custom''';,
-},''';
+      enterprise: 'Custom'''},''';
     benefits: ['''';
       'Deploy 10x faster',Reduce operational costs',Improve reliability',Enhance security',Scale efficiently''';
     ],''';
@@ -263,8 +251,7 @@ interface Service {}
       'Software development teams',DevOps engineers',Cloud architects',System administrators',Startup companies''';
     ],''';
     link: '/services/cloud-devops-automation',''';
-    status: 'available';,
-},;
+    status: 'available'},;
   {}
 ';
 '';
@@ -283,8 +270,7 @@ interface Service {}
 ''';
       starter: '$199/month',''';
       professional: '$599/month',''';
-      enterprise: 'Custom''';,
-},''';
+      enterprise: 'Custom'''},''';
     benefits: ['''';
       'Reduce downtime by 99.9%',Lower operational costs',Improve performance',Enhance security posture',Streamline management''';
     ],''';
@@ -292,8 +278,7 @@ interface Service {}
       'Enterprise IT departments',Data centers',Managed service providers',Educational institutions',Healthcare organizations''';
     ],''';
     link: '/services/it-infrastructure',''';
-    status: 'available';,
-},;
+    status: 'available'},;
   // Micro SAAS Services;
   {}
 ';
@@ -313,8 +298,7 @@ interface Service {}
 ''';
       starter: '$29/month',''';
       professional: '$79/month',''';
-      enterprise: '$199/month''';,
-},''';
+      enterprise: '$199/month'''},''';
     benefits: ['''';
       'Affordable pricing',Easy to implement',Scalable solution',Improve customer relationships',Increase sales efficiency''';
     ],''';
@@ -322,8 +306,7 @@ interface Service {}
       'Small businesses',Sales teams',Real estate agents',Consultants',Startups''';
     ],''';
     link: '/services/micro-crm',''';
-    status: 'available';,
-},;
+    status: 'available'},;
   {}
 ';
 '';
@@ -342,8 +325,7 @@ interface Service {}
 ''';
       starter: '$399/month',''';
       professional: '$999/month',''';
-      enterprise: 'Custom''';,
-},''';
+      enterprise: 'Custom'''},''';
     benefits: ['''';
       'Make data-driven decisions',Identify trends and patterns',Predict future outcomes',Improve operational efficiency',Gain competitive advantage''';
     ],''';
@@ -351,10 +333,9 @@ interface Service {}
       'Business analysts',Executives and managers',Marketing teams',Operations teams',Financial analysts''';
     ],''';
     link: '/services/ai-business-intelligence',''';
-    status: 'available';,
-}
+    status: 'available'}
 ];
-;
+
 const categories = [;
   { id: 'all', name: 'All Services', icon: Globe, count: services.length },;
   { id: 'ai', name: 'AI Services', icon: Brain, count: services.filter(s => s.category.includes('AI')).length },;
@@ -363,28 +344,23 @@ const categories = [;
   { id: 'security', name: 'Security', icon: Shield, count: services.filter(s => s.category.includes('Security')).length },;
   { id: 'healthcare', name: 'Healthcare', icon: Heart, count: services.filter(s => s.category.includes('Healthcare')).length }
 ];
-;
-export default function ComprehensiveServicesShowcase2025(...args: unknown[]): unknown {;
+
+export default function ComprehensiveServicesShowcase2025(...args: unknown[]): unknown {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedService, setSelectedService] = useState<Service | null>(null);
-;
-  const filteredServices = services.filter(service => {;
+
+  const filteredServices = services.filter(service => {
     const matchesCategory = selectedCategory === 'all' || ;
       service.category.toLowerCase().includes(selectedCategory.replace('-', ' '));
     const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
       service.description.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch;,
-});
-;
-  const handleServiceClick = (service: Service) => {;
-    setSelectedService(service);,
-};
-;
-  const closeModal = () => {;
-    setSelectedService(null);,
-};
-;
+    return matchesCategory && matchesSearch});
+
+  const handleServiceClick = (service: Service) => {
+    setSelectedService(service)}
+  const closeModal = () => {
+    setSelectedService(null)}
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <SEO ;
@@ -455,8 +431,7 @@ export default function ComprehensiveServicesShowcase2025(...args: unknown[]): u
 '''`;
                     selectedCategory === category.id'''`'`;
                       ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg'''`'`'`;
-                      : 'bg-zion-blue-darker text-zion-slate-light hover:bg-zion-purple/20 hover:text-white'````;,
-}`}
+                      : 'bg-zion-blue-darker text-zion-slate-light hover:bg-zion-purple/20 hover:text-white'````}`}
                 >;
                   Grid;
                 </button>';
@@ -468,8 +443,7 @@ export default function ComprehensiveServicesShowcase2025(...args: unknown[]): u
 '''`;
                     viewMode === 'list' '''`'`;
                       ? 'bg-zion-cyan text-white' ''`'`'`;
-                      : 'text-zion-slate-light hover:text-white'````;,
-}`}
+                      : 'text-zion-slate-light hover:text-white'````}`}
                 >;
                   List;
                 </button>;
@@ -542,8 +516,7 @@ export default function ComprehensiveServicesShowcase2025(...args: unknown[]): u
 ';
                   activeCategory === category.id'';
                     ? 'bg-zion-cyan text-white shadow-lg shadow-zion-cyan/25'''`;
-                    : 'bg-zion-slate-dark text-zion-slate-light hover:bg-zion-slate hover:text-white border border-zion-slate-light/20'``;,
-}`}">"";
+                    : 'bg-zion-slate-dark text-zion-slate-light hover:bg-zion-slate hover:text-white border border-zion-slate-light/20'``}`}">"";
                 <span className="mr-2">{category.icon}</span>;
                 {category.name} ({category.count}) </button>) ) }
           </div>;
@@ -574,8 +547,7 @@ export default function ComprehensiveServicesShowcase2025(...args: unknown[]): u
 '''`;
                     service.status === 'available' ? 'bg-green-500/20 text-green-400' :'''`'`;
                     service.status === 'beta' ? 'bg-blue-500/20 text-blue-400' :''`'`'`;
-                    'bg-yellow-500/20 text-yellow-400'``'`'`;,
-}`}>''';
+                    'bg-yellow-500/20 text-yellow-400'``'`'`}`}>''';
                     {service.status === 'available' ? 'Available' :'''';
                      service.status === 'beta' ? 'Beta' : 'Coming Soon'}
                   </span>;
@@ -784,17 +756,12 @@ export default function ComprehensiveServicesShowcase2025(...args: unknown[]): u
         )}
       </AnimatePresence>;
     </div>;
-  );,
-}
-;
+  )}
 
-export { ComprehensiveServicesShowcase2025 };
-;
-export { ComprehensiveServicesShowcase2025 };
-;
-export { ComprehensiveServicesShowcase2025 };
-;
-export { ComprehensiveServicesShowcase2025 };
-;
-export { ComprehensiveServicesShowcase2025 };
+
+export { ComprehensiveServicesShowcase2025 }
+export { ComprehensiveServicesShowcase2025 }
+export { ComprehensiveServicesShowcase2025 }
+export { ComprehensiveServicesShowcase2025 }
+export { ComprehensiveServicesShowcase2025 }
 ))

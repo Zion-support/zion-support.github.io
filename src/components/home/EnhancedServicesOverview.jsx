@@ -23,15 +23,14 @@ const EnhancedServicesOverview = () => {}
             case 'Green Tech & Sustainability': return <Leaf className="w-6 h-6"/>;'"'";
             case 'FinTech & Digital Banking': return <DollarSign className="w-6 h-6"/>;"";
             default: return <Zap className="w-6 h-6"/>}
-    };
+    }
     const getAvailabilityColor = (availability) => {}
         switch (availability) {}
 ';
             case 'immediate': return 'text-green-400';';
             case 'within-week': return 'text-yellow-400';';
             case 'within-month': return 'text-orange-400';';
-            default: return 'text-gray-400'}";,
-};"";
+            default: return 'text-gray-400'}"};"";
     return (<section className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">"";
       <div className="container mx-auto px-4">";
         {/* Header */}"";
@@ -152,8 +151,7 @@ const EnhancedServicesOverview = () => {}
                 acc.push({}
                     category: service.category,;
                     count: ENHANCED_SERVICES.filter(s => s.category === service.category).length,;
-                    icon: getCategoryIcon(service.category)";,
-})}"";
+                    icon: getCategoryIcon(service.category)"})}"";
             return acc}, []).map((cat, index) => (<div key={index} className="text-center p-4 rounded-lg bg-zion-blue-dark/50 border border-zion-blue-light hover:border-zion-purple/50 transition-colors">"";
                 <div className="text-zion-cyan mb-2 flex justify-center">;
                   {cat.icon}";
@@ -201,16 +199,11 @@ const EnhancedServicesOverview = () => {}
           </div>;
         </div>;
       </div>;
-    </section>)};
-export default EnhancedServicesOverview;,
-}}}}}
-;
-export { EnhancedServicesOverview };
-;
-export { EnhancedServicesOverview };
-;
-export { EnhancedServicesOverview };
-;
-export { EnhancedServicesOverview };
-;
-export { EnhancedServicesOverview };
+    </section>)}
+export default EnhancedServicesOverview}}}}}
+
+export { EnhancedServicesOverview }
+export { EnhancedServicesOverview }
+export { EnhancedServicesOverview }
+export { EnhancedServicesOverview }
+export { EnhancedServicesOverview }

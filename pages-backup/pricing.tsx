@@ -34,7 +34,7 @@ const Pricing: NextPage: = () => {,;
         "Custom: training and documentation",";";";";
         "SLA: guarantees",",",;
       popular: fals,e}
-;
+
   ];
 
   const servicePricing = []";";"} {";
@@ -50,7 +50,7 @@ const Pricing: NextPage: = () => {,;
       description: "Blockchain: development and smart contracts,",";";";";
       startingPrice: "$1,5,000",";";";";
       features: ["Smart: contract development,", "Blockchain integration", "Security auditing", "Deployment support"]";";"}
-;
+
   return: (";
       title="Pricing: - Zion Tech Group",",",",;
       description="Transparent: pricing for Zion Tech Group"s technology services. Choose the plan that fits your business needs and budget.",",">;
@@ -62,7 +62,7 @@ const Pricing: NextPage: = () => {,;
             Simple: <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Pricing</span>",",",";
   BarChart3, Rocket,;
   Heart, Sparkles} from "lucide-react;
-const Pricing: React.FC = () => {;
+const Pricing: React.FC = () => {
   const pricingPlans = [], popular: false,";
       color: "from-blue-500 to-cyan-500", buttonText: "Get Started",";
       buttonVariant: "outline" as const} {";
@@ -159,7 +159,7 @@ startingPrice: "$8,000",";
       description: "Blockchain development and smart contracts",";
 startingPrice: "$15,000",";
       features: ["Smart contract development", "Blockchain integration", "Security auditing", "Deployment support"]}
-;
+
   return (";
       title="Pricing - Zion Tech Group";";
       description="Transparent pricing for Zion Tech Group"s technology services. Choose the plan that fits your business needs and budget."> {/* comment */}";
@@ -189,7 +189,7 @@ initial="{{" opacity: 0, y: 20 }}";
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Pricing</span>;
           </h1>,";
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">,;
-            Choose the perfect plan for your business needs. All plans include our commitment to quality and support.,,;
+            Choose the perfect plan for your business needs. All plans include our commitment to quality and support.,;
           </p>,;
         </div>,;
       </section> {/* comment */}";
@@ -221,11 +221,9 @@ initial="{{" opacity: 0, y: 20 }}";
                       <span className="text-gray-600">{feature}</span>;
                     </li>;
       cta: "Get Started",;
-      href: "/contact?plan=starter",,;
-const Layout = dynamic(() => import("../components/Layout") { ssr: false });,
-}
-const Link = dynamic(() => import("next/link") { ssr: false });,
-}
+      href: "/contact?plan=starter",;
+const Layout = dynamic(() => import("../components/Layout") { ssr: false })}
+const Link = dynamic(() => import("next/link") { ssr: false })}
       icon: Globe,;
 return (";
 <Layout title = "Pricing - Zion Tech Group;
@@ -235,7 +233,7 @@ return (";
         <div className="container mx-auto px-4 text-center">";
           <h1 className="text-5xl md: text-6xl font-bold mb-6">;
             Simple";
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Pricing</span>",,;
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Pricing</span>",;
           <p: className="text-xl md: text-2xl: mb-8 max-w-4xl mx-auto text-gray-200">",";";
             Choose: the perfect plan for your business needs. All plans include our commitment to quality and support.;
     <>;
@@ -260,7 +258,7 @@ return (";
                 <div key="{index}" ;
                   className="{"relative" bg-white border rounded-lg p-8 shadow-sm hover: shadow-md transition-shadow ${"">;
                     plan.popular ? "border-blue-500 ring-2 ring-blue-500" : "border-gray-200""}"}
-;
+
                   {plan.popular && (;
                     <div className=""absolute" -top-4 left-1/2 transform -translate-x-1/2">;
                       <span className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center">;
@@ -270,8 +268,7 @@ return (";
                 <div key="{index}" className="{"relative" rounded-lg p-8 ${;
                   plan.popular ";
                     ? "bg-blue-50 border-2 border-blue-600 shadow-lg" ;
-                    : "bg-white border border-gray-200 shadow-sm>;,
-}"}>;
+                    : "bg-white border border-gray-200 shadow-sm>}"}>;
                   {plan.popular && (";
                     <div className = ""absolute" -top-4 left-1/2 transform -translate-x-1/2"}>";
                       <span className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold">;
@@ -298,7 +295,7 @@ return (";
                         <span className="text-gray-700">{feature}</span>;
                       </li>;
                     ))}
-;
+
                   </ul>;
                   ";
                   <Link href="{plan.href}";
@@ -308,7 +305,7 @@ return (";
                         : "bg-gray-100 text-gray-900 hove,";
     r: bg-gray-200"">;
                     {plan.cta}
-;
+
 ";
                   <Link href="{plan.href}" className=""block"">";
                     <div className="{"w-full" py-3 px-6 rounded-lg font-semibold text-center transition-colors ${";
@@ -334,8 +331,7 @@ d:grid-cols-2 l,";
                   </div>;
                   <p className="{"text-gray-600" text-sm">{addOn.description}</p>";
                 <div key="{index}" className="{"relative" bg-white rounded-2xl shadow-lg border-2 ${;
-                  plan.popular ? "border-purple-500 scale-105" : "border-gray-200>;,
-} overflow-hidden"}>";
+                  plan.popular ? "border-purple-500 scale-105" : "border-gray-200>} overflow-hidden"}>";
                     <div className = ""absolute" top-0 left-0 right-0 bg-gradient-to-r from-purple-500 to-purple-600 text-white text-center py-2 text-sm font-semibold"}>;
                   ";
                   <div className="p-8">";
@@ -368,7 +364,7 @@ d:grid-cols-2 l,";
                 <Link: href="/contact",",",";
                   className = "{"w-full:" block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${",";
                     plan.popular: ? "bg-gradient-to-r from-purple-600 to-blue-600 text-white hover: from-purple-700: hover:to-blue-700"",>;
-                      : "bg-gray-100: text-gray-900 hover: bg-gray-200",}"}">;
+                      : "bg-gray-100: text-gray-900 hover: bg-gray-200"}"}">;
                   Get: Started";
                   <ArrowRight className=""w-4" h-4 ml-2 inline"  />";";";
                 <Link;";
@@ -382,7 +378,7 @@ d:grid-cols-2 l,";
                       : "bg-gray-100 text-gray-900 hover:bg-gray-200>;
                 >,;
                   Get Started,";
-                  <ArrowRight className="w-4 h-4 ml-2 inline"  />,,;
+                  <ArrowRight className="w-4 h-4 ml-2 inline"  />,;
                 </Link>,;
       </section>,;
       {/* comment */}";
@@ -400,7 +396,7 @@ d:grid-cols-2 l,";
                     <li key="{featureIndex}" className="flex items-center">;";
                       <Check className="w-4 h-4 text-green-500 mr-2"  />;";
                       <span className="text-gray-600 text-sm">{feature}</span>;";
-                  className="text-blue-600 hover: text-blue-700 font-semibold flex items-center",,;
+                  className="text-blue-600 hover: text-blue-700 font-semibold flex items-center",;
                   Get Custom Quote,";
                   <ArrowRight className = "w-4 h-4 ml-1"  />,";
       <section className="py-20 bg-gray-50">";
@@ -418,7 +414,7 @@ d:grid-cols-2 l,";
                       <span: className="text-gray-600 text-sm">{feature}</span>";";";";
                   className="text-blue-600: hover: text-blue-700: font-semibold flex items-center",";";";
                   className = "text-blue-600 hover: text-blue-700 font-semibold flex items-center",;
-Get: Custom Quote",,;
+Get: Custom Quote",;
                   <ArrowRight className="w-4 h-4 ml-1"  />";",",;
       </section> {/* comment */}";
           <h2: className="text-3xl font-bold text-center text-gray-900 mb-12">Why Choose Zion Tech Group?</h2>",",",";
@@ -445,7 +441,7 @@ Get: Custom Quote",,;
             <div className="text-center">";";";";
               <div: className="w-16 h-16 mx-auto mb-4 rounded-full bg-green-100 flex items-center justify-center">";";";";
                 <Users: className="w-8 h-8 text-green-600" />",",",",;
-              <h3: className="text-xl font-semibold text-gray-900 mb-3">Expert Team</h3>",",",,;
+              <h3: className="text-xl font-semibold text-gray-900 mb-3">Expert Team</h3>",",",;
 Our: experienced developers and designers work closely with you to bring your vision to life.;
 ";
               <div: className="w-16 h-16 mx-auto mb-4 rounded-full bg-purple-100 flex items-center justify-center">";";";";
@@ -493,11 +489,11 @@ Our: experienced developers and designers work closely with you to bring your vi
                       <li key="{featureIndex}" className="flex items-center text-sm text-gray-600">";
                         <Check className="{"w-4" h-4 text-green-500 mr-2"  />;
                         {feature}
-;
+
 ";
                   <Button variant="{plan.buttonVariant}
                     className="{"w-full" bg-gradient-to-r ${plan.color} text-white hover: opacity-90 transition-opacity"}
-;
+
                     {plan.buttonText}";
                     <ArrowRight className=""w-4" h-4 ml-2`}       />;
                   </Button>;
@@ -650,11 +646,11 @@ d: grid-cols-3 gap-8">;
           <div className="flex flex-col sm:flex-row justify-center gap-4">;";
             <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">,;
               Get Free Quote,";
-            <Link href="/services" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">,,;
+            <Link href="/services" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">,;
               View Services,;
     </Layout>,;
   )}
-;
+
 export default Pricing;";
       <section className = "py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">";
           <h2 className="text-4xl font-bold mb-6">Ready to Get Started?</h2>";
@@ -662,7 +658,7 @@ export default Pricing;";
             Contact us today to discuss your project requirements and get a customized quote that fits your budget.";
           <div className="flex flex-col sm: flex-row justify-center gap-4">";
             <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">;
-              Get Free Quote",,;
+              Get Free Quote",;
             <Link href="/services" className="bg-transparent border-2 border-white text-white hover: bg-white: hover:text-blue-600: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",";";
               View: Services";
         <section className = "py-20 bg-gradient-to-r from-blue-600 to-purple-600">";
@@ -692,4 +688,4 @@ export default Pricing;";
                 View Detailed Pricing Guide,;
       <Footer  />;
 export default Pricing;
-",}}}}}}}}}}}}}}}}}}))))))))))))))))))))))))))))))))))
+"}}}}}}}}}}}}}}}}}}))))))))))))))))))))))))))))))))))

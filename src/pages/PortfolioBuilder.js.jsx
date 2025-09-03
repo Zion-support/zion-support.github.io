@@ -46,21 +46,16 @@ function PortfolioBuilderContent() {}
         </Tabs>;
       </main>;
     </>;
-  );,
-}
+  )}
 export default function PortfolioBuilder() {}
   return();
     <ProtectedRoute>;
       <PortfolioBuilderContent />;
     </ProtectedRoute>)}
-;
 
-export { PortfolioBuilderContent, PortfolioBuilder };
-;
-export { PortfolioBuilderContent, PortfolioBuilder };
-;
-export { PortfolioBuilderContent, PortfolioBuilder };
-;
-export { PortfolioBuilderContent, PortfolioBuilder };
-;
-export { PortfolioBuilderContent, PortfolioBuilder };
+
+export { PortfolioBuilderContent, PortfolioBuilder }
+export { PortfolioBuilderContent, PortfolioBuilder }
+export { PortfolioBuilderContent, PortfolioBuilder }
+export { PortfolioBuilderContent, PortfolioBuilder }
+export { PortfolioBuilderContent, PortfolioBuilder }

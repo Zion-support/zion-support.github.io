@@ -2,8 +2,8 @@ import type { NextPage } from 'next';
 import Layout from '../../components/Layout';
 import Link from 'next/link';
 import { Heart, Shield, Database, Users, CheckCircle, Zap, Globe, Lock } from 'lucide-react';
-;
-const HealthcareSolutions: NextPage = () => {;
+
+const HealthcareSolutions: NextPage = () => {
   return (;
     <Layout;
       title="Healthcare Solutions - Zion Tech Group";
@@ -19,7 +19,7 @@ const HealthcareSolutions: NextPage = () => {;
             Transform healthcare delivery with secure, compliant, and innovative technology solutions. ;
             We help healthcare organizations improve patient care through advanced technology.;
           </p>;
-          ;
+
           <div className="flex flex-col sm:flex-row justify-center gap-4">;
             <Link href="/contact">;
               <a className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">;
@@ -44,7 +44,7 @@ const HealthcareSolutions: NextPage = () => {;
               Comprehensive solutions designed to meet the unique needs of healthcare organizations, ensuring compliance, security, and improved patient outcomes.;
             </p>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
             <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow">;
               <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">;
@@ -202,7 +202,7 @@ const HealthcareSolutions: NextPage = () => {;
               Ensuring your healthcare technology solutions meet all regulatory requirements and security standards.;
             </p>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-2 gap-12 items-center">;
             <div>;
               <h3 className="text-3xl font-bold text-gray-900 mb-6">Regulatory Compliance</h3>;
@@ -230,7 +230,7 @@ const HealthcareSolutions: NextPage = () => {;
                 </div>;
               </div>;
             </div>;
-            ;
+
             <div className="bg-gray-50 rounded-lg p-8">;
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Security Features</h3>;
               <ul className="space-y-3">;
@@ -286,7 +286,5 @@ const HealthcareSolutions: NextPage = () => {;
         </div>;
       </section>;
     </Layout>;
-  );,
-};
-;
+  )}
 export default HealthcareSolutions;

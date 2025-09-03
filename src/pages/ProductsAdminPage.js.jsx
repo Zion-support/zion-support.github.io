@@ -32,8 +32,7 @@ export default function ProductsAdminPage() {}
               status: p.status === 'approved' ? 'rejected' : 'approved'}
           : p;
       );
-    );,
-};
+    )}
   return();
     <AdminLayout>;
       <div className="space-y-4">"";
@@ -77,14 +76,10 @@ export default function ProductsAdminPage() {}
         </div>;
       </div>;
     </AdminLayout>)}
-;
 
-export { ProductsAdminPage };
-;
-export { ProductsAdminPage };
-;
-export { ProductsAdminPage };
-;
-export { ProductsAdminPage };
-;
-export { ProductsAdminPage };
+
+export { ProductsAdminPage }
+export { ProductsAdminPage }
+export { ProductsAdminPage }
+export { ProductsAdminPage }
+export { ProductsAdminPage }

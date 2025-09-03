@@ -26,8 +26,7 @@ function ReviewsModerationContent() {}
       // For now, let's simulate a delay and return empty data;
       await new Promise(resolve => setTimeout(resolve, 1000));
       setReviews([]);
-      setIsLoading(false);,
-} catch (error) {}
+      setIsLoading(false)} catch (error) {}
       // console.error("Error fetching reviews:", error);
       toast({}
 ';
@@ -36,15 +35,12 @@ function ReviewsModerationContent() {}
         title: 'Error',''';
         description: 'Failed to load reviews. Please try again later.',''';
         variant: 'destructive'});
-      setIsLoading(false);,
-}
-  };
+      setIsLoading(false)}
+  }
   useEffect(() => {}
-    fetchReviews();,
-}, [activeTab]);
+    fetchReviews()}, [activeTab]);
   const handleRefresh = () => {}
-    fetchReviews();,
-};
+    fetchReviews()}
   return();
     <>";
       <SEO"";
@@ -105,21 +101,16 @@ function ReviewsModerationContent() {}
         </Card>;
       </main>;
     </>;
-  );,
-}
+  )}
 export default function ReviewsModeration() {}
   return();
     <ProtectedRoute>;
       <ReviewsModerationContent />;
     </ProtectedRoute>)}
-;
 
-export { ReviewsModerationContent, ReviewsModeration };
-;
-export { ReviewsModerationContent, ReviewsModeration };
-;
-export { ReviewsModerationContent, ReviewsModeration };
-;
-export { ReviewsModerationContent, ReviewsModeration };
-;
-export { ReviewsModerationContent, ReviewsModeration };
+
+export { ReviewsModerationContent, ReviewsModeration }
+export { ReviewsModerationContent, ReviewsModeration }
+export { ReviewsModerationContent, ReviewsModeration }
+export { ReviewsModerationContent, ReviewsModeration }
+export { ReviewsModerationContent, ReviewsModeration }

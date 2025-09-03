@@ -2,8 +2,8 @@ import type { NextPage } from 'next';
 import Layout from '../../components/Layout';
 import Link from 'next/link';
 import { CheckCircle, Brain, Zap, Target, BarChart, Users, Award } from 'lucide-react';
-;
-const AIDevelopment: NextPage = () => {;
+
+const AIDevelopment: NextPage = () => {
   return (;
     <Layout;
       title="AI Development Services - Zion Tech Group";
@@ -19,7 +19,7 @@ const AIDevelopment: NextPage = () => {;
             Transform your business with custom AI solutions and machine learning models. ;
             We build intelligent systems that drive results and enhance your competitive advantage.;
           </p>;
-          ;
+
           <div className="flex flex-col sm:flex-row justify-center gap-4">;
             <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">;
               Start Your AI Project;
@@ -41,7 +41,7 @@ const AIDevelopment: NextPage = () => {;
               and drive measurable results across various industries.;
             </p>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
             <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">;
               <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">;
@@ -199,7 +199,7 @@ const AIDevelopment: NextPage = () => {;
               We follow a proven methodology to ensure your AI solutions deliver maximum value and ROI.;
             </p>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
             <div className="text-center">;
               <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">;
@@ -262,7 +262,5 @@ const AIDevelopment: NextPage = () => {;
         </div>;
       </section>;
     </Layout>;
-  );,
-};
-;
+  )}
 export default AIDevelopment;

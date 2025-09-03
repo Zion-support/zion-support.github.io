@@ -4,7 +4,7 @@ import { useAuth } from "@/hooks/useAuth";"";
 import { Button } from "@/components/ui/button";"";
 import { useNavigate } from "react-router-dom";"";
 import { toast } from "sonner";
-;
+
     const { user, isLoading, logout } = useAuth () ;
     const navigate = useNavigate () ;
     useEffect ( () => {}
@@ -64,14 +64,11 @@ import { toast } from "sonner";
       </div>;
 
     </>) }
-;
-export default Profile;
-;
 
-export { Profile };
-;
-export { Profile };
-;
-export { Profile };
-;
-export { Profile };
+export default Profile;
+
+
+export { Profile }
+export { Profile }
+export { Profile }
+export { Profile }

@@ -1,30 +1,27 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Zap, Brain, Shield, Cloud } from 'lucide-react';
-;
-;
-export function ITServiceRequestHero() {;
+
+
+export function ITServiceRequestHero() {
     const features = [;
-        {;
+        {
             icon: <Brain className="w-6 h-6"/>,;
             title: "AI-Powered Solutions",;
-            description: "Cutting-edge artificial intelligence that learns and adapts to your business needs.";,
-},;
-        {;
+            description: "Cutting-edge artificial intelligence that learns and adapts to your business needs."},;
+        {
             icon: <Shield className="w-6 h-6"/>,;
             title: "Cybersecurity",;
-            description: "Advanced security solutions protecting your digital assets and infrastructure.";,
-},;
-        {;
+            description: "Advanced security solutions protecting your digital assets and infrastructure."},;
+        {
             icon: <Cloud className="w-6 h-6"/>,;
             title: "Cloud Computing",;
-            description: "Scalable cloud solutions that optimize performance and reduce costs.";,
-}
+            description: "Scalable cloud solutions that optimize performance and reduce costs."}
     ];
     return (<section className="relative py-20 overflow-hidden">;
       <div className="absolute inset-0 bg-gradient-to-r from-zion-blue-dark/80 to-zion-purple-dark/80"></div>;
       <div className="absolute inset-0 bg-gradient-to-r from-white/5 to-white/5 opacity-20"></div>;
-      ;
+
       <div className="relative container mx-auto px-4 text-center">;
         <NeonGlow color="zion-cyan" intensity="high">          <GradientHeading size="6xl" className="mb-6">;
             Zion Tech Group;
@@ -72,6 +69,5 @@ export function ITServiceRequestHero() {;
         </div>;
       </div>;
     </section>;
-  );,
-}'";
+  )}'";
 '"'"

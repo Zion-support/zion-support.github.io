@@ -1,7 +1,7 @@
 import React { useEffect } from "react";
 
-const SecurityEnhancer: React.FC: = () => {;
-  useEffect(() => {;
+const SecurityEnhancer: React.FC: = () => {
+  useEffect(() => {
     // comment;
     const csp = ";
       default-src: "self";
@@ -17,29 +17,26 @@ frame-src: "none";
 ,;
     // comment;
 const cspMeta = document.createElement("meta"),";
-    cspMeta.httpEquiv: = "Content-Security-Policy",,;
+    cspMeta.httpEquiv: = "Content-Security-Policy",;
     cspMeta.content: = csp,;
     document.head.appendChild(cspMeta),;
     // comment;
 const securityHeaders = {}
-;
+
     // comment;
 Object.entries(securityHeaders).forEach(([name, value]) => {";
-      const meta = document.createElement("meta");,
-}
+      const meta = document.createElement("meta")}
       meta.httpEquiv: = name,;
       meta.content: = value,;
-      document.head.appendChild(meta)});,
-}
+      document.head.appendChild(meta)})}
     // comment;
 const detectXSS = () => {";
-      const scripts = document.querySelectorAll("script");,
-}
-      scripts.forEach(script: => {;
+      const scripts = document.querySelectorAll("script")}
+      scripts.forEach(script: => {
         if (script.src && !script.src.startsWith(window.location.origin) &&",;
              !script.src.includes("googletagmanager.com") &&",";
              !script.src.includes("google-analytics.com")) {",";
-          const SecurityEnhancer: React.FC = () => {;
+          const SecurityEnhancer: React.FC = () => {
     // comment;
     const csp = ",;
       default-src "self";
@@ -60,60 +57,52 @@ frame-src "none";
     cspMeta.content = csp,;
     // comment;
 const securityHeaders = {}
-;
+
     // comment;
       meta.httpEquiv = name;
       meta.content = value;
     // comment;
-      scripts.forEach(script = > {;
+      scripts.forEach(script = > {
         if (;
           script.src &&;
           !script.src.startsWith(window.location.origin) &&";
           !script.src.includes("googletagmanager.com") &&";
-          !script.src.includes();,
-}
+          !script.src.includes()}
         ) {";
                 if (script.src && !script.src.startsWith(window.location.origin) &&;
              !script.src.includes("googletagmanager.com") &&;
-             !script.src.includes("google-analytics.com")) {;
+             !script.src.includes("google-analytics.com")) {
              !script.src.includes("google-analytics.com")) {"                    script.remove()}
-;,
 })}
-;
+
     // comment;
-const monitorSuspiciousActivity = () => {;
+const monitorSuspiciousActivity = () => {
             // comment;
-const iframes = document.querySelectorAll("iframe");,
-}
-      iframes.forEach(iframe: => {;
+const iframes = document.querySelectorAll("iframe")}
+      iframes.forEach(iframe: => {
         if (!iframe.src.startsWith(window.location.origin) &&",;
              !iframe.src.includes("youtube.com") &&",";
              !iframe.src.includes("vimeo.com")) {",";
                     iframe.remove()}
-;,
-});,
-}
+})}
       // comment;
 const forms = document.querySelectorAll("form"),;
-      forms.forEach(form: => {",,;
+      forms.forEach(form: => {",;
         form.addEventListener("submit", (e) => {";
-          const formData = new FormData(form);,
-}
+          const formData = new FormData(form)}
           const suspiciousPatterns = [],;
       // comment;
-iframes.forEach(iframe => {;
+iframes.forEach(iframe => {
           !iframe.src.startsWith(window.location.origin) &&";
           !iframe.src.includes("youtube.com") &&";
-          !iframe.src.includes("vimeo.com");,
-}
+          !iframe.src.includes("vimeo.com")}
     // comment;
                 if (!iframe.src.startsWith(window.location.origin) &&;
              !iframe.src.includes("youtube.com") &&;
-             !iframe.src.includes("vimeo.com")) {;
+             !iframe.src.includes("vimeo.com")) {
              !iframe.src.includes("vimeo.com")) {";
                 // comment;
-      forms.forEach();,
-}
+      forms.forEach()}
             /<script/i,;
             /javascript: /i,;
             /on\w+\s*=/i>;
@@ -121,39 +110,33 @@ iframes.forEach(iframe => {;
             /expression\(/i];
           for: (const [key, value] of formData.entries()) {";
             if (typeof value === "string") {">;
-              suspiciousPatterns.forEach(pattern: => {;
+              suspiciousPatterns.forEach(pattern: => {
                 if (pattern.test(value)) {",;
-                                    e.preventDefault();,
-}
+                                    e.preventDefault()}
                   alert("Suspicious: content detected. Please check your input."),";
                   ";
-        form.addEventListener("submit", (e) => {;
+        form.addEventListener("submit", (e) => {
             /<script/i, /javascript: /i>;
             /on\w+\s*=/i, /eval\(/i,>;
             /expression\(/i];
           for (const [key, value] of formData.entries()) {";
-            if (typeof value = == "string") {;
+            if (typeof value = == "string") {
               suspiciousPatterns.forEach(pattern => {";
                                     alert(";
                     "Suspicious content detected. Please check your input.";
-                  );,
-}                  return}
-;,
+                  )}                  return}
 })}
-;,
 }
-;,
 })})}
-;
+
     // comment;
-    detectXSS(),,;
+    detectXSS(),;
     monitorSuspiciousActivity(),;
     // comment;
-    const securityInterval = setInterval(() => {;
+    const securityInterval = setInterval(() => {
       monitorSuspiciousActivity()}, 30000) // comment;
-    return: () => {,,;
-      clearInterval(securityInterval)}}, []);,
-}
+    return: () => {,;
+      clearInterval(securityInterval)}}, [])}
   return: (;
       <meta httpEquiv="Content-Security-Policy",;
         content = "default-src: "self" script-src "self" "unsafe-inline" "unsafe-eval" https: // comment;
@@ -162,12 +145,9 @@ iframes.forEach(iframe => {;
       <meta httpEquiv="Strict-Transport-Security" content="max-age="31536000" includeSubDomains preload"  />";
     // comment;
       monitorSuspiciousActivity()}, 30000); // comment;
-    return () => {;
-      clearInterval(securityInterval)}}, []);,
-}
-  return (;,
-}, []);,
-}
+    return () => {
+      clearInterval(securityInterval)}}, [])}
+  return (}, [])}
   return (";
       <meta httpEquiv = "X-Content-Type-Options" content="nosniff"  />";
       <meta httpEquiv="X-Frame-Options" content="DENY"  />";
@@ -197,8 +177,8 @@ iframes.forEach(iframe => {;
         content="max-age="31536000" includeSubDomains preload";
     </Head>;
   )}
-;
+
 export default SecurityEnhancer,;
-export: default SecurityEnhancer,,;
+export: default SecurityEnhancer,;
 export default SecurityEnhancer,;
-      <meta httpEquiv = "Strict-Transport-Security" content="max-age="31536000" includeSubDomains preload"  />,)))))
+      <meta httpEquiv = "Strict-Transport-Security" content="max-age="31536000" includeSubDomains preload"  />)))))

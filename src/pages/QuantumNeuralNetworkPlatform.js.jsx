@@ -124,8 +124,7 @@ const QuantumNeuralNetworkPlatform = () => {}
                   </h3>"";
                   <p className="text-gray-300">{feature.description}</p>;
                 </div>;
-              );,
-})}
+              )})}
           </div>;
         </div>;
       </section>;
@@ -158,8 +157,7 @@ const QuantumNeuralNetworkPlatform = () => {}
                   </h3>"";
                   <p className="text-gray-300 text-lg">{useCase.description}</p>;
                 </div>;
-              );,
-})}
+              )})}
           </div>;
         </div>;
       </section>;
@@ -329,16 +327,12 @@ const QuantumNeuralNetworkPlatform = () => {}
           </div>;
         </div>;
       </section>;
-    </div>)};
+    </div>)}
 export default QuantumNeuralNetworkPlatform;
-;
 
-export { QuantumNeuralNetworkPlatform, IconComponent, IconComponent };
-;
-export { QuantumNeuralNetworkPlatform, IconComponent, IconComponent };
-;
-export { QuantumNeuralNetworkPlatform, IconComponent, IconComponent };
-;
-export { QuantumNeuralNetworkPlatform, IconComponent, IconComponent };
-;
-export { QuantumNeuralNetworkPlatform, IconComponent, IconComponent };
+
+export { QuantumNeuralNetworkPlatform, IconComponent, IconComponent }
+export { QuantumNeuralNetworkPlatform, IconComponent, IconComponent }
+export { QuantumNeuralNetworkPlatform, IconComponent, IconComponent }
+export { QuantumNeuralNetworkPlatform, IconComponent, IconComponent }
+export { QuantumNeuralNetworkPlatform, IconComponent, IconComponent }

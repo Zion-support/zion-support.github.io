@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link  } from 'react-router-dom';
-export default function Page() {;
+export default function Page() {
 ,;
         { id: 'automation', name: 'Automation', icon: <Zap className="h-5 w-5"/> },;
         { id: 'cloud', name: 'Cloud', icon: <Cloud className="h-5 w-5"/> }
@@ -24,9 +24,8 @@ export default function Page() {;
             rating: 4.9,;
             features['SEO optimization',Readability scoring',Content suggestions',Performance analytics'],;
             badge: 'Popular',;
-            color: 'from-purple-500 to-cyan-500';,
-},;
-        {;
+            color: 'from-purple-500 to-cyan-500'},;
+        {
 
             id: 'cyber-threat-monitor',;
             title: 'Cyber Threat Monitor',;
@@ -37,9 +36,8 @@ export default function Page() {;
             rating: 4.8,;
             features['Real-time monitoring',AI threat detection',Automated response',Compliance reporting'],;
             badge: 'New',;
-            color: 'from-blue-500 to-green-500';,
-},;
-        {;
+            color: 'from-blue-500 to-green-500'},;
+        {
 
             id: 'data-visualization-studio',;
             title: 'Data Visualization Studio',;
@@ -50,9 +48,8 @@ export default function Page() {;
             rating: 4.7,;
             features['Interactive dashboards',Custom reports',Data integration',Real-time updates'],;
             badge: 'Pro',;
-            color: 'from-green-500 to-teal-500';,
-},;
-        {;
+            color: 'from-green-500 to-teal-500'},;
+        {
 
             id: 'smart-email-marketing',;
             title: 'Smart Email Marketing Platform',;
@@ -63,9 +60,8 @@ export default function Page() {;
             rating: 4.6,;
             features['AI personalization',Automated workflows',Advanced segmentation',Performance tracking'],;
             badge: 'Featured',;
-            color: 'from-red-500 to-orange-500';,
-},;
-        {;
+            color: 'from-red-500 to-orange-500'},;
+        {
 
             id: 'ai-customer-support',;
             title: 'AI Customer Support Assistant',;
@@ -76,9 +72,8 @@ export default function Page() {;
             rating: 4.9,;
             features['24/7 availability',AI-powered responses',Multi-language support',Integration APIs'],;
             badge: 'AI',;
-            color: 'from-pink-500 to-rose-500';,
-},;
-        {;
+            color: 'from-pink-500 to-rose-500'},;
+        {
 
             id: 'smart-invoice-manager',;
             title: 'Smart Invoice Manager',;
@@ -89,9 +84,8 @@ export default function Page() {;
             rating: 4.5,;
             features['Automated invoicing',Expense tracking',Financial reporting',Payment reminders'],;
             badge: 'Finance',;
-            color: 'from-yellow-500 to-amber-500';,
-},;
-        {;
+            color: 'from-yellow-500 to-amber-500'},;
+        {
 
             id: 'cloud-infrastructure-manager',;
             title: 'Cloud Infrastructure Manager',;
@@ -102,9 +96,8 @@ export default function Page() {;
             rating: 4.8,;
             features['Multi-cloud support',Cost optimization',Performance monitoring',Security compliance'],;
             badge: 'Enterprise',;
-            color: 'from-indigo-500 to-purple-500';,
-},;
-        {;
+            color: 'from-indigo-500 to-purple-500'},;
+        {
 
             id: 'ai-seo-analyzer',;
             title: 'AI SEO Analyzer',;

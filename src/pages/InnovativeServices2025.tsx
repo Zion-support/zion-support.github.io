@@ -137,18 +137,17 @@ import { Brain, ;
   CalendarTime2,;
   CalendarWeek2,;
   CalendarMonth2,;
-  CalendarYear2;,
-} from 'lucide-react.ts';
-;
-export default function InnovativeServices2025(...args: unknown[]): unknown {;
+  CalendarYear2} from 'lucide-react.ts';
+
+export default function InnovativeServices2025(...args: unknown[]): unknown {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState('popularity');
-;
+
   // Enhanced Services Catalog 2025;
   const services = [;
     // AI & Machine Learning Services;
-    {;
+    {
       id: 'ai-business-intelligence',;
       name: 'AI Business Intelligence Platform',;
       description: 'Advanced AI-powered business analytics and insights platform with predictive modeling and real-time dashboards.',;
@@ -162,9 +161,8 @@ export default function InnovativeServices2025(...args: unknown[]): unknown {;
       marketPrice: '$3,200/month',;
       savings: '22%',;
       rating: 4.9,;
-      reviews: 127;,
-},;
-    {;
+      reviews: 127},;
+    {
       id: 'ai-compliance-assistant',;
       name: 'AI Compliance Automation Suite',;
       description: 'Automated compliance monitoring and reporting for regulatory requirements across industries.',;
@@ -178,9 +176,8 @@ export default function InnovativeServices2025(...args: unknown[]): unknown {;
       marketPrice: '$2,400/month',;
       savings: '25%',;
       rating: 4.8,;
-      reviews: 89;,
-},;
-    {;
+      reviews: 89},;
+    {
       id: 'ai-sales-copilot',;
       name: 'AI Sales Copilot Platform',;
       description: 'Intelligent sales automation with lead scoring, customer insights, and sales forecasting.',;
@@ -194,9 +191,8 @@ export default function InnovativeServices2025(...args: unknown[]): unknown {;
       marketPrice: '$2,800/month',;
       savings: '21%',;
       rating: 4.9,;
-      reviews: 156;,
-},;
-    {;
+      reviews: 156},;
+    {
       id: 'ai-content-marketing-suite',;
       name: 'AI Content Marketing Suite',;
       description: 'Complete content creation, optimization, and distribution platform powered by advanced AI.',;
@@ -210,9 +206,8 @@ export default function InnovativeServices2025(...args: unknown[]): unknown {;
       marketPrice: '$2,500/month',;
       savings: '24%',;
       rating: 4.7,;
-      reviews: 94;,
-},;
-    {;
+      reviews: 94},;
+    {
       id: 'ai-customer-support-automation',;
       name: 'AI Customer Support Automation',;
       description: 'Intelligent customer service automation with chatbots, ticket routing, and sentiment analysis.',;
@@ -226,9 +221,8 @@ export default function InnovativeServices2025(...args: unknown[]): unknown {;
       marketPrice: '$2,100/month',;
       savings: '24%',;
       rating: 4.8,;
-      reviews: 203;,
-},;
-    {;
+      reviews: 203},;
+    {
       id: 'ai-project-management',;
       name: 'AI Project Management Platform',;
       description: 'Intelligent project planning, resource allocation, and risk management with AI insights.',;
@@ -242,11 +236,10 @@ export default function InnovativeServices2025(...args: unknown[]): unknown {;
       marketPrice: '$2,900/month',;
       savings: '21%',;
       rating: 4.9,;
-      reviews: 178;,
-},;
+      reviews: 178},;
 
     // IT Infrastructure Services;
-    {;
+    {
       id: 'cloud-devops-platform',;
       name: 'Cloud DevOps Automation Platform',;
       description: 'Comprehensive DevOps automation with CI/CD pipelines, infrastructure as code, and monitoring.',;
@@ -260,9 +253,8 @@ export default function InnovativeServices2025(...args: unknown[]): unknown {;
       marketPrice: '$4,100/month',;
       savings: '22%',;
       rating: 4.9,;
-      reviews: 234;,
-},;
-    {;
+      reviews: 234},;
+    {
       id: 'it-infrastructure-management',;
       name: 'IT Infrastructure Management Suite',;
       description: 'Complete IT infrastructure monitoring, management, and optimization platform.',;
@@ -276,9 +268,8 @@ export default function InnovativeServices2025(...args: unknown[]): unknown {;
       marketPrice: '$3,500/month',;
       savings: '20%',;
       rating: 4.8,;
-      reviews: 167;,
-},;
-    {;
+      reviews: 167},;
+    {
       id: 'cybersecurity-platform',;
       name: 'AI-Powered Cybersecurity Platform',;
       description: 'Advanced threat detection, vulnerability assessment, and security automation platform.',;
@@ -292,11 +283,10 @@ export default function InnovativeServices2025(...args: unknown[]): unknown {;
       marketPrice: '$4,400/month',;
       savings: '20%',;
       rating: 4.9,;
-      reviews: 289;,
-},;
+      reviews: 289},;
 
     // Micro SaaS Solutions;
-    {;
+    {
       id: 'finops-advisor',;
       name: 'FinOps Cloud Cost Optimizer',;
       description: 'Cloud cost optimization and financial operations management platform for enterprises.',;
@@ -310,9 +300,8 @@ export default function InnovativeServices2025(...args: unknown[]): unknown {;
       marketPrice: '$1,600/month',;
       savings: '25%',;
       rating: 4.7,;
-      reviews: 76;,
-},;
-    {;
+      reviews: 76},;
+    {
       id: 'zero-trust-network',;
       name: 'Zero Trust Network Access Platform',;
       description: 'Secure network access control with identity verification and continuous monitoring.',;
@@ -326,9 +315,8 @@ export default function InnovativeServices2025(...args: unknown[]): unknown {;
       marketPrice: '$2,700/month',;
       savings: '22%',;
       rating: 4.8,;
-      reviews: 134;,
-},;
-    {;
+      reviews: 134},;
+    {
       id: 'dsr-portal',;
       name: 'Data Subject Rights Portal',;
       description: 'GDPR compliance platform for managing data subject requests and privacy rights.',;
@@ -342,11 +330,10 @@ export default function InnovativeServices2025(...args: unknown[]): unknown {;
       marketPrice: '$1,200/month',;
       savings: '25%',;
       rating: 4.6,;
-      reviews: 89;,
-},;
+      reviews: 89},;
 
     // Emerging Technology Services;
-    {;
+    {
       id: 'quantum-computing-platform',;
       name: 'Quantum Computing Solutions',;
       description: 'Quantum computing services for optimization, cryptography, and scientific computing.',;
@@ -360,9 +347,8 @@ export default function InnovativeServices2025(...args: unknown[]): unknown {;
       marketPrice: '$6,500/month',;
       savings: '23%',;
       rating: 4.9,;
-      reviews: 45;,
-},;
-    {;
+      reviews: 45},;
+    {
       id: 'edge-computing-platform',;
       name: 'Edge Computing Platform',;
       description: 'Distributed edge computing platform for IoT, real-time processing, and low-latency applications.',;
@@ -376,9 +362,8 @@ export default function InnovativeServices2025(...args: unknown[]): unknown {;
       marketPrice: '$3,600/month',;
       savings: '22%',;
       rating: 4.8,;
-      reviews: 123;,
-},;
-    {;
+      reviews: 123},;
+    {
       id: 'blockchain-platform',;
       name: 'Enterprise Blockchain Platform',;
       description: 'Scalable blockchain solutions for supply chain, finance, and digital identity management.',;
@@ -392,10 +377,9 @@ export default function InnovativeServices2025(...args: unknown[]): unknown {;
       marketPrice: '$4,100/month',;
       savings: '22%',;
       rating: 4.7,;
-      reviews: 167;,
-}
+      reviews: 167}
   ];
-;
+
   const categories = [;
     { id: unknown'all', name: 'All Services', icon: Star, count: services.length },;
     { id: 'AI & ML', name: 'AI & Machine Learning', icon: Brain, count: services.filter(s  => s.category === 'AI & ML').length },;
@@ -403,16 +387,15 @@ export default function InnovativeServices2025(...args: unknown[]): unknown {;
     { id: unknown'Micro SaaS', name: 'Micro SaaS', icon: Rocket, count: services.filter(s  => s.category === 'Micro SaaS').length },;
     { id: unknown'Emerging Tech', name: 'Emerging Technology', icon: Atom, count: services.filter(s  => s.category === 'Emerging Tech').length }
   ];
-;
-  const filteredServices = services.filter(service => {;
+
+  const filteredServices = services.filter(service => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch;,
-});
-;
-  const sortedServices = [...filteredServices].sort((a, b) => {;
-    switch (sortBy) {;
+    return matchesCategory && matchesSearch});
+
+  const sortedServices = [...filteredServices].sort((a, b) => {
+    switch (sortBy) {
       case 'price-low':;
         return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
       case 'price-high':;
@@ -420,8 +403,7 @@ export default function InnovativeServices2025(...args: unknown[]): unknown {;
       case 'rating':;
         return b.rating - a.rating;
       case 'popularity':;
-      default:        return b.reviews - a.reviews;,
-}
+      default:        return b.reviews - a.reviews}
   }) ;
   return();
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">";
@@ -495,8 +477,7 @@ export default function InnovativeServices2025(...args: unknown[]): unknown {;
 ';
                     selectedCategory === category.id'';
                       ? 'bg-zion-blue text-white'''`;
-                      : 'bg-zion-slate text-zion-blue-light hover:bg-zion-slate-light'``;,
-}`}">"";
+                      : 'bg-zion-slate text-zion-blue-light hover:bg-zion-slate-light'``}`}">"";
                   <category.icon className="w-4 h-4" />";
                   <span>{category.name}</span>"";
                   <span className="bg-white/20 px-2 py-1 rounded-full text-xs">;
@@ -557,8 +538,7 @@ export default function InnovativeServices2025(...args: unknown[]): unknown {;
                         service.badge === 'New' ? 'bg-green-500 text-white' :''''`;
                         service.badge === 'Popular' ? 'bg-blue-500 text-white' :'''`'`;
                         service.badge === 'Featured' ? 'bg-purple-500 text-white' :''`'`'`;
-                        'bg-orange-500 text-white'````;,
-}`}>;
+                        'bg-orange-500 text-white'````}`}>;
                         {service.badge}
                       </span>;
                     </div>) }
@@ -601,8 +581,7 @@ export default function InnovativeServices2025(...args: unknown[]): unknown {;
                           <Star key={i}`                            className={`w-4 h-4 ${}
                               i < Math.floor(service.rating)';
                                 ? 'text-yellow-400 fill-current'''`;
-                                : 'text-zion-slate-light'``;,
-}`}
+                                : 'text-zion-slate-light'``}`}
                             />;
                         ))}";
                       </div>"";
@@ -672,15 +651,10 @@ export default function InnovativeServices2025(...args: unknown[]): unknown {;
         </div>;
       </section>;
     </div>;
-  );,
-}
-;
-export { InnovativeServices2025 };
-;
-export { InnovativeServices2025 };
-;
-export { InnovativeServices2025 };
-;
-export { InnovativeServices2025 };
-;
-export { InnovativeServices2025 };
+  )}
+
+export { InnovativeServices2025 }
+export { InnovativeServices2025 }
+export { InnovativeServices2025 }
+export { InnovativeServices2025 }
+export { InnovativeServices2025 }

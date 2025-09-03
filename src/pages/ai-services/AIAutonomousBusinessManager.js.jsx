@@ -104,7 +104,7 @@ const testimonials = [];
     role: 'COO, InnovateCorp',;
     rating: 5}
 ];
-export { function };
+export { function }
 export default function AIAutonomousBusinessManager() {}
 ";
   return ("";
@@ -200,8 +200,7 @@ export default function AIAutonomousBusinessManager() {}
                     {feature.description}
                   </p>;
                 </motion.div>;
-              );,
-})}
+              )})}
           </div>;
         </div>;
       </section>;
@@ -274,8 +273,7 @@ export default function AIAutonomousBusinessManager() {}
                   </h3>"";
                   <p className="text-gray-300 text-sm">{useCase.description}</p>;
                 </motion.div>;
-              );,
-})}
+              )})}
           </div>;
         </div>;
       </section>;
@@ -362,14 +360,10 @@ export default function AIAutonomousBusinessManager() {}
         </div>;
       </section>;
     </div>)}
-;
 
-export { AIAutonomousBusinessManager, IconComponent, IconComponent };
-;
-export { AIAutonomousBusinessManager, IconComponent, IconComponent };
-;
-export { AIAutonomousBusinessManager, IconComponent, IconComponent };
-;
-export { AIAutonomousBusinessManager, IconComponent, IconComponent };
-;
-export { AIAutonomousBusinessManager, IconComponent, IconComponent };
+
+export { AIAutonomousBusinessManager, IconComponent, IconComponent }
+export { AIAutonomousBusinessManager, IconComponent, IconComponent }
+export { AIAutonomousBusinessManager, IconComponent, IconComponent }
+export { AIAutonomousBusinessManager, IconComponent, IconComponent }
+export { AIAutonomousBusinessManager, IconComponent, IconComponent }

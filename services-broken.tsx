@@ -1,6 +1,5 @@
-import React from "react";,;,
-} from "lucide-react";
-export default function Services() {;
+import React from "react"} from "lucide-react";
+export default function Services() {
 	const title = "Services — Zion Tech Group";
 	const description = "AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.";
 	return (;
@@ -217,7 +216,7 @@ export default function Services() {;
 					</div>;
 				</div>;
 			</section>;
-;
+
 			{/* Process Section */}
 			<section className="py-24 sm:py-32 bg-gray-50">;
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">;
@@ -259,7 +258,7 @@ export default function Services() {;
 					</div>;
 				</div>;
 			</section>;
-;
+
 			{/* CTA Section */}
 			<section className="bg-gradient-to-r from-blue-600 to-purple-600 py-24 sm:py-32">;
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">;
@@ -290,5 +289,4 @@ export default function Services() {;
 				</div>;
 			</section>;
 		</>;
-	);,;,
-}
+	)}

@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Cloud, Server, Database, Shield, GitFork, ArrowRight, CheckCircle, Monitor } from 'lucide-react';
-const CloudDevOpsServices = () => {;
+const CloudDevOpsServices = () => {
     const cloudServices = [;
-        {;
+        {
             title: "Cloud Migration & Strategy",;
             description: "Seamless migration to cloud platforms with strategic planning and execution.",;
             icon: Cloud,;
@@ -13,9 +13,8 @@ const CloudDevOpsServices = () => {;
                 "Cost Optimization",;
                 "Performance Optimization",;
                 "Security Assessment";
-            ];,
-},;
-        {;
+            ]},;
+        {
             title: "DevOps Implementation",;
             description: "Streamline development and operations with modern DevOps practices and tools.",;
             icon: GitFork,;
@@ -25,9 +24,8 @@ const CloudDevOpsServices = () => {;
                 "Automated Testing",;
                 "Deployment Automation",;
                 "Monitoring & Alerting";
-            ];,
-},;
-        {;
+            ]},;
+        {
             title: "Container Orchestration",;
             description: "Manage and scale containerized applications with Kubernetes and Docker.",;
             icon: Server,;
@@ -37,9 +35,8 @@ const CloudDevOpsServices = () => {;
                 "Service Mesh",;
                 "Auto-scaling",;
                 "Load Balancing";
-            ];,
-},;
-        {;
+            ]},;
+        {
             title: "Database Management",;
             description: "Optimize and manage databases in cloud environments for performance and reliability.",;
             icon: Database,;
@@ -49,9 +46,8 @@ const CloudDevOpsServices = () => {;
                 "Backup & Recovery",;
                 "High Availability",;
                 "Data Security";
-            ];,
-},;
-        {;
+            ]},;
+        {
             title: "Security & Compliance",;
             description: "Ensure cloud security and compliance with industry standards and best practices.",;
             icon: Shield,;
@@ -61,9 +57,8 @@ const CloudDevOpsServices = () => {;
                 "Data Encryption",;
                 "Compliance Auditing",;
                 "Threat Detection";
-            ];,
-},;
-        {;
+            ]},;
+        {
             title: "Monitoring & Observability",;
             description: "Comprehensive monitoring and observability solutions for cloud infrastructure.",;
             icon: Monitor,;
@@ -93,21 +88,18 @@ const CloudDevOpsServices = () => {;
         "ELK Stack";
     ];
     const cloudPlatforms = [;
-        {;
+        {
             name: "Amazon Web Services",;
             description: "Leading cloud platform with comprehensive services",;
-            features["EC2, S3, RDS", "Lambda Functions", "CloudFormation", "CloudWatch"];,
-},;
-        {;
+            features["EC2, S3, RDS", "Lambda Functions", "CloudFormation", "CloudWatch"]},;
+        {
             name: "Microsoft Azure",;
             description: "Enterprise-grade cloud solutions for Windows environments",;
-            features["Virtual Machines", "Azure DevOps", "Azure Functions", "Application Insights"];,
-},;
-        {;
+            features["Virtual Machines", "Azure DevOps", "Azure Functions", "Application Insights"]},;
+        {
             name: "Google Cloud Platform",;
             description: "Innovative cloud services with AI and ML capabilities",;
-            features["Compute Engine", "Cloud Run", "BigQuery", "Cloud Build"];,
-}
+            features["Compute Engine", "Cloud Run", "BigQuery", "Cloud Build"]}
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">;
       {/* Hero Section */}
@@ -266,16 +258,11 @@ const CloudDevOpsServices = () => {;
           </div>;
         </div>;
       </section>;
-    </div>)};
-export default CloudDevOpsServices;,
-}}}
-;
-export { CloudDevOpsServices };
-;
-export { CloudDevOpsServices };
-;
-export { CloudDevOpsServices };
-;
-export { CloudDevOpsServices };
-;
-export { CloudDevOpsServices };
+    </div>)}
+export default CloudDevOpsServices}}}
+
+export { CloudDevOpsServices }
+export { CloudDevOpsServices }
+export { CloudDevOpsServices }
+export { CloudDevOpsServices }
+export { CloudDevOpsServices }

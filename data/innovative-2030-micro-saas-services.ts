@@ -1,5 +1,5 @@
 import { ServiceVariant  } from "../types/service-variants";
-export interface Innovative2030MicroSaasService {;
+export interface Innovative2030MicroSaasService {
   id: string;
   name: string;
   tagline: string;
@@ -26,7 +26,7 @@ export interface Innovative2030MicroSaasService {;
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -38,7 +38,7 @@ export interface Innovative2030MicroSaasService {;
   rating: number;
 export const innovative2030MicroSaasServices: Innovative2030MicroSaasService[] = [;
   // AI-Powered Business Intelligence;
-  {;
+  {
     id: "ai-business-intelligence-suite",;
     name: "AI Business Intelligence Suite",;
     tagline: "Transform data into actionable insights with AI-powered analytics",;
@@ -76,21 +76,19 @@ export const innovative2030MicroSaasServices: Innovative2030MicroSaasService[] =
     marketSize: "$29.5B market",;
     growthRate: "220% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Full-stack SaaS platform with real-time data processing, AI model training pipeline, and scalable cloud infrastructure. Includes enterprise-grade security and compliance features.",;
     launchDate: "2024-03-01",;
     customers: 1800,;
     rating: 4.9,;
-    reviews: 950;,;,
-},;
+    reviews: 950},;
   // Quantum-Safe Cybersecurity Platform;
-  {;
+  {
     id: "quantum-safe-cybersecurity-platform",;
     name: "Quantum-Safe Cybersecurity Platform",;
     tagline: "Future-proof your security with quantum-resistant encryption",;
@@ -128,21 +126,19 @@ export const innovative2030MicroSaasServices: Innovative2030MicroSaasService[] =
     marketSize: "$45.2B market",;
     growthRate: "280% annual growth",;
     variant: "quantum-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Enterprise-grade security platform with quantum-resistant cryptography, AI-powered threat detection, and automated compliance management. Deployed on secure cloud infrastructure with 99.99% uptime.",;
     launchDate: "2024-02-15",;
     customers: 1200,;
     rating: 4.8,;
-    reviews: 680;,;,
-},;
+    reviews: 680},;
   // AI-Powered Customer Experience Platform;
-  {;
+  {
     id: "ai-customer-experience-platform",;
     name: "AI Customer Experience Platform",;
     tagline: "Deliver personalized experiences at scale with AI",;
@@ -180,21 +176,19 @@ export const innovative2030MicroSaasServices: Innovative2030MicroSaasService[] =
     marketSize: "$15.8B market",;
     growthRate: "190% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Scalable SaaS platform with real-time data processing, AI model training, and comprehensive analytics dashboard. Includes mobile app and API for seamless integration.",;
     launchDate: "2024-01-20",;
     customers: 2200,;
     rating: 4.7,;
-    reviews: 1100;,;,
-},;
+    reviews: 1100},;
   // Blockchain Supply Chain Transparency;
-  {;
+  {
     id: "blockchain-supply-chain-transparency",;
     name: "Blockchain Supply Chain Transparency",;
     tagline: "End-to-end visibility and traceability for your supply chain",;
@@ -232,21 +226,19 @@ export const innovative2030MicroSaasServices: Innovative2030MicroSaasService[] =
     marketSize: "$12.3B market",;
     growthRate: "250% annual growth",;
     variant: "blockchain-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Enterprise blockchain platform with permissioned networks, smart contract automation, and comprehensive supply chain management tools. Deployed on secure cloud infrastructure.",;
     launchDate: "2024-02-01",;
     customers: 800,;
     rating: 4.6,;
-    reviews: 420;,;,
-},;
+    reviews: 420},;
   // AI-Powered HR Automation Suite;
-  {;
+  {
     id: "ai-hr-automation-suite",;
     name: "AI HR Automation Suite",;
     tagline: "Streamline HR processes with intelligent automation",;
@@ -284,21 +276,19 @@ export const innovative2030MicroSaasServices: Innovative2030MicroSaasService[] =
     marketSize: "$18.7B market",;
     growthRate: "210% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Full-featured HR platform with AI-powered automation, comprehensive employee management tools, and seamless third-party integrations. Includes mobile app and API access.",;
     launchDate: "2024-01-10",;
     customers: 1600,;
     rating: 4.8,;
-    reviews: 820;,;,
-},;
+    reviews: 820},;
   // Quantum Machine Learning Platform;
-  {;
+  {
     id: "quantum-machine-learning-platform",;
     name: "Quantum Machine Learning Platform",;
     tagline: "Accelerate AI with quantum computing power",;
@@ -336,21 +326,19 @@ export const innovative2030MicroSaasServices: Innovative2030MicroSaasService[] =
     marketSize: "$8.9B market",;
     growthRate: "350% annual growth",;
     variant: "quantum-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced quantum computing platform with hybrid classical-quantum algorithms, comprehensive development tools, and cloud-based quantum simulators. Includes educational resources and community support.",;
     launchDate: "2024-03-15",;
     customers: 400,;
     rating: 4.9,;
-    reviews: 280;,;,
-},;
+    reviews: 280},;
   // Edge Computing Orchestration Platform;
-  {;
+  {
     id: "edge-computing-orchestration-platform",;
     name: "Edge Computing Orchestration Platform",;
     tagline: "Deploy and manage applications at the edge with ease",;
@@ -388,12 +376,11 @@ export const innovative2030MicroSaasServices: Innovative2030MicroSaasService[] =
     marketSize: "$11.2B market",;
     growthRate: "240% annual growth",;
     variant: "edge-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Enterprise-grade edge computing platform with Kubernetes-based orchestration, comprehensive monitoring tools, and seamless cloud integration. Deployed on secure infrastructure with global edge locations.",;
     launchDate: "2024-02-20",;

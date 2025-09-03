@@ -27,9 +27,8 @@ export default function RequestsPanel() {}
     setShowDetails(true);';
     // If status is new, mark as viewed'';
     if (quote.status === 'new') {}
-      markAsViewed(quote.id);,
-}
-  };
+      markAsViewed(quote.id)}
+  }
   // Filter quotes by archive status;
   const archivedQuotes = quotes.filter(q => q.is_archived);
   return();
@@ -83,19 +82,14 @@ export default function RequestsPanel() {}
           isOpen={showDetails}
           onClose={() => {}
             setShowDetails(false);
-            setSelectedQuote(null);,
-}}
+            setSelectedQuote(null)}}
         />;
       </div>;
     </ProtectedRoute>)}
-;
 
-export { RequestsPanel };
-;
-export { RequestsPanel };
-;
-export { RequestsPanel };
-;
-export { RequestsPanel };
-;
-export { RequestsPanel };
+
+export { RequestsPanel }
+export { RequestsPanel }
+export { RequestsPanel }
+export { RequestsPanel }
+export { RequestsPanel }

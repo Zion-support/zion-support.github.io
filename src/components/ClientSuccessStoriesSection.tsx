@@ -1,25 +1,23 @@
 import {  import { motion  } from 'framer-motion';
-;
+
  params - Function parameters;
  * @returns {*} Function return value;
  */;
-function ClientSuccessStoriesSection () {;
-export function ClientSuccessStoriesSection() {;
+function ClientSuccessStoriesSection () {
+export function ClientSuccessStoriesSection() {
   return (";
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
       <div className="max-w-7xl mx-auto px-6">;
         <motion.div ";
           className="text-center mb-16";
-          initial = {;
+          initial = {
 
   { opacity: 0,;
-  y: 20;,
-}}
-          whileInView = {;
+  y: 20}}
+          whileInView = {
 
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >";
@@ -31,24 +29,21 @@ export function ClientSuccessStoriesSection() {;
             across industries achieve remarkable transformations and measurable success.</p>;
         </motion.div>;
 
-          initial = {;
+          initial = {
 
   { opacity: 0,;
-  y: 20;,
-}}
-          whileInView = {;
+  y: 20}}
+          whileInView = {
 
   { opacity: 1,;
-  y: 0;,
-}}
-          transition = {;
+  y: 0}}
+          transition = {
 
   { duration: 0.6,;
-  delay: 0.1;,
-}}";
+  delay: 0.1}}";
           className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16">;
-          {successMetrics.map ( (metric, index) => {;
-            ;
+          {successMetrics.map ( (metric, index) => {
+
             return (";
               <div key = {metric.label} className="text-center">";
                 <div className="flex justify-center mb-4">";
@@ -71,22 +66,19 @@ export function ClientSuccessStoriesSection() {;
             <motion.div;
               key={story.id}";
               className="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25";
-              initial = {;
+              initial = {
 
   { opacity: 0,;
-  y: 30;,
-}}
-              whileInView = {;
+  y: 30}}
+              whileInView = {
 
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
               viewport={{ once: true }}
-              transition = {;
+              transition = {
 
   { duration: 0.6,;
-  delay: index * 0.1;,
-}}
+  delay: index * 0.1}}
             >";
               <div className="flex items-center mb-6">";
                 <div className="text-4xl mr-4">{testimonial.avatar}</div>;
@@ -152,22 +144,19 @@ export function ClientSuccessStoriesSection() {;
 
         {/* Success Metrics */}
         <motion.div;
-          className="mb-16";          initial = {;
+          className="mb-16";          initial = {
 
   { opacity: 0,;
-  y: 30;,
-}}
-          whileInView = {;
+  y: 30}}
+          whileInView = {
 
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
           viewport={{ once: true }}
-          transition = {;
+          transition = {
 
   { duration: 0.6,;
-  delay: 0.4;,
-}}
+  delay: 0.4}}
         >";
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">";
             <h3 className="text-2xl font-bold text-white text-center mb-8">;
@@ -195,22 +184,19 @@ export function ClientSuccessStoriesSection() {;
         </motion.div>;
 
         <motion.div;
-          className="text-center"          initial = {;
+          className="text-center"          initial = {
 
   { opacity: 0,;
-  y: 20;,
-}}
-          whileInView = {;
+  y: 20}}
+          whileInView = {
 
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
           viewport={{ once: true }}
-          transition = {;
+          transition = {
 
   { duration: 0.6,;
-  delay: 0.6;,
-}}
+  delay: 0.6}}
         >";
           <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-8 text-white">";
             <h3 className="text-2xl font-bold mb-4">;
@@ -231,8 +217,7 @@ export function ClientSuccessStoriesSection() {;
           </div>;
         </motion.div>;
       </div>;
-    </section>;) };
-;
+    </section>;) }
 export default ClientSuccessStoriesSection;";
             <span className="text-2xl">→</span>;
           </div>;

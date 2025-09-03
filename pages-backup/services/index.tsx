@@ -3,56 +3,56 @@ import React from "react";
   const benefits = [],";
       href: "/services/ai-model-development-chat",";
       color: "blue"},;
-    {;
+    {
       icon: Globe,";
       title: "Web Development",";
       description: "Modern, responsive web applications built with cutting-edge technologies.",";
       features: ["React/Next.js Applications", "E-commerce Solutions", "Progressive Web Apps", "API Development"],";
       href: "/services/web-application-development-chat",";
       color: "green"},;
-    {;
+    {
       icon: Smartphone,";
       title: "Mobile Development",";
       description: "Native and cross-platform mobile applications for iOS and Android.",";
       features: ["iOS Development", "Android Development", "React Native", "Flutter Apps"],";
       href: "/services/mobile-app-development-chat",";
       color: "purple"},;
-    {;
+    {
       icon: Cloud,";
       title: "Cloud Solutions",";
       description: "Scalable cloud infrastructure and migration services for modern applications.",";
       features: ["AWS/Azure/GCP", "Cloud Migration", "DevOps & CI/CD", "Container Orchestration"],";
       href: "/services/cloud-migration-services-chat",";
       color: "orange"},;
-    {;
+    {
       icon: Shield,";
       title: "Cybersecurity",";
       description: "Comprehensive security solutions to protect your digital assets.",";
       features: ["Security Audits", "Penetration Testing", "Compliance", "Incident Response"],";
       href: "/services/network-security-chat",";
       color: "red"},;
-    {;
+    {
       icon: BarChart3,";
       title: "Data Analytics",";
       description: "Transform your data into actionable insights with advanced analytics.",";
       features: ["Business Intelligence", "Data Visualization", "Predictive Modeling", "Real-time Analytics"],";
       href: "/services/business-intelligence-chat",";
       color: "indigo"},;
-    {;
+    {
       icon: Palette,";
       title: "UI/UX Design",";
       description: "User-centered design solutions that enhance user experience and engagement.",";
       features: ["User Research", "Wireframing", "Prototyping", "Design Systems"],";
       href: "/services/ui-ux-design-chat",";
       color: "pink"},;
-    {;
+    {
       icon: CheckCircle,";
       title: "Quality Assurance",";
       description: "Comprehensive testing services to ensure your applications perform flawlessly.",";
       features: ["Automated Testing", "Performance Testing", "Security Testing", "User Acceptance Testing"],";
       href: "/services/quality-assurance-testing-chat",";
       color: "teal"}
-;
+
   ];
 
   const getColorClasses = (color: string) => {,;
@@ -65,9 +65,8 @@ import React from "react";
       indigo: "bg-indigo-100 text-indigo-600",;
       pink: "bg-pink-100 text-pink-600",;
       teal: "bg-teal-100 text-teal-600"},;
-    return colorMap[color] || "bg-gray-100 text-gray-600;,
-}
-;
+    return colorMap[color] || "bg-gray-100 text-gray-600}
+
   return (";
     <MainLayout title = "Our Services - Zion Tech Group;
       description="Comprehensive technology services including AI development, web development, mobile apps, cloud solutions, cybersecurity, and more.">;
@@ -80,7 +79,7 @@ className="text-5xl md: text-6xl font-bold mb-6 leading-tight"">;
               initial="{{" opacity: 0, y: 30 }}";
               animate="{{" opacity: 1, y: 0 }}";
               transition="{{" duration: 0.8 }}
-;
+
             >;
               Comprehensive Technology Solutions,;
             </motion.h1>;
@@ -89,18 +88,18 @@ className="text-xl md: text-2xl mb-8 text-gray-200 leading-relaxed"">;
               initial="{{" opacity: 0, y: 30 }}";
               animate="{{" opacity: 1, y: 0 }}";
               transition="{{" duration: 0.8, delay: 0.2 }}
-;
+
             >;
               From innovative Micro SaaS applications to cutting-edge AI services and enterprise IT solutions,;
               we provide the technology foundation your business needs to thrive in the digital age.;
             </motion.p>;
-            ;
+
             <motion.div,";
 className="flex flex-col sm: flex-row gap-4 justify-center mb-12"">;
               initial="{{" opacity: 0, y: 30 }}";
               animate="{{" opacity: 1, y: 0 }}";
               transition="{{" duration: 0.8, delay: 0.4 }}
-;
+
             >";
               <Link href="/contact" className="bg-blue-600 hover: bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 cursor-pointer inline-block text-lg hover:scale-105 hover:shadow-lg">;
                 Get Started Today,;
@@ -111,15 +110,15 @@ className="flex flex-col sm: flex-row gap-4 justify-center mb-12"">;
             </motion.div>;
 ,;
             {/* comment */}
-;
+
             <motion.div,";
 className="grid grid-cols-2 md: grid-cols-4 gap-8"">;
               initial="{{" opacity: 0, y: 30 }}";
               animate="{{" opacity: 1, y: 0 }}";
               transition="{{" duration: 0.8, delay: 0.6 }}
-;
+
             >;
-              {stats.map((stat, index) => {;
+              {stats.map((stat, index) => {
                 const IconComponent = stat.icon;
                 return (;
                   <motion.div,";
@@ -127,7 +126,7 @@ key = "{stat.label}
                     className="text-center group;
                     whileHover="{{" scale: 1.05 }}";
                     transition="{{" duration: 0.2 }}
-;
+
                   >";
                     <div className="flex justify-center mb-2">";
                       <IconComponent className="w-8 h-8 text-blue-400 group-hover: text-purple-400 transition-colors"  />;
@@ -135,10 +134,9 @@ key = "{stat.label}
                     <div className="text-3xl font-bold text-blue-400 group-hover:text-purple-400 transition-colors">{stat.number}</div>";
                     <div className="text-gray-300">{stat.label}</div>;
                   </motion.div>;
-                );,
-}
+                )}
               })}
-;
+
             </motion.div>;
           </div>;
       </section>;
@@ -151,7 +149,7 @@ className="text-center mb-16;
             whileInView="{{" opacity: 1, y: 0 }}";
             transition="{{" duration: 0.8 }}";
             viewport="{{" once: true }}
-;
+
           >";
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Service Categories</h2>";
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
@@ -161,7 +159,7 @@ className="text-center mb-16;
           ";
           <div className="grid md: grid-cols-3 gap-8">,;
             {/* comment */}
-;
+
             <motion.div,";
 className="bg-white p-8 rounded-lg shadow-lg hover: shadow-xl transition-all duration-300 group"">;
               initial="{{" opacity: 0, y: 30 }}";
@@ -169,7 +167,7 @@ className="bg-white p-8 rounded-lg shadow-lg hover: shadow-xl transition-all dur
               transition="{{" duration: 0.8, delay: 0.1 }}";
               viewport="{{" once: true }}";
               whileHover="{{" y: -5 }}
-;
+
             >";
               <div className="text-blue-600 mb-4 group-hover: text-purple-600 transition-colors">";
                 <Zap className="w-12 h-12"  />;
@@ -198,7 +196,7 @@ className="bg-white p-8 rounded-lg shadow-lg hover: shadow-xl transition-all dur
             </motion.div>;
 ,;
             {/* comment */}
-;
+
             <motion.div,";
 className="bg-white p-8 rounded-lg shadow-lg hover: shadow-xl transition-all duration-300 group"">;
               initial="{{" opacity: 0, y: 30 }}";
@@ -206,7 +204,7 @@ className="bg-white p-8 rounded-lg shadow-lg hover: shadow-xl transition-all dur
               transition="{{" duration: 0.8, delay: 0.2 }}";
               viewport="{{" once: true }}";
               whileHover="{{" y: -5 }}
-;
+
             >";
               <div className="text-blue-600 mb-4 group-hover: text-purple-600 transition-colors">";
                 <Shield className="w-12 h-12"  />;
@@ -235,7 +233,7 @@ className="bg-white p-8 rounded-lg shadow-lg hover: shadow-xl transition-all dur
             </motion.div>;
 ,;
             {/* comment */}
-;
+
             <motion.div,";
 className="bg-white p-8 rounded-lg shadow-lg hover: shadow-xl transition-all duration-300 group"">;
               initial="{{" opacity: 0, y: 30 }}";
@@ -243,7 +241,7 @@ className="bg-white p-8 rounded-lg shadow-lg hover: shadow-xl transition-all dur
               transition="{{" duration: 0.8, delay: 0.3 }}";
               viewport="{{" once: true }}";
               whileHover="{{" y: -5 }}
-;
+
             >";
               <div className="text-blue-600 mb-4 group-hover: text-purple-600 transition-colors">";
                 <Globe className="w-12 h-12"  />;
@@ -287,7 +285,7 @@ className="text-center mb-16;
             whileInView="{{" opacity: 1, y: 0 }}";
             transition="{{" duration: 0.8 }}";
             viewport="{{" once: true }}
-;
+
           >";
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Our Services?</h2>";
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
@@ -305,20 +303,20 @@ key="{benefit.title}
                 transition="{{" duration: 0.8, delay: index * 0.1 }}";
                 viewport="{{" once: true }}";
                 whileHover="{{" scale: 1.05 }}
-;
+
               >";
                 <div className="flex justify-center mb-4">";
                   <div className="p-4 bg-blue-100 rounded-full group-hover: bg-purple-100 transition-colors">";
                     <div className="text-blue-600 group-hover:text-purple-600 transition-colors">,;
                       {benefit.icon}
-;
+
                     </div>;
                 </div>";
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{benefit.title}</h3>";
                 <p className="text-gray-600">{benefit.description}</p>;
               </motion.div>;
             ))}
-;
+
           </div>;
       </section>;
       {/* comment */}";
@@ -362,7 +360,7 @@ className="text-center mb-16;
             whileInView="{{" opacity: 1, y: 0 }}";
             transition="{{" duration: 0.8 }}";
             viewport="{{" once: true }}
-;
+
           >";
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Featured Services</h2>";
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
@@ -380,13 +378,13 @@ key="{service.id}
                 transition="{{" duration: 0.8, delay: index * 0.1 }}";
                 viewport="{{" once: true }}";
                 whileHover="{{" y: -5 }}
-;
+
               >";
                 <div className="flex items-center mb-4">";
                   <span className="text-2xl mr-3">{service.icon}</span>";
                   <h3 className="text-xl font-bold text-gray-900 group-hover: text-blue-600 transition-colors">,;
                     {service.name}
-;
+
                   </h3>;
                 </div>";
                 <p className="text-gray-600 mb-4 text-sm">{service.description}</p>";
@@ -394,7 +392,7 @@ key="{service.id}
                   <div className="{"text-lg" font-semibold text-green-600">;
                     From ${service.pricing.starter}/mo";
           <div className=""grid" md:grid-cols-2 lg:grid-cols-3 gap-8"}>;
-            {services.map((service, index) => {;
+            {services.map((service, index) => {
               const IconComponent = service.icon;
               return (";
                 <div key = "{index}" className="{"bg-white" rounded-lg p-8 shadow-lg hover: shadow-xl transition-shadow">",;
@@ -410,10 +408,10 @@ key="{service.id}
                       <li key="{featureIndex}" className="flex items-center text-sm text-gray-600">";
                         <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0"  />;
                         {feature}
-;
+
                       </li>;
                     ))}
-;
+
                   </ul>;
                   ";
                   <Link href="{service.href}
@@ -423,7 +421,7 @@ key="{service.id}
                   </Link>;
                 </div>,;
               )})}
-;
+
           </div>;
       </section>;
       {/* comment */}";
@@ -479,7 +477,7 @@ initial="{{" opacity: 0, y: 30 }}";
             whileInView="{{" opacity: 1, y: 0 }}";
             transition="{{" duration: 0.8 }}";
             viewport="{{" once: true }}
-;
+
           >";
             <h2 className="text-4xl font-bold text-white mb-6">;
               Ready to Transform Your Business?;
@@ -508,7 +506,7 @@ initial="{{" opacity: 0, y: 30 }}";
           </Link>;
         </div>;
       </section>;
-    </MainLayout>,,;
+    </MainLayout>,;
   )}
-;
+
 "export default ServicesIndex))

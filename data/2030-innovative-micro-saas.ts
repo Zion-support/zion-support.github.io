@@ -1,5 +1,5 @@
 import { ServiceVariant  } from "../types/service-variants";
-export interface InnovativeMicroSaas2030 {;
+export interface InnovativeMicroSaas2030 {
   id: string;
   name: string;
   tagline: string;
@@ -26,7 +26,7 @@ export interface InnovativeMicroSaas2030 {;
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -38,7 +38,7 @@ export interface InnovativeMicroSaas2030 {;
   rating: number;
 export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [;
   // AI Business Intelligence 2030;
-  {;
+  {
     id: "ai-business-intelligence-2030",;
     name: "AI Business Intelligence 2030",;
     tagline: "Next-generation AI-powered business insights",;
@@ -76,21 +76,19 @@ export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [;
     marketSize: "Growing market - $200B+ potential",;
     growthRate: "800%+ annual growth potential",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced AI business intelligence platform with real-time analytics, predictive insights, and autonomous decision-making.",;
     launchDate: "2030-01-01",;
     customers: 45,;
     rating: 4.9,;
-    reviews: 28;,;,
-},;
+    reviews: 28},;
   // Quantum-Secure Communication 2030;
-  {;
+  {
     id: "quantum-secure-communication-2030",;
     name: "Quantum-Secure Communication 2030",;
     tagline: "Unbreakable quantum encryption",;
@@ -128,21 +126,19 @@ export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [;
     marketSize: "Growing market - $150B+ potential",;
     growthRate: "1200%+ annual growth potential",;
     variant: "quantum-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced quantum-secure communication platform with unbreakable encryption and secure communication channels.",;
     launchDate: "2030-01-15",;
     customers: 32,;
     rating: 5.0,;
-    reviews: 20;,;,
-},;
+    reviews: 20},;
   // AI Customer Success Automation 2030;
-  {;
+  {
     id: "ai-customer-success-automation-2030",;
     name: "AI Customer Success Automation 2030",;
     tagline: "Fully automated customer success",;
@@ -180,21 +176,19 @@ export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [;
     marketSize: "Growing market - $100B+ potential",;
     growthRate: "600%+ annual growth potential",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced AI customer success automation platform with autonomous customer service and success optimization.",;
     launchDate: "2030-02-01",;
     customers: 78,;
     rating: 4.8,;
-    reviews: 45;,;,
-},;
+    reviews: 45},;
   // Blockchain Supply Chain Transparency 2030;
-  {;
+  {
     id: "blockchain-supply-chain-transparency-2030",;
     name: "Blockchain Supply Chain Transparency 2030",;
     tagline: "End-to-end blockchain traceability",;
@@ -232,21 +226,19 @@ export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [;
     marketSize: "Growing market - $120B+ potential",;
     growthRate: "900%+ annual growth potential",;
     variant: "blockchain-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced blockchain supply chain transparency platform with end-to-end traceability and verification.",;
     launchDate: "2030-02-15",;
     customers: 56,;
     rating: 4.9,;
-    reviews: 34;,;,
-},;
+    reviews: 34},;
   // AI Marketing Automation 2030;
-  {;
+  {
     id: "ai-marketing-automation-2030",;
     name: "AI Marketing Automation 2030",;
     tagline: "Fully autonomous marketing",;
@@ -284,12 +276,11 @@ export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [;
     marketSize: "Growing market - $80B+ potential",;
     growthRate: "700%+ annual growth potential",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced AI marketing automation platform with autonomous marketing campaigns and optimization.",;
     launchDate: "2030-03-01",;

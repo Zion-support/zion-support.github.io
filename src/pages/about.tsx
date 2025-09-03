@@ -1,7 +1,7 @@
 import React from 'react';
 import { SEO } from '../components/SEO';
-;
-const About: React.FC = () => {;
+
+const About: React.FC = () => {
   return(<>;
       <SEO ;
         title="About Us - Zion Tech Group";
@@ -19,7 +19,5 @@ const About: React.FC = () => {;
         </div>;
       </div>;
     </>;
-  );,
-};
-;
+  )}
 export default About;

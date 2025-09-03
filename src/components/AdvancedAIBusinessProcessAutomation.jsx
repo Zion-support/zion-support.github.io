@@ -1,9 +1,9 @@
 import React, { useState, useRef } from 'react';
-export function AdvancedAIBusinessProcessAutomation () {;
+export function AdvancedAIBusinessProcessAutomation () {
 
 import { GitFork, Brain, Settings, X, Maximize2, Minimize2, Search, CheckCircle, BarChart3, TrendingUp, Target, Activity, Users, FileText, AlertTriangle, Lightbulb, DollarSign, PieChart, MoreVertical, Edit3, Server, Play, Loader  } from 'lucide-react';
 ,;
-    {;
+    {
 
         id: 'bp-002',;
         name: 'Employee Onboarding',;
@@ -22,7 +22,7 @@ import { GitFork, Brain, Settings, X, Maximize2, Minimize2, Search, CheckCircle,
         lastExecuted: new Date('2024-01-14T14:15:00Z'),;
         nextExecution: new Date('2024-01-17T09:00:00Z'),;
         executionHistory[;
-            {;
+            {
 
                 id: 'exec-002',;
                 timestamp: new Date('2024-01-14T14:15:00Z'),;
@@ -35,7 +35,7 @@ import { GitFork, Brain, Settings, X, Maximize2, Minimize2, Search, CheckCircle,
 
         ],;
         rules[;
-            {;
+            {
 
                 id: 'rule-002',;
                 name: 'Auto-assign IT tasks',;
@@ -48,9 +48,8 @@ import { GitFork, Brain, Settings, X, Maximize2, Minimize2, Search, CheckCircle,
                 triggerCount: 23;
 
         ],;
-        dependencies['background_check',document_verification'];,
-},;
-    {;
+        dependencies['background_check',document_verification']},;
+    {
 
         id: 'bp-003',;
         name: 'Customer Support Ticket Routing',;
@@ -69,7 +68,7 @@ import { GitFork, Brain, Settings, X, Maximize2, Minimize2, Search, CheckCircle,
         lastExecuted: new Date('2024-01-15T16:45:00Z'),;
         nextExecution: new Date('2024-01-15T17:00:00Z'),;
         executionHistory[;
-            {;
+            {
 
                 id: 'exec-003',;
                 timestamp: new Date('2024-01-15T16:45:00Z'),;
@@ -82,7 +81,7 @@ import { GitFork, Brain, Settings, X, Maximize2, Minimize2, Search, CheckCircle,
 
         ],;
         rules[;
-            {;
+            {
 
                 id: 'rule-003',;
                 name: 'Priority-based routing',";
@@ -95,10 +94,9 @@ import { GitFork, Brain, Settings, X, Maximize2, Minimize2, Search, CheckCircle,
                 triggerCount: 8;
 
         ],;
-        dependencies['ticket_classification',agent_availability'];,
-}
+        dependencies['ticket_classification',agent_availability']}
 ];
-export function AdvancedAIBusinessProcessAutomation() {;
+export function AdvancedAIBusinessProcessAutomation() {
     const [isOpen, setIsOpen] = useState(false);
     const [isMinimized, setIsMinimized] = useState(false);
     const [isFullscreen, setIsFullscreen] = useState(false);
@@ -112,9 +110,9 @@ export function AdvancedAIBusinessProcessAutomation() {;
     const [selectedProcess, setSelectedProcess] = useState(null);
     const [isExecuting, setIsExecuting] = useState(false);
     const containerRef = useRef(null);
-    const getStatusColor = (status) => {;
+    const getStatusColor = (status) => {
 
-        switch(status) {;
+        switch(status) {
 
             case 'active': return 'text-green-500 bg-green-100 dark:bg-green-900/20';
             case 'paused': return 'text-yellow-500 bg-yellow-100 dark:bg-yellow-900/20';
@@ -122,29 +120,29 @@ export function AdvancedAIBusinessProcessAutomation() {;
             case 'failed': return 'text-red-500 bg-red-100 dark:bg-red-900/20';
             case 'draft': return 'text-gray-500 bg-gray-100 dark:bg-gray-900/20';
             default: return 'text-gray-500 bg-gray-100 dark:bg-gray-900/20'}
-    };
-    const getPriorityColor = (priority) => {;
+    }
+    const getPriorityColor = (priority) => {
 
-        switch(priority) {;
+        switch(priority) {
 
             case 'critical': return 'text-red-600 bg-red-100 dark:bg-red-900/20';
             case 'high': return 'text-orange-600 bg-orange-100 dark:bg-orange-900/20';
             case 'medium': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/20';
             case 'low': return 'text-green-600 bg-green-100 dark:bg-green-900/20';
             default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/20'}
-    };
-    const getAutomationLevelColor = (level) => {;
+    }
+    const getAutomationLevelColor = (level) => {
 
-        switch(level) {;
+        switch(level) {
 
             case 'fully-automated': return 'text-green-600 bg-green-100 dark:bg-green-900/20';
             case 'semi-automated': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/20';
             case 'manual': return 'text-red-600 bg-red-100 dark:bg-red-900/20';
             default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/20'}
-    };
-    const getCategoryIcon = (category) => {;
+    }
+    const getCategoryIcon = (category) => {
 
-        switch(category) {;
+        switch(category) {
 '";
             case 'finance': return <DollarSign className="w-4 h-4"/>;'";
             case 'hr': return <Users className="w-4 h-4"/>;'";
@@ -153,11 +151,11 @@ export function AdvancedAIBusinessProcessAutomation() {;
             case 'marketing': return <Target className="w-4 h-4"/>;'";
             case 'it': return <Server className="w-4 h-4"/>;";
             default: return <FileText className="w-4 h-4"/>}
-    };
-    const formatPercentage = (value) => {;
+    }
+    const formatPercentage = (value) => {
 
-        return `${value}%`};
-    const executeProcess = async(processId) => {;
+        return `${value}%`}
+    const executeProcess = async(processId) => {
 
         setIsExecuting(true);
         // Simulate process execution;
@@ -166,13 +164,13 @@ export function AdvancedAIBusinessProcessAutomation() {;
         // Update process status;
         setBusinessProcesses(prev => prev.map(p => p.id === processId';
             ? { ...p, lastExecuted: new Date(), status: 'active' }
-            : p))};
-    const filteredProcesses = businessProcesses.filter(process => {;
+            : p))}
+    const filteredProcesses = businessProcesses.filter(process => {
 
         const matchesSearch = process.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
             process.description.toLowerCase().includes(searchQuery.toLowerCase());
         return matchesCategory && matchesStatus && matchesSearch});
-    if(!isOpen) {;
+    if(!isOpen) {
 ";
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-blue to-zion-purple text-white p-4 rounded-full shadow-2xl hover:shadow-zion-blue/50 transition-all duration-300 z-50 group">";
         <div className="flex items-center gap-3">";
@@ -183,7 +181,7 @@ export function AdvancedAIBusinessProcessAutomation() {;
           NEW;
         </div>;
       </button>) }
-    if(isMinimized) {;
+    if(isMinimized) {
 ";
         return (<div className="fixed bottom-4 right-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50">";
         <div className="flex items-center gap-3 p-3">";
@@ -415,7 +413,7 @@ export function AdvancedAIBusinessProcessAutomation() {;
                     {process.priority}
                   </span>`;
                   <span className={`px-3 py-1 rounded-full text-xs font-medium ${getAutomationLevelColor(process.automationLevel)}`}>;
-                    {process.automationLevel.replace('-',)}
+                    {process.automationLevel.replace('-')}
                   </span>;
                 </div>;
 ";
@@ -431,7 +429,7 @@ export function AdvancedAIBusinessProcessAutomation() {;
                         </div>))}
                     </div>;
                   </div>) }
-;
+
                 {showAutomation && (<div>";
                     <h4 className="font-medium text-sm mb-2 flex items-center gap-2">";
                                              <Settings className="w-4 h-4 text-zion-blue"/>;
@@ -500,8 +498,7 @@ export function AdvancedAIBusinessProcessAutomation() {;
 
                 ...rule,;
                 processName: process.name,;
-                processCategory: process.category";,
-}))).map(rule => (<div key={rule.id} className="flex items-center justify-between p-4 bg-zion-slate-light/10 rounded-lg">";
+                processCategory: process.category"}))).map(rule => (<div key={rule.id} className="flex items-center justify-between p-4 bg-zion-slate-light/10 rounded-lg">";
                     <div className="flex items-center gap-3">";
                       <div className="p-2 bg-zion-blue/10 rounded-lg">;
                         {getCategoryIcon(rule.processCategory)}

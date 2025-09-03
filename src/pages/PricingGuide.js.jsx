@@ -50,22 +50,18 @@ export default function PricingGuide() {}
       'Digital Transformation': <TrendingUp className="w-6 h-6" />,"'";
       'Emerging Tech': <Globe className="w-6 h-6" />,"'";
       'Managed Services': <Lock className="w-6 h-6" />};"";
-    return icons[category] || <Star className="w-6 h-6" />;,
-};
+    return icons[category] || <Star className="w-6 h-6" />}
   const formatPrice = price => {}
     if (price >= 1000) {}
-      return `$${(price / 1000).toFixed(0)}K`;`;,
-}``;
-    return `$${price}`;,
-};
+      return `$${(price / 1000).toFixed(0)}K`;`}``;
+    return `$${price}`}
   const getMarketComparison = (price, category) => {}
     const comparisons = {}
 ';
       'AI Development': { avg: price * 1.3, savings: 23 },Cloud Services': { avg: price * 1.25, savings: 20 },;
       DevOps: { avg: price * 1.35, savings: 26 },';
-      Cybersecurity: { avg: price * 1.4, savings: 29 },Data & Analytics': { avg: price * 1.3, savings: 23 },Digital Transformation': { avg: price * 1.45, savings: 31 },Emerging Tech': { avg: price * 1.5, savings: 33 },Managed Services': { avg: price * 1.2, savings: 17 }};
-    return comparisons[category] || { avg: price * 1.3, savings: 23 };,
-};";
+      Cybersecurity: { avg: price * 1.4, savings: 29 },Data & Analytics': { avg: price * 1.3, savings: 23 },Digital Transformation': { avg: price * 1.45, savings: 31 },Emerging Tech': { avg: price * 1.5, savings: 33 },Managed Services': { avg: price * 1.2, savings: 17 }}
+    return comparisons[category] || { avg: price * 1.3, savings: 23 }};";
   return ("";
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light">";
       <SEO"";
@@ -199,8 +195,7 @@ export default function PricingGuide() {}
 ';
 '';
 ''';
-                  selectedCategory === category.value ? 'default' : 'outline';,
-}
+                  selectedCategory === category.value ? 'default' : 'outline'}
                 onClick={() => setSelectedCategory(category.value)}
                 className={}
 ';
@@ -208,8 +203,7 @@ export default function PricingGuide() {}
 ''';
                   selectedCategory === category.value'''';
                     ? 'bg-zion-purple hover:bg-zion-purple-dark''''';
-                    : '';,
-}
+                    : ''}
               >;
                 {category.label}
               </Button>;
@@ -335,8 +329,7 @@ export default function PricingGuide() {}
                     </div>;
                   </CardContent>;
                 </Card>;
-              );,
-})}
+              )})}
           </div>;
 ";
           {filteredServices.length === 0 && ("";
@@ -469,14 +462,10 @@ export default function PricingGuide() {}
         </div>;
       </div>;
     </div>)}
-;
 
-export { PricingGuide };
-;
-export { PricingGuide };
-;
-export { PricingGuide };
-;
-export { PricingGuide };
-;
-export { PricingGuide };
+
+export { PricingGuide }
+export { PricingGuide }
+export { PricingGuide }
+export { PricingGuide }
+export { PricingGuide }

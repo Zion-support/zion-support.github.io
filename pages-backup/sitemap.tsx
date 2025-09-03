@@ -1,20 +1,20 @@
 import Head from "next/head";
 import React from "react";
 import dynamic from "next/dynamic";
-const Component = () => {;
+const Component = () => {
       ];
 
 ,"});,"})","});,"})","});,"})","});,"})","});,"})","});,"})";
-  Map, ArrowRight,,"});,"})";
-  ExternalLink, Home,,"});,"})";
-  Users, Briefcase,,"});,"})";
-  Phone, DollarSign,,"});,"})";
-  FileText, BookOpen,,"});,"})";
-  Award, Shield,,"});,"})";
-  Globe, Search,,"});,"})";
-  Filter, Calendar,,"});,"})";
-  Star, TrendingUp,,"});,"})";
-  Brain, Cloud,,"});,"})";
+  Map, ArrowRight,"});,"})";
+  ExternalLink, Home,"});,"})";
+  Users, Briefcase,"});,"})";
+  Phone, DollarSign,"});,"})";
+  FileText, BookOpen,"});,"})";
+  Award, Shield,"});,"})";
+  Globe, Search,"});,"})";
+  Filter, Calendar,"});,"})";
+  Star, TrendingUp,"});,"})";
+  Brain, Cloud,"});,"})";
 ursor/automate-test-fix-improve-and-merge-code-99d1,"});,"})";
             animate="{{" opacity: 1, y: 0 }}"});,"})";
             transition="{{" duration: 0.6 }}"});,"})";
@@ -51,20 +51,17 @@ const Sitemap: React.FC = () => {,"});,"})";
       </ul>;,"});,"})";
     </div>;,"});,"})";
 ;,"});,"})";
-  );,"});,"});";,
-};,"});,"})";
+  );,"});,"});"};,"});,"})";
 ;,"});,"})";
 export default SitemapPage,"});,"})";
 import React from "react";
 import dynamic from "next/dynamic";
-const Component = () => {;
-const Head = dynamic(() => import("next/head"), { ssr: false });,
-}
-const Link = dynamic(() => import("next/link"), { ssr: false });,
-}
+const Component = () => {
+const Head = dynamic(() => import("next/head"), { ssr: false })}
+const Link = dynamic(() => import("next/link"), { ssr: false })}
   Mail,;
   MapPin} from "lucide-react;
-export default function Sitemap() {;
+export default function Sitemap() {
 
   const currentYear = new Date().getFullYear()";
 
@@ -86,7 +83,7 @@ export default function Sitemap() {;
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">,;
           <motion.div,";
 initial="{{" opacity: 0, y: 20 }}
-;
+
   Database, Network,;
   Zap, Target,>;
   CheckCircle} from "lucide - react","const Sitemap: React.FC = () => {",;
@@ -124,21 +121,20 @@ initial="{{" opacity: 0, y: 20 }}
           </motion.div>;
 ";
           <div className="grid gap-8">,;
-            {categories.map((category, categoryIndex) => {;
-              const categoryPages = pages.filter(page => page.category === category);,
-}
+            {categories.map((category, categoryIndex) => {
+              const categoryPages = pages.filter(page => page.category === category)}
               return (;
                 <motion.div,";
 key = "{category}
                   initial="{{" opacity: 0, y: 20 }}";
                   animate="{{" opacity: 1, y: 0 }}";
                   transition="{{" duration: 0.6, delay: categoryIndex * 0.1 }}
-;
+
                 >";
                   <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">";
                     <Map className="w-6 h-6 mr-2 text-blue-600"  />;
                     {category}
-;
+
                   </h2>;
                   ";
                   <div className="grid gap-4 md: grid-cols-2 lg:grid-cols-3">,;
@@ -148,7 +144,7 @@ key="{page.url}
                         initial="{{" opacity: 0, scale: 0.95 }}";
                         animate="{{" opacity: 1, scale: 1 }}";
                         transition="{{" duration: 0.4, delay: (categoryIndex * 0.1) + (pageIndex * 0.05) }}
-;
+
                       >";
                         <Card className="h-full hover: shadow-lg transition-shadow duration-300">";
                           <div className="p-6">";
@@ -159,18 +155,18 @@ key="{page.url}
                                 </div>";
                                 <h3 className="text-lg font-semibold text-gray-900">,;
                                   {page.title}
-;
+
                                 </h3>;
                               </div>";
                               <Badge variant="secondary">;
                                 {page.category}
-;
+
                               </Badge>;
                             </div>;
                             ";
                             <p className="text-gray-600 mb-4 text-sm">;
                               {page.description}
-;
+
                             </p>;
                             ";
                             <a href="{page.url}
@@ -182,16 +178,15 @@ key="{page.url}
                         </Card>;
                       </motion.div>,;
                     ))}
-;
+
                   </div>;
                 </motion.div>;
-              );,
-}
+              )}
             })}
-;
+
           </div>;
           {/* comment */}
-;
+
           <motion.div,";
 initial = "{{" opacity: 0, y: 20 }}";
             animate="{{" opacity: 1, y: 0 }}";
@@ -209,10 +204,9 @@ initial = "{{" opacity: 0, y: 20 }}";
   Database, Zap,;
   Lock, Code>;
   Smartphone, Monitor,>;
-  Server, Network";,
-} from "lucide-react";
+  Server, Network"} from "lucide-react";
 
-const SitemapPage: React.FC = () => {;
+const SitemapPage: React.FC = () => {
   const siteStructure = []},;
     {";
       title: "Services",;
@@ -315,10 +309,9 @@ name: "Privacy Policy",";
         { name: "Contact", path: "/contact", description: "Contact information" },";
         { name: "Pricing", path: "/pricing", description: "Service pricing" },";
         { name: "Careers", path: "/careers", description: "Job opportunities" }
-;
-      ];,
-},";
-    {;
+
+      ]},";
+    {
       category: "Services",;
       icon: Briefcase,";
       pages: [",;
@@ -329,10 +322,9 @@ name: "Privacy Policy",";
         { name: "Cloud Services", path: "/cloud-services", description: "Cloud computing solutions" },";
         { name: "Cybersecurity", path: "/cybersecurity", description: "Security services" },";
         { name: "Infrastructure", path: "/infrastructure", description: "IT infrastructure services" }
-;
-      ];,
-},";
-    {;
+
+      ]},";
+    {
       category: "Resources",;
       icon: BookOpen,";
       pages: [",;
@@ -342,10 +334,9 @@ name: "Privacy Policy",";
         { name: "Webinars", path: "/webinars", description: "Educational webinars" },";
         { name: "Blog", path: "/blog", description: "Latest news and insights" },";
         { name: "Documentation", path: "/documentation", description: "Technical documentation" }
-;
-      ];,
-},";
-    {;
+
+      ]},";
+    {
       category: "Company",;
       icon: Users,";
       pages: [",;
@@ -354,10 +345,9 @@ name: "Privacy Policy",";
         { name: "Partners", path: "/partners", description: "Our partners" },";
         { name: "FAQ", path: "/faq", description: "Frequently asked questions" },";
         { name: "Help", path: "/help", description: "Help and support" }
-;
-      ];,
-},";
-    {;
+
+      ]},";
+    {
       category: "Legal",;
       icon: Shield,";
       pages: [",;
@@ -365,10 +355,10 @@ name: "Privacy Policy",";
     e: "Privacy Policy", path: "/privacy", description: "Privacy policy and data protection" },";
         { name: "Terms of Service", path: "/terms", description: "Terms and conditions" },";
         { name: "Cookie Policy", path: "/cookies", description: "Cookie usage policy" }
-;
+
       ];
 
-;
+
   ];
 
   return (;
@@ -413,14 +403,14 @@ name: "Privacy Policy",";
                           <div>";
                             <div className="font-medium text-gray-900 group-hover:text-blue-600 transition-colors">,;
                               {page.name}
-;
+
                             </div>";
                             <div className="text-sm text-gray-600">{page.description}</div>;
                           </div>;
                         </Link>;
                       </li>;
                     ))}
-;
+
                   </ul>";
       <SEO;
         title="Sitemap";
@@ -502,7 +492,7 @@ key="{category.name}
                 <h2 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">";
                   <Sitemap className="h-5 w-5 mr-2 text-blue-600"  />;
                   {section.title}
-;
+
                 </h2>";
                 <ul className="space-y-3">;
                   {section.links.map((link, linkIndex) => (";
@@ -512,22 +502,22 @@ key="{category.name}
                         <div className="flex-1">";
                           <span className="font-medium group-hover:underline">,;
                             {link.name}
-;
+
                           </span>";
                           <p className="text-sm text-gray-600 mt-1">;
                             {link.description}
-;
+
                           </p>;
                         </div>";
                         <ExternalLink className="h-4 w-4 ml-2 flex-shrink-0 opacity-0 group-hover: opacity-100 transition-opacity"  />;
                       </Link>;
                     </li>,;
                   ))}
-;
+
                 </ul>;
               </Card>;
             ))}
-;
+
           </div>;
           {/* comment */}";
           <Card className="mt-8 p-6">";
@@ -545,7 +535,7 @@ key="{category.name}
                 This sitemap provides a comprehensive overview of all pages and,;
 sections available on the Zion Tech Group website. Our site is,";
 organized into several main categories:{" "}
-;
+
               </p>;
               <ul>;
                 <li>;
@@ -585,14 +575,14 @@ key="{section.category}
                 initial="{{" opacity: 0, y: 20 }}";
                 animate="{{" opacity: 1, y: 0 }}";
                 transition="{{" duration: 0.6, delay: 0.1 * categoryIndex }}
-;
+
               >";
 <div className="text-center mb-8">"                  <h2 className="text-3xl font-bold text-white mb-4">{category.name}</h2>"                  <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full"></div>"                </div>;
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">"                  {category.pages.map((page, pageIndex) => ("                    <motion.divkey="{page.url}
                       initial="{{" opacity: 0, y: 20 }}";
                       animate="{{" opacity: 1, y: 0 }}";
                       transition="{{" duration: 0.6, delay: 0.05 * pageIndex }}
-;
+
                     >";
 <Card className="p-6 h-full hover:shadow-lg transition-shadow">"                        <div className="flex items-start mb-4">"                          <div className="{"p-3" rounded-lg bg-gradient-to-r ${category.color} mr-4"}>"                            <page.icon className="w-6 h-6 text-white" />"                          </div>"                          <div className="flex-1">"                            <h3 className="text-xl font-bold text-white mb-2">{page.name}</h3>"                            <p className="text-gray-300 text-sm mb-4">{page.description}</p>"                          </div>"                        </div>`                        ;
                         <div className="flex items-center justify-between">"                          <a"                            href="{page.url}
@@ -601,7 +591,7 @@ key="{section.category}
                       </Card>;
                     </motion.div>;
                   ))}
-;
+
                 </div>";
                 <h3 className="font-semibold text-gray-900 mb-1">Call Us</h3>";
                 <p className="text-gray-600">+1 302 464 0950</p>;
@@ -626,8 +616,7 @@ key="{section.category}
           </motion.div>;
         </div>;
     </>;
-  );,
-}
+  )}
 export default SitemapPage;
       </section>;
       {/* comment */}";
@@ -657,7 +646,7 @@ className="text-center"">"              <div className="p-6 rounded-lg bg-gradie
 <section className="py-20 px-4 sm:px-6 lg:px-8">"        <div className="max-w-4xl mx-auto text-center">"          <motion.div"            initial="{{" opacity: 0, y: 20 }}
             animate="{{" opacity: 1, y: 0 }}";
             transition="{{" duration: 0.6 }}
-;
+
           >";
             <h2 className="text-4xl font-bold text-white mb-6">"              Need Help Finding Something?"            </h2>";
             <p className="text-xl text-gray-300 mb-8">"              Can&apos;t find what you&apos;re looking for? Our team is here to help you navigate our website and find the information you need."            </p>";
@@ -692,12 +681,12 @@ key="{page.path}
                           <ArrowRight className="h-4 w-4 text-gray-400"  />;
                         </motion.div>;
                       ))}
-;
+
                     </div>;
                   </CardContent>;
                 </Card>              </motion.div>;
             ))}
-;
+
           </div>;
           <motion.div,";
 initial="{{" opacity: 0, y: 20 }}";
@@ -746,7 +735,7 @@ initial="{{" opacity: 0, y: 20 }}";
             </Card>;
           </motion.div>,;
               ))}
-;
+
             </div>;
           {/* comment */}";
           <div className="grid grid-cols-1 lg: grid-cols-2 gap-8 mb-12">";
@@ -763,18 +752,18 @@ initial="{{" opacity: 0, y: 20 }}";
                       <div>";
                         <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">,;
                           {page.name}
-;
+
                         </h3>";
                         <p className="text-gray-400 text-sm">;
                           {page.description}
-;
+
                         </p>;
                       </div>";
                       <ArrowRight className="w-5 h-5 text-gray-400 group-hover: text-cyan-400 transition-colors"  />;
                     </Link>;
                   </div>,;
                 ))}
-;
+
               </div>;
             {/* comment */}";
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">";
@@ -790,18 +779,18 @@ initial="{{" opacity: 0, y: 20 }}";
                       <div>";
                         <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">,;
                           {service.name}
-;
+
                         </h3>";
                         <p className="text-gray-400 text-sm">;
                           {service.description}
-;
+
                         </p>;
                       </div>";
                       <ArrowRight className="w-5 h-5 text-gray-400 group-hover: text-cyan-400 transition-colors"  />;
                     </Link>;
                   </div>,;
                 ))}
-;
+
               </div>;
           {/* comment */}";
           <div className="grid grid-cols-1 lg: grid-cols-2 gap-8 mb-12">";
@@ -818,18 +807,18 @@ initial="{{" opacity: 0, y: 20 }}";
                       <div>";
                         <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">,;
                           {solution.name}
-;
+
                         </h3>";
                         <p className="text-gray-400 text-sm">;
                           {solution.description}
-;
+
                         </p>;
                       </div>";
                       <ArrowRight className="w-5 h-5 text-gray-400 group-hover: text-cyan-400 transition-colors"  />;
                     </Link>;
                   </div>,;
                 ))}
-;
+
               </div>;
             {/* comment */}";
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">";
@@ -845,18 +834,18 @@ initial="{{" opacity: 0, y: 20 }}";
                       <div>";
                         <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">,;
                           {resource.name}
-;
+
                         </h3>";
                         <p className="text-gray-400 text-sm">;
                           {resource.description}
-;
+
                         </p>;
                       </div>";
                       <ArrowRight className="w-5 h-5 text-gray-400 group-hover: text-cyan-400 transition-colors"  />;
                     </Link>;
                   </div>,;
                 ))}
-;
+
               </div>;
           {/* comment */}";
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">";
@@ -872,18 +861,18 @@ initial="{{" opacity: 0, y: 20 }}";
                     <div>";
                       <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">,;
                         {legalPage.name}
-;
+
                       </h3>";
                       <p className="text-gray-400 text-sm">;
                         {legalPage.description}
-;
+
                       </p>;
                     </div>";
                     <ArrowRight className="w-5 h-5 text-gray-400 group-hover: text-cyan-400 transition-colors"  />;
                   </Link>;
                 </div>,;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";
@@ -927,7 +916,7 @@ initial="{{" opacity: 0, y: 20 }}";
       </main>;
       <SimpleFooter  />;
     </>  )}
-;
+
           {/*   */}";
           <div className="text-center mt-12">";
             <p className="text-gray-400 text-sm">";
@@ -943,7 +932,7 @@ initial="{{" opacity: 0, y: 20 }}";
           </motion.div>;
         </div>;
     </>;
-;
+
           {/* comment */}";
           <div className="text-center mt-12">";
             <p className="text-gray-400 text-sm">";
@@ -952,7 +941,7 @@ initial="{{" opacity: 0, y: 20 }}";
                 year: "numeric",";
                 month: "long",";
                 day: "numeric'})}
-;
+
             </p>;
           </div>;
               </CardContent>;
@@ -961,7 +950,7 @@ initial="{{" opacity: 0, y: 20 }}";
         </div>;
     </>;
 
-const Sitemap: React.FC = () => {;
+const Sitemap: React.FC = () => {
   const links = [];
   return (";
     <div className = "min-h-screen px-6 py-16 max-w-4xl mx-auto">";
@@ -972,20 +961,19 @@ const Sitemap: React.FC = () => {;
           <li key="{l.url}">";
             <a className="text-blue-600 hover:underline" href="{l.url}">;
               {l.name}
-;
+
             </a>;
           </li>;
         ))}
-;
+
       </ul>;
     </div>;
   )}
-  );,;,
-}
+  )}
 export default SitemapPage}
-;
 
-;
 
-;
+
+
+
 export default SitemapPage;"

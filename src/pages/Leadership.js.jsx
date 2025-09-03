@@ -19,8 +19,7 @@ const Leadership = () => {}
             ],;"";
             linkedin: "https://linkedin.com/in/sarah-chen","";
             email: "sarah.chen@ziontechgroup.com","";
-            location: "San Francisco, CA";,
-},;
+            location: "San Francisco, CA"},;
         {}
 ";
 "";
@@ -39,8 +38,7 @@ const Leadership = () => {}
             ],;"";
             linkedin: "https://linkedin.com/in/michael-rodriguez","";
             email: "michael.rodriguez@ziontechgroup.com","";
-            location: "Austin, TX";,
-},;
+            location: "Austin, TX"},;
         {}
 ";
 "";
@@ -59,8 +57,7 @@ const Leadership = () => {}
             ],;"";
             linkedin: "https://linkedin.com/in/emily-watson","";
             email: "emily.watson@ziontechgroup.com","";
-            location: "Boston, MA";,
-},;
+            location: "Boston, MA"},;
         {}
 ";
 "";
@@ -79,8 +76,7 @@ const Leadership = () => {}
             ],;"";
             linkedin: "https://linkedin.com/in/david-kim","";
             email: "david.kim@ziontechgroup.com","";
-            location: "Washington, DC";,
-},;
+            location: "Washington, DC"},;
         {}
 ";
 "";
@@ -99,8 +95,7 @@ const Leadership = () => {}
             ],;"";
             linkedin: "https://linkedin.com/in/lisa-thompson","";
             email: "lisa.thompson@ziontechgroup.com","";
-            location: "Seattle, WA";,
-},;
+            location: "Seattle, WA"},;
         {}
 ";
 "";
@@ -119,8 +114,7 @@ const Leadership = () => {}
             ],;"";
             linkedin: "https://linkedin.com/in/james-wilson","";
             email: "james.wilson@ziontechgroup.com","";
-            location: "New York, NY";,
-}
+            location: "New York, NY"}
     ];
     const compValues = [];
         {}
@@ -128,29 +122,25 @@ const Leadership = () => {}
 "";
             title: "Innovation First","'";
             description: "We push the boundaries of what's possible, constantly exploring new technologies and approaches.",;
-            icon: Zap;,
-},;
+            icon: Zap},;
         {}
 ";
 "";
             title: "Excellence in Everything","";
             description: "We maintain the highest standards in our work, from code quality to client relationships.",;
-            icon: Award;,
-},;
+            icon: Award},;
         {}
 ";
 "";
             title: "Collaborative Culture","";
             description: "We believe in the power of teamwork and diverse perspectives to solve complex challenges.",;
-            icon: Users;,
-},;
+            icon: Users},;
         {}
 ";
 "";
             title: "Client Success","";
             description: "Our success is measured by the success of our clients and the impact we create together.",;
-            icon: Target;,
-}
+            icon: Target}
     ];
     const vision = {}
 ";
@@ -163,8 +153,7 @@ const Leadership = () => {}
             "Create sustainable technology solutions","";
   "Build the most trusted technology partner network";
         ];
-";,
-};"";
+"};"";
     return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">";
       {/* Hero Section */}"";
       <section className="relative bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 text-white py-20">"";
@@ -331,16 +320,12 @@ const Leadership = () => {}
           </div>;
         </div>;
       </section>;
-    </div>)};
+    </div>)}
 export default Leadership;
-;
 
-export { Leadership };
-;
-export { Leadership };
-;
-export { Leadership };
-;
-export { Leadership };
-;
-export { Leadership };
+
+export { Leadership }
+export { Leadership }
+export { Leadership }
+export { Leadership }
+export { Leadership }

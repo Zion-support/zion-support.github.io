@@ -1,36 +1,32 @@
 
 import React, { useState, useEffect } from 'react';
 
-interface SecurityIssue {;
+interface SecurityIssue {
   id: string;
   severity: 'low' | 'medium' | 'high' | 'critical';
   title: string;
   description: string;
-  status: 'open' | 'resolved';,
-}
-;
-export default function SecurityAudit() {;
+  status: 'open' | 'resolved'}
+
+export default function SecurityAudit() {
   const [issues, setIssues] = useState<SecurityIssue[]>([]);
 
-  useEffect(() => {;
+  useEffect(() => {
     const auditIssues: SecurityIssue[] = [;
-      {;
+      {
         id: '1',;
         severity: 'high',;
         title: 'Missing Content Security Policy',;
         description: 'No CSP headers detected',;
-        status: 'open';,
-},;
-      {;
+        status: 'open'},;
+      {
         id: '2',;
         severity: 'medium',;
         title: 'Weak Password Policy',;
         description: 'Password requirements are not enforced',;
-        status: 'open';,
-}
+        status: 'open'}
     ];
-    setIssues(auditIssues);,
-}, []);
+    setIssues(auditIssues)}, []);
 
   return (;
     <div className="space-y-4">;
@@ -45,5 +41,4 @@ export default function SecurityAudit() {;
         ))}
       </div>;
     </div>;
-  );,
-}
+  )}

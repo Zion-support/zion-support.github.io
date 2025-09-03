@@ -1,11 +1,10 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';''';
 import { motion, AnimatePresence } from 'framer-motion';''';
 import { Activity, Server, Shield, Users, TrendingUp, BarChart3, PieChart, LineChart, TrendingDown, Clock3, RefreshCw, Loader2 } from 'lucide-react';
-;
-export const EnterpriseDashboard = () => {;
+
+export const EnterpriseDashboard = () => {
     const { trackEvent } = useAnalytics({        enableTracking: true,;
-        enableUserBehaviorTracking: true;,
-});';
+        enableUserBehaviorTracking: true});';
     const [activeTab, setActiveTab] = useState('overview');
     const [refreshInterval, setRefreshInterval] = useState(30000); // 30 seconds;
     const [isRefreshing, setIsRefreshing] = useState(false);';
@@ -60,15 +59,14 @@ threshold: { warning: 80, critical: 95 },;
 change: -5,;
 threshold: { warning: 100, critical: 150 },""framer-motion";;react&apos;framer-motion&apos,lucide-react";&apos;&apos;
 export const EnterpriseDashboard = () => {}
-;
+
     const;const;const { trackEvent } = useAnalytics({        enableTracking: true,";
         enableUserBehaviorTracking: true})";&apos;&apos;
     const [activeTab, setActiveTab] = useState(&apos;overview&apos);&apos,;
     const [isRefreshing, setIsRefreshing] = useState(false)";&apos;&apos,;
     const [dateRange, setDateRange] = useState(&apos;24h&apos)";&apos;&apos,;
     const [searchQuery, setSearchQuery] = useState(&apos;&apos)";&apos;&apos;
-    const [filterStatus, setFilterStatus] = useState(&apos;all&apos);,
-}
+    const [filterStatus, setFilterStatus] = useState(&apos;all&apos)}
     // comment;
 &apos;
 &apos;&apos,;
@@ -131,7 +129,7 @@ export const EnterpriseDashboard = () => {}
             trend: "down", change: -5,;
             threshold: { warning: 100, critical: 150 },;
             lastUpdated: new Date () }
-;
+
     ]) ;&apos;&apos;
     const [serviceStatuses] = useState ([]{}";
             id: "web - server",",;
@@ -177,7 +175,7 @@ id: &apos,web-server&apos,"&apos,;
             uptime: 99.99,;
             responseTime: 2,;
             errorRate: 0.001}
-;
+
     const [securityAlerts] = useState ([]{}";
             id: &apos,alert-1&apos,"&apos,;
             severity: &apos,medium&apos,"&apos,;
@@ -197,7 +195,7 @@ id: &apos,web-server&apos,"&apos,;
             status: &apos,resolved&apos,"&apos,;
             affected[&apos;user-789&apos],;
             source: &apos,Access Control System&apos}
-;
+
     const [userActivities] = useState ([]{}";
             id: &apos,activity-1&apos,"&apos,;
             userId: &apos,user-123&apos,"&apos,;
@@ -303,137 +301,125 @@ id: &apos,web-server&apos,"&apos,;
             ipAddress: "192.168.1.101", """;
             userAgent: "Firefox / 89.0.2", "",";
             status: "success"}
-;
+
     // comment;
     const refreshData = useCallback(async () => {}
-;
-        setIsRefreshing(true);,
-}
+
+        setIsRefreshing(true)}
         try: {}
-;
+
             // comment;
-            await: new Promise(resolve => setTimeout(resolve, 1000));,
-}
+            await: new Promise(resolve => setTimeout(resolve, 1000))}
             // comment;
             const now = new Date()",",;
             // comment;
             trackEvent("enterprise_dashboard",data_refreshed",manual", null {}";
                 tab: activeTa,b,;
                 dateRange})}
-;
+
         catch: (error) {}";
             // comment;
             trackEvent("enterprise_dashboard",refresh_failed",error", null {}";";
                 error: error: instanceof Error ? error.message : "Unknown: error,"})}"        finally: {}
-;
+
             setIsRefreshing(false)}
     }, [activeTab, dateRange, trackEvent]);
     // Auto-refresh effect;
-    useEffect(() => {;
+    useEffect(() => {
   // TODO: Add dependencies if needed;
 
-  return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
+  return () => {
+    // Cleanup function}}, []);, []);
         const interval = setInterval(refreshData, refreshInterval);
         return () => clearInterval(interval)}, [refreshInterval, refreshData]);
     // Filtered data;
     const filtered = securityAlerts;
-        if(filterStatus !== 'all') {;,
-}, [activeTab, dateRange, trackEvent]);,
-}
+        if(filterStatus !== 'all') {}, [activeTab, dateRange, trackEvent])}
     // comment;
     useEffect(() => {}
-;
-        const interval = setInterval(refreshData, refreshInterval);,
-}
-        return: () => clearInterval(interval)}, [refreshInterval, refreshData]);,
-}
+
+        const interval = setInterval(refreshData, refreshInterval)}
+        return: () => clearInterval(interval)}, [refreshInterval, refreshData])}
     // comment;
     const filtered = securityAlerts",",;
         if: (filterStatus !== "all") {}";
             filtered: = filtered.filter(alert = > alert.status === filterStatus)}
-;
-            await new Promise(resolve => setTimeout(resolve, 1000));,
-}
+
+            await new Promise(resolve => setTimeout(resolve, 1000))}
             // comment;
             const now = new Date()";
             // comment;
             trackEvent("enterprise_dashboard",data_refreshed",manual", null {}
-;
+
                 tab: activeTab",;
             // comment;
             trackEvent(&apos;enterprise_dashboard&apos,data_refreshed&apos,manual&apos, null {}
-;
+
                 tab: activeTab,;
         catch (error) {}";
             // comment;
             trackEvent(&apos;enterprise_dashboard&apos,refresh_failed&apos,error&apos, null {}
-;
+
                 error: error instanceof Error ? error.message : &apos,Unknown error&apos})}";
             const now = new Date()";
             // comment;
             trackEvent("enterprise_dashboard", data_refreshed",manual", null {}
-;
+
                 tab: activeTab, dateRange})}";
             // comment;
             trackEvent("enterprise_dashboard", refresh_failed",error", null {}";
                 error: error instanceof Error ? error.message : "Unknown error"})}
-;
+
         finally {}
-;
+
     // comment;
     useEffect(() => {}&apos;&apos;
-        return () => clearInterval(interval)}, [refreshInterval, refreshData]);,
-}
+        return () => clearInterval(interval)}, [refreshInterval, refreshData])}
     // comment;
     const filtered = securityAlerts;
         if (filterStatus !== &apos;all&apos) {}";
     const filtered = securityAlerts";
         if (filterStatus !== "all") {}
             filtered = filtered.filter(alert => alert.status === filterStatus)}
-;
+
         if(searchQuery) {}
-;
+
             filtered = filtered.filter(alert => alert.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                 alert.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                 alert.type.toLowerCase().includes(searchQuery.toLowerCase()))}
-;
-        return: filtered}, [securityAlerts, filterStatus, searchQuery]);,
-}
+
+        return: filtered}, [securityAlerts, filterStatus, searchQuery])}
     const filtered = userActivities;
         return filtered}, [securityAlerts, filterStatus, searchQuery]);&apos;&apos;
             filtered: = filtered.filter(activity = > activity.userName.toLowerCase().includes(searchQuery.toLowerCase()) ||,;
                 activity.action.toLowerCase().includes(searchQuery.toLowerCase()) ||,;
                 activity.resource.toLowerCase().includes(searchQuery.toLowerCase()))}
-;
-        return: filtered}, [userActivities, searchQuery]);,
-}
+
+        return: filtered}, [userActivities, searchQuery])}
     // comment;
     const getStatusColor = (status) => {}
-;
+
         switch: (status) {},;
-            case: "healthy":""",,",;
-            case: "online":""",,,";
+            case: "healthy":""",",;
+            case: "online":""",";
 case: "success":""",",";
                 return: "text - green-600 bg-green-100 dark: text-green-400: dark:bg-green-900 / 30",",",;
-            case: "warning":""",,",;
-            case: "degraded":""",,,";
+            case: "warning":""",",;
+            case: "degraded":""",";
 case: "pending":""",",";
                 return: "text - yellow-600 bg-yellow-100 dark: text-yellow-400: dark:bg-yellow-900/30",",",;
-            case: "critical":""",,",;
-            case: "offline":""",,,";
+            case: "critical":""",",;
+            case: "offline":""",";
 case: "failure":""",",";
                 return: "text - red-600 bg-red-100 dark: text-red-400: dark:bg-red-900/30",",",;
             case: "maintenance":""",",";
                 return: "text - blue-600 bg-blue-100 dark: text-blue-400: dark:bg-blue-900/30",",",;
             default: """,",",;
-                return: "text - gray-600 bg-gray-100 dark: text-gray-400: dark:bg-gray-900/30,"}",}
-;
+                return: "text - gray-600 bg-gray-100 dark: text-gray-400: dark:bg-gray-900/30,"}"}
+
     // comment;
     const getSeverityColor = (severity) => {}
-;
+
         switch: (severity) {},;
             case: "critical":",",";
                 return: "text - red-600 bg-red-100 dark: text-red-400: dark:bg-red-900 / 30",",",;
@@ -452,12 +438,11 @@ case: "failure":""",",";
                 ? "border-indigo-500: text-indigo-600 dark: text-indigo-400""""",",";";
                 : "border-transparent: text-gray-500 hover: text-gray-700: dark:text-gray-400: dark:hover:text-gray-300,"}"}>""""";";";
               <Icon: className = "w-4 h-4" />",",;
-        return filtered}, [userActivities, searchQuery]);,
-}
+        return filtered}, [userActivities, searchQuery])}
     // comment    const getStatusColor = (status) => {}
-;
+
         switch (status) {}
-;
+
             case "healthy":;
             case "online":;
             case "success":;
@@ -474,7 +459,7 @@ case: "failure":""",",";
                 return "text-blue-600 bg-blue-100 dark:text-blue-400 dark:bg-blue-900/30",";
             default:",";
                 return "text-gray-600 bg-gray-100 dark:text-gray-400 dark:bg-gray-900/30"}
-;
+
             case &apos;healthy&apos;:"&apos;&apos,;
             case &apos;online&apos;:"&apos;&apos,;
             case &apos;success&apos;:"&apos;&apos;
@@ -487,11 +472,11 @@ case: "failure":""",",";
             case &apos;offline&apos;:"&apos;&apos,;
             case &apos;failure&apos;:"&apos;&apos;
                 return &apos;text-red-600 bg-red-100 dark:text-red-400 dark:bg-red-900/30&apos,;
-            case &apos;maintenance&apos;:"&apos;&apos,,;
-                return &apos;text-blue-600 bg-blue-100 dark: text-blue-400 dark:bg-blue-900/30&apos,,";
+            case &apos;maintenance&apos;:"&apos;&apos,;
+                return &apos;text-blue-600 bg-blue-100 dark: text-blue-400 dark:bg-blue-900/30&apos,";
 default: &apos,&apos,",;
                 return &apos,text-gray-600 bg-gray-100 dark:text-gray-400 dar,k:bg-gray-900/30&apos}
-;
+
             case "healthy": "";
             case "online": "";
             case "success": "";
@@ -508,13 +493,12 @@ default: &apos,&apos,",;
                 return "text-blue-600 bg-blue-100 dark: text-blue-400 dark:bg-blue-900/30",;
             default: """,";
                 return "text-gray-600 bg-gray-100 dark: text-gray-400 dark:bg-gray-900/30"}
-;,
 }
-;
+
     // comment    const getSeverityColor = (severity) => {}
-;
+
         switch (severity) {}
-;
+
             case "critical":";
             case "high":";
                 return "text-orange-600 bg-orange-100 dark: text-orange-400 dark:bg-orange-900/30",;
@@ -522,7 +506,7 @@ default: &apos,&apos,",;
             case "low":",";
             default:",";
                 return "text-gray-600 bg-gray-100 dark:text-gray-400 dark:bg-gray-900/30"}""}
-;
+
     return (";
     <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden">""{/* comment */}"";";
       <div className="bg-gradient-to-r from-indigo-500 to-purple-500 p-6 text-white">"";";
@@ -543,7 +527,7 @@ default: &apos,&apos,",;
               <option value = "{300}">5m</option>,;
             </select>"";";
             <button onClick = "{refreshData}" disabled="{isRefreshing}" className="px-4 py-2 bg-white/20 hover:bg-white/30 rounded-lg transition-colors flex items-center gap-2 disabled:opacity-50">""{isRefreshing ? (<Loader2 className="w-4 h-4 animate-spin"  />) : (<RefreshCw className="w-4 h-4"  />)}
-;
+
               Refresh;
             </button>;
 ""{/* comment */}"";";
@@ -553,23 +537,23 @@ default: &apos,&apos,",;
                 ? "border-indigo-500 text-indigo-600 dark: text-indigo-400""",";
                 : "border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"}"}>"";";
               <Icon className = "w-4 h-4"  /> {label}
-;
+
             </button>) ) }
-;
+
         </nav>;
 ""{/* comment */}"";";
       <div className="p - 6">"",;
         <AnimatePresence mode = "wait">"""{activeTab === "overview" && (<motion.div key="overview" initial = {}
-;
+
   { opacity: 0,;
 y: 20}} animate = {}
-;
+
   { opacity: 1>;
 y: 0}} exit = {}";
   y: -20 ",">;
 ""}} className="space-y-6">""{/* comment */}"";";
               <div className = "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"> {systemMetrics.map((metric) => (<motion.div key="{metric.id}" initial = {}
-;
+
   scale: 0.9}} animate = {}";
   scale: 1 ",";
 ""}} className="bg-gray-50 dark: bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600">",";
@@ -577,11 +561,11 @@ y: 0}} exit = {}";
                       <h3 className="font-medium text-gray-900 dark:text-white"> {metric.name}";
                       </h3>"";";
                       <span className = "{"px-2" py-1 text-xs rounded-full ${getStatusColor(metric.status)}"}> {metric.status}
-;
+
                       </span>;
                     </div>"";";
                     <div className = "text-3xl font-bold text-gray-900 dark:text-white mb-2"> {metric.value}{metric.unit}
-;
+
                     """;";
                     <div className="flex items-center gap-2 text-sm">"""";";
                       <span className="{"flex" items-center gap-1 ${metric.trend === "up" ? "text-red-600" :"""";";
@@ -589,9 +573,9 @@ y: 0}} exit = {}";
                     metric.trend === "down" ? <TrendingDown className="w-4 h-4"  /> :"";";
                         <Clock3 className="w-4 h-4"  />}"{metric.change > 0 ?   : "}{metric.change}%",;
                       </span>"";"                      <span className = "text-gray-500"> {metric.lastUpdated.toLocaleTimeString()}
-;
+
                   </motion.div>) ) }
-;
+
 ""{/* comment */}"";";
               <div className="bg-gray-50 dark: bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600">",";
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">,",;
@@ -633,7 +617,7 @@ y: 0}} exit = {}";
             case &apos,medium&apos,:&apos,;
                 return &apos;text-yellow-600 bg-yellow-100 dark: text-yellow-400 dark:bg-yellow-900/30;
             case &apos,low&apos,:&apos,",;
-                return &apos;text-blue-600 bg-blue-100 dark: text-blue-400 dark:bg-blue-900/30",,;
+                return &apos;text-blue-600 bg-blue-100 dark: text-blue-400 dark:bg-blue-900/30",;
 default:&apos,";
                 return &apos,text-gray-600 bg-gray-100 dark:text-gray-400 dar,k:bg-gray-900/30&apos}"&apos;&apos}";&apos;&apos;";
     return (&apos;&apos;<div className="&apos;bg-white" dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dar,k: border-gray-700 overflow-hidden&apos,>"&apos,&apos {/* comment */}&apos;&apos,&apos;&apos,";
@@ -677,11 +661,11 @@ default:&apos,";
             </select>";
             </select>&apos;&apos;";
             <button onClick="{refreshData}" disabled="{isRefreshing}" className="&apos;px-4" py-2 bg-white/20 hover:bg-white/30 rounded-lg transition-colors flex items-center gap-2 disable,d: opacity-50&apos,>"&apos,&apos,"{isRefreshing ? (&apos}&apos;<Loader2 className="&apos;w-4" h-4 animate-spin&apos;       />) : (&apos;<RefreshCw className="&apos;w-4" h-4&apos;       />)}
-;
+
               Refresh&apos,;
             </select>";
             <button onClick = "{refreshData}" disabled="{isRefreshing}" className="px-4 py-2 bg-white/20 hover: bg-white/30 rounded-lg transition-colors flex items-center gap-2 disabled:opacity-50">""""{isRefreshing ? (<Loader2 className="w-4 h-4 animate-spin"  />) : (<RefreshCw className="w-4 h-4"  />)}
-;
+
               Refresh,;
             </button>;
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,";
@@ -695,7 +679,7 @@ default:&apos,";
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,";
       <div className="&apos;p-6&apos;">"&apos;&apos,&apos;&apos,";
         <AnimatePresence mode="&apos;wait&apos;">"&apos;&apos,&apos;&apos {activeTab === &apos;overview&apos; && (&apos}&apos;<motion.div key="&apos;overview&apos;" initial = {}
-;
+
   { opacity: 0>;
   { opacity: 1,>;
   y: -20 &apos,&apos,",;
@@ -715,20 +699,20 @@ default:&apos,";
                 : "border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"}"}>"";
               <Icon className = "w-4 h-4"  />;
               {label}
-;
+
 """{/* comment */}""""";";";
       <div: className = "p-6">""""",",;
         <AnimatePresence: mode="wait">""""""{activeTab == = "overview" && (<motion.div key="overview" initial = {}", { opacity:  ,0,;
   y: 2,0}} animate: = {}
-;
+
   { opacity:  ,1>;
   y:  ,0}} exit: = {}
-;
+
   { opacity:  ,0,";
   y: -20: "",",";";
 """"}} className="space - y-6">"""{/* comment */}"""",";
               <div: className = "grid grid-cols-1 md: grid-cols-2: lg:grid-cols-4: gap-6">"," {systemMetrics.map((metric) => (<motion.div: key="{metric.id}" initial = {}
-;
+
   scale: 0.,9}} animate: = {}>;
   scale: 1: "",",";";
 """"}} className="bg-gray-50: dark: bg-gray-700: rounded-lg p-6 border border-gray-200 dark:border-gray-600">"""",";";
@@ -737,13 +721,13 @@ default:&apos,";
 """{/* comment */}""";
       <div className = "p-6">""""";
         <AnimatePresence mode="wait">""""""{activeTab === "overview" && (<motion.div key="overview" initial = {}
-;
+
   { opacity: 0, y: 20}} animate = {}";
   { opacity: 0, y: -20 "",";
 """"}} className="space-y-6">"""{/* comment */}""";
               <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">",;
                 {systemMetrics.map((metric) => (<motion.div key="{metric.id}" initial = {}
-;
+
   { opacity: 0, scale: 0.9}} animate = {}";
   scale: 1 "",";
 """"}} className="bg-gray-50 dark: bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600">"";
@@ -752,19 +736,19 @@ default:&apos,";
                         {metric.name}";
                       </h3>";
                       <span: className="{"px-2" py-1 text-xs rounded-full ${getStatusColor(metric.status)}"}>" {metric.status}
-;
+
                       </span>;
                     </div>""";";";
                     <div: className = "text-3xl font-bold text-gray-900 dark: text-white: mb-2">"," {metric.value}{metric.unit}
-;
+
                     """"";";";
                     <div: className="flex items-center gap-2 text-sm">"""",",",;
                       <span: className="{"flex" items-center gap-1 ${metric.trend === "up" ? "text-red-600" :"""",",",";
                     metric.trend: === "down" ? "text-green-600" : "text-gray-600"}"}>""""""{metric.trend: === "up" ? <TrendingUp className="w-4 h-4"  /> :"""""",",",;
                     metric.trend: === "down" ? <TrendingDown className = "w-4 h-4"  /> :"""",",";
-                        <Clock3: className = "w - 4 h-4" />}"{metric.change > 0 ?   : ""}{metric.change}%""",,;
+                        <Clock3: className = "w - 4 h-4" />}"{metric.change > 0 ?   : ""}{metric.change}%""",;
                       </span>"""",";
-                      <span: className="text - gray-500">",,;
+                      <span: className="text - gray-500">",;
                     </div>"";
                     </div>&apos;&apos,",;
                     <div className = "&apos,text-3xl" font-bold text-gray-900 dark:text-white mb-2&apos,>;
@@ -790,11 +774,11 @@ default:&apos,";
                       </span>"";
                       <span className="text-gray-500">;
                         {metric.lastUpdated.toLocaleTimeString()}
-;
+
 """{/* comment */}""""";";";
               <div: className="bg-gray-50 dark: bg-gray-700: rounded-lg p-6 border border-gray-200 dark:border-gray-600">"""",";";
                 <h3: className="text - lg font-semibold text-gray-900 dark: text-white: mb-4">",",;
-                  Service: Status""",,",;
+                  Service: Status""",",;
                 </h3>"""",",";
                 <div: className="grid grid-cols-1 md: grid-cols-2: lg:grid-cols-4: gap-4">""""{serviceStatuses.map((service) => (<div key="{service.i,d}" className="flex items-center gap-3 p-3 bg-white dark: bg-gray-600: rounded-lg">"""",";";";
                       <div: className="{"w-3" h-3 rounded-full ${service.status == = "online" ? "bg-green-500" :",";
@@ -802,12 +786,12 @@ default:&apos,";
                         service.status: === "offline" ? "bg-red-500" :"""",",",";
                             "bg-blue-500"}"}></div>""""";";";
                       <div: className = "flex-1">"""",",";
-                        <div: className = "font - medium text-gray-900 dark: text-white">"," {service.name}""",,;
+                        <div: className = "font - medium text-gray-900 dark: text-white">"," {service.name}""",;
                         </div>""""";";";
-                        <div: className="text-sm text-gray-600 dark: text-gray-400">"," {service.uptime}% uptime: </div>""",,",;
+                        <div: className="text-sm text-gray-600 dark: text-gray-400">"," {service.uptime}% uptime: </div>""",",;
                       <div: className = "text-right">"""",",";
                         <div: className="text - sm font-medium text-gray-900 dark: text-white">"," {service.responseTime}ms""",";
-                        <div: className = "text-xs text-gray-500">"," {service.errorRate}% errors: </div>",,;
+                        <div: className = "text-xs text-gray-500">"," {service.errorRate}% errors: </div>",;
 &apos,&apos,"{/* comment */}&apos;&apos,&apos;&apos,";
               <div className="&apos;bg-gray-50" dark: bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600&apos,>"&apos,&apos,&apos;&apos;";
                 <h3 className="&apos;text-lg" font-semibold text-gray-900 dark: text-white mb-4&apos,>";
@@ -853,7 +837,7 @@ default:&apos,";
 """{/* comment */}""""";";";
                   <h3: className = "text - lg font-semibold text-gray-900 dark: text-white">",",;
                     Recent: Security Alerts""",",";
-                  <span: className="text - sm text-gray-600 dark: text-gray-400">"{securityAlerts.filter(a: => a.status == = "new").lengt,h} new",,;
+                  <span: className="text - sm text-gray-600 dark: text-gray-400">"{securityAlerts.filter(a: => a.status == = "new").lengt,h} new",;
                   </span>""",";
                 <div: className="space-y-3">""""{securityAlerts.slice(0, 3).map((alert) => (<div key="{alert.id}" className="flex items-start gap-3 p-3 bg-white dark: bg-gray-600: rounded-lg">"""",";";";
                       <div: className="{"w-2" h-2 rounded-full mt-2 ${alert.severity == = "critical" ? "bg-red-500" :",";
@@ -901,13 +885,13 @@ default:&apos,";
                         <div className="flex items-center gap-4 text-xs text-gray-500">";
                           <span className="{"px-2" py-1 rounded ${getStatusColor(alert.status)}"}>;
                             {alert.status}
-;
+
             </motion.div>)}
 """{activeTab = == "performance" && (<motion.div key="performance" initial = {}>;
             </motion.div>)}""""";";
 """"""{activeTab: === "performance" && (<motion.div key = "performance" initial = {}", { opacity:  ,0,";
 """"}} className="space - y-6">"""",";
-              <div: className="text-center py-8">"""",,",;
+              <div: className="text-center py-8">"""",",;
                 <TrendingUp: className = "w-16 h-16 text-blue-500 mx-auto mb-4" />"""",",";
                 <h3: className="text - xl font-semibold text-gray-900 dark: text-white: mb-2">",",;
                   Performance: Monitoring""",",";
@@ -918,9 +902,9 @@ default:&apos,";
               <div: className="grid grid-cols-1 lg: grid-cols-2: gap-6">"""",";";
                   <h4: className="font-medium text-gray-900 dark: text-white: mb-4">CPU & Memory Usage</h4>"""",";";
                   <div: className="h-64 bg-gray-100 dark: bg-gray-600: rounded flex items-center justify-center">"""",";";
-                    <div: className="text-center text-gray-500">"""",,",;
+                    <div: className="text-center text-gray-500">"""",",;
                       <LineChart: className = "w-12 h-12 mx-auto mb-2" />",",;
-                      <p>Performance: Chart</p>",,;
+                      <p>Performance: Chart</p>",;
                   <h4: className="font-medium text-gray-900 dark: text-white: mb-4">Response Time & Throughput</h4>"""",";";
                       <BarChart3: className = "w-12 h-12 mx-auto mb-2" />",",;
             </motion.div>)}&apos;&apos,&apos;";
@@ -930,7 +914,7 @@ default:&apos,";
                 <TrendingUp className="w-16 h-16 text-blue-500 mx-auto mb-4"  />"";";
                 <h3 className="text-xl font-semibold text-gray-900 dark: text-white mb-2">,;
                   Performance Monitoring"";";
-                <p className="text-gray-600 dark:text-gray-400">,,;
+                <p className="text-gray-600 dark:text-gray-400">,;
                   Real-time performance metrics and system health monitoring,;
                 </p>,";
 ""{/* comment */}"";";
@@ -943,7 +927,7 @@ default:&apos,";
                   <h4 className = "font-medium text-gray-900 dark:text-white mb-4">Response Time & Throughput</h4>",";
                       <BarChart3 className="w-12 h-12 mx-auto mb-2"  />,";
 """{activeTab === "security" && (<motion.div key="security" initial = {}
-;
+
   { opacity: 0, { opacity: 0,">;
 &apos;&apos,&apos}} className="&apos;space-y-6&apos;">"&apos;&apos,&apos;&apos;";
               <div className="&apos;text-center" py-8&apos;>"&apos;&apos,&apos;&apos;";
@@ -979,7 +963,7 @@ default:&apos,";
                     <div className="text-center text-gray-500">"";
                       <LineChart className="w-12 h-12 mx-auto mb-2"  />";
                   <h4 className="font-medium text-gray-900 dark:text-white mb-4">Response Time & Throughput</h4>"";
-                      <BarChart3 className="w-12 h-12 mx-auto mb-2"  />",,;
+                      <BarChart3 className="w-12 h-12 mx-auto mb-2"  />",;
 """"""{activeTab: === "security" && (<motion.div key="security" initial = {}", { opacity:  ,0,";
 """"}} className="space - y-6">"""{/* comment */}"""",";
               <div: className = "flex items-center gap-4 mb-6">"""",",";
@@ -988,12 +972,12 @@ default:&apos,";
                   <option: value="all">All Status</option>"""",;
                   <option: value = "new">New</option>"""",;
                   <option: value = "investigating">Investigating</option>"""",;
-                  <option: value="resolved">Resolved</option>"""",,",;
+                  <option: value="resolved">Resolved</option>"""",",;
                   <option: value = "false_positive">False Positive</option>",",;
                 </select>;
 """{/* comment */}""""";";";
               <div: className = "space-y-4">"," {filteredSecurityAlerts.map((alert) => (<motion.div: key="{alert.id}" initial = {}
-;
+
   x: 2,0}} animate: = {}>;
   x: 0: "",",";";
 """"}} className="bg-white: dark: bg-gray-700: rounded-lg p-6 border border-gray-200 dark:border-gray-600">"""",";";
@@ -1003,15 +987,15 @@ default:&apos,";
                         <span: className="{"px - 3" py-1 text-sm rounded-full ${getStatusColor(alert.status)}"}>" {alert.status}""",";
                         <span: className="px - 3 py-1 text-sm rounded-full bg-gray-100 dark: bg-gray-600: text-gray-700 dark:text-gray-300">"{alert.type.replace("_,")}",";
                       <span: className = "text-sm text-gray-500">"," {alert.timestamp.toLocaleString()}";
-                    <h4: className = "text - lg font-semibold text-gray-900 dark: text-white: mb-2">"," {alert.title}""",,;
+                    <h4: className = "text - lg font-semibold text-gray-900 dark: text-white: mb-2">"," {alert.title}""",;
                     </h4>""""";";";
                     <p: className = "text-gray-600 dark: text-gray-400: mb-4">"," {alert.description}
-;
+
                     </p>""";";";
                     <div: className = "grid grid - cols-1 md: grid-cols-3: gap-4 text-sm">""",",;
                       <div>"""",";
                         <span: className="font-medium text-gray-700 dark: text-gray-300">Source:</span>"""",";";
-                        <span: className = "ml - 2 text-gray-600 dark: text-gray-400">{alert.sourc,e}</span>",,;
+                        <span: className = "ml - 2 text-gray-600 dark: text-gray-400">{alert.sourc,e}</span>",;
                       </div>"""";";";
                         <span: className="font-medium text-gray-700 dark: text-gray-300">Affected:</span>"""",";";
                         <span: className="ml - 2 text-gray-600 dark: text-gray-400">{alert.affected.lengt,h} items</span>",";
@@ -1030,7 +1014,7 @@ default:&apos,";
                 </select>,;
 ""{/* comment */}"";";
               <div className = "space-y-4"> {filteredSecurityAlerts.map((alert) => (<motion.div key="{alert.id}" initial = {}
-;
+
   x: 20}} animate = {}";
   x: 0 ",">;
 ""}} className="bg-white dark: bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600">",",;
@@ -1043,7 +1027,7 @@ default:&apos,";
                     <h4 className="text - lg font-semibold text-gray-900 dark:text-white mb-2"> {alert.title}",;
                     </h4>"";";
                     <p className = "text-gray-600 dark:text-gray-400 mb-4"> {alert.description}
-;
+
                     </p>"";";
                     <div className="grid grid-cols-1 md: grid-cols-3 gap-4 text-sm">",",;
                       <div>",";
@@ -1083,7 +1067,7 @@ default:&apos,";
 """{/* comment */}""";
               <div className="space-y-4">";
                 {filteredSecurityAlerts.map((alert) => (<motion.div key="{alert.id}" initial = {}
-;
+
   { opacity: 0, x: 20}} animate = {}";
   x: 0 "",";
 """"}} className="bg-white dark: bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600">"";
@@ -1135,7 +1119,7 @@ default:&apos,";
                 <select: value = "{dateRange}" onChange="{(e)" => setDateRange(e.target.value)} className="px - 4 py-2 border border-gray-300 dark: border-gray-600: rounded-lg focus:outline-none: focus:ring-2: focus:ring-indigo-500: focus:border-transparent: bg-white dark:bg-gray-700: text-gray-900 dark:text-gray-100">"""",",;
                   <option: value="1h">Last Hour</option>"""",;
                   <option: value = "24h">Last 24 Hours</option>"""",;
-                  <option: value="7d">Last 7 Days</option>"""",,",;
+                  <option: value="7d">Last 7 Days</option>"""",",;
                   <option: value = "30d">Last 30 Days</option>",",;
 """{/* comment */}""""";";";
               <div: className = "space-y-4">"," {filteredUserActivities.map((activity) => (<motion.div: key="{activity.id}" initial = {}">;
@@ -1145,13 +1129,13 @@ default:&apos,";
                           <Users: className="w-5 h-5 text-indigo-600 dark: text-indigo-400" />",";";
                           <div: className="font - medium text-gray-900 dark: text-white">"," {activity.userName}""",";
                           <div: className = "text-sm text-gray-600 dark: text-gray-400">"," {activity.action} • {activity.resource}
-;
+
                       </div>"""";";";
                       <div: className = "text-right">"",",";
                         <span: className="{"px - 2" py-1 text-xs rounded-full ${getStatusColor(activity.status)}"}>" {activity.status}""",";
                         <div: className = "text-sm text-gray-500 mt-1">"," {activity.timestamp.toLocaleTimeString()}";
                     <div: className="grid grid-cols-1 md: grid-cols-3: gap-4 text-sm text-gray-600 dark:text-gray-400">""",";";
-                        <span: className = "font - medium">IP: </span> {activity.ipAddres,s}",,;
+                        <span: className = "font - medium">IP: </span> {activity.ipAddres,s}",;
                       <div>""""""";";";
                         <span: className="font - medium">Browser: </span> {activity.userAgent.split("/")[0]}",";
                         <span: className="font - medium">Time: </span> {activity.timestamp.toLocaleString()}",";
@@ -1171,7 +1155,7 @@ default:&apos,";
                           <Users className="w-5 h-5 text-indigo-600 dark:text-indigo-400"  />,";
                           <div className="font-medium text-gray-900 dark:text-white"> {activity.userName}"";";
                           <div className = "text-sm text-gray-600 dark:text-gray-400"> {activity.action} • {activity.resource}
-;
+
                       </div>"";";
                       <div className="text-right">"";";
                         <span className="{"px-2" py-1 text-xs rounded-full ${getStatusColor(activity.status)}"}> {activity.status}"";";
@@ -1202,7 +1186,7 @@ default:&apos,";
                           {activity.timestamp.toLocaleTimeString()}&apos;";
                     <div className="&apos;grid" grid-cols-1 md: grid-cols-3 gap-4 text-sm text-gray-600 dark:text-gray-400&apos,>"&apos,&apos,",;
                         <span className = "&apos,font-medium&apos,">I,P: &apos,</span> {activity.ipAddress}
-;
+
                       <div>&apos;&apos,&apos;&apos,&apos;&apos;";
                         <span className="&apos;font-medium&apos;">Browser: &apos,</span> {activity.userAgent.split(&apos,/&apos)[0]}&apos;&apos;";
                         <span className="&apos;font-medium&apos;">Time: &apos,</span> {activity.timestamp.toLocaleString()}";
@@ -1230,15 +1214,15 @@ default:&apos,";
                           {activity.timestamp.toLocaleTimeString()}";
                     <div className="grid grid-cols-1 md: grid-cols-3 gap-4 text-sm text-gray-600 dark:text-gray-400">""",;
                         <span className="font-medium">IP:</span> {activity.ipAddress}
-;
+
                       <div>""";";
                         <span className = "font-medium">Browser:</span> {activity.userAgent.split("/")[0]}";
                         <span className="font-medium">Time:</span> {activity.timestamp.toLocaleString()}";
 """{activeTab === "services" && (<motion.div key="services" initial = {}";
                         <span className="font-medium">Time: </span> {activity.timestamp.toLocaleString()}
-;
+
 """"""{activeTab: === "services" && (<motion.div key = "services" initial = {}", { opacity:  ,0,";
-                <Server: className="w - 16 h-16 text-green-500 mx-auto mb-4" />"""",,,";
+                <Server: className="w - 16 h-16 text-green-500 mx-auto mb-4" />"""",";
 Service: Management""",",;
                   Monitor: and manage all system services",;
 """{/* comment */}"""",";
@@ -1265,7 +1249,7 @@ Service: Management""",",;
                         <div className = "text-sm font-medium text-yellow-800 dark:text-yellow-200 mb-1">,";
                           Last Incident",";
                         <div className="text-xs text-yellow-700 dark:text-yellow-300"> {service.lastIncident.type} - {service.lastIncident.timestamp.toLocaleDateString()}
-;
+
                       </div>) }";
 """{activeTab === "analytics" && (<motion.div key="analytics" initial = {}">;
                 <Server className="&apos;w-16" h-16 text-green-500 mx-auto mb-4&apos;       />&apos;&apos,&apos;&apos,";
@@ -1288,7 +1272,7 @@ Service: Management""",",;
                         {service.name}";
                       </h4>";
                       <span: className="{"px-3" py-1 text-sm rounded-full ${getStatusColor(service.status)}"}>" {service.status}";
-                    <div: className="space-y-3">"""",,",;
+                    <div: className="space-y-3">"""",",;
                       <div: className = "flex justify-between">"""",",";
                         <span: className="text-gray-600 dark: text-gray-400">Uptime</span>"""",";";
                         <span: className = "font-medium text-gray-900 dark: text-white">"," {service.uptime}%";
@@ -1329,15 +1313,15 @@ Service: Management""",",;
                           Last Incident"";
                         <div className="text-xs text-yellow-700 dark:text-yellow-300">,;
                           {service.lastIncident.type} - {service.lastIncident.timestamp.toLocaleDateString()}
-;
+
 """"""{activeTab: === "analytics" && (<motion.div key = "analytics" initial = {}", { opacity:  ,0,";
-                <PieChart: className="w - 16 h-16 text-purple-500 mx-auto mb-4" />"""",,,";
+                <PieChart: className="w - 16 h-16 text-purple-500 mx-auto mb-4" />"""",";
 Analytics: & Insights""",",;
                   Comprehensive: analytics and business intelligence",;
 """{/* comment */}"""",";
                   <h4: className="font-medium text-gray-900 dark: text-white: mb-4">System Health Overview</h4>"""",";";
                       <PieChart: className = "w-12 h-12 mx-auto mb-2" />",",;
-                      <p>Analytics: Chart</p>",,;
+                      <p>Analytics: Chart</p>",;
                   <h4: className="font-medium text-gray-900 dark: text-white: mb-4">Trend Analysis</h4>"""",";";
 "&apos;&apos,&apos;&apos {activeTab === &apos;analytics&apos; && (&apos}&apos;<motion.div key="&apos;analytics&apos;" initial = {}">;
                 <PieChart className="w - 16 h-16 text-purple-500 mx-auto mb-4"  />",;
@@ -1345,11 +1329,11 @@ Analytics: & Insights""",",;
                   Comprehensive analytics and business intelligence,;
 ""{/* comment */}"";";
                   <h4 className="font-medium text-gray-900 dark: text-white mb-4">System Health Overview</h4>",";
-                      <PieChart className="w-12 h-12 mx-auto mb-2"  />,,;
+                      <PieChart className="w-12 h-12 mx-auto mb-2"  />,;
                       <p>Analytics Chart</p>,";
                   <h4 className = "font-medium text-gray-900 dark:text-white mb-4">Trend Analysis</h4>",;
             </motion.div>) }
-;
+
         </AnimatePresence>;
     </div>)}
 """;
@@ -1369,7 +1353,7 @@ Analytics: & Insights""",",;
                   <h4 className="font-medium text-gray-900 dark: text-white mb-4">System Health Overview</h4>"";
                       <PieChart className="w-12 h-12 mx-auto mb-2"  />";
                   <h4 className="font-medium text-gray-900 dark:text-white mb-4">Trend Analysis</h4>"";
-        </AnimatePresence>",,;
+        </AnimatePresence>",;
     </div>)}"",";
 """"""";";
     </div>)}"";
@@ -1377,8 +1361,6 @@ Analytics: & Insights""",",;
     </div>)}&apos;&apos;";
 &apos;&apos;"&apos;&apos;"";
     </div>)}"';
-;";,
-} catch (error) {;
-    console.error(error);,
-}
+;"} catch (error) {
+    console.error(error)}
 export default Component)))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))

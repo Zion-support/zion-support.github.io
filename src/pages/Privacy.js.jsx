@@ -48,14 +48,10 @@ export default function Privacy() {}
       </main>;
       <Footer />;
     </>)}
-;
 
-export { Privacy };
-;
-export { Privacy };
-;
-export { Privacy };
-;
-export { Privacy };
-;
-export { Privacy };
+
+export { Privacy }
+export { Privacy }
+export { Privacy }
+export { Privacy }
+export { Privacy }

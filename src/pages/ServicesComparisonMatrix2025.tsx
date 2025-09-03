@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
-const ServicesComparisonMatrix2025 = () => {;
+const ServicesComparisonMatrix2025 = () => {
   return (;
     <>;
       <Head>;
@@ -45,6 +45,5 @@ const ServicesComparisonMatrix2025 = () => {;
               </Link>;
             </div>;
     </>;
-  );,
-}
+  )}
 export default ServicesComparisonMatrix2025;

@@ -1,12 +1,12 @@
 import React, { useState, useMemo } from 'react';
 export default AdvancedServicePortfolioDashboard;
 import { Badge } from './ui / badge';
-export default function Page() {;
+export default function Page() {
  from './ui/badge';";
 import { Input } from './ui/input';
-export default function Page() {;
+export default function Page() {
 ,;
-        {;
+        {
 
             id: 'nanotechnology',;
             title: 'Advanced Nanotechnology Platform',;
@@ -20,9 +20,8 @@ export default function Page() {;
             growth: 34.2,;
             complexity: 'Advanced',;
             marketDemand: 'High',;
-            technologyMaturity: 'Growing';,
-},;
-        {;
+            technologyMaturity: 'Growing'},;
+        {
 
             id: 'brain-computer-interface',;
             title: 'Advanced Brain-Computer Interface',;
@@ -39,12 +38,12 @@ export default function Page() {;
             technologyMaturity: 'Leading';
 
     ];
-    const filteredPortfolio = useMemo(() => {;
-        return portfolioData.filter(service => {;
+    const filteredPortfolio = useMemo(() => {
+        return portfolioData.filter(service => {
 
             const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase());
             return matchesCategory && matchesStatus && matchesComplexity && matchesSearch})}, [selectedCategory, selectedStatus, selectedComplexity, searchTerm]);
-    const portfolioMetrics = useMemo(() => {;
+    const portfolioMetrics = useMemo(() => {
 
         const activeServices = portfolioData.filter(s => s.status === 'Active');
         const totalClients = portfolioData.reduce((sum, s) => sum + s.clientCount, 0);
@@ -54,55 +53,54 @@ export default function Page() {;
         const portfolioGrowth = portfolioData.length > 0;
             ? portfolioData.reduce((sum, s) => sum + s.growth, 0) / portfolioData.length;
             : 0;
-        return {;
+        return {
 
             totalServices: portfolioData.length,;
             totalRevenue,;
             activeClients: totalClients,;
             averagePerformance: Math.round(avgPerformance) ,;
             portfolioGrowth: Math.round(portfolioGrowth) ,;
-            marketCoverage: Math.round((portfolioData.length / 50) * 100) // Assuming 50 total possible services;,
-}}, [portfolioData]) ;
-    const getStatusColor = (status) => {;
+            marketCoverage: Math.round((portfolioData.length / 50) * 100) // Assuming 50 total possible services}}, [portfolioData]) ;
+    const getStatusColor = (status) => {
 
-        switch(status) {;
+        switch(status) {
 
             case 'Active': return 'bg-green-100 text-green-800';
             case 'Development': return 'bg-blue-100 text-blue-800';
             case 'Planning': return 'bg-yellow-100 text-yellow-800';
             case 'Discontinued': return 'bg-red-100 text-red-800';
             default: return 'bg-gray-100 text-gray-800'}
-    };
-    const getComplexityColor = (complexity) => {;
+    }
+    const getComplexityColor = (complexity) => {
 
-        switch(complexity) {;
+        switch(complexity) {
 
             case 'Basic': return 'bg-green-100 text-green-800';
             case 'Intermediate': return 'bg-blue-100 text-blue-800';
             case 'Advanced': return 'bg-orange-100 text-orange-800';
             case 'Enterprise': return 'bg-purple-100 text-purple-800';
             default: return 'bg-gray-100 text-gray-800'}
-    };
-    const getMarketDemandColor = (demand) => {;
+    }
+    const getMarketDemandColor = (demand) => {
 
-        switch(demand) {;
+        switch(demand) {
 
             case 'Low': return 'bg-gray-100 text-gray-800';
             case 'Medium': return 'bg-blue-100 text-blue-800';
             case 'High': return 'bg-orange-100 text-orange-800';
             case 'Exploding': return 'bg-red-100 text-red-800';
             default: return 'bg-gray-100 text-gray-800'}
-    };
-    const getTechnologyMaturityColor = (maturity) => {;
+    }
+    const getTechnologyMaturityColor = (maturity) => {
 
-        switch(maturity) {;
+        switch(maturity) {
 
             case 'Emerging': return 'bg-blue-100 text-blue-800';
             case 'Growing': return 'bg-green-100 text-green-800';
             case 'Mature': return 'bg-orange-100 text-orange-800';
             case 'Leading': return 'bg-purple-100 text-purple-800';
             default: return 'bg-gray-100 text-gray-800'}
-    };
+    }
     const categories = [';
         { id: 'all', name: 'All Categories', count: portfolioData.length },;
         { id: 'ai', name: 'AI & Machine Learning', count: portfolioData.filter(s => s.category === 'ai').length },;
@@ -113,17 +111,15 @@ export default function Page() {;
     ];";
     return (<div className="max-w-7xl mx-auto p-6">;
       {/* Header */}
-      <motion.div initial = {;
+      <motion.div initial = {
 
   { opacity: 0,;
-  y: 20;,
-}} animate = {;
+  y: 20}} animate = {
 
   { opacity: 1,;
   y: 0;
 
-";,
-}} className="mb-8">";
+"}} className="mb-8">";
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">;
           <div>";
             <h1 className="text-3xl font-bold text-zion-blue-dark mb-2">;
@@ -146,17 +142,15 @@ export default function Page() {;
       </motion.div>;
 
       {/* Portfolio Metrics */}
-      <motion.div initial = {;
+      <motion.div initial = {
 
   { opacity: 0,;
-  y: 20;,
-}} animate = {;
+  y: 20}} animate = {
 
   { opacity: 1,;
   y: 0;
 
-";,
-}} transition={{ delay: 0.1 }} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">";
+"}} transition={{ delay: 0.1 }} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">";
         <Card className="hover:shadow-lg transition-shadow">";
           <CardHeader className="pb-3">";
             <div className="flex items-center justify-between">";
@@ -255,17 +249,15 @@ export default function Page() {;
       </motion.div>;
 
       {/* Filters and Controls */}
-      <motion.div initial = {;
+      <motion.div initial = {
 
   { opacity: 0,;
-  y: 20;,
-}} animate = {;
+  y: 20}} animate = {
 
   { opacity: 1,;
   y: 0;
 
-";,
-}} transition={{ delay: 0.2 }} className="bg-white rounded-lg shadow-lg p-6 mb-8">";
+"}} transition={{ delay: 0.2 }} className="bg-white rounded-lg shadow-lg p-6 mb-8">";
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">;
           <div>";
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Category</label>";
@@ -304,7 +296,7 @@ export default function Page() {;
           </div>;
 ";
           <div className="flex items-end">";
-            <Button variant="outline" className="w-full" onClick={() => {;
+            <Button variant="outline" className="w-full" onClick={() => {
 
             setSelectedCategory('all');
             setSelectedStatus('all');
@@ -318,17 +310,15 @@ export default function Page() {;
       </motion.div>;
 
       {/* Portfolio Table */}
-      <motion.div initial = {;
+      <motion.div initial = {
 
   { opacity: 0,;
-  y: 20;,
-}} animate = {;
+  y: 20}} animate = {
 
   { opacity: 1,;
   y: 0;
 
-";,
-}} transition={{ delay: 0.3 }} className="mb-8">;
+"}} transition={{ delay: 0.3 }} className="mb-8">;
         <Card>;
           <CardHeader>";
             <div className="flex items-center justify-between">";
@@ -358,17 +348,15 @@ export default function Page() {;
                   </tr>;
                 </thead>;
                 <tbody>;
-                  {filteredPortfolio.map((service, index) => (<motion.tr key={service.id} initial = {;
+                  {filteredPortfolio.map((service, index) => (<motion.tr key={service.id} initial = {
 
   { opacity: 0,;
-  x: -20;,
-}} animate = {;
+  x: -20}} animate = {
 
   { opacity: 1,;
   x: 0;
 
-";,
-}} transition={{ delay: 0.1 * index }} className="border-b border-zion-slate-light/10 hover:bg-zion-blue-light/5">";
+"}} transition={{ delay: 0.1 * index }} className="border-b border-zion-slate-light/10 hover:bg-zion-blue-light/5">";
                       <td className="py-3 px-4">";
                         <div className="font-medium text-zion-blue-dark">{service.title}</div>";
                         <div className="text-sm text-zion-slate-light">{service.price}</div>;
@@ -419,17 +407,15 @@ export default function Page() {;
       </motion.div>;
 
       {/* Portfolio Insights */}
-      <motion.div initial = {;
+      <motion.div initial = {
 
   { opacity: 0,;
-  y: 20;,
-}} animate = {;
+  y: 20}} animate = {
 
   { opacity: 1,;
   y: 0;
 
-";,
-}} transition={{ delay: 0.4 }} className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">;
+"}} transition={{ delay: 0.4 }} className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">;
         {/* Category Distribution */}
         <Card>;
           <CardHeader>";
@@ -440,17 +426,15 @@ export default function Page() {;
           </CardHeader>;
           <CardContent>";
             <div className="space-y-3">;
-              {categories.filter(cat => cat.id !== 'all').map((category, index) => (<motion.div key={category.id} initial = {;
+              {categories.filter(cat => cat.id !== 'all').map((category, index) => (<motion.div key={category.id} initial = {
 
   { opacity: 0,;
-  x: -20;,
-}} animate = {;
+  x: -20}} animate = {
 
   { opacity: 1,;
   x: 0;
 
-";,
-}} transition={{ delay: 0.1 * index }} className="flex items-center justify-between">";
+"}} transition={{ delay: 0.1 * index }} className="flex items-center justify-between">";
                   <div className="flex items-center gap-3">'`;
                     <div className={`w-4 h-4 rounded-full ${index === 0 ? 'bg-blue-500' :';
                 index === 1 ? 'bg-purple-500' :';
@@ -519,49 +503,40 @@ export default function Page() {;
       </motion.div>;
 
       {/* CTA Section */}
-      <motion.div initial = {;
+      <motion.div initial = {
 
   { opacity: 0,;
-  y: 20;,
-}} animate = {;
+  y: 20}} animate = {
 
   { opacity: 1,;
   y: 0;
 
-";,
-}} transition={{ delay: 0.5 }} className="text-center">";
+"}} transition={{ delay: 0.5 }} className="text-center">";
         <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">";
           <h3 className="text-3xl font-bold mb-4">Ready to Expand Your Portfolio?</h3>";
           <p className="text-xl mb-6 max-w-2xl mx-auto">;
             Our comprehensive service portfolio offers cutting-edge solutions across all major technology sectors.Contact us to discuss how we can help you achieve your business goals.</p>";
           <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-            <Button className="bg-white text-zion-purple hover:bg-zion-slate-light" onClick = {;
+            <Button className="bg-white text-zion-purple hover:bg-zion-slate-light" onClick = {
 
-  () => window.open('mailto:kleber@ziontechgroup.com?subject=Portfolio Expansion Consultation',_blank');,
-}>";
+  () => window.open('mailto:kleber@ziontechgroup.com?subject=Portfolio Expansion Consultation',_blank')}>";
               <Users className="w-5 h-5 mr-2"/>;
               Get Portfolio Consultation;
             </Button>";
-            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick = {;
+            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick = {
 
-  () => window.open('tel:+13024640950',_blank');,
-}>";
+  () => window.open('tel:+13024640950',_blank')}>";
               <Zap className="w-5 h-5 mr-2"/>;
               Call Now;
             </Button>;
           </div>;
         </div>;
       </motion.div>;
-    </div>)};
-export default AdvancedServicePortfolioDashboard;,
-}}}}}}
-;
-export { AdvancedServicePortfolioDashboard };
-;
-export { AdvancedServicePortfolioDashboard };
-;
-export { AdvancedServicePortfolioDashboard };
-;
-export { AdvancedServicePortfolioDashboard };
-;
-export { AdvancedServicePortfolioDashboard };
+    </div>)}
+export default AdvancedServicePortfolioDashboard}}}}}}
+
+export { AdvancedServicePortfolioDashboard }
+export { AdvancedServicePortfolioDashboard }
+export { AdvancedServicePortfolioDashboard }
+export { AdvancedServicePortfolioDashboard }
+export { AdvancedServicePortfolioDashboard }

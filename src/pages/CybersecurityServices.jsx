@@ -14,36 +14,31 @@ export default function CybersecurityServices() {}
 "";
             title: "Network Security","";
             description: "Firewall configuration, intrusion detection, and network monitoring","";
-            icon: <Network className="h-8 w-8 text-zion-cyan"/>;,
-},;
+            icon: <Network className="h-8 w-8 text-zion-cyan"/>},;
         {}
 ";
 "";
             title: "Endpoint Protection","";
             description: "Advanced antivirus, malware protection, and device security","";
-            icon: <Smartphone className="h-8 w-8 text-zion-purple"/>;,
-},;
+            icon: <Smartphone className="h-8 w-8 text-zion-purple"/>},;
         {}
 ";
 "";
             title: "Cloud Security","";
             description: "AWS, Azure, and Google Cloud security assessment and hardening","";
-            icon: <Cloud className="h-8 w-8 text-zion-blue"/>;,
-},;
+            icon: <Cloud className="h-8 w-8 text-zion-blue"/>},;
         {}
 ";
 "";
             title: "Data Protection","";
             description: "Encryption, backup security, and data loss prevention","";
-            icon: <Database className="h-8 w-8 text-zion-cyan"/>;,
-},;
+            icon: <Database className="h-8 w-8 text-zion-cyan"/>},;
         {}
 ";
 "";
             title: "Server Security","";
             description: "Server hardening, access control, and monitoring","";
-            icon: <Server className="h-8 w-8 text-zion-purple"/>;,
-},;
+            icon: <Server className="h-8 w-8 text-zion-purple"/>},;
         {}
 ";
 "";
@@ -67,8 +62,7 @@ export default function CybersecurityServices() {}
                 "Email support","";
                 "Security training";
             ],;
-            popular: false;,
-},;
+            popular: false},;
         {}
 ";
 "";
@@ -84,8 +78,7 @@ export default function CybersecurityServices() {}
                 "Advanced training","";
                 "Compliance assistance";
             ],;
-            popular: true;,
-},;
+            popular: true},;
         {}
 ";
 "";
@@ -110,16 +103,14 @@ export default function CybersecurityServices() {}
             name: "Michael Chen","";
             role: "CISO, FinTech Solutions","'";
             content: "Zion's cybersecurity team helped us achieve SOC 2 compliance in record time. Their expertise is unmatched.",;
-            rating: 5;,
-},;
+            rating: 5},;
         {}
 ";
 "";
             name: "Dr. Sarah Williams","";
             role: "IT Director, HealthCare Plus","'";
             content: "The penetration testing revealed critical vulnerabilities we didn't know existed. Their thorough approach saved us.",;
-            rating: 5;,
-},;
+            rating: 5},;
         {}
 ";
 "";
@@ -324,14 +315,10 @@ export default function CybersecurityServices() {}
         </div>;
       </section>;
     </div>)}
-;
 
-export { CybersecurityServices };
-;
-export { CybersecurityServices };
-;
-export { CybersecurityServices };
-;
-export { CybersecurityServices };
-;
-export { CybersecurityServices };
+
+export { CybersecurityServices }
+export { CybersecurityServices }
+export { CybersecurityServices }
+export { CybersecurityServices }
+export { CybersecurityServices }

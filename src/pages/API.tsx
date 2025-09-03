@@ -1,7 +1,6 @@
 import React from "react";
 import { SEO } from "@/components/SEO";
-;,"});,"});,
-}
+;,"});,"})}
 export default function API() {return (";
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">";
       <SEO title="API - Zion Tech Group" description="Professional API services by Zion Tech Group"  />";
@@ -11,6 +10,5 @@ export default function API() {return (";
           Professional API services to help your business grow.;
         </p>;
       </div>;
-  );,
-}
+  )}
 }

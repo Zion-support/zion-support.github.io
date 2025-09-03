@@ -9,8 +9,7 @@ export default function AIBusinessSolutions() {}
             title: 'Increased Efficiency',''';
             description: 'Automate repetitive tasks and optimize workflows',''';
             metric: '40%',''';
-            detail: 'Average efficiency improvement';,
-},;
+            detail: 'Average efficiency improvement'},;
         {}
 ';
 '';
@@ -18,8 +17,7 @@ export default function AIBusinessSolutions() {}
             title: 'Cost Reduction',''';
             description: 'Reduce operational costs through intelligent automation',''';
             metric: '30%',''';
-            detail: 'Average cost savings';,
-},;
+            detail: 'Average cost savings'},;
         {}
 ';
 '';
@@ -27,8 +25,7 @@ export default function AIBusinessSolutions() {}
             title: 'Better Decision Making',''';
             description: 'Data-driven insights for strategic decisions',''';
             metric: '60%',''';
-            detail: 'Faster decision making';,
-},;
+            detail: 'Faster decision making'},;
         {}
 ';
 '';
@@ -45,43 +42,37 @@ export default function AIBusinessSolutions() {}
 '';
 ''';
             name: 'Healthcare',''';
-            applications['Patient diagnosis',Drug discovery',Medical imaging',Predictive healthcare'];,
-},;
+            applications['Patient diagnosis',Drug discovery',Medical imaging',Predictive healthcare']},;
         {}
 ';
 '';
 ''';
             name: 'Manufacturing',''';
-            applications['Predictive maintenance',Quality control',Supply chain optimization',Production planning'];,
-},;
+            applications['Predictive maintenance',Quality control',Supply chain optimization',Production planning']},;
         {}
 ';
 '';
 ''';
             name: 'Retail',''';
-            applications['Inventory management',Customer segmentation',Price optimization',Demand forecasting'];,
-},;
+            applications['Inventory management',Customer segmentation',Price optimization',Demand forecasting']},;
         {}
 ';
 '';
 ''';
             name: 'Financial Services',''';
-            applications['Risk assessment',Fraud detection',Portfolio management',Customer service'];,
-},;
+            applications['Risk assessment',Fraud detection',Portfolio management',Customer service']},;
         {}
 ';
 '';
 ''';
             name: 'Transportation',''';
-            applications['Route optimization',Fleet management',Predictive maintenance',Demand forecasting'];,
-},;
+            applications['Route optimization',Fleet management',Predictive maintenance',Demand forecasting']},;
         {}
 ';
 '';
 ''';
             name: 'Energy',''';
-            applications['Grid optimization',Predictive maintenance',Energy trading',Sustainability analysis'];,
-}
+            applications['Grid optimization',Predictive maintenance',Energy trading',Sustainability analysis']}
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">"";
       <div className="max-w-7xl mx-auto px-4 py-16">";
@@ -213,14 +204,10 @@ export default function AIBusinessSolutions() {}
         </div>;
       </div>;
     </div>)}
-;
 
-export { AIBusinessSolutions };
-;
-export { AIBusinessSolutions };
-;
-export { AIBusinessSolutions };
-;
-export { AIBusinessSolutions };
-;
-export { AIBusinessSolutions };
+
+export { AIBusinessSolutions }
+export { AIBusinessSolutions }
+export { AIBusinessSolutions }
+export { AIBusinessSolutions }
+export { AIBusinessSolutions }

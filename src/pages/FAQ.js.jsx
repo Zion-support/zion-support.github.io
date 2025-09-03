@@ -159,14 +159,10 @@ export default function FAQ() {}
       </main>;
       <Footer />;
     </>)}
-;
 
-export { FAQ };
-;
-export { FAQ };
-;
-export { FAQ };
-;
-export { FAQ };
-;
-export { FAQ };
+
+export { FAQ }
+export { FAQ }
+export { FAQ }
+export { FAQ }
+export { FAQ }

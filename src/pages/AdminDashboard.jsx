@@ -8,14 +8,10 @@ export default function AdminDashboard() {}
         <p>Select a section from the sidebar.</p>;
       </div>;
     </AdminLayout>)}
-;
 
-export { AdminDashboard };
-;
-export { AdminDashboard };
-;
-export { AdminDashboard };
-;
-export { AdminDashboard };
-;
-export { AdminDashboard };
+
+export { AdminDashboard }
+export { AdminDashboard }
+export { AdminDashboard }
+export { AdminDashboard }
+export { AdminDashboard }

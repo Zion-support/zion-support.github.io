@@ -1,4 +1,4 @@
-export interface EmergingTechInnovationService {;
+export interface EmergingTechInnovationService {
   id: string;
   name: string;
   tagline: string;
@@ -14,7 +14,7 @@ export interface EmergingTechInnovationService {;
   integrations: string[];
   compliance: string[];
   website: string;
-  contact: {;
+  contact: {
     phone: string;
     email: string;
     address: string}
@@ -39,16 +39,16 @@ export interface EmergingTechInnovationService {;
   technology?: string[];
   growthRate?: string;
   variant?: string;
-  contactInfo?: {;
+  contactInfo?: {
     mobile: string;
     email: string;
     address: string;
     website: string}
   realImplementation?: boolean;
   implementationDetails?: string}
-;
+
 export const emergingTechInnovations2025: EmergingTechInnovationService[] = [;
-  {;
+  {
     id: "ai-quantum-fusion-2025",;
     name: "AI-Quantum Fusion Platform",;
     tagline: "Revolutionary AI-Quantum Computing Integration",;
@@ -89,11 +89,10 @@ export const emergingTechInnovations2025: EmergingTechInnovationService[] = [;
     ],;
     compliance: ["ISO 27001", "SOC 2 Type II", "GDPR", "HIPAA"],;
     website: "https://ziontechgroup.com/ai-quantum-fusion",;
-    contact: {;
+    contact: {
       phone: "+1-800-ZION-TECH",;
       email: "ai-quantum@ziontechgroup.com",;
-      address: "Zion Tech Group, Innovation District, Tech City",;,;,
-},;
+      address: "Zion Tech Group, Innovation District, Tech City"},;
     trialDays: 30,;
     setupTime: "2-4 weeks",;
     competitors: ["IBM Quantum", "Google Quantum AI", "Microsoft Quantum"],;
@@ -120,6 +119,5 @@ export const emergingTechInnovations2025: EmergingTechInnovationService[] = [;
     marketPosition: "Market Leader",;
     technology: ["AI", "Quantum Computing", "Machine Learning"],;
     growthRate: "45% YoY",;
-    variant: "premium",;,;,
-},;
+    variant: "premium"},;
 ]

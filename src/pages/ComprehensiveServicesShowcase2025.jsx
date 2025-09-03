@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Sparkles, ArrowRight, CheckCircle, Phone, Mail, MapPin, TrendingUp, Play, Download, ExternalLink, Search } from 'lucide-react';
 import { CUTTING_EDGE_SERVICES_2025 } from "../data/enhanced-2025-cutting-edge-services.jsx";
 import { SPECIALIZED_INDUSTRY_SOLUTIONS_2025 } from "../data/specialized-industry-solutions-2025.jsx";
-const ComprehensiveServicesShowcase2025 = () => {;
+const ComprehensiveServicesShowcase2025 = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedIndustry, setSelectedIndustry] = useState('all');
@@ -11,32 +11,29 @@ const ComprehensiveServicesShowcase2025 = () => {;
     const categories = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];
     const industries = ['all', ...Array.from(new Set(SPECIALIZED_INDUSTRY_SOLUTIONS_2025.map(service => service.industry)))];
     // Filter services based on selection;
-    const filteredServices = allServices.filter(service => {;
+    const filteredServices = allServices.filter(service => {
         const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
             service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
         return matchesCategory && matchesIndustry && matchesSearch});
-    const containerVariants = {;
+    const containerVariants = {
         hidden: { opacity: 0 },;
-        visible: {;
+        visible: {
             opacity: 1,;
-            transition: {;
-                staggerChildren: 0.1;,
-}
+            transition: {
+                staggerChildren: 0.1}
         }
-    };
-    const itemVariants = {;
+    }
+    const itemVariants = {
   hidden: { y: 20,;
-  opacity: 0 ;,
-},;
-        visible: {;
+  opacity: 0 },;
+        visible: {
             y: 0,;
             opacity: 1,;
-            transition: {;
-                duration: 0.5;,
-}
+            transition: {
+                duration: 0.5}
         }
-    };
+    }
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">;
       {/* Hero Section */}
       <div className="relative overflow-hidden">;
@@ -335,8 +332,7 @@ const ComprehensiveServicesShowcase2025 = () => {;
 ';
                 setSearchTerm('');';
                 setSelectedCategory('all');';
-                setSelectedIndustry('all');";,
-}}"";
+                setSelectedIndustry('all');"}}"";
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">;
               View All Services;
             </button>;
@@ -369,16 +365,12 @@ const ComprehensiveServicesShowcase2025 = () => {;
           </div>;
         </div>;
       </div>;
-    </div>)};
+    </div>)}
 export default ComprehensiveServicesShowcase2025;
-;
 
-export { ComprehensiveServicesShowcase2025 };
-;
-export { ComprehensiveServicesShowcase2025 };
-;
-export { ComprehensiveServicesShowcase2025 };
-;
-export { ComprehensiveServicesShowcase2025 };
-;
-export { ComprehensiveServicesShowcase2025 };
+
+export { ComprehensiveServicesShowcase2025 }
+export { ComprehensiveServicesShowcase2025 }
+export { ComprehensiveServicesShowcase2025 }
+export { ComprehensiveServicesShowcase2025 }
+export { ComprehensiveServicesShowcase2025 }

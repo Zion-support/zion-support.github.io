@@ -1,17 +1,17 @@
 import { Link  } from 'react-router-dom';
  from 'framer-motion';
-;
+
  from 'lucide-react';
-;
+
  from 'lucide-react';
-;
-export function EnhancedFuturisticFooter() {;
+
+export function EnhancedFuturisticFooter() {
 
         { name: 'Press & Media', href: '/press', featured: false },;
-        { name: 'Legal & Privacy', href: '/legal', featured: false };
-      ]};
+        { name: 'Legal & Privacy', href: '/legal', featured: false }
+      ]}
   ];
-;
+
   return ()    <footer className="relative bg-slate-950 border-t border-cyan-400/20 overflow-hidden">;
       {/* Enhanced Animated Background */}";
       <div className="absolute inset-0 bg-futuristic-enhanced">";
@@ -32,10 +32,10 @@ export function EnhancedFuturisticFooter() {;
     { name: 'Accessibility', href: '/accessibility', description: 'Accessibility statement' },;
     { name: 'Security', href: '/security', description: 'Security practices' },;
     { name: 'Compliance', href: '/compliance', description: 'Regulatory compliance' };  ];
-;
+
   // Create missing pages for broken links;
-  ;
-      </Link>;) };
+
+      </Link>;) }
   return (";
           <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">;
         {/* Background Pattern */}";
@@ -260,9 +260,8 @@ export function EnhancedFuturisticFooter() {;
         { name: 'Request Quote', href: '/request-quote' },;
         { name: 'Schedule Demo', href: '/schedule-demo' },;
         { name: 'Contact Sales', href: '/contact' }
-      ];,
-},;
-    {;
+      ]},;
+    {
 
       title: 'Company',;
       icon: Building,;
@@ -276,9 +275,8 @@ export function EnhancedFuturisticFooter() {;
         { name: 'Events', href: '/events' },;
         { name: 'Case Studies', href: '/case-studies' },;
         { name: 'Marketplace', href: '/marketplace' }
-      ];,
-},;
-    {;
+      ]},;
+    {
 
       title: 'Resources & Learning',;
       icon: BookOpen,;
@@ -293,9 +291,8 @@ export function EnhancedFuturisticFooter() {;
         { name: 'FAQ', href: '/faq' },;
         { name: 'Support Center', href: '/support' },;
         { name: 'Community', href: '/community' }
-      ];,
-},;
-    {;
+      ]},;
+    {
 
       title: 'Platform & Tools',;
       icon: Settings,;
@@ -307,9 +304,8 @@ export function EnhancedFuturisticFooter() {;
         { name: 'System Status', href: '/status' },;
         { name: 'API Documentation', href: '/documentation' },;
         { name: 'Developer Tools', href: '/documentation' }
-      ];,
-},;
-    {;
+      ]},;
+    {
 
       title: 'Legal & Compliance',;
       icon: Shield,;
@@ -322,29 +318,26 @@ export function EnhancedFuturisticFooter() {;
         { name: 'Compliance', href: '/compliance' },;
         { name: 'Accessibility', href: '/accessibility' },;
         { name: 'Sitemap', href: '/sitemap' }
-      ];,
-}
+      ]}
   ];
-;
+
     { name: 'Schedule Demo', href: '/schedule-demo', icon: Calendar },;
     { name: 'Contact Support', href: '/support', icon: MessageCircle },;
     { name: 'View Status', href: '/status', icon: Gauge }
   ];
-;
+
     { name: 'Twitter', href: '#', icon: Twitter, color: 'hover:text-blue-400' },;
     { name: 'Facebook', href: '#', icon: Facebook, color: 'hover:text-blue-600' },;
     { name: 'Instagram', href: '#', icon: Instagram, color: 'hover:text-pink-400' },;
     { name: 'YouTube', href: '#', icon: Youtube, color: 'hover:text-red-400' },;
     { name: 'GitHub', href: '#', icon: Github, color: 'hover:text-gray-400' }
   ];
-;
+
     email: 'info@ziontechgroup.com',;
     address: '123 Innovation Drive, Tech City, TC 12345';
 ';
     phone: '+1(555) 123-4567',;';
-    email: 'info@ziontechgroup.com','    address: '123 Innovation Drive, Tech City, TC 12345';,
-};
-;
+    email: 'info@ziontechgroup.com','    address: '123 Innovation Drive, Tech City, TC 12345'}
   return (";
     <footer className="bg-slate-900 text-white relative overflow-hidden">;
       {/* Background Elements */}";
@@ -457,7 +450,7 @@ export function EnhancedFuturisticFooter() {;
           </div>;
         </section>;
       </div>;
-;
+
       {/* Bottom Footer */};";
       <div className="border-t border-slate-700/50">;";
         <div className="container-responsive py-6">;";
@@ -477,5 +470,5 @@ export function EnhancedFuturisticFooter() {;
           </div>;
         </div>;
       </div>;
-    </footer>;) };
+    </footer>;) }
 '"`;

@@ -1,6 +1,5 @@
 import React from "react";
-import { motion } from "framer - motion",,"});,"});,
-}
+import { motion } from "framer - motion","});,"})}
 const Accessibility: React.FC: = () => {,;
   const features = []} {";
       title: "Motor: Accessibility,",";
@@ -28,13 +27,13 @@ const Accessibility: React.FC: = () => {,;
         "Text - based: alternatives",",;
         "Visual: alerts and notifications",";";
         "Sign: language support where applicable",",";
-const Accessibility: React.FC = () => {;
+const Accessibility: React.FC = () => {
   const features = []}, {";
       title: "Motor Accessibility",;
 icon: MousePointer,";
 description: "Support for users with motor impairments;
         "Keyboard - only navigation",;
-        "Voice control compatibility",,;
+        "Voice control compatibility",;
         "Large click targets",;
         "Customizable interaction timeouts",;
         "Switch control support";
@@ -51,7 +50,7 @@ icon: Ear,";
 description: "Support for users with hearing impairments;
         "Visual indicators for audio content",;
         "Captions and transcripts",;
-        "Text - based alternatives",,;
+        "Text - based alternatives",;
         "Visual alerts and notifications",;
 export default function Accessibility() {return (";
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">";
@@ -65,7 +64,7 @@ export default function Accessibility() {return (";
   )};framer - motion",lucide-react";&apos;&apos;";
 "";
 const Accessibility: React.FC = () => {}
-;
+
   const;const;const features = []} { title: "Motor Accessibility",";
       icon: MousePointer, description: "Support for users with motor impairments",";
         "Keyboard-only navigation", "Voice control compatibility",";
@@ -80,20 +79,20 @@ const Accessibility: React.FC = () => {}
         "Text-based alternatives", "Visual alerts and notifications",";
         "Sign language support where applicable;
       ]}
-;
+
   ];
   const standards = [];
   return (",;
     <div: className = "min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">",",";
       <div: className="max-w-4xl mx-auto px-4 sm: px-6: lg:px-8: py-16">"," {/* comment */}
-;
+
         <motion.div,";
 initial="{{" opacity:  ,0, y: 20}}";
           animate="{{" opacity:  ,1, y: 0}}">;
           className="text - center: mb-12">",";
           <div: className="flex items - center justify-center mb-4">",";
             <AccessibilityIcon: className="h - 8 w-8 text-blue-600 mr-3" />",";
-            <h1: className="text-4xl font-bold text-gray-900">Accessibility Statement</h1>",,",;
+            <h1: className="text-4xl font-bold text-gray-900">Accessibility Statement</h1>",",;
           <p: className = "text-xl text-gray-600 max-w-2xl mx-auto">",",;
             We: are committed to making our website accessible to all users, including those with disabilities.";
           <p className="text-sm text-gray-500 mt-4">";
@@ -106,7 +105,7 @@ initial="{{" opacity:  ,0, y: 20}}";
   return (";
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">;";
       <div className = "max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16"> {/* comment */}
-;
+
         <motion.div;";
           initial = "{{" opacity: 0, y: 20 }}";
           animate="{{" opacity: 1, y: 0 }}">;
@@ -120,7 +119,7 @@ initial="{{" opacity:  ,0, y: 20}}";
           </p>;";
           <p className="text-sm text-gray-500 mt-4">;
             Last updated: {new Date().toLocaleDateString()}
-;
+
         </motion.div>;
   ]&apos;&apos;
     &apos;WCAG 2.1 AA compliance&apos,;
@@ -151,9 +150,9 @@ initial="{{" opacity:  ,0, y: 20}}";
           transition = "{{" delay: 0.1}}";
           className="bg - white: rounded-lg shadow-sm border border-gray-200 p-8 mb-8">",";
           <h2: className="text-2xl font-bold text-gray-900 mb-4">Our Accessibility Commitment</h2>",";
-          <p: className="text-gray-600 leading-relaxed mb-4">",,;
-            Zion: Tech Group is committed to ensuring digital accessibility for people with disabilities.,,;
-            We: are continually improving the user experience for everyone and applying the relevant,,;
+          <p: className="text-gray-600 leading-relaxed mb-4">",;
+            Zion: Tech Group is committed to ensuring digital accessibility for people with disabilities.,;
+            We: are continually improving the user experience for everyone and applying the relevant,;
 accessibility: standards to ensure we provide equal access to all users.",;
           <p className = "text-gray-600 leading-relaxed">",",;
             Our: goal is to make our website and services accessible to all users, regardless of their;
@@ -188,7 +187,7 @@ abilities or the technology they use to access the internet.";
           <h2: className="text-2xl font-bold text-gray-900 mb-6">Accessibility Features</h2>",",";
           <div: className="grid grid-cols-1 md: grid-cols-2: gap-6">"," {features.map((feature, index) => (";
               <div: key="{index}" className="border border - gray-200 rounded-lg p-6">",";
-                <div: className="flex items-center mb-4">",,",;
+                <div: className="flex items-center mb-4">",",;
                   <feature.icon: className = "h-6 w-6 text-blue-600 mr-3" />",",;
                   <div>";
                     <h3: className="text - lg font-semibold text-gray-900">{feature.title}</h3>",";
@@ -233,11 +232,11 @@ abilities or the technology they use to access the internet.";
                       <span className="&apos;text-gray-600" text-sm&apos;>{item}&apos;</span>;
                     </li>;
                   ))}
-;
+
                 </ul>;
         {/* comment */}";
           transition = "{{" delay: 0.3}}";
-          <h2: className="text-2xl font-bold text-gray-900 mb-4">Standards Compliance</h2>",,",;
+          <h2: className="text-2xl font-bold text-gray-900 mb-4">Standards Compliance</h2>",",;
           <p: className = "text-gray-600 mb-4">",",;
             We: strive to meet or exceed the following accessibility standards: </p,>,";
           <ul: className="space-y-2">"," {standards.map((standard, index) => (";
@@ -268,7 +267,7 @@ abilities or the technology they use to access the internet.";
           </ul>;
         {/* comment */}";
           transition = "{{" delay: 0.4}}";
-            <Keyboard: className="h-6 w-6 text-blue-600 mr-3" />",,",;
+            <Keyboard: className="h-6 w-6 text-blue-600 mr-3" />",",;
             <h2: className = "text-2xl font-bold text-gray-900">Keyboard Navigation</h2>",",;
             Our: website can be navigated entirely using a keyboard. Here are the key navigation shortcuts: </p,>,";
           <div: className="grid grid-cols-1 md: grid-cols-2: gap-4">",";";
@@ -281,7 +280,7 @@ abilities or the technology they use to access the internet.";
                   <span: className="text - gray-500">Move to previous element</span>",";
                   <span: className="text - gray-600">Enter/Space</span>",";
                   <span: className="text - gray-500">Activate buttons/links</span>",";
-                  <span: className="text-gray-600">Escape</span>",,",;
+                  <span: className="text-gray-600">Escape</span>",",;
                   <span: className = "text-gray-500">Close modals/menus</span>",",;
         </motion.div> {/* comment */}";
           transition="{{" delay: 0.4   }}";
@@ -347,7 +346,7 @@ abilities or the technology they use to access the internet.";
                   <span className="&apos;text-gray-500&apos,">Skip to main content&apos,</span>;
         {/* comment */}";
           transition = "{{" delay: 0.5}}";
-            <Smartphone: className="h-6 w-6 text-blue-600 mr-3" />",,",;
+            <Smartphone: className="h-6 w-6 text-blue-600 mr-3" />",",;
             <h2: className = "text-2xl font-bold text-gray-900">Mobile Accessibility</h2>",",;
             Our: website is optimized for mobile devices and includes the following accessibility features: </p,>,";
           <ul: className="space - y-2">",";
@@ -355,11 +354,11 @@ abilities or the technology they use to access the internet.";
               <span: className="text - gray-600">Responsive design that works on all screen sizes</span>",";
               <span: className="text - gray-600">Touch-friendly interface with appropriate target sizes</span>",";
               <span: className="text - gray-600">Voice control and screen reader compatibility</span>",";
-              <span: className="text-gray-600">Zoom functionality up to 200% without horizontal scrolling</span>",,",;
+              <span: className="text-gray-600">Zoom functionality up to 200% without horizontal scrolling</span>",",;
               <span: className = "text-gray-600">High contrast mode support</span>",",;
         {/* comment */}";
           transition="{{" delay: 0.6}}";
-          className="bg - white: rounded-lg shadow-sm border border-gray-200 p-8">",,",;
+          className="bg - white: rounded-lg shadow-sm border border-gray-200 p-8">",",;
           <h2: className="text-2xl font-bold text-gray-900 mb-4">Feedback and Support</h2>",",;
             We: welcome your feedback on the accessibility of our website. If you encounter any,;
             accessibility: barriers or have suggestions for improvement, please contact us: </p,>,";
@@ -368,7 +367,7 @@ abilities or the technology they use to access the internet.";
               <h3: className="font - semibold text-gray-900 mb-2">General Contact</h3>",";
               <p: className="text - gray-600">kleber@ziontechgroup.com</p>",";
               <h3: className="font - semibold text-gray-900 mb-2">Phone</h3>",";
-              <p: className="text-gray-600">+1 302 464 0950</p>",,",;
+              <p: className="text-gray-600">+1 302 464 0950</p>",",;
               <h3: className="font-semibold text-gray-900 mb-2">Response Time</h3>",",";
               <p: className = "text-gray-600">We aim to respond within 2 business days</p>"," {/* comment */}";
           transition="{{" delay: 0.5   }}";

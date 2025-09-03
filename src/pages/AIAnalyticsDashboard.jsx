@@ -14,22 +14,19 @@ export default function AIAnalyticsDashboard() {}
 "";
             title: "AI-Powered Insights","";
             description: "Advanced machine learning algorithms analyze your data to uncover hidden patterns and opportunities","";
-            icon: <Brain className="h-6 w-6 text-zion-cyan"/>;,
-},;
+            icon: <Brain className="h-6 w-6 text-zion-cyan"/>},;
         {}
 ";
 "";
             title: "Real-time Analytics","";
             description: "Monitor your business metrics in real-time with live dashboards and instant notifications","";
-            icon: <Zap className="h-6 w-6 text-zion-purple"/>;,
-},;
+            icon: <Zap className="h-6 w-6 text-zion-purple"/>},;
         {}
 ";
 "";
             title: "Predictive Analytics","";
             description: "Forecast future trends and make data-driven decisions with confidence","";
-            icon: <TrendingUp className="h-6 w-6 text-zion-blue"/>;,
-},;
+            icon: <TrendingUp className="h-6 w-6 text-zion-blue"/>},;
         {}
 ";
 "";
@@ -53,8 +50,7 @@ export default function AIAnalyticsDashboard() {}
                 "Email support","";
                 "Monthly reports";
             ],;
-            popular: false;,
-},;
+            popular: false},;
         {}
 ";
 "";
@@ -70,8 +66,7 @@ export default function AIAnalyticsDashboard() {}
                 "Real-time alerts","";
                 "API access";
             ],;
-            popular: true;,
-},;
+            popular: true},;
         {}
 ";
 "";
@@ -96,16 +91,14 @@ export default function AIAnalyticsDashboard() {}
             name: "Sarah Chen","";
             role: "CTO, TechFlow Inc.","'";
             content: "Zion's AI Analytics Dashboard transformed how we understand our customer data. The insights are game-changing.",;
-            rating: 5;,
-},;
+            rating: 5},;
         {}
 ";
 "";
             name: "Marcus Rodriguez","";
             role: "Data Scientist, DataCorp","'";
             content: "The predictive analytics capabilities are incredible. We've improved our forecasting accuracy by 40%.",;
-            rating: 5;,
-},;
+            rating: 5},;
         {}
 ";
 "";
@@ -277,14 +270,10 @@ export default function AIAnalyticsDashboard() {}
         </div>;
       </section>;
     </div>)}
-;
 
-export { AIAnalyticsDashboard };
-;
-export { AIAnalyticsDashboard };
-;
-export { AIAnalyticsDashboard };
-;
-export { AIAnalyticsDashboard };
-;
-export { AIAnalyticsDashboard };
+
+export { AIAnalyticsDashboard }
+export { AIAnalyticsDashboard }
+export { AIAnalyticsDashboard }
+export { AIAnalyticsDashboard }
+export { AIAnalyticsDashboard }

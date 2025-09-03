@@ -1,6 +1,6 @@
 import React from 'react';
-;
-const ContactPage: React.FC = () => {;
+
+const ContactPage: React.FC = () => {
   return (;
     <div className="min-h-screen bg-gray-50 py-20">;
       <div className="container mx-auto px-4">;
@@ -10,7 +10,7 @@ const ContactPage: React.FC = () => {;
             Ready to transform your business? Get in touch with our expert team.;
           </p>;
         </div>;
-        ;
+
         <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">;
           <div className="bg-white p-8 rounded-lg shadow-lg">;
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h2>;
@@ -29,7 +29,7 @@ const ContactPage: React.FC = () => {;
               </div>;
             </div>;
           </div>;
-          ;
+
           <div className="bg-white p-8 rounded-lg shadow-lg">;
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h2>;
             <form className="space-y-4">;
@@ -66,7 +66,5 @@ const ContactPage: React.FC = () => {;
         </div>;
       </div>;
     </div>;
-  );,
-};
-;
+  )}
 export default ContactPage;

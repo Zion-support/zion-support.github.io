@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-;
-;
-const CuttingEdgeServicesShowcase = () => {;
+
+
+const CuttingEdgeServicesShowcase = () => {
     const [selectedCategory, setSelectedCategory] = useState('All');
     const [selectedIndustry, setSelectedIndustry] = useState('All');
     const [searchTerm, setSearchTerm] = useState('');
@@ -47,12 +47,10 @@ const CuttingEdgeServicesShowcase = () => {;
 ``;
 ```;
 ````;
-            return `$${price}/attorney/month`}
-        else {}
+            return `$${price}/attorney/month`} else {}
 `;
 ``;
-            return `$${price}/${model}`}";,
-};"";
+            return `$${price}/${model}`}"};"";
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 pt-32">"";
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">";
         {/* Header Section */}"";
@@ -256,16 +254,11 @@ const CuttingEdgeServicesShowcase = () => {;
           </div>;
         </div>;
       </div>;
-    </div>)};
-export default CuttingEdgeServicesShowcase;,
-}}}}}}}}
-;
-export { CuttingEdgeServicesShowcase };
-;
-export { CuttingEdgeServicesShowcase };
-;
-export { CuttingEdgeServicesShowcase };
-;
-export { CuttingEdgeServicesShowcase };
-;
-export { CuttingEdgeServicesShowcase };
+    </div>)}
+export default CuttingEdgeServicesShowcase}}}}}}}}
+
+export { CuttingEdgeServicesShowcase }
+export { CuttingEdgeServicesShowcase }
+export { CuttingEdgeServicesShowcase }
+export { CuttingEdgeServicesShowcase }
+export { CuttingEdgeServicesShowcase }

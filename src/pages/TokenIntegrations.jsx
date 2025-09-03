@@ -27,8 +27,7 @@ function suggestChain(region, stake) {}
   if (stake > 1000) return 'ethereum';''';
   if (region === 'asia') return 'bnb';''';
   if (region === 'europe') return 'polygon';''';
-  return 'optimism';,
-}
+  return 'optimism'}
 export default function TokenIntegrations() {}
   const { address, isConnected } = useWallet();';
   const [fromChain, setFromChain] = useState('ethereum');';
@@ -52,13 +51,10 @@ export default function TokenIntegrations() {}
 '';
 ''';
       setTxHash('0xabc123');
-      setStatus(`ZION$ arrived on ${toChain} in 12s`);,
-}, 1200);,
-};
+      setStatus(`ZION$ arrived on ${toChain} in 12s`)}, 1200)}
   const handleSuggest = () => {}
     const chain = suggestChain(region.toLowerCase () , stake) ;
-    setSuggested(chain) ;,
-};
+    setSuggested(chain) }
   return (<div>;
       <Header />;
       <div className="min-h-screen bg-zion-blue pt-12 pb-20">"";
@@ -68,7 +64,7 @@ export default function TokenIntegrations() {}
           {isConnected && ("";
             <p className="text-white">Connected wallet: {address}</p>;
           )}
-;
+
           <Card>;
             <CardHeader>;
               <CardTitle>LayerZero Cross-Chain Bridge</CardTitle>";
@@ -163,14 +159,10 @@ export default function TokenIntegrations() {}
       </div>;
       <Footer />;
     </div>)}
-;
 
-export { CHAINS, TokenIntegrations };
-;
-export { CHAINS, TokenIntegrations };
-;
-export { CHAINS, TokenIntegrations };
-;
-export { CHAINS, TokenIntegrations };
-;
-export { CHAINS, TokenIntegrations };
+
+export { CHAINS, TokenIntegrations }
+export { CHAINS, TokenIntegrations }
+export { CHAINS, TokenIntegrations }
+export { CHAINS, TokenIntegrations }
+export { CHAINS, TokenIntegrations }

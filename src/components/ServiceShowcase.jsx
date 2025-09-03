@@ -1,7 +1,6 @@
 import {  import { Badge } from './ui / badge';
-;
-export default function Page() {;,
-};
+
+export default function Page() {}
   return (";
     <div className="py-12 bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900">";
       <div className="container mx-auto px-4">";
@@ -108,6 +107,5 @@ export default function Page() {;,
         </div>;
       </div>;
     </div>;
-  );,
-}
+  )}
 '"`

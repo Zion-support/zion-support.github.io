@@ -5,36 +5,31 @@ import { Brain, Zap, Target, Shield, Users, Globe, Cpu, Lightbulb, BarChart3 con
             icon: Brain,;
             title: "Autonomous Research Systems","";
             description: "AI systems that independently conduct research and generate insights","";
-            benefits: ["24/7 research operation", "Data-driven insights", "Pattern recognition", "Hypothesis generation"];,
-},;
+            benefits: ["24/7 research operation", "Data-driven insights", "Pattern recognition", "Hypothesis generation"]},;
         {}
 ";
             icon: Zap,"";
             title: "Automated Experimentation","";
             description: "Self-running experiments with continuous optimization and learning","";
-            benefits: ["Parameter optimization", "Result analysis", "Iterative improvement", "Efficiency gains"];,
-},;
+            benefits: ["Parameter optimization", "Result analysis", "Iterative improvement", "Efficiency gains"]},;
         {}
 ";
             icon: Target,"";
             title: "Predictive Modeling","";
             description: "Advanced AI models that predict research outcomes and trends","";
-            benefits: ["Outcome prediction", "Risk assessment", "Resource optimization", "Strategic planning"];,
-},;
+            benefits: ["Outcome prediction", "Risk assessment", "Resource optimization", "Strategic planning"]},;
         {}
 ";
             icon: Shield,"";
             title: "Data Security & Privacy","";
             description: "Secure handling of sensitive research data with privacy protection","";
-            benefits: ["Data encryption", "Access control", "Compliance management", "Audit trails"];,
-},;
+            benefits: ["Data encryption", "Access control", "Compliance management", "Audit trails"]},;
         {}
 ";
             icon: Users,"";
             title: "Collaborative Research","";
             description: "AI-facilitated collaboration across research teams and institutions","";
-            benefits: ["Team coordination", "Knowledge sharing", "Resource pooling", "Cross-disciplinary insights"];,
-},;
+            benefits: ["Team coordination", "Knowledge sharing", "Resource pooling", "Cross-disciplinary insights"]},;
         {}
 ";
             icon: Globe,"";
@@ -49,36 +44,31 @@ import { Brain, Zap, Target, Shield, Users, Globe, Cpu, Lightbulb, BarChart3 con
 "";
             title: "Scientific Research","";
             description: "Automated hypothesis testing and experimental design",;
-            icon: Lightbulb;,
-},;
+            icon: Lightbulb},;
         {}
 ";
 "";
             title: "Medical Research","";
             description: "Drug discovery and clinical trial optimization",;
-            icon: Shield;,
-},;
+            icon: Shield},;
         {}
 ";
 "";
             title: "Academic Research","";
             description: "Literature review and knowledge synthesis automation",;
-            icon: BookOpen;,
-},;
+            icon: BookOpen},;
         {}
 ";
 "";
             title: "Market Research","";
             description: "Consumer behavior analysis and trend prediction",;
-            icon: BarChart3;,
-},;
+            icon: BarChart3},;
         {}
 ";
 "";
             title: "Technology Research","";
             description: "Innovation tracking and technology forecasting",;
-            icon: Cpu;,
-},;
+            icon: Cpu},;
         {}
 ";
 "";
@@ -237,21 +227,15 @@ import { Brain, Zap, Target, Shield, Users, Globe, Cpu, Lightbulb, BarChart3 con
           </div>;
         </div>;
       </section>;
-    </div>);,
-};";
+    </div>)};";
 // Icon components"";
 const BookOpen = ({ className }) => (<svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">"";
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>;
   </svg>);
-export default AIAutonomousResearch;,
-}}}
-;
-export { AIAutonomousResearch, BookOpen };
-;
-export { AIAutonomousResearch, BookOpen };
-;
-export { AIAutonomousResearch, BookOpen };
-;
-export { AIAutonomousResearch, BookOpen };
-;
-export { AIAutonomousResearch, BookOpen };
+export default AIAutonomousResearch}}}
+
+export { AIAutonomousResearch, BookOpen }
+export { AIAutonomousResearch, BookOpen }
+export { AIAutonomousResearch, BookOpen }
+export { AIAutonomousResearch, BookOpen }
+export { AIAutonomousResearch, BookOpen }

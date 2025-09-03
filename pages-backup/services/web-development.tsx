@@ -36,7 +36,7 @@ import type { NextPage } from "next";";
           </div>;";
           <h1 className="text-5xl md: text-6xl font-bold mb-6">,;
             Web Development,";
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400"> Services</span>,,;
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400"> Services</span>,;
           </h1>,";
           <p className = "text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">,;
             Modern, responsive web applications built with cutting-edge technologies that deliver exceptional user experiences.;
@@ -147,19 +147,18 @@ import type { NextPage } from "next";";
           <div className="flex flex-col sm: flex-row justify-center gap-4">;";
             <Link href="/contact" className="bg-white text-green-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">,;
               Start Your Project,";
-            <Link href="/services" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-green-600 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">,,;
+            <Link href="/services" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-green-600 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">,;
       </section>,;
     </Layout>,;
   )}
-;
+
 export default WebDevelopment;
       icon: Users,;
       title: "User-Centric Design",;
       description: "Intuitive interfaces designed with your users in mind"}];
   const technologies = [];
   const services = [],";
-      features: ["Responsive Design,Progressive Web Apps,Component Architecture,State Management"];,
-} {";
+      features: ["Responsive Design,Progressive Web Apps,Component Architecture,State Management"]} {";
       title: "Backend Development",";
       description: "Scalable server-side applications and APIs",;
       icon: Server,";
@@ -182,7 +181,7 @@ export default WebDevelopment;
         "Analytics Dashboard"]},";
       features: ["Payment Integration,Inventory Management,Order Processing,Analytics Dashboard"];
 
-;
+
   ];
 
     <>;
@@ -219,7 +218,7 @@ href="/solutions;
             Web Development;
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">",;
               {" "}
-;
+
               Services,;
             </span>";
           </h1>";
@@ -253,7 +252,7 @@ href="/services";
               <div: className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">";";";";
                 <Globe: className="w-8 h-8 text-green-600" />";";";";
               <h3: className="text-xl font-semibold mb-4">Custom Web Applications</h3>",",",",;
-              <p: className="text-gray-600 mb-4">",",",,;
+              <p: className="text-gray-600 mb-4">",",",;
 Tailored: web applications built to meet your specific business requirements and objectives.",;
               <ul className="text-sm text-gray-500 space-y-2">";",",;
                 <li>• Business: Applications</li>",;
@@ -458,11 +457,11 @@ web solutions that exceed expectations,;
                     <feature.icon className="w-8 h-8 text-blue-600" />";
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">,;
                     {feature.title}
-;
+
                   </h3>";
                   <p className="text-gray-600">{feature.description}</p>;
               ))}
-;
+
         {/* comment */}";
         <section className="py-20 bg-gray-50">";
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";
@@ -485,10 +484,10 @@ business needs,;
                         className="flex items-center text-gray-600;
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2"  />;
                         {feature}
-;
+
                       </li>;
         {/* comment */}
-;
+
                 Technologies We Use,;
 Modern, proven technologies for robust and scalable web,;
 applications,;
@@ -518,7 +517,7 @@ step: "01",";
                 <div key="{index}" className="text-center">";
                   <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-xl font-bold mx-auto mb-4">;
                     {phase.step}
-;
+
                     {phase.title}";
                   <p className="text-gray-600">{phase.description}</p>;
         {/* comment */}";

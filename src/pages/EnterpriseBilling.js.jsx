@@ -17,10 +17,8 @@ export default function EnterpriseBilling() {}
 ';
 '';
 ''';
-      router.push('/unauthorized');,
-}
-    return null;,
-}
+      router.push('/unauthorized')}
+    return null}
   return();
     <ProtectedRoute>;
       <SEO;
@@ -31,16 +29,12 @@ export default function EnterpriseBilling() {}
       <main className="min-h-screen bg-background">;
         <BillingDashboard />;
       </main>;
-      ;
-    </ProtectedRoute>)}
-;
 
-export { EnterpriseBilling };
-;
-export { EnterpriseBilling };
-;
-export { EnterpriseBilling };
-;
-export { EnterpriseBilling };
-;
-export { EnterpriseBilling };
+    </ProtectedRoute>)}
+
+
+export { EnterpriseBilling }
+export { EnterpriseBilling }
+export { EnterpriseBilling }
+export { EnterpriseBilling }
+export { EnterpriseBilling }

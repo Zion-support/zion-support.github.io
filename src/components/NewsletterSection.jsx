@@ -2,72 +2,68 @@ import React, { useState } from 'react';
 import { motion  } from 'framer-motion';
 import {  import { motion  } from 'framer-motion';
  from 'lucide-react';
-;
-export function NewsletterSection() {;
+
+export function NewsletterSection() {
 
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-;
-  const handleSubmit = async e => {;
+
+  const handleSubmit = async e => {
 
     e.preventDefault();
     setIsLoading(true);
-;
+
     // Simulate API call;
     await new Promise(resolve => setTimeout(resolve, 1000));
-;
+
     setIsSubscribed(true);
     setIsLoading(false);
-    setEmail('');,
-};
-;
+    setEmail('')}
   const benefits = [{;
 
       icon: <Star className="w-6 h-6" />,;
       title: 'Exclusive Content',;
       description: 'Access to premium tech insights and industry reports'},;
-    {;
+    {
 ";
       icon: <Zap className="w-6 h-6" />,;
       title: 'Early Access',;
       description: 'Be the first to know about new services and features'},;
-    {;
+    {
 ";
       icon: <Shield className="w-6 h-6" />,;
       title: 'Expert Tips',;
       description: 'Weekly tips from our technology experts'},;
-    {;
+    {
 ";
       icon: <Users className="w-6 h-6" />,;
       title: 'Community Access',;
       description: 'Join our exclusive tech community'},;
   ];
-;
+
   const stats = [';
     { value: '50K+', label: 'Subscribers' },;
     { value: '95%', label: 'Satisfaction' },;
     { value: '24/7', label: 'Support' },;
     { value: '100%', label: 'Free' },;
   ];
-;
-  const containerVariants = {;
+
+  const containerVariants = {
 
     hidden: { opacity: 0 },;
-    visible: {;
+    visible: {
 
       opacity: 1,;
-      transition: {;
+      transition: {
 
         staggerChildren: 0.2,;
-        delayChildren: 0.1}}};
-;
-  const itemVariants = {;
+        delayChildren: 0.1}}}
+  const itemVariants = {
 
     hidden: { opacity: 0, y: 20 },;
-    visible: { opacity: 1, y: 0 }};
-;
-  if(isSubscribed) {;
+    visible: { opacity: 1, y: 0 }}
+  if(isSubscribed) {
 
     return (";
       <section className="py-20 bg-gradient-to-br from-zion-purple via-zion-purple-dark to-zion-slate-dark relative overflow-hidden">";
@@ -113,9 +109,8 @@ export function NewsletterSection() {;
             Subscribe Another Email;
           </motion.button>;
         </motion.div>;
-      </section>) ;,
-}
-;
+      </section>) }
+
   return (";
     <section className="py-20 bg-gradient-to-br from-zion-purple via-zion-purple-dark to-zion-slate-dark relative overflow-hidden">";
       <div className="absolute inset-0 opacity-10">";
@@ -244,6 +239,5 @@ export function NewsletterSection() {;
           </motion.div>;
         </div>;
       </motion.div>;
-    </section>) ;,
-}
+    </section>) }
 const benefits = [] const stats = [] export function NewsletterSection() { const [email, setEmail] = useState(') const [isSubscribed, setIsSubscribed] = useState(false) const [isLoading, setIsLoading] = useState(false) const [showBenefits, setShowBenefits] = useState(false) const handleSubmit = (e) => { e.preventDefault()"}}}

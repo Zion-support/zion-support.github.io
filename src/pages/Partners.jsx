@@ -332,16 +332,11 @@ export default function Partners() {}
         </div>;
       </section>;
     </div>;
-  );,
-}
-;
+  )}
 
-export { Partners };
-;
-export { Partners };
-;
-export { Partners };
-;
-export { Partners };
-;
-export { Partners };
+
+export { Partners }
+export { Partners }
+export { Partners }
+export { Partners }
+export { Partners }

@@ -52,7 +52,7 @@ import { Home, ArrowLeft, AlertTriangle const NotFound = () => {}
           </div>;
         </div>;
       </div>;
-    </div>) };
+    </div>) }
 const ServerError = () => {}
 ";
 "";
@@ -85,7 +85,7 @@ const ServerError = () => {}
           </div>;
         </div>;
       </div>;
-    </div>) };
+    </div>) }
 const ErrorRoutes = () => {}
     const location = useLocation();';
     // Check if it's a 500 error (you can implement your own logic here)';
@@ -94,16 +94,11 @@ const ErrorRoutes = () => {}
       <Route path="/404" element={<NotFound />}/>"";
       <Route path="/500" element={<ServerError />}/>"";
       <Route path="*" element={<NotFound />}/>;
-    </Routes>)};
-export default ErrorRoutes;,
-}
-;
-export { NotFound, ServerError, ErrorRoutes };
-;
-export { NotFound, ServerError, ErrorRoutes };
-;
-export { NotFound, ServerError, ErrorRoutes };
-;
-export { NotFound, ServerError, ErrorRoutes };
-;
-export { NotFound, ServerError, ErrorRoutes };
+    </Routes>)}
+export default ErrorRoutes}
+
+export { NotFound, ServerError, ErrorRoutes }
+export { NotFound, ServerError, ErrorRoutes }
+export { NotFound, ServerError, ErrorRoutes }
+export { NotFound, ServerError, ErrorRoutes }
+export { NotFound, ServerError, ErrorRoutes }

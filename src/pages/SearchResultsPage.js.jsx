@@ -21,8 +21,7 @@ export default function SearchResultsPage() {}
             return (await res.json())},;
         enabled: !!query,;
         initialPageParam: 1,;
-        getNextPageParam: (lastPage, pages) => lastPage.length < LIMIT ? null : pages.length + 1;,
-}) ;
+        getNextPageParam: (lastPage, pages) => lastPage.length < LIMIT ? null : pages.length + 1}) ;
     // Refetch when the URL param changes;
     useEffect ( () => {}
         if (initialQuery !== query) {}
@@ -62,14 +61,10 @@ export default function SearchResultsPage() {}
       <div ref={loader} className="h-1"/>"";
       {isFetchingNextPage && <p className="text-center mt-4">Loading more...</p>}
     </main>)}
-;
 
-export { LIMIT, SearchResultsPage };
-;
-export { LIMIT, SearchResultsPage };
-;
-export { LIMIT, SearchResultsPage };
-;
-export { LIMIT, SearchResultsPage };
-;
-export { LIMIT, SearchResultsPage };
+
+export { LIMIT, SearchResultsPage }
+export { LIMIT, SearchResultsPage }
+export { LIMIT, SearchResultsPage }
+export { LIMIT, SearchResultsPage }
+export { LIMIT, SearchResultsPage }

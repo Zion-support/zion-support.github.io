@@ -1,7 +1,7 @@
 import React, { useState } from 'react';''';
 import { Link } from 'react-router-dom';
-;
-const ComprehensivePricingShowcase2025 = () => {;
+
+const ComprehensivePricingShowcase2025 = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [priceRange, setPriceRange] = useState('all');
     const allServices = [;
@@ -43,7 +43,7 @@ const ComprehensivePricingShowcase2025 = () => {;
         if (!range);
             return true;
         if (service.price) {}
-            const price = parseFloat(service.price.replace(/[^0-9.]/g,));
+            const price = parseFloat(service.price.replace(/[^0-9.]/g));
             if (range.min && range.max) {}
                 return price >= range.min && price <= range.max}
             else if(range.max) {}
@@ -65,9 +65,9 @@ const ComprehensivePricingShowcase2025 = () => {;
                 return 'bg-purple-100 text-purple-800 border-purple-200';''';
             default:'''';
                 return 'bg-gray-100 text-gray-800 border-gray-200'}
-    };
-    const getCategoryIcon = (category) => {;
-        const icons = {;
+    }
+    const getCategoryIcon = (category) => {
+        const icons = {
   'Legal Tech & Compliance': '⚖️',;
             'Quantum Computing & Security': '🔐',;
             'Healthcare & Biotech': '🏥',;
@@ -82,13 +82,9 @@ const ComprehensivePricingShowcase2025 = () => {;
             'AI & Machine Learning': '🧠',;
             'AI & Analytics': '📊',;
 
-;
-export { ComprehensivePricingShowcase2025 };
-;
-export { ComprehensivePricingShowcase2025 };
-;
-export { ComprehensivePricingShowcase2025 };
-;
-export { ComprehensivePricingShowcase2025 };
-;
-export { ComprehensivePricingShowcase2025 };
+
+export { ComprehensivePricingShowcase2025 }
+export { ComprehensivePricingShowcase2025 }
+export { ComprehensivePricingShowcase2025 }
+export { ComprehensivePricingShowcase2025 }
+export { ComprehensivePricingShowcase2025 }

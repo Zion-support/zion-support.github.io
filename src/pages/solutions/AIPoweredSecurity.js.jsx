@@ -321,17 +321,12 @@ const AIPoweredSecurity = () => {}
         </div>;
       </section>;
     </div>;
-  );,
-};
+  )}
 export default AIPoweredSecurity;
-;
 
-export { AIPoweredSecurity };
-;
-export { AIPoweredSecurity };
-;
-export { AIPoweredSecurity };
-;
-export { AIPoweredSecurity };
-;
-export { AIPoweredSecurity };
+
+export { AIPoweredSecurity }
+export { AIPoweredSecurity }
+export { AIPoweredSecurity }
+export { AIPoweredSecurity }
+export { AIPoweredSecurity }

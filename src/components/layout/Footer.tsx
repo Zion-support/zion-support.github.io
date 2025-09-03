@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import {;
+import {
 
   Mail, ;
   Phone, ;
@@ -58,15 +58,14 @@ import {;
   Layers,;
   Database,;
   Home,;
-  Leaf;,
-} from 'lucide-react';
-;
-export function Footer() {;
+  Leaf} from 'lucide-react';
+
+export function Footer() {
 
   const currentYear = new Date().getFullYear();
-;
+
   const footerSections = [;
-    {;
+    {
 
       title: "Pricing & Plans",;
       icon: DollarSign,;
@@ -74,9 +73,8 @@ export function Footer() {;
         { name: "Comprehensive Pricing 2025", href: "/comprehensive-pricing-guide-2025", icon: DollarSign },;
         { name: "Pricing Overview", href: "/pricing", icon: BarChart3 },;
         { name: "Get Custom Quote", href: "/contact", icon: MessageCircle },;
-      ];,
-},;
-    {;
+      ]},;
+    {
       title: "AI & Automation Services",;
       icon: Brain,;
       links: [;
@@ -100,9 +98,8 @@ export function Footer() {;
         { name: "AI Quantum Neural Network", href: "/services/ai-quantum-neural-network-platform", icon: Atom },;
         { name: "AI Space Technology", href: "/services/ai-space-technology-platform", icon: Satellite },;
         { name: "AI Cybersecurity", href: "/services/ai-cybersecurity-threat-intelligence", icon: Shield }
-      ];,
-},;
-    {;
+      ]},;
+    {
 
       title: "Quantum Computing",;
       icon: Atom,;
@@ -112,9 +109,8 @@ export function Footer() {;
         { name: "Quantum Computing as a Service", href: "/services/quantum-computing-as-a-service", icon: Cloud },;
         { name: "Quantum Machine Learning", href: "/services/quantum-machine-learning", icon: Cpu },;
         { name: "Quantum Edge Computing", href: "/services/quantum-edge-computing-solutions", icon: Network }
-      ];,
-},;
-    {;
+      ]},;
+    {
 
       title: "IT Infrastructure",;
       icon: Server,;
@@ -125,9 +121,8 @@ export function Footer() {;
         { name: "Digital Transformation", href: "/services/digital-transformation", icon: Rocket },;
         { name: "Green IT Solutions", href: "/services/green-it", icon: Leaf },;
         { name: "Space Technology", href: "/services/space-tech", icon: Satellite }
-      ];,
-},;
-    {;
+      ]},;
+    {
 
       title: "Micro SAAS Solutions",;
       icon: Building2,;
@@ -136,10 +131,9 @@ export function Footer() {;
         { name: "Micro SAAS Platform", href: "/services/micro-saas-solutions", icon: Building2 },;
         { name: "Micro SAAS Solutions Comprehensive", href: "/services/micro-saas-solutions-comprehensive", icon: Layers },;
         { name: "Micro SAAS Innovation Hub", href: "/micro-saas-innovation-hub-2029", icon: Sparkles }
-      ];,
-}
+      ]}
   ];
-;
+
   const quickLinks = [;
     { name: "About Us", href: "/about", icon: Building2 },;
     { name: "Services", href: "/services", icon: Server },;
@@ -150,28 +144,25 @@ export function Footer() {;
     { name: "Support", href: "/help-center", icon: HelpCircle },;
     { name: "Documentation", href: "/documentation", icon: BookOpen }
   ];
-;
+
   const contactInfo = [;
-    {;
+    {
 
       icon: Phone,;
       text: "+1 302 464 0950",;
-      href: "tel:+13024640950";,
-},;
-    {;
+      href: "tel:+13024640950"},;
+    {
 
       icon: Mail,;
       text: "kleber@ziontechgroup.com",;
-      href: "mailto:kleber@ziontechgroup.com";,
-},;
-    {;
+      href: "mailto:kleber@ziontechgroup.com"},;
+    {
 
       icon: MapPin,;
       text: "364 E Main St STE 1008 Middletown DE 19709",;
-      href: "https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709";,
-}
+      href: "https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709"}
   ];
-;
+
   const socialLinks = [;
     { name: "LinkedIn", href: "https://linkedin.com/company/ziontechgroup", icon: Linkedin },;
     { name: "Twitter", href: "https://twitter.com/ziontechgroup", icon: Twitter },;
@@ -179,7 +170,7 @@ export function Footer() {;
     { name: "Facebook", href: "https://facebook.com/ziontechgroup", icon: Facebook },;
     { name: "Instagram", href: "https://instagram.com/ziontechgroup", icon: Instagram }
   ];
-;
+
   return (;
     <footer className="bg-zion-slate-darker border-t border-zion-purple/20">;
       {/* Main Footer Content */}
@@ -316,7 +307,7 @@ export function Footer() {;
                 Terms of Service;
               </Link>;
             </div>;
-            ;
+
             <div className="flex items-center space-x-4">;
               <span className="text-sm text-gray-400">Powered by</span>;
               <div className="flex items-center space-x-2">;
@@ -336,5 +327,4 @@ export function Footer() {;
         <ArrowUp className="h-5 w-5" />;
       </button>;
     </footer>;
-  );,
-}
+  )}

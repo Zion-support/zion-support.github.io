@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import {;
+import {
   Phone,;
   Mail,;
   MapPin,;
@@ -16,23 +16,16 @@ import {;
   Zap,;
   Target,;
   Users,;
-  CheckCircle;,
-} from 'lucide-react';
-;
-export default function Services() {;
-    const contact = {;
+  CheckCircle} from 'lucide-react';
+
+export default function Services() {
+    const contact = {
   mobile: '+1 302 464 0950',;
         email: 'kleber@ziontechgroup.com',;
         address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup.com';
-    ;
 
-;
-
-;
-
-;,
-};
+}
     return (<>;
 			<SEO title="Services - Micro SaaS, IT and AI Solutions | Zion Tech Group" description="Explore our micro SaaS products, enterprise IT services, and AI solutions with transparent pricing, clear features, and easy ways to get started." canonical="/services" url="https://ziontechgroup.com/services"/>;
 
@@ -97,16 +90,11 @@ export default function Services() {;
 
 				</div>;
 			</main>;
-		</>);,
-}
-;
+		</>)}
 
-export { Services };
-;
-export { Services };
-;
-export { Services };
-;
-export { Services };
-;
-export { Services };
+
+export { Services }
+export { Services }
+export { Services }
+export { Services }
+export { Services }

@@ -1,12 +1,11 @@
 import type { InnovativeAIService } from "./innovative-ai-services";
-const contact = {;
+const contact = {
   mobile: "+1 302 464 0950",;
   email: "kleber@ziontechgroup.com",;
   address: "364 E Main St STE 1008 Middletown DE 19709",;
-  website: "https://ziontechgroup.com";,;,
-}
+  website: "https://ziontechgroup.com"}
 export const addedAIServices2025: InnovativeAIService[] = [;
-  {;
+  {
     id: "agentic-customer-support-suite",;
     name: "Agentic Customer Support Suite",;
     tagline: "LLM agents that resolve tickets end-to-end with approvals and guardrails",;
@@ -46,9 +45,8 @@ export const addedAIServices2025: InnovativeAIService[] = [;
     launchDate: "2025-03-04",;
     customers: 64,;
     rating: 4.8,;
-    reviews: 38;,;,
-},;
-  {;
+    reviews: 38},;
+  {
     id: "ai-governance-and-risk-suite",;
     name: "AI Governance & Risk Suite",;
     tagline: "Policies, evaluations, and monitoring for safe AI at scale",;
@@ -87,9 +85,8 @@ export const addedAIServices2025: InnovativeAIService[] = [;
     launchDate: "2025-02-12",;
     customers: 19,;
     rating: 4.7,;
-    reviews: 17;,;,
-},;
-  {;
+    reviews: 17},;
+  {
     id: "marketing-content-studio",;
     name: "AI Marketing Content Studio",;
     tagline: "On-brand content at scale with approvals and performance insights",;
@@ -128,9 +125,8 @@ export const addedAIServices2025: InnovativeAIService[] = [;
     launchDate: "2025-05-20",;
     customers: 73,;
     rating: 4.7,;
-    reviews: 40;,;,
-},;
-  {;
+    reviews: 40},;
+  {
     id: "agentic-sales-engineer",;
     name: "Agentic Sales Engineer",;
     tagline: "Pre-sales technical answers, demos, and POC scaffolds 24/7",;
@@ -169,9 +165,8 @@ export const addedAIServices2025: InnovativeAIService[] = [;
     launchDate: "2025-06-03",;
     customers: 21,;
     rating: 4.6,;
-    reviews: 12;,;,
-},;
-  {;
+    reviews: 12},;
+  {
     id: "ai-fraud-detection-workbench",;
     name: "AI Fraud Detection Workbench",;
     tagline: "Detect anomalous behavior with explainable alerts and playbooks",;
@@ -210,9 +205,8 @@ export const addedAIServices2025: InnovativeAIService[] = [;
     launchDate: "2025-06-11",;
     customers: 11,;
     rating: 4.7,;
-    reviews: 9;,;,
-},;
-  {;
+    reviews: 9},;
+  {
     id: "agentic-finops-optimizer",;
     name: "Agentic FinOps Optimizer",;
     tagline: "Autonomously rightsizes cloud resources with approvals",;
@@ -251,9 +245,8 @@ export const addedAIServices2025: InnovativeAIService[] = [;
     launchDate: "2025-06-08",;
     customers: 23,;
     rating: 4.8,;
-    reviews: 14;,;,
-},;
-  {;
+    reviews: 14},;
+  {
     id: "r-d-tooling-copilot",;
     name: "R&D Tooling Copilot",;
     tagline: "Internal dev copilot with secure codebase grounding and actions",;
@@ -292,9 +285,8 @@ export const addedAIServices2025: InnovativeAIService[] = [;
     launchDate: "2025-06-05",;
     customers: 17,;
     rating: 4.6,;
-    reviews: 13;,;,
-},;
-  {;
+    reviews: 13},;
+  {
     id: "agentic-hr-recruiting-suite",;
     name: "Agentic HR Recruiting Suite",;
     tagline: "Source, screen, and schedule with bias-aware guardrails",;
@@ -333,9 +325,8 @@ export const addedAIServices2025: InnovativeAIService[] = [;
     launchDate: "2025-06-13",;
     customers: 31,;
     rating: 4.7,;
-    reviews: 18;,;,
-},;
-  {;
+    reviews: 18},;
+  {
     id: "agentic-ops-runbook-engine",;
     name: "Agentic Ops Runbook Engine",;
     tagline: "Execute runbooks with approvals, rollbacks, and observability",;
@@ -374,9 +365,8 @@ export const addedAIServices2025: InnovativeAIService[] = [;
     launchDate: "2025-06-16",;
     customers: 22,;
     rating: 4.6,;
-    reviews: 12;,;,
-},;
-  {;
+    reviews: 12},;
+  {
     id: "agentic-revenue-forecasting-studio",;
     name: "Agentic Revenue Forecasting Studio",;
     tagline: "Blend ML forecasts with scenario planning and explainability",;
@@ -415,9 +405,8 @@ export const addedAIServices2025: InnovativeAIService[] = [;
     launchDate: "2025-06-17",;
     customers: 16,;
     rating: 4.6,;
-    reviews: 9;,;,
-},;
-  {;
+    reviews: 9},;
+  {
     id: "agentic-supply-chain-copilot",;
     name: "Agentic Supply Chain Copilot",;
     tagline: "Continuously optimize inventory and logistics with live signals",;
@@ -456,9 +445,8 @@ export const addedAIServices2025: InnovativeAIService[] = [;
     launchDate: "2025-06-12",;
     customers: 19,;
     rating: 4.7,;
-    reviews: 11;,;,
-},;
-  {;
+    reviews: 11},;
+  {
     id: "agentic-sales-engineer",;
     name: "Agentic Sales Engineer",;
     tagline: "Answers technical questions, drafts diagrams, and builds demo scaffolds 24/7",;
@@ -497,9 +485,8 @@ export const addedAIServices2025: InnovativeAIService[] = [;
     launchDate: "2025-05-22",;
     customers: 31,;
     rating: 4.7,;
-    reviews: 18;,;,
-},;
-  {;
+    reviews: 18},;
+  {
     id: "ai-marketing-content-studio",;
     name: "AI Marketing Content Studio",;
     tagline: "On-brand content at scale with SEO briefs, approvals, and analytics",;
@@ -538,9 +525,8 @@ export const addedAIServices2025: InnovativeAIService[] = [;
     launchDate: "2025-04-28",;
     customers: 76,;
     rating: 4.6,;
-    reviews: 44;,;,
-},;
-  {;
+    reviews: 44},;
+  {
     id: "risk-and-compliance-copilot",;
     name: "Risk & Compliance Copilot",;
     tagline: "Continuously assess AI risks, map controls, and generate audit evidence",;
@@ -579,9 +565,8 @@ export const addedAIServices2025: InnovativeAIService[] = [;
     launchDate: "2025-05-30",;
     customers: 19,;
     rating: 4.8,;
-    reviews: 11;,;,
-},;
-  {;
+    reviews: 11},;
+  {
     id: "autonomous-analytics-briefs",;
     name: "Autonomous Analytics Briefs",;
     tagline: "Weekly plain-English insights from your data warehouse",;
@@ -620,9 +605,8 @@ export const addedAIServices2025: InnovativeAIService[] = [;
     launchDate: "2025-06-22",;
     customers: 25,;
     rating: 4.7,;
-    reviews: 13;,;,
-},;
-  {;
+    reviews: 13},;
+  {
     id: "agentic-qa-and-test-writer",;
     name: "Agentic QA & Test Writer",;
     tagline: "Writes and maintains unit/e2e tests with CI integration",;
@@ -661,9 +645,8 @@ export const addedAIServices2025: InnovativeAIService[] = [;
     launchDate: "2025-06-21",;
     customers: 12,;
     rating: 4.6,;
-    reviews: 8;,;,
-},;
-  {;
+    reviews: 8},;
+  {
     id: "ai-data-contracts-assistant",;
     name: "AI Data Contracts Assistant",;
     tagline: "Defines, validates, and enforces data contracts with owners",;

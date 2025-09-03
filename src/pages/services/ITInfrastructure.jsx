@@ -1,42 +1,38 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-;
-const ITInfrastructure = () => {;
+
+const ITInfrastructure = () => {
   const features = [;
-    {;
+    {
       title: "Network Management",;
       description: "Comprehensive network infrastructure design, implementation, and maintenance",;
       features: ["Network Design", "Performance Optimization", "Security Implementation", "24/7 Monitoring"],;
-      icon: "🌐";,
-},;
-    {;
+      icon: "🌐"},;
+    {
       title: "System Administration",;
       description: "Expert management of servers, operating systems, and enterprise applications",;
       features: ["Server Management", "OS Administration", "Application Support", "Performance Tuning"],;
-      icon: "🖥️";,
-},;
-    {;
+      icon: "🖥️"},;
+    {
       title: "Data Center Operations",;
       description: "Professional data center management and optimization services",;
       features: ["Facility Management", "Power & Cooling", "Hardware Maintenance", "Capacity Planning"],;
-      icon: "🏢";,
-},;
-    {;
+      icon: "🏢"},;
+    {
       title: "Performance Optimization",;
       description: "System and network performance analysis and improvement",;
       features: ["Performance Monitoring", "Bottleneck Analysis", "Optimization Strategies", "Capacity Planning"],;
-      icon: "⚡";,
-}
+      icon: "⚡"}
   ];
-;
+
   const infrastructureAreas = [;
     { area: "Hardware Infrastructure", solutions: ["Servers", "Storage systems", "Network equipment", "Workstations"] },;
     { area: "Software Infrastructure", solutions: ["Operating systems", "Virtualization platforms", "Database systems", "Management tools"] },;
     { area: "Network Infrastructure", solutions: ["LAN/WAN setup", "Wireless networks", "VPN solutions", "Network security"] },;
     { area: "Storage Infrastructure", solutions: ["Storage arrays", "Backup systems", "Cloud storage", "Data protection"] }
   ];
-;
+
   return (;
     <>;
       <Helmet>;
@@ -197,17 +193,11 @@ const ITInfrastructure = () => {;
         </section>;
       </div>;
     </>;
-  );,
-};
-;
+  )}
 export default ITInfrastructure;
-;
-export { ITInfrastructure };
-;
-export { ITInfrastructure };
-;
-export { ITInfrastructure };
-;
-export { ITInfrastructure };
-;
-export { ITInfrastructure };
+
+export { ITInfrastructure }
+export { ITInfrastructure }
+export { ITInfrastructure }
+export { ITInfrastructure }
+export { ITInfrastructure }

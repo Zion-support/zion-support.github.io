@@ -17,8 +17,7 @@ const AdvancedServices2025 = () => {}
                     benefits["50% faster decision making", "Predictive insights", "Real-time monitoring", "Cost optimization"],;"";
                     marketPosition: "Enterprise-grade analytics for Fortune 500 companies","";
                     competitors["Tableau", "Power BI", "QlikView"],;"";
-                    competitiveAdvantage: "AI-powered insights, real-time processing, and seamless enterprise integration";,
-},;
+                    competitiveAdvantage: "AI-powered insights, real-time processing, and seamless enterprise integration"},;
                 {}
 ";
 "";
@@ -30,8 +29,7 @@ const AdvancedServices2025 = () => {}
                     benefits["70% process efficiency improvement", "Automated compliance", "Cost reduction", "Error elimination"],;"";
                     marketPosition: "Leading BPA solution for large enterprises","";
                     competitors["UiPath", "Automation Anywhere", "Blue Prism"],;"";
-                    competitiveAdvantage: "AI-native approach, intelligent decision making, and comprehensive automation";,
-},;
+                    competitiveAdvantage: "AI-native approach, intelligent decision making, and comprehensive automation"},;
                 {}
 ";
 "";
@@ -43,10 +41,8 @@ const AdvancedServices2025 = () => {}
                     benefits["40% increase in customer satisfaction", "Higher conversion rates", "Reduced churn", "Personalized experiences"],;"";
                     marketPosition: "Next-generation CX platform for customer-centric businesses","";
                     competitors["Adobe Experience Cloud", "Salesforce Service Cloud", "Oracle CX"],;"";
-                    competitiveAdvantage: "AI-driven personalization, real-time optimization, and comprehensive analytics";,
-}
-            ];,
-},;
+                    competitiveAdvantage: "AI-driven personalization, real-time optimization, and comprehensive analytics"}
+            ]},;
         {}
 ";
 "";
@@ -64,8 +60,7 @@ const AdvancedServices2025 = () => {}
                     benefits["Future-ready technology advantage", "Competitive differentiation", "Innovation leadership", "Strategic positioning"],;"";
                     marketPosition: "Premier quantum computing consultancy for Fortune 100 companies","";
                     competitors["IBM Quantum", "Google Quantum AI", "Microsoft Quantum"],;"";
-                    competitiveAdvantage: "Deep quantum expertise, practical implementation, and strategic business focus";,
-},;
+                    competitiveAdvantage: "Deep quantum expertise, practical implementation, and strategic business focus"},;
                 {}
 ";
 "";
@@ -77,8 +72,7 @@ const AdvancedServices2025 = () => {}
                     benefits["New revenue streams", "Enhanced customer engagement", "Innovation leadership", "Future market positioning"],;"";
                     marketPosition: "Leading metaverse development for global brands","";
                     competitors["Meta", "Microsoft Mesh", "NVIDIA Omniverse"],;"";
-                    competitiveAdvantage: "Custom development, strategic implementation, and comprehensive ecosystem building";,
-},;
+                    competitiveAdvantage: "Custom development, strategic implementation, and comprehensive ecosystem building"},;
                 {}
 ";
 "";
@@ -90,10 +84,8 @@ const AdvancedServices2025 = () => {}
                     benefits["Decentralized operations", "Enhanced security", "Transparency", "New business models"],;"";
                     marketPosition: "Enterprise blockchain solutions for innovative organizations","";
                     competitors["Ethereum Enterprise", "Hyperledger", "Corda"],;"";
-                    competitiveAdvantage: "Custom development, enterprise integration, and regulatory compliance";,
-}
-            ];,
-},;
+                    competitiveAdvantage: "Custom development, enterprise integration, and regulatory compliance"}
+            ]},;
         {}
 ";
 "";
@@ -111,8 +103,7 @@ const AdvancedServices2025 = () => {}
                     benefits["3x engagement increase", "Time savings", "Better reach", "Automated optimization"],;"";
                     marketPosition: "Next-generation social media automation","";
                     competitors["Hootsuite", "Buffer", "Sprout Social"],;"";
-                    competitiveAdvantage: "AI-powered content, intelligent automation, and predictive analytics";,
-},;
+                    competitiveAdvantage: "AI-powered content, intelligent automation, and predictive analytics"},;
                 {}
 ";
 "";
@@ -124,8 +115,7 @@ const AdvancedServices2025 = () => {}
                     benefits["40% higher open rates", "Better conversions", "Automated optimization", "ROI tracking"],;"";
                     marketPosition: "AI-powered email marketing for growth-focused businesses","";
                     competitors["Mailchimp", "Constant Contact", "ConvertKit"],;"";
-                    competitiveAdvantage: "AI personalization, predictive analytics, and automated optimization";,
-},;
+                    competitiveAdvantage: "AI personalization, predictive analytics, and automated optimization"},;
                 {}
 ";
 "";
@@ -137,8 +127,7 @@ const AdvancedServices2025 = () => {}
                     benefits["50% ranking improvement", "Traffic growth", "Automated optimization", "Comprehensive reporting"],;"";
                     marketPosition: "AI-driven SEO for competitive online businesses","";
                     competitors["SEMrush", "Ahrefs", "Moz"],;"";
-                    competitiveAdvantage: "AI-powered optimization, automated analysis, and predictive insights";,
-},;
+                    competitiveAdvantage: "AI-powered optimization, automated analysis, and predictive insights"},;
                 {}
 ";
 "";
@@ -150,8 +139,7 @@ const AdvancedServices2025 = () => {}
                     benefits["80% faster resolution", "24/7 support", "Customer satisfaction", "Cost reduction"],;"";
                     marketPosition: "Intelligent customer support for modern businesses","";
                     competitors["Zendesk", "Freshdesk", "Help Scout"],;"";
-                    competitiveAdvantage: "AI-driven automation, intelligent routing, and proactive support";,
-},;
+                    competitiveAdvantage: "AI-driven automation, intelligent routing, and proactive support"},;
                 {}
 ";
 "";
@@ -163,8 +151,7 @@ const AdvancedServices2025 = () => {}
                     benefits["3x higher conversion rates", "Better lead quality", "Automated nurturing", "Increased revenue"],;"";
                     marketPosition: "AI-powered lead generation for sales-focused organizations","";
                     competitors["Salesforce Pardot", "HubSpot", "Marketo"],;"";
-                    competitiveAdvantage: "Predictive scoring, automated qualification, and intelligent nurturing";,
-},;
+                    competitiveAdvantage: "Predictive scoring, automated qualification, and intelligent nurturing"},;
                 {}
 ";
 "";
@@ -176,10 +163,8 @@ const AdvancedServices2025 = () => {}
                     benefits["Reduced planning time", "Better attendee experience", "Resource optimization", "ROI tracking"],;"";
                     marketPosition: "Intelligent event management for modern organizations","";
                     competitors["Eventbrite", "Cvent", "Hopin"],;"";
-                    competitiveAdvantage: "AI-powered automation, intelligent optimization, and comprehensive analytics";,
-}
-            ];,
-},;
+                    competitiveAdvantage: "AI-powered automation, intelligent optimization, and comprehensive analytics"}
+            ]},;
         {}
 ";
 "";
@@ -197,8 +182,7 @@ const AdvancedServices2025 = () => {}
                     benefits["Enhanced security", "Compliance assurance", "Risk reduction", "Operational efficiency"],;"";
                     marketPosition: "Leading zero trust implementation for enterprise organizations","";
                     competitors["Cisco", "Palo Alto Networks", "Fortinet"],;"";
-                    competitiveAdvantage: "Comprehensive implementation, continuous monitoring, and strategic integration";,
-},;
+                    competitiveAdvantage: "Comprehensive implementation, continuous monitoring, and strategic integration"},;
                 {}
 ";
 "";
@@ -210,8 +194,7 @@ const AdvancedServices2025 = () => {}
                     benefits["Ultra-low latency", "Real-time processing", "Cost optimization", "Scalable performance"],;"";
                     marketPosition: "Edge computing solutions for performance-critical applications","";
                     competitors["AWS Edge", "Azure Edge", "Google Edge"],;"";
-                    competitiveAdvantage: "Custom deployment, performance optimization, and comprehensive integration";,
-},;
+                    competitiveAdvantage: "Custom deployment, performance optimization, and comprehensive integration"},;
                 {}
 ";
 "";
@@ -223,8 +206,7 @@ const AdvancedServices2025 = () => {}
                     benefits["Maximum performance", "Optimal coverage", "Future scalability", "Cost efficiency"],;"";
                     marketPosition: "5G optimization for enterprise and carrier networks","";
                     competitors["Ericsson", "Nokia", "Huawei"],;"";
-                    competitiveAdvantage: "Custom optimization, performance tuning, and strategic planning";,
-},;
+                    competitiveAdvantage: "Custom optimization, performance tuning, and strategic planning"},;
                 {}
 ";
 "";
@@ -236,8 +218,7 @@ const AdvancedServices2025 = () => {}
                     benefits["Faster deployments", "Reduced downtime", "Cost optimization", "Improved reliability"],;"";
                     marketPosition: "AI-powered DevOps for modern software organizations","";
                     competitors["GitLab", "Jenkins", "CircleCI"],;"";
-                    competitiveAdvantage: "AI-driven automation, intelligent optimization, and comprehensive monitoring";,
-},;
+                    competitiveAdvantage: "AI-driven automation, intelligent optimization, and comprehensive monitoring"},;
                 {}
 ";
 "";
@@ -249,8 +230,7 @@ const AdvancedServices2025 = () => {}
                     benefits["Future security", "Quantum resistance", "Compliance", "Risk mitigation"],;"";
                     marketPosition: "Quantum-safe cryptography for security-focused organizations","";
                     competitors["NIST", "Cloudflare", "Google"],;"";
-                    competitiveAdvantage: "Expert implementation, comprehensive testing, and strategic migration";,
-},;
+                    competitiveAdvantage: "Expert implementation, comprehensive testing, and strategic migration"},;
                 {}
 ";
 "";
@@ -262,10 +242,8 @@ const AdvancedServices2025 = () => {}
                     benefits["Energy savings", "Performance optimization", "Cost reduction", "Operational efficiency"],;"";
                     marketPosition: "Intelligent data center management for large-scale operations","";
                     competitors["Nutanix", "VMware", "OpenStack"],;"";
-                    competitiveAdvantage: "AI-driven optimization, predictive maintenance, and comprehensive management";,
-}
-            ];,
-},;
+                    competitiveAdvantage: "AI-driven optimization, predictive maintenance, and comprehensive management"}
+            ]},;
         {}
 ";
 "";
@@ -283,8 +261,7 @@ const AdvancedServices2025 = () => {}
                     benefits["Improved diagnosis accuracy", "Better patient care", "Cost reduction", "Operational efficiency"],;"";
                     marketPosition: "Healthcare AI for hospitals and medical institutions","";
                     competitors["IBM Watson Health", "Google Health", "Microsoft Healthcare"],;"";
-                    competitiveAdvantage: "Specialized medical AI, regulatory compliance, and clinical integration";,
-},;
+                    competitiveAdvantage: "Specialized medical AI, regulatory compliance, and clinical integration"},;
                 {}
 ";
 "";
@@ -296,8 +273,7 @@ const AdvancedServices2025 = () => {}
                     benefits["Risk reduction", "Fraud prevention", "Performance optimization", "Regulatory compliance"],;"";
                     marketPosition: "AI-powered financial services for banks and fintech companies","";
                     competitors["Palantir", "Quantexa", "Feedzai"],;"";
-                    competitiveAdvantage: "Specialized financial AI, regulatory compliance, and real-time processing";,
-},;
+                    competitiveAdvantage: "Specialized financial AI, regulatory compliance, and real-time processing"},;
                 {}
 ";
 "";
@@ -309,8 +285,7 @@ const AdvancedServices2025 = () => {}
                     benefits["Reduced downtime", "Quality improvement", "Cost reduction", "Operational efficiency"],;"";
                     marketPosition: "Manufacturing AI for industrial organizations","";
                     competitors["Siemens", "GE Digital", "PTC"],;"";
-                    competitiveAdvantage: "Specialized manufacturing AI, predictive analytics, and industrial integration";,
-},;
+                    competitiveAdvantage: "Specialized manufacturing AI, predictive analytics, and industrial integration"},;
                 {}
 ";
 "";
@@ -322,8 +297,7 @@ const AdvancedServices2025 = () => {}
                     benefits["Inventory reduction", "Revenue increase", "Customer satisfaction", "Operational efficiency"],;"";
                     marketPosition: "Retail AI for modern retail organizations","";
                     competitors["Amazon", "Walmart", "Target"],;"";
-                    competitiveAdvantage: "Specialized retail AI, real-time optimization, and comprehensive analytics";,
-},;
+                    competitiveAdvantage: "Specialized retail AI, real-time optimization, and comprehensive analytics"},;
                 {}
 ";
 "";
@@ -335,8 +309,7 @@ const AdvancedServices2025 = () => {}
                     benefits["Cost reduction", "Efficiency improvement", "Customer satisfaction", "Operational optimization"],;"";
                     marketPosition: "Logistics AI for transportation and logistics companies","";
                     competitors["UPS", "FedEx", "DHL"],;"";
-                    competitiveAdvantage: "Specialized logistics AI, real-time optimization, and comprehensive management";,
-},;
+                    competitiveAdvantage: "Specialized logistics AI, real-time optimization, and comprehensive management"},;
                 {}
 ";
 "";
@@ -348,10 +321,8 @@ const AdvancedServices2025 = () => {}
                     benefits["Energy savings", "Cost reduction", "Sustainability goals", "Operational efficiency"],;"";
                     marketPosition: "Energy AI for utility and energy companies","";
                     competitors["Schneider Electric", "Siemens", "GE"],;"";
-                    competitiveAdvantage: "Specialized energy AI, predictive analytics, and sustainability focus";,
-}
-            ];,
-}";
+                    competitiveAdvantage: "Specialized energy AI, predictive analytics, and sustainability focus"}
+            ]}";
     ];"";
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">"";
       <section className="py-20 px-4 sm:px-6 lg:px-8">"";
@@ -460,16 +431,12 @@ const AdvancedServices2025 = () => {}
           </div>;
         </div>;
       </section>;
-    </div>)};
+    </div>)}
 export default AdvancedServices2025;
-;
 
-export { AdvancedServices2025 };
-;
-export { AdvancedServices2025 };
-;
-export { AdvancedServices2025 };
-;
-export { AdvancedServices2025 };
-;
-export { AdvancedServices2025 };
+
+export { AdvancedServices2025 }
+export { AdvancedServices2025 }
+export { AdvancedServices2025 }
+export { AdvancedServices2025 }
+export { AdvancedServices2025 }

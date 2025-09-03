@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 export default InteractiveServiceShowcase;
 import { motion, AnimatePresence  } from 'framer-motion';
-;
-export default function Page() {;
+
+export default function Page() {
 ,;
         { id: 'security', name: 'Security', icon: '🛡️', count: 6 },;
         { id: 'automation', name: 'Automation', icon: '⚡', count: 3 }
@@ -18,9 +18,8 @@ export default function Page() {;
             features['Strategic Planning',Implementation Roadmap',ROI Analysis',Team Training'],;
             isPopular: true,;
             color: 'from-zion-cyan to-zion-blue',;
-            href: '/services/ai';,
-},;
-        {;
+            href: '/services/ai'},;
+        {
 
             id: 'quantum-ai',;
             title: 'Quantum AI Fusion Platform',;
@@ -31,9 +30,8 @@ export default function Page() {;
             features['Quantum Algorithms',AI Integration',Performance Optimization',Scalable Architecture'],;
             isNew: true,;
             color: 'from-zion-purple to-zion-cyan',;
-            href: '/services/quantum';,
-},;
-        {;
+            href: '/services/quantum'},;
+        {
 
             id: 'neuromorphic',;
             title: 'Neuromorphic Computing Platform',;
@@ -43,9 +41,8 @@ export default function Page() {;
             category: 'ai',;
             features['Neural Networks',Efficient Processing',Scalable Architecture',Low Power Consumption'],;
             color: 'from-zion-blue to-zion-cyan',;
-            href: '/services/ai';,
-},;
-        {;
+            href: '/services/ai'},;
+        {
 
             id: 'edge-ai',;
             title: 'Edge AI Orchestration Platform',;
@@ -55,9 +52,8 @@ export default function Page() {;
             category: 'cloud',;
             features['Edge Deployment',Load Balancing',Real-time Processing',IoT Integration'],;
             color: 'from-zion-cyan to-zion-green',;
-            href: '/services/cloud';,
-},;
-        {;
+            href: '/services/cloud'},;
+        {
 
             id: 'federated-learning',;
             title: 'Federated Learning Platform',;
@@ -67,9 +63,8 @@ export default function Page() {;
             category: 'security',;
             features['Data Privacy',Distributed Training',Secure Communication',Compliance Ready'],;
             color: 'from-zion-green to-zion-cyan',;
-            href: '/services/security';,
-},;
-        {;
+            href: '/services/security'},;
+        {
 
             id: 'ai-ethics',;
             title: 'AI Ethics & Governance Platform',;
@@ -79,9 +74,8 @@ export default function Page() {;
             category: 'ai',;
             features['Ethical Guidelines',Compliance Tools',Audit Trails',Risk Assessment'],;
             color: 'from-zion-yellow to-zion-orange',;
-            href: '/services/ai';,
-},;
-        {;
+            href: '/services/ai'},;
+        {
 
             id: 'quantum-security',;
             title: 'Quantum-Safe Security Suite',;
@@ -92,9 +86,8 @@ export default function Page() {;
             features['Post-Quantum Cryptography',Quantum Key Distribution',Threat Detection',Zero Trust'],;
             isNew: true,;
             color: 'from-zion-purple to-zion-red',;
-            href: '/services/security';,
-},;
-        {;
+            href: '/services/security'},;
+        {
 
             id: 'cloud-automation',;
             title: 'Cloud Infrastructure Automation',;
@@ -110,56 +103,49 @@ export default function Page() {;
     const filteredServices = activeCategory === 'all';
         ? services;
         : services.filter(service => service.category === activeCategory) ;
-    const containerVariants = {;
+    const containerVariants = {
 
         hidden: { opacity: 0 },;
-        visible: {;
+        visible: {
 
             opacity: 1,;
-            transition: {;
+            transition: {
 
-                staggerChildren: 0.1;,
-};
-    const itemVariants = {;
+                staggerChildren: 0.1}
+    const itemVariants = {
 
   hidden: { y: 20,;
-  opacity: 0;,
-},;
-        visible: {;
+  opacity: 0},;
+        visible: {
 
             y: 0,;
             opacity: 1,;
-            transition: {;
+            transition: {
 
                 duration: 0.5,;
-                ease: "easeOut";,
-};
-    const categoryVariants = {;
+                ease: "easeOut"}
+    const categoryVariants = {
 
   hidden: { scale: 0.8,;
-  opacity: 0;,
-},;
-        visible: {;
+  opacity: 0},;
+        visible: {
 
             scale: 1,;
             opacity: 1,;
-            transition: {;
+            transition: {
 
                 duration: 0.3,";
-                ease: "easeOut";,
-};";
+                ease: "easeOut"};";
     return (<section className="py-24 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light">;";
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
         {/* Header Section */}";
-        <motion.div className="text-center mb-20" initial = {;
+        <motion.div className="text-center mb-20" initial = {
 
   { opacity: 0,;
-  y: 30;,
-}} whileInView = {;
+  y: 30}} whileInView = {
 
   { opacity: 1,;
-  y: 0;,
-}} viewport={{ once: true }} transition={{ duration: 0.8 }}>";
+  y: 0}} viewport={{ once: true }} transition={{ duration: 0.8 }}>";
           <h2 className="text-5xl md:text-6xl font-black text-white mb-6">;
             Explore Our{' '}";
             <span className="bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple bg-clip-text text-transparent">;
@@ -173,15 +159,13 @@ export default function Page() {;
         </motion.div>;
 
         {/* Category Filter Tabs */}";
-        <motion.div className="flex flex-wrap justify-center gap-4 mb-16" initial = {;
+        <motion.div className="flex flex-wrap justify-center gap-4 mb-16" initial = {
 
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {;
+  y: 20}} whileInView = {
 
   { opacity: 1,;
-  y: 0;,
-}} viewport={{ once: true }} transition={{ duration: 0.6 }}>;
+  y: 0}} viewport={{ once: true }} transition={{ duration: 0.6 }}>;
           {categories.map((category) => (<button key={category.id} onClick={() => setActiveCategory(category.id)} className={`group flex items-center gap-3 px-6 py-4 rounded-2xl font-semibold transition-all duration-300 ${activeCategory === category.id';
                 ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-xl shadow-zion-cyan/25''`;
                 : 'bg-white/10 backdrop-blur-md text-zion-slate-light border border-white/20 hover:bg-white/20 hover:border-zion-cyan/50'}`}>";
@@ -207,7 +191,7 @@ export default function Page() {;
                     : 'bg-gradient-to-r from-zion-purple to-zion-cyan'}`}>;
                         {service.isPopular ? '🔥 Popular' : '✨ New'}
                       </div>) }
-;
+
                     {/* Service Icon */}`;
                     <div className={`w-20 h-20 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg`}>";
                       <span className="text-3xl">{service.icon}</span>;
@@ -254,19 +238,16 @@ export default function Page() {;
         </motion.div>;
 
         {/* Bottom CTA Section */}";
-        <motion.div className="text-center mt-20" initial = {;
+        <motion.div className="text-center mt-20" initial = {
 
   { opacity: 0,;
-  y: 30;,
-}} whileInView = {;
+  y: 30}} whileInView = {
 
   { opacity: 1,;
-  y: 0;,
-}} viewport={{ once: true }} transition = {;
+  y: 0}} viewport={{ once: true }} transition = {
 
   { duration: 0.8,;
-  delay: 0.2;,
-}}>";
+  delay: 0.2}}>";
           <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-blue/10 backdrop-blur-md p-12 rounded-3xl border border-zion-cyan/20">";
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">;
               Ready to Transform Your Business?;
@@ -288,16 +269,11 @@ export default function Page() {;
           </div>;
         </motion.div>;
       </div>;
-    </section>)};
-export default InteractiveServiceShowcase;,
-}}}}}}}
-;
-export { InteractiveServiceShowcase };
-;
-export { InteractiveServiceShowcase };
-;
-export { InteractiveServiceShowcase };
-;
-export { InteractiveServiceShowcase };
-;
-export { InteractiveServiceShowcase };
+    </section>)}
+export default InteractiveServiceShowcase}}}}}}}
+
+export { InteractiveServiceShowcase }
+export { InteractiveServiceShowcase }
+export { InteractiveServiceShowcase }
+export { InteractiveServiceShowcase }
+export { InteractiveServiceShowcase }

@@ -2,9 +2,9 @@ import React, { useState } from 'react';''';
 import { Link } from 'react-router-dom';
 import { Brain, Cpu, Cloud, Zap, Globe, CheckCircle, Star, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
 import { SEOHead } from "../components/SEOHead.jsx";
-;
+
 import { SPECIALIZED_IT_SERVICES_2025 } from "../data/specializedITServices2025";
-const InnovativeNewServices2025 = () => {;
+const InnovativeNewServices2025 = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedPriceRange, setSelectedPriceRange] = useState('all');
     const allServices = [...INNOVATIVE_NEW_SERVICES_2025, ...SPECIALIZED_IT_SERVICES_2025];
@@ -15,7 +15,7 @@ const InnovativeNewServices2025 = () => {;
         { value: '2000-5000', label: '$2,000 - $5,000/month' },;
         { value: '5000+', label: '$5,000+/month' }
     ];
-    const filteredServices = allServices.filter(service => {;
+    const filteredServices = allServices.filter(service => {
         const categoryMatch = selectedCategory === 'all' || service.category === selectedCategory;
         // All services have a price property;
         const servicePrice = service.price;
@@ -24,8 +24,8 @@ const InnovativeNewServices2025 = () => {;
             (selectedPriceRange === '2000-5000' && service.price >= 2000 && service.price < 5000) ||;
             (selectedPriceRange === '5000+' && service.price >= 5000);
         return categoryMatch && priceMatch});
-    const getCategoryIcon = (category) => {;
-        switch (category) {;
+    const getCategoryIcon = (category) => {
+        switch (category) {
             case 'AI & Analytics':;
                 return Brain;
             case 'AI & Development':;
@@ -36,9 +36,9 @@ const InnovativeNewServices2025 = () => {;
                 return Cloud;
             default:;
                 return Zap}
-    };
-    const getCategoryColor = (category) => {;
-        switch (category) {;
+    }
+    const getCategoryColor = (category) => {
+        switch (category) {
             case 'AI & Analytics':;
                 return 'from-purple-500 to-pink-600';
             case 'AI & Development':;
@@ -49,7 +49,7 @@ const InnovativeNewServices2025 = () => {;
                 return 'from-orange-500 to-red-600';
             default:;
                 return 'from-gray-500 to-gray-600'}
-    };
+    }
     return (<div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-blue-900 text-white">;
       <SEOHead title="Innovative New Services 2025 - Zion Tech Group" description="Discover our cutting-edge AI solutions, 5G infrastructure, edge computing, and autonomous systems. Transform your business with next-generation technology." keywords="AI solutions 2025, 5G enterprise, edge computing, autonomous systems, quantum technology, Zion Tech Group" type="website" url="https://ziontechgroup.com/innovative-new-services-2025"/>;
 
@@ -259,8 +259,7 @@ const InnovativeNewServices2025 = () => {;
                     </div>;
                   </div>;
                 </div>;
-              );,
-})}
+              )})}
           </div>;
 ";
           {filteredServices.length === 0 && ("";
@@ -275,8 +274,7 @@ const InnovativeNewServices2025 = () => {;
                 onClick={() => {}
 ';
                   setSelectedCategory('all');';
-                  setSelectedPriceRange('all');";,
-}}"";
+                  setSelectedPriceRange('all');"}}"";
                 className="px-6 py-3 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors">;
                 Clear Filters;
               </button>;
@@ -309,16 +307,12 @@ const InnovativeNewServices2025 = () => {;
           </div>;
         </div>;
       </section>;
-    </div>)};
+    </div>)}
 export default InnovativeNewServices2025;
-;
 
-export { InnovativeNewServices2025, IconComponent };
-;
-export { InnovativeNewServices2025, IconComponent };
-;
-export { InnovativeNewServices2025, IconComponent };
-;
-export { InnovativeNewServices2025, IconComponent };
-;
-export { InnovativeNewServices2025, IconComponent };
+
+export { InnovativeNewServices2025, IconComponent }
+export { InnovativeNewServices2025, IconComponent }
+export { InnovativeNewServices2025, IconComponent }
+export { InnovativeNewServices2025, IconComponent }
+export { InnovativeNewServices2025, IconComponent }

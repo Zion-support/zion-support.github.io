@@ -1,8 +1,8 @@
 import React from 'react';
-export class SEOOptimizer {;
-    static DEFAULT_META_DESCRIPTIONS = {;
+export class SEOOptimizer {
+    static DEFAULT_META_DESCRIPTIONS = {
 
-  static DEFAULT_META_DESCRIPTIONS = {;
+  static DEFAULT_META_DESCRIPTIONS = {
     '/': 'Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting - edge technology services.Transform your business with Zion Tech Group.',;
     '/services':;
       'Comprehensive AI services, cybersecurity solutions, cloud infrastructure, and emerging technology services.Expert IT solutions for modern businesses.',;
@@ -33,10 +33,8 @@ export class SEOOptimizer {;
     '/solutions / enterprise':;
       'Enterprise - grade technology solutions.Comprehensive IT services designed for large - scale business operations and growth.',;
     '/solutions / healthcare':;
-      'Healthcare technology solutions.Secure, compliant, and innovative IT services for the healthcare industry.',;,
-};
-;
-  static KEYWORD_MAPPINGS = {;
+      'Healthcare technology solutions.Secure, compliant, and innovative IT services for the healthcare industry.'}
+  static KEYWORD_MAPPINGS = {
     '/': ['AI marketplace',;
       'tech services',;
       'artificial intelligence',;
@@ -167,116 +165,100 @@ export class SEOOptimizer {;
       'healthcare compliance',;
       'HIPAA solutions',;
       'medical technology',;
-    ],;,
-};
-;
-  static generateSEOData(path) {;
+    ]}
+  static generateSEOData(path) {
     const title = this.generateTitle(path) ;
     const description = this.generateDescription(path) ;
     const keywords = this.generateKeywords(path) ;
     const canonicalUrl = this.generateCanonicalUrl(path) ;
     const structuredData = this.generateStructuredData(path) ;
-;
-    return {;
+
+    return {
       title,;
       description,;
       keywords,;
       canonicalUrl,;
-      structuredData,    };,
-}
-;
-  static generateTitle(path) {;
-    const baseTitle = 'Zion Tech Group';
-    if(path === '/') {;
-      return `${baseTitle} - Revolutionary Technology Solutions`;,
-}
-;
-    static KEYWORD_MAPPINGS = {;
+      structuredData}}
 
-        '/': ['AI marketplace',tech services',artificial intelligence',IT services',AI developers',technology marketplace',AI solutions',machine learning',digital transformation',micro SaaS',quantum computing',blockchain',cybersecurity',edge computing',metaverse'],/services': ['AI services',cybersecurity',cloud infrastructure',IT solutions',digital transformation',automation',machine learning',blockchain',quantum computing'],/ai-solutions': ['artificial intelligence',AI automation',machine learning',deep learning',neural networks',AI systems',intelligent automation',AI platforms'],/about': ['Zion Tech Group',technology company',innovation',expertise',leadership',mission',vision',company history'],/contact': ['contact us',get in touch',support',consultation',partnership',sales inquiry',technical support'],/pricing': ['pricing plans',cost',subscription',enterprise pricing',custom solutions',affordable technology'],/careers': ['job opportunities',careers',employment',work with us',join our team',technology jobs',AI careers'],/blog': ['technology blog',industry insights',AI trends',tech news',thought leadership',expert analysis'],/news': ['company news',press releases',announcements',updates',partnerships',achievements'],/services/ai-autonomous-systems': ['AI autonomous systems',intelligent automation',business process automation',AI agents',autonomous operations',machine learning systems'],/services/quantum-technology': ['quantum computing',quantum technology',quantum algorithms',quantum cryptography',quantum machine learning',quantum advantage'],/services/cybersecurity': ['cybersecurity',information security',threat protection',security assessment',compliance',data protection',quantum-safe security'],/services/it-infrastructure': ['IT infrastructure',network infrastructure',cloud infrastructure',data centers',server management',network security'],/services/micro-saas-solutions': ['micro SaaS',software as a service',SaaS platforms',business software',cloud applications',subscription software'],/solutions/enterprise': ['enterprise solutions',enterprise IT',large business solutions',scalable technology',enterprise software',business technology'],/solutions/healthcare': ['healthcare technology',health IT',medical software',healthcare compliance',HIPAA solutions',medical technology'];,
-};
-;
-    static generateSEOData(path) {;
+  static generateTitle(path) {
+    const baseTitle = 'Zion Tech Group';
+    if(path === '/') {
+      return `${baseTitle} - Revolutionary Technology Solutions`}
+
+    static KEYWORD_MAPPINGS = {
+
+        '/': ['AI marketplace',tech services',artificial intelligence',IT services',AI developers',technology marketplace',AI solutions',machine learning',digital transformation',micro SaaS',quantum computing',blockchain',cybersecurity',edge computing',metaverse'],/services': ['AI services',cybersecurity',cloud infrastructure',IT solutions',digital transformation',automation',machine learning',blockchain',quantum computing'],/ai-solutions': ['artificial intelligence',AI automation',machine learning',deep learning',neural networks',AI systems',intelligent automation',AI platforms'],/about': ['Zion Tech Group',technology company',innovation',expertise',leadership',mission',vision',company history'],/contact': ['contact us',get in touch',support',consultation',partnership',sales inquiry',technical support'],/pricing': ['pricing plans',cost',subscription',enterprise pricing',custom solutions',affordable technology'],/careers': ['job opportunities',careers',employment',work with us',join our team',technology jobs',AI careers'],/blog': ['technology blog',industry insights',AI trends',tech news',thought leadership',expert analysis'],/news': ['company news',press releases',announcements',updates',partnerships',achievements'],/services/ai-autonomous-systems': ['AI autonomous systems',intelligent automation',business process automation',AI agents',autonomous operations',machine learning systems'],/services/quantum-technology': ['quantum computing',quantum technology',quantum algorithms',quantum cryptography',quantum machine learning',quantum advantage'],/services/cybersecurity': ['cybersecurity',information security',threat protection',security assessment',compliance',data protection',quantum-safe security'],/services/it-infrastructure': ['IT infrastructure',network infrastructure',cloud infrastructure',data centers',server management',network security'],/services/micro-saas-solutions': ['micro SaaS',software as a service',SaaS platforms',business software',cloud applications',subscription software'],/solutions/enterprise': ['enterprise solutions',enterprise IT',large business solutions',scalable technology',enterprise software',business technology'],/solutions/healthcare': ['healthcare technology',health IT',medical software',healthcare compliance',HIPAA solutions',medical technology']}
+    static generateSEOData(path) {
 
         const title = this.generateTitle(path);
         const description = this.generateDescription(path);
         const keywords = this.generateKeywords(path);
         const canonicalUrl = this.generateCanonicalUrl(path);
         const structuredData = this.generateStructuredData(path);
-;
-        return {;
+
+        return {
 
             title,;
             description,;
             keywords,;
             canonicalUrl,;
-            structuredData;,
-};,
-}
-;
-    static generateTitle(path) {;
+            structuredData}}
+
+    static generateTitle(path) {
 
         const baseTitle = 'Zion Tech Group';
-        if(path === '/') {;
+        if(path === '/') {
 
-            return `${baseTitle} - Revolutionary Technology Solutions`;,
-}
-;
+            return `${baseTitle} - Revolutionary Technology Solutions`}
+
         const pathSegments = path.split('/').filter(Boolean);
         if(pathSegments.length === 0);
             return baseTitle;
-;
+
         const lastSegment = pathSegments[pathSegments.length-1];
         const formattedSegment = lastSegment;
             .split('-');
             .map(word => word.charAt(0).toUpperCase() + word.slice(1));
             .join(' ');
 `;
-        return `${formattedSegment} - ${baseTitle}`;,
-}
-;
-    static generateDescription(path) {;
+        return `${formattedSegment} - ${baseTitle}`}
+
+    static generateDescription(path) {
 
         return this.DEFAULT_META_DESCRIPTIONS[path] ||';
-            'Professional technology solutions and services.Expert IT consulting, AI development, and digital transformation services for modern businesses.';,
-}
-;
-    static generateKeywords(path) {;
+            'Professional technology solutions and services.Expert IT consulting, AI development, and digital transformation services for modern businesses.'}
+
+    static generateKeywords(path) {
 
         return this.KEYWORD_MAPPINGS[path] ||';
-            ['technology',IT services',digital solutions',business technology',innovation'];,
-}
-;
-    static generateCanonicalUrl(path) {;
+            ['technology',IT services',digital solutions',business technology',innovation']}
+
+    static generateCanonicalUrl(path) {
 
         const baseUrl = 'https://ziontechgroup.com';`;
-        return `${baseUrl}${path}`;,
-}
-;
-    static generateStructuredData(path) {;
+        return `${baseUrl}${path}`}
 
-        const baseData = {;
+    static generateStructuredData(path) {
+
+        const baseData = {
 
             "@context": "https://schema.org",";
             "@type": "WebPage",";
             "name": this.generateTitle(path),";
             "description": this.generateDescription(path),";
             "url": this.generateCanonicalUrl(path),";
-            "publisher": {;
+            "publisher": {
 ";
                 "@type": "Organization",";
                 "name": "Zion Tech Group",";
                 "url": "https://ziontechgroup.com",;
 ";
-                "logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc";,
+                "logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc"}
 }
-;,
-};
-;
         // Add specific structured data based on page type';
-        if(path === '/') {;
+        if(path === '/') {
 
-            return {;
+            return {
 
                 ...baseData,";
                 "@type": "Organization",";
@@ -284,118 +266,101 @@ export class SEOOptimizer {;
                 "url": "https://ziontechgroup.com",";
                 "logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc",";
                 "description": "Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services.",";
-                "address": {;
+                "address": {
 ";
                     "@type": "PostalAddress",";
                     "streetAddress": "364 E Main St STE 1008",";
                     "addressLocality": "Middletown",";
                     "addressRegion": "DE",";
                     "postalCode": "19709",";
-                    "addressCountry": "US";,
-},";
-                "contactPoint": {;
+                    "addressCountry": "US"},";
+                "contactPoint": {
 ";
                     "@type": "ContactPoint",";
                     "telephone": "+1-302-464-0950",";
                     "contactType": "customer service",";
-                    "email": "kleber@ziontechgroup.com";,
-}
-            };,
-}
-;
-        if(path.startsWith('/services/')) {;
+                    "email": "kleber@ziontechgroup.com"}
+            }}
 
-            return {;
+        if(path.startsWith('/services/')) {
+
+            return {
 
                 ...baseData,";
                 "@type": "Service",";
-                "serviceType": path.split('/').pop()?.replace(/-/g,),";
-                "provider": {;
+                "serviceType": path.split('/').pop()?.replace(/-/g),";
+                "provider": {
 ";
                     "@type": "Organization",";
-                    "name": "Zion Tech Group";,
-}
-            };,
-}
-;
-        return baseData;,
-}
-;
-    static analyzeContentQuality(content, page) {;
+                    "name": "Zion Tech Group"}
+            }}
+
+        return baseData}
+
+    static analyzeContentQuality(content, page) {
 
         const issues = [];
-;
+
         // Check for missing or short title';
-        if(!content.includes('<title>) || content.includes('<title></title>)) {;
+        if(!content.includes('<title>) || content.includes('<title></title>)) {
 
             issues.push({;
 
                 page,;
                 issue: 'missing-title',;
                 severity: 'high',;
-                suggestedFix: 'Add a descriptive title tag with relevant keywords';,
-});,
-}
-;
+                suggestedFix: 'Add a descriptive title tag with relevant keywords'})}
+
         // Check for missing meta description'";
-        if(!content.includes('name="description"')) {;
+        if(!content.includes('name="description"')) {
 
             issues.push({;
 
                 page,;
                 issue: 'missing-description',;
                 severity: 'high',;
-                suggestedFix: 'Add a meta description tag with compelling content';,
-});,
-}
-;
+                suggestedFix: 'Add a meta description tag with compelling content'})}
+
         // Check for short meta description";
         const descMatch = content.match(/name="description" content="([^"]+)"/);
-        if(descMatch && descMatch[1].length < 120) {;
+        if(descMatch && descMatch[1].length < 120) {
 
             issues.push({;
 
                 page,;
                 issue: 'short-description',;
                 severity: 'medium',;
-                suggestedFix: 'Expand meta description to 120-160 characters for better SEO';,
-});,
-}
-;
+                suggestedFix: 'Expand meta description to 120-160 characters for better SEO'})}
+
         // Check for missing headings';
-        if(!content.includes('<h1>) && !content.includes('<h2>) && !content.includes('<h3>)) {;
+        if(!content.includes('<h1>) && !content.includes('<h2>) && !content.includes('<h3>)) {
 
             issues.push({;
 
                 page,;
                 issue: 'no-headings',;
                 severity: 'medium',;
-                suggestedFix: 'Add proper heading structure (H1, H2, H3) for better content organization';,
-});,
-}
-;
+                suggestedFix: 'Add proper heading structure (H1, H2, H3) for better content organization'})}
+
         // Check for minimal content';
-        const textContent = content.replace(/<[^>]*>/g,).trim();
-        if(textContent.length < 300) {;
+        const textContent = content.replace(/<[^>]*>/g).trim();
+        if(textContent.length < 300) {
 
             issues.push({;
 
                 page,;
                 issue: 'minimal-content',;
                 severity: 'medium',;
-                suggestedFix: 'Add more relevant content to improve user experience and SEO value';,
-});,
-}
-;
-        return issues;,
-}
-;
-    static generateMetaTags(seoData) {;
+                suggestedFix: 'Add more relevant content to improve user experience and SEO value'})}
+
+        return issues}
+
+    static generateMetaTags(seoData) {
 `;
         return `;
     <title>${seoData.title}</title>";
     <meta name="description" content="${seoData.description}" />'";
-    <meta name="keywords" content="${seoData.keywords.join(',)}" />";
+    <meta name="keywords" content="${seoData.keywords.join(')}" />";
     <link rel="canonical" href="${seoData.canonicalUrl}" />;
 
     <!-- Open Graph-->";
@@ -415,11 +380,10 @@ export class SEOOptimizer {;
     <script type="application/ld+json">;
       ${JSON.stringify(seoData.structuredData, null, 2)}
     </script>`;
-    `;,
+    `}
 }
-}
-;
+
 export const seoOptimizer = new SEOOptimizer();
-;
+
 export default SEOOptimizer;
 '"`}}

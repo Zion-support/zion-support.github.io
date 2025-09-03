@@ -1,63 +1,60 @@
 import {  import { motion  } from 'framer-motion';
-;
-export default function Page() {;
+
+export default function Page() {
 -${Math.random().toString(36).substr(2, 9)}`}}
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {;
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
 
     this.setState({ errorInfo });
-;
+
     // Log error to console';
     // console.error('Error caught by boundary:', error, errorInfo);
-;
+
     // Call custom error handler if provided;
-    if(this.props.onError) {;
+    if(this.props.onError) {
 
       this.props.onError(error, errorInfo)}
-;
+
     // Send error to error reporting service;
     this.reportError(error, errorInfo) }
-  private async reportError(error: Error, errorInfo: ErrorInfo) {;
+  private async reportError(error: Error, errorInfo: ErrorInfo) {
 
-    try {;
+    try {
       // You can integrate with services like Sentry, LogRocket, etc.      // Send to your error reporting endpoint';
-      await fetch('/api/error-report', {;
+      await fetch('/api/error-report', {
 
         method: 'POST',        headers: { 'Content-Type': 'application/json' },;
-        body: JSON.stringify(errorReport)})} catch(reportError) {;
+        body: JSON.stringify(errorReport)})} catch(reportError) {
 
       // console.error('Failed to report error:', reportError)}  }
-;
-  private handleRetry = () => {;
+
+  private handleRetry = () => {
     this.setState({;
 
       hasError: false,;
       error: null,;
       errorInfo: null,;
       errorId: null,;
-      reportSent: false})};
-;
-  private handleGoHome = () => {;
+      reportSent: false})}
+  private handleGoHome = () => {
 
-    window.location.href = '/'};
-;
-  private handleGoBack = () => {;
-    window.history.back () };
-  private handleReportError = async () => {;
+    window.location.href = '/'}
+  private handleGoBack = () => {
+    window.history.back () }
+  private handleReportError = async () => {
     this.setState({ isReporting: true });
-;
-    try {;
+
+    try {
       await this.reportError(this.state.error!, this.state.errorInfo!);
       this.setState({ reportSent: true });
-;
+
       // Reset report status after 3 seconds;
-      setTimeout(() => {;
-        this.setState({ reportSent: false }) }, 3000) } catch(error) {;
+      setTimeout(() => {
+        this.setState({ reportSent: false }) }, 3000) } catch(error) {
 
-      // console.error('Failed to report error:', error)} finally {;
+      // console.error('Failed to report error:', error)} finally {
 
-      this.setState({ isReporting: false })}  };
-;
-  private handleRetry = () => {;
+      this.setState({ isReporting: false })}  }
+  private handleRetry = () => {
     this.setState({;
 
       hasError: false,;
@@ -66,32 +63,29 @@ export default function Page() {;
       errorId: null,;
       showDetails: false,;
       isRecovering: true});
-;
-    // Force a re - render of children;
-    this.forceUpdate () };
-;
-  private handleGoHome = () => {;
 
-    window.location.href = '/'};
-  private handleCopyError = async : unknown {;
-    if(this.state.error) {;
+    // Force a re - render of children;
+    this.forceUpdate () }
+  private handleGoHome = () => {
+
+    window.location.href = '/'}
+  private handleCopyError = async : unknown {
+    if(this.state.error) {
 `;
-      ;
-      try {;
+
+      try {
         await navigator.clipboard.writeText(errorText) ;
-        // You could show a toast notification here;,
-} catch(err) {;
+        // You could show a toast notification here} catch(err) {
 
         // console.error('Failed to copy error details:', err)}    }
-  };
-;
-  private toggleDetails = () => {;
-    this.setState(prev => ({ showDetails: !prev.showDetails }) ) };
-  render () {;
-    if(this.state.hasError) {;
+  }
+  private toggleDetails = () => {
+    this.setState(prev => ({ showDetails: !prev.showDetails }) ) }
+  render () {
+    if(this.state.hasError) {
 
       // Custom fallback UI;
-      if(this.props.fallback) {;
+      if(this.props.fallback) {
 
         return this.props.fallback}
       return ();
@@ -211,7 +205,7 @@ export default function Page() {;
                 )}
               </motion.div>;
             )}
-;
+
             {/* Contact Information */}
             <motion.div;
               initial={{ opacity: 0 }}

@@ -1,92 +1,79 @@
-#!/usr/bin/env node;
-const { execSync } = require("$1");
+#!/usr/bin/env node
+const { execSync } = require("fs");
 const fs = require("fs");
-class CodeQualityChecks {;
-  constructor() {;
-    this.results = {;
+class CodeQualityChecks {
+  constructor() {
+    this.results = {
       timestamp: new Date().toISOString(),;
       checks: [],;
       score: 100,;
       summary: { passed: 0, failed: 0, warnings: 0 }
     }
   }
-;
-  async runChecks() {;
+
+  async runChecks() {
     console.log("🔍 Running Code Quality Checks...");
-    try {;
+    try {
       await this.checkCodeStyle();
       await this.checkComplexity();
       await this.checkDuplication();
       await this.checkSecurity();
       await this.checkPerformance();
       this.generateReport();
-      console.log("✅ Code quality checks completed"),;,
-} catch (error) {;
-      console.error("❌ Code quality checks failed:", error.message),;,
-}
+      console.log("✅ Code quality checks completed")} catch (error) {
+      console.error("❌ Code quality checks failed:", error.message)}
   }
-;
-  async checkCodeStyle() {;
+
+  async checkCodeStyle() {
     console.log("🎨 Checking code style...");
-    try {;
+    try {
       const result = execSync("npm run lint", { encoding: "utf8" });
-      this.addCheck("Code Style", "passed", "No style issues found"),;,
-} catch (error) {;
+      this.addCheck("Code Style", "passed", "No style issues found")} catch (error) {
       this.addCheck("Code Style", "failed", error.message);
-      this.results.score -= 10,;,
-}
+      this.results.score -= 10}
   }
-;
-  async checkComplexity() {;
+
+  async checkComplexity() {
     console.log("🧮 Checking code complexity...");
-    try {;
+    try {
       const result = execSync("npx complexity-report src/", { encoding: "utf8" });
-      this.addCheck("Complexity", "passed", "Code complexity is acceptable"),;,
-} catch (error) {;
+      this.addCheck("Complexity", "passed", "Code complexity is acceptable")} catch (error) {
       this.addCheck("Complexity", "warning", "High complexity detected");
-      this.results.score -= 5,;,
-}
+      this.results.score -= 5}
   }
-;
-  async checkDuplication() {;
+
+  async checkDuplication() {
     console.log("🔄 Checking code duplication...");
-    try {;
+    try {
       const result = execSync("npx jscpd src/", { encoding: "utf8" });
-      this.addCheck("Duplication", "passed", "No significant duplication found"),;,
-} catch (error) {;
+      this.addCheck("Duplication", "passed", "No significant duplication found")} catch (error) {
       this.addCheck("Duplication", "warning", "Code duplication detected");
-      this.results.score -= 5,;,
-}
+      this.results.score -= 5}
   }
-;
-  async checkSecurity() {;
+
+  async checkSecurity() {
     console.log("🔒 Checking security...");
-    try {;
+    try {
       const result = execSync("npm audit", { encoding: "utf8" });
-      this.addCheck("Security", "passed", "No security vulnerabilities found"),;,
-} catch (error) {;
+      this.addCheck("Security", "passed", "No security vulnerabilities found")} catch (error) {
       this.addCheck("Security", "failed", "Security vulnerabilities detected");
-      this.results.score -= 20,;,
-}
+      this.results.score -= 20}
   }
-;
-  async checkPerformance() {;
+
+  async checkPerformance() {
     console.log("⚡ Checking performance...");
-    try {;
+    try {
       const result = execSync("npm run build", { encoding: "utf8" });
-      this.addCheck("Performance", "passed", "Build completed successfully"),;,
-} catch (error) {;
+      this.addCheck("Performance", "passed", "Build completed successfully")} catch (error) {
       this.addCheck("Performance", "failed", "Build failed");
-      this.results.score -= 15,;,
-}
+      this.results.score -= 15}
   }
-;
-  addCheck(name, status, message) {;
+
+  addCheck(name, status, message) {
     this.results.checks.push({ name, status, message, timestamp: new Date().toISOString() });
-    this.results.summary[status]++,;,
-}
-;
-  generateReport() {;
+    this.results.summary[status]++}
+
+  generateReport() {
     const reportPath = "code-quality-report.json";
     fs.writeFileSync(reportPath, JSON.stringify(this.results, null, 2));
     console.log("\n📊 Code Quality Results:");
@@ -96,10 +83,9 @@ class CodeQualityChecks {;
     console.log(`Failed: ${this.results.summary.failed}`);
     console.log(`Warnings: ${this.results.summary.warnings}`);
     console.log("=".repeat(50));
-    console.log(`📄 Report saved to: ${reportPath}`),;,
+    console.log(`📄 Report saved to: ${reportPath}`)}
 }
-}
-;
+
 // Run the checks;
 const qualityChecks = new CodeQualityChecks();
 qualityChecks.runChecks().catch(console.error)

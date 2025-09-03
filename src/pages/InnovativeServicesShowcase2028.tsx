@@ -1,19 +1,19 @@
 />;
 
-export default function InnovativeServicesShowcase2028(...args: unknown[]): unknown {;
+export default function InnovativeServicesShowcase2028(...args: unknown[]): unknown {
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
-;
+
   // Enhanced service categories with real market prices and features;
   const serviceCategories = [;
-    {;
+    {
       id: 'ai-services',;
       name: 'AI & Machine Learning Services',;
       icon: Brain,;
       color: 'from-blue-600 to-cyan-600',;
       description: 'Cutting-edge artificial intelligence solutions for business transformation',;
       services: [;
-        {;
+        {
           name: 'AI-Powered Business Intelligence Platform',;
           description: 'Advanced analytics with machine learning insights and predictive modeling',;
           price: '$2,500/month',;
@@ -22,9 +22,8 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
           benefits: ['40% faster decision making', '25% cost reduction', 'Real-time insights', 'Scalable architecture'],;
           icon: BarChart3,;
           category: 'ai-services',;
-          badge: 'Popular';,
-},;
-        {;
+          badge: 'Popular'},;
+        {
           name: 'AI Customer Experience Platform',;
           description: 'Intelligent customer engagement with personalized recommendations and sentiment analysis',;
           price: '$1,800/month',;
@@ -33,9 +32,8 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
           benefits: ['35% increase in customer satisfaction', '28% higher conversion rates', '24/7 customer support', 'Reduced support costs'],;
           icon: Users,;
           category: 'ai-services',;
-          badge: 'New';,
-},;
-        {;
+          badge: 'New'},;
+        {
           name: 'AI Cybersecurity Threat Detection',;
           description: 'Advanced threat detection using machine learning and behavioral analysis',;
           price: '$3,200/month',;
@@ -44,18 +42,16 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
           benefits: ['99.9% threat detection rate', '60% faster incident response', 'Reduced false positives', 'Compliance automation'],;
           icon: Shield,;
           category: 'ai-services',;
-          badge: 'Featured';,
-}
-      ];,
-},;
-    {;
+          badge: 'Featured'}
+      ]},;
+    {
       id: 'micro-saas',;
       name: 'Micro SAAS Solutions',;
       icon: Zap,;
       color: 'from-purple-600 to-pink-600',;
       description: 'Scalable software-as-a-service solutions for specific business needs',;
       services: [;
-        {;
+        {
           name: 'AI-Powered Project Management Suite',;
           description: 'Intelligent project planning, resource allocation, and progress tracking',;
           price: '$150/month',;
@@ -64,9 +60,8 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
           benefits: ['30% faster project completion', '20% resource optimization', 'Improved team productivity', 'Real-time insights'],;
           icon: Workflow,;
           category: 'micro-saas',;
-          badge: 'Best Value';,
-},;
-        {;
+          badge: 'Best Value'},;
+        {
           name: 'Smart Inventory Management System',;
           description: 'AI-driven inventory optimization with demand forecasting and automated reordering',;
           price: '$200/month',;
@@ -75,9 +70,8 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
           benefits: ['25% inventory cost reduction', '99% stock availability', 'Automated procurement', 'Real-time tracking'],;
           icon: Truck,;
           category: 'micro-saas',;
-          badge: 'Popular';,
-},;
-        {;
+          badge: 'Popular'},;
+        {
           name: 'AI Content Creation Platform',;
           description: 'Automated content generation with SEO optimization and brand consistency',;
           price: '$120/month',;
@@ -86,18 +80,16 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
           benefits: ['10x faster content creation', 'Improved SEO rankings', 'Consistent brand voice', 'Cost-effective marketing'],;
           icon: Brain, // Changed from PenTool to Brain for consistency with AI services;
           category: 'micro-saas',;
-          badge: 'New';,
-}
-      ];,
-},;
-    {;
+          badge: 'New'}
+      ]},;
+    {
       id: 'it-services',;
       name: 'IT Infrastructure & Services',;
       icon: Server,;
       color: 'from-green-600 to-emerald-600',;
       description: 'Comprehensive IT solutions for modern business infrastructure',;
       services: [;
-        {;
+        {
           name: 'Cloud Migration & Optimization',;
           description: 'Seamless cloud migration with cost optimization and performance tuning',;
           price: '$5,000/project',;
@@ -106,9 +98,8 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
           benefits: ['40% cost reduction', '99.9% uptime', 'Scalable infrastructure', 'Enhanced security'],;
           icon: Cloud,;
           category: 'it-services',;
-          badge: 'Featured';,
-},;
-        {;
+          badge: 'Featured'},;
+        {
           name: 'DevOps Automation Platform',;
           description: 'End-to-end DevOps automation with CI/CD pipelines and infrastructure as code',;
           price: '$2,800/month',;
@@ -117,9 +108,8 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
           benefits: ['80% faster deployments', 'Reduced human errors', 'Improved code quality', 'Faster time to market'],;
           icon: Code,;
           category: 'it-services',;
-          badge: 'Popular';,
-},;
-        {;
+          badge: 'Popular'},;
+        {
           name: 'Cybersecurity Compliance Suite',;
           description: 'Comprehensive security compliance for GDPR, HIPAA, SOC2, and industry standards',;
           price: '$4,500/month',;
@@ -128,18 +118,16 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
           benefits: ['100% compliance assurance', 'Reduced audit time', 'Risk mitigation', 'Legal protection'],;
           icon: Lock,;
           category: 'it-services',;
-          badge: 'Essential';,
-}
-      ];,
-},;
-    {;
+          badge: 'Essential'}
+      ]},;
+    {
       id: 'quantum-tech',;
       name: 'Quantum & Emerging Technologies',;
       icon: Atom,;
       color: 'from-indigo-600 to-purple-600',;
       description: 'Next-generation technologies for future-ready businesses',;
       services: [;
-        {;
+        {
           name: 'Quantum Computing Solutions',;
           description: 'Quantum algorithms for optimization, cryptography, and complex problem solving',;
           price: '$15,000/month',;
@@ -148,9 +136,8 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
           benefits: ['Exponential speed improvements', 'Unbreakable encryption', 'Complex problem solving', 'Competitive advantage'],;
           icon: Atom,;
           category: 'quantum-tech',;
-          badge: 'Future Tech';,
-},;
-        {;
+          badge: 'Future Tech'},;
+        {
           name: 'Blockchain Enterprise Platform',;
           description: 'Secure blockchain solutions for supply chain, finance, and digital identity',;
           price: '$3,500/month',;
@@ -159,9 +146,8 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
           benefits: ['Enhanced transparency', 'Reduced fraud', 'Automated processes', 'Cost savings'],;
           icon: LinkIcon,;
           category: 'quantum-tech',;
-          badge: 'Innovative';,
-},;
-        {;
+          badge: 'Innovative'},;
+        {
           name: 'IoT Edge Computing Platform',;
           description: 'Real-time data processing at the edge for industrial IoT applications',;
           price: '$2,200/month',;
@@ -170,18 +156,16 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
           benefits: ['Ultra-low latency', 'Reduced bandwidth costs', 'Real-time insights', 'Offline operation'],;
           icon: Cpu,;
           category: 'quantum-tech',;
-          badge: 'Industrial';,
-}
-      ];,
-},;
-    {;
+          badge: 'Industrial'}
+      ]},;
+    {
       id: 'green-tech',;
       name: 'Green Technology Solutions',;
       icon: Leaf,;
       color: 'from-green-500 to-teal-600',;
       description: 'Sustainable technology solutions for environmental responsibility',;
       services: [;
-        {;
+        {
           name: 'Carbon Footprint Analytics Platform',;
           description: 'AI-powered carbon tracking and sustainability reporting for businesses',;
           price: '$800/month',;
@@ -190,9 +174,8 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
           benefits: ['Reduced carbon footprint', 'Cost savings', 'Regulatory compliance', 'Brand enhancement'],;
           icon: Leaf,;
           category: 'green-tech',;
-          badge: 'Eco-Friendly';,
-},;
-        {;
+          badge: 'Eco-Friendly'},;
+        {
           name: 'Smart Energy Management System',;
           description: 'Intelligent energy optimization using IoT sensors and AI analytics',;
           price: '$1,500/month',;
@@ -201,18 +184,16 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
           benefits: ['30% energy cost reduction', 'Predictive maintenance', 'Real-time monitoring', 'ROI optimization'],;
           icon: Zap,;
           category: 'green-tech',;
-          badge: 'Cost-Effective';,
-}
-      ];,
-},;
-    {;
+          badge: 'Cost-Effective'}
+      ]},;
+    {
       id: 'space-tech',;
       name: 'Space Technology Solutions',;
       icon: Satellite,;
       color: 'from-blue-500 to-indigo-600',;
       description: 'Satellite and space-based technology for global connectivity and insights',;
       services: [;
-        {;
+        {
           name: 'Satellite Data Analytics Platform',;
           description: 'Earth observation data analysis for agriculture, climate, and urban planning',;
           price: '$2,800/month',;
@@ -221,19 +202,15 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
           benefits: ['Global coverage', 'Real-time insights', 'Cost-effective monitoring', 'Scalable solutions'],;
           icon: Satellite,;
           category: 'space-tech',;
-          badge: 'Global';,
-}
-      ];,
-}
+          badge: 'Global'}
+      ]}
   ];
-;
-  const contactInfo = {;
+
+  const contactInfo = {
     phone: '+1 302 464 0950',;
     email: 'kleber@ziontechgroup.com',;
     address: '364 E Main St STE 1008, Middletown DE 19709',;
-    website: 'https://ziontechgroup.com';,
-};
-;
+    website: 'https://ziontechgroup.com'}
   const filteredServices = serviceCategories.flatMap(category => ;
     category.services.filter(service => ;
       (activeCategory === 'all' || service.category === activeCategory) &&;
@@ -242,26 +219,23 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
         service.description.toLowerCase().includes(searchQuery.toLowerCase()));
     );
   );
-;
-  const containerVariants = {;
+
+  const containerVariants = {
     hidden: { opacity: 0 },;
-    visible: {;
+    visible: {
       opacity: 1,;
-      transition: {;
-        staggerChildren: 0.1;,
-}
+      transition: {
+        staggerChildren: 0.1}
     }
-  };
-;
-  const itemVariants = {;
+  }
+  const itemVariants = {
     hidden: { opacity: 0, y: 20 },;
-    visible: {;
+    visible: {
       opacity: 1,;
       y: 0,;
       transition: { duration: 0.6 }
     }
-  };
-;
+  }
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">;
       <SEO ;
@@ -333,8 +307,7 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
 '''`;
                   activeCategory === 'all''''`'`;
                     ? 'bg-cyan-500 text-white shadow-lg shadow-cyan-500/25'''`'`'`;
-                    : 'bg-slate-700 text-slate-300 hover:bg-slate-600'````;,
-}`}
+                    : 'bg-slate-700 text-slate-300 hover:bg-slate-600'````}`}
               >;
                 All Services;
               </button>;
@@ -348,8 +321,7 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
 '''`;
                     activeCategory === category.id'''`'`;
                       ? 'bg-cyan-500 text-white shadow-lg shadow-cyan-500/25'''`'`'`;
-                      : 'bg-slate-700 text-slate-300 hover:bg-slate-600'````;,
-}`}
+                      : 'bg-slate-700 text-slate-300 hover:bg-slate-600'````}`}
                 >;
                   {category.name}
                 </button>) ) }
@@ -391,8 +363,7 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
                                 ? 'bg-purple-500/20 text-purple-400 border border-purple-500/30'''''`;
                                 : service.badge === 'Best Value''''`'`;
                                   ? 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30'''`'`'`;
-                                  : 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30'````;,
-}`}
+                                  : 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30'````}`}
                       >;
                         {service.badge}
                       </span>) }
@@ -615,16 +586,11 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
         </div>;
       </section>;
     </div>;
-  );,
-}
-;
+  )}
 
-export { InnovativeServicesShowcase2028 };
-;
-export { InnovativeServicesShowcase2028 };
-;
-export { InnovativeServicesShowcase2028 };
-;
-export { InnovativeServicesShowcase2028 };
-;
-export { InnovativeServicesShowcase2028 };
+
+export { InnovativeServicesShowcase2028 }
+export { InnovativeServicesShowcase2028 }
+export { InnovativeServicesShowcase2028 }
+export { InnovativeServicesShowcase2028 }
+export { InnovativeServicesShowcase2028 }

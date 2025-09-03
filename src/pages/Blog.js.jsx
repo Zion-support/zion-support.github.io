@@ -27,10 +27,8 @@ export default function Blog() {}
   const [posts, setPosts] = useState([...BLOG_POSTS]);
   useEffect(() => {}
     const interval = setInterval(() => {}
-      setPosts(prev => [...prev, generateRandomBlogPost()]);,
-}, 120000); // every 2 minutes;
-    return () => clearInterval(interval);,
-}, []);
+      setPosts(prev => [...prev, generateRandomBlogPost()])}, 120000); // every 2 minutes;
+    return () => clearInterval(interval)}, []);
   // Filter blog posts based on search and category;
   const filteredPosts = posts.filter(post => {}
 ';
@@ -39,8 +37,7 @@ export default function Blog() {}
     const matchesCategory ='''';
       selectedCategory === 'All Categories' ||;
       post.category === selectedCategory;
-    return matchesSearch && matchesCategory;,
-});
+    return matchesSearch && matchesCategory});
   // Get featured posts;
   const featuredPosts = posts.filter(post => post.isFeatured);
   return();
@@ -74,8 +71,7 @@ export default function Blog() {}
                     className="object-cover w-full h-full hover:scale-105 transition-transform duration-300";
                     onError={e => {}
                       const target = e.currentTarget;';
-                      target.src = '/images/blog-placeholder.svg';,
-}}
+                      target.src = '/images/blog-placeholder.svg'}}
                   />";
                 </div>"";
                 <div className="flex flex-col justify-center">"";
@@ -95,8 +91,7 @@ export default function Blog() {}
                       className="w-10 h-10 rounded-full mr-3";
                       onError={e => {}
                         const target = e.currentTarget;';
-                        target.src = '/images/blog-placeholder.svg';,
-}}
+                        target.src = '/images/blog-placeholder.svg'}}
                     />";
                     <div>"";
                       <p className="text-white font-medium">;
@@ -165,8 +160,7 @@ export default function Blog() {}
                       className="object-cover w-full h-full hover:scale-105 transition-transform duration-300";
                       onError={e => {}
                         const target = e.currentTarget;';
-                        target.src = '/images/blog-placeholder.svg';,
-}}
+                        target.src = '/images/blog-placeholder.svg'}}
                     />";
                   </div>"";
                   <CardContent className="p-6">"";
@@ -191,8 +185,7 @@ export default function Blog() {}
                         className="w-8 h-8 rounded-full mr-2";
                         onError={e => {}
                           const target = e.currentTarget;';
-                          target.src = '/images/blog-placeholder.svg';,
-}}";
+                          target.src = '/images/blog-placeholder.svg'}}";
                       />"";
                       <span className="text-sm text-white">;
                         {post.author.name}
@@ -224,8 +217,7 @@ export default function Blog() {}
                 onClick={() => {}
 ';
                   setSearchQuery('');';
-                  setSelectedCategory('All Categories');";,
-}}"";
+                  setSelectedCategory('All Categories');"}}"";
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10">;
                 Clear all filters;
               </Button>;
@@ -234,14 +226,10 @@ export default function Blog() {}
         </div>;
       </div>;
     </>)}
-;
 
-export { CATEGORIES, Blog };
-;
-export { CATEGORIES, Blog };
-;
-export { CATEGORIES, Blog };
-;
-export { CATEGORIES, Blog };
-;
-export { CATEGORIES, Blog };
+
+export { CATEGORIES, Blog }
+export { CATEGORIES, Blog }
+export { CATEGORIES, Blog }
+export { CATEGORIES, Blog }
+export { CATEGORIES, Blog }

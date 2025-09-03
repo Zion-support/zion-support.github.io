@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import {;
+import {
   Server,;
   Cloud,;
   Shield,;
@@ -35,13 +35,13 @@ import {;
   Satellite,;
   TreePine} from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
-;
-export default function ITServices() {;
+
+export default function ITServices() {
   const title = 'IT Services — Zion Tech Group';
   const description = 'Comprehensive IT services including cloud infrastructure, cybersecurity, network management, and digital transformation solutions.';
-;
+
   const itServices = [;
-  {;
+  {
       title: 'Cloud Infrastructure & Migration',;
       description: 'Complete cloud transformation with AWS, Azure, and Google Cloud Platform',;
       icon: Cloud,;
@@ -51,7 +51,7 @@ export default function ITServices() {;
       pricing: '$5,000 - $50,000/month',;
       delivery: '4-12 weeks',;
       category: 'Cloud Services'},;
-    {;
+    {
       title: 'Cybersecurity & Compliance',;
       description: 'Enterprise-grade security solutions and compliance management',;
       icon: Shield,;
@@ -61,7 +61,7 @@ export default function ITServices() {;
       pricing: '$3,000 - $25,000/month',;
       delivery: '3-8 weeks',;
       category: 'Security Services'},;
-    {;
+    {
       title: 'Network Infrastructure',;
       description: 'Design, implementation, and management of enterprise networks',;
       icon: Network,;
@@ -71,7 +71,7 @@ export default function ITServices() {;
       pricing: '$2,000 - $15,000/month',;
       delivery: '2-6 weeks',;
       category: 'Network Services'},;
-    {;
+    {
       title: 'IT Support & Helpdesk',;
       description: '24/7 technical support and helpdesk services',;
       icon: Users,;
@@ -81,7 +81,7 @@ export default function ITServices() {;
       pricing: '$1,500 - $8,000/month',;
       delivery: '1-2 weeks',;
       category: 'Support Services'},;
-    {;
+    {
       title: 'Data Management & Analytics',;
       description: 'Data warehousing, analytics, and business intelligence solutions',;
       icon: Database,;
@@ -91,7 +91,7 @@ export default function ITServices() {;
       pricing: '$4,000 - $30,000/month',;
       delivery: '6-16 weeks',;
       category: 'Data Services'},;
-    {;
+    {
       title: 'DevOps & CI/CD',;
       description: 'Automated deployment pipelines and infrastructure as code',;
       icon: Settings,;
@@ -101,7 +101,7 @@ export default function ITServices() {;
       pricing: '$3,500 - $20,000/month',;
       delivery: '4-10 weeks',;
       category: 'DevOps Services'},;
-    {;
+    {
       title: 'Digital Transformation',;
       description: 'End-to-end digital transformation consulting and implementation',;
       icon: Zap,;
@@ -111,7 +111,7 @@ export default function ITServices() {;
       pricing: '$10,000 - $100,000/month',;
       delivery: '12-24 weeks',;
       category: 'Consulting Services'},;
-    {;
+    {
       title: 'Managed IT Services',;
       description: 'Comprehensive IT management and monitoring services',;
       icon: Monitor,;
@@ -121,7 +121,7 @@ export default function ITServices() {;
       pricing: '$2,500 - $15,000/month',;
       delivery: '2-4 weeks',;
       category: 'Managed Services'},;
-    {;
+    {
       title: 'Blockchain & Web3 Solutions',;
       description: 'Blockchain development, smart contracts, and decentralized applications',;
       icon: Network,;
@@ -131,7 +131,7 @@ export default function ITServices() {;
       pricing: '$8,000 - $50,000/month',;
       delivery: '8-20 weeks',;
       category: 'Blockchain Services'},;
-    {;
+    {
       title: 'IoT & Edge Computing',;
       description: 'Internet of Things solutions and edge computing infrastructure',;
       icon: Cpu,;
@@ -141,7 +141,7 @@ export default function ITServices() {;
       pricing: '$5,000 - $30,000/month',;
       delivery: '6-16 weeks',;
       category: 'IoT Services'},;
-    {;
+    {
       title: 'Quantum Computing Consulting',;
       description: 'Quantum computing strategy, algorithm development, and implementation',;
       icon: Cpu,;
@@ -151,7 +151,7 @@ export default function ITServices() {;
       pricing: '$15,000 - $100,000/month',;
       delivery: '12-24 weeks',;
       category: 'Quantum Services'},;
-    {;
+    {
       title: '5G & Network Modernization',;
       description: '5G network implementation and legacy network modernization',;
       icon: Wifi,;
@@ -161,7 +161,7 @@ export default function ITServices() {;
       pricing: '$10,000 - $75,000/month',;
       delivery: '8-20 weeks',;
       category: 'Network Services'},;
-    {;
+    {
       title: 'AR/VR Development & Implementation',;
       description: 'Augmented and virtual reality solutions for business applications',;
       icon: Monitor,;
@@ -171,7 +171,7 @@ export default function ITServices() {;
       pricing: '$6,000 - $40,000/month',;
       delivery: '8-16 weeks',;
       category: 'AR/VR Services'},;
-    {;
+    {
       title: 'API Management & Integration',;
       description: 'Comprehensive API strategy, development, and management platform',;
       icon: Code,;
@@ -181,7 +181,7 @@ export default function ITServices() {;
       pricing: '$3,000 - $20,000/month',;
       delivery: '4-12 weeks',;
       category: 'API Services'},;
-    {;
+    {
       title: 'Disaster Recovery & Business Continuity',;
       description: 'Comprehensive disaster recovery planning and implementation',;
       icon: Shield,;
@@ -191,7 +191,7 @@ export default function ITServices() {;
       pricing: '$5,000 - $35,000/month',;
       delivery: '6-16 weeks',;
       category: 'Recovery Services'},;
-    {;
+    {
       title: 'Green IT & Sustainability Solutions',;
       description: 'Sustainable IT practices and carbon footprint reduction',;
       icon: Globe,;
@@ -201,7 +201,7 @@ export default function ITServices() {;
       pricing: '$4,000 - $25,000/month',;
       delivery: '6-14 weeks',;
       category: 'Sustainability Services'},;
-    {;
+    {
       title: 'FinTech & Payment Solutions',;
       description: 'Financial technology solutions and payment system integration',;
       icon: Database,;
@@ -211,7 +211,7 @@ export default function ITServices() {;
       pricing: '$8,000 - $60,000/month',;
       delivery: '10-24 weeks',;
       category: 'FinTech Services'},;
-    {;
+    {
       title: 'Edge Computing & Distributed Systems',;
       description: 'Edge computing infrastructure and distributed system architecture',;
       icon: Cpu,;
@@ -221,7 +221,7 @@ export default function ITServices() {;
       pricing: '$6,000 - $35,000/month',;
       delivery: '8-16 weeks',;
       category: 'Edge Computing Services'},;
-    {;
+    {
       title: 'Zero Trust Security Architecture',;
       description: 'Comprehensive zero trust security implementation and management',;
       icon: Shield,;
@@ -231,7 +231,7 @@ export default function ITServices() {;
       pricing: '$5,000 - $30,000/month',;
       delivery: '6-14 weeks',;
       category: 'Security Architecture Services'},;
-    {;
+    {
       title: 'Hyperautomation & RPA Solutions',;
       description: 'Intelligent process automation and robotic process automation',;
       icon: Settings,;
@@ -241,7 +241,7 @@ export default function ITServices() {;
       pricing: '$4,000 - $25,000/month',;
       delivery: '6-12 weeks',;
       category: 'Automation Services'},;
-    {;
+    {
       title: 'Digital Twin & Simulation Platforms',;
       description: 'Digital twin development and simulation platform implementation',;
       icon: Monitor,;
@@ -251,7 +251,7 @@ export default function ITServices() {;
       pricing: '$10,000 - $50,000/month',;
       delivery: '12-24 weeks',;
       category: 'Digital Twin Services'},;
-    {;
+    {
       title: 'Multi-Cloud & Hybrid Cloud Management',;
       description: 'Comprehensive multi-cloud strategy and hybrid cloud management',;
       icon: Cloud,;
@@ -261,7 +261,7 @@ export default function ITServices() {;
       pricing: '$8,000 - $40,000/month',;
       delivery: '8-20 weeks',;
       category: 'Multi-Cloud Services'},;
-    {;
+    {
       title: 'Low-Code/No-Code Platform Development',;
       description: 'Custom low-code and no-code platform development and implementation',;
       icon: Code,;
@@ -271,7 +271,7 @@ export default function ITServices() {;
       pricing: '$5,000 - $30,000/month',;
       delivery: '8-16 weeks',;
       category: 'Low-Code Services'},;
-    {;
+    {
       title: 'IT Helpdesk Platform for Managed Service Providers',;
       description: 'Comprehensive IT helpdesk solution designed specifically for MSPs with client management and ticketing',;
       icon: Users,;
@@ -280,9 +280,8 @@ export default function ITServices() {;
       ],;
       pricing: '$2,000 - $12,000/month',;
       delivery: '3-6 weeks',;
-      category: 'MSP Services';,
-},;
-    {;
+      category: 'MSP Services'},;
+    {
       title: 'Cloud Cost Optimization & FinOps Platform',;
       description: 'Intelligent cloud cost management and optimization with automated resource scaling',;
       icon: TrendingUp,;
@@ -291,9 +290,8 @@ export default function ITServices() {;
       ],;
       pricing: '$3,000 - $18,000/month',;
       delivery: '4-8 weeks',;
-      category: 'Cloud Optimization Services';,
-},;
-    {;
+      category: 'Cloud Optimization Services'},;
+    {
       title: 'API Management & Developer Portal Platform',;
       description: 'Comprehensive API management solution with developer portal and analytics',;
       icon: Code,;
@@ -302,9 +300,8 @@ export default function ITServices() {;
       ],;
       pricing: '$2,500 - $15,000/month',;
       delivery: '4-10 weeks',;
-      category: 'API Management Services';,
-},;
-    {;
+      category: 'API Management Services'},;
+    {
       title: 'Digital Workplace & Collaboration Platform',;
       description: 'Comprehensive digital workplace solution with unified communication and collaboration tools',;
       icon: Users,;
@@ -313,9 +310,8 @@ export default function ITServices() {;
       ],;
       pricing: '$4,000 - $25,000/month',;
       delivery: '6-12 weeks',;
-      category: 'Digital Workplace Services';,
-},;
-    {;
+      category: 'Digital Workplace Services'},;
+    {
       title: 'AI-Powered IT Service Management (ITSM)',;
       description: 'Intelligent IT service management with AI-driven automation and predictive analytics',;
       icon: Settings,;
@@ -324,9 +320,8 @@ export default function ITServices() {;
       ],;
       pricing: '$5,000 - $30,000/month',;
       delivery: '6-14 weeks',;
-      category: 'ITSM Services';,
-},;
-    {;
+      category: 'ITSM Services'},;
+    {
       title: 'Cybersecurity Operations Center (SOC)',;
       description: '24/7 security operations center and threat monitoring services',;
       icon: Shield,;
@@ -336,7 +331,7 @@ export default function ITServices() {;
       pricing: '$3,000 - $20,000/month',;
       delivery: '4-8 weeks',;
       category: 'SOC Services'},;
-    {;
+    {
       title: 'Quantum-Safe Cryptography Implementation',;
       description: 'Post-quantum cryptography solutions to protect against future quantum computing threats',;
       icon: Lock,;
@@ -346,7 +341,7 @@ export default function ITServices() {;
       pricing: '$15,000 - $75,000/month',;
       delivery: '12-24 weeks',;
       category: 'Quantum Security Services'},;
-    {;
+    {
       title: 'Neuromorphic Computing Infrastructure',;
       description: 'Brain-inspired computing systems for edge AI and low-power processing',;
       icon: Cpu,;
@@ -356,7 +351,7 @@ export default function ITServices() {;
       pricing: '$20,000 - $100,000/month',;
       delivery: '16-32 weeks',;
       category: 'Neuromorphic Computing Services'},;
-    {;
+    {
       title: 'Space-Based Computing Infrastructure',;
       description: 'Satellite-based computing and edge processing for global connectivity',;
       icon: Satellite,;
@@ -366,7 +361,7 @@ export default function ITServices() {;
       pricing: '$50,000 - $500,000/month',;
       delivery: '24-48 weeks',;
       category: 'Space Computing Services'},;
-    {;
+    {
       title: 'Fusion Energy IT Infrastructure',;
       description: 'Specialized IT infrastructure for fusion energy research and power generation',;
       icon: Zap,;
@@ -376,7 +371,7 @@ export default function ITServices() {;
       pricing: '$100,000 - $1,000,000/month',;
       delivery: '32-64 weeks',;
       category: 'Fusion Energy IT Services'},;
-    {;
+    {
       title: 'Synthetic Biology Computing Platform',;
       description: 'Specialized computing infrastructure for synthetic biology and bioengineering',;
       icon: Cpu,;
@@ -386,7 +381,7 @@ export default function ITServices() {;
       pricing: '$25,000 - $150,000/month',;
       delivery: '20-40 weeks',;
       category: 'Synthetic Biology IT Services'},;
-    {;
+    {
       title: 'Autonomous Vehicle Infrastructure',;
       description: 'IT infrastructure for autonomous vehicle testing, deployment, and management',;
       icon: Car,;
@@ -396,7 +391,7 @@ export default function ITServices() {;
       pricing: '$30,000 - $200,000/month',;
       delivery: '24-48 weeks',;
       category: 'Autonomous Vehicle IT Services'},;
-    {;
+    {
       title: 'Digital Twin Infrastructure Platform',;
       description: 'Comprehensive digital twin infrastructure for real-time simulation and monitoring',;
       icon: Monitor,;
@@ -406,7 +401,7 @@ export default function ITServices() {;
       pricing: '$20,000 - $100,000/month',;
       delivery: '16-32 weeks',;
       category: 'Digital Twin Infrastructure Services'},;
-    {;
+    {
       title: 'Metaverse Infrastructure & Platform',;
       description: 'Complete metaverse infrastructure for virtual worlds and immersive experiences',;
       icon: Globe,;
@@ -416,7 +411,7 @@ export default function ITServices() {;
       pricing: '$40,000 - $300,000/month',;
       delivery: '24-48 weeks',;
       category: 'Metaverse Infrastructure Services'},;
-    {;
+    {
       title: 'Brain-Computer Interface Infrastructure',;
       description: 'Specialized IT infrastructure for brain-computer interface systems and neural data processing',;
       icon: Brain,;
@@ -426,7 +421,7 @@ export default function ITServices() {;
       pricing: '$35,000 - $200,000/month',;
       delivery: '28-56 weeks',;
       category: 'BCI Infrastructure Services'},;
-    {;
+    {
       title: 'Underwater Computing Infrastructure',;
       description: 'Specialized computing infrastructure for underwater operations and marine research',;
       icon: Network,;
@@ -436,7 +431,7 @@ export default function ITServices() {;
       pricing: '$25,000 - $150,000/month',;
       delivery: '20-40 weeks',;
       category: 'Marine Computing Services'},;
-    {;
+    {
       title: 'Consciousness Research Computing Platform',;
       description: 'Advanced computing infrastructure for consciousness research and AGI development',;
       icon: Brain,;
@@ -446,7 +441,7 @@ export default function ITServices() {;
       pricing: '$100,000 - $1,000,000/month',;
       delivery: '40-80 weeks',;
       category: 'Consciousness Research IT Services'},;
-    {;
+    {
       title: 'Climate Computing & Modeling Infrastructure',;
       description: 'High-performance computing infrastructure for climate modeling and environmental research',;
       icon: Globe,;
@@ -456,7 +451,7 @@ export default function ITServices() {;
       pricing: '$30,000 - $250,000/month',;
       delivery: '24-48 weeks',;
       category: 'Climate Computing Services'},;
-    {;
+    {
       title: 'Space Mission Computing Infrastructure',;
       description: 'Specialized computing infrastructure for space missions and satellite operations',;
       icon: Satellite,;
@@ -466,7 +461,7 @@ export default function ITServices() {;
       pricing: '$75,000 - $750,000/month',;
       delivery: '32-64 weeks',;
       category: 'Space Mission IT Services'},;
-    {;
+    {
       title: 'Quantum Computing Infrastructure',;
       description: 'Quantum computing setup, optimization, and hybrid classical-quantum systems',;
       icon: Cpu,;
@@ -476,7 +471,7 @@ export default function ITServices() {;
       pricing: '$50,000 - $500,000/month',;
       delivery: '24-48 weeks',;
       category: 'Quantum Computing Services'},;
-    {;
+    {
       title: '5G & Edge Computing Networks',;
       description: '5G network deployment, edge computing infrastructure, and ultra-low latency solutions',;
       icon: Network,;
@@ -486,7 +481,7 @@ export default function ITServices() {;
       pricing: '$25,000 - $200,000/month',;
       delivery: '16-32 weeks',;
       category: '5G & Edge Services'},;
-    {;
+    {
       title: 'Metaverse & Virtual Reality Infrastructure',;
       description: 'VR/AR platform development, metaverse infrastructure, and immersive technology solutions',;
       icon: Monitor,;
@@ -496,7 +491,7 @@ export default function ITServices() {;
       pricing: '$15,000 - $150,000/month',;
       delivery: '12-24 weeks',;
       category: 'Metaverse Services'},;
-    {;
+    {
       title: 'Green IT & Sustainable Computing',;
       description: 'Energy-efficient computing solutions, carbon footprint reduction, and sustainable IT practices',;
       icon: TreePine,;
@@ -506,7 +501,7 @@ export default function ITServices() {;
       pricing: '$10,000 - $100,000/month',;
       delivery: '8-16 weeks',;
       category: 'Green IT Services'},;
-    {;
+    {
       title: 'Zero-Trust Security Architecture',;
       description: 'Comprehensive zero-trust security implementation with identity verification and micro-segmentation',;
       icon: Shield,;
@@ -516,7 +511,7 @@ export default function ITServices() {;
       pricing: '$20,000 - $150,000/month',;
       delivery: '12-24 weeks',;
       category: 'Zero-Trust Security Services'},;
-    {;
+    {
       title: 'Hyperautomation & RPA Solutions',;
       description: 'Intelligent process automation, robotic process automation, and business process optimization',;
       icon: Settings,;
@@ -526,7 +521,7 @@ export default function ITServices() {;
       pricing: '$8,000 - $80,000/month',;
       delivery: '8-20 weeks',;
       category: 'Hyperautomation Services'},;
-    {;
+    {
       title: 'Digital Twin & Simulation Platforms',;
       description: 'Digital twin development, simulation platforms, and virtual modeling solutions',;
       icon: Monitor,;
@@ -536,7 +531,7 @@ export default function ITServices() {;
       pricing: '$25,000 - $250,000/month',;
       delivery: '16-32 weeks',;
       category: 'Digital Twin Services'},;
-    {;
+    {
       title: 'Neuromorphic Computing Systems',;
       description: 'Brain-inspired computing infrastructure, spiking neural networks, and edge AI optimization',;
       icon: Brain,;
@@ -546,7 +541,7 @@ export default function ITServices() {;
       pricing: '$30,000 - $300,000/month',;
       delivery: '20-40 weeks',;
       category: 'Neuromorphic Computing Services'},;
-    {;
+    {
       title: 'Autonomous Systems Infrastructure',;
       description: 'Infrastructure for autonomous vehicles, drones, and robotic systems with real-time processing',;
       icon: Car,;
@@ -556,7 +551,7 @@ export default function ITServices() {;
       pricing: '$40,000 - $400,000/month',;
       delivery: '24-48 weeks',;
       category: 'Autonomous Systems Services'},;
-    {;
+    {
       title: 'DevOps Automation Platform',;
       description: 'Comprehensive DevOps automation with CI/CD pipelines, infrastructure management, and monitoring',;
       icon: Settings,;
@@ -566,7 +561,7 @@ export default function ITServices() {;
       pricing: '$5,000 - $25,000/month',;
       delivery: '6-12 weeks',;
       category: 'DevOps Services'},;
-    {;
+    {
       title: 'API Gateway Management',;
       description: 'Enterprise API gateway solution with security, monitoring, and traffic management',;
       icon: Network,;
@@ -576,7 +571,7 @@ export default function ITServices() {;
       pricing: '$3,000 - $15,000/month',;
       delivery: '4-8 weeks',;
       category: 'API Services'},;
-    {;
+    {
       title: 'Database Optimization & Management',;
       description: 'Advanced database performance tuning, optimization, and management services',;
       icon: Database,;
@@ -586,7 +581,7 @@ export default function ITServices() {;
       pricing: '$4,000 - $20,000/month',;
       delivery: '4-10 weeks',;
       category: 'Database Services'},;
-    {;
+    {
       title: 'Performance Monitoring & Analytics',;
       description: 'Comprehensive application and infrastructure performance monitoring with AI insights',;
       icon: BarChart3,;
@@ -596,7 +591,7 @@ export default function ITServices() {;
       pricing: '$2,500 - $12,000/month',;
       delivery: '3-6 weeks',;
       category: 'Monitoring Services'},;
-    {;
+    {
       title: 'Security Auditing & Compliance',;
       description: 'Comprehensive security auditing, vulnerability assessment, and compliance management',;
       icon: Shield,;
@@ -606,7 +601,7 @@ export default function ITServices() {;
       pricing: '$5,000 - $30,000/month',;
       delivery: '4-12 weeks',;
       category: 'Security Services'},;
-    {;
+    {
       title: 'Advanced Data Analytics & Business Intelligence',;
       description: 'Comprehensive data analytics platform with real-time insights and predictive modeling',;
       icon: BarChart3,;
@@ -616,7 +611,7 @@ export default function ITServices() {;
       pricing: '$3,000 - $15,000/month',;
       delivery: '3-6 weeks',;
       category: 'Data Analytics'},;
-    {;
+    {
       title: 'Enterprise IoT Solutions & Integration',;
       description: 'Comprehensive IoT platform with device management, data processing, and analytics',;
       icon: Cpu,;
@@ -626,7 +621,7 @@ export default function ITServices() {;
       pricing: '$4,000 - $20,000/month',;
       delivery: '4-8 weeks',;
       category: 'IoT Services'},;
-    {;
+    {
       title: 'Advanced DevOps & CI/CD Automation',;
       description: 'Comprehensive DevOps platform with automated deployment, monitoring, and optimization',;
       icon: Settings,;
@@ -636,7 +631,7 @@ export default function ITServices() {;
       pricing: '$2,500 - $12,000/month',;
       delivery: '3-5 weeks',;
       category: 'DevOps Services'},;
-    {;
+    {
       title: 'Enterprise API Management & Integration',;
       description: 'Comprehensive API strategy with management, security, and integration services',;
       icon: Code,;
@@ -646,7 +641,7 @@ export default function ITServices() {;
       pricing: '$2,000 - $10,000/month',;
       delivery: '2-4 weeks',;
       category: 'API Services'},;
-    {;
+    {
       title: 'Advanced Database Management & Optimization',;
       description: 'Comprehensive database services with optimization, migration, and management',;
       icon: Database,;
@@ -656,7 +651,7 @@ export default function ITServices() {;
       pricing: '$1,500 - $8,000/month',;
       delivery: '2-4 weeks',;
       category: 'Database Services'},;
-    {;
+    {
       title: 'Enterprise Mobile App Development',;
       description: 'Native and cross-platform mobile application development with backend integration',;
       icon: Smartphone,;
@@ -666,7 +661,7 @@ export default function ITServices() {;
       pricing: '$5,000 - $25,000/month',;
       delivery: '6-12 weeks',;
       category: 'Mobile Development'},;
-    {;
+    {
       title: 'Advanced Cloud Security & Compliance',;
       description: 'Comprehensive cloud security with compliance management and threat protection',;
       icon: Shield,;
@@ -676,7 +671,7 @@ export default function ITServices() {;
       pricing: '$4,000 - $18,000/month',;
       delivery: '4-8 weeks',;
       category: 'Cloud Security'},;
-    {;
+    {
       title: 'Enterprise Integration & Data Migration',;
       description: 'Comprehensive system integration with data migration and transformation services',;
       icon: Network,;
@@ -686,7 +681,7 @@ export default function ITServices() {;
       pricing: '$3,000 - $15,000/month',;
       delivery: '4-10 weeks',;
       category: 'Integration Services'},;
-    {;
+    {
       title: 'Advanced Performance Monitoring & Optimization',;
       description: 'Comprehensive application and infrastructure performance monitoring with optimization',;
       icon: BarChart3,;
@@ -696,7 +691,7 @@ export default function ITServices() {;
       pricing: '$2,000 - $10,000/month',;
       delivery: '2-4 weeks',;
       category: 'Performance Services'},;
-    {;
+    {
       title: 'Enterprise Backup & Disaster Recovery',;
       description: 'Comprehensive backup and disaster recovery solutions with business continuity planning',;
       icon: Shield,;
@@ -706,7 +701,7 @@ export default function ITServices() {;
       pricing: '$2,500 - $12,000/month',;
       delivery: '3-6 weeks',;
       category: 'Backup & Recovery'},;
-    {;
+    {
       title: 'Advanced Network Security & Monitoring',;
       description: 'Comprehensive network security with advanced threat detection and response',;
       icon: Network,;
@@ -716,7 +711,7 @@ export default function ITServices() {;
       pricing: '$3,000 - $15,000/month',;
       delivery: '3-6 weeks',;
       category: 'Network Security'},;
-    {;
+    {
       title: 'AI-Powered IT Operations (AIOps)',;
       description: 'Intelligent IT operations with AI-driven automation and predictive analytics',;
       icon: Brain,;
@@ -726,7 +721,7 @@ export default function ITServices() {;
       pricing: '$5,000 - $25,000/month',;
       delivery: '6-12 weeks',;
       category: 'AIOps Services'},;
-    {;
+    {
       title: 'Zero Trust Security Architecture',;
       description: 'Comprehensive zero trust security implementation with identity and access management',;
       icon: Shield,;
@@ -736,7 +731,7 @@ export default function ITServices() {;
       pricing: '$8,000 - $40,000/month',;
       delivery: '8-16 weeks',;
       category: 'Security Services'},;
-    {;
+    {
       title: 'Quantum-Safe Cryptography Implementation',;
       description: 'Future-proof cryptographic solutions resistant to quantum computing threats',;
       icon: Lock,;
@@ -746,7 +741,7 @@ export default function ITServices() {;
       pricing: '$15,000 - $75,000/month',;
       delivery: '12-24 weeks',;
       category: 'Quantum Security'},;
-    {;
+    {
       title: 'Edge Computing Infrastructure',;
       description: 'Distributed edge computing solutions for low-latency applications and IoT',;
       icon: Cpu,;
@@ -756,7 +751,7 @@ export default function ITServices() {;
       pricing: '$6,000 - $30,000/month',;
       delivery: '8-16 weeks',;
       category: 'Edge Computing'},;
-    {;
+    {
       title: 'Green IT & Sustainability Solutions',;
       description: 'Environmentally conscious IT infrastructure and carbon footprint reduction',;
       icon: TreePine,;
@@ -766,7 +761,7 @@ export default function ITServices() {;
       pricing: '$4,000 - $20,000/month',;
       delivery: '6-12 weeks',;
       category: 'Green IT'},;
-    {;
+    {
       title: 'Hyperconverged Infrastructure (HCI)',;
       description: 'Simplified infrastructure management with integrated compute, storage, and networking',;
       icon: Server,;
@@ -776,7 +771,7 @@ export default function ITServices() {;
       pricing: '$5,000 - $25,000/month',;
       delivery: '6-12 weeks',;
       category: 'Infrastructure Services'},;
-    {;
+    {
       title: 'Multi-Cloud Management Platform',;
       description: 'Unified management and orchestration across multiple cloud providers',;
       icon: Cloud,;
@@ -786,7 +781,7 @@ export default function ITServices() {;
       pricing: '$7,000 - $35,000/month',;
       delivery: '8-16 weeks',;
       category: 'Cloud Services'},;
-    {;
+    {
       title: 'IT Service Management (ITSM) Platform',;
       description: 'Comprehensive IT service delivery and support management system',;
       icon: Settings,;
@@ -796,7 +791,7 @@ export default function ITServices() {;
       pricing: '$3,000 - $15,000/month',;
       delivery: '4-8 weeks',;
       category: 'Service Management'},;
-    {;
+    {
       title: 'Advanced Threat Intelligence Platform',;
       description: 'Proactive threat hunting and intelligence-driven security operations',;
       icon: Shield,;
@@ -806,7 +801,7 @@ export default function ITServices() {;
       pricing: '$10,000 - $50,000/month',;
       delivery: '10-20 weeks',;
       category: 'Threat Intelligence'},;
-    {;
+    {
       title: 'Green IT Solutions',;
       description: 'Environmentally conscious IT solutions with carbon footprint reduction',;
       icon: TreePine,;
@@ -816,7 +811,7 @@ export default function ITServices() {;
       pricing: '$1,500 - $8,000/month',;
       delivery: '2-4 weeks',;
       category: 'Green IT'},;
-    {;
+    {
       title: 'Quantum Computing Readiness',;
       description: 'Preparation and integration services for quantum computing technologies',;
       icon: Cpu,;
@@ -826,7 +821,7 @@ export default function ITServices() {;
       pricing: '$8,000 - $40,000/month',;
       delivery: '8-16 weeks',;
       category: 'Quantum Computing'},;
-    {;
+    {
       title: '5G Network Integration',;
       description: '5G network deployment and integration services for enterprise applications',;
       icon: Wifi,;
@@ -836,7 +831,7 @@ export default function ITServices() {;
       pricing: '$5,000 - $25,000/month',;
       delivery: '6-12 weeks',;
       category: '5G Services'},;
-    {;
+    {
       title: 'Blockchain Infrastructure Services',;
       description: 'Blockchain network deployment and management for enterprise applications',;
       icon: Shield,;
@@ -846,7 +841,7 @@ export default function ITServices() {;
       pricing: '$3,500 - $18,000/month',;
       delivery: '4-10 weeks',;
       category: 'Blockchain Services'},;
-    {;
+    {
       title: 'IoT Platform Management',;
       description: 'Comprehensive IoT infrastructure and device management services',;
       icon: Network,;
@@ -856,7 +851,7 @@ export default function ITServices() {;
       pricing: '$2,000 - $10,000/month',;
       delivery: '3-6 weeks',;
       category: 'IoT Services'},;
-    {;
+    {
       title: 'Digital Twin Implementation',;
       description: 'Digital twin creation and management for physical assets and processes',;
       icon: Monitor,;
@@ -866,7 +861,7 @@ export default function ITServices() {;
       pricing: '$6,000 - $30,000/month',;
       delivery: '8-16 weeks',;
       category: 'Digital Twin Services'},;
-    {;
+    {
       title: 'Zero Trust Security Architecture',;
       description: 'Comprehensive zero trust security implementation and management',;
       icon: Lock,;
@@ -876,7 +871,7 @@ export default function ITServices() {;
       pricing: '$4,500 - $22,000/month',;
       delivery: '6-12 weeks',;
       category: 'Zero Trust Security'},;
-    {;
+    {
       title: 'AI-Powered IT Operations (AIOps)',;
       description: 'Intelligent IT operations with machine learning-driven automation and predictive analytics',;
       icon: Brain,;
@@ -886,7 +881,7 @@ export default function ITServices() {;
       pricing: '$8,000 - $35,000/month',;
       delivery: '8-16 weeks',;
       category: 'AIOps Services'},;
-    {;
+    {
       title: 'Edge Computing Infrastructure',;
       description: 'Comprehensive edge computing solutions with distributed processing and real-time analytics',;
       icon: Cpu,;
@@ -896,7 +891,7 @@ export default function ITServices() {;
       pricing: '$6,000 - $30,000/month',;
       delivery: '6-14 weeks',;
       category: 'Edge Computing Services'},;
-    {;
+    {
       title: 'Serverless Architecture & Functions',;
       description: 'Serverless computing solutions with function-as-a-service and event-driven architecture',;
       icon: Cloud,;
@@ -906,7 +901,7 @@ export default function ITServices() {;
       pricing: '$4,000 - $20,000/month',;
       delivery: '4-10 weeks',;
       category: 'Serverless Services'},;
-    {;
+    {
       title: 'Container Security & Compliance',;
       description: 'Comprehensive container security with vulnerability scanning and compliance automation',;
       icon: Shield,;
@@ -916,7 +911,7 @@ export default function ITServices() {;
       pricing: '$3,500 - $18,000/month',;
       delivery: '4-8 weeks',;
       category: 'Container Security Services'},;
-    {;
+    {
       title: 'Data Mesh & Distributed Data Architecture',;
       description: 'Modern data architecture with distributed data mesh and domain-driven design',;
       icon: Network,;
@@ -926,7 +921,7 @@ export default function ITServices() {;
       pricing: '$10,000 - $50,000/month',;
       delivery: '12-24 weeks',;
       category: 'Data Architecture Services'},;
-    {;
+    {
       title: 'Cloud-Native Application Development',;
       description: 'Modern cloud-native application development with microservices and containerization',;
       icon: Code,;
@@ -936,7 +931,7 @@ export default function ITServices() {;
       pricing: '$8,000 - $40,000/month',;
       delivery: '8-20 weeks',;
       category: 'Cloud-Native Development Services'},;
-    {;
+    {
       title: 'IT Service Management (ITSM) Automation',;
       description: 'Intelligent IT service management with automated workflows and AI-powered support',;
       icon: Settings,;
@@ -946,7 +941,7 @@ export default function ITServices() {;
       pricing: '$5,000 - $25,000/month',;
       delivery: '6-14 weeks',;
       category: 'ITSM Services'},;
-    {;
+    {
       title: 'Hybrid Cloud Management Platform',;
       description: 'Unified hybrid cloud management with multi-cloud orchestration and governance',;
       icon: Cloud,;
@@ -956,7 +951,7 @@ export default function ITServices() {;
       pricing: '$12,000 - $60,000/month',;
       delivery: '10-24 weeks',;
       category: 'Hybrid Cloud Services'},;
-    {;
+    {
       title: 'IT Infrastructure Automation & Orchestration',;
       description: 'Comprehensive infrastructure automation with intelligent orchestration and self-healing',;
       icon: Settings,;
@@ -966,7 +961,7 @@ export default function ITServices() {;
       pricing: '$6,000 - $30,000/month',;
       delivery: '6-16 weeks',;
       category: 'Infrastructure Automation Services'},;
-    {;
+    {
       title: 'Cybersecurity Operations Center (SOC) as a Service',;
       description: '24/7 security operations center with advanced threat detection and response capabilities',;
       icon: Shield,;
@@ -976,7 +971,7 @@ export default function ITServices() {;
       pricing: '$15,000 - $75,000/month',;
       delivery: '4-8 weeks',;
       category: 'SOC Services'},;
-    {;
+    {
       title: 'Digital Workplace & Collaboration Solutions',;
       description: 'Modern digital workplace with unified communication and collaboration platforms',;
       icon: Users,;
@@ -986,7 +981,7 @@ export default function ITServices() {;
       pricing: '$3,000 - $15,000/month',;
       delivery: '4-10 weeks',;
       category: 'Digital Workplace Services'},;
-    {;
+    {
       title: 'IT Asset Management & Lifecycle Services',;
       description: 'Comprehensive IT asset management with automated lifecycle tracking and optimization',;
       icon: Database,;
@@ -996,7 +991,7 @@ export default function ITServices() {;
       pricing: '$2,500 - $12,000/month',;
       delivery: '3-8 weeks',;
       category: 'IT Asset Management Services'},;
-    {;
+    {
       title: 'Cloud Migration & Modernization Services',;
       description: 'Comprehensive cloud migration with application modernization and optimization',;
       icon: Cloud,;
@@ -1006,7 +1001,7 @@ export default function ITServices() {;
       pricing: '$10,000 - $100,000/month',;
       delivery: '8-24 weeks',;
       category: 'Cloud Migration Services'},;
-    {;
+    {
       title: 'IT Compliance & Governance Services',;
       description: 'Comprehensive IT compliance management with automated governance and audit support',;
       icon: Shield,;
@@ -1016,7 +1011,7 @@ export default function ITServices() {;
       pricing: '$5,000 - $30,000/month',;
       delivery: '6-16 weeks',;
       category: 'IT Compliance Services'},;
-    {;
+    {
       title: 'AI-Powered IT Service Desk',;
       description: 'Intelligent IT service desk with AI chatbots, automated ticket routing, and predictive issue resolution',;
       icon: Brain,;
@@ -1026,7 +1021,7 @@ export default function ITServices() {;
       pricing: '$3,000 - $15,000/month',;
       delivery: '4-8 weeks',;
       category: 'AI-Powered Support Services'},;
-    {;
+    {
       title: 'Quantum-Safe Security Implementation',;
       description: 'Future-proof security solutions resistant to quantum computing threats with post-quantum cryptography',;
       icon: Lock,;
@@ -1036,7 +1031,7 @@ export default function ITServices() {;
       pricing: '$15,000 - $75,000/month',;
       delivery: '12-24 weeks',;
       category: 'Quantum Security Services'},;
-    {;
+    {
       title: 'Neuromorphic Computing Infrastructure',;
       description: 'Brain-inspired computing systems for ultra-low power AI processing and edge computing optimization',;
       icon: Cpu,;
@@ -1046,7 +1041,7 @@ export default function ITServices() {;
       pricing: '$20,000 - $100,000/month',;
       delivery: '16-32 weeks',;
       category: 'Neuromorphic Computing Services'},;
-    {;
+    {
       title: 'Space-Based Computing Infrastructure',;
       description: 'Satellite-based computing and edge processing for global connectivity and low-latency applications',;
       icon: Satellite,;
@@ -1056,7 +1051,7 @@ export default function ITServices() {;
       pricing: '$50,000 - $500,000/month',;
       delivery: '24-48 weeks',;
       category: 'Space Computing Services'},;
-    {;
+    {
       title: 'Fusion Energy IT Infrastructure',;
       description: 'Specialized IT infrastructure for fusion energy research, power generation, and plasma control systems',;
       icon: Zap,;
@@ -1066,7 +1061,7 @@ export default function ITServices() {;
       pricing: '$100,000 - $1,000,000/month',;
       delivery: '32-64 weeks',;
       category: 'Fusion Energy IT Services'},;
-    {;
+    {
       title: 'Synthetic Biology Computing Platform',;
       description: 'Specialized computing infrastructure for synthetic biology, bioengineering, and genetic design',;
       icon: Cpu,;
@@ -1076,7 +1071,7 @@ export default function ITServices() {;
       pricing: '$25,000 - $150,000/month',;
       delivery: '20-40 weeks',;
       category: 'Synthetic Biology IT Services'},;
-    {;
+    {
       title: 'Autonomous Vehicle Infrastructure',;
       description: 'IT infrastructure for autonomous vehicle testing, deployment, fleet management, and safety systems',;
       icon: Car,;
@@ -1086,7 +1081,7 @@ export default function ITServices() {;
       pricing: '$30,000 - $200,000/month',;
       delivery: '24-48 weeks',;
       category: 'Autonomous Vehicle IT Services'},;
-    {;
+    {
       title: 'Digital Twin Infrastructure Platform',;
       description: 'Comprehensive digital twin infrastructure for real-time simulation, monitoring, and predictive analytics',;
       icon: Monitor,;
@@ -1096,7 +1091,7 @@ export default function ITServices() {;
       pricing: '$20,000 - $100,000/month',;
       delivery: '16-32 weeks',;
       category: 'Digital Twin Infrastructure Services'},;
-    {;
+    {
       title: 'Metaverse Infrastructure & Platform',;
       description: 'Complete metaverse infrastructure for virtual worlds, immersive experiences, and virtual economies',;
       icon: Globe,;
@@ -1106,7 +1101,7 @@ export default function ITServices() {;
       pricing: '$40,000 - $300,000/month',;
       delivery: '24-48 weeks',;
       category: 'Metaverse Infrastructure Services'},;
-    {;
+    {
       title: 'Brain-Computer Interface Infrastructure',;
       description: 'Specialized IT infrastructure for brain-computer interface systems, neural data processing, and medical applications',;
       icon: Brain,;
@@ -1116,7 +1111,7 @@ export default function ITServices() {;
       pricing: '$35,000 - $200,000/month',;
       delivery: '28-56 weeks',;
       category: 'BCI Infrastructure Services'},;
-    {;
+    {
       title: 'Underwater Computing Infrastructure',;
       description: 'Specialized computing infrastructure for underwater operations, marine research, and ocean exploration',;
       icon: Network,;
@@ -1126,7 +1121,7 @@ export default function ITServices() {;
       pricing: '$25,000 - $150,000/month',;
       delivery: '20-40 weeks',;
       category: 'Marine Computing Services'},;
-    {;
+    {
       title: 'Consciousness Research Computing Platform',;
       description: 'Advanced computing infrastructure for consciousness research, AGI development, and cognitive architecture design',;
       icon: Brain,;
@@ -1136,7 +1131,7 @@ export default function ITServices() {;
       pricing: '$100,000 - $1,000,000/month',;
       delivery: '40-80 weeks',;
       category: 'Consciousness Research IT Services'},;
-    {;
+    {
       title: 'Climate Computing & Modeling Infrastructure',;
       description: 'High-performance computing infrastructure for climate modeling, environmental research, and sustainability planning',;
       icon: Globe,;
@@ -1146,7 +1141,7 @@ export default function ITServices() {;
       pricing: '$30,000 - $250,000/month',;
       delivery: '24-48 weeks',;
       category: 'Climate Computing Services'},;
-    {;
+    {
       title: 'Space Mission Computing Infrastructure',;
       description: 'Specialized computing infrastructure for space missions, satellite operations, and space exploration',;
       icon: Satellite,;
@@ -1156,7 +1151,7 @@ export default function ITServices() {;
       pricing: '$75,000 - $750,000/month',;
       delivery: '32-64 weeks',;
       category: 'Space Mission IT Services'},;
-    {;
+    {
       title: 'Quantum Computing Infrastructure',;
       description: 'Quantum computing setup, optimization, and hybrid classical-quantum systems for enterprise applications',;
       icon: Cpu,;
@@ -1166,7 +1161,7 @@ export default function ITServices() {;
       pricing: '$50,000 - $500,000/month',;
       delivery: '24-48 weeks',;
       category: 'Quantum Computing Services'},;
-    {;
+    {
       title: '5G & Edge Computing Networks',;
       description: '5G network deployment, edge computing infrastructure, and ultra-low latency solutions for enterprise',;
       icon: Network,;
@@ -1176,7 +1171,7 @@ export default function ITServices() {;
       pricing: '$25,000 - $200,000/month',;
       delivery: '16-32 weeks',;
       category: '5G & Edge Services'},;
-    {;
+    {
       title: 'Metaverse & Virtual Reality Infrastructure',;
       description: 'VR/AR platform development, metaverse infrastructure, and immersive technology solutions',;
       icon: Monitor,;
@@ -1186,7 +1181,7 @@ export default function ITServices() {;
       pricing: '$15,000 - $150,000/month',;
       delivery: '12-24 weeks',;
       category: 'Metaverse Services'},;
-    {;
+    {
       title: 'Green IT & Sustainable Computing',;
       description: 'Energy-efficient computing solutions, carbon footprint reduction, and sustainable IT practices',;
       icon: TreePine,;
@@ -1196,7 +1191,7 @@ export default function ITServices() {;
       pricing: '$10,000 - $100,000/month',;
       delivery: '8-16 weeks',;
       category: 'Green IT Services'},;
-    {;
+    {
       title: 'Zero-Trust Security Architecture',;
       description: 'Comprehensive zero-trust security implementation with identity verification and micro-segmentation',;
       icon: Shield,;
@@ -1206,7 +1201,7 @@ export default function ITServices() {;
       pricing: '$20,000 - $150,000/month',;
       delivery: '12-24 weeks',;
       category: 'Zero-Trust Security Services'},;
-    {;
+    {
       title: 'Hyperautomation & RPA Solutions',;
       description: 'Intelligent process automation, robotic process automation, and business process optimization',;
       icon: Settings,;
@@ -1216,7 +1211,7 @@ export default function ITServices() {;
       pricing: '$8,000 - $80,000/month',;
       delivery: '8-20 weeks',;
       category: 'Hyperautomation Services'},;
-    {;
+    {
       title: 'Digital Twin & Simulation Platforms',;
       description: 'Digital twin development, simulation platforms, and virtual modeling solutions',;
       icon: Monitor,;
@@ -1226,7 +1221,7 @@ export default function ITServices() {;
       pricing: '$25,000 - $250,000/month',;
       delivery: '16-32 weeks',;
       category: 'Digital Twin Services'},;
-    {;
+    {
       title: 'Neuromorphic Computing Systems',;
       description: 'Brain-inspired computing infrastructure, spiking neural networks, and edge AI optimization',;
       icon: Brain,;
@@ -1236,7 +1231,7 @@ export default function ITServices() {;
       pricing: '$30,000 - $300,000/month',;
       delivery: '20-40 weeks',;
       category: 'Neuromorphic Computing Services'},;
-    {;
+    {
       title: 'Autonomous Systems Infrastructure',;
       description: 'Infrastructure for autonomous vehicles, drones, and robotic systems with real-time processing',;
       icon: Car,;
@@ -1246,7 +1241,7 @@ export default function ITServices() {;
       pricing: '$40,000 - $400,000/month',;
       delivery: '24-48 weeks',;
       category: 'Autonomous Systems Services'},;
-    {;
+    {
       title: 'AI-Powered Infrastructure Orchestration',;
       description: 'Intelligent infrastructure management with AI-driven automation, predictive scaling, and self-healing capabilities',;
       icon: Brain,;
@@ -1256,7 +1251,7 @@ export default function ITServices() {;
       pricing: '$15,000 - $100,000/month',;
       delivery: '12-24 weeks',;
       category: 'AI Infrastructure Services'},;
-    {;
+    {
       title: 'Quantum-Safe Network Security',;
       description: 'Future-proof network security with post-quantum cryptography and quantum-resistant protocols',;
       icon: Lock,;
@@ -1266,7 +1261,7 @@ export default function ITServices() {;
       pricing: '$25,000 - $200,000/month',;
       delivery: '16-32 weeks',;
       category: 'Quantum Security Services'},;
-    {;
+    {
       title: 'Edge AI Computing Platform',;
       description: 'Distributed edge AI infrastructure with real-time inference, model optimization, and autonomous decision making',;
       icon: Cpu,;
@@ -1276,7 +1271,7 @@ export default function ITServices() {;
       pricing: '$20,000 - $150,000/month',;
       delivery: '16-32 weeks',;
       category: 'Edge AI Services'},;
-    {;
+    {
       title: 'Blockchain Infrastructure & Web3 Services',;
       description: 'Comprehensive blockchain infrastructure with DeFi integration, NFT platforms, and Web3 applications',;
       icon: Network,;
@@ -1286,7 +1281,7 @@ export default function ITServices() {;
       pricing: '$30,000 - $300,000/month',;
       delivery: '20-40 weeks',;
       category: 'Blockchain Infrastructure Services'},;
-    {;
+    {
       title: 'Neuromorphic Edge Computing',;
       description: 'Brain-inspired edge computing with spiking neural networks and ultra-low power processing',;
       icon: Brain,;
@@ -1296,7 +1291,7 @@ export default function ITServices() {;
       pricing: '$40,000 - $400,000/month',;
       delivery: '24-48 weeks',;
       category: 'Neuromorphic Edge Services'},;
-    {;
+    {
       title: 'AI-Powered Cybersecurity Operations',;
       description: 'Advanced AI-driven cybersecurity with autonomous threat detection, response, and prevention',;
       icon: Shield,;
@@ -1306,7 +1301,7 @@ export default function ITServices() {;
       pricing: '$25,000 - $200,000/month',;
       delivery: '16-32 weeks',;
       category: 'AI Cybersecurity Services'},;
-    {;
+    {
       title: 'Quantum-Enhanced Data Analytics',;
       description: 'Next-generation data analytics leveraging quantum computing for complex optimization and pattern recognition',;
       icon: Cpu,;
@@ -1316,7 +1311,7 @@ export default function ITServices() {;
       pricing: '$50,000 - $500,000/month',;
       delivery: '32-64 weeks',;
       category: 'Quantum Analytics Services'},;
-    {;
+    {
       title: 'Autonomous Cloud Management',;
       description: 'Self-managing cloud infrastructure with AI-driven optimization, cost management, and performance tuning',;
       icon: Cloud,;
@@ -1326,7 +1321,7 @@ export default function ITServices() {;
       pricing: '$20,000 - $150,000/month',;
       delivery: '16-32 weeks',;
       category: 'Autonomous Cloud Services'},;
-    {;
+    {
       title: 'AI-Powered Network Intelligence',;
       description: 'Intelligent network management with AI-driven optimization, security, and performance enhancement',;
       icon: Network,;
@@ -1336,7 +1331,7 @@ export default function ITServices() {;
       pricing: '$15,000 - $100,000/month',;
       delivery: '12-24 weeks',;
       category: 'AI Network Services'},;
-    {;
+    {
       title: 'Federated Learning Infrastructure',;
       description: 'Privacy-preserving distributed machine learning with federated learning and secure multi-party computation',;
       icon: Network,;
@@ -1358,22 +1353,22 @@ export default function ITServices() {;
   ];
 
   const benefits = [;
-  {;
+  {
       title: 'Reduced Downtime',;
       description: 'Proactive monitoring and maintenance',;
       icon: Clock,;
       stat: '99.9%'},;
-    {;
+    {
       title: 'Cost Savings',;
       description: 'Optimized infrastructure and processes',;
       icon: Zap,;
       stat: '40%'},;
-    {;
+    {
       title: 'Enhanced Security',;
       description: 'Enterprise-grade protection',;
       icon: Shield,;
       stat: '100%'},;
-    {;
+    {
       title: 'Scalability',;
       description: 'Flexible and scalable solutions',;
       icon: TrendingUp,;

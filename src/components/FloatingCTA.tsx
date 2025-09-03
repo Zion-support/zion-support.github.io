@@ -1,32 +1,30 @@
 import { Link  } from 'react-router-dom';
-export default function Page() {;
+export default function Page() {
  from 'lucide-react';
-;
-const FloatingCTA: React.FC = () : JSX.Element => {;
+
+const FloatingCTA: React.FC = () : JSX.Element => {
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
-;
-  useEffect(() => {;
+
+  useEffect(() => {
   // TODO: Add dependencies if needed;
 
-  return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
+  return () => {
+    // Cleanup function}}, []);, []);
     // Show CTA after 5 seconds;
-    ;
+
       setIsVisible(true) }, 5000) ;
-;
-    return () => clearTimeout(timer) }, []) };
+
+    return () => clearTimeout(timer) }, []) }
   ];
-;
+
   const quickServices = [";
     { name: "AI Solutions", icon: Brain, link: "/ai-services" },";
     { name: "Cybersecurity", icon: Shield, link: "/cybersecurity" },";
     { name: "Cloud Services", icon: Cloud, link: "/cloud-solutions" },;";
-    { name: "Digital Transformation", icon: Zap, link: "/digital-transformation" };
+    { name: "Digital Transformation", icon: Zap, link: "/digital-transformation" }
   ];
-;
+
   if(!isVisible) return null;
                     to="/services";
                     className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-700 transition-colors duration-200 text-white";
@@ -76,10 +74,9 @@ const FloatingCTA: React.FC = () : JSX.Element => {;
           />) }
       </AnimatePresence>;
     </>;
-  )};
-;
-            onClick={ () => setIsExpanded(false) };
-          />;) };
+  )}
+            onClick={ () => setIsExpanded(false) }
+          />;) }
       </AnimatePresence>;
     </>;
   )}

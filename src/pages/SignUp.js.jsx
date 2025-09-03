@@ -11,8 +11,7 @@ export default function SignUp() {}
   const handleSubmit = async e => {}
     e.preventDefault();';
     await axios.post('/auth/register', { email, password });';
-    router('/marketplace');,
-};
+    router('/marketplace')}
   return();
     <form onSubmit={handleSubmit} className="p-4 space-y-2">";
       <input"";
@@ -33,14 +32,10 @@ export default function SignUp() {}
         Sign Up;
       </button>;
     </form>)}
-;
 
-export { SignUp };
-;
-export { SignUp };
-;
-export { SignUp };
-;
-export { SignUp };
-;
-export { SignUp };
+
+export { SignUp }
+export { SignUp }
+export { SignUp }
+export { SignUp }
+export { SignUp }

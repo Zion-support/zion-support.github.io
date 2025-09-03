@@ -1,5 +1,5 @@
 import Head from "next/head";
-const Component = () => {;
+const Component = () => {
 import React from "react";
   return (;
     <>;
@@ -49,7 +49,7 @@ import React from "react";
                   <div className="text-gray-600">{stat.description}</div>;
                 </div>;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";
@@ -81,11 +81,11 @@ import React from "react";
                         <span className="text-gray-700">{feature}</span>;
                       </li>;
                     ))}
-;
+
                   </ul>;
                 </div>;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";
@@ -108,7 +108,7 @@ import React from "react";
                   <p className="text-sm text-gray-600">{tech.description}</p>;
                 </div>;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";
@@ -200,5 +200,5 @@ import React from "react";
       <Footer  />;
     </>;
   )}
-;
+
 "export default CloudDevOps

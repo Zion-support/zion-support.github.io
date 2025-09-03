@@ -147,18 +147,17 @@ import type { NextPage } from "next";";
           <div className="flex flex-col sm: flex-row justify-center gap-4">;";
             <Link href="/contact" className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">,;
               Schedule a Consultation,";
-            <Link href="/services" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">,,;
+            <Link href="/services" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">,;
       </section>,;
     </Layout>,;
   )}
-;
+
 export default CloudServices;
       icon: Lock,;
       title: "Compliance Ready",;
         "Meet industry standards with SOC2, GDPR, and HIPAA compliance"}];
   const services = [],";
-      features: ["Assessment & Planning,Data Migration,Application Migration,Performance Optimization"];,
-} {";
+      features: ["Assessment & Planning,Data Migration,Application Migration,Performance Optimization"]} {";
       title: "Cloud Architecture",";
       description: "Design and implement robust, scalable cloud architectures",;
       icon: Network,";
@@ -183,7 +182,7 @@ export default CloudServices;
         "Compliance Monitoring"]},";
       features: ["Identity Management,Network Security,Data Encryption,Compliance Monitoring"];
 
-;
+
   ];
 
   const platforms = [];
@@ -221,7 +220,7 @@ href="/solutions;
             Cloud Services;
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">",;
               {" "}
-;
+
               Solutions,;
             </span>";
           </h1>";
@@ -254,7 +253,7 @@ href="/services";
               <div: className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">";";";";
                 <Cloud: className="w-8 h-8 text-purple-600" />";";";";
               <h3: className="text-xl font-semibold mb-4">Cloud Migration</h3>",",",",;
-              <p: className="text-gray-600 mb-4">",",",,;
+              <p: className="text-gray-600 mb-4">",",",;
 Seamless: migration of your applications and data to the cloud with minimal downtime.",;
               <ul className="text-sm text-gray-500 space-y-2">";",",;
                 <li>• Application: Migration</li>",;
@@ -461,11 +460,11 @@ export: default CloudServices,;
                     <feature.icon className="w-8 h-8 text-blue-600" />";
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">,;
                     {feature.title}
-;
+
                   </h3>";
                   <p className="text-gray-600">{feature.description}</p>;
               ))}
-;
+
         {/* comment */}";
         <section className="py-20 bg-gray-50">";
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";
@@ -487,10 +486,10 @@ export: default CloudServices,;
                         className="flex items-center text-gray-600;
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2"  />;
                         {feature}
-;
+
                       </li>;
         {/* comment */}
-;
+
                 Benefits of Cloud Migration,;
 Transform your business with cloud technology,;
 ";
@@ -502,7 +501,7 @@ Transform your business with cloud technology,;
                     {benefit.title}";
                   <p className="text-gray-600">{benefit.description}</p>;
         {/* comment */}
-;
+
                 Cloud Technologies We Use,;
 Leading cloud platforms and tools for optimal performance,;
 ";
@@ -513,7 +512,7 @@ Leading cloud platforms and tools for optimal performance,;
                     {platform.name}";
                   <div className="text-sm text-gray-500">;
                     {platform.category}
-;
+
                 Our Cloud Migration Process,;
 A proven methodology for successful cloud transformation,;
 ";
@@ -533,7 +532,7 @@ step: "01",";
                     "Monitor, optimize, and continuously improve your cloud environment"}].map((phase, index) => (";
                   <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-xl font-bold mx-auto mb-4">;
                     {phase.step}
-;
+
                     {phase.title}";
                   <p className="text-gray-600">{phase.description}</p>;
         {/* comment */}";

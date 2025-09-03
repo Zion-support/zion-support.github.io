@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
 import { Calendar, Clock, Users, Play, ExternalLink, Filter } from 'lucide-react';
-;
-const Webinars: NextPage = () => {;
+
+const Webinars: NextPage = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
-;
+
   const categories = ['All', 'AI & Machine Learning', 'Cloud Computing', 'Cybersecurity', 'Digital Transformation', 'Development'];
-;
+
   const webinars = [;
-    {;
+    {
       id: 1,;
       title: 'AI-Powered Business Transformation: Real-World Success Stories',;
       description: 'Learn how leading companies are leveraging AI to drive innovation and growth. Join us for insights from industry experts and real-world case studies.',;
@@ -22,9 +22,8 @@ const Webinars: NextPage = () => {;
       type: 'upcoming',;
       attendees: 0,;
       maxAttendees: 500,;
-      image: '/webinars/ai-transformation.jpg';,
-},;
-    {;
+      image: '/webinars/ai-transformation.jpg'},;
+    {
       id: 2,;
       title: 'Cloud Migration Best Practices: A Complete Guide',;
       description: 'Comprehensive guide to successful cloud migration strategies, common pitfalls to avoid, and best practices for seamless transitions.',;
@@ -37,9 +36,8 @@ const Webinars: NextPage = () => {;
       type: 'upcoming',;
       attendees: 0,;
       maxAttendees: 300,;
-      image: '/webinars/cloud-migration.jpg';,
-},;
-    {;
+      image: '/webinars/cloud-migration.jpg'},;
+    {
       id: 3,;
       title: 'Cybersecurity in the Age of Remote Work',;
       description: 'Essential security measures and best practices for protecting your organization in today\'s distributed work environment.',;
@@ -52,9 +50,8 @@ const Webinars: NextPage = () => {;
       type: 'upcoming',;
       attendees: 0,;
       maxAttendees: 400,;
-      image: '/webinars/cybersecurity-remote.jpg';,
-},;
-    {;
+      image: '/webinars/cybersecurity-remote.jpg'},;
+    {
       id: 4,;
       title: 'Building Scalable Microservices Architecture',;
       description: 'Learn how to design and implement microservices that can scale with your business growth and technical requirements.',;
@@ -67,9 +64,8 @@ const Webinars: NextPage = () => {;
       type: 'upcoming',;
       attendees: 0,;
       maxAttendees: 350,;
-      image: '/webinars/microservices.jpg';,
-},;
-    {;
+      image: '/webinars/microservices.jpg'},;
+    {
       id: 5,;
       title: 'Digital Transformation: Success Stories from 2024',;
       description: 'Real-world case studies of successful digital transformations and the key factors that led to their success.',;
@@ -82,9 +78,8 @@ const Webinars: NextPage = () => {;
       type: 'upcoming',;
       attendees: 0,;
       maxAttendees: 500,;
-      image: '/webinars/digital-transformation.jpg';,
-},;
-    {;
+      image: '/webinars/digital-transformation.jpg'},;
+    {
       id: 6,;
       title: 'The Future of AI in Business: Trends for 2025',;
       description: 'Explore the latest AI trends that are transforming businesses and how to prepare your organization for the AI revolution.',;
@@ -97,12 +92,11 @@ const Webinars: NextPage = () => {;
       type: 'upcoming',;
       attendees: 0,;
       maxAttendees: 600,;
-      image: '/webinars/ai-future.jpg';,
-}
+      image: '/webinars/ai-future.jpg'}
   ];
-;
+
   const pastWebinars = [;
-    {;
+    {
       id: 7,;
       title: 'Introduction to Machine Learning for Business Leaders',;
       description: 'A comprehensive introduction to machine learning concepts and their practical applications in business.',;
@@ -116,9 +110,8 @@ const Webinars: NextPage = () => {;
       attendees: 450,;
       maxAttendees: 500,;
       recordingUrl: '/recordings/ml-intro-2025-01-15',;
-      image: '/webinars/ml-intro.jpg';,
-},;
-    {;
+      image: '/webinars/ml-intro.jpg'},;
+    {
       id: 8,;
       title: 'Cloud Security Best Practices',;
       description: 'Essential security measures for cloud environments and how to implement them effectively.',;
@@ -132,20 +125,19 @@ const Webinars: NextPage = () => {;
       attendees: 320,;
       maxAttendees: 400,;
       recordingUrl: '/recordings/cloud-security-2025-01-10',;
-      image: '/webinars/cloud-security.jpg';,
-}
+      image: '/webinars/cloud-security.jpg'}
   ];
-;
+
   const filteredWebinars = webinars.filter(webinar => ;
     selectedCategory === 'All' || webinar.category === selectedCategory;
   );
-;
+
   const filteredPastWebinars = pastWebinars.filter(webinar => ;
     selectedCategory === 'All' || webinar.category === selectedCategory;
   );
-;
-  const getCategoryColor = (category: string) => {;
-    switch (category) {;
+
+  const getCategoryColor = (category: string) => {
+    switch (category) {
       case 'AI & Machine Learning':;
         return 'bg-purple-100 text-purple-800';
       case 'Cloud Computing':;
@@ -157,10 +149,8 @@ const Webinars: NextPage = () => {;
       case 'Development':;
         return 'bg-yellow-100 text-yellow-800';
       default:;
-        return 'bg-gray-100 text-gray-800';,
-}
-  };
-;
+        return 'bg-gray-100 text-gray-800'}
+  }
   return (;
     <MainLayout;
       title="Webinars - Zion Tech Group";
@@ -175,10 +165,9 @@ const Webinars: NextPage = () => {;
               <h1 className="text-4xl md:text-5xl font-bold mb-6">Expert Webinars</h1>;
               <p className="text-xl text-gray-200 mb-8">;
                 Learn from industry experts and stay ahead of technology trends with our comprehensive webinar series.;
-              </p>;,
-}
+              </p>}
   ];
-;
+
   const categories = [;
     'All Webinars',;
     'Artificial Intelligence',;
@@ -188,7 +177,7 @@ const Webinars: NextPage = () => {;
     'Cloud Computing',;
     'Cybersecurity';
   ];
-;
+
   return (;
     <MainLayout;
       title="Webinars - Zion Tech Group";
@@ -253,8 +242,7 @@ const Webinars: NextPage = () => {;
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${;
                       selectedCategory === category;
                         ? 'bg-blue-600 text-white';
-                        : 'bg-gray-100 text-gray-600 hover:bg-gray-200';,
-}`}
+                        : 'bg-gray-100 text-gray-600 hover:bg-gray-200'}`}
                   >;
                     {category}
                   </button>;
@@ -281,16 +269,16 @@ const Webinars: NextPage = () => {;
                           Upcoming;
                         </span>;
                       </div>;
-                      ;
+
                       <h3 className="text-xl font-bold text-gray-900 mb-3">{webinar.title}</h3>;
                       <p className="text-gray-600 mb-4">{webinar.description}</p>;
-                      ;
+
                       <div className="mb-4">;
                         <h4 className="font-semibold text-gray-900 mb-1">Speaker</h4>;
                         <p className="text-gray-600">{webinar.speaker}</p>;
                         <p className="text-sm text-gray-500">{webinar.speakerTitle}</p>;
                       </div>;
-                      ;
+
                       <div className="grid grid-cols-2 gap-4 mb-6">;
                         <div className="flex items-center text-sm text-gray-600">;
                           <Calendar className="w-4 h-4 mr-2" />;
@@ -309,7 +297,7 @@ const Webinars: NextPage = () => {;
                           {webinar.attendees}/{webinar.maxAttendees} registered;
                         </div>;
                       </div>;
-                      ;
+
                       <button className="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">;
                         Register Now;
                       </button>;
@@ -338,16 +326,16 @@ const Webinars: NextPage = () => {;
                           Past Event;
                         </span>;
                       </div>;
-                      ;
+
                       <h3 className="text-xl font-bold text-gray-900 mb-3">{webinar.title}</h3>;
                       <p className="text-gray-600 mb-4">{webinar.description}</p>;
-                      ;
+
                       <div className="mb-4">;
                         <h4 className="font-semibold text-gray-900 mb-1">Speaker</h4>;
                         <p className="text-gray-600">{webinar.speaker}</p>;
                         <p className="text-sm text-gray-500">{webinar.speakerTitle}</p>;
                       </div>;
-                      ;
+
                       <div className="grid grid-cols-2 gap-4 mb-6">;
                         <div className="flex items-center text-sm text-gray-600">;
                           <Calendar className="w-4 h-4 mr-2" />;
@@ -362,7 +350,7 @@ const Webinars: NextPage = () => {;
                           {webinar.attendees} attendees;
                         </div>;
                       </div>;
-                      ;
+
                       <button className="w-full bg-gray-600 hover:bg-gray-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center">;
                         <Play className="w-4 h-4 mr-2" />;
                         Watch Recording;
@@ -448,7 +436,7 @@ const Webinars: NextPage = () => {;
                           <div className="text-sm opacity-80">Upcoming</div>;
                         </div>;
                       </div>;
-                      ;
+
                       <div className="p-6">;
                         <div className="flex items-center justify-between mb-3">;
                           <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">;
@@ -457,15 +445,15 @@ const Webinars: NextPage = () => {;
                           </span>;
                           <span className="text-sm text-gray-500">{webinar.level}</span>;
                         </div>;
-                        ;
+
                         <h2 className="text-xl font-semibold mb-3 text-gray-800">;
                           {webinar.title}
                         </h2>;
-                        ;
+
                         <p className="text-gray-600 mb-4 text-sm line-clamp-3">;
                           {webinar.description}
                         </p>;
-                        ;
+
                         <div className="mb-4">;
                           <div className="flex flex-wrap gap-1">;
                             {webinar.tags.map((tag) => (;
@@ -477,7 +465,7 @@ const Webinars: NextPage = () => {;
                             ))}
                           </div>;
                         </div>;
-                        ;
+
                         <div className="mb-4 space-y-2">;
                           <div className="flex items-center text-sm text-gray-600">;
                             <Users className="w-4 h-4 mr-2" />;
@@ -493,7 +481,7 @@ const Webinars: NextPage = () => {;
                             <span>{webinar.duration}</span>;
                           </div>;
                         </div>;
-                        ;
+
                         <div className="mb-4">;
                           <div className="flex justify-between text-sm text-gray-600 mb-1">;
                             <span>Registered: {webinar.attendees}</span>;
@@ -506,7 +494,7 @@ const Webinars: NextPage = () => {;
                             ></div>;
                           </div>;
                         </div>;
-                        ;
+
                         <button className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors flex items-center justify-center">;
                           <Calendar className="w-4 h-4 mr-2" />;
                           Register Now;
@@ -536,7 +524,7 @@ const Webinars: NextPage = () => {;
                           <div className="text-sm opacity-80">Recording Available</div>;
                         </div>;
                       </div>;
-                      ;
+
                       <div className="p-6">;
                         <div className="flex items-center justify-between mb-3">;
                           <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">;
@@ -545,15 +533,15 @@ const Webinars: NextPage = () => {;
                           </span>;
                           <span className="text-sm text-gray-500">{webinar.level}</span>;
                         </div>;
-                        ;
+
                         <h2 className="text-xl font-semibold mb-3 text-gray-800">;
                           {webinar.title}
                         </h2>;
-                        ;
+
                         <p className="text-gray-600 mb-4 text-sm line-clamp-3">;
                           {webinar.description}
                         </p>;
-                        ;
+
                         <div className="mb-4">;
                           <div className="flex flex-wrap gap-1">;
                             {webinar.tags.map((tag) => (;
@@ -565,7 +553,7 @@ const Webinars: NextPage = () => {;
                             ))}
                           </div>;
                         </div>;
-                        ;
+
                         <div className="mb-4 space-y-2">;
                           <div className="flex items-center text-sm text-gray-600">;
                             <Users className="w-4 h-4 mr-2" />;
@@ -585,7 +573,7 @@ const Webinars: NextPage = () => {;
                             <span>{webinar.attendees} attendees</span>;
                           </div>;
                         </div>;
-                        ;
+
                         <div className="flex space-x-3">;
                           <button className="flex-1 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors flex items-center justify-center">;
                             <Play className="w-4 h-4 mr-2" />;
@@ -635,7 +623,5 @@ const Webinars: NextPage = () => {;
         </div>;
       </section>;
     </MainLayout>;
-  );,
-};
-;
+  )}
 export default Webinars;)

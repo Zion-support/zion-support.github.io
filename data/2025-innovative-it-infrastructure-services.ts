@@ -1,5 +1,5 @@
 import { ServiceVariant  } from "../types/service-variants";
-export interface InnovativeITInfrastructureService {;
+export interface InnovativeITInfrastructureService {
   id: string;
   name: string;
   tagline: string;
@@ -26,7 +26,7 @@ export interface InnovativeITInfrastructureService {;
   marketSize: string;
   growthRate: string;
   variant: string;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -38,7 +38,7 @@ export interface InnovativeITInfrastructureService {;
   rating: number;
 export const innovativeITInfrastructureServices2025: InnovativeITInfrastructureService[] = [;
   // Quantum-Secure Cloud Infrastructure;
-  {;
+  {
     id: "quantum-secure-cloud-infrastructure",;
     name: "Quantum-Secure Cloud Infrastructure Platform",;
     tagline: "Future-proof cloud infrastructure with quantum-resistant encryption",;
@@ -76,21 +76,19 @@ export const innovativeITInfrastructureServices2025: InnovativeITInfrastructureS
     marketSize: "$45.2B cloud infrastructure market",;
     growthRate: "28% annual growth",;
     variant: "quantum-secure-enterprise",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Quantum-secure cloud infrastructure with post-quantum cryptography and quantum key distribution.",;
     launchDate: "2025-01-15",;
     customers: 12,;
     rating: 4.9,;
-    reviews: 8;,;,
-},;
+    reviews: 8},;
   // Edge Computing Orchestration Platform;
-  {;
+  {
     id: "edge-computing-orchestration",;
     name: "Edge Computing Orchestration Platform",;
     tagline: "Intelligent orchestration of distributed edge computing resources",;
@@ -128,21 +126,19 @@ export const innovativeITInfrastructureServices2025: InnovativeITInfrastructureS
     marketSize: "$15.8B edge computing market",;
     growthRate: "35% annual growth",;
     variant: "edge-computing-enterprise",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Edge computing orchestration platform with intelligent workload distribution and edge-to-cloud synchronization.",;
     launchDate: "2025-01-20",;
     customers: 45,;
     rating: 4.8,;
-    reviews: 32;,;,
-},;
+    reviews: 32},;
   // Neuromorphic Computing Infrastructure;
-  {;
+  {
     id: "neuromorphic-computing-infrastructure",;
     name: "Neuromorphic Computing Infrastructure Platform",;
     tagline: "Brain-inspired computing architecture for ultra-efficient AI processing",;
@@ -180,21 +176,19 @@ export const innovativeITInfrastructureServices2025: InnovativeITInfrastructureS
     marketSize: "$2.1B neuromorphic computing market",;
     growthRate: "65% annual growth",;
     variant: "neuromorphic-enterprise",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Neuromorphic computing infrastructure with brain-inspired neural architecture and ultra-efficient AI processing.",;
     launchDate: "2025-02-01",;
     customers: 8,;
     rating: 4.9,;
-    reviews: 6;,;,
-},;
+    reviews: 6},;
   // Hybrid Quantum-Classical Infrastructure;
-  {;
+  {
     id: "hybrid-quantum-classical-infrastructure",;
     name: "Hybrid Quantum-Classical Infrastructure Platform",;
     tagline: "Seamless integration of quantum and classical computing resources",;
@@ -232,21 +226,19 @@ export const innovativeITInfrastructureServices2025: InnovativeITInfrastructureS
     marketSize: "$3.2B quantum computing market",;
     growthRate: "55% annual growth",;
     variant: "hybrid-quantum-enterprise",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Hybrid quantum-classical infrastructure with seamless resource orchestration and hybrid algorithm optimization.",;
     launchDate: "2025-01-25",;
     customers: 15,;
     rating: 4.8,;
-    reviews: 12;,;,
-},;
+    reviews: 12},;
   // Autonomous Data Center Management;
-  {;
+  {
     id: "autonomous-data-center-management",;
     name: "Autonomous Data Center Management Platform",;
     tagline: "Fully autonomous data center operations with AI-powered optimization",;
@@ -284,12 +276,11 @@ export const innovativeITInfrastructureServices2025: InnovativeITInfrastructureS
     marketSize: "$18.5B data center management market",;
     growthRate: "22% annual growth",;
     variant: "autonomous-infrastructure-enterprise",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Autonomous data center management platform with AI-powered optimization and zero human intervention.",;
     launchDate: "2025-02-05',;

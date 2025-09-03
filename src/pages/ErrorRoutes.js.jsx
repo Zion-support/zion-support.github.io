@@ -67,8 +67,7 @@ const NotFound = () => {}
         </div>;
       </div>;
     </div>;
-  );,
-};
+  )}
 const ServerError = () => {}
 ";
   return ("";
@@ -105,8 +104,8 @@ const ServerError = () => {}
           </div>;
         </div>;
       </div>;
-    </div>)};
-const ErrorRoutes = () => {;
+    </div>)}
+const ErrorRoutes = () => {
     const location = useLocation();
     // Check if it's a 500 error (you can implement your own logic here);
     const isServerError = location.pathname === '/500' || location.state?.error === 'server';
@@ -114,16 +113,12 @@ const ErrorRoutes = () => {;
       <Route path="/404" element={<NotFound />}/>;
       <Route path="/500" element={<ServerError />}/>;
       <Route path="*" element={<NotFound />}/>;
-    </Routes>)};
+    </Routes>)}
 export default ErrorRoutes;
-;
 
-export { NotFound, ServerError, ErrorRoutes };
-;
-export { NotFound, ServerError, ErrorRoutes };
-;
-export { NotFound, ServerError, ErrorRoutes };
-;
-export { NotFound, ServerError, ErrorRoutes };
-;
-export { NotFound, ServerError, ErrorRoutes };
+
+export { NotFound, ServerError, ErrorRoutes }
+export { NotFound, ServerError, ErrorRoutes }
+export { NotFound, ServerError, ErrorRoutes }
+export { NotFound, ServerError, ErrorRoutes }
+export { NotFound, ServerError, ErrorRoutes }

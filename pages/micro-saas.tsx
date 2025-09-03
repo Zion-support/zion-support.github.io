@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import {;
+import {
   Code,;
   Cloud,;
   Zap,;
@@ -40,13 +40,13 @@ import {;
   Satellite,;
   Mic} from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
-;
-export default function MicroSaaS() {;
+
+export default function MicroSaaS() {
   const title = 'Micro SaaS Solutions — Zion Tech Group';
   const description = 'Custom micro SaaS applications and software solutions tailored to your business needs. Scalable, secure, and innovative.';
-;
+
   const microSaaSServices = [;
-  {;
+  {
       title: 'AI-Powered Email Responder',;
       description: 'Intelligent email automation with sentiment analysis and smart categorization',;
       icon: MessageSquare,;
@@ -56,7 +56,7 @@ export default function MicroSaaS() {;
       pricing: '$2,500 - $8,000/month',;
       delivery: '2-3 weeks',;
       category: 'Communication SaaS'},;
-    {;
+    {
       title: 'Mobile-First Survey Platform',;
       description: 'Responsive survey tool optimized for mobile devices with real-time analytics',;
       icon: Smartphone,;
@@ -66,7 +66,7 @@ export default function MicroSaaS() {;
       pricing: '$1,500 - $5,000/month',;
       delivery: '2-4 weeks',;
       category: 'Survey SaaS'},;
-    {;
+    {
       title: 'Niche Productivity Planner',;
       description: 'Industry-specific productivity tools with customized workflows and templates',;
       icon: Target,;
@@ -76,7 +76,7 @@ export default function MicroSaaS() {;
       pricing: '$2,000 - $6,000/month',;
       delivery: '3-5 weeks',;
       category: 'Productivity SaaS'},;
-    {;
+    {
       title: 'Event Management Dashboard',;
       description: 'Comprehensive event planning and management platform with ticketing and analytics',;
       icon: Calendar,;
@@ -86,7 +86,7 @@ export default function MicroSaaS() {;
       pricing: '$3,000 - $10,000/month',;
       delivery: '4-6 weeks',;
       category: 'Event SaaS'},;
-    {;
+    {
       title: 'AI Content Creation Suite',;
       description: 'AI-powered content generation platform for marketing and documentation',;
       icon: FileText,;
@@ -96,7 +96,7 @@ export default function MicroSaaS() {;
       pricing: '$2,500 - $8,000/month',;
       delivery: '3-5 weeks',;
       category: 'Content SaaS'},;
-    {;
+    {
       title: 'Customer Support Platform',;
       description: 'Comprehensive helpdesk solution with AI chatbots and ticket management',;
       icon: Users,;
@@ -106,7 +106,7 @@ export default function MicroSaaS() {;
       pricing: '$2,000 - $7,000/month',;
       delivery: '3-4 weeks',;
       category: 'Support SaaS'},;
-    {;
+    {
       title: 'AI Recruiting Platform',;
       description: 'Intelligent recruitment system with automated screening and matching',;
       icon: Brain,;
@@ -116,7 +116,7 @@ export default function MicroSaaS() {;
       pricing: '$4,000 - $15,000/month',;
       delivery: '5-8 weeks',;
       category: 'HR SaaS'},;
-    {;
+    {
       title: 'Document Processing Automation',;
       description: 'AI-powered document analysis and processing for business automation',;
       icon: FileText,;
@@ -126,7 +126,7 @@ export default function MicroSaaS() {;
       pricing: '$3,500 - $12,000/month',;
       delivery: '4-6 weeks',;
       category: 'Document SaaS'},;
-    {;
+    {
       title: 'Analytics Dashboard Platform',;
       description: 'Custom business intelligence and analytics platform with real-time insights',;
       icon: BarChart3,;
@@ -136,7 +136,7 @@ export default function MicroSaaS() {;
       pricing: '$5,000 - $20,000/month',;
       delivery: '6-10 weeks',;
       category: 'Analytics SaaS'},;
-    {;
+    {
       title: 'Workflow Automation Engine',;
       description: 'No-code workflow automation platform for business process optimization',;
       icon: Settings,;
@@ -146,7 +146,7 @@ export default function MicroSaaS() {;
       pricing: '$3,000 - $10,000/month',;
       delivery: '4-7 weeks',;
       category: 'Automation SaaS'},;
-    {;
+    {
       title: 'AI-Powered E-commerce Return Manager',;
       description: 'Intelligent return processing system with automated decision making and fraud detection',;
       icon: ArrowRight,;
@@ -156,7 +156,7 @@ export default function MicroSaaS() {;
       pricing: '$1,500 - $5,000/month',;
       delivery: '3-5 weeks',;
       category: 'E-commerce SaaS'},;
-    {;
+    {
       title: 'Smart Inventory Optimization Platform',;
       description: 'AI-driven inventory management with demand forecasting and automated reordering',;
       icon: BarChart3,;
@@ -166,7 +166,7 @@ export default function MicroSaaS() {;
       pricing: '$2,500 - $8,000/month',;
       delivery: '4-6 weeks',;
       category: 'Inventory SaaS'},;
-    {;
+    {
       title: 'AI-Powered SEO Content Optimizer',;
       description: 'Intelligent content optimization platform that enhances web page performance and rankings',;
       icon: TrendingUp,;
@@ -176,7 +176,7 @@ export default function MicroSaaS() {;
       pricing: '$199 - $799/month',;
       delivery: '1-2 weeks',;
       category: 'SEO SaaS'},;
-    {;
+    {
       title: 'Intelligent Lead Scoring Platform',;
       description: 'AI-powered lead qualification and scoring system with behavioral analysis',;
       icon: Target,;
@@ -186,7 +186,7 @@ export default function MicroSaaS() {;
       pricing: '$299 - $1,200/month',;
       delivery: '2-4 weeks',;
       category: 'Sales SaaS'},;
-    {;
+    {
       title: 'AI-Powered Social Media Manager',;
       description: 'Comprehensive social media management with AI content creation and scheduling',;
       icon: Globe,;
@@ -196,7 +196,7 @@ export default function MicroSaaS() {;
       pricing: '$149 - $599/month',;
       delivery: '2-3 weeks',;
       category: 'Social Media SaaS'},;
-    {;
+    {
       title: 'Smart Expense Management System',;
       description: 'AI-powered expense tracking and approval workflow with receipt processing',;
       icon: FileText,;
@@ -206,7 +206,7 @@ export default function MicroSaaS() {;
       pricing: '$99 - $399/month',;
       delivery: '2-3 weeks',;
       category: 'Finance SaaS'},;
-    {;
+    {
       title: 'AI-Powered Customer Onboarding Platform',;
       description: 'Intelligent customer onboarding with personalized journey mapping and automation',;
       icon: Users,;
@@ -216,7 +216,7 @@ export default function MicroSaaS() {;
       pricing: '$199 - $799/month',;
       delivery: '3-4 weeks',;
       category: 'Customer Success SaaS'},;
-    {;
+    {
       title: 'Intelligent Meeting Scheduler',;
       description: 'AI-powered meeting scheduling with time zone optimization and conflict resolution',;
       icon: Calendar,;
@@ -226,7 +226,7 @@ export default function MicroSaaS() {;
       pricing: '$49 - $199/month',;
       delivery: '1-2 weeks',;
       category: 'Productivity SaaS'},;
-    {;
+    {
       title: 'AI-Powered Code Review Assistant',;
       description: 'Intelligent code analysis and review platform with automated quality checks',;
       icon: Code,;
@@ -236,7 +236,7 @@ export default function MicroSaaS() {;
       pricing: '$299 - $1,200/month',;
       delivery: '3-5 weeks',;
       category: 'Development SaaS'},;
-    {;
+    {
       title: 'Affiliate Marketing Tracking Platform',;
       description: 'Comprehensive affiliate program management with fraud detection and automated payouts',;
       icon: TrendingUp,;
@@ -246,7 +246,7 @@ export default function MicroSaaS() {;
       pricing: '$199 - $999/month',;
       delivery: '3-4 weeks',;
       category: 'Marketing SaaS'},;
-    {;
+    {
       title: 'AI-Powered Email Follow-up Automation',;
       description: 'Intelligent email sequence automation with personalization and engagement tracking',;
       icon: Mail,;
@@ -256,7 +256,7 @@ export default function MicroSaaS() {;
       pricing: '$99 - $499/month',;
       delivery: '2-3 weeks',;
       category: 'Email Marketing SaaS'},;
-    {;
+    {
       title: 'Intelligent Helpdesk & Support Platform',;
       description: 'AI-powered customer support system with ticket management and chatbot integration',;
       icon: MessageSquare,;
@@ -266,7 +266,7 @@ export default function MicroSaaS() {;
       pricing: '$149 - $799/month',;
       delivery: '3-4 weeks',;
       category: 'Customer Support SaaS'},;
-    {;
+    {
       title: 'AI-Powered Real Estate Investment Analyzer',;
       description: 'Comprehensive real estate investment analysis with market predictions and ROI calculations',;
       icon: Home,;
@@ -276,9 +276,8 @@ export default function MicroSaaS() {;
       pricing: '$299 - $1,499/month',;
       delivery: '4-6 weeks',;
       category: 'Real Estate SaaS'},;
-      category: 'Real Estate SaaS';,
-},;
-    {;
+      category: 'Real Estate SaaS'},;
+    {
       title: 'AI-Powered Website Analytics for Small Business',;
       description: 'Intuitive website analytics dashboard designed specifically for small business owners without technical expertise',;
       icon: BarChart3,;
@@ -287,9 +286,8 @@ export default function MicroSaaS() {;
       ],;
       pricing: '$29 - $149/month',;
       delivery: '1-2 weeks',;
-      category: 'Analytics SaaS';,
-},;
-    {;
+      category: 'Analytics SaaS'},;
+    {
       title: 'Smart E-commerce Return Management System',;
       description: 'Automated return processing platform that simplifies returns for both merchants and customers',;
       icon: ArrowRight,;
@@ -298,9 +296,8 @@ export default function MicroSaaS() {;
       ],;
       pricing: '$99 - $499/month',;
       delivery: '2-3 weeks',;
-      category: 'E-commerce SaaS';,
-},;
-    {;
+      category: 'E-commerce SaaS'},;
+    {
       title: 'AI-Powered Content Creation Suite',;
       description: 'Comprehensive AI content generation platform for blogs, social media, and marketing materials',;
       icon: FileText,;
@@ -309,9 +306,8 @@ export default function MicroSaaS() {;
       ],;
       pricing: '$79 - $399/month',;
       delivery: '2-3 weeks',;
-      category: 'Content SaaS';,
-},;
-    {;
+      category: 'Content SaaS'},;
+    {
       title: 'Intelligent Email Follow-up Automation',;
       description: 'Smart email sequence automation with AI-powered personalization and optimal timing',;
       icon: Mail,;
@@ -320,9 +316,8 @@ export default function MicroSaaS() {;
       ],;
       pricing: '$49 - $299/month',;
       delivery: '1-2 weeks',;
-      category: 'Email Marketing SaaS';,
-},;
-    {;
+      category: 'Email Marketing SaaS'},;
+    {
       title: 'AI-Powered Social Media Management Platform',;
       description: 'Comprehensive social media management with AI content creation, scheduling, and analytics',;
       icon: Globe,;
@@ -331,9 +326,8 @@ export default function MicroSaaS() {;
       ],;
       pricing: '$99 - $499/month',;
       delivery: '2-3 weeks',;
-      category: 'Social Media SaaS';,
-},;
-    {;
+      category: 'Social Media SaaS'},;
+    {
       title: 'Smart Inventory Optimization System',;
       description: 'AI-driven inventory management with demand forecasting and automated reordering',;
       icon: BarChart3,;
@@ -342,9 +336,8 @@ export default function MicroSaaS() {;
       ],;
       pricing: '$199 - $999/month',;
       delivery: '3-4 weeks',;
-      category: 'Inventory SaaS';,
-},;
-    {;
+      category: 'Inventory SaaS'},;
+    {
       title: 'AI-Powered Customer Segmentation Platform',;
       description: 'Intelligent customer segmentation and targeting with behavioral analysis and predictive modeling',;
       icon: Users,;
@@ -353,9 +346,8 @@ export default function MicroSaaS() {;
       ],;
       pricing: '$149 - $799/month',;
       delivery: '3-4 weeks',;
-      category: 'Marketing SaaS';,
-},;
-    {;
+      category: 'Marketing SaaS'},;
+    {
       title: 'Intelligent Project Management Suite',;
       description: 'AI-enhanced project management with predictive analytics and resource optimization',;
       icon: Target,;
@@ -364,9 +356,8 @@ export default function MicroSaaS() {;
       ],;
       pricing: '$99 - $599/month',;
       delivery: '3-4 weeks',;
-      category: 'Project Management SaaS';,
-},;
-    {;
+      category: 'Project Management SaaS'},;
+    {
       title: 'AI-Powered Financial Planning Assistant',;
       description: 'Intelligent financial planning and budgeting tool with predictive analytics and recommendations',;
       icon: TrendingUp,;
@@ -375,10 +366,9 @@ export default function MicroSaaS() {;
       ],;
       pricing: '$79 - $399/month',;
       delivery: '2-3 weeks',;
-      category: 'Finance SaaS';,
-},;
+      category: 'Finance SaaS'},;
 >>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb;
-    {;
+    {
       title: 'Smart Healthcare Appointment Scheduler',;
       description: 'AI-powered healthcare scheduling with patient preference learning and resource optimization',;
       icon: Heart,;
@@ -388,7 +378,7 @@ export default function MicroSaaS() {;
       pricing: '$199 - $899/month',;
       delivery: '3-5 weeks',;
       category: 'Healthcare SaaS'},;
-    {;
+    {
       title: 'AI-Powered Fleet Management System',;
       description: 'Intelligent fleet tracking and optimization with predictive maintenance and route planning',;
       icon: Car,;
@@ -398,7 +388,7 @@ export default function MicroSaaS() {;
       pricing: '$399 - $1,999/month',;
       delivery: '5-8 weeks',;
       category: 'Fleet Management SaaS'},;
-    {;
+    {
       title: 'Smart Environmental Monitoring Platform',;
       description: 'IoT-based environmental monitoring with AI analytics and compliance reporting',;
       icon: TreePine,;
@@ -408,7 +398,7 @@ export default function MicroSaaS() {;
       pricing: '$199 - $999/month',;
       delivery: '4-6 weeks',;
       category: 'Environmental SaaS'},;
-    {;
+    {
       title: 'AI-Powered Satellite Data Analytics',;
       description: 'Advanced satellite imagery analysis for agriculture, urban planning, and environmental monitoring',;
       icon: Satellite,;
@@ -418,7 +408,7 @@ export default function MicroSaaS() {;
       pricing: '$999 - $4,999/month',;
       delivery: '6-10 weeks',;
       category: 'Geospatial SaaS'},;
-    {;
+    {
       title: 'Intelligent Voice Analytics Platform',;
       description: 'AI-powered voice analysis for call centers, sales teams, and customer service optimization',;
       icon: Mic,;
@@ -428,7 +418,7 @@ export default function MicroSaaS() {;
       pricing: '$299 - $1,299/month',;
       delivery: '4-6 weeks',;
       category: 'Voice Analytics SaaS'},;
-    {;
+    {
       title: 'Smart Invoice Generator Pro',;
       description: 'AI-powered invoice creation with automated data extraction, smart categorization, and payment tracking',;
       icon: FileText,;
@@ -438,7 +428,7 @@ export default function MicroSaaS() {;
       pricing: '$199 - $799/month',;
       delivery: '2-3 weeks',;
       category: 'Finance SaaS'},;
-    {;
+    {
       title: 'Real Estate Analytics Intelligence Platform',;
       description: 'Advanced real estate market analysis with AI-powered predictions and investment insights',;
       icon: Home,;
@@ -448,7 +438,7 @@ export default function MicroSaaS() {;
       pricing: '$399 - $1,999/month',;
       delivery: '4-6 weeks',;
       category: 'Real Estate SaaS'},;
-    {;
+    {
       title: 'Health Monitoring Dashboard Pro',;
       description: 'Comprehensive health tracking platform with AI insights and predictive health analytics',;
       icon: Heart,;
@@ -458,7 +448,7 @@ export default function MicroSaaS() {;
       pricing: '$149 - $699/month',;
       delivery: '3-5 weeks',;
       category: 'Healthcare SaaS'},;
-    {;
+    {
       title: 'Supply Chain Optimizer AI',;
       description: 'Intelligent supply chain management with predictive analytics and automated optimization',;
       icon: Network,;
@@ -468,7 +458,7 @@ export default function MicroSaaS() {;
       pricing: '$2,999 - $12,999/month',;
       delivery: '6-10 weeks',;
       category: 'Supply Chain SaaS'},;
-    {;
+    {
       title: 'AI-Powered Carbon Footprint Tracker',;
       description: 'Comprehensive carbon footprint monitoring and reduction platform for businesses and individuals',;
       icon: TreePine,;
@@ -478,7 +468,7 @@ export default function MicroSaaS() {;
       pricing: '$299 - $1,499/month',;
       delivery: '4-6 weeks',;
       category: 'Sustainability SaaS'},;
-    {;
+    {
       title: 'Smart Legal Document Analyzer',;
       description: 'AI-powered legal document analysis with contract review, risk assessment, and compliance monitoring',;
       icon: FileText,;
@@ -488,7 +478,7 @@ export default function MicroSaaS() {;
       pricing: '$499 - $2,499/month',;
       delivery: '5-8 weeks',;
       category: 'Legal Tech SaaS'},;
-    {;
+    {
       title: 'AI-Powered Restaurant Management Suite',;
       description: 'Comprehensive restaurant operations management with AI-driven insights and automation',;
       icon: Heart,;
@@ -498,7 +488,7 @@ export default function MicroSaaS() {;
       pricing: '$199 - $999/month',;
       delivery: '3-5 weeks',;
       category: 'Restaurant SaaS'},;
-    {;
+    {
       title: 'Smart Learning Management System Pro',;
       description: 'AI-enhanced learning platform with personalized content delivery and progress tracking',;
       icon: Brain,;
@@ -508,7 +498,7 @@ export default function MicroSaaS() {;
       pricing: '$99 - $599/month',;
       delivery: '4-6 weeks',;
       category: 'Education SaaS'},;
-    {;
+    {
       title: 'AI-Powered Customer Churn Predictor',;
       description: 'Advanced customer retention platform with predictive analytics and automated intervention strategies',;
       icon: Users,;
@@ -518,7 +508,7 @@ export default function MicroSaaS() {;
       pricing: '$399 - $1,999/month',;
       delivery: '4-6 weeks',;
       category: 'Customer Success SaaS'},;
-    {;
+    {
       title: 'Smart Energy Management Platform',;
       description: 'AI-driven energy optimization for buildings and facilities with cost reduction and sustainability focus',;
       icon: Zap,;
@@ -528,7 +518,7 @@ export default function MicroSaaS() {;
       pricing: '$299 - $1,499/month',;
       delivery: '4-6 weeks',;
       category: 'Energy Management SaaS'},;
-    {;
+    {
       title: 'AI-Powered Fraud Detection Suite',;
       description: 'Advanced fraud prevention and detection platform with real-time monitoring and automated response',;
       icon: Shield,;
@@ -538,7 +528,7 @@ export default function MicroSaaS() {;
       pricing: '$999 - $4,999/month',;
       delivery: '6-8 weeks',;
       category: 'Security SaaS'},;
-    {;
+    {
       title: 'Smart Inventory Forecasting Platform',;
       description: 'AI-powered inventory prediction and optimization with demand forecasting and automated reordering',;
       icon: BarChart3,;
@@ -548,7 +538,7 @@ export default function MicroSaaS() {;
       pricing: '$199 - $1,199/month',;
       delivery: '3-5 weeks',;
       category: 'Inventory SaaS'},;
-    {;
+    {
       title: 'AI-Powered Social Media Analytics Suite',;
       description: 'Comprehensive social media management with AI-driven content optimization and performance analytics',;
       icon: Globe,;
@@ -558,7 +548,7 @@ export default function MicroSaaS() {;
       pricing: '$149 - $799/month',;
       delivery: '3-4 weeks',;
       category: 'Social Media SaaS'},;
-    {;
+    {
       title: 'Smart Compliance Management Platform',;
       description: 'Automated compliance monitoring and reporting with AI-powered risk assessment and regulatory updates',;
       icon: Shield,;
@@ -568,7 +558,7 @@ export default function MicroSaaS() {;
       pricing: '$399 - $1,999/month',;
       delivery: '5-7 weeks',;
       category: 'Compliance SaaS'},;
-    {;
+    {
       title: 'Social Media Scheduler Pro',;
       description: 'Advanced social media management with AI content creation and optimal posting strategies',;
       icon: Globe,;
@@ -578,7 +568,7 @@ export default function MicroSaaS() {;
       pricing: '$299 - $1,299/month',;
       delivery: '3-4 weeks',;
       category: 'Social Media SaaS'},;
-    {;
+    {
       title: 'Smart Learning Management System',;
       description: 'AI-powered educational platform with personalized learning paths and progress tracking',;
       icon: Brain,;
@@ -588,7 +578,7 @@ export default function MicroSaaS() {;
       pricing: '$199 - $899/month',;
       delivery: '5-8 weeks',;
       category: 'EdTech SaaS'},;
-    {;
+    {
       title: 'AI-Powered Legal Document Analyzer',;
       description: 'Intelligent legal document review and analysis with contract risk assessment',;
       icon: FileText,;
@@ -598,7 +588,7 @@ export default function MicroSaaS() {;
       pricing: '$499 - $2,499/month',;
       delivery: '6-10 weeks',;
       category: 'LegalTech SaaS'},;
-    {;
+    {
       title: 'Smart Restaurant Management Platform',;
       description: 'Comprehensive restaurant operations management with AI-powered inventory and staff optimization',;
       icon: Heart,;
@@ -608,7 +598,7 @@ export default function MicroSaaS() {;
       pricing: '$299 - $1,499/month',;
       delivery: '4-7 weeks',;
       category: 'Restaurant SaaS'},;
-    {;
+    {
       title: 'AI-Powered Personal Finance Manager',;
       description: 'Intelligent personal finance tracking with budgeting, investment advice, and goal setting',;
       icon: TrendingUp,;
@@ -618,7 +608,7 @@ export default function MicroSaaS() {;
       pricing: '$9.99 - $49.99/month',;
       delivery: '3-5 weeks',;
       category: 'FinTech SaaS'},;
-    {;
+    {
       title: 'Smart Home Automation Platform',;
       description: 'AI-powered home automation with energy optimization and security management',;
       icon: Home,;
@@ -628,7 +618,7 @@ export default function MicroSaaS() {;
       pricing: '$19.99 - $99.99/month',;
       delivery: '4-6 weeks',;
       category: 'Smart Home SaaS'},;
-    {;
+    {
       title: 'AI-Powered Content Creation Suite',;
       description: 'Comprehensive content generation platform for blogs, social media, and marketing materials',;
       icon: FileText,;
@@ -638,7 +628,7 @@ export default function MicroSaaS() {;
       pricing: '$199 - $899/month',;
       delivery: '2-3 weeks',;
       category: 'Content Creation SaaS'},;
-    {;
+    {
       title: 'Smart Project Management Dashboard',;
       description: 'AI-enhanced project management with predictive analytics and resource optimization',;
       icon: Target,;
@@ -648,7 +638,7 @@ export default function MicroSaaS() {;
       pricing: '$299 - $1,299/month',;
       delivery: '4-5 weeks',;
       category: 'Project Management SaaS'},;
-    {;
+    {
       title: 'Intelligent Financial Analytics Platform',;
       description: 'AI-powered financial analysis and forecasting with automated reporting',;
       icon: BarChart3,;
@@ -658,7 +648,7 @@ export default function MicroSaaS() {;
       pricing: '$399 - $1,599/month',;
       delivery: '4-6 weeks',;
       category: 'Financial Analytics SaaS'},;
-    {;
+    {
       title: 'AI-Powered HR Management System',;
       description: 'Comprehensive human resources platform with recruitment automation and employee analytics',;
       icon: Users,;
@@ -668,7 +658,7 @@ export default function MicroSaaS() {;
       pricing: '$199 - $999/month',;
       delivery: '4-5 weeks',;
       category: 'HR Management SaaS'},;
-    {;
+    {
       title: 'Quantum-Enhanced Data Analytics Platform',;
       description: 'Next-generation analytics platform leveraging quantum computing for complex data processing and insights',;
       icon: Cpu,;
@@ -678,7 +668,7 @@ export default function MicroSaaS() {;
       pricing: '$15,000 - $75,000/month',;
       delivery: '12-20 weeks',;
       category: 'Quantum Analytics SaaS'},;
-    {;
+    {
       title: 'AI-Powered Cybersecurity Threat Intelligence',;
       description: 'Advanced threat detection and response platform with AI-driven security analytics',;
       icon: Shield,;
@@ -688,7 +678,7 @@ export default function MicroSaaS() {;
       pricing: '$5,000 - $25,000/month',;
       delivery: '8-12 weeks',;
       category: 'Cybersecurity SaaS'},;
-    {;
+    {
       title: 'Blockchain-Based Supply Chain Transparency',;
       description: 'Immutable supply chain tracking and verification platform with smart contracts',;
       icon: Network,;
@@ -698,7 +688,7 @@ export default function MicroSaaS() {;
       pricing: '$8,000 - $35,000/month',;
       delivery: '10-16 weeks',;
       category: 'Blockchain SaaS'},;
-    {;
+    {
       title: 'AI-Powered Voice Commerce Platform',;
       description: 'Voice-activated e-commerce solution with natural language processing and personalization',;
       icon: Mic,;
@@ -708,7 +698,7 @@ export default function MicroSaaS() {;
       pricing: '$3,500 - $15,000/month',;
       delivery: '6-10 weeks',;
       category: 'Voice Commerce SaaS'},;
-    {;
+    {
       title: 'Metaverse Business Platform',;
       description: 'Virtual business environment with 3D spaces, avatars, and immersive collaboration tools',;
       icon: Globe,;
@@ -718,7 +708,7 @@ export default function MicroSaaS() {;
       pricing: '$10,000 - $50,000/month',;
       delivery: '12-24 weeks',;
       category: 'Metaverse SaaS'},;
-    {;
+    {
       title: 'AI-Powered Personal Finance Coach',;
       description: 'Intelligent financial planning and investment advisory platform with personalized recommendations',;
       icon: TrendingUp,;
@@ -728,7 +718,7 @@ export default function MicroSaaS() {;
       pricing: '$99 - $499/month',;
       delivery: '4-6 weeks',;
       category: 'FinTech SaaS'},;
-    {;
+    {
       title: 'Smart Home Automation Hub',;
       description: 'AI-powered home automation platform with predictive maintenance and energy optimization',;
       icon: Home,;
@@ -738,7 +728,7 @@ export default function MicroSaaS() {;
       pricing: '$199 - $999/month',;
       delivery: '6-8 weeks',;
       category: 'IoT SaaS'},;
-    {;
+    {
       title: 'AI-Powered Mental Health Companion',;
       description: 'Intelligent mental wellness platform with mood tracking, therapy sessions, and crisis intervention',;
       icon: Heart,;
@@ -748,7 +738,7 @@ export default function MicroSaaS() {;
       pricing: '$149 - $699/month',;
       delivery: '8-12 weeks',;
       category: 'HealthTech SaaS'},;
-    {;
+    {
       title: 'Autonomous Fleet Management System',;
       description: 'AI-driven fleet optimization platform for autonomous and traditional vehicle management',;
       icon: Car,;
@@ -758,7 +748,7 @@ export default function MicroSaaS() {;
       pricing: '$5,000 - $30,000/month',;
       delivery: '10-16 weeks',;
       category: 'Fleet Management SaaS'},;
-    {;
+    {
       title: 'AI-Powered Legal Document Analyzer',;
       description: 'Intelligent legal document processing platform with contract analysis and risk assessment',;
       icon: FileText,;
@@ -768,7 +758,7 @@ export default function MicroSaaS() {;
       pricing: '$2,500 - $12,000/month',;
       delivery: '6-10 weeks',;
       category: 'LegalTech SaaS'},;
-    {;
+    {
       title: 'Smart Agriculture Management Platform',;
       description: 'AI-driven agricultural optimization platform with precision farming and yield prediction',;
       icon: TreePine,;
@@ -778,7 +768,7 @@ export default function MicroSaaS() {;
       pricing: '$3,000 - $15,000/month',;
       delivery: '8-12 weeks',;
       category: 'AgriTech SaaS'},;
-    {;
+    {
       title: 'AI-Powered Energy Trading Platform',;
       description: 'Intelligent energy market platform with automated trading and grid optimization',;
       icon: Zap,;
@@ -788,7 +778,7 @@ export default function MicroSaaS() {;
       pricing: '$10,000 - $100,000/month',;
       delivery: '12-20 weeks',;
       category: 'EnergyTech SaaS'},;
-    {;
+    {
       title: 'Virtual Reality Training Simulator',;
       description: 'Immersive VR training platform for complex skills and emergency response scenarios',;
       icon: Eye,;
@@ -798,7 +788,7 @@ export default function MicroSaaS() {;
       pricing: '$5,000 - $25,000/month',;
       delivery: '10-16 weeks',;
       category: 'EdTech SaaS'},;
-    {;
+    {
       title: 'AI-Powered Space Mission Planning',;
       description: 'Advanced space mission optimization platform with trajectory planning and resource management',;
       icon: Satellite,;
@@ -808,7 +798,7 @@ export default function MicroSaaS() {;
       pricing: '$25,000 - $500,000/month',;
       delivery: '16-32 weeks',;
       category: 'SpaceTech SaaS'},;
-    {;
+    {
       title: 'AI-Powered Real Estate Investment Analyzer',;
       description: 'Intelligent property investment platform with market analysis and ROI prediction',;
       icon: TrendingUp,;
@@ -818,7 +808,7 @@ export default function MicroSaaS() {;
       pricing: '$299 - $1,499/month',;
       delivery: '4-6 weeks',;
       category: 'PropTech SaaS'},;
-    {;
+    {
       title: 'Smart Waste Management Platform',;
       description: 'AI-powered waste optimization system with route planning and recycling analytics',;
       icon: TreePine,;
@@ -828,7 +818,7 @@ export default function MicroSaaS() {;
       pricing: '$1,500 - $8,000/month',;
       delivery: '6-8 weeks',;
       category: 'CleanTech SaaS'},;
-    {;
+    {
       title: 'AI-Powered Language Learning Platform',;
       description: 'Personalized language learning with AI tutors and real-time conversation practice',;
       icon: Brain,;
@@ -838,7 +828,7 @@ export default function MicroSaaS() {;
       pricing: '$99 - $499/month',;
       delivery: '6-10 weeks',;
       category: 'EdTech SaaS'},;
-    {;
+    {
       title: 'Intelligent Restaurant Management System',;
       description: 'AI-driven restaurant operations platform with demand forecasting and inventory optimization',;
       icon: Heart,;
@@ -848,7 +838,7 @@ export default function MicroSaaS() {;
       pricing: '$199 - $1,299/month',;
       delivery: '4-6 weeks',;
       category: 'FoodTech SaaS'},;
-    {;
+    {
       title: 'AI-Powered Pet Care Platform',;
       description: 'Comprehensive pet health and wellness platform with AI diagnostics and care recommendations',;
       icon: Heart,;
@@ -858,7 +848,7 @@ export default function MicroSaaS() {;
       pricing: '$49 - $299/month',;
       delivery: '4-6 weeks',;
       category: 'PetTech SaaS'},;
-    {;
+    {
       title: 'Smart City Traffic Optimization Platform',;
       description: 'AI-driven urban traffic management with real-time optimization and congestion reduction',;
       icon: Car,;
@@ -868,7 +858,7 @@ export default function MicroSaaS() {;
       pricing: '$10,000 - $100,000/month',;
       delivery: '12-20 weeks',;
       category: 'Smart City SaaS'},;
-    {;
+    {
       title: 'AI-Powered Personal Stylist Platform',;
       description: 'Intelligent fashion and style recommendation system with virtual try-on capabilities',;
       icon: Eye,;
@@ -878,7 +868,7 @@ export default function MicroSaaS() {;
       pricing: '$99 - $599/month',;
       delivery: '6-8 weeks',;
       category: 'FashionTech SaaS'},;
-    {;
+    {
       title: 'Intelligent Home Security System',;
       description: 'AI-powered home security platform with facial recognition and behavioral analysis',;
       icon: Shield,;
@@ -888,7 +878,7 @@ export default function MicroSaaS() {;
       pricing: '$199 - $999/month',;
       delivery: '4-6 weeks',;
       category: 'Security SaaS'},;
-    {;
+    {
       title: 'AI-Powered Music Composition Platform',;
       description: 'Intelligent music creation platform with AI composition and collaboration tools',;
       icon: Mic,;
@@ -898,7 +888,7 @@ export default function MicroSaaS() {;
       pricing: '$149 - $799/month',;
       delivery: '6-10 weeks',;
       category: 'MusicTech SaaS'},;
-    {;
+    {
       title: 'Smart Water Quality Monitoring System',;
       description: 'AI-driven water quality analysis platform with contamination detection and treatment optimization',;
       icon: TreePine,;
@@ -908,7 +898,7 @@ export default function MicroSaaS() {;
       pricing: '$2,500 - $15,000/month',;
       delivery: '8-12 weeks',;
       category: 'WaterTech SaaS'},;
-    {;
+    {
       title: 'AI-Powered Personal Trainer Platform',;
       description: 'Intelligent fitness coaching platform with personalized workout plans and form analysis',;
       icon: Heart,;
@@ -918,7 +908,7 @@ export default function MicroSaaS() {;
       pricing: '$99 - $499/month',;
       delivery: '4-6 weeks',;
       category: 'FitnessTech SaaS'},;
-    {;
+    {
       title: 'Intelligent Supply Chain Risk Management',;
       description: 'AI-powered supply chain resilience platform with risk prediction and mitigation strategies',;
       icon: Network,;
@@ -928,7 +918,7 @@ export default function MicroSaaS() {;
       pricing: '$5,000 - $30,000/month',;
       delivery: '8-12 weeks',;
       category: 'Supply Chain SaaS'},;
-    {;
+    {
       title: 'AI-Powered Sleep Optimization Platform',;
       description: 'Intelligent sleep analysis and improvement platform with personalized recommendations',;
       icon: Heart,;
@@ -938,7 +928,7 @@ export default function MicroSaaS() {;
       pricing: '$49 - $299/month',;
       delivery: '4-6 weeks',;
       category: 'HealthTech SaaS'},;
-    {;
+    {
       title: 'Smart Parking Management System',;
       description: 'AI-driven parking optimization platform with real-time availability and pricing',;
       icon: Car,;
@@ -948,7 +938,7 @@ export default function MicroSaaS() {;
       pricing: '$1,500 - $10,000/month',;
       delivery: '6-8 weeks',;
       category: 'Smart City SaaS'},;
-    {;
+    {
       title: 'AI-Powered Wine Recommendation Engine',;
       description: 'Intelligent wine discovery platform with taste profiling and food pairing recommendations',;
       icon: Heart,;
@@ -958,7 +948,7 @@ export default function MicroSaaS() {;
       pricing: '$99 - $599/month',;
       delivery: '4-6 weeks',;
       category: 'FoodTech SaaS'},;
-    {;
+    {
       title: 'Intelligent Elderly Care Platform',;
       description: 'AI-powered senior care management system with health monitoring and family communication',;
       icon: Heart,;
@@ -968,7 +958,7 @@ export default function MicroSaaS() {;
       pricing: '$199 - $999/month',;
       delivery: '6-8 weeks',;
       category: 'HealthTech SaaS'},;
-    {;
+    {
       title: 'AI-Powered Carbon Footprint Tracker',;
       description: 'Intelligent environmental impact monitoring with reduction strategies and offset recommendations',;
       icon: TreePine,;
@@ -978,7 +968,7 @@ export default function MicroSaaS() {;
       pricing: '$49 - $299/month',;
       delivery: '3-4 weeks',;
       category: 'CleanTech SaaS'},;
-    {;
+    {
       title: 'Smart Retail Analytics Platform',;
       description: 'AI-driven retail optimization with customer behavior analysis and inventory management',;
       icon: BarChart3,;
@@ -988,7 +978,7 @@ export default function MicroSaaS() {;
       pricing: '$2,500 - $15,000/month',;
       delivery: '6-8 weeks',;
       category: 'RetailTech SaaS'},;
-    {;
+    {
       title: 'AI-Powered Customer Success Platform',;
       description: 'Intelligent customer success management with predictive churn prevention and automated engagement',;
       icon: Users,;
@@ -998,7 +988,7 @@ export default function MicroSaaS() {;
       pricing: '$3,000 - $12,000/month',;
       delivery: '4-6 weeks',;
       category: 'Customer Success SaaS'},;
-    {;
+    {
       title: 'Smart Contract Management Platform',;
       description: 'AI-powered contract lifecycle management with automated review and compliance monitoring',;
       icon: FileText,;
@@ -1008,7 +998,7 @@ export default function MicroSaaS() {;
       pricing: '$2,000 - $8,000/month',;
       delivery: '3-5 weeks',;
       category: 'LegalTech SaaS'},;
-    {;
+    {
       title: 'Intelligent Inventory Forecasting System',;
       description: 'AI-driven inventory optimization with demand prediction and automated reordering',;
       icon: BarChart3,;
@@ -1018,7 +1008,7 @@ export default function MicroSaaS() {;
       pricing: '$1,500 - $6,000/month',;
       delivery: '2-4 weeks',;
       category: 'Supply Chain SaaS'},;
-    {;
+    {
       title: 'AI-Powered Sales Coaching Platform',;
       description: 'Intelligent sales performance optimization with real-time coaching and analytics',;
       icon: Target,;
@@ -1028,7 +1018,7 @@ export default function MicroSaaS() {;
       pricing: '$2,500 - $10,000/month',;
       delivery: '3-5 weeks',;
       category: 'SalesTech SaaS'},;
-    {;
+    {
       title: 'Smart Employee Wellness Platform',;
       description: 'Comprehensive employee wellness tracking with AI insights and personalized recommendations',;
       icon: Heart,;
@@ -1038,7 +1028,7 @@ export default function MicroSaaS() {;
       pricing: '$1,000 - $4,000/month',;
       delivery: '2-3 weeks',;
       category: 'HRTech SaaS'},;
-    {;
+    {
       title: 'AI-Powered Content Moderation Platform',;
       description: 'Intelligent content moderation with real-time detection and automated action',;
       icon: Shield,;
@@ -1048,7 +1038,7 @@ export default function MicroSaaS() {;
       pricing: '$2,000 - $8,000/month',;
       delivery: '3-4 weeks',;
       category: 'Content Safety SaaS'},;
-    {;
+    {
       title: 'Smart Energy Management Platform',;
       description: 'AI-driven energy optimization for buildings and facilities with cost reduction',;
       icon: Zap,;
@@ -1058,7 +1048,7 @@ export default function MicroSaaS() {;
       pricing: '$1,500 - $6,000/month',;
       delivery: '3-5 weeks',;
       category: 'EnergyTech SaaS'},;
-    {;
+    {
       title: 'AI-Powered Learning Management System',;
       description: 'Intelligent educational platform with personalized learning paths and progress tracking',;
       icon: Brain,;
@@ -1068,7 +1058,7 @@ export default function MicroSaaS() {;
       pricing: '$2,000 - $7,000/month',;
       delivery: '4-6 weeks',;
       category: 'EdTech SaaS'},;
-    {;
+    {
       title: 'Intelligent Property Management Platform',;
       description: 'AI-powered property management with automated maintenance and tenant services',;
       icon: Home,;
@@ -1078,7 +1068,7 @@ export default function MicroSaaS() {;
       pricing: '$1,500 - $5,000/month',;
       delivery: '3-4 weeks',;
       category: 'PropTech SaaS'},;
-    {;
+    {
       title: 'AI-Powered Compliance Monitoring System',;
       description: 'Automated compliance tracking and reporting with regulatory change management',;
       icon: Shield,;
@@ -1088,7 +1078,7 @@ export default function MicroSaaS() {;
       pricing: '$3,000 - $12,000/month',;
       delivery: '4-6 weeks',;
       category: 'Compliance SaaS'},;
-    {;
+    {
       title: 'Smart Fleet Maintenance Platform',;
       description: 'Predictive fleet maintenance with IoT integration and cost optimization',;
       icon: Car,;
@@ -1098,7 +1088,7 @@ export default function MicroSaaS() {;
       pricing: '$2,000 - $8,000/month',;
       delivery: '3-5 weeks',;
       category: 'FleetTech SaaS'},;
-    {;
+    {
       title: 'AI-Powered Podcast Transcription Service',;
       description: 'High-accuracy podcast transcription with speaker identification and SEO optimization',;
       icon: Mic,;
@@ -1108,7 +1098,7 @@ export default function MicroSaaS() {;
       pricing: '$29 - $149/month',;
       delivery: '1-2 weeks',;
       category: 'Media SaaS'},;
-    {;
+    {
       title: 'Intelligent Freelancer Portfolio Builder',;
       description: 'AI-powered portfolio creation platform with automated content generation and optimization',;
       icon: Users,;
@@ -1118,7 +1108,7 @@ export default function MicroSaaS() {;
       pricing: '$19 - $99/month',;
       delivery: '1-2 weeks',;
       category: 'Portfolio SaaS'},;
-    {;
+    {
       title: 'Smart Local Business CRM',;
       description: 'Simplified CRM designed for local businesses with appointment scheduling and customer insights',;
       icon: Users,;
@@ -1128,7 +1118,7 @@ export default function MicroSaaS() {;
       pricing: '$39 - $199/month',;
       delivery: '2-3 weeks',;
       category: 'Local Business SaaS'},;
-    {;
+    {
       title: 'AI-Powered Website Analytics for SMBs',;
       description: 'Simplified website analytics with AI insights and actionable recommendations for small businesses',;
       icon: BarChart3,;
@@ -1138,7 +1128,7 @@ export default function MicroSaaS() {;
       pricing: '$49 - $199/month',;
       delivery: '1-2 weeks',;
       category: 'Analytics SaaS'},;
-    {;
+    {
       title: 'Intelligent E-commerce Return Manager',;
       description: 'Automated return processing with AI decision making and fraud prevention',;
       icon: ArrowRight,;
@@ -1148,7 +1138,7 @@ export default function MicroSaaS() {;
       pricing: '$79 - $399/month',;
       delivery: '2-3 weeks',;
       category: 'E-commerce SaaS'},;
-    {;
+    {
       title: 'AI-Powered Content Moderation Platform',;
       description: 'Automated content moderation with AI detection of inappropriate content and spam',;
       icon: Shield,;
@@ -1158,7 +1148,7 @@ export default function MicroSaaS() {;
       pricing: '$199 - $999/month',;
       delivery: '3-4 weeks',;
       category: 'Moderation SaaS'},;
-    {;
+    {
       title: 'Smart Inventory Forecasting System',;
       description: 'AI-driven inventory prediction with demand forecasting and automated reordering',;
       icon: TrendingUp,;
@@ -1168,7 +1158,7 @@ export default function MicroSaaS() {;
       pricing: '$149 - $699/month',;
       delivery: '3-4 weeks',;
       category: 'Inventory SaaS'},;
-    {;
+    {
       title: 'AI-Powered Customer Feedback Analyzer',;
       description: 'Intelligent feedback analysis with sentiment tracking and actionable insights',;
       icon: MessageSquare,;
@@ -1178,7 +1168,7 @@ export default function MicroSaaS() {;
       pricing: '$99 - $499/month',;
       delivery: '2-3 weeks',;
       category: 'Feedback SaaS'},;
-    {;
+    {
       title: 'Intelligent Meeting Transcription & Notes',;
       description: 'AI-powered meeting transcription with automatic note generation and action item extraction',;
       icon: Mic,;
@@ -1188,7 +1178,7 @@ export default function MicroSaaS() {;
       pricing: '$29 - $149/month',;
       delivery: '1-2 weeks',;
       category: 'Productivity SaaS'},;
-    {;
+    {
       title: 'AI-Powered Social Media Analytics',;
       description: 'Comprehensive social media analytics with AI insights and competitor analysis',;
       icon: Globe,;
@@ -1198,7 +1188,7 @@ export default function MicroSaaS() {;
       pricing: '$79 - $399/month',;
       delivery: '2-3 weeks',;
       category: 'Social Media SaaS'},;
-    {;
+    {
       title: 'AI-Powered Legal Document Analyzer',;
       description: 'Intelligent legal document review and analysis with contract risk assessment and compliance checking',;
       icon: FileText,;
@@ -1208,7 +1198,7 @@ export default function MicroSaaS() {;
       pricing: '$499 - $2,499/month',;
       delivery: '4-6 weeks',;
       category: 'Legal SaaS'},;
-    {;
+    {
       title: 'Smart Energy Management Platform',;
       description: 'AI-driven energy optimization for buildings and facilities with predictive analytics and cost reduction',;
       icon: Zap,;
@@ -1218,7 +1208,7 @@ export default function MicroSaaS() {;
       pricing: '$299 - $1,499/month',;
       delivery: '3-5 weeks',;
       category: 'Energy SaaS'},;
-    {;
+    {
       title: 'AI-Powered Learning Management System',;
       description: 'Intelligent educational platform with personalized learning paths and automated assessment',;
       icon: Brain,;
@@ -1228,7 +1218,7 @@ export default function MicroSaaS() {;
       pricing: '$199 - $999/month',;
       delivery: '4-6 weeks',;
       category: 'Education SaaS'},;
-    {;
+    {
       title: 'Smart Restaurant Management Suite',;
       description: 'Comprehensive restaurant operations platform with AI-powered inventory, staffing, and customer analytics',;
       icon: Heart,;
@@ -1238,7 +1228,7 @@ export default function MicroSaaS() {;
       pricing: '$399 - $1,999/month',;
       delivery: '5-8 weeks',;
       category: 'Restaurant SaaS'},;
-    {;
+    {
       title: 'AI-Powered Insurance Claims Processor',;
       description: 'Intelligent insurance claims processing with automated damage assessment and fraud detection',;
       icon: Shield,;
@@ -1248,7 +1238,7 @@ export default function MicroSaaS() {;
       pricing: '$999 - $4,999/month',;
       delivery: '6-10 weeks',;
       category: 'Insurance SaaS'},;
-    {;
+    {
       title: 'Smart Manufacturing Quality Control',;
       description: 'AI-powered quality control system for manufacturing with real-time defect detection and process optimization',;
       icon: Settings,;
@@ -1258,7 +1248,7 @@ export default function MicroSaaS() {;
       pricing: '$1,999 - $9,999/month',;
       delivery: '6-12 weeks',;
       category: 'Manufacturing SaaS'},;
-    {;
+    {
       title: 'AI-Powered Personal Finance Coach',;
       description: 'Intelligent personal finance management with budgeting, investment advice, and financial goal tracking',;
       icon: TrendingUp,;
@@ -1268,7 +1258,7 @@ export default function MicroSaaS() {;
       pricing: '$9.99 - $49.99/month',;
       delivery: '2-4 weeks',;
       category: 'Personal Finance SaaS'},;
-    {;
+    {
       title: 'Smart Agriculture Management Platform',;
       description: 'AI-driven agricultural management with crop monitoring, yield prediction, and resource optimization',;
       icon: TreePine,;
@@ -1278,7 +1268,7 @@ export default function MicroSaaS() {;
       pricing: '$199 - $1,999/month',;
       delivery: '4-8 weeks',;
       category: 'Agriculture SaaS'},;
-    {;
+    {
       title: 'AI-Powered Mental Health Companion',;
       description: 'Intelligent mental health support platform with mood tracking, therapy recommendations, and crisis intervention',;
       icon: Heart,;
@@ -1288,7 +1278,7 @@ export default function MicroSaaS() {;
       pricing: '$29.99 - $149.99/month',;
       delivery: '3-6 weeks',;
       category: 'Mental Health SaaS'},;
-    {;
+    {
       title: 'Smart Home Automation Hub',;
       description: 'AI-powered home automation platform with intelligent device control and energy optimization',;
       icon: Home,;
@@ -1298,7 +1288,7 @@ export default function MicroSaaS() {;
       pricing: '$19.99 - $99.99/month',;
       delivery: '2-4 weeks',;
       category: 'Smart Home SaaS'},;
-    {;
+    {
       title: 'AI-Powered Language Learning Platform',;
       description: 'Intelligent language learning with personalized curriculum, speech recognition, and cultural context',;
       icon: Globe,;
@@ -1308,7 +1298,7 @@ export default function MicroSaaS() {;
       pricing: '$14.99 - $79.99/month',;
       delivery: '3-5 weeks',;
       category: 'Education SaaS'},;
-    {;
+    {
       title: 'Smart Fitness & Wellness Coach',;
       description: 'AI-powered fitness platform with personalized workout plans, nutrition tracking, and health monitoring',;
       icon: Heart,;
@@ -1318,7 +1308,7 @@ export default function MicroSaaS() {;
       pricing: '$19.99 - $99.99/month',;
       delivery: '3-5 weeks',;
       category: 'Fitness SaaS'},;
-    {;
+    {
       title: 'AI-Powered Travel Planning Assistant',;
       description: 'Intelligent travel planning with personalized recommendations, real-time updates, and cost optimization',;
       icon: Globe,;
@@ -1328,7 +1318,7 @@ export default function MicroSaaS() {;
       pricing: '$9.99 - $49.99/month',;
       delivery: '2-4 weeks',;
       category: 'Travel SaaS'},;
-    {;
+    {
       title: 'Smart Pet Care Management',;
       description: 'AI-powered pet health monitoring with veterinary integration and care recommendations',;
       icon: Heart,;
@@ -1338,7 +1328,7 @@ export default function MicroSaaS() {;
       pricing: '$14.99 - $79.99/month',;
       delivery: '3-5 weeks',;
       category: 'Pet Care SaaS'},;
-    {;
+    {
       title: 'AI-Powered Blockchain Analytics Platform',;
       description: 'Comprehensive blockchain data analysis with DeFi insights, NFT tracking, and crypto market intelligence',;
       icon: Network,;
@@ -1348,7 +1338,7 @@ export default function MicroSaaS() {;
       pricing: '$299 - $2,999/month',;
       delivery: '4-8 weeks',;
       category: 'Blockchain SaaS'},;
-    {;
+    {
       title: 'Quantum-Safe Cryptography Platform',;
       description: 'Post-quantum cryptography solutions for future-proofing digital security and data protection',;
       icon: Lock,;
@@ -1358,7 +1348,7 @@ export default function MicroSaaS() {;
       pricing: '$5,000 - $50,000/month',;
       delivery: '8-16 weeks',;
       category: 'Quantum Security SaaS'},;
-    {;
+    {
       title: 'AI-Powered Synthetic Biology Platform',;
       description: 'Intelligent biological system design and optimization for biotechnology and pharmaceutical applications',;
       icon: Cpu,;
@@ -1368,7 +1358,7 @@ export default function MicroSaaS() {;
       pricing: '$10,000 - $100,000/month',;
       delivery: '12-24 weeks',;
       category: 'BioTech SaaS'},;
-    {;
+    {
       title: 'Neuromorphic Computing Platform',;
       description: 'Brain-inspired computing infrastructure for edge AI and ultra-low power processing applications',;
       icon: Brain,;
@@ -1378,7 +1368,7 @@ export default function MicroSaaS() {;
       pricing: '$15,000 - $150,000/month',;
       delivery: '16-32 weeks',;
       category: 'Neuromorphic SaaS'},;
-    {;
+    {
       title: 'AI-Powered Space Mission Planning',;
       description: 'Advanced space mission optimization with trajectory planning, resource management, and satellite constellation coordination',;
       icon: Satellite,;
@@ -1388,7 +1378,7 @@ export default function MicroSaaS() {;
       pricing: '$25,000 - $500,000/month',;
       delivery: '20-40 weeks',;
       category: 'SpaceTech SaaS'},;
-    {;
+    {
       title: 'Fusion Energy Control System',;
       description: 'Intelligent fusion reactor control platform for plasma optimization and energy production management',;
       icon: Zap,;
@@ -1398,7 +1388,7 @@ export default function MicroSaaS() {;
       pricing: '$50,000 - $1,000,000/month',;
       delivery: '24-48 weeks',;
       category: 'Fusion Energy SaaS'},;
-    {;
+    {
       title: 'Brain-Computer Interface Platform',;
       description: 'Advanced neural interface system for direct brain-computer communication and control applications',;
       icon: Brain,;
@@ -1408,7 +1398,7 @@ export default function MicroSaaS() {;
       pricing: '$20,000 - $200,000/month',;
       delivery: '20-40 weeks',;
       category: 'BCI SaaS'},;
-    {;
+    {
       title: 'AI-Powered Climate Modeling Platform',;
       description: 'Advanced climate prediction and environmental impact analysis with high-resolution modeling capabilities',;
       icon: Globe,;
@@ -1418,7 +1408,7 @@ export default function MicroSaaS() {;
       pricing: '$10,000 - $100,000/month',;
       delivery: '16-32 weeks',;
       category: 'ClimateTech SaaS'},;
-    {;
+    {
       title: 'Autonomous Vehicle Fleet Management',;
       description: 'Intelligent coordination system for autonomous vehicle fleets with real-time optimization and safety monitoring',;
       icon: Car,;
@@ -1428,7 +1418,7 @@ export default function MicroSaaS() {;
       pricing: '$15,000 - $150,000/month',;
       delivery: '16-32 weeks',;
       category: 'Autonomous Vehicle SaaS'},;
-    {;
+    {
       title: 'Digital Twin of Earth Platform',;
       description: 'Comprehensive digital twin system for global environmental monitoring, prediction, and policy simulation',;
       icon: Globe,;
@@ -1438,7 +1428,7 @@ export default function MicroSaaS() {;
       pricing: '$100,000 - $1,000,000/month',;
       delivery: '32-64 weeks',;
       category: 'Digital Earth SaaS'},;
-    {;
+    {
       title: 'AI-Powered Consciousness Research Platform',;
       description: 'Advanced AI system for consciousness research and artificial general intelligence development',;
       icon: Brain,;
@@ -1448,7 +1438,7 @@ export default function MicroSaaS() {;
       pricing: '$50,000 - $500,000/month',;
       delivery: '24-48 weeks',;
       category: 'AGI Research SaaS'},;
-    {;
+    {
       title: 'Underwater Computing Infrastructure',;
       description: 'Specialized computing infrastructure for underwater operations, marine research, and ocean exploration',;
       icon: Network,;
@@ -1458,7 +1448,7 @@ export default function MicroSaaS() {;
       pricing: '$20,000 - $200,000/month',;
       delivery: '20-40 weeks',;
       category: 'MarineTech SaaS'},;
-    {;
+    {
       title: 'AI-Powered Personalized Medicine Platform',;
       description: 'Precision medicine platform with genomic analysis, drug discovery, and personalized treatment optimization',;
       icon: Heart,;
@@ -1468,7 +1458,7 @@ export default function MicroSaaS() {;
       pricing: '$25,000 - $250,000/month',;
       delivery: '20-40 weeks',;
       category: 'Precision Medicine SaaS'},;
-    {;
+    {
       title: 'AI-Powered Space Debris Management',;
       description: 'Intelligent space debris tracking and collision avoidance system for satellite constellation protection',;
       icon: Satellite,;
@@ -1478,7 +1468,7 @@ export default function MicroSaaS() {;
       pricing: '$30,000 - $300,000/month',;
       delivery: '24-48 weeks',;
       category: 'Space Safety SaaS'},;
-    {;
+    {
       title: 'AI-Powered Autonomous Drone Swarm',;
       description: 'Intelligent drone swarm coordination system for complex missions, search and rescue, and infrastructure inspection',;
       icon: Network,;
@@ -1488,7 +1478,7 @@ export default function MicroSaaS() {;
       pricing: '$10,000 - $100,000/month',;
       delivery: '16-32 weeks',;
       category: 'Drone Swarm SaaS'},;
-    {;
+    {
       title: 'AI-Powered Synthetic Media Generation',;
       description: 'Advanced AI system for creating realistic synthetic media including deepfakes, virtual influencers, and content generation',;
       icon: Video,;
@@ -1498,7 +1488,7 @@ export default function MicroSaaS() {;
       pricing: '$5,000 - $50,000/month',;
       delivery: '12-24 weeks',;
       category: 'Synthetic Media SaaS'},;
-    {;
+    {
       title: 'AI-Powered Quantum Machine Learning',;
       description: 'Next-generation machine learning platform leveraging quantum computing for complex pattern recognition and optimization',;
       icon: Cpu,;
@@ -1508,7 +1498,7 @@ export default function MicroSaaS() {;
       pricing: '$20,000 - $200,000/month',;
       delivery: '20-40 weeks',;
       category: 'Quantum ML SaaS'},;
-    {;
+    {
       title: 'AI-Powered Autonomous Underwater Vehicles',;
       description: 'Intelligent underwater vehicle coordination system for ocean exploration, research, and commercial applications',;
       icon: Network,;
@@ -1518,7 +1508,7 @@ export default function MicroSaaS() {;
       pricing: '$15,000 - $150,000/month',;
       delivery: '20-40 weeks',;
       category: 'Underwater Robotics SaaS'},;
-    {;
+    {
       title: 'AI-Powered Cybersecurity Threat Hunter',;
       description: 'Advanced AI system for proactive threat detection, automated incident response, and cybersecurity intelligence',;
       icon: Shield,;
@@ -1528,7 +1518,7 @@ export default function MicroSaaS() {;
       pricing: '$10,000 - $100,000/month',;
       delivery: '16-32 weeks',;
       category: 'Cybersecurity SaaS'},;
-    {;
+    {
       title: 'AI-Powered Financial Trading Algorithm',;
       description: 'Intelligent algorithmic trading system with market prediction, risk management, and portfolio optimization',;
       icon: TrendingUp,;
@@ -1538,7 +1528,7 @@ export default function MicroSaaS() {;
       pricing: '$25,000 - $250,000/month',;
       delivery: '20-40 weeks',;
       category: 'Algorithmic Trading SaaS'},;
-    {;
+    {
       title: 'AI-Powered Medical Diagnosis Assistant',;
       description: 'Advanced medical AI for diagnostic support, treatment recommendations, and clinical decision making',;
       icon: Heart,;
@@ -1548,7 +1538,7 @@ export default function MicroSaaS() {;
       pricing: '$30,000 - $300,000/month',;
       delivery: '24-48 weeks',;
       category: 'Medical AI SaaS'},;
-    {;
+    {
       title: 'AI-Powered Autonomous Vehicle Control',;
       description: 'Intelligent autonomous vehicle navigation and safety systems for self-driving cars and transportation',;
       icon: Car,;
@@ -1558,7 +1548,7 @@ export default function MicroSaaS() {;
       pricing: '$20,000 - $200,000/month',;
       delivery: '20-40 weeks',;
       category: 'Autonomous Vehicle SaaS'},;
-    {;
+    {
       title: 'AI-Powered Energy Grid Optimization',;
       description: 'Intelligent energy distribution and consumption optimization system for smart grids and renewable energy integration',;
       icon: Zap,;
@@ -1580,22 +1570,22 @@ export default function MicroSaaS() {;
   ];
 
   const benefits = [;
-  {;
+  {
       title: 'Faster Development',;
       description: 'Rapid prototyping and deployment',;
       icon: Zap,;
       stat: '50%'},;
-    {;
+    {
       title: 'Cost Effective',;
       description: 'Lower development and maintenance costs',;
       icon: TrendingUp,;
       stat: '60%'},;
-    {;
+    {
       title: 'Scalable Solutions',;
       description: 'Built to grow with your business',;
       icon: Target,;
       stat: 'Unlimited'},;
-    {;
+    {
       title: 'Custom Features',;
       description: 'Tailored to your specific needs',;
       icon: Settings,;

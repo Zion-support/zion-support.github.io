@@ -1,5 +1,5 @@
 import { ServiceVariant  } from "../types/service-variants";
-export interface AdvancedAIAutomationService {;
+export interface AdvancedAIAutomationService {
   id: string;
   name: string;
   tagline: string;
@@ -25,7 +25,7 @@ export interface AdvancedAIAutomationService {;
   competitors: string[];
   marketSize: string;
   growthRate: string;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -35,18 +35,17 @@ export interface AdvancedAIAutomationService {;
   launchDate: string;
   customers: number;
   rating: number;
-const contact = {;
+const contact = {
   mobile: "+1 302 464 0950",;
   email: "kleber@ziontechgroup.com",;
   address: "364 E Main St STE 1008 Middletown DE 19709";
-  ;
-  ;
-  ;
-  ;
-  website: "https://ziontechgroup.com";,;,
-}
+
+
+
+
+  website: "https://ziontechgroup.com"}
 export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [;
-  {;
+  {
     id: "ai-autonomous-customer-service",;
     name: "AI Autonomous Customer Service",;
     tagline: "24/7 intelligent customer support with human-like understanding and resolution",;
@@ -89,9 +88,8 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     launchDate: "2025-01-20",;
     customers: 89,;
     rating: 4.8,;
-    reviews: 67;,;,
-},;
-  {;
+    reviews: 67},;
+  {
     id: "ai-predictive-maintenance-platform",;
     name: "AI Predictive Maintenance Platform",;
     tagline: "Predict equipment failures before they happen with AI-powered analytics",;
@@ -134,9 +132,8 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     launchDate: "2025-02-15",;
     customers: 45,;
     rating: 4.7,;
-    reviews: 32;,;,
-},;
-  {;
+    reviews: 32},;
+  {
     id: "ai-autonomous-marketing-optimization",;
     name: "AI Autonomous Marketing Optimization",;
     tagline: "Automatically optimize campaigns, budgets, and strategies for maximum ROI",;
@@ -179,9 +176,8 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     launchDate: "2025-01-25",;
     customers: 156,;
     rating: 4.9,;
-    reviews: 98;,;,
-},;
-  {;
+    reviews: 98},;
+  {
     id: "ai-autonomous-financial-advisory",;
     name: "AI Autonomous Financial Advisory",;
     tagline: "Personalized financial planning and investment advice powered by AI",;
@@ -224,9 +220,8 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     launchDate: "2025-02-10",;
     customers: 234,;
     rating: 4.8,;
-    reviews: 145;,;,
-},;
-  {;
+    reviews: 145},;
+  {
     id: "ai-autonomous-supply-chain-optimization",;
     name: "AI Autonomous Supply Chain Optimization",;
     tagline: "Optimize supply chains with AI-powered demand forecasting and inventory management",;

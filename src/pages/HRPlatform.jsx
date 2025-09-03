@@ -139,13 +139,11 @@ import {}
   Wifi,';
   Bluetooth,'';
   Battery,''';
-  Signal'''';,
-} from 'lucide-react';
-;
-    technologies["Business Intelligence", "Machine Learning", "Data Mining", "Visualization Tools"];,
-}
+  Signal''''} from 'lucide-react';
+
+    technologies["Business Intelligence", "Machine Learning", "Data Mining", "Visualization Tools"]}
 ];
-;
+
 const hrTechnologies = [];
   {}
 ";
@@ -154,8 +152,7 @@ const hrTechnologies = [];
     description: "Comprehensive employee lifecycle management",";
     icon: Users,"";
     useCase: "HR Operations","";
-    reliability: "Critical";,
-},;
+    reliability: "Critical"},;
   {}
 ";
 "";
@@ -163,8 +160,7 @@ const hrTechnologies = [];
     description: "Intelligent automation for HR processes",";
     icon: Brain,"";
     useCase: "Process Automation","";
-    reliability: "High";,
-},;
+    reliability: "High"},;
   {}
 ";
 "";
@@ -172,8 +168,7 @@ const hrTechnologies = [];
     description: "Enterprise-grade security and compliance",";
     icon: Shield,"";
     useCase: "Data Protection","";
-    reliability: "Critical";,
-},;
+    reliability: "Critical"},;
   {}
 ";
 "";
@@ -183,7 +178,7 @@ const hrTechnologies = [];
     useCase: "Infrastructure","";
     reliability: "High";
 ];
-;
+
 const successStories = [];
   {}
 ";
@@ -193,8 +188,7 @@ const successStories = [];
     challenge: "Needed unified HR platform for 10,000+ employees across 20 countries","";
     solution: "Built comprehensive HR platform with localization, compliance, and automation features","";
     results: "40% reduction in HR processing time, 60% improvement in employee satisfaction, streamlined global operations","";
-    logo: "GC";,
-},;
+    logo: "GC"},;
   {}
 ";
     id: 2,"";
@@ -203,8 +197,7 @@ const successStories = [];
     challenge: "Required automated recruitment and onboarding for 500+ annual hires","";
     solution: "Implemented AI-powered recruitment system with automated workflows and compliance tracking","";
     results: "70% faster hiring process, 50% reduction in administrative overhead, improved compliance","";
-    logo: "HN";,
-},;
+    logo: "HN"},;
   {}
 ";
     id: 3,"";
@@ -215,7 +208,7 @@ const successStories = [];
     results: "35% improvement in productivity, 45% increase in employee engagement, better retention","";
     logo: "MC";
 ];
-;
+
 const processSteps = [];
   {}
 ";
@@ -223,24 +216,21 @@ const processSteps = [];
     title: "HR Assessment","";
     description: "Evaluate current HR processes and identify improvement opportunities",";
     icon: FileText,"";
-    duration: "2-4 weeks";,
-},;
+    duration: "2-4 weeks"},;
   {}
 ";
     step: 2,"";
     title: "Platform Design","";
     description: "Design HR platform architecture and user experience",";
     icon: Code,"";
-    duration: "4-8 weeks";,
-},;
+    duration: "4-8 weeks"},;
   {}
 ";
     step: 3,"";
     title: "Development","";
     description: "Build and integrate HR platform components",";
     icon: Wrench,"";
-    duration: "16-32 weeks";,
-},;
+    duration: "16-32 weeks"},;
   {}
 ";
     step: 4,"";
@@ -249,7 +239,7 @@ const processSteps = [];
     icon: Users,"";
     duration: "2-6 weeks";
 ];
-;
+
 const hrBenefits = [];
   {}
 ";
@@ -257,34 +247,30 @@ const hrBenefits = [];
     title: "Operational Efficiency","";
     description: "Streamlined HR processes reduce administrative overhead and improve productivity",";
     icon: Zap,"";
-    examples["Automated workflows", "Reduced paperwork", "Faster processing", "Better accuracy"];,
-},;
+    examples["Automated workflows", "Reduced paperwork", "Faster processing", "Better accuracy"]},;
   {}
 ";
 "";
     title: "Employee Experience","";
     description: "Improved self-service capabilities and better communication enhance employee satisfaction",";
     icon: Users,"";
-    examples["Self-service portals", "Mobile access", "Real-time updates", "Better communication"];,
-},;
+    examples["Self-service portals", "Mobile access", "Real-time updates", "Better communication"]},;
   {}
 ";
 "";
     title: "Data-Driven Decisions","";
     description: "Advanced analytics provide insights for better workforce planning and HR strategy",";
     icon: BarChart3,"";
-    examples["Workforce analytics", "Performance insights", "Trend analysis", "Predictive modeling"];,
-},;
+    examples["Workforce analytics", "Performance insights", "Trend analysis", "Predictive modeling"]},;
   {}
 ";
 "";
     title: "Compliance & Security","";
     description: "Built-in compliance features and enterprise-grade security protect sensitive HR data",";
     icon: Shield,"";
-    examples["Regulatory compliance", "Data encryption", "Access controls", "Audit trails"];,
-}
+    examples["Regulatory compliance", "Data encryption", "Access controls", "Audit trails"]}
 ];
-;
+
 export default function HRPlatform() {}
 ';
 '';
@@ -312,30 +298,24 @@ export default function HRPlatform() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             animate = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center max-w-4xl mx-auto";
             <motion.div;
               initial = {}
   { opacity: 0,;
-  scale: 0.8;,
-}}
+  scale: 0.8}}
               animate = {}
   { opacity: 1,;
-  scale: 1;,
-}}
+  scale: 1}}
               transition = {}
   { duration: 0.8,;
-  delay: 0.2;,
-}}
+  delay: 0.2}}
               className="inline - flex items - center justify - center w-20 h-20 bg-gradient - to - br from - zion - cyan to - zion - purple rounded-2xl mb-8";
-";,
-}}"";
+"}}"";
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"";
 "";
               <Users className="w-10 h-10 text-white" />;
@@ -375,12 +355,10 @@ export default function HRPlatform() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
 "";
@@ -396,19 +374,15 @@ export default function HRPlatform() {}
                 key={benefit.title}
                 initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                 transition = {}
   { duration: 0.6,;
-  delay: index * 0.1;,
-}}
+  delay: index * 0.1}}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 8 hover:border-zion - cyan / 40 transition - all duration -300";
-";,
-}}"";
+"}}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"";
 "";
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">"";
@@ -438,12 +412,10 @@ export default function HRPlatform() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
 "";
@@ -459,19 +431,15 @@ export default function HRPlatform() {}
                 key={technology.name}
                 initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                 transition = {}
   { duration: 0.6,;
-  delay: index * 0.1;,
-}}
+  delay: index * 0.1}}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 text-center hover:border-zion - cyan / 40 transition - all duration -300";
-";,
-}}"";
+"}}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"";
 "";
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">"";
@@ -490,8 +458,7 @@ export default function HRPlatform() {}
                     ? 'bg-red-500/20 text-red-400 border border-red-500/30'''''`;
                     : technology.reliability === 'High''''`'`;
                     ? 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30'''`'`'`;
-                    : 'bg-green-500/20 text-green-400 border border-green-500/30'````;,
-}`}>;
+                    : 'bg-green-500/20 text-green-400 border border-green-500/30'````}`}>;
                   {technology.reliability} Reliability;
                 </span>;
               </motion.div>;) ) }
@@ -505,12 +472,10 @@ export default function HRPlatform() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
 "";
@@ -526,17 +491,14 @@ export default function HRPlatform() {}
                 key={step.step}
                 initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                 transition = {}
   { duration: 0.6,;
   delay: index * 0.1;
-";,
-}}"";
+"}}"";
                 className="text-center"";
 "";
                 <div className="relative mb-6">"";
@@ -564,12 +526,10 @@ export default function HRPlatform() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
 "";
@@ -591,9 +551,8 @@ export default function HRPlatform() {}
 '''`;
                   selectedCategory === category'''`'`;
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'''`'`'`;
-                    : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````;,
-}`}
-;
+                    : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````}`}
+
                 {category}
               </button>) ) }
           </div>";
@@ -604,21 +563,17 @@ export default function HRPlatform() {}
                 key={solution.id}
                 initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                 transition = {}
   { duration: 0.6,;
-  delay: index * 0.1;,
-}}
+  delay: index * 0.1}}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 hover:border-zion - cyan / 40 transition - all duration - 300 cursor -pointer";
                 onClick={ () => setSelectedSolution(solution) }
-;
-";,
-}}"";
+
+"}}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer";
                 onClick={() => setSelectedSolution(solution)}";
 "";
@@ -672,12 +627,10 @@ export default function HRPlatform() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
 "";
@@ -693,19 +646,15 @@ export default function HRPlatform() {}
                 key={story.id}
                 initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                 transition = {}
   { duration: 0.6,;
-  delay: index * 0.1;,
-}}
+  delay: index * 0.1}}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 hover:border-zion - cyan / 40 transition - all duration -300";
-";,
-}}"";
+"}}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"";
 "";
                 <div className="flex items-center gap-4 mb-6">"";
@@ -750,12 +699,10 @@ export default function HRPlatform() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center max-w-4xl mx-auto"";
 "";
@@ -782,14 +729,10 @@ export default function HRPlatform() {}
       </section>;
     </div>;
   )}
-;
 
-export { HRPlatform };
-;
-export { HRPlatform };
-;
-export { HRPlatform };
-;
-export { HRPlatform };
-;
-export { HRPlatform };
+
+export { HRPlatform }
+export { HRPlatform }
+export { HRPlatform }
+export { HRPlatform }
+export { HRPlatform }

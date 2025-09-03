@@ -1,4 +1,4 @@
-export interface EnhancedService2027 {;
+export interface EnhancedService2027 {
     id: string;
     title: string;
     description: string;
@@ -14,12 +14,11 @@ export interface EnhancedService2027 {;
     ctaLabel: string;
     href: string;
     external?: boolean;
-    contactInfo: {;
+    contactInfo: {
         phone: string;
         email: string;
         website: string;
-        address: string;,
-};
+        address: string}
     competitors: string[];
     roi: string;
     setupTime: string;
@@ -27,12 +26,11 @@ export interface EnhancedService2027 {;
     freeTier: boolean;
     trialPeriod: string;
     compliance: string[];
-    useCases: string[];,
-}
-;
+    useCases: string[]}
+
 export const enhancedInnovativeServices2027: EnhancedService2027[] = [;
     // Web3 Solutions;
-    {;
+    {
         id: 'metaverse-commerce-platform',;
         title: 'Metaverse Commerce Platform',;
         description: 'Complete virtual commerce solution enabling businesses to create, manage, and monetize virtual storefronts in the metaverse with AI-powered customer engagement and blockchain-based transactions.',;
@@ -63,12 +61,11 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [;
         innovationLevel: 'Cutting-edge',;
         ctaLabel: 'Launch Metaverse Store',;
         href: '/services/metaverse-commerce',;
-        contactInfo: {;
+        contactInfo: {
             phone: '+1 302 464 0950',;
             email: 'kleber@ziontechgroup.com',;
             website: 'https://ziontechgroup.com',;
-            address: '364 E Main St STE 1008 Middletown DE 19709';,
-},;
+            address: '364 E Main St STE 1008 Middletown DE 19709'},;
         competitors: ['Meta', 'Decentraland', 'Roblox', 'VRChat'],;
         roi: '300-500% within 12 months',;
         setupTime: '2-4 weeks',;
@@ -76,11 +73,10 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [;
         freeTier: true,;
         trialPeriod: '30 days',;
         compliance: ['GDPR', 'CCPA', 'SOC 2', 'PCI DSS'],;
-        useCases: ['Virtual retail stores', 'Virtual events', 'Digital art galleries', 'Virtual real estate'];,
-},;
+        useCases: ['Virtual retail stores', 'Virtual events', 'Digital art galleries', 'Virtual real estate']},;
 
     // DeFi Solutions;
-    {;
+    {
         id: 'defi-yield-optimizer-pro',;
         title: 'DeFi Yield Optimizer Pro',;
         description: 'Advanced DeFi yield optimization platform that automatically finds and executes the best yield farming strategies across multiple blockchain networks with risk management and portfolio rebalancing.',;
@@ -111,12 +107,11 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [;
         innovationLevel: 'Revolutionary',;
         ctaLabel: 'Optimize DeFi Yields',;
         href: '/services/defi-optimizer',;
-        contactInfo: {;
+        contactInfo: {
             phone: '+1 302 464 0950',;
             email: 'kleber@ziontechgroup.com',;
             website: 'https://ziontechgroup.com',;
-            address: '364 E Main St STE 1008 Middletown DE 19709';,
-},;
+            address: '364 E Main St STE 1008 Middletown DE 19709'},;
         competitors: ['Yearn Finance', 'Harvest Finance', 'Beefy Finance', 'AutoFarm'],;
         roi: '200-400% annually',;
         setupTime: '1-2 weeks',;
@@ -124,11 +119,10 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [;
         freeTier: false,;
         trialPeriod: '14 days',;
         compliance: ['AML', 'KYC', 'DeFi regulations'],;
-        useCases: ['Yield farming', 'Portfolio optimization', 'Risk management', 'Multi-chain investing'];,
-},;
+        useCases: ['Yield farming', 'Portfolio optimization', 'Risk management', 'Multi-chain investing']},;
 
     // Sustainable Tech;
-    {;
+    {
         id: 'carbon-neutral-cloud-platform',;
         title: 'Carbon-Neutral Cloud Platform',;
         description: 'Eco-friendly cloud infrastructure platform powered by renewable energy sources, featuring carbon footprint tracking, sustainable computing practices, and green data center optimization.',;
@@ -159,12 +153,11 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [;
         innovationLevel: 'Sustainable',;
         ctaLabel: 'Go Green with Cloud',;
         href: '/services/green-cloud',;
-        contactInfo: {;
+        contactInfo: {
             phone: '+1 302 464 0950',;
             email: 'kleber@ziontechgroup.com',;
             website: 'https://ziontechgroup.com',;
-            address: '364 E Main St STE 1008 Middletown DE 19709';,
-},;
+            address: '364 E Main St STE 1008 Middletown DE 19709'},;
         competitors: ['Google Cloud', 'AWS', 'Microsoft Azure', 'DigitalOcean'],;
         roi: '150-250% within 18 months',;
         setupTime: '3-6 weeks',;
@@ -172,11 +165,10 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [;
         freeTier: true,;
         trialPeriod: '60 days',;
         compliance: ['ISO 14001', 'LEED certification', 'Carbon Trust', 'ESG standards'],;
-        useCases: ['Green hosting', 'Sustainable computing', 'ESG reporting', 'Carbon tracking'];,
-},;
+        useCases: ['Green hosting', 'Sustainable computing', 'ESG reporting', 'Carbon tracking']},;
 
     // NeuroTech Solutions;
-    {;
+    {
         id: 'brain-computer-interface-platform',;
         title: 'Brain-Computer Interface Platform',;
         description: 'Advanced BCI platform enabling direct communication between the human brain and computers for medical applications, accessibility solutions, and human-computer interaction research.',;
@@ -207,12 +199,11 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [;
         innovationLevel: 'Breakthrough',;
         ctaLabel: 'Explore BCI Technology',;
         href: '/services/brain-computer-interface',;
-        contactInfo: {;
+        contactInfo: {
             phone: '+1 302 464 0950',;
             email: 'kleber@ziontechgroup.com',;
             website: 'https://ziontechgroup.com',;
-            address: '364 E Main St STE 1008 Middletown DE 19709';,
-},;
+            address: '364 E Main St STE 1008 Middletown DE 19709'},;
         competitors: ['Neuralink', 'Kernel', 'CTRL-labs', 'OpenBCI'],;
         roi: '300-600% for research applications',;
         setupTime: '8-12 weeks',;
@@ -220,11 +211,10 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [;
         freeTier: false,;
         trialPeriod: '30 days',;
         compliance: ['FDA', 'CE marking', 'HIPAA', 'Medical device regulations'],;
-        useCases: ['Medical research', 'Accessibility solutions', 'Human-computer interaction', 'Neurological studies'];,
-},;
+        useCases: ['Medical research', 'Accessibility solutions', 'Human-computer interaction', 'Neurological studies']},;
 
     // Fusion Energy Solutions;
-    {;
+    {
         id: 'fusion-energy-simulation-platform',;
         title: 'Fusion Energy Simulation Platform',;
         description: 'Comprehensive fusion energy simulation and modeling platform for research institutions, energy companies, and government agencies working on next-generation clean energy solutions.',;
@@ -255,12 +245,11 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [;
         innovationLevel: 'Revolutionary',;
         ctaLabel: 'Simulate Fusion Energy',;
         href: '/services/fusion-simulation',;
-        contactInfo: {;
+        contactInfo: {
             phone: '+1 302 464 0950',;
             email: 'kleber@ziontechgroup.com',;
             website: 'https://ziontechgroup.com',;
-            address: '364 E Main St STE 1008 Middletown DE 19709';,
-},;
+            address: '364 E Main St STE 1008 Middletown DE 19709'},;
         competitors: ['ITER', 'General Fusion', 'Commonwealth Fusion', 'Helion Energy'],;
         roi: '500-1000% for research breakthroughs',;
         setupTime: '12-16 weeks',;
@@ -268,11 +257,10 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [;
         freeTier: false,;
         trialPeriod: '90 days',;
         compliance: ['Nuclear safety regulations', 'Research ethics', 'International standards'],;
-        useCases: ['Fusion research', 'Reactor design', 'Plasma physics', 'Energy modeling'];,
-},;
+        useCases: ['Fusion research', 'Reactor design', 'Plasma physics', 'Energy modeling']},;
 
     // OceanTech Solutions;
-    {;
+    {
         id: 'ocean-monitoring-conservation-platform',;
         title: 'Ocean Monitoring & Conservation Platform',;
         description: 'Comprehensive ocean monitoring system using IoT sensors, satellite data, and AI analytics to track marine ecosystems, detect pollution, and support ocean conservation efforts.',;
@@ -303,12 +291,11 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [;
         innovationLevel: 'Environmental',;
         ctaLabel: 'Monitor Ocean Health',;
         href: '/services/ocean-monitoring',;
-        contactInfo: {;
+        contactInfo: {
             phone: '+1 302 464 0950',;
             email: 'kleber@ziontechgroup.com',;
             website: 'https://ziontechgroup.com',;
-            address: '364 E Main St STE 1008 Middletown DE 19709';,
-},;
+            address: '364 E Main St STE 1008 Middletown DE 19709'},;
         competitors: ['Saildrone', 'OceanMind', 'MarineTraffic', 'Global Fishing Watch'],;
         roi: '200-400% for environmental impact',;
         setupTime: '6-10 weeks',;
@@ -316,11 +303,10 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [;
         freeTier: true,;
         trialPeriod: '45 days',;
         compliance: ['Environmental regulations', 'Marine safety', 'Data privacy'],;
-        useCases: ['Ocean monitoring', 'Pollution detection', 'Marine research', 'Conservation planning'];,
-},;
+        useCases: ['Ocean monitoring', 'Pollution detection', 'Marine research', 'Conservation planning']},;
 
     // AgriTech Solutions;
-    {;
+    {
         id: 'precision-agriculture-ai-platform',;
         title: 'Precision Agriculture AI Platform',;
         description: 'AI-powered precision agriculture platform that optimizes crop yields, reduces resource waste, and enables sustainable farming practices through advanced analytics and IoT integration.',;
@@ -351,12 +337,11 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [;
         innovationLevel: 'Sustainable',;
         ctaLabel: 'Optimize Agriculture',;
         href: '/services/precision-agriculture',;
-        contactInfo: {;
+        contactInfo: {
             phone: '+1 302 464 0950',;
             email: 'kleber@ziontechgroup.com',;
             website: 'https://ziontechgroup.com',;
-            address: '364 E Main St STE 1008 Middletown DE 19709';,
-},;
+            address: '364 E Main St STE 1008 Middletown DE 19709'},;
         competitors: ['John Deere', 'Climate FieldView', 'FarmLogs', 'Granular'],;
         roi: '250-400% within 2 years',;
         setupTime: '4-8 weeks',;
@@ -364,11 +349,10 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [;
         freeTier: true,;
         trialPeriod: '60 days',;
         compliance: ['Food safety', 'Agricultural regulations', 'Environmental standards'],;
-        useCases: ['Crop optimization', 'Resource management', 'Sustainability tracking', 'Supply chain optimization'];,
-},;
+        useCases: ['Crop optimization', 'Resource management', 'Sustainability tracking', 'Supply chain optimization']},;
 
     // Smart City Solutions;
-    {;
+    {
         id: 'smart-city-operations-center',;
         title: 'Smart City Operations Center',;
         description: 'Comprehensive smart city management platform integrating IoT sensors, AI analytics, and real-time monitoring to optimize urban infrastructure, transportation, and public services.',;
@@ -399,12 +383,11 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [;
         innovationLevel: 'Transformative',;
         ctaLabel: 'Build Smart City',;
         href: '/services/smart-city',;
-        contactInfo: {;
+        contactInfo: {
             phone: '+1 302 464 0950',;
             email: 'kleber@ziontechgroup.com',;
             website: 'https://ziontechgroup.com',;
-            address: '364 E Main St STE 1008 Middletown DE 19709';,
-},;
+            address: '364 E Main St STE 1008 Middletown DE 19709'},;
         competitors: ['Siemens', 'IBM', 'Cisco', 'Schneider Electric'],;
         roi: '300-500% over 5 years',;
         setupTime: '12-18 months',;
@@ -412,11 +395,10 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [;
         freeTier: false,;
         trialPeriod: '90 days',;
         compliance: ['Government regulations', 'Data privacy', 'Infrastructure standards'],;
-        useCases: ['Urban planning', 'Infrastructure management', 'Public services', 'Emergency response'];,
-},;
+        useCases: ['Urban planning', 'Infrastructure management', 'Public services', 'Emergency response']},;
 
     // Digital Twin Solutions;
-    {;
+    {
         id: 'digital-twin-management-platform',;
         title: 'Digital Twin Management Platform',;
         description: 'Advanced digital twin platform for creating virtual replicas of physical assets, processes, and systems to enable predictive maintenance, optimization, and simulation.',;
@@ -447,12 +429,11 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [;
         innovationLevel: 'Advanced',;
         ctaLabel: 'Create Digital Twin',;
         href: '/services/digital-twin',;
-        contactInfo: {;
+        contactInfo: {
             phone: '+1 302 464 0950',;
             email: 'kleber@ziontechgroup.com',;
             website: 'https://ziontechgroup.com',;
-            address: '364 E Main St STE 1008 Middletown DE 19709';,
-},;
+            address: '364 E Main St STE 1008 Middletown DE 19709'},;
         competitors: ['Siemens', 'GE Digital', 'PTC', 'Dassault Systèmes'],;
         roi: '250-400% within 18 months',;
         setupTime: '8-12 weeks',;
@@ -460,11 +441,10 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [;
         freeTier: true,;
         trialPeriod: '45 days',;
         compliance: ['Industry standards', 'Data security', 'Quality management'],;
-        useCases: ['Asset management', 'Predictive maintenance', 'Process optimization', 'Quality control'];,
-},;
+        useCases: ['Asset management', 'Predictive maintenance', 'Process optimization', 'Quality control']},;
 
     // Edge AI Solutions;
-    {;
+    {
         id: 'edge-ai-computing-platform',;
         title: 'Edge AI Computing Platform',;
         description: 'Distributed edge AI computing platform that brings machine learning capabilities closer to data sources, enabling real-time processing, reduced latency, and improved privacy.',;
@@ -495,12 +475,11 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [;
         innovationLevel: 'Cutting-edge',;
         ctaLabel: 'Deploy Edge AI',;
         href: '/services/edge-ai',;
-        contactInfo: {;
+        contactInfo: {
             phone: '+1 302 464 0950',;
             email: 'kleber@ziontechgroup.com',;
             website: 'https://ziontechgroup.com',;
-            address: '364 E Main St STE 1008 Middletown DE 19709';,
-},;
+            address: '364 E Main St STE 1008 Middletown DE 19709'},;
         competitors: ['NVIDIA', 'Intel', 'Qualcomm', 'ARM'],;
         roi: '300-500% within 12 months',;
         setupTime: '6-10 weeks',;
@@ -508,11 +487,10 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [;
         freeTier: true,;
         trialPeriod: '30 days',;
         compliance: ['Data privacy', 'Security standards', 'Industry regulations'],;
-        useCases: ['Real-time processing', 'Privacy-preserving AI', 'IoT applications', 'Autonomous systems'];,
-},;
+        useCases: ['Real-time processing', 'Privacy-preserving AI', 'IoT applications', 'Autonomous systems']},;
 
     // Federated Learning Solutions;
-    {;
+    {
         id: 'federated-learning-platform',;
         title: 'Federated Learning Platform',;
         description: 'Privacy-preserving machine learning platform that enables collaborative model training across distributed data sources without sharing raw data, ensuring data privacy and security.',;
@@ -543,12 +521,11 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [;
         innovationLevel: 'Privacy-focused',;
         ctaLabel: 'Enable Federated Learning',;
         href: '/services/federated-learning',;
-        contactInfo: {;
+        contactInfo: {
             phone: '+1 302 464 0950',;
             email: 'kleber@ziontechgroup.com',;
             website: 'https://ziontechgroup.com',;
-            address: '364 E Main St STE 1008 Middletown DE 19709';,
-},;
+            address: '364 E Main St STE 1008 Middletown DE 19709'},;
         competitors: ['OpenMined', 'TensorFlow Federated', 'IBM Federated Learning', 'Microsoft FL'],;
         roi: '200-400% for privacy-sensitive applications',;
         setupTime: '8-12 weeks',;
@@ -556,6 +533,5 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [;
         freeTier: true,;
         trialPeriod: '60 days',;
         compliance: ['GDPR', 'HIPAA', 'SOC 2', 'Data privacy regulations'],;
-        useCases: ['Healthcare AI', 'Financial modeling', 'Research collaboration', 'Privacy-preserving analytics'];,
-}
+        useCases: ['Healthcare AI', 'Financial modeling', 'Research collaboration', 'Privacy-preserving analytics']}
 ];

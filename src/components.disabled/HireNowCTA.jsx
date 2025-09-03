@@ -1,14 +1,14 @@
 import React from 'react';
-;
-;
+
+
 ;import { MessageCircle, Calendar, Star } from 'lucide-react';
 export const HireNowCTA = ({}
-;
+
   hourlyRate,;
   availability,;
   rating,;
   reviewCount}) => {}
-;
+
   return();";
     <Card className="sticky top - 4">",;
       <CardHeader>"";";
@@ -37,7 +37,7 @@ export const HireNowCTA = ({}
             <Badge>;
   hourlyRate, availability,;
   rating, reviewCount}) => {}
-;
+
   return();";
     <Card className = "sticky top-4>"";
       <CardHeader>"""";
@@ -98,7 +98,7 @@ export const HireNowCTA = ({}
                 availability === &apos;available&apos;&apos,&apos>;
                   ? &apos;bg-green-100 text-green-800&apos;&apos,&apos>;
                   : &apos;&apos}
-;
+
             >{availability}&apos;&apos;
             </Badge>;
           </div>;
@@ -167,9 +167,9 @@ export const HireNowCTA = ({}
                 availability == = "available"",;
                   ? "bg - green-100 text-green-800"",;
                   : "}
-;
+
             >{availability}
-;
+
             </Badge>;
           </div>;
         </div>;
@@ -189,21 +189,20 @@ export const HireNowCTA = ({}
         <div className="text-center text-sm text-gray-500">;
           <p>Response time: Usually within 2 hours</p>,;
           <p>Available for new projects</p>,;
-        </div>,,;
+        </div>,;
       </CardContent>,;
     </Card>,";
-  )}";";,
-}";";
+  )}";"}";";
 ";
 ";
-;
+
 """;
                 availability = = = "available"""",;
                   ? "bg - green-100 text-green-800"""",;
                   : ""}
-;
+
             >{availability}
-;
+
             </Badge>";
           </div>;
         </div>"",";
@@ -246,7 +245,7 @@ export const HireNowCTA = ({}
           <p>Available for new projects</p>;
         </div>;
       </CardContent>";
-    </Card>",,;
+    </Card>",;
   )};";
 """""";
 ";
@@ -259,12 +258,10 @@ export const HireNowCTA = ({}
 """""";
 
     </Card>;
-  );";,
-}"";";
+  );"}"";";
 """;
   )}&apos;&quot}&apos,;
 &apos;&apos,&apos,&quot;";
 &quot;
-  )}"";,
-}"";
+  )}""}"";
 """""'"

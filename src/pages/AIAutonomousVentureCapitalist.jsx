@@ -575,13 +575,11 @@ import {}
   CheckCircle,';
   Shield,'';
   Zap,''';
-  Brain'''';,
-} from 'lucide-react';
-;
-    technologies["AI", "Exit Planning", "Market Analysis", "Optimization"];,
-}
+  Brain''''} from 'lucide-react';
+
+    technologies["AI", "Exit Planning", "Market Analysis", "Optimization"]}
 ];
-;
+
 const vcTechnologies = [];
   {}
 ";
@@ -590,8 +588,7 @@ const vcTechnologies = [];
     description: "Advanced AI algorithms for investment analysis",";
     icon: Brain,"";
     useCase: "Investment Analysis","";
-    reliability: "Critical";,
-},;
+    reliability: "Critical"},;
   {}
 ";
 "";
@@ -599,8 +596,7 @@ const vcTechnologies = [];
     description: "Comprehensive financial data analysis",";
     icon: BarChart3,"";
     useCase: "Financial Modeling","";
-    reliability: "Critical";,
-},;
+    reliability: "Critical"},;
   {}
 ";
 "";
@@ -608,8 +604,7 @@ const vcTechnologies = [];
     description: "Real-time market data and insights",";
     icon: TrendingUp,"";
     useCase: "Market Analysis","";
-    reliability: "High";,
-},;
+    reliability: "High"},;
   {}
 ";
 "";
@@ -619,7 +614,7 @@ const vcTechnologies = [];
     useCase: "Risk Analysis","";
     reliability: "High";
 ];
-;
+
 const successStories = [];
   {}
 ";
@@ -629,8 +624,7 @@ const successStories = [];
     challenge: "Needed AI-powered investment analysis platform for portfolio management","";
     solution: "Built comprehensive AI investment analysis platform with market intelligence and risk management","";
     results: "45% better investment decisions, 60% faster due diligence, 35% improved returns, better risk management","";
-    logo: "ICP";,
-},;
+    logo: "ICP"},;
   {}
 ";
     id: 2,"";
@@ -639,8 +633,7 @@ const successStories = [];
     challenge: "Required autonomous deal sourcing and evaluation system","";
     solution: "Implemented AI-driven deal sourcing and evaluation platform","";
     results: "50% more deal flow, 40% faster evaluation, better quality investments, improved efficiency","";
-    logo: "TGF";,
-},;
+    logo: "TGF"},;
   {}
 ";
     id: 3,"";
@@ -651,7 +644,7 @@ const successStories = [];
     results: "30% better portfolio performance, 45% improved exit timing, better returns, optimized strategies","";
     logo: "SVL";
 ];
-;
+
 const processSteps = [];
   {}
 ";
@@ -659,24 +652,21 @@ const processSteps = [];
     title: "Investment Strategy Assessment","";
     description: "Evaluate current investment processes and identify AI opportunities",";
     icon: FileText,"";
-    duration: "2-4 weeks";,
-},;
+    duration: "2-4 weeks"},;
   {}
 ";
     step: 2,"";
     title: "AI Strategy Development","";
     description: "Develop AI strategy and implementation roadmap",";
     icon: Code,"";
-    duration: "4-8 weeks";,
-},;
+    duration: "4-8 weeks"},;
   {}
 ";
     step: 3,"";
     title: "System Implementation","";
     description: "Build and deploy AI venture capital systems",";
     icon: Wrench,"";
-    duration: "22-48 weeks";,
-},;
+    duration: "22-48 weeks"},;
   {}
 ";
     step: 4,"";
@@ -685,7 +675,7 @@ const processSteps = [];
     icon: Gauge,"";
     duration: "4-8 weeks";
 ];
-;
+
 const vcBenefits = [];
   {}
 ";
@@ -693,34 +683,30 @@ const vcBenefits = [];
     title: "Better Investment Decisions","";
     description: "AI-powered insights enable data-driven investment decisions",";
     icon: Brain,"";
-    examples["Data-driven insights", "Market analysis", "Risk assessment", "Portfolio optimization"];,
-},;
+    examples["Data-driven insights", "Market analysis", "Risk assessment", "Portfolio optimization"]},;
   {}
 ";
 "";
     title: "Increased Deal Flow","";
     description: "AI systems identify more investment opportunities",";
     icon: Zap,"";
-    examples["Deal sourcing", "Market scanning", "Opportunity identification", "Better coverage"];,
-},;
+    examples["Deal sourcing", "Market scanning", "Opportunity identification", "Better coverage"]},;
   {}
 ";
 "";
     title: "Improved Returns","";
     description: "AI optimization leads to better portfolio performance",";
     icon: TrendingUp,"";
-    examples["Portfolio optimization", "Risk management", "Exit timing", "Better performance"];,
-},;
+    examples["Portfolio optimization", "Risk management", "Exit timing", "Better performance"]},;
   {}
 ";
 "";
     title: "Operational Efficiency","";
     description: "Automation reduces manual effort and improves processes",";
     icon: Rocket,"";
-    examples["Process automation", "Due diligence", "Reporting", "Better efficiency"];,
-}
+    examples["Process automation", "Due diligence", "Reporting", "Better efficiency"]}
 ];
-;
+
 export default function AIAutonomousVentureCapitalist() {}
 ';
 '';
@@ -748,30 +734,24 @@ export default function AIAutonomousVentureCapitalist() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             animate = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center max-w-4xl mx-auto";
             <motion.div;
               initial = {}
   { opacity: 0,;
-  scale: 0.8;,
-}}
+  scale: 0.8}}
               animate = {}
   { opacity: 1,;
-  scale: 1;,
-}}
+  scale: 1}}
               transition = {}
   { duration: 0.8,;
-  delay: 0.2;,
-}}
+  delay: 0.2}}
               className="inline - flex items - center justify - center w-20 h-20 bg-gradient - to - br from - zion - cyan to - zion - purple rounded-2xl mb-8";
-";,
-}}"";
+"}}"";
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"";
 "";
               <TrendingUp className="w-10 h-10 text-white" />;
@@ -811,12 +791,10 @@ export default function AIAutonomousVentureCapitalist() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
 "";
@@ -832,19 +810,15 @@ export default function AIAutonomousVentureCapitalist() {}
                 key={benefit.title}
                 initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                 transition = {}
   { duration: 0.6,;
-  delay: index * 0.1;,
-}}
+  delay: index * 0.1}}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 8 hover:border-zion - cyan / 40 transition - all duration -300";
-";,
-}}"";
+"}}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"";
 "";
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">"";
@@ -874,12 +848,10 @@ export default function AIAutonomousVentureCapitalist() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
 "";
@@ -895,19 +867,15 @@ export default function AIAutonomousVentureCapitalist() {}
                 key={technology.name}
                 initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                 transition = {}
   { duration: 0.6,;
-  delay: index * 0.1;,
-}}
+  delay: index * 0.1}}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 text-center hover:border-zion - cyan / 40 transition - all duration -300";
-";,
-}}"";
+"}}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"";
 "";
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">"";
@@ -926,8 +894,7 @@ export default function AIAutonomousVentureCapitalist() {}
                     ? 'bg-red-500/20 text-red-400 border border-red-500/30'''''`;
                     : technology.reliability === 'High''''`'`;
                     ? 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30'''`'`'`;
-                    : 'bg-green-500/20 text-green-400 border border-green-500/30'````;,
-}`}>;
+                    : 'bg-green-500/20 text-green-400 border border-green-500/30'````}`}>;
                   {technology.reliability} Reliability;
                 </span>;
               </motion.div>;) ) }
@@ -941,12 +908,10 @@ export default function AIAutonomousVentureCapitalist() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
 "";
@@ -962,17 +927,14 @@ export default function AIAutonomousVentureCapitalist() {}
                 key={step.step}
                 initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                 transition = {}
   { duration: 0.6,;
   delay: index * 0.1;
-";,
-}}"";
+"}}"";
                 className="text-center"";
 "";
                 <div className="relative mb-6">"";
@@ -1000,12 +962,10 @@ export default function AIAutonomousVentureCapitalist() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
 "";
@@ -1027,9 +987,8 @@ export default function AIAutonomousVentureCapitalist() {}
 '''`;
                   selectedCategory === category'''`'`;
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'''`'`'`;
-                    : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````;,
-}`}
-;
+                    : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````}`}
+
                 {category}
               </button>) ) }
           </div>";
@@ -1040,21 +999,17 @@ export default function AIAutonomousVentureCapitalist() {}
                 key={solution.id}
                 initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                 transition = {}
   { duration: 0.6,;
-  delay: index * 0.1;,
-}}
+  delay: index * 0.1}}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 hover:border-zion - cyan / 40 transition - all duration - 300 cursor -pointer";
                 onClick={ () => setSelectedSolution(solution) }
-;
-";,
-}}"";
+
+"}}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer";
                 onClick={() => setSelectedSolution(solution)}";
 "";
@@ -1108,12 +1063,10 @@ export default function AIAutonomousVentureCapitalist() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
 "";
@@ -1129,19 +1082,15 @@ export default function AIAutonomousVentureCapitalist() {}
                 key={story.id}
                 initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                 transition = {}
   { duration: 0.6,;
-  delay: index * 0.1;,
-}}
+  delay: index * 0.1}}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 hover:border-zion - cyan / 40 transition - all duration -300";
-";,
-}}"";
+"}}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"";
 "";
                 <div className="flex items-center gap-4 mb-6">"";
@@ -1186,12 +1135,10 @@ export default function AIAutonomousVentureCapitalist() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center max-w-4xl mx-auto"";
 "";
@@ -1218,14 +1165,10 @@ export default function AIAutonomousVentureCapitalist() {}
       </section>;
     </div>;
   )}
-;
 
-export { AIAutonomousVentureCapitalist };
-;
-export { AIAutonomousVentureCapitalist };
-;
-export { AIAutonomousVentureCapitalist };
-;
-export { AIAutonomousVentureCapitalist };
-;
-export { AIAutonomousVentureCapitalist };
+
+export { AIAutonomousVentureCapitalist }
+export { AIAutonomousVentureCapitalist }
+export { AIAutonomousVentureCapitalist }
+export { AIAutonomousVentureCapitalist }
+export { AIAutonomousVentureCapitalist }

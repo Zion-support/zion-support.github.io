@@ -1,6 +1,6 @@
 import React from 'react';
-;
-;
+
+
 ;import { Building, Users, BarChart3, MessageSquare, Calendar, FileText, CreditCard, Globe, TrendingUp, CheckCircle, Star, Phone, Mail, MapPin, ExternalLink, BarChart, Shield, Zap } from "lucide-react";
 export default function MicroSAASServicesPage() {}
     const microSAASServices = [];
@@ -30,12 +30,10 @@ export default function MicroSAASServicesPage() {}
 "";
                 starter: "$29/month","";
                 professional: "$79/month","";
-                enterprise: "$199/month"";,
-},"";
+                enterprise: "$199/month""},"";
             freeTrial: "14 days",;
             rating: 4.8,;
-            reviewCount: 342;,
-},;
+            reviewCount: 342},;
         {}
 ";
 "";
@@ -62,12 +60,10 @@ export default function MicroSAASServicesPage() {}
 "";
                 starter: "$19/month","";
                 professional: "$49/month","";
-                enterprise: "$99/month"";,
-},"";
+                enterprise: "$99/month""},"";
             freeTrial: "30 days",;
             rating: 4.7,;
-            reviewCount: 267;,
-},;
+            reviewCount: 267},;
         {}
 ";
 "";
@@ -94,13 +90,11 @@ export default function MicroSAASServicesPage() {}
 "";
                 starter: "$39/month","";
                 professional: "$89/month","";
-                enterprise: "$199/month"";,
-},"";
+                enterprise: "$199/month""},"";
             freeTrial: "21 days",;
             rating: 4.9,;
-            reviewCount: 189;,
-},;
-        {;
+            reviewCount: 189},;
+        {
             id: "communication - tool",;
             title: "ZionChat",;
             description: "Team communication platform with chat, video calls, and file sharing capabilities.",;
@@ -118,16 +112,14 @@ export default function MicroSAASServicesPage() {}
             badge: "Collaborative",;
             link: "https://ziontechgroup.com / zion - chat",;
             details: "Connect your team with our modern communication platform.Chat, call, and collaborate seamlessly across all devices and platforms.",;
-            pricing: {;
+            pricing: {
                 starter: "$15 / month",;
                 professional: "$39 / month",;
-                enterprise: "$79 / month";,
-},;
+                enterprise: "$79 / month"},;
             freeTrial: "7 days",;
             rating: 4.6,;
-            reviewCount: 198;,
-},;
-        {;
+            reviewCount: 198},;
+        {
             id: "document - management",;
             title: "ZionDocs",;
             description: "Document management system with version control, collaboration, and secure storage.",;
@@ -145,16 +137,14 @@ export default function MicroSAASServicesPage() {}
             badge: "Secure",;
             link: "https://ziontechgroup.com / zion - docs",;
             details: "Organize and secure your documents with our enterprise - grade document management system.Collaborate with your team while maintaining version control and security.",;
-            pricing: {;
+            pricing: {
                 starter: "$25 / month",;
                 professional: "$59 / month",;
-                enterprise: "$129 / month";,
-},;
+                enterprise: "$129 / month"},;
             freeTrial: "14 days",;
             rating: 4.8,;
-            reviewCount: 156;,
-},;
-        {;
+            reviewCount: 156},;
+        {
             id: "payment - processor",;
             title: "ZionPay",;
             description: "Payment processing solution with multiple payment methods, invoicing, and subscription management.",;
@@ -172,16 +162,14 @@ export default function MicroSAASServicesPage() {}
             badge: "Free",;
             link: "https://ziontechgroup.com / zion - pay",;
             details: "Accept payments from customers worldwide with our secure payment processing solution.Support multiple payment methods and automate your billing processes.",;
-            pricing: {;
+            pricing: {
                 starter: "2.9% + $0.30",;
                 professional: "2.5% + $0.30",;
-                enterprise: "2.2% + $0.30";,
-},;
+                enterprise: "2.2% + $0.30"},;
             freeTrial: "No setup fees",;
             rating: 4.9,;
-            reviewCount: 423;,
-},;
-        {;
+            reviewCount: 423},;
+        {
             id: "marketing - automation",;
             title: "ZionMarketing",;
             description: "Marketing automation platform with email campaigns, lead nurturing, and conversion tracking.",;
@@ -199,16 +187,14 @@ export default function MicroSAASServicesPage() {}
             badge: "Automated",;
             link: "https://ziontechgroup.com / zion - marketing",;
             details: "Automate your marketing efforts and nurture leads effectively with our comprehensive marketing automation platform.Track conversions and optimize your campaigns.",;
-            pricing: {;
+            pricing: {
                 starter: "$49 / month",;
                 professional: "$99 / month",;
-                enterprise: "$199 / month";,
-},;
+                enterprise: "$199 / month"},;
             freeTrial: "14 days",;
             rating: 4.7,;
-            reviewCount: 234;,
-},;
-        {;
+            reviewCount: 234},;
+        {
             id: "inventory - management",;
             title: "ZionInventory",;
             description: "Inventory management system with stock tracking, order management, and supplier management.",;
@@ -226,16 +212,14 @@ export default function MicroSAASServicesPage() {}
             badge: "Efficient",;
             link: "https://ziontechgroup.com / zion - inventory",;
             details: "Keep track of your inventory in real - time with our comprehensive inventory management system.Prevent stockouts and optimize your supply chain.",;
-            pricing: {;
+            pricing: {
                 starter: "$35 / month",;
                 professional: "$79 / month",;
-                enterprise: "$149 / month";,
-},;
+                enterprise: "$149 / month"},;
             freeTrial: "21 days",;
             rating: 4.8,;
-            reviewCount: 178;,
-},;
-        {;
+            reviewCount: 178},;
+        {
             id: "hr - management",;
             title: "ZionHR",;
             description: "Human resources management platform with employee onboarding, time tracking, and performance management.",;
@@ -253,16 +237,14 @@ export default function MicroSAASServicesPage() {}
             badge: "Comprehensive",;
             link: "https://ziontechgroup.com / zion - hr",;
             details: "Streamline your HR processes with our comprehensive human resources management platform.Manage employees, track performance, and ensure compliance.",;
-            pricing: {;
+            pricing: {
                 starter: "$45 / month",;
                 professional: "$89 / month",;
-                enterprise: "$179 / month";,
-},;
+                enterprise: "$179 / month"},;
             freeTrial: "30 days",;
             rating: 4.6,;
-            reviewCount: 145;,
-},;
-        {;
+            reviewCount: 145},;
+        {
             id: "accounting - software",;
             title: "ZionBooks",;
             description: "Cloud - based accounting software with invoicing, expense tracking, and financial reporting.",;
@@ -280,16 +262,14 @@ export default function MicroSAASServicesPage() {}
             badge: "Financial",;
             link: "https://ziontechgroup.com / zion - books",;
             details: "Manage your business finances with our cloud - based accounting software.Create invoices, track expenses, and generate comprehensive financial reports.",;
-            pricing: {;
+            pricing: {
                 starter: "$30 / month",;
                 professional: "$69 / month",;
-                enterprise: "$129 / month";,
-},;
+                enterprise: "$129 / month"},;
             freeTrial: "30 days",;
             rating: 4.8,;
-            reviewCount: 267;,
-},;
-        {;
+            reviewCount: 267},;
+        {
             id: "ecommerce - platform",;
             title: "ZionShop",;
             description: "E - commerce platform with online store creation, payment processing, and inventory management.",;
@@ -307,16 +287,14 @@ export default function MicroSAASServicesPage() {}
             badge: "Complete",;
             link: "https://ziontechgroup.com / zion - shop",;
             details: "Create and manage your online store with our comprehensive e - commerce platform.Sell products, process payments, and grow your business online.",;
-            pricing: {;
+            pricing: {
                 starter: "$40 / month",;
                 professional: "$89 / month",;
-                enterprise: "$199 / month";,
-},;
+                enterprise: "$199 / month"},;
             freeTrial: "14 days",;
             rating: 4.7,;
-            reviewCount: 198;,
-},;
-        {;
+            reviewCount: 198},;
+        {
             id: "learning - platform",;
             title: "ZionAcademy",;
             description: "Online learning management system with course creation, student management, and progress tracking.",;
@@ -334,16 +312,14 @@ export default function MicroSAASServicesPage() {}
             badge: "Educational",;
             link: "https://ziontechgroup.com / zion - academy",;
             details: "Create and deliver online courses with our comprehensive learning management system.Engage students and track their progress effectively.",;
-            pricing: {;
+            pricing: {
                 starter: "$55 / month",;
                 professional: "$109 / month",;
-                enterprise: "$249 / month";,
-},;
+                enterprise: "$249 / month"},;
             freeTrial: "21 days",;
             rating: 4.9,;
-            reviewCount: 167;,
-},;
-        {;
+            reviewCount: 167},;
+        {
             id: "ai - content - generator",;
             title: "ZionAI Writer",;
             description: "AI - powered content generation platform for blogs, marketing copy, and creative writing.",;
@@ -361,16 +337,14 @@ export default function MicroSAASServicesPage() {}
             badge: "AI - Powered",;
             link: "https://ziontechgroup.com / zion - ai - writer",;
             details: "Generate high-quality, SEO - optimized content in seconds with our advanced AI writing platform.Save time and improve your content strategy.",;
-            pricing: {;
+            pricing: {
                 starter: "$39 / month",;
                 professional: "$79 / month",;
-                enterprise: "$159 / month";,
-},;
+                enterprise: "$159 / month"},;
             freeTrial: "14 days",;
             rating: 4.8,;
-            reviewCount: 234;,
-},;
-        {;
+            reviewCount: 234},;
+        {
             id: "blockchain - wallet",;
             title: "ZionWallet",;
             description: "Secure cryptocurrency wallet with DeFi integration, staking, and portfolio management.",;
@@ -388,16 +362,14 @@ export default function MicroSAASServicesPage() {}
             badge: "Web3 Ready",;
             link: "https://ziontechgroup.com / zion - wallet",;
             details: "Manage your cryptocurrency portfolio with our secure, multi - chain wallet.Access DeFi protocols and earn staking rewards.",;
-            pricing: {;
+            pricing: {
                 starter: "Free",;
                 professional: "$9 / month",;
-                enterprise: "$29 / month";,
-},;
+                enterprise: "$29 / month"},;
             freeTrial: "Always free",;
             rating: 4.7,;
-            reviewCount: 189;,
-},;
-        {;
+            reviewCount: 189},;
+        {
             id: "quantum - computing",;
             title: "ZionQuantum",;
             description: "Quantum computing platform for complex problem solving and optimization.",;
@@ -415,16 +387,14 @@ export default function MicroSAASServicesPage() {}
             badge: "Cutting - Edge",;
             link: "https://ziontechgroup.com / zion - quantum",;
             details: "Access quantum computing power for complex optimization problems, cryptography, and scientific research.",;
-            pricing: {;
+            pricing: {
                 starter: "$299 / month",;
                 professional: "$799 / month",;
-                enterprise: "$1,999 / month";,
-},;
+                enterprise: "$1,999 / month"},;
             freeTrial: "7 days",;
             rating: 4.9,;
-            reviewCount: 89;,
-},;
-        {;
+            reviewCount: 89},;
+        {
             id: "iot - platform",;
             title: "ZionIoT Hub",;
             description: "Internet of Things platform for device management, data collection, and automation.",;
@@ -442,16 +412,14 @@ export default function MicroSAASServicesPage() {}
             badge: "Connected",;
             link: "https://ziontechgroup.com / zion - iot",;
             details: "Connect and manage your IoT devices with our comprehensive platform.Monitor, analyze, and automate your connected ecosystem.",;
-            pricing: {;
+            pricing: {
                 starter: "$45 / month",;
                 professional: "$89 / month",;
-                enterprise: "$179 / month";,
-},;
+                enterprise: "$179 / month"},;
             freeTrial: "30 days",;
             rating: 4.8,;
-            reviewCount: 156;,
-},;
-        {;
+            reviewCount: 156},;
+        {
             id: "cybersecurity - suite",;
             title: "ZionShield",;
             description: "Comprehensive cybersecurity platform with threat detection, vulnerability scanning, and incident response.",;
@@ -469,16 +437,14 @@ export default function MicroSAASServicesPage() {}
             badge: "Secure",;
             link: "https://ziontechgroup.com / zion - shield",;
             details: "Protect your business with our advanced cybersecurity platform.Detect threats, prevent attacks, and respond to incidents in real - time.",;
-            pricing: {;
+            pricing: {
                 starter: "$89 / month",;
                 professional: "$179 / month",;
-                enterprise: "$399 / month";,
-},;
+                enterprise: "$399 / month"},;
             freeTrial: "14 days",;
             rating: 4.9,;
-            reviewCount: 312;,
-},;
-        {;
+            reviewCount: 312},;
+        {
             id: "data - visualization",;
             title: "ZionViz",;
             description: "Advanced data visualization platform with interactive charts, dashboards, and reporting tools.",;
@@ -496,16 +462,14 @@ export default function MicroSAASServicesPage() {}
             badge: "Visual",;
             link: "https://ziontechgroup.com / zion - viz",;
             details: "Transform your data into compelling visual stories with our advanced visualization platform.Create interactive dashboards and reports.",;
-            pricing: {;
+            pricing: {
                 starter: "$49 / month",;
                 professional: "$99 / month",;
-                enterprise: "$199 / month";,
-},;
+                enterprise: "$199 / month"},;
             freeTrial: "21 days",;
             rating: 4.7,;
-            reviewCount: 178;,
-},;
-        {;
+            reviewCount: 178},;
+        {
             id: "workflow-automation",;
             title: "ZionFlow",;
             description: "No - code workflow automation platform for business process optimization and task automation.",;
@@ -523,16 +487,14 @@ export default function MicroSAASServicesPage() {}
             badge: "Efficient",;
             link: "https://ziontechgroup.com / zion - flow",;
             details: "Automate your business processes with our intuitive no - code platform.Build complex workflows without writing a single line of code.",;
-            pricing: {;
+            pricing: {
                 starter: "$35 / month",;
                 professional: "$69 / month",;
-                enterprise: "$139 / month";,
-},;
+                enterprise: "$139 / month"},;
             freeTrial: "30 days",;
             rating: 4.8,;
-            reviewCount: 203;,
-},;
-        {;
+            reviewCount: 203},;
+        {
             id: "supply - chain",;
             title: "ZionSupply",;
             description: "End - to - end supply chain management platform with real - time tracking and optimization.",;
@@ -550,16 +512,14 @@ export default function MicroSAASServicesPage() {}
             badge: "Optimized",;
             link: "https://ziontechgroup.com / zion - supply",;
             details: "Optimize your supply chain operations with real - time tracking, demand forecasting, and intelligent route optimization.",;
-            pricing: {;
+            pricing: {
                 starter: "$69 / month",;
                 professional: "$139 / month",;
-                enterprise: "$279 / month";,
-},;
+                enterprise: "$279 / month"},;
             freeTrial: "21 days",;
             rating: 4.8,;
-            reviewCount: 167;,
-},;
-        {;
+            reviewCount: 167},;
+        {
             id: "customer - support",;
             title: "ZionSupport",;
             description: "AI - powered customer support platform with chatbots, ticket management, and knowledge base.",;
@@ -577,15 +537,13 @@ export default function MicroSAASServicesPage() {}
             badge: "AI - Powered",;
             link: "https://ziontechgroup.com / zion - support",;
             details: "Deliver exceptional customer support with our AI - powered platform.Automate responses and provide instant solutions.",;
-            pricing: {;
+            pricing: {
                 starter: "$29 / month",;
                 professional: "$59 / month",;
-                enterprise: "$119 / month";,
-},;
+                enterprise: "$119 / month"},;
             freeTrial: "14 days",;
             rating: 4.7,;
-            reviewCount: 234;,
-}
+            reviewCount: 234}
     ];
     const categories = ["All Services",;
         "Business Tools",;
@@ -612,27 +570,23 @@ export default function MicroSAASServicesPage() {}
     ];
     const [selectedCategory, setSelectedCategory] = React.useState("All Services");
     const [filteredServices, setFilteredServices] = React.useState(microSAASServices);
-    React.useEffect(() => {;
+    React.useEffect(() => {
   // TODO: Add dependencies if needed;
 
-  return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
-        if(selectedCategory === "All Services") {;
-            setFilteredServices(microSAASServices) ;,
-}
+  return () => {
+    // Cleanup function}}, []);, []);
+        if(selectedCategory === "All Services") {
+            setFilteredServices(microSAASServices) }
         // Filter by search query;
-        if(searchQuery.trim () ) {;
+        if(searchQuery.trim () ) {
             const query = searchQuery.toLowerCase () ;
             filtered = filtered.filter(service => service.title.toLowerCase () .includes(query) ||;
                 service.description.toLowerCase () .includes(query) ||;
                 service.tags.some(tag => tag.toLowerCase () .includes(query) ) ||;
-                service.subcategory.toLowerCase () .includes(query) ) ;,
-}
+                service.subcategory.toLowerCase () .includes(query) ) }
         // Sort services;
-        filtered.sort((a, b) => {;
-            switch(sortBy) {;
+        filtered.sort((a, b) => {
+            switch(sortBy) {
                 case 'rating':;
                     return (b.rating || 0) - (a.rating || 0) ;
                 case 'price':;
@@ -642,17 +596,15 @@ export default function MicroSAASServicesPage() {}
                 case 'newest':;
                     return new Date(b.createdAt) .getTime () - new Date(a.createdAt) .getTime () ;
                 default:;
-                    return 0;,
-}
+                    return 0}
         }) ;
-        setFilteredServices(filtered) ;,
-}, [selectedCategory, selectedPricing, searchQuery, sortBy]) ;
+        setFilteredServices(filtered) }, [selectedCategory, selectedPricing, searchQuery, sortBy]) ;
     const ServiceCard = ({ service }) => (<div className="group relative bg-gradient - to - br from - zion - blue - dark / 50 to - zion - slate - dark / 50 border border-zion - blue - light / 20 rounded-2xl p - 6 hover:border-zion - purple / 50 transition - all duration - 500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-zion -purple / 20">;
       {/* Featured Badge */}
       {service.featured && (<div className="absolute - top - 3 -right - 3 bg-gradient - to - r from - zion - purple to - zion - cyan text-white text-xs font - bold px-3 py-1 rounded-full">;
           Featured;
         </div>) }
-;
+
       {/* Service Image */}
       <div className="relative mb-6 overflow-hidden rounded-xl">;
         <img src={service.images[0]} alt={service.title} className="w-full h-48 object - cover group - hover:scale - 110 transition - transform duration -500"/>;
@@ -671,8 +623,7 @@ export default function MicroSAASServicesPage() {}
         </div>;
       </div > import React, {useState} from 'react';
             SERVICE_CATEGORIES,;
-            type} MicroSaasService;,
-} from '@/data / microSaasServices';
+            type} MicroSaasService} from '@/data / microSaasServices';
             Clock,;
             Users,;
             Zap,;
@@ -686,24 +637,21 @@ export default function MicroSAASServicesPage() {}
             MessageCircle,;
             ArrowRight,;
             Sparkles} from 'lucide - react';
-;
+
   const [selectedCategory, setSelectedCategory] = useState < string> ('all') ;
   const [searchQuery, setSearchQuery] = useState < string> ('') ;
-;
+
   const filteredServices = MICRO_SAAS_SERVICES.filter(service => {}
     const matchesSearch = service.title.toLowerCase () .includes(searchQuery.toLowerCase () ) ||;
                          service.description.toLowerCase () .includes(searchQuery.toLowerCase () ) ||;
                          service.tags.some(tag => tag.toLowerCase () .includes(searchQuery.toLowerCase () ) ) ;
-    return matchesCategory && matchesSearch;,
-}) ;
-;
+    return matchesCategory && matchesSearch}) ;
+
   const formatPrice = (price: number, currency: string, model: string) => { /* empty */ }
     if(model === 'monthly') return `${currency}${price}/month`;
     if(model === 'yearly') return `${currency}${price}/year`;
     if(model === 'one - time') return `${currency}${price}`;
-    return `${currency}${price}`;,
-};
-;
+    return `${currency}${price}`}
   const ServiceCard = ({service}: {service}: MicroSaasService }) => (<Card className="group relative overflow-hidden border-0 bg-gradient - to - br from - zion - blue - dark / 50 to - zion - slate / 50 backdrop - blur - sm hover:from - zion - blue - dark / 70 hover:to - zion - slate / 70 transition - all duration - 500 hover:scale - 105 hover:shadow-2xl hover:shadow-zion -purple / 20">;
       <div className="absolute inset - 0 bg-gradient - to - r from - zion - purple / 5 to - zion - cyan / 5 opacity - 0 group - hover:opacity - 100 transition - opacity duration -500"></div>;
 
@@ -841,7 +789,7 @@ export default function MicroSAASServicesPage() {}
         </div>;
       </div>;
     </div>) ;
-;
+
   return (<div className="min - h-screen bg-gradient - to - br from - zion - slate - dark via - zion - blue - dark to - zion - slate -dark">;
       <SEO title="Micro SAAS Services - Zion Tech Group" description="Discover innovative micro SAAS services and solutions in AI, IT, and business automation.Transform your business with cutting - edge technology." keywords="micro SAAS, AI services, IT solutions, business automation, Zion Tech Group" canonical="https://ziontechgroup.com / micro - saas - services"/>;
 
@@ -993,14 +941,10 @@ export default function MicroSAASServicesPage() {}
         </div>;
       </div>;
     </div>)}
-;
 
-export { MicroSAASServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard };
-;
-export { MicroSAASServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard };
-;
-export { MicroSAASServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard };
-;
-export { MicroSAASServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard };
-;
-export { MicroSAASServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard };
+
+export { MicroSAASServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard }
+export { MicroSAASServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard }
+export { MicroSAASServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard }
+export { MicroSAASServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard }
+export { MicroSAASServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard }

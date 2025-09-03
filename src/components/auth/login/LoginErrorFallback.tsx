@@ -1,9 +1,9 @@
-interface LoginErrorFallbackProps extends React.PropsWithChildren<{}> {;
+interface LoginErrorFallbackProps extends React.PropsWithChildren<{}> {
 
   error: Error;
-  resetErrorBoundary: : unknown void};
-export { function };
-export default function LoginErrorFallback(...args[]):  {;
+  resetErrorBoundary: : unknown void}
+export { function }
+export default function LoginErrorFallback(...args[]):  {
 
   return ();
     <div className="min-h-screen flex items-center justify-center bg-futuristic p-4">;";

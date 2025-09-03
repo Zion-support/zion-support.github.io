@@ -1,57 +1,51 @@
 import {  import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
-export default function Page() {;
+export default function Page() {
 ,;
     { id: 'Metaverse', name: 'Metaverse', count: allServices.filter(s => s.category === 'Metaverse').length, icon: '🌍' },;
     { id: 'Edge Computing', name: 'Edge Computing', count: allServices.filter(s => s.category === 'Edge Computing').length, icon: '🌐' },;
-    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category === 'Cybersecurity').length, icon: '🛡️' };
+    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category === 'Cybersecurity').length, icon: '🛡️' }
   ];
-;
+
     { id: 'all', name: 'All Levels', icon: '🌟' },;
     { id: 'Advanced', name: 'Advanced', icon: '🚀' },;
     { id: 'Cutting-edge', name: 'Cutting-edge', icon: '⚡' },;
-    { id: 'Revolutionary', name: 'Revolutionary', icon: '💫' };
+    { id: 'Revolutionary', name: 'Revolutionary', icon: '💫' }
   ];
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    ;
+
     return matchesCategory && matchesSearch && matchesPrice && matchesInnovation}) ;
-;
-    switch(sortBy) {;
+
+    switch(sortBy) {
       case 'price':;
         return a.price - b.price;      case 'name':;
         return a.title.localeCompare(b.title);
       case 'innovation':;
-        ;
-  ;
-  ;
+
+
+
 ';
   'Advanced': 1, 'Cutting-edge': 2,;  ;
-  ;
-  ;
-  ;
+
+
+
   'Revolutionary': 3 ;
-;,
-};
+}
         return (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0) - ;
                (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0);      case 'category':;
         return a.category.localeCompare(b.category) ;
       default:;
         return 0}) ;
-;
+
     hidden: { opacity: 0 },;
-    visible: {;
+    visible: {
       opacity: 1,;
-      transition: {;
-        staggerChildren: 0.1;,
-};,
-};,
-};
-;
-  const itemVariants = {;
+      transition: {
+        staggerChildren: 0.1}}}
+  const itemVariants = {
   hidden: { y: 20,;
-  opacity: 0;,
-},                value={searchTerm}
+  opacity: 0},                value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}";
                 className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl pl-12 pr-4 py-3 text-white placeholder-zion-slate-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan";
               />;
@@ -109,16 +103,14 @@ export default function Page() {;
                   onClick={() => setViewMode('grid')}
                   className={`flex-1 px-3 py-2 rounded-lg transition-all ${viewMode === 'grid'';
                       ? 'bg-zion-cyan text-white'';
-                      : 'text-zion-slate-400 hover:text-white'`;,
-}`}
+                      : 'text-zion-slate-400 hover:text-white'`}`}
 ";
                   <Grid className="w-4 h-4 mx-auto"  />                </button>;
                 <button';
                   onClick={() => setViewMode('list')}`;
                   className={`flex-1 px-3 py-2 rounded-lg transition-all ${viewMode === 'list'';
                       ? 'bg-zion-cyan text-white'';
-                      : 'text-zion-slate-400 hover:text-white'`;,
-}`}
+                      : 'text-zion-slate-400 hover:text-white'`}`}
 ";
                   <List className="w-4 h-4 mx-auto"  />                </button>;
               </div>;
@@ -135,11 +127,10 @@ export default function Page() {;
                   min="0";
                   max="10000";
                   value={priceRange[0]}
-                  onChange = {;
+                  onChange = {
 
   (e) => setPriceRange([parseInt(e.target.value),;
-  priceRange[1]]);,
-}";
+  priceRange[1]])}";
                   className="flex-1 h-2 bg-zion-slate-600 rounded-lg appearance-none cursor-pointer slider";
                 />;
                 <input";
@@ -147,11 +138,10 @@ export default function Page() {;
                   min="0";
                   max="10000";
                   value={priceRange[1]}
-                  onChange = {;
+                  onChange = {
 
   (e) => setPriceRange([priceRange[0],;
-  parseInt(e.target.value)]);,
-}";
+  parseInt(e.target.value)])}";
                   className="flex-1 h-2 bg-zion-slate-600 rounded-lg appearance-none cursor-pointer slider";
                 />;
               </div>;
@@ -183,10 +173,9 @@ export default function Page() {;
               <motion.div;
                 key={service.id}
                 variants={itemVariants}`;
-                className={`bg-zion-slate-800/50 backdrop-blur-sm border border-zion-slate-700 rounded-2xl p-6 hover:border-zion-cyan/50 hover:shadow-lg hover:shadow-zion-cyan/20 transition-all duration-300 cursor-pointer group ${viewMode === 'list' ? 'flex items-center gap-6' : ''`;,
-}`}
+                className={`bg-zion-slate-800/50 backdrop-blur-sm border border-zion-slate-700 rounded-2xl p-6 hover:border-zion-cyan/50 hover:shadow-lg hover:shadow-zion-cyan/20 transition-all duration-300 cursor-pointer group ${viewMode === 'list' ? 'flex items-center gap-6' : ''`}`}
                 onClick={() => handleServiceClick(service)}
-;
+
                 {viewMode === 'grid' ? (;
                   // Grid View;
                   <>;
@@ -299,12 +288,12 @@ export default function Page() {;
               <p className="text-zion-slate-400 mb-6">;
                 Try adjusting your search criteria or filters;
               </p>;
-              <button      onClick = {;
-  ;
-  ;
-  ;
-  ;
-  () => {;
+              <button      onClick = {
+
+
+
+
+  () => {
                   setSearchTerm('');
                   setActiveCategory('all');
                   setPriceRange([0,;
@@ -324,23 +313,20 @@ export default function Page() {;
             exit={{ opacity: 0 }}";
             className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4";
             onClick={closeModal}
-;
+
             <motion.div;
-              initial = {;
+              initial = {
 
   { scale: 0.9,;
-  opacity: 0;,
-}}
-              animate = {;
+  opacity: 0}}
+              animate = {
 
   { scale: 1,;
-  opacity: 1;,
-}}
-              exit = {;
+  opacity: 1}}
+              exit = {
 
   { scale: 0.9,;
-  opacity: 0;,
-}}";
+  opacity: 0}}";
               className="bg-zion-slate-900 border border-zion-slate-700 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto";
               onClick={(e) => e.stopPropagation()}
 ";
@@ -471,7 +457,7 @@ export default function Page() {;
                       </div>;
                     </div>;
                   </div>) }
-;
+
                 {/* Contact and CTA */}";
                 <div className="border-t border-zion-slate-700 pt-6">";
                   <div className="flex flex-col md:flex-row items-center justify-between gap-4">";
@@ -494,9 +480,8 @@ export default function Page() {;
                 </div>;
               </div>;
             </motion.div>;
-          </motion.div>;) };
+          </motion.div>;) }
       </AnimatePresence>;
     </div>;) ;
-</div></div></div></div></div></div></div>};
-;
+</div></div></div></div></div></div></div>}
 export default ComprehensiveServicesShowcase2025}}}}}}}}}}'"`;

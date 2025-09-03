@@ -5,7 +5,7 @@ import SEO from '@/components/SEO';''';
 import { GradientHeading } from '@/components/GradientHeading';''';
 import { Button } from '@/components/ui/button';''';
 import { Link } from 'react-router-dom';
-export { function };
+export { function }
 export default function Internationalization() {}
   const schema = {}
 ';
@@ -15,7 +15,7 @@ export default function Internationalization() {}
     name: 'Internationalization',''';
     description:'''';
       'Use Zion in multiple languages and attract clients worldwide with localized listings.',''';
-    url: 'https://app.ziontechgroup.com/features/internationalization'};
+    url: 'https://app.ziontechgroup.com/features/internationalization'}
   return();
     <>;
       <SEO;
@@ -81,14 +81,10 @@ export default function Internationalization() {}
       </main>;
       <Footer />;
     </>)}
-;
 
-export { Internationalization };
-;
-export { Internationalization };
-;
-export { Internationalization };
-;
-export { Internationalization };
-;
-export { Internationalization };
+
+export { Internationalization }
+export { Internationalization }
+export { Internationalization }
+export { Internationalization }
+export { Internationalization }

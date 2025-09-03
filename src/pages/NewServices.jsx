@@ -1,9 +1,9 @@
 import React, { useState } from 'react';''';
 import { motion } from 'framer-motion';
 import { COMPREHENSIVE_SERVICES } from "../data/comprehensiveServices.jsx";
-;
+
 import { EMERGING_TECH_SERVICES } from "../data/emergingTechServices.jsx";
-export function NewServices() {;
+export function NewServices() {
     const [selectedCategory, setSelectedCategory] = useState('all');    const [searchTerm, setSearchTerm] = useState('');
     const [selectedService, setSelectedService] = useState(null);
     // Combine all services;
@@ -26,8 +26,7 @@ export function NewServices() {;
             opacity: 1,;
             transition: {}
                 duration: 0.5;
-";,
-};"";
+"};"";
     return (<div className="min-h-screen bg-zion-blue-dark text-white relative overflow-hidden">;";
       {/* Animated Background */}"";
       <div className="absolute inset-0 bg-quantum-gradient opacity-20 animate-pulse"></div>;"";
@@ -38,8 +37,7 @@ export function NewServices() {;
         {[...Array(20)].map((_, i) => (<div key={i} className="absolute text-zion-cyan text-xs animate-matrix-rain" style={{}
                 left: `${Math.random() * 100}%`,``;
                 animationDelay: `${Math.random() * 20}s`,``;
-                animationDuration: `${20 + Math.random() * 10}s`;,
-}}>';
+                animationDuration: `${20 + Math.random() * 10}s`}}>';
             {Math.random() > 0.5 ? '1' : '0'}
           </div>))}
       </div>";
@@ -48,13 +46,11 @@ export function NewServices() {;
         {/* Header Section */}
         <motion.div initial = {}
   { opacity: 0,;
-  y: 20;,
-}} animate = {}
+  y: 20}} animate = {}
   { opacity: 1,;
   y: 0;
 ";
-"";,
-}} transition={{ duration: 0.8 }} className="text-center mb-16">"";
+""}} transition={{ duration: 0.8 }} className="text-center mb-16">"";
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-holographic-gradient bg-clip-text text-transparent animate-holographic-shift">;
             Revolutionary Tech Services";
           </h1>"";
@@ -121,16 +117,13 @@ export function NewServices() {;
         {/* Category Filter */}
         <motion.div initial = {}
   { opacity: 0,;
-  y: 20;,
-}} animate = {}
+  y: 20}} animate = {}
   { opacity: 1,;
-  y: 0;,
-}} transition = {}
+  y: 0}} transition = {}
   { duration: 0.8,;
   delay: 0.2;
 ";
-"";,
-}} className="mb-12">""`;
+""}} className="mb-12">""`;
           <div className="flex flex-wrap gap-4 justify-center">`'`;
             {categories.map((category) => (<button key={category} onClick={() => setSelectedCategory(category)} className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${selectedCategory === category''`;
                 ? 'bg-zion-cyan text-zion-blue-dark shadow-lg shadow-zion-cyan/30''`'`;
@@ -143,16 +136,13 @@ export function NewServices() {;
         {/* Featured Services Section */}
         <motion.div initial = {}
   { opacity: 0,;
-  y: 20;,
-}} animate = {}
+  y: 20}} animate = {}
   { opacity: 1,;
-  y: 0;,
-}} transition = {}
+  y: 0}} transition = {}
   { duration: 0.8,;
   delay: 0.4;
 ";
-"";,
-}} className="mb-16">"";
+""}} className="mb-16">"";
           <h2 className="text-3xl font-bold text-center mb-8 text-zion-cyan">;
             Featured Revolutionary Services;
           </h2>;
@@ -336,16 +326,13 @@ export function NewServices() {;
         {/* CTA Section */}
         <motion.div initial = {}
   { opacity: 0,;
-  y: 20;,
-}} animate = {}
+  y: 20}} animate = {}
   { opacity: 1,;
-  y: 0;,
-}} transition = {}
+  y: 0}} transition = {}
   { duration: 0.8,;
   delay: 0.6;
 ";
-"";,
-}} className="text-center mt-16">"";
+""}} className="text-center mt-16">"";
           <div className="bg-gradient-to-r from-zion-cyan/20 via-zion-purple/20 to-zion-cyan/20 border border-zion-cyan/30 rounded-2xl p-12 backdrop-blur-md">"";
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">;
               Ready to Transform Your Business?";
@@ -376,13 +363,11 @@ export function NewServices() {;
       {selectedService && (<div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">;
           <motion.div initial = {}
   { opacity: 0,;
-  scale: 0.9;,
-}} animate = {}
+  scale: 0.9}} animate = {}
   { opacity: 1,;
   scale: 1;
 ";
-"";,
-}} className="bg-zion-blue-dark border border-zion-cyan/30 rounded-xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto">"";
+""}} className="bg-zion-blue-dark border border-zion-cyan/30 rounded-xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto">"";
             <div className="flex justify-between items-start mb-6">"";
               <h2 className="text-3xl font-bold text-white">{selectedService.title}</h2>"";
               <button onClick={() => setSelectedService(null)} className="text-zion-slate-light hover:text-white text-2xl">;
@@ -484,7 +469,7 @@ export function NewServices() {;
           </motion.div>;
         </div>) }
     </div>) }
-;
+
 export default NewServices;
 export default NewServices;
 export default NewServices;

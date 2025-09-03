@@ -11,7 +11,7 @@ export default function HelpCenter() {}
     const toggleCategory = (category) => {}
         setExpandedCategories(prev => prev.includes(category);
             ? prev.filter(c => c !== category);
-            [...prev, category])};
+            [...prev, category])}
     const helpCategories = {}
 ';
   'getting-started': {}
@@ -20,13 +20,11 @@ export default function HelpCenter() {}
             icon: BookOpen,;
             articles[;';
                 { title: 'How to create your first account',';
-  href: '/help/create-account' ;,
-},';
+  href: '/help/create-account' },';
                 { title: 'Complete profile setup guide', href: '/help/profile-setup' },';
                 { title: 'Understanding the marketplace', href: '/help/marketplace-guide' },';
                 { title: 'First steps for new users', href: '/help/first-steps' }
-            ];,
-},;';
+            ]},;';
         'marketplace': {}
 ';
             title: 'Marketplace',;
@@ -36,8 +34,7 @@ export default function HelpCenter() {}
                 { title: 'Managing your listings', href: '/help/manage-listings' },';
                 { title: 'Understanding pricing and fees', href: '/help/pricing-fees' },';
                 { title: 'Marketplace policies and guidelines', href: '/help/marketplace-policies' }
-            ];,
-},;';
+            ]},;';
         'talent': {}
 ';
             title: 'Talent & Hiring',;
@@ -47,8 +44,7 @@ export default function HelpCenter() {}
                 { title: 'Finding and hiring talent', href: '/help/hire-talent' },';
                 { title: 'Managing projects and contracts', href: '/help/manage-projects' },';
                 { title: 'Payment and escrow system', href: '/help/payment-system' }
-            ];,
-},;';
+            ]},;';
         'technical': {}
 ';
             title: 'Technical Support',;
@@ -58,8 +54,7 @@ export default function HelpCenter() {}
                 { title: 'Browser compatibility', href: '/help/browser-compatibility' },';
                 { title: 'Mobile app troubleshooting', href: '/help/mobile-troubleshooting' },';
                 { title: 'API and integration support', href: '/help/api-support' }
-            ];,
-},;';
+            ]},;';
         'billing': {}
 ';
             title: 'Billing & Payments',;
@@ -69,8 +64,7 @@ export default function HelpCenter() {}
                 { title: 'Payment methods and security', href: '/help/payment-methods' },';
                 { title: 'Refund and cancellation policy', href: '/help/refund-policy' },';
                 { title: 'Tax information and reporting', href: '/help/tax-information' }
-            ];,
-},;';
+            ]},;';
         'account': {}
 ';
 '';
@@ -82,9 +76,7 @@ export default function HelpCenter() {}
                 { title: 'Two-factor authentication setup', href: '/help/2fa-setup' },''';
                 { title: 'Password reset and recovery', href: '/help/password-recovery' },''';
                 { title: 'Privacy settings and data control', href: '/help/privacy-settings' }
-            ]';,
-}'';,
-};''';
+            ]'}''};''';
     const popularArticles = ['''';
         'How to create your first account',Understanding the marketplace',Creating a talent profile',Finding and hiring talent',Payment and escrow system',Account security best practices';
     ];
@@ -153,8 +145,7 @@ export default function HelpCenter() {}
                   <Link to = {}
 ';
   `/help/${article.toLowerCase().replace(/\s+/g,-')"`;
-"`"`;,
-}`} className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light font-medium transition-colors">";
+"`"`}`} className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light font-medium transition-colors">";
                     Read Article"";
                     <ArrowRight className="w-4 h-4 ml-2"/>;
                   </Link>;
@@ -209,14 +200,10 @@ export default function HelpCenter() {}
         </section>;
       </div>;
     </>)}
-;
 
-export { HelpCenter };
-;
-export { HelpCenter };
-;
-export { HelpCenter };
-;
-export { HelpCenter };
-;
-export { HelpCenter };
+
+export { HelpCenter }
+export { HelpCenter }
+export { HelpCenter }
+export { HelpCenter }
+export { HelpCenter }

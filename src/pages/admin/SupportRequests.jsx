@@ -21,8 +21,7 @@ const MOCK_SUPPORT_REQUESTS = [];
         priority: "high","";
         createdAt: "2023-12-15T14:30:00Z","";
         lastUpdated: "2023-12-15T15:45:00Z","";
-        category: "authentication";,
-},;
+        category: "authentication"},;
     {}
 ";
 "";
@@ -34,8 +33,7 @@ const MOCK_SUPPORT_REQUESTS = [];
         priority: "high","";
         createdAt: "2023-12-14T09:15:00Z","";
         lastUpdated: "2023-12-15T13:20:00Z","";
-        category: "billing";,
-},;
+        category: "billing"},;
     {}
 ";
 "";
@@ -47,8 +45,7 @@ const MOCK_SUPPORT_REQUESTS = [];
         priority: "medium","";
         createdAt: "2023-12-15T11:00:00Z","";
         lastUpdated: "2023-12-15T11:00:00Z","";
-        category: "billing";,
-},;
+        category: "billing"},;
     {}
 ";
 "";
@@ -60,8 +57,7 @@ const MOCK_SUPPORT_REQUESTS = [];
         priority: "low","";
         createdAt: "2023-12-13T16:45:00Z","";
         lastUpdated: "2023-12-13T16:45:00Z","";
-        category: "api";,
-},;
+        category: "api"},;
     {}
 ";
 "";
@@ -73,8 +69,7 @@ const MOCK_SUPPORT_REQUESTS = [];
         priority: "high","";
         createdAt: "2023-12-12T10:30:00Z","";
         lastUpdated: "2023-12-15T09:15:00Z","";
-        category: "disputes";,
-},;
+        category: "disputes"},;
     {}
 ";
 "";
@@ -86,8 +81,7 @@ const MOCK_SUPPORT_REQUESTS = [];
         priority: "medium","";
         createdAt: "2023-12-08T13:20:00Z","";
         lastUpdated: "2023-12-15T08:30:00Z","";
-        category: "verification";,
-},;
+        category: "verification"},;
     {}
 ";
 "";
@@ -101,7 +95,7 @@ const MOCK_SUPPORT_REQUESTS = [];
         lastUpdated: "2023-12-13T11:25:00Z","";
         category: "profile";
 ];
-export { function };
+export { function }
 export default function SupportRequests() {}
 ";
 "";
@@ -332,14 +326,10 @@ export default function SupportRequests() {}
           </TabsContent>;
         </Tabs>;
       </div>)}
-;
 
-export { MOCK_SUPPORT_REQUESTS, SupportRequests };
-;
-export { MOCK_SUPPORT_REQUESTS, SupportRequests };
-;
-export { MOCK_SUPPORT_REQUESTS, SupportRequests };
-;
-export { MOCK_SUPPORT_REQUESTS, SupportRequests };
-;
-export { MOCK_SUPPORT_REQUESTS, SupportRequests };
+
+export { MOCK_SUPPORT_REQUESTS, SupportRequests }
+export { MOCK_SUPPORT_REQUESTS, SupportRequests }
+export { MOCK_SUPPORT_REQUESTS, SupportRequests }
+export { MOCK_SUPPORT_REQUESTS, SupportRequests }
+export { MOCK_SUPPORT_REQUESTS, SupportRequests }

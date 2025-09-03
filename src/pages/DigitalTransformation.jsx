@@ -9,8 +9,7 @@ const transformationServices = [];
         description: "Comprehensive digital transformation roadmap aligned with business objectives and market opportunities.",";
         icon: Rocket,"";
         features: ["Digital Maturity Assessment", "Technology Roadmap", "Change Management Strategy", "ROI Analysis"],"";
-        color: "from-purple-500 to-pink-500";,
-},;
+        color: "from-purple-500 to-pink-500"},;
     {}
 ";
 "";
@@ -18,8 +17,7 @@ const transformationServices = [];
         description: "Intelligent automation solutions that streamline operations and eliminate manual workflows.",";
         icon: Zap,"";
         features: ["Workflow Automation", "RPA Implementation", "Process Optimization", "Performance Monitoring"],"";
-        color: "from-blue-500 to-cyan-500";,
-},;
+        color: "from-blue-500 to-cyan-500"},;
     {}
 ";
 "";
@@ -27,8 +25,7 @@ const transformationServices = [];
         description: "Legacy system modernization and cloud-native architecture implementation.",";
         icon: Cpu,"";
         features: ["Legacy Migration", "Cloud Architecture", "API Development", "Microservices"],"";
-        color: "from-green-500 to-emerald-500";,
-},;
+        color: "from-green-500 to-emerald-500"},;
     {}
 ";
 "";
@@ -36,8 +33,7 @@ const transformationServices = [];
         description: "Data-driven insights and business intelligence solutions for informed decision-making.",";
         icon: Database,"";
         features: ["Data Strategy", "Business Intelligence", "Predictive Analytics", "Data Governance"],"";
-        color: "from-orange-500 to-red-500";,
-},;
+        color: "from-orange-500 to-red-500"},;
     {}
 ";
 "";
@@ -45,8 +41,7 @@ const transformationServices = [];
         description: "Omnichannel customer experience optimization and digital touchpoint enhancement.",";
         icon: Users,"";
         features: ["CX Strategy", "Digital Channels", "Personalization", "Customer Journey Mapping"],"";
-        color: "from-indigo-500 to-purple-500";,
-},;
+        color: "from-indigo-500 to-purple-500"},;
     {}
 ";
 "";
@@ -63,24 +58,21 @@ const transformationPhases = [];
         phase: "01","";
         title: "Discovery & Assessment","";
         description: "Evaluate current state, identify opportunities, and assess digital maturity","";
-        duration: "2-4 weeks";,
-},;
+        duration: "2-4 weeks"},;
     {}
 ";
 "";
         phase: "02","";
         title: "Strategy Development","";
         description: "Create comprehensive digital transformation roadmap and business case","";
-        duration: "4-6 weeks";,
-},;
+        duration: "4-6 weeks"},;
     {}
 ";
 "";
         phase: "03","";
         title: "Pilot & Validation","";
         description: "Implement proof-of-concept and validate approach with stakeholders","";
-        duration: "6-8 weeks";,
-},;
+        duration: "6-8 weeks"},;
     {}
 ";
 "";
@@ -98,16 +90,14 @@ const testimonials = [];
         content: "Zion's digital transformation approach was game-changing. They didn't just implement technology - they transformed our entire business model.","";
         name: "Carlos Rodriguez","";
         role: "CEO, InnovateCorp",;
-        rating: 5;,
-},;
+        rating: 5},;
     {}
 ";
 "";
         content: "The process automation they implemented saved us 40 hours per week and improved our customer satisfaction scores significantly.","";
         name: "Lisa Chang","";
         role: "COO, TechFlow Solutions",;
-        rating: 5;,
-},;
+        rating: 5},;
     {}
 '";
 '"'";
@@ -132,13 +122,11 @@ export default function DigitalTransformation() {}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
           <motion.div initial = {}
   { opacity: 0,;
-  y: 20;,
-}} animate = {}
+  y: 20}} animate = {}
   { opacity: 1,;
   y: 0;
 ";
-"";,
-}} transition={{ duration: 0.8 }} className="relative z-10">"";
+""}} transition={{ duration: 0.8 }} className="relative z-10">"";
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">";
               Digital"";
               <span className="block bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">;
@@ -171,16 +159,13 @@ export default function DigitalTransformation() {}
             const IconComponent = stat.icon;
             return (<motion.div key={stat.label} initial = {}
   { opacity: 0,;
-  scale: 0.8;,
-}} whileInView = {}
+  scale: 0.8}} whileInView = {}
   { opacity: 1,;
-  scale: 1;,
-}} transition = {}
+  scale: 1}} transition = {}
   { duration: 0.6,;
   delay: index * 0.1;
 ";
-"";,
-}} className="text-center">"";
+""}} className="text-center">"";
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mx-auto mb-4 flex items-center justify-center">"";
                     <IconComponent className="w-8 h-8 text-white"/>";
                   </div>"";
@@ -195,13 +180,11 @@ export default function DigitalTransformation() {}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion.div initial = {}
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
+  y: 20}} whileInView = {}
   { opacity: 1,;
   y: 0;
 ";
-"";,
-}} transition={{ duration: 0.8 }} className="text-center mb-16">"";
+""}} transition={{ duration: 0.8 }} className="text-center mb-16">"";
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">;
               Our Transformation Services";
             </h2>"";
@@ -214,16 +197,13 @@ export default function DigitalTransformation() {}
             const IconComponent = service.icon;
             return (<motion.div key={service.title} initial = {}
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
+  y: 20}} whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}} transition = {}
+  y: 0}} transition = {}
   { duration: 0.6,;
   delay: index * 0.1;
 ";
-"";,
-}} className="group bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-6 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20">";
+""}} className="group bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-6 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20">";
                   <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl mb-6 flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300`}>"";
                     <IconComponent className="w-8 h-8"/>";
                   </div>"";
@@ -253,13 +233,11 @@ export default function DigitalTransformation() {}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion.div initial = {}
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
+  y: 20}} whileInView = {}
   { opacity: 1,;
   y: 0;
 ";
-"";,
-}} transition={{ duration: 0.8 }} className="text-center mb-16">"";
+""}} transition={{ duration: 0.8 }} className="text-center mb-16">"";
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">;
               Our Transformation Process";
             </h2>"";
@@ -270,16 +248,13 @@ export default function DigitalTransformation() {}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">;
             {transformationPhases.map((phase, index) => (<motion.div key={phase.phase} initial = {}
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
+  y: 20}} whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}} transition = {}
+  y: 0}} transition = {}
   { duration: 0.6,;
   delay: index * 0.1;
 ";
-"";,
-}} className="text-center">"";
+""}} className="text-center">"";
                 <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full mx-auto mb-6 flex items-center justify-center text-white text-2xl font-bold">;
                   {phase.phase}";
                 </div>"";
@@ -295,13 +270,11 @@ export default function DigitalTransformation() {}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion.div initial = {}
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
+  y: 20}} whileInView = {}
   { opacity: 1,;
   y: 0;
 ";
-"";,
-}} transition={{ duration: 0.8 }} className="text-center mb-16">"";
+""}} transition={{ duration: 0.8 }} className="text-center mb-16">"";
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">;
               Transformation Benefits";
             </h2>"";
@@ -316,22 +289,19 @@ export default function DigitalTransformation() {}
 "";
                 title: "Operational Efficiency","";
                 description: "Streamlined processes and automation reduce costs and improve productivity by up to 60%.",;
-                icon: Zap;,
-},;
+                icon: Zap},;
             {}
 ";
 "";
                 title: "Customer Experience","";
                 description: "Enhanced digital touchpoints and personalized experiences increase customer satisfaction and loyalty.",;
-                icon: Users;,
-},;
+                icon: Users},;
             {}
 ";
 "";
                 title: "Data-Driven Insights","";
                 description: "Real-time analytics and business intelligence enable informed decision-making and strategic planning.",;
-                icon: TrendingUp;,
-},;
+                icon: TrendingUp},;
             {}
 ";
 "";
@@ -342,16 +312,13 @@ export default function DigitalTransformation() {}
             const IconComponent = benefit.icon;
             return (<motion.div key={benefit.title} initial = {}
   { opacity: 0,;
-  x: index % 2 === 0 ? -20 : 20;,
-}} whileInView = {}
+  x: index % 2 === 0 ? -20 : 20}} whileInView = {}
   { opacity: 1,;
-  x: 0;,
-}} transition = {}
+  x: 0}} transition = {}
   { duration: 0.6,;
   delay: index * 0.1;
 ";
-"";,
-}} className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300">"";
+""}} className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300">"";
                   <div className="flex items-start gap-4">"";
                     <div className="p-3 bg-zion-purple/20 rounded-lg text-zion-cyan">"";
                       <IconComponent className="w-8 h-8"/>;
@@ -370,13 +337,11 @@ export default function DigitalTransformation() {}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion.div initial = {}
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
+  y: 20}} whileInView = {}
   { opacity: 1,;
   y: 0;
 ";
-"";,
-}} transition={{ duration: 0.8 }} className="text-center mb-16">"";
+""}} transition={{ duration: 0.8 }} className="text-center mb-16">"";
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">;
               Success Stories";
             </h2>"";
@@ -387,16 +352,13 @@ export default function DigitalTransformation() {}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
             {testimonials.map((testimonial, index) => (<motion.div key={testimonial.name} initial = {}
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
+  y: 20}} whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}} transition = {}
+  y: 0}} transition = {}
   { duration: 0.6,;
   delay: index * 0.1;
 ";
-"";,
-}} className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300">"";
+""}} className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300">"";
                 <div className="flex gap-1 mb-4">"";
                   {[...Array(testimonial.rating)].map((_, i) => (<Star key={i} className="w-5 h-5 text-zion-cyan fill-current"/>))}";
                 </div>"";
@@ -416,13 +378,11 @@ export default function DigitalTransformation() {}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion.div initial = {}
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
+  y: 20}} whileInView = {}
   { opacity: 1,;
   y: 0;
 ";
-"";,
-}} transition={{ duration: 0.8 }} className="text-center">"";
+""}} transition={{ duration: 0.8 }} className="text-center">"";
             <div className="bg-gradient-to-r from-zion-cyan/20 via-zion-purple/20 to-zion-cyan/20 border border-zion-cyan/30 rounded-2xl p-12 backdrop-blur-md">"";
               <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white">;
                 Ready to Transform Your Business?";
@@ -443,14 +403,10 @@ export default function DigitalTransformation() {}
         </div>;
       </section>;
     </div>)}
-;
 
-export { DigitalTransformation, IconComponent, IconComponent, IconComponent };
-;
-export { DigitalTransformation, IconComponent, IconComponent, IconComponent };
-;
-export { DigitalTransformation, IconComponent, IconComponent, IconComponent };
-;
-export { DigitalTransformation, IconComponent, IconComponent, IconComponent };
-;
-export { DigitalTransformation, IconComponent, IconComponent, IconComponent };
+
+export { DigitalTransformation, IconComponent, IconComponent, IconComponent }
+export { DigitalTransformation, IconComponent, IconComponent, IconComponent }
+export { DigitalTransformation, IconComponent, IconComponent, IconComponent }
+export { DigitalTransformation, IconComponent, IconComponent, IconComponent }
+export { DigitalTransformation, IconComponent, IconComponent, IconComponent }

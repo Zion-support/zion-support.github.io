@@ -13,16 +13,12 @@ export default function IntegrationsPage() {}
       <main className="min-h-screen bg-background">;
         <IntegrationsHub />;
       </main>;
-      ;
-    </ProtectedRoute>)}
-;
 
-export { IntegrationsPage };
-;
-export { IntegrationsPage };
-;
-export { IntegrationsPage };
-;
-export { IntegrationsPage };
-;
-export { IntegrationsPage };
+    </ProtectedRoute>)}
+
+
+export { IntegrationsPage }
+export { IntegrationsPage }
+export { IntegrationsPage }
+export { IntegrationsPage }
+export { IntegrationsPage }

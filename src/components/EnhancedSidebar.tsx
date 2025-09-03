@@ -1,8 +1,7 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
-;
-export default function Page() {;
-    setExpandedSections(newExpanded)};
-;
+
+export default function Page() {
+    setExpandedSections(newExpanded)}
   const navigationSections = [{;
 
       title: "Main Navigation",;
@@ -21,40 +20,34 @@ export default function Page() {;
 
               <AnimatePresence>;
                 {expandedSections.has(section.title) && (<motion.div;
-                    initial = {;
+                    initial = {
 
   { opacity: 0,;
-  height: 0;,
-}}
-                    animate = {;
+  height: 0}}
+                    animate = {
 
   { opacity: 1,;
-  height: 'auto';,
-}}
-                    exit = {;
+  height: 'auto'}}
+                    exit = {
 
   { opacity: 0,;
-  height: 0;,
-}}
+  height: 0}}
                     transition={{ duration: 0.3 }}";
                     className="ml-7 mt-2 space-y-1">;
                     {section.items.map((item) => (<Link;
                         key={item.name}
-                        initial = {;
+                        initial = {
 
   { opacity: 0,;
-  x: -20;,
-}}
-                        animate = {;
+  x: -20}}
+                        animate = {
 
   { opacity: 1,;
-  x: 0;,
-}}
-                        transition = {;
+  x: 0}}
+                        transition = {
 
   { duration: 0.2,;
-  delay: itemIndex * 0.05;,
-}}
+  delay: itemIndex * 0.05}}
                       >";
                         <item.icon className="w-4 h-4" />;
                         <span>{item.name}</span>;
@@ -72,21 +65,18 @@ export default function Page() {;
         {/* Contact Info */}
         <motion.div";
           className="mt-8 p-4 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg";
-          initial = {;
+          initial = {
 
   { opacity: 0,;
-  y: 20;,
-}}
-          animate = {;
+  y: 20}}
+          animate = {
 
   { opacity: 1,;
-  y: 0;,
-}}
-          transition = {;
+  y: 0}}
+          transition = {
 
   { duration: 0.5,;
-  delay: 0.5;,
-}}
+  delay: 0.5}}
         >";
           <h3 className="text-sm font-semibold text-zion-cyan mb-3">Need Help?</h3>";
           <div className="space-y-2 text-xs text-zion-slate-light">";
@@ -104,5 +94,5 @@ export default function Page() {;
           </div>;
         </motion.div>;
       </div>;
-    </aside>;) };
+    </aside>;) }
 '"`;

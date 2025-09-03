@@ -22,11 +22,10 @@ import { ;
   Users,;
   Clock,;
   Award,;
-  Pill;,
-} from 'lucide-react';
+  Pill} from 'lucide-react';
 import { SEO } from '@/components/SEO';
-;
-export default function AIBiotechnology() {;
+
+export default function AIBiotechnology() {
   const features = [;
     "AI-powered drug discovery and design",;
     "Genomic sequencing and analysis",;
@@ -37,7 +36,7 @@ export default function AIBiotechnology() {;
     "Drug repurposing AI",;
     "Clinical trial optimization";
   ];
-;
+
   const benefits = [;
     "Accelerated drug development timeline",;
     "Improved drug efficacy and safety",;
@@ -48,9 +47,9 @@ export default function AIBiotechnology() {;
     "Innovative therapeutic approaches",;
     "Precision medicine capabilities";
   ];
-;
+
   const pricingTiers = [;
-    {;
+    {
       name: "Bio Starter",;
       price: 3999,;
       period: "month",;
@@ -61,9 +60,8 @@ export default function AIBiotechnology() {;
         "Email support",;
         "Standard API access",;
         "Basic analytics dashboard";
-      ];,
-},;
-    {;
+      ]},;
+    {
       name: "Bio Professional",;
       price: 9999,;
       period: "month",;
@@ -77,9 +75,8 @@ export default function AIBiotechnology() {;
         "Bio consulting hours",;
         "Performance optimization";
       ],;
-      popular: true;,
-},;
-    {;
+      popular: true},;
+    {
       name: "Bio Enterprise",;
       price: 24999,;
       period: "month",;
@@ -93,79 +90,66 @@ export default function AIBiotechnology() {;
         "SLA guarantees",;
         "Dedicated bio scientist",;
         "Regulatory compliance support";
-      ];,
-}
+      ]}
   ];
-;
+
   const useCases = [;
-    {;
+    {
       title: "Pharmaceutical Development",;
       description: "AI-powered drug discovery, optimization, and clinical trial management",;
-      icon: Pill;,
-},;
-    {;
+      icon: Pill},;
+    {
       title: "Personalized Medicine",;
       description: "Genomic analysis and treatment customization based on individual genetic profiles",;
-      icon: Heart;,
-},;
-    {;
+      icon: Heart},;
+    {
       title: "Agricultural Biotechnology",;
       description: "Crop improvement, disease resistance, and sustainable farming solutions",;
-      icon: Leaf;,
-},;
-    {;
+      icon: Leaf},;
+    {
       title: "Medical Diagnostics",;
       description: "AI-enhanced diagnostic tools and biomarker discovery for early disease detection",;
-      icon: Microscope;,
-}
+      icon: Microscope}
   ];
-;
+
   const technologies = [;
-    {;
+    {
       name: "Machine Learning",;
       description: "Advanced AI algorithms for biological data analysis and prediction",;
-      icon: Brain;,
-},;
-    {;
+      icon: Brain},;
+    {
       name: "Computer Vision",;
       description: "AI-powered image analysis for cellular and molecular imaging",;
-      icon: Microscope;,
-},;
-    {;
+      icon: Microscope},;
+    {
       name: "Natural Language Processing",;
       description: "AI-driven analysis of scientific literature and research papers",;
-      icon: Beaker;,
-},;
-    {;
+      icon: Beaker},;
+    {
       name: "Predictive Analytics",;
       description: "Forecasting drug interactions and treatment outcomes",;
-      icon: Target;,
-}
+      icon: Target}
   ];
-;
+
   const industries = [;
-    {;
+    {
       name: "Pharmaceutical",;
       description: "Drug discovery, development, and clinical trials",;
-      icon: Pill;,
-},;
-    {;
+      icon: Pill},;
+    {
       name: "Healthcare",;
       description: "Personalized medicine and diagnostic tools",;
-      icon: Heart;,
-},;
-    {;
+      icon: Heart},;
+    {
       name: "Agriculture",;
       description: "Crop improvement and sustainable farming",;
-      icon: Leaf;,
-},;
-    {;
+      icon: Leaf},;
+    {
       name: "Research",;
       description: "Academic and industrial research institutions",;
-      icon: Microscope;,
-}
+      icon: Microscope}
   ];
-;
+
   return (;
     <>;
       <SEO ;
@@ -173,7 +157,7 @@ export default function AIBiotechnology() {;
         description="Revolutionary AI-powered biotechnology solutions. From drug discovery to personalized medicine, discover the future of biotechnology.";
         canonical="/services/ai-biotechnology";
       />;
-      ;
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">;
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">;
@@ -415,8 +399,7 @@ export default function AIBiotechnology() {;
                   className={`relative bg-gradient-to-br from-green-900/50 to-emerald-900/50 border rounded-xl p-8 ${;
                     tier.popular ;
                       ? 'border-green-400 scale-105' ;
-                      : 'border-green-500/30';,
-}`}
+                      : 'border-green-500/30'}`}
                 >;
                   {tier.popular && (;
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">;
@@ -425,7 +408,6 @@ export default function AIBiotechnology() {;
                       </span>;
                     </div>;
                   )}
-                  ;
                   <div className="text-center mb-8">;
                     <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>;
                     <p className="text-gray-400 mb-4">{tier.description}</p>;
@@ -449,8 +431,7 @@ export default function AIBiotechnology() {;
                     className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${;
                       tier.popular;
                         ? 'bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white';
-                        : 'border border-green-500 text-green-400 hover:bg-green-500 hover:text-white';,
-}`}
+                        : 'border border-green-500 text-green-400 hover:bg-green-500 hover:text-white'}`}
                   >;
                     Start Research;
                   </Link>;
@@ -521,5 +502,4 @@ export default function AIBiotechnology() {;
         </section>;
       </div>;
     </>;
-  );,
-}
+  )}

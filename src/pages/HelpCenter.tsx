@@ -11,15 +11,14 @@ import { motion } from 'framer-motion';import { ;
   CheckCircle,;
   ArrowRight,;
   ChevronDown,;
-  ChevronRight;,
-} from 'lucide-react';
-;
-export default function HelpCenter() {;
+  ChevronRight} from 'lucide-react';
+
+export default function HelpCenter() {
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
-;
+
   const helpCategories = [;
-    {;
+    {
       id: 'getting-started',;
       title: 'Getting Started',;
       icon: <BookOpen className="w-6 h-6" />,;
@@ -28,9 +27,8 @@ export default function HelpCenter() {;
         { title: 'Creating Your Account', url: '/help/create-account' },;
         { title: 'First Steps Guide', url: '/help/first-steps' },;
         { title: 'Platform Overview', url: '/help/platform-overview' }
-      ];,
-},;
-    {;
+      ]},;
+    {
       id: 'services',;
       title: 'Services & Solutions',;
       icon: <FileText className="w-6 h-6" />,;
@@ -39,9 +37,8 @@ export default function HelpCenter() {;
         { title: 'Service Selection Guide', url: '/help/service-selection' },;
         { title: 'Pricing Information', url: '/help/pricing' },;
         { title: 'Service Customization', url: '/help/customization' }
-      ];,
-},;
-    {;
+      ]},;
+    {
       id: 'marketplace',;
       title: 'Marketplace',;
       icon: <Users className="w-6 h-6" />,;
@@ -50,9 +47,8 @@ export default function HelpCenter() {;
         { title: 'Finding Talent & Services', url: '/help/finding-services' },;
         { title: 'Making Purchases', url: '/help/purchases' },;
         { title: 'Reviews & Ratings', url: '/help/reviews' }
-      ];,
-},;
-    {;
+      ]},;
+    {
       id: 'account',;
       title: 'Account & Billing',;
       icon: <FileText className="w-6 h-6" />,;
@@ -61,9 +57,8 @@ export default function HelpCenter() {;
         { title: 'Billing & Payments', url: '/help/billing' },;
         { title: 'Security & Privacy', url: '/help/security' },;
         { title: 'Data Management', url: '/help/data-management' }
-      ];,
-},;
-    {;
+      ]},;
+    {
       id: 'technical',;
       title: 'Technical Support',;
       icon: <FileText className="w-6 h-6" />,;
@@ -72,10 +67,9 @@ export default function HelpCenter() {;
         { title: 'Troubleshooting Guide', url: '/help/troubleshooting' },;
         { title: 'API Documentation', url: '/help/api-docs' },;
         { title: 'Integration Guides', url: '/help/integrations' }
-      ];,
-}
+      ]}
   ];
-;
+
   const popularArticles = [;
     'How to get started with AI services',;
     'Understanding our pricing structure',;
@@ -84,42 +78,37 @@ export default function HelpCenter() {;
     'API integration guide',;
     'Troubleshooting common issues';
   ];
-;
+
   const contactMethods = [;
-    {;
+    {
       icon: <Mail className="w-6 h-6" />,;
       title: 'Email Support',;
       description: 'Get help via email',;
       action: 'support@ziontechgroup.com',;
-      link: 'mailto:support@ziontechgroup.com';,
-},;
-    {;
+      link: 'mailto:support@ziontechgroup.com'},;
+    {
       icon: <Phone className="w-6 h-6" />,;
       title: 'Phone Support',;
       description: 'Speak with our team',;
       action: '+1 302 464 0950',;
-      link: 'tel:+13024640950';,
-},;
-    {;
+      link: 'tel:+13024640950'},;
+    {
       icon: <MessageCircle className="w-6 h-6" />,;
       title: 'Live Chat',;
       description: 'Chat with support',;
       action: 'Start Chat',;
-      link: '#';,
-}
+      link: '#'}
   ];
-;
-  const toggleCategory = (categoryId: string) => {;
-    setExpandedCategory(expandedCategory === categoryId ? null : categoryId);,
-};
-;
+
+  const toggleCategory = (categoryId: string) => {
+    setExpandedCategory(expandedCategory === categoryId ? null : categoryId)}
   const filteredCategories = helpCategories.filter(category =>;
     category.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
     category.articles.some(article => ;
       article.title.toLowerCase().includes(searchQuery.toLowerCase());
     );
   );
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-20">;
       {/* Hero Section */}
@@ -140,7 +129,7 @@ export default function HelpCenter() {;
               Find answers to your questions, learn how to use our platform, and get the support you need ;
               to make the most of Zion Tech Group's services.;
             </p>;
-            ;
+
             {/* Search Bar */}
             <div className="relative max-w-2xl mx-auto">;
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />;
@@ -154,7 +143,7 @@ export default function HelpCenter() {;
             </div>;
           </motion.div>;
         </div>;
-        ;
+
         {/* Background Elements */}
         <div className="absolute inset-0 opacity-10">;
           <div className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan rounded-full"></div>;
@@ -199,7 +188,7 @@ export default function HelpCenter() {;
                     <ChevronRight className="w-5 h-5 text-zion-cyan" />;
                   )}
                 </button>;
-                ;
+
                 {expandedCategory === category.id && (;
                   <motion.div;
                     initial={{ opacity: 0, height: 0 }}
@@ -340,8 +329,7 @@ export default function HelpCenter() {;
   );
 import React from "react";
 import { SEO } from "@/components/SEO";
-;,"});,"});,
-}
+;,"});,"})}
 export default function HelpCenter() {return (";
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">";
       <SEO title="HelpCenter - Zion Tech Group" description="Professional HelpCenter services by Zion Tech Group"  />";
@@ -351,6 +339,5 @@ export default function HelpCenter() {return (";
           Professional HelpCenter services to help your business grow.;
         </p>;
       </div>;
-  );,
-}
+  )}
 }

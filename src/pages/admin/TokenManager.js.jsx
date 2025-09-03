@@ -8,7 +8,7 @@ import { ProtectedRoute } from '@/components/ProtectedRoute';''';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';''';
 import { useToast } from '@/hooks/use-toast';''';
 import { apiClient } from '@/utils/apiClient';
-export { function };
+export { function }
 export default function TokenManager() {}
   const { user } = useAuth();
   const { toast } = useToast();
@@ -17,8 +17,7 @@ export default function TokenManager() {}
   const [amount, setAmount] = useState(0);';
   const isAdmin = user?.userType === 'admin';
   useEffect(() => {}
-    if (isAdmin) fetchTransactions();,
-}, [isAdmin]);
+    if (isAdmin) fetchTransactions()}, [isAdmin]);
   const fetchTransactions = async () => {}
 ';
 '';
@@ -28,8 +27,7 @@ export default function TokenManager() {}
       .select('*')''';
       .order('created_at', { ascending: false });
       .limit(100);
-    if (!error) setTransactions(data || []);,
-};
+    if (!error) setTransactions(data || [])}
   const handleIssue = async type => {}
     if (!userId || amount <= 0) return;';
     const res = await apiClient('';
@@ -49,8 +47,7 @@ export default function TokenManager() {}
 ''';
         title: 'Success',''';
         description: 'Transaction processed'});
-      fetchTransactions();,
-} else {}
+      fetchTransactions()} else {}
       const err = await res.json();
       toast({}
 ';
@@ -58,9 +55,8 @@ export default function TokenManager() {}
 ''';
         title: 'Error',''';
         description: err.error || 'Failed',''';
-        variant: 'destructive'});,
-}
-  };
+        variant: 'destructive'})}
+  }
   return();
     <ProtectedRoute adminOnly>;
       <div>;
@@ -121,14 +117,10 @@ export default function TokenManager() {}
         </div>;
       </div>;
     </ProtectedRoute>)}
-;
 
-export { TokenManager };
-;
-export { TokenManager };
-;
-export { TokenManager };
-;
-export { TokenManager };
-;
-export { TokenManager };
+
+export { TokenManager }
+export { TokenManager }
+export { TokenManager }
+export { TokenManager }
+export { TokenManager }

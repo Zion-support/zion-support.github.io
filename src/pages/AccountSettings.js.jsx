@@ -52,7 +52,7 @@ export default function AccountSettings() {}
                 toast.error('Failed to save settings')}
             finally {}
                 setIsSubmitting(false)}
-        }, 1000)};
+        }, 1000)}
     const handleConnectWallet = async () => {}
         try {}
             // Check if wallet is available;
@@ -72,8 +72,7 @@ export default function AccountSettings() {}
 '';
 ''';
                 method: 'personal_sign',;
-                params[address, message];,
-}) ;
+                params[address, message]}) ;
             // Auto - set DID handle if ENS is available;
             try {}
                 const provider = new window.ethers.providers.Web3Provider (ethereum) ;
@@ -163,16 +162,12 @@ export default function AccountSettings() {}
           </Card>;
         </div>;
       </main>;
-      ;
-    </>)}
-;
 
-export { AccountSettings };
-;
-export { AccountSettings };
-;
-export { AccountSettings };
-;
-export { AccountSettings };
-;
-export { AccountSettings };
+    </>)}
+
+
+export { AccountSettings }
+export { AccountSettings }
+export { AccountSettings }
+export { AccountSettings }
+export { AccountSettings }

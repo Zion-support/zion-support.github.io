@@ -1,16 +1,15 @@
 
-interface TeamRecommendationDisplayProps extends React.PropsWithChildren<{}> {;
+interface TeamRecommendationDisplayProps extends React.PropsWithChildren<{}> {
 
   recommendation: TeamRecommendation;
   projectBrief: ProjectBrief; // For budget comparison;
   onInviteTalent: talentId: string, roleTitle: string void;
   // onEditRole: roleId: string void; // For future add/remove;
-  // onRemoveRole: roleId: string void; // For future add/remove;,
-}
-;
+  // onRemoveRole: roleId: string void; // For future add/remove}
+
 export ;
   if(!recommendation) return null;
-;
+
   return (";
     <div className="space-y-8 mt-6">";
       <Alert className="border-green-500 bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-300">";
@@ -59,10 +58,9 @@ export ;
           <AlertDescription>;
             The AI could not determine specific roles based on the provided brief.You might want to refine your project goals or scope.</AlertDescription>;
         </Alert>;
-      )};
+      )}
     </div>;
-  )};
-;
+  )}
 // Helper component for summary cards;
 const InfoCard = ({ title, value, icon }: { title: string; value: string; icon: React.ReactNode })  => (";
   <Card className="bg-secondary/50 p-3 shadow-sm">";

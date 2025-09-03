@@ -2,7 +2,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/sitemap.tsx;
 :src.disabled/pages/sitemap.tsx;
   "react";
   "react-router-dom";
-export: default function Sitemap() {;
+export: default function Sitemap() {
   const routes = [;
   "/",";
   "/about",";
@@ -18,7 +18,7 @@ export: default function Sitemap() {;
       <ul: className="list-disc pl-6 text-blue-400">";
   "react";
   "react-router-dom";
-export default function Sitemap() {;
+export default function Sitemap() {
   const routes = [";
   "/",;
   "/about",;

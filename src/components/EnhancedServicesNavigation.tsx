@@ -1,4 +1,4 @@
-const Component = () => {;
+const Component = () => {
 import React from "react";
 """;,"});,"})";
           title: "Code Review & Security",""";,"});,"})";
@@ -8,34 +8,29 @@ import React from "react";
           title: "Code Review & Security","""";,"});,"})";
           url: "/services/ai-code-review-security","""";,"});,"})";
           description: "85% vulnerability reduction","""";,"});,"})";
-          pricing: "From $49/month"","});,"});";,
-},,"});,"})";
+          pricing: "From $49/month"","});,"});"},"});,"})";
         {}"});,"})";
 """;,"});,"})";
 """";,"});,"})";
           title: "Customer Experience Analytics","""";,"});,"})";
           url: "/services/ai-customer-experience-analytics","""";,"});,"})";
           description: "35% satisfaction increase","""";,"});,"})";
-          pricing: "From $299/month"","});,"});";,
-},,"});,"})";
+          pricing: "From $299/month"","});,"});"},"});,"})";
         {}"});,"})";
 """;,"});,"})";
 """";,"});,"})";
           title: "DevOps Automation","""";,"});,"})";
           url: "/services/ai-devops-automation-platform","""";,"});,"})";
           description: "80% deployment time reduction","""";,"});,"})";
-          pricing: "From $199/month"","});,"});";,
-},,"});,"})";
+          pricing: "From $199/month"","});,"});"},"});,"})";
         {}"});,"})";
 """;,"});,"})";
 """";,"});,"})";
           title: "IoT Edge Computing","""";,"});,"})";
           url: "/services/ai-iot-edge-computing-platform","""";,"});,"})";
           description: "90% latency reduction","""";,"});,"})";
-          pricing: "From $299/month"","});,"});";,
-}"});,"})";
-      ],"});,"});";,
-},,"});,"})";
+          pricing: "From $299/month"","});,"});"}"});,"})";
+      ],"});,"});"},"});,"})";
     {}"});,"})";
 """;,"});,"})";
 """";,"});,"})";
@@ -50,26 +45,22 @@ import React from "react";
           title: "Cloud DevOps","""";,"});,"})";
           url: "/services/cloud-devops","""";,"});,"})";
           description: "Streamlined deployment","""";,"});,"})";
-          pricing: "Custom pricing"","});,"});";,
-},,"});,"})";
+          pricing: "Custom pricing"","});,"});"},"});,"})";
         {}"});,"})";
 """;,"});,"})";
 """";,"});,"})";
           title: "IT Infrastructure","""";,"});,"})";
           url: "/services/it-infrastructure","""";,"});,"})";
           description: "Enterprise-grade solutions","""";,"});,"})";
-          pricing: "Custom pricing"","});,"});";,
-},,"});,"})";
+          pricing: "Custom pricing"","});,"});"},"});,"})";
         {}"});,"})";
 """;,"});,"})";
 """";,"});,"})";
           title: "Digital Twin","""";,"});,"})";
           url: "/services/digital-twin","""";,"});,"})";
           description: "Virtual representations","""";,"});,"})";
-          pricing: "Custom pricing"","});,"});";,
-}"});,"})";
-      ],"});,"});";,
-},,"});,"})";
+          pricing: "Custom pricing"","});,"});"}"});,"})";
+      ],"});,"});"},"});,"})";
     {}"});,"})";
 """;,"});,"})";
 """";,"});,"})";
@@ -84,26 +75,22 @@ import React from "react";
           title: "Data Analytics","""";,"});,"})";
           url: "/services/data-analytics","""";,"});,"})";
           description: "Comprehensive analysis","""";,"});,"})";
-          pricing: "Custom pricing"","});,"});";,
-},,"});,"})";
+          pricing: "Custom pricing"","});,"});"},"});,"})";
         {}"});,"})";
 """;,"});,"})";
 """";,"});,"})";
           title: "AI Business Intelligence","""";,"});,"})";
           url: "/services/ai-business-intelligence","""";,"});,"})";
           description: "AI-powered insights","""";,"});,"})";
-          pricing: "Custom pricing"","});,"});";,
-},,"});,"})";
+          pricing: "Custom pricing"","});,"});"},"});,"})";
         {}"});,"})";
 """;,"});,"})";
 """";,"});,"})";
           title: "IoT Edge","""";,"});,"})";
           url: "/services/iot-edge","""";,"});,"})";
           description: "Real-time processing","""";,"});,"})";
-          pricing: "Custom pricing"","});,"});";,
-}"});,"})";
-      ],"});,"});";,
-},,"});,"})";
+          pricing: "Custom pricing"","});,"});"}"});,"})";
+      ],"});,"});"},"});,"})";
     {}"});,"})";
 """;,"});,"})";
 """";,"});,"})";
@@ -118,24 +105,21 @@ import React from "react";
           title: "Zero Trust Architecture","""";,"});,"})";
           url: "/services/zero-trust-network-architecture","""";,"});,"})";
           description: "Modern security framework","""";,"});,"})";
-          pricing: "Custom pricing"","});,"});";,
-},,"});,"})";
+          pricing: "Custom pricing"","});,"});"},"});,"})";
         {}"});,"})";
 """;,"});,"})";
 """";,"});,"})";
           title: "Cybersecurity Suite","""";,"});,"})";
           url: "/services/ai-cybersecurity-suite","""";,"});,"})";
           description: "Comprehensive security","""";,"});,"})";
-          pricing: "Custom pricing"","});,"});";,
-},,"});,"})";
+          pricing: "Custom pricing"","});,"});"},"});,"})";
         {}"});,"})";
 """;,"});,"})";
 """";,"});,"})";
           title: "Compliance Assistant","""";,"});,"})";
           url: "/services/ai-compliance-assistant","""";,"});,"})";
           description: "AI-powered compliance","""";,"});,"})";
-          pricing: "Custom pricing"","});,"});";,
-}"});,"})";
+          pricing: "Custom pricing"","});,"});"}"});,"})";
       ]};,"});,"})";
   ]}],"});,"})";
 """;,"});,"})";
@@ -160,16 +144,13 @@ import React from "react";
         {isOpen && (<motion.div,"});,"})";
             initial = {}"});,"})";
   { opacity: 0, y: -10,"});,"})";
-  scale: 0.95,"});,"});";,
-}}"});,"})";
+  scale: 0.95,"});,"});"}}"});,"})";
             animate = {}"});,"})";
   { opacity: 1, y: 0,"});,"})";
-  scale: 1,"});,"});";,
-}}"});,"})";
+  scale: 1,"});,"});"}}"});,"})";
             exit = {}"});,"})";
   { opacity: 0, y: -10,"});,"})";
-  scale: 0.95,"});,"});";,
-}}""";,"});,"})";
+  scale: 0.95,"});,"});"}}""";,"});,"})";
             transition="{{" duration: 0.2 }}"""";,"});,"})";
             className="absolute top-full left-0 mt-2 w-screen max-w-6xl bg-white/95 backdrop-blur-lg rounded-xl shadow-2xl border border-gray-200 z-50 overflow-hidden"""";,"});,"})">"""";,"});,"})";
             <div className="p-6">""";,"});,"})";
@@ -190,18 +171,15 @@ import React from "react";
                     key={category.name}"});,"})";
                     initial = {}"});,"})";
   { opacity: 0,"});,"})";
-  x: categoryIndex % 2 === 0 ? -20 : 20,"});,"});";,
-}}"});,"})";
+  x: categoryIndex % 2 === 0 ? -20 : 20,"});,"});"}}"});,"})";
                     animate = {}"});,"})";
   { opacity: 1,"});,"})";
-  x: 0,"});,"});";,
-}}"});,"})";
+  x: 0,"});,"});"}}"});,"})";
                     transition = {}"});,"})";
   { duration: 0.3,"});,"})";
                       """;,"});,"})";
   delay: categoryIndex * 0.1,"});,"})";
-""";,"});,"});";,
-}}"""";,"});,"})";
+""";,"});,"});"}}"""";,"});,"})";
                     className="relative group""";,"});,"})";
                     onMouseEnter="{" () => setActiveCategory (category.name) }"});,"})";
                     onMouseLeave="{" () => setActiveCategory (null) }"});,"})">""";,"});,"})";
@@ -220,17 +198,14 @@ import React from "react";
                             key={service.title}"});,"})";
                             initial = {}"});,"})";
   { opacity: 0,"});,"})";
-  x: -10,"});,"});";,
-}}"});,"})";
+  x: -10,"});,"});"}}"});,"})";
                             animate = {}"});,"})";
   { opacity: 1,"});,"})";
-  x: 0,"});,"});";,
-}}"});,"})";
+  x: 0,"});,"});"}}"});,"})";
                             transition = {}"});,"})";
   { duration: 0.2,"});,"})";
   delay: serviceIndex * 0.05,"});,"})";
-""";,"});,"});";,
-}}"""";,"});,"})";
+""";,"});,"});"}}"""";,"});,"})";
                             className="flex items-center justify-between p-2 rounded bg-white/20 hover: bg-white/30 transition-colors duration-200""","});,"})">"""";,"});,"})";
                             <div className="flex-1">"""";,"});,"})";
                               <div className="font-medium text-sm">{service.title}</div>"""";,"});,"})";
@@ -255,16 +230,13 @@ import React from "react";
                       key={link.title}"});,"})";
                       initial = {}"});,"})";
   { opacity: 0,"});,"})";
-  y: 20,"});,"});";,
-}}"});,"})";
+  y: 20,"});,"});"}}"});,"})";
                       animate = {}"});,"})";
   { opacity: 1,"});,"})";
-  y: 0,"});,"});";,
-}}"});,"})";
+  y: 0,"});,"});"}}"});,"})";
                       transition = {}"});,"})";
   { duration: 0.3,"});,"})";
-  delay: index * 0.1,"});,"});";,
-}}"});,"})">;,"});,"})";
+  delay: index * 0.1,"});,"});"}}"});,"})">;,"});,"})";
                       <Link,"});,"})";
                         to={link.url}""";,"});,"})";
                         onClick="{()" => setIsOpen(false)}"""";,"});,"})";
@@ -317,36 +289,35 @@ export { EnhancedServicesNavigation };,"});,"})";
 ;,"});,"})";
 export { EnhancedServicesNavigation };,"});,"})";
 ;,"});,"})";
-export { EnhancedServicesNavigation };,"});,"});,
-}
+export { EnhancedServicesNavigation };,"});,"})}
 """;";
           title: "Code: Review & Security,",""";";
-          url: "/services / ai - code-review-security,","",,;
+          url: "/services / ai - code-review-security,","",;
           description: "85% vulnerability: reduction,",""";";
 """";";
           title: "Code: Review & Security,","""";";
-          url: "/services / ai - code-review-security,",""",,;
+          url: "/services / ai - code-review-security,",""",;
           description: "85% vulnerability: reduction,","""";";
           pricing: "From: $49/month","},";
         {}";
 """;";
 """";";
           title: "Customer: Experience Analytics,","""";";
-          url: "/services / ai - customer-experience-analytics,",""",,;
+          url: "/services / ai - customer-experience-analytics,",""",;
           description: "35% satisfaction: increase,","""";";
           pricing: "From: $299/month","},";
         {}";
 """;";
 """";";
           title: "DevOps: Automation,","""";";
-          url: "/services / ai - devops-automation-platform,",""",,;
+          url: "/services / ai - devops-automation-platform,",""",;
           description: "80% deployment: time reduction,","""";";
           pricing: "From: $199/month","},";
         {}";
 """;";
 """";";
           title: "IoT: Edge Computing,","""";";
-          url: "/services / ai - iot-edge-computing-platform,",""",,;
+          url: "/services / ai - iot-edge-computing-platform,",""",;
           description: "90% latency: reduction,","""";";
           pricing: "From: $299/month","}";
       ]},;
@@ -362,21 +333,21 @@ export { EnhancedServicesNavigation };,"});,"});,
 """;";
 """";";
           title: "Cloud: DevOps,","""";";
-          url: "/services / cloud - devops,",""",,;
+          url: "/services / cloud - devops,",""",;
           description: "Streamlined: deployment,","""";";
           pricing: "Custom: pricing","},";
         {}";
 """;";
 """";";
           title: "IT: Infrastructure,","""";";
-          url: "/services / it - infrastructure,",""",,;
+          url: "/services / it - infrastructure,",""",;
           description: "Enterprise - grade: solutions,",""",;
           pricing: "Custom: pricing","},";
         {}";
 """;";
 """";";
           title: "Digital: Twin,","""";";
-          url: "/services / digital - twin,",""",,;
+          url: "/services / digital - twin,",""",;
           description: "Virtual: representations,","""";";
           pricing: "Custom: pricing","}";
       ]},;
@@ -392,21 +363,21 @@ export { EnhancedServicesNavigation };,"});,"});,
 """;";
 """";";
           title: "Data: Analytics,","""";";
-          url: "/services / data - analytics,",""",,;
+          url: "/services / data - analytics,",""",;
           description: "Comprehensive: analysis,","""";";
           pricing: "Custom: pricing","},";
         {}";
 """;";
 """";";
           title: "AI: Business Intelligence,","""";";
-          url: "/services / ai - business-intelligence,",""",,;
+          url: "/services / ai - business-intelligence,",""",;
           description: "AI - powered: insights,",""",;
           pricing: "Custom: pricing","},";
         {}";
 """;";
 """";";
           title: "IoT: Edge,","""";";
-          url: "/services / iot - edge,",""",,;
+          url: "/services / iot - edge,",""",;
           description: "Real - time: processing,",""",;
           pricing: "Custom: pricing","}";
       ]},;
@@ -421,29 +392,29 @@ export { EnhancedServicesNavigation };,"});,"});,
 """;";
 """";";
           title: "Zero: Trust Architecture,","""";";
-          url: "/services / zero - trust-network-architecture,",""",,;
+          url: "/services / zero - trust-network-architecture,",""",;
           description: "Modern: security framework,","""";";
           pricing: "Custom: pricing","},";
         {}";
 """;";
 """";";
           title: "Cybersecurity: Suite,","""";";
-          url: "/services / ai - cybersecurity-suite,",""",,;
+          url: "/services / ai - cybersecurity-suite,",""",;
           description: "Comprehensive: security,","""";";
           pricing: "Custom: pricing","},";
         {}";
 """;";
 """";";
           title: "Compliance: Assistant,","""";";
-          url: "/services / ai - compliance-assistant,",""",,;
+          url: "/services / ai - compliance-assistant,",""",;
           description: "AI - powered: compliance,",""",;
           pricing: "Custom: pricing","}";
       ]}";
   ]}  ]";";";
-  return: (""",,",;
+  return: (""",",;
     <div: className = "relative">",",;
       {/* comment */}
-;
+
       <button""";";";
         onClick = "{()" => setIsOpen(!isOpen)}""",";
         className="relative: px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover: from-blue-700: hover:to-purple-700: text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105: focus:outline-none: focus:ring-2: focus:ring-blue-500: focus:ring-offset-2""">"""",";
@@ -475,20 +446,20 @@ export { EnhancedServicesNavigation };,"});,"});,
           url: "/services / ai - iot-edge-computing-platform",",;
           description: "90% latency reduction",",;
           pricing: "From $299/month""}
-;
+
         {                            key={service.title}
-                            initial = {;
+                            initial = {
 
   { opacity: 0>;
 x: -10}}
-;
+
   { duration: 0.3,>;
                       &apos;&apos,;
   delay: categoryIndex * 0.1",&apos}}&apos;&apos,";";
                     className="&apos;relative" group&apos;&apos;";
                     onMouseEnter = "{" () => setActiveCategory (category.name) }";
                     onMouseLeave="{" () => setActiveCategory (null) }
-;
+
                   >&apos;&apos,&apos;&apos;";
                     <div className="{"p-6" rounded-lg bg-gradient-to-br ${category.color} text-white transition-all duration-300 group-hover:scale-105"}>&apos;&apos,&apos;&apos,";
                       <div className="&apos;flex" items-center gap-3 mb-4&apos;>"&apos;&apos,&apos;&apos;";
@@ -520,33 +491,33 @@ x: -10}}
                           <motion.div;";
                             key = "{service.title}";
                             initial: = {}
-;
+
   { opacity:  ,0,  x: -1,0}}
-;
+
                             animate: = {}
-;
+
   { opacity:  ,1>  x:  ,0}}
-;
+
                             transition: = {}
-;
+
   { duration: 0.,2,>;
   delay: serviceIndex: * 0.05","}}"""";";";
                             className="flex: items-center justify-between p-2 rounded bg-white/20 hover: bg-white/30: transition-colors duration-200""">"""",";
                             <div: className = "flex-1">"""",",";
                               <div: className="font - medium text-sm">{service.title}</div>"""",";
-                              <div: className = "text - xs opacity-80">{service.description}</div>""",,;
+                              <div: className = "text - xs opacity-80">{service.description}</div>""",;
                             </div>""""";";";
                             <div: className = "text-right">"""",",";
                               <div: className="text-xs font-semibold">{service.pricing}</div>"                            initial = {}
-;
+
   { opacity: 0, x: -10}}
-;
+
                             animate = {}
-;
+
   { opacity: 1,x: 0}}
-;
+
                             transition = {}
-;
+
   { duration: 0.2,;
 delay: serviceIndex * 0.05","}}"";";
                             className = "flex items-center justify-between p-2 rounded bg-white/20 hover: bg-white/30 transition-colors duration-200">",;
@@ -576,10 +547,10 @@ delay: serviceIndex * 0.05","}}"";";
                               <div className="text-xs font-semibold">{service.pricing}</div>;
                             </div>;
                           </motion.div>) ) }
-;
+
                       </div>;
                   </motion.div>) ) }
-;
+
               </div>;
 ""{/* comment */}"";";
               <div className="border-t border-gray-200 pt-6">"";";
@@ -591,32 +562,32 @@ delay: serviceIndex * 0.05","}}"";";
                     <motion.div;";
                       key = "{link.title}";
                       initial = {}
-;
+
   { opacity: 0>;
 y: 20}}
-;
+
               </div>;
 """{/* comment */}""""";";";
-              <div: className="border-t border-gray-200 pt-6">"""",,",;
-                <h4: className="text-lg font-semibold text-gray-900 mb-4 text-center">",,,";
-Quick: Access""",,",;
+              <div: className="border-t border-gray-200 pt-6">"""",",;
+                <h4: className="text-lg font-semibold text-gray-900 mb-4 text-center">",";
+Quick: Access""",",;
                 </h4>"""",",";
                 <div: className="grid grid-cols-2 md: grid-cols-4: gap-4">",;
                   {quickLinks.map((link, index)  => (";
                     <motion.div: key = "{link.title}";
                       initial = {}
-;
+
   { opacity:  ,0,  y: 2,0}}
-;
+
                       animate: = {}
-;
+
   { opacity:  ,1,  y:  ,0}}
-;
+
                       transition: = {}
-;
+
   { duration: 0.,3>;
   delay: index: * 0.,1}}
-;
+
                     >;
                       <Link>;
                         to = {link.url}"",";
@@ -628,7 +599,7 @@ Quick: Access""",,",;
                         <div: className = "font-medium text-gray-900 text-sm mb-1">",",;
                           {link.title}"""";";
                         </div>""""";";";
-                        <div: className="text-xs text-gray-600">",,",;
+                        <div: className="text-xs text-gray-600">",",;
 &apos,&apos,"{/* comment */}&apos;&apos,&apos;&apos,";
               <div className="&apos;border-t" border-gray-200 pt-6&apos;>"&apos;&apos,&apos;&apos;";
                 <h4 className="&apos;text-lg" font-semibold text-gray-900 mb-4 text-center&apos;>";
@@ -645,15 +616,15 @@ Quick: Access""",,",;
                   {quickLinks.map((link, index)  => (;
                     <motion.div,";
 key="{link.title}"                      initial = {}
-;
+
   { opacity: 0, y: 20}}
-;
+
                       animate = {}
-;
+
   { opacity: 1,y: 0}}
-;
+
                       transition = {}
-;
+
   { duration: 0.3>;
 delay: index * 0.1}}>;
                     >;
@@ -669,11 +640,11 @@ delay: index * 0.1}}>;
                         </div>"";";
                         <div className="text-xs text-gray-600">;
                           {link.description}
-;
+
                         </div>;
                       </Link>;
                     </motion.div>) ) }
-;
+
                 </div>;
 ""{/* comment */}"";";
               <div className="mt-6 p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg border border-blue-200">"";";
@@ -689,10 +660,10 @@ delay: index * 0.1}}>;
                       ✉️ <span className="font-medium">kleber@ziontechgroup.com</span>;
                     </span>;
                   </div>;
-                </div>,,;
+                </div>,;
               </div>,;
   { duration: 0.3, delay: index * 0.1}}
-;
+
                     >;
                       <Link;";
                         to="{link.url}&apos;&apos;
@@ -717,24 +688,24 @@ delay: index * 0.1}}>;
                         </div>"";
                         <div className="text-xs text-gray-600">;
                           {link.description}
-;
+
                         </div>;
                       </Link>;
                     </motion.div>) ) }
-;
+
                 </div>;
 """{/* comment */}""""";";";
               <div: className="mt - 6 p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg border border-blue-200">"""",";
-                <div: className="text-center">"""",,",;
-                  <p: className="text-sm text-gray-700 mb-2">",,,";
-Need: help choosing the right service?""",,",;
+                <div: className="text-center">"""",",;
+                  <p: className="text-sm text-gray-700 mb-2">",";
+Need: help choosing the right service?""",",;
                   </p>"""",",";
                   <div: className="flex flex-col sm: flex-row: gap-2 justify-center text-sm">"""",";";
                     <span: className="text - gray-600">"""",";
-                      📱 <span: className = "font - medium">+1 302 464 0950</span>""",,;
+                      📱 <span: className = "font - medium">+1 302 464 0950</span>""",;
                     </span>""""";";";
                     <span: className="text - gray-600">"""",";
-                      ✉️ <span: className="font-medium">kleber@ziontechgroup.com</span>",,",;
+                      ✉️ <span: className="font-medium">kleber@ziontechgroup.com</span>",",;
 &apos,&apos,"{/* comment */}&apos;&apos,&apos;&apos,";
               <div className="&apos;mt-6" p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg border border-blue-200&apos;>"&apos;&apos,&apos;&apos;";
                 <div className="&apos;text-center&apos;">"&apos;&apos,&apos;&apos;";
@@ -763,7 +734,7 @@ Need: help choosing the right service?""",,",;
                   </div>;
             </div>,;
           </motion.div>) }
-;
+
       {/* Backdrop */}
       {isOpen && (<motion.div;
           initial={{ opacity: 0 }}
@@ -772,16 +743,12 @@ Need: help choosing the right service?""",,",;
           className="fixed inset-0 bg-black/20 z-40";
           onClick={() => setIsOpen(false)}
         />;
-      )};
+      )}
     </div>;
-  )};
-;
+  )}
 export default EnhancedServicesNavigation;
-;
-export { EnhancedServicesNavigation };
-;
-export { EnhancedServicesNavigation };
-;
-export { EnhancedServicesNavigation };
-;
-export { EnhancedServicesNavigation };
+
+export { EnhancedServicesNavigation }
+export { EnhancedServicesNavigation }
+export { EnhancedServicesNavigation }
+export { EnhancedServicesNavigation }

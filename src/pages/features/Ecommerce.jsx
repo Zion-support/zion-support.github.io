@@ -5,7 +5,7 @@ import SEO from '@/components/SEO';''';
 import { GradientHeading } from '@/components/GradientHeading';''';
 import { Button } from '@/components/ui/button';''';
 import { Link } from 'react-router-dom';
-export { function };
+export { function }
 export default function Ecommerce() {}
   const schema = {}
 ';
@@ -15,7 +15,7 @@ export default function Ecommerce() {}
     name: 'E-commerce Platform',''';
     description:'''';
       'Sell or purchase AI solutions and IT equipment through our secure marketplace.',''';
-    url: 'https://app.ziontechgroup.com/features/e-commerce'};
+    url: 'https://app.ziontechgroup.com/features/e-commerce'}
   return();
     <>;
       <SEO;
@@ -85,14 +85,10 @@ export default function Ecommerce() {}
       </main>;
       <Footer />;
     </>)}
-;
 
-export { Ecommerce };
-;
-export { Ecommerce };
-;
-export { Ecommerce };
-;
-export { Ecommerce };
-;
-export { Ecommerce };
+
+export { Ecommerce }
+export { Ecommerce }
+export { Ecommerce }
+export { Ecommerce }
+export { Ecommerce }

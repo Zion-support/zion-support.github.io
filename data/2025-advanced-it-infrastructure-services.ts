@@ -1,5 +1,5 @@
 import { ServiceVariant  } from "../types/service-variants";
-export interface AdvancedITInfrastructureService {;
+export interface AdvancedITInfrastructureService {
   id: string;
   name: string;
   tagline: string;
@@ -26,7 +26,7 @@ export interface AdvancedITInfrastructureService {;
   marketSize: string;
   growthRate: string;
   variant: string;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -38,7 +38,7 @@ export interface AdvancedITInfrastructureService {;
   rating: number;
 export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [;
   // Multi-Cloud Orchestration Platform;
-  {;
+  {
     id: "multi-cloud-orchestration",;
     name: "Multi-Cloud Orchestration Platform",;
     tagline: "Unified management across AWS, Azure, Google Cloud, and private clouds",;
@@ -76,21 +76,19 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     marketSize: "$25B multi-cloud management market",;
     growthRate: "35% annual growth",;
     variant: "multi-cloud-enterprise",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Hybrid quantum-classical cloud infrastructure with quantum processing capabilities and classical cloud services.",;
     launchDate: "2024-11-01",;
     customers: 23,;
     rating: 4.9,;
-    reviews: 15;,;,
-},;
+    reviews: 15},;
   // Autonomous Edge Computing Network;
-  {;
+  {
     id: "autonomous-edge-computing-network",;
     name: "Autonomous Edge Computing Network",;
     tagline: "Self-managing edge infrastructure with intelligent optimization",;
@@ -128,21 +126,19 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     marketSize: "$12.8B edge computing market",;
     growthRate: "45% annual growth",;
     variant: "edge-computing-enterprise",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Autonomous edge computing network with intelligent optimization and real-time processing capabilities.",;
     launchDate: "2024-10-15",;
     customers: 45,;
     rating: 4.8,;
-    reviews: 45;,;,
-},;
+    reviews: 45},;
   // Zero-Trust Network Security Platform;
-  {;
+  {
     id: "zero-trust-network-security",;
     name: "Zero-Trust Network Security Platform",;
     tagline: "Comprehensive zero-trust security architecture for modern networks",;
@@ -180,21 +176,19 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     marketSize: "$40B network security market",;
     growthRate: "30% annual growth in zero-trust segment",;
     variant: "zero-trust-enterprise",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Zero-trust network security platform implementing comprehensive security architecture with continuous authentication.",;
     launchDate: "2025-02-01",;
     customers: 34,;
     rating: 4.8,;
-    reviews: 28;,;,
-},;
+    reviews: 28},;
   // AI-Powered DevOps Automation Platform;
-  {;
+  {
     id: "ai-devops-automation",;
     name: "AI-Powered DevOps Automation Platform",;
     tagline: "Intelligent automation for development and operations",;
@@ -232,21 +226,19 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     marketSize: "$8B DevOps market",;
     growthRate: "28% annual growth",;
     variant: "ai-devops-enterprise",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "AI-powered DevOps automation platform with intelligent CI/CD optimization and comprehensive automation capabilities.",;
     launchDate: "2025-01-15",;
     customers: 89,;
     rating: 4.7,;
-    reviews: 67;,;,
-},;
+    reviews: 67},;
   // Quantum-Resistant Data Storage Platform;
-  {;
+  {
     id: "quantum-resistant-storage",;
     name: "Quantum-Resistant Data Storage Platform",;
     tagline: "Future-proof data storage with quantum-resistant encryption",;
@@ -284,21 +276,19 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     marketSize: "$50B data storage market",;
     growthRate: "40% annual growth in quantum-resistant segment",;
     variant: "quantum-storage-enterprise",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Quantum-resistant data storage platform implementing advanced encryption for future-proof data protection.",;
     launchDate: "2025-02-05",;
     customers: 23,;
     rating: 4.8,;
-    reviews: 18;,;,
-},;
+    reviews: 18},;
   // Intelligent Data Center Management Platform;
-  {;
+  {
     id: "intelligent-data-center",;
     name: "Intelligent Data Center Management Platform",;
     tagline: "AI-powered data center optimization and management",;
@@ -336,21 +326,19 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     marketSize: "$12B data center management market",;
     growthRate: "32% annual growth",;
     variant: "intelligent-datacenter-enterprise",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Intelligent data center management platform with AI-powered optimization and comprehensive monitoring capabilities.",;
     launchDate: "2025-01-25",;
     customers: 45,;
     rating: 4.7,;
-    reviews: 34;,;,
-},;
+    reviews: 34},;
   // Federated Learning Infrastructure Platform;
-  {;
+  {
     id: "federated-learning-infrastructure",;
     name: "Federated Learning Infrastructure Platform",;
     tagline: "Privacy-preserving AI training across distributed data sources",;
@@ -388,21 +376,19 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     marketSize: "$3B federated learning market",;
     growthRate: "50% annual growth",;
     variant: "federated-learning-enterprise",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Federated learning infrastructure platform enabling privacy-preserving AI training across distributed data sources.",;
     launchDate: "2025-02-10",;
     customers: 18,;
     rating: 4.9,;
-    reviews: 12;,;,
-},;
+    reviews: 12},;
   // New Advanced IT Infrastructure Services for 2025;
-  {;
+  {
     id: "quantum-cloud-infrastructure-platform",;
     name: "Quantum Cloud Infrastructure Platform",;
     tagline: "Next-generation quantum cloud computing",;
@@ -440,21 +426,19 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     marketSize: "$50B+ potential market",;
     growthRate: "800%+ annual growth",;
     variant: "quantum-cloud",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced quantum cloud infrastructure platform with hybrid quantum-classical computing, quantum-secured services, and comprehensive cloud management capabilities.",;
     launchDate: "2025-01-30",;
     customers: 5,;
     rating: 5.0,;
-    reviews: 3;,;,
-},;
+    reviews: 3},;
   // Edge Computing Orchestration Platform;
-  {;
+  {
     id: "edge-computing-orchestration-platform-v2",;
     name: "Edge Computing Orchestration Platform",;
     tagline: "Intelligent edge computing management and optimization",;
@@ -492,21 +476,19 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     marketSize: "$12.5B edge computing market",;
     growthRate: "35% annual growth",;
     variant: "edge-computing",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Comprehensive edge computing orchestration platform with intelligent resource management, real-time optimization, and seamless cloud platform integration.",;
     launchDate: "2025-02-20",;
     customers: 28,;
     rating: 4.9,;
-    reviews: 19;,;,
-},;
+    reviews: 19},;
   // Zero Trust Security Architecture Platform;
-  {;
+  {
     id: "zero-trust-security-architecture-platform",;
     name: "Zero Trust Security Architecture Platform",;
     tagline: "Advanced zero trust security implementation",;
@@ -544,21 +526,19 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     marketSize: "$12.8B zero trust security market",;
     growthRate: "38% annual growth",;
     variant: "zero-trust",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Enterprise-grade zero trust security architecture platform with comprehensive security implementation, continuous verification, and advanced threat protection capabilities.",;
     launchDate: "2025-03-10",;
     customers: 18,;
     rating: 5.0,;
-    reviews: 12;,;,
-},;
+    reviews: 12},;
   // Autonomous Data Center Platform;
-  {;
+  {
     id: "autonomous-data-center-platform",;
     name: "Autonomous Data Center Platform",;
     tagline: "Self-managing data center infrastructure",;
@@ -596,21 +576,19 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     marketSize: "$35B+ potential market",;
     growthRate: "500%+ annual growth",;
     variant: "autonomous-infrastructure",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced autonomous data center platform with AI-powered management, comprehensive optimization, and seamless infrastructure automation capabilities.",;
     launchDate: "2025-04-05",;
     customers: 8,;
     rating: 5.0,;
-    reviews: 5;,;,
-},;
+    reviews: 5},;
   // Quantum Networking Infrastructure;
-  {;
+  {
     id: "quantum-networking-infrastructure",;
     name: "Quantum Networking Infrastructure",;
     tagline: "Next-generation quantum communication networks",;
@@ -648,21 +626,19 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     marketSize: "$45B+ potential market",;
     growthRate: "700%+ annual growth",;
     variant: "quantum-networking",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Enterprise-grade quantum networking infrastructure with quantum key distribution, advanced security protocols, and comprehensive network management capabilities.",;
     launchDate: "2024-07-20",;
     customers: 19,;
     rating: 4.9,;
-    reviews: 12;,;,
-},;
+    reviews: 12},;
   // New Advanced IT Infrastructure Services for 2025;
-  {;
+  {
     id: "quantum-cloud-infrastructure-platform",;
     name: "Quantum Cloud Infrastructure Platform",;
     tagline: "Next-generation quantum cloud computing",;
@@ -700,21 +676,19 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     marketSize: "$50B+ potential market",;
     growthRate: "800%+ annual growth",;
     variant: "quantum-cloud",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced quantum cloud infrastructure platform with hybrid quantum-classical computing, quantum-secured services, and comprehensive cloud management capabilities.",;
     launchDate: "2025-01-30",;
     customers: 5,;
     rating: 5.0,;
-    reviews: 3;,;,
-},;
+    reviews: 3},;
   // Edge Computing Orchestration Platform;
-  {;
+  {
     id: "edge-computing-orchestration-platform-v2",;
     name: "Edge Computing Orchestration Platform",;
     tagline: "Intelligent edge computing management and optimization",;
@@ -752,21 +726,19 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     marketSize: "$12.5B edge computing market",;
     growthRate: "35% annual growth",;
     variant: "edge-computing",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Comprehensive edge computing orchestration platform with intelligent resource management, real-time optimization, and seamless cloud platform integration.",;
     launchDate: "2025-02-20",;
     customers: 28,;
     rating: 4.9,;
-    reviews: 19;,;,
-},;
+    reviews: 19},;
   // Zero Trust Security Architecture Platform;
-  {;
+  {
     id: "zero-trust-security-architecture-platform",;
     name: "Zero Trust Security Architecture Platform",;
     tagline: "Advanced zero trust security implementation",;
@@ -804,21 +776,19 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     marketSize: "$12.8B zero trust security market",;
     growthRate: "38% annual growth",;
     variant: "zero-trust",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Enterprise-grade zero trust security architecture platform with comprehensive security implementation, continuous verification, and advanced threat protection capabilities.",;
     launchDate: "2025-03-10",;
     customers: 18,;
     rating: 5.0,;
-    reviews: 12;,;,
-},;
+    reviews: 12},;
   // Autonomous Data Center Platform;
-  {;
+  {
     id: "autonomous-data-center-platform",;
     name: "Autonomous Data Center Platform",;
     tagline: "Self-managing data center infrastructure",;
@@ -856,21 +826,19 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     marketSize: "$35B+ potential market",;
     growthRate: "500%+ annual growth",;
     variant: "autonomous-infrastructure",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced autonomous data center platform with AI-powered management, comprehensive optimization, and seamless infrastructure automation capabilities.",;
     launchDate: "2025-04-05",;
     customers: 8,;
     rating: 5.0,;
-    reviews: 5;,;,
-},;
+    reviews: 5},;
   // Quantum Networking Infrastructure;
-  {;
+  {
     id: "quantum-networking-infrastructure",;
     name: "Quantum Networking Infrastructure",;
     tagline: "Next-generation quantum communication networks",;
@@ -908,21 +876,19 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     marketSize: "$45B+ potential market",;
     growthRate: "700%+ annual growth",;
     variant: "quantum-networking",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Enterprise-grade quantum networking infrastructure with quantum key distribution, advanced security protocols, and comprehensive network management capabilities.",;
     launchDate: "2025-05-01",;
     customers: 3,;
     rating: 5.0,;
-    reviews: 2;,;,
-},;
+    reviews: 2},;
   // AI-Powered Infrastructure Management;
-  {;
+  {
     id: "ai-powered-infrastructure-management",;
     name: "AI-Powered Infrastructure Management",;
     tagline: "Intelligent infrastructure management and optimization",;
@@ -960,21 +926,19 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     marketSize: "$15.2B infrastructure management market",;
     growthRate: "32% annual growth",;
     variant: "ai-infrastructure",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Comprehensive AI-powered infrastructure management platform with intelligent monitoring, optimization, and seamless infrastructure tool integration.",;
     launchDate: "2025-05-15",;
     customers: 25,;
     rating: 4.8,;
-    reviews: 18;,;,
-},;
+    reviews: 18},;
   // Hybrid Cloud Orchestration Platform;
-  {;
+  {
     id: "hybrid-cloud-orchestration-platform",;
     name: "Hybrid Cloud Orchestration Platform",;
     tagline: "Seamless hybrid cloud management and optimization",;
@@ -1012,12 +976,11 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     marketSize: "$18.5B hybrid cloud market",;
     growthRate: "28% annual growth",;
     variant: "hybrid-cloud",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Comprehensive hybrid cloud orchestration platform with seamless multi-cloud management, optimization, and comprehensive cloud platform integration.",;
     launchDate: "2025-06-01",;

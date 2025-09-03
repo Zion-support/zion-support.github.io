@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export default function Home() {;
+export default function Home() {
   return (;
     <main style={{ fontFamily: 'system-ui, sans-serif', lineHeight: 1.5, padding: '32px', maxWidth: 1120, margin: '0 auto' }}>;
       <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 24 }}>;
@@ -25,18 +25,16 @@ export default function Home() {;
         <Card title="Contact" href="/services#contact" description="Mobile: +1 302 464 0950 • kleber@ziontechgroup.com" />;
       </section>;
     </main>;
-  );,
-}
-;
-function Card({ title, description, href }: { title: string; description: string; href: string }) {;
+  )}
+
+function Card({ title, description, href }: { title: string; description: string; href: string }) {
   return (;
     <Link href={href} style={{ border: '1px solid #ddd', borderRadius: 12, padding: 16, textDecoration: 'none', color: 'inherit' }}>;
       <h3 style={{ marginTop: 0 }}>{title}</h3>;
       <p style={{ marginBottom: 0 }}>{description}</p>;
     </Link>;
-  );,
-}
-;
+  )}
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { SEO } from '../components/SEO';
@@ -44,36 +42,33 @@ import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, Brain, Cloud, Database, Network, Target, Phone, Mail } from 'lucide-react';
-;
-const Home: React.FC = () => {;
+
+const Home: React.FC = () => {
   const stats = [;
     { number: '500+', label: 'Projects Completed' },;
     { number: '50+', label: 'Happy Clients' },;
     { number: '99.9%', label: 'Uptime Guarantee' },;
     { number: '24/7', label: 'Support Available' },;
   ];
-;
+
   const services = [;
-    {;
+    {
       title: "AI Services",;
       description: "Cutting-edge artificial intelligence solutions",;
       icon: Brain,;
-      href: "/ai-services";,
-},;
-    {;
+      href: "/ai-services"},;
+    {
       title: "IT Services", ;
       description: "Comprehensive information technology services",;
       icon: Network,;
-      href: "/it-services";,
-},;
-    {;
+      href: "/it-services"},;
+    {
       title: "Micro SaaS",;
       description: "Scalable software as a service solutions",;
       icon: Cloud,;
-      href: "/micro-saas";,
-}
+      href: "/micro-saas"}
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <SEO ;
@@ -81,38 +76,34 @@ const Home: React.FC = () => {;
         description="Transform your business with cutting-edge AI solutions, cloud services, and technology consulting. Expert team delivering innovative results.";
       />;
 
-export default function Home() {;
+export default function Home() {
   const featuredServices = [;
-    {;
+    {
       icon: <Brain className="w-8 h-8" />,;
       title: "AI Customer Sentiment Analyzer",;
       description: "Monitor customer feedback across all channels in real-time with AI-powered sentiment analysis.",;
       price: "From $199/month",;
-      link: "/services/ai-customer-sentiment-analyzer";,
-},;
-    {;
+      link: "/services/ai-customer-sentiment-analyzer"},;
+    {
       icon: <Zap className="w-8 h-8" />,;
       title: "AI Automated Email Follow-up",;
       description: "Intelligent email automation with personalized sequences and optimal timing predictions.",;
       price: "From $49/month",;
-      link: "/services/ai-automated-email-followup";,
-},;
-    {;
+      link: "/services/ai-automated-email-followup"},;
+    {
       icon: <Shield className="w-8 h-8" />,;
       title: "Zero Trust Security Platform",;
       description: "Comprehensive security solution with identity verification and network segmentation.",;
       price: "From $2,000/month",;
-      link: "/services/zero-trust-security-platform";,
-},;
-    {;
+      link: "/services/zero-trust-security-platform"},;
+    {
       icon: <Cloud className="w-8 h-8" />,;
       title: "Cloud Cost Optimization Suite",;
       description: "AI-powered cloud cost management across AWS, Azure, and GCP with automated optimization.",;
       price: "From $500/month",;
-      link: "/services/cloud-cost-optimization-suite";,
-}
+      link: "/services/cloud-cost-optimization-suite"}
   ];
-;
+
   const benefits = [;
     "Reduce operational costs by 30-50%",;
     "Improve efficiency with AI automation",;
@@ -120,7 +111,7 @@ export default function Home() {;
     "Enhance security with zero-trust architecture",;
     "24/7 expert support and monitoring";
   ];
-;
+
   return (;
     <>;
       <Head>;
@@ -130,7 +121,7 @@ export default function Home() {;
         <meta name="viewport" content="width=device-width, initial-scale=1" />;
         <link rel="canonical" href="https://ziontechgroup.com" />;
       </Head>;
-      ;
+
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -156,7 +147,7 @@ export default function Home() {;
                 </span>;
               </Link>;
             </div>;
-            ;
+
             {/* Contact Info */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm">;
               <div className="flex items-center gap-2">;
@@ -176,7 +167,7 @@ import SEO from "../components/SEO";
 
 const Link = dynamic(() => import("next/link"), { ssr: false });
 
-const Home: React.FC = () => {;
+const Home: React.FC = () => {
   const stats = [;
     { number: "500+", label: "Projects Completed" },;
     { number: "99.9%", label: "Uptime Guarantee" },;
@@ -184,53 +175,46 @@ const Home: React.FC = () => {;
   ];
 
   const services = [;
-    {;
+    {
       icon: Zap,;
       title: "Micro SaaS Solutions",;
       description: "Innovative, focused software solutions that solve specific business problems with minimal overhead. From AI-powered tools to productivity platforms.",;
       tags: ["AI Tools", "Productivity", "Automation"],;
       link: "/services/micro-saas",;
-      color: "blue";,
-},;
-    {;
+      color: "blue"},;
+    {
       icon: Shield,;
       title: "IT Services",;
       description: "Comprehensive IT infrastructure, cloud migration, cybersecurity, and digital transformation solutions for modern businesses.",;
       tags: ["Cloud Migration", "Cybersecurity", "DevOps"],;
       link: "/services/it-services",;
-      color: "green";,
-},;
-    {;
+      color: "green"},;
+    {
       icon: Globe,;
       title: "AI Services",;
       description: "Cutting-edge artificial intelligence solutions including machine learning, computer vision, and predictive analytics.",;
       tags: ["Machine Learning", "Computer Vision", "NLP"],;
       link: "/services/ai-services",;
-      color: "purple";,
-}
+      color: "purple"}
   ];
 
   const features = [;
-    {;
+    {
       icon: CheckCircle,;
       title: "Proven Expertise",;
-      description: "500+ successful projects with industry-leading expertise and cutting-edge technology";,
-},;
-    {;
+      description: "500+ successful projects with industry-leading expertise and cutting-edge technology"},;
+    {
       icon: Shield,;
       title: "Enterprise Security",;
-      description: "Bank-level security with 99.9% uptime guarantee and SOC 2 compliance";,
-},;
-    {;
+      description: "Bank-level security with 99.9% uptime guarantee and SOC 2 compliance"},;
+    {
       icon: Users,;
       title: "Dedicated Support",;
-      description: "24/7 expert support from our experienced team of technology professionals";,
-},;
-    {;
+      description: "24/7 expert support from our experienced team of technology professionals"},;
+    {
       icon: Zap,;
       title: "Fast Delivery",;
-      description: "Agile development with rapid deployment capabilities and continuous integration";,
-}
+      description: "Agile development with rapid deployment capabilities and continuous integration"}
   ];
 
   return (;
@@ -240,7 +224,7 @@ const Home: React.FC = () => {;
         description="Transform your business with cutting-edge AI solutions, cloud services, and technology consulting. Expert team delivering innovative results.";
         keywords="AI solutions, cloud services, technology consulting, micro SaaS, IT services, cybersecurity, machine learning";
       />;
-      ;
+
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">;
         <div className="absolute inset-0">;
@@ -248,7 +232,7 @@ const Home: React.FC = () => {;
           <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>;
           <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>;
         </div>;
-        ;
+
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">;
           <motion.div;
             initial={{ opacity: 0, y: 30 }}
@@ -265,7 +249,7 @@ const Home: React.FC = () => {;
               Zion Tech Group delivers innovative AI solutions, comprehensive IT services, and micro SaaS applications ;
               to help businesses thrive in the digital age. Experience 24/7 support and enterprise-grade security.;
             </p>;
-            ;
+
             <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">;
               <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-all duration-300 cursor-pointer inline-flex items-center justify-center text-lg hover:scale-105 hover:shadow-lg">;
                 Get Started Today;
@@ -309,7 +293,7 @@ const Home: React.FC = () => {;
               From innovative micro SaaS applications to cutting-edge AI services and enterprise IT solutions.;
             </p>;
           </motion.div>;
-          ;
+
           <div className="grid md:grid-cols-3 gap-8">;
             {/* Micro SaaS Services */}
             <motion.div ;
@@ -430,6 +414,5 @@ const Home: React.FC = () => {;
         </div>;
       </section>;
     </>;
-  );,
-}
+  )}
 }}))

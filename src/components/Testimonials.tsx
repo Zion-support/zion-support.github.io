@@ -1,17 +1,15 @@
-export default function Testimonials() {;
-interface Testimonial {;
+export default function Testimonials() {
+interface Testimonial {
   quote: string;
   author: string;
   role: string;
   company: string;
   rating: number;
-  avatar: string;,
-}
-;
-interface TestimonialsProps {;
-  testimonials: Testimonial[];,
-}
-;
+  avatar: string}
+
+interface TestimonialsProps {
+  testimonials: Testimonial[]}
+
   return (<section className="py-20 bg-gray -800">;
       <div className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8">;
         <div className="text-center mb-16">;
@@ -61,7 +59,6 @@ interface TestimonialsProps {;
         </div>;
       </div>;
     </section>;
-  );,
-}
-;
+  )}
+
 export default Testimonials;

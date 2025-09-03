@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-;
-;
-const RevolutionaryServicesShowcase2025 = () => {;
+
+
+const RevolutionaryServicesShowcase2025 = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');
     const allServices = [;
@@ -20,7 +20,7 @@ const RevolutionaryServicesShowcase2025 = () => {;
         'Biotechnology',;
         'Quantum Technology';
     ];
-    const filteredServices = allServices.filter(service => {;
+    const filteredServices = allServices.filter(service => {
         const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
             service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
@@ -137,8 +137,7 @@ const RevolutionaryServicesShowcase2025 = () => {;
                           ? 'bg-green-500/20 text-green-400''';
                           : service.category === 'AI Solutions''';
                             ? 'bg-purple-500/20 text-purple-400'''`;
-                            : 'bg-gray-500/20 text-gray-400'``;,
-}`}
+                            : 'bg-gray-500/20 text-gray-400'``}`}
                   >;
                     {service.category}";
                   </span>"";
@@ -308,16 +307,12 @@ const RevolutionaryServicesShowcase2025 = () => {;
           </div>;
         </div>;
       </div>;
-    </div>)};
+    </div>)}
 export default RevolutionaryServicesShowcase2025;
-;
 
-export { RevolutionaryServicesShowcase2025 };
-;
-export { RevolutionaryServicesShowcase2025 };
-;
-export { RevolutionaryServicesShowcase2025 };
-;
-export { RevolutionaryServicesShowcase2025 };
-;
-export { RevolutionaryServicesShowcase2025 };
+
+export { RevolutionaryServicesShowcase2025 }
+export { RevolutionaryServicesShowcase2025 }
+export { RevolutionaryServicesShowcase2025 }
+export { RevolutionaryServicesShowcase2025 }
+export { RevolutionaryServicesShowcase2025 }

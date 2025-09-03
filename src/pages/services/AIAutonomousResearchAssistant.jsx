@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Search, Lightbulb, BarChart3, Rocket, GraduationCap, Globe } from 'lucide-react';
-const AIAutonomousResearchAssistant = () => {;
+const AIAutonomousResearchAssistant = () => {
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">;
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">;
@@ -407,17 +407,11 @@ const AIAutonomousResearchAssistant = () => {;
         </div>;
       </section>;
     </div>;
-  );,
-};
-;
+  )}
 export default AIAutonomousResearchAssistant;
-;
-export { AIAutonomousResearchAssistant };
-;
-export { AIAutonomousResearchAssistant };
-;
-export { AIAutonomousResearchAssistant };
-;
-export { AIAutonomousResearchAssistant };
-;
-export { AIAutonomousResearchAssistant };
+
+export { AIAutonomousResearchAssistant }
+export { AIAutonomousResearchAssistant }
+export { AIAutonomousResearchAssistant }
+export { AIAutonomousResearchAssistant }
+export { AIAutonomousResearchAssistant }

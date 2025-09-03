@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
-;
-;
-const CuttingEdgeServicesShowcase = () => {;
+
+
+const CuttingEdgeServicesShowcase = () => {
     const [selectedCategory, setSelectedCategory] = useState('All');
     const [selectedIndustry, setSelectedIndustry] = useState('All');
     const [searchTerm, setSearchTerm] = useState('');
     const allServices = [...cuttingEdgeInnovations2025, ...specializedIndustrySolutions2025];
     const categories = ['All', ...Array.from(new Set(allServices.map(service => service.category)))];
     const industries = ['All', ...Array.from(new Set(specializedIndustrySolutions2025.map(service => service.industry)))];
-    const filteredServices = allServices.filter(service => {;
+    const filteredServices = allServices.filter(service => {
         const categoryMatch = selectedCategory === 'All' || service.category === selectedCategory;
         const industryMatch = selectedIndustry === 'All' ||;
             ('industry' in service ? service.industry === selectedIndustry : true);
@@ -16,24 +16,23 @@ const CuttingEdgeServicesShowcase = () => {;
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
             service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
         return categoryMatch && industryMatch && searchMatch});
-    const formatPrice = (price, model) => {;
-        if (model === 'percentage of revenue') {;
+    const formatPrice = (price, model) => {
+        if (model === 'percentage of revenue') {
             return `${price}% of revenue`}
-        else if (model === 'per device per day') {;
+        else if (model === 'per device per day') {
             return `$${price.toFixed(2)}/device/day`}
-        else if (model === 'per kWh managed') {;
+        else if (model === 'per kWh managed') {
             return `$${price.toFixed(3)}/kWh`}
-        else if (model === 'per acre') {;
+        else if (model === 'per acre') {
             return `$${price.toFixed(2)}/acre/month`}
-        else if (model === 'per inference') {;
+        else if (model === 'per inference') {
             return `$${price.toFixed(3)}/inference`}
-        else if (model === 'monthly per student') {;
+        else if (model === 'monthly per student') {
             return `$${price}/student/month`}
-        else if (model === 'monthly per attorney') {;
-            return `$${price}/attorney/month`}
-        else {;
+        else if (model === 'monthly per attorney') {
+            return `$${price}/attorney/month`} else {
             return `$${price}/${model}`}
-    };
+    }
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 pt-32">;
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">;
         {/* Header Section */}
@@ -310,8 +309,7 @@ const CuttingEdgeServicesShowcase = () => {;
 ';
 '';
 ''';
-                      service.freeTier ? 'text-green-400' : 'text-red-400'';,
-}'';
+                      service.freeTier ? 'text-green-400' : 'text-red-400''}'';
                   >''';
                     {service.freeTier ? 'Yes' : 'No'}
                   </div>;
@@ -372,16 +370,12 @@ const CuttingEdgeServicesShowcase = () => {;
           </div>;
         </div>;
       </div>;
-    </div>)};
+    </div>)}
 export default CuttingEdgeServicesShowcase;
-;
 
-export { CuttingEdgeServicesShowcase };
-;
-export { CuttingEdgeServicesShowcase };
-;
-export { CuttingEdgeServicesShowcase };
-;
-export { CuttingEdgeServicesShowcase };
-;
-export { CuttingEdgeServicesShowcase };
+
+export { CuttingEdgeServicesShowcase }
+export { CuttingEdgeServicesShowcase }
+export { CuttingEdgeServicesShowcase }
+export { CuttingEdgeServicesShowcase }
+export { CuttingEdgeServicesShowcase }

@@ -37,23 +37,19 @@ export default function PricingGuidePage() {}
     const services = EXPANDED_SERVICES.filter(s => s.category === category);
     const avgRating =;
       services.reduce((sum, s) => sum + (s.rating || 0), 0) / services.length;
-    return { count: services.length, avgPrice, avgRating };,
-};
+    return { count: services.length, avgPrice, avgRating }}
   const formatPrice = price => {}
     if (price >= 1000) {}
-      return `$${(price / 1000).toFixed(1)}K`;`;,
-}``;
-    return `$${price}`;,
-};
+      return `$${(price / 1000).toFixed(1)}K`;`}``;
+    return `$${price}`}
   const getServiceTier = price => {}
     if (price < 2000)';
-      return { tier: 'Starter', color: 'bg-green-100 text-green-800' };
+      return { tier: 'Starter', color: 'bg-green-100 text-green-800' }
     if (price < 5000)';
-      return { tier: 'Professional', color: 'bg-blue-100 text-blue-800' };
+      return { tier: 'Professional', color: 'bg-blue-100 text-blue-800' }
     if (price < 10000)';
       return { tier: 'Enterprise', color: 'bg-purple-100 text-purple-800' };';
-    return { tier: 'Premium', color: 'bg-orange-100 text-orange-800' };,
-};
+    return { tier: 'Premium', color: 'bg-orange-100 text-orange-800' }}
   return();
     <div className="min-h-screen bg-background">";
       <SEO"";
@@ -147,8 +143,7 @@ export default function PricingGuidePage() {}
 ''';
                 selectedCategory === 'all''''';
                   ? 'bg-zion-cyan text-white''''';
-                  : 'border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10';,
-}
+                  : 'border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10'}
             >;
               All Services({EXPANDED_SERVICES.length}) </Button>;
             {SERVICE_CATEGORIES.map(category => {}
@@ -159,8 +154,7 @@ export default function PricingGuidePage() {}
 ';
 '';
 ''';
-                    selectedCategory === category.name ? 'default' : 'outline';,
-}
+                    selectedCategory === category.name ? 'default' : 'outline'}
                   onClick={ () => setSelectedCategory(category.name) }
                   className={}
 ';
@@ -168,11 +162,9 @@ export default function PricingGuidePage() {}
 ''';
                     selectedCategory === category.name'''';
                       ? 'bg-zion-cyan text-white''''';
-                      : 'border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10';,
-}
+                      : 'border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10'}
                 >;
-                  {category.name} ({stats.count}) </Button>) ;,
-}) }
+                  {category.name} ({stats.count}) </Button>) }) }
           </div>;
         </div>;
       </div>;
@@ -301,8 +293,7 @@ export default function PricingGuidePage() {}
                     </Button>;
                   </div>;
                 </CardContent>;
-              </Card>) ;,
-}) }
+              </Card>) }) }
         </div>;
 ";
         {filteredServices.length === 0 && ("";
@@ -465,14 +456,10 @@ export default function PricingGuidePage() {}
         </div>;
       </div>;
     </div>)}
-;
 
-export { PricingGuidePage };
-;
-export { PricingGuidePage };
-;
-export { PricingGuidePage };
-;
-export { PricingGuidePage };
-;
-export { PricingGuidePage };
+
+export { PricingGuidePage }
+export { PricingGuidePage }
+export { PricingGuidePage }
+export { PricingGuidePage }
+export { PricingGuidePage }

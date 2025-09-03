@@ -1,5 +1,5 @@
 var __rest = (this && this.__rest) || function (s, e) {}
-    var t = {};
+    var t = {}
     for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0);
         t[p] = s[p];
     if (s != null && typeof Object.getOwnPropertySymbols === "function");
@@ -22,8 +22,7 @@ const Badge = ({ children, className = '', variant = 'default' }) => {}
   default: 'border-transparent bg-primary text-primary-foreground',''';
     secondary: 'border-transparent bg-secondary text-secondary-foreground',''';
     destructive: 'border-transparent bg-destructive text-destructive-foreground',''';
-  outline: 'text-foreground';,
-};';
+  outline: 'text-foreground'};';
   '';
 import React from 'react';
 ';
@@ -39,25 +38,15 @@ const Badge = ({ children, className = '', variant = 'default' }) => {}
     default: 'border-transparent bg-primary text-primary-foreground',''';
     secondary: 'border-transparent bg-secondary text-secondary-foreground',''';
     destructive: 'border-transparent bg-destructive text-destructive-foreground',''';
-    outline: 'text-foreground';,
-};
-;
+    outline: 'text-foreground'}
   return();
     <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}>;
       {children}
     </div>;
-  );,
-};
-;
-export { Badge };
-;
-
-export { Badge, Badge };
-;
-export { Badge, Badge };
-;
-export { Badge, Badge };
-;
-export { Badge, Badge };
-;
-export { Badge, Badge };
+  )}
+export { Badge }
+export { Badge, Badge }
+export { Badge, Badge }
+export { Badge, Badge }
+export { Badge, Badge }
+export { Badge, Badge }

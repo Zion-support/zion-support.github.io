@@ -1,5 +1,5 @@
 import { ServiceVariant  } from "../types/service-variants";
-export interface EmergingTech2028Service {;
+export interface EmergingTech2028Service {
   id: string;
   name: string;
   tagline: string;
@@ -26,7 +26,7 @@ export interface EmergingTech2028Service {;
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -38,7 +38,7 @@ export interface EmergingTech2028Service {;
   rating: number;
 export const emergingTech2028Services: EmergingTech2028Service[] = [;
   // Biometric Authentication Platform;
-  {;
+  {
     id: "biometric-authentication-platform",;
     name: "Biometric Authentication Platform",;
     tagline: "Secure identity verification with advanced biometrics",;
@@ -76,21 +76,19 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [;
     marketSize: "$18B biometric market",;
     growthRate: "30% annual growth",;
     variant: "biometric-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete biometric authentication platform with multi-modal verification, liveness detection, and compliance tools. Includes mobile SDKs and web APIs.",;
     launchDate: "2028-01-20",;
     customers: 180,;
     rating: 4.8,;
-    reviews: 134;,;,
-},;
+    reviews: 134},;
   // Edge Computing Orchestration Platform;
-  {;
+  {
     id: "edge-computing-orchestration-platform",;
     name: "Edge Computing Orchestration Platform",;
     tagline: "Intelligent edge computing management and optimization",;
@@ -128,21 +126,19 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [;
     marketSize: "$22B edge computing market",;
     growthRate: "35% annual growth",;
     variant: "edge-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete edge computing orchestration platform with intelligent workload distribution, resource optimization, and comprehensive monitoring. Includes mobile management and analytics.",;
     launchDate: "2028-02-01",;
     customers: 95,;
     rating: 4.7,;
-    reviews: 68;,;,
-},;
+    reviews: 68},;
   // 5G Network Optimization Platform;
-  {;
+  {
     id: "5g-network-optimization-platform",;
     name: "5G Network Optimization Platform",;
     tagline: "Intelligent 5G network performance and optimization",;
@@ -180,21 +176,19 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [;
     marketSize: "$35B 5G infrastructure market",;
     growthRate: "40% annual growth",;
     variant: "5g-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete 5G network optimization platform with AI-powered monitoring, optimization, and analytics. Includes mobile management and comprehensive reporting.",;
     launchDate: "2028-01-15",;
     customers: 65,;
     rating: 4.9,;
-    reviews: 48;,;,
-},;
+    reviews: 48},;
   // Blockchain Supply Chain Platform;
-  {;
+  {
     id: "blockchain-supply-chain-platform",;
     name: "Blockchain Supply Chain Platform",;
     tagline: "Transparent and secure supply chain with blockchain",;
@@ -232,21 +226,19 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [;
     marketSize: "$20B blockchain supply chain market",;
     growthRate: "45% annual growth",;
     variant: "blockchain-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete blockchain supply chain platform with end-to-end tracking, smart contracts, and comprehensive analytics. Includes mobile apps and API access.",;
     launchDate: "2028-02-01",;
     customers: 140,;
     rating: 4.8,;
-    reviews: 98;,;,
-},;
+    reviews: 98},;
   // AI-Powered Content Creation Suite;
-  {;
+  {
     id: "ai-content-creation-suite",;
     name: "AI Content Creation Suite",;
     tagline: "Revolutionary content creation with artificial intelligence",;
@@ -284,21 +276,19 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [;
     marketSize: "$15B AI content creation market",;
     growthRate: "50% annual growth",;
     variant: "ai-content",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete AI content creation suite with text, video, and image generation capabilities. Includes social media automation and analytics tools.",;
     launchDate: "2028-01-25",;
     customers: 250,;
     rating: 4.7,;
-    reviews: 189;,;,
-},;
+    reviews: 189},;
   // Quantum Machine Learning Platform;
-  {;
+  {
     id: "quantum-machine-learning-platform",;
     name: "Quantum Machine Learning Platform",;
     tagline: "Quantum computing powered machine learning",;
@@ -336,21 +326,19 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [;
     marketSize: "$12B quantum computing market",;
     growthRate: "60% annual growth",;
     variant: "quantum-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete quantum machine learning platform with quantum algorithms, neural networks, and classical ML integration. Includes comprehensive documentation and expert support.",;
     launchDate: "2028-01-30",;
     customers: 45,;
     rating: 4.9,;
-    reviews: 32;,;,
-},;
+    reviews: 32},;
   // Autonomous Vehicle Fleet Management;
-  {;
+  {
     id: "autonomous-vehicle-fleet-management",;
     name: "Autonomous Vehicle Fleet Management",;
     tagline: "Intelligent fleet management for autonomous vehicles",;
@@ -388,21 +376,19 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [;
     marketSize: "$28B autonomous vehicle market",;
     growthRate: "55% annual growth",;
     variant: "autonomous-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete autonomous vehicle fleet management platform with AI optimization, safety monitoring, and comprehensive analytics. Includes mobile management and API access.",;
     launchDate: "2028-02-15",;
     customers: 85,;
     rating: 4.8,;
-    reviews: 67;,;,
-},;
+    reviews: 67},;
   // Digital Twin Platform;
-  {;
+  {
     id: "digital-twin-platform",;
     name: "Digital Twin Platform",;
     tagline: "Virtual replicas for real-world optimization",;
@@ -440,12 +426,11 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [;
     marketSize: "$32B digital twin market",;
     growthRate: "40% annual growth",;
     variant: "digital-twin-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete digital twin platform with 3D modeling, real-time monitoring, and predictive analytics. Includes mobile monitoring and comprehensive reporting.",;
     launchDate: "2028-01-20",;

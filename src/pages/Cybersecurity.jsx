@@ -8,20 +8,17 @@ const Cybersecurity = () => {}
 ";
             icon: CheckCircle,"";
             title: "24/7 Monitoring","";
-            description: "Continuous security monitoring and threat detection";,
-},;
+            description: "Continuous security monitoring and threat detection"},;
         {}
 ";
             icon: Zap,"";
             title: "Real-time Response","";
-            description: "Instant automated response to security incidents";,
-},;
+            description: "Instant automated response to security incidents"},;
         {}
 ";
             icon: Target,"";
             title: "Proactive Defense","";
-            description: "Predictive security using AI and machine learning";,
-},;
+            description: "Predictive security using AI and machine learning"},;
         {}
 ";
             icon: BarChart3,"";
@@ -221,16 +218,11 @@ const Cybersecurity = () => {}
           </div>;
         </div>;
       </section>;
-    </div>)};
-export default Cybersecurity;,
-}}}
-;
-export { Cybersecurity };
-;
-export { Cybersecurity };
-;
-export { Cybersecurity };
-;
-export { Cybersecurity };
-;
-export { Cybersecurity };
+    </div>)}
+export default Cybersecurity}}}
+
+export { Cybersecurity }
+export { Cybersecurity }
+export { Cybersecurity }
+export { Cybersecurity }
+export { Cybersecurity }

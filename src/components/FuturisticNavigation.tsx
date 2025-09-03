@@ -1,18 +1,18 @@
 import {  import { MobileSidebarToggle } from './MobileSidebarToggle';
-export default function Page() {;
+export default function Page() {
 , [location.pathname]);
-  ;
+
     e.preventDefault();
       e.preventDefault();
-    if(searchQuery.trim()) {;
+    if(searchQuery.trim()) {
 
-      window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`};
-  ;
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown) };
-  ;
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown) };
+      window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`}
+
+    setActiveDropdown(activeDropdown === dropdown ? null : dropdown) }
+
+    setActiveDropdown(activeDropdown === dropdown ? null : dropdown) }
   // Enhanced service categories with better organization;
-  ;
+
         { name: 'AI Autonomous Trading', href: '/ai-services/autonomous-trading', icon: DollarSign, description: 'AI-powered financial trading platform' },;
         { name: 'AI Consciousness Simulator', href: '/ai-services/consciousness-simulator', icon: Brain, description: 'Quantum AI consciousness research' },;
         { name: 'AI Business Operations', href: '/ai-services/business-operations', icon: Building, description: 'Autonomous business management' },;
@@ -29,9 +29,8 @@ export default function Page() {;
         { name: 'AI Content Creation', href: '/ai-services/content-creation', icon: FileText, description: 'Autonomous content generation' },';
         { name: 'AI Supply Chain', href: '/ai-services/supply-chain', icon: Truck, description: 'AI-powered supply chain optimization' },';
         { name: 'View All AI Services', href: '/ultimate-services-2027', icon: Sparkles, description: 'Complete AI services showcase' },'        { name: 'Innovative Services 2028', href: '/innovative-services-2028', icon: Crown, description: 'Latest innovative services for 2028' }
-      ];,
-},;
-    {;
+      ]},;
+    {
 ";
       name: "Micro SAAS Solutions",;
       icon: Cloud,;
@@ -42,9 +41,8 @@ export default function Page() {;
         { name: "Industry Solutions", href: "/micro-saas/industry" },";
         { name: "Custom Development", href: "/micro-saas/custom" },";
         { name: "Marketplace", href: "/marketplace" }
-      ];,
-},;
-    {;
+      ]},;
+    {
 ";
       name: "IT Infrastructure",;
       icon: Server,;
@@ -55,9 +53,8 @@ export default function Page() {;
         { name: "DevOps & Automation", href: "/it-services/devops" },";
         { name: "Data Management", href: "/it-services/data" },";
         { name: "Network Security", href: "/it-services/network-security" }
-      ];,
-},;
-    {;
+      ]},;
+    {
 ";
       name: "Emerging Technologies",;
       icon: Rocket,;
@@ -68,9 +65,8 @@ export default function Page() {;
         { name: "IoT Solutions", href: "/emerging-tech/iot" },";
         { name: "Green Technology", href: "/green-it" },";
         { name: "Space Technology", href: "/emerging-tech/space" }
-      ];,
-},;
-    {;
+      ]},;
+    {
 
       name: '2028 Services',;
       href: '/innovative-services-2028',;
@@ -80,30 +76,27 @@ export default function Page() {;
         { name: 'Innovative Services 2028', href: '/innovative-services-2028', icon: Crown, description: 'Latest innovative services for 2028' },;
         { name: 'Micro SAAS 2028', href: '/micro-saas-2028', icon: Zap, description: 'Advanced micro SAAS solutions' },;
         { name: 'IT Services 2028', href: '/it-services-2028', icon: Server, description: 'Next-generation IT services' },;
-        { name: 'Pricing Guide 2028', href: '/comprehensive-pricing-guide-2028', icon: Calculator, description: 'Complete pricing and ROI analysis' };
-      ]};
+        { name: 'Pricing Guide 2028', href: '/comprehensive-pricing-guide-2028', icon: Calculator, description: 'Complete pricing and ROI analysis' }
+      ]}
   ];
   return ();
     <>`;
       <header className={`sticky top-0 z-50 w-full transition-all duration-500 ${scrolled';
           ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10'';
-          : 'bg-transparent'`;,
-}`}>";
+          : 'bg-transparent'`}`}>";
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">";
           <div className="flex h-20 items-center justify-between">;
             {/* Enhanced Logo */}
             <motion.div";
               className="flex items-center";
-              initial = {;
+              initial = {
 
   { opacity: 0,;
-  x: -20;,
-}}
-              animate = {;
+  x: -20}}
+              animate = {
 
   { opacity: 1,;
-  x: 0;,
-}}
+  x: 0}}
               transition={{ duration: 0.5 }}
 ";
               <Link to="/" className="flex items-center space-x-3 group">";
@@ -126,21 +119,18 @@ export default function Page() {;
             <nav className="hidden lg:flex items-center space-x-1">;
               {/* Main Navigation Links */}
               <motion.div;
-                initial = {;
+                initial = {
 
   { opacity: 0,;
-  y: -20;,
-}}
-                animate = {;
+  y: -20}}
+                animate = {
 
   { opacity: 1,;
-  y: 0;,
-}}
-                transition = {;
+  y: 0}}
+                transition = {
 
   { duration: 0.5,;
-  delay: 0.1;,
-}}
+  delay: 0.1}}
               >;
                 <Link";
                   to="/about";
@@ -150,21 +140,18 @@ export default function Page() {;
                 </Link>;
               </motion.div>;
               <motion.div;
-                initial = {;
+                initial = {
 
   { opacity: 0,;
-  y: -20;,
-}}
-                animate = {;
+  y: -20}}
+                animate = {
 
   { opacity: 1,;
-  y: 0;,
-}}
-                transition = {;
+  y: 0}}
+                transition = {
 
   { duration: 0.5,;
-  delay: 0.15;,
-}}
+  delay: 0.15}}
               >;
                 <Link";
                   to="/partners";
@@ -177,50 +164,42 @@ export default function Page() {;
               {serviceCategories.map((category, index) => (";
                 <div key={category.name} className="relative">;
                   <motion.button;
-                    initial = {;
+                    initial = {
 
   { opacity: 0,;
-  y: -20;,
-}}
-                    animate = {;
+  y: -20}}
+                    animate = {
 
   { opacity: 1,;
-  y: 0;,
-}}
-                    transition = {;
+  y: 0}}
+                    transition = {
 
   { duration: 0.5,;
-  delay: (index + 2) * 0.1;,
-}}
+  delay: (index + 2) * 0.1}}
                     onClick={() => toggleDropdown(category.name)}`;
                     className={`nav-link flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 group ${activeDropdown === category.name';
                         ? 'text-zion-cyan bg-zion-cyan/10 shadow-lg shadow-zion-cyan/20'';
-                        : 'hover:text-zion-cyan hover:bg-zion-cyan/5 hover:shadow-lg hover:shadow-zion-cyan/10'`;,
-}`}
+                        : 'hover:text-zion-cyan hover:bg-zion-cyan/5 hover:shadow-lg hover:shadow-zion-cyan/10'`}`}
 ";
                     <category.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />";
                     <span className="font-medium">{category.name}</span>`;
-                    <ChevronDown className={`w-3 h-3 transition-transform duration-300 ${activeDropdown === category.name ? 'rotate-180' : ''`;,
-}`}  />                  </motion.button>;
+                    <ChevronDown className={`w-3 h-3 transition-transform duration-300 ${activeDropdown === category.name ? 'rotate-180' : ''`}`}  />                  </motion.button>;
                   {/* Enhanced Dropdown Menu */}
                   <AnimatePresence>;
                     {activeDropdown === category.name && ;
                       <motion.div;
-                        initial = {;
+                        initial = {
 
   { opacity: 0, y: -10,;
-  scale: 0.95;,
-}}
-                        animate = {;
+  scale: 0.95}}
+                        animate = {
 
   { opacity: 1, y: 0,;
-  scale: 1;,
-}}
-                        exit = {;
+  scale: 1}}
+                        exit = {
 
   { opacity: 0, y: -10,;
-  scale: 0.95;,
-}}
+  scale: 0.95}}
                         transition={{ duration: 0.2 }}";
                         className="absolute top-full left-0 mt-2 w-80 bg-zion-slate-dark/95 backdrop-blur-xl border border-zion-cyan/20 rounded-xl shadow-2xl shadow-zion-cyan/20 overflow-hidden";
 ";
@@ -233,21 +212,18 @@ export default function Page() {;
                             {category.services.map((service, subIndex) => (;
                               <motion.div;
                                 key={service.name}
-                                initial = {;
+                                initial = {
 
   { opacity: 0,;
-  x: -20;,
-}}
-                                animate = {;
+  x: -20}}
+                                animate = {
 
   { opacity: 1,;
-  x: 0;,
-}}
-                                transition = {;
+  x: 0}}
+                                transition = {
 
   { duration: 0.3,;
-  delay: subIndex * 0.05;,
-}}
+  delay: subIndex * 0.05}}
                               >;
                                 <Link;
                                   to={service.href}";
@@ -310,7 +286,7 @@ export default function Page() {;
         </div>;
       </header>;
     </>;
-  )};
+  )}
 '"`;
 
-;,"});,})";
+;,"});})";

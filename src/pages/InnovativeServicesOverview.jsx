@@ -1,11 +1,11 @@
 import React, { useState } from 'react';''';
 import { motion } from 'framer-motion';
-;
-;
-;
-;
-;
-const InnovativeServicesOverview = () => {;
+
+
+
+
+
+const InnovativeServicesOverview = () => {
     const [selectedService, setSelectedService] = useState(null);    const [selectedCategory, setSelectedCategory] = useState('all');
     const allServices = [];
         ...comprehensiveMicroSaasServices2025,;
@@ -28,19 +28,15 @@ const InnovativeServicesOverview = () => {;
     ];';
     const filteredServices = selectedCategory === 'all';
         ? allServices;
-        : allServices.filter(service => {;
+        : allServices.filter(service => {
             const category = categories.find(c => c.id === selectedCategory);
             if (!category);
                 return true;
-            const categoryMappings = {;
+            const categoryMappings = {
 
-;
-export { InnovativeServicesOverview };
-;
-export { InnovativeServicesOverview };
-;
-export { InnovativeServicesOverview };
-;
-export { InnovativeServicesOverview };
-;
+
+export { InnovativeServicesOverview }
+export { InnovativeServicesOverview }
+export { InnovativeServicesOverview }
+export { InnovativeServicesOverview }
 export { InnovativeServicesOverview };}}})

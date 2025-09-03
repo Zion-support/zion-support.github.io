@@ -26,9 +26,8 @@ export default function ComprehensiveServicesPage() {}
 ';
 '';
 ''';
-  'Micro SAAS': 'bg-blue-100 text-blue-800',IT Services': 'bg-green-100 text-green-800',AI Services': 'bg-purple-100 text-purple-800';,
-};';
-        return colorMap[type] || 'bg-gray-100 text-gray-800'};
+  'Micro SAAS': 'bg-blue-100 text-blue-800',IT Services': 'bg-green-100 text-green-800',AI Services': 'bg-purple-100 text-purple-800'};';
+        return colorMap[type] || 'bg-gray-100 text-gray-800'}
     return (<div className="min-h-screen bg-zion-blue-dark">"";
               <SEO title="Comprehensive Micro SAAS Solutions - Zion Tech Group" description="Discover our extensive portfolio of innovative micro SAAS, IT, and AI services designed to transform your business operations and drive growth" keywords="micro SAAS, IT services, AI solutions, Zion Tech Group" url="https://ziontechgroup.com/comprehensive-services"/>;
 ";
@@ -227,22 +226,19 @@ export default function ComprehensiveServicesPage() {}
 "";
                 icon: <Zap className="w-8 h-8"/>,"";
                 title: "Innovation First","";
-                description: "Cutting-edge AI and technology solutions that keep you ahead of the competition";,
-},;
+                description: "Cutting-edge AI and technology solutions that keep you ahead of the competition"},;
             {}
 ";
 "";
                 icon: <Shield className="w-8 h-8"/>,"";
                 title: "Enterprise Security","";
-                description: "Bank-level security and compliance for all our solutions and services";,
-},;
+                description: "Bank-level security and compliance for all our solutions and services"},;
             {}
 ";
 "";
                 icon: <Building className="w-8 h-8"/>,"";
                 title: "Proven Results","";
-                description: "Track record of successful implementations and measurable business outcomes";,
-},;
+                description: "Track record of successful implementations and measurable business outcomes"},;
             {}
 ";
 "";
@@ -283,14 +279,10 @@ export default function ComprehensiveServicesPage() {}
         </div>;
       </div>;
     </div>)}
-;
 
-export { ComprehensiveServicesPage };
-;
-export { ComprehensiveServicesPage };
-;
-export { ComprehensiveServicesPage };
-;
-export { ComprehensiveServicesPage };
-;
-export { ComprehensiveServicesPage };
+
+export { ComprehensiveServicesPage }
+export { ComprehensiveServicesPage }
+export { ComprehensiveServicesPage }
+export { ComprehensiveServicesPage }
+export { ComprehensiveServicesPage }

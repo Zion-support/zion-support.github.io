@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Heart, Shield, Users, Activity, Microscope, Pill } from 'lucide-react';
-;
-const HealthcareSolutions = () => {;
+
+const HealthcareSolutions = () => {
     const solutions = [;
-        {;
+        {
             title: 'AI-Powered Patient Care',;
             description: 'Intelligent patient monitoring and care management systems.',;
             features: [;
@@ -15,9 +15,8 @@ const HealthcareSolutions = () => {;
                 'Care coordination platform';
             ],;
             icon: Heart,;
-            href: '/services/ai-autonomous-systems';,
-},;
-        {;
+            href: '/services/ai-autonomous-systems'},;
+        {
             title: 'Medical Imaging AI',;
             description: 'Advanced AI for diagnostic imaging and analysis.',;
             features: [;
@@ -28,9 +27,8 @@ const HealthcareSolutions = () => {;
                 'Quality assurance tools';
             ],;
             icon: Microscope,;
-            href: '/services/ai-autonomous-systems';,
-},;
-        {;
+            href: '/services/ai-autonomous-systems'},;
+        {
             title: 'Drug Discovery Platform',;
             description: 'AI-driven pharmaceutical research and development.',;
             features: [;
@@ -41,9 +39,8 @@ const HealthcareSolutions = () => {;
                 'Safety prediction';
             ],;
             icon: Pill,;
-            href: '/services/quantum-technology';,
-},;
-        {;
+            href: '/services/quantum-technology'},;
+        {
             title: 'Healthcare Compliance',;
             description: 'Automated compliance management for healthcare regulations.',;
             features: [;
@@ -54,25 +51,21 @@ const HealthcareSolutions = () => {;
                 'Document management';
             ],;
             icon: Shield,;
-            href: '/services/cybersecurity';,
-}
+            href: '/services/cybersecurity'}
     ];
     const benefits = [;
-        {;
+        {
             title: 'Improved Patient Outcomes',;
             description: 'AI-driven insights lead to better diagnosis and treatment.',;
-            icon: Activity;,
-},;
-        {;
+            icon: Activity},;
+        {
             title: 'Operational Efficiency',;
             description: 'Streamlined workflows reduce costs and improve care delivery.',;
-            icon: Users;,
-},;
-        {;
+            icon: Users},;
+        {
             title: 'Enhanced Security',;
             description: 'HIPAA-compliant solutions protect patient data.',;
-            icon: Shield;,
-}
+            icon: Shield}
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">;
       {/* Header Section */}
@@ -104,7 +97,7 @@ const HealthcareSolutions = () => {;
           </h2>;
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
-            {solutions.map((solution, index) => {;
+            {solutions.map((solution, index) => {
             const Icon = solution.icon;
             return (<div key={index} className="bg-gray-800/30 rounded-2xl p-8 border border-gray-700 hover:border-cyan-400/50 transition-all duration-300">;
                   <div className="flex items-center mb-6">;
@@ -129,8 +122,7 @@ const HealthcareSolutions = () => {;
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"/>;
                     </svg>;
                   </Link>;
-                </div>);,
-})}
+                </div>)})}
           </div>;
         </div>;
       </div>;
@@ -143,7 +135,7 @@ const HealthcareSolutions = () => {;
           </h2>;
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-            {benefits.map((benefit, index) => {;
+            {benefits.map((benefit, index) => {
             const Icon = benefit.icon;
             return (<div key={index} className="text-center">;
                   <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6">;
@@ -151,8 +143,7 @@ const HealthcareSolutions = () => {;
                   </div>;
                   <h3 className="text-xl font-bold mb-4">{benefit.title}</h3>;
                   <p className="text-gray-300">{benefit.description}</p>;
-                </div>);,
-})}
+                </div>)})}
           </div>;
         </div>;
       </div>;
@@ -179,17 +170,11 @@ const HealthcareSolutions = () => {;
         </div>;
       </div>;
     </div>;
-  );,
-};
-;
+  )}
 export default HealthcareSolutions;
-;
-export { HealthcareSolutions, Icon, Icon };
-;
-export { HealthcareSolutions, Icon, Icon };
-;
-export { HealthcareSolutions, Icon, Icon };
-;
-export { HealthcareSolutions, Icon, Icon };
-;
-export { HealthcareSolutions, Icon, Icon };
+
+export { HealthcareSolutions, Icon, Icon }
+export { HealthcareSolutions, Icon, Icon }
+export { HealthcareSolutions, Icon, Icon }
+export { HealthcareSolutions, Icon, Icon }
+export { HealthcareSolutions, Icon, Icon }

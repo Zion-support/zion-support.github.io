@@ -9,39 +9,33 @@ import { SEO } from "@/components/SEO";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace";
 import { useWhitelabel } from "@/context/WhitelabelContext";
-;
-export default function CompanyWorkspace() {;
-  const { companySlug } = useParams() as { companySlug?: string };
+
+export default function CompanyWorkspace() {
+  const { companySlug } = useParams() as { companySlug?: string }
   const { user } = useAuth();
   const { company, isLoading, error } = useCompanyWorkspace(companySlug);
   const { isWhitelabel, tenant, brandName } = useWhitelabel();
-  ;
-  if (isLoading) {;
+
+  if (isLoading) {
     return (;
       <div className="flex items-center justify-center min-h-screen">;
         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan"></div>;
       </div>;
-    );,
-}
-  ;
-  if (error || !company) {;
-            return <Navigate to="/" />;,
-}
-  ;
+    )}
+  if (error || !company) {
+            return <Navigate to="/" />}
   // In white-label mode, use the tenant's theme instead of the company's theme;
-  const effectiveTheme = isWhitelabel ? {;
+  const effectiveTheme = isWhitelabel ? {
     primaryColor: tenant?.primary_color || company.theme?.primaryColor,;
     backgroundColor: company.theme?.backgroundColor || 'var(--background)',;
-    textColor: company.theme?.textColor || 'var(--foreground)';,
-} : company.theme;
-  ;
+    textColor: company.theme?.textColor || 'var(--foreground)'} : company.theme;
+
   // Check if user has access to this company workspace;
   const hasAccess = true; // For demo purposes, always grant access;
 
-  if (!hasAccess) {;
-    return <Navigate to="/unauthorized" />;,
-}
-;
+  if (!hasAccess) {
+    return <Navigate to="/unauthorized" />}
+
   return (;
     <ProtectedRoute>;
       <SEO ;
@@ -63,8 +57,7 @@ export default function CompanyWorkspace() {;
   );
 import React from "react";
 import { SEO } from "@/components/SEO";
-;,"});,"});,
-}
+;,"});,"})}
 export default function CompanyWorkspace() {return (";
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">";
       <SEO title="CompanyWorkspace - Zion Tech Group" description="Professional CompanyWorkspace services by Zion Tech Group"  />";
@@ -74,6 +67,5 @@ export default function CompanyWorkspace() {return (";
           Professional CompanyWorkspace services to help your business grow.;
         </p>;
       </div>;
-  );,
-}
+  )}
 }

@@ -1,41 +1,36 @@
 import React from 'react';
-;
-export function StatsSection() {;
+
+export function StatsSection() {
   const stats = [{;
       number: '500+',;
       label: 'Projects Completed',;
       description: 'Successfully delivered solutions',;
       icon: '🚀',;
-      color: 'from-purple-500 to-pink-500';,
-},;
-    {;
+      color: 'from-purple-500 to-pink-500'},;
+    {
       number: '99.9%',;
       label: 'Uptime Guarantee',;
       description: 'Reliable service availability',;
       icon: '⚡',;
-      color: 'from-green-500 to-emerald-500';,
-},;
-    {;
+      color: 'from-green-500 to-emerald-500'},;
+    {
       number: '24/7',;
       label: 'Support Available',;
       description: 'Round-the-clock technical assistance',;
       icon: '🔄',;
-      color: 'from-yellow-500 to-orange-500';,
-},;
-    {;
+      color: 'from-yellow-500 to-orange-500'},;
+    {
       number: '50+',;
       label: 'Expert Team',;
       description: 'Certified professionals',;
       icon: '💡',;
-      color: 'from-indigo-500 to-purple-500';,
-},;
-    {;
+      color: 'from-indigo-500 to-purple-500'},;
+    {
       number: '15+',;
       label: 'Years Experience',;
       description: 'Industry expertise and knowledge',;
       icon: '🏆',;
-      color: 'from-red-500 to-pink-500';,
-}
+      color: 'from-red-500 to-pink-500'}
   ];
   return ();
     <section className="py-16 bg-white">";
@@ -100,7 +95,6 @@ export function StatsSection() {;
         </div>;
       </div>;
     </section>;
-  );,
-}
-;
+  )}
+
 export default StatsSection;

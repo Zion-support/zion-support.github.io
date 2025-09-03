@@ -1,5 +1,5 @@
 import { ServiceVariant  } from "../types/service-variants";
-export interface Revolutionary2026ITInfrastructureService {;
+export interface Revolutionary2026ITInfrastructureService {
   id: string;
   name: string;
   tagline: string;
@@ -26,7 +26,7 @@ export interface Revolutionary2026ITInfrastructureService {;
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -37,7 +37,7 @@ export interface Revolutionary2026ITInfrastructureService {;
   customers: number;
   rating: number;
 export const revolutionary2026ITInfrastructureServices: Revolutionary2026ITInfrastructureService[] = [;
-  {;
+  {
     id: "quantum-cloud-infrastructure",;
     name: "Quantum Cloud Infrastructure Platform",;
     tagline: "Quantum-powered cloud infrastructure for the future",;
@@ -75,20 +75,18 @@ export const revolutionary2026ITInfrastructureServices: Revolutionary2026ITInfra
     marketSize: "$45B market",;
     growthRate: "280% annual growth",;
     variant: "quantum-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Full quantum cloud infrastructure with advanced computing, security, and monitoring capabilities.",;
     launchDate: "2026-02-01",;
     customers: 200,;
     rating: 4.8,;
-    reviews: 100;,;,
-},;
-  {;
+    reviews: 100},;
+  {
     id: "neuromorphic-computing-platform",;
     name: "Neuromorphic Computing Platform",;
     tagline: "Brain-inspired computing for next-generation AI",;
@@ -126,20 +124,18 @@ export const revolutionary2026ITInfrastructureServices: Revolutionary2026ITInfra
     marketSize: "$8B market",;
     growthRate: "250% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Full neuromorphic computing platform with brain-inspired architecture and advanced AI capabilities.",;
     launchDate: "2026-01-25",;
     customers: 150,;
     rating: 4.7,;
-    reviews: 75;,;,
-},;
-  {;
+    reviews: 75},;
+  {
     id: "photonic-computing-infrastructure",;
     name: "Photonic Computing Infrastructure",;
     tagline: "Light-speed computing with photonic processors",;
@@ -177,20 +173,18 @@ export const revolutionary2026ITInfrastructureServices: Revolutionary2026ITInfra
     marketSize: "$12B market",;
     growthRate: "220% annual growth",;
     variant: "it-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Full photonic computing infrastructure with light-speed processing and advanced optical capabilities.",;
     launchDate: "2026-02-10",;
     customers: 180,;
     rating: 4.8,;
-    reviews: 90;,;,
-},;
-  {;
+    reviews: 90},;
+  {
     id: "dna-computing-platform",;
     name: "DNA Computing Platform",;
     tagline: "Molecular computing for complex problem solving",;
@@ -228,20 +222,18 @@ export const revolutionary2026ITInfrastructureServices: Revolutionary2026ITInfra
     marketSize: "$35B emerging market",;
     growthRate: "400% annual growth",;
     variant: "healthcare-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced DNA computing platform with molecular processing and biological algorithms.",;
     launchDate: "2026-03-01",;
     customers: 80,;
     rating: 4.9,;
-    reviews: 40;,;,
-},;
-  {;
+    reviews: 40},;
+  {
     id: "holographic-computing-infrastructure",;
     name: "Holographic Computing Infrastructure",;
     tagline: "3D holographic computing for immersive experiences",;
@@ -279,20 +271,18 @@ export const revolutionary2026ITInfrastructureServices: Revolutionary2026ITInfra
     marketSize: "$18B market",;
     growthRate: "280% annual growth",;
     variant: "holographic-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Full holographic computing infrastructure with 3D processing and immersive capabilities.",;
     launchDate: "2026-01-30",;
     customers: 250,;
     rating: 4.7,;
-    reviews: 125;,;,
-},;
-  {;
+    reviews: 125},;
+  {
     id: "quantum-internet-infrastructure",;
     name: "Quantum Internet Infrastructure",;
     tagline: "Ultra-secure quantum communication network",;
@@ -330,20 +320,18 @@ export const revolutionary2026ITInfrastructureServices: Revolutionary2026ITInfra
     marketSize: "$28B market",;
     growthRate: "320% annual growth",;
     variant: "quantum-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Full quantum internet infrastructure with ultra-secure communication and advanced networking capabilities.",;
     launchDate: "2026-02-20",;
     customers: 120,;
     rating: 4.8,;
-    reviews: 60;,;,
-},;
-  {;
+    reviews: 60},;
+  {
     id: "edge-quantum-computing",;
     name: "Edge Quantum Computing Platform",;
     tagline: "Quantum computing at the edge for real-time processing",;
@@ -381,20 +369,18 @@ export const revolutionary2026ITInfrastructureServices: Revolutionary2026ITInfra
     marketSize: "$22B emerging market",;
     growthRate: "350% annual growth",;
     variant: "edge-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced edge quantum computing platform with real-time processing and mobile optimization.",;
     launchDate: "2026-02-15",;
     customers: 300,;
     rating: 4.7,;
-    reviews: 150;,;,
-},;
-  {;
+    reviews: 150},;
+  {
     id: "quantum-robotics-infrastructure",;
     name: "Quantum Robotics Infrastructure",;
     tagline: "Quantum-powered robotics for advanced automation",;
@@ -432,12 +418,11 @@ export const revolutionary2026ITInfrastructureServices: Revolutionary2026ITInfra
     marketSize: "$32B market",;
     growthRate: "280% annual growth",;
     variant: "autonomous-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Full quantum robotics infrastructure with advanced automation and real-time control capabilities.",;
     launchDate: "2026-03-10",;

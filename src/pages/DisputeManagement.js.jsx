@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-;
-export default function DisputeManagement() {;
+
+export default function DisputeManagement() {
     const [activeTab, setActiveTab] = useState('overview');
     return (<>;
       <SEO title="Dispute Management | Zion Tech Group" description="Admin dashboard for managing and resolving marketplace disputes and conflicts" keywords="dispute management, admin dashboard, conflict resolution, marketplace admin, Zion Tech Group" canonical="https://ziontechgroup.com/admin/disputes"/>;
@@ -27,8 +27,7 @@ export default function DisputeManagement() {;
 '''`;
                   activeTab === 'overview''''`'`;
                     ? 'bg-zion-cyan text-zion-blue-dark'''`'`'`;
-                    : 'text-zion-slate-light hover:text-white hover:bg-zion-blue'````;,
-}`}
+                    : 'text-zion-slate-light hover:text-white hover:bg-zion-blue'````}`}
               >;
                 Overview;
               </button>';
@@ -40,8 +39,7 @@ export default function DisputeManagement() {;
 '''`;
                   activeTab === 'disputes''''`'`;
                     ? 'bg-zion-cyan text-zion-blue-dark'''`'`'`;
-                    : 'text-zion-slate-light hover:text-white hover:bg-zion-blue'````;,
-}`}
+                    : 'text-zion-slate-light hover:text-white hover:bg-zion-blue'````}`}
               >;
                 Active Disputes;
               </button>';
@@ -53,8 +51,7 @@ export default function DisputeManagement() {;
 '''`;
                   activeTab === 'resolutions''''`'`;
                     ? 'bg-zion-cyan text-zion-blue-dark'''`'`'`;
-                    : 'text-zion-slate-light hover:text-white hover:bg-zion-blue'````;,
-}`}
+                    : 'text-zion-slate-light hover:text-white hover:bg-zion-blue'````}`}
               >;
                 Resolutions;
               </button>';
@@ -66,8 +63,7 @@ export default function DisputeManagement() {;
 '''`;
                   activeTab === 'settings''''`'`;
                     ? 'bg-zion-cyan text-zion-blue-dark'''`'`'`;
-                    : 'text-zion-slate-light hover:text-white hover:bg-zion-blue'````;,
-}`}
+                    : 'text-zion-slate-light hover:text-white hover:bg-zion-blue'````}`}
               >;
                 Settings;
               </button>;
@@ -412,14 +408,10 @@ export default function DisputeManagement() {;
         </div>;
       </main>;
     </>)}
-;
 
-export { DisputeManagement };
-;
-export { DisputeManagement };
-;
-export { DisputeManagement };
-;
-export { DisputeManagement };
-;
-export { DisputeManagement };
+
+export { DisputeManagement }
+export { DisputeManagement }
+export { DisputeManagement }
+export { DisputeManagement }
+export { DisputeManagement }

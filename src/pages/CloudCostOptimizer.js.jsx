@@ -39,8 +39,7 @@ export default function CloudCostOptimizer() {}
                 "Basic cost alerts","";
                 "AWS cost optimization";
             ],;
-            popular: false;,
-},;
+            popular: false},;
         {}
 ";
 "";
@@ -58,8 +57,7 @@ export default function CloudCostOptimizer() {}
                 "Automated optimization","";
                 "Custom cost policies";
             ],;
-            popular: true;,
-},;
+            popular: true},;
         {}
 ";
 "";
@@ -79,8 +77,7 @@ export default function CloudCostOptimizer() {}
                 "Advanced forecasting","";
                 "Custom reporting";
             ],;
-            popular: false;,
-}
+            popular: false}
     ];
     const optimizationServices = [];
         {}
@@ -88,29 +85,25 @@ export default function CloudCostOptimizer() {}
 "";
             title: "Cost Analysis & Monitoring","";
             description: "Real-time visibility into your cloud spending with detailed breakdowns and trend analysis.","";
-            icon: <BarChart3 className="h-8 w-8 text-zion-cyan"/>;,
-},;
+            icon: <BarChart3 className="h-8 w-8 text-zion-cyan"/>},;
         {}
 ";
 "";
             title: "AI-Powered Optimization","";
             description: "Machine learning algorithms that continuously optimize your cloud resources for maximum cost efficiency.","";
-            icon: <BarChart3 className="h-8 w-8 text-zion-purple"/>;,
-},;
+            icon: <BarChart3 className="h-8 w-8 text-zion-purple"/>},;
         {}
 ";
 "";
             title: "Multi-Cloud Management","";
             description: "Unified cost optimization across AWS, Azure, and Google Cloud Platform.","";
-            icon: <Globe className="h-8 w-8 text-zion-cyan"/>;,
-},;
+            icon: <Globe className="h-8 w-8 text-zion-cyan"/>},;
         {}
 ";
 "";
             title: "Automated Actions","";
             description: "Automatically implement cost-saving measures with your approval and oversight.","";
-            icon: <Settings className="h-8 w-8 text-zion-purple"/>;,
-}
+            icon: <Settings className="h-8 w-8 text-zion-purple"/>}
     ];";
     const supportedClouds = ["";
         "Amazon Web Services (AWS)","";
@@ -128,29 +121,25 @@ export default function CloudCostOptimizer() {}
 "";
             metric: "Average Cost Reduction","";
             value: "40%","";
-            description: "Typical savings achieved by our customers";,
-},;
+            description: "Typical savings achieved by our customers"},;
         {}
 ";
 "";
             metric: "ROI Timeline","";
             value: "2-3 months","";
-            description: "Time to see positive return on investment";,
-},;
+            description: "Time to see positive return on investment"},;
         {}
 ";
 "";
             metric: "Resource Utilization","";
             value: "85%","";
-            description: "Average improvement in resource efficiency";,
-},;
+            description: "Average improvement in resource efficiency"},;
         {}
 ";
 "";
             metric: "Cost Visibility","";
             value: "100%","";
-            description: "Complete transparency into cloud spending";,
-}";
+            description: "Complete transparency into cloud spending"}";
     ];"";
     return (<div className="min-h-screen bg-gradient-to-b from-zion-blue-dark via-zion-slate to-background">"";
       <SEO title="Cloud Cost Optimizer - Zion Tech Group" description="AI-driven cloud cost optimization and resource management across AWS, Azure, and Google Cloud. Reduce costs by up to 40%." keywords="cloud cost optimization, AWS cost management, Azure cost reduction, GCP optimization, cloud savings" canonical="https://ziontechgroup.com/cloud-optimizer"/>;
@@ -350,14 +339,10 @@ export default function CloudCostOptimizer() {}
         </div>;
       </section>;
     </div>)}
-;
 
-export { CloudCostOptimizer };
-;
-export { CloudCostOptimizer };
-;
-export { CloudCostOptimizer };
-;
-export { CloudCostOptimizer };
-;
-export { CloudCostOptimizer };
+
+export { CloudCostOptimizer }
+export { CloudCostOptimizer }
+export { CloudCostOptimizer }
+export { CloudCostOptimizer }
+export { CloudCostOptimizer }

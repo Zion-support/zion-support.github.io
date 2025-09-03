@@ -2,65 +2,57 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Cloud, Zap, Database, Server, GitFork, Cpu, Globe, Shield } from 'lucide-react';
 import { SEO } from '@/components/SEO';
-;
-const CloudDevOps = () => {;
+
+const CloudDevOps = () => {
   const cloudServices = [;
-    {;
+    {
       icon: Cloud,;
       title: "Cloud Migration",;
       description: "Seamless migration to cloud platforms with minimal downtime and maximum efficiency.",;
-      features: ["Assessment & Planning", "Data Migration", "Application Modernization", "Performance Optimization"];,
-},;
-    {;
+      features: ["Assessment & Planning", "Data Migration", "Application Modernization", "Performance Optimization"]},;
+    {
       icon: Server,;
       title: "Infrastructure as Code",;
       description: "Automated infrastructure provisioning and management using modern DevOps practices.",;
-      features: ["Terraform", "AWS CloudFormation", "Azure ARM", "Kubernetes"];,
-},;
-    {;
+      features: ["Terraform", "AWS CloudFormation", "Azure ARM", "Kubernetes"]},;
+    {
       icon: GitFork,;
       title: "CI/CD Pipelines",;
       description: "Automated build, test, and deployment pipelines for faster, more reliable releases.",;
-      features: ["Jenkins", "GitHub Actions", "GitLab CI", "Azure DevOps"];,
-},;
-    {;
+      features: ["Jenkins", "GitHub Actions", "GitLab CI", "Azure DevOps"]},;
+    {
       icon: Database,;
       title: "Database Management",;
       description: "Scalable database solutions with high availability and disaster recovery.",;
-      features: ["AWS RDS", "Azure SQL", "MongoDB Atlas", "Redis"];,
-}
+      features: ["AWS RDS", "Azure SQL", "MongoDB Atlas", "Redis"]}
   ];
-;
+
   const platforms = [;
-    {;
+    {
       name: "AWS",;
       description: "Amazon Web Services cloud platform solutions",;
-      icon: "☁️";,
-},;
-    {;
+      icon: "☁️"},;
+    {
       name: "Azure",;
       description: "Microsoft Azure cloud services and solutions",;
-      icon: "🔷";,
-},;
-    {;
+      icon: "🔷"},;
+    {
       name: "Google Cloud",;
       description: "Google Cloud Platform infrastructure and services",;
-      icon: "🔵";,
-},;
-    {;
+      icon: "🔵"},;
+    {
       name: "Multi-Cloud",;
       description: "Hybrid and multi-cloud strategy implementation",;
-      icon: "🌐";,
-}
+      icon: "🌐"}
   ];
-;
+
   const devOpsTools = [;
     { category: "CI/CD", tools: ["Jenkins", "GitLab CI", "GitHub Actions", "CircleCI", "ArgoCD"] },;
     { category: "Infrastructure", tools: ["Terraform", "Ansible", "Puppet", "Chef", "CloudFormation"] },;
     { category: "Monitoring", tools: ["Prometheus", "Grafana", "ELK Stack", "Datadog", "New Relic"] },;
     { category: "Security", tools: ["Vault", "AWS IAM", "Azure AD", "Google IAM", "Prisma Cloud"] }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <SEO;
@@ -175,18 +167,12 @@ const CloudDevOps = () => {;
         </div>;
       </section>;
     </div>;
-  );,
-};
-;
+  )}
 export default CloudDevOps;
-;
 
-export { CloudDevOps };
-;
-export { CloudDevOps };
-;
-export { CloudDevOps };
-;
-export { CloudDevOps };
-;
-export { CloudDevOps };
+
+export { CloudDevOps }
+export { CloudDevOps }
+export { CloudDevOps }
+export { CloudDevOps }
+export { CloudDevOps }

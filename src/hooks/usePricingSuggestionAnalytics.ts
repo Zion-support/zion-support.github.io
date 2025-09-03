@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { supabase } from '@/integrations/supabase/client';
-;
+
 [];
-  recentSuggestions: {;
+  recentSuggestions: {
     id: string;
     userId: string;
     suggestedMin: number;
@@ -10,13 +10,11 @@ import { supabase } from '@/integrations/supabase/client';
     actualValue?: number;
     accepted: boolean;
     createdAt: string;
-    type: 'client' | 'talent';,
-}[];
+    type: 'client' | 'talent'}[];
   isLoading: boolean;
-  error: string | null;,
-}
-;
-export function usePricingSuggestionAnalytics(days = 30) {;
+  error: string | null}
+
+export function usePricingSuggestionAnalytics(days = 30) {
   const [analytics, setAnalytics] = useState<PricingSuggestionAnalytics>({;
     totalSuggestions: 0,;
     acceptanceRate: 0,;
@@ -24,15 +22,14 @@ export function usePricingSuggestionAnalytics(days = 30) {;
     suggestionsByCategory: [],;
     recentSuggestions: [],;
     isLoading: true,;
-    error: null;,
-});
-;
-  const fetchAnalytics = useCallback(async () => {;
+    error: null});
+
+  const fetchAnalytics = useCallback(async () => {
     setAnalytics(prev => ({ ...prev, isLoading: true, error: null }));
-    try {;
+    try {
       await new Promise(resolve => setTimeout(resolve, 1000));
-;
-      const mockData = {;
+
+      const mockData = {
         totalSuggestions: 256,;
         acceptanceRate: 0.72,;
         averagePriceGap: 12.5,;
@@ -50,31 +47,21 @@ export function usePricingSuggestionAnalytics(days = 30) {;
           actualValue: Math.random() > 0.3 ? 45 + Math.floor(Math.random() * 30) : undefined,;
           accepted: Math.random() > 0.25,;
           createdAt: new Date(Date.now() - Math.floor(Math.random() * 1000000000)).toISOString(),;
-          type: Math.random() > 0.5 ? 'client' : 'talent' as 'client' | 'talent',;,
-}));,
-};
-;
+          type: Math.random() > 0.5 ? 'client' : 'talent' as 'client' | 'talent'}))}
       setAnalytics({;
         ...mockData,;
         isLoading: false,;
-        error: null;,
-});
-;,
-} catch(error) {;
+        error: null});
+} catch(error) {
       console.error("Error fetching pricing suggestion analytics:", error);
       setAnalytics(prev => ({ ;
         ...prev, ;
         isLoading: false,;
-        error: "Failed to load pricing analytics data.";,
-}));,
-}
+        error: "Failed to load pricing analytics data."}))}
   }, [days]);
-;
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;,
-}, []);
-    fetchAnalytics();,
-}, [fetchAnalytics]);
-;
-  return analytics;,
-}
+
+  useEffect(() => {
+  // TODO: Add dependencies if needed}, []);
+    fetchAnalytics()}, [fetchAnalytics]);
+
+  return analytics}

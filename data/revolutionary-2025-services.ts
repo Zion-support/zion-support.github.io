@@ -1,5 +1,5 @@
 import { ServiceVariant  } from "../types/service-variants";
-export interface Revolutionary2025Service {;
+export interface Revolutionary2025Service {
   id: string;
   name: string;
   tagline: string;
@@ -26,7 +26,7 @@ export interface Revolutionary2025Service {;
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -38,7 +38,7 @@ export interface Revolutionary2025Service {;
   rating: number;
 export const revolutionary2025Services: Revolutionary2025Service[] = [;
   // Revolutionary AI Services 2025;
-  {;
+  {
     id: "ai-consciousness-simulator",;
     name: "AI Consciousness Simulator",;
     tagline: "Simulate and test AI consciousness emergence patterns",;
@@ -76,20 +76,18 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [;
     marketSize: "$500M emerging market",;
     growthRate: "300% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced AI consciousness simulation platform with real-time monitoring, ethical testing frameworks, and comprehensive safety protocols.",;
     launchDate: "2025-01-15",;
     customers: 25,;
     rating: 4.9,;
-    reviews: 18;,;,
-},;
-  {;
+    reviews: 18},;
+  {
     id: "quantum-emotion-processor",;
     name: "Quantum Emotion Processor",;
     tagline: "Process and analyze emotions using quantum computing",;
@@ -127,20 +125,18 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [;
     marketSize: "$2.8B market",;
     growthRate: "250% annual growth",;
     variant: "quantum-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Quantum-powered emotion processing platform with real-time analysis, therapeutic response systems, and comprehensive mental health monitoring.",;
     launchDate: "2025-02-01",;
     customers: 150,;
     rating: 4.8,;
-    reviews: 89;,;,
-},;
-  {;
+    reviews: 89},;
+  {
     id: "neural-interface-developer",;
     name: "Neural Interface Developer",;
     tagline: "Develop brain-computer interfaces with AI assistance",;
@@ -178,21 +174,19 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [;
     marketSize: "$1.2B market",;
     growthRate: "400% annual growth",;
     variant: "neural-quantum",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Comprehensive neural interface development platform with AI assistance, hardware integration, and regulatory compliance tools.",;
     launchDate: "2025-01-20",;
     customers: 75,;
     rating: 4.9,;
-    reviews: 42;,;,
-},;
+    reviews: 42},;
   // Revolutionary IT Services 2025;
-  {;
+  {
     id: "quantum-cloud-orchestrator",;
     name: "Quantum Cloud Orchestrator",;
     tagline: "Orchestrate cloud resources using quantum algorithms",;
@@ -230,20 +224,18 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [;
     marketSize: "$8.5B market",;
     growthRate: "180% annual growth",;
     variant: "quantum-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Quantum-powered cloud orchestration platform with multi-cloud management, cost optimization, and performance prediction.",;
     launchDate: "2025-02-15",;
     customers: 200,;
     rating: 4.8,;
-    reviews: 156;,;,
-},;
-  {;
+    reviews: 156},;
+  {
     id: "ai-cybersecurity-sentinel",;
     name: "AI Cybersecurity Sentinel",;
     tagline: "AI-powered cybersecurity with quantum threat detection",;
@@ -281,21 +273,19 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [;
     marketSize: "$15.2B market",;
     growthRate: "220% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "AI-powered cybersecurity platform with quantum threat detection, behavioral analysis, and automated response capabilities.",;
     launchDate: "2025-01-30",;
     customers: 300,;
     rating: 4.9,;
-    reviews: 234;,;,
-},;
+    reviews: 234},;
   // Revolutionary Emerging Technology Services 2025;
-  {;
+  {
     id: "metaverse-ai-architect",;
     name: "Metaverse AI Architect",;
     tagline: "Design and build AI-powered metaverse experiences",;
@@ -333,20 +323,18 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [;
     marketSize: "$3.2B market",;
     growthRate: "350% annual growth",;
     variant: "metaverse-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "AI-powered metaverse development platform with VR integration, blockchain support, and comprehensive content generation tools.",;
     launchDate: "2025-03-01",;
     customers: 120,;
     rating: 4.8,;
-    reviews: 89;,;,
-},;
-  {;
+    reviews: 89},;
+  {
     id: "quantum-iot-network",;
     name: "Quantum IoT Network",;
     tagline: "Secure IoT network powered by quantum encryption",;
@@ -384,21 +372,19 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [;
     marketSize: "$4.8B market",;
     growthRate: "280% annual growth",;
     variant: "quantum-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Quantum-encrypted IoT network platform with AI security, scalable connectivity, and comprehensive device management.",;
     launchDate: "2025-02-20",;
     customers: 180,;
     rating: 4.9,;
-    reviews: 134;,;,
-},;
+    reviews: 134},;
   // Revolutionary Business Services 2025;
-  {;
+  {
     id: "ai-business-strategist",;
     name: "AI Business Strategist",;
     tagline: "AI-powered business strategy and decision making",;
@@ -436,20 +422,18 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [;
     marketSize: "$12.5B market",;
     growthRate: "200% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "AI-powered business strategy platform with predictive analytics, market intelligence, and strategic recommendations.",;
     launchDate: "2025-01-25",;
     customers: 250,;
     rating: 4.8,;
-    reviews: 189;,;,
-},;
-  {;
+    reviews: 189},;
+  {
     id: "quantum-financial-optimizer",;
     name: "Quantum Financial Optimizer",;
     tagline: "Optimize financial portfolios using quantum algorithms",;
@@ -487,12 +471,11 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [;
     marketSize: "$18.5B market",;
     growthRate: "320% annual growth",;
     variant: "quantum-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Quantum-powered financial optimization platform with portfolio optimization, risk assessment, and algorithmic trading capabilities.",;
     launchDate: "2025-02-10",;

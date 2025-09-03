@@ -266,8 +266,7 @@ const IncidentResponsePlatform = () => {}
 '''`;
                     plan.popular'''`'`;
                       ? 'border-red-400 bg-red-900/20'''`'`'`;
-                      : 'border-white/20 hover:border-white/40'````;,
-}`}
+                      : 'border-white/20 hover:border-white/40'````}`}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -310,8 +309,7 @@ const IncidentResponsePlatform = () => {}
 '''`;
                       plan.popular'''`'`;
                         ? 'bg-red-600 hover:bg-red-700 text-white'''`'`'`;
-                        : 'bg-white/10 hover:bg-white/20 text-white border border-white/20'````;,
-}`}
+                        : 'bg-white/10 hover:bg-white/20 text-white border border-white/20'````}`}
                   >;
                     Get Started;
                   </Link>;
@@ -457,17 +455,12 @@ const IncidentResponsePlatform = () => {}
         </section>;
       </div>;
     </>;
-  );,
-};
+  )}
 export default IncidentResponsePlatform;
-;
 
-export { IncidentResponsePlatform };
-;
-export { IncidentResponsePlatform };
-;
-export { IncidentResponsePlatform };
-;
-export { IncidentResponsePlatform };
-;
-export { IncidentResponsePlatform };
+
+export { IncidentResponsePlatform }
+export { IncidentResponsePlatform }
+export { IncidentResponsePlatform }
+export { IncidentResponsePlatform }
+export { IncidentResponsePlatform }

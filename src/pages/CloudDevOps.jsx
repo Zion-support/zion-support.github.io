@@ -22,9 +22,8 @@ import {}
   Code,';
   FileText,'';
   Truck,''';
-  Wrench'''';,
-} from 'lucide-react';
-;
+  Wrench''''} from 'lucide-react';
+
     icon: GitFork,;
     features: [;
       "Automated testing","";
@@ -35,8 +34,7 @@ import {}
     price: "From $12,000",;"";
     timeline: "6-12 weeks",;"";
     category: "DevOps",;"";
-    platforms["Jenkins", "GitHub Actions", "GitLab CI", "Azure DevOps"];,
-},;
+    platforms["Jenkins", "GitHub Actions", "GitLab CI", "Azure DevOps"]},;
   {}
 ";
     id: 3,"";
@@ -52,8 +50,7 @@ import {}
     price: "From $20,000",;"";
     timeline: "10-18 weeks",;"";
     category: "Containerization",;"";
-    platforms["Kubernetes", "Docker", "Helm", "Istio"];,
-},;
+    platforms["Kubernetes", "Docker", "Helm", "Istio"]},;
   {}
 ";
     id: 4,"";
@@ -69,8 +66,7 @@ import {}
     price: "From $18,000",;"";
     timeline: "8-14 weeks",;"";
     category: "IaC",;"";
-    platforms["Terraform", "Ansible", "CloudFormation", "ARM Templates"];,
-},;
+    platforms["Terraform", "Ansible", "CloudFormation", "ARM Templates"]},;
   {}
 ";
     id: 5,"";
@@ -86,8 +82,7 @@ import {}
     price: "From $10,000",;"";
     timeline: "6-10 weeks",;"";
     category: "Monitoring",;"";
-    platforms["Prometheus", "Grafana", "ELK Stack", "Datadog"];,
-},;
+    platforms["Prometheus", "Grafana", "ELK Stack", "Datadog"]},;
   {}
 ";
     id: 6,"";
@@ -103,10 +98,9 @@ import {}
     price: "From $25,000",;"";
     timeline: "12-20 weeks",;"";
     category: "Security",;"";
-    platforms["IAM", "VPC", "Security Groups", "WAF"];,
-}
+    platforms["IAM", "VPC", "Security Groups", "WAF"]}
 ];
-;
+
 const cloudPlatforms = [];
   {}
 ";
@@ -114,24 +108,21 @@ const cloudPlatforms = [];
     name: "Amazon Web Services","";
     description: "Leading cloud platform with comprehensive services",";
     icon: Cloud,"";
-    features["EC2", "S3", "Lambda", "RDS", "ECS"];,
-},;
+    features["EC2", "S3", "Lambda", "RDS", "ECS"]},;
   {}
 ";
 "";
     name: "Microsoft Azure","";
     description: "Enterprise cloud platform with strong integration",";
     icon: Server,"";
-    features["Virtual Machines", "Blob Storage", "Functions", "SQL Database", "AKS"];,
-},;
+    features["Virtual Machines", "Blob Storage", "Functions", "SQL Database", "AKS"]},;
   {}
 ";
 "";
     name: "Google Cloud Platform","";
     description: "Innovative cloud platform with AI/ML focus",";
     icon: Globe,"";
-    features["Compute Engine", "Cloud Storage", "Cloud Functions", "Cloud SQL", "GKE"];,
-},;
+    features["Compute Engine", "Cloud Storage", "Cloud Functions", "Cloud SQL", "GKE"]},;
   {}
 ";
 "";
@@ -140,10 +131,9 @@ const cloudPlatforms = [];
           icon: GitFork,"";
     features: ["Auto-scaling", "Load Balancing", "Service Discovery", "Rolling Updates"]";
 "";
-    features["Auto-scaling", "Load Balancing", "Service Discovery", "Rolling Updates"];,
-}
+    features["Auto-scaling", "Load Balancing", "Service Discovery", "Rolling Updates"]}
 ];
-;
+
 const successStories = [];
   {}
 ";
@@ -153,8 +143,7 @@ const successStories = [];
     challenge: "Needed scalable cloud infrastructure for rapid growth","";
     solution: "Built auto-scaling cloud platform with CI/CD pipelines","";
     results: "10x faster deployments, 99.9% uptime, 60% cost reduction","";
-    logo: "TS";,
-},;
+    logo: "TS"},;
   {}
 ";
     id: 2,"";
@@ -163,8 +152,7 @@ const successStories = [];
     challenge: "Required containerized microservices architecture","";
     solution: "Implemented Kubernetes with automated CI/CD","";
     results: "5x faster development cycles, improved scalability, better performance","";
-    logo: "EP";,
-},;
+    logo: "EP"},;
   {}
 ";
     id: 3,"";
@@ -175,7 +163,7 @@ const successStories = [];
     results: "Full compliance, enhanced security, 40% faster time-to-market","";
     logo: "FS";
 ];
-;
+
 const processSteps = [];
   {}
 ";
@@ -183,24 +171,21 @@ const processSteps = [];
     title: "Assessment & Planning","";
     description: "Evaluate current infrastructure and plan cloud migration strategy",";
     icon: FileText,"";
-    duration: "1-2 weeks";,
-},;
+    duration: "1-2 weeks"},;
   {}
 ";
     step: 2,"";
     title: "Architecture Design","";
     description: "Design scalable cloud architecture and DevOps processes",";
     icon: Code,"";
-    duration: "2-3 weeks";,
-},;
+    duration: "2-3 weeks"},;
   {}
 ";
     step: 3,"";
     title: "Implementation","";
     description: "Build and deploy cloud infrastructure with automation",";
     icon: Wrench,"";
-    duration: "6-20 weeks";,
-},;
+    duration: "6-20 weeks"},;
   {}
 ";
     step: 4,"";
@@ -209,7 +194,7 @@ const processSteps = [];
     icon: Zap,"";
     duration: "Ongoing";
 ];
-;
+
 export default function CloudDevOps() {}
 ';
 '';
@@ -237,30 +222,24 @@ export default function CloudDevOps() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             animate = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center max-w-4xl mx-auto";
             <motion.div;
               initial = {}
   { opacity: 0,;
-  scale: 0.8;,
-}}
+  scale: 0.8}}
               animate = {}
   { opacity: 1,;
-  scale: 1;,
-}}
+  scale: 1}}
               transition = {}
   { duration: 0.8,;
-  delay: 0.2;,
-}}
+  delay: 0.2}}
               className="inline - flex items - center justify - center w-20 h-20 bg-gradient - to - br from - zion - cyan to - zion - purple rounded-2xl mb-8";
-";,
-}}"";
+"}}"";
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"";
 "";
               <Cloud className="w-10 h-10 text-white" />;
@@ -300,12 +279,10 @@ export default function CloudDevOps() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
 "";
@@ -321,19 +298,15 @@ export default function CloudDevOps() {}
                 key={platform.name}
                 initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                 transition = {}
   { duration: 0.6,;
-  delay: index * 0.1;,
-}}
+  delay: index * 0.1}}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 text-center hover:border-zion - cyan / 40 transition - all duration -300";
-";,
-}}"";
+"}}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"";
 "";
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">"";
@@ -361,12 +334,10 @@ export default function CloudDevOps() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
 "";
@@ -382,17 +353,14 @@ export default function CloudDevOps() {}
                 key={step.step}
                 initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                 transition = {}
   { duration: 0.6,;
   delay: index * 0.1;
-";,
-}}"";
+"}}"";
                 className="text-center"";
 "";
                 <div className="relative mb-6">"";
@@ -420,12 +388,10 @@ export default function CloudDevOps() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
 "";
@@ -447,9 +413,8 @@ export default function CloudDevOps() {}
 '''`;
                   selectedCategory === category'''`'`;
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'''`'`'`;
-                    : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````;,
-}`}
-;
+                    : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````}`}
+
                 {category}
               </button>) ) }
           </div>";
@@ -460,21 +425,17 @@ export default function CloudDevOps() {}
                 key={solution.id}
                 initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                 transition = {}
   { duration: 0.6,;
-  delay: index * 0.1;,
-}}
+  delay: index * 0.1}}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 hover:border-zion - cyan / 40 transition - all duration - 300 cursor -pointer";
                 onClick={ () => setSelectedSolution(solution) }
-;
-";,
-}}"";
+
+"}}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer";
                 onClick={() => setSelectedSolution(solution)}";
 "";
@@ -528,12 +489,10 @@ export default function CloudDevOps() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
 "";
@@ -549,19 +508,15 @@ export default function CloudDevOps() {}
                 key={story.id}
                 initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                 transition = {}
   { duration: 0.6,;
-  delay: index * 0.1;,
-}}
+  delay: index * 0.1}}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 hover:border-zion - cyan / 40 transition - all duration -300";
-";,
-}}"";
+"}}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"";
 "";
                 <div className="flex items-center gap-4 mb-6">"";
@@ -606,12 +561,10 @@ export default function CloudDevOps() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center max-w-4xl mx-auto"";
 "";
@@ -638,14 +591,10 @@ export default function CloudDevOps() {}
       </section>;
     </div>;
   )}
-;
 
-export { CloudDevOps };
-;
-export { CloudDevOps };
-;
-export { CloudDevOps };
-;
-export { CloudDevOps };
-;
-export { CloudDevOps };
+
+export { CloudDevOps }
+export { CloudDevOps }
+export { CloudDevOps }
+export { CloudDevOps }
+export { CloudDevOps }

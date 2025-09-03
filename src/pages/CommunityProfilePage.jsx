@@ -1,7 +1,7 @@
 import { useParams, Link  } from 'react-router-dom';
-export default function Page() {;
+export default function Page() {
 ,;
-    {;
+    {
         id: "11",;
         title: "How to structure an AI prompt for best results",;
         content: "After experimenting with different prompt formats, I've found these patterns to work consistently better...",;
@@ -15,9 +15,8 @@ export default function Page() {;
         updatedAt: "2025 - 03 - 20T14:25:00Z",;
         upvotes: 36,;
         downvotes: 1,;
-        replyCount: 8;,
-},;
-    {;
+        replyCount: 8},;
+    {
         id: "12",;
         title: "Setting up effective monitoring for AI systems",;
         content: "Here's my approach to monitoring AI systems in production environments...",;
@@ -38,36 +37,32 @@ export default function Page() {;
     const [user, setUser] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
     const [posts, setPosts] = useState([]);
-    useEffect(() => {;
+    useEffect(() => {
   // TODO: Add dependencies if needed;
 
-  return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
+  return () => {
+    // Cleanup function}}, []);, []);
         // In a real app, we would fetch the user data here;
         // For now, we'll just use the mock data;
         setUser(mockUser) ;
         setPosts(userPosts) ;
         setIsLoading(false) }, [userId]) ;
-    if(isLoading) {;
+    if(isLoading) {
         return (<div className="container py-8">;
           <div className="flex justify - center items - center h-64">;
             <div className="animate - spin rounded-full h-12 w-12 border-b-2 border-zion -purple"></div>;
           </div>;
         </div>) }
-    if(!user) {;
+    if(!user) {
         return (<div className="container py-8">;
           <h1 > User not found</h1>;
           <Button asChild className="mt-4">;
             <Link to="/community">Back to Community</Link>;
           </Button>;
-        </div>) ;,
-}
-    return (<SEO title={`${user.name}'s Profile | Community Forum | Zion AI Marketplace`} description={`View ${user.name}'s profile, posts, and contributions in the Zion AI Marketplace community.`} keywords = {;
+        </div>) }
+    return (<SEO title={`${user.name}'s Profile | Community Forum | Zion AI Marketplace`} description={`View ${user.name}'s profile, posts, and contributions in the Zion AI Marketplace community.`} keywords = {
   `community, forum, profile, user profile,;
-  ${user.name;,
-}`}/>;
+  ${user.name}`}/>;
         ,;
             <div className="container py-8">;
         <div className="flex items - center gap-3 mb-6">;
@@ -210,12 +205,9 @@ export default function Page() {;
           </div>;
         </div>;
       </div>)}
-;
 
-export { CommunityProfilePage };
-;
-export { CommunityProfilePage };
-;
-export { CommunityProfilePage };
-;
-export { CommunityProfilePage };
+
+export { CommunityProfilePage }
+export { CommunityProfilePage }
+export { CommunityProfilePage }
+export { CommunityProfilePage }

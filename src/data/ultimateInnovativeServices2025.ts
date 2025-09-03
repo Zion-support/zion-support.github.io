@@ -1,4 +1,4 @@
-export interface UltimateInnovativeService {;
+export interface UltimateInnovativeService {
   id: string;
   title: string;
   description: string;
@@ -17,22 +17,21 @@ export interface UltimateInnovativeService {;
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-contactInfo: {;
+contactInfo: {
 
     phone: string;
     email: string;
-    website: string;,
-};
-  technicalSpecs?: {;
+    website: string}
+  technicalSpecs?: {
 
     technology: string[];
     integrations: string[];
     apiEndpoints: number;
     uptime: string;
-    security: string[]};
+    security: string[]}
   competitors?: string[];
   caseStudies?: string[]}
-;
+
 export ;
   'IoT & Edge Computing',;
   'Metaverse & AR/VR',;
@@ -50,6 +49,6 @@ export ;
   'Biotechnology',;';
   'Space Technology',;'  'Green Technology';
 ];
-;
-export const SERVICE_SUBCATEGORIES = {;
+
+export const SERVICE_SUBCATEGORIES = {
 }

@@ -15,24 +15,21 @@ export default function CloudMigrationServices() {}
             title: "Cloud Assessment","";
             description: "Comprehensive analysis of your current infrastructure and cloud readiness","";
             icon: <BarChart3 className="h-6 w-6 text-zion-cyan"/>,"";
-            price: "From $2,000";,
-},;
+            price: "From $2,000"},;
         {}
 ";
 "";
             title: "Migration Planning","";
             description: "Detailed roadmap and strategy for seamless cloud migration","";
             icon: <Target className="h-6 w-6 text-zion-purple"/>,"";
-            price: "From $3,500";,
-},;
+            price: "From $3,500"},;
         {}
 ";
 "";
             title: "Data Migration","";
             description: "Secure and efficient transfer of data to cloud platforms","";
             icon: <Database className="h-6 w-6 text-zion-blue"/>,"";
-            price: "From $5,000";,
-},;
+            price: "From $5,000"},;
         {}
 ";
 "";
@@ -48,32 +45,28 @@ export default function CloudMigrationServices() {}
             name: "AWS","";
             description: "Amazon Web Services migration and optimization","";
             icon: <Cloud className="h-8 w-8 text-zion-cyan"/>,"";
-            features["EC2", "RDS", "S3", "Lambda"];,
-},;
+            features["EC2", "RDS", "S3", "Lambda"]},;
         {}
 ";
 "";
             name: "Azure","";
             description: "Microsoft Azure cloud migration services","";
             icon: <Cloud className="h-8 w-8 text-zion-purple"/>,"";
-            features["VM", "SQL Database", "Blob Storage", "Functions"];,
-},;
+            features["VM", "SQL Database", "Blob Storage", "Functions"]},;
         {}
 ";
 "";
             name: "Google Cloud","";
             description: "Google Cloud Platform migration solutions","";
             icon: <Cloud className="h-8 w-8 text-zion-blue"/>,"";
-            features["Compute Engine", "Cloud SQL", "Cloud Storage", "Cloud Functions"];,
-},;
+            features["Compute Engine", "Cloud SQL", "Cloud Storage", "Cloud Functions"]},;
         {}
 ";
 "";
             name: "Multi-Cloud","";
             description: "Hybrid and multi-cloud migration strategies","";
             icon: <Network className="h-8 w-8 text-zion-cyan"/>,"";
-            features["Hybrid Cloud", "Multi-Cloud", "Cloud Bursting", "Disaster Recovery"];,
-}
+            features["Hybrid Cloud", "Multi-Cloud", "Cloud Bursting", "Disaster Recovery"]}
     ];
     const pricingPlans = [];
         {}
@@ -90,8 +83,7 @@ export default function CloudMigrationServices() {}
                 "Basic optimization","";
                 "30 days support";
             ],;
-            popular: false;,
-},;
+            popular: false},;
         {}
 ";
 "";
@@ -107,8 +99,7 @@ export default function CloudMigrationServices() {}
                 "90 days support","";
                 "Training & documentation";
             ],;
-            popular: true;,
-},;
+            popular: true},;
         {}
 ";
 "";
@@ -133,16 +124,14 @@ export default function CloudMigrationServices() {}
             name: "Alex Rodriguez","";
             role: "CTO, RetailTech Solutions","'";
             content: "Zion's cloud migration team transformed our infrastructure. We reduced costs by 40% and improved performance significantly.",;
-            rating: 5;,
-},;
+            rating: 5},;
         {}
 ";
 "";
             name: "Dr. Maria Santos","";
             role: "IT Director, HealthTech Innovations","'";
             content: "The migration was seamless with zero downtime. Zion's expertise in healthcare compliance made all the difference.",;
-            rating: 5;,
-},;
+            rating: 5},;
         {}
 ";
 "";
@@ -410,14 +399,10 @@ export default function CloudMigrationServices() {}
         </div>;
       </section>;
     </div>)}
-;
 
-export { CloudMigrationServices };
-;
-export { CloudMigrationServices };
-;
-export { CloudMigrationServices };
-;
-export { CloudMigrationServices };
-;
-export { CloudMigrationServices };
+
+export { CloudMigrationServices }
+export { CloudMigrationServices }
+export { CloudMigrationServices }
+export { CloudMigrationServices }
+export { CloudMigrationServices }

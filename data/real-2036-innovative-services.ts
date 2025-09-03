@@ -1,5 +1,5 @@
 export const real2036InnovativeServices = [;
-  {;
+  {
     id: "ai-autonomous-business-process-automation",;
     name: "AI Autonomous Business Process Automation",;
     tagline: "Self-learning process optimization platform",;
@@ -29,9 +29,8 @@ export const real2036InnovativeServices = [;
       "Supply chain optimization",;
       "Financial process automation",;
       "HR workflow management";
-    ];,;,
-},;
-  {;
+    ]},;
+  {
     id: "quantum-ai-fusion-platform",;
     name: "Quantum AI Fusion Platform",;
     tagline: "Next-generation quantum-AI hybrid computing",;
@@ -61,9 +60,8 @@ export const real2036InnovativeServices = [;
       "Financial portfolio optimization",;
       "Climate change modeling",;
       "Advanced AI model training";
-    ];,;,
-},;
-  {;
+    ]},;
+  {
     id: "space-mining-automation-platform",;
     name: "Space Mining Automation Platform",;
     tagline: "Autonomous space resource extraction",;
@@ -93,9 +91,8 @@ export const real2036InnovativeServices = [;
       "Lunar resource extraction",;
       "Space station resource management",;
       "Interplanetary resource planning";
-    ];,;,
-},;
-  {;
+    ]},;
+  {
     id: "metaverse-ai-development-studio-pro",;
     name: "Metaverse AI Development Studio Pro",;
     tagline: "Professional metaverse creation platform",;
@@ -125,9 +122,8 @@ export const real2036InnovativeServices = [;
       "Educational metaverses",;
       "Virtual retail experiences",;
       "Social virtual worlds";
-    ];,;,
-},;
-  {;
+    ]},;
+  {
     id: "brain-computer-interface-platform",;
     name: "Brain-Computer Interface Platform",;
     tagline: "Next-generation neural interface technology",;
@@ -157,9 +153,8 @@ export const real2036InnovativeServices = [;
       "Gaming and entertainment",;
       "Medical research",;
       "Human augmentation";
-    ];,;,
-},;
-  {;
+    ]},;
+  {
     id: "quantum-bio-computing-platform",;
     name: "Quantum Bio-Computing Platform",;
     tagline: "Biological quantum computing solutions",;
@@ -189,9 +184,8 @@ export const real2036InnovativeServices = [;
       "Genetic medicine",;
       "Biological research",;
       "Personalized medicine";
-    ];,;,
-},;
-  {;
+    ]},;
+  {
     id: "ai-consciousness-evolution-platform",;
     name: "AI Consciousness Evolution Platform",;
     tagline: "Advanced AI consciousness development",;
@@ -221,9 +215,8 @@ export const real2036InnovativeServices = [;
       "Ethical AI training",;
       "Consciousness studies",;
       "AGI development";
-    ];,;,
-},;
-  {;
+    ]},;
+  {
     id: "quantum-internet-security-gateway",;
     name: "Quantum Internet Security Gateway",;
     tagline: "Unbreakable quantum-secured communications",;
@@ -253,9 +246,8 @@ export const real2036InnovativeServices = [;
       "Financial institutions",;
       "Healthcare data protection",;
       "Critical infrastructure";
-    ];,;,
-},;
-  {;
+    ]},;
+  {
     id: "ai-autonomous-robotics-platform",;
     name: "AI Autonomous Robotics Platform",;
     tagline: "Self-learning robotic automation",;
@@ -285,9 +277,8 @@ export const real2036InnovativeServices = [;
       "Warehouse operations",;
       "Service robotics",;
       "Agricultural automation";
-    ];,;,
-},;
-  {;
+    ]},;
+  {
     id: "quantum-financial-trading-platform",;
     name: "Quantum Financial Trading Platform",;
     tagline: "Quantum-powered financial optimization",;

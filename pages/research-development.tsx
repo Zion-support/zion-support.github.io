@@ -1,7 +1,7 @@
 import React from 'react';
 import SEOHead from '../src/components/SEOHead';
-;
-const RDPage = () => {;
+
+const RDPage = () => {
   return (;
     <>;
       <SEOHead title="Research & Development - Zion Tech Group" description="Explore our R&D initiatives and innovation programs." />;
@@ -10,8 +10,6 @@ const RDPage = () => {;
         <p className="text-gray-600">We invest in cutting-edge research across AI, cloud, and edge computing to build the future.</p>;
       </main>;
     </>;
-  );,
-};
-;
+  )}
 export default RDPage;
-;
+

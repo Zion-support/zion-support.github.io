@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-export const TestimonialsSection: React.FC = () => {;
+export const TestimonialsSection: React.FC = () => {
 import { motion, AnimatePresence  } from 'framer-motion';
-;
-export default function Page() {;
+
+export default function Page() {
 ,;
-  {;
+  {
 
     id: 4,";
     name: "James Thompson",";
@@ -15,9 +15,8 @@ export default function Page() {;
     content: "The AI financial analytics platform has given us unprecedented insights into market trends.Our investment decisions are now data-driven and we've outperformed the market by 25%.",";
     industry: "Finance",";
     results: ["25% market outperformance", "Real-time analytics", "Risk reduction"],;
-    verified: true;,
-},;
-  {;
+    verified: true},;
+  {
 
     id: 5,";
     name: "Lisa Park",";
@@ -28,35 +27,31 @@ export default function Page() {;
     content: "Zion's AI marketing automation tools have revolutionized our customer acquisition.We've seen a 150% increase in conversion rates and 80% reduction in marketing costs.",";
     industry: "E-commerce",";
     results: ["150% conversion increase", "80% cost reduction", "Personalized campaigns"],;
-    verified: true;,
-}";
+    verified: true}";
     company: "Healthcare Innovations",;";
     content: "The cloud infrastructure solution provided by Zion Tech Group has dramatically improved our system reliability and scalability.",;
     rating: 5,;";
     industry: "Healthcare",;";
-    project: "Cloud Migration & Optimization"};
+    project: "Cloud Migration & Optimization"}
 ];
-;
-;
-export const TestimonialsSection: React.FC = props {;
+
+
+export const TestimonialsSection: React.FC = props {
   const [currentTestimonial, setCurrentTestimonial] = useState<typeof 0>(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState<typeof true>(true);
-;
+
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true) }}};
-;
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true) }}}
   // Auto - play functionality;
-  React.useEffect(() => {;
+  React.useEffect(() => {
   // TODO: Add dependencies if needed;
 
-  return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
+  return () => {
+    // Cleanup function}}, []);, []);
     if(!isAutoPlaying) return}, 5000) ;
-;
+
     return () => clearInterval(interval) }, [isAutoPlaying, currentTestimonial]) ;
-;
+
   return (";
     <section className="py-20 bg-zion-blue-dark">";
       <div className="container mx-auto px-4">";
@@ -193,7 +188,7 @@ export const TestimonialsSection: React.FC = props {;
                       <CheckCircle className="w-5 h-5 text-green-400"  />"                      <span className="text-green-400 text-sm font-medium">Verified Customer</span>;
                     </div>;
                   )}
-;
+
                   {/* Results */}";
                   <div className="bg-white/5 border border-white/10 rounded-lg p-4">";
                     <h5 className="text-white font-semibold mb-3">Key Results</h5>";
@@ -229,8 +224,7 @@ export const TestimonialsSection: React.FC = props {;
                   onClick={() => goToTestimonial(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentTestimonial';
                       ? 'bg-cyan-400 scale-125'';
-                      : 'bg-white/30 hover:bg-white/50'`;,
-}`}`;
+                      : 'bg-white/30 hover:bg-white/50'`}`}`;
                   aria-label={`Go to testimonial ${index + 1}`}
                 />;
               ))}
@@ -248,8 +242,7 @@ export const TestimonialsSection: React.FC = props {;
               onClick={() => setIsAutoPlaying(!isAutoPlaying)}`;
               className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${isAutoPlaying';
                   ? 'bg-cyan-500 text-white'';
-                  : 'bg-white/10 text-gray-300 hover:bg-white/20'`;,
-}`}
+                  : 'bg-white/10 text-gray-300 hover:bg-white/20'`}`}
             >;
               {isAutoPlaying ? 'Pause' : 'Play'} Auto-rotation;
             </button>;
@@ -280,5 +273,5 @@ export const TestimonialsSection: React.FC = props {;
           </div>;
         </motion.div>;
       </div>;
-    </section>;) };
+    </section>;) }
 '"`;

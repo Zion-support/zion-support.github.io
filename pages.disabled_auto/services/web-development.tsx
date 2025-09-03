@@ -2,8 +2,8 @@ import type { NextPage } from 'next';
 import Layout from '../../components/Layout';
 import Link from 'next/link';
 import { CheckCircle, Code, Globe, Smartphone, Zap, Shield, Award } from 'lucide-react';
-;
-const WebDevelopment: NextPage = () => {;
+
+const WebDevelopment: NextPage = () => {
   return (;
     <Layout;
       title="Web Development Services - Zion Tech Group";
@@ -19,7 +19,7 @@ const WebDevelopment: NextPage = () => {;
             Modern, responsive web applications built with cutting-edge technologies. ;
             From simple websites to complex web applications, we deliver exceptional user experiences.;
           </p>;
-          ;
+
           <div className="flex flex-col sm:flex-row justify-center gap-4">;
             <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">;
               Start Your Web Project;
@@ -41,7 +41,7 @@ const WebDevelopment: NextPage = () => {;
               and drive business growth across all industries.;
             </p>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
             <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">;
               <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">;
@@ -199,7 +199,7 @@ const WebDevelopment: NextPage = () => {;
               We stay current with the latest web technologies to deliver cutting-edge solutions.;
             </p>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
             <div className="bg-white rounded-lg p-6 shadow-lg text-center">;
               <h3 className="text-lg font-semibold mb-4">Frontend</h3>;
@@ -266,7 +266,5 @@ const WebDevelopment: NextPage = () => {;
         </div>;
       </section>;
     </Layout>;
-  );,
-};
-;
+  )}
 export default WebDevelopment;

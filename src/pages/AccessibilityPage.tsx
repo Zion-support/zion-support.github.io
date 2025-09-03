@@ -31,12 +31,11 @@ import { ;
   Heart,;
   Lightbulb,;
   Target,;
-  Zap;,
-} from 'lucide-react';
-;
-export function AccessibilityPage() {;
+  Zap} from 'lucide-react';
+
+export function AccessibilityPage() {
   const accessibilityFeatures = [;
-    {;
+    {
       icon: Eye,;
       title: 'Visual Accessibility',;
       description: 'Support for users with visual impairments including screen readers, high contrast modes, and text scaling.',;
@@ -47,9 +46,8 @@ export function AccessibilityPage() {;
         'Alternative text for images',;
         'Keyboard navigation support',;
         'Focus indicators';
-      ];,
-},;
-    {;
+      ]},;
+    {
       icon: Ear,;
       title: 'Auditory Accessibility',;
       description: 'Features for users with hearing impairments including captions, transcripts, and visual indicators.',;
@@ -60,9 +58,8 @@ export function AccessibilityPage() {;
         'Sign language support',;
         'Audio descriptions',;
         'Volume controls';
-      ];,
-},;
-    {;
+      ]},;
+    {
       icon: Hand,;
       title: 'Motor Accessibility',;
       description: 'Support for users with motor impairments including keyboard navigation, voice control, and assistive technologies.',;
@@ -73,9 +70,8 @@ export function AccessibilityPage() {;
         'Large click targets',;
         'Customizable timing',;
         'Assistive device support';
-      ];,
-},;
-    {;
+      ]},;
+    {
       icon: Brain,;
       title: 'Cognitive Accessibility',;
       description: 'Features to support users with cognitive disabilities including clear navigation, consistent design, and simplified content.',;
@@ -86,95 +82,82 @@ export function AccessibilityPage() {;
         'Help and support',;
         'Progress indicators',;
         'Memory aids';
-      ];,
-}
+      ]}
   ];
-;
+
   const standards = [;
-    {;
+    {
       name: 'WCAG 2.1 AA',;
       description: 'Web Content Accessibility Guidelines 2.1 Level AA compliance',;
       status: 'Compliant',;
       icon: CheckCircle,;
-      details: 'Our website meets all WCAG 2.1 AA success criteria for accessibility.';,
-},;
-    {;
+      details: 'Our website meets all WCAG 2.1 AA success criteria for accessibility.'},;
+    {
       name: 'Section 508',;
       description: 'US Federal accessibility standards compliance',;
       status: 'Compliant',;
       icon: CheckCircle,;
-      details: 'Full compliance with Section 508 of the Rehabilitation Act.';,
-},;
-    {;
+      details: 'Full compliance with Section 508 of the Rehabilitation Act.'},;
+    {
       name: 'ADA Compliance',;
       description: 'Americans with Disabilities Act compliance',;
       status: 'Compliant',;
       icon: CheckCircle,;
-      details: 'Our digital properties meet ADA accessibility requirements.';,
-},;
-    {;
+      details: 'Our digital properties meet ADA accessibility requirements.'},;
+    {
       name: 'EN 301 549',;
       description: 'European accessibility standard compliance',;
       status: 'Compliant',;
       icon: CheckCircle,;
-      details: 'Compliance with European accessibility standards.';,
-}
+      details: 'Compliance with European accessibility standards.'}
   ];
-;
+
   const assistiveTechnologies = [;
-    {;
+    {
       name: 'Screen Readers',;
       icon: Eye,;
       description: 'Compatible with popular screen readers including NVDA, JAWS, and VoiceOver.',;
-      supported: ['NVDA', 'JAWS', 'VoiceOver', 'TalkBack', 'Orca'];,
-},;
-    {;
+      supported: ['NVDA', 'JAWS', 'VoiceOver', 'TalkBack', 'Orca']},;
+    {
       name: 'Voice Control',;
       icon: Volume2,;
       description: 'Full support for voice control software and voice commands.',;
-      supported: ['Dragon NaturallySpeaking', 'Voice Control (macOS)', 'Voice Access (Android)'];,
-},;
-    {;
+      supported: ['Dragon NaturallySpeaking', 'Voice Control (macOS)', 'Voice Access (Android)']},;
+    {
       name: 'Switch Navigation',;
       icon: Touchpad,;
       description: 'Support for switch-based navigation devices and assistive switches.',;
-      supported: ['Switch Access', 'Assistive Switches', 'Eye Tracking'];,
-},;
-    {;
+      supported: ['Switch Access', 'Assistive Switches', 'Eye Tracking']},;
+    {
       name: 'Magnification',;
       icon: ZoomIn,;
       description: 'Compatible with screen magnification software and browser zoom.',;
-      supported: ['ZoomText', 'MAGic', 'Browser Zoom', 'System Magnification'];,
-}
+      supported: ['ZoomText', 'MAGic', 'Browser Zoom', 'System Magnification']}
   ];
-;
+
   const accessibilityTools = [;
-    {;
+    {
       name: 'High Contrast Mode',;
       icon: Contrast,;
       description: 'Toggle high contrast mode for better visibility.',;
-      action: 'Enable High Contrast';,
-},;
-    {;
+      action: 'Enable High Contrast'},;
+    {
       name: 'Text Size',;
       icon: Type,;
       description: 'Increase or decrease text size for better readability.',;
-      action: 'Adjust Text Size';,
-},;
-    {;
+      action: 'Adjust Text Size'},;
+    {
       name: 'Keyboard Navigation',;
       icon: Keyboard,;
       description: 'Navigate the entire website using only the keyboard.',;
-      action: 'Learn Keyboard Shortcuts';,
-},;
-    {;
+      action: 'Learn Keyboard Shortcuts'},;
+    {
       name: 'Screen Reader',;
       icon: Eye,;
       description: 'Optimized for screen reader compatibility.',;
-      action: 'Screen Reader Guide';,
-}
+      action: 'Screen Reader Guide'}
   ];
-;
+
   const keyboardShortcuts = [;
     { key: 'Tab', description: 'Navigate to next interactive element' },;
     { key: 'Shift + Tab', description: 'Navigate to previous interactive element' },;
@@ -185,7 +168,7 @@ export function AccessibilityPage() {;
     { key: 'Home', description: 'Go to beginning of page' },;
     { key: 'End', description: 'Go to end of page' }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-zion-slate-dark">;
       {/* Hero Section */}
@@ -199,7 +182,7 @@ export function AccessibilityPage() {;
               Zion Tech Group is committed to ensuring digital accessibility for all users. ;
               We strive to provide an inclusive experience that works for everyone, regardless of ability.;
             </p>;
-            ;
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
               <Link;
                 to="/contact";
@@ -235,7 +218,7 @@ export function AccessibilityPage() {;
                   <feature.icon className="w-10 h-10 text-zion-cyan" />;
                   <h3 className="text-xl font-semibold text-white">{feature.title}</h3>;
                 </div>;
-                ;
+
                 <p className="text-zion-slate-light mb-4 leading-relaxed">;
                   {feature.description}
                 </p>;
@@ -304,7 +287,7 @@ export function AccessibilityPage() {;
                     <p className="text-zion-slate-light text-sm">{tech.description}</p>;
                   </div>;
                 </div>;
-                ;
+
                 <div>;
                   <h4 className="text-sm font-semibold text-zion-cyan mb-2">Supported Technologies:</h4>;
                   <div className="flex flex-wrap gap-2">;
@@ -362,7 +345,7 @@ export function AccessibilityPage() {;
                 Our website can be fully navigated using only the keyboard. Use these keyboard shortcuts ;
                 to navigate efficiently through our content.;
               </p>;
-              ;
+
               <div className="space-y-3">;
                 {keyboardShortcuts.map((shortcut, index) => (;
                   <div key={index} className="flex items-center justify-between">;
@@ -413,7 +396,7 @@ export function AccessibilityPage() {;
                 If you encounter any accessibility barriers or have suggestions for improvement, ;
                 please contact us.;
               </p>;
-              ;
+
               <div className="space-y-4">;
                 <div className="flex items-center space-x-3">;
                   <Mail className="w-5 h-5 text-zion-cyan" />;
@@ -435,7 +418,7 @@ export function AccessibilityPage() {;
               <p className="text-zion-slate-light mb-6">;
                 Help us improve by reporting accessibility issues or suggesting enhancements.;
               </p>;
-              ;
+
               <div className="space-y-4">;
                 <input;
                   type="text";
@@ -493,7 +476,6 @@ export function AccessibilityPage() {;
         </div>;
       </section>;
     </div>;
-  );,
-}
-;
+  )}
+
 export default AccessibilityPage;

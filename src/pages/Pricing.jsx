@@ -1,6 +1,6 @@
 import React from 'react';''';
 import { SEO } from '../components/SEO';
-;
+
 const Pricing = () => {}
   const pricingTiers = [];
     {}
@@ -54,7 +54,7 @@ const Pricing = () => {}
       cta: 'Contact Sales',';
       link: '/contact'}
   ];
-;
+
   return();
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
       <SEO"";
@@ -94,8 +94,7 @@ const Pricing = () => {}
 ';
                   tier.popular'';
                     ? 'border-blue-500 shadow-lg shadow-blue-500/25'''`;
-                    : 'border-white/10'``;,
-}`}
+                    : 'border-white/10'``}`}
               >";
                 {tier.popular && ("";
                   <div className="text-center mb-4">"";
@@ -134,8 +133,7 @@ const Pricing = () => {}
 '''`;
                     tier.popular'''`'`;
                       ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white hover:from-blue-600 hover:to-cyan-600'''`'`'`;
-                      : 'bg-transparent border border-white text-white hover:text-slate-900'````;,
-}`}
+                      : 'bg-transparent border border-white text-white hover:text-slate-900'````}`}
                 >;
                   {tier.cta}
                 </a>;
@@ -169,17 +167,12 @@ const Pricing = () => {}
         </div>;
       </section>;
     </div>;
-  );,
-}
-;
+  )}
+
 export default Pricing;
-;
-export { Pricing };
-;
-export { Pricing };
-;
-export { Pricing };
-;
-export { Pricing };
-;
-export { Pricing };
+
+export { Pricing }
+export { Pricing }
+export { Pricing }
+export { Pricing }
+export { Pricing }

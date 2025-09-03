@@ -1,8 +1,8 @@
 import React from 'react';
 export default Sitemap;
-;
+
 import { Link  } from 'react-router-dom';
-export default function Page() {;
+export default function Page() {
 ,;
             { path: '/blog', label: 'Blog', description: 'Latest insights and technology trends' }
         ],;
@@ -39,8 +39,7 @@ export default function Page() {;
         legal[;
             { path: '/privacy', label: 'Privacy Policy', description: 'Our privacy policy and data handling' },;
             { path: '/terms', label: 'Terms of Service', description: 'Terms and conditions of service' }
-        ];,
-};
+        ]}
     return (<div className="bg-slate-50 py-16">";
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">";
         <div className="text-center mb-12">";
@@ -61,7 +60,7 @@ export default function Page() {;
                     <div className="text-sm text-slate-600">{item.description}</div>;
                   </Link>;
                 </li>) ) }
-;
+
             </ul>";
           </div>;
           {/* comment */}""";
@@ -115,17 +114,13 @@ export default function Page() {;
           </div>;
         </div>;
       </div>;
-    </div>)};
+    </div>)}
 export default Sitemap;
-;
 
-export { Sitemap };
-;
-export { Sitemap };
-;
-export { Sitemap };
-;
-export { Sitemap };
-;
-export { Page, Sitemap };
+
+export { Sitemap }
+export { Sitemap }
+export { Sitemap }
+export { Sitemap }
+export { Page, Sitemap }
 }}))))))))

@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { motion  } from 'framer-motion';
-export default function Page() {;
+export default function Page() {
 ,;
   ];
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;,
-}, []);
+  useEffect(() => {
+  // TODO: Add dependencies if needed}, []);
     setLinkStatuses(sampleLinks);
-    generateReport(sampleLinks);,
-}, []);
-  const generateReport = links => {;
+    generateReport(sampleLinks)}, []);
+  const generateReport = links => {
 
     const totalLinks = links.length;
     const healthyLinks = links.filter(l => l.status === 'healthy').length;
@@ -24,17 +22,15 @@ export default function Page() {;
       brokenLinks,;
       externalLinks,;
       averageResponseTime: avgResponseTime,;
-      lastUpdated: new Date()});,
-};
-  const startMonitoring = async () => {;
+      lastUpdated: new Date()})}
+  const startMonitoring = async () => {
     setIsMonitoring(true);
     // Simulate link checking;
     await new Promise(resolve => setTimeout(resolve, 2000));
-    setIsMonitoring(false);,
-};
-  const getStatusIcon = status => {;
+    setIsMonitoring(false)}
+  const getStatusIcon = status => {
 
-    switch(status) {;
+    switch(status) {
 
       case 'healthy':;
         return <CheckCircle className="w-4 h-4 text-green-400" />;
@@ -43,12 +39,11 @@ export default function Page() {;
       case 'external':";
         return <ExternalLink className="w-4 h-4 text-blue-400" />;
       default:";
-        return <RefreshCw className="w-4 h-4 text-yellow-400" />;,
-}
-  };
-  const getStatusColor = status => {;
+        return <RefreshCw className="w-4 h-4 text-yellow-400" />}
+  }
+  const getStatusColor = status => {
 
-    switch(status) {;
+    switch(status) {
 
       case 'healthy':';
         return 'text-green-400';
@@ -57,14 +52,12 @@ export default function Page() {;
       case 'external':';
         return 'text-blue-400';
       default:';
-        return 'text-yellow-400';,
-}
-  };
-  const filteredLinks = linkStatuses.filter(link => {;
+        return 'text-yellow-400'}
+  }
+  const filteredLinks = linkStatuses.filter(link => {
 
     if (selectedFilter === 'all') return true;
-    return link.status === selectedFilter;,
-});
+    return link.status === selectedFilter});
   return ();
     <>;
       {/* Floating Action Button */}
@@ -142,7 +135,7 @@ export default function Page() {;
                   </div>;
                 </div>;
               )}
-;
+
               {/* Actions */}";
               <div className="flex items-center justify-between">";
                 <div className="flex space-x-2">;
@@ -150,8 +143,7 @@ export default function Page() {;
                     onClick={() => setSelectedFilter('all')}
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'all'';
                         ? 'bg-cyan-500 text-white'';
-                        : 'bg-gray-700 text-gray-300 hover:bg-gray-600'`;,
-}`}
+                        : 'bg-gray-700 text-gray-300 hover:bg-gray-600'`}`}
                   >;
                     All Links;
                   </button>;
@@ -159,8 +151,7 @@ export default function Page() {;
                     onClick={() => setSelectedFilter('broken')}`;
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'broken'';
                         ? 'bg-red-500 text-white'';
-                        : 'bg-gray-700 text-gray-300 hover:bg-gray-600'`;,
-}`}
+                        : 'bg-gray-700 text-gray-300 hover:bg-gray-600'`}`}
                   >;
                     Broken;
                   </button>;
@@ -168,8 +159,7 @@ export default function Page() {;
                     onClick={() => setSelectedFilter('external')}`;
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'external'';
                         ? 'bg-blue-500 text-white'';
-                        : 'bg-gray-700 text-gray-300 hover:bg-gray-600'`;,
-}`}
+                        : 'bg-gray-700 text-gray-300 hover:bg-gray-600'`}`}
                   >;
                     External;
                   </button>;
@@ -177,8 +167,7 @@ export default function Page() {;
                     onClick={() => setSelectedFilter('healthy')}`;
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'healthy'';
                         ? 'bg-green-500 text-white'';
-                        : 'bg-gray-700 text-gray-300 hover:bg-gray-600'`;,
-}`}
+                        : 'bg-gray-700 text-gray-300 hover:bg-gray-600'`}`}
                   >;
                     Healthy;
                   </button>;
@@ -289,16 +278,12 @@ export default function Page() {;
             </div>;
           </motion.div>;
         </motion.div>)}
-    </>)};
+    </>)}
 export default LinkHealthMonitor;
-;
 
-export { LinkHealthMonitor };
-;
-export { LinkHealthMonitor };
-;
-export { LinkHealthMonitor };
-;
-export { LinkHealthMonitor };
-;
-export { LinkHealthMonitor };
+
+export { LinkHealthMonitor }
+export { LinkHealthMonitor }
+export { LinkHealthMonitor }
+export { LinkHealthMonitor }
+export { LinkHealthMonitor }

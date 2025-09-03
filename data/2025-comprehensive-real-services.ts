@@ -1,4 +1,4 @@
-export interface ComprehensiveService {;
+export interface ComprehensiveService {
   id: string;
   name: string;
   tagline: string;
@@ -14,7 +14,7 @@ export interface ComprehensiveService {;
   integrations: string[];
   compliance: string[];
   website: string;
-  contact: {;
+  contact: {
     phone: string;
     email: string;
     address: string}
@@ -27,7 +27,7 @@ export interface ComprehensiveService {;
   rating: number;
 export const comprehensiveRealServices: ComprehensiveService[] = [;
   // AI & Machine Learning Services;
-  {;
+  {
     id: "ai-content-factory-pro",;
     name: "AI Content Factory Pro",;
     tagline: "Enterprise-grade AI content generation with brand voice consistency",;
@@ -60,11 +60,10 @@ export const comprehensiveRealServices: ComprehensiveService[] = [;
     integrations["WordPress", "Shopify", "HubSpot", "Mailchimp", "Google Analytics", "SEMrush"],;
     compliance["GDPR", "CCPA", "SOC2", "ISO 27001"],;
     website: "https://ziontechgroup.com/ai-content-factory-pro",;
-    contact: {;
+    contact: {
       phone: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
-},;
+      address: "364 E Main St STE 1008 Middletown DE 19709"},;
     trialDays: 14,;
     setupTime: "5 minutes",;
     competitors["Jasper", "Copy.ai", "Writesonic", "Grammarly Business"],;
@@ -72,10 +71,9 @@ export const comprehensiveRealServices: ComprehensiveService[] = [;
     launchDate: "2024-01-15",;
     customers: 2500,;
     rating: 4.8,;
-    reviews: 1250;,;,
-},;
+    reviews: 1250},;
   // Customer Success & Support;
-  {;
+  {
     id: "ai-customer-success-platform",;
     name: "AI Customer Success Platform",;
     tagline: "Predictive customer success with AI-powered insights",;
@@ -108,11 +106,10 @@ export const comprehensiveRealServices: ComprehensiveService[] = [;
     integrations["Salesforce", "HubSpot", "Pipedrive", "Intercom", "Zendesk", "Slack"],;
     compliance["GDPR", "CCPA", "SOC2", "ISO 27001"],;
     website: "https://ziontechgroup.com/ai-customer-success-platform",;
-    contact: {;
+    contact: {
       phone: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
-},;
+      address: "364 E Main St STE 1008 Middletown DE 19709"},;
     trialDays: 21,;
     setupTime: "1-2 days",;
     competitors["Gainsight", "Totango", "ClientSuccess", "ChurnZero"],;
@@ -120,10 +117,9 @@ export const comprehensiveRealServices: ComprehensiveService[] = [;
     launchDate: "2024-02-20",;
     customers: 1800,;
     rating: 4.9,;
-    reviews: 950;,;,
-},;
+    reviews: 950},;
   // Financial Technology;
-  {;
+  {
     id: "ai-financial-risk-manager",;
     name: "AI Financial Risk Manager",;
     tagline: "Real-time financial risk assessment and compliance",;
@@ -156,11 +152,10 @@ export const comprehensiveRealServices: ComprehensiveService[] = [;
     integrations["Fiserv", "Jack Henry", "FIS", "Temenos", "Salesforce", "Oracle"],;
     compliance["Basel III", "Dodd-Frank", "SOX", "GDPR", "SOC2", "ISO 27001"],;
     website: "https://ziontechgroup.com/ai-financial-risk-manager",;
-    contact: {;
+    contact: {
       phone: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
-},;
+      address: "364 E Main St STE 1008 Middletown DE 19709"},;
     trialDays: 30,;
     setupTime: "2-4 weeks",;
     competitors["SAS", "IBM", "Oracle", "SAP"],;
@@ -168,10 +163,9 @@ export const comprehensiveRealServices: ComprehensiveService[] = [;
     launchDate: "2024-03-10",;
     customers: 1200,;
     rating: 4.7,;
-    reviews: 680;,;,
-},;
+    reviews: 680},;
   // Healthcare & Biotech;
-  {;
+  {
     id: "ai-healthcare-diagnostics",;
     name: "AI Healthcare Diagnostics Platform",;
     tagline: "AI-powered medical imaging and diagnostic support",;
@@ -204,11 +198,10 @@ export const comprehensiveRealServices: ComprehensiveService[] = [;
     integrations["Epic", "Cerner", "Allscripts", "GE Healthcare", "Siemens", "Philips"],;
     compliance["HIPAA", "FDA", "CE Mark", "SOC2", "ISO 27001", "ISO 13485"],;
     website: "https://ziontechgroup.com/ai-healthcare-diagnostics",;
-    contact: {;
+    contact: {
       phone: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
-},;
+      address: "364 E Main St STE 1008 Middletown DE 19709"},;
     trialDays: 60,;
     setupTime: "4-6 weeks",;
     competitors["IBM Watson Health", "Google Health", "Microsoft Healthcare", "Philips"],;
@@ -216,10 +209,9 @@ export const comprehensiveRealServices: ComprehensiveService[] = [;
     launchDate: "2024-01-30",;
     customers: 850,;
     rating: 4.9,;
-    reviews: 420;,;,
-},;
+    reviews: 420},;
   // E-commerce & Retail;
-  {;
+  {
     id: "ai-ecommerce-optimizer",;
     name: "AI E-commerce Optimizer",;
     tagline: "Intelligent e-commerce optimization and personalization",;
@@ -252,11 +244,10 @@ export const comprehensiveRealServices: ComprehensiveService[] = [;
     integrations["Shopify", "WooCommerce", "Magento", "BigCommerce", "Salesforce", "Klaviyo"],;
     compliance["GDPR", "CCPA", "PCI DSS", "SOC2", "ISO 27001"],;
     website: "https://ziontechgroup.com/ai-ecommerce-optimizer",;
-    contact: {;
+    contact: {
       phone: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
-},;
+      address: "364 E Main St STE 1008 Middletown DE 19709"},;
     trialDays: 14,;
     setupTime: "1-2 days",;
     competitors["Dynamic Yield", "Optimizely", "Klevu", "Algolia"],;
@@ -264,10 +255,9 @@ export const comprehensiveRealServices: ComprehensiveService[] = [;
     launchDate: "2024-02-15",;
     customers: 3200,;
     rating: 4.8,;
-    reviews: 1680;,;,
-},;
+    reviews: 1680},;
   // Cybersecurity & Compliance;
-  {;
+  {
     id: "ai-cybersecurity-suite",;
     name: "AI Cybersecurity Suite",;
     tagline: "Intelligent threat detection and response",;
@@ -300,11 +290,10 @@ export const comprehensiveRealServices: ComprehensiveService[] = [;
     integrations["Splunk", "ServiceNow", "Jira", "Slack", "Microsoft 365", "Google Workspace"],;
     compliance["SOC2", "ISO 27001", "NIST", "GDPR", "HIPAA", "PCI DSS"],;
     website: "https://ziontechgroup.com/ai-cybersecurity-suite",;
-    contact: {;
+    contact: {
       phone: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
-},;
+      address: "364 E Main St STE 1008 Middletown DE 19709"},;
     trialDays: 30,;
     setupTime: "1-2 weeks",;
     competitors["CrowdStrike", "SentinelOne", "Carbon Black", "Cylance"],;
@@ -312,10 +301,9 @@ export const comprehensiveRealServices: ComprehensiveService[] = [;
     launchDate: "2024-03-01",;
     customers: 2100,;
     rating: 4.9,;
-    reviews: 1100;,;,
-},;
+    reviews: 1100},;
   // Data & Analytics;
-  {;
+  {
     id: "ai-data-pipeline-platform",;
     name: "AI Data Pipeline Platform",;
     tagline: "Intelligent data processing and analytics automation",;
@@ -348,11 +336,10 @@ export const comprehensiveRealServices: ComprehensiveService[] = [;
     integrations["Snowflake", "Databricks", "AWS", "Google Cloud", "Azure", "Tableau"],;
     compliance["SOC2", "ISO 27001", "GDPR", "CCPA", "HIPAA"],;
     website: "https://ziontechgroup.com/ai-data-pipeline-platform",;
-    contact: {;
+    contact: {
       phone: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
-},;
+      address: "364 E Main St STE 1008 Middletown DE 19709"},;
     trialDays: 21,;
     setupTime: "1-2 weeks",;
     competitors["Fivetran", "Alteryx", "Talend", "Informatica"],;
@@ -360,10 +347,9 @@ export const comprehensiveRealServices: ComprehensiveService[] = [;
     launchDate: "2024-02-01",;
     customers: 2800,;
     rating: 4.8,;
-    reviews: 1450;,;,
-},;
+    reviews: 1450},;
   // Human Resources;
-  {;
+  {
     id: "ai-hr-recruitment-platform",;
     name: "AI HR Recruitment Platform",;
     tagline: "Intelligent talent acquisition and HR automation",;
@@ -396,11 +382,10 @@ export const comprehensiveRealServices: ComprehensiveService[] = [;
     integrations["Workday", "BambooHR", "Greenhouse", "Lever", "Slack", "Microsoft Teams"],;
     compliance["EEOC", "OFCCP", "GDPR", "CCPA", "SOC2", "ISO 27001"],;
     website: "https://ziontechgroup.com/ai-hr-recruitment-platform",;
-    contact: {;
+    contact: {
       phone: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
-},;
+      address: "364 E Main St STE 1008 Middletown DE 19709"},;
     trialDays: 14,;
     setupTime: "1-2 days",;
     competitors["HireVue", "Pymetrics", "HiredScore", "Entelo"],;
@@ -408,10 +393,9 @@ export const comprehensiveRealServices: ComprehensiveService[] = [;
     launchDate: "2024-01-20",;
     customers: 1900,;
     rating: 4.7,;
-    reviews: 890;,;,
-},;
+    reviews: 890},;
   // Legal & Compliance;
-  {;
+  {
     id: "ai-legal-contract-analyzer",;
     name: "AI Legal Contract Analyzer",;
     tagline: "Intelligent contract analysis and legal automation",;
@@ -444,11 +428,10 @@ export const comprehensiveRealServices: ComprehensiveService[] = [;
     integrations["Clio", "MyCase", "PracticePanther", "LexisNexis", "Westlaw", "DocuSign"],;
     compliance["SOC2", "ISO 27001", "GDPR", "CCPA", "Attorney-client privilege"],;
     website: "https://ziontechgroup.com/ai-legal-contract-analyzer",;
-    contact: {;
+    contact: {
       phone: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
-},;
+      address: "364 E Main St STE 1008 Middletown DE 19709"},;
     trialDays: 30,;
     setupTime: "1-2 weeks",;
     competitors["Evisort", "ContractPodAi", "Kira Systems", "Luminance"],;
@@ -456,10 +439,9 @@ export const comprehensiveRealServices: ComprehensiveService[] = [;
     launchDate: "2024-02-10",;
     customers: 1100,;
     rating: 4.8,;
-    reviews: 580;,;,
-},;
+    reviews: 580},;
   // Manufacturing & IoT;
-  {;
+  {
     id: "ai-manufacturing-optimizer",;
     name: "AI Manufacturing Optimizer",;
     tagline: "Intelligent manufacturing optimization and predictive maintenance",;
@@ -492,11 +474,10 @@ export const comprehensiveRealServices: ComprehensiveService[] = [;
     integrations["SAP", "Oracle", "Siemens", "Rockwell", "GE Digital", "PTC"],;
     compliance["ISO 9001", "ISO 14001", "OHSAS 18001", "SOC2", "ISO 27001"],;
     website: "https://ziontechgroup.com/ai-manufacturing-optimizer",;
-    contact: {;
+    contact: {
       phone: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
-},;
+      address: "364 E Main St STE 1008 Middletown DE 19709"},;
     trialDays: 60,;
     setupTime: "4-6 weeks",;
     competitors["PTC", "Siemens", "GE Digital", "Rockwell Automation"],;

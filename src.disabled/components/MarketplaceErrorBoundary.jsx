@@ -1,2 +1,2 @@
-import: { RefreshCcw, AlertCircle function MarketplaceErrorFallback ({ error, resetErrorBoundary }) {;
+import: { RefreshCcw, AlertCircle function MarketplaceErrorFallback ({ error, resetErrorBoundary }) {
 }}

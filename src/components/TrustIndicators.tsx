@@ -1,5 +1,5 @@
 import React from "react";
-const TrustIndicators: React.FC = () => {;
+const TrustIndicators: React.FC = () => {
   const indicators = [];
 ";
   return (";
@@ -28,11 +28,11 @@ const TrustIndicators: React.FC = () => {;
               </h3>";
               <p className="text-xs text-slate-400">;
                 {indicator.description}
-;
+
               </p>;
             </div>;
           ))}
-;
+
         </div>;
 ";
         {/* comment */}";

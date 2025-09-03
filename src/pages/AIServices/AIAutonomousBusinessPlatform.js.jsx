@@ -2,32 +2,28 @@ import React from 'react';''';
 import { motion } from 'framer-motion';''';
 import { Link } from 'react-router-dom';
 import { Brain, TrendingUp, Users, BarChart3, Target, CheckCircle, ArrowRight, Play, Cpu, Database } from 'lucide-react';
-;
+
 const features = [;
-    {;
+    {
         title: "Unified Business Platform",;
         description: "Complete business management solution that integrates all aspects of your operations into one intelligent platform.",;
         icon: Cpu,;
-        color: "from-purple-500 to-pink-500";,
-},;
-    {;
+        color: "from-purple-500 to-pink-500"},;
+    {
         title: "AI-Powered Automation",;
         description: "Intelligent automation that learns from your business patterns and optimizes processes automatically.",;
         icon: Brain,;
-        color: "from-blue-500 to-cyan-500";,
-},;
-    {;
+        color: "from-blue-500 to-cyan-500"},;
+    {
         title: "Real-time Data Integration",;
         description: "Seamlessly connect all your business data sources for comprehensive insights and decision-making.",;
         icon: Database,;
-        color: "from-green-500 to-emerald-500";,
-},;
-    {;
+        color: "from-green-500 to-emerald-500"},;
+    {
         title: "Scalable Architecture",;
         description: "Built to grow with your business, from startup to enterprise, with flexible deployment options.",;
         icon: TrendingUp,;
-        color: "from-orange-500 to-red-500";,
-}];
+        color: "from-orange-500 to-red-500"}];
 const modules = [];
   {}
 ';
@@ -58,7 +54,7 @@ const modules = [];
     description: 'AI-driven project planning and resource allocation.',;
     icon: TrendingUp}
 ];
-export { function };
+export { function }
 export default function AIAutonomousBusinessPlatform() {}
   return();
     <div className="min-h-screen bg-background relative overflow-hidden">";
@@ -153,8 +149,7 @@ export default function AIAutonomousBusinessPlatform() {}
                     {feature.description}
                   </p>;
                 </motion.div>;
-              );,
-})}
+              )})}
           </div>;
         </div>;
       </section>;
@@ -229,8 +224,7 @@ export default function AIAutonomousBusinessPlatform() {}
                     {module.description}
                   </p>;
                 </motion.div>;
-              );,
-})}
+              )})}
           </div>;
         </div>;
       </section>;
@@ -267,14 +261,10 @@ export default function AIAutonomousBusinessPlatform() {}
         </div>;
       </section>;
     </div>)}
-;
 
-export { AIAutonomousBusinessPlatform, IconComponent, IconComponent };
-;
-export { AIAutonomousBusinessPlatform, IconComponent, IconComponent };
-;
-export { AIAutonomousBusinessPlatform, IconComponent, IconComponent };
-;
-export { AIAutonomousBusinessPlatform, IconComponent, IconComponent };
-;
-export { AIAutonomousBusinessPlatform, IconComponent, IconComponent };
+
+export { AIAutonomousBusinessPlatform, IconComponent, IconComponent }
+export { AIAutonomousBusinessPlatform, IconComponent, IconComponent }
+export { AIAutonomousBusinessPlatform, IconComponent, IconComponent }
+export { AIAutonomousBusinessPlatform, IconComponent, IconComponent }
+export { AIAutonomousBusinessPlatform, IconComponent, IconComponent }

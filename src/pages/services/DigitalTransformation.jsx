@@ -3,51 +3,44 @@ import { Link } from 'react-router-dom';
 import { SEO } from '@/components/SEO';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
-;
-const DigitalTransformation = () => {;
+
+const DigitalTransformation = () => {
     const transformationServices = [;
-        {;
+        {
             title: "Process Automation",;
             description: "Streamline operations with intelligent automation solutions",;
             features: ["Workflow Automation", "RPA Implementation", "Business Process Optimization", "Efficiency Metrics"],;
-            icon: "🤖";,
-},;
-        {;
+            icon: "🤖"},;
+        {
             title: "Workflow Optimization",;
             description: "Redesign and optimize business workflows for maximum efficiency",;
             features: ["Process Mapping", "Bottleneck Analysis", "Workflow Redesign", "Performance Monitoring"],;
-            icon: "📊";,
-},;
-        {;
+            icon: "📊"},;
+        {
             title: "Change Management",;
             description: "Guide your organization through digital transformation with expert change management",;
             features: ["Stakeholder Engagement", "Training Programs", "Communication Strategy", "Success Metrics"],;
-            icon: "🔄";,
-},;
-        {;
+            icon: "🔄"},;
+        {
             title: "Business Process Optimization",;
             description: "Streamline operations and improve efficiency through digital workflows",;
             features: ["Process Mapping", "Automation", "Performance Metrics", "Continuous Improvement"],;
-            icon: "⚡";,
-},;
-        {;
+            icon: "⚡"},;
+        {
             title: "Customer Experience Enhancement",;
             description: "Create seamless digital experiences that delight your customers",;
             features: ["User Journey Mapping", "Digital Touchpoints", "Personalization", "Feedback Systems"],;
-            icon: "🎯";,
-},;
-        {;
+            icon: "🎯"},;
+        {
             title: "Data & Analytics Strategy",;
             description: "Leverage data insights to drive informed business decisions",;
             features: ["Data Collection", "Analytics Platforms", "Business Intelligence", "Predictive Modeling"],;
-            icon: "📊";,
-},;
-        {;
+            icon: "📊"},;
+        {
             title: "Technology Infrastructure",;
             description: "Modernize your technology stack for scalability and performance",;
             features: ["Cloud Migration", "API Integration", "Microservices", "DevOps Practices"],;
-            icon: "🏗️";,
-}
+            icon: "🏗️"}
     ];
     const benefits = [;
         "Increased operational efficiency by 50%",;
@@ -68,24 +61,22 @@ const DigitalTransformation = () => {;
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto text-center">;
-          <motion.h1 className="text-4xl md:text-6xl font-bold mb-6" initial = {;
+          <motion.h1 className="text-4xl md:text-6xl font-bold mb-6" initial = {
   { opacity: 0,;
   y: -20 ;
 
-;
 
-;
 
-;,
-}} animate = {;
+
+
+}} animate = {
   { opacity: 1,;
   y: 0 ;
 
-;
 
-;
 
-;,
+
+
 }} transition={{ duration: 0.8 }}>;
             Digital;
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">;
@@ -94,8 +85,8 @@ const DigitalTransformation = () => {;
           </motion.h1>;
           <motion.p ;
             className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto" ;
-            initial={{ opacity: 0, y: 20 }} ;
-            animate={{ opacity: 1, y: 0 }} ;
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >;
             Embrace the future of business with our comprehensive digital transformation services designed to modernize your operations and drive sustainable growth.;
@@ -128,18 +119,17 @@ const DigitalTransformation = () => {;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {transformationServices.map((service, index) => (;
               <motion.div ;
-                key={index} ;
+                key={index}
                 className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105" ;
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6,;
   delay: index * 0.1 ;
 
-;
 
-;
 
-;,
+
+
 }} viewport={{ once: true }}>;
                 <div className="text-5xl mb-6">{service.icon}</div>;
                 <h3 className="text-2xl font-semibold text-white mb-4">{service.title}</h3>;
@@ -176,7 +166,7 @@ const DigitalTransformation = () => {;
               className="text-center" ;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }} ;
+              transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >;
               <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">;
@@ -190,9 +180,9 @@ const DigitalTransformation = () => {;
 
             <motion.div ;
               className="text-center" ;
-              initial={{ opacity: 0, y: 20 }} ;
-              whileInView={{ opacity: 1, y: 0 }} ;
-              transition={{ duration: 0.6, delay: 0.2 }} ;
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >;
               <div className="w-16 h-16 bg-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">;
@@ -206,9 +196,9 @@ const DigitalTransformation = () => {;
 
             <motion.div ;
               className="text-center" ;
-              initial={{ opacity: 0, y: 20 }} ;
-              whileInView={{ opacity: 1, y: 0 }} ;
-              transition={{ duration: 0.6, delay: 0.4 }} ;
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
             >;
               <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">;
@@ -238,7 +228,7 @@ const DigitalTransformation = () => {;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
             {transformationApproach.map((step, index) => (;
               <motion.div ;
-                key={index} ;
+                key={index}
                 className="text-center" ;
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -271,17 +261,12 @@ const DigitalTransformation = () => {;
         </div>;
       </section>;
     </div>;
-  );,
-}
-;
+  )}
+
 export default DigitalTransformation;
-;
-export { DigitalTransformation };
-;
-export { DigitalTransformation };
-;
-export { DigitalTransformation };
-;
-export { DigitalTransformation };
-;
-export { DigitalTransformation };
+
+export { DigitalTransformation }
+export { DigitalTransformation }
+export { DigitalTransformation }
+export { DigitalTransformation }
+export { DigitalTransformation }

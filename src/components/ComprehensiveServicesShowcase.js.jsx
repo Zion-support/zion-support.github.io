@@ -1,19 +1,18 @@
 import React, { useState } from "react";""";,"});,"})","});,"})","})";
-  Brain,,"});,"})";
-  Shield,,"});,"})";
-  Rocket,,"});,"})";
-  Globe,,"});,"})";
-  Zap,,"});,"})";
-  ArrowRight,,"});,"})";
-  Star,,"});,"})";
-  Users,,"});,"})";
-  TrendingUp,,"});,"})";
-  CheckCircle,,"});,"})";
+  Brain,"});,"})";
+  Shield,"});,"})";
+  Rocket,"});,"})";
+  Globe,"});,"})";
+  Zap,"});,"})";
+  ArrowRight,"});,"})";
+  Star,"});,"})";
+  Users,"});,"})";
+  TrendingUp,"});,"})";
+  CheckCircle,"});,"})";
   DollarSign,";,"});,"})";
   Clock,"";,"});,"})";
   Target,""";,"});,"})";
-  Award"""";,"});,"});";,
-} from "lucide - react","";,"});,"})","});,"})";
+  Award"""";,"});,"});"} from "lucide - react","";,"});,"})","});,"})";
 ;,"});,"})";
 // comment;
 ;,"});,"})";
@@ -24,24 +23,21 @@ const serviceCategories = [];,"});,"})";
     name: "Micro SAAS Solutions","""";,"});,"})";
     icon: <Rocket className="w-6 h-6"  />,";,"});,"})";
     color: "from-purple-600 to-pink-600","});,"})";
-    services: revolutionary2027AdvancedMicroSaasServices,"});,"});";,
-},,"});,"})";
+    services: revolutionary2027AdvancedMicroSaasServices,"});,"});"},"});,"})";
   {}"});,"})";
 ";,"});,"})";
     id: "it-infrastructure",""";,"});,"})";
     name: "IT Infrastructure & Cybersecurity","""";,"});,"})";
     icon: <Shield className="w-6 h-6"  />,";,"});,"})";
     color: "from-red-600 to-orange-600","});,"})";
-    services: revolutionary2027ITInfrastructureCybersecurityServices,"});,"});";,
-},,"});,"})";
+    services: revolutionary2027ITInfrastructureCybersecurityServices,"});,"});"},"});,"})";
   {}"});,"})";
 ";,"});,"})";
     id: "ai-innovation",""";,"});,"})";
     name: "AI Innovation Services","""";,"});,"})";
     icon: <Brain className="w-6 h-6"  />,";,"});,"})";
     color: "from-blue-600 to-cyan-600","});,"})";
-    services: revolutionary2027AIInnovationServices,"});,"});";,
-}"});,"})";
+    services: revolutionary2027AIInnovationServices,"});,"});"}"});,"})";
 ];,"});,"})";
 ;,"});,"})";
 export function ComprehensiveServicesShowcase() {}"});,"})";
@@ -52,42 +48,34 @@ export function ComprehensiveServicesShowcase() {}"});,"})";
   const [selectedService, setSelectedService] = useState(null);,"});,"})";
 ;,"});,"})";
   const containerVariants = {}"});,"})";
-    hidden: { opacity: 0 },,"});,"})";
+    hidden: { opacity: 0 },"});,"})";
     visible: {}"});,"})";
       opacity: 1,"});,"})";
       transition: {}"});,"})";
         staggerChildren: 0.1,"});,"})";
-        delayChildren: 0.2,"});,"});";,
-}"});,"});";,
-};,"});,"})";
+        delayChildren: 0.2,"});,"});"}"});,"});"};,"});,"})";
 ;,"});,"})";
   const itemVariants = {}"});,"})";
   hidden: { y: 20,"});,"})";
-  opacity: 0,"});,"});";,
-},,"});,"})";
+  opacity: 0,"});,"});"},"});,"})";
     visible: {}"});,"})";
       y: 0,"});,"})";
       opacity: 1,"});,"})";
       transition: {}"});,"})";
 """;,"});,"})";
         duration: 0.5,"""";,"});,"})";
-        ease: "easeOut"","});,"});";,
-}"});,"});";,
-};,"});,"})";
+        ease: "easeOut"","});,"});"}"});,"});"};,"});,"})";
 ;,"});,"})";
   const cardVariants = {}"});,"})";
   hidden: { scale: 0.95,"});,"})";
-  opacity: 0,"});,"});";,
-},,"});,"})";
+  opacity: 0,"});,"});"},"});,"})";
     visible: {}"});,"})";
       scale: 1,"});,"})";
       opacity: 1,"});,"})";
       transition: {}"});,"})";
 """;,"});,"})";
         duration: 0.4,"""";,"});,"})";
-        ease: "easeOut"","});,"});";,
-}"});,"});";,
-};,"});,"})";
+        ease: "easeOut"","});,"});"}"});,"});"};,"});,"})";
 """;,"});,"})";
   return ("""";,"});,"})";
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">"""";,"});,"})";
@@ -97,12 +85,10 @@ export function ComprehensiveServicesShowcase() {}"});,"})";
           className="text-center mb-16""";,"});,"})";
           initial = {}"});,"})";
   { opacity: 0,"});,"})";
-  y: 30,"});,"});";,
-}}"});,"})";
+  y: 30,"});,"});"}}"});,"})";
           animate = {}"});,"})";
   { opacity: 1,"});,"})";
-  y: 0,"});,"});";,
-}}"});,"})";
+  y: 0,"});,"});"}}"});,"})";
           transition="{{" duration: 0.6 }}""";,"});,"})">"""";,"});,"})";
           <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,"});,"})";
             Revolutionary 2027 Services""";,"});,"})";
@@ -143,16 +129,13 @@ export function ComprehensiveServicesShowcase() {}"});,"})";
           className="flex flex-wrap justify-center gap-4 mb-12""";,"});,"})";
           initial = {}"});,"})";
   { opacity: 0,"});,"})";
-  y: 20,"});,"});";,
-}}"});,"})";
+  y: 20,"});,"});"}}"});,"})";
           animate = {}"});,"})";
   { opacity: 1,"});,"})";
-  y: 0,"});,"});";,
-}}"});,"})";
+  y: 0,"});,"});"}}"});,"})";
           transition = {}"});,"})";
   { duration: 0.6,"});,"})";
-  delay: 0.2,"});,"});";,
-}}"});,"})">;,"});,"})";
+  delay: 0.2,"});,"});"}}"});,"})">;,"});,"})";
           {serviceCategories.map ( (category) => (<button,"});,"})";
               key={category.id}"});,"})";
               onClick="{()" => setSelectedCategory(category.id)}"});,"})";
@@ -162,8 +145,7 @@ export function ComprehensiveServicesShowcase() {}"});,"})";
 """"";,"});,"})";
                 selectedCategory === category.id""""""";,"});,"})";
                   ? "bg-gradient-to-r ${category.color} text-white shadow-lg"""""""";,"});,"})";
-                  : "bg-zion-slate-dark text-zion-cyan-light hover: bg-zion-slate hover:text-zion-cyan border border-zion-cyan/30"""","});,"});";,
-}"}"});,"})">;,"});,"})";
+                  : "bg-zion-slate-dark text-zion-cyan-light hover: bg-zion-slate hover:text-zion-cyan border border-zion-cyan/30"""","});,"});"}"}"});,"})">;,"});,"})";
               {category.icon}"});,"})";
               <span>{category.name}</span>;,"});,"})";
             </button>) ) }"});,"})";
@@ -189,8 +171,7 @@ export function ComprehensiveServicesShowcase() {}"});,"})";
                   y: -8,"""";,"});,"})";
                   boxShadow: "0 20px 40px rgba(0, 0, 0,"""";,"});,"})";
   0.3)";,"});,"})";
-;,"});,"});";,
-}}"});,"})">""";,"});,"})";
+;,"});,"});"}}"});,"})">""";,"});,"})";
                 {/* comment */}"""";,"});,"})";
                 <div className="flex items-start justify-between mb-4">"""";,"});,"})";
                   <div className="text-4xl">{service.icon}</div>""";,"});,"})";
@@ -267,16 +248,13 @@ export function ComprehensiveServicesShowcase() {}"});,"})";
           className="text-center mt-16""";,"});,"})";
           initial = {}"});,"})";
   { opacity: 0,"});,"})";
-  y: 30,"});,"});";,
-}}"});,"})";
+  y: 30,"});,"});"}}"});,"})";
           animate = {}"});,"})";
   { opacity: 1,"});,"})";
-  y: 0,"});,"});";,
-}}"});,"})";
+  y: 0,"});,"});"}}"});,"})";
           transition = {}"});,"})";
   { duration: 0.6,"});,"})";
-  delay: 0.4,"});,"});";,
-}}""";,"});,"})">"""";,"});,"})";
+  delay: 0.4,"});,"});"}}""";,"});,"})">"""";,"});,"})";
           <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 p-8 rounded-2xl border border-zion-cyan/30">"""";,"});,"})";
             <h3 className="text-2xl font-bold text-white mb-4">;,"});,"})";
               Ready to Get Started?""";,"});,"})";
@@ -312,16 +290,13 @@ export function ComprehensiveServicesShowcase() {}"});,"})";
               className="bg-zion-slate-dark rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto""";,"});,"})";
               initial = {}"});,"})";
   { scale: 0.9,"});,"})";
-  opacity: 0,"});,"});";,
-}}"});,"})";
+  opacity: 0,"});,"});"}}"});,"})";
               animate = {}"});,"})";
   { scale: 1,"});,"})";
-  opacity: 1,"});,"});";,
-}}"});,"})";
+  opacity: 1,"});,"});"}}"});,"})";
               exit = {}"});,"})";
   { scale: 0.9,"});,"})";
-  opacity: 0,"});,"});";,
-}}"});,"})";
+  opacity: 0,"});,"});"}}"});,"})";
               onClick="{(e)" => e.stopPropagation()}""";,"});,"})">"""";,"});,"})";
               <div className="flex items-start justify-between mb-6">"""";,"});,"})";
                 <div className="text-6xl">{selectedService.icon}</div>;,"});,"})";
@@ -399,15 +374,13 @@ export function ComprehensiveServicesShowcase() {}"});,"})";
   )}"";,"});,"})";
 """"";,"});,"})";
 "";
-  const [selectedCategory, setSelectedCategory] = useState();,
-}
-  const [selectedService, setSelectedService] = useState();,
-}  const containerVariants = {}
-;
+  const [selectedCategory, setSelectedCategory] = useState()}
+  const [selectedService, setSelectedService] = useState()}  const containerVariants = {}
+
 // Import the new service data;
-;
-;
-;
+
+
+
 const serviceCategories = [];
   {}
 ';
@@ -415,55 +388,48 @@ const serviceCategories = [];
     name: 'Micro SAAS Solutions',"";
     icon: <Rocket className="w-6 h-6" />,';
     color: 'from-purple-600 to-pink-600',;
-    services: revolutionary2027AdvancedMicroSaasServices;,
-},;
+    services: revolutionary2027AdvancedMicroSaasServices},;
   {}
 ';
     id: 'it-infrastructure','";
     name: 'IT Infrastructure & Cybersecurity',"";
     icon: <Shield className="w-6 h-6" />,';
     color: 'from-red-600 to-orange-600',;
-    services: revolutionary2027ITInfrastructureCybersecurityServices;,
-},;
+    services: revolutionary2027ITInfrastructureCybersecurityServices},;
   {}
 ';
     id: 'ai-innovation','";
     name: 'AI Innovation Services',"";
     icon: <Brain className="w-6 h-6" />,';
     color: 'from-blue-600 to-cyan-600',;
-    services: revolutionary2027AIInnovationServices;,
-}
-;
+    services: revolutionary2027AIInnovationServices}
+
   const itemVariants = {}
-;
+
   hidden: { y: 20, opacity: 0}, visible: {}";
       y: 0, opacity: 1, transition: {}
 """;
         duration: 0.5,""";
         ease: "easeOut"""}
     }
-;,
 }
-;
+
   const cardVariants = {}
-;
+
   hidden: { scale: 0.95, opacity: 0}, visible: {}";
       scale: 1, opacity: 1, transition: {}
 "";
         duration: 0.4, "";
-        ease: "easeOut"""}";,
-};", ";,
-}";";";,
-};"}";
+        ease: "easeOut"""}"};", "}";";"};"}";
   return ("";
     <section className = "py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">"";
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",;
         {/* comment */}""";
         <motion .div "";
           className="text-center mb-16"          initial = {}
-;
+
   { opacity: 0, y: 30}}
-;
+
           animate = {}";
   { opacity: 1, y: 0}}";
           transition="{{" duration: 0.6 }}""">"""";
@@ -504,13 +470,13 @@ designed to transform your business and drive exponential growth.";
         {/* comment */}""";
         <motion .div "";
           className="flex flex-wrap justify-center gap-4 mb-12"          initial = {}
-;
+
   { opacity: 0, y: 20}}
-;
+
           animate = {}
-;
+
   { opacity: 1, y: 0}}
-;
+
           transition = {}";
   { duration: 0.6, delay: 0.2}}">;
           {serviceCategories.map ( (category) => (<button key="{category.id}
@@ -521,12 +487,11 @@ designed to transform your business and drive exponential growth.";
 """"""";
                 selectedCategory === category.id"""""""""";
                   ? "bg-gradient-to-r ${category.color} text-white shadow-lg""""""""";
-                  : "bg-zion-slate-dark text-zion-cyan-light hover:bg-zion-slate hover:text-zion-cyan border border-zion-cyan/30"""", ";,
-}"}
-;
+                  : "bg-zion-slate-dark text-zion-cyan-light hover:bg-zion-slate hover:text-zion-cyan border border-zion-cyan/30"""", "}"}
+
             >;
               {category.icon}
-;
+
               <span>{category.name}</span>;
             </button>) ) }";
         </motion.div>;
@@ -552,8 +517,7 @@ designed to transform your business and drive exponential growth.";
 """;
                   y: -8, """;
                   boxShadow: "0 20px 40px rgba(0, 0, 0,""""">;
-  0.3)", ";,
-}}"">""";
+  0.3)", "}}"">""";
                 {/* comment */}"";
                 <div className = "flex items-start justify-between mb-4">"";
                   <div className="text-4xl">{service.icon}</div>""";
@@ -599,7 +563,7 @@ designed to transform your business and drive exponential growth.";
                       <span className="bg-zion-cyan/20 text-zion-cyan text-xs px-2 py-1 rounded-full">;
                         +{service.features.length-3} more,;
                       </span>) }
-;
+
                   </div>";
                 </div>;
 """;
@@ -632,16 +596,15 @@ designed to transform your business and drive exponential growth.";
         {/* comment */}""";
         <motion .div "";
           className="text-center mt-16"          initial = {}
-;
+
   { opacity: 0, y: 30}}
-;
+
           animate = {}
-;
+
   { opacity: 1, y: 0}}
-;
+
           transition = {}">;
-  { duration: 0.6, delay: 0.4",";";,
-}}""">"""";
+  { duration: 0.6, delay: 0.4",";"}}""">"""";
           <div className = "bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 p-8 rounded-2xl border border-zion-cyan/30">"";
             <h3 className="text-2xl font-bold text-white mb-4">;
               Ready to Get Started?""";
@@ -675,13 +638,13 @@ designed to transform your business and drive exponential growth.";
             onClick="{" () ="> setSelectedService (null) }">""";
             <motion .div"";
               className="bg-zion-slate-dark rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto"              initial = {}
-;
+
   { scale: 0.9, opacity: 0}}
-;
+
               animate = {}
-;
+
   { scale: 1, opacity: 1}}
-;
+
               exit = {}";
   { scale: 0.9, opacity: 0}}";
               onClick="{(e)" ="> e.stopPropagation()}"">""";
@@ -707,7 +670,7 @@ designed to transform your business and drive exponential growth.";
                         <span className="text-zion-cyan-light">{feature}</span>;
                       </li>;
                     ))}
-;
+
                   </ul>";
                 </div>;
 """;
@@ -758,7 +721,7 @@ designed to transform your business and drive exponential growth.";
                 </div>;
             </motion.div>,;
           </motion.div>) }
-;
+
       </AnimatePresence>";
     </section>"";
   )}""""";

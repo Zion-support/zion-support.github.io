@@ -7,43 +7,37 @@ export default function ManufacturingSolutions() {}
             icon: Brain,;
             title: "AI-Powered Manufacturing","";
             description: "Intelligent automation and predictive maintenance for smart factories","";
-            features["Predictive maintenance", "Quality control", "Process optimization"];,
-},;
+            features["Predictive maintenance", "Quality control", "Process optimization"]},;
         {}
 ";
             icon: Cpu,"";
             title: "IoT Integration","";
             description: "Connected devices and sensors for real-time monitoring and control","";
-            features["Real-time monitoring", "Data collection", "Remote control"];,
-},;
+            features["Real-time monitoring", "Data collection", "Remote control"]},;
         {}
 ";
             icon: BarChart3,"";
             title: "Advanced Analytics","";
             description: "Data-driven insights for operational efficiency and quality improvement","";
-            features["Performance analytics", "Quality metrics", "Efficiency tracking"];,
-},;
+            features["Performance analytics", "Quality metrics", "Efficiency tracking"]},;
         {}
 ";
             icon: Shield,"";
             title: "Cybersecurity","";
             description: "Industrial-grade security for connected manufacturing systems","";
-            features["Threat detection", "Access control", "Data protection"];,
-},;
+            features["Threat detection", "Access control", "Data protection"]},;
         {}
 ";
             icon: Network,"";
             title: "Digital Twin","";
             description: "Virtual replicas of physical systems for simulation and optimization","";
-            features["3D modeling", "Simulation", "Performance prediction"];,
-},;
+            features["3D modeling", "Simulation", "Performance prediction"]},;
         {}
 ";
             icon: Zap,"";
             title: "Process Automation","";
             description: "Streamlined workflows and automated decision-making processes","";
-            features["Workflow automation", "Decision support", "Process optimization"];,
-}
+            features["Workflow automation", "Decision support", "Process optimization"]}
     ];
     const useCases = [];
         {}
@@ -51,43 +45,37 @@ export default function ManufacturingSolutions() {}
 "";
             title: "Predictive Maintenance","";
             description: "AI-powered equipment monitoring to prevent costly breakdowns","";
-            icon: "🔧";,
-},;
+            icon: "🔧"},;
         {}
 ";
 "";
             title: "Quality Control","";
             description: "Automated inspection and quality assurance systems","";
-            icon: "✅";,
-},;
+            icon: "✅"},;
         {}
 ";
 "";
             title: "Supply Chain Optimization","";
             description: "Intelligent inventory management and logistics optimization","";
-            icon: "📦";,
-},;
+            icon: "📦"},;
         {}
 ";
 "";
             title: "Energy Management","";
             description: "Smart energy consumption monitoring and optimization","";
-            icon: "⚡";,
-},;
+            icon: "⚡"},;
         {}
 ";
 "";
             title: "Worker Safety","";
             description: "AI-powered safety monitoring and hazard detection","";
-            icon: "🛡️";,
-},;
+            icon: "🛡️"},;
         {}
 ";
 "";
             title: "Production Planning","";
             description: "Intelligent production scheduling and resource allocation","";
-            icon: "📅";,
-}
+            icon: "📅"}
     ];";
     const benefits = ["";
         "Reduce downtime by 30-50%","";
@@ -227,14 +215,10 @@ export default function ManufacturingSolutions() {}
         </div>;
       </section>;
     </div>)}
-;
 
-export { ManufacturingSolutions };
-;
-export { ManufacturingSolutions };
-;
-export { ManufacturingSolutions };
-;
-export { ManufacturingSolutions };
-;
-export { ManufacturingSolutions };
+
+export { ManufacturingSolutions }
+export { ManufacturingSolutions }
+export { ManufacturingSolutions }
+export { ManufacturingSolutions }
+export { ManufacturingSolutions }

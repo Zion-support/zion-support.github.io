@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
-;
-export default function AIAutomationTrends2025() {;
+
+export default function AIAutomationTrends2025() {
   return (;
     <>;
       <Head>;
@@ -11,7 +11,7 @@ export default function AIAutomationTrends2025() {;
         <meta property="og:description" content="Explore the cutting-edge trends shaping the future of AI automation and autonomous technology systems." />;
         <meta name="twitter:card" content="summary_large_image" />;
       </Head>;
-      ;
+
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">;
         <main className="container mx-auto px-6 py-12">;
           <nav className="mb-8">;
@@ -19,7 +19,7 @@ export default function AIAutomationTrends2025() {;
               ← Back to Blog;
             </a>;
           </nav>;
-          ;
+
           <article className="max-w-4xl mx-auto">;
             <header className="mb-12">;
               <div className="flex items-center gap-3 mb-4">;
@@ -38,7 +38,7 @@ export default function AIAutomationTrends2025() {;
                 From autonomous decision-making systems to self-healing infrastructure, the future is here.;
               </p>;
             </header>;
-            ;
+
             <div className="prose prose-invert prose-lg max-w-none">;
               <section className="mb-12">;
                 <h2 className="text-3xl font-bold mb-6 text-cyan-400">The Rise of Autonomous Decision Making</h2>;
@@ -53,7 +53,7 @@ export default function AIAutomationTrends2025() {;
                   content without human oversight.;
                 </p>;
               </section>;
-              ;
+
               <section className="mb-12">;
                 <h2 className="text-3xl font-bold mb-6 text-fuchsia-400">Self-Healing Infrastructure</h2>;
                 <p className="text-white/80 mb-4">;
@@ -67,7 +67,7 @@ export default function AIAutomationTrends2025() {;
                   without human intervention.;
                 </p>;
               </section>;
-              ;
+
               <section className="mb-12">;
                 <h2 className="text-3xl font-bold mb-6 text-green-400">AI-Generated Content Creation</h2>;
                 <p className="text-white/80 mb-4">;
@@ -80,7 +80,7 @@ export default function AIAutomationTrends2025() {;
                   pages of high-quality content, demonstrating the power and potential of AI-driven creativity.;
                 </p>;
               </section>;
-              ;
+
               <section className="mb-12">;
                 <h2 className="text-3xl font-bold mb-6 text-blue-400">The Future of Work</h2>;
                 <p className="text-white/80 mb-4">;
@@ -93,7 +93,7 @@ export default function AIAutomationTrends2025() {;
                   creating workflows where both humans and AI systems work together seamlessly.;
                 </p>;
               </section>;
-              ;
+
               <section className="mb-12">;
                 <h2 className="text-3xl font-bold mb-6 text-purple-400">Ethical Considerations</h2>;
                 <p className="text-white/80 mb-4">;
@@ -106,7 +106,7 @@ export default function AIAutomationTrends2025() {;
                   and maintaining human control over critical systems.;
                 </p>;
               </section>;
-              ;
+
               <section className="mb-12">;
                 <h2 className="text-3xl font-bold mb-6 text-yellow-400">What's Next?</h2>;
                 <p className="text-white/80 mb-4">;
@@ -119,7 +119,7 @@ export default function AIAutomationTrends2025() {;
                 </p>;
               </section>;
             </div>;
-            ;
+
             <footer className="mt-16 pt-8 border-t border-white/20">;
               <div className="flex items-center justify-between">;
                 <div className="text-white/60 text-sm">;
@@ -139,5 +139,4 @@ export default function AIAutomationTrends2025() {;
         </main>;
       </div>;
     </>;
-  );,
-}
+  )}

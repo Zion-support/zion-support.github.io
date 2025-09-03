@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { motion  } from 'framer-motion';
-export default function Page() {;
+export default function Page() {
 ,;
   ];
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;,
-}, []);
+  useEffect(() => {
+  // TODO: Add dependencies if needed}, []);
     setContentIssues(sampleIssues);
-    generateReport(sampleIssues);,
-}, []);
-  const generateReport = issues => {;
+    generateReport(sampleIssues)}, []);
+  const generateReport = issues => {
 
     const totalPages = 79; // From analysis report;
     const pagesWithIssues = issues.length;
@@ -26,17 +24,15 @@ export default function Page() {;
       averageContentLength: 5000, // Sample data;
       pagesWithImages: 45, // Sample data;
       pagesWithMetaDescriptions: 32, // Sample data;
-      lastUpdated: new Date()});,
-};
-  const startAnalysis = async () => {;
+      lastUpdated: new Date()})}
+  const startAnalysis = async () => {
     setIsAnalyzing(true);
     // Simulate content analysis;
     await new Promise(resolve => setTimeout(resolve, 3000));
-    setIsAnalyzing(false);,
-};
-  const getSeverityIcon = severity => {;
+    setIsAnalyzing(false)}
+  const getSeverityIcon = severity => {
 
-    switch(severity) {;
+    switch(severity) {
 
       case 'high':;
         return <AlertTriangle className="w-4 h-4 text-red-400" />;
@@ -45,12 +41,11 @@ export default function Page() {;
       case 'low':";
         return <Info className="w-4 h-4 text-blue-400" />;
       default:";
-        return <Info className="w-4 h-4 text-gray-400" />;,
-}
-  };
-  const getSeverityColor = severity => {;
+        return <Info className="w-4 h-4 text-gray-400" />}
+  }
+  const getSeverityColor = severity => {
 
-    switch(severity) {;
+    switch(severity) {
 
       case 'high':';
         return 'text-red-400';
@@ -59,12 +54,11 @@ export default function Page() {;
       case 'low':';
         return 'text-blue-400';
       default:';
-        return 'text-gray-400';,
-}
-  };
-  const getStatusColor = status => {;
+        return 'text-gray-400'}
+  }
+  const getStatusColor = status => {
 
-    switch(status) {;
+    switch(status) {
 
       case 'resolved':';
         return 'text-green-400';
@@ -73,19 +67,17 @@ export default function Page() {;
       case 'open':';
         return 'text-red-400';
       default:';
-        return 'text-gray-400';,
-}
-  };
-  const filteredIssues = contentIssues.filter(issue => {;
+        return 'text-gray-400'}
+  }
+  const filteredIssues = contentIssues.filter(issue => {
 
     const matchesSearch =;
       issue.pageTitle.toLowerCase().includes(searchTerm.toLowerCase()) ||;
       issue.description.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesFilter && matchesSearch;,
-});
-  const getIssueTypeLabel = type => {;
+    return matchesFilter && matchesSearch});
+  const getIssueTypeLabel = type => {
 
-    switch(type) {;
+    switch(type) {
 
       case 'missing_title':';
         return 'Missing Title';
@@ -98,9 +90,8 @@ export default function Page() {;
       case 'no_images':';
         return 'No Images';
       default:;
-        return type;,
-}
-  };
+        return type}
+  }
   return ();
     <>;
       {/* Floating Action Button */}
@@ -182,7 +173,7 @@ export default function Page() {;
                   </div>;
                 </div>;
               )}
-;
+
               {/* Actions */}";
               <div className="flex items-center justify-between">";
                 <div className="flex space-x-2">;
@@ -190,8 +181,7 @@ export default function Page() {;
                     onClick={() => setSelectedFilter('all')}
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'all'';
                         ? 'bg-purple-500 text-white'';
-                        : 'bg-gray-700 text-gray-300 hover:bg-gray-600'`;,
-}`}
+                        : 'bg-gray-700 text-gray-300 hover:bg-gray-600'`}`}
                   >;
                     All Issues;
                   </button>;
@@ -199,8 +189,7 @@ export default function Page() {;
                     onClick={() => setSelectedFilter('critical')}`;
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'critical'';
                         ? 'bg-red-500 text-white'';
-                        : 'bg-gray-700 text-gray-300 hover:bg-gray-600'`;,
-}`}
+                        : 'bg-gray-700 text-gray-300 hover:bg-gray-600'`}`}
                   >;
                     Critical;
                   </button>;
@@ -208,8 +197,7 @@ export default function Page() {;
                     onClick={() => setSelectedFilter('medium')}`;
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'medium'';
                         ? 'bg-yellow-500 text-white'';
-                        : 'bg-gray-700 text-gray-300 hover:bg-gray-600'`;,
-}`}
+                        : 'bg-gray-700 text-gray-300 hover:bg-gray-600'`}`}
                   >;
                     Medium;
                   </button>;
@@ -217,8 +205,7 @@ export default function Page() {;
                     onClick={() => setSelectedFilter('low')}`;
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'low'';
                         ? 'bg-blue-500 text-white'';
-                        : 'bg-gray-700 text-gray-300 hover:bg-gray-600'`;,
-}`}
+                        : 'bg-gray-700 text-gray-300 hover:bg-gray-600'`}`}
                   >;
                     Low;
                   </button>;
@@ -328,10 +315,10 @@ export default function Page() {;
                               className={`text-sm font-medium ${getStatusColor(issue.status)}`}
                             >;
                               {issue.status';
-                                .replace('_',);
+                                .replace('_');
                                 .charAt(0);
                                 .toUpperCase() +';
-                                issue.status.replace('_',).slice(1)}
+                                issue.status.replace('_').slice(1)}
                             </span>;
                           </td>";
                           <td className="px-6 py-4 whitespace-nowrap">";
@@ -377,18 +364,13 @@ export default function Page() {;
             </div>;
           </motion.div>;
         </motion.div>)}
-    </>)};
+    </>)}
 export default ContentQualityAnalyzer;
-;
 
-export { ContentQualityAnalyzer };
-;
-export { ContentQualityAnalyzer };
-;
-export { ContentQualityAnalyzer };
-;
-export { ContentQualityAnalyzer };
-;
-export { ContentQualityAnalyzer };
-";,
-}
+
+export { ContentQualityAnalyzer }
+export { ContentQualityAnalyzer }
+export { ContentQualityAnalyzer }
+export { ContentQualityAnalyzer }
+export { ContentQualityAnalyzer }
+"}

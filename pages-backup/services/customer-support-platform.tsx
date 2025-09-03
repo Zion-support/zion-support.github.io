@@ -3,8 +3,7 @@ import React from "react";
   Search,;
   Bell} from "lucide - react",;
   const description = "Comprehensive customer support platform with AI chatbots, ticket management, live chat, and knowledge base creation.;
-  const features = [];,
-},;
+  const features = []},;
     {";
       title: "Ticket Management System",";
       description: "Streamlined ticket creation, tracking, and resolution workflow",;
@@ -16,8 +15,7 @@ import React from "react";
         "Team collaboration tools",";
         "Custom ticket fields",";
         "Bulk operations and automation";
-      ];,
-},;
+      ]},;
     {";
       title: "Live Chat Support",";
       description: "Real-time customer communication with advanced features",;
@@ -29,8 +27,7 @@ import React from "react";
         "Proactive chat invitations",";
         "Mobile app for agents",";
         "Chat analytics and reporting";
-      ];,
-},;
+      ]},;
     {";
       title: "Knowledge Base Builder",";
       description: "Create and manage comprehensive self-service documentation",;
@@ -44,7 +41,7 @@ import React from "react";
         "Analytics and feedback collection";
       ];
 
-;
+
   ];
 
   const pricing = [],;
@@ -79,7 +76,7 @@ import React from "react";
         "SLA guarantee";
       ],;
       popular: false}
-;
+
   ];
 
   const benefits = [];
@@ -149,11 +146,11 @@ import React from "react";
                       <span className="text-sm text-gray-700">{detail}</span>;
                     </li>;
                   ))}
-;
+
                 </ul>;
               </div>;
             ))}
-;
+
           </div>;
       </section>;
       {/* comment */}";
@@ -179,7 +176,7 @@ import React from "react";
                   <p className="text-gray-600">{benefit.description}</p>;
                 </div>;
             ))}
-;
+
           </div>;
       </section>;
       {/* comment */}";
@@ -219,7 +216,7 @@ import React from "react";
                       <span className="text-sm text-gray-700">{feature}</span>;
                     </li>;
                   ))}
-;
+
                 </ul>";
                 <div className="mt-8">";
                   <Link href="{"/contact"" className="{"block" w-full rounded-md px-6 py-3 text-center text-sm font-semibold ${plan.popular ? "bg-blue-600 text-white hover:bg-blue-500" : "bg-gray-900 text-white hover:bg-gray-800'}"}>;
@@ -227,7 +224,7 @@ import React from "react";
                   </Link>;
                 </div>;
             ))}
-;
+
           </div>;
       </section>;
       {/* comment */}";
@@ -303,5 +300,5 @@ import React from "react";
     </PageTransition>;
   );";
 
-;
+
 export default Component

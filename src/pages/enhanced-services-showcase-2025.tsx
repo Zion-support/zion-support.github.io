@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import {;
+import {
   Brain,;
   Cloud,;
   Shield,;
@@ -73,10 +73,9 @@ import {;
   PackageIcon,;
   CreditCardIcon,;
   Globe2Icon,;
-  ShieldCheckIcon;,
-} from 'lucide-react';
-;
-interface Service {;
+  ShieldCheckIcon} from 'lucide-react';
+
+interface Service {
   id: string;
   title: string;
   description: string;
@@ -90,16 +89,15 @@ interface Service {;
   ctaUrl: string;
   icon: React.ComponentType<any>;
   popular?: boolean;
-  new?: boolean;,
-}
-;
-export default function EnhancedServicesShowcase2025() {;
+  new?: boolean}
+
+export default function EnhancedServicesShowcase2025() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState('');
-;
+
   const services: Service[] = [;
     // AI-Powered Micro SAAS Services;
-    {;
+    {
       id: 'ai-sales-copilot',;
       title: 'AI Sales Copilot Pro',;
       description: 'Intelligent sales automation platform that predicts customer behavior, automates follow-ups, and optimizes sales strategies using advanced AI.',;
@@ -112,9 +110,8 @@ export default function EnhancedServicesShowcase2025() {;
       learnMoreUrl: 'https://ziontechgroup.com/services/ai-sales-copilot',;
       ctaUrl: 'https://ziontechgroup.com/contact',;
       icon: Brain,;
-      popular: true;,
-},;
-    {;
+      popular: true},;
+    {
       id: 'cloud-finops-optimizer',;
       title: 'Cloud FinOps Optimizer',;
       description: 'Comprehensive cloud cost management and optimization platform that helps businesses reduce cloud spending by up to 40%.',;
@@ -126,9 +123,8 @@ export default function EnhancedServicesShowcase2025() {;
       marketPrice: '$1,500 - $3,000/month',;
       learnMoreUrl: 'https://ziontechgroup.com/services/cloud-finops-optimizer',;
       ctaUrl: 'https://ziontechgroup.com/contact',;
-      icon: Cloud;,
-},;
-    {;
+      icon: Cloud},;
+    {
       id: 'ai-compliance-assistant',;
       title: 'AI Compliance Assistant',;
       description: 'Automated compliance monitoring and reporting platform that ensures businesses meet regulatory requirements across multiple jurisdictions.',;
@@ -140,9 +136,8 @@ export default function EnhancedServicesShowcase2025() {;
       marketPrice: '$2,000 - $4,000/month',;
       learnMoreUrl: 'https://ziontechgroup.com/services/ai-compliance-assistant',;
       ctaUrl: 'https://ziontechgroup.com/contact',;
-      icon: Shield;,
-},;
-    {;
+      icon: Shield},;
+    {
       id: 'ai-business-intelligence',;
       title: 'AI Business Intelligence Suite',;
       description: 'Advanced analytics platform that transforms raw data into actionable insights using machine learning and predictive analytics.',;
@@ -154,9 +149,8 @@ export default function EnhancedServicesShowcase2025() {;
       marketPrice: '$3,000 - $6,000/month',;
       learnMoreUrl: 'https://ziontechgroup.com/services/ai-business-intelligence',;
       ctaUrl: 'https://ziontechgroup.com/contact',;
-      icon: BarChart3;,
-},;
-    {;
+      icon: BarChart3},;
+    {
       id: 'ai-customer-support-automation',;
       title: 'AI Customer Support Automation',;
       description: 'Intelligent customer service platform that automates responses, routes inquiries, and provides 24/7 support.',;
@@ -168,9 +162,8 @@ export default function EnhancedServicesShowcase2025() {;
       marketPrice: '$1,200 - $2,500/month',;
       learnMoreUrl: 'https://ziontechgroup.com/services/ai-customer-support-automation',;
       ctaUrl: 'https://ziontechgroup.com/contact',;
-      icon: MessageCircle;,
-},;
-    {;
+      icon: MessageCircle},;
+    {
       id: 'ai-project-management',;
       title: 'AI Project Management Platform',;
       description: 'Smart project management solution that uses AI to optimize workflows, predict delays, and improve team productivity.',;
@@ -182,9 +175,8 @@ export default function EnhancedServicesShowcase2025() {;
       marketPrice: '$2,000 - $4,500/month',;
       learnMoreUrl: 'https://ziontechgroup.com/services/ai-project-management',;
       ctaUrl: 'https://ziontechgroup.com/contact',;
-      icon: Workflow;,
-},;
-    {;
+      icon: Workflow},;
+    {
       id: 'ai-marketing-automation',;
       title: 'AI Marketing Automation Suite',;
       description: 'Comprehensive marketing automation platform that personalizes campaigns, optimizes conversions, and tracks ROI.',;
@@ -196,9 +188,8 @@ export default function EnhancedServicesShowcase2025() {;
       marketPrice: '$2,500 - $5,000/month',;
       learnMoreUrl: 'https://ziontechgroup.com/services/ai-marketing-automation',;
       ctaUrl: 'https://ziontechgroup.com/contact',;
-      icon: TrendingUp;,
-},;
-    {;
+      icon: TrendingUp},;
+    {
       id: 'ai-hr-platform',;
       title: 'AI HR Management Platform',;
       description: 'Intelligent human resources platform that streamlines recruitment, employee management, and performance evaluation.',;
@@ -210,9 +201,8 @@ export default function EnhancedServicesShowcase2025() {;
       marketPrice: '$1,800 - $3,500/month',;
       learnMoreUrl: 'https://ziontechgroup.com/services/ai-hr-platform',;
       ctaUrl: 'https://ziontechgroup.com/contact',;
-      icon: Users;,
-},;
-    {;
+      icon: Users},;
+    {
       id: 'ai-legal-automation',;
       title: 'AI Legal Document Automation',;
       description: 'Legal document generation and review platform that uses AI to create, analyze, and optimize legal documents.',;
@@ -224,9 +214,8 @@ export default function EnhancedServicesShowcase2025() {;
       marketPrice: '$3,000 - $6,000/month',;
       learnMoreUrl: 'https://ziontechgroup.com/services/ai-legal-automation',;
       ctaUrl: 'https://ziontechgroup.com/contact',;
-      icon: FileText;,
-},;
-    {;
+      icon: FileText},;
+    {
       id: 'ai-healthcare-analytics',;
       title: 'AI Healthcare Analytics Platform',;
       description: 'Advanced healthcare analytics platform that provides insights for patient care, operational efficiency, and clinical decision-making.',;
@@ -238,9 +227,8 @@ export default function EnhancedServicesShowcase2025() {;
       marketPrice: '$4,000 - $8,000/month',;
       learnMoreUrl: 'https://ziontechgroup.com/services/ai-healthcare-analytics',;
       ctaUrl: 'https://ziontechgroup.com/contact',;
-      icon: Heart;,
-},;
-    {;
+      icon: Heart},;
+    {
       id: 'ai-financial-trading',;
       title: 'AI Financial Trading Platform',;
       description: 'Intelligent trading platform that uses AI to analyze market data, predict trends, and execute trades automatically.',;
@@ -252,9 +240,8 @@ export default function EnhancedServicesShowcase2025() {;
       marketPrice: '$5,000 - $12,000/month',;
       learnMoreUrl: 'https://ziontechgroup.com/services/ai-financial-trading',;
       ctaUrl: 'https://ziontechgroup.com/contact',;
-      icon: TrendingUp;,
-},;
-    {;
+      icon: TrendingUp},;
+    {
       id: 'ai-supply-chain-optimization',;
       title: 'AI Supply Chain Optimization',;
       description: 'Intelligent supply chain platform that optimizes inventory, predicts demand, and reduces operational costs.',;
@@ -266,9 +253,8 @@ export default function EnhancedServicesShowcase2025() {;
       marketPrice: '$3,500 - $7,000/month',;
       learnMoreUrl: 'https://ziontechgroup.com/services/ai-supply-chain-optimization',;
       ctaUrl: 'https://ziontechgroup.com/contact',;
-      icon: Truck;,
-},;
-    {;
+      icon: Truck},;
+    {
       id: 'ai-manufacturing-platform',;
       title: 'AI Manufacturing Intelligence',;
       description: 'Smart manufacturing platform that uses AI to optimize production, predict maintenance, and improve quality control.',;
@@ -280,9 +266,8 @@ export default function EnhancedServicesShowcase2025() {;
       marketPrice: '$4,500 - $9,000/month',;
       learnMoreUrl: 'https://ziontechgroup.com/services/ai-manufacturing-platform',;
       ctaUrl: 'https://ziontechgroup.com/contact',;
-      icon: Factory;,
-},;
-    {;
+      icon: Factory},;
+    {
       id: 'ai-real-estate-analytics',;
       title: 'AI Real Estate Investment Analytics',;
       description: 'Advanced real estate analytics platform that provides insights for investment decisions, market analysis, and property valuation.',;
@@ -294,9 +279,8 @@ export default function EnhancedServicesShowcase2025() {;
       marketPrice: '$2,500 - $5,500/month',;
       learnMoreUrl: 'https://ziontechgroup.com/services/ai-real-estate-analytics',;
       ctaUrl: 'https://ziontechgroup.com/contact',;
-      icon: Building;,
-},;
-    {;
+      icon: Building},;
+    {
       id: 'ai-educational-content',;
       title: 'AI Educational Content Creation',;
       description: 'Intelligent platform that creates personalized educational content, assessments, and learning paths using AI.',;
@@ -308,9 +292,8 @@ export default function EnhancedServicesShowcase2025() {;
       marketPrice: '$2,000 - $4,000/month',;
       learnMoreUrl: 'https://ziontechgroup.com/services/ai-educational-content',;
       ctaUrl: 'https://ziontechgroup.com/contact',;
-      icon: BookOpen;,
-},;
-    {;
+      icon: BookOpen},;
+    {
       id: 'ai-logistics-platform',;
       title: 'AI Autonomous Logistics Platform',;
       description: 'Intelligent logistics platform that optimizes routes, predicts delays, and automates logistics operations.',;
@@ -322,9 +305,8 @@ export default function EnhancedServicesShowcase2025() {;
       marketPrice: '$3,500 - $8,000/month',;
       learnMoreUrl: 'https://ziontechgroup.com/services/ai-logistics-platform',;
       ctaUrl: 'https://ziontechgroup.com/contact',;
-      icon: Truck;,
-},;
-    {;
+      icon: Truck},;
+    {
       id: 'ai-enterprise-resource-planning',;
       title: 'AI Enterprise Resource Planning',;
       description: 'Intelligent ERP platform that integrates business processes, provides insights, and optimizes operations.',;
@@ -336,9 +318,8 @@ export default function EnhancedServicesShowcase2025() {;
       marketPrice: '$8,000 - $20,000/month',;
       learnMoreUrl: 'https://ziontechgroup.com/services/ai-enterprise-resource-planning',;
       ctaUrl: 'https://ziontechgroup.com/contact',;
-      icon: Database;,
-},;
-    {;
+      icon: Database},;
+    {
       id: 'ai-quantum-neural-network',;
       title: 'AI Quantum Neural Network Platform',;
       description: 'Cutting-edge platform that combines quantum computing with neural networks for advanced AI applications.',;
@@ -350,9 +331,8 @@ export default function EnhancedServicesShowcase2025() {;
       marketPrice: '$12,000 - $30,000/month',;
       learnMoreUrl: 'https://ziontechgroup.com/services/ai-quantum-neural-network',;
       ctaUrl: 'https://ziontechgroup.com/contact',;
-      icon: Atom;,
-},;
-    {;
+      icon: Atom},;
+    {
       id: 'ai-space-technology',;
       title: 'AI Space Technology Platform',;
       description: 'Advanced platform for space technology applications, satellite management, and space data analytics.',;
@@ -364,9 +344,8 @@ export default function EnhancedServicesShowcase2025() {;
       marketPrice: '$10,000 - $25,000/month',;
       learnMoreUrl: 'https://ziontechgroup.com/services/ai-space-technology',;
       ctaUrl: 'https://ziontechgroup.com/contact',;
-      icon: Satellite;,
-},;
-    {;
+      icon: Satellite},;
+    {
       id: 'ai-sustainability-tech',;
       title: 'AI Sustainability Technology Platform',;
       description: 'Intelligent platform that helps businesses reduce environmental impact and achieve sustainability goals.',;
@@ -378,9 +357,8 @@ export default function EnhancedServicesShowcase2025() {;
       marketPrice: '$2,500 - $6,000/month',;
       learnMoreUrl: 'https://ziontechgroup.com/services/ai-sustainability-tech',;
       ctaUrl: 'https://ziontechgroup.com/contact',;
-      icon: Leaf;,
-},;
-    {;
+      icon: Leaf},;
+    {
       id: 'ai-cybersecurity-threat-intelligence',;
       title: 'AI Cybersecurity Threat Intelligence',;
       description: 'Advanced cybersecurity platform that uses AI to detect, prevent, and respond to cyber threats in real-time.',;
@@ -392,10 +370,9 @@ export default function EnhancedServicesShowcase2025() {;
       marketPrice: '$4,500 - $12,000/month',;
       learnMoreUrl: 'https://ziontechgroup.com/services/ai-cybersecurity-threat-intelligence',;
       ctaUrl: 'https://ziontechgroup.com/contact',;
-      icon: Shield;,
-}
+      icon: Shield}
   ];
-;
+
   const categories = [;
     { id: 'all', name: 'All Services', icon: Star },;
     { id: 'ai-saas', name: 'AI SaaS', icon: Brain },;
@@ -403,14 +380,13 @@ export default function EnhancedServicesShowcase2025() {;
     { id: 'security-saas', name: 'Security SaaS', icon: Shield },;
     { id: 'business-saas', name: 'Business SaaS', icon: Building }
   ];
-;
-  const filteredServices = services.filter(service => {;
+
+  const filteredServices = services.filter(service => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;,
-});
-;
+    return matchesCategory && matchesSearch});
+
   return (;
     <>;
       <Helmet>;
@@ -472,7 +448,7 @@ export default function EnhancedServicesShowcase2025() {;
 
               {/* Category Filter */}
               <div className="flex flex-wrap gap-2">;
-                {categories.map((category) => {;
+                {categories.map((category) => {
                   const Icon = category.icon;
                   return (;
                     <button;
@@ -481,14 +457,12 @@ export default function EnhancedServicesShowcase2025() {;
                       className={`flex items-center gap-2 px-4 py-2 rounded-lg border transition-all duration-300 ${;
                         selectedCategory === category.id;
                           ? 'border-zion-cyan bg-zion-cyan text-white';
-                          : 'border-zion-purple/30 text-zion-slate-light hover:border-zion-cyan hover:text-zion-cyan';,
-}`}
+                          : 'border-zion-purple/30 text-zion-slate-light hover:border-zion-cyan hover:text-zion-cyan'}`}
                     >;
                       <Icon className="w-4 h-4" />;
                       {category.name}
                     </button>;
-                  );,
-})}
+                  )})}
               </div>;
             </div>;
           </div>;
@@ -498,7 +472,7 @@ export default function EnhancedServicesShowcase2025() {;
         <section className="py-16 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {filteredServices.map((service, index) => {;
+              {filteredServices.map((service, index) => {
                 const Icon = service.icon;
                 return (;
                   <motion.div;
@@ -582,8 +556,7 @@ export default function EnhancedServicesShowcase2025() {;
                       </Link>;
                     </div>;
                   </motion.div>;
-                );,
-})}
+                )})}
             </div>;
           </div>;
         </section>;
@@ -621,5 +594,4 @@ export default function EnhancedServicesShowcase2025() {;
         </section>;
       </div>;
     </>;
-  );,
-}
+  )}

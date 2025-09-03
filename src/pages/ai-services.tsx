@@ -202,12 +202,11 @@ import { ;
   FastForward as FastForwardIcon,;
   Shuffle as ShuffleIcon,;
   Repeat as RepeatIcon,;
-  Repeat1 as Repeat1Icon;,
-} from 'lucide-react';
-;
-const AIServices: React.FC = () => {;
+  Repeat1 as Repeat1Icon} from 'lucide-react';
+
+const AIServices: React.FC = () => {
   const aiServiceCategories = [;
-    {;
+    {
       name: "AI-Powered Business Intelligence",;
       description: "Advanced analytics and business intelligence solutions powered by artificial intelligence",;
       icon: Brain,;
@@ -220,9 +219,8 @@ const AIServices: React.FC = () => {;
         "Machine Learning Models",;
         "Real-time Analytics",;
         "Custom Dashboards";
-      ];,
-},;
-    {;
+      ]},;
+    {
       name: "AI Automation & Workflow",;
       description: "Intelligent automation solutions that streamline business processes and workflows",;
       icon: Workflow,;
@@ -235,9 +233,8 @@ const AIServices: React.FC = () => {;
         "Intelligent Automation",;
         "Business Process Management",;
         "Task Automation";
-      ];,
-},;
-    {;
+      ]},;
+    {
       name: "AI-Powered Customer Experience",;
       description: "AI-driven solutions that enhance customer interactions and improve satisfaction",;
       icon: Users,;
@@ -250,9 +247,8 @@ const AIServices: React.FC = () => {;
         "Sentiment Analysis",;
         "Customer Analytics",;
         "Voice Assistants";
-      ];,
-},;
-    {;
+      ]},;
+    {
       name: "AI Security & Compliance",;
       description: "Intelligent security solutions that protect data and ensure regulatory compliance",;
       icon: Shield,;
@@ -265,12 +261,11 @@ const AIServices: React.FC = () => {;
         "Security Analytics",;
         "Risk Assessment",;
         "Privacy Protection";
-      ];,
-}
+      ]}
   ];
-;
+
   const featuredAIServices = [;
-    {;
+    {
       title: "AI Autonomous Business Orchestrator",;
       description: "Revolutionary AI-powered autonomous business orchestrator that automates operations, optimizes processes, and makes intelligent decisions 24/7.",;
       price: "From $7,999/month",;
@@ -278,27 +273,24 @@ const AIServices: React.FC = () => {;
       href: "/services/ai-autonomous-business-orchestrator",;
       color: "from-indigo-400 to-purple-500",;
       popular: true,;
-      benefits: ["Increase operational efficiency by 75%", "Reduce operational costs by 50%", "Improve decision-making speed by 90%", "Minimize human errors by 95%"];,
-},;
-    {;
+      benefits: ["Increase operational efficiency by 75%", "Reduce operational costs by 50%", "Improve decision-making speed by 90%", "Minimize human errors by 95%"]},;
+    {
       title: "AI Customer Insights Platform",;
       description: "Advanced AI-powered customer analytics platform that predicts behavior, prevents churn, and maximizes customer lifetime value with 95% accuracy.",;
       price: "From $1,999/month",;
       features: ["Real-time Customer Analytics", "Predictive Behavior Modeling", "Sentiment Analysis Engine", "Customer Journey Mapping", "Churn Prediction", "Personalization Engine"],;
       href: "/services/ai-customer-insights-platform",;
       color: "from-emerald-400 to-teal-500",;
-      benefits: ["Increase customer retention by 45%", "Boost revenue per customer by 35%", "Reduce churn rate by 60%", "Improve customer satisfaction by 50%"];,
-},;
-    {;
+      benefits: ["Increase customer retention by 45%", "Boost revenue per customer by 35%", "Reduce churn rate by 60%", "Improve customer satisfaction by 50%"]},;
+    {
       title: "AI Financial Forecasting Suite",;
       description: "Advanced AI-powered financial forecasting platform that predicts revenue, optimizes budgets, and minimizes risks with unprecedented accuracy.",;
       price: "From $2,499/month",;
       features: ["AI-Powered Revenue Forecasting", "Cash Flow Prediction Models", "Risk Assessment & Analysis", "Budget Optimization Engine", "Scenario Planning Tools", "Real-time Dashboards"],;
       href: "/services/ai-financial-forecasting-suite",;
       color: "from-green-400 to-emerald-500",;
-      benefits: ["Improve forecast accuracy by 85%", "Reduce financial planning time by 70%", "Optimize cash flow management", "Minimize financial risks by 60%"];,
-},;
-    {;
+      benefits: ["Improve forecast accuracy by 85%", "Reduce financial planning time by 70%", "Optimize cash flow management", "Minimize financial risks by 60%"]},;
+    {
       title: "AI-Powered Business Intelligence Platform",;
       description: "Advanced analytics platform that uses machine learning to provide actionable business insights and predictive analytics",;
       price: "From $2,999/month",;
@@ -312,9 +304,8 @@ const AIServices: React.FC = () => {;
       ],;
       href: "/services/ai-business-intelligence",;
       color: "from-purple-400 to-pink-500",;
-      benefits: ["Increase decision-making speed by 60%", "Improve forecast accuracy by 45%", "Reduce manual reporting by 80%", "Enhance data-driven insights"];,
-},;
-    {;
+      benefits: ["Increase decision-making speed by 60%", "Improve forecast accuracy by 45%", "Reduce manual reporting by 80%", "Enhance data-driven insights"]},;
+    {
       title: "Intelligent Document Processing Suite",;
       description: "AI-powered document processing platform that automatically extracts, categorizes, and analyzes information from various document types",;
       price: "From $1,499/month",;
@@ -327,9 +318,8 @@ const AIServices: React.FC = () => {;
         "Integration APIs";
       ],;
       href: "/services/ai-document-processing",;
-      color: "from-blue-400 to-cyan-500";,
-},;
-    {;
+      color: "from-blue-400 to-cyan-500"},;
+    {
       title: "AI-Powered Marketing Automation",;
       description: "Intelligent marketing automation that personalizes campaigns, optimizes customer journeys, and maximizes ROI through AI-driven insights",;
       price: "From $2,499/month",;
@@ -342,63 +332,56 @@ const AIServices: React.FC = () => {;
         "CRM Integration";
       ],;
       href: "/services/ai-marketing-automation",;
-      color: "from-green-400 to-emerald-500";,
-}
+      color: "from-green-400 to-emerald-500"}
   ];
-;
+
   const aiSolutions = [;
-    {;
+    {
       name: "Machine Learning Model Development",;
       description: "Custom ML models tailored to your specific business needs and data",;
       price: "$5,000 - $50,000",;
       features: ["Custom Algorithm Development", "Data Preprocessing", "Model Training & Validation", "Performance Optimization", "Deployment & Monitoring"],;
       icon: Brain,;
-      color: "from-purple-400 to-pink-500";,
-},;
-    {;
+      color: "from-purple-400 to-pink-500"},;
+    {
       name: "Natural Language Processing",;
       description: "Advanced NLP solutions for text analysis, sentiment analysis, and language understanding",;
       price: "$3,000 - $25,000",;
       features: ["Text Classification", "Sentiment Analysis", "Named Entity Recognition", "Language Translation", "Chatbot Development"],;
       icon: MessageSquare,;
-      color: "from-blue-400 to-cyan-500";,
-},;
-    {;
+      color: "from-blue-400 to-cyan-500"},;
+    {
       name: "Computer Vision Solutions",;
       description: "Image and video analysis solutions using advanced computer vision techniques",;
       price: "$4,000 - $40,000",;
       features: ["Object Detection", "Image Classification", "Facial Recognition", "Video Analytics", "Quality Control"],;
       icon: Eye,;
-      color: "from-green-400 to-emerald-500";,
-},;
-    {;
+      color: "from-green-400 to-emerald-500"},;
+    {
       name: "Predictive Analytics",;
       description: "Forecast future trends and behaviors using advanced statistical and machine learning methods",;
       price: "$2,500 - $20,000",;
       features: ["Trend Forecasting", "Risk Assessment", "Demand Prediction", "Customer Behavior Analysis", "Performance Optimization"],;
       icon: TrendingUp,;
-      color: "from-yellow-400 to-orange-500";,
-},;
-    {;
+      color: "from-yellow-400 to-orange-500"},;
+    {
       name: "AI Chatbots & Virtual Assistants",;
       description: "Intelligent conversational AI solutions for customer service and support",;
       price: "$1,500 - $15,000",;
       features: ["Natural Language Understanding", "Multi-language Support", "Integration APIs", "Analytics Dashboard", "24/7 Availability"],;
       icon: Bot,;
-      color: "from-indigo-400 to-purple-500";,
-},;
-    {;
+      color: "from-indigo-400 to-purple-500"},;
+    {
       name: "AI-Powered Data Analytics",;
       description: "Transform raw data into actionable insights using artificial intelligence",;
       price: "$3,500 - $30,000",;
       features: ["Automated Data Processing", "Pattern Recognition", "Anomaly Detection", "Real-time Analytics", "Custom Dashboards"],;
       icon: BarChart3,;
-      color: "from-red-400 to-pink-500";,
-}
+      color: "from-red-400 to-pink-500"}
   ];
-;
+
   const pricingTiers = [;
-    {;
+    {
       name: "AI Starter",;
       price: "$1,999",;
       period: "/month",;
@@ -412,9 +395,8 @@ const AIServices: React.FC = () => {;
         "99.5% uptime SLA";
       ],;
       popular: false,;
-      cta: "Get Started";,
-},;
-    {;
+      cta: "Get Started"},;
+    {
       name: "AI Professional",;
       price: "$4,999",;
       period: "/month",;
@@ -430,9 +412,8 @@ const AIServices: React.FC = () => {;
         "99.9% uptime SLA";
       ],;
       popular: true,;
-      cta: "Start Free Trial";,
-},;
-    {;
+      cta: "Start Free Trial"},;
+    {
       name: "AI Enterprise",;
       price: "Custom",;
       period: ",;
@@ -449,10 +430,9 @@ const AIServices: React.FC = () => {;
         "99.99% uptime SLA";
       ],;
       popular: false,;
-      cta: "Contact Sales";,
-}
+      cta: "Contact Sales"}
   ];
-;
+
   return (;
     <>;
       <Helmet>;
@@ -460,7 +440,7 @@ const AIServices: React.FC = () => {;
         <meta name="description" content="Comprehensive AI services including machine learning, natural language processing, computer vision, predictive analytics, and AI-powered automation solutions." />;
         <meta name="keywords" content="AI services, machine learning, NLP, computer vision, predictive analytics, AI chatbots, artificial intelligence solutions" />;
       </Helmet>;
-      ;
+
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">;
         {/* Hero Section */}
         <section className="relative py-20 bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white">;
@@ -506,7 +486,7 @@ const AIServices: React.FC = () => {;
                 Comprehensive artificial intelligence solutions across all major domains;
               </p>;
             </div>;
-            ;
+
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
               {aiServiceCategories.map((category, index) => (;
                 <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8">;
@@ -560,7 +540,7 @@ const AIServices: React.FC = () => {;
                 Our most popular and impactful AI solutions;
               </p>;
             </div>;
-            ;
+
             <div className="grid lg:grid-cols-3 gap-8">;
               {featuredAIServices.map((service, index) => (;
                 <div key={index} className={`relative bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 ${service.popular ? 'ring-2 ring-cyan-500' : ''}`}>;
@@ -571,19 +551,18 @@ const AIServices: React.FC = () => {;
                       </span>;
                     </div>;
                   )}
-                  ;
                   <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-6`}>;
                     <Brain className="h-8 w-8 text-white" />;
                   </div>;
-                  ;
+
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">;
                     {service.title}
                   </h3>;
-                  ;
+
                   <p className="text-gray-600 mb-6">;
                     {service.description}
                   </p>;
-                  ;
+
                   <div className="mb-6">;
                     <p className="text-3xl font-bold text-gray-900 mb-2">;
                       {service.price}
@@ -597,7 +576,7 @@ const AIServices: React.FC = () => {;
                       ))}
                     </ul>;
                   </div>;
-                  ;
+
                   <Link ;
                     to={service.href}
                     className="w-full bg-cyan-500 hover:bg-cyan-600 text-white py-3 px-6 rounded-lg font-semibold transition-colors flex items-center justify-center">;
@@ -621,22 +600,22 @@ const AIServices: React.FC = () => {;
                 Comprehensive AI solutions tailored to your business needs;
               </p>;
             </div>;
-            ;
+
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
               {aiSolutions.map((solution, index) => (;
                 <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8">;
                   <div className={`w-16 h-16 bg-gradient-to-r ${solution.color} rounded-lg flex items-center justify-center mb-6`}>;
                     <solution.icon className="h-8 w-8 text-white" />;
                   </div>;
-                  ;
+
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">;
                     {solution.name}
                   </h3>;
-                  ;
+
                   <p className="text-gray-600 mb-6">;
                     {solution.description}
                   </p>;
-                  ;
+
                   <div className="mb-6">;
                     <p className="text-2xl font-bold text-gray-900 mb-4">;
                       {solution.price}
@@ -650,7 +629,7 @@ const AIServices: React.FC = () => {;
                       ))}
                     </ul>;
                   </div>;
-                  ;
+
                   <button className="w-full bg-cyan-500 hover:bg-cyan-600 text-white py-3 px-6 rounded-lg font-semibold transition-colors">;
                     Learn More;
                   </button>;
@@ -671,7 +650,7 @@ const AIServices: React.FC = () => {;
                 Transparent pricing for AI solutions that scale with your business;
               </p>;
             </div>;
-            ;
+
             <div className="grid md:grid-cols-3 gap-8">;
               {pricingTiers.map((tier, index) => (;
                 <div key={index} className={`relative bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 ${tier.popular ? 'ring-2 ring-cyan-500 scale-105' : ''}`}>;
@@ -682,7 +661,6 @@ const AIServices: React.FC = () => {;
                       </span>;
                     </div>;
                   )}
-                  ;
                   <div className="text-center mb-8">;
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">;
                       {tier.name}
@@ -699,7 +677,7 @@ const AIServices: React.FC = () => {;
                       </span>;
                     </div>;
                   </div>;
-                  ;
+
                   <ul className="space-y-4 mb-8">;
                     {tier.features.map((feature, featureIndex) => (;
                       <li key={featureIndex} className="flex items-center text-gray-600">;
@@ -708,12 +686,11 @@ const AIServices: React.FC = () => {;
                       </li>;
                     ))}
                   </ul>;
-                  ;
+
                   <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${;
                     tier.popular ;
                       ? 'bg-cyan-500 hover:bg-cyan-600 text-white' ;
-                      : 'bg-gray-200 hover:bg-gray-300 text-gray-900';,
-}`}>;
+                      : 'bg-gray-200 hover:bg-gray-300 text-gray-900'}`}>;
                     {tier.cta}
                   </button>;
                 </div>;
@@ -733,7 +710,7 @@ const AIServices: React.FC = () => {;
                 Get in touch with our AI experts for a free consultation;
               </p>;
             </div>;
-            ;
+
             <div className="grid md:grid-cols-3 gap-8 mb-12">;
               <div className="text-center">;
                 <Phone className="h-12 w-12 text-cyan-400 mx-auto mb-4" />;
@@ -751,7 +728,7 @@ const AIServices: React.FC = () => {;
                 <p className="text-gray-200">364 E Main St STE 1008<br />Middletown DE 19709</p>;
               </div>;
             </div>;
-            ;
+
             <div className="text-center">;
               <Link ;
                 to="/contact" ;
@@ -764,7 +741,5 @@ const AIServices: React.FC = () => {;
         </section>;
       </div>;
     </>;
-  );,
-};
-;
+  )}
 export default AIServices;

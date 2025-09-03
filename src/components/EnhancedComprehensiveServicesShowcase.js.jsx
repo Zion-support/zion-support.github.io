@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-;
-;
-const EnhancedComprehensiveServicesShowcase = () => {;
+
+
+const EnhancedComprehensiveServicesShowcase = () => {
     const [activeCategory, setActiveCategory] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedService, setSelectedService] = useState(null);
@@ -9,15 +9,13 @@ const EnhancedComprehensiveServicesShowcase = () => {;
         ...advancedInnovativeServicesExpansionV3.map(service => ({;
             ...service,;
             type: 'Advanced AI & Innovation',;
-            displayPrice: service.price;,
-})),;
+            displayPrice: service.price})),;
         ...specializedEnterpriseSolutions2025.map(service => ({;
             ...service,;
             type: 'Specialized Enterprise',;
-            displayPrice: service.price;,
-}));
+            displayPrice: service.price}));
     ];
-    const filteredServices = allServices.filter(service => {;
+    const filteredServices = allServices.filter(service => {
         const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
             service.category.toLowerCase().includes(searchTerm.toLowerCase());
@@ -27,10 +25,10 @@ const EnhancedComprehensiveServicesShowcase = () => {;
         { id: 'Advanced AI & Innovation', name: 'Advanced AI & Innovation', count: advancedInnovativeServicesExpansionV3.length },;
         { id: 'Specialized Enterprise', name: 'Specialized Enterprise', count: specializedEnterpriseSolutions2025.length }
     ];
-    const handleServiceClick = (service) => {;
-        setSelectedService(service)};
-    const closeModal = () => {;
-        setSelectedService(null)};
+    const handleServiceClick = (service) => {
+        setSelectedService(service)}
+    const closeModal = () => {
+        setSelectedService(null)}
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">;
       {/* Header Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
@@ -113,15 +111,13 @@ const EnhancedComprehensiveServicesShowcase = () => {;
 """""";
                   activeCategory === category.id"""""""";
                     ? "bg-gradient-to-r from-blue-600 to-cyan-600 text-white""""""""";
-                    : "bg-white/10 backdrop-blur-lg border border-white/20 text-gray-300 hover:bg-white/20"""", ";,
-}"}
-;
+                    : "bg-white/10 backdrop-blur-lg border border-white/20 text-gray-300 hover:bg-white/20"""", "}"}
+
               >;
-                {category.name} ({category.count});,
-}
+                {category.name} ({category.count})}
               </button>;
             ))}
-;
+
           </div>;
         </div>";
       </section>;
@@ -206,7 +202,7 @@ const EnhancedComprehensiveServicesShowcase = () => {;
                 </div>;
               </div>,;
             ))}
-;
+
           </div>;
         </div>";
       </section>;
@@ -296,7 +292,7 @@ enterprise-level reliability,;
                   </h2>"";
                   <p className="text-xl text-gray-300 mb-4">;
                     {selectedService.tagline}
-;
+
                   </p>";
                 </div>;
                 <button""";
@@ -342,7 +338,7 @@ enterprise-level reliability,;
                           className="text-gray-300 flex items-center"">"";
                           <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>;
                           {feature}
-;
+
                         </li>;
                       ))}";
                     </ul>;
@@ -358,10 +354,10 @@ enterprise-level reliability,;
                           key={idx}"";
                           className="px-3 py-1 bg-blue-600/20 text-blue-400 text-sm rounded-full border border-blue-600/30 ">;
                           {tech}
-;
+
                         </span>;
                       ))}
-;
+
                     </div>;
                   </div>";
                 </div>;
@@ -383,7 +379,7 @@ enterprise-level reliability,;
                         <span className="text-gray-400">Setup Fee: </span>"";
                         <span className="text-white">,;
                           {selectedService.setupFee}
-;
+
                         </span>;
                       </div>";
                     )}
@@ -393,7 +389,7 @@ enterprise-level reliability,;
                         <span className="text-gray-400">Annual Discount: </span>"";
                         <span className="text-white">,;
                           {selectedService.annualDiscount}
-;
+
                         </span>;
                       </div>";
                     )}
@@ -423,7 +419,7 @@ enterprise-level reliability,;
                       </h5>"";
                       <p className="text-gray-300 text-sm">;
                         {selectedService.targetAudience}
-;
+
                       </p>";
                     </div>;
                   </div>""";
@@ -442,7 +438,7 @@ enterprise-level reliability,;
                         href={"tel:${selectedService.contactInfo.mobile}"}"";
                         className="block w-full text-center px-6 py-3 border border-gray-600 text-white font-semibold rounded-lg hover: bg-gray-800 transition-all duration-300 ">",;
                         Call Us: {selectedService.contactInfo.mobile}
-;
+
                       </a>;
                     </div>;
                   </div>;
@@ -451,16 +447,12 @@ enterprise-level reliability,;
             </div>;
           </div>;
         </div>)}
-    </div>)};
+    </div>)}
 export default EnhancedComprehensiveServicesShowcase;
-;
 
-export { EnhancedComprehensiveServicesShowcase };
-;
-export { EnhancedComprehensiveServicesShowcase };
-;
-export { EnhancedComprehensiveServicesShowcase };
-;
-export { EnhancedComprehensiveServicesShowcase };
-;
-export { EnhancedComprehensiveServicesShowcase };
+
+export { EnhancedComprehensiveServicesShowcase }
+export { EnhancedComprehensiveServicesShowcase }
+export { EnhancedComprehensiveServicesShowcase }
+export { EnhancedComprehensiveServicesShowcase }
+export { EnhancedComprehensiveServicesShowcase }

@@ -1,56 +1,46 @@
 import { ProductListing } from '@/types/listings';
-;
-export default function Page() {;
+
+export default function Page() {
 ,;
-  "Quantum Computing": {;
+  "Quantum Computing": {
     icon: "⚛️",;
     description: "Quantum computing platforms and quantum-resistant solutions",;
-    count: 2;,
-},;
-  "IoT": {;
+    count: 2},;
+  "IoT": {
     icon: "📡",;
     description: "Internet of Things and edge computing solutions",;
-    count: 1;,
-},;
-  "Compliance": {;
+    count: 1},;
+  "Compliance": {
     icon: "📋",;
     description: "Regulatory compliance and data governance solutions",;
-    count: 1;,
-},;
-  "DevOps": {;
+    count: 1},;
+  "DevOps": {
     icon: "🔄",;
     description: "Development operations and microservices management",;
-    count: 1;,
-},;
-  "Fintech": {;
+    count: 1},;
+  "Fintech": {
     icon: "💳",;
     description: "Financial technology and payment processing solutions",;
-    count: 1;,
-},;
-  "Healthcare AI": {;
+    count: 1},;
+  "Healthcare AI": {
     icon: "🏥",;
     description: "AI-powered healthcare and medical diagnostic solutions",;
-    count: 1;,
-},;
-  "Smart Cities": {;
+    count: 1},;
+  "Smart Cities": {
     icon: "🏙️",;
     description: "Smart city infrastructure and urban management solutions",;
-    count: 1;,
-},;
-  "Augmented Reality": {;
+    count: 1},;
+  "Augmented Reality": {
     icon: "👁️",;
     description: "AR/VR solutions and immersive technology platforms",;
-    count: 1;,
-},;
-  "Logistics AI": {;
+    count: 1},;
+  "Logistics AI": {
     icon: "🚚",;    description: "AI-powered logistics and supply chain automation",;
-    count: 1}};
-;
-export const ULTIMATE_SERVICE_SUBCATEGORIES_2025 = {;
+    count: 1}}
+export const ULTIMATE_SERVICE_SUBCATEGORIES_2025 = {
 ";
   "Chatbots": { icon: "💬",;
-  count: 1;,
-},;
+  count: 1},;
   "Threat Intelligence": { icon: "🛡️", count: 1 },;
   "Migration": { icon: "🚀", count: 1 },;
   "Supply Chain": { icon: "📦", count: 1 },;
@@ -66,38 +56,30 @@ export const ULTIMATE_SERVICE_SUBCATEGORIES_2025 = {;
   "E-commerce": { icon: "🛒", count: 1 },;
   "Autonomous Systems": { icon: "🚗", count: 1 },;
   "Cryptography": { icon: "🔑", count: 1 },;
-  "Content Generation": { icon: "✍️", count: 1 };,
-};
-;
-export const ULTIMATE_PRICING_TIERS_2025 = {;
-  "Starter": {;
+  "Content Generation": { icon: "✍️", count: 1 }}
+export const ULTIMATE_PRICING_TIERS_2025 = {
+  "Starter": {
     range: "$8,000 - $15,000",;
     description: "Essential solutions for small to medium businesses",;
     features: ["Basic functionality", "Standard support", "Core integrations",;
-  "Documentation"];,
-},;
-  "Professional": {;
+  "Documentation"]},;
+  "Professional": {
     range: "$15,000 - $30,000",;
     description: "Advanced solutions with enhanced features and support",;
-    features: ["Advanced functionality", "Priority support", "Extended integrations", "Customization options", "Training"];,
-},;
-  "Enterprise": {;
+    features: ["Advanced functionality", "Priority support", "Extended integrations", "Customization options", "Training"]},;
+  "Enterprise": {
     range: "$30,000 - $50,000",;
     description: "Comprehensive solutions for large organizations",;
-    features: ["Full functionality", "24/7 support", "All integrations", "Custom development", "Dedicated account manager", "SLA guarantees"];,
-};,
-};
-export const ULTIMATE_CONTACT_INFO_2025 = {;
+    features: ["Full functionality", "24/7 support", "All integrations", "Custom development", "Dedicated account manager", "SLA guarantees"]}}
+export const ULTIMATE_CONTACT_INFO_2025 = {
 ";
   phone: "+1 302 464 0950",";
   email: "kleber@ziontechgroup.com",";
   website: "https://ziontechgroup.com",";
   address: "364 E Main St STE 1008 Middletown DE 19709",";
   businessHours: "Monday - Friday: 9:00 AM - 6:00 PM EST",;  ;
-  ;
-  ;
+
+
   ;";
-  emergencySupport: "24/7 available for critical issues"};
-;
-;,
-};
+  emergencySupport: "24/7 available for critical issues"}
+}

@@ -1,30 +1,26 @@
-;
-const Mobile = () => {;
+
+const Mobile = () => {
     const mobileStats = [;
-        {;
+        {
             stat: "73%",;
             label: "Mobile Internet Usage",;
-            description: "Of all internet traffic comes from mobile devices";,
-},;
-        {;
+            description: "Of all internet traffic comes from mobile devices"},;
+        {
             stat: "85%",;
             label: "User Preference",;
-            description: "Of users prefer mobile-friendly websites";,
-},;
-        {;
+            description: "Of users prefer mobile-friendly websites"},;
+        {
             stat: "60%",;
             label: "Mobile Search",;
-            description: "Of searches are performed on mobile devices";,
-},;
-        {;
+            description: "Of searches are performed on mobile devices"},;
+        {
             stat: "40%",;
             label: "Mobile Conversion",;
-            description: "Higher conversion rates on mobile-optimized sites";,
-}
+            description: "Higher conversion rates on mobile-optimized sites"}
     ];
     return (<>;
       <SEO title="Mobile-First Solutions - Zion Tech Group" description="Experience mobile-first design and development with Zion Tech Group. From responsive websites to native mobile apps, we ensure optimal mobile experiences." canonical="/mobile"/>;
-      ;
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">;
         <main className="pt-12">;
           <div className="container mx-auto px-4 py-16">;
@@ -207,16 +203,12 @@ const Mobile = () => {;
           </div>;
         </main>;
       </div>;
-    </>)};
+    </>)}
 export default Mobile;
-;
 
-export { Mobile };
-;
-export { Mobile };
-;
-export { Mobile };
-;
-export { Mobile };
-;
-export { Mobile };
+
+export { Mobile }
+export { Mobile }
+export { Mobile }
+export { Mobile }
+export { Mobile }

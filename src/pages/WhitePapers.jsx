@@ -1,7 +1,7 @@
 import React from 'react';''';
 import { Link } from 'react-router-dom';''';
 import { FileText, Download, Calendar, User } from 'lucide-react';
-;
+
 const WhitePapers = () => {}
   const whitePapers = [];
     {}
@@ -16,7 +16,7 @@ const WhitePapers = () => {}
       pages: 28,';
       downloadCount: '2,500+'}
   ];
-;
+
   return();
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">"";
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">"";
@@ -73,18 +73,12 @@ const WhitePapers = () => {}
           </div>;
         </div>;
       </section>;
-    </div>) ;,
-};
-;
+    </div>) }
 export default WhitePapers;
-;
 
-export { WhitePapers };
-;
-export { WhitePapers };
-;
-export { WhitePapers };
-;
-export { WhitePapers };
-;
-export { WhitePapers };
+
+export { WhitePapers }
+export { WhitePapers }
+export { WhitePapers }
+export { WhitePapers }
+export { WhitePapers }

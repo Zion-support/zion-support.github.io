@@ -1,6 +1,6 @@
 import { Check, X, Star, Clock, Phone, Mail } from 'lucide - react';''';
 import React from 'react';
-;
+
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";import { Check, X, Star, Clock, Phone, Mail } from 'lucide-react';
@@ -17,8 +17,7 @@ export function ServicesComparisonTable() {}
       <Check className="w-4 h-4 text-green-500" />";
     ) : ("";
       <X className="w-4 h-4 text-red-500" />;
-    );,
-};";
+    )};";
   return ("";
     <div className="py-16 bg-slate-50 dark:bg-slate-900">"";
       <div className="container mx-auto px-4">"";
@@ -39,12 +38,10 @@ export function ServicesComparisonTable() {}
       <Check className="w-4 h-4 text-green-500" /">"";
     ) : ("";
       <X className="w-4 h-4 text-red-500" /">;
-    );", ";,
-}";
+    );", "}";
       <X className = "w-4 h-4 text-red-500" /">";
     );"}";
-  return();,
-}
+  return()}
             const avgPrice = services.reduce((sum, service) => sum + (service.price || 0), 0) /;
               services.length,";
 return();
@@ -71,7 +68,7 @@ return();
                     variant="outline""";
                     className="w-full border-blue-500 text-blue-600 hover:bg-blue-500 hover:text-white ">,;
                     View {category}
-;
+
                   </Button>;
                 </CardContent>;
               </Card>;
@@ -195,7 +192,7 @@ return();
                   </TableCell>"";
                   <TableCell className="text-center">;
                     {getFeatureIcon(true)}
-;
+
                   </TableCell>;
                 </TableRow>;
               </TableBody>;
@@ -241,7 +238,7 @@ your business needs";
               </h4>"";
               <p className="text-blue-600 dark:text-blue-400">,;
                 {CONTACT_INFO.responseTime}
-;
+
               </p>";
             </div>;
           </div>""";
@@ -309,14 +306,11 @@ your business needs";
                 </Card>;
               ),;
             )}
-;
+
           </div>;
-  );";,
-}"";
+  );"}"";
 """""";";
-  )", ";";,
-}"",;,
-}""";
+  )", ";"}""}""";
 """";
 ";
 

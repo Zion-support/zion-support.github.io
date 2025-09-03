@@ -1,4 +1,4 @@
-export interface RealAdditionService2025Q3 {;
+export interface RealAdditionService2025Q3 {
 	id: string;
 	name: string;
 	tagline: string;
@@ -53,8 +53,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [;
 		launchDate: "2025-06-01",;
 		customers: 140,;
 		rating: 4.7,;
-		reviews: 62;,;,
-},;
+		reviews: 62},;
 	{;
 		id: "affiliate-tracking-lite",;
 		name: "Affiliate Tracking Lite",;
@@ -85,8 +84,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [;
 		launchDate: "2025-06-02",;
 		customers: 85,;
 		rating: 4.6,;
-		reviews: 33;,;,
-},;
+		reviews: 33},;
 	{;
 		id: "smb-analytics-starter",;
 		name: "SMB Analytics Starter",;
@@ -117,8 +115,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [;
 		launchDate: "2025-06-03",;
 		customers: 120,;
 		rating: 4.5,;
-		reviews: 28;,;,
-},;
+		reviews: 28},;
 	{;
 		id: "it-helpdesk-suite",;
 		name: "IT Helpdesk Suite",;
@@ -149,8 +146,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [;
 		launchDate: "2025-06-04",;
 		customers: 60,;
 		rating: 4.6,;
-		reviews: 21;,;,
-},;
+		reviews: 21},;
 	{;
 		id: "meeting-minutes-ai",;
 		name: "Meeting Minutes AI",;
@@ -181,8 +177,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [;
 		launchDate: "2025-06-05",;
 		customers: 200,;
 		rating: 4.5,;
-		reviews: 45;,;,
-},;
+		reviews: 45},;
 	{;
 		id: "data-quality-guard",;
 		name: "Data Quality Guard",;
@@ -213,8 +208,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [;
 		launchDate: "2025-06-06",;
 		customers: 55,;
 		rating: 4.6,;
-		reviews: 19;,;,
-},;
+		reviews: 19},;
 	{;
 		id: "landing-page-ai-tester",;
 		name: "Landing Page AI Tester",;
@@ -245,8 +239,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [;
 		launchDate: "2025-06-07",;
 		customers: 90,;
 		rating: 4.5,;
-		reviews: 31;,;,
-},;
+		reviews: 31},;
 	{;
 		id: "ai-brand-copilot",;
 		name: "AI Brand Copilot",;
@@ -277,8 +270,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [;
 		launchDate: "2025-06-08",;
 		customers: 45,;
 		rating: 4.6,;
-		reviews: 17;,;,
-},;
+		reviews: 17},;
 	{;
 		id: "security-changelog-bot",;
 		name: "Security Changelog Bot",;
@@ -309,8 +301,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [;
 		launchDate: "2025-06-09",;
 		customers: 110,;
 		rating: 4.5,;
-		reviews: 26;,;,
-},;
+		reviews: 26},;
 	{;
 		id: "vendor-risk-lite",;
 		name: "Vendor Risk Lite",;
@@ -341,8 +332,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [;
 		launchDate: "2025-06-10",;
 		customers: 65,;
 		rating: 4.6,;
-		reviews: 24;,;,
-},;
+		reviews: 24},;
 	{;
 		id: "incident-comms-assistant",;
 		name: "Incident Comms Assistant",;
@@ -373,8 +363,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [;
 		launchDate: "2025-06-11",;
 		customers: 40,;
 		rating: 4.5,;
-		reviews: 16;,;,
-},;
+		reviews: 16},;
 	{;
 		id: "policy-privacy-scanner",;
 		name: "Policy & Privacy Scanner",;
@@ -405,8 +394,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [;
 		launchDate: "2025-06-12",;
 		customers: 95,;
 		rating: 4.6,;
-		reviews: 29;,;,
-},;
+		reviews: 29},;
 	{;
 		id: "ai-proposal-writer",;
 		name: "AI Proposal Writer",;

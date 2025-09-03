@@ -1,7 +1,7 @@
 export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
   // ===== REVOLUTIONARY MICRO SAAS SERVICES =====;
     // 1. AI-Powered Quantum Financial Trading Platform;
-    {;
+    {
   id: "quantum-ai-trading-platform",;
         name: "Quantum AI Trading Platform",;
         tagline: "Quantum computing meets AI for next-generation financial trading",;
@@ -67,21 +67,19 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
         competitors["Bloomberg Terminal", "Thomson Reuters", "Interactive Brokers Pro"],;
         marketSize: "$15.2B algorithmic trading market",;
         growthRate: "250% annual growth in quantum computing applications",;
-        contactInfo: {;
+        contactInfo: {
   phone: "+1 302 464 0950",;
             email: "kleber@ziontechgroup.com",;
             website: "https://ziontechgroup.com",;
-            address: "364 E Main St STE 1008 Middletown DE 19709";,;,
-},;
+            address: "364 E Main St STE 1008 Middletown DE 19709"},;
         websiteUrl: "https://ziontechgroup.com/quantum-ai-trading",;
         demoUrl: "https://ziontechgroup.com/quantum-ai-trading/demo",;
         trialDays: 30,;
         setupTime: "2-3 weeks",;
         complianceStandards["SOX", "Dodd-Frank", "MiFID II", "GDPR", "SOC2"],;
-        supportLevel: "enterprise";,;,
-},;
+        supportLevel: "enterprise"},;
     // 2. Autonomous AI Content Creation Studio;
-    {;
+    {
   id: "autonomous-ai-content-studio",;
         name: "Autonomous AI Content Creation Studio",;
         tagline: "Fully autonomous content creation with human-level creativity",;
@@ -147,21 +145,19 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
         competitors["Jasper", "Copy.ai", "Writesonic", "ContentBot"],;
         marketSize: "$4.2B content creation market",;
         growthRate: "180% annual growth in AI content creation",;
-        contactInfo: {;
+        contactInfo: {
   phone: "+1 302 464 0950",;
             email: "kleber@ziontechgroup.com",;
             website: "https://ziontechgroup.com",;
-            address: "364 E Main St STE 1008 Middletown DE 19709";,;,
-},;
+            address: "364 E Main St STE 1008 Middletown DE 19709"},;
         websiteUrl: "https://ziontechgroup.com/autonomous-ai-content-studio",;
         demoUrl: "https://ziontechgroup.com/autonomous-ai-content-studio/demo",;
         trialDays: 14,;
         setupTime: "1 hour",;
         complianceStandards["GDPR", "CCPA", "SOC2"],;
-        supportLevel: "premium";,;,
-},;
+        supportLevel: "premium"},;
     // 3. Quantum-Secure Healthcare Data Platform;
-    {;
+    {
   id: "quantum-secure-healthcare-platform",;
         name: "Quantum-Secure Healthcare Data Platform",;
         tagline: "Unbreakable healthcare data security with quantum encryption",;
@@ -227,22 +223,20 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
         competitors["Epic Systems", "Cerner", "Athenahealth"],;
         marketSize: "$28.4B healthcare IT market",;
         growthRate: "300% annual growth in quantum security applications",;
-        contactInfo: {;
+        contactInfo: {
   phone: "+1 302 464 0950",;
             email: "kleber@ziontechgroup.com",;
             website: "https://ziontechgroup.com",;
-            address: "364 E Main St STE 1008 Middletown DE 19709";,;,
-},;
+            address: "364 E Main St STE 1008 Middletown DE 19709"},;
         websiteUrl: "https://ziontechgroup.com/quantum-secure-healthcare",;
         demoUrl: "https://ziontechgroup.com/quantum-secure-healthcare/demo",;
         trialDays: 30,;
         setupTime: "4-6 weeks",;
         complianceStandards["HIPAA", "HITECH", "SOC2", "ISO 27001", "GDPR"],;
-        supportLevel: "enterprise";,;,
-},;
+        supportLevel: "enterprise"},;
     // ===== REVOLUTIONARY IT SERVICES =====;
     // 4. Quantum Cloud Infrastructure;
-    {;
+    {
   id: "quantum-cloud-infrastructure",;
         name: "Quantum Cloud Infrastructure",;
         tagline: "Next-generation cloud computing with quantum processing capabilities",;
@@ -308,21 +302,19 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
         competitors["IBM Quantum", "Google Quantum AI", "Amazon Braket"],;
         marketSize: "$8.6B quantum computing market",;
         growthRate: "400% annual growth in quantum cloud services",;
-        contactInfo: {;
+        contactInfo: {
   phone: "+1 302 464 0950",;
             email: "kleber@ziontechgroup.com",;
             website: "https://ziontechgroup.com",;
-            address: "364 E Main St STE 1008 Middletown DE 19709";,;,
-},;
+            address: "364 E Main St STE 1008 Middletown DE 19709"},;
         websiteUrl: "https://ziontechgroup.com/quantum-cloud-infrastructure",;
         demoUrl: "https://ziontechgroup.com/quantum-cloud-infrastructure/demo",;
         trialDays: 14,;
         setupTime: "2-4 weeks",;
         complianceStandards["SOC2", "ISO 27001", "FedRAMP", "GDPR"],;
-        supportLevel: "enterprise";,;,
-},;
+        supportLevel: "enterprise"},;
     // 5. Autonomous Cybersecurity Operations Center;
-    {;
+    {
   id: "autonomous-cybersecurity-soc",;
         name: "Autonomous Cybersecurity Operations Center",;
         tagline: "AI-powered cybersecurity that never sleeps",;
@@ -388,22 +380,20 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
         competitors["CrowdStrike", "SentinelOne", "Palo Alto Networks"],;
         marketSize: "$182.3B cybersecurity market",;
         growthRate: "350% annual growth in autonomous security",;
-        contactInfo: {;
+        contactInfo: {
   phone: "+1 302 464 0950",;
             email: "kleber@ziontechgroup.com",;
             website: "https://ziontechgroup.com",;
-            address: "364 E Main St STE 1008 Middletown DE 19709";,;,
-},;
+            address: "364 E Main St STE 1008 Middletown DE 19709"},;
         websiteUrl: "https://ziontechgroup.com/autonomous-cybersecurity-soc",;
         demoUrl: "https://ziontechgroup.com/autonomous-cybersecurity-soc/demo",;
         trialDays: 30,;
         setupTime: "1-2 weeks",;
         complianceStandards["SOC2", "ISO 27001", "NIST", "GDPR", "HIPAA"],;
-        supportLevel: "enterprise";,;,
-},;
+        supportLevel: "enterprise"},;
     // ===== REVOLUTIONARY AI SOLUTIONS =====;
     // 6. Autonomous AI Research Assistant;
-    {;
+    {
   id: "autonomous-ai-research-assistant",;
         name: "Autonomous AI Research Assistant",;
         tagline: "AI that conducts research autonomously and generates insights",;
@@ -469,21 +459,19 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
         competitors["Perplexity AI", "Claude", "ResearchGate"],;
         marketSize: "$2.1B research tools market",;
         growthRate: "280% annual growth in AI research tools",;
-        contactInfo: {;
+        contactInfo: {
   phone: "+1 302 464 0950",;
             email: "kleber@ziontechgroup.com",;
             website: "https://ziontechgroup.com",;
-            address: "364 E Main St STE 1008 Middletown DE 19709";,;,
-},;
+            address: "364 E Main St STE 1008 Middletown DE 19709"},;
         websiteUrl: "https://ziontechgroup.com/autonomous-ai-research-assistant",;
         demoUrl: "https://ziontechgroup.com/autonomous-ai-research-assistant/demo",;
         trialDays: 14,;
         setupTime: "1 hour",;
         complianceStandards["GDPR", "CCPA", "SOC2"],;
-        supportLevel: "premium";,;,
-},;
+        supportLevel: "premium"},;
     // 7. Quantum AI Drug Discovery Platform;
-    {;
+    {
   id: "quantum-ai-drug-discovery",;
         name: "Quantum AI Drug Discovery Platform",;
         tagline: "Revolutionary drug discovery powered by quantum computing and AI",;
@@ -549,21 +537,19 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
         competitors["Atomwise", "Insilico Medicine", "BenevolentAI"],;
         marketSize: "$45.2B AI in drug discovery market",;
         growthRate: "500% annual growth in quantum drug discovery",;
-        contactInfo: {;
+        contactInfo: {
   phone: "+1 302 464 0950",;
             email: "kleber@ziontechgroup.com",;
             website: "https://ziontechgroup.com",;
-            address: "364 E Main St STE 1008 Middletown DE 19709";,;,
-},;
+            address: "364 E Main St STE 1008 Middletown DE 19709"},;
         websiteUrl: "https://ziontechgroup.com/quantum-ai-drug-discovery",;
         demoUrl: "https://ziontechgroup.com/quantum-ai-drug-discovery/demo",;
         trialDays: 30,;
         setupTime: "4-6 weeks",;
         complianceStandards["FDA", "EMA", "GMP", "GLP", "GCP"],;
-        supportLevel: "enterprise";,;,
-},;
+        supportLevel: "enterprise"},;
     // 8. Autonomous AI Legal Assistant;
-    {;
+    {
   id: "autonomous-ai-legal-assistant",;
         name: "Autonomous AI Legal Assistant",;
         tagline: "AI-powered legal research, document analysis, and case preparation",;
@@ -629,12 +615,11 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
         competitors["Casetext", "ROSS Intelligence", "Harvey AI"],;
         marketSize: "$3.8B legal technology market",;
         growthRate: "320% annual growth in AI legal technology",;
-        contactInfo: {;
+        contactInfo: {
   phone: "+1 302 464 0950",;
             email: "kleber@ziontechgroup.com",;
             website: "https://ziontechgroup.com",;
-            address: "364 E Main St STE 1008 Middletown DE 19709";,;,
-},;
+            address: "364 E Main St STE 1008 Middletown DE 19709"},;
         websiteUrl: "https://ziontechgroup.com/autonomous-ai-legal-assistant",;
         demoUrl: "https://ziontechgroup.com/autonomous-ai-legal-assistant/demo",;
         trialDays: 14,;
@@ -643,7 +628,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
         supportLevel: "premium";
 ];
 // Additional specialized service categories;
-export const SERVICE_CATEGORIES = {;
+export const SERVICE_CATEGORIES = {
   "Micro SAAS": [;
   "Financial Technology",;
         "Content Creation & Marketing",;
@@ -679,10 +664,9 @@ export const SERVICE_CATEGORIES = {;
         "Energy & Sustainability",;
         "Education & Training",;
   "Creative Industries";
-    ];,;,
-}
+    ]}
 // Market analysis and pricing information;
-export const MARKET_ANALYSIS = {;
+export const MARKET_ANALYSIS = {
   totalMarketSize: "$2.8T",;
     growthRate: "15.7% CAGR",;
     keyTrends[;
@@ -700,6 +684,5 @@ export const MARKET_ANALYSIS = {;
         "Enterprise-grade security",;
         "Comprehensive compliance frameworks",;
   "24/7 autonomous operations";
-    ];,;,
-}
+    ]}
 }

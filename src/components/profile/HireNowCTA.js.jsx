@@ -16,8 +16,7 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {}
   const handleSubmit = e => {}
     e.preventDefault();
     if (onHire) {}
-      onHire(formData);,
-}
+      onHire(formData)}
     // Reset form and close;
     setFormData({}
 ';
@@ -27,13 +26,11 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {}
       budget: '',''';
       startDate: '',''';
       message: ''});
-    setIsFormOpen(false);,
-};
+    setIsFormOpen(false)}
   const handleChange = e => {}
     setFormData(prev => ({}
       ...prev,;
-      [e.target.name]: e.target.value}));,
-};
+      [e.target.name]: e.target.value}))}
   return();
     <Card className="bg-zion-blue-light border-zion-blue-lighter">";
       <CardHeader>"";
@@ -149,6 +146,5 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {}
         )}
       </CardContent>;
     </Card>;
-  );,
-}'";
+  )}'";
 '"'"

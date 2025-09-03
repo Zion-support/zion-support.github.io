@@ -13,8 +13,7 @@ const ITServices = [];
         icon: <Cloud className="h-8 w-8 text-zion-cyan"/>,"";
         category: "Cloud","";
         badge: "Popular","";
-        link: "/request-quote?service=cloud-infrastructure";,
-},;
+        link: "/request-quote?service=cloud-infrastructure"},;
     {}
 ";
 "";
@@ -25,8 +24,7 @@ const ITServices = [];
         icon: <Shield className="h-8 w-8 text-zion-purple"/>,"";
         category: "Security","";
         badge: "Premium","";
-        link: "/request-quote?service=cybersecurity";,
-},;
+        link: "/request-quote?service=cybersecurity"},;
     {}
 ";
 "";
@@ -36,8 +34,7 @@ const ITServices = [];
         features["Pipeline automation", "Infrastructure as code", "Monitoring", "Performance optimization"],;"";
         icon: <Zap className="h-8 w-8 text-zion-blue"/>,"";
         category: "DevOps","";
-        link: "/request-quote?service=devops";,
-},;
+        link: "/request-quote?service=devops"},;
     {}
 ";
 "";
@@ -47,8 +44,7 @@ const ITServices = [];
         features["Performance tuning", "Backup & recovery", "Security hardening", "Migration support"],;"";
         icon: <Database className="h-8 w-8 text-zion-cyan"/>,"";
         category: "Database","";
-        link: "/request-quote?service=database-management";,
-},;
+        link: "/request-quote?service=database-management"},;
     {}
 ";
 "";
@@ -58,8 +54,7 @@ const ITServices = [];
         features["Network design", "Security implementation", "Monitoring", "24/7 support"],;"";
         icon: <Globe className="h-8 w-8 text-zion-purple"/>,"";
         category: "Networking","";
-        link: "/request-quote?service=network-infrastructure";,
-},;
+        link: "/request-quote?service=network-infrastructure"},;
     {}
 ";
 "";
@@ -69,8 +64,7 @@ const ITServices = [];
         features["Technology assessment", "Roadmap planning", "Vendor selection", "ROI analysis"],;"";
         icon: <CheckCircle className="h-8 w-8 text-zion-blue"/>,"";
         category: "Consulting","";
-        link: "/request-quote?service=it-consulting";,
-},;
+        link: "/request-quote?service=it-consulting"},;
     {}
 ";
 "";
@@ -81,8 +75,7 @@ const ITServices = [];
         icon: <Settings className="h-8 w-8 text-zion-cyan"/>,"";
         category: "Managed Services","";
         badge: "New","";
-        link: "/request-quote?service=managed-it";,
-},;
+        link: "/request-quote?service=managed-it"},;
     {}
 ";
 "";
@@ -92,8 +85,7 @@ const ITServices = [];
         features["Hardware provisioning", "Environmental monitoring", "Power management", "Security"],;"";
         icon: <Server className="h-8 w-8 text-zion-purple"/>,"";
         category: "Data Center","";
-        link: "/request-quote?service=data-center";,
-},;
+        link: "/request-quote?service=data-center"},;
     {}
 ";
 "";
@@ -103,8 +95,7 @@ const ITServices = [];
         features["UI/UX design", "Native development", "Testing", "App store deployment"],;"";
         icon: <Smartphone className="h-8 w-8 text-zion-blue"/>,"";
         category: "Development","";
-        link: "/request-quote?service=mobile-development";,
-},;
+        link: "/request-quote?service=mobile-development"},;
     {}
 ";
 "";
@@ -114,8 +105,7 @@ const ITServices = [];
         features["Responsive design", "SEO optimization", "Performance tuning", "Maintenance"],;"";
         icon: <Globe className="h-8 w-8 text-zion-cyan"/>,"";
         category: "Development","";
-        link: "/request-quote?service=web-development";,
-},;
+        link: "/request-quote?service=web-development"},;
     {}
 ";
 "";
@@ -125,8 +115,7 @@ const ITServices = [];
         features["Hands-on workshops", "Certification prep", "Custom curriculum", "Ongoing support"],;"";
         icon: <Users className="h-8 w-8 text-zion-purple"/>,"";
         category: "Training","";
-        link: "/request-quote?service=it-training";,
-},;
+        link: "/request-quote?service=it-training"},;
     {}
 ";
 "";
@@ -136,8 +125,7 @@ const ITServices = [];
         features["Automated backups", "Off-site storage", "Recovery testing", "24/7 support"],;"";
         icon: <HardDrive className="h-8 w-8 text-zion-blue"/>,"";
         category: "Recovery","";
-        link: "/request-quote?service=disaster-recovery";,
-},;
+        link: "/request-quote?service=disaster-recovery"},;
     {}
 ";
 "";
@@ -147,8 +135,7 @@ const ITServices = [];
         features["Compliance assessment", "Risk analysis", "Documentation", "Remediation"],;"";
         icon: <FileText className="h-8 w-8 text-zion-cyan"/>,"";
         category: "Compliance","";
-        link: "/request-quote?service=it-audit";,
-},;
+        link: "/request-quote?service=it-audit"},;
     {}
 ";
 "";
@@ -158,8 +145,7 @@ const ITServices = [];
         features["Vendor management", "Volume discounts", "Installation", "Warranty support"],;"";
         icon: <Server className="h-8 w-8 text-zion-purple"/>,"";
         category: "Hardware","";
-        link: "/request-quote?service=hardware-procurement";,
-},;
+        link: "/request-quote?service=hardware-procurement"},;
     {}
 ";
 "";
@@ -169,8 +155,7 @@ const ITServices = [];
         features["Project planning", "Resource management", "Risk mitigation", "Delivery assurance"],;"";
         icon: <BarChart3 className="h-8 w-8 text-zion-blue"/>,"";
         category: "Project Management","";
-        link: "/request-quote?service=it-project-management";,
-},;
+        link: "/request-quote?service=it-project-management"},;
     {}
 ";
 "";
@@ -181,8 +166,7 @@ const ITServices = [];
         icon: <Monitor className="h-8 w-8 text-zion-cyan"/>,"";
         category: "Support","";
         badge: "Featured","";
-        link: "/request-quote?service=24-7-support";,
-}
+        link: "/request-quote?service=24-7-support"}
 ];";
 const categories = ["";
     { name: "All", value: "all", icon: <Globe className="h-4 w-4"/> },"";
@@ -307,14 +291,10 @@ export default function ITServicesPage() {}
         </div>;
       </div>;
     </div>)}
-;
 
-export { ITServices, ITServicesPage };
-;
-export { ITServices, ITServicesPage };
-;
-export { ITServices, ITServicesPage };
-;
-export { ITServices, ITServicesPage };
-;
-export { ITServices, ITServicesPage };
+
+export { ITServices, ITServicesPage }
+export { ITServices, ITServicesPage }
+export { ITServices, ITServicesPage }
+export { ITServices, ITServicesPage }
+export { ITServices, ITServicesPage }

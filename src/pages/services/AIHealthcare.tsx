@@ -1,8 +1,8 @@
 import React from 'react';
 import { Heart, Check, ArrowRight } from 'lucide-react';
 import { SEO } from '../../components/SEO';
-;
-export default function AIHealthcare() {;
+
+export default function AIHealthcare() {
   const features = [;
     'Automated medical record processing and coding',;
     'Predictive analytics for patient outcomes',;
@@ -11,25 +11,22 @@ export default function AIHealthcare() {;
     'Integration with major EHR and healthcare systems',;
     'Custom AI models for specialized medical domains';
   ];
-;
+
   const tiers = [;
-    {;
+    {
       name: 'Starter',;
       price: '$299/mo',;
-      details: ['Basic features', 'Standard support', 'Up to 100 patients'];,
-},;
-    {;
+      details: ['Basic features', 'Standard support', 'Up to 100 patients']},;
+    {
       name: 'Professional',;
       price: '$999/mo',;
-      details: ['Advanced features', 'Priority support', 'Up to 1000 patients'];,
-},;
-    {;
+      details: ['Advanced features', 'Priority support', 'Up to 1000 patients']},;
+    {
       name: 'Enterprise',;
       price: '$2,999/mo',;
-      details: ['All features', 'Dedicated support', 'Unlimited patients'];,
-}
+      details: ['All features', 'Dedicated support', 'Unlimited patients']}
   ];
-;
+
   return (;
     <>;
       <SEO ;
@@ -71,7 +68,7 @@ export default function AIHealthcare() {;
                 Built with enterprise-grade security, HIPAA compliance, and 99.9% uptime SLA.;
               </div>;
             </div>;
-            ;
+
             <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">;
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">;
                 Competitive Pricing;
@@ -107,5 +104,4 @@ export default function AIHealthcare() {;
         </section>;
       </div>;
     </>;
-  );,
-}
+  )}

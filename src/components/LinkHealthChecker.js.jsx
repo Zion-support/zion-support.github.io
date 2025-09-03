@@ -1,52 +1,45 @@
 import React, { useState, useEffect } from 'react';
 import { CheckCircle, XCircle, AlertTriangle, ExternalLink  } from 'lucide-react';
-;
-export default function Page() {;
-;,
+
+export default function Page() {
 }
       // For internal links, we'll assume they're healthy since they're part of our app';
-      if(url.startsWith('/') || url.includes('ziontechgroup.com')) {;
+      if(url.startsWith('/') || url.includes('ziontechgroup.com')) {
 
-        return {;
+        return {
 
           url,;
           status: 'healthy',;
-          responseTime: Date.now() - startTime};,
-}
+          responseTime: Date.now() - startTime}}
       // For external links, we could implement actual health checking';
       // For now, we'll mark them as external;
-      return {;
+      return {
 
         url,;
         status: 'external',;
-        responseTime: Date.now() - startTime};,
-} catch(error) {;
-      return {;
+        responseTime: Date.now() - startTime}} catch(error) {
+      return {
 
         url,;
         status: 'broken',;
         responseTime: Date.now() - startTime,;
-        error: error instanceof Error ? error.message : 'Unknown error'};,
-}
-  };
-  const checkAllLinks = async () => {;
+        error: error instanceof Error ? error.message : 'Unknown error'}}
+  }
+  const checkAllLinks = async () => {
     setIsChecking(true);
     setLinkStatuses(links.map(link => ({ url: link.url, status: 'checking' })));
     const statuses = await Promise.all();
       links.map(link => checkLinkHealth(link.url));
     );
     setLinkStatuses(statuses);
-    setIsChecking(false);,
-};
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;,
-}, []);
+    setIsChecking(false)}
+  useEffect(() => {
+  // TODO: Add dependencies if needed}, []);
     // Auto-check links when component mounts;
-    checkAllLinks();,
-}, [links]);
-  const getStatusIcon = status => {;
+    checkAllLinks()}, [links]);
+  const getStatusIcon = status => {
 
-    switch(status) {;
+    switch(status) {
 
       case 'healthy':;
         return <CheckCircle className="w-5 h-5 text-green-500" />;
@@ -59,12 +52,11 @@ export default function Page() {;
           <AlertTriangle className="w-5 h-5 text-yellow-500 animate-pulse" />;
         );
       default:";
-        return <AlertTriangle className="w-5 h-5 text-gray-500" />;,
-}
-  };
-  const getStatusText = status => {;
+        return <AlertTriangle className="w-5 h-5 text-gray-500" />}
+  }
+  const getStatusText = status => {
 
-    switch(status) {;
+    switch(status) {
 
       case 'healthy':';
         return 'Healthy';
@@ -75,12 +67,11 @@ export default function Page() {;
       case 'checking':';
         return 'Checking...';
       default:';
-        return 'Unknown';,
-}
-  };
-  const getStatusColor = status => {;
+        return 'Unknown'}
+  }
+  const getStatusColor = status => {
 
-    switch(status) {;
+    switch(status) {
 
       case 'healthy':';
         return 'text-green-500';
@@ -91,9 +82,8 @@ export default function Page() {;
       case 'checking':';
         return 'text-yellow-500';
       default:';
-        return 'text-gray-500';,
-}
-  };
+        return 'text-gray-500'}
+  }
   const healthyCount = linkStatuses.filter(s => s.status === 'healthy').length;
   const brokenCount = linkStatuses.filter(s => s.status === 'broken').length;
   const externalCount = linkStatuses.filter(';
@@ -153,7 +143,7 @@ export default function Page() {;
 
       {/* Link Status List */}";
       <div className="space-y-3">;
-        {links.map((link, index) => {;
+        {links.map((link, index) => {
 
           const status = linkStatuses[index];
           if(!status) return null;
@@ -186,8 +176,7 @@ export default function Page() {;
                 )}
               </div>;
             </div>;
-          );,
-})}
+          )})}
       </div>;
 
       {/* Recommendations */}
@@ -202,7 +191,7 @@ export default function Page() {;
             review and fix these links to improve user experience.</p>;
         </div>;
       )}
-;
+
       {healthyCount === links.length && (";
         <div className="mt-6 p-4 bg-green-500/10 border border-green-500/20 rounded-lg">";
           <h4 className="text-green-400 font-semibold mb-2">;
@@ -212,16 +201,12 @@ export default function Page() {;
             Great job! All links are working properly. Your website is in excellent health.;
           </p>;
         </div>)}
-    </div>)};
+    </div>)}
 export default LinkHealthChecker;
-;
 
-export { LinkHealthChecker };
-;
-export { LinkHealthChecker };
-;
-export { LinkHealthChecker };
-;
-export { LinkHealthChecker };
-;
-export { LinkHealthChecker };
+
+export { LinkHealthChecker }
+export { LinkHealthChecker }
+export { LinkHealthChecker }
+export { LinkHealthChecker }
+export { LinkHealthChecker }

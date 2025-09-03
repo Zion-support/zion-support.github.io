@@ -15,19 +15,16 @@ export default function ComprehensiveContact() {}
         comp: '',''';
         phone: '',''';
         service: '',''';
-        message: '';,
-}) ;
+        message: ''}) ;
     const handleSubmit = (e) => {}
         e.preventDefault();';
         // Handle form submission'';
-        // // // // // // // // console.log('Form submitted:', formData);,
-};';
-        // console.log('Form submitted:', formData)};
+        // // // // // // // // console.log('Form submitted:', formData)};';
+        // console.log('Form submitted:', formData)}
     const handleChange = (e) => {}
         setFormData({}
             ...formData,;
-            [e.target.name]: e.target.value;,
-})};
+            [e.target.name]: e.target.value})}
     return (<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">";
       {/* Hero Section */}"";
       <div className="relative overflow-hidden">"";
@@ -356,14 +353,10 @@ export default function ComprehensiveContact() {}
         </div>;
       </footer>;
     </div>)}
-;
 
-export { ComprehensiveContact };
-;
-export { ComprehensiveContact };
-;
-export { ComprehensiveContact };
-;
-export { ComprehensiveContact };
-;
-export { ComprehensiveContact };
+
+export { ComprehensiveContact }
+export { ComprehensiveContact }
+export { ComprehensiveContact }
+export { ComprehensiveContact }
+export { ComprehensiveContact }

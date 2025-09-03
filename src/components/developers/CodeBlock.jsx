@@ -18,8 +18,7 @@ export default function CodeBlock({}
           onClick={() =>';
             navigator.clipboard.writeText('';
               typeof content === 'string' ? content : content.toString();
-            )";,
-}"";
+            )"}"";
           className="text-xs text-gray-400 hover:text-white transition-colors">;
           Copy;
         </button>";
@@ -28,14 +27,10 @@ export default function CodeBlock({}
         <code>{content}</code>;
       </pre>;
     </div>)}
-;
 
-export { CodeBlock };
-;
-export { CodeBlock };
-;
-export { CodeBlock };
-;
-export { CodeBlock };
-;
-export { CodeBlock };
+
+export { CodeBlock }
+export { CodeBlock }
+export { CodeBlock }
+export { CodeBlock }
+export { CodeBlock }

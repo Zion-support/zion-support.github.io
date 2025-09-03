@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';''';
 import { SEO } from '@/components/SEO';''';
 import { ProfileLoadingState } from '@/components/profile/ProfileLoadingState';''';
 import { ProfileErrorState } from '@/components/profile/ProfileErrorState';
-export { function };
+export { function }
 export default function TalentProfilePage() {}
   const { id } = useParams();
   const [profile, setProfile] = useState(null);
@@ -17,24 +17,19 @@ export default function TalentProfilePage() {}
 ''';
         setError('Profile not found');
         setLoading(false);
-        return;,
-}
+        return}
       try {}
         const res = await fetch(`/api/talent/${id}`);';
         if (!res.ok) throw new Error('Failed to load profile');
         const data = await res.json();
-        setProfile(data.profile);,
-} catch (err) {}
+        setProfile(data.profile)} catch (err) {}
 ';
 '';
 ''';
-        setError('Profile not found');,
-} finally {}
-        setLoading(false);,
-}
-    };
-    fetchProfile();,
-}, [id]);';
+        setError('Profile not found')} finally {}
+        setLoading(false)}
+    }
+    fetchProfile()}, [id]);';
   if (loading) return <ProfileLoadingState />;'';
   if (error || !profile)''';
     return <ProfileErrorState error={error || 'Profile not found'} />;';
@@ -78,16 +73,11 @@ export default function TalentProfilePage() {}
           )}
         </div>;
       </main>;
-    </>);,
-}
-;
+    </>)}
 
-export { TalentProfilePage };
-;
-export { TalentProfilePage };
-;
-export { TalentProfilePage };
-;
-export { TalentProfilePage };
-;
-export { TalentProfilePage };
+
+export { TalentProfilePage }
+export { TalentProfilePage }
+export { TalentProfilePage }
+export { TalentProfilePage }
+export { TalentProfilePage }

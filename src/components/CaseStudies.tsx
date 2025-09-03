@@ -1,20 +1,18 @@
 React from 'react';
 import {  motion   } from "framer-motion";
 import {  CheckCircle, TrendingUp, Users, DollarSign   } from "lucide-react";
-;
+
 interface CaseStudy { id: string;
   title: string;
   description: string;
   industry: string;
-  results: {;
+  results: {
     metric: string;
     value: string;
-    icon: React.ReactNode;,
-}[];
+    icon: React.ReactNode}[];
   technologies: string[];
-  duration: string;,
-}
-;
+  duration: string}
+
 const caseStudies: CaseStudy[] = [{ id: '1',;
     title: 'AI-Powered Customer Service Automation',;
     description: 'Implemented multi-agent AI system for enterprise customer service, reducing response time and improving satisfaction.',;
@@ -25,8 +23,7 @@ const caseStudies: CaseStudy[] = [{ id: '1',;
       { metric: 'Cost Reduction', value: '40%', icon: <DollarSign className="w-5 h-5" /> }
     ],;
     technologies: ['OpenAI GPT-4', 'LangChain', 'React', 'Node.js', 'PostgreSQL'],;
-    duration: '3 months';,
-},;
+    duration: '3 months'},;
   { id: '2',;
     title: 'Cloud-Native Data Platform Migration',;
     description: 'Migrated legacy data infrastructure to modern cloud-native platform with real-time analytics capabilities.',;
@@ -36,8 +33,7 @@ const caseStudies: CaseStudy[] = [{ id: '1',;
       { metric: 'Infrastructure Cost', value: '-60%', icon: <DollarSign className="w-5 h-5" /> }
     ],;
     technologies: ['AWS', 'Kubernetes', 'Apache Kafka', 'Apache Spark', 'Terraform'],;
-    duration: '6 months';,
-},;
+    duration: '6 months'},;
   { id: '3',;
     title: 'Zero-Trust Cybersecurity Implementation',;
     description: 'Deployed comprehensive zero-trust security framework with automated threat detection and response.',;
@@ -47,11 +43,10 @@ const caseStudies: CaseStudy[] = [{ id: '1',;
       { metric: 'Detection Time', value: 'Real-time', icon: <TrendingUp className="w-5 h-5" /> }
     ],;
     technologies: ['Okta', 'CrowdStrike', 'Splunk', 'AWS GuardDuty', 'Python'],;
-    duration: '4 months';,
-}
+    duration: '4 months'}
 ];
 
-export default function CaseStudies() {;
+export default function CaseStudies() {
   return(<section className="py-24 sm:py-32 bg-gradient-to-br from-slate-50 to-blue-50">;
       <div className="mx-auto max-w-7xl px-6 lg:px-8">;
         {/* Header */}
@@ -170,5 +165,4 @@ export default function CaseStudies() {;
         </motion.div>;
       </div>;
     </section>;
-  );,
-}
+  )}

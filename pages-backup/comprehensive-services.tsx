@@ -1,11 +1,9 @@
 import Head from "next/head";
 import React from "react";
 import dynamic from "next/dynamic";
-const Component = () => {;
-const Head = dynamic(() => import("next/head"), { ssr: false });,
-}
-const Link = dynamic(() => import("next/link"), { ssr: false });,
-}
+const Component = () => {
+const Head = dynamic(() => import("next/head"), { ssr: false })}
+const Link = dynamic(() => import("next/link"), { ssr: false })}
   Settings as Configuration,;
   Palette as Design} from "lucide-react";
 
@@ -32,9 +30,8 @@ export default function ComprehensiveServices() {";
           pricing: "$8,000 - $25,000/month",";
           features: ["Image analysis", "HIPAA compliance", "EHR integration"],";
           delivery: "8-12 weeks"}
-;
-      ];,
-},;
+
+      ]},;
     {";
       title: "IT Infrastructure & Security",;
       icon: Shield,";
@@ -64,9 +61,8 @@ name: "Zero Trust Security Architecture",";
           pricing: "$8,000 - $50,000/month",";
           features: ["Smart contracts", "DeFi protocols", "NFT marketplaces"],";
           delivery: "8-16 weeks"}
-;
-      ];,
-},;
+
+      ]},;
     {";
       title: "Micro SaaS Solutions",;
       icon: Cloud,";
@@ -96,9 +92,8 @@ name: "Smart Inventory Management System",";
           pricing: "$1,500 - $5,000/month",";
           features: ["Fraud detection", "Automated processing", "Analytics dashboard"],";
           delivery: "3-5 weeks"}
-;
-      ];,
-},;
+
+      ]},;
     {";
       title: "Specialized Industry Solutions",;
       icon: Target,";
@@ -128,14 +123,14 @@ name: "Healthcare Technology Solutions",";
           pricing: "$6,000 - $30,000/month",";
           features: ["LMS integration", "Learning analytics", "Student engagement"],";
           delivery: "6-14 weeks"}
-;
+
       ];
 
-;
+
   ];
 
   const contactInfo = {}
-;
+
   const stats = [];
 
   return (;
@@ -163,15 +158,15 @@ name: "Healthcare Technology Solutions",";
               <div className="{"flex" flex-col sm: flex-row gap-4 justify-center">",;
                 <a href="{"tel:${contactInfo.phone}"}
                   className="{"bg-blue-600" text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center"}
-;
+
                 >";
                   <Phone className="{"w-5" h-5 mr-2"  />;
                   Call Now: {contactInfo.phone}
-;
+
                 </a>";
                 <a href="{"mailto:${contactInfo.email}"}
                   className=""border-2" border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors flex items-center justify-center"}
-;
+
                 >";
                   <Mail className="w-5 h-5 mr-2"  />;
                   Email Us,;
@@ -188,7 +183,7 @@ name: "Healthcare Technology Solutions",";
                   <div className="text-gray-600">{stat.label}</div>;
                 </div>;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";
@@ -238,10 +233,10 @@ name: "Healthcare Technology Solutions",";
                                 <li key="{featureIndex}" className="flex items-center text-sm text-gray-600">";
                                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0"  />;
                                   {feature}
-;
+
                                 </li>;
                               ))}
-;
+
                             </ul>;
                           </div>;
 ";
@@ -252,16 +247,16 @@ name: "Healthcare Technology Solutions",";
                             </a>",;
                             <a href="{"mailto:${contactInfo.email}?subject=Inquiry" about ${service.name}"}";
                               className=""flex-1" border border-blue-600 text-blue-600 py-2 px-4 rounded-lg text-center text-sm font-medium hover:bg-blue-600 hover:text-white transition-colors"}
-;
+
                             >;
                               Learn More,;
                             </a>;
                           </div>;
                       ))}
-;
+
                     </div>;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";
@@ -280,10 +275,10 @@ can drive your success.;
                   <h3 className="{"text-lg" font-semibold mb-2">Call Us</h3>",;
                   <a href="{"tel:${contactInfo.phone}"}
                     className=""text-blue-200" hover:text-white transition-colors"}
-;
+
                   >;
                     {contactInfo.phone}
-;
+
                   </a>;
                 </div>";
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">";
@@ -291,10 +286,10 @@ can drive your success.;
                   <h3 className="{"text-lg" font-semibold mb-2">Email Us</h3>";
                   <a href="{"mailto:${contactInfo.email}"}
                     className=""text-blue-200" hover:text-white transition-colors"}
-;
+
                   >;
                     {contactInfo.email}
-;
+
                   </a>;
                 </div>";
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">";
@@ -306,14 +301,14 @@ can drive your success.;
               <div className="{"flex" flex-col sm: flex-row gap-4 justify-center">",;
                 <a href="{"tel:${contactInfo.phone}"}
                   className=""bg-white" text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center"}
-;
+
                 >";
                   <Phone className="{"w-5" h-5 mr-2"  />;
                   Call Now for Free Consultation,;
                 </a>";
                 <a href="{"mailto:${contactInfo.email}"}
                   className=""border-2" border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-blue-600 transition-colors flex items-center justify-center"}
-;
+
                 >";
                   <Mail className="w-5 h-5 mr-2"  />;
                   Send Email Inquiry,;

@@ -168,8 +168,7 @@ const EnterpriseSolutions = () => {}
                     </svg>;
                   </Link>;
                 </div>;
-              );,
-})}
+              )})}
           </div>;
         </div>;
       </div>;
@@ -207,8 +206,7 @@ const EnterpriseSolutions = () => {}
                     ))}
                   </div>;
                 </div>;
-              );,
-})}
+              )})}
           </div>;
         </div>;
       </div>;
@@ -256,8 +254,7 @@ const EnterpriseSolutions = () => {}
                   <h3 className="text-xl font-bold mb-4">{benefit.title}</h3>"";
                   <p className="text-gray-300">{benefit.description}</p>;
                 </div>;
-              );,
-})}
+              )})}
           </div>;
         </div>;
       </div>;
@@ -289,17 +286,12 @@ const EnterpriseSolutions = () => {}
         </div>;
       </div>;
     </div>;
-  );,
-};
+  )}
 export default EnterpriseSolutions;
-;
 
-export { EnterpriseSolutions, Icon, Icon, Icon };
-;
-export { EnterpriseSolutions, Icon, Icon, Icon };
-;
-export { EnterpriseSolutions, Icon, Icon, Icon };
-;
-export { EnterpriseSolutions, Icon, Icon, Icon };
-;
-export { EnterpriseSolutions, Icon, Icon, Icon };
+
+export { EnterpriseSolutions, Icon, Icon, Icon }
+export { EnterpriseSolutions, Icon, Icon, Icon }
+export { EnterpriseSolutions, Icon, Icon, Icon }
+export { EnterpriseSolutions, Icon, Icon, Icon }
+export { EnterpriseSolutions, Icon, Icon, Icon }

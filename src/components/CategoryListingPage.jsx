@@ -23,43 +23,37 @@ import { Select, SelectTrigger, SelectContent, SelectItem } from '@/components/u
     { label: 'All', value: 'all' },;
     { label: 'Highly Rated', value: 'high-rating' },;
     { label: 'Best AI Match', value: 'best-match' },;
-] }) {;
+] }) {
 ";
     const [searchQuery, setSearchQuery] = useState("");
     const [selectedSort, setSelectedSort] = useState(() => localStorage.getItem('category_selected_sort') || sortOptions[0].value);
     const [selectedFilter, setSelectedFilter] = useState(() => localStorage.getItem('category_selected_filter') || filterOptions[0].value);
     const [isLoading, setIsLoading] = useState(false);
-    useEffect(() => {;
+    useEffect(() => {
   // TODO: Add dependencies if needed;
 
-  return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
-;
+  return () => {
+    // Cleanup function}}, []);, []);
+
         localStorage.setItem('category_selected_sort', selectedSort)}, [selectedSort]);
-    useEffect(() => {;
+    useEffect(() => {
   // TODO: Add dependencies if needed;
 
-  return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
-;
+  return () => {
+    // Cleanup function}}, []);, []);
+
         localStorage.setItem('category_selected_filter', selectedFilter)}, [selectedFilter]);
-    useEffect(() => {;
+    useEffect(() => {
   // TODO: Add dependencies if needed;
 
-  return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
+  return () => {
+    // Cleanup function}}, []);, []);
         setIsLoading(true);
         const timeout = setTimeout(() => setIsLoading(false), 300);
         return () => clearTimeout(timeout)}, [searchQuery, selectedSort, selectedFilter]);
     // Process listings based on filters and search;
     const processedListings = initialListings;
-        .filter(listing => {;
+        .filter(listing => {
 
         // Apply search filter;
         const matchesSearch = listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
@@ -73,10 +67,10 @@ import { Select, SelectTrigger, SelectContent, SelectItem } from '@/components/u
         if(selectedFilter === 'best-match');
             return matchesSearch && (listing.aiScore || 0) >= 85;
         return matchesSearch});
-        .sort((a, b) => {;
+        .sort((a, b) => {
 
         // Apply sorting;
-        switch(selectedSort) {;
+        switch(selectedSort) {
 
             case 'newest':;
                 return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
@@ -161,7 +155,7 @@ import { Select, SelectTrigger, SelectContent, SelectItem } from '@/components/u
             </div>) : (<div className="text-center py-20">";
               <h3 className="text-xl font-bold text-white mb-2">No listings found</h3>";
               <p className="text-zion-slate-light mb-6">Try adjusting your filters or search query</p>";
-              <Button variant="outline" onClick={() => {;
+              <Button variant="outline" onClick={() => {
 ";
                 setSearchQuery("");";
                 setSelectedFilter(filterOptions[0].value)}} className="border-zion-purple text-zion-purple hover:bg-zion-purple/10">;

@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
-;
-export default function Page() {;
+
+export default function Page() {
             // Check for very short content;
-            if(words.length > 0 && words.length < 10) {;
+            if(words.length > 0 && words.length < 10) {
 
                 issues.push({;
 `;
@@ -15,12 +15,11 @@ export default function Page() {;
                     element: element,;
                     fixable: true,;
                     suggestion: 'Expand content to provide more value to users',;
-                    impact: 'engagement';,
-});
+                    impact: 'engagement'});
                 engagementScore -= 5;
                 seoScore -= 3}
             // Check for very long paragraphs(hard to read);
-            if(words.length > 100) {;
+            if(words.length > 100) {
 
                 issues.push({;
 `;
@@ -32,19 +31,18 @@ export default function Page() {;
                     element: element,;
                     fixable: true,;
                     suggestion: 'Break into smaller paragraphs for better readability',;
-                    impact: 'readability';,
-});
+                    impact: 'readability'});
                 readabilityScore -= 5;
                 engagementScore -= 3}
             // Check for proper heading structure;
-            if(element.tagName.match(/^H[1-6]$/)) {;
+            if(element.tagName.match(/^H[1-6]$/)) {
 
                 const level = parseInt(element.tagName.charAt(1));
                 const previousHeadings = Array.from(contentElements).slice(0, index).filter(el => el.tagName.match(/^H[1-6]$/));
-                if(previousHeadings.length > 0) {;
+                if(previousHeadings.length > 0) {
 
                     const lastLevel = parseInt(previousHeadings[previousHeadings.length-1].tagName.charAt(1));
-                    if(level - lastLevel > 1) {;
+                    if(level - lastLevel > 1) {
 
                         issues.push({;
 `;
@@ -56,23 +54,22 @@ export default function Page() {;
                             element: element,;
                             fixable: true,;
                             suggestion: 'Ensure heading levels follow logical sequence',;
-                            impact: 'accessibility';,
-});
+                            impact: 'accessibility'});
                         seoScore -= 3}
                 }
             }
             // Check for keyword stuffing;
             const commonWords = text.toLowerCase().match(/\b\w+\b/g) || [];
-            const wordFrequency = { /* empty */ };
-            commonWords.forEach(word => {;
+            const wordFrequency = { /* empty */ }
+            commonWords.forEach(word => {
 
                 wordFrequency[word] = (wordFrequency[word] || 0) + 1});
-            Object.entries(wordFrequency).forEach(([word, count]) => {;
+            Object.entries(wordFrequency).forEach(([word, count]) => {
 
-                if(count > 5 && word.length > 3) {;
+                if(count > 5 && word.length > 3) {
 
                     const density = (count / commonWords.length) * 100;
-                    if(density > 3) {;
+                    if(density > 3) {
 
                         issues.push({;
 `;
@@ -84,16 +81,15 @@ export default function Page() {;
                             element: element,;
                             fixable: true,;
                             suggestion: 'Reduce keyword density for more natural content',;
-                            impact: 'seo';,
-});
+                            impact: 'seo'});
                         seoScore -= 5}
                 }
             });
             // Check for proper meta descriptions';
-            if(element.tagName === 'META' && element.getAttribute('name') === 'description') {;
+            if(element.tagName === 'META' && element.getAttribute('name') === 'description') {
 
                 const content = element.getAttribute('content') || '';
-                if(content.length < 50) {;
+                if(content.length < 50) {
 
                     issues.push({;
 `;
@@ -105,10 +101,9 @@ export default function Page() {;
                         element: element,;
                         fixable: true,;
                         suggestion: 'Meta descriptions should be 150-160 characters for optimal display',;
-                        impact: 'seo';,
-});
+                        impact: 'seo'});
                     seoScore -= 5}
-                else if(content.length > 160) {;
+                else if(content.length > 160) {
 
                     issues.push({;
 `;
@@ -120,15 +115,14 @@ export default function Page() {;
                         element: element,;
                         fixable: true,;
                         suggestion: 'Meta descriptions should be 150-160 characters for optimal display',;
-                        impact: 'seo';,
-});
+                        impact: 'seo'});
                     seoScore -= 2}
             }
             // Check for broken links';
-            if(element.tagName === 'A') {;
+            if(element.tagName === 'A') {
 
                 const href = element.getAttribute('href');
-                if(href && (href.startsWith('#') || href.startsWith('javascript:'))) {;
+                if(href && (href.startsWith('#') || href.startsWith('javascript:'))) {
 
                     issues.push({;
 `;
@@ -140,15 +134,14 @@ export default function Page() {;
                         element: element,;
                         fixable: true,;
                         suggestion: 'Ensure link points to valid URL or page section',;
-                        impact: 'engagement';,
-});
+                        impact: 'engagement'});
                     engagementScore -= 3}
             }
             // Check for images without alt text';
-            if(element.tagName === 'IMG') {;
+            if(element.tagName === 'IMG') {
 
                 const alt = element.getAttribute('alt');
-                if(!alt || alt.trim() === '') {;
+                if(!alt || alt.trim() === '') {
 
                     issues.push({;
 `;
@@ -160,14 +153,13 @@ export default function Page() {;
                         element: element,;
                         fixable: true,;
                         suggestion: 'Add descriptive alt text for better accessibility and SEO',;
-                        impact: 'accessibility';,
-});
+                        impact: 'accessibility'});
                     seoScore -= 8;
                     engagementScore -= 5}
             }
         });
         // Generate suggestions based on analysis;
-        if(wordCount < 300) {;
+        if(wordCount < 300) {
 
             suggestions.push({;
 
@@ -177,9 +169,8 @@ export default function Page() {;
                 description: 'Consider adding more content to improve SEO and user engagement',;
                 priority: 'high',;
                 implementation: 'Add relevant sections, expand existing content, include more examples',;
-                expectedImpact: 15;,
-})}
-        if(readabilityScore < 80) {;
+                expectedImpact: 15})}
+        if(readabilityScore < 80) {
 
             suggestions.push({;
 
@@ -189,9 +180,8 @@ export default function Page() {;
                 description: 'Content could be more readable for better user experience',;
                 priority: 'medium',;
                 implementation: 'Use shorter sentences, break up long paragraphs, simplify complex language',;
-                expectedImpact: 12;,
-})}
-        if(seoScore < 80) {;
+                expectedImpact: 12})}
+        if(seoScore < 80) {
 
             suggestions.push({;
 
@@ -201,9 +191,8 @@ export default function Page() {;
                 description: 'Several SEO improvements could boost search visibility',;
                 priority: 'high',;
                 implementation: 'Fix meta descriptions, add alt text, improve heading structure',;
-                expectedImpact: 20;,
-})}
-        if(engagementScore < 80) {;
+                expectedImpact: 20})}
+        if(engagementScore < 80) {
 
             suggestions.push({;
 
@@ -213,11 +202,10 @@ export default function Page() {;
                 description: 'Content could be more engaging for visitors',;
                 priority: 'medium',;
                 implementation: 'Add interactive elements, improve content structure, include calls-to-action',;
-                expectedImpact: 10;,
-})}
+                expectedImpact: 10})}
         // Calculate overall score;
         const overallScore = Math.round((readabilityScore + seoScore + engagementScore) / 3);
-        const analysisResult = {;
+        const analysisResult = {
 
   wordCount,;
             readabilityScore: Math.max(0, Math.min(100, readabilityScore)),;
@@ -226,32 +214,31 @@ export default function Page() {;
             issues,;
             suggestions,;
             overallScore: Math.max(0, Math.min(100,;
-  overallScore));,
-};
+  overallScore))}
         setAnalysis(analysisResult);
         setIsAnalyzing(false)}, [targetElements]);
     // Auto-fix content issues;
-    const autoFixIssues = useCallback(() => {;
+    const autoFixIssues = useCallback(() => {
         if(!analysis);
             return;
         const fixedCount = 0;
-        fixableIssues.forEach(issue => {;
+        fixableIssues.forEach(issue => {
 
-            if (issue.element) {;
+            if (issue.element) {
 
-                switch(issue.id.split('-')[0]) {;
+                switch(issue.id.split('-')[0]) {
 
                     case 'empty-content':';
-                        if(issue.element.textContent?.trim() === '') {;
+                        if(issue.element.textContent?.trim() === '') {
 
                             issue.element.innerHTML = '<em>Content placeholder - please add relevant information</em>;
                             fixedCount++}
                         break;
                     case 'missing-alt':';
-                        if(issue.element.tagName === 'IMG') {;
+                        if(issue.element.tagName === 'IMG') {
 
                             const img = issue.element;
-                            if(!img.alt) {;
+                            if(!img.alt) {
 
                                 img.alt = 'Image';
                                 fixedCount++}
@@ -266,16 +253,16 @@ export default function Page() {;
                         break}
             }
         });
-        if(fixedCount > 0) {;
+        if(fixedCount > 0) {
 
             // Re-analyze content after fixes;
             setTimeout(analyzeContent, 500)}
         return fixedCount}, [analysis, analyzeContent]);
     // Highlight element in page;
-    const highlightElement = useCallback((element) => {;
+    const highlightElement = useCallback((element) => {
 
         // Remove previous highlights';
-        document.querySelectorAll('.content-highlight').forEach(el => {;
+        document.querySelectorAll('.content-highlight').forEach(el => {
 
             el.classList.remove('content-highlight')});
         // Add highlight to selected element';
@@ -284,55 +271,54 @@ export default function Page() {;
         // Scroll to element';
         element.scrollIntoView({ behavior: 'smooth', block: 'center' });
         // Remove highlight after 3 seconds;
-        setTimeout(() => {;
+        setTimeout(() => {
 
             element.classList.remove('content-highlight');
             setSelectedElement(null)}, 3000)}, []);
     // Auto-analyze content;
-    useEffect(() => {;
-  // TODO: Add dependencies if needed;,
-}, []);
-        if(autoAnalyze) {;
+    useEffect(() => {
+  // TODO: Add dependencies if needed}, []);
+        if(autoAnalyze) {
 
             const timer = setTimeout(analyzeContent, 3000);
             return () => clearTimeout(timer)}
     }, [autoAnalyze, analyzeContent]);
     // Get score color;
-    const getScoreColor = (score) => {;
+    const getScoreColor = (score) => {
 
         if(score >= 80);
             return 'text-green-600';
         if(score >= 60);
             return 'text-yellow-600';
-        return 'text-red-600'};
+        return 'text-red-600'}
     // Get score background color;
-    const getScoreBgColor = (score) => {;
+    const getScoreBgColor = (score) => {
 
         if(score >= 80);
             return 'bg-green-100 dark:bg-green-900/20';
         if(score >= 60);
             return 'bg-yellow-100 dark:bg-yellow-900/20';
-        return 'bg-red-100 dark:bg-red-900/20'};
+        return 'bg-red-100 dark:bg-red-900/20'}
     // Get severity color;
-    const getSeverityColor = (severity) => {;
+    const getSeverityColor = (severity) => {
 
-        switch(severity) {;
+        switch(severity) {
 
             case 'high': return 'text-red-600 bg-red-100 dark:bg-red-900/30';
             case 'medium': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30';
             case 'low': return 'text-blue-600 bg-blue-100 dark:bg-blue-900/30';
             default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/30'}
-    };
+    }
     // Get priority color;
-    const getPriorityColor = (priority) => {;
+    const getPriorityColor = (priority) => {
 
-        switch(priority) {;
+        switch(priority) {
 
             case 'high': return 'text-red-600 bg-red-100 dark:bg-red-900/30';
             case 'medium': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30';
             case 'low': return 'text-blue-600 bg-blue-100 dark:bg-blue-900/30';
             default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/30'}
-    };
+    }
     return (<>;
       {/* Content Quality Toggle Button */}"`;
       <motion.button initial={{ scale: 0 }} animate={{ scale: 1 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={() => setIsOpen(!isOpen)} className={`fixed bottom-20 right-4 z-50 w-14 h-14 bg-purple-600 hover:bg-purple-700 text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 ${className}`}  aria-expanded={isOpen}>";
@@ -341,19 +327,16 @@ export default function Page() {;
 
       {/* Content Quality Panel */}
       <AnimatePresence>;
-        {isOpen && (<motion.div initial = {;
+        {isOpen && (<motion.div initial = {
 
   { opacity: 0, scale: 0.8,;
-  y: 20;,
-}} animate = {;
+  y: 20}} animate = {
 
   { opacity: 1, scale: 1,;
-  y: 0;,
-}} exit = {;
+  y: 0}} exit = {
 
   { opacity: 0, scale: 0.8,;
-  y: 20;,
-}} className="fixed bottom-20 right-4 z-40 w-96 bg-white dark:bg-gray-900 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700">;
+  y: 20}} className="fixed bottom-20 right-4 z-40 w-96 bg-white dark:bg-gray-900 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700">;
             {/* Header */}";
             <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">";
               <h2 className="text-lg font-semibold text-gray-900 dark:text-white">;
@@ -450,13 +433,13 @@ export default function Page() {;
                         </div>;
                       </div>;
                     </>)}
-;
+
                   {/* Analyze Button */}";
                   <button onClick={analyzeContent} disabled={isAnalyzing} className="w-full bg-purple-600 hover:bg-purple-700 disabled:bg-gray-400 text-white px-4 py-2 rounded-lg transition-colors">;
                     {isAnalyzing ? 'Analyzing...' : 'Analyze Content'}
                   </button>;
                 </div>)}
-;
+
               {/* Issues Tab */}'";
               {activeTab === 'issues' && (<div className="space-y-4">";
                   {!analysis ? (<div className="text-center text-gray-500 dark:text-gray-400">";
@@ -498,7 +481,7 @@ export default function Page() {;
                         </div>))}
                     </div>)}
                 </div>)}
-;
+
               {/* Suggestions Tab */}'";
               {activeTab === 'suggestions' && (<div className="space-y-4">";
                   {!analysis ? (<div className="text-center text-gray-500 dark:text-gray-400">";
@@ -535,7 +518,7 @@ export default function Page() {;
                         </div>))}
                     </div>)}
                 </div>)}
-;
+
               {/* Actions Tab */}'";
               {activeTab === 'actions' && (<div className="space-y-4">";
                   <div className="text-center text-gray-500 dark:text-gray-400">";
@@ -547,7 +530,7 @@ export default function Page() {;
                   {analysis && analysis.issues.filter(i => i.fixable).length > 0 && (<button onClick={autoFixIssues} className="w-full bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-colors">;
                       Auto-fix Issues;
                     </button>)}
-;
+
                   {/* Re-analyze Button */}";
                   <button onClick={analyzeContent} disabled={isAnalyzing} className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white px-4 py-2 rounded-lg transition-colors">";
                     <ArrowPathIcon className="w-4 h-4 inline mr-2"/>;
@@ -555,13 +538,12 @@ export default function Page() {;
                   </button>;
 
                   {/* Export Report */}
-                  {analysis && (<button onClick = {;
+                  {analysis && (<button onClick = {
 
-  () => {;
+  () => {
                         const report = JSON.stringify(analysis, null, 2);
                         const blob = new Blob([report],;
-  { type: 'application/json';,
-});
+  { type: 'application/json'});
                         const url = URL.createObjectURL(blob);
                         const a = document.createElement('a');
                         a.href = url;
@@ -577,14 +559,13 @@ export default function Page() {;
 
       {/* CSS for highlighting */}`;
       <style>{`;
-        .content-highlight {;
+        .content-highlight {
 
           outline: 3px solid #8b5cf6 !important;
           outline-offset: 2px !important;
           background-color: rgba(139, 92, 246, 0.1) !important;
           transition: all 0.3s ease !important}`;
       `}</style>;
-    </>)};
-export { ContentQualityEnhancer };
-export default ContentQualityEnhancer;,
-}}}}}}}}}'"`;
+    </>)}
+export { ContentQualityEnhancer }
+export default ContentQualityEnhancer}}}}}}}}}'"`;

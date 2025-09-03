@@ -25,8 +25,7 @@ const mockPost = {}
         name: "Alex Johnson","";
         avatar: "https://i.pravatar.cc/150?img=3","";
   role: "Verified Talent";
-";,
-},"";
+"},"";
     authorId: "user1","";
     category: "ai-tools","";
     categoryId: "ai-tools","";
@@ -44,8 +43,7 @@ const mockPost = {}
     isAnswered: true,"";
     authorName: "Alex Johnson","";
     authorAvatar: "https://i.pravatar.cc/150?img=3","";
-    authorRole: "Verified Talent";,
-};
+    authorRole: "Verified Talent"}
 // Mock data for replies;
 const mockReplies = [];
     {}
@@ -60,14 +58,12 @@ const mockReplies = [];
             id: "user2","";
             name: "Sarah Chen","";
             avatar: "https://i.pravatar.cc/150?img=5","";
-            role: "AI Engineer"";,
-},"";
+            role: "AI Engineer""},"";
         createdAt: "2025-04-01T14:30:00Z","";
         updatedAt: "2025-04-01T14:30:00Z",;
         likes: 12,;
         isSolution: false,;
-        isAnswer: false;,
-},;
+        isAnswer: false},;
     {}
 ";
 "";
@@ -80,14 +76,12 @@ const mockReplies = [];
             id: "user3","";
             name: "Michael Wong","";
             avatar: "https://i.pravatar.cc/150?img=7","";
-            role: "AI Engineer"";,
-},"";
+            role: "AI Engineer""},"";
         createdAt: "2025-04-01T16:15:00Z","";
         updatedAt: "2025-04-01T16:15:00Z",;
         likes: 8,;
         isSolution: false,;
-        isAnswer: false;,
-},;
+        isAnswer: false},;
     {}
 ";
 "";
@@ -100,14 +94,12 @@ const mockReplies = [];
             id: "user4","";
             name: "Emma Davis","";
             avatar: "https://i.pravatar.cc/150?img=9","";
-            role: "ML Research Lead"";,
-},"";
+            role: "ML Research Lead""},"";
         createdAt: "2025-04-02T09:45:00Z","";
         updatedAt: "2025-04-02T09:45:00Z",;
         likes: 15,;
         isSolution: false,;
-        isAnswer: true;,
-},;
+        isAnswer: true},;
     {}
 ";
 "";
@@ -120,8 +112,7 @@ const mockReplies = [];
             id: "user5","";
             name: "David Lin","";
             avatar: "https://i.pravatar.cc/150?img=11","";
-            role: "Developer"";,
-},"";
+            role: "Developer""},"";
         createdAt: "2025-04-02T11:20:00Z","";
         updatedAt: "2025-04-02T11:20:00Z",;
         likes: 4,;
@@ -167,7 +158,7 @@ export default function ForumPostPage() {}
 ";
 "";
             title: "Vote recorded","";
-            description: "You upvoted this post"})};
+            description: "You upvoted this post"})}
     const handleDownvote = () => {}
         if(!user) {}
             toast({}
@@ -181,7 +172,7 @@ export default function ForumPostPage() {}
 ";
 "";
             title: "Vote recorded","";
-            description: "You downvoted this post"})};
+            description: "You downvoted this post"})}
     const handleSubmitReply = async (content) => {}
         if (!user) {}
             toast({}
@@ -206,21 +197,19 @@ export default function ForumPostPage() {}
                 id: user.id || 'unknown',''';
                 name: user.displayName || 'Anonymous',''';
                 avatar: user.avatarUrl || 'https://i.pravatar.cc/150?img=1',''';
-                role: user.role || 'user';,
-},;
+                role: user.role || 'user'},;
             createdAt: new Date () .toISOString () ,;
             updatedAt: new Date () .toISOString () ,;
             likes: 0,;
             isSolution: false,;
-            isAnswer: false;,
-};
+            isAnswer: false}
         setReplies([...replies, newReply]) ;
         setPost({ ...post, replyCount: post.replyCount + 1 }) ;
         toast({}
 ";
 "";
             title: "Reply posted","";
-            description: "Your reply has been added to the discussion"})};
+            description: "Your reply has been added to the discussion"})}
     const handleMarkAsAnswer = (replyId) => {}
         // Only post author or admin can mark an answer;
         if(!isAuthor && !isAdminOrMod) {}
@@ -229,21 +218,19 @@ export default function ForumPostPage() {}
 "";
                 title: "Permission denied","";
                 description: "Only the original poster or moderators can mark answers","";
-                variant: "destructive";,
-}) ;
+                variant: "destructive"}) ;
             return}
         // Update the replies;
         const updatedReplies = replies.map(reply => ({}
             ...reply,;
-            isAnswer: reply.id === replyId;,
-}) ) ;
+            isAnswer: reply.id === replyId}) ) ;
         setReplies(updatedReplies) ;
         setPost({ ...post, isAnswered: true }) ;
         toast({}
 ";
 "";
             title: "Answer marked","";
-            description: "The reply has been marked as the accepted answer"})};
+            description: "The reply has been marked as the accepted answer"})}
     const handleReportPost = () => {}
         if(!user) {}
             toast({}
@@ -256,7 +243,7 @@ export default function ForumPostPage() {}
 ";
 "";
             title: "Report submitted","";
-            description: "A moderator will review this content"})};
+            description: "A moderator will review this content"})}
     const handlePinPost = () => {}
         if(!isAdminOrMod) return;
         setPost({ ...post, isPinned: !post.isPinned }) ;
@@ -264,7 +251,7 @@ export default function ForumPostPage() {}
 ";
 "";
             title: post.isPinned ? "Post unpinned" : "Post pinned","";
-            description: post.isPinned ? "The post has been unpinned" : "The post has been pinned to the top"})};
+            description: post.isPinned ? "The post has been unpinned" : "The post has been pinned to the top"})}
     const handleLockPost = () => {}
         if(!isAdminOrMod) return;
         setPost({ ...post, isLocked: !post.isLocked }) ;
@@ -281,19 +268,16 @@ export default function ForumPostPage() {}
   160) } keywords = {}
   `community, forum, discussion, ${post.tags.join(',;
   ') ;
-;,
 }`} canonical={`https://ziontechgroup.com / community / post/${post.id}`}/>;
-;,
 } keywords = {}
 '`;
 '`'`;
 '`'`'`;
 '`'`'`'`;
-  `community, forum, discussion, ${post.tags.join(',);
-;
+  `community, forum, discussion, ${post.tags.join(');
+
 `;
-``;,
-}`} canonical={`https://ziontechgroup.com/community/post/${post.id}`}/>;";
+``}`} canonical={`https://ziontechgroup.com/community/post/${post.id}`}/>;";
       "";
       <div className="container py-8">"";
         <div className="flex items-center gap-3 mb-6">"";
@@ -418,14 +402,10 @@ export default function ForumPostPage() {}
         </div>;
       </div>;
     </>)}
-;
 
-export { ForumPostPage };
-;
-export { ForumPostPage };
-;
-export { ForumPostPage };
-;
-export { ForumPostPage };
-;
-export { ForumPostPage };
+
+export { ForumPostPage }
+export { ForumPostPage }
+export { ForumPostPage }
+export { ForumPostPage }
+export { ForumPostPage }

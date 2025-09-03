@@ -49,10 +49,9 @@ import { ;
   Mail,;
   MapPin,;
   ExternalLink,;
-  Award;,
-} from 'lucide-react';
-;
-interface Service {;
+  Award} from 'lucide-react';
+
+interface Service {
   id: string;
   title: string;
   category: string;
@@ -72,17 +71,16 @@ interface Service {;
   href: string;
   rating: number;
   complexity: 'Low' | 'Medium' | 'High';
-  scalability: 'Small' | 'Medium' | 'Enterprise';,
-}
-;
-export default function ServicesComparison() {;
+  scalability: 'Small' | 'Medium' | 'Enterprise'}
+
+export default function ServicesComparison() {
   const [selectedServices, setSelectedServices] = useState<string[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
-;
+
   const services: Service[] = [;
     // AI Services;
-    {;
+    {
       id: 'ai-supply-chain',;
       title: 'AI Supply Chain Optimization',;
       category: 'AI Services',;
@@ -102,9 +100,8 @@ export default function ServicesComparison() {;
       href: '/services/ai-supply-chain-optimization',;
       rating: 4.8,;
       complexity: 'High',;
-      scalability: 'Enterprise';,
-},;
-    {;
+      scalability: 'Enterprise'},;
+    {
       id: 'ai-cybersecurity',;
       title: 'AI Cybersecurity Platform',;
       category: 'AI Services',;
@@ -124,9 +121,8 @@ export default function ServicesComparison() {;
       href: '/services/ai-cybersecurity-platform',;
       rating: 4.9,;
       complexity: 'High',;
-      scalability: 'Enterprise';,
-},;
-    {;
+      scalability: 'Enterprise'},;
+    {
       id: 'ai-healthcare',;
       title: 'AI Healthcare Platform',;
       category: 'AI Services',;
@@ -146,10 +142,9 @@ export default function ServicesComparison() {;
       href: '/services/ai-healthcare-platform',;
       rating: 4.7,;
       complexity: 'High',;
-      scalability: 'Enterprise';,
-},;
+      scalability: 'Enterprise'},;
     // IT Services;
-    {;
+    {
       id: 'cloud-devops',;
       title: 'Cloud & DevOps Solutions',;
       category: 'IT Services',;
@@ -169,9 +164,8 @@ export default function ServicesComparison() {;
       href: '/it-services',;
       rating: 4.6,;
       complexity: 'Medium',;
-      scalability: 'Medium';,
-},;
-    {;
+      scalability: 'Medium'},;
+    {
       id: 'cybersecurity-suite',;
       title: 'Cybersecurity Suite',;
       category: 'IT Services',;
@@ -191,10 +185,9 @@ export default function ServicesComparison() {;
       href: '/it-services',;
       rating: 4.5,;
       complexity: 'Medium',;
-      scalability: 'Medium';,
-},;
+      scalability: 'Medium'},;
     // Micro SaaS;
-    {;
+    {
       id: 'ai-lead-scoring',;
       title: 'AI Lead Scoring',;
       category: 'Micro SaaS',;
@@ -214,9 +207,8 @@ export default function ServicesComparison() {;
       href: '/micro-saas',;
       rating: 4.4,;
       complexity: 'Low',;
-      scalability: 'Small';,
-},;
-    {;
+      scalability: 'Small'},;
+    {
       id: 'ai-chatbot',;
       title: 'Website AI Chatbot',;
       category: 'Micro SaaS',;
@@ -236,37 +228,31 @@ export default function ServicesComparison() {;
       href: '/micro-saas',;
       rating: 4.3,;
       complexity: 'Low',;
-      scalability: 'Small';,
-}
+      scalability: 'Small'}
   ];
-;
-  const filteredServices = services.filter(service => {;
+
+  const filteredServices = services.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchQuery.toLowerCase());
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    return matchesSearch && matchesCategory;,
-});
-;
+    return matchesSearch && matchesCategory});
+
   const categories = [...new Set(services.map(service => service.category))];
-;
-  const toggleService = (serviceId: string) => {;
+
+  const toggleService = (serviceId: string) => {
     setSelectedServices(prev => ;
       prev.includes(serviceId) ;
         ? prev.filter(id => id !== serviceId);
         : prev.length < 4 ;
           ? [...prev, serviceId];
           : prev;
-    );,
-};
-;
+    )}
   const selectedServicesData = services.filter(service => selectedServices.includes(service.id));
-;
-  const contactInfo = {;
+
+  const contactInfo = {
     phone: "+1 302 464 0950",;
     email: "kleber@ziontechgroup.com",;
-    website: "https://ziontechgroup.com";,
-};
-;
+    website: "https://ziontechgroup.com"}
   return (;
     <div className="min-h-screen bg-zion-blue pt-20">;
       {/* Hero Section */}
@@ -298,7 +284,7 @@ export default function ServicesComparison() {;
             </div>;
           </motion.div>;
         </div>;
-        ;
+
         {/* Background Elements */}
         <div className="absolute inset-0 overflow-hidden">;
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-zion-cyan/20 rounded-full blur-3xl"></div>;
@@ -348,7 +334,7 @@ export default function ServicesComparison() {;
 
           {/* Service Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
-            {filteredServices.map((service) => {;
+            {filteredServices.map((service) => {
               const Icon = service.icon;
               const isSelected = selectedServices.includes(service.id);
               return (;
@@ -358,13 +344,11 @@ export default function ServicesComparison() {;
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5 }}
                   className={`relative cursor-pointer transition-all duration-300 ${;
-                    isSelected ? 'ring-2 ring-zion-cyan scale-105' : 'hover:scale-105';,
-}`}
+                    isSelected ? 'ring-2 ring-zion-cyan scale-105' : 'hover:scale-105'}`}
                   onClick={() => toggleService(service.id)}
                 >;
                   <div className={`bg-zion-blue border rounded-2xl p-6 h-full transition-all duration-300 ${;
-                    isSelected ? 'border-zion-cyan bg-zion-blue-darker' : 'border-zion-purple/30 hover:border-zion-cyan/50';,
-}`}>;
+                    isSelected ? 'border-zion-cyan bg-zion-blue-darker' : 'border-zion-purple/30 hover:border-zion-cyan/50'}`}>;
                     {/* Selection Indicator */}
                     <div className="absolute top-4 right-4">;
                       {isSelected ? (;
@@ -410,8 +394,7 @@ export default function ServicesComparison() {;
                         <span className={`px-2 py-1 rounded text-xs ${;
                           service.complexity === 'Low' ? 'bg-green-500/20 text-green-400' :;
                           service.complexity === 'Medium' ? 'bg-yellow-500/20 text-yellow-400' :;
-                          'bg-red-500/20 text-red-400';,
-}`}>;
+                          'bg-red-500/20 text-red-400'}`}>;
                           {service.complexity}
                         </span>;
                       </div>;
@@ -432,8 +415,7 @@ export default function ServicesComparison() {;
                     </div>;
                   </div>;
                 </motion.div>;
-              );,
-})}
+              )})}
           </div>;
         </div>;
       </section>;
@@ -499,8 +481,7 @@ export default function ServicesComparison() {;
                           <span className={`px-3 py-1 rounded-full text-sm ${;
                             service.complexity === 'Low' ? 'bg-green-500/20 text-green-400' :;
                             service.complexity === 'Medium' ? 'bg-yellow-500/20 text-yellow-400' :;
-                            'bg-red-500/20 text-red-400';,
-}`}>;
+                            'bg-red-500/20 text-red-400'}`}>;
                             {service.complexity}
                           </span>;
                         </td>;
@@ -616,7 +597,7 @@ export default function ServicesComparison() {;
           </div>;
         </section>;
       )}
-;
+
       {/* Call to Action */}
       <section className="py-20 bg-gradient-to-r from-zion-purple to-zion-purple-dark">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
@@ -648,5 +629,4 @@ export default function ServicesComparison() {;
         </div>;
       </section>;
     </div>;
-  );,
-}
+  )}

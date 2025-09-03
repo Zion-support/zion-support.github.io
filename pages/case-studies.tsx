@@ -1,9 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
-;
-export default function CaseStudiesPage() {;
+
+export default function CaseStudiesPage() {
   const caseStudies = [;
-    {;
+    {
       title: 'Global E-commerce Platform Automation',;
       company: 'TechRetail Inc.',;
       industry: 'E-commerce',;
@@ -15,9 +15,8 @@ export default function CaseStudiesPage() {;
         '40% cost savings',;
         '24/7 automated operations';
       ],;
-      technologies: ['AI Order Processing', 'Inventory Automation', 'Customer Service Bots', 'Real-time Analytics'];,
-},;
-    {;
+      technologies: ['AI Order Processing', 'Inventory Automation', 'Customer Service Bots', 'Real-time Analytics']},;
+    {
       title: 'Financial Services Compliance Automation',;
       company: 'SecureBank Ltd.',;
       industry: 'Financial Services',;
@@ -29,9 +28,8 @@ export default function CaseStudiesPage() {;
         'Real-time risk detection',;
         'Automated audit trails';
       ],;
-      technologies: ['Compliance Monitoring', 'Risk Assessment AI', 'Automated Reporting', 'Audit Automation'];,
-},;
-    {;
+      technologies: ['Compliance Monitoring', 'Risk Assessment AI', 'Automated Reporting', 'Audit Automation']},;
+    {
       title: 'Healthcare Data Processing Automation',;
       company: 'MediTech Solutions',;
       industry: 'Healthcare',;
@@ -43,9 +41,8 @@ export default function CaseStudiesPage() {;
         '99.99% data accuracy',;
         'Automated quality checks';
       ],;
-      technologies: ['HIPAA-Compliant AI', 'Data Pipeline Automation', 'Privacy-Preserving ML', 'Quality Assurance'];,
-},;
-    {;
+      technologies: ['HIPAA-Compliant AI', 'Data Pipeline Automation', 'Privacy-Preserving ML', 'Quality Assurance']},;
+    {
       title: 'Manufacturing Quality Control',;
       company: 'Precision Manufacturing Co.',;
       industry: 'Manufacturing',;
@@ -57,12 +54,11 @@ export default function CaseStudiesPage() {;
         'Zero production delays',;
         'Continuous quality improvement';
       ],;
-      technologies: ['Computer Vision AI', 'Quality Control Automation', 'Predictive Maintenance', 'Real-time Monitoring'];,
-}
+      technologies: ['Computer Vision AI', 'Quality Control Automation', 'Predictive Maintenance', 'Real-time Monitoring']}
   ];
-;
+
   const industries = ['All', 'E-commerce', 'Financial Services', 'Healthcare', 'Manufacturing', 'Technology', 'Education'];
-;
+
   return (;
     <>;
       <Head>;
@@ -72,7 +68,7 @@ export default function CaseStudiesPage() {;
         <meta property="og:description" content="Success stories and automation results from real businesses." />;
         <meta name="twitter:card" content="summary_large_image" />;
       </Head>;
-      ;
+
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">;
         <main className="container mx-auto px-6 py-12">;
           <nav className="mb-8">;
@@ -80,7 +76,7 @@ export default function CaseStudiesPage() {;
               ← Back to Home;
             </a>;
           </nav>;
-          ;
+
           <header className="text-center mb-16">;
             <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">;
               Success Stories;
@@ -115,19 +111,19 @@ export default function CaseStudiesPage() {;
                     </span>;
                     <span className="text-white/60 text-sm">{study.company}</span>;
                   </div>;
-                  ;
+
                   <h3 className="text-2xl font-bold mb-4 text-white">{study.title}</h3>;
-                  ;
+
                   <div className="mb-6">;
                     <h4 className="font-semibold text-fuchsia-400 mb-2">The Challenge</h4>;
                     <p className="text-white/80 text-sm">{study.challenge}</p>;
                   </div>;
-                  ;
+
                   <div className="mb-6">;
                     <h4 className="font-semibold text-green-400 mb-2">Our Solution</h4>;
                     <p className="text-white/80 text-sm">{study.solution}</p>;
                   </div>;
-                  ;
+
                   <div className="mb-6">;
                     <h4 className="font-semibold text-blue-400 mb-2">Results</h4>;
                     <ul className="space-y-1">;
@@ -136,7 +132,7 @@ export default function CaseStudiesPage() {;
                       ))}
                     </ul>;
                   </div>;
-                  ;
+
                   <div>;
                     <h4 className="font-semibold text-purple-400 mb-2">Technologies Used</h4>;
                     <div className="flex flex-wrap gap-2">;
@@ -196,5 +192,4 @@ export default function CaseStudiesPage() {;
         </main>;
       </div>;
     </>;
-  );,
-}
+  )}

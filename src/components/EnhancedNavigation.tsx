@@ -1,8 +1,8 @@
 import { Link, useLocation  } from 'react-router-dom';
-;
-export default function Page() {;
+
+export default function Page() {
 ,;
-  {;
+  {
     label: 'AI & Machine Learning',;
     href: '/ai - services',;
     icon: <Brain className="w-4 h-4" />,;
@@ -29,9 +29,8 @@ export default function Page() {;
       { label: 'AI Healthcare Analytics', href: '/services / ai - healthcare - analytics' },;
       { label: 'AI Financial Trading', href: '/services / ai - financial - trading' },;
       { label: 'AI Content Creation Suite', href: '/services / ai - content - creation - suite' }
-    ];,
-},;
-  {;
+    ]},;
+  {
     label: 'Cloud & Infrastructure',;
     href: '/it - services',;
     icon: <Cloud className="w-4 h-4" />,;
@@ -45,9 +44,8 @@ export default function Page() {;
       { label: 'Digital Twin', href: '/services / digital - twin' },;
       { label: 'Data Analytics', href: '/services / data - analytics' },;
       { label: 'Digital Transformation', href: '/services / digital - transformation' }
-    ];,
-},;
-  {;
+    ]},;
+  {
     label: 'Cybersecurity & Privacy',;
     href: '/services / cybersecurity',;
     icon: <Shield className="w-4 h-4" />,;
@@ -56,9 +54,8 @@ export default function Page() {;
       { label: 'DSR Privacy Portal', href: '/services / dsr - portal' },;
       { label: 'Zero Trust Network Access', href: '/services / zero - trust - network - access' },;
       { label: 'AI Compliance Assistant', href: '/services / ai - compliance - assistant' }
-    ];,
-},;
-  {;
+    ]},;
+  {
     label: 'Emerging Technologies',;
     href: '/emerging - tech',;
     icon: <Atom className="w-4 h-4" />,;
@@ -69,9 +66,8 @@ export default function Page() {;
       { label: 'Quantum Machine Learning', href: '/services / quantum - machine - learning' },;
       { label: 'AI Predictive Maintenance', href: '/services / ai - predictive - maintenance' },;
       { label: 'Sustainable Technology', href: '/services / sustainable - technology' }
-    ];,
-},;
-  {;
+    ]},;
+  {
     label: 'Micro SaaS Solutions',;
     href: '/micro - saas',;
     icon: <ShoppingCart className="w-4 h-4" />,;
@@ -85,9 +81,8 @@ export default function Page() {;
       { label: 'Email Sequencer', href: '/services / email - sequencer' },;
       { label: 'Returns Management', href: '/services / returns - management' },;
       { label: 'LLM Content Studio', href: '/services / llm - content - studio' }
-    ];,
-},;
-  {;
+    ]},;
+  {
     label: 'Solutions',;
     href: '/solutions',;
     icon: <Building className="w-4 h-4" />,;
@@ -97,9 +92,8 @@ export default function Page() {;
       { label: 'Financial Solutions', href: '/financial - solutions' },;
       { label: '5G Enterprise Solutions', href: '/5g - enterprise - solutions' },;
       { label: 'Industry Solutions', href: '/industry - solutions' }
-    ];,
-},;
-  {;
+    ]},;
+  {
     label: 'Comp',;
     href: '/about',;
     icon: <Users className="w-4 h-4" />,;
@@ -130,9 +124,8 @@ export default function Page() {;
       { label: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics' },;
       { label: 'AI Financial Trading', href: '/services/ai-financial-trading' },;
       { label: 'AI Content Creation Suite', href: '/services/ai-content-creation-suite' }
-    ];,
-},;
-  {;
+    ]},;
+  {
 
     label: 'Cloud & Infrastructure',;
     href: '/it-services',";
@@ -148,9 +141,8 @@ export default function Page() {;
       { label: 'Digital Twin', href: '/services/digital-twin' },;
       { label: 'Data Analytics', href: '/services/data-analytics' },;
       { label: 'Digital Transformation', href: '/services/digital-transformation' }
-    ];,
-},;
-  {;
+    ]},;
+  {
 
     label: 'Cybersecurity & Privacy',;
     href: '/services/cybersecurity',";
@@ -161,9 +153,8 @@ export default function Page() {;
       { label: 'DSR Privacy Portal', href: '/services/dsr-portal' },;
       { label: 'Zero Trust Network Access', href: '/services/zero-trust-network-access' },;
       { label: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant' }
-    ];,
-},;
-  {;
+    ]},;
+  {
 
     label: 'Emerging Technologies',;
     href: '/emerging-tech',";
@@ -176,9 +167,8 @@ export default function Page() {;
       { label: 'Quantum Machine Learning', href: '/services/quantum-machine-learning' },;
       { label: 'AI Predictive Maintenance', href: '/services/ai-predictive-maintenance' },;
       { label: 'Sustainable Technology', href: '/services/sustainable-technology' }
-    ];,
-},;
-  {;
+    ]},;
+  {
 
     label: 'Micro SaaS Solutions',;
     href: '/micro-saas',";
@@ -194,9 +184,8 @@ export default function Page() {;
       { label: 'Email Sequencer', href: '/services/email-sequencer' },;
       { label: 'Returns Management', href: '/services/returns-management' },;
       { label: 'LLM Content Studio', href: '/services/llm-content-studio' }
-    ];,
-},;
-  {;
+    ]},;
+  {
 
     label: 'Solutions',;
     href: '/solutions',";
@@ -208,9 +197,8 @@ export default function Page() {;
       { label: 'Financial Solutions', href: '/financial-solutions' },;
       { label: '5G Enterprise Solutions', href: '/5g-enterprise-solutions' },;
       { label: 'Industry Solutions', href: '/industry-solutions' }
-    ];,
-},;
-  {;
+    ]},;
+  {
 
     label: 'Comp',;
     href: '/about',";
@@ -223,9 +211,8 @@ export default function Page() {;
       { label: 'Partners', href: '/partners' },;
       { label: 'News', href: '/news' },;
       { label: 'Case Studies', href: '/case-studies' },;
-      { label: 'Blog', href: '/blog' }    ];,
-},;
-  {;
+      { label: 'Blog', href: '/blog' }    ]},;
+  {
     label: 'Resources',;
     href: '/resources',;
     icon: <BarChart3 className="w-4 h-4" />,;
@@ -244,43 +231,36 @@ export default function Page() {;
       { label: 'Webinars', href: '/webinars' },;
       { label: 'White Papers', href: '/white-papers' },;
       { label: 'Sitemap', href: '/sitemap' }
-    ];,
-},;
+    ]},;
   { label: 'Contact', href: '/contact' }
 ];
-;
+
 export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
 
 className:  '',;
-  onThemeChange }) => {;
+  onThemeChange }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<any>(null);
   const [theme, setTheme] = useState<any>('system');
   const [isScrolled, setIsScrolled] = useState(false);
-  ;
-  useEffect(() => {;
+
+  useEffect(() => {
   // TODO: Add dependencies if needed;
 
-  return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
-;
+  return () => {
+    // Cleanup function}}, []);, []);
+
       root.classList.add(newTheme)}
     ';
-    localStorage.setItem('zion-theme', newTheme)}, [onThemeChange])}};
-;
-  return ()    <nav className = {`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${  const contactInfo = {;
+    localStorage.setItem('zion-theme', newTheme)}, [onThemeChange])}}
+  return ()    <nav className = {`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${  const contactInfo = {
     phone: "+1 302 464 0950",;
     email: "kleber@ziontechgroup.com",;
     website: "https://ziontechgroup.com",;
-    address: "364 E Main St STE 1008 Middletown DE 19709";,
-};
-;
+    address: "364 E Main St STE 1008 Middletown DE 19709"}
   return (<nav className = {`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${isScrolled;
         ? 'bg-white / 95 dark:bg-slate - 900 / 95 backdrop - blur - md shadow-lg';
-        : 'bg-transparent';,
-} ${className}`}>;
+        : 'bg-transparent'} ${className}`}>;
       <div  className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8">;
         <div  className="flex justify - between items - center h-16">;
           {/* Logo */}
@@ -310,25 +290,22 @@ className:  '',;
                     className="px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">;
                     {item.label}
                   </Link>) }
-;
+
                 {/* Dropdown Menu */}
                 {item.children && (<AnimatePresence>;
                     {activeDropdown === item.label && (<motion.div;
-                        initial = {;
+                        initial = {
 
   { opacity: 0,;
-  y: -10;,
-}}
-                        animate = {;
+  y: -10}}
+                        animate = {
 
   { opacity: 1,;
-  y: 0;,
-}}
-                        exit = {;
+  y: 0}}
+                        exit = {
 
   { opacity: 0,;
-  y: -10;,
-}}
+  y: -10}}
                         transition={{ duration: 0.2 }}";
                         className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md border border-slate-700/50 rounded-xl shadow-2xl py-2 z-50">";
                         <div className="px-4 py-2 border-b border-slate-700/50">";
@@ -360,16 +337,14 @@ className:  '',;
               <button     onClick={ () => handleThemeChange('light') }
                 className={`p - 2 rounded-md transition - colors ${theme === 'light';
                     ? 'bg-white dark:bg-slate - 700 text-blue - 600 shadow-sm';
-                    : 'text-gray - 500 dark:text-gray - 400 hover:text-gray - 700 dark:hover:text-gray - 300';,
-}`}
+                    : 'text-gray - 500 dark:text-gray - 400 hover:text-gray - 700 dark:hover:text-gray - 300'}`}
               >;
                 <Sun className="w-4 h-4" />;
               </button>;
               <button     onClick={ () => handleThemeChange('dark') }
                 className={`p - 2 rounded-md transition - colors ${theme === 'dark';
                     ? 'bg-white dark:bg-slate - 700 text-blue - 600 shadow-sm';
-                    : 'text-gray - 500 dark:text-gray - 400 hover:text-gray - 700 dark:hover:text-gray - 300';,
-}`}
+                    : 'text-gray - 500 dark:text-gray - 400 hover:text-gray - 700 dark:hover:text-gray - 300'}`}
               >;
                 <Moon className="w-4 h-4" />;
               </button>;
@@ -422,8 +397,7 @@ className:  '',;
                                   {item.icon}
                                   <span>{item.label}</span>;
                                 </div>;
-                                <ChevronDown className={`w-5 h-5 transition - transform duration - 200 ${activeDropdown === item.label ? 'rotate - 180' : '';,
-}`} />;
+                                <ChevronDown className={`w-5 h-5 transition - transform duration - 200 ${activeDropdown === item.label ? 'rotate - 180' : ''}`} />;
                               </button>;
                               {activeDropdown === item.label && (<motion.div;
                                   initial={{ opacity: 0, y: -10 }}
@@ -449,7 +423,7 @@ className:  '',;
                               {item.label}
                             </Link>) }
                         </div>) ) }
-;
+
               {/* Mobile Actions */}";
               <div className="pt-4 border-t border-slate-700/50 space-y-3">";
                 <div className="flex items-center space-x-4 text-slate-400">";
@@ -475,4 +449,4 @@ className:  '',;
     </nav>;
   )};'"`;
 
-;,"});,})";
+;,"});})";

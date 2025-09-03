@@ -46,7 +46,7 @@ export default function ExpandedServicesPage() {}
             case 'IT Services': return '💻';''';
             case 'Digital Services': return '🚀';''';
             default: return '⚡'}
-    };
+    }
     const getPricingModelColor = (model) => {}
         switch (model) {}
 ';
@@ -57,7 +57,7 @@ export default function ExpandedServicesPage() {}
             case 'one-time': return 'bg-green-100 text-green-800';''';
             case 'usage-based': return 'bg-orange-100 text-orange-800';''';
             default: return 'bg-gray-100 text-gray-800'}
-    };
+    }
     return (<div className="min-h-screen bg-background">";
       {/* Hero Section */}"";
       <section className="bg-zion-blue py-20">"";
@@ -121,7 +121,7 @@ export default function ExpandedServicesPage() {}
                   <div className="flex items-start justify-between mb-2">"";
                     <div className="text-3xl">{getCategoryIcon(service.category)}</div>;
                     <Badge className={getPricingModelColor(service.pricingModel)}>';
-                      {service.pricingModel.replace('-',)}
+                      {service.pricingModel.replace('-')}
                     </Badge>";
                   </div>"";
                   <CardTitle className="text-xl text-zion-blue-dark">{service.title}</CardTitle>"";
@@ -318,14 +318,10 @@ export default function ExpandedServicesPage() {}
 
       <TrustedBySection />;
     </div>)}
-;
 
-export { ExpandedServicesPage };
-;
-export { ExpandedServicesPage };
-;
-export { ExpandedServicesPage };
-;
-export { ExpandedServicesPage };
-;
-export { ExpandedServicesPage };
+
+export { ExpandedServicesPage }
+export { ExpandedServicesPage }
+export { ExpandedServicesPage }
+export { ExpandedServicesPage }
+export { ExpandedServicesPage }

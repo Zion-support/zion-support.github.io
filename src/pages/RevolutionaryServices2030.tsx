@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import {;
+import {
   Brain,;
   Rocket,;
   Zap,;
@@ -47,56 +47,54 @@ import {;
   Zap as ZapIcon,;
   Star as StarIcon,;
   Target as TargetIcon,;
-  TrendingUp as TrendingUpIcon;,
-} from 'lucide-react';
+  TrendingUp as TrendingUpIcon} from 'lucide-react';
 import { allRevolutionaryServices2030 } from '../data/revolutionaryServices2030';
-;
-export default function RevolutionaryServices2030(...args: unknown[]): unknown {;
+
+export default function RevolutionaryServices2030(...args: unknown[]): unknown {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');  const [sortBy, setSortBy] = useState('featured');
-;
+
   ';
     { id: 'all', name: 'All Revolutionary Services', icon: Rocket, color: 'from-zion-purple to-zion-orange' },;';
     { id: 'AI Services', name: 'AI Services', icon: Brain, color: 'from-zion-cyan to-zion-purple' },;';
     { id: 'Blockchain Services', name: 'Blockchain Services', icon: Lock, color: 'from-zion-purple to-zion-blue' },;';
     { id: 'Cybersecurity Services', name: 'Cybersecurity Services', icon: Shield, color: 'from-zion-purple to-zion-red' },;';
-    { id: 'Emerging Tech', name: 'Emerging Technology', icon: Cpu, color: 'from-zion-orange to-zion-green' };
+    { id: 'Emerging Tech', name: 'Emerging Technology', icon: Cpu, color: 'from-zion-orange to-zion-green' }
   ];
-;
+
   ';
     { id: 'all', name: 'All Prices', range: 'All' },;';
     { id: 'budget', name: 'Budget', range: '$1,000 - $10,000' },;';
     { id: 'mid-range', name: 'Mid-Range', range: '$10,000 - $25,000' },;';
-    { id: 'enterprise', name: 'Enterprise', range: '$25,000+' };
+    { id: 'enterprise', name: 'Enterprise', range: '$25,000+' }
   ];
 ';
   const sortOptions: unknown = [;'';
     { id: 'featured', name: 'Featured' },;'';
     { id: 'price-low', name: 'Price: Low to High' },;'';
     { id: 'price-high', name: 'Price: High to Low' },;'';
-    { id: 'innovation', name: 'Innovation Level' },;'    { id: 'market-size', name: 'Market Size' };
+    { id: 'innovation', name: 'Innovation Level' },;'    { id: 'market-size', name: 'Market Size' }
   ];
-;
+
   // Combine all revolutionary services;
   const allServices: unknown = [;
     ...REVOLUTIONARY_SERVICES_2030,;
     ...EMERGING_TECH_SERVICES_2030;
   ];
-;
+
   // Filter and sort services;
-  const filteredServices = allServices.filter(service => {;
+  const filteredServices = allServices.filter(service => {
     const categoryMatch = selectedCategory === 'all' || service.category === selectedCategory;
     const priceMatch = selectedPriceRange === 'all' ||;
       (selectedPriceRange === 'budget' && service.pricing.monthly <= 10000) ||;
       (selectedPriceRange === 'mid-range' && service.pricing.monthly > 10000 && service.pricing.monthly <= 25000) ||;
       (selectedPriceRange === 'enterprise' && service.pricing.monthly > 25000);
-;
-    return categoryMatch && priceMatch;,
-});
-;
+
+    return categoryMatch && priceMatch});
+
 // Service Card Component;
 const ServiceCard = ({ service, type }: { service: unknown; type: 'microSaas' | 'itService' | 'aiService' }) => {  const [isExpanded, setIsExpanded] = useState(false);
-;
+
   ';
     if (category.includes('Quantum')) return Atom;';
     if (category.includes('Space')) return Satellite;';
@@ -107,10 +105,9 @@ const ServiceCard = ({ service, type }: { service: unknown; type: 'microSaas' | 
     if (category.includes('Ethics')) return Eye;';
     if (category.includes('Multimodal')) return Cpu;';
     if (category.includes('Autonomous')) return Bot;
-    return Zap};
-;
+    return Zap}
   const IconComponent: unknown = getIcon(service.category) ;
-;
+
   return (<motion.div;
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -247,12 +244,10 @@ const ServiceCard = ({ service, type }: { service: unknown; type: 'microSaas' | 
           </div>;
         </div>;
       </div>;
-    </motion.div>) ;,
-};
-;
+    </motion.div>) }
 // Main Component;
 export default function RevolutionaryServices2030(...args: unknown[]): unknown {  const [activeTab, setActiveTab] = useState<'all' | 'microSaas' | 'itServices' | 'aiServices'>('all');
-;
+
   ';
       case 'itServices':'';
         return allRevolutionaryServices2030.itServices.map(service => ({ service, type: 'itService' as const }));'';
@@ -263,7 +258,7 @@ export default function RevolutionaryServices2030(...args: unknown[]): unknown {
           ...allRevolutionaryServices2030.itServices.map(service => ({ service, type: 'itService' as const })),';
           ...allRevolutionaryServices2030.aiServices.map(service => ({ service, type: 'aiService' as const }));
         ]}
-  };
+  }
 ";
   return ("";
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
@@ -325,36 +320,31 @@ export default function RevolutionaryServices2030(...args: unknown[]): unknown {
 ';
                   activeTab === tab.id'';
                     ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg shadow-cyan-500/25'''`;
-                    : 'bg-slate-800/50 text-slate-300 hover:bg-slate-700/50 border border-slate-600 hover:border-cyan-400/50'``;,
-}`}
+                    : 'bg-slate-800/50 text-slate-300 hover:bg-slate-700/50 border border-slate-600 hover:border-cyan-400/50'``}`}
               >;
 ;";
           {/* Services Grid */};"";
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             <AnimatePresence>;
-              {sortedServices.map((service, index) => {;
+              {sortedServices.map((service, index) => {
                 const IconComponent: unknown = getServiceIcon(service.category) ;
                 const colorClass: unknown = getServiceColor(service.category) ;
-;
+
                 return (<motion.div;
                     key = {service.id}
                     initial = {}
   { opacity: 0,;
-  y: 20;,
-}}
+  y: 20}}
                     animate = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                     exit = {}
   { opacity: 0,;
-  y: -20;,
-}}
+  y: -20}}
                     transition = {}
   { duration: 0.5,;
   delay: index * 0.1;
-";,
-}}"";
+"}}"";
                     className="bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 border border-gray-700 hover:border-zion-cyan"">"";
                     <option value="rating">Sort by Rating</option>"";
                     <option value="price">Sort by Price</option>"";
@@ -375,17 +365,12 @@ export default function RevolutionaryServices2030(...args: unknown[]): unknown {
         </div>;
       </section>;
     </div>;
-  );,
-}
-;
+  )}
 
-export { RevolutionaryServices2030, ServiceCard, IconComponent, RevolutionaryServices2030, IconComponent };
-;
-export { RevolutionaryServices2030, ServiceCard, IconComponent, RevolutionaryServices2030, IconComponent };
-;
-export { RevolutionaryServices2030, ServiceCard, IconComponent, RevolutionaryServices2030, IconComponent };
-;
-export { RevolutionaryServices2030, ServiceCard, IconComponent, RevolutionaryServices2030, IconComponent };
-;
-export { RevolutionaryServices2030, ServiceCard, IconComponent, RevolutionaryServices2030, IconComponent };
+
+export { RevolutionaryServices2030, ServiceCard, IconComponent, RevolutionaryServices2030, IconComponent }
+export { RevolutionaryServices2030, ServiceCard, IconComponent, RevolutionaryServices2030, IconComponent }
+export { RevolutionaryServices2030, ServiceCard, IconComponent, RevolutionaryServices2030, IconComponent }
+export { RevolutionaryServices2030, ServiceCard, IconComponent, RevolutionaryServices2030, IconComponent }
+export { RevolutionaryServices2030, ServiceCard, IconComponent, RevolutionaryServices2030, IconComponent }
 ))))

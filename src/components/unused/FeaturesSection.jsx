@@ -1,14 +1,13 @@
 import { motion  } from 'framer-motion';
-export default function Page() {;
+export default function Page() {
 ,;
-        {;
+        {
 
             icon: RocketLaunchIcon,";
             title: "Scalable Solutions",";
             description: "Architected for growth with cloud-native and microservices approaches",";
-            color: "text-zion-cyan";,
-},;
-        {;
+            color: "text-zion-cyan"},;
+        {
 
             icon: CogIcon,";
             title: "24/7 Support",";
@@ -16,29 +15,26 @@ export default function Page() {;
             color: "text-zion-purple";
 
     ];
-    const containerVariants = {;
+    const containerVariants = {
 
         hidden: { opacity: 0 },;
-        visible: {;
+        visible: {
 
             opacity: 1,;
-            transition: {;
+            transition: {
 
-                staggerChildren: 0.1;,
-};
-    const itemVariants = {;
+                staggerChildren: 0.1}
+    const itemVariants = {
 
   hidden: { y: 20,;
-  opacity: 0;,
-},;
-        visible: {;
+  opacity: 0},;
+        visible: {
 
             y: 0,;
             opacity: 1,;
-            transition: {;
+            transition: {
 
-                duration: 0.5;,
-};    return (<section className="py-20 bg-white relative overflow-hidden">;
+                duration: 0.5};    return (<section className="py-20 bg-white relative overflow-hidden">;
       {/* Background Elements */}";
       <div className="absolute inset-0 bg-gradient-to-br from-zion-slate-light to-white opacity-50"></div>;";
       <div className="absolute top-0 right-0 w-96 h-96 bg-zion-cyan/5 rounded-full blur-3xl"></div>";
@@ -46,15 +42,13 @@ export default function Page() {;
 ";
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">;
         {/* Section Header */}
-        <motion.div initial = {;
+        <motion.div initial = {
 
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {;
+  y: 20}} whileInView = {
 
   { opacity: 1,;
-  y: 0;,
-}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">          <h2 className="text-4xl md:text-5xl font-bold text-zion-blue-dark mb-6">;
+  y: 0}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">          <h2 className="text-4xl md:text-5xl font-bold text-zion-blue-dark mb-6">;
             Why Choose Zion Tech Group?;
           </h2>";
           <p className="text-xl text-zion-slate max-w-3xl mx-auto">;
@@ -83,19 +77,16 @@ export default function Page() {;
         </motion.div>;
 
         {/* Additional Info */}
-        <motion.div initial = {;
+        <motion.div initial = {
 
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {;
+  y: 20}} whileInView = {
 
   { opacity: 1,;
-  y: 0;,
-}} viewport={{ once: true }} transition = {;
+  y: 0}} viewport={{ once: true }} transition = {
 
   { duration: 0.8,;
-  delay: 0.5;,
-}} className="mt-16 text-center">;
+  delay: 0.5}} className="mt-16 text-center">;
           <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 rounded-2xl p-8 border border-zion-cyan/20">            <h3 className="text-2xl font-bold text-zion-blue-dark mb-4">;
               Ready to Experience the Difference?;
             </h3>";

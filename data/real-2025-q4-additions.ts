@@ -1,4 +1,4 @@
-export interface Q4Service {;
+export interface Q4Service {
   id: string;
   name: string;
   tagline: string;
@@ -25,7 +25,7 @@ export interface Q4Service {;
   marketSize?: string;
   growthRate?: string;
   variant?: string;
-  contactInfo?: {;
+  contactInfo?: {
     mobile: string;
     email: string;
     address: string;
@@ -35,16 +35,15 @@ export interface Q4Service {;
   launchDate?: string;
   customers?: number;
   rating?: number;
-const contact = {;
+const contact = {
   mobile: "+1 302 464 0950",;
   email: "kleber@ziontechgroup.com",;
   address: "364 E Main St STE 1008 Middletown DE 19709";
-  ;
-  ;
-  ;
-  ;
-  website: "https://ziontechgroup.com";,;,
-}
+
+
+
+
+  website: "https://ziontechgroup.com"}
 export const realQ4Services2025: RealQ4Service[] = [;
 	{;
 		id: "affiliate-marketing-hub",;
@@ -86,8 +85,7 @@ export const realQ4Services2025: RealQ4Service[] = [;
 		launchDate: "2025-10-01",;
 		customers: 120,;
 		rating: 4.7,;
-		reviews: 48;,;,
-},;
+		reviews: 48},;
 	{;
 		id: "podcast-transcription-studio",;
 		name: "Podcast Transcription Studio",;
@@ -128,8 +126,7 @@ export const realQ4Services2025: RealQ4Service[] = [;
 		launchDate: "2025-09-15",;
 		customers: 60,;
 		rating: 4.6,;
-		reviews: 22;,;,
-},;
+		reviews: 22},;
 	{;
 		id: "micro-crm-local-business",;
 		name: "Micro CRM for Local Business",;
@@ -170,8 +167,7 @@ export const realQ4Services2025: RealQ4Service[] = [;
 		launchDate: "2025-10-20",;
 		customers: 210,;
 		rating: 4.5,;
-		reviews: 77;,;,
-},;
+		reviews: 77},;
 	{;
 		id: "returns-automation-saas",;
 		name: "E‑commerce Returns Automation",;
@@ -212,8 +208,7 @@ export const realQ4Services2025: RealQ4Service[] = [;
 		launchDate: "2025-10-05",;
 		customers: 95,;
 		rating: 4.6,;
-		reviews: 35;,;,
-},;
+		reviews: 35},;
 	{;
 		id: "it-helpdesk-for-msps",;
 		name: "IT Helpdesk for MSPs",;
@@ -257,7 +252,7 @@ export const realQ4Services2025: RealQ4Service[] = [;
 		reviews: 28;
 ];
 export const real2025Q4Additions = [;
-  {;
+  {
     id: "ai-governed-rag-platform",;
     name: "AI-Governed RAG Platform",;
     tagline: "Enterprise-grade RAG with guardrails, approvals, and evals",;
@@ -297,9 +292,8 @@ export const real2025Q4Additions = [;
     launchDate: "2025-03-01",;
     customers: 18,;
     rating: 4.8,;
-    reviews: 11;,;,
-},;
-  {;
+    reviews: 11},;
+  {
     id: "edge-personalization-engine",;
     name: "Edge Personalization Engine",;
     tagline: "Real-time content and pricing personalization at the edge",;
@@ -338,9 +332,8 @@ export const real2025Q4Additions = [;
     launchDate: "2025-03-10",;
     customers: 42,;
     rating: 4.6,;
-    reviews: 23;,;,
-},;
-  {;
+    reviews: 23},;
+  {
     id: "devx-preview-environments",;
     name: "DevX Preview Environments",;
     tagline: "On-demand ephemeral previews with seeded data and checks",;
@@ -378,9 +371,8 @@ export const real2025Q4Additions = [;
     launchDate: "2025-03-05",;
     customers: 27,;
     rating: 4.7,;
-    reviews: 16;,;,
-},;
-  {;
+    reviews: 16},;
+  {
     id: "real-time-log-anomaly-guard",;
     name: "Real-time Log Anomaly Guard",;
     tagline: "Detect anomalies and regressions with LLM-assisted alerts",;
@@ -418,9 +410,8 @@ export const real2025Q4Additions = [;
     launchDate: "2025-03-08",;
     customers: 33,;
     rating: 4.5,;
-    reviews: 19;,;,
-},;
-  {;
+    reviews: 19},;
+  {
     id: "governed-feature-flags",;
     name: "Governed Feature Flags",;
     tagline: "Audit-ready flags with policies, approvals, and rollbacks",;
@@ -458,9 +449,8 @@ export const real2025Q4Additions = [;
     launchDate: "2025-03-02",;
     customers: 21,;
     rating: 4.6,;
-    reviews: 12;,;,
-},;
-  {;
+    reviews: 12},;
+  {
     id: "email-sequence-copilot",;
     name: "Email Sequence Copilot",;
     tagline: "On-brand outbound with warm-up, scoring, and safety",;
@@ -498,9 +488,8 @@ export const real2025Q4Additions = [;
     launchDate: "2025-03-12",;
     customers: 38,;
     rating: 4.5,;
-    reviews: 20;,;,
-},;
-  {;
+    reviews: 20},;
+  {
     id: "data-contracts-guardrails",;
     name: "Data Contracts Guardrails",;
     tagline: "Schema governance, lineage, and backward-compat checks",;
@@ -538,9 +527,8 @@ export const real2025Q4Additions = [;
     launchDate: "2025-03-03",;
     customers: 12,;
     rating: 4.6,;
-    reviews: 9;,;,
-},;
-  {;
+    reviews: 9},;
+  {
     id: "managed-sso-fast-track",;
     name: "Managed SSO Fast Track",;
     tagline: "IdP mappings, SCIM, SAML/OIDC with enterprise checklist",;
@@ -577,9 +565,8 @@ export const real2025Q4Additions = [;
     launchDate: "2025-03-06",;
     customers: 9,;
     rating: 4.7,;
-    reviews: 7;,;,
-},;
-  {;
+    reviews: 7},;
+  {
     id: "ai-sales-pipeline-insights",;
     name: "AI Sales Pipeline Insights",;
     tagline: "Forecast hygiene, stage risks, and next-best actions",;
@@ -616,9 +603,8 @@ export const real2025Q4Additions = [;
     launchDate: "2025-03-04",;
     customers: 14,;
     rating: 4.5,;
-    reviews: 10;,;,
-},;
-  {;
+    reviews: 10},;
+  {
     id: "secure-webhook-relay",;
     name: "Secure Webhook Relay",;
     tagline: "Replay, signature verification, retries, and audit logs",;
@@ -656,9 +642,8 @@ export const real2025Q4Additions = [;
     launchDate: "2025-03-09",;
     customers: 31,;
     rating: 4.6,;
-    reviews: 18;,;,
-},;
-  {;
+    reviews: 18},;
+  {
     id: "managed-postgres-ha-lite",;
     name: "Managed Postgres HA Lite",;
     tagline: "Backups, failover, and performance baselines for SMEs",;

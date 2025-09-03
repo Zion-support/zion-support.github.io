@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
-const Interviews = () => {;
+const Interviews = () => {
   return (;
     <>;
       <Head>;
@@ -45,6 +45,5 @@ const Interviews = () => {;
               </Link>;
             </div>;
     </>;
-  );,
-}
+  )}
 export default Interviews;

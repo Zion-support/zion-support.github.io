@@ -5,86 +5,75 @@ import Footer from '../src/components/Footer';
 import Sidebar from '../src/components/Sidebar';
 import SEOHead from '../src/components/seo/SEOHead';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, Brain, Cloud, Database, Network, Target, Phone, Mail, Menu } from 'lucide-react';
-;
-const Home = memo(() => {;
+
+const Home = memo(() => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  ;
-  const handleSidebarToggle = useCallback(() => {;
-    setSidebarOpen(prev => !prev);,
-}, []);
-  ;
-  const handleSidebarClose = useCallback(() => {;
-    setSidebarOpen(false);,
-}, []);
-;
-  const structuredData = {;
+
+  const handleSidebarToggle = useCallback(() => {
+    setSidebarOpen(prev => !prev)}, []);
+
+  const handleSidebarClose = useCallback(() => {
+    setSidebarOpen(false)}, []);
+
+  const structuredData = {
     "@context": "https://schema.org",;
     "@type": "WebSite",;
     "name": "Zion Tech Group",;
     "url": "https://ziontechgroup.com",;
     "description": "Leading provider of revolutionary AI services, IT solutions, and micro SaaS development",;
-    "potentialAction": {;
+    "potentialAction": {
       "@type": "SearchAction",;
       "target": "https://ziontechgroup.com/search?q={search_term_string}",;
-      "query-input": "required name=search_term_string";,
-},;
-    "publisher": {;
+      "query-input": "required name=search_term_string"},;
+    "publisher": {
       "@type": "Organization",;
       "name": "Zion Tech Group",;
-      "url": "https://ziontechgroup.com";,
-}
-  };
+      "url": "https://ziontechgroup.com"}
+  }
   const stats = [;
   { number: '500+', label: 'Projects Completed' },;
     { number: '50+', label: 'Happy Clients' },;
     { number: '99.9%', label: 'Uptime Guarantee' },;
     { number: '24/7', label: 'Support Available' }
   ];
-  ;
+
   const services = [;
-  {;
+  {
       title: 'AI Services',;
       description: 'Cutting-edge artificial intelligence solutions',;
       icon: Brain,;
-      href: '/services/ai-services';,
-},;
-    {;
+      href: '/services/ai-services'},;
+    {
       title: 'IT Services',;
       description: 'Comprehensive information technology services',;
       icon: Network,;
-      href: '/services/it-services';,
-},;
-    {;
+      href: '/services/it-services'},;
+    {
       title: 'Micro SaaS',;
       description: 'Scalable software as a service solutions',;
       icon: Cloud,;
-      href: '/services/micro-saas';,
-}
+      href: '/services/micro-saas'}
   ];
-;
+
   const features = [;
-  {;
+  {
       icon: Zap,;
       title: 'Fast Delivery',;
-      description: 'Quick turnaround times without compromising quality';,
-},;
-    {;
+      description: 'Quick turnaround times without compromising quality'},;
+    {
       icon: Shield,;
       title: 'Enterprise Security',;
-      description: 'Bank-level security and compliance standards';,
-},;
-    {;
+      description: 'Bank-level security and compliance standards'},;
+    {
       icon: Users,;
       title: 'Expert Team',;
-      description: 'Dedicated professionals with years of experience';,
-},;
-    {;
+      description: 'Dedicated professionals with years of experience'},;
+    {
       icon: Globe,;
       title: 'Global Reach',;
-      description: 'Serving clients worldwide with local expertise';,
-}
+      description: 'Serving clients worldwide with local expertise'}
   ];
-;
+
   return (;
     <>;
       <SEOHead;
@@ -93,10 +82,10 @@ const Home = memo(() => {;
         keywords="AI services, IT solutions, micro SaaS, technology consulting, digital transformation, cloud services, cybersecurity";
         structuredData={structuredData}
       />;
-      ;
+
       <Navigation />;
       <Sidebar isOpen={sidebarOpen} onClose={handleSidebarClose} />;
-      ;
+
       <main className="min-h-screen bg-white">;
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20" role="banner" aria-labelledby="hero-heading">;
@@ -154,7 +143,7 @@ const Home = memo(() => {;
                 Comprehensive technology solutions designed to drive your business forward;
               </p>;
             </div>;
-            ;
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
               {services.map((service, index) => (;
                 <div key={index} className="bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow">;
@@ -184,7 +173,7 @@ const Home = memo(() => {;
                 We deliver exceptional results through innovation, expertise, and dedication;
               </p>;
             </div>;
-            ;
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
               {features.map((feature, index) => (;
                 <div key={index} className="text-center">;
@@ -219,12 +208,11 @@ const Home = memo(() => {;
           </div>;
         </section>;
       </main>;
-      ;
+
       <Footer />;
     </>;
-  );,
-});
-;
+  )});
+
 Home.displayName = 'Home';
-;
+
 export default Home;

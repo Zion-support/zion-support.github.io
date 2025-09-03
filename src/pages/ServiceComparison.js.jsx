@@ -4,27 +4,23 @@ import { BarChart3, Target, TrendingUp, Award, Users, ArrowRight, CheckCircle, Z
 import { AdvancedServiceComparison } from "../components/AdvancedServiceComparison.jsx";
 import { Button } from "../components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
-const ServiceComparison = () => {;
+const ServiceComparison = () => {
     const features = [;
-        {;
+        {
             icon: <BarChart3 className="w-6 h-6 text-zion-cyan"/>,;
             title: 'Advanced Filtering',;
-            description: 'Filter services by category, complexity, price range, and technology stack';,
-},;
-        {;
+            description: 'Filter services by category, complexity, price range, and technology stack'},;
+        {
             icon: <Target className="w-6 h-6 text-zion-purple"/>,;
             title: 'Smart Comparison',;
-            description: 'Compare multiple services side-by-side with detailed feature analysis';,
-},;
-        {;
+            description: 'Compare multiple services side-by-side with detailed feature analysis'},;
+        {
             icon: <TrendingUp className="w-6 h-6 text-zion-green"/>,;
-            description: 'Real-time ratings and popularity indicators to guide your decision';,
-},;
-        {;
+            description: 'Real-time ratings and popularity indicators to guide your decision'},;
+        {
             icon: <Award className="w-6 h-6 text-zion-orange"/>,;
             title: 'Expert Insights',;
-            description: 'Get detailed insights into each service\'s capabilities and target audience';,
-}
+            description: 'Get detailed insights into each service\'s capabilities and target audience'}
     ];
     const benefits = [;
         'Make informed decisions with comprehensive service comparisons',;
@@ -60,8 +56,7 @@ const ServiceComparison = () => {;
                 onClick={() =>';
                   document'';
                     .getElementById('comparison-tool')';
-                    ?.scrollIntoView({ behavior: 'smooth' });,
-}
+                    ?.scrollIntoView({ behavior: 'smooth' })}
               >";
                 Start Comparing"";
                 <ArrowRight className="w-5 h-5 ml-2" />;
@@ -71,8 +66,7 @@ const ServiceComparison = () => {;
                 onClick={() =>';
                   window.open('';
                     'mailto:kleber@ziontechgroup.com?subject=Service Comparison Help',_blank';
-                  );,
-}
+                  )}
               >;
                 Get Expert Help;
               </Button>;
@@ -206,8 +200,7 @@ const ServiceComparison = () => {;
                 onClick={() =>';
                   window.open('';
                     'mailto:kleber@ziontechgroup.com?subject=Service Selection Help',_blank';
-                  );,
-}">"";
+                  )}">"";
                 <Users className="w-5 h-5 mr-2" />;
                 Get Expert Consultation;
               </Button>";
@@ -221,16 +214,12 @@ const ServiceComparison = () => {;
           </motion.div>;
         </div>;
       </section>;
-    </div>)};
+    </div>)}
 export default ServiceComparison;
-;
 
-export { ServiceComparison };
-;
-export { ServiceComparison };
-;
-export { ServiceComparison };
-;
-export { ServiceComparison };
-;
-export { ServiceComparison };
+
+export { ServiceComparison }
+export { ServiceComparison }
+export { ServiceComparison }
+export { ServiceComparison }
+export { ServiceComparison }

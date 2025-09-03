@@ -5,36 +5,31 @@ import { Brain, Zap, Target, Shield, Users, Globe, Cpu, Lightbulb, BarChart3 con
             icon: Brain,;
             title: "Intelligent Decision Making","";
             description: "AI systems that analyze data and make autonomous business decisions","";
-            benefits: ["Real-time analysis", "Predictive insights", "Risk assessment", "Automated responses"];,
-},;
+            benefits: ["Real-time analysis", "Predictive insights", "Risk assessment", "Automated responses"]},;
         {}
 ";
             icon: Zap,"";
             title: "Process Automation","";
             description: "End-to-end automation of complex business processes and workflows","";
-            benefits: ["Workflow optimization", "Error reduction", "24/7 operation", "Cost savings"];,
-},;
+            benefits: ["Workflow optimization", "Error reduction", "24/7 operation", "Cost savings"]},;
         {}
 ";
             icon: Target,"";
             title: "Predictive Analytics","";
             description: "Advanced forecasting and trend analysis for strategic planning","";
-            benefits: ["Market predictions", "Demand forecasting", "Resource optimization", "Competitive advantage"];,
-},;
+            benefits: ["Market predictions", "Demand forecasting", "Resource optimization", "Competitive advantage"]},;
         {}
 ";
             icon: Shield,"";
             title: "Autonomous Security","";
             description: "AI-powered threat detection and automated security responses","";
-            benefits: ["Real-time monitoring", "Threat prevention", "Incident response", "Compliance management"];,
-},;
+            benefits: ["Real-time monitoring", "Threat prevention", "Incident response", "Compliance management"]},;
         {}
 ";
             icon: Users,"";
             title: "Customer Intelligence","";
             description: "Automated customer behavior analysis and personalized experiences","";
-            benefits: ["Customer insights", "Personalization", "Churn prevention", "Revenue optimization"];,
-},;
+            benefits: ["Customer insights", "Personalization", "Churn prevention", "Revenue optimization"]},;
         {}
 ";
             icon: Globe,"";
@@ -49,36 +44,31 @@ import { Brain, Zap, Target, Shield, Users, Globe, Cpu, Lightbulb, BarChart3 con
 "";
             title: "Financial Services","";
             description: "Automated trading, risk assessment, and fraud detection",;
-            icon: BarChart3;,
-},;
+            icon: BarChart3},;
         {}
 ";
 "";
             title: "Manufacturing","";
             description: "Predictive maintenance and quality control automation",;
-            icon: Cpu;,
-},;
+            icon: Cpu},;
         {}
 ";
 "";
             title: "Healthcare","";
             description: "Patient diagnosis and treatment planning automation",;
-            icon: Shield;,
-},;
+            icon: Shield},;
         {}
 ";
 "";
             title: "Retail","";
             description: "Inventory management and customer experience optimization",;
-            icon: Users;,
-},;
+            icon: Users},;
         {}
 ";
 "";
             title: "Logistics","";
             description: "Route optimization and supply chain automation",;
-            icon: Globe;,
-},;
+            icon: Globe},;
         {}
 ";
 "";
@@ -100,22 +90,19 @@ import { Brain, Zap, Target, Shield, Users, Globe, Cpu, Lightbulb, BarChart3 con
 "";
             phase: "Assessment","";
             description: "Current state analysis and AI readiness evaluation","";
-            duration: "2-4 weeks";,
-},;
+            duration: "2-4 weeks"},;
         {}
 ";
 "";
             phase: "Strategy","";
             description: "AI roadmap development and technology selection","";
-            duration: "4-6 weeks";,
-},;
+            duration: "4-6 weeks"},;
         {}
 ";
 "";
             phase: "Pilot","";
             description: "Proof of concept and pilot program implementation","";
-            duration: "8-12 weeks";,
-},;
+            duration: "8-12 weeks"},;
         {}
 ";
 "";
@@ -291,17 +278,11 @@ import { Brain, Zap, Target, Shield, Users, Globe, Cpu, Lightbulb, BarChart3 con
           </div>;
         </div>;
       </section>;
-    </div>);,
-};
-export default AIAutonomousBusiness;,
-}}}}
-;
-export { AIAutonomousBusiness };
-;
-export { AIAutonomousBusiness };
-;
-export { AIAutonomousBusiness };
-;
-export { AIAutonomousBusiness };
-;
-export { AIAutonomousBusiness };
+    </div>)}
+export default AIAutonomousBusiness}}}}
+
+export { AIAutonomousBusiness }
+export { AIAutonomousBusiness }
+export { AIAutonomousBusiness }
+export { AIAutonomousBusiness }
+export { AIAutonomousBusiness }

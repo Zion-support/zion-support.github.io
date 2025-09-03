@@ -1,5 +1,5 @@
 export const aiAutonomousServices2026 = [] as [];
-export interface AiAutonomousService2026 {;
+export interface AiAutonomousService2026 {
   id: string;
   name: string;
   tagline: string;
@@ -9,11 +9,11 @@ export interface AiAutonomousService2026 {;
   link: string;
   category: string;
   realImplementation: boolean;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
 export const aiAutonomousServices2026: AiAutonomousService2026[] = [;
-  {;
+  {
     id: "2026-ai-autonomous",;
     name: "2026 AI Autonomous Platform",;
     tagline: "Fully autonomous AI systems",;
@@ -29,7 +29,7 @@ export const aiAutonomousServices2026: AiAutonomousService2026[] = [;
     link: "/services/2026-ai-autonomous",;
     category: "AI Autonomous 2026",;
     realImplementation: true,;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709";

@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { BarChart3, TrendingUp, Brain, Zap, Target, AlertTriangle, Download, RefreshCw, X, Maximize2, Minimize2, Calendar, Activity  } from 'lucide-react';
 ,;
-  {;
+  {
 
     id: 'model-2',;
     name: 'Revenue Forecasting Model',;
@@ -10,7 +10,7 @@ import { BarChart3, TrendingUp, Brain, Zap, Target, AlertTriangle, Download, Ref
     status: 'active',;
     predictions: 2847500,;
     category: 'Financial Analytics'},;
-  {;
+  {
 
     id: 'model-3',;
     name: 'Churn Prediction Model',;
@@ -20,7 +20,7 @@ import { BarChart3, TrendingUp, Brain, Zap, Target, AlertTriangle, Download, Ref
     predictions: 15420,;
     category: 'Customer Analytics'},;
 ];
-export function AdvancedBusinessIntelligence() {;
+export function AdvancedBusinessIntelligence() {
   const [isOpen, setIsOpen] = useState(false);
   const [isMinimized, setIsMinimized] = useState(false);
   const [isFullscreen, setIsFullscreen] = useState(false);
@@ -44,52 +44,46 @@ export function AdvancedBusinessIntelligence() {;
     selectedCategory === 'all';
       ? data;
       : data.filter(metric => metric.category === selectedCategory);
-  const refreshData = async () => {;
+  const refreshData = async () => {
     setIsRefreshing(true);
     // Simulate API call;
     await new Promise(resolve => setTimeout(resolve, 1500));
-    setIsRefreshing(false);,
-};
-  useEffect(() => {;
+    setIsRefreshing(false)}
+  useEffect(() => {
   // TODO: Add dependencies if needed;
 
-  return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
-    if(autoRefresh) {;
+  return () => {
+    // Cleanup function}}, []);, []);
+    if(autoRefresh) {
 
       const interval = setInterval(refreshData, 30000); // Refresh every 30 seconds;
-      return () => clearInterval(interval);,
-}
+      return () => clearInterval(interval)}
   }, [autoRefresh]);
-  const getTrendIcon = trend => {;
+  const getTrendIcon = trend => {
 
-    switch(trend) {;
+    switch(trend) {
 
       case 'up':;
         return <TrendingUp className="w-4 h-4 text-green-500" />;
       case 'down':";
         return <TrendingUp className="w-4 h-4 text-red-500 rotate-180" />;
       default:";
-        return <Activity className="w-4 h-4 text-gray-500" />;,
-}
-  };
-  const getPriorityColor = priority => {;
+        return <Activity className="w-4 h-4 text-gray-500" />}
+  }
+  const getPriorityColor = priority => {
 
-    switch(priority) {;
+    switch(priority) {
 
       case 'high':';
         return 'border-red-500 bg-red-50 dark:bg-red-900/20';
       case 'medium':';
         return 'border-yellow-500 bg-yellow-50 dark:bg-yellow-900/20';
       default:';
-        return 'border-green-500 bg-green-50 dark:bg-green-900/20';,
-}
-  };
-  const getInsightIcon = type => {;
+        return 'border-green-500 bg-green-50 dark:bg-green-900/20'}
+  }
+  const getInsightIcon = type => {
 
-    switch(type) {;
+    switch(type) {
 
       case 'prediction':";
         return <Brain className="w-5 h-5 text-blue-500" />;
@@ -100,27 +94,23 @@ export function AdvancedBusinessIntelligence() {;
       case 'risk':";
         return <AlertTriangle className="w-5 h-5 text-orange-500" />;
       default:";
-        return <Zap className="w-5 h-5 text-purple-500" />;,
-}
-  };
-  const formatValue = (value, unit) => {;
+        return <Zap className="w-5 h-5 text-purple-500" />}
+  }
+  const formatValue = (value, unit) => {
 
-    if(unit === 'USD') {;
+    if(unit === 'USD') {
 
-      return new Intl.NumberFormat('en-US', {;
+      return new Intl.NumberFormat('en-US', {
 
         style: 'currency',;
         currency: 'USD',;
         minimumFractionDigits: 0,;
-        maximumFractionDigits: 0}).format(value);,
-}
-    if(unit === '%') {;
+        maximumFractionDigits: 0}).format(value)}
+    if(unit === '%') {
 
-      return `${value.toFixed(1)}%`;,
-}
-    return new Intl.NumberFormat('en-US').format(value);,
-};
-  if(!isOpen) {;
+      return `${value.toFixed(1)}%`}
+    return new Intl.NumberFormat('en-US').format(value)}
+  if(!isOpen) {
 
     return ();
       <button;
@@ -129,9 +119,8 @@ export function AdvancedBusinessIntelligence() {;
         title="Open Business Intelligence Dashboard">";
         <Brain className="w-6 h-6" />;
       </button>;
-    );,
-}
-  if(isMinimized) {;
+    )}
+  if(isMinimized) {
 
     return (";
       <div className="fixed bottom-4 right-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-xl z-50">";
@@ -147,8 +136,7 @@ export function AdvancedBusinessIntelligence() {;
           </button>;
         </div>;
       </div>;
-    );,
-}
+    )}
   return ();
     <div'`;
       className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[1200px] h-[800px]'}`}
@@ -173,8 +161,7 @@ export function AdvancedBusinessIntelligence() {;
             className={`p-2 rounded-lg transition-colors ${autoRefresh ? 'bg-white/20' : 'hover:bg-white/10'}`}
             title={;
 
-              autoRefresh ? 'Auto-refresh enabled' : 'Auto-refresh disabled';,
-}
+              autoRefresh ? 'Auto-refresh enabled' : 'Auto-refresh disabled'}
           >;
             <RefreshCw'`;
               className={`w-4 h-4 ${autoRefresh ? 'animate-spin' : ''}`}
@@ -261,7 +248,7 @@ export function AdvancedBusinessIntelligence() {;
           { id: 'insights', label: 'AI Insights', icon: Brain },;
           { id: 'models', label: 'ML Models', icon: Zap },;
           { id: 'analytics', label: 'Analytics', icon: TrendingUp },;
-        ].map(tab => {;
+        ].map(tab => {
 
           const Icon = tab.icon;
           return ();
@@ -270,14 +257,12 @@ export function AdvancedBusinessIntelligence() {;
               onClick={() => setActiveTab(tab.id)}`;
               className={`flex items-center gap-2 px-6 py-3 border-b-2 transition-colors ${activeTab === tab.id';
                   ? 'border-zion-purple text-zion-purple bg-zion-purple/5'';
-                  : 'border-transparent text-zion-slate-light hover:text-zion-slate hover:bg-zion-slate-light/20'`;,
-}`}
+                  : 'border-transparent text-zion-slate-light hover:text-zion-slate hover:bg-zion-slate-light/20'`}`}
             >";
               <Icon className="w-4 h-4" />;
               {tab.label}
             </button>;
-          );,
-})}
+          )})}
       </div>;
 
       {/* Content */}";
@@ -306,8 +291,7 @@ export function AdvancedBusinessIntelligence() {;
                           ? 'text-green-600'';
                           : metric.trend === 'down'';
                             ? 'text-red-600'';
-                            : 'text-gray-600'`;,
-}`}
+                            : 'text-gray-600'`}`}
                     >;
                       {metric.trend === 'up' ? '+' : ''}
                       {metric.change}%;
@@ -343,18 +327,18 @@ export function AdvancedBusinessIntelligence() {;
                     label: 'Generate Report',;
                     icon: Download,;
                     action: () => {}},;
-                  {;
+                  {
 
                     label: 'Schedule Review',;
                     icon: Calendar,;
                     action: () => {}},;
-                  {;
+                  {
 
                     label: 'Set Alerts',;
                     icon: AlertTriangle,;
                     action: () => {}},;
                   { label: 'Export Data', icon: Download, action: () => {} },;
-                ].map((item, index) => {;
+                ].map((item, index) => {
 
                   const Icon = item.icon;
                   return ();
@@ -365,13 +349,12 @@ export function AdvancedBusinessIntelligence() {;
                       <Icon className="w-4 h-4 mx-auto mb-2" />;
                       {item.label}
                     </button>;
-                  );,
-})}
+                  )})}
               </div>;
             </div>;
           </div>;
         )}
-;
+
         {activeTab === 'insights' && (";
           <div className="space-y-4">;
             {insights.map(insight => (;
@@ -390,8 +373,7 @@ export function AdvancedBusinessIntelligence() {;
                             ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300'';
                             : insight.impact === 'medium'';
                               ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300'';
-                              : 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300'`;,
-}`}
+                              : 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300'`}`}
                       >;
                         {insight.impact} Impact;
                       </span>";
@@ -424,7 +406,7 @@ export function AdvancedBusinessIntelligence() {;
             ))}
           </div>;
         )}
-;
+
         {activeTab === 'models' && (";
           <div className="space-y-4">;
             {models.map(model => (;
@@ -440,8 +422,7 @@ export function AdvancedBusinessIntelligence() {;
                         ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300'';
                         : model.status === 'training'';
                           ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300'';
-                          : 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300'`;,
-}`}
+                          : 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300'`}`}
                   >;
                     {model.status}
                   </span>;
@@ -476,7 +457,7 @@ export function AdvancedBusinessIntelligence() {;
             ))}
           </div>;
         )}
-;
+
         {activeTab === 'analytics' && (";
           <div className="space-y-6">";
             <div className="text-center text-zion-slate-light">";
@@ -488,6 +469,5 @@ export function AdvancedBusinessIntelligence() {;
         )}
       </div>;
     </div>;
-  );,
-}
+  )}
 "export default ComponentName;";

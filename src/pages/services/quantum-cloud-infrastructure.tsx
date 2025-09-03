@@ -5,10 +5,9 @@ import { ;
   Cpu, Cloud, Zap, Shield, CheckCircle, Star, ArrowRight, ;
   Database, Network, Server, Globe, ExternalLink, Phone, ;
   Mail, MapPin, Activity, BarChart3, Lock, Users, Clock,;
-  TrendingUp, Target, Brain, Building, Rocket;,
-} from "lucide-react";
+  TrendingUp, Target, Brain, Building, Rocket} from "lucide-react";
 
-export default function QuantumCloudInfrastructure() {;
+export default function QuantumCloudInfrastructure() {
   const features = [;
     "Quantum-Enhanced Computing",;
     "Hybrid Cloud Architecture", ;
@@ -30,39 +29,33 @@ export default function QuantumCloudInfrastructure() {;
   ];
 
   const pricing = [;
-    {;
+    {
       name: "Startup",;
       price: "$5,999/month",;
-      details: ["Up to 10 servers", "Basic quantum features", "Email support", "Standard SLA", "Monthly backups"];,
-},;
-    {;
+      details: ["Up to 10 servers", "Basic quantum features", "Email support", "Standard SLA", "Monthly backups"]},;
+    {
       name: "Enterprise", ;
       price: "$15,999/month",;
-      details: ["Up to 100 servers", "Full quantum suite", "24/7 support", "99.99% SLA", "Real-time backups", "Custom optimization"];,
-},;
-    {;
+      details: ["Up to 100 servers", "Full quantum suite", "24/7 support", "99.99% SLA", "Real-time backups", "Custom optimization"]},;
+    {
       name: "Global Scale",;
       price: "$39,999/month", ;
-      details: ["Unlimited servers", "Advanced quantum AI", "Dedicated support", "99.999% SLA", "Global edge network", "White-label solution"];,
-}
+      details: ["Unlimited servers", "Advanced quantum AI", "Dedicated support", "99.999% SLA", "Global edge network", "White-label solution"]}
   ];
 
   const useCases = [;
-    {;
+    {
       title: "High-Performance Computing",;
       description: "Quantum-enhanced infrastructure for scientific computing, AI training, and complex simulations.",;
-      icon: Cpu;,
-},;
-    {;
+      icon: Cpu},;
+    {
       title: "Global Enterprise",;
       description: "Scalable cloud infrastructure for multinational corporations with global operations.",;
-      icon: Globe;,
-},;
-    {;
+      icon: Globe},;
+    {
       title: "AI/ML Workloads",;
       description: "Optimized infrastructure for machine learning training and inference at scale.",;
-      icon: Brain;,
-}
+      icon: Brain}
   ];
 
   const technologies = [;
@@ -115,7 +108,7 @@ export default function QuantumCloudInfrastructure() {;
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Cutting-Edge Technology</h2>;
             <p className="text-gray-600 text-lg">Powered by quantum computing and AI optimization</p>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">;
             {features.map((feature, index) => (;
               <div key={index} className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">;
@@ -145,7 +138,7 @@ export default function QuantumCloudInfrastructure() {;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Unmatched Performance</h2>;
               <p className="text-gray-600 text-lg">Proven results from our quantum cloud infrastructure</p>;
             </div>;
-            ;
+
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
               {benefits.map((benefit, index) => (;
                 <div key={index} className="bg-white p-6 rounded-lg shadow-sm">;
@@ -165,7 +158,7 @@ export default function QuantumCloudInfrastructure() {;
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced Technology Stack</h2>;
             <p className="text-gray-600 text-lg">Built on cutting-edge technologies</p>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">;
             {technologies.map((tech, index) => (;
               <div key={index} className="bg-white border border-gray-200 rounded-xl p-6 text-center">;
@@ -186,7 +179,7 @@ export default function QuantumCloudInfrastructure() {;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Perfect For</h2>;
               <p className="text-gray-600 text-lg">Ideal solutions for demanding computing needs</p>;
             </div>;
-            ;
+
             <div className="grid md:grid-cols-3 gap-8">;
               {useCases.map((useCase, index) => (;
                 <div key={index} className="text-center">;
@@ -208,7 +201,7 @@ export default function QuantumCloudInfrastructure() {;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Enterprise-Grade Pricing</h2>;
               <p className="text-gray-600 text-lg">Scale with your infrastructure needs</p>;
             </div>;
-            ;
+
             <div className="grid md:grid-cols-3 gap-8">;
               {pricing.map((tier, index) => (;
                 <div key={index} className={`bg-white rounded-xl p-8 shadow-lg border ${tier.name === 'Enterprise' ? 'ring-2 ring-purple-500 relative' : ''}`}>;
@@ -267,5 +260,4 @@ export default function QuantumCloudInfrastructure() {;
         </section>;
       </div>;
     </>;
-  );,
-}
+  )}

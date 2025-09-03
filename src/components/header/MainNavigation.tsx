@@ -28,18 +28,16 @@ import { ;
   Lightbulb,;
   Code,;
   Activity,;
-  Target;,
-} from 'lucide-react';
-;
-interface MainNavigationProps {;
-  className?: string;,
-}
-;
-export function MainNavigation({ className = '' }: MainNavigationProps) {;
+  Target} from 'lucide-react';
+
+interface MainNavigationProps {
+  className?: string}
+
+export function MainNavigation({ className = '' }: MainNavigationProps) {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const [isCompanyOpen, setIsCompanyOpen] = useState(false);
-;
+
   return (;
     <nav className={`flex items-center space-x-8 ${className}`}>;
       {/* Home */}
@@ -59,10 +57,10 @@ export function MainNavigation({ className = '' }: MainNavigationProps) {;
           <span>Services</span>;
           <ChevronDown className="w-3 h-3" />;
         </button>;
-        ;
+
         {isServicesOpen && (;
           <div ;
-            onMouseEnter={() => setIsServicesOpen(true)} ;
+            onMouseEnter={() => setIsServicesOpen(true)}
             onMouseLeave={() => setIsServicesOpen(false)}
             className="absolute top-full left-0 mt-2 w-96 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50">;
             <div className="p-4">;
@@ -105,7 +103,7 @@ export function MainNavigation({ className = '' }: MainNavigationProps) {;
                     </li>;
                   </ul>;
                 </div>;
-                ;
+
                 <div>;
                   <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">;
                     <Shield className="w-4 h-4 mr-2" />;
@@ -177,7 +175,7 @@ export function MainNavigation({ className = '' }: MainNavigationProps) {;
                   </ul>;
                 </div>;
               </div>;
-              ;
+
               <div className="mt-4 pt-4 border-t border-zion-purple/20">;
                 <Link ;
                   to="/services" ;
@@ -201,10 +199,10 @@ export function MainNavigation({ className = '' }: MainNavigationProps) {;
           <span>Solutions</span>;
           <ChevronDown className="w-3 h-3" />;
         </button>;
-        ;
+
         {isSolutionsOpen && (;
           <div ;
-            onMouseEnter={() => setIsSolutionsOpen(true)} ;
+            onMouseEnter={() => setIsSolutionsOpen(true)}
             onMouseLeave={() => setIsSolutionsOpen(false)}
             className="absolute top-full left-0 mt-2 w-80 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50">;
             <div className="p-4">;
@@ -238,7 +236,7 @@ export function MainNavigation({ className = '' }: MainNavigationProps) {;
                     </li>;
                   </ul>;
                 </div>;
-                ;
+
                 <div>;
                   <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">;
                     <HardDrive className="w-4 h-4 mr-2" />;
@@ -268,7 +266,7 @@ export function MainNavigation({ className = '' }: MainNavigationProps) {;
                   </ul>;
                 </div>;
               </div>;
-              ;
+
               <div className="mt-4 pt-4 border-t border-zion-purple/20">;
                 <Link ;
                   to="/request-quote" ;
@@ -292,10 +290,10 @@ export function MainNavigation({ className = '' }: MainNavigationProps) {;
           <span>Company</span>;
           <ChevronDown className="w-3 h-3" />;
         </button>;
-        ;
+
         {isCompanyOpen && (;
           <div ;
-            onMouseEnter={() => setIsCompanyOpen(true)} ;
+            onMouseEnter={() => setIsCompanyOpen(true)}
             onMouseLeave={() => setIsCompanyOpen(false)}
             className="absolute top-full left-0 mt-2 w-64 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50">;
             <div className="p-4">;
@@ -362,5 +360,4 @@ export function MainNavigation({ className = '' }: MainNavigationProps) {;
         Contact;
       </Link>;
     </nav>;
-  );,
-} ;
+  )}

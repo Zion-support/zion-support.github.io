@@ -1,19 +1,19 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
-;
-export default function Page() {;
-> {;
+
+export default function Page() {
+> {
 
   data: SearchResult[];
   onResultsChange?: (results: SearchResult[]) => void;
   placeholder?: string;
   showFilters?: boolean}
-;
+
 export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({;
 
   data,;
   onResultsChange,;
   placeholder = "Search services, articles, team members...",;
-  showFilters = true}) => {;
+  showFilters = true}) => {
 
   const [searchQuery, setSearchQuery] = useState('');
   const [isSearchFocused, setIsSearchFocused] = useState(false);
@@ -21,13 +21,13 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({;
   const [showFilterPanel, setShowFilterPanel] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
   const [sortBy, setSortBy] = useState<any>('relevance');
-;
+
   // Filter options;
-  ;
+
       return acc}, {} as Record < string, any>) ;
-;
+
       return acc}, {} as Record < string, any>) ;
-        results = results.sort((a, b) => {;
+        results = results.sort((a, b) => {
 
           if(!a.rating || !b.rating) return 0;
           return b.rating - a.rating});
@@ -37,48 +37,43 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({;
       default: // relevance;
         // Keep original order for relevance;
         break;
-;
+
     return results}, [data, searchQuery, selectedCategory, activeFilters, sortBy]) ;
-;
+
   // Update parent component with results;
-  useEffect(() => {;
+  useEffect(() => {
   // TODO: Add dependencies if needed;
 
-  return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
+  return () => {
+    // Cleanup function}}, []);, []);
     onResultsChange?.(filteredResults) }, [filteredResults, onResultsChange]) ;
-;
-  // Toggle filter;
-  ;
-    if(newFilters.has(filterId)) {;
 
-      newFilters.delete(filterId)} else {;
+  // Toggle filter;
+
+    if(newFilters.has(filterId)) {
+
+      newFilters.delete(filterId)} else {
 
       newFilters.add(filterId);
-;
-    setActiveFilters(newFilters) };
-;
-  // Clear all filters;
-  ;
-    setSelectedCategory('all');
-    setSortBy('relevance')};
-;
-  // Get icon for type;
-  const getTypeIcon = (type: string) => {;
 
-    switch(type) {;
+    setActiveFilters(newFilters) }
+  // Clear all filters;
+
+    setSelectedCategory('all');
+    setSortBy('relevance')}
+  // Get icon for type;
+  const getTypeIcon = (type: string) => {
+
+    switch(type) {
 '";
       case 'service': return <Zap className="w-4 h-4"  />;'";
       case 'article': return <Tag className="w-4 h-4"  />;'";
       case 'team': return <Users className="w-4 h-4"  />;'";
       case 'technology': return <Brain className="w-4 h-4"  />;";
-      default: return <Globe className="w-4 h-4"  />};
-;
+      default: return <Globe className="w-4 h-4"  />}
   // Get category color;
-  ;
-    return colors[category as keyof typeof colors] || 'text-zinc-400'};
+
+    return colors[category as keyof typeof colors] || 'text-zinc-400'}
   return (";
     <div className="w-full max-w-6xl mx-auto">;
       {/* Search Bar */}";
@@ -170,8 +165,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({;
             onClick={() => setShowFilterPanel(!showFilterPanel)}`;
 className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${showFilterPanel';
                 ? 'bg-zion-cyan text-white'';
-                : 'bg-zinc-900/50 text-zinc-300 hover:text-white border border-zinc-700/50'`;,
-}`}
+                : 'bg-zinc-900/50 text-zinc-300 hover:text-white border border-zinc-700/50'`}`}
 ";
             <Filter className="w-4 h-4"  />            Filters;
             {activeFilters.size > 0 && (";
@@ -189,30 +183,26 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
               Clear all;
             </button>) }
         </div>) }
-;
+
       {/* Filter Panel */}
       <AnimatePresence>;
         {showFilterPanel && (<motion.div;
-            initial = {;
+            initial = {
 
   { height: 0,;
-  opacity: 0;,
-}}
-            animate = {;
+  opacity: 0}}
+            animate = {
 
   { height: 'auto',;
-  opacity: 1;,
-}}
-            exit = {;
+  opacity: 1}}
+            exit = {
 
   { height: 0,;
-  opacity: 0;,
-}}
-            transition = {;
+  opacity: 0}}
+            transition = {
 
   { duration: 0.3,;
-  ease: 'easeOut';,
-}}";
+  ease: 'easeOut'}}";
             className="mb-6 overflow-hidden";
 ";
             <div className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl">";
@@ -248,9 +238,8 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
                         onClick={() => toggleFilter(tag.toLowerCase())}`;
                         className={`px-3 py-1 text-xs rounded-full transition-all duration-300 ${activeFilters.has(tag.toLowerCase());
                             ? 'bg-zion-cyan text-white'';
-                            : 'bg-zinc-800/50 text-zinc-300 hover:bg-zinc-700/50'`;,
-}`}
-;
+                            : 'bg-zinc-800/50 text-zinc-300 hover:bg-zinc-700/50'`}`}
+
                         {tag}
                       </button>) ) }
                   </div>;
@@ -289,16 +278,14 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
         {filteredResults.map((result) => (;
           <motion.div;
             key={result.id}
-            initial = {;
+            initial = {
 
   { opacity: 0,;
-  y: 20;,
-}}
-            animate = {;
+  y: 20}}
+            animate = {
 
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300 cursor-pointer group";
 ";
             <div className="flex items-start gap-4">";
@@ -340,7 +327,7 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
                   )}";
                   <div className="flex items-center gap-1">";
                     <Tag className="w-4 h-4"  />;
-                    {result.tags.slice(0, 3).join(',)}`;
+                    {result.tags.slice(0, 3).join(')}`;
                     {result.tags.length > 3 && ` +${result.tags.length-3} more`}                  </div>;
                 </div>;
               </div>;
@@ -366,8 +353,6 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
           </button>;
         </motion.div>) }
     </div>) }
-;,
 }
-;,
 }
 '"`;

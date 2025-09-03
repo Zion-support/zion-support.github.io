@@ -18,14 +18,12 @@ const categoryColors = {}
 ';
 '';
 ''';
-  'AI & Legal Tech': 'from-blue-500 to-indigo-500',AI & FinTech': 'from-green-500 to-emerald-500',AI & Healthcare': 'from-red-500 to-pink-500',Cybersecurity & Quantum': 'from-purple-500 to-violet-500',AI & Supply Chain': 'from-orange-500 to-red-500',AI & Energy': 'from-yellow-500 to-orange-500',AI & Customer Experience': 'from-pink-500 to-rose-500',Quantum & AI': 'from-cyan-500 to-blue-500',AI & Data Governance': 'from-indigo-500 to-purple-500',AI & HR Tech': 'from-teal-500 to-green-500',AI & Machine Learning': 'from-purple-500 to-pink-500',AI & Business Intelligence': 'from-indigo-500 to-purple-500',AI & Marketing Automation': 'from-pink-500 to-rose-500',AI & CRM': 'from-blue-500 to-cyan-500',AI & ERP': 'from-green-500 to-emerald-500',AI & Project Management': 'from-orange-500 to-red-500',AI & Autonomous Systems': 'from-purple-500 to-violet-500',AI & Research': 'from-cyan-500 to-blue-500',AI & Content Generation': 'from-indigo-500 to-purple-500',AI & Voice Technology': 'from-teal-500 to-green-500',AI & Video Generation': 'from-pink-500 to-rose-500',AI & Threat Intelligence': 'from-red-500 to-pink-500',AI & Cloud Management': 'from-blue-500 to-cyan-500',AI & DevOps': 'from-orange-500 to-red-500';,
-};
+  'AI & Legal Tech': 'from-blue-500 to-indigo-500',AI & FinTech': 'from-green-500 to-emerald-500',AI & Healthcare': 'from-red-500 to-pink-500',Cybersecurity & Quantum': 'from-purple-500 to-violet-500',AI & Supply Chain': 'from-orange-500 to-red-500',AI & Energy': 'from-yellow-500 to-orange-500',AI & Customer Experience': 'from-pink-500 to-rose-500',Quantum & AI': 'from-cyan-500 to-blue-500',AI & Data Governance': 'from-indigo-500 to-purple-500',AI & HR Tech': 'from-teal-500 to-green-500',AI & Machine Learning': 'from-purple-500 to-pink-500',AI & Business Intelligence': 'from-indigo-500 to-purple-500',AI & Marketing Automation': 'from-pink-500 to-rose-500',AI & CRM': 'from-blue-500 to-cyan-500',AI & ERP': 'from-green-500 to-emerald-500',AI & Project Management': 'from-orange-500 to-red-500',AI & Autonomous Systems': 'from-purple-500 to-violet-500',AI & Research': 'from-cyan-500 to-blue-500',AI & Content Generation': 'from-indigo-500 to-purple-500',AI & Voice Technology': 'from-teal-500 to-green-500',AI & Video Generation': 'from-pink-500 to-rose-500',AI & Threat Intelligence': 'from-red-500 to-pink-500',AI & Cloud Management': 'from-blue-500 to-cyan-500',AI & DevOps': 'from-orange-500 to-red-500'}
 const supportLevelColors = {}
 ';
 '';
 ''';
-  'premium': 'bg-gradient-to-r from-blue-500 to-cyan-500',enterprise': 'bg-gradient-to-r from-purple-500 to-pink-500',basic': 'bg-gradient-to-r from-green-500 to-emerald-500';,
-};
+  'premium': 'bg-gradient-to-r from-blue-500 to-cyan-500',enterprise': 'bg-gradient-to-r from-purple-500 to-pink-500',basic': 'bg-gradient-to-r from-green-500 to-emerald-500'}
 export default function ComprehensiveServicesOverview() {}
 ';
 '';
@@ -74,7 +72,7 @@ export default function ComprehensiveServicesOverview() {}
 ';
         if (typeof service.price === 'number') {}
             return service.price}
-    };
+    }
     return (<>;
       <SEOHead title="Comprehensive Technology Services - Zion Tech Group" description="Explore our comprehensive portfolio of cutting-edge technology services including AI, Quantum Computing, Cybersecurity, IT Infrastructure, and more. Transform your business with innovative solutions." keywords="technology services, AI services, quantum computing, cybersecurity, IT infrastructure, micro SaaS, autonomous systems, space technology, neurotechnology" image="/images/services-overview-og.jpg" canonical="https://ziontechgroup.com/comprehensive-services-overview"/>";
 "";
@@ -208,12 +206,10 @@ export default function ComprehensiveServicesOverview() {}
               </div>) : (<div className="grid grid - cols - 1 lg:grid - cols - 2 gap-6">;
                 {filteredServices.map((service, index) => (<motion.div key={service.id} initial = {}
   { opacity: 0,;
-  x: -20;,
-}} animate = {}
+  x: -20}} animate = {}
   { opacity: 1,;
   x: 0;
-";,
-}} transition={{ delay: index * 0.05 }}>"";
+"}} transition={{ delay: index * 0.05 }}>"";
                     <Card className="bg-white/5 backdrop-blur-lg border-white/10 hover:bg-white/10 transition-all duration-300 group">";
                       <CardHeader>"";
                         <div className="flex items-start justify-between mb-4">';
@@ -221,8 +217,7 @@ export default function ComprehensiveServicesOverview() {}
                             {React.createElement(categoryIcons[service.category] || Settings, {}
 ";
 "";
-                    className: "h-6 w-6 text-white";,
-})}";
+                    className: "h-6 w-6 text-white"})}";
                           </div>"'"`;
                           <div className="text-right">'`'`;
                             {service.supportLevel && (<Badge className={`${supportLevelColors[service.supportLevel] || 'bg-gray-500'} text-white mb-2`}>;
@@ -352,15 +347,11 @@ export default function ComprehensiveServicesOverview() {}
         </div>;
       </div>;
     </>)}
-;
 
-export { ALL_SERVICES, ComprehensiveServicesOverview };
-;
-export { ALL_SERVICES, ComprehensiveServicesOverview };
-;
-export { ALL_SERVICES, ComprehensiveServicesOverview };
-;
-export { ALL_SERVICES, ComprehensiveServicesOverview };
-;
-export { ALL_SERVICES, ComprehensiveServicesOverview };
+
+export { ALL_SERVICES, ComprehensiveServicesOverview }
+export { ALL_SERVICES, ComprehensiveServicesOverview }
+export { ALL_SERVICES, ComprehensiveServicesOverview }
+export { ALL_SERVICES, ComprehensiveServicesOverview }
+export { ALL_SERVICES, ComprehensiveServicesOverview }
 ))

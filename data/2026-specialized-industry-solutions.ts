@@ -1,4 +1,4 @@
-export interface SpecializedIndustrySolution {;
+export interface SpecializedIndustrySolution {
   id: string;
   name: string;
   tagline: string;
@@ -24,7 +24,7 @@ export interface SpecializedIndustrySolution {;
   competitors: string[];
   marketSize: string;
   growthRate: string;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -34,18 +34,17 @@ export interface SpecializedIndustrySolution {;
   launchDate: string;
   customers: number;
   rating: number;
-const contact = {;
+const contact = {
   mobile: "+1 302 464 0950",;
   email: "kleber@ziontechgroup.com",;
   address: "364 E Main St STE 1008 Middletown DE 19709";
-  ;
-  ;
-  ;
-  ;
-  website: "https://ziontechgroup.com";,;,
-}
+
+
+
+
+  website: "https://ziontechgroup.com"}
 export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [;
-  {;
+  {
     id: "healthcare-ai-diagnostic-platform",;
     name: "Healthcare AI Diagnostic Platform",;
     tagline: "Advanced AI-powered diagnostic tools for healthcare professionals",;
@@ -88,9 +87,8 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     launchDate: "2024-06-15",;
     customers: 28,;
     rating: 4.9,;
-    reviews: 22;,;,
-},;
-  {;
+    reviews: 22},;
+  {
     id: "fintech-blockchain-platform",;
     name: "FinTech Blockchain Platform",;
     tagline: "Secure, scalable blockchain solutions for financial services",;
@@ -133,9 +131,8 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     launchDate: "2024-05-01",;
     customers: 35,;
     rating: 4.8,;
-    reviews: 31;,;,
-},;
-  {;
+    reviews: 31},;
+  {
     id: "manufacturing-iot-platform",;
     name: "Manufacturing IoT Platform",;
     tagline: "Comprehensive IoT solution for smart manufacturing and Industry 4.0",;
@@ -178,9 +175,8 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     launchDate: "2024-04-15",;
     customers: 42,;
     rating: 4.7,;
-    reviews: 38;,;,
-},;
-  {;
+    reviews: 38},;
+  {
     id: "retail-ai-optimization-platform",;
     name: "Retail AI Optimization Platform",;
     tagline: "AI-powered retail optimization for enhanced customer experience and profitability",;
@@ -223,9 +219,8 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     launchDate: "2024-03-01",;
     customers: 55,;
     rating: 4.8,;
-    reviews: 47;,;,
-},;
-  {;
+    reviews: 47},;
+  {
     id: "logistics-supply-chain-ai",;
     name: "Logistics & Supply Chain AI Platform",;
     tagline: "Intelligent logistics optimization and supply chain management",;

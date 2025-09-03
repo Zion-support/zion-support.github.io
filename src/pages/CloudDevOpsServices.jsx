@@ -26,15 +26,14 @@ const CloudDevOpsServices = () => {}
             case 'Infrastructure': return <Server className="w-6 h-6"/>;'"'";
             case 'Security': return <Shield className="w-6 h-6"/>;"";
             default: return <Code className="w-6 h-6"/>}
-    };
+    }
     const getPricingColor = (pricing) => {}
         switch (pricing) {}
 ';
             case 'Enterprise': return 'text-purple-400';';
             case 'Professional': return 'text-blue-400';';
             case 'Standard': return 'text-green-400';';
-            default: return 'text-gray-400'}";,
-};"";
+            default: return 'text-gray-400'}"};"";
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">"";
       <div className="container mx-auto px-4 py-8">";
         {/* Header */}"";
@@ -156,16 +155,11 @@ const CloudDevOpsServices = () => {}
           </div>;
         </div>;
       </div>;
-    </div>)};
-export default CloudDevOpsServices;,
-}}}}
-;
-export { CloudDevOpsServices };
-;
-export { CloudDevOpsServices };
-;
-export { CloudDevOpsServices };
-;
-export { CloudDevOpsServices };
-;
-export { CloudDevOpsServices };
+    </div>)}
+export default CloudDevOpsServices}}}}
+
+export { CloudDevOpsServices }
+export { CloudDevOpsServices }
+export { CloudDevOpsServices }
+export { CloudDevOpsServices }
+export { CloudDevOpsServices }

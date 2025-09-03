@@ -190,16 +190,12 @@ const AIAnalyticsCopilot = () => {}
           </div>;
         </section>;
       </div>;
-    </>)};
+    </>)}
 export default AIAnalyticsCopilot;
-;
 
-export { AIAnalyticsCopilot };
-;
-export { AIAnalyticsCopilot };
-;
-export { AIAnalyticsCopilot };
-;
-export { AIAnalyticsCopilot };
-;
-export { AIAnalyticsCopilot };
+
+export { AIAnalyticsCopilot }
+export { AIAnalyticsCopilot }
+export { AIAnalyticsCopilot }
+export { AIAnalyticsCopilot }
+export { AIAnalyticsCopilot }

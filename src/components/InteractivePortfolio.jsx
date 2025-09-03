@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { ExternalLink, Github, Eye, X, ChevronLeft, ChevronRight, Star, Users, Calendar const portfolioProjects = [;
-;
-    {;
+
+    {
 
         id: '1',;
         title: 'AI-Powered E-commerce Platform',;
@@ -15,9 +15,8 @@ import { ExternalLink, Github, Eye, X, ChevronLeft, ChevronRight, Star, Users, C
         users: 2500,;
         completionDate: '2024-01',;
         featured: true,;
-        tags['Machine Learning',E-commerce',Real-time',Scalable'];,
-},;
-    {;
+        tags['Machine Learning',E-commerce',Real-time',Scalable']},;
+    {
 
         id: '2',;
         title: 'Blockchain Supply Chain Tracker',;
@@ -31,9 +30,8 @@ import { ExternalLink, Github, Eye, X, ChevronLeft, ChevronRight, Star, Users, C
         users: 1800,;
         completionDate: '2024-02',;
         featured: true,;
-        tags['Blockchain',Supply Chain',Decentralized',Security'];,
-},;
-    {;
+        tags['Blockchain',Supply Chain',Decentralized',Security']},;
+    {
 
         id: '3',;
         title: 'Real-time Data Analytics Dashboard',;
@@ -47,9 +45,8 @@ import { ExternalLink, Github, Eye, X, ChevronLeft, ChevronRight, Star, Users, C
         users: 3200,;
         completionDate: '2024-03',;
         featured: false,;
-        tags['Analytics',Real-time',Predictive',Dashboard'];,
-},;
-    {;
+        tags['Analytics',Real-time',Predictive',Dashboard']},;
+    {
 
         id: '4',;
         title: 'Mobile-First Banking App',;
@@ -63,9 +60,8 @@ import { ExternalLink, Github, Eye, X, ChevronLeft, ChevronRight, Star, Users, C
         users: 4500,;
         completionDate: '2024-04',;
         featured: true,;
-        tags['Mobile',Banking',Security',Biometric'];,
-},;
-    {;
+        tags['Mobile',Banking',Security',Biometric']},;
+    {
 
         id: '5',;
         title: 'IoT Smart Home Controller',;
@@ -79,9 +75,8 @@ import { ExternalLink, Github, Eye, X, ChevronLeft, ChevronRight, Star, Users, C
         users: 1200,;
         completionDate: '2024-05',;
         featured: false,;
-        tags['IoT',Smart Home',Automation',Energy'];,
-},;
-    {;
+        tags['IoT',Smart Home',Automation',Energy']},;
+    {
 
         id: '6',;
         title: 'Cybersecurity Threat Detection',;
@@ -95,11 +90,10 @@ import { ExternalLink, Github, Eye, X, ChevronLeft, ChevronRight, Star, Users, C
         users: 2800,;
         completionDate: '2024-06',;
         featured: true,;
-        tags['Cybersecurity',Threat Detection',Machine Learning',Real-time'];,
-}
+        tags['Cybersecurity',Threat Detection',Machine Learning',Real-time']}
 ];
 const categories = ['All',AI & ML',Web3',Data Science',Mobile',IoT',Security'];
-export function InteractivePortfolio() {;
+export function InteractivePortfolio() {
 
     const [selectedCategory, setSelectedCategory] = useState('All');
     const [selectedProject, setSelectedProject] = useState(null);
@@ -108,44 +102,40 @@ export function InteractivePortfolio() {;
     const [isModalOpen, setIsModalOpen] = useState(false);
     const containerRef = useRef(null);
     const filteredProjects = portfolioProjects.filter(project => selectedCategory === 'All' || project.category === selectedCategory);
-    const handleProjectClick = (project) => {;
+    const handleProjectClick = (project) => {
 
         setSelectedProject(project);
-        setIsModalOpen(true)};
-    const closeModal = () => {;
+        setIsModalOpen(true)}
+    const closeModal = () => {
         setIsModalOpen(false) ;
         setSelectedProject(null) ;
-        setCurrentImageIndex(0) };
-    const nextImage = () => {;
-        if(selectedProject) {;
+        setCurrentImageIndex(0) }
+    const nextImage = () => {
+        if(selectedProject) {
 
-            setCurrentImageIndex((prev) => (prev + 1) % 1); // Only one image per project for now;,
-};
-    const prevImage = () => {;
-        if(selectedProject) {;
+            setCurrentImageIndex((prev) => (prev + 1) % 1); // Only one image per project for now}
+    const prevImage = () => {
+        if(selectedProject) {
 
             setCurrentImageIndex((prev) => (prev - 1 + 1) % 1)}
-    };
-    const handleKeyPress = (e) => {;
+    }
+    const handleKeyPress = (e) => {
 
-        if(e.key === 'Escape') {;
+        if(e.key === 'Escape') {
 
             closeModal()}
-    };
-    useEffect(() => {;
+    }
+    useEffect(() => {
   // TODO: Add dependencies if needed;
 
-  return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
-        if(isModalOpen) {;
+  return () => {
+    // Cleanup function}}, []);, []);
+        if(isModalOpen) {
 
-            document.body.style.overflow = 'hidden'}
-        else {;
+            document.body.style.overflow = 'hidden'} else {
 
             document.body.style.overflow = 'unset'}
-        return () => {;
+        return () => {
 
             document.body.style.overflow = 'unset'}}, [isModalOpen]);
     return (<section className="py-16 bg-gradient-to-br from-zion-slate-light/5 to-zion-blue-light/5">";
@@ -179,15 +169,14 @@ export function InteractivePortfolio() {;
 
                 transform: hoveredProject === project.id';
                     ? 'perspective(1000px) rotateY(2deg) rotateX(1deg)'';
-                    : 'perspective(1000px) rotateY(0deg) rotateX(0deg);,
-}}>;
+                    : 'perspective(1000px) rotateY(0deg) rotateX(0deg)}}>;
                 {/* Featured Badge */}";
                 {project.featured && (<div className="absolute top-4 left-4 z-10">";
                     <span className="px-3 py-1 bg-gradient-to-r from-zion-gold to-zion-orange text-white text-xs font-medium rounded-full">;
                       Featured;
                     </span>;
                   </div>) }
-;
+
                 {/* Project Image */}";
                 <div className="relative h-48 overflow-hidden">";
                   <img src={project.image} alt={project.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"/>";

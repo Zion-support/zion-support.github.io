@@ -1,29 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import { INNOVATIVE_SERVICES_2025, INNOVATIVE_SERVICE_CATEGORIES_2025, INNOVATIVE_SERVICE_SUBCATEGORIES_2025, INNOVATIVE_PRICING_TIERS_2025, INNOVATIVE_CONTACT_INFO_2025, INNOVATIVE_SERVICE_GUARANTEES_2025 } from '@/data / innovativeServices2025';
-;
-export default function Page() {;
-    if(sortOrder === 'asc') {;
 
-      return aValue > bValue ? 1 : -1} else {;
+export default function Page() {
+    if(sortOrder === 'asc') {
+
+      return aValue > bValue ? 1 : -1} else {
 
       return aValue < bValue ? 1 : -1}
   }) ;
-;
-  const getCategoryIcon = (category: anystring) => {;
+
+  const getCategoryIcon = (category: anystring) => {
     if(category === 'all') return < Rocket className="w-6 h-6" />;
     return INNOVATIVE_SERVICE_CATEGORIES_2025[category]?.icon ?;
       <span className="text-2xl">{INNOVATIVE_SERVICE_CATEGORIES_2025[category].icon}</span> :;
-      <Rocket className="w-6 h-6" />;,
-};
-    return INNOVATIVE_SERVICE_CATEGORIES_2025[category]?.color || 'from-gray-500 to-slate-500'};
-;
-    setShowModal(true)};
-;
-  const closeModal = () => {;
+      <Rocket className="w-6 h-6" />}
+    return INNOVATIVE_SERVICE_CATEGORIES_2025[category]?.color || 'from-gray-500 to-slate-500'}
+    setShowModal(true)}
+  const closeModal = () => {
     setShowModal(false) ;
-    setSelectedService(null) ;,
-};
-;
+    setSelectedService(null) }
   return (<div  className="min - h-screen futuristic -bg">;
       {/* Matrix Rain Background Effect */}
       <div  className="matrix -rain"></div>;
@@ -123,8 +118,7 @@ export default function Page() {;
                   onClick={() => setSelectedCategory(category)}`;
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${selectedCategory === category';
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white'';
-                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50'`;,
-}`}
+                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50'`}`}
                 >";
                   <div className="flex items-center gap-2">;
                     {getCategoryIcon(category)}'";
@@ -138,21 +132,19 @@ export default function Page() {;
               <div className="flex bg-gray-800/50 rounded-lg p-1">;
                 <button';
                   onClick={() => setViewMode('grid')}`;
-                  className={`p-2 rounded-md transition-all duration-300 ${viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white'`;,
-}`}
+                  className={`p-2 rounded-md transition-all duration-300 ${viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white'`}`}
                 >";
                   <Grid className="w-5 h-5"  />                </button>;
                                   <button';
                     onClick={() => setViewMode('list')}`;
-                    className={`p-2 rounded-md transition-all duration-300 ${viewMode === 'list' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white'`;,
-}`}
+                    className={`p-2 rounded-md transition-all duration-300 ${viewMode === 'list' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white'`}`}
                   >";
                   <List className="w-5 h-5"  />                </button>;
               </div>;
 
               <select`;
                 value={`${sortBy}-${sortOrder}`}
-                onChange={(e) => {;
+                onChange={(e) => {
 
                   const [newSortBy, newSortOrder] = e.target.value.split('-');
                   setSortBy(newSortBy as );

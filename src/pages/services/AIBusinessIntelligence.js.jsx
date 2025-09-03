@@ -8,29 +8,25 @@ const AIBusinessIntelligence = () => {}
             icon: Brain,;
             title: "AI-Powered Analytics","";
             description: "Advanced machine learning algorithms that automatically identify patterns, trends, and insights from your data","";
-            benefits["Predictive modeling", "Anomaly detection", "Pattern recognition", "Automated insights"];,
-},;
+            benefits["Predictive modeling", "Anomaly detection", "Pattern recognition", "Automated insights"]},;
         {}
 ";
             icon: BarChart3,"";
             title: "Real-time Dashboards","";
             description: "Interactive, customizable dashboards that provide instant visibility into key business metrics","";
-            benefits["Live data updates", "Customizable views", "Role-based access", "Mobile responsive"];,
-},;
+            benefits["Live data updates", "Customizable views", "Role-based access", "Mobile responsive"]},;
         {}
 ";
             icon: TrendingUp,"";
             title: "Predictive Analytics","";
             description: "Forecast future trends and outcomes using historical data and advanced statistical models","";
-            benefits["Sales forecasting", "Demand planning", "Risk assessment", "Trend prediction"];,
-},;
+            benefits["Sales forecasting", "Demand planning", "Risk assessment", "Trend prediction"]},;
         {}
 ";
             icon: Target,"";
             title: "Performance Tracking","";
             description: "Monitor and measure business performance against goals and benchmarks in real-time","";
-            benefits["KPI monitoring", "Goal tracking", "Benchmarking", "Performance alerts"];,
-}
+            benefits["KPI monitoring", "Goal tracking", "Benchmarking", "Performance alerts"]}
     ];
     const solutions = [];
         {}
@@ -44,8 +40,7 @@ const AIBusinessIntelligence = () => {}
                 "Campaign performance optimization","";
                 "Market trend analysis","";
                 "Customer lifetime value prediction";
-            ];,
-},;
+            ]},;
         {}
 ";
 "";
@@ -57,8 +52,7 @@ const AIBusinessIntelligence = () => {}
                 "Operational efficiency analysis","";
                 "Quality control monitoring","";
                 "Resource allocation optimization";
-            ];,
-},;
+            ]},;
         {}
 ";
 "";
@@ -70,8 +64,7 @@ const AIBusinessIntelligence = () => {}
                 "Profitability analysis","";
                 "Cash flow prediction","";
                 "Investment decision support";
-            ];,
-},;
+            ]},;
         {}
 ";
 "";
@@ -83,8 +76,7 @@ const AIBusinessIntelligence = () => {}
                 "Workforce planning","";
                 "Employee retention prediction","";
                 "Training effectiveness analysis";
-            ];,
-}
+            ]}
     ];
     const technologies = [];
         {}
@@ -92,65 +84,55 @@ const AIBusinessIntelligence = () => {}
 "";
             name: "Machine Learning","";
             description: "Advanced ML algorithms for pattern recognition and prediction",;
-            icon: Brain;,
-},;
+            icon: Brain},;
         {}
 ";
 "";
             name: "Big Data Processing","";
             description: "Scalable data processing for large datasets",;
-            icon: Database;,
-},;
+            icon: Database},;
         {}
 ";
 "";
             name: "Real-time Analytics","";
             description: "Instant data processing and insights delivery",;
-            icon: Zap;,
-},;
+            icon: Zap},;
         {}
 ";
 "";
             name: "Cloud Infrastructure","";
             description: "Scalable cloud-based BI platform",;
-            icon: Globe;,
-},;
+            icon: Globe},;
         {}
 ";
 "";
             name: "Data Security","";
             description: "Enterprise-grade security and compliance",;
-            icon: Shield;,
-},;
+            icon: Shield},;
         {}
 ";
 "";
             name: "24/7 Monitoring","";
             description: "Continuous monitoring and alerting",;
-            icon: Clock;,
-}
+            icon: Clock}
     ];
     const containerVariants = {}
         hidden: { opacity: 0 },;
         visible: {}
             opacity: 1,;
             transition: {}
-                staggerChildren: 0.1;,
-}
+                staggerChildren: 0.1}
         }
-    };
+    }
     const itemVariants = {}
   hidden: { y: 20,;
-  opacity: 0;,
-},;
+  opacity: 0},;
         visible: {}
             y: 0,;
             opacity: 1,;
             transition: {}
-                duration: 0.5;,
-}
-        }";,
-};"";
+                duration: 0.5}
+        }"};"";
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
       {/* Hero Section */}"";
       <div className="relative overflow-hidden">"";
@@ -159,12 +141,10 @@ const AIBusinessIntelligence = () => {}
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">;
           <motion.div initial = {}
   { opacity: 0,;
-  y: 20;,
-}} animate = {}
+  y: 20}} animate = {}
   { opacity: 1,;
   y: 0 ";
-"";,
-}} transition={{ duration: 0.8 }} className="text-center">"";
+""}} transition={{ duration: 0.8 }} className="text-center">"";
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full mb-6">"";
               <TrendingUp className="w-10 h-10 text-white"/>";
             </div>"";
@@ -229,12 +209,10 @@ const AIBusinessIntelligence = () => {}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">;
           <motion.div initial = {}
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
+  y: 20}} whileInView = {}
   { opacity: 1,;
   y: 0 ";
-"";,
-}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">"";
+""}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">"";
             <h2 className="text-4xl font-bold text-white mb-6">Solutions by Industry</h2>"";
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
               Tailored AI Business Intelligence solutions designed to address the unique challenges;
@@ -245,15 +223,12 @@ const AIBusinessIntelligence = () => {}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
             {solutions.map((category, index) => (<motion.div key={category.category} initial = {}
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
+  y: 20}} whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}} viewport={{ once: true }} transition = {}
+  y: 0}} viewport={{ once: true }} transition = {}
   { duration: 0.5,;
   delay: index * 0.1 ";
-"";,
-}} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6">"";
+""}} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6">"";
                 <div className="flex items-center mb-6">"";
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mr-4">"";
                     <category.icon className="w-6 h-6 text-white"/>";
@@ -276,12 +251,10 @@ const AIBusinessIntelligence = () => {}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">;
         <motion.div initial = {}
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
+  y: 20}} whileInView = {}
   { opacity: 1,;
   y: 0 ";
-"";,
-}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">"";
+""}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">"";
           <h2 className="text-4xl font-bold text-white mb-6">Technology Stack</h2>"";
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
             Built on cutting-edge technologies to ensure scalability, performance, and reliability;
@@ -292,15 +265,12 @@ const AIBusinessIntelligence = () => {}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
           {technologies.map((tech, index) => (<motion.div key={tech.name} initial = {}
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
+  y: 20}} whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}} viewport={{ once: true }} transition = {}
+  y: 0}} viewport={{ once: true }} transition = {}
   { duration: 0.5,;
   delay: index * 0.1 ";
-"";,
-}} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 text-center hover:border-blue-500/50 transition-all duration-300">"";
+""}} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 text-center hover:border-blue-500/50 transition-all duration-300">"";
               <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">"";
                 <tech.icon className="w-8 h-8 text-white"/>";
               </div>"";
@@ -315,12 +285,10 @@ const AIBusinessIntelligence = () => {}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">;
           <motion.div initial = {}
   { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
+  y: 20}} whileInView = {}
   { opacity: 1,;
   y: 0 ";
-"";,
-}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center">"";
+""}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center">"";
             <h2 className="text-4xl font-bold text-white mb-6">;
               Ready to Transform Your Business Intelligence?";
             </h2>"";
@@ -339,16 +307,12 @@ const AIBusinessIntelligence = () => {}
           </motion.div>;
         </div>;
       </div>;
-    </div>)};
+    </div>)}
 export default AIBusinessIntelligence;
-;
 
-export { AIBusinessIntelligence };
-;
-export { AIBusinessIntelligence };
-;
-export { AIBusinessIntelligence };
-;
-export { AIBusinessIntelligence };
-;
-export { AIBusinessIntelligence };
+
+export { AIBusinessIntelligence }
+export { AIBusinessIntelligence }
+export { AIBusinessIntelligence }
+export { AIBusinessIntelligence }
+export { AIBusinessIntelligence }

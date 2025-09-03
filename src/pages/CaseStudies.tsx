@@ -1,7 +1,7 @@
 import React from 'react';
 import { SEO } from '../components/SEO';
-;
-const CaseStudies: React.FC = () => {;
+
+const CaseStudies: React.FC = () => {
   return(<>;
       <SEO title="CaseStudies - Zion Tech Group" />;
       <div className="min-h-screen bg-white py-20">;
@@ -11,7 +11,5 @@ const CaseStudies: React.FC = () => {;
         </div>;
       </div>;
     </>;
-  );,
-};
-;
+  )}
 export default CaseStudies;

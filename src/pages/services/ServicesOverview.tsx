@@ -35,74 +35,64 @@ import { ;
   MessageCircle,;
   Phone,;
   Mail,;
-  MapPin;,
-} from 'lucide-react';
+  MapPin} from 'lucide-react';
 import { motion } from 'framer-motion';
-;
-const ServicesOverview: React.FC = () => {;
+
+const ServicesOverview: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-;
+
   const serviceCategories = [;
-    {;
+    {
       id: 'all',;
       name: 'All Services',;
       icon: Star,;
-      count: 0;,
-},;
-    {;
+      count: 0},;
+    {
       id: 'ai-ml',;
       name: 'AI & Machine Learning',;
       icon: Brain,;
-      count: 0;,
-},;
-    {;
+      count: 0},;
+    {
       id: 'cybersecurity',;
       name: 'Cybersecurity',;
       icon: Shield,;
-      count: 0;,
-},;
-    {;
+      count: 0},;
+    {
       id: 'cloud-devops',;
       name: 'Cloud & DevOps',;
       icon: Cloud,;
-      count: 0;,
-},;
-    {;
+      count: 0},;
+    {
       id: 'blockchain',;
       name: 'Blockchain & Web3',;
       icon: Network,;
-      count: 0;,
-},;
-    {;
+      count: 0},;
+    {
       id: 'quantum',;
       name: 'Quantum Computing',;
       icon: Cpu,;
-      count: 0;,
-},;
-    {;
+      count: 0},;
+    {
       id: 'iot-edge',;
       name: 'IoT & Edge Computing',;
       icon: Smartphone,;
-      count: 0;,
-},;
-    {;
+      count: 0},;
+    {
       id: 'data-analytics',;
       name: 'Data & Analytics',;
       icon: BarChart3,;
-      count: 0;,
-},;
-    {;
+      count: 0},;
+    {
       id: 'specialized',;
       name: 'Specialized Solutions',;
       icon: Target,;
-      count: 0;,
-}
+      count: 0}
   ];
-;
+
   const allServices = [;
     // AI & Machine Learning;
-    {;
+    {
       id: 'ai-autonomous-business-intelligence',;
       name: 'AI Autonomous Business Intelligence',;
       description: 'Transform your business with AI-powered autonomous intelligence that continuously analyzes, predicts, and optimizes operations.',;
@@ -112,9 +102,8 @@ const ServicesOverview: React.FC = () => {;
       features: ['Autonomous Data Analysis', 'Predictive Analytics', 'Real-time Processing', 'Enterprise Security'],;
       href: '/services/ai-autonomous-business-intelligence',;
       popular: true,;
-      tags: ['AI', 'Business Intelligence', 'Analytics', 'Automation'];,
-},;
-    {;
+      tags: ['AI', 'Business Intelligence', 'Analytics', 'Automation']},;
+    {
       id: 'ai-cybersecurity-platform',;
       name: 'AI Cybersecurity Platform',;
       description: 'Next-generation cybersecurity powered by artificial intelligence with autonomous threat detection and response.',;
@@ -124,9 +113,8 @@ const ServicesOverview: React.FC = () => {;
       features: ['AI Threat Detection', 'Zero-Day Prevention', 'Automated Response', 'Multi-Layer Security'],;
       href: '/services/ai-cybersecurity-platform',;
       popular: true,;
-      tags: ['AI', 'Cybersecurity', 'Threat Detection', 'Security'];,
-},;
-    {;
+      tags: ['AI', 'Cybersecurity', 'Threat Detection', 'Security']},;
+    {
       id: 'ai-threat-intelligence',;
       name: 'AI Threat Intelligence Platform',;
       description: 'Advanced threat intelligence powered by AI for proactive cybersecurity defense.',;
@@ -136,9 +124,8 @@ const ServicesOverview: React.FC = () => {;
       features: ['Real-time Monitoring', 'Predictive Analysis', 'Global Intelligence', 'Automated Alerts'],;
       href: '/services/ai-threat-intelligence',;
       popular: false,;
-      tags: ['AI', 'Threat Intelligence', 'Cybersecurity', 'Monitoring'];,
-},;
-    {;
+      tags: ['AI', 'Threat Intelligence', 'Cybersecurity', 'Monitoring']},;
+    {
       id: 'ai-workflow-automation',;
       name: 'AI Workflow Automation',;
       description: 'Intelligent workflow automation that learns and adapts to optimize business processes.',;
@@ -148,9 +135,8 @@ const ServicesOverview: React.FC = () => {;
       features: ['Process Automation', 'Intelligent Routing', 'Performance Analytics', 'Custom Workflows'],;
       href: '/services/ai-workflow-automation',;
       popular: false,;
-      tags: ['AI', 'Automation', 'Workflow', 'Process Optimization'];,
-},;
-    {;
+      tags: ['AI', 'Automation', 'Workflow', 'Process Optimization']},;
+    {
       id: 'ai-content-creation',;
       name: 'AI Content Creation Studio',;
       description: 'AI-powered content creation platform for marketing, social media, and business communications.',;
@@ -160,9 +146,8 @@ const ServicesOverview: React.FC = () => {;
       features: ['Content Generation', 'Multi-format Support', 'Brand Consistency', 'Performance Analytics'],;
       href: '/services/ai-content-creation',;
       popular: false,;
-      tags: ['AI', 'Content Creation', 'Marketing', 'Automation'];,
-},;
-    {;
+      tags: ['AI', 'Content Creation', 'Marketing', 'Automation']},;
+    {
       id: 'ai-legal-tech',;
       name: 'AI Legal Tech Platform',;
       description: 'Comprehensive legal technology solutions powered by artificial intelligence.',;
@@ -172,9 +157,8 @@ const ServicesOverview: React.FC = () => {;
       features: ['Document Analysis', 'Legal Research', 'Compliance Monitoring', 'Contract Management'],;
       href: '/services/ai-legal-tech',;
       popular: false,;
-      tags: ['AI', 'Legal Tech', 'Compliance', 'Documentation'];,
-},;
-    {;
+      tags: ['AI', 'Legal Tech', 'Compliance', 'Documentation']},;
+    {
       id: 'ai-healthcare',;
       name: 'AI Healthcare Platform',;
       description: 'AI-powered healthcare solutions for diagnosis, treatment planning, and patient care.',;
@@ -184,9 +168,8 @@ const ServicesOverview: React.FC = () => {;
       features: ['Diagnostic Support', 'Treatment Planning', 'Patient Monitoring', 'Data Analytics'],;
       href: '/services/ai-healthcare',;
       popular: false,;
-      tags: ['AI', 'Healthcare', 'Diagnostics', 'Patient Care'];,
-},;
-    {;
+      tags: ['AI', 'Healthcare', 'Diagnostics', 'Patient Care']},;
+    {
       id: 'ai-financial-advisor',;
       name: 'AI Personal Finance Advisor',;
       description: 'Intelligent financial planning and investment advice powered by AI.',;
@@ -196,9 +179,8 @@ const ServicesOverview: React.FC = () => {;
       features: ['Financial Planning', 'Investment Advice', 'Risk Assessment', 'Portfolio Management'],;
       href: '/services/ai-financial-advisor',;
       popular: false,;
-      tags: ['AI', 'Finance', 'Investment', 'Planning'];,
-},;
-    {;
+      tags: ['AI', 'Finance', 'Investment', 'Planning']},;
+    {
       id: 'blockchain-supply-chain',;
       name: 'Blockchain Supply Chain Platform',;
       description: 'Transparent and secure supply chain management powered by blockchain technology.',;
@@ -208,9 +190,8 @@ const ServicesOverview: React.FC = () => {;
       features: ['Supply Chain Tracking', 'Smart Contracts', 'Transparency', 'Security'],;
       href: '/services/blockchain-supply-chain',;
       popular: false,;
-      tags: ['Blockchain', 'Supply Chain', 'Transparency', 'Security'];,
-},;
-    {;
+      tags: ['Blockchain', 'Supply Chain', 'Transparency', 'Security']},;
+    {
       id: 'quantum-computing',;
       name: 'Quantum Computing as a Service',;
       description: 'Access to quantum computing resources for complex computational problems.',;
@@ -220,9 +201,8 @@ const ServicesOverview: React.FC = () => {;
       features: ['Quantum Processing', 'Algorithm Optimization', 'Research Support', 'Expert Consultation'],;
       href: '/services/quantum-computing',;
       popular: false,;
-      tags: ['Quantum Computing', 'Research', 'Optimization', 'Advanced Computing'];,
-},;
-    {;
+      tags: ['Quantum Computing', 'Research', 'Optimization', 'Advanced Computing']},;
+    {
       id: 'iot-edge-computing',;
       name: 'IoT Edge Computing Platform',;
       description: 'Edge computing solutions for IoT devices with real-time processing capabilities.',;
@@ -232,9 +212,8 @@ const ServicesOverview: React.FC = () => {;
       features: ['Edge Processing', 'IoT Integration', 'Real-time Analytics', 'Device Management'],;
       href: '/services/iot-edge-computing',;
       popular: false,;
-      tags: ['IoT', 'Edge Computing', 'Real-time', 'Device Management'];,
-},;
-    {;
+      tags: ['IoT', 'Edge Computing', 'Real-time', 'Device Management']},;
+    {
       id: 'cloud-devops',;
       name: 'Cloud Infrastructure & DevOps',;
       description: 'Comprehensive cloud infrastructure and DevOps automation services.',;
@@ -244,9 +223,8 @@ const ServicesOverview: React.FC = () => {;
       features: ['Cloud Migration', 'DevOps Automation', 'Infrastructure Management', 'Monitoring'],;
       href: '/services/cloud-devops',;
       popular: false,;
-      tags: ['Cloud', 'DevOps', 'Infrastructure', 'Automation'];,
-},;
-    {;
+      tags: ['Cloud', 'DevOps', 'Infrastructure', 'Automation']},;
+    {
       id: 'data-analytics',;
       name: 'Data Analytics & Business Intelligence',;
       description: 'Advanced data analytics and business intelligence solutions for data-driven decisions.',;
@@ -256,9 +234,8 @@ const ServicesOverview: React.FC = () => {;
       features: ['Data Visualization', 'Predictive Analytics', 'Real-time Dashboards', 'Custom Reports'],;
       href: '/services/data-analytics',;
       popular: false,;
-      tags: ['Data Analytics', 'Business Intelligence', 'Visualization', 'Reporting'];,
-},;
-    {;
+      tags: ['Data Analytics', 'Business Intelligence', 'Visualization', 'Reporting']},;
+    {
       id: 'sustainability-analytics',;
       name: 'AI Sustainability Analytics Platform',;
       description: 'AI-powered sustainability analytics for environmental impact assessment and optimization.',;
@@ -268,9 +245,8 @@ const ServicesOverview: React.FC = () => {;
       features: ['Environmental Impact', 'Sustainability Metrics', 'Optimization', 'Reporting'],;
       href: '/services/ai-sustainability-analytics',;
       popular: false,;
-      tags: ['AI', 'Sustainability', 'Environmental', 'Analytics'];,
-},;
-    {;
+      tags: ['AI', 'Sustainability', 'Environmental', 'Analytics']},;
+    {
       id: 'digital-transformation',;
       name: 'Digital Transformation Services',;
       description: 'End-to-end digital transformation consulting and implementation services.',;
@@ -280,33 +256,28 @@ const ServicesOverview: React.FC = () => {;
       features: ['Strategy Development', 'Technology Implementation', 'Change Management', 'Training'],;
       href: '/services/digital-transformation',;
       popular: false,;
-      tags: ['Digital Transformation', 'Consulting', 'Implementation', 'Strategy'];,
-}
+      tags: ['Digital Transformation', 'Consulting', 'Implementation', 'Strategy']}
   ];
-;
+
   // Calculate category counts;
-  serviceCategories.forEach(category => {;
+  serviceCategories.forEach(category => {
     category.count = allServices.filter(service => ;
       category.id === 'all' || service.category === category.id;
-    ).length;,
-});
-;
+    ).length});
+
   // Filter services based on search and category;
-  const filteredServices = allServices.filter(service => {;
+  const filteredServices = allServices.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    return matchesSearch && matchesCategory;,
-});
-;
-  const contactInfo = {;
+    return matchesSearch && matchesCategory});
+
+  const contactInfo = {
     phone: '+1 302 464 0950',;
     email: 'kleber@ziontechgroup.com',;
     address: '364 E Main St STE 1008 Middletown DE 19709',;
-    website: 'https://ziontechgroup.com';,
-};
-;
+    website: 'https://ziontechgroup.com'}
   return (;
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">;
       {/* Hero Section */}
@@ -358,7 +329,7 @@ const ServicesOverview: React.FC = () => {;
                 />;
               </div>;
             </div>;
-            ;
+
             <div className="flex flex-wrap gap-2">;
               {serviceCategories.map((category) => (;
                 <button;
@@ -367,8 +338,7 @@ const ServicesOverview: React.FC = () => {;
                   className={`flex items-center space-x-2 px-4 py-2 rounded-lg font-medium transition-colors ${;
                     selectedCategory === category.id;
                       ? 'bg-cyan-500 text-white';
-                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200';,
-}`}
+                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
                 >;
                   <category.icon className="w-4 h-4" />;
                   <span>{category.name}</span>;
@@ -392,11 +362,10 @@ const ServicesOverview: React.FC = () => {;
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
               {searchTerm || selectedCategory !== 'all' ;
                 ? `Showing results for "${searchTerm || serviceCategories.find(c => c.id === selectedCategory)?.name}"`;
-                : 'Explore our comprehensive range of innovative technology services';,
-}
+                : 'Explore our comprehensive range of innovative technology services'}
             </p>;
           </div>;
-          ;
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {filteredServices.map((service, index) => (;
               <motion.div;
@@ -407,8 +376,7 @@ const ServicesOverview: React.FC = () => {;
                 className={`relative bg-white p-8 rounded-xl shadow-lg border-2 hover:shadow-xl transition-all duration-300 ${;
                   service.popular ;
                     ? 'border-cyan-500 shadow-cyan-100' ;
-                    : 'border-gray-200 hover:border-cyan-300';,
-}`}
+                    : 'border-gray-200 hover:border-cyan-300'}`}
               >;
                 {service.popular && (;
                   <div className="absolute -top-3 left-6">;
@@ -417,7 +385,6 @@ const ServicesOverview: React.FC = () => {;
                     </span>;
                   </div>;
                 )}
-                ;
                 <div className="mb-6">;
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-4">;
                     <service.icon className="w-8 h-8 text-white" />;
@@ -426,7 +393,7 @@ const ServicesOverview: React.FC = () => {;
                   <p className="text-gray-600 text-sm leading-relaxed mb-4">{service.description}</p>;
                   <div className="text-2xl font-bold text-cyan-600 mb-4">{service.price}</div>;
                 </div>;
-                ;
+
                 <div className="mb-6">;
                   <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>;
                   <ul className="space-y-2">;
@@ -438,7 +405,7 @@ const ServicesOverview: React.FC = () => {;
                     ))}
                   </ul>;
                 </div>;
-                ;
+
                 <div className="mb-6">;
                   <div className="flex flex-wrap gap-2">;
                     {service.tags.slice(0, 3).map((tag, idx) => (;
@@ -450,7 +417,7 @@ const ServicesOverview: React.FC = () => {;
                     ))}
                   </div>;
                 </div>;
-                ;
+
                 <Link;
                   to={service.href}
                   className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-colors text-center inline-block">;
@@ -459,7 +426,7 @@ const ServicesOverview: React.FC = () => {;
               </motion.div>;
             ))}
           </div>;
-          ;
+
           {filteredServices.length === 0 && (;
             <div className="text-center py-12">;
               <div className="w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">;
@@ -470,10 +437,9 @@ const ServicesOverview: React.FC = () => {;
                 Try adjusting your search terms or category filter to find what you're looking for.;
               </p>;
               <button;
-                onClick={() => {;
+                onClick={() => {
                   setSearchTerm('');
-                  setSelectedCategory('all');,
-}}
+                  setSelectedCategory('all')}}
                 className="bg-cyan-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-cyan-600 transition-colors">;
                 Clear Filters;
               </button>;
@@ -494,13 +460,13 @@ const ServicesOverview: React.FC = () => {;
               transform your business with innovative technology solutions.;
             </p>;
           </div>;
-          ;
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">;
             <div>;
               <h3 className="text-2xl font-semibold text-gray-900 mb-6">;
                 Get in Touch;
               </h3>;
-              ;
+
               <div className="space-y-6">;
                 <div className="flex items-center space-x-4">;
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">;
@@ -513,7 +479,7 @@ const ServicesOverview: React.FC = () => {;
                     </a>;
                   </div>;
                 </div>;
-                ;
+
                 <div className="flex items-center space-x-4">;
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">;
                     <Mail className="w-6 h-6 text-white" />;
@@ -525,7 +491,7 @@ const ServicesOverview: React.FC = () => {;
                     </a>;
                   </div>;
                 </div>;
-                ;
+
                 <div className="flex items-center space-x-4">;
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">;
                     <MapPin className="w-6 h-6 text-white" />;
@@ -537,12 +503,12 @@ const ServicesOverview: React.FC = () => {;
                 </div>;
               </div>;
             </div>;
-            ;
+
             <div className="bg-white p-8 rounded-xl shadow-lg">;
               <h3 className="text-2xl font-semibold text-gray-900 mb-6">;
                 Request Information;
               </h3>;
-              ;
+
               <form className="space-y-4">;
                 <div>;
                   <label className="block text-sm font-medium text-gray-700 mb-2">;
@@ -554,7 +520,7 @@ const ServicesOverview: React.FC = () => {;
                     placeholder="Enter your company name";
                   />;
                 </div>;
-                ;
+
                 <div>;
                   <label className="block text-sm font-medium text-gray-700 mb-2">;
                     Email Address;
@@ -565,7 +531,7 @@ const ServicesOverview: React.FC = () => {;
                     placeholder="Enter your email";
                   />;
                 </div>;
-                ;
+
                 <div>;
                   <label className="block text-sm font-medium text-gray-700 mb-2">;
                     Services of Interest;
@@ -582,7 +548,7 @@ const ServicesOverview: React.FC = () => {;
                     <option>Specialized Solutions</option>;
                   </select>;
                 </div>;
-                ;
+
                 <div>;
                   <label className="block text-sm font-medium text-gray-700 mb-2">;
                     Message;
@@ -592,7 +558,7 @@ const ServicesOverview: React.FC = () => {;
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent";
                     placeholder="Tell us about your needs and how we can help"></textarea>;
                 </div>;
-                ;
+
                 <button;
                   type="submit";
                   className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-colors">;
@@ -630,7 +596,5 @@ const ServicesOverview: React.FC = () => {;
         </div>;
       </section>;
     </div>;
-  );,
-};
-;
+  )}
 export default ServicesOverview;

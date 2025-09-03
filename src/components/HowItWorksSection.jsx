@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 import {  import { motion, AnimatePresence  } from 'framer-motion';
  from 'lucide-react';
-;
-export const HowItWorksSection = () => {;
+
+export const HowItWorksSection = () => {
   return (;
     <section className="py-12">;
       <div className="container mx-auto px-4">;
@@ -24,7 +24,5 @@ export const HowItWorksSection = () => {;
         </div>;
       </div>;
     </section>;
-  );,
-};
-  );,
-}
+  )}
+  )}

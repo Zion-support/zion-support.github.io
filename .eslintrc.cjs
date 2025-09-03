@@ -1,13 +1,9 @@
 module.exports = {
   extends: [
-    'next/core-web-vitals',
-  ],
+    'next/core-web-vitals'],
   rules: {
     'react-hooks/exhaustive-deps': 'warn',
     'react/react-in-jsx-scope': 'off',
-    'no-undef': 'off',
-  },
+    'no-undef': 'off'},
   ignorePatterns: [
-    '**/*',
-  ],
-};
+    '**/*']}

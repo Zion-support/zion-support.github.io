@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
-const IoTEdgeComputing = () => {;
+const IoTEdgeComputing = () => {
   return (;
     <>;
       <Head>;
@@ -45,6 +45,5 @@ const IoTEdgeComputing = () => {;
               </Link>;
             </div>;
     </>;
-  );,
-}
+  )}
 export default IoTEdgeComputing;

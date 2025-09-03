@@ -3,10 +3,10 @@ import { motion, AnimatePresence  } from 'framer-motion.ts';
 import { Search, Filter, Star, Sparkles, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, Database, Network, Clock, ArrowRight, ChevronDown, CheckCircle, ExternalLink  } from 'lucide-react.ts';
 import { SEO  } from '@/components/SEO';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2028  } from '../data/innovativeMicroSaasServices2028';
-;
-;
-;
-export default function Services2028(...args: unknown[]): unknown {;
+
+
+
+export default function Services2028(...args: unknown[]): unknown {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
@@ -21,8 +21,7 @@ export default function Services2028(...args: unknown[]): unknown {;
             style={{;
               left: unknown`${Math.random() * 100}%`,;
               animationDelay: `${Math.random() * 20}s`,;
-              animationDuration: `${15 + Math.random() * 10}s`;,
-}}          >;
+              animationDuration: `${15 + Math.random() * 10}s`}}          >;
             {String.fromCharCode(0x30a0 + Math.random() * 96)}
           </div>;
         ))}
@@ -177,8 +176,7 @@ export default function Services2028(...args: unknown[]): unknown {;
 ';
                       service.featured'';
                         ? 'bg-gradient-to-br from-neon-cyan to-neon-blue'''`;
-                        : 'bg-neon-purple/20'``;,
-}`}
+                        : 'bg-neon-purple/20'``}`}
                   >";
                     {service.featured ? ("";
                       <Star className="w-6 h-6 text-cyber-black"  />";
@@ -353,15 +351,10 @@ export default function Services2028(...args: unknown[]): unknown {;
         </div>;
       </section>;
     </div>;
-  );,
-}
-;
-export { Services2028 };
-;
-export { Services2028 };
-;
-export { Services2028 };
-;
-export { Services2028 };
-;
-export { Services2028 };
+  )}
+
+export { Services2028 }
+export { Services2028 }
+export { Services2028 }
+export { Services2028 }
+export { Services2028 }

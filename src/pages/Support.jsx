@@ -1,6 +1,6 @@
 import React from 'react';'';
 import { Link } from 'react-router-dom';
-;
+
 export default function Support() {}
 ';
 '';
@@ -88,7 +88,7 @@ export default function Support() {}
         question: 'How do you handle data privacy?',';
         answer:'';
           'We follow strict data privacy protocols and are fully GDPR compliant. All data is encrypted, access is strictly controlled, and we never share your data with third parties without explicit consent.'}
-    ]};
+    ]}
   const supportChannels = [];
     {}
 ';
@@ -184,16 +184,11 @@ export default function Support() {}
             expert assistance.;
           </p>;
         </div>;
-    );,
-}
-;
+    )}
 
-export { Support };
-;
-export { Support };
-;
-export { Support };
-;
-export { Support };
-;
-export { Support };
+
+export { Support }
+export { Support }
+export { Support }
+export { Support }
+export { Support }

@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { BarChart3, RefreshCw, X, Maximize2, Minimize2 const mockChartData = [;
-;
+
     { id: '1', name: 'Q1 Revenue', value: 1250000, category: 'Revenue', timestamp: new Date('2024 - 01 - 01') },;
     { id: '2', name: 'Q2 Revenue', value: 1580000, category: 'Revenue', timestamp: new Date('2024 - 04 - 01') },;
     { id: '3', name: 'Q3 Revenue', value: 1420000, category: 'Revenue', timestamp: new Date('2024 - 07 - 01') },;
@@ -19,7 +19,7 @@ const colorPalettes = [';
     ['#ef4444',#f97316',#eab308',#84cc16',#22c55e'],;
     ['#8b5cf6',#ec4899',#f97316',#eab308',#84cc16'];
 ];
-export function AdvancedDataVisualization() {;
+export function AdvancedDataVisualization() {
     const [isOpen, setIsOpen] = useState(false);
     const [isMinimized, setIsMinimized] = useState(false);
     const [isFullscreen, setIsFullscreen] = useState(false);
@@ -31,43 +31,39 @@ export function AdvancedDataVisualization() {;
         showLegend: true,;
         showGrid: true,;
         animate: true,;
-        responsive: true;,
-});
+        responsive: true});
     const [data, setData] = useState(mockChartData);
     const [isRefreshing, setIsRefreshing] = useState(false);
     const [autoRefresh, setAutoRefresh] = useState(false);
     const categories = ['all', ...Array.from(new Set(data.map(item => item.category)))];
     const filteredData = data.filter(item => selectedCategory === 'all' || item.category === selectedCategory);
-    const refreshData = async () => {;
+    const refreshData = async () => {
         setIsRefreshing(true) ;
         // Simulate data refresh;
-        setTimeout(() => {;
+        setTimeout(() => {
             const newData = data.map(item => ({;
 
                 ...item,;
                 value: item.value + Math.floor (Math.random () * 100000 - 50000) }) ) ;
             setData(newData) ;
-            setIsRefreshing(false) }, 1000) };
-    useEffect(() => {;
+            setIsRefreshing(false) }, 1000) }
+    useEffect(() => {
   // TODO: Add dependencies if needed;
 
-  return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
-        if(autoRefresh) {;
+  return () => {
+    // Cleanup function}}, []);, []);
+        if(autoRefresh) {
 
             const interval = setInterval(refreshData, 30000); // Refresh every 30 seconds;
-        // // // // // // // // console.log(`Downloading chart as ${format}`);,
-};
+        // // // // // // // // console.log(`Downloading chart as ${format}`)}
             return () => clearInterval(interval) }
     }, [autoRefresh]) ;
-    const downloadChart = (format) => {;
+    const downloadChart = (format) => {
 
         // Simulate chart download`;
-        // console.log(`Downloading chart as ${format}`)};
-    const renderChart = () => {;
-        switch(selectedChartType) {;
+        // console.log(`Downloading chart as ${format}`)}
+    const renderChart = () => {
+        switch(selectedChartType) {
 
             case 'bar':;
                 return renderBarChart();
@@ -81,8 +77,8 @@ export function AdvancedDataVisualization() {;
                 return renderScatterChart () ;
             default:;
                 return renderBarChart () }
-    };
-    const renderBarChart = () => {;
+    }
+    const renderBarChart = () => {
         const maxValue = Math.max(...filteredData.map (item => item.value) ) ;
         const colors = colorPalettes[selectedColorPalette];
         return (<div className="h-80 flex items-end justify-center gap-4 p-6">";
@@ -90,55 +86,51 @@ export function AdvancedDataVisualization() {;
             <div className="w-16 bg-gradient-to-t from-zion-cyan to-zion-purple rounded-t-lg transition-all duration-500 hover:scale-110 cursor-pointer" style={{;
 `;
                     height: `${(item.value / maxValue) * 280}px`,;
-                    backgroundColor: colors[index % colors.length]`;,
-}} title={`${item.name}: ${item.value.toLocaleString()}`}/>";
+                    backgroundColor: colors[index % colors.length]`}} title={`${item.name}: ${item.value.toLocaleString()}`}/>";
             <div className="mt-2 text-center">";
               <div className="text-xs font-medium text-zion-slate">{item.name}</div>";
               <div className="text-xs text-zion-slate-light">{item.value.toLocaleString()}</div>;
             </div>;
           </div>) ) }
-      </div>) };
-    const renderLineChart = () => {;
+      </div>) }
+    const renderLineChart = () => {
         const maxValue = Math.max(...filteredData.map(item => item.value));
         const colors = colorPalettes[selectedColorPalette];";
         return (<div className="h-80 p-6 relative">";
         <svg className="w-full h-full">";
-          <polyline fill="none" stroke={colors[0]} strokeWidth="3" points = {;
+          <polyline fill="none" stroke={colors[0]} strokeWidth="3" points = {
 
   filteredData.map((item,`;
   index) => `${(index / (filteredData.length-1)) * 800;
 
-'`;,
-},${280 - (item.value / maxValue) * 280}`).join(' ')}/>";
+'`},${280 - (item.value / maxValue) * 280}`).join(' ')}/>";
           {filteredData.map((item, index) => (<circle key={item.id} cx={(index / (filteredData.length-1)) * 800} cy={280 - (item.value / maxValue) * 280} r="6" fill={colors[0]} className="cursor-pointer hover:r-8 transition-all duration-200"/>))}
         </svg>";
         <div className="absolute bottom-0 left-0 right-0 flex justify-between text-xs text-zion-slate-light">;
           {filteredData.map(item => (<span key={item.id}>{item.name}</span>))}
         </div>;
-      </div>) };
-    const renderPieChart = () => {;
+      </div>) }
+    const renderPieChart = () => {
         const total = filteredData.reduce((sum, item) => sum + item.value, 0);
         const colors = colorPalettes[selectedColorPalette];";
         return (<div className="h-80 flex items-center justify-center">";
         <div className="relative w-64 h-64">;
-          {filteredData.map((item, index) => {;
+          {filteredData.map((item, index) => {
 
                 const percentage = (item.value / total) * 100;
                 const angle = (percentage / 100) * 360;
                 const prevAngle = filteredData;
                     .slice(0, index);
                     .reduce((sum, prevItem) => sum + (prevItem.value / total) * 360, 0);";
-                return (<div key={item.id} className="absolute inset-0 rounded-full border-8 border-transparent" style = {;
+                return (<div key={item.id} className="absolute inset-0 rounded-full border-8 border-transparent" style = {
 
-  {;
+  {
 
                         borderTopColor: colors[index % colors.length],`;
   transform: `rotate(${prevAngle;
 
-`;,
-}deg)`,`;
-                        clipPath: `polygon(50% 50%, 50% 0%, ${50 + Math.cos((angle * Math.PI) / 180) * 50}% ${50 + Math.sin((angle * Math.PI) / 180) * 50}%)``;,
-}} title={`${item.name}: ${percentage.toFixed(1)}%`}/>)})}";
+`}deg)`,`;
+                        clipPath: `polygon(50% 50%, 50% 0%, ${50 + Math.cos((angle * Math.PI) / 180) * 50}% ${50 + Math.sin((angle * Math.PI) / 180) * 50}%)``}} title={`${item.name}: ${percentage.toFixed(1)}%`}/>)})}";
           <div className="absolute inset-0 flex items-center justify-center">";
             <div className="text-center">";
               <div className="text-2xl font-bold text-zion-slate">{total.toLocaleString()}</div>";
@@ -146,25 +138,24 @@ export function AdvancedDataVisualization() {;
             </div>;
           </div>;
         </div>;
-      </div>) };
-    const renderAreaChart = () => {;
+      </div>) }
+    const renderAreaChart = () => {
         const maxValue = Math.max(...filteredData.map(item => item.value));
         const colors = colorPalettes[selectedColorPalette];";
         return (<div className="h-80 p-6 relative">";
         <svg className="w-full h-full">";
-          <path fill={colors[0]} fillOpacity="0.3" stroke={colors[0]} strokeWidth="2" d = {;
+          <path fill={colors[0]} fillOpacity="0.3" stroke={colors[0]} strokeWidth="2" d = {
 `;
   `M 0,;
   ${280;
 
-'`;,
-} ${filteredData.map((item, index) => `L ${(index / (filteredData.length-1)) * 800},${280 - (item.value / maxValue) * 280}`).join(' ')} L 800,${280} Z`}/>;
+'`} ${filteredData.map((item, index) => `L ${(index / (filteredData.length-1)) * 800},${280 - (item.value / maxValue) * 280}`).join(' ')} L 800,${280} Z`}/>;
         </svg>";
         <div className="absolute bottom-0 left-0 right-0 flex justify-between text-xs text-zion-slate-light">;
           {filteredData.map(item => (<span key={item.id}>{item.name}</span>))}
         </div>;
-      </div>) };
-    const renderScatterChart = () => {;
+      </div>) }
+    const renderScatterChart = () => {
         const maxValue = Math.max(...filteredData.map(item => item.value));
         const colors = colorPalettes[selectedColorPalette];";
         return (<div className="h-80 p-6 relative">";
@@ -174,13 +165,13 @@ export function AdvancedDataVisualization() {;
         <div className="absolute bottom-0 left-0 right-0 flex justify-between text-xs text-zion-slate-light">;
           {filteredData.map(item => (<span key={item.id}>{item.name}</span>))}
         </div>;
-      </div>) };
-    if(!isOpen) {;
+      </div>) }
+    if(!isOpen) {
 ";
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-68 p-3 bg-zion-cyan hover:bg-zion-cyan-light text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50" title="Advanced Data Visualization">";
         <BarChart3 className="w-5 h-5"/>;
       </button>)}
-    if(isMinimized) {;
+    if(isMinimized) {
 ";
         return (<div className="fixed bottom-4 right-68 z-50">";
         <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-lg p-3">";
@@ -268,21 +259,18 @@ export function AdvancedDataVisualization() {;
               <div className="space - y-3">;
                 <label className="flex items - center gap-2">;
                   <input type="checkbox" checked={chartConfig.showLegend} onChange = { (e) => setChartConfig(prev => ({ ...prev,;
-  showLegend: e.target.checked;,
-}) ) } className="rounded border-zion - slate - light text-zion - cyan focus:ring - zion -cyan"/>;
+  showLegend: e.target.checked}) ) } className="rounded border-zion - slate - light text-zion - cyan focus:ring - zion -cyan"/>;
                   <span className="text-sm text-zion -slate">Show Legend</span>;
                 </label>;
                 <label className="flex items - center gap-2">;
                   <input type="checkbox" checked={chartConfig.showGrid} onChange = { (e) => setChartConfig(prev => ({ ...prev,;
-  showGrid: e.target.checked;,
-}) ) } className="rounded border-zion - slate - light text-zion - cyan focus:ring - zion -cyan"/>;
+  showGrid: e.target.checked}) ) } className="rounded border-zion - slate - light text-zion - cyan focus:ring - zion -cyan"/>;
                   <span className="text-sm text-zion -slate">Show Grid</span>;
                 </label>;
                 <label className="flex items - center gap-2">;
                   <input type="checkbox" checked={chartConfig.animate} onChange = { (e) => setChartConfig(prev => ({ ...prev,;
   animate: e.target.checked;
-";,
-}))} className="rounded border-zion-slate-light text-zion-cyan focus:ring-zion-cyan"/>";
+"}))} className="rounded border-zion-slate-light text-zion-cyan focus:ring-zion-cyan"/>";
                   <span className="text-sm text-zion-slate">Animations</span>;
                 </label>";
                 <label className="flex items-center gap-2">";

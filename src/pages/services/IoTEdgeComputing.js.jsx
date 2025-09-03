@@ -410,16 +410,11 @@ export default function IoTEdgeComputingServices() {}
           </div>;
         </div>;
       </section>;
-    </div>);,
-}
-;
+    </div>)}
 
-export { IoTEdgeComputingServices };
-;
-export { IoTEdgeComputingServices };
-;
-export { IoTEdgeComputingServices };
-;
-export { IoTEdgeComputingServices };
-;
-export { IoTEdgeComputingServices };
+
+export { IoTEdgeComputingServices }
+export { IoTEdgeComputingServices }
+export { IoTEdgeComputingServices }
+export { IoTEdgeComputingServices }
+export { IoTEdgeComputingServices }

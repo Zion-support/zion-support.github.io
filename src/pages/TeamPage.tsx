@@ -23,12 +23,11 @@ import { ;
   Heart,;
   Coffee,;
   BookOpen,;
-  Lightbulb;,
-} from 'lucide-react';
-;
-export function TeamPage() {;
+  Lightbulb} from 'lucide-react';
+
+export function TeamPage() {
   const teamMembers = [;
-    {;
+    {
       name: 'Kleber Santos',;
       title: 'Founder & CEO',;
       location: 'Middletown, DE',;
@@ -39,9 +38,8 @@ export function TeamPage() {;
       bio: 'Visionary leader with 15+ years in technology and entrepreneurship. Passionate about AI innovation and building solutions that transform businesses.',;
       expertise: ['AI Strategy', 'Leadership', 'Product Vision', 'Business Development'],;
       avatar: '👨‍💼',;
-      isFounder: true;,
-},;
-    {;
+      isFounder: true},;
+    {
       name: 'Dr. Sarah Chen',;
       title: 'Chief Technology Officer',;
       location: 'San Francisco, CA',;
@@ -50,9 +48,8 @@ export function TeamPage() {;
       bio: 'AI research pioneer with PhD in Computer Science from Stanford. Led AI initiatives at major tech companies before joining Zion Tech Group.',;
       expertise: ['Machine Learning', 'AI Research', 'Technical Architecture', 'Team Leadership'],;
       avatar: '👩‍💻',;
-      isFounder: false;,
-},;
-    {;
+      isFounder: false},;
+    {
       name: 'Marcus Rodriguez',;
       title: 'Head of Engineering',;
       location: 'Austin, TX',;
@@ -61,9 +58,8 @@ export function TeamPage() {;
       bio: 'Full-stack engineering expert with deep experience in cloud architecture and scalable systems. Passionate about building robust, efficient solutions.',;
       expertise: ['Cloud Architecture', 'DevOps', 'System Design', 'Team Management'],;
       avatar: '👨‍💻',;
-      isFounder: false;,
-},;
-    {;
+      isFounder: false},;
+    {
       name: 'Emily Watson',;
       title: 'Chief Security Officer',;
       location: 'New York, NY',;
@@ -72,9 +68,8 @@ export function TeamPage() {;
       bio: 'Cybersecurity expert with 12+ years protecting enterprise systems. Former security consultant for Fortune 500 companies.',;
       expertise: ['Cybersecurity', 'Risk Assessment', 'Compliance', 'Incident Response'],;
       avatar: '👩‍🔬',;
-      isFounder: false;,
-},;
-    {;
+      isFounder: false},;
+    {
       name: 'Alex Kim',;
       title: 'Head of Product',;
       location: 'Seattle, WA',;
@@ -83,9 +78,8 @@ export function TeamPage() {;
       bio: 'Product strategy expert with a track record of launching successful B2B SaaS products. Focused on user experience and market fit.',;
       expertise: ['Product Strategy', 'User Experience', 'Market Research', 'Agile Development'],;
       avatar: '👨‍💼',;
-      isFounder: false;,
-},;
-    {;
+      isFounder: false},;
+    {
       name: 'Dr. Lisa Thompson',;
       title: 'Head of AI Research',;
       location: 'Boston, MA',;
@@ -94,101 +88,86 @@ export function TeamPage() {;
       bio: 'Leading AI researcher with expertise in natural language processing and computer vision. Published author and conference speaker.',;
       expertise: ['NLP', 'Computer Vision', 'Deep Learning', 'Research'],;
       avatar: '👩‍🔬',;
-      isFounder: false;,
-}
+      isFounder: false}
   ];
-;
+
   const teamStats = [;
-    {;
+    {
       icon: Users,;
       number: '50+',;
       label: 'Team Members',;
-      description: 'Diverse, talented professionals from around the world';,
-},;
-    {;
+      description: 'Diverse, talented professionals from around the world'},;
+    {
       icon: Globe,;
       number: '15+',;
       label: 'Countries',;
-      description: 'Global team with local expertise';,
-},;
-    {;
+      description: 'Global team with local expertise'},;
+    {
       icon: Award,;
       number: '100+',;
       label: 'Years Combined Experience',;
-      description: 'Deep expertise across all technology domains';,
-},;
-    {;
+      description: 'Deep expertise across all technology domains'},;
+    {
       icon: Star,;
       number: '4.9★',;
       label: 'Client Satisfaction',;
-      description: 'Consistently high ratings from our clients';,
-}
+      description: 'Consistently high ratings from our clients'}
   ];
-;
+
   const values = [;
-    {;
+    {
       icon: Lightbulb,;
       title: 'Innovation',;
-      description: 'We constantly push the boundaries of what\'s possible with technology, always seeking new ways to solve complex problems.';,
-},;
-    {;
+      description: 'We constantly push the boundaries of what\'s possible with technology, always seeking new ways to solve complex problems.'},;
+    {
       icon: Heart,;
       title: 'Passion',;
-      description: 'Our team is driven by a genuine passion for technology and its potential to transform businesses and improve lives.';,
-},;
-    {;
+      description: 'Our team is driven by a genuine passion for technology and its potential to transform businesses and improve lives.'},;
+    {
       icon: Target,;
       title: 'Excellence',;
-      description: 'We strive for excellence in everything we do, from code quality to client relationships and project delivery.';,
-},;
-    {;
+      description: 'We strive for excellence in everything we do, from code quality to client relationships and project delivery.'},;
+    {
       icon: Users,;
       title: 'Collaboration',;
-      description: 'We believe in the power of teamwork and collaboration, both within our team and with our clients and partners.';,
-},;
-    {;
+      description: 'We believe in the power of teamwork and collaboration, both within our team and with our clients and partners.'},;
+    {
       icon: Shield,;
       title: 'Integrity',;
-      description: 'We operate with the highest standards of integrity, transparency, and ethical business practices.';,
-},;
-    {;
+      description: 'We operate with the highest standards of integrity, transparency, and ethical business practices.'},;
+    {
       icon: TrendingUp,;
       title: 'Growth',;
-      description: 'We are committed to continuous learning and growth, both as individuals and as an organization.';,
-}
+      description: 'We are committed to continuous learning and growth, both as individuals and as an organization.'}
   ];
-;
+
   const departments = [;
-    {;
+    {
       name: 'Engineering',;
       icon: Code,;
       description: 'Full-stack developers, DevOps engineers, and system architects building robust, scalable solutions.',;
       teamSize: '20+ engineers',;
-      focus: ['Backend Development', 'Frontend Development', 'DevOps', 'System Architecture'];,
-},;
-    {;
+      focus: ['Backend Development', 'Frontend Development', 'DevOps', 'System Architecture']},;
+    {
       name: 'AI & Research',;
       icon: Brain,;
       description: 'AI researchers, data scientists, and ML engineers pushing the boundaries of artificial intelligence.',;
       teamSize: '15+ researchers',;
-      focus: ['Machine Learning', 'Data Science', 'AI Research', 'Algorithm Development'];,
-},;
-    {;
+      focus: ['Machine Learning', 'Data Science', 'AI Research', 'Algorithm Development']},;
+    {
       name: 'Security',;
       icon: Shield,;
       description: 'Cybersecurity experts ensuring our solutions and client systems remain secure and compliant.',;
       teamSize: '8+ security experts',;
-      focus: ['Cybersecurity', 'Compliance', 'Risk Assessment', 'Incident Response'];,
-},;
-    {;
+      focus: ['Cybersecurity', 'Compliance', 'Risk Assessment', 'Incident Response']},;
+    {
       name: 'Product & Design',;
       icon: Target,;
       description: 'Product managers, UX designers, and business analysts creating user-centered solutions.',;
       teamSize: '12+ professionals',;
-      focus: ['Product Strategy', 'UX Design', 'Business Analysis', 'Market Research'];,
-}
+      focus: ['Product Strategy', 'UX Design', 'Business Analysis', 'Market Research']}
   ];
-;
+
   return (;
     <div className="min-h-screen bg-zion-slate-dark">;
       {/* Hero Section */}
@@ -202,7 +181,7 @@ export function TeamPage() {;
               A diverse group of passionate technologists, innovators, and problem-solvers ;
               dedicated to transforming businesses through cutting-edge technology.;
             </p>;
-            ;
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
               <Link;
                 to="/careers";
@@ -345,7 +324,7 @@ export function TeamPage() {;
                     <p className="text-sm text-zion-cyan">{dept.teamSize}</p>;
                   </div>;
                 </div>;
-                ;
+
                 <p className="text-zion-slate-light mb-4 leading-relaxed">;
                   {dept.description}
                 </p>;
@@ -406,7 +385,7 @@ export function TeamPage() {;
                 At Zion Tech Group, we foster a culture of innovation, collaboration, and continuous learning. ;
                 We believe that great technology comes from great people working together toward a common vision.;
               </p>;
-              ;
+
               <div className="space-y-4">;
                 <div className="flex items-center space-x-3">;
                   <CheckCircle className="w-5 h-5 text-zion-cyan" />;
@@ -482,7 +461,6 @@ export function TeamPage() {;
         </div>;
       </section>;
     </div>;
-  );,
-}
-;
+  )}
+
 export default TeamPage;

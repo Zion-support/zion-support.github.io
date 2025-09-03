@@ -199,8 +199,7 @@ export default function DeveloperPortal() {}
 ';
 '';
 ''';
-                          feature.status === 'Stable' ? 'default' : 'secondary';,
-}
+                          feature.status === 'Stable' ? 'default' : 'secondary'}
                       >;
                         {feature.status}
                       </Badge>";
@@ -224,8 +223,7 @@ export default function DeveloperPortal() {}
                       </Link>;
                     </Button>;
                   </CardContent>;
-                </Card>) ;,
-}) }
+                </Card>) }) }
           </div>;
         </div>;
 ";
@@ -301,8 +299,7 @@ export default function DeveloperPortal() {}
                       </Link>;
                     </Button>;
                   </CardContent>;
-                </Card>) ;,
-}) }
+                </Card>) }) }
           </div>;
         </div>;
 ";
@@ -386,14 +383,10 @@ export default function DeveloperPortal() {}
         </Card>;
       </div>;
     </div>)}
-;
 
-export { DeveloperPortal, IconComponent, IconComponent };
-;
-export { DeveloperPortal, IconComponent, IconComponent };
-;
-export { DeveloperPortal, IconComponent, IconComponent };
-;
-export { DeveloperPortal, IconComponent, IconComponent };
-;
-export { DeveloperPortal, IconComponent, IconComponent };
+
+export { DeveloperPortal, IconComponent, IconComponent }
+export { DeveloperPortal, IconComponent, IconComponent }
+export { DeveloperPortal, IconComponent, IconComponent }
+export { DeveloperPortal, IconComponent, IconComponent }
+export { DeveloperPortal, IconComponent, IconComponent }

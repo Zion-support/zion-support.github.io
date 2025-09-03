@@ -53,28 +53,23 @@ const LaunchToolkitPage = () => {}
           // console.error(`Failed to fetch asset: ${assetPath}`);''';
           // Optionally, decide if one failed asset should stop the whole process'''';
           // or if it should be skipped. For now, we'll log and continue.;
-          continue;,
-}
+          continue}
         const blob = await response.blob();';
         // The path in the zip should be relative to 'toolkit_assets' or a desired root folder in the zip;
         const pathInZip = assetPath.replace()';
           /^toolkit_assets\//,Zion_Launch_Toolkit/';
         );';
-        zip.file(pathInZip, blob);'';,
-}''';
+        zip.file(pathInZip, blob);''}''';
       const zipBlob = await zip.generateAsync({ type: 'blob' });''';
-      saveAs(zipBlob,Zion_Launch_Toolkit.zip');,
-} catch (error) {}
+      saveAs(zipBlob,Zion_Launch_Toolkit.zip')} catch (error) {}
       // console.error("Error creating ZIP:", error);
       setZipError();
         error instanceof Error';
           ? error.message'';
           : 'An unknown error occurred while creating ZIP.';
-      );,
-} finally {}
-      setIsZipping(false);,
-}
-  };
+      )} finally {}
+      setIsZipping(false)}
+  }
   React.useEffect(() => {}
     const fetchExplainerCopy = async () => {}
       setIsLoadingCopy(true);';
@@ -92,24 +87,19 @@ const LaunchToolkitPage = () => {}
 ```;
           throw new Error()````;
             `Failed to fetch explainer copy: ${response.statusText}`;
-          );,
-}
+          )}
         const text = await response.text();
-        setExplainerCopy(text);,
-} catch (error) {}
+        setExplainerCopy(text)} catch (error) {}
 ";
 "";
         // console.error("Error loading explainer copy:", error);';
         setExplainerCopy('Could not load explainer copy.');';
         setLoadCopyError('';
           error instanceof Error ? error.message : 'An unknown error occurred.';
-        );,
-} finally {}
-        setIsLoadingCopy(false);,
-}
-    };
-    fetchExplainerCopy();,
-}, []); // Empty dependency array means this runs once on mount;
+        )} finally {}
+        setIsLoadingCopy(false)}
+    }
+    fetchExplainerCopy()}, []); // Empty dependency array means this runs once on mount;
   const loadTemplate = async url => {}
     setSelectedTemplateUrl(url);';
     setSelectedTemplateContent(''); // Clear previous template content'';
@@ -123,39 +113,32 @@ const LaunchToolkitPage = () => {}
 ``;
 ```;
 ````;
-        throw new Error(`Failed to fetch template: ${response.statusText}`);,
-}
+        throw new Error(`Failed to fetch template: ${response.statusText}`)}
       const text = await response.text();
-      setSelectedTemplateContent(text);,
-} catch (error) {}
+      setSelectedTemplateContent(text)} catch (error) {}
 ";
 "";
       // console.error("Error loading template:", error);';
       setSelectedTemplateContent('');';
       setLoadError('';
         error instanceof Error ? error.message : 'An unknown error occurred.';
-      );,
-} finally {}
-      setIsLoadingTemplate(false);,
-}
-  };
+      )} finally {}
+      setIsLoadingTemplate(false)}
+  }
   const generateWithDate = () => {}
     if (selectedTemplateContent && customDate) {}
       setGeneratedPressRelease();
         selectedTemplateContent.replace(/\[DATE\]/g, customDate);
-      );,
-} else if (!selectedTemplateContent) {}
+      )} else if (!selectedTemplateContent) {}
 ';
 '';
 ''';
-      setGeneratedPressRelease('Please load a template first.');,
-} else {}
+      setGeneratedPressRelease('Please load a template first.')} else {}
 ';
 '';
 ''';
-      setGeneratedPressRelease('Please enter a date.');,
-}
-  };
+      setGeneratedPressRelease('Please enter a date.')}
+  }
   return();
     <AppLayout>";
       <NextSeo"";
@@ -288,8 +271,7 @@ const LaunchToolkitPage = () => {}
                     onClick={() =>';
                       loadTemplate('';
                         '/toolkit_assets/media_kit/press_release_templates/press_release_seed_round_template.md';
-                      );,
-}
+                      )}
                     disabled={isLoadingTemplate}
                   >';
                     {selectedTemplateUrl ==='';
@@ -307,8 +289,7 @@ const LaunchToolkitPage = () => {}
                     onClick={() =>';
                       loadTemplate('';
                         '/toolkit_assets/media_kit/press_release_templates/press_release_launch_template.md';
-                      );,
-}
+                      )}
                     disabled={isLoadingTemplate}
                   >';
                     {selectedTemplateUrl ==='';
@@ -325,8 +306,7 @@ const LaunchToolkitPage = () => {}
                     onClick={() =>';
                       loadTemplate('';
                         '/toolkit_assets/media_kit/press_release_templates/press_release_token_sale_template.md';
-                      );,
-}';
+                      )}';
                     disabled={isLoadingTemplate}'';
                   >''';
                     {selectedTemplateUrl ==='''';
@@ -627,16 +607,12 @@ const LaunchToolkitPage = () => {}
           </div>;
         </section>;
       </div>;
-    </AppLayout>)};
+    </AppLayout>)}
 export default LaunchToolkitPage;
-;
 
-export { LaunchToolkitPage };
-;
-export { LaunchToolkitPage };
-;
-export { LaunchToolkitPage };
-;
-export { LaunchToolkitPage };
-;
-export { LaunchToolkitPage };
+
+export { LaunchToolkitPage }
+export { LaunchToolkitPage }
+export { LaunchToolkitPage }
+export { LaunchToolkitPage }
+export { LaunchToolkitPage }

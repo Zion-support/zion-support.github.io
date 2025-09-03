@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
-const ZionCuttingEdgeServices2031 = () => {;
+const ZionCuttingEdgeServices2031 = () => {
   return (;
     <>;
       <Head>;
@@ -45,6 +45,5 @@ const ZionCuttingEdgeServices2031 = () => {;
               </Link>;
             </div>;
     </>;
-  );,
-}
+  )}
 export default ZionCuttingEdgeServices2031;

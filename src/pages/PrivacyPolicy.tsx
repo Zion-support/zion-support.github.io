@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
-const PrivacyPolicy = () => {;
+const PrivacyPolicy = () => {
   return (;
     <>;
       <Head>;
@@ -45,6 +45,5 @@ const PrivacyPolicy = () => {;
               </Link>;
             </div>;
     </>;
-  );,
-}
+  )}
 export default PrivacyPolicy;

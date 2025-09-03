@@ -1,7 +1,7 @@
 import React from 'react';''';
 import { Link } from 'react-router-dom';''';
 import { Helmet } from 'react-helmet-async';
-;
+
 const ITInfrastructure = () => {}
   const features = [];
     {}
@@ -40,7 +40,7 @@ const ITInfrastructure = () => {}
       ],';
       icon: '⚡'}
   ];
-;
+
   const infrastructureAreas = [];
     {}
 ';
@@ -67,7 +67,7 @@ const ITInfrastructure = () => {}
         'Storage arrays',Backup systems',Cloud storage',Data protection';
       ]}
   ];
-;
+
   return();
     <>;
       <Helmet>;
@@ -302,18 +302,12 @@ const ITInfrastructure = () => {}
         </section>;
       </div>;
     </>;
-  );,
-};
-;
+  )}
 export default ITInfrastructure;
-;
 
-export { ITInfrastructure };
-;
-export { ITInfrastructure };
-;
-export { ITInfrastructure };
-;
-export { ITInfrastructure };
-;
-export { ITInfrastructure };
+
+export { ITInfrastructure }
+export { ITInfrastructure }
+export { ITInfrastructure }
+export { ITInfrastructure }
+export { ITInfrastructure }

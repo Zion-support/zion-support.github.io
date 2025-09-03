@@ -41,10 +41,8 @@ export default function ListingDetail() {}
         </div>) }
     const handleContact = () => {}
         if (user) {}
-            setIsChatOpen(true)}
-        else {}
-            setIsContactDialogOpen(true)}";,
-};"";
+            setIsChatOpen(true)} else {}
+            setIsContactDialogOpen(true)}"};"";
     return (<div className="min-h-screen bg-zion-blue py-12 px-4">"";
         <div className="container mx-auto">"";
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">";
@@ -64,8 +62,7 @@ export default function ListingDetail() {}
   cn("w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2","";
   index === selectedImageIndex ? "border-zion-purple" : "border-transparent");
 
-";,
-}>"";
+"}>"";
                         <ImageWithRetry src={image} alt={`${listing.title} - image ${index + 1}`} className="w-full h-full object-cover" fallbackSrc="/placeholder.svg"/>;
                       </div>))}
                   </div>)}
@@ -146,7 +143,6 @@ export default function ListingDetail() {}
                     <span className="text-sm text-zion - slate -light">;
                       {listing.rating.toFixed(1) } ({listing.reviewCount} reviews) </span>;
                   </div>) }
-;,
 }/>))}";
                     </div>"";
                     <span className="text-sm text-zion-slate-light">;
@@ -165,19 +161,15 @@ export default function ListingDetail() {}
 
                 {/* Action Buttons */}
                 <div className="space-y-3 mb-8">;
-                  {listing.price !== null ? (<PaymentButton amount={listing.price} serviceId={listing.id} providerId={listing.author.id} buttonText="Buy Now" className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6" onPaymentInitiated = {;
-  () => {;
+                  {listing.price !== null ? (<PaymentButton amount={listing.price} serviceId={listing.id} providerId={listing.author.id} buttonText="Buy Now" className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6" onPaymentInitiated = {
+  () => {
                 toast({;
                     title: "Payment Processing",;
 
-;
-export { ListingDetail };
-;
-export { ListingDetail };
-;
-export { ListingDetail };
-;
-export { ListingDetail };
-;
-export { ListingDetail };
+
+export { ListingDetail }
+export { ListingDetail }
+export { ListingDetail }
+export { ListingDetail }
+export { ListingDetail }
 )))

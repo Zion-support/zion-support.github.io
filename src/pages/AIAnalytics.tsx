@@ -16,67 +16,58 @@ import { ;
   Globe,;
   Cpu,;
   Target,;
-  Lightbulb;,
-} from 'lucide-react';
-;
+  Lightbulb} from 'lucide-react';
+
 const features = [;
-  {;
+  {
     icon: Brain,;
     title: 'Predictive Analytics',;
     description: 'Advanced machine learning models that forecast trends and identify opportunities before they happen.',;
-    benefits: ['Revenue optimization', 'Risk mitigation', 'Strategic planning', 'Market insights'];,
-},;
-  {;
+    benefits: ['Revenue optimization', 'Risk mitigation', 'Strategic planning', 'Market insights']},;
+  {
     icon: BarChart3,;
     title: 'Real-time Dashboards',;
     description: 'Interactive visualizations that provide instant insights into your business performance.',;
-    benefits: ['Live monitoring', 'Custom metrics', 'Mobile access', 'Real-time alerts'];,
-},;
-  {;
+    benefits: ['Live monitoring', 'Custom metrics', 'Mobile access', 'Real-time alerts']},;
+  {
     icon: TrendingUp,;
     title: 'Performance Optimization',;
     description: 'AI-driven recommendations to improve efficiency and maximize ROI across all operations.',;
-    benefits: ['Cost reduction', 'Efficiency gains', 'Resource optimization', 'Process improvement'];,
-},;
-  {;
+    benefits: ['Cost reduction', 'Efficiency gains', 'Resource optimization', 'Process improvement']},;
+  {
     icon: Database,;
     title: 'Data Intelligence',;
     description: 'Transform raw data into actionable intelligence with advanced analytics and pattern recognition.',;
-    benefits: ['Pattern discovery', 'Anomaly detection', 'Data quality', 'Insight generation'];,
-}
+    benefits: ['Pattern discovery', 'Anomaly detection', 'Data quality', 'Insight generation']}
 ];
-;
+
 const useCases = [;
-  {;
+  {
     industry: 'E-commerce',;
     title: 'Customer Behavior Analysis',;
     description: 'Predict customer preferences and optimize product recommendations for increased sales.',;
     icon: Users,;
-    metrics: ['25% increase in conversion', '30% higher customer lifetime value', '40% reduction in cart abandonment'];,
-},;
-  {;
+    metrics: ['25% increase in conversion', '30% higher customer lifetime value', '40% reduction in cart abandonment']},;
+  {
     industry: 'Finance',;
     title: 'Risk Assessment & Fraud Detection',;
     description: 'AI-powered systems that identify potential risks and fraudulent activities in real-time.',;
     icon: Shield,;
-    metrics: ['99.9% fraud detection accuracy', '60% faster risk assessment', '80% reduction in false positives'];,
-},;
-  {;
+    metrics: ['99.9% fraud detection accuracy', '60% faster risk assessment', '80% reduction in false positives']},;
+  {
     industry: 'Healthcare',;
     title: 'Patient Outcome Prediction',;
     description: 'Machine learning models that predict patient outcomes and optimize treatment plans.',;
     icon: Target,;
-    metrics: ['90% prediction accuracy', '35% improvement in treatment outcomes', '50% reduction in readmissions'];,
-},;
-  {;
+    metrics: ['90% prediction accuracy', '35% improvement in treatment outcomes', '50% reduction in readmissions']},;
+  {
     industry: 'Manufacturing',;
     title: 'Predictive Maintenance',;
     description: 'AI systems that predict equipment failures and optimize maintenance schedules.',;
     icon: Cpu,;
-    metrics: ['70% reduction in downtime', '45% lower maintenance costs', '95% equipment reliability'];,
-}
+    metrics: ['70% reduction in downtime', '45% lower maintenance costs', '95% equipment reliability']}
 ];
-;
+
 const technologies = [;
   { name: 'TensorFlow', description: 'Advanced deep learning framework', icon: Code },;
   { name: 'PyTorch', description: 'Flexible machine learning library', icon: Brain },;
@@ -85,8 +76,8 @@ const technologies = [;
   { name: 'AWS SageMaker', description: 'Cloud-based ML platform', icon: Cloud },;
   { name: 'Google Cloud AI', description: 'Enterprise AI services', icon: Globe }
 ];
-;
-export default function AIAnalytics() {;
+
+export default function AIAnalytics() {
   return (;
     <div className="min-h-screen bg-futuristic">;
       {/* Hero Section */}
@@ -96,7 +87,7 @@ export default function AIAnalytics() {;
           <div className="absolute bottom-32 right-32 w-32 h-32 border border-zion-purple rounded-full animate-pulse delay-1000"></div>;
           <div className="absolute top-1/2 left-1/2 w-24 h-24 border border-zion-blue rounded-full animate-pulse delay-2000"></div>;
         </div>;
-        ;
+
         <div className="container-responsive relative z-10">;
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
@@ -283,5 +274,4 @@ export default function AIAnalytics() {;
         </div>;
       </section>;
     </div>;
-  );,
-}
+  )}

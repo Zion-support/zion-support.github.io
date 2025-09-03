@@ -256,16 +256,12 @@ const AIAutonomousEducationProfessor = () => {}
           </div>;
         </div>;
       </div>;
-    </>)};
+    </>)}
 export default AIAutonomousEducationProfessor;
-;
 
-export { AIAutonomousEducationProfessor };
-;
-export { AIAutonomousEducationProfessor };
-;
-export { AIAutonomousEducationProfessor };
-;
-export { AIAutonomousEducationProfessor };
-;
-export { AIAutonomousEducationProfessor };
+
+export { AIAutonomousEducationProfessor }
+export { AIAutonomousEducationProfessor }
+export { AIAutonomousEducationProfessor }
+export { AIAutonomousEducationProfessor }
+export { AIAutonomousEducationProfessor }

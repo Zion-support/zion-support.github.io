@@ -2,8 +2,8 @@ import Head from "next/head";
 import React from "react";
   Mail,;
   Smartphone} from "lucide-react";
-export default function EventManagement() {;
-;
+export default function EventManagement() {
+
   const features = [];
 
   return (;
@@ -66,7 +66,7 @@ export default function EventManagement() {;
                 <p className="text-gray-600">{feature.description}</p>;
               </Card>;
             ))}
-;
+
           </div>;
       </section>;
       {/* comment */}";

@@ -1,15 +1,11 @@
 import Head from "next/head";
 import React from "react";
 import dynamic from "next/dynamic";
-const Component = () => {;
-const Head = dynamic(() => import("next/head"), { ssr: false });,
-}
-const Link = dynamic(() => import("next/link"), { ssr: false });,
-}
-const Navigation = dynamic(() => import("../src/components/Navigation"), { ssr: false });,
-}
-const Footer = dynamic(() => import("../src/components/Footer"), { ssr: false });,
-}
+const Component = () => {
+const Head = dynamic(() => import("next/head"), { ssr: false })}
+const Link = dynamic(() => import("next/link"), { ssr: false })}
+const Navigation = dynamic(() => import("../src/components/Navigation"), { ssr: false })}
+const Footer = dynamic(() => import("../src/components/Footer"), { ssr: false })}
   return (;
     <div className="min-h-screen bg-gray-900 text-white">;
 <Head>;
@@ -64,7 +60,7 @@ advanced security assessments, data protection, and 24/7 monitoring to keep your
                 <div className="text-gray-400">{stat.label}</div>;
               </div>;
             ))}
-;
+
           </div>;
       </section>;
       {/* comment */}";
@@ -94,14 +90,14 @@ advanced security assessments, data protection, and 24/7 monitoring to keep your
                     <li key="{featureIndex}" className="flex items-center text-gray-400">";
                       <CheckCircle className="w-4 h-4 text-green-400 mr-3"  />;
                       {feature}
-;
+
                     </li>;
                   ))}
-;
+
                 </ul>;
               </div>;
             ))}
-;
+
           </div>;
       </section>;
       {/* comment */}";
@@ -123,7 +119,7 @@ advanced security assessments, data protection, and 24/7 monitoring to keep your
                 <p className="text-gray-400 text-sm">{framework.description}</p>;
               </div>;
             ))}
-;
+
           </div>;
       </section>;
       {/* comment */}";
@@ -151,5 +147,5 @@ advanced security assessments, data protection, and 24/7 monitoring to keep your
       <Footer  />;
     </div>",;
   )}
-;
+
 export default Component

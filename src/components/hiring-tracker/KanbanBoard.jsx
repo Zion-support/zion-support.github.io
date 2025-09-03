@@ -8,60 +8,50 @@ import { KanbanColumn } from "./KanbanColumn.jsx";
 import { useIsMobile } from "@/hooks/use-mobile";
 // Define the kanban board columns based on application statuses;
 const COLUMNS = [;
-    {;
+    {
         id: "new",;
         title: "Applied",;
-        description: "New applications",;,
-},;
-    {;
+        description: "New applications"},;
+    {
         id: "shortlisted",;
         title: "Shortlisted",;
-        description: "Candidates selected for review",;,
-},;
-    {;
+        description: "Candidates selected for review"},;
+    {
         id: "interview",;
         title: "Interview",;
-        description: "Scheduled for interview",;,
-},;
-    {;
+        description: "Scheduled for interview"},;
+    {
         id: "hired",;
         title: "Hired",;
-        description: "Successful candidates",;,
-},;
-    {;
+        description: "Successful candidates"},;
+    {
         id: "rejected",;
         title: "Rejected",;
-        description: "Not moving forward",;,
-},];
+        description: "Not moving forward"}];
 export function KanbanBoard({ jobId }) {}
   const { applications, isLoading, updateApplicationStatus } =;
     useJobApplications(jobId);
   const [columns, setColumns] = useState({;
 
-    /* empty */;,
-});
+    /* empty */});
   const isMobile = useIsMobile();
   // Initialize columns with applications based on their status;
-  useEffect(() => {;
+  useEffect(() => {
   // TODO: Add dependencies if needed;
 
-  return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
-    if(applications) {;
+  return () => {
+    // Cleanup function}}, []);, []);
+    if(applications) {
 
       // Group applications by status;
-      const groupedApplications = COLUMNS.reduce((acc, column) => {;
+      const groupedApplications = COLUMNS.reduce((acc, column) => {
 
         acc[column.id] = applications.filter(app => app.status === column.id);
-        return acc;,
-}, {});
-      setColumns(groupedApplications);,
-}
+        return acc}, {});
+      setColumns(groupedApplications)}
   }, [applications]);
   // Handle drag end event to update the application status;
-  const handleDragEnd = async result => {;
+  const handleDragEnd = async result => {
 
     const { destination, source, draggableId } = result;
     // If there's no destination or the item is dropped in the same place, do nothing;
@@ -69,10 +59,9 @@ export function KanbanBoard({ jobId }) {}
       !destination ||;
       (destination.droppableId === source.droppableId &&;
         destination.index === source.index);
-    ) {;
+    ) {
 
-      return;,
-}
+      return}
     // Get the application that was dragged;
     const application = applications.find(app => app.id === draggableId);
     if(!application) return;
@@ -89,22 +78,20 @@ export function KanbanBoard({ jobId }) {}
       [source.droppableId]: sourceColumn,;
       [destination.droppableId]: destColumn});
     // Update status in the database;
-    try {;
+    try {
       await updateApplicationStatus(draggableId, newStatus);
       toast({;
 
         title: 'Status updated',;
-        description: `Candidate moved to ${COLUMNS.find(col => col.id === newStatus)?.title}`});,
-} catch(error) {;
+        description: `Candidate moved to ${COLUMNS.find(col => col.id === newStatus)?.title}`})} catch(error) {
       // Revert the UI changes if the database update fails;
       toast({;
 
         title: 'Failed to update status',;
         description: 'Please try again',;
-        variant: 'destructive'});,
-}
-  };
-  if(isLoading) {;
+        variant: 'destructive'})}
+  }
+  if(isLoading) {
 
     return ();
       <div'`;
@@ -121,9 +108,8 @@ export function KanbanBoard({ jobId }) {}
           </Card>;
         ))}
       </div>;
-    );,
-}
-  if(!applications || applications.length === 0) {;
+    )}
+  if(!applications || applications.length === 0) {
 
     return (";
       <Card className="text-center py-16">;
@@ -133,8 +119,7 @@ export function KanbanBoard({ jobId }) {}
             You haven't received applications for this job yet.</p>;
         </CardContent>;
       </Card>;
-    );,
-}
+    )}
   return ();
     <DragDropContext onDragEnd={handleDragEnd}>;
       <div'`;
@@ -152,6 +137,5 @@ export function KanbanBoard({ jobId }) {}
         ))}
       </div>;
     </DragDropContext>;
-  );,
-}
+  )}
 '"`

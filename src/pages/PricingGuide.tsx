@@ -6,8 +6,7 @@
         "API Access"";
       ],;"";
       cta: "Get Started",;
-      popular: false;,
-},;
+      popular: false},;
     {}
 ";
 "";
@@ -31,8 +30,7 @@
         "Dedicated Account Manager"";
       ],;"";
       cta: "Start Free Trial",;
-      popular: true;,
-},;
+      popular: true},;
     {}
 ";
 "";
@@ -50,15 +48,13 @@
         "Unlimited User Licenses","";
         "Monthly Strategy Sessions","";
         "Custom Integration","";
-        "SLA Guarantees";,
-};
+        "SLA Guarantees"}
       ],;";
       notIncluded: [],;"";
       cta: "Contact Sales",;
-      popular: false;,
-};
+      popular: false}
   ];
-;
+
   const servicePricing: unknown = [];
     {}
 ";
@@ -69,8 +65,7 @@
         { name: "AI Business Intelligence", price: "From $299/month", description: "Advanced analytics and insights" },"";
         { name: "AI Sales Copilot", price: "From $199/month", description: "Intelligent sales automation" },"";
         { name: "AI Compliance Assistant", price: "From $399/month", description: "Automated compliance management" },"        { name: "LLM Content Studio", price: "From $149/month", description: "AI-powered content creation" }
-      ];,
-},;
+      ]},;
     {}
 ";
 "";
@@ -80,8 +75,7 @@
         { name: "Cloud DevOps", price: "From $599/month", description: "End-to-end cloud solutions" },"";
         { name: "Cloud FinOps Optimizer", price: "From $299/month", description: "Cost optimization strategies" },"";
         { name: "FinOps Advisor", price: "From $499/month", description: "Financial operations consulting" }
-      ];,
-},;
+      ]},;
     {}
 ";
 "";
@@ -91,8 +85,7 @@
         { name: "AI Compliance Copilot", price: "From $399/month", description: "AI-powered security compliance" },"";
         { name: "Zero Trust Architecture", price: "From $799/month", description: "Modern security framework" },"";
         { name: "Incident Response Platform", price: "From $599/month", description: "Rapid threat response" }
-      ];,
-},;
+      ]},;
     {}
 ";
 "";
@@ -102,8 +95,8 @@
         { name: "IT Infrastructure Management", price: "From $699/month", description: "Enterprise infrastructure management" },;"";
         { name: "Digital Twin", price: "From $899/month", description: "Virtual infrastructure modeling" },;"";
         { name: "IT Consulting", price: "From $299/hour", description: "Strategic IT guidance" },;"";
-        { name: "Onsite Support", price: "From $199/hour", description: "Local technical assistance" };
-      ]};
+        { name: "Onsite Support", price: "From $199/hour", description: "Local technical assistance" }
+      ]}
   ];";
 "";
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
@@ -160,8 +153,7 @@
 ';
                 plan.popular'';
                   ? 'border-cyan-500/50 bg-gradient-to-br from-slate-800/50 to-cyan-900/20'''`;
-                  : 'border-slate-700/50'``;,
-}`}>";
+                  : 'border-slate-700/50'``}`}>";
                 {plan.popular && ("";
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"";
                     <div className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">;
@@ -193,8 +185,7 @@
 ';
                       plan.popular'';
                         ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700'''`;
-                        : 'bg-slate-700 text-white hover:bg-slate-600 border border-slate-600'``;,
-}`}
+                        : 'bg-slate-700 text-white hover:bg-slate-600 border border-slate-600'``}`}
                   >;
                     {tier.cta}";
                     <ArrowRight className="w-4 h-4"  />;
@@ -209,7 +200,7 @@
                       <span className="text-sm">{feature}</span>;
                     </div>;
                   ))}
-;
+
                   {plan.notIncluded.length > 0 && (;
                     <>;
                       <h4 className="text-lg font-semibold text-white mb-4 mt-6">Not Included: unknown</h4>;
@@ -293,14 +284,10 @@
         </div>;
       </section>;
     </div>;
-  );,
-}
-;
+  )}
 
-export { PricingGuide };
-;
-export { PricingGuide };
-;
-export { PricingGuide };
-;
-export { PricingGuide };
+
+export { PricingGuide }
+export { PricingGuide }
+export { PricingGuide }
+export { PricingGuide }

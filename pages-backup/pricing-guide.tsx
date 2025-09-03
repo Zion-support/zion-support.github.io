@@ -43,9 +43,8 @@ const Component = () => {} from";
                   className="{"relative" rounded-2xl border-2 p-8 ${;
                     tier.popular";
                       ? "border-blue-500 bg-blue-50";
-                      : "border-gray-200 bg-white>;,
-}"}
-;
+                      : "border-gray-200 bg-white>}"}
+
                 >;
                   {tier.popular && (";
                     <div className = ""absolute" -top-4 left-1/2 transform -translate-x-1/2"}>";
@@ -54,7 +53,7 @@ const Component = () => {} from";
                       </span>;
                     </div>;
                   )}
-;
+
                   ";
                   <div className="text-center mb-8">";
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">{tier.name}</h3>";
@@ -71,7 +70,7 @@ const Component = () => {} from";
                         <span className="text-gray-700">{feature}</span>;
                       </li>;
                     ))}
-;
+
                   </ul>;
                   ";
                   <Link href="{"/contact";
@@ -79,13 +78,13 @@ const Component = () => {} from";
                       tier.popular";
                         ? "bg-blue-600 text-white hover: bg-blue-700"">;
                         : "bg-gray-900 text-white hover:bg-gray-800"}"}
-;
+
                   >;
                     Get Started,;
                   </Link>;
                 </div>;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";
@@ -97,7 +96,7 @@ const Component = () => {} from";
             </div>;
             ";
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,;
-              {serviceCategories.map((category, index) => {;
+              {serviceCategories.map((category, index) => {
                 const IconComponent = category.icon;
                 return (";
                   <div key = "{index}" className="bg-white rounded-xl p-6 shadow-lg">";
@@ -107,105 +106,96 @@ const Component = () => {} from";
                       </div>";
                       <h3 className="text-xl font-semibold text-gray-900">{category.title}</h3>";
 ursor/automate-test-fix-improve-and-merge-code-99d1,"});,"})";
-  ArrowRight,,"});,"})";
-  DollarSign,,"});,"})";
-  TrendingUp,,"});,"})";
-  Award,,"});,"})";
-  Clock,,"});,"})";
-  Target,,"});,"})";
-  Network,,"});,"})";
-  Brain,,"});,"})";
-  Server,,"});,"})";
-  Cloud,,"});,"})";
-  Database,,"});,"})";
-  Lock,,"});,"})";
-  BarChart3,,"});,"})";
-  Rocket,,"});,"})";
-  Heart,,"});,"})";
-  Sparkles,,"});,"})";
-  Calculator,,"});,"})";
-  BookOpen,,"});,"})";
-  Lightbulb,,"});,"})";
-ursor/automate-test-fix-improve-and-merge-code-99d1,"});,"});";,
-} from "lucide-react";,"});,"})","});,"})";
-;,"});,"});";,
-} from,"});,"})";
+  ArrowRight,"});,"})";
+  DollarSign,"});,"})";
+  TrendingUp,"});,"})";
+  Award,"});,"})";
+  Clock,"});,"})";
+  Target,"});,"})";
+  Network,"});,"})";
+  Brain,"});,"})";
+  Server,"});,"})";
+  Cloud,"});,"})";
+  Database,"});,"})";
+  Lock,"});,"})";
+  BarChart3,"});,"})";
+  Rocket,"});,"})";
+  Heart,"});,"})";
+  Sparkles,"});,"})";
+  Calculator,"});,"})";
+  BookOpen,"});,"})";
+  Lightbulb,"});,"})";
+ursor/automate-test-fix-improve-and-merge-code-99d1,"});,"});"} from "lucide-react";,"});,"})","});,"})";
+;,"});,"});"} from,"});,"})";
   "lucide-react";,"});,"})";
 const PricingGuide: React.FC = () => {,"});,"})";
-  const pricingFactors = [],,"});,"})";
+  const pricingFactors = [],"});,"})";
       icon: Brain,"});,"})";
-      color: "from-blue-500 to-cyan-500","});,"});";,
-},,"});,"})";
-    {;,"});,"})";
+      color: "from-blue-500 to-cyan-500","});,"});"},"});,"})";
+    {,"});,"})";
       factor: "Data Requirements","});,"})";
       description:;,"});,"})";
-        "Amount and quality of data needed for training and implementation",,"});,"})";
+        "Amount and quality of data needed for training and implementation","});,"})";
       details: [,"});,"})";
-        "Small datasets: $1,000 - $3, 000",,"});,"})";
-        "Medium datasets: $3, 000 - $8,000",,"});,"})";
-        "Large datasets: $8,000 - $20, 000+",,"});,"})";
-      ],,"});,"})";
+        "Small datasets: $1,000 - $3, 000","});,"})";
+        "Medium datasets: $3, 000 - $8,000","});,"})";
+        "Large datasets: $8,000 - $20, 000+","});,"})";
+      ],"});,"})";
       icon: Database,"});,"})";
-      color: "from-green-500 to-emerald-500","});,"});";,
-},,"});,"})";
-    {;,"});,"})";
+      color: "from-green-500 to-emerald-500","});,"});"},"});,"})";
+    {,"});,"})";
       factor: "Integration Needs","});,"})";
       description:;,"});,"})";
-        "Complexity of integrating with existing systems and platforms",,"});,"})";
+        "Complexity of integrating with existing systems and platforms","});,"})";
       details: [,"});,"})";
-        "Basic integrations: $1,500 - $4, 000",,"});,"})";
-        "Complex integrations: $4, 000 - $10,000",,"});,"})";
-        "Enterprise integrations: $10,000 - $25, 000+",,"});,"})";
-      ],,"});,"})";
+        "Basic integrations: $1,500 - $4, 000","});,"})";
+        "Complex integrations: $4, 000 - $10,000","});,"})";
+        "Enterprise integrations: $10,000 - $25, 000+","});,"})";
+      ],"});,"})";
       icon: Network,"});,"})";
-      color: "from-purple-500 to-pink-500","});,"});";,
-},,"});,"})";
-    {;,"});,"})";
+      color: "from-purple-500 to-pink-500","});,"});"},"});,"})";
+    {,"});,"})";
       factor: "Timeline Requirements","});,"})";
       description: "How quickly you need the solution delivered","});,"})";
       details: [,"});,"})";
         "Standard timeline: Base price","});,"})";
-        "Rush delivery (50% faster): +30% cost",,"});,"})";
-        "Emergency delivery (75% faster): +50% cost",,"});,"})";
-      ],,"});,"})";
+        "Rush delivery (50% faster): +30% cost","});,"})";
+        "Emergency delivery (75% faster): +50% cost","});,"})";
+      ],"});,"})";
       icon: Clock,"});,"})";
-      color: "from-orange-500 to-red-500","});,"});";,
-},,"});,"})";
+      color: "from-orange-500 to-red-500","});,"});"},"});,"})";
   ],"});,"})";
 ;,"});,"})";
-  const pricingExamples = [],,"});,"})";
-      price: "$3,500 - $5, 500",,"});,"})";
+  const pricingExamples = [],"});,"})";
+      price: "$3,500 - $5, 500","});,"})";
       timeline: "4-6 weeks","});,"})";
-      roi: "300% ROI within 6 months","});,"});";,
-},,"});,"})";
-    {;,"});,"})";
+      roi: "300% ROI within 6 months","});,"});"},"});,"})";
+    {,"});,"})";
       scenario: "Enterprise AI Platform","});,"})";
       description: "Comprehensive AI platform for large manufacturing company","});,"})";
       features: [,"});,"})";
-        "Custom machine learning models",,"});,"})";
-        "Predictive maintenance system",,"});,"})";
-        "Real-time analytics dashboard",,"});,"})";
-        "Multi-site deployment",,"});,"})";
-        "24/7 support and monitoring",,"});,"})";
-      ],,"});,"})";
-      price: "$25,000 - $75, 000",,"});,"})";
+        "Custom machine learning models","});,"})";
+        "Predictive maintenance system","});,"})";
+        "Real-time analytics dashboard","});,"})";
+        "Multi-site deployment","});,"})";
+        "24/7 support and monitoring","});,"})";
+      ],"});,"})";
+      price: "$25,000 - $75, 000","});,"})";
       timeline: "12-16 weeks","});,"})";
-      roi: "500% ROI within 12 months","});,"});";,
-},,"});,"})";
-    {;,"});,"})";
+      roi: "500% ROI within 12 months","});,"});"},"});,"})";
+    {,"});,"})";
       scenario: "Healthcare AI Solution","});,"})";
       description: "AI-powered diagnostic tool for medical practice","});,"})";
       features: [,"});,"})";
-        "Medical image analysis",,"});,"})";
-        "Patient data integration",,"});,"})";
-        "HIPAA compliance",,"});,"})";
-        "Clinical decision support",,"});,"})";
-        "Training and certification",,"});,"})";
-      ],,"});,"})";
-      price: "$15,000 - $35, 000",,"});,"})";
+        "Medical image analysis","});,"})";
+        "Patient data integration","});,"})";
+        "HIPAA compliance","});,"})";
+        "Clinical decision support","});,"})";
+        "Training and certification","});,"})";
+      ],"});,"})";
+      price: "$15,000 - $35, 000","});,"})";
       timeline: "8-12 weeks","});,"})";
-      roi: "400% ROI within 8 months","});,"});";,
-},,"});,"})";
+      roi: "400% ROI within 8 months","});,"});"},"});,"})";
   ],"});,"})";
 ;,"});,"})";
   const costSavingTips = [],"});,"})";
@@ -413,31 +403,30 @@ const PricingGuide: React.FC = () => {,"});,"})";
         </div>;,"});,"})";
       </section>;,"});,"})";
     </div>;,"});,"})";
-  );,"});,"});";,
-};,"});,"})";
+  );,"});,"});"};,"});,"})";
 ;,"});,"})";
 export default PricingGuide,"});,"})";
 ;,"});,"})";
 import React from "react";
 import dynamic from "next/dynamic";
-const Component = () => {;
-const PricingGuide: React.FC = () => {;
+const Component = () => {
+const PricingGuide: React.FC = () => {
   const pricingFactors = [], icon: Brain,";
-      color: "from-blue-500 to-cyan-500"}, {;
+      color: "from-blue-500 to-cyan-500"}, {
       factor: "Data Requirements",";
       description: "Amount and quality of data needed for training and implementation", details: [",;
         "Small dataset,";
     s: $1,000 - $3,000",";
         "Medium datasets: $3,000 - $8,000", "Large datasets: $8,000 - $20,000+";
       ], icon: Database,";
-      color: "from-green-500 to-emerald-500"}, {;
+      color: "from-green-500 to-emerald-500"}, {
       factor: "Integration Needs",";
       description: "Complexity of integrating with existing systems and platforms", details: [",;
         "Basic integration,";
     s: $1,500 - $4,000",";
         "Complex integrations: $4,000 - $10,000", "Enterprise integrations: $10,000 - $25,000+";
       ], icon: Network,";
-      color: "from-purple-500 to-pink-500"}, {;
+      color: "from-purple-500 to-pink-500"}, {
       factor: "Timeline Requirements",";
       description: "How quickly you need the solution delivered", details: [",;
         "Standard timelin,";
@@ -445,12 +434,12 @@ const PricingGuide: React.FC = () => {;
         "Rush delivery (50% faster): +30% cost", "Emergency delivery (75% faster): +50% cost";
       ], icon: Clock,";
       color: "from-orange-500 to-red-500"}
-;
+
   ];
 
   const pricingExamples = [], price: "$3,500 - $5,500",";
       timeline: "4-6 weeks", roi: "300% ROI within 6 months"},";
-    {;
+    {
       scenario: "Enterprise AI Platform", description: "Comprehensive AI platform for large manufacturing company",";
       features: [",;
         "Custom machine learning models", "Predictive maintenance system",";
@@ -458,7 +447,7 @@ const PricingGuide: React.FC = () => {;
         "24/7 support and monitoring";
       ], price: "$25,000 - $75,000",";
       timeline: "12-16 weeks", roi: "500% ROI within 12 months"},";
-    {;
+    {
       scenario: "Healthcare AI Solution", description: "AI-powered diagnostic tool for medical practice",";
       features: [",;
         "Medical image analysis", "Patient data integration",";
@@ -466,7 +455,7 @@ const PricingGuide: React.FC = () => {;
         "Training and certification";
       ], price: "$15,000 - $35,000",";
       timeline: "8-12 weeks", roi: "400% ROI within 8 months"}
-;
+
   ];
 
   const costSavingTips = []";
@@ -540,15 +529,15 @@ key="{factor.factor}
                       <li key="{detailIndex}" className="flex items-center text-gray-300>";
                         <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0"  />;
                         {detail}
-;
+
                       </li>;
                     ))}
-;
+
                   </ul>;
                 </Card>;
               </motion.div>;
             ))}
-;
+
           </div>;
       </section>;
       {/* comment */}";
@@ -590,7 +579,7 @@ key="{example.scenario}
                       <li key="{featureIndex}" className="flex items-center text-gray-300 text-sm>";
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0"  />;
                         {feature}
-;
+
                       </li>;
                     ))}";
                   </ul>;
@@ -598,13 +587,13 @@ key="{example.scenario}
                     <Badge variant="secondary" className="text-green-400>";
                       <TrendingUp className="w-4 h-4 mr-1"  />;
                       {example.roi}
-;
+
                     </Badge>;
                   </div>;
                 </Card>;
               </motion.div>;
             ))}
-;
+
           </div>;
       </section>;
       {/* comment */}";
@@ -644,7 +633,7 @@ key="{tip.tip}
                       <p className="text-gray-300 mb-3">{tip.description}</p>;
                       <Badge variant="secondary" className="text-green-400">;
                         {tip.savings}
-;
+
                       </Badge>;
                     </div>;
                     ";
@@ -655,13 +644,12 @@ key="{tip.tip}
                           <span className="text-blue-600 font-medium">{service.price}</span>;
                         </li>;
                       ))}
-;
+
                     </ul>;
                   </div>;
-                );,
-}
+                )}
               })}
-;
+
             </div>;
         </section>;
       {/* comment */}";
@@ -671,7 +659,7 @@ key="{tip.tip}
 initial="{{" opacity: 0, y: 20 }}";
             animate="{{" opacity: 1, y: 0 }}";
             transition="{{" duration: 0.6 }}
-;
+
           >";
             <h2 className="text-4xl font-bold text-white mb-6">;
               Get Your Custom Quote,;
@@ -723,8 +711,8 @@ initial="{{" opacit>;
   Shield,;
   Clock,;
   Award} from "lucide-react";
-export default function PricingGuide() {;
-;
+export default function PricingGuide() {
+
   const plans = [], popular: false,";
       cta: "Start Free Trial"}, {";
       name: "Professional",";
@@ -747,7 +735,7 @@ export default function PricingGuide() {;
         "Custom development", "SLA guarantee";
       ], popular: false,";
       cta: "Contact Sales"}
-;
+
   ];
 
   const addOns = [];
@@ -860,7 +848,7 @@ export default function PricingGuide() {;
               {pricingTiers.map((tier, index) => (";
                 <div key="{index}
                   className="{"relative" bg-white rounded-2xl shadow-lg p-8 ${tier.popular ? "ring-2 ring-blue-500 transform scale-105" : ""}"}
-;
+
                 >;
                   {tier.popular && (";
                     <div className=""absolute" -top-4 left-1/2 transform -translate-x-1/2"}>";
@@ -869,7 +857,7 @@ export default function PricingGuide() {;
                       </span>;
                     </div>;
                   )}
-;
+
 ";
                   <div className="text-center mb-8">";
                     <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">";
@@ -877,13 +865,13 @@ export default function PricingGuide() {;
                     </div>";
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">;
                       {tier.name}
-;
+
                     </h3>";
                     <p className="text-gray-600 mb-4">{tier.description}</p>";
                     <div className="flex items-baseline justify-center">";
                       <span className="text-4xl font-bold text-gray-900">;
                         {tier.price}
-;
+
                       </span>";
                       <span className="text-gray-600 ml-1">{tier.period}</span>;
                     </div>;
@@ -895,7 +883,7 @@ export default function PricingGuide() {;
                         <span className="text-gray-700">{feature}</span>;
                       </li>;
                     ))}
-;
+
                   </ul>;
 ";
                   <Link href="{"/contact"">";
@@ -903,7 +891,7 @@ export default function PricingGuide() {;
                         tier.popular";
                           ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white hover: from-blue-700 hover:to-purple-700"">;
                           : "bg-gray-100 text-gray-900 hover:bg-gray-200"}"}
-;
+
                     >;
                       Get Started";
                       <ArrowRight className=""w-4" h-4 ml-2 inline`}       />;
@@ -911,7 +899,7 @@ export default function PricingGuide() {;
                   </Link>;
                 </div>;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";
@@ -946,22 +934,22 @@ export default function PricingGuide() {;
                     <Calculator className="w-12 h-12 text-blue-600 mx-auto mb-4"  />";
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">,;
                       {service.name}
-;
+
                     </h3>";
                     <p className="text-2xl font-bold text-blue-600 mb-2">;
                       {service.price}
-;
+
                     </p>";
                     <p className="text-gray-600 text-sm">;
                       {service.description}
-;
+
                     </p>";
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">{service.name}</h3>";
                     <p className="text-2xl font-bold text-blue-600 mb-2">{service.price}</p>";
                     <p className="text-gray-600 text-sm">{service.description}</p>;
                   </div>;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";
@@ -1061,12 +1049,10 @@ to your needs.;
       <SimpleFooter  />;
     </>;
   )}
-;
+
       </div>;
     </Layout>;
-  );,
-}
+  )}
       </main>;
     </>;
-  );,
-}}"
+  )}}"

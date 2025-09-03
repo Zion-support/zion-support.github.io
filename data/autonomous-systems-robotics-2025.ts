@@ -1,5 +1,5 @@
 import { ServiceVariant  } from "../types/service-variants";
-export interface AutonomousSystemsRobotics2025 {;
+export interface AutonomousSystemsRobotics2025 {
   id: string;
   name: string;
   tagline: string;
@@ -26,7 +26,7 @@ export interface AutonomousSystemsRobotics2025 {;
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -38,7 +38,7 @@ export interface AutonomousSystemsRobotics2025 {;
   rating: number;
 export const autonomousSystemsRobotics2025: AutonomousSystemsRobotics2025[] = [;
   // Autonomous Manufacturing;
-  {;
+  {
     id: "autonomous-manufacturing-ai-platform",;
     name: "Autonomous Manufacturing AI Platform",;
     tagline: "AI-powered manufacturing automation and optimization",;
@@ -76,21 +76,19 @@ export const autonomousSystemsRobotics2025: AutonomousSystemsRobotics2025[] = [;
     marketSize: "$18B autonomous manufacturing market",;
     growthRate: "250% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Comprehensive autonomous manufacturing platform with equipment integration, predictive analytics, and quality control. Includes custom workflow development and equipment integration services.",;
     launchDate: "2025-01-20",;
     customers: 120,;
     rating: 4.7,;
-    reviews: 78;,;,
-},;
+    reviews: 78},;
   // Swarm Robotics;
-  {;
+  {
     id: "swarm-robotics-platform",;
     name: "Swarm Robotics Platform",;
     tagline: "Coordinated multi-robot systems for complex tasks",;
@@ -128,21 +126,19 @@ export const autonomousSystemsRobotics2025: AutonomousSystemsRobotics2025[] = [;
     marketSize: "$12B swarm robotics market",;
     growthRate: "300% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Enterprise-grade swarm robotics platform with robot coordination, task management, and performance analytics. Includes custom robot programming and integration services.",;
     launchDate: "2025-01-25",;
     customers: 65,;
     rating: 4.8,;
-    reviews: 42;,;,
-},;
+    reviews: 42},;
   // Autonomous Vehicles;
-  {;
+  {
     id: "autonomous-vehicle-ai-platform",;
     name: "Autonomous Vehicle AI Platform",;
     tagline: "AI-powered autonomous vehicle control and navigation",;
@@ -180,21 +176,19 @@ export const autonomousSystemsRobotics2025: AutonomousSystemsRobotics2025[] = [;
     marketSize: "$25B autonomous vehicle market",;
     growthRate: "280% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Comprehensive autonomous vehicle platform with perception systems, decision-making algorithms, and safety protocols. Includes custom vehicle integration and safety certification services.",;
     launchDate: "2025-02-01",;
     customers: 45,;
     rating: 4.7,;
-    reviews: 31;,;,
-},;
+    reviews: 31},;
   // Advanced Robotics;
-  {;
+  {
     id: "advanced-robotics-automation-platform",;
     name: "Advanced Robotics Automation Platform",;
     tagline: "Next-generation robotics automation and control",;
@@ -232,21 +226,19 @@ export const autonomousSystemsRobotics2025: AutonomousSystemsRobotics2025[] = [;
     marketSize: "$15B advanced robotics market",;
     growthRate: "220% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Enterprise-grade advanced robotics platform with robot control, safety systems, and integration capabilities. Includes custom robot programming and safety certification services.",;
     launchDate: "2025-02-05",;
     customers: 55,;
     rating: 4.6,;
-    reviews: 38;,;,
-},;
+    reviews: 38},;
   // Autonomous Supply Chain;
-  {;
+  {
     id: "autonomous-supply-chain-optimization",;
     name: "Autonomous Supply Chain Optimization",;
     tagline: "AI-powered supply chain automation and optimization",;
@@ -284,12 +276,11 @@ export const autonomousSystemsRobotics2025: AutonomousSystemsRobotics2025[] = [;
     marketSize: "$22B supply chain optimization market",;
     growthRate: "200% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Comprehensive autonomous supply chain platform with predictive analytics, optimization algorithms, and real-time monitoring. Includes custom optimization development and system integration services.",;
     launchDate: "2025-02-10",;

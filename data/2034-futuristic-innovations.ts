@@ -1,4 +1,4 @@
-export interface Service2034 {;
+export interface Service2034 {
   id: string;
   name: string;
   description: string;
@@ -24,7 +24,7 @@ export interface Service2034 {;
   uptime: string;
   contact: string;
 export const futuristic2034Services: Service2034[] = [;
-  {;
+  {
     id: "ai-quantum-hybrid-brain",;
     name: "AI Quantum Hybrid Brain Interface",;
     description: "Revolutionary brain-computer interface that combines quantum computing with AI to enable direct neural control of digital systems.",;
@@ -79,9 +79,8 @@ export const futuristic2034Services: Service2034[] = [;
     scalability: "Unlimited neural connections",;
     uptime: "99.99% neural interface availability",;
     contact: "+1 302 464 0950",;
-    website: "https://ziontechgroup.com/ai-quantum-hybrid-brain-interface";,;,
-},;
-  {;
+    website: "https://ziontechgroup.com/ai-quantum-hybrid-brain-interface"},;
+  {
     id: "quantum-dna-storage-platform",;
     name: "Quantum DNA Storage Platform",;
     description: "Breakthrough platform that uses quantum computing to encode and store massive amounts of data in synthetic DNA molecules.",;
@@ -136,9 +135,8 @@ export const futuristic2034Services: Service2034[] = [;
     scalability: "Unlimited DNA storage capacity",;
     uptime: "99.99% DNA storage availability",;
     contact: "+1 302 464 0950",;
-    website: "https://ziontechgroup.com/quantum-dna-storage-platform";,;,
-},;
-  {;
+    website: "https://ziontechgroup.com/quantum-dna-storage-platform"},;
+  {
     id: "autonomous-space-colony-ai",;
     name: "Autonomous Space Colony AI Platform",;
     description: "AI system designed to autonomously manage and operate space colonies, handling everything from life support to resource management.",;
@@ -193,9 +191,8 @@ export const futuristic2034Services: Service2034[] = [;
     scalability: "Unlimited colony management",;
     uptime: "99.999% space operations availability",;
     contact: "+1 302 464 0950",;
-    website: "https://ziontechgroup.com/autonomous-space-colony-ai";,;,
-},;
-  {;
+    website: "https://ziontechgroup.com/autonomous-space-colony-ai"},;
+  {
     id: "quantum-emotional-intelligence",;
     name: "Quantum Emotional Intelligence Platform",;
     description: "Advanced platform that uses quantum computing to analyze and understand human emotions with unprecedented accuracy and depth.",;
@@ -250,9 +247,8 @@ export const futuristic2034Services: Service2034[] = [;
     scalability: "Unlimited emotional analysis",;
     uptime: "99.99% emotional intelligence availability",;
     contact: "+1 302 464 0950",;
-    website: "https://ziontechgroup.com/quantum-emotional-intelligence";,;,
-},;
-  {;
+    website: "https://ziontechgroup.com/quantum-emotional-intelligence"},;
+  {
     id: "ai-quantum-creativity-studio",;
     name: "AI Quantum Creativity Studio",;
     description: "Revolutionary platform that combines AI and quantum computing to generate creative content across all media types with unprecedented originality.",;
@@ -307,9 +303,8 @@ export const futuristic2034Services: Service2034[] = [;
     scalability: "Unlimited creative generation",;
     uptime: "99.99% creativity platform availability",;
     contact: "+1 302 464 0950",;
-    website: "https://ziontechgroup.com/ai-quantum-creativity-studio";,;,
-},;
-  {;
+    website: "https://ziontechgroup.com/ai-quantum-creativity-studio"},;
+  {
     id: "quantum-financial-prediction",;
     name: "Quantum Financial Prediction Platform",;
     description: "Advanced platform that uses quantum computing to predict financial markets with unprecedented accuracy and speed.",;

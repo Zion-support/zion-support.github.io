@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = () => {;
+import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = () => {
   const [formData, setFormData] = useState({;
 
   const [formData, setFormData] = useState ({;
@@ -8,37 +8,34 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
     phone: '',;
     comp: '',;
     service: '',;
-    message: '';,
-});
+    message: ''});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-;
+
   const services = [';
     'IT Support & Maintenance',Network Setup & Security',Hardware Installation',Data Recovery',Cloud Migration',Custom Solution';
   ];
-;
-  const handleChange = (e) => {;
+
+  const handleChange = (e) => {
 
     const { name, value } = e.target;
     setFormData(prev => ({;
 
       ...prev,;
-      [name]: value;,
-}) ) };
-;
-  const handleSubmit = async(e) => {;
+      [name]: value}) ) }
+  const handleSubmit = async(e) => {
 
     e.preventDefault();
     setIsSubmitting(true);
-;
+
     // Simulate API call;
     await new Promise(resolve => setTimeout (resolve, 2000) ) ;
-;
+
     setIsSubmitting(false) ;
     setIsSubmitted(true) ;
-;
+
     // Reset form after 5 seconds;
-    setTimeout(() => {;
+    setTimeout(() => {
       setIsSubmitted(false);
       setFormData({;
 
@@ -47,10 +44,8 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
         phone: '',;
         comp: '',;
         service: '',;
-        message: '';,
-}) }, 5000) };
-;
-  if(isSubmitted) {;
+        message: ''}) }, 5000) }
+  if(isSubmitted) {
 
     return ();
       <section className="py-20 bg-gradient-to-br from-green-50 to-blue-50">";
@@ -76,7 +71,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
           </div>;
         </div>;
       </section>) }
-;
+
   return (";
     <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">";
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">";
@@ -268,5 +263,5 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
         </div>;
       </div>;
     </section>;
-  )};
+  )}
 '"}}

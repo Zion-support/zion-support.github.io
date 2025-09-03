@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-;
-export default function Training() {;
+
+export default function Training() {
   return (;
     <div className="min-h-screen bg-gray-50 py-12">;
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -27,7 +27,7 @@ export default function Training() {;
             </Link>;
           </div>;
         </div>;
-        ;
+
         <div className="text-center">;
           <Link ;
             to="/contact" ;
@@ -36,18 +36,12 @@ export default function Training() {;
           </Link>;
         </div>;
       </section>;
-    </div>) ;,
-};
-;
+    </div>) }
 export default Training;
-;
 
-export { Training };
-;
-export { Training };
-;
-export { Training };
-;
-export { Training };
-;
-export { Training };
+
+export { Training }
+export { Training }
+export { Training }
+export { Training }
+export { Training }

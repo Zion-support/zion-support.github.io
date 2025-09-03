@@ -15,113 +15,101 @@ import { ;
   Calendar,;
   Clock,;
   Star,;
-  CheckCircle;,
-} from 'lucide-react';
-;
-export default function ResourcesPage() {;
+  CheckCircle} from 'lucide-react';
+
+export default function ResourcesPage() {
   const whitepapers = [;
-    {;
+    {
       title: "AI-Powered Business Transformation: A Comprehensive Guide",;
       description: "Learn how artificial intelligence is revolutionizing business operations and discover practical strategies for implementation.",;
       category: "AI & Automation",;
       downloadCount: "2.3k",;
       rating: 4.8,;
       fileSize: "2.4 MB",;
-      downloadUrl: "/resources/whitepapers/ai-business-transformation.pdf";,
-},;
-    {;
+      downloadUrl: "/resources/whitepapers/ai-business-transformation.pdf"},;
+    {
       title: "Cloud Cost Optimization Strategies for Enterprise",;
       description: "Comprehensive guide to reducing cloud spending while maintaining performance and scalability.",;
       category: "Cloud & Infrastructure",;
       downloadCount: "1.8k",;
       rating: 4.9,;
       fileSize: "3.1 MB",;
-      downloadUrl: "/resources/whitepapers/cloud-cost-optimization.pdf";,
-},;
-    {;
+      downloadUrl: "/resources/whitepapers/cloud-cost-optimization.pdf"},;
+    {
       title: "Cybersecurity in the Age of AI: Threats and Solutions",;
       description: "Explore emerging cybersecurity challenges and AI-powered defense strategies for modern organizations.",;
       category: "Cybersecurity",;
       downloadCount: "1.5k",;
       rating: 4.7,;
       fileSize: "2.8 MB",;
-      downloadUrl: "/resources/whitepapers/ai-cybersecurity.pdf";,
-}
+      downloadUrl: "/resources/whitepapers/ai-cybersecurity.pdf"}
   ];
-;
+
   const caseStudies = [;
-    {;
+    {
       title: "How TechCorp Reduced Cloud Costs by 40%",;
       company: "TechCorp Inc.",;
       industry: "Technology",;
       results: ["40% cost reduction", "Improved performance", "Better resource utilization"],;
       readTime: "5 min read",;
-      url: "/resources/case-studies/techcorp-cloud-optimization";,
-},;
-    {;
+      url: "/resources/case-studies/techcorp-cloud-optimization"},;
+    {
       title: "AI-Powered Customer Service Transformation at RetailMax",;
       company: "RetailMax",;
       industry: "Retail",;
       results: ["300% increase in efficiency", "Improved customer satisfaction", "Reduced support costs"],;
       readTime: "7 min read",;
-      url: "/resources/case-studies/retailmax-ai-transformation";,
-},;
-    {;
+      url: "/resources/case-studies/retailmax-ai-transformation"},;
+    {
       title: "Quantum Computing Solutions for Financial Services",;
       company: "QuantumBank",;
       industry: "Financial Services",;
       results: ["Faster risk calculations", "Enhanced security", "Competitive advantage"],;
       readTime: "6 min read",;
-      url: "/resources/case-studies/quantumbank-quantum-computing";,
-}
+      url: "/resources/case-studies/quantumbank-quantum-computing"}
   ];
-;
+
   const guides = [;
-    {;
+    {
       title: "Getting Started with AI Implementation",;
       description: "Step-by-step guide for businesses looking to implement AI solutions.",;
       level: "Beginner",;
       estimatedTime: "30 min",;
       category: "AI & Machine Learning",;
-      url: "/resources/guides/ai-implementation-guide";,
-},;
-    {;
+      url: "/resources/guides/ai-implementation-guide"},;
+    {
       title: "Cloud Migration Best Practices",;
       description: "Comprehensive checklist and best practices for successful cloud migration.",;
       level: "Intermediate",;
       estimatedTime: "45 min",;
       category: "Cloud & Infrastructure",;
-      url: "/resources/guides/cloud-migration-best-practices";,
-},;
-    {;
+      url: "/resources/guides/cloud-migration-best-practices"},;
+    {
       title: "Cybersecurity Framework Implementation",;
       description: "Guide to implementing NIST cybersecurity framework in your organization.",;
       level: "Advanced",;
       estimatedTime: "60 min",;
       category: "Cybersecurity",;
-      url: "/resources/guides/cybersecurity-framework-implementation";,
-}
+      url: "/resources/guides/cybersecurity-framework-implementation"}
   ];
-;
+
   const webinars = [;
-    {;
+    {
       title: "The Future of AI in Business",;
       date: "December 15, 2025",;
       time: "2:00 PM EST",;
       speaker: "Dr. Sarah Chen, CTO",;
       description: "Explore emerging AI trends and their impact on business strategy and operations.",;
-      registrationUrl: "/webinars/future-of-ai-business";,
-},;
-    {;
+      registrationUrl: "/webinars/future-of-ai-business"},;
+    {
       title: "Cloud Cost Optimization Workshop",;
       date: "December 22, 2025",;
       time: "1:00 PM EST",;
       speaker: "Marcus Rodriguez, COO",;
       description: "Hands-on workshop to optimize your cloud spending and improve resource utilization.",;
-      registrationUrl: "/webinars/cloud-cost-optimization-workshop";,
-}
+      registrationUrl: "/webinars/cloud-cost-optimization-workshop"}
   ];
-;
+
   return (;
     <div className="min-h-screen bg-zion-slate-dark text-white">;
       {/* Hero Section */}
@@ -166,16 +154,16 @@ export default function ResourcesPage() {;
                     {paper.rating}
                   </div>;
                 </div>;
-                ;
+
                 <h3 className="text-xl font-semibold text-white mb-3">{paper.title}</h3>;
                 <p className="text-zion-slate-light text-sm mb-4">{paper.description}</p>;
-                ;
+
                 <div className="flex items-center justify-between text-xs text-zion-slate-light mb-4">;
                   <span>📥 {paper.downloadCount} downloads</span>;
                   <span>📁 {paper.fileSize}</span>;
                 </div>;
-                ;
-                <a href={paper.downloadUrl} ;
+
+                <a href={paper.downloadUrl}
                    className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue text-white text-center py-3 rounded-lg hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300 flex items-center justify-center">;
                   <Download className="w-4 h-4 mr-2" />;
                   Download Whitepaper;
@@ -206,10 +194,10 @@ export default function ResourcesPage() {;
                     {study.industry}
                   </span>;
                 </div>;
-                ;
+
                 <h3 className="text-xl font-semibold text-white mb-2">{study.title}</h3>;
                 <p className="text-zion-cyan font-medium mb-3">{study.company}</p>;
-                ;
+
                 <div className="mb-4">;
                   <h4 className="text-sm font-semibold text-white mb-2">Key Results:</h4>;
                   <ul className="space-y-1">;
@@ -221,7 +209,7 @@ export default function ResourcesPage() {;
                     ))}
                   </ul>;
                 </div>;
-                ;
+
                 <div className="flex items-center justify-between">;
                   <span className="text-xs text-zion-slate-light">{study.readTime}</span>;
                   <a href={study.url} className="text-zion-cyan hover:text-zion-cyan-light text-sm font-medium flex items-center">;
@@ -258,17 +246,17 @@ export default function ResourcesPage() {;
                     {guide.level}
                   </span>;
                 </div>;
-                ;
+
                 <h3 className="text-xl font-semibold text-white mb-3">{guide.title}</h3>;
                 <p className="text-zion-slate-light text-sm mb-4">{guide.description}</p>;
-                ;
+
                 <div className="flex items-center justify-between text-xs text-zion-slate-light mb-4">;
                   <span className="flex items-center">;
                     <Clock className="w-3 h-3 mr-1" />;
                     {guide.estimatedTime}
                   </span>;
                 </div>;
-                ;
+
                 <a href={guide.url} className="w-full border border-zion-cyan text-zion-cyan text-center py-3 rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center justify-center">;
                   <BookOpen className="w-4 h-4 mr-2" />;
                   Read Guide;
@@ -300,10 +288,10 @@ export default function ResourcesPage() {;
                   </span>;
                   <span className="text-zion-slate-light text-sm">{webinar.date}</span>;
                 </div>;
-                ;
+
                 <h3 className="text-xl font-semibold text-white mb-3">{webinar.title}</h3>;
                 <p className="text-zion-slate-light text-sm mb-4">{webinar.description}</p>;
-                ;
+
                 <div className="mb-4">;
                   <p className="text-zion-cyan text-sm font-medium mb-1">Speaker: {webinar.speaker}</p>;
                   <p className="text-zion-slate-light text-sm flex items-center">;
@@ -311,7 +299,7 @@ export default function ResourcesPage() {;
                     {webinar.date} at {webinar.time}
                   </p>;
                 </div>;
-                ;
+
                 <a href={webinar.registrationUrl} className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue text-white text-center py-3 rounded-lg hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300 flex items-center justify-center">;
                   <Video className="w-4 h-4 mr-2" />;
                   Register Now;
@@ -344,5 +332,4 @@ export default function ResourcesPage() {;
         </div>;
       </section>;
     </div>;
-  );,
-}
+  )}

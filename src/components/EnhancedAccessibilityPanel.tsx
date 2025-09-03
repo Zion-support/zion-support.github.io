@@ -1,9 +1,9 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
-;
+
  params - Function parameters;
  * @returns {*} Function return value;
  */;
-function EnhancedAccessibilityPanel () {;
+function EnhancedAccessibilityPanel () {
 
   Accessibility,;
   Eye,;
@@ -32,8 +32,8 @@ function EnhancedAccessibilityPanel () {;
   SkipBack,;
   SkipForward,;
   Volume1} from 'lucide-react';
-;
-interface AccessibilitySettings {;
+
+interface AccessibilitySettings {
 
   highContrast: boolean;
   largeText: boolean;
@@ -45,14 +45,14 @@ interface AccessibilitySettings {;
   lineHeight: number;
   letterSpacing: number;
   wordSpacing: number}
-interface AccessibilityIssue {;
+interface AccessibilityIssue {
   id: string;
   type: 'error' | 'warning' | 'info';
   message: string;
   element?: string;
   recommendation: string;
   severity: 'low' | 'medium' | 'high';
-export function EnhancedAccessibilityPanel() {;
+export function EnhancedAccessibilityPanel() {
   const [isVisible, setIsVisible] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
   const [settings, setSettings] = useState<AccessibilitySettings>({;
@@ -71,46 +71,46 @@ export function EnhancedAccessibilityPanel() {;
   const [isScanning, setIsScanning] = useState(false);
   const [currentFocus, setCurrentFocus] = useState<string>('');
   const [keyboardMode, setKeyboardMode] = useState(false);
-;
-  // Apply accessibility settings;
-  ;
-      setSettings(updatedSettings);
-;
-      // Apply high contrast;
-      if(updatedSettings.highContrast) {;
 
-        document.documentElement.classList.add('high-contrast')} else {;
+  // Apply accessibility settings;
+
+      setSettings(updatedSettings);
+
+      // Apply high contrast;
+      if(updatedSettings.highContrast) {
+
+        document.documentElement.classList.add('high-contrast')} else {
 
         document.documentElement.classList.remove('high-contrast')}
-;
-      // Apply large text;
-      if(updatedSettings.largeText) {;
 
-        document.documentElement.style.fontSize = '18px'} else {;
+      // Apply large text;
+      if(updatedSettings.largeText) {
+
+        document.documentElement.style.fontSize = '18px'} else {
 
         document.documentElement.style.fontSize = '16px'}
-;
+
       // Apply reduced motion;
-      if(updatedSettings.reducedMotion) {;
+      if(updatedSettings.reducedMotion) {
         document.documentElement.style.setProperty(';
           '--reduced-motion',reduce';
-        )} else {;
+        )} else {
 
         document.documentElement.style.removeProperty('--reduced-motion')}
-;
-      // Apply focus indicator;
-      if(updatedSettings.focusIndicator) {;
 
-        document.documentElement.classList.add('focus-visible')} else {;
+      // Apply focus indicator;
+      if(updatedSettings.focusIndicator) {
+
+        document.documentElement.classList.add('focus-visible')} else {
 
         document.documentElement.classList.remove('focus-visible')}
-;
+
       // Apply color blindness simulation;
       document.documentElement.style.setProperty(';
         '--color-blindness',;
         updatedSettings.colorBlindness;
       );
-;
+
       // Apply typography settings;
       document.documentElement.style.setProperty(';
         '--font-size',;
@@ -128,7 +128,7 @@ export function EnhancedAccessibilityPanel() {;
         '--word-spacing',`;
         `${updatedSettings.wordSpacing}px`;
       );
-;
+
       // Save to localStorage;
       localStorage.setItem(';
         'accessibility-settings',;
@@ -136,13 +136,11 @@ export function EnhancedAccessibilityPanel() {;
       )},;
     [settings];
   );
-;
+
   // Load settings from localStorage;
-  useEffect(() => {;
+  useEffect(() => {
   // TODO: Add dependencies if needed;
 
-  return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
+  return () => {
+    // Cleanup function}}, []);, []);
 }}

@@ -22,13 +22,11 @@ import {}
   FileText,';
   Truck,'';
   Wrench,''';
-  Cpu'''';,
-} from 'lucide-react';
-;
-    technologies["TLS / SSL", "OAuth 2.0", "JWT", "Zero Trust"];,
-}
+  Cpu''''} from 'lucide-react';
+
+    technologies["TLS / SSL", "OAuth 2.0", "JWT", "Zero Trust"]}
 ];
-;
+
 const iotTechnologies = [];
   {}
 ";
@@ -37,8 +35,7 @@ const iotTechnologies = [];
     description: "Lightweight messaging protocol for IoT devices",";
     icon: Wifi,"";
     useCase: "Device Communication","";
-    reliability: "High";,
-},;
+    reliability: "High"},;
   {}
 ";
 "";
@@ -46,8 +43,7 @@ const iotTechnologies = [];
     description: "Distributed computing at the network edge",";
     icon: Server,"";
     useCase: "Real-time Processing","";
-    reliability: "Critical";,
-},;
+    reliability: "Critical"},;
   {}
 ";
 "";
@@ -55,8 +51,7 @@ const iotTechnologies = [];
     description: "High-speed, low-latency wireless connectivity",";
     icon: Globe,"";
     useCase: "High-bandwidth IoT","";
-    reliability: "High";,
-},;
+    reliability: "High"},;
   {}
 ";
 "";
@@ -66,7 +61,7 @@ const iotTechnologies = [];
     useCase: "Wide-area IoT","";
     reliability: "Medium";
 ];
-;
+
 const successStories = [];
   {}
 ";
@@ -76,8 +71,7 @@ const successStories = [];
     challenge: "Needed real-time monitoring of 1000+ production machines","";
     solution: "Built IIoT platform with edge computing and predictive analytics","";
     results: "30% reduction in downtime, 25% energy savings, improved quality control","";
-    logo: "MC";,
-},;
+    logo: "MC"},;
   {}
 ";
     id: 2,"";
@@ -86,8 +80,7 @@ const successStories = [];
     challenge: "Required IoT infrastructure for city-wide monitoring","";
     solution: "Implemented smart city platform with edge nodes and real-time analytics","";
     results: "40% improvement in traffic flow, 20% reduction in energy consumption","";
-    logo: "SC";,
-},;
+    logo: "SC"},;
   {}
 ";
     id: 3,"";
@@ -98,7 +91,7 @@ const successStories = [];
     results: "50% improvement in delivery times, 35% reduction in fuel costs","";
     logo: "LN";
 ];
-;
+
 const processSteps = [];
   {}
 ";
@@ -106,24 +99,21 @@ const processSteps = [];
     title: "IoT Assessment","";
     description: "Evaluate current infrastructure and IoT requirements",";
     icon: FileText,"";
-    duration: "1-2 weeks";,
-},;
+    duration: "1-2 weeks"},;
   {}
 ";
     step: 2,"";
     title: "Architecture Design","";
     description: "Design IoT and edge computing architecture",";
     icon: Code,"";
-    duration: "2-3 weeks";,
-},;
+    duration: "2-3 weeks"},;
   {}
 ";
     step: 3,"";
     title: "Implementation","";
     description: "Build and deploy IoT infrastructure and edge nodes",";
     icon: Wrench,"";
-    duration: "16-48 weeks";,
-},;
+    duration: "16-48 weeks"},;
   {}
 ";
     step: 4,"";
@@ -132,7 +122,7 @@ const processSteps = [];
     icon: CheckCircle,"";
     duration: "2-4 weeks";
 ];
-;
+
 export default function IoTEdge() {}
 ';
 '';
@@ -160,30 +150,24 @@ export default function IoTEdge() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             animate = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center max-w-4xl mx-auto";
             <motion.div;
               initial = {}
   { opacity: 0,;
-  scale: 0.8;,
-}}
+  scale: 0.8}}
               animate = {}
   { opacity: 1,;
-  scale: 1;,
-}}
+  scale: 1}}
               transition = {}
   { duration: 0.8,;
-  delay: 0.2;,
-}}
+  delay: 0.2}}
               className="inline - flex items - center justify - center w-20 h-20 bg-gradient - to - br from - zion - cyan to - zion - purple rounded-2xl mb-8";
-";,
-}}"";
+"}}"";
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"";
 "";
               <Wifi className="w-10 h-10 text-white" />;
@@ -223,12 +207,10 @@ export default function IoTEdge() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
 "";
@@ -244,19 +226,15 @@ export default function IoTEdge() {}
                 key={technology.name}
                 initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                 transition = {}
   { duration: 0.6,;
-  delay: index * 0.1;,
-}}
+  delay: index * 0.1}}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 text-center hover:border-zion - cyan / 40 transition - all duration -300";
-";,
-}}"";
+"}}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"";
 "";
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">"";
@@ -275,8 +253,7 @@ export default function IoTEdge() {}
                     ? 'bg-red-500/20 text-red-400 border border-red-500/30'''''`;
                     : technology.reliability === 'High''''`'`;
                     ? 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30'''`'`'`;
-                    : 'bg-green-500/20 text-green-400 border border-green-500/30'````;,
-}`}>;
+                    : 'bg-green-500/20 text-green-400 border border-green-500/30'````}`}>;
                   {technology.reliability} Reliability;
                 </span>;
               </motion.div>;) ) }
@@ -290,12 +267,10 @@ export default function IoTEdge() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
 "";
@@ -311,17 +286,14 @@ export default function IoTEdge() {}
                 key={step.step}
                 initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                 transition = {}
   { duration: 0.6,;
   delay: index * 0.1;
-";,
-}}"";
+"}}"";
                 className="text-center"";
 "";
                 <div className="relative mb-6">"";
@@ -349,12 +321,10 @@ export default function IoTEdge() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
 "";
@@ -376,9 +346,8 @@ export default function IoTEdge() {}
 '''`;
                   selectedCategory === category'''`'`;
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'''`'`'`;
-                    : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````;,
-}`}
-;
+                    : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````}`}
+
                 {category}
               </button>) ) }
           </div>";
@@ -389,21 +358,17 @@ export default function IoTEdge() {}
                 key={solution.id}
                 initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                 transition = {}
   { duration: 0.6,;
-  delay: index * 0.1;,
-}}
+  delay: index * 0.1}}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 hover:border-zion - cyan / 40 transition - all duration - 300 cursor -pointer";
                 onClick={ () => setSelectedSolution(solution) }
-;
-";,
-}}"";
+
+"}}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer";
                 onClick={() => setSelectedSolution(solution)}";
 "";
@@ -457,12 +422,10 @@ export default function IoTEdge() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
 "";
@@ -478,19 +441,15 @@ export default function IoTEdge() {}
                 key={story.id}
                 initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                 transition = {}
   { duration: 0.6,;
-  delay: index * 0.1;,
-}}
+  delay: index * 0.1}}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 hover:border-zion - cyan / 40 transition - all duration -300";
-";,
-}}"";
+"}}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"";
 "";
                 <div className="flex items-center gap-4 mb-6">"";
@@ -535,12 +494,10 @@ export default function IoTEdge() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center max-w-4xl mx-auto"";
 "";
@@ -567,14 +524,10 @@ export default function IoTEdge() {}
       </section>;
     </div>;
   )}
-;
 
-export { IoTEdge };
-;
-export { IoTEdge };
-;
-export { IoTEdge };
-;
-export { IoTEdge };
-;
-export { IoTEdge };
+
+export { IoTEdge }
+export { IoTEdge }
+export { IoTEdge }
+export { IoTEdge }
+export { IoTEdge }

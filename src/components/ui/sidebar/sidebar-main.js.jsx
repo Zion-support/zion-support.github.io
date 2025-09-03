@@ -1,17 +1,15 @@
 import * as React from "react";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
-;
-export const Sidebar = React.forwardRef((props, ref) => {;
+
+export const Sidebar = React.forwardRef((props, ref) => {
     const { isMobile, state, openMobile, setOpenMobile } = useSidebar();
-    if (props.collapsible === "none") {;
-        return (<div className = {;
+    if (props.collapsible === "none") {
+        return (<div className = {
   cn("flex h-full w-[--sidebar-width] flex-col bg-sidebar text-sidebar-foreground",;
-  props.className);,
-} ref={ref} {...props}>        {props.children}
+  props.className)} ref={ref} {...props}>        {props.children}
       </div>;
-    );,
-}
+    )}
   if (isMobile) {}
     return();
       <Sheet open={openMobile} onOpenChange={setOpenMobile} {...props}>;
@@ -26,8 +24,7 @@ export const Sidebar = React.forwardRef((props, ref) => {;
           <div className="flex h-full w-full flex-col">{props.children}</div>;
         </SheetContent>;
       </Sheet>;
-    );,
-}
+    )}
   return();
     <div";
       ref={ref}"";
@@ -67,8 +64,7 @@ export const Sidebar = React.forwardRef((props, ref) => {;
         </div>;
       </div>;
     </div>';
-  );'';,
-});''';
+  );''});''';
 Sidebar.displayName = 'Sidebar';
 export const SidebarRail = React.forwardRef((props, ref) => {}
   const { toggleSidebar } = useSidebar();
@@ -86,8 +82,7 @@ export const SidebarRail = React.forwardRef((props, ref) => {}
       )}
       {...props}
     />';
-  );'';,
-});''';
+  );''});''';
 SidebarRail.displayName = 'SidebarRail';
 export const SidebarInset = React.forwardRef((props, ref) => {}
   return();
@@ -99,7 +94,6 @@ export const SidebarInset = React.forwardRef((props, ref) => {}
       )}
       {...props}
     />;
-  );,
-});';
+  )});';
 SidebarInset.displayName = 'SidebarInset';'";
 '"'"

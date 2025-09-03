@@ -1,4 +1,4 @@
-export interface EmergingTechService2025 {;
+export interface EmergingTechService2025 {
   id: string;
   name: string;
   tagline: string;
@@ -8,11 +8,11 @@ export interface EmergingTechService2025 {;
   link: string;
   category: string;
   realImplementation: boolean;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
 export const emergingTechServices2025: EmergingTechService2025[] = [;
-  {;
+  {
     id: "metaverse-platform",;
     name: "Metaverse Development Platform",;
     tagline: "Create immersive virtual experiences",;
@@ -28,7 +28,7 @@ export const emergingTechServices2025: EmergingTechService2025[] = [;
     link: "/services/metaverse-platform",;
     category: "Emerging Tech 2025",;
     realImplementation: true,;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709";

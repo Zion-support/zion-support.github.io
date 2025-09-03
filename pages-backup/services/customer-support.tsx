@@ -1,4 +1,4 @@
-const Component = () => {;
+const Component = () => {
 import React from "react";
 import type { NextPage } from "next";
 
@@ -44,7 +44,7 @@ import type { NextPage } from "next";
                 <p className="text-gray-600">{feature.description}</p>;
               </div>;
             ))}
-;
+
           </div>;
       </section>;
       {/* comment */}";
@@ -66,7 +66,7 @@ exceptional customer experiences while optimizing your support operations.;
                     <span className="text-gray-700">{benefit}</span>;
                   </li>;
                 ))}
-;
+
               </ul>;
             </div>";
             <div className="bg-white rounded-xl p-8 shadow-lg">";
@@ -121,20 +121,20 @@ exceptional customer experiences while optimizing your support operations.;
                       <span className="text-gray-700">{feature}</span>;
                     </li>;
                   ))}
-;
+
                 </ul>";
                 <Link href="{"/contact"" ";
                   className="{"w-full" block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${;
                     plan.popular ";
                       ? "bg-orange-600 hover: bg-orange-700 text-white" ">;
                       : "bg-gray-100 hover:bg-gray-200 text-gray-900"}"}
-;
+
                 >;
                   Get Started,;
                 </Link>;
               </div>;
             ))}
-;
+
           </div>;
       </section>;
       {/* comment */}";
@@ -155,5 +155,5 @@ exceptional customer experiences while optimizing your support operations.;
       </section>;
     </Layout>;,;
   )}
-;
+
 "export default CustomerSupport

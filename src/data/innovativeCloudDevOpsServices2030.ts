@@ -1,21 +1,20 @@
 // Innovative Cloud & DevOps Services 2030 - Zion Tech Group;
 // Next-generation infrastructure and development solutions;
-;
-export interface CloudDevOpsService {;
+
+export interface CloudDevOpsService {
   id: string;
   title: string;
   description: string;
   category: string;
   subcategory: string;
-pricing: {;
+pricing: {
 
     monthly: number;
     yearly: number;
     custom: string;
     currency: string;
     pricingModel: string;
-    marketPrice: string;,
-};
+    marketPrice: string}
   features: string[];
   benefits: string[];
   useCases: string[];
@@ -49,20 +48,17 @@ pricing: {;
   createdAt: string;
   featured: boolean;
   trending: boolean}
-;
+
 // Zion Tech Group Contact Information;
 const zionContact: unknown = {}
   phone: "+1 302 464 0950","";
   email: "kleber@ziontechgroup.com","";
   website: "https://ziontechgroup.com",;  ;
-  ;
-  ;
+
+
   ;";
-  address: "364 E Main St STE 1008 Middletown DE 19709"};
-;
-;,
-};
-;
+  address: "364 E Main St STE 1008 Middletown DE 19709"}
+}
 export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [{;
 ";
     id: "multi-cloud-orchestration-platform",";
@@ -70,15 +66,14 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [{;
     description: "Advanced multi-cloud orchestration platform that provides unified management, automation, and optimization across AWS, Azure, Google Cloud, and private cloud environments.",";
     category: "Cloud & DevOps Services",";
     subcategory: "Cloud Management",;
-    pricing: {;
+    pricing: {
 
       monthly: 799,;
       yearly: 7990,";
       custom: "Enterprise multi-cloud solutions",";
       currency: "$",";
       pricingModel: "Monthly subscription with resource-based pricing",";
-      marketPrice: "$799-1,599/month";,
-},;
+      marketPrice: "$799-1,599/month"},;
     features[;";
       "Unified cloud dashboard",";
       "Automated resource provisioning",";
@@ -155,25 +150,23 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [{;
     image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto = format&fit=crop&w=800&h=500",";
     createdAt: "2030-01-15T10:00:00.000Z",;
     featured: true,;
-    trending: true;,
-},;
+    trending: true},;
 
-  {;
+  {
 ";
     id: "ai-powered-devops-automation",";
     title: "Zion AI-Powered DevOps Automation",";
     description: "Intelligent DevOps automation platform that uses AI to optimize CI/CD pipelines, predict deployment issues, and automate infrastructure management for faster, more reliable software delivery.",";
     category: "Cloud & DevOps Services",";
     subcategory: "DevOps Automation",;
-    pricing: {;
+    pricing: {
 
       monthly: 599,;
       yearly: 5990,";
       custom: "Enterprise DevOps automation",";
       currency: "$",";
       pricingModel: "Monthly subscription with pipeline-based pricing",";
-      marketPrice: "$599-1,199/month";,
-},;
+      marketPrice: "$599-1,199/month"},;
     features[;";
       "AI-powered pipeline optimization",";
       "Predictive deployment analysis",";
@@ -250,25 +243,23 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [{;
     image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&h=500",";
     createdAt: "2030-01-15T10:00:00.000Z",;
     featured: true,;
-    trending: true;,
-},;
+    trending: true},;
 
-  {;
+  {
 ";
     id: "edge-computing-orchestrator",";
     title: "Zion Edge Computing Orchestrator",";
     description: "Advanced edge computing orchestration platform that manages distributed computing resources, optimizes data processing, and enables real-time applications at the network edge.",";
     category: "Cloud & DevOps Services",";
     subcategory: "Edge Computing",;
-    pricing: {;
+    pricing: {
 
       monthly: 699,;
       yearly: 6990,";
       custom: "Enterprise edge computing solutions",";
       currency: "$",";
       pricingModel: "Monthly subscription with edge node pricing",";
-      marketPrice: "$699-1,399/month";,
-},;
+      marketPrice: "$699-1,399/month"},;
     features[;";
       "Distributed edge management",";
       "Real-time data processing",";
@@ -345,25 +336,23 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [{;
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500",";
     createdAt: "2030-01-15T10:00:00.000Z",;
     featured: true,;
-    trending: true;,
-},;
+    trending: true},;
 
-  {;
+  {
 ";
     id: "serverless-architecture-platform",";
     title: "Zion Serverless Architecture Platform",";
     description: "Comprehensive serverless platform that simplifies application development, deployment, and scaling while optimizing costs and eliminating infrastructure management overhead.",";
     category: "Cloud & DevOps Services",";
     subcategory: "Serverless Computing",;
-    pricing: {;
+    pricing: {
 
       monthly: 299,;
       yearly: 2990,";
       custom: "Enterprise serverless solutions",";
       currency: "$",";
       pricingModel: "Monthly subscription with usage-based pricing",";
-      marketPrice: "$299-599/month";,
-},;
+      marketPrice: "$299-599/month"},;
     features[;";
       "Function-as-a-Service(FaaS)",";
       "Event-driven architecture",";
@@ -440,25 +429,23 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [{;
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500",";
     createdAt: "2030-01-15T10:00:00.000Z",;
     featured: true,;
-    trending: true;,
-},;
+    trending: true},;
 
-  {;
+  {
 ";
     id: "gitops-workflow-automation",";
     title: "Zion GitOps Workflow Automation",";
     description: "Advanced GitOps platform that automates infrastructure and application deployments using Git as the single source of truth, ensuring consistency, security, and auditability.",";
     category: "Cloud & DevOps Services",";
     subcategory: "GitOps & Workflows",;
-    pricing: {;
+    pricing: {
 
       monthly: 399,;
       yearly: 3990,";
       custom: "Enterprise GitOps solutions",";
       currency: "$",";
       pricingModel: "Monthly subscription with repository-based pricing",";
-      marketPrice: "$399-799/month";,
-},;
+      marketPrice: "$399-799/month"},;
     features[;";
       "Git-based deployment automation",";
       "Infrastructure as code management",";
@@ -535,7 +522,7 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [{;
     image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&h=500",;";
     createdAt: "2030-01-15T10:00:00.000Z",;
     featured: true,;
-    trending: true};
+    trending: true}
 ];
-;
+
 export default innovativeCloudDevOpsServices2030}}"

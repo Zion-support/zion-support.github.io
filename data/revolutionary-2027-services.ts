@@ -1,4 +1,4 @@
-export interface Revolutionary2027Service {;
+export interface Revolutionary2027Service {
   id: string;
   name: string;
   tagline: string;
@@ -8,11 +8,11 @@ export interface Revolutionary2027Service {;
   link: string;
   category: string;
   realImplementation: boolean;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
 export const revolutionary2027Services: Revolutionary2027Service[] = [;
-  {;
+  {
     id: "2027-revolutionary-service",;
     name: "2027 Revolutionary Service Platform",;
     tagline: "Revolutionary services for 2027",;
@@ -28,7 +28,7 @@ export const revolutionary2027Services: Revolutionary2027Service[] = [;
     link: "/services/2027-revolutionary-service",;
     category: "Revolutionary 2027 Services",;
     realImplementation: true,;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709";

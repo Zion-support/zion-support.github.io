@@ -27,8 +27,7 @@ const SERVICE_COMPARISONS = [];
                 professional: { price: "$5,999", features["Advanced analytics", "Personalization engine", "Priority support", "Custom dashboards", "API access"] },;"";
                 enterprise: { price: "$8,999+", features["Full customer intelligence suite", "Custom algorithms", "Dedicated support", "Advanced integrations", "Compliance features"] }
             }
-        ];,
-},;
+        ]},;
     {}
 ";
 "";
@@ -50,8 +49,7 @@ const SERVICE_COMPARISONS = [];
                 professional: { price: "$4,999", features["Multi-framework support", "Automated reporting", "Priority support", "Custom workflows", "Training"] },;"";
                 enterprise: { price: "$6,999+", features["Full compliance suite", "Custom frameworks", "Dedicated support", "Advanced integrations", "Audit preparation"] }
             }
-        ];,
-},;
+        ]},;
     {}
 ";
 "";
@@ -73,8 +71,7 @@ const SERVICE_COMPARISONS = [];
                 professional: { price: "$4,999", features["Advanced automation", "Custom pipelines", "Priority support", "Advanced testing", "Training"] },;"";
                 enterprise: { price: "$7,999+", features["Full DevOps suite", "Custom development", "Dedicated support", "Advanced monitoring", "Multi-environment support"] }
             }
-        ];,
-},;
+        ]},;
     {}
 ";
 "";
@@ -96,8 +93,7 @@ const SERVICE_COMPARISONS = [];
                 professional: { price: "$3,999", features["Advanced dashboards", "Custom visualizations", "Priority support", "Advanced analytics", "Training"] },;"";
                 enterprise: { price: "$5,999+", features["Full analytics suite", "Custom development", "Dedicated support", "Advanced integrations", "White-label options"] }
             }
-        ];,
-}
+        ]}
 ];
 export default function ServicesComparisonPage() {}
 ";
@@ -328,14 +324,10 @@ export default function ServicesComparisonPage() {}
         </div>;
       </section>;
     </div>)}
-;
 
-export { SERVICE_COMPARISONS, ServicesComparisonPage };
-;
-export { SERVICE_COMPARISONS, ServicesComparisonPage };
-;
-export { SERVICE_COMPARISONS, ServicesComparisonPage };
-;
-export { SERVICE_COMPARISONS, ServicesComparisonPage };
-;
-export { SERVICE_COMPARISONS, ServicesComparisonPage };
+
+export { SERVICE_COMPARISONS, ServicesComparisonPage }
+export { SERVICE_COMPARISONS, ServicesComparisonPage }
+export { SERVICE_COMPARISONS, ServicesComparisonPage }
+export { SERVICE_COMPARISONS, ServicesComparisonPage }
+export { SERVICE_COMPARISONS, ServicesComparisonPage }

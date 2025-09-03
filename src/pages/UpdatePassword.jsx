@@ -1,70 +1,61 @@
 import { useForm } from 'react - hook -form';
-export default function Page() {;
+export default function Page() {
 ) ;
-    useEffect(() => {;
-  // TODO: Add dependencies if needed;,
-}, []);
+    useEffect(() => {
+  // TODO: Add dependencies if needed}, []);
         // Extract access token from URL hash;
         const hashParams = new URLSearchParams(location.hash.substring (1) ) ;
         const token = hashParams.get("access_token") ;
-        if(token) {;
-            setAccessToken(token) }
-        else {;
+        if(token) {
+            setAccessToken(token) } else {
             setError("No access token found.Please request a new password reset link.") }
         // Clean up auth state to prevent issues;
         cleanupAuthState () }, [location]) ;
     // Form submission handler;
-    const onSubmit = async(data) => {;
-        if(!accessToken) {;
+    const onSubmit = async(data) => {
+        if(!accessToken) {
             setError("No access token found.Please request a new password reset link.") ;
             return}
         setIsLoading(true) ;
-        try {;
+        try {
             // Set the session with the access token;
             await supabase.auth.setSession({;
                 access_token: accessToken,;
-                refresh_token: '',;,
-}) ;
+                refresh_token: ''}) ;
             // Update the password;
             const { error } = await supabase.auth.updateUser({;
-                password: data.password,;,
-}) ;
-            if(error) {;
+                password: data.password}) ;
+            if(error) {
                 toast({;
                     title: "Password update failed",;
                     description: error.message,;
-                    variant: "destructive",;,
-}) ;
+                    variant: "destructive"}) ;
                 setError(error.message) ;
                 return}
             // Show success message and clean up auth state;
             setSuccess(true) ;
             toast({;
                 title: "Password updated successfully",;
-                description: "You can now log in with your new password.",;,
-}) ;
+                description: "You can now log in with your new password."}) ;
             // Clean auth state and redirect after a delay;
             cleanupAuthState () ;
-            setTimeout(() => {;
-                router("/login") ;,
-}, 3000) ;,
-}
-        catch(error) {;
+            setTimeout(() => {
+                router("/login") }, 3000) }
+        catch(error) {
             // // // // // // // console.error("Password update error:", error) ;
             toast({;
                 title: "Password update failed",;
                 description: error.message || "An unexpected error occurred",;
-                variant: "destructive",;,
-}) ;
+                variant: "destructive"}) ;
             setError(error.message || "An unexpected error occurred") }
-        finally {;
+        finally {
             setIsLoading(false) }
-    };
-    const onInvalid = (errors) => {;
+    }
+    const onInvalid = (errors) => {
         const firstError = Object.keys(errors) [0];
-        if(firstError) {;
+        if(firstError) {
             form.setFocus(firstError) }
-    };
+    }
     return (<>;
 
       <div className="flex min - h-screen bg-zion -blue">;
@@ -85,7 +76,7 @@ export default function Page() {;
                     Request new reset link;
                   </Button>;
                 </div>) }
-;
+
               {success ? (<div className="text-center py-8">;
                   <div className="mx - auto flex items - center justify - center h-12 w-12 rounded-full bg-zion - purple / 20 mb-4">;
                     <LockKeyhole className="h-6 w-6 text-zion -purple"/>;
@@ -97,7 +88,7 @@ export default function Page() {;
                     Redirecting you to login...;
                   </p>;
                 </div>) : (<Form {...form}>;
-                  <form onSubmit = {;
+                  <form onSubmit = {
   form.handleSubmit(onSubmit,;
   onInvalid) } className="space - y-6">;
                     <FormField control={form.control} name="password" render={ ({ field }) => (<FormItem>;
@@ -142,16 +133,12 @@ export default function Page() {;
           </div>;
         </div>;
       </div>;
-      ;
-    </>)}
-;
 
-export { UpdatePassword };
-;
-export { UpdatePassword };
-;
-export { UpdatePassword };
-;
-export { UpdatePassword };
-;
-export { UpdatePassword };
+    </>)}
+
+
+export { UpdatePassword }
+export { UpdatePassword }
+export { UpdatePassword }
+export { UpdatePassword }
+export { UpdatePassword }

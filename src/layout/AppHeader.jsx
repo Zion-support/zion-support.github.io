@@ -14,29 +14,25 @@ import { ;
   Users, ;
   Code, ;
   Lock, ;
-  Rocket ;,
-} from 'lucide-react';
-export function AppHeader() {;
+  Rocket } from 'lucide-react';
+export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const location = useLocation();
-;
+
   // Handle scroll effect;
-  useEffect(() => {;
-    const handleScroll = () => {;
-      setScrolled(window.scrollY > 20);,
-};
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20)}
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);,
-}, []);
-;
+    return () => window.removeEventListener('scroll', handleScroll)}, []);
+
   // Close mobile menu when route changes;
-  useEffect(() => {;
+  useEffect(() => {
     setMobileMenuOpen(false);
-    setActiveDropdown(null);,
-}, [location.pathname]);
-;
+    setActiveDropdown(null)}, [location.pathname]);
+
   const navigationItems = [;
     { name: 'Home', path: '/', icon: null },;
     { ;
@@ -52,21 +48,19 @@ export function AppHeader() {;
         { name: 'FinTech Solutions', path: '/services?category=fintech', icon: Database, color: 'from-yellow-500 to-orange-500' },;
         { name: 'Green Technology', path: '/services?category=green-tech', icon: Shield, color: 'from-green-400 to-teal-500' },;
         { name: 'Cybersecurity', path: '/services?category=cybersecurity', icon: Lock, color: 'from-red-500 to-pink-500' },;
-      ];,
-},;
+      ]},;
     { name: 'About', path: '/about', icon: null },;
     { name: 'Contact', path: '/contact', icon: null },;
   ];
-;
+
   const isActive = (path) => location.pathname === path;
-;
+
   return (;
     <motion.header ;
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${;
         scrolled ;
           ? 'bg-black/95 backdrop-blur-xl border-b border-zion-cyan/30 shadow-2xl shadow-zion-cyan/10' ;
-          : 'bg-black/80 backdrop-blur-md border-b border-zion-cyan/20';,
-}`}
+          : 'bg-black/80 backdrop-blur-md border-b border-zion-cyan/20'}`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
@@ -115,13 +109,12 @@ export function AppHeader() {;
                     className={`font-medium transition-colors duration-300 ${;
                       isActive(item.path) ;
                         ? 'text-zion-cyan' ;
-                        : 'text-white hover:text-zion-cyan';,
-}`}
+                        : 'text-white hover:text-zion-cyan'}`}
                   >;
                     {item.name}
                   </Link>;
                 )}
-;
+
                 {/* Dropdown Menu */}
                 {item.dropdown && activeDropdown === item.name && (;
                   <motion.div;
@@ -209,8 +202,7 @@ export function AppHeader() {;
                       className={`block font-medium transition-colors duration-300 ${;
                         isActive(item.path) ;
                           ? 'text-zion-cyan' ;
-                          : 'text-white hover:text-zion-cyan';,
-}`}
+                          : 'text-white hover:text-zion-cyan'}`}
                       onClick={() => setMobileMenuOpen(false)}
                     >;
                       {item.name}
@@ -218,7 +210,6 @@ export function AppHeader() {;
                   )}
                 </div>;
               ))}
-              ;
               <div className="pt-4 border-t border-zion-cyan/30">;
                 <Link;
                   to="/contact";
@@ -233,5 +224,4 @@ export function AppHeader() {;
         )}
       </AnimatePresence>;
     </motion.header>;
-  );,
-}
+  )}

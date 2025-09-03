@@ -1,18 +1,17 @@
 import React, { useState, useRef, useEffect } from 'react';
-export function AdvancedBusinessIntelligence () {;
+export function AdvancedBusinessIntelligence () {
 
         actions['Conduct market research', 'Develop localization strategy', 'Establish partnerships'];
 import { BarChart3, TrendingUp, Brain, Zap, Target, AlertTriangle, Download, RefreshCw, X, Maximize2, Minimize2, Calendar, Activity  } from 'lucide-react';
-;
+
         id: 'model-1',;
         name: 'Customer Lifetime Value Predictor',;
         accuracy: 94.2,;
         lastTrained: '2024-01-10T00:00:00.000Z',;
         status: 'active',;
         predictions: 15420,;
-        category: 'Customer Analytics';,
-},;
-    {;
+        category: 'Customer Analytics'},;
+    {
 
         id: 'model-2',;
         name: 'Revenue Forecasting Model',;
@@ -20,9 +19,8 @@ import { BarChart3, TrendingUp, Brain, Zap, Target, AlertTriangle, Download, Ref
         lastTrained: '2024-01-08T00:00:00.000Z',;
         status: 'active',;
         predictions: 2847500,;
-        category: 'Financial Analytics';,
-},;
-    {;
+        category: 'Financial Analytics'},;
+    {
 
         id: 'model-3',;
         name: 'Churn Prediction Model',;
@@ -33,7 +31,7 @@ import { BarChart3, TrendingUp, Brain, Zap, Target, AlertTriangle, Download, Ref
         category: 'Customer Analytics';
 
 ];
-export function AdvancedBusinessIntelligence() {;
+export function AdvancedBusinessIntelligence() {
     const [isOpen, setIsOpen] = useState(false);
     const [isMinimized, setIsMinimized] = useState(false);
     const [isFullscreen, setIsFullscreen] = useState(false);
@@ -56,26 +54,24 @@ export function AdvancedBusinessIntelligence() {;
     const filteredMetrics = selectedCategory === 'all';
         ? data;
         : data.filter(metric => metric.category === selectedCategory) ;
-    const refreshData = async () => {;
+    const refreshData = async () => {
         setIsRefreshing(true) ;
         // Simulate API call;
         await new Promise(resolve => setTimeout (resolve, 1500) ) ;
-        setIsRefreshing(false) };
-    useEffect(() => {;
+        setIsRefreshing(false) }
+    useEffect(() => {
   // TODO: Add dependencies if needed;
 
-  return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
-        if(autoRefresh) {;
+  return () => {
+    // Cleanup function}}, []);, []);
+        if(autoRefresh) {
 
             const interval = setInterval(refreshData, 30000); // Refresh every 30 seconds;
             return () => clearInterval(interval)}
     }, [autoRefresh]);
-    const getTrendIcon = (trend) => {;
+    const getTrendIcon = (trend) => {
 
-        switch(trend) {;
+        switch(trend) {
 
             case 'up':;
                 return <TrendingUp className="w-4 h-4 text-green-500"/>;
@@ -83,10 +79,10 @@ export function AdvancedBusinessIntelligence() {;
                 return <TrendingUp className="w-4 h-4 text-red-500 rotate-180"/>;
             default:";
                 return <Activity className="w-4 h-4 text-gray-500"/>}
-    };
-    const getPriorityColor = (priority) => {;
+    }
+    const getPriorityColor = (priority) => {
 
-        switch(priority) {;
+        switch(priority) {
 
             case 'high':';
                 return 'border-red-500 bg-red-50 dark:bg-red-900/20';
@@ -94,10 +90,10 @@ export function AdvancedBusinessIntelligence() {;
                 return 'border-yellow-500 bg-yellow-50 dark:bg-yellow-900/20';
             default:';
                 return 'border-green-500 bg-green-50 dark:bg-green-900/20'}
-    };
-    const getInsightIcon = (type) => {;
+    }
+    const getInsightIcon = (type) => {
 
-        switch(type) {;
+        switch(type) {
 
             case 'prediction':";
                 return <Brain className="w-5 h-5 text-blue-500"/>;
@@ -109,28 +105,27 @@ export function AdvancedBusinessIntelligence() {;
                 return <AlertTriangle className="w-5 h-5 text-orange-500"/>;
             default:";
                 return <Zap className="w-5 h-5 text-purple-500"/>}
-    };
-    const formatValue = (value, unit) => {;
+    }
+    const formatValue = (value, unit) => {
 
-        if(unit === 'USD') {;
+        if(unit === 'USD') {
 
-            return new Intl.NumberFormat('en-US', {;
+            return new Intl.NumberFormat('en-US', {
 
                 style: 'currency',;
                 currency: 'USD',;
                 minimumFractionDigits: 0,;
-                maximumFractionDigits: 0;,
-}).format(value)}
-        if(unit === '%') {;
+                maximumFractionDigits: 0}).format(value)}
+        if(unit === '%') {
 
             return `${value.toFixed(1)}%`}
-        return new Intl.NumberFormat('en-US').format(value)};
-    if(!isOpen) {;
+        return new Intl.NumberFormat('en-US').format(value)}
+    if(!isOpen) {
 ";
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 z-40" title="Open Business Intelligence Dashboard">";
         <Brain className="w-6 h-6"/>;
       </button>)}
-    if(isMinimized) {;
+    if(isMinimized) {
 ";
         return (<div className="fixed bottom-4 right-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-xl z-50">";
         <div className="flex items-center gap-2 p-3">";
@@ -206,7 +201,7 @@ export function AdvancedBusinessIntelligence() {;
             { id: 'insights', label: 'AI Insights', icon: Brain },;
             { id: 'models', label: 'ML Models', icon: Zap },;
             { id: 'analytics', label: 'Analytics', icon: TrendingUp }
-        ].map(tab => {;
+        ].map(tab => {
 
             const Icon = tab.icon;`;
             return (<button key={tab.id} onClick={() => setActiveTab(tab.id)} className={`flex items-center gap-2 px-6 py-3 border-b-2 transition-colors ${activeTab === tab.id';
@@ -259,7 +254,7 @@ export function AdvancedBusinessIntelligence() {;
                 { label: 'Schedule Review', icon: Calendar, action: () => { /* empty */ } },;
                 { label: 'Set Alerts', icon: AlertTriangle, action: () => { /* empty */ } },;
                 { label: 'Export Data', icon: Download, action: () => { /* empty */ } }
-            ].map((item, index) => {;
+            ].map((item, index) => {
 
                 const Icon = item.icon;";
                 return (<button key={index} onClick={item.action} className="p-3 bg-white dark:bg-zion-slate rounded-lg border border-zion-slate-light hover:border-zion-cyan transition-colors text-sm font-medium text-zion-slate hover:text-zion-cyan">";

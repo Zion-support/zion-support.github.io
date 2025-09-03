@@ -1,121 +1,104 @@
-export const safeStorage = {;
+export const safeStorage = {
 export default safeStorage;
-;
-// In - memory storage for fallback with optimizationsconst inMemoryStore = {};
+
+// In - memory storage for fallback with optimizationsconst inMemoryStore = {}
 let localStorageAvailable = null; // Cache the availability check;
 let lastAvailabilityCheck = 0;
 const AVAILABILITY_CHECK_INTERVAL = 5000; // Check every 5 seconds max;
 
-function isLocalStorageAvailable() {;
+function isLocalStorageAvailable() {
   const now = Date.now();
   // Use cached result if checked recently;
   if();
     localStorageAvailable !== null &&;
     now-lastAvailabilityCheck < AVAILABILITY_CHECK_INTERVAL;
-  ) {;
+  ) {
 
-    return localStorageAvailable;,
-}
-;
+    return localStorageAvailable}
+
   lastAvailabilityCheck = now;
-  try {;
-    if(typeof window === 'undefined') {;
+  try {
+    if(typeof window === 'undefined') {
 
       localStorageAvailable = false;
-      return false;,
-}
-;
+      return false}
+
     const testKey = '__localStorage_test__';
     localStorage.setItem(testKey,test');
     localStorage.removeItem(testKey);
     localStorageAvailable = true;
-    return true;,
-} catch {;
+    return true} catch {
 
     localStorageAvailable = false;
-    return false;,
+    return false}
 }
-}
-;
-function safeConsoleError(message, error) {;
+
+function safeConsoleError(message, error) {
 
   const env = globalThis.process?.env?.NODE_ENV ?? 'production';
   // Prevent infinite recursion in console logging';
   if(env === 'production') return;
-;
-  try {;
-    // console.error(message, error);,
-} catch {;
 
-    // Silent fail if console.error causes recursion;,
-}}
-;
-export const safeStorage = {;
+  try {
+    // console.error(message, error)} catch {
 
-  getItem: key => {;
+    // Silent fail if console.error causes recursion}}
 
-    try {;
-      return localStorage.getItem(key);,
-} catch(error) {;
+export const safeStorage = {
+
+  getItem: key => {
+
+    try {
+      return localStorage.getItem(key)} catch(error) {
 
       // console.warn('Failed to get item from localStorage:', error);
-      return null;,
-}
+      return null}
   },;
 
-  setItem: (key, value) => {;
+  setItem: (key, value) => {
 
-    try {;
+    try {
       localStorage.setItem(key, value);
-      return true;,
-} catch(error) {;
+      return true} catch(error) {
 
       // console.warn('Failed to set item in localStorage:', error);
-      return false;,
-}
+      return false}
   },;
 
-  removeItem: key => {;
+  removeItem: key => {
 
-    try {;
+    try {
       localStorage.removeItem(key);
-      return true;,
-} catch(error) {;
+      return true} catch(error) {
 
       // console.warn('Failed to remove item from localStorage:', error);
-      return false;,
-}
+      return false}
   },;
 
-  clear: () => {;
-    try {;
+  clear: () => {
+    try {
       localStorage.clear();
-      return true;,
-} catch(error) {;
+      return true} catch(error) {
 
       // console.warn('Failed to clear localStorage:', error);
-      return false;,
-}
+      return false}
   },;
 
-  key: index => {;
+  key: index => {
 
-    try {;
-      return localStorage.key(index);,
-} catch(error) {;
+    try {
+      return localStorage.key(index)} catch(error) {
 
       // console.warn('Failed to get key from localStorage:', error);
       return null;    }
   },;
 
-  get length() {;
-    try {;
-      return localStorage.length;,
-} catch(error) {;
+  get length() {
+    try {
+      return localStorage.length} catch(error) {
 
       // console.warn('Failed to get localStorage length:', error);
       return 0;    }
-  }};
-;
+  }}
 export default safeStorage;
 }

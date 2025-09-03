@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
-const Zion2026AIMarketplaceShowcase = () => {;
+const Zion2026AIMarketplaceShowcase = () => {
   return (;
     <>;
       <Head>;
@@ -45,6 +45,5 @@ const Zion2026AIMarketplaceShowcase = () => {;
               </Link>;
             </div>;
     </>;
-  );,
-}
+  )}
 export default Zion2026AIMarketplaceShowcase;

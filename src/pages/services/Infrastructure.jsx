@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-const InfrastructureServices = () => {;
+const InfrastructureServices = () => {
     return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">;
       <section className="pt-24 pb-16 bg-gradient-to-r from-slate-900 to-slate-800 text-white">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -34,17 +34,12 @@ const InfrastructureServices = () => {;
           <Link to="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300">Get Started</Link>;
         </div>;
       </section>;
-    </div>);,
-};
+    </div>)}
 export default InfrastructureServices;
-;
 
-export { InfrastructureServices };
-;
-export { InfrastructureServices };
-;
-export { InfrastructureServices };
-;
-export { InfrastructureServices };
-;
-export { InfrastructureServices };
+
+export { InfrastructureServices }
+export { InfrastructureServices }
+export { InfrastructureServices }
+export { InfrastructureServices }
+export { InfrastructureServices }

@@ -1,6 +1,6 @@
 import React from "react";
   );
-export default function Authroutes() {;
+export default function Authroutes() {
   return (;
     <div className="min-h-screen bg-white">;
       <div className="max-w-4xl mx-auto px-6 py-16">;
@@ -9,5 +9,4 @@ export default function Authroutes() {;
           This is a placeholder component for authroutes.;
         </p>;
       </div>;
-  );,
-}
+  )}

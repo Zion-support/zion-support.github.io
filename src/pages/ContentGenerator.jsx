@@ -1,55 +1,53 @@
 import { useNavigate  } from 'react-router-dom';
-export default function Page() {;
- = await supabase.functions.invoke('generate - content', {;
-                body: {;
+export default function Page() {
+ = await supabase.functions.invoke('generate - content', {
+                body: {
                     contentType,;
                     prompt: customPrompt || null,;
                     topic: topic || null,;
                     autoPublish,;
-                    includeImage: contentType === 'blog' ? includeImage : false;,
-}) ;
+                    includeImage: contentType === 'blog' ? includeImage : false}) ;
             if(error) throw error;
             setPreviewContent(data) ;
             // // // // // // // console.error("Error generating content:", error) ;
             toast.error("Failed to generate content.Please try again.") ;
-;
-        finally {;
+
+        finally {
             setIsGenerating(false) ;
-;
+
             toast.success(`${contentType === 'blog' ? 'Blog post' : 'Newsletter'} generated successfully!`) }
-        catch(error) {;
+        catch(error) {
             console.error("Error generating content:", error) ;
             toast.error("Failed to generate content.Please try again.") }
-        finally {;
+        finally {
             setIsGenerating(false) }
-    };
-    const sendTestNewsletter = async () => {;
-        if(!testEmail) {;
+    }
+    const sendTestNewsletter = async () => {
+        if(!testEmail) {
             toast.error("Please enter a test email address") ;
             return}
-        if(!previewContent) {;
+        if(!previewContent) {
             toast.error("Generate newsletter content first") ;
             return}
-        try {;
-            const { data, error } = await supabase.functions.invoke('send - newsletter', {;
-                body: {;
+        try {
+            const { data, error } = await supabase.functions.invoke('send - newsletter', {
+                body: {
                     subject: previewContent.subject,;
                     previewText: previewContent.previewText,;
                     body: previewContent.body,;
                     testMode: true,;
-                    testEmail;,
-}) ;
+                    testEmail}) ;
             if(error) throw error;
             // // // // // // // console.error("Error sending test newsletter:", error) ;
             toast.error("Failed to send test newsletter.Please try again.") ;
-;
+
             toast.success(`Test newsletter sent to ${testEmail}!`) }
-        catch(error) {;
+        catch(error) {
             console.error("Error sending test newsletter:", error) ;
             toast.error("Failed to send test newsletter.Please try again.") }
-    };
+    }
     // Check if user is still loading;
-    if(isLoading) {;
+    if(isLoading) {
         return (<>;
 
         <div className="min - h-screen bg-zion - blue flex items - center justify -center">;
@@ -87,10 +85,9 @@ export default function Page() {;
 
                   <div className="space - y-2">;
                     <Label htmlFor="topic" className="text-white">Topic(Optional) </Label>;
-                    <Input id="topic" placeholder = {;
+                    <Input id="topic" placeholder = {
   contentType === 'blog' ? "e.g., Hiring AI Freelancers" : "e.g.,;
   May Platform Updates";
-;,
 } className="bg-zion - blue border border-zion - blue - light text-white" value={topic} onChange={ (e) => setTopic(e.target.value) }/>;
                   </div>;
 
@@ -110,7 +107,7 @@ export default function Page() {;
                         <Switch id="includeImage" checked={includeImage} onCheckedChange={setIncludeImage}/>;
                       </div>;
                     </>) }
-;
+
                   {contentType === 'newsletter' && (<div className="space - y-2">;
                       <Label htmlFor="testEmail" className="text-white">Test Email</Label>;
                       <Input id="testEmail" type="email" placeholder="your@email.com" className="bg-zion - blue border border-zion - blue - light text-white" value={testEmail} onChange={ (e) => setTestEmail(e.target.value) }/>;
@@ -151,12 +148,11 @@ export default function Page() {;
                               <div className="space - y-4">;
                                 <h2 className="text-2xl font - bold text-white">{previewContent.title}</h2>;
                                 <p className="text-zion - slate -light">{previewContent.metaDescription}</p>;
-                                <div className="prose prose - invert max - w-none" // TODO: Sanitize content before using dangerouslySetInnerHTML = {;
-  {;
+                                <div className="prose prose - invert max - w-none" // TODO: Sanitize content before using dangerouslySetInnerHTML = {
+  {
                 __html: previewContent.body;
                     .replace(/^#{1,;
   6;
-;,
 }\s+ (.+) $/gm, "<h$1>$2</h$1>") ;
                     .replace(/\*\* (.+?) \*\*/g, "<strong>$1</strong>") .replace(/\* (.+?) \*/g, "<em>$1</em>") .replace(/^-\s+ (.+) $/gm, "<li>$1</li>") .replace(/\n\n / g, "<br><br>") }}/>;
                               </div>;
@@ -196,7 +192,7 @@ export default function Page() {;
                                   <h3 className="text-white font - semibold mb-1">Tweet Summary</h3>;
                                   <p className="text-zion - slate -light">{previewContent.tweetSummary}</p>;
                                 </div>) }
-;
+
                               {previewContent.imagePrompt && (<div>;
                                   <h3 className="text-white font - semibold mb-1">Image Prompt</h3>;
                                   <p className="text-zion - slate -light">{previewContent.imagePrompt}</p>;
@@ -258,17 +254,13 @@ export default function Page() {;
           </div>;
         </div>;
       </div>;
-      ;
-    </>)}
-;
 
-export { ContentGenerator };
-;
-export { ContentGenerator };
-;
-export { ContentGenerator };
-;
-export { ContentGenerator };
-;
-export { ContentGenerator };
+    </>)}
+
+
+export { ContentGenerator }
+export { ContentGenerator }
+export { ContentGenerator }
+export { ContentGenerator }
+export { ContentGenerator }
 }

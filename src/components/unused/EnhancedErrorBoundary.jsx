@@ -1,91 +1,85 @@
 import React from 'react';
 import { motion  } from 'framer-motion';
-;
-export default function Page() {;
-    componentDidCatch(error, errorInfo) {;
+
+export default function Page() {
+    componentDidCatch(error, errorInfo) {
 
         this.setState({ errorInfo });
         // Log error to console';
         // // // // // // // // console.error('Error caught by boundary:', error, errorInfo);
         // Call custom error handler if provided;
-        if(this.props.onError) {;
+        if(this.props.onError) {
 
             this.props.onError(error, errorInfo)}
         // Send error to error reporting service(if available);
         this.reportError(error, errorInfo)}
-    static generateErrorId() {;
+    static generateErrorId() {
         return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`}
-    reportError(error, errorInfo) {;
+    reportError(error, errorInfo) {
 
         // In a real application, you would send this to your error reporting service;
-        // For example: Sentry, LogRocket, Bugsnag, etc.const errorReport = {;
+        // For example: Sentry, LogRocket, Bugsnag, etc.const errorReport = {
 
   id: this.state.errorId,;
             timestamp: new Date().toISOString(),;
-            error: {;
+            error: {
 
                 name: error.name,;
                 message: error.message,;
-  stack: error.stack;,
-},;
-            errorInfo: {;
+  stack: error.stack},;
+            errorInfo: {
 
-                componentStack: errorInfo.componentStack;,
-},;
+                componentStack: errorInfo.componentStack},;
             userAgent: navigator.userAgent,;
             url: window.location.href,;
-            viewport: {;
+            viewport: {
 
                 width: window.innerWidth,;
-                height: window.innerHeight;,
-};
+                height: window.innerHeight}
         // Log to console for development';
-        if(process.env.NODE_ENV === 'development') {;
+        if(process.env.NODE_ENV === 'development') {
 
             console.group('Error Report');
             // // // // // // // // console.log('Error ID:', errorReport.id);
             // // // // // // // // console.log('Error Details:', errorReport);
             console.groupEnd();
-;
+
         // In production, you would send this to your error reporting service;
         // Example: Sentry.captureException(error, { extra: errorReport });
-;
+
             // console.log('Error ID:', errorReport.id);
             // console.log('Error Details:', errorReport);
             console.groupEnd()}
         // In production, you would send this to your error reporting service;
         // Example: Sentry.captureException(error, { extra: errorReport })}
-    handleRetry = () => {;
+    handleRetry = () => {
         this.setState({;
 
             hasError: false,;
             error: null,;
             errorInfo: null,;
             errorId: null,;
-            showStackTrace: false;,
-})};
-    handleGoHome = () => {;
+            showStackTrace: false})}
+    handleGoHome = () => {
 
-        window.location.href = '/'};
-    handleReportIssue = () => {;
+        window.location.href = '/'}
+    handleReportIssue = () => {
         const errorInfo = this.state.errorInfo;
-        if(error && errorInfo) {;
+        if(error && errorInfo) {
 `;
             const issueUrl = `https://github.com/ziontechgroup/zion-website/issues/new?title=Error: ${encodeURIComponent(error.message)}&body=${encodeURIComponent(issueBody)}`;
             window.open(issueUrl,_blank')}
-    };
+    }
                 return this.props.fallback}
             // Default error UI;
             return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 flex items-center justify-center p-4">;
-          <motion.div initial = {;
+          <motion.div initial = {
 
   { opacity: 0,;
-  scale: 0.9;,
-}} animate = {;
+  scale: 0.9}} animate = {
 
   { opacity: 1,;
-  scale: 1;,
-}} className="max-w-2xl w-full bg-white dark:bg-slate-800 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-700 overflow-hidden">;
+  scale: 1}} className="max-w-2xl w-full bg-white dark:bg-slate-800 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-700 overflow-hidden">;
             {/* Header */}";
             <div className="bg-gradient-to-r from-red-500 to-pink-500 p-6 text-white">";
               <div className="flex items-center space-x-3">";
@@ -96,33 +90,28 @@ export default function Page() {;
 
     // Add global error handler';
     window.addEventListener('error', handleError);
-    window.addEventListener('unhandledrejection', (event) => {;
+    window.addEventListener('unhandledrejection', (event) => {
 
-      handleError(event.reason, { componentStack: 'Promise rejection' });,
-});
-;
-    return () => {;
+      handleError(event.reason, { componentStack: 'Promise rejection' })});
+
+    return () => {
 
       window.removeEventListener('error', handleError);
-      window.removeEventListener('unhandledrejection', handleError);,
-};,
-}, []);
-;
-  if(hasError) {;
+      window.removeEventListener('unhandledrejection', handleError)}}, []);
+
+  if(hasError) {
 
     const defaultFallback = (";
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-red-100">;
         <motion.div;
-          initial = {;
+          initial = {
 
   { opacity: 0,;
-  y: 20;,
-}}
-          animate = {;
+  y: 20}}
+          animate = {
 
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
           className="max-w-md mx-auto text-center p-8 bg-white rounded-xl shadow-lg">";
           <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">";
             <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">";
@@ -170,16 +159,12 @@ export default function Page() {;
         </motion.div>;
       </div>;
     );
-;
-    return fallback || defaultFallback;,
-}
-;
-  return children;,
-};
-;
-export { EnhancedErrorBoundary };
-export default EnhancedErrorBoundary;'"`;,
-}}}}}}}}}}}}}'"`'"`;
 
-;
-export { Page };
+    return fallback || defaultFallback}
+
+  return children}
+export { EnhancedErrorBoundary }
+export default EnhancedErrorBoundary;'"`}}}}}}}}}}}}}'"`'"`;
+
+
+export { Page }

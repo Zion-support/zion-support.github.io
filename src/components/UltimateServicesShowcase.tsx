@@ -7,79 +7,67 @@ export default UltimateServicesShowcase;
 export default UltimateServicesShowcase;
 export default UltimateServicesShowcase;
 export default UltimateServicesShowcase;
-export default function UltimateServicesShowcase(...args[]) :  {;
+export default function UltimateServicesShowcase(...args[]) :  {
 import { enterpriseITInfrastructureServices2025 } from '../../data / 2025 - enterprise - it - infrastructure -services';
 import { innovativeMicroSaasSolutions2025 } from '../../data / 2025 - innovative - micro - saas -solutions';
 import { motion  } from 'framer-motion';
 import { ultimateInnovativeServices2025 } from '../../data / 2025 - ultimate - innovative - services -expansion';
-;
+
  from 'lucide - react';
-;
+
 // Import the new services;
-  ;
-  ;
-  ;
-  website: 'https://ziontechgroup.com';,
-};
-;
-;
+
+
+
+  website: 'https://ziontechgroup.com'}
     name: 'Micro SAAS Solutions',;
     description: 'Innovative software solutions for small businesses',;";
     icon: <Code className="w-8 h-8"  />,;
     color: 'from-green-600 to-emerald-700',;
-    services: innovativeMicroSaasSolutions2025};
+    services: innovativeMicroSaasSolutions2025}
 ];
-;
-;
-  ;
+
   ;  ;
-  ;
-  'Emerging': 'from-green-600 to-emerald-700';,
-};
-;
-;
-  ;
-  ;
+
+  'Emerging': 'from-green-600 to-emerald-700'}
+
+
 ';
   'Patented': 'from-green-600 to-emerald-700',';
   'Patent Pending': 'from-yellow-600 to-orange-700',';
   'Trade Secret': 'from-blue-600 to-indigo-700',;  ;
-  ;
-  ;
+
+
   'Open Source': 'from-purple-600 to-violet-700';
-;
-;,
-};
-;
-export function UltimateServicesShowcase(...args[]):  {;
+
+}
+export function UltimateServicesShowcase(...args[]):  {
 
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedService, setSelectedService] = useState<any>(null);
-;
+
     ...ultimateInnovativeServices2025,;
     ...enterpriseITInfrastructureServices2025,;
     ...innovativeMicroSaasSolutions2025;
   ];
       y: 0,;
-      transition: {;
+      transition: {
         duration: 0.6,;";
-        ease: "easeOut"}}};
+        ease: "easeOut"}}}
   return (";
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">";
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
         {/* Header */}
         <motion.div";
           className="text-center mb-16";
-          initial = {;
+          initial = {
 
   { opacity: 0,;
-  y: 20;,
-}}
-          animate = {;
+  y: 20}}
+          animate = {
 
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
           transition={{ duration: 0.8 }}
 ";
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">";
@@ -111,29 +99,25 @@ export function UltimateServicesShowcase(...args[]):  {;
         {/* Category Navigation */}
         <motion.div";
           className="flex flex-wrap justify-center gap-4 mb-12";
-          initial = {;
+          initial = {
 
   { opacity: 0,;
-  y: 20;,
-}}
-          animate = {;
+  y: 20}}
+          animate = {
 
   { opacity: 1,;
-  y: 0;,
-}}
-          transition = {;
+  y: 0}}
+          transition = {
 
   { duration: 0.8,;
-  delay: 0.2;,
-}}
+  delay: 0.2}}
         >;
           <button';
             onClick={() => setSelectedCategory('all')}
             className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${selectedCategory === 'all'';
                 ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-lg shadow-zion-cyan/25'';
-                : 'bg-zion-slate-light text-zion-gray-light hover: bg-zion-slate hover:text-white'`;,
-}`}
-;
+                : 'bg-zion-slate-light text-zion-gray-light hover: bg-zion-slate hover:text-white'`}`}
+
             All Services({allServices.length});
           </button>;
           {categories.map((category)  => (;
@@ -142,9 +126,8 @@ export function UltimateServicesShowcase(...args[]):  {;
               onClick={() => setSelectedCategory(category.id)}`;
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${selectedCategory === category.id';
                   ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-lg shadow-zion-cyan/25'';
-                  : 'bg-zion-slate-light text-zion-gray-light hover:bg-zion-slate hover:text-white'`;,
-}`}
-;
+                  : 'bg-zion-slate-light text-zion-gray-light hover:bg-zion-slate hover:text-white'`}`}
+
               {category.name} ({category.services.length}) ;
             </button>;) ) }
         </motion.div>;
@@ -259,13 +242,13 @@ export function UltimateServicesShowcase(...args[]):  {;
         {/* Call to Action */}
         <motion.div";
           className="text-center mt-16";
-          initial = {;
+          initial = {
 
   { opacity: 0,;
-  y: 20 }}          animate = {;
+  y: 20 }}          animate = {
 
   { opacity: 1,;
-  y: 0 }}          transition = {;
+  y: 0 }}          transition = {
 
   { duration: 0.8,;
   delay: 0.4 }}
@@ -284,8 +267,8 @@ export function UltimateServicesShowcase(...args[]):  {;
                 <ArrowRight className="w-5 h-5"  />              </Link>;
               <a`;
                 href={`tel:${contact.mobile}`';
-                  .replace(/\s/g,);
-                  .replace(/[^\d+]/g,)}";
+                  .replace(/\s/g);
+                  .replace(/[^\d+]/g)}";
                 className="bg-zion-slate-light border border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center gap-2";
 ";
                 <Phone className="w-5 h-5"  />                Call Now;
@@ -394,8 +377,8 @@ export function UltimateServicesShowcase(...args[]):  {;
                     </Link>;
                     <a`;
                       href={`tel:${contact.mobile}`';
-                        .replace(/\s/g,);
-                        .replace(/[^\d+]/g,)}";
+                        .replace(/\s/g);
+                        .replace(/[^\d+]/g)}";
                       className="bg-zion-slate border border-zion-cyan text-zion-cyan px-6 py-3 rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center justify-center";
 ";
                       <Phone className="w-5 h-5"  />                    </a>;
@@ -404,7 +387,7 @@ export function UltimateServicesShowcase(...args[]):  {;
               </div>;
             </div>;
           </div>;
-        </div>;) };
+        </div>;) }
     </section>;) }
 export default UltimateServicesShowcase;
 export default UltimateServicesShowcase;

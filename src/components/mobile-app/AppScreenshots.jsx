@@ -1,10 +1,10 @@
 import React, { useRef } from "react";";
 import { ChevronLeft, ChevronRight import { Button } from '@/components/ui/button';
-export default function Page() {;
+export default function Page() {
 ,";
     { id: 5, alt: "Profile screen", src: "/placeholder.svg" },;
 ];
-export const AppScreenshots = () => {;
+export const AppScreenshots = () => {
     const scrollAmount = 300;
             scrollContainerRef.current.scrollBy({;
 ";
@@ -24,10 +24,9 @@ export const AppScreenshots = () => {;
             <ChevronLeft className="h-6 w-6"/>;
           </Button>;
 
-          <div ref={scrollContainerRef} className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory" style = {;
+          <div ref={scrollContainerRef} className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory" style = {
   { scrollbarWidth: "none",;
-  msOverflowStyle: "none";,
-}}>";
+  msOverflowStyle: "none"}}>";
             {mockScreenshots.map((screenshot) => (<div key={screenshot.id} className="flex-shrink-0 w-60 h-[500px] snap-center rounded-xl overflow-hidden border-2 border-zion-purple/30">";
                 <img loading="lazy" src={screenshot.src} alt={screenshot.alt} className="w-full h-full object-cover"/>;
               </div>))}
@@ -38,5 +37,5 @@ export const AppScreenshots = () => {;
           </Button>;
         </div>;
       </div>;
-    </section>)};
+    </section>)}
 '"

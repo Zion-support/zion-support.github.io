@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-;
-;
-const ComprehensivePricing2026 = () => {;
+
+
+const ComprehensivePricing2026 = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [billingCycle, setBillingCycle] = useState('monthly');
     // Combine all services;
@@ -16,8 +16,8 @@ const ComprehensivePricing2026 = () => {;
         'Cloud & DevOps',;
         'Specialized Industry';
     ];
-    const getCategoryServices = (category) => {;
-        switch (category) {;
+    const getCategoryServices = (category) => {
+        switch (category) {
             case 'AI & Business Solutions':;
                 return allServices.filter(service => ['Business Intelligence', 'Marketing Automation', 'Customer Service', 'Workflow Automation'].includes(service.category));
             case 'IT Infrastructure':;
@@ -30,45 +30,40 @@ const ComprehensivePricing2026 = () => {;
                 return allServices.filter(service => ['Supply Chain Management', 'Financial Technology', 'Healthcare Technology', 'Legal Technology', 'Blockchain Technology', 'Internet of Things', 'Quantum Computing'].includes(service.category));
             default:;
                 return allServices}
-    };
+    }
     const filteredServices = getCategoryServices(selectedCategory);
-    const getAnnualPrice = (monthlyPrice) => {;
+    const getAnnualPrice = (monthlyPrice) => {
         const price = parseInt(monthlyPrice.replace(/[^0-9]/g, ''));
         const annualPrice = price * 12 * 0.8; // 20% discount for annual;
-        return `$${annualPrice.toLocaleString()}`};
-    const containerVariants = {;
+        return `$${annualPrice.toLocaleString()}`}
+    const containerVariants = {
         hidden: { opacity: 0 },;
-        visible: {;
+        visible: {
             opacity: 1,;
-            transition: {;
-                staggerChildren: 0.1;,
-}
+            transition: {
+                staggerChildren: 0.1}
         }
-    };
-    const itemVariants = {;
+    }
+    const itemVariants = {
   hidden: { y: 20,;
-  opacity: 0 ;,
-},;
-        visible: {;
+  opacity: 0 },;
+        visible: {
             y: 0,;
             opacity: 1,;
-            transition: {;
+            transition: {
                 duration: 0.5,;
-                ease: "easeOut";,
-}
+                ease: "easeOut"}
         }
-    };
+    }
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">;
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto text-center">;
-          <motion.h1 className="text-4xl md:text-6xl font-bold mb-6" initial = {;
+          <motion.h1 className="text-4xl md:text-6xl font-bold mb-6" initial = {
   { opacity: 0,;
-  y: 20 ;,
-}} animate = {;
+  y: 20 }} animate = {
   { opacity: 1,;
-  y: 0 ;,
-}} transition={{ duration: 0.8 }}>;
+  y: 0 }} transition={{ duration: 0.8 }}>;
             Comprehensive;
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">;
               {" "}Pricing 2026            </span>;
@@ -100,8 +95,7 @@ const ComprehensivePricing2026 = () => {;
               onClick={() =>';
                 setBillingCycle('';
                   billingCycle === 'monthly' ? 'annual' : 'monthly';
-                )'`;,
-}'`'`;
+                )'`}'`'`;
               className={`relative w-16 h-8 bg-white/20 rounded-full p-1 transition-all duration-300 ${billingCycle === 'annual' ? 'bg-cyan-500' : ''}`}
             >'`;
               <div'`'`;
@@ -161,8 +155,7 @@ const ComprehensivePricing2026 = () => {;
 '''`;
                   selectedCategory === category'''`'`;
                     ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg'''`'`'`;
-                    : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'```'`;,
-}`}'';
+                    : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'```'`}`}'';
               >''';
                 {category === 'all' ? 'All Services' : category}
               </button>;
@@ -477,16 +470,12 @@ const ComprehensivePricing2026 = () => {;
           </div>;
         </div>;
       </section>;
-    </div>)};
+    </div>)}
 export default ComprehensivePricing2026;
-;
 
-export { ComprehensivePricing2026 };
-;
-export { ComprehensivePricing2026 };
-;
-export { ComprehensivePricing2026 };
-;
-export { ComprehensivePricing2026 };
-;
-export { ComprehensivePricing2026 };
+
+export { ComprehensivePricing2026 }
+export { ComprehensivePricing2026 }
+export { ComprehensivePricing2026 }
+export { ComprehensivePricing2026 }
+export { ComprehensivePricing2026 }

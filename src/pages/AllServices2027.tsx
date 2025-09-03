@@ -13,8 +13,7 @@
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
                 </motion.div>;
-              );,
-})}
+              )})}
           </div>;
         </div>;
       </section>;
@@ -33,14 +32,11 @@
           </motion.div>;
         </div>;
       </section>;
-  );,
-};
-;
+  )}
 export default AllServices2027;
 import React from "react";
 import { SEO } from "@/components/SEO";
-;,"});,"});,
-}
+;,"});,"})}
 export default function AllServices2027() {return (";
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">";
       <SEO title="AllServices2027 - Zion Tech Group" description="Professional AllServices2027 services by Zion Tech Group"  />";
@@ -50,6 +46,5 @@ export default function AllServices2027() {return (";
           Professional AllServices2027 services to help your business grow.;
         </p>;
       </div>;
-  );,
-}
+  )}
 }

@@ -18,13 +18,11 @@ export default function CompWorkspace() {}
       <div className="flex items-center justify-center min-h-screen">"";
         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan"></div>;
       </div>;
-    );,
-}
+    )}
   if (error || !comp) {}
 ";
 "";
-    return <Navigate to="/" />;,
-}';
+    return <Navigate to="/" />}';
   // In white-label mode, use the tenant's theme instead of the comp's theme;
   const effectiveTheme = isWhitelabel;
     ? {}
@@ -37,8 +35,7 @@ export default function CompWorkspace() {}
   if (!hasAccess) {}
 ";
 "";
-    return <Navigate to="/unauthorized" />;,
-}';
+    return <Navigate to="/unauthorized" />}';
   return()'';
     <ProtectedRoute>''';
       <SEO'''';
@@ -62,14 +59,10 @@ export default function CompWorkspace() {}
       </main>;
       <Footer />;
     </ProtectedRoute>)}
-;
 
-export { CompWorkspace };
-;
-export { CompWorkspace };
-;
-export { CompWorkspace };
-;
-export { CompWorkspace };
-;
-export { CompWorkspace };
+
+export { CompWorkspace }
+export { CompWorkspace }
+export { CompWorkspace }
+export { CompWorkspace }
+export { CompWorkspace }

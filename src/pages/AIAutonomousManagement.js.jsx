@@ -241,16 +241,12 @@ const AIAutonomousManagement = () => {}
           </div>;
         </div>;
       </div>;
-    </>)};
+    </>)}
 export default AIAutonomousManagement;
-;
 
-export { AIAutonomousManagement };
-;
-export { AIAutonomousManagement };
-;
-export { AIAutonomousManagement };
-;
-export { AIAutonomousManagement };
-;
-export { AIAutonomousManagement };
+
+export { AIAutonomousManagement }
+export { AIAutonomousManagement }
+export { AIAutonomousManagement }
+export { AIAutonomousManagement }
+export { AIAutonomousManagement }

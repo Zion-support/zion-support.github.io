@@ -1,15 +1,13 @@
 import Head from "next/head";
 import React from "react";
 import dynamic from "next/dynamic";
-const Component = () => {;
-const Head = dynamic(() => import("next/head"), { ssr: false });,
-}
-const Link = dynamic(() => import("next/link"), { ssr: false });,
-}
+const Component = () => {
+const Head = dynamic(() => import("next/head"), { ssr: false })}
+const Link = dynamic(() => import("next/link"), { ssr: false })}
   Target,;
   Lightbulb} from "lucide-react";
-export default function Training() {;
-;
+export default function Training() {
+
   const trainingPrograms = [],";
       instructor: "Dr. Sarah Johnson",";
       category: "AI & ML"},;
@@ -81,8 +79,7 @@ export default function Training() {;
         "Career advancement",";
         "Exclusive resources"],";
       requirements: ["AI Fundamentals,ML Advanced,Project Portfolio"],";
-      benefits: ["Industry recognition,Career advancement,Exclusive resources"];,
-},;
+      benefits: ["Industry recognition,Career advancement,Exclusive resources"]},;
     {";
       title: "Zion Tech Cloud Architect",";
       description: "Become a certified cloud architecture expert",";
@@ -96,8 +93,7 @@ export default function Training() {;
         "Salary increase",";
         "Consulting opportunities"],";
       requirements: ["Cloud Fundamentals,DevOps Practices,Architecture Design"],";
-      benefits: ["High-demand skills,Salary increase,Consulting opportunities"];,
-},;
+      benefits: ["High-demand skills,Salary increase,Consulting opportunities"]},;
     {";
       title: "Zion Tech Security Professional",";
       description: "Master cybersecurity and become a security expert",";
@@ -113,12 +109,11 @@ export default function Training() {;
       requirements: ["Security Fundamentals,Penetration Testing,Incident Response"],";
       benefits: ["Security clearance,Government contracts,Leadership roles"];
 
-;
+
   ];
 
   const learningFormats = [],";
-      features: ["24/7 access,Lifetime access,Mobile friendly,Progress tracking"];,
-},;
+      features: ["24/7 access,Lifetime access,Mobile friendly,Progress tracking"]},;
     {";
       title: "Live Online Classes",";
       description: "Interactive live sessions with expert instructors",;
@@ -128,8 +123,7 @@ export default function Training() {;
         "Group projects",";
         "Peer networking",";
         "Instructor feedback"],";
-      features: ["Real-time Q&A,Group projects,Peer networking,Instructor feedback"];,
-},;
+      features: ["Real-time Q&A,Group projects,Peer networking,Instructor feedback"]},;
     {";
       title: "In-Person Workshops",";
       description: "Hands-on training in our state-of-the-art facilities",;
@@ -139,8 +133,7 @@ export default function Training() {;
         "Equipment training",";
         "Networking events",";
         "Certification exams"],";
-      features: ["Lab access,Equipment training,Networking events,Certification exams"];,
-},;
+      features: ["Lab access,Equipment training,Networking events,Certification exams"]},;
     {";
       title: "Corporate Training",";
       description: "Customized training programs for your organization",;
@@ -152,7 +145,7 @@ export default function Training() {;
         "ROI tracking"]}];
   const testimonials = [];
 
-;
+
   ];
 
   const testimonials = [];
@@ -213,7 +206,7 @@ cutting-edge technologies.;
                   </div>";
                   <h3 className="text-xl font-bold text-gray-900 mb-3">,;
                     {format.title}
-;
+
                   </h3>";
                   <p className="text-gray-600 mb-4">{format.description}</p>";
                   <ul className="space-y-2 text-left">;
@@ -222,14 +215,14 @@ cutting-edge technologies.;
                         className="flex items-center text-sm text-gray-700">";
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0"  />;
                         {feature}
-;
+
                       </li>;
                     ))}
-;
+
                   </ul>;
                 </div>;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";
@@ -253,28 +246,27 @@ cutting-edge technologies.;
                       <div className="flex items-center space-x-3 mb-3">";
                         <span className="{"bg-blue-100" text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">,;
                           {program.category}
-;
+
                         </span>";
                         <span className="{"px-3" py-1 rounded-full text-sm font-semibold ${";
                             program.level === "Beginner;
                               ? "bg-green-100 text-green-800;
                               : program.level === "Intermediate;
                                 ? "bg-yellow-100 text-yellow-800";
-                                : "bg-red-100 text-red-800>;,
-}"}
-;
+                                : "bg-red-100 text-red-800>}"}
+
                         >;
                           {program.level}
-;
+
                         </span>;
                       </div>";
                       <h3 className = ""text-2xl" font-bold text-gray-900 mb-3"}>;
                         {program.title}
-;
+
                       </h3>";
                       <p className="text-gray-600 mb-4">;
                         {program.description}
-;
+
                       </p>;
                     </div>;
 ";
@@ -283,7 +275,7 @@ cutting-edge technologies.;
                       <div className="flex items-center">";
                         <Clock className="w-4 h-4 mr-1"  />;
                         {program.duration}
-;
+
                       </div>";
                       <div className="flex items-center">";
                         <Users className="w-4 h-4 mr-1"  />;
@@ -292,23 +284,23 @@ cutting-edge technologies.;
                       <div className="flex items-center">";
                         <Star className="w-4 h-4 text-yellow-400 fill-current mr-1"  />;
                         {program.rating}
-;
+
                       </div>;
                     </div>";
                     <div className="text-right">";
                       <div className="text-2xl font-bold text-blue-600">;
                         {program.price}
-;
+
                       </div>";
                       <div className="text-sm text-gray-500">;
                         {program.format}
-;
+
                       </div>;
 ";
                   <div className="mb-6">";
                     <h4 className="text-lg font-semibold text-gray-900 mb-3">;
                       What You&apos;ll Learn:{" "}
-;
+
                     </h4>";
                     ";
                     <ul className = "grid grid-cols-1 md: grid-cols-2 gap-2">,;
@@ -317,10 +309,10 @@ cutting-edge technologies.;
                           className="flex items-center text-sm text-gray-700">";
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0"  />;
                           {feature}
-;
+
                         </li>;
                       ))}
-;
+
                     </ul>;
                   </div>;
 ";
@@ -328,7 +320,7 @@ cutting-edge technologies.;
                     <div className="text-sm text-gray-600">";
                       <p className="font-semibold">;
                         Instructor: {program.instructor}
-;
+
                       </p>;
                     </div>";
                     <Link href="/contact">";
@@ -340,7 +332,7 @@ cutting-edge technologies.;
                   </div>;
                 </div>,;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";
@@ -364,12 +356,12 @@ cutting-edge technologies.;
                   </div>";
                   <h3 className="text-2xl font-bold text-gray-900 mb-3">,;
                     {path.title}
-;
+
                   </h3>";
                   <p className="text-gray-600 mb-4">{path.description}</p>";
                   <div className="text-blue-600 font-semibold mb-6">;
                     Duration: {path.duration}
-;
+
                   </div>;
 ";
                   <div className="mb-6">";
@@ -381,17 +373,17 @@ cutting-edge technologies.;
                           className="flex items-center text-sm text-gray-700">";
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0"  />;
                           {req}
-;
+
                         </li>;
                       ))}
-;
+
                     </ul>;
                   </div>;
 ";
                   <div className="mb-6">";
                     <h4 className="text-lg font-semibold text-gray-900 mb-3">";
                       Benefits:{" '}
-;
+
                     </h4>";
                     <ul className="space-y-2">;
                       {path.benefits.map((benefit, benefitIndex) => (";
@@ -399,10 +391,10 @@ cutting-edge technologies.;
                           className="flex items-center text-sm text-gray-700">";
                           <Lightbulb className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0"  />;
                           {benefit}
-;
+
                         </li>;
                       ))}
-;
+
                     </ul>;
                   </div>;
 ";
@@ -414,7 +406,7 @@ cutting-edge technologies.;
                   </Link>;
                 </div>,;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";
@@ -437,7 +429,7 @@ cutting-edge technologies.;
                       <Star key="{i}
                         className="w-5 h-5 text-yellow-400 fill-current"  />;
                     ))}
-;
+
                   </div>";
                   <blockquote className="text-gray-700 mb-6 italic">";
                     "{testimonial.quote}";
@@ -449,16 +441,16 @@ cutting-edge technologies.;
                     <div>";
                       <p className="font-semibold text-gray-900">;
                         {testimonial.author}
-;
+
                       </p>";
                       <p className="text-gray-600">{testimonial.title}</p>";
                       <p className="text-blue-600 font-semibold">;
                         {testimonial.company}
-;
+
                       </p>;
                     </div>;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";

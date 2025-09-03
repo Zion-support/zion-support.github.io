@@ -1,152 +1,148 @@
 import {   Activity, Zap, Clock,  TrendingUp, AlertTriangle  } from 'lucide-react';
-;
-export default function Page() {;
+
+export default function Page() {
 );
-;
+
   // Calculate performance score based on Core Web Vitals;
-  ;
+
       let validMetrics = 0;
-;
+
       // FCP scoring(0-100);
-      if(metrics.fcp !== null) {;
+      if(metrics.fcp !== null) {
 
         validMetrics++;
         if(metrics.fcp < 1800) totalScore += 100;
         else if(metrics.fcp < 3000) totalScore += 50;
         else totalScore += 0}
-;
+
       // LCP scoring(0-100);
-      if(metrics.lcp !== null) {;
+      if(metrics.lcp !== null) {
 
         validMetrics++;
         if(metrics.lcp < 2500) totalScore += 100;
         else if(metrics.lcp < 4000) totalScore += 50;
         else totalScore += 0}
-;
+
       // FID scoring(0-100);
-      if(metrics.fid !== null) {;
+      if(metrics.fid !== null) {
 
         validMetrics++;
         if(metrics.fid < 100) totalScore += 100;
         else if(metrics.fid < 300) totalScore += 50;
         else totalScore += 0}
-;
+
       // CLS scoring(0-100);
-      if(metrics.cls !== null) {;
+      if(metrics.cls !== null) {
 
         validMetrics++;
         if(metrics.cls < 0.1) totalScore += 100;
         else if(metrics.cls < 0.25) totalScore += 50;
         else totalScore += 0}
-;
+
       let rating: 'good' | 'needs-improvement' | 'poor';
       let color: string;
-;
-      if(averageScore >= 90) {;
+
+      if(averageScore >= 90) {
 
         rating = 'good';
-        color = 'text-green-500'} else if(averageScore >= 50) {;
+        color = 'text-green-500'} else if(averageScore >= 50) {
 
         rating = 'needs-improvement';
-        color = 'text-yellow-500'} else {;
+        color = 'text-yellow-500'} else {
 
         rating = 'poor';
         color = 'text-red-500'}
     });
-;
+
   TrendingUp,';
   AlertTriangle} from 'lucide-react';    ;
     let grade: 'A' | 'B' | 'C' | 'D' | 'F';
     let color: string;
-;
-    if(averageScore >= 90) {;
+
+    if(averageScore >= 90) {
       grade = 'A';
-      color = 'text-green-500'} else if(averageScore >= 80) {;
+      color = 'text-green-500'} else if(averageScore >= 80) {
       grade = 'B';
-      color = 'text-blue-500'} else if(averageScore >= 70) {;
+      color = 'text-blue-500'} else if(averageScore >= 70) {
       grade = 'C';
-      color = 'text-yellow-500'} else if(averageScore >= 60) {;
+      color = 'text-yellow-500'} else if(averageScore >= 60) {
       grade = 'D';
-      color = 'text-orange-500'} else {;
+      color = 'text-orange-500'} else {
       grade = 'F';
       color = 'text-red-500'}
   }, []) ;
-;
+
       return { score: averageScore, rating, color }},;
     [];
   );
   // Measure Core Web Vitals;
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;,
-}, []);
-;
-    if('PerformanceObserver' in window) {;
+  useEffect(() => {
+  // TODO: Add dependencies if needed}, []);
+
+    if('PerformanceObserver' in window) {
 
       // First Contentful Paint;
 
-        if(fcpEntry) {;
+        if(fcpEntry) {
 
           setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }))}
       });
       fcpObserver.observe({ entryTypes: ['paint'] });
-;
+
       // Largest Contentful Paint;
 
-        if(lastEntry) {;
+        if(lastEntry) {
 
           setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }))}
       });
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-;
+
       // First Input Delay;
-      const fidObserver = new PerformanceObserver(list => {;
+      const fidObserver = new PerformanceObserver(list => {
 
-        const entries = list.getEntries();        entries.forEach(entry => {;
+        const entries = list.getEntries();        entries.forEach(entry => {
 
-          if (entry.processingStart && entry.startTime) {;
+          if (entry.processingStart && entry.startTime) {
 
             setMetrics(prev => ({ ...prev, fid }) ) }
         })});
       fidObserver.observe({ entryTypes: ['first-input'] });
-;
+
       // Layout Shift;
-      const clsObserver = new PerformanceObserver(list => {;
+      const clsObserver = new PerformanceObserver(list => {
 
-        let clsValue = 0;        list.getEntries().forEach((entry: any) => {;
+        let clsValue = 0;        list.getEntries().forEach((entry: any) => {
 
-          if(!entry.hadRecentInput) {;
+          if(!entry.hadRecentInput) {
 
             clsValue += entry.value}
         });
-        setMetrics(prev => ({ ...prev, cls: clsValue }));,
-});
+        setMetrics(prev => ({ ...prev, cls: clsValue }))});
       clsObserver.observe({ entryTypes: ['layout-shift'] });
-      return () => {;
+      return () => {
         lcpObserver.disconnect();
         fidObserver.disconnect();
         clsObserver.disconnect()}}
   }, []);
-;
+
   // Measure other performance metrics;
-  ;
+
       setMetrics(prev => ({ ...prev, ttfb }))}
   }, []) ;
-;
+
       // First Meaningful Paint(FMP) - approximated;
-      ;
+
       setMetrics(prev => ({ ...prev, fmp }));
-;
+
   // Format time values;
-  ;
-    return `${Math.round(time)}ms`};
-;
+
+    return `${Math.round(time)}ms`}
   // Format CLS value;
-  ;
-    return cls.toFixed(3)};
-;
+
+    return cls.toFixed(3)}
   // Get metric rating;
-  ;
-    switch(metric) {;
+
+    switch(metric) {
 
       case 'fcp':;
         return value < 1800';
@@ -173,9 +169,8 @@ export default function Page() {;
             ? '🟡 Needs Improvement'';
             : '🔴 Poor';
       default:';
-        return 'N/A'}  };
-;
-  if(!isVisible) {;
+        return 'N/A'}  }
+  if(!isVisible) {
 
     return ();
       <button;
@@ -183,7 +178,7 @@ export default function Page() {;
         className="fixed bottom-4 right-4 bg-zion-cyan text-white p-3 rounded-full shadow-lg hover:bg-zion-cyan/90 transition-all duration-300 z-50">";
         <Activity className="w-6 h-6"  />      </button>;
     )}
-;
+
   return (";
     <div className="fixed bottom-4 right-4 bg-zion-slate-dark/95 backdrop-blur-xl border border-zion-cyan/30 rounded-2xl p-6 shadow-2xl z-50 max-w-sm">";
       <div className="flex items-center justify-between mb-4">";

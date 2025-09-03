@@ -4,23 +4,21 @@ import Navigation from '../src/components/Navigation';
 import Footer from '../src/components/Footer';
 import SEOHead from '../src/components/SEOHead';
 import { Download, ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, Brain, Cloud, Database, Network, Target, Phone, Mail, FileText, Eye } from 'lucide-react';
-;
-const Brochure = () => {;
-  const structuredData = {;
+
+const Brochure = () => {
+  const structuredData = {
     "@context": "https://schema.org",;
     "@type": "WebPage",;
     "name": "Product Brochure - Zion Tech Group",;
     "url": "https://ziontechgroup.com/brochure",;
     "description": "Download our comprehensive product brochure featuring AI services, IT solutions, and micro SaaS platforms",;
-    "publisher": {;
+    "publisher": {
       "@type": "Organization",;
       "name": "Zion Tech Group",;
-      "url": "https://ziontechgroup.com";,
-}
-  };
-;
+      "url": "https://ziontechgroup.com"}
+  }
   const brochures = [;
-    {;
+    {
       title: 'AI Services Brochure',;
       description: 'Comprehensive guide to our AI solutions and capabilities',;
       pages: 24,;
@@ -35,9 +33,8 @@ const Brochure = () => {;
         'AI Integration Services';
       ],;
       downloadUrl: '#',;
-      previewUrl: '#';,
-},;
-    {;
+      previewUrl: '#'},;
+    {
       title: 'IT Solutions Brochure',;
       description: 'Complete overview of our IT services and infrastructure solutions',;
       pages: 32,;
@@ -52,9 +49,8 @@ const Brochure = () => {;
         'Data Management';
       ],;
       downloadUrl: '#',;
-      previewUrl: '#';,
-},;
-    {;
+      previewUrl: '#'},;
+    {
       title: 'Micro SaaS Platform',;
       description: 'Detailed information about our SaaS development and platform services',;
       pages: 28,;
@@ -69,9 +65,8 @@ const Brochure = () => {;
         'Analytics & Reporting';
       ],;
       downloadUrl: '#',;
-      previewUrl: '#';,
-},;
-    {;
+      previewUrl: '#'},;
+    {
       title: 'Complete Solutions Guide',;
       description: 'All-in-one brochure covering all our services and solutions',;
       pages: 48,;
@@ -86,17 +81,16 @@ const Brochure = () => {;
         'Pricing Information';
       ],;
       downloadUrl: '#',;
-      previewUrl: '#';,
-}
+      previewUrl: '#'}
   ];
-;
+
   const stats = [;
     { number: '500+', label: 'Projects Completed' },;
     { number: '50+', label: 'Happy Clients' },;
     { number: '99.9%', label: 'Uptime Guarantee' },;
     { number: '24/7', label: 'Support Available' }
   ];
-;
+
   return (;
     <>;
       <SEOHead ;
@@ -106,7 +100,7 @@ const Brochure = () => {;
         structuredData={structuredData}
       />;
       <Navigation />;
-      ;
+
       <main className="min-h-screen bg-gray-900 text-white">;
         {/* Hero Section */}
         <section className="pt-24 pb-16 bg-gradient-to-b from-gray-900 to-gray-800">;
@@ -299,7 +293,5 @@ const Brochure = () => {;
 
       <Footer />;
     </>;
-  );,
-};
-;
+  )}
 export default Brochure;

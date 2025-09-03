@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
-;
-export default function Terms() {;
+
+export default function Terms() {
   return (;
     <>;
       <Head>;
@@ -10,7 +10,7 @@ export default function Terms() {;
         <meta property="og:title" content="Terms of Service — Zion Tech Group" />;
         <meta property="og:description" content="Terms of service and usage agreement for Zion Tech Group's autonomous systems and services." />;
       </Head>;
-      ;
+
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">;
         <main className="container mx-auto px-6 py-12">;
           <section className="text-center mb-16">;
@@ -220,5 +220,4 @@ export default function Terms() {;
         </main>;
       </div>;
     </>;
-  );,
-}
+  )}

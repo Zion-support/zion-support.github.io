@@ -6,9 +6,9 @@ import { Button } from "../components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../components/ui/tabs";
 import { Check, Star, Zap, Shield, TrendingUp, Users, Cloud, Brain, Code, Database, Globe, Smartphone, Server, Lock, BarChart3, Settings, Phone, Mail, MapPin, ExternalLink, DollarSign, Target, Award } from 'lucide-react';
 import enhancedMicroSaasServices2025 from "../data/enhancedMicroSaasServices2025";
-;
-;
-const ComprehensivePricing = () => {;
+
+
+const ComprehensivePricing = () => {
     const [activeTab, setActiveTab] = useState('microsaas');    const [billingCycle, setBillingCycle] = useState('monthly');
     const getCategoryIcon = (category) => {}
         switch (category.toLowerCase()) {}
@@ -42,7 +42,7 @@ const ComprehensivePricing = () => {;
             case 'managed services': return <Settings className="h-5 w-5"/>;'"'";
             case 'web development': return <Globe className="h-5 w-5"/>;"";
             default: return <Star className="h-5 w-5"/>}
-    };
+    }
     const getCategoryColor = (category) => {}
         switch (category.toLowerCase()) {}
 ';
@@ -76,7 +76,7 @@ const ComprehensivePricing = () => {;
             case 'managed services': return 'from-teal-500 to-cyan-500';''';
             case 'web development': return 'from-blue-500 to-green-500';''';
             default: return 'from-gray-500 to-slate-500'}
-    };
+    }
     const formatPrice = (price, pricingModel) => {}
 ';
         if (pricingModel === 'per API call') {}
@@ -110,12 +110,10 @@ const ComprehensivePricing = () => {;
 ``;
 ```;
 ````;
-            return `$${price}/month`}
-        else {}
+            return `$${price}/month`} else {}
 `;
 ``;
-            return `$${price}`}";,
-};"";
+            return `$${price}`}"};"";
     const renderITPricing = () => (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"";
       {enhancedITServices2025.map((service) => (<Card key={service.id} className="group relative overflow-hidden bg-gradient-to-br from-blue-800/50 to-indigo-700/50 border-blue-600/30 hover:border-blue-500/50 transition-all duration-500 hover:scale-105 backdrop-blur-sm">"";
           <CardHeader className="pb-4">""`;
@@ -185,8 +183,7 @@ const ComprehensivePricing = () => {;
 ';
 '';
 ''';
-  () => window.open(service.contactInfo.website,_blank');,
-}>;
+  () => window.open(service.contactInfo.website,_blank')}>;
                   Get Started"`;
                 </Button>"`"`;
                 <Button size="sm" variant="outline" className="border-blue-500 text-blue-300 hover:border-indigo-500 hover:text-indigo-400" onClick={() => window.open(`mailto:${service.contactInfo.email}`)}>;
@@ -285,8 +282,7 @@ const ComprehensivePricing = () => {;
 ';
 '';
 ''';
-  () => window.open('https://ziontechgroup.com',_blank');,
-}>";
+  () => window.open('https://ziontechgroup.com',_blank')}>";
               Visit Our Website"";
               <ExternalLink className="ml-2 h-4 w-4"/>"`;
             </Button>"`"`;
@@ -297,16 +293,11 @@ const ComprehensivePricing = () => {;
           </div>;
         </div>;
       </section>;
-    </div>)};
-export default ComprehensivePricing;,
-}}}}}}}}}}}}
-;
-export { ComprehensivePricing };
-;
-export { ComprehensivePricing };
-;
-export { ComprehensivePricing };
-;
-export { ComprehensivePricing };
-;
-export { ComprehensivePricing };
+    </div>)}
+export default ComprehensivePricing}}}}}}}}}}}}
+
+export { ComprehensivePricing }
+export { ComprehensivePricing }
+export { ComprehensivePricing }
+export { ComprehensivePricing }
+export { ComprehensivePricing }

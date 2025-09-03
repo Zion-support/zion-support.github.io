@@ -1,31 +1,30 @@
 import { DollarSign  } from 'lucide-react';
-export default function Page() {;
- else {;
+export default function Page() {
+ else {
 `;
       router(`/request-quote?listing=${listing.id}`)}
-  };
-;
+  }
   return ();
     <div;
       data-testid= "equipment-link";'`;
-      className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`};
-      onClick={handleViewListing};
+      className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`}
+      onClick={handleViewListing}
       tabIndex={0};";
-      ;
-      onKeyDown={(e) => {;
-        if(e.key === 'Enter' || e.key === ' ') {;
+
+      onKeyDown={(e) => {
+        if(e.key === 'Enter' || e.key === ' ') {
           e.preventDefault () ;
           handleViewListing () }
       }}
-;
+
       {/* Image */}
       <div';
-        className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'};
+        className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'}
         onClick={handleViewListing} // Keep existing onClick for navigation;";
-        ;
+
         tabIndex={-1} // Remove from tab order as parent is focusable;
-        onKeyDown={(e) => {;
-          if(e.key === 'Enter' || e.key === ' ') {;
+        onKeyDown={(e) => {
+          if(e.key === 'Enter' || e.key === ' ') {
             e.preventDefault () ;
             handleViewListing () }
         }}
@@ -96,7 +95,7 @@ export default function Page() {;
             <Button";
               size="sm";
               className="bg-primary hover:bg-primary/80 text-primary-foreground";
-              onClick={(e) => {;
+              onClick={(e) => {
 
                 e.stopPropagation();`;
                 router(`${detailBasePath}/${listing.id}`)}}              disabled = {loading}
@@ -121,13 +120,13 @@ export default function Page() {;
                 className="border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground";
 
                 Request Quote;
-              </Button>) };
+              </Button>) }
           </div>;
         </div>;
       </div>;
     </div>;) }
 export default React.memo(ProductListingCard);
-;
+
 export default ProductListingCard;
 export default ProductListingCard;
 export default ProductListingCard;

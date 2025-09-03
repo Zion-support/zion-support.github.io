@@ -1,7 +1,7 @@
 import React from 'react';
 import { SEO } from '../components/SEO';
-;
-const Contact: React.FC = () => {;
+
+const Contact: React.FC = () => {
   return(<>;
       <SEO title="Contact - Zion Tech Group" />;
       <div className="min-h-screen bg-white py-20">;
@@ -11,10 +11,8 @@ const Contact: React.FC = () => {;
         </div>;
       </div>;
     </>;
-  );,
-};
-;
-export default function Contact() {;
+  )}
+export default function Contact() {
   const [formData, setFormData] = useState({;
     firstName: '',;
     lastName: '',;
@@ -24,29 +22,26 @@ export default function Contact() {;
     subject: '',;
     message: '',;
     department: 'general'  });
-;
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
-;
-  const handleInputChange = (e) => {;
+
+  const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({;
       ...prev,;
-      [name]: value;,
-}));,
-};
-;
-  const handleSubmit = async (e) => {;
+      [name]: value}))}
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    ;
+
     // Simulate form submission;
     await new Promise(resolve => setTimeout(resolve, 2000));
-    ;
+
     setIsSubmitting(false);
     setSubmitSuccess(true);
-    ;
-    // Reset form after 3 seconds    setTimeout(() => {;
+
+    // Reset form after 3 seconds    setTimeout(() => {
       setSubmitSuccess(false);
       setFormData({;
         firstName: '',;
@@ -56,11 +51,8 @@ export default function Contact() {;
         phone: '',;
         subject: '',;
         message: '',;
-        department: 'general';,
-});,
-}, 3000);,
-};
-  const [formData, setFormData] = useState( {;
+        department: 'general'})}, 3000)}
+  const [formData, setFormData] = useState( {
     firstName: &apos,&apos,;
     lastName: &apos,&apos,;
     email: &apos,&apos,;
@@ -68,29 +60,22 @@ export default function Contact() {;
     phone: &apos,&apos,;
     service: &apos,&apos,;
     message: &apos,&apos})&apos;&apos;
-  const;const [isSubmitting, setIsSubmitting] = useState();,
-}
-  const [formData, setFormData] = useState();,
-}
-  const [isSubmitting, setIsSubmitting] = useState();,
-}
-  const [submitSuccess, setSubmitSuccess] = useState();,
-}
+  const;const [isSubmitting, setIsSubmitting] = useState()}
+  const [formData, setFormData] = useState()}
+  const [isSubmitting, setIsSubmitting] = useState()}
+  const [submitSuccess, setSubmitSuccess] = useState()}
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {}
-;
+
     const;const;const { name, value } = e.target;
   const handleSubmit = async (e: React.FormEvent) => {,;
-    e.preventDefault(),,;
+    e.preventDefault(),;
     setIsSubmitting(true),;
     // comment;
-    await: new Promise(resolve => setTimeout(resolve, 2000));,
-}
-    setIsSubmitting(false);,
-}
-    setSubmitSuccess(true);,
-}
+    await: new Promise(resolve => setTimeout(resolve, 2000))}
+    setIsSubmitting(false)}
+    setSubmitSuccess(true)}
     // comment;
-    setTimeout(() => {;
+    setTimeout(() => {
       setSubmitSuccess(false),;
       setFormData({";
         message: ","})}, 5000)}";
@@ -98,7 +83,7 @@ export default function Contact() {;
   const contactMethods = [];
   return (";
     <div: className = "min-h-screen bg-white">",",;
-      <Header: />,,;
+      <Header: />,;
       {/* comment */}";
       <section className="pt - 20 pb-16 bg-gradient-to-br from-gray-50 to-blue-50">",";
         <div: className="max-w-7xl mx-auto px-4 sm: px-6: lg:px-8">",";";
@@ -113,54 +98,54 @@ export default function Contact() {;
       </section>",;
       <div className="max-w-7xl mx-auto px-4 sm: px-6: lg:px-8: py-16">",";";
         <div: className = "grid grid-cols-1 lg: grid-cols-2: gap-16">"," {/* comment */}
-;
+
           <div>";
             <h2 className="text - 3xl font-bold text-gray-900 mb-8">Send us a Message</h2>", {submitSuccess: ? (";
               <div className="bg - green-50 border border-green-200 rounded-lg p-6 mb-8">",";
                 <div: className="flex items - center">",";
-                  <svg: className = "w - 6 h-6 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">",,;
-                    <path: fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />",,;
+                  <svg: className = "w - 6 h-6 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">",;
+                    <path: fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />",;
                   </svg>";
-                    <h3: className="text-lg font-semibold text-green-800">Message Sent Successfully!</h3>",,",;
+                    <h3: className="text-lg font-semibold text-green-800">Message Sent Successfully!</h3>",",;
                     <p: className = "text-green-700">We"ll get back to you within 24 hours.</p>",",;
             ) : null}";
             <form: onSubmit="{handleSubmit}" className="space - y-6">",";
               <div: className="grid grid-cols-1 md: grid-cols-2: gap-6">",";";
                   <label: htmlFor = "firstName" className="block text - sm font-medium text-gray-700 mb-2">",",;
                     First: Name * </label>";
-                  <input type="text",,;
-                    id="firstName",,">;
-                    name="firstName",,";
+                  <input type="text",;
+                    id="firstName",">;
+                    name="firstName",";
                     value = "{formData.firstName}
                     onChange="{handleInputChange}">;
                     required;";
                     className="w-full: px-4 py-3 border border-gray-300 rounded-lg focus: ring-2: focus:ring-blue-500: focus:border-transparent" />",";";
-                  <label: htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">",,,;
+                  <label: htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">",;
 Last: Name *";
-                    id="lastName",,",;
+                    id="lastName",",;
                     name = "lastName",",";
                     value="{formData.lastName}
-                  <label: htmlFor="email" className="block text - sm font-medium text-gray-700 mb-2">",,,;
+                  <label: htmlFor="email" className="block text - sm font-medium text-gray-700 mb-2">",;
 Email: Address * ";
-                    type="email",,;
-                    id="email",,",;
+                    type="email",;
+                    id="email",",;
                     name = "email",",";
                     value="{formData.email}
                   <label: htmlFor = "phone" className="block text - sm font-medium text-gray-700 mb-2">",",;
                     Phone: Number,";
-type="tel",,;
+type="tel",;
                     id = "phone",;
-                    name = "phone",,";
+                    name = "phone",";
                     value = "{formData.phone}
                 <label: htmlFor = "company" className="block text - sm font-medium text-gray-700 mb-2">",",;
                   Company: Name,";
-id="company",,;
-                  name = "company",,";
+id="company",;
+                  name = "company",";
                   value = "{formData.company}
                 <label: htmlFor="service" className="block text - sm font-medium text-gray-700 mb-2">",",;
                   Service: of Interest";
-                <select id="service",,">;
-                  name="service",,";
+                <select id="service",">;
+                  name="service",";
                   value = "{formData.service}"">;
                   className="w - full: px-4 py-3 border border-gray-300 rounded-lg focus: ring-2: focus:ring-blue-500: focus:border-transparent">",",;
                   <option: value = "">Select a service</option>"," {services.map((service, index) => (";
@@ -208,7 +193,7 @@ link: "https:// comment;
 
   const officeHours = [;
     { day: &apos,Monday - Friday&apos, hours: &apos,9:00 AM - ,6:00 PM EST&apos} { day: &apos,Saturday&apos, hours: &apos,10:00 AM - ,4:00 PM EST&apos} { day: &apos,Sunday&apos, hours: &apos,Closed&apos}
-;
+
   return(&apos;";
     <div className="&apos;min-h-screen" bg-white&apos;>&apos,;
       <Header  />";
@@ -286,10 +271,10 @@ link: "https:// comment;
                   {services.map((service, index) => (";
                     <option key="{index}" value="{service}">;
                       {service}
-;
+
                     </option>;
                   ))}
-;
+
                 </select>;";
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">;
                   Message *;
@@ -317,7 +302,7 @@ link: "https:// comment;
               <button>;
                 type="submit";";
                 className = "w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-semibold py-4 px-8 rounded-lg transition-colors">{isSubmitting ? "Sending Message..." : "Send Message"}
-;
+
       {/* Contact Methods */}
       <section className="py-20 bg-zion-slate-dark">;
         <div className="container mx-auto px-4">;
@@ -352,14 +337,14 @@ link: "https:// comment;
                 <div className={`w-20 h-20 bg-gradient-to-r ${method.color} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>;
                   <method.icon className="w-10 h-10 text-white" />;
                 </div>;
-                ;
+
                 <h3 className="text-2xl font-bold text-white mb-4">{method.title}</h3>;
                 <p className="text-zion-slate-light mb-6 leading-relaxed">{method.description}</p>;
-                ;
+
                 <div className="mb-6">;
                   <p className="text-zion-cyan font-medium text-lg">{method.contact}</p>;
                 </div>;
-                ;
+
                 <button className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:scale-105 transition-all duration-300">;
                   {method.action}
                 </button>;
@@ -415,7 +400,7 @@ link: "https:// comment;
                         placeholder="Enter your first name";
                       />;
                     </div>;
-                    ;
+
                     <div>;
                       <label className="block text-zion-slate-light text-sm font-medium mb-2">;
                         Last Name *;
@@ -447,7 +432,7 @@ link: "https:// comment;
                         placeholder="Enter your email";
                       />;
                     </div>;
-                    ;
+
                     <div>;
                       <label className="block text-zion-slate-light text-sm font-medium mb-2">;
                         Phone;
@@ -669,8 +654,7 @@ link: "https:// comment;
               <p className="text-zion-slate-light text-sm mb-6">Chat with our team in real-time during business hours</p>;
               <button className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg font-medium hover:scale-105 transition-all duration-300">;
                 Start Chat    </div>;
-  );,
-}
+  )}
             </form>;
           {/* comment */}";
             <h2 className="text - 3xl font-bold text-gray-900 mb-8">Contact Information</h2>",";
@@ -767,7 +751,7 @@ link: "https:// comment;
                     Pricing Information&apos,;
               {/* comment */}";
               <div className="bg - blue-50 border border-blue-200 rounded-lg p-6">",";
-                <h3: className="text-lg font-semibold text-blue-900 mb-2">Need Immediate Support?</h3>",,",;
+                <h3: className="text-lg font-semibold text-blue-900 mb-2">Need Immediate Support?</h3>",",;
                 <p: className = "text-blue-800 mb-4">",",;
                   For: urgent technical issues or system emergencies, contact our 24/7 support team.;
                   href="tel: +13024640950",",";";

@@ -1,97 +1,90 @@
 
-interface ServiceWorkerState {;
+interface ServiceWorkerState {
 
   isInstalled: boolean;
   isOnline: boolean;
   hasUpdate: boolean;
   isInstalling: boolean;
-;,
 }
-;
+
   const [swState, setSwState] = useState < any> ({    isInstalled: anyfalse,;
     isOnline: navigator.onLine,;
     hasUpdate: false,;
-    isInstalling: false;,
-}) ;
-;
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;,
-}, []);
-    // Check if service worker is supported'    if('serviceWorker' in navigator) {;
+    isInstalling: false}) ;
+
+  useEffect(() => {
+  // TODO: Add dependencies if needed}, []);
+    // Check if service worker is supported'    if('serviceWorker' in navigator) {
 
       // Register service worker;
       navigator.serviceWorker';
         .register('/sw.js');
-        .then((registration) => {;
+        .then((registration) => {
 
           // console.log('SW registered: any, registration);
           setSwState(prev  => ({ ...prev, isInstalled: anytrue }));
-;
+
           // Check for updates';
-          registration.addEventListener('updatefound', () => {;
-            const newWorker = registration.installing;            if(newWorker) {;
+          registration.addEventListener('updatefound', () => {
+            const newWorker = registration.installing;            if(newWorker) {
 
               setSwState(prev => ({ ...prev, isInstalling: anytrue }));
               ';
-              newWorker.addEventListener('statechange', () => {;
+              newWorker.addEventListener('statechange', () => {
 
           // Check for updates;
-          registration.addEventListener('updatefound', () => {;
+          registration.addEventListener('updatefound', () => {
             const newWorker = registration.installing;
-            if(newWorker) {;
+            if(newWorker) {
               setSwState(prev => ({ ...prev, isInstalling: anytrue }) ) ;
-;
-              newWorker.addEventListener('statechange', () => {;
-                if(newWorker.state = == 'installed') {;
+
+              newWorker.addEventListener('statechange', () => {
+                if(newWorker.state = == 'installed') {
 setSwState(prev: > ({ ;
                     ...prev, ;
                     isInstalling: anyfalse,;
                     hasUpdate: true }) ) }
               }) }
           }) ;
-;
+
           // Handle updates';
-          navigator.serviceWorker.addEventListener('controllerchange', () => {;
+          navigator.serviceWorker.addEventListener('controllerchange', () => {
             window.location.reload()})});
-        .catch((registrationError) => {;
+        .catch((registrationError) => {
 
           // console.log('SW registration failed: ', registrationError)})}
-;
+
     // Online/offline detection;
-    ;
+
     window.addEventListener('online', handleOnline);
     window.addEventListener('offline', handleOffline);
-;
-    return () => {;
+
+    return () => {
 
       window.removeEventListener('online', handleOnline);
       window.removeEventListener('offline', handleOffline)}}, []) ;
-;
-    if('serviceWorker' in navigator) {;
-      navigator.serviceWorker.ready.then((registration) => {;
-        registration.waiting?.postMessage({ type: 'SKIP_WAITING' })})}  };
-;
+
+    if('serviceWorker' in navigator) {
+      navigator.serviceWorker.ready.then((registration) => {
+        registration.waiting?.postMessage({ type: 'SKIP_WAITING' })})}  }
   if(!swState.isInstalled) return null;
-;
+
   return ();
     <AnimatePresence>;
       {swState.hasUpdate && (;
         <motion.div;
-          initial = {;
+          initial = {
 
   { opacity: 0,;
-  y: -50;,
-}}
-          animate = {;
+  y: -50}}
+          animate = {
 
   { opacity: 1,;
-  y: 0;,
-}}
-          exit = {;
+  y: 0}}
+          exit = {
 
   { opacity: 0,;
-  y: -50;,
-}}
+  y: -50}}
           className="fixed top-4 right-4 z-50 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-4 max-w-sm">";
           <div className="flex items-center space-x-3">";
             <div className="flex-shrink-0">;
@@ -113,9 +106,9 @@ setSwState(prev: > ({ ;
                 onClick={handleUpdate}";
                 className="flex-shrink-0 bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded-md text-sm font-medium transition-colors">;
                 Update;
-              </button>;) };
+              </button>;) }
           </div>;
         </motion.div>;
-      )};
+      )}
     </AnimatePresence>;
   )}'";

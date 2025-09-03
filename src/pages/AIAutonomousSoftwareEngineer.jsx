@@ -260,16 +260,12 @@ const AIAutonomousSoftwareEngineer = () => {}
           </div>;
         </div>;
       </div>;
-    </>)};
+    </>)}
 export default AIAutonomousSoftwareEngineer;
-;
 
-export { AIAutonomousSoftwareEngineer };
-;
-export { AIAutonomousSoftwareEngineer };
-;
-export { AIAutonomousSoftwareEngineer };
-;
-export { AIAutonomousSoftwareEngineer };
-;
-export { AIAutonomousSoftwareEngineer };
+
+export { AIAutonomousSoftwareEngineer }
+export { AIAutonomousSoftwareEngineer }
+export { AIAutonomousSoftwareEngineer }
+export { AIAutonomousSoftwareEngineer }
+export { AIAutonomousSoftwareEngineer }

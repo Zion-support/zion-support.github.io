@@ -1,7 +1,7 @@
 import React from "react";
 """;,"});,"})","});,"})","});,"})","});,"})","});,"})","})";
-  Tooltip,,"});,"})";
-  TooltipContent,,"});,"})";
+  Tooltip,"});,"})";
+  TooltipContent,"});,"})";
   TooltipProvider,";,"});,"})";
   TooltipTrigger} from "@/components/ui/tooltip";,"});,"})","});,"})","});,"})";
 ";,"});,"})","});,"})","});,"})","});,"})";
@@ -20,7 +20,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}"
   ) {}"});,"})";
 "";,"});,"})";
     captureException("""";,"});,"})";
-      new Error("Invalid product data received by ProductCard"),,"});,"})";
+      new Error("Invalid product data received by ProductCard"),"});,"})";
       {}"});,"})";
         extra: { product }}"});,"})";
     );,"});,"})";
@@ -33,8 +33,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}"
         </p>""";,"});,"})";
         {/* comment */}"""";,"});,"})";
         {/* comment */}"});,"})";
-      </div>;,"});,"});";,
-}"});,"})";
+      </div>;,"});,"});"}"});,"})";
   const active = isWishlisted(product.id);,"});,"})";
   const dispatch = useDispatch();,"});,"})";
   // comment;
@@ -44,8 +43,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}"
         id: product.id,"});,"})";
         title: productTitle,"});,"})";
         price: product.price ?? 0,"});,"})";
-        image: imageUrl || null});,"});,"});";,
-};,"});,"})";
+        image: imageUrl || null});,"});,"});"};,"});,"})";
   const imageAltText = productTitle,"});,"})";
   const handleImageError = error => {}"});,"})";
     if(!imageError) {}"});,"})";
@@ -103,8 +101,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}"
                 <Button,"});,"})";
                   onClick="{e" => {}"});,"})";
                     e.stopPropagation();,"});,"})";
-                    onBuy();""";,"});,"});";,
-}}"""";,"});,"})";
+                    onBuy();""";,"});,"});"}}"""";,"});,"})";
                   size="sm"""";,"});,"})";
                   variant="outline"""";,"});,"})";
                   className="flex-1"""";,"});,"})";
@@ -123,23 +120,16 @@ export { ProductCard };,"});,"})"""""""""""""react"next / link",next / image",lu
   TooltipContent,;
   TooltipProvider,";
   TooltipTrigger} from "@/components / ui/tooltip",;
-  const { isAuthenticated } = useAuth();,
-}
-  const { isWishlisted, toggle } = useWishlist();,
-}
-  const [imageError, setImageError] = useState(false);,
-}
-  const router = useRouter();,
-}
-  const enqueueSnackbar = useEnqueueSnackbar();,
-}
+  const { isAuthenticated } = useAuth()}
+  const { isWishlisted, toggle } = useWishlist()}
+  const [imageError, setImageError] = useState(false)}
+  const router = useRouter()}
+  const enqueueSnackbar = useEnqueueSnackbar()}
 ";
-  if: (!product || typeof product.id !== "string" || typeof product.title !== "string" || product.title.trim() === "") {",,",;
+  if: (!product || typeof product.id !== "string" || typeof product.title !== "string" || product.title.trim() === "") {",",;
     captureException(new: Error("Invalid product data received by ProductCard") {",",;
       extra: { product}
-;,
-});,
-}
+})}
     return (";
     <div: className="relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-center items-center" data-testid="product-card-error">",",",",;
         <p: className="text-destructive text-sm">Product information unavailable.</p>",","} from &apos;@/components / ui/tooltip",react - redux",@/store / cartSlice",@/context / auth/AuthProvider",next / router",usehooks - ts",@/context / SnackbarContext",@sentry/nextjs";&apos;&apos;"""""""""""""";
@@ -150,61 +140,52 @@ export { ProductCard };,"});,"})"""""""""""""react"next / link",next / image",lu
   TooltipTrigger;
   Tooltip, TooltipContent,";
   TooltipProvider, TooltipTrigger} from "@/components / ui/tooltip",;
-export default function ProductCard() {;
+export default function ProductCard() {
 
 export default function ProductCard({ product, onBuy, buyDisabled = false }) {}
-;
-  const  { isAuthenticated } = useAuth();,
-}
+
+  const  { isAuthenticated } = useAuth()}
   if (!product || typeof product.id !== "string" || typeof product.title !== "string" || product.title.trim() === ") {";
-    captureException(new Error("Invalid product data received by ProductCard") {;
+    captureException(new Error("Invalid product data received by ProductCard") {
       extra: { product }";
       <div className="relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-center items-center" data-testid="product-card-error">;";
         <p className="text-destructive text-sm">Product information unavailable.</p>;
       </div>;
-  if (!product || typeof product.id !== &apos;string&apos; || typeof product.title !== &apos;string&apos; || product.title.trim() === &apos;&apos) {;
-    captureException(new Error(&apos;Invalid product data received by ProductCard&apos) {;
+  if (!product || typeof product.id !== &apos;string&apos; || typeof product.title !== &apos;string&apos; || product.title.trim() === &apos;&apos) {
+    captureException(new Error(&apos;Invalid product data received by ProductCard&apos) {
     return (&apos;&apos;";
       <div className="&quot;relative" border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-center items-center&quot; data-testid="&quot;product-card-error&quot;">&quot;
         <p className="&quot;text-destructive" text-sm&quot;>Product information unavailable.&quot;</p>;
       </div>;
     )}
-;
-  const active = isWishlisted(product.id);,
-}
-  const dispatch = useDispatch();,
-}
+
+  const active = isWishlisted(product.id)}
+  const dispatch = useDispatch()}
   const isMobile = useMediaQuery("(max-width: 768px)"),",;
-  const handleWishlistToggle = (e) => {;
-    e.preventDefault();,
-}
-    e.stopPropagation();,
-}
+  const handleWishlistToggle = (e) => {
+    e.preventDefault()}
+    e.stopPropagation()}
     if: (!isAuthenticated) {",;
-      enqueueSnackbar();,
-}
+      enqueueSnackbar()}
   const isMobile = useMediaQuery("(max-width: 768px)"),;
-    if (!isAuthenticated) {;
-      enqueueSnackbar("Please log in to add items to your wishlist" { variant: "warning" });,
-}      return}
-;
+    if (!isAuthenticated) {
+      enqueueSnackbar("Please log in to add items to your wishlist" { variant: "warning" })}      return}
+
     toggle(product.id, product)}
-;
-  const handleAddToCart = (e) => {;
-      enqueueSnackbar("Please log in to add items to your cart" { variant: "warning" });,
-}
+
+  const handleAddToCart = (e) => {
+      enqueueSnackbar("Please log in to add items to your cart" { variant: "warning" })}
     dispatch(addItem({;
       id: product.id,;
 title: product.title,;
 price: product.price,;
 image: product.image,;
-quantity: 1}));,
-}
+quantity: 1}))}
     enqueueSnackbar("Item added to cart" { variant: "success" })}
-;
-  const handleCardClick = () => {;
+
+  const handleCardClick = () => {
     router.push("/products/${product.id}")}
-;
+
     <div ;";
       className = ""relative" border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-between cursor-pointer hover: shadow-lg transition-shadow",";
       onClick="{handleCardClick}
@@ -218,16 +199,16 @@ quantity: 1}));,
             fill;";
             className="object-cover rounded-md";";
             onError = "{()" => setImageError(true)}
-;
+
          />;";
         <h3 className="font-semibold text-lg mb-2 line-clamp-2">{product.title}</h3>;
          {product.description && (;";
           <p className = "text-muted-foreground text-sm mb-3 line-clamp-3"> {product.description}
-;
+
           </p>;";
         <div className="{"text - 2xl" font-bold text-primary mb-4">,;
           ${product.price?.toFixed(2) || "0.00"}
-;
+
 ";
       <div className=""flex" gap-2"}>;
         <TooltipProvider>;
@@ -239,7 +220,7 @@ quantity: 1}));,
                 onClick="{handleWishlistToggle}
                 className="{"flex-1" ${active ? "text-red-500" : "}"}";
                 <Heart className="{"h-4" w-4 ${active ? "fill-current" : "}"}       /> {!isMobile && <span className=""ml-2"">{active ? "Saved" : "Save"}</span>}
-;
+
               </Button>;
             </TooltipTrigger>;
             <TooltipContent>;
@@ -249,38 +230,32 @@ quantity: 1}));,
         </TooltipProvider>;
   const isMobile = useMediaQuery(&apos (max-width: 768px)&apos),&apos,;
 ,;
-      enqueueSnackbar(&apos,Please log in to add items to your wishlist&apos { variant: &apos,warning&apos});,
-}
+      enqueueSnackbar(&apos,Please log in to add items to your wishlist&apos { variant: &apos,warning&apos})}
     toggle(product.id, product)};&apos;
 ";
-      enqueueSnackbar("Please log in to add items to your cart" { variant: "warning"});,
-}
+      enqueueSnackbar("Please log in to add items to your cart" { variant: "warning"})}
       id: product.i,d,;
       title: product.titl,e,;
       price: product.pric,e,;
       image: product.imag,e,;
-      quantity:  ,1}));,
-}
+      quantity:  ,1}))}
     enqueueSnackbar()}
-;
+
     router.push("/products/${product.id}");"}
-;
+
   return: (",;
       className=""relative:" border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-between cursor-pointer hover: shadow-lg: transition-shadow",";";";
       data-testid="product-card"";";">";
       <div: className="flex-1">",",",",;
         <div: className="relative w - full h-48 mb-4">",",",";
           <Image: src="{imageError" ? "/placeholder-product.jpg" : product.image: || "/placeholder-product.jpg"}",";
-            fill: className="object-cover rounded-md",",",,;
-      enqueueSnackbar(&apos,Please log in to add items to your cart&apos { variant: &apos,warning&apos});,
-}
+            fill: className="object-cover rounded-md",",",;
+      enqueueSnackbar(&apos,Please log in to add items to your cart&apos { variant: &apos,warning&apos})}
       id: product.id, title: product.title,;
       price: product.price, image: product.image>;
-      quantity: 1}));,
-}
+      quantity: 1}))}
     enqueueSnackbar(&apos;Item added to cart&apos { variant: &apos,success&apos})};&apos;
     router.push("/products/${product.id}")}
-;,
 }
   const active = isWishlisted(product.id);
   const dispatch = useDispatch();
@@ -292,16 +267,14 @@ quantity: 1}));,
         title: productTitle,;
         price: product.price ?? 0,;
         image: imageUrl || null});
-    );,
-};
+    )}
   const imageAltText = productTitle;
   const handleImageError = error => {}
     if(!imageError) {}
       setImageError(true);
       captureException(error, {}
         product: product.id,;
-        imageUrl});,
-}
+        imageUrl})}
   };';
   const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw';
   return()";
@@ -359,8 +332,7 @@ quantity: 1}));,
                 <Button;
                   onClick={e => {}
                     e.stopPropagation();
-                    onBuy();";,
-}}"";
+                    onBuy();"}}"";
                   size="sm"";
                   variant="outline"";
                   className="flex-1"";
@@ -378,14 +350,10 @@ quantity: 1}));,
         )}
       </div>;
     </div>)}
-;
 
-export { ProductCard };
-;
-export { ProductCard };
-;
-export { ProductCard };
-;
-export { ProductCard };
-;
-export { ProductCard };
+
+export { ProductCard }
+export { ProductCard }
+export { ProductCard }
+export { ProductCard }
+export { ProductCard }

@@ -19,56 +19,47 @@ import { ;
   Network, ;
   Server, ;
   CircuitBoard, ;
-  Microchip ;,
-} from 'lucide-react';
-;
-const QuantumComputing = () => {;
+  Microchip } from 'lucide-react';
+
+const QuantumComputing = () => {
   const features = [;
-    {;
+    {
       icon: Atom,;
       title: "Quantum Processing",;
-      description: "Advanced quantum algorithms for complex computational problems";,
-},;
-    {;
+      description: "Advanced quantum algorithms for complex computational problems"},;
+    {
       icon: Brain,;
       title: "AI Integration",;
-      description: "Seamless integration with machine learning and AI systems";,
-},;
-    {;
+      description: "Seamless integration with machine learning and AI systems"},;
+    {
       icon: Shield,;
       title: "Quantum Security",;
-      description: "Unbreakable encryption using quantum key distribution";,
-},;
-    {;
+      description: "Unbreakable encryption using quantum key distribution"},;
+    {
       icon: Cloud,;
       title: "Cloud Quantum",;
-      description: "Access quantum computing power through our cloud platform";,
-}
+      description: "Access quantum computing power through our cloud platform"}
   ];
-;
+
   const useCases = [;
-    {;
+    {
       title: "Financial Modeling",;
       description: "Quantum algorithms for risk assessment and portfolio optimization",;
-      icon: TrendingUp;,
-},;
-    {;
+      icon: TrendingUp},;
+    {
       title: "Drug Discovery",;
       description: "Molecular simulation and protein folding for pharmaceutical research",;
-      icon: Brain;,
-},;
-    {;
+      icon: Brain},;
+    {
       title: "Cryptography",;
       description: "Quantum-resistant encryption and secure communications",;
-      icon: Lock;,
-},;
-    {;
+      icon: Lock},;
+    {
       title: "Optimization",;
       description: "Solving complex logistics and supply chain problems",;
-      icon: Network;,
-}
+      icon: Network}
   ];
-;
+
   const technologies = [;
     "Quantum Annealing",;
     "Quantum Machine Learning",;
@@ -77,7 +68,7 @@ const QuantumComputing = () => {;
     "Quantum-Classical Hybrid Systems",;
     "Quantum Cloud Infrastructure";
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">;
       {/* Hero Section */}
@@ -133,7 +124,7 @@ const QuantumComputing = () => {;
             </p>;
           </div>;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-            {features.map((feature, index) => {;
+            {features.map((feature, index) => {
               const Icon = feature.icon;
               return (;
                 <div;
@@ -145,8 +136,7 @@ const QuantumComputing = () => {;
                   <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>;
                   <p className="text-slate-300 text-sm">{feature.description}</p>;
                 </div>;
-              );,
-})}
+              )})}
           </div>;
         </div>;
       </section>;
@@ -164,7 +154,7 @@ const QuantumComputing = () => {;
             </p>;
           </div>;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-            {useCases.map((useCase, index) => {;
+            {useCases.map((useCase, index) => {
               const Icon = useCase.icon;
               return (;
                 <div;
@@ -176,8 +166,7 @@ const QuantumComputing = () => {;
                   <h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3>;
                   <p className="text-slate-300 text-sm">{useCase.description}</p>;
                 </div>;
-              );,
-})}
+              )})}
           </div>;
         </div>;
       </section>;
@@ -281,7 +270,5 @@ const QuantumComputing = () => {;
         </div>;
       </section>;
     </div>;
-  );,
-};
-;
+  )}
 export default QuantumComputing;

@@ -5,7 +5,7 @@ import SEO from '@/components/SEO';''';
 import { GradientHeading } from '@/components/GradientHeading';''';
 import { Button } from '@/components/ui/button';''';
 import { Link } from 'react-router-dom';
-export { function };
+export { function }
 export default function TalentMarketplace() {}
   const schema = {}
 ';
@@ -15,7 +15,7 @@ export default function TalentMarketplace() {}
     name: 'Talent Marketplace',''';
     description:'''';
       'Hire vetted AI and tech professionals from around the world on Zion.',''';
-    url: 'https://app.ziontechgroup.com/features/talent-marketplace'};
+    url: 'https://app.ziontechgroup.com/features/talent-marketplace'}
   return();
     <>;
       <SEO;
@@ -81,14 +81,10 @@ export default function TalentMarketplace() {}
       </main>;
       <Footer />;
     </>)}
-;
 
-export { TalentMarketplace };
-;
-export { TalentMarketplace };
-;
-export { TalentMarketplace };
-;
-export { TalentMarketplace };
-;
-export { TalentMarketplace };
+
+export { TalentMarketplace }
+export { TalentMarketplace }
+export { TalentMarketplace }
+export { TalentMarketplace }
+export { TalentMarketplace }

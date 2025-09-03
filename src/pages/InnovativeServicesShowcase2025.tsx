@@ -4,13 +4,12 @@ import { Link } from 'react-router-dom';
 import { SEO } from '../components/SEO';
 import { ;
   Brain, Database, Users, Truck, Shield, Briefcase, Cpu, Wrench, Leaf, Atom,;
-  ArrowRight, ExternalLink, Phone, Mail, Zap, Target, Clock, Globe, Check;,
-} from 'lucide-react';
+  ArrowRight, ExternalLink, Phone, Mail, Zap, Target, Clock, Globe, Check} from 'lucide-react';
 import { SEO } from '@/components/SEO';
-;
-export default function InnovativeServicesShowcase2025(...args: unknown[]): unknown {;
+
+export default function InnovativeServicesShowcase2025(...args: unknown[]): unknown {
   const services = [;
-    {;
+    {
       id: 'ai-workflow-orchestrator',;
       title: 'AI Workflow Orchestrator',;
       description: 'Intelligent workflow automation that learns, optimizes, and orchestrates complex business processes with AI-powered decision making.',;
@@ -28,9 +27,8 @@ export default function InnovativeServicesShowcase2025(...args: unknown[]): unkn
         'Cut operational costs by 40%';
       ],;
       path: '/services/ai-workflow-orchestrator',;
-      category: 'AI & Automation';,
-},;
-    {;
+      category: 'AI & Automation'},;
+    {
       id: 'ai-data-governance-platform',;
       title: 'AI Data Governance Platform',;
       description: 'Intelligent data governance that automatically discovers, classifies, and protects your data while ensuring full regulatory compliance.',;
@@ -48,9 +46,8 @@ export default function InnovativeServicesShowcase2025(...args: unknown[]): unkn
         'Improve data quality by 80%';
       ],;
       path: '/services/ai-data-governance-platform',;
-      category: 'AI & Data';,
-},;
-    {;
+      category: 'AI & Data'},;
+    {
       id: 'ai-customer-experience-analytics',;
       title: 'AI Customer Experience Analytics',;
       description: 'Transform customer insights into actionable intelligence with AI-powered analytics that predict, optimize, and enhance every customer interaction.',;
@@ -68,9 +65,8 @@ export default function InnovativeServicesShowcase2025(...args: unknown[]): unkn
         'Improve customer lifetime value by 35%';
       ],;
       path: '/services/ai-customer-experience-analytics',;
-      category: 'AI & Analytics';,
-},;
-    {;
+      category: 'AI & Analytics'},;
+    {
       id: 'ai-supply-chain-optimization',      title: 'AI Supply Chain Optimization',;
       description: 'Revolutionize your supply chain with AI - powered optimization that predicts demand, optimizes inventory, and streamlines logistics for maximum efficiency.',;
       icon: Truck,;
@@ -85,8 +81,7 @@ export default function InnovativeServicesShowcase2025(...args: unknown[]): unkn
         'Reduce lead times by 30 - 50%';
       ],;
       path: '/services / ai - supply - chain - optimization',;
-      category: 'AI & Logistics';,
-},;
+      category: 'AI & Logistics'},;
     {}
       id: 'ai - financial - risk - management',;
       title: 'AI Financial Risk Management',;
@@ -103,8 +98,7 @@ export default function InnovativeServicesShowcase2025(...args: unknown[]): unkn
         'Detect fraud with 99.5% accuracy';
       ],;
       path: '/services / ai - financial - risk - management',;
-      category: 'AI & Finance';,
-},;
+      category: 'AI & Finance'},;
     {}
       id: 'ai - hr - talent - acquisition',;
       title: 'AI HR Talent Acquisition',;
@@ -121,8 +115,7 @@ export default function InnovativeServicesShowcase2025(...args: unknown[]): unkn
         'Reduce recruitment costs by 40%';
       ],;
       path: '/services / ai - hr - talent - acquisition',;
-      category: 'AI & HR';,
-},;
+      category: 'AI & HR'},;
     {}
       id: 'ai - iot - edge - computing',;
       title: 'AI IoT Edge Computing',;
@@ -139,8 +132,7 @@ export default function InnovativeServicesShowcase2025(...args: unknown[]): unkn
         'Improve device reliability by 75%';
       ],;
       path: '/services / ai - iot - edge - computing',;
-      category: 'AI & IoT';,
-},;
+      category: 'AI & IoT'},;
     {}
       id: 'ai - predictive - maintenance',;
       title: 'AI Predictive Maintenance',;
@@ -157,8 +149,7 @@ export default function InnovativeServicesShowcase2025(...args: unknown[]): unkn
         'Extend equipment lifespan by 20 - 30%';
       ],;
       path: '/services / ai - predictive - maintenance',;
-      category: 'AI & Maintenance';,
-},;
+      category: 'AI & Maintenance'},;
     {}
       id: 'ai - sustainable - technology',;
       title: 'AI Sustainable Technology',;
@@ -175,8 +166,7 @@ export default function InnovativeServicesShowcase2025(...args: unknown[]): unkn
         'Improve resource efficiency by 35%';
       ],;
       path: '/services / ai - sustainable - technology',;
-      category: 'AI & Sustainability';,
-},;
+      category: 'AI & Sustainability'},;
     {}
       id: 'ai - quantum - machine - learning',;
       title: 'AI Quantum Machine Learning',;
@@ -193,13 +183,11 @@ export default function InnovativeServicesShowcase2025(...args: unknown[]): unkn
         'Enable previously impossible computational tasks';
       ],;
       path: '/services / ai - quantum - machine - learning',;
-      category: 'AI & Quantum Computing';,
-}
+      category: 'AI & Quantum Computing'}
   ];
 ';
   Brain, Database, Users, Truck, Shield, Briefcase, Cpu, Wrench, Leaf, Atom,'';
-  ArrowRight, ExternalLink, Phone, Mail, Zap, Target, Clock, Globe, Check'''';,
-} from 'lucide-react'};';
+  ArrowRight, ExternalLink, Phone, Mail, Zap, Target, Clock, Globe, Check''''} from 'lucide-react'};';
 '';
   ''';
       case 'IT Services': return Server;''';
@@ -219,8 +207,7 @@ export default function InnovativeServicesShowcase2025(...args: unknown[]): unkn
       case 'Cloud Services': return 'from-cyan-600 to-blue-600';''';
       case 'Emerging Tech': return 'from-yellow-600 to-orange-600';''';
       default: return 'from-gray-600 to-slate-600'}
-  };
-;
+  }
   return();
     <div className="min-h-screen bg-white">";
       <SEO "";
@@ -574,17 +561,12 @@ export default function InnovativeServicesShowcase2025(...args: unknown[]): unkn
         </div>;
       </section>;
     </div>;
-  );,
-}
-;
+  )}
 
-export { InnovativeServicesShowcase2025 };
-;
-export { InnovativeServicesShowcase2025 };
-;
-export { InnovativeServicesShowcase2025 };
-;
-export { InnovativeServicesShowcase2025 };
-;
-export { InnovativeServicesShowcase2025 };
+
+export { InnovativeServicesShowcase2025 }
+export { InnovativeServicesShowcase2025 }
+export { InnovativeServicesShowcase2025 }
+export { InnovativeServicesShowcase2025 }
+export { InnovativeServicesShowcase2025 }
 )

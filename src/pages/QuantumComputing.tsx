@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
-const QuantumComputing = () => {;
+const QuantumComputing = () => {
   return (;
     <>;
       <Head>;
@@ -45,6 +45,5 @@ const QuantumComputing = () => {;
               </Link>;
             </div>;
     </>;
-  );,
-}
+  )}
 export default QuantumComputing;

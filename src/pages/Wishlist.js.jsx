@@ -22,15 +22,14 @@ export default function WishlistPage() {}
             router.push('/login')}
     }, [user, isAuthLoading, router]);
     if (isAuthLoading || !user) { // Show loading or null while auth check or redirect happens;
-        return null; // Or a loading spinner;,
-}
+        return null; // Or a loading spinner}
     const { items, dispatch } = useCart () ;
     const addToCart = (item) => {}
         const stored = safeStorage.getItem(getCartKey(user?.id));
         const cart = stored ? JSON.parse(stored) [];';
         cart.push({ id: item.id, name: item.title || 'Item', price: item.price || 0, quantity: 1 });
         safeStorage.setItem(getCartKey(user?.id), JSON.stringify(cart));';
-        dispatch({ type: 'SET_ITEMS', payload: cart })};
+        dispatch({ type: 'SET_ITEMS', payload: cart })}
     const productMap = MARKETPLACE_LISTINGS.reduce((acc, p) => {}
         acc[p.id] = p;
         return acc}, {});
@@ -54,14 +53,10 @@ export default function WishlistPage() {}
               </div>) : null})}
         </div>)}
     </div>)}
-;
 
-export { WishlistPage };
-;
-export { WishlistPage };
-;
-export { WishlistPage };
-;
-export { WishlistPage };
-;
-export { WishlistPage };
+
+export { WishlistPage }
+export { WishlistPage }
+export { WishlistPage }
+export { WishlistPage }
+export { WishlistPage }

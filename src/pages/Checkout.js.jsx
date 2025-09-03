@@ -68,7 +68,7 @@ export default function CheckoutPage() {}
 '';
 ''';
             // console.error('Payment failed', err)}
-    };
+    }
     return (<div className="max-w-2xl mx-auto p-6">"";
       <h1 className="text-2xl font-bold mb-6">Checkout</h1>"";
       <CheckoutProgress currentStep={0} className="mb-6"/>;
@@ -100,14 +100,10 @@ export default function CheckoutPage() {}
         </div>;
       </div>;
     </div>)}
-;
 
-export { CheckoutPage };
-;
-export { CheckoutPage };
-;
-export { CheckoutPage };
-;
-export { CheckoutPage };
-;
-export { CheckoutPage };
+
+export { CheckoutPage }
+export { CheckoutPage }
+export { CheckoutPage }
+export { CheckoutPage }
+export { CheckoutPage }

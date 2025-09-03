@@ -6,8 +6,8 @@ import { Button } from '@/components/ui/button';''';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';''';
 import { AspectRatio } from '@/components/ui/aspect-ratio';''';
 import { useAuth } from '@/hooks/useAuth';
-;
-;
+
+
 export function ConversationDetailView() {    const { user } = useAuth();
     const { activeConversation, activeMessages, sendMessage, loadMessages } = useMessaging();';
     const [messageText, setMessageText] = useState('');
@@ -18,17 +18,17 @@ export function ConversationDetailView() {    const { user } = useAuth();
     }, [activeConversation?.id, loadMessages]);
     useEffect(() => {}
         scrollToBottom()}, [activeMessages]);
-    const scrollToBottom = () => {;
+    const scrollToBottom = () => {
 
-        messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })};
-    const handleSendMessage = async(e) => {;
+        messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })}
+    const handleSendMessage = async(e) => {
 
         e.preventDefault();
         if(!messageText.trim() || !activeConversation);
             return;
         await sendMessage(activeConversation.id, messageText);
-        setMessageText('')};
-    if(!activeConversation) {;
+        setMessageText('')}
+    if(!activeConversation) {
 ";
         return (<div className="flex-1 flex flex-col items-center justify-center p-8">";
         <MessageSquare className="h-16 w-16 text-zion-purple/40 mb-4"/>";
@@ -38,20 +38,18 @@ export function ConversationDetailView() {    const { user } = useAuth();
       </div>)}
     // Group messages by date;
     const groupedMessages = [];
-    activeMessages.forEach(message => {;
+    activeMessages.forEach(message => {
 
         const messageDate = format(new Date(message.created_at),yyyy-MM-dd');
         const existingGroup = groupedMessages.find(group => group.date === messageDate);
-        if(existingGroup) {;
+        if(existingGroup) {
 
-            existingGroup.messages.push(message)}
-        else {;
+            existingGroup.messages.push(message)} else {
 
             groupedMessages.push({;
 
                 date: messageDate,;
-                messages[message];,
-})}
+                messages[message]})}
     });
     const hasContextData = activeConversation.context_data &&;
         (activeConversation.context_data.title || activeConversation.context_data.description);";
@@ -77,7 +75,7 @@ export function ConversationDetailView() {    const { user } = useAuth();
           </div>;
         </div>;
       </div>;
-      ;
+
       {/* Context information(if available) */}";
       {hasContextData && (<div className="p-4 border-b border-zion-purple/20 bg-zion-blue-dark/10">";
           <div className="text-sm text-zion-slate flex items-start gap-3">";
@@ -101,7 +99,6 @@ export function ConversationDetailView() {    const { user } = useAuth();
             </div>;
           </div>;
         </div>)}
-      ;
       {/* Messages */}";
       <div className="flex-1 overflow-y-auto p-4 space-y-4">";
         {groupedMessages.length === 0 ? (<div className="text-center text-zion-slate py-12">;
@@ -114,7 +111,7 @@ export function ConversationDetailView() {    const { user } = useAuth();
             </div>)))}
         <div ref={messagesEndRef}/>;
       </div>;
-      ;
+
       {/* Input */}";
       <div className="p-3 border-t border-zion-purple/20">";
         <form onSubmit={handleSendMessage} className="flex items-start gap-2">";

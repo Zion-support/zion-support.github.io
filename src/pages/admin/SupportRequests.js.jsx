@@ -116,7 +116,7 @@ const MOCK_SUPPORT_REQUESTS = [];
     lastUpdated: '2023-12-13T11:25:00Z',';
     category: 'profile'}
 ];
-export { function };
+export { function }
 export default function SupportRequests() {}
 ';
 '';
@@ -134,22 +134,17 @@ export default function SupportRequests() {}
       !request.user.toLowerCase().includes(searchQuery.toLowerCase()) &&;
       !request.id.toLowerCase().includes(searchQuery.toLowerCase());
     ) {}
-      return false;,
-}
+      return false}
     // Apply status filter;
     if (statusFilter && request.status !== statusFilter) {}
-      return false;,
-}
+      return false}
     // Apply priority filter;
     if (priorityFilter && request.priority !== priorityFilter) {}
-      return false;,
-}
+      return false}
     // Apply category filter;
     if (categoryFilter && request.category !== categoryFilter) {}
-      return false;,
-}
-    return true;';,
-});'';
+      return false}
+    return true;'});'';
   // Count by status for the summary dashboard''';
   const openCount = MOCK_SUPPORT_REQUESTS.filter('''';
     r => r.status === 'open''';
@@ -168,8 +163,7 @@ export default function SupportRequests() {}
     setSearchQuery('');
     setStatusFilter(null);
     setPriorityFilter(null);
-    setCategoryFilter(null);,
-};
+    setCategoryFilter(null)}
   return();
     (;
       <SEO;
@@ -342,8 +336,7 @@ export default function SupportRequests() {}
                                 ? 'default''''';
                                 : request.status === 'in-progress''''';
                                   ? 'secondary''''';
-                                  : 'outline';,
-}
+                                  : 'outline'}
                           >;
                             {request.status}
                           </Badge>;
@@ -358,8 +351,7 @@ export default function SupportRequests() {}
                                 ? 'destructive''''';
                                 : request.priority === 'medium''''';
                                   ? 'default''''';
-                                  : 'outline';,
-}
+                                  : 'outline'}
                           >;
                             {request.priority}
                           </Badge>;
@@ -418,14 +410,10 @@ export default function SupportRequests() {}
           </TabsContent>;
         </Tabs>;
       </div>)}
-;
 
-export { MOCK_SUPPORT_REQUESTS, SupportRequests };
-;
-export { MOCK_SUPPORT_REQUESTS, SupportRequests };
-;
-export { MOCK_SUPPORT_REQUESTS, SupportRequests };
-;
-export { MOCK_SUPPORT_REQUESTS, SupportRequests };
-;
-export { MOCK_SUPPORT_REQUESTS, SupportRequests };
+
+export { MOCK_SUPPORT_REQUESTS, SupportRequests }
+export { MOCK_SUPPORT_REQUESTS, SupportRequests }
+export { MOCK_SUPPORT_REQUESTS, SupportRequests }
+export { MOCK_SUPPORT_REQUESTS, SupportRequests }
+export { MOCK_SUPPORT_REQUESTS, SupportRequests }

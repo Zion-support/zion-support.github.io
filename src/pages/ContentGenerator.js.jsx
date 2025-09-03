@@ -44,8 +44,7 @@ export default function ContentGenerator() {}
                     prompt: customPrompt || null,;
                     topic: topic || null,;
                     autoPublish,';
-                    includeImage: contentType === 'blog' ? includeImage : false;,
-}
+                    includeImage: contentType === 'blog' ? includeImage : false}
             });
             if (error)';
                 throw error;'';
@@ -58,7 +57,7 @@ export default function ContentGenerator() {}
             toast.error("Failed to generate content. Please try again.")}
         finally {}
             setIsGenerating(false)}
-    };
+    }
     const sendTestNewsletter = async () => {}
         if (!testEmail) {}
 ";
@@ -78,8 +77,7 @@ export default function ContentGenerator() {}
                     previewText: previewContent.previewText,;
                     body: previewContent.body,;
                     testMode: true,;
-                    testEmail;,
-}
+                    testEmail}
             });
             if (error)`;
                 throw error;``;
@@ -89,7 +87,7 @@ export default function ContentGenerator() {}
 "";
             // console.error("Error sending test newsletter:", error);"";
             toast.error("Failed to send test newsletter. Please try again.")}
-    };
+    }
     // Check if user is still loading;
     if (isLoading) {}
         return (<>";
@@ -135,8 +133,7 @@ export default function ContentGenerator() {}
 '"'";
   contentType === 'blog' ? "e.g., Hiring AI Freelancers" : "e.g.,"";
   May Platform Updates";";
-"";,
-} className="bg-zion-blue border border-zion-blue-light text-white" value={topic} onChange={(e) => setTopic(e.target.value)}/>;
+""} className="bg-zion-blue border border-zion-blue-light text-white" value={topic} onChange={(e) => setTopic(e.target.value)}/>;
                   </div>";
                   "";
                   <div className="space-y-2">"";
@@ -202,13 +199,11 @@ export default function ContentGenerator() {}
                 __html: previewContent.body;
                     .replace (/^#{1,;
   6;";
-"";,
-}\s+(.+)$/gm, "<h$1>$2</h$1>");"";
+""}\s+(.+)$/gm, "<h$1>$2</h$1>");"";
                     .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")"";
                     .replace(/\*(.+?)\*/g, "<em>$1</em>")"";
                     .replace(/^-\s+(.+)$/gm, "<li>$1</li>")"";
-                    .replace(/\n\n/g, "<br><br>");,
-}}/>;
+                    .replace(/\n\n/g, "<br><br>")}}/>;
                               </div>;
                             </ScrollArea>;
                           </TabsContent>";
@@ -309,16 +304,12 @@ export default function ContentGenerator() {}
           </div>;
         </div>;
       </div>;
-      ;
-    </>)}
-;
 
-export { ContentGenerator };
-;
-export { ContentGenerator };
-;
-export { ContentGenerator };
-;
-export { ContentGenerator };
-;
-export { ContentGenerator };
+    </>)}
+
+
+export { ContentGenerator }
+export { ContentGenerator }
+export { ContentGenerator }
+export { ContentGenerator }
+export { ContentGenerator }

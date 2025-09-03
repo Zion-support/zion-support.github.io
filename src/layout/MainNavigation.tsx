@@ -1,17 +1,16 @@
 
 import { ChevronDown, Menu, X, Home, Settings, Users, Building, Globe, Zap, Brain, Shield, Cloud, Code, BarChart3'  } from 'lucide-react';
-;
-export default function Page() {;
+
+export default function Page() {
 , []);
-;
+
   const baseLinks: NavigationLink[] = [{;
 
       key: 'home',;
       href: '/',;
       name: 'Home',;
-      matches: (path: string) => path = == '/';,
-},;
-    {;
+      matches: (path: string) => path = == '/'},;
+    {
 
       key: 'services',;
       href: '/services',;
@@ -39,60 +38,52 @@ export default function Page() {;
         { key: 'it-helpdesk', href: '/services/it-helpdesk', name: 'IT Helpdesk', matches: (p: string) => p.startsWith('/services/it-helpdesk') },;
         { key: 'affiliate-tracking', href: '/services/affiliate-tracking', name: 'Affiliate Tracking', matches: (p: string) => p.startsWith('/services/affiliate-tracking') },;
         { key: 'mobile-survey', href: '/services/mobile-survey', name: 'Mobile Survey', matches: (p: string) => p.startsWith('/services/mobile-survey') }
-      ];,
-},;
-    {;
+      ]},;
+    {
 
       key: 'ai-services',;
       href: '/ai-services',;
       name: 'AI Services',;
-      matches: (path: string)  => path.startsWith('/ai-services');,
-},;
-    {;
+      matches: (path: string)  => path.startsWith('/ai-services')},;
+    {
 
       key: 'it-services',;
       href: '/it-services',;
       name: 'IT Services',;
-      matches: (path: string)  => path.startsWith('/it-services');,
-},;
-    {;
+      matches: (path: string)  => path.startsWith('/it-services')},;
+    {
 
       key: 'micro-saas',;
       href: '/micro-saas',;
       name: 'Micro SAAS',;
-      matches: (path: string)  => path.startsWith('/micro-saas');,
-},;
-    {;
+      matches: (path: string)  => path.startsWith('/micro-saas')},;
+    {
 
       key: 'marketplace',;
       href: '/marketplace',;
       name: 'Marketplace',;
-      matches: (path: string)  => path.startsWith('/marketplace');,
-},;
-    {;
+      matches: (path: string)  => path.startsWith('/marketplace')},;
+    {
 
       key: 'about',;
       href: '/about',;
       name: 'About',;
-      matches: (path: string)  => path.startsWith('/about');,
-},;
-    {;
+      matches: (path: string)  => path.startsWith('/about')},;
+    {
 
-      matches: (path: string)  => path.startsWith('/contact');,
-};
+      matches: (path: string)  => path.startsWith('/contact')}
       key: 'contact',;
       href: '/contact',;
       name: 'Contact',;
-      matches: (path: string) => path.startsWith('/contact')};
+      matches: (path: string) => path.startsWith('/contact')}
   ];
-;
+
               </div>;
             </motion.div>;
-          )};
+          )}
         </AnimatePresence>;
       </div>;
-    )};
-;
+    )}
   return ();
     <nav className = {`${className}`}>;
       {/* Desktop Navigation */}
@@ -110,9 +101,8 @@ export default function Page() {;
                 to={link.href}`;
                 className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${isActive(link);
                     ? 'bg-zion-cyan text-white'';
-                    : 'text-zion-slate-light hover:text-white hover:bg-white/10'`;,
-}`}
-;
+                    : 'text-zion-slate-light hover:text-white hover:bg-white/10'`}`}
+
                 {link.name}
               </Link>;
             )}
@@ -131,21 +121,18 @@ export default function Page() {;
       <AnimatePresence>;
         {isMobileMenuOpen && ;
           <motion.div;
-            initial = {;
+            initial = {
 
   { opacity: 0,;
-  x: '100%';,
-}}
-            animate = {;
+  x: '100%'}}
+            animate = {
 
   { opacity: 1,;
-  x: 0;,
-}}
-            exit = {;
+  x: 0}}
+            exit = {
 
   { opacity: 0,;
-  x: '100%';,
-}}
+  x: '100%'}}
             transition={{ duration: 0.3 }}";
             className="lg:hidden fixed inset-y-0 right-0 w-80 bg-zion-slate-dark border-l border-white/10 shadow-xl z-50";
 ";
@@ -167,9 +154,8 @@ export default function Page() {;
                           onClick={() => setActiveDropdown(activeDropdown === link.key ? null : link.key)}`;
                           className={`w-full flex items-center justify-between px-4 py-3 text-left text-sm font-medium rounded-md transition-colors ${isActive(link);
                               ? 'bg-zion-cyan text-white'';
-                              : 'text-zion-slate-light hover:text-white hover:bg-white/10'`;,
-}`}
-;
+                              : 'text-zion-slate-light hover:text-white hover:bg-white/10'`}`}
+
                           {link.name}'`;
                           <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === link.key ? 'rotate-180' : ''}`}  />                        </button>;
 
@@ -179,10 +165,9 @@ export default function Page() {;
                               <Link;
                                 key={child.key}
                                 to={child.href}`;
-                                className={`block px-4 py-2 text-sm text-zion-slate-light hover:text-white hover:bg-white/10 rounded-md transition-colors ${isActive(child) ? 'text-zion-cyan bg-zion-cyan/10' : ''`;,
-}`}
+                                className={`block px-4 py-2 text-sm text-zion-slate-light hover:text-white hover:bg-white/10 rounded-md transition-colors ${isActive(child) ? 'text-zion-cyan bg-zion-cyan/10' : ''`}`}
                                 onClick={: unknown setIsMobileMenuOpen(false)}
-;
+
                                 {child.name}
                               </Link>;
                             ))}
@@ -194,10 +179,9 @@ export default function Page() {;
                         to={link.href}`;
                         className={`block px-4 py-3 text-sm font-medium rounded-md transition-colors ${isActive(link);
                             ? 'bg-zion-cyan text-white'';
-                            : 'text-zion-slate-light hover:text-white hover:bg-white/10'`;,
-}`}
+                            : 'text-zion-slate-light hover:text-white hover:bg-white/10'`}`}
                         onClick={: unknown setIsMobileMenuOpen(false)}
-;
+
                         {link.name}
                       </Link>;
                     )}
@@ -206,7 +190,7 @@ export default function Page() {;
               </div>;
             </div>;
           </motion.div>;
-        )};
+        )}
       </AnimatePresence>;
     </nav>;
   )}

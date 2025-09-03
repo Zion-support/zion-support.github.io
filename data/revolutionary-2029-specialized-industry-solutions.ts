@@ -1,5 +1,5 @@
 import { ServiceVariant  } from "../types/service-variants";
-export interface RevolutionarySpecializedIndustryService2029 {;
+export interface RevolutionarySpecializedIndustryService2029 {
   id: string;
   name: string;
   tagline: string;
@@ -26,7 +26,7 @@ export interface RevolutionarySpecializedIndustryService2029 {;
   marketSize: string;
   growthRate: string;
   variant: string;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string}
@@ -41,7 +41,7 @@ export interface RevolutionarySpecializedIndustryService2029 {;
 export const revolutionarySpecializedIndustryServices2029: RevolutionarySpecializedIndustryService2029[] =;
   [;
     // AI-Powered Healthcare Platform;
-    {;
+    {
       id: "ai-healthcare-platform",;
       name: "AI Healthcare Platform",;
       tagline: "Transform healthcare delivery with intelligent AI",;
@@ -89,21 +89,19 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       marketSize: "$100B Healthcare AI",;
       growthRate: "25% CAGR",;
       variant: "healthcare-ai",;
-      contactInfo: {;
+      contactInfo: {
         mobile: "+1 302 464 0950",;
         email: "kleber@ziontechgroup.com",;
-        address: "364 E Main St STE 1008 Middletown DE 19709",;,;,
-},;
+        address: "364 E Main St STE 1008 Middletown DE 19709"},;
       realImplementation: true,;
       implementationDetails: "AI models, healthcare APIs, compliance framework",;
       launchDate: "2025-01-05",;
       customers: 23,;
       rating: 4.9,;
       reviews: 18,;
-      isPopular: true,;,;,
-},;
+      isPopular: true},;
     // Fintech Innovation Platform;
-    {;
+    {
       id: "fintech-innovation-platform",;
       name: "Fintech Innovation Platform",;
       tagline: "Build the future of financial services",;
@@ -152,11 +150,10 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       marketSize: "$150B Fintech",;
       growthRate: "30% CAGR",;
       variant: "fintech-platform",;
-      contactInfo: {;
+      contactInfo: {
         mobile: "+1 302 464 0950",;
         email: "kleber@ziontechgroup.com",;
-        address: "364 E Main St STE 1008 Middletown DE 19709",;,;,
-},;
+        address: "364 E Main St STE 1008 Middletown DE 19709"},;
       realImplementation: true,;
       implementationDetails:;
         "Fintech infrastructure, compliance engine, API platform",;
@@ -164,10 +161,9 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       customers: 41,;
       rating: 4.8,;
       reviews: 25,;
-      isNew: true,;,;,
-},;
+      isNew: true},;
     // Smart Manufacturing Solutions;
-    {;
+    {
       id: "smart-manufacturing-solutions",;
       name: "Smart Manufacturing Solutions",;
       tagline: "Industry 4.0 manufacturing with AI and IoT",;
@@ -211,20 +207,18 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       marketSize: "$80B Smart Manufacturing",;
       growthRate: "22% CAGR",;
       variant: "manufacturing-ai",;
-      contactInfo: {;
+      contactInfo: {
         mobile: "+1 302 464 0950",;
         email: "kleber@ziontechgroup.com",;
-        address: "364 E Main St STE 1008 Middletown DE 19709",;,;,
-},;
+        address: "364 E Main St STE 1008 Middletown DE 19709"},;
       realImplementation: true,;
       implementationDetails: "AI models, IoT platform, automation engine",;
       launchDate: "2025-01-10",;
       customers: 28,;
       rating: 4.7,;
-      reviews: 19,;,;,
-},;
+      reviews: 19},;
     // Retail Technology Platform;
-    {;
+    {
       id: "retail-technology-platform",;
       name: "Retail Technology Platform",;
       tagline: "Transform retail with AI and omnichannel solutions",;
@@ -272,11 +266,10 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       marketSize: "$60B Retail Technology",;
       growthRate: "18% CAGR",;
       variant: "retail-tech",;
-      contactInfo: {;
+      contactInfo: {
         mobile: "+1 302 464 0950",;
         email: "kleber@ziontechgroup.com",;
-        address: "364 E Main St STE 1008 Middletown DE 19709",;,;,
-},;
+        address: "364 E Main St STE 1008 Middletown DE 19709"},;
       realImplementation: true,;
       implementationDetails:;
         "Omnichannel platform, AI personalization, retail analytics",;
@@ -284,10 +277,9 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       customers: 35,;
       rating: 4.8,;
       reviews: 22,;
-      isPopular: true,;,;,
-},;
+      isPopular: true},;
     // Education Technology Platform;
-    {;
+    {
       id: "education-technology-platform",;
       name: "Education Technology Platform",;
       tagline: "Revolutionize learning with AI and personalized education",;
@@ -331,21 +323,19 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       marketSize: "$40B EdTech",;
       growthRate: "20% CAGR",;
       variant: "education-tech",;
-      contactInfo: {;
+      contactInfo: {
         mobile: "+1 302 464 0950",;
         email: "kleber@ziontechgroup.com",;
-        address: "364 E Main St STE 1008 Middletown DE 19709",;,;,
-},;
+        address: "364 E Main St STE 1008 Middletown DE 19709"},;
       realImplementation: true,;
       implementationDetails:;
         "AI learning engine, content platform, analytics dashboard",;
       launchDate: "2025-01-15",;
       customers: 47,;
       rating: 4.6,;
-      reviews: 31,;,;,
-},;
+      reviews: 31},;
     // Legal Technology Platform;
-    {;
+    {
       id: "legal-technology-platform",;
       name: "Legal Technology Platform",;
       tagline: "Modernize legal practice with AI and automation",;
@@ -389,11 +379,10 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       marketSize: "$25B Legal Tech",;
       growthRate: "18% CAGR",;
       variant: "legal-tech",;
-      contactInfo: {;
+      contactInfo: {
         mobile: "+1 302 464 0950",;
         email: "kleber@ziontechgroup.com",;
-        address: "364 E Main St STE 1008 Middletown DE 19709",;,;,
-},;
+        address: "364 E Main St STE 1008 Middletown DE 19709"},;
       realImplementation: true,;
       implementationDetails:;
         "AI research engine, document automation, legal platform",;
@@ -401,10 +390,9 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       customers: 32,;
       rating: 4.7,;
       reviews: 24,;
-      isNew: true,;,;,
-},;
+      isNew: true},;
     // Real Estate Technology Platform;
-    {;
+    {
       id: "real-estate-technology-platform",;
       name: "Real Estate Technology Platform",;
       tagline: "Transform real estate with AI and digital solutions",;
@@ -452,21 +440,19 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       marketSize: "$30B Real Estate Tech",;
       growthRate: "16% CAGR",;
       variant: "real-estate-tech",;
-      contactInfo: {;
+      contactInfo: {
         mobile: "+1 302 464 0950",;
         email: "kleber@ziontechgroup.com",;
-        address: "364 E Main St STE 1008 Middletown DE 19709",;,;,
-},;
+        address: "364 E Main St STE 1008 Middletown DE 19709"},;
       realImplementation: true,;
       implementationDetails:;
         "AI valuation models, property analytics, transaction platform",;
       launchDate: "2025-01-20",;
       customers: 29,;
       rating: 4.8,;
-      reviews: 20,;,;,
-},;
+      reviews: 20},;
     // Transportation & Logistics Platform;
-    {;
+    {
       id: "transportation-logistics-platform",;
       name: "Transportation & Logistics Platform",;
       tagline: "Optimize logistics with AI and real-time tracking",;
@@ -518,11 +504,10 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       marketSize: "$45B Logistics Technology",;
       growthRate: "20% CAGR",;
       variant: "logistics-tech",;
-      contactInfo: {;
+      contactInfo: {
         mobile: "+1 302 464 0950",;
         email: "kleber@ziontechgroup.com",;
-        address: "364 E Main St STE 1008 Middletown DE 19709",;,;,
-},;
+        address: "364 E Main St STE 1008 Middletown DE 19709"},;
       realImplementation: true,;
       implementationDetails:;
         "AI optimization engine, tracking platform, logistics analytics",;
@@ -530,10 +515,9 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       customers: 26,;
       rating: 4.7,;
       reviews: 18,;
-      isPopular: true,;,;,
-},;
+      isPopular: true},;
     // Energy & Utilities Platform;
-    {;
+    {
       id: "energy-utilities-platform",;
       name: "Energy & Utilities Platform",;
       tagline: "Optimize energy systems with AI and IoT",;
@@ -577,21 +561,19 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       marketSize: "$50B Energy Technology",;
       growthRate: "18% CAGR",;
       variant: "energy-tech",;
-      contactInfo: {;
+      contactInfo: {
         mobile: "+1 302 464 0950",;
         email: "kleber@ziontechgroup.com",;
-        address: "364 E Main St STE 1008 Middletown DE 19709",;,;,
-},;
+        address: "364 E Main St STE 1008 Middletown DE 19709"},;
       realImplementation: true,;
       implementationDetails:;
         "AI optimization engine, IoT platform, energy analytics",;
       launchDate: "2025-01-25",;
       customers: 19,;
       rating: 4.8,;
-      reviews: 15,;,;,
-},;
+      reviews: 15},;
     // Agriculture Technology Platform;
-    {;
+    {
       id: "agriculture-technology-platform",;
       name: "Agriculture Technology Platform",;
       tagline: "Revolutionize farming with AI and precision agriculture",;
@@ -639,11 +621,10 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       marketSize: "$35B AgTech",;
       growthRate: "25% CAGR",;
       variant: "agriculture-tech",;
-      contactInfo: {;
+      contactInfo: {
         mobile: "+1 302 464 0950",;
         email: "kleber@ziontechgroup.com",;
-        address: "364 E Main St STE 1008 Middletown DE 19709",;,;,
-},;
+        address: "364 E Main St STE 1008 Middletown DE 19709"},;
       realImplementation: true,;
       implementationDetails:;
         "AI monitoring engine, IoT platform, agriculture analytics",;
@@ -651,28 +632,24 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       customers: 24,;
       rating: 4.7,;
       reviews: 17,;
-      isNew: true,;,;,
-},;
+      isNew: true},;
   ];
-export const getSpecializedIndustryServicesByCategory = (category: string) => {;
+export const getSpecializedIndustryServicesByCategory = (category: string) => {
   return revolutionarySpecializedIndustryServices2029.filter(;
     service => service.category === category;
   )}
-export const getPopularSpecializedIndustryServices = () => {;
+export const getPopularSpecializedIndustryServices = () => {
   return revolutionarySpecializedIndustryServices2029.filter(;
     service => service.isPopular;
-  );,;,
-}
-export const getNewSpecializedIndustryServices = () => {;
+  )}
+export const getNewSpecializedIndustryServices = () => {
   return revolutionarySpecializedIndustryServices2029.filter(;
     service => service.isNew;
-  );,;,
-}
+  )}
 export const getSpecializedIndustryServicesByPriceRange = (;
   minPrice: number,;
   maxPrice: number;
-) => {;
-  return revolutionarySpecializedIndustryServices2029.filter(service => {;
+) => {
+  return revolutionarySpecializedIndustryServices2029.filter(service => {
     const price = parseInt(service.price.replace("$", "").replace(",", ""));
-    return price >= minPrice && price <= maxPrice});,;,
-}>
+    return price >= minPrice && price <= maxPrice})}>

@@ -30,16 +30,12 @@ export default function Unauthorized() {}
           </div>;
         </div>;
       </div>;
-      ;
-    </>)}
-;
 
-export { Unauthorized };
-;
-export { Unauthorized };
-;
-export { Unauthorized };
-;
-export { Unauthorized };
-;
-export { Unauthorized };
+    </>)}
+
+
+export { Unauthorized }
+export { Unauthorized }
+export { Unauthorized }
+export { Unauthorized }
+export { Unauthorized }

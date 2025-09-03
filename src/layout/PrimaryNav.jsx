@@ -1,17 +1,16 @@
 import React, { useState } from 'react';
 import { useState } from 'react';
-;
-export default function Page() {;
+
+export default function Page() {
 `);
             setQuery('');
-;
+
             // console.log('PrimaryNav search submit:', query);`;
             router(`/search/${slugify(query)}`);
             // console.log('PrimaryNav search submit:', query);`;
             navigate(`/search/${slugify(query)}`);
-            setQuery('');,
-}
-    };
+            setQuery('')}
+    }
     return (<>;
       <header className="sticky top-0 z-50 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md" role="navigation"  data-testid="header">";
         <div className="container flex flex-wrap items-center justify-between gap-2 min-h-16 px-4 sm:px-6">;
@@ -27,71 +26,63 @@ export default function Page() {;
             {/* Search form with clamped width */}
             // // // // // // // // console.log('PrimaryNav search suggestion selected:', sugg);
             // Handle different suggestion types with proper navigation;
-            if(sugg.id) {;
+            if(sugg.id) {
 
                 // Product listings with IDs go to product detail page`;
                 navigate(`/marketplace/listing/${sugg.id}`);
-;
-            else if(sugg.type === 'doc' && sugg.slug && sugg.slug.startsWith('/')) {;
+
+            else if(sugg.type === 'doc' && sugg.slug && sugg.slug.startsWith('/')) {
 
                 // Documentation suggestions navigate directly to their path;
                 navigate(sugg.slug);
-;
-            else if(sugg.type === 'blog' && sugg.slug) {;
+
+            else if(sugg.type === 'blog' && sugg.slug) {
 
                 // Blog posts navigate to blog detail page`;
                 navigate(`/blog/${sugg.slug}`);
-;
-            else {;
+
+            else {
 
                 // Default: search results page with slug`;
                 navigate(`/search/${sugg.slug || slugify(sugg.text)}`);";
-            <form onSubmit={handleSubmit} className="flex-shrink-0" style = {;
+            <form onSubmit={handleSubmit} className="flex-shrink-0" style = {
 
   { width: 'clamp(12rem, 20vw,;
-  16rem)';,
-}}>;
-              <EnhancedSearchInput value={query} onChange={setQuery} onSelectSuggestion = {;
+  16rem)'}}>;
+              <EnhancedSearchInput value={query} onChange={setQuery} onSelectSuggestion = {
 
-  (sugg) => {;
+  (sugg) => {
 
             // console.log('PrimaryNav search suggestion selected:',;
   sugg);
             // Handle different suggestion types with proper navigation;
-            if(sugg.id) {;
+            if(sugg.id) {
 
                 // Product listings with IDs go to product detail page`;
                 router(`/marketplace/listing/${sugg.id;
 
-;
-`;,
-}`);,
-}
-            else if(sugg.type === 'doc' && sugg.slug && sugg.slug.startsWith('/')) {;
+
+`}`)}
+            else if(sugg.type === 'doc' && sugg.slug && sugg.slug.startsWith('/')) {
 
                 // Documentation suggestions navigate directly to their path;
-                router(sugg.slug);,
-}
-            else if(sugg.type === 'blog' && sugg.slug) {;
+                router(sugg.slug)}
+            else if(sugg.type === 'blog' && sugg.slug) {
 
                 // Blog posts navigate to blog detail page`;
-                router(`/blog/${sugg.slug}`);,
-}
-            else {;
+                router(`/blog/${sugg.slug}`)} else {
 
                 // Default: search results page with slug`;
-                router(`/search/${sugg.slug || slugify(sugg.text)}`);,
-}
+                router(`/search/${sugg.slug || slugify(sugg.text)}`)}
             setQuery('');
             // Track analytics event';
-            if(typeof window !== 'null' && window.gtag) {;
+            if(typeof window !== 'null' && window.gtag) {
 
-                window.gtag('event',search_suggestion_click', {;
+                window.gtag('event',search_suggestion_click', {
 
                     search_term: sugg.text,;
                     suggestion_type: sugg.type,;
-                    suggestion_id: sugg.id || sugg.slug;,
-})}
+                    suggestion_id: sugg.id || sugg.slug})}
         }} searchSuggestions={suggestions}/>;
             </form>;
 
@@ -100,10 +91,9 @@ export default function Page() {;
               <PointsBadge />;
               <HoverCard openDelay={100}>;
                 <HoverCardTrigger asChild>";
-                  <Link href="/cart" className="relative p-1" aria-label= {;
+                  <Link href="/cart" className="relative p-1" aria-label= {
 
-  t('nav.cart',Cart');,
-}>;
+  t('nav.cart',Cart')}>;
                     <ShoppingCart aria-hidden="true" className="h-5 w-5 text-foreground hover:text-primary"/>                    {cartCount > 0 && (<span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center">;
                         {cartCount}
                       </span>)}

@@ -1,54 +1,49 @@
 import React, { useState, useEffect } from 'react';
-export function Notification({ id, type, title, message, duration = 5000, onClose }) {;
-export function NotificationContainer({ notifications, onClose }) {;
+export function Notification({ id, type, title, message, duration = 5000, onClose }) {
+export function NotificationContainer({ notifications, onClose }) {
 
 import { CheckCircle, XCircle, Info, X, AlertTriangle  } from 'lucide-react';
 ,;
-    error: {;
+    error: {
 
         icon: XCircle,;
         bgColor: 'bg-red-500/10',;
         borderColor: 'border-red-500/20',;
         textColor: 'text-red-500',;
-        iconColor: 'text-red-500';,
-},;
-    info: {;
+        iconColor: 'text-red-500'},;
+    info: {
 
         icon: Info,;
         bgColor: 'bg-zion-blue/10',;
         borderColor: 'border-zion-blue/20',;
         textColor: 'text-zion-blue',;
-        iconColor: 'text-zion-blue';,
-},;
-    warning: {;
+        iconColor: 'text-zion-blue'},;
+    warning: {
 
         icon: AlertTriangle,;
         bgColor: 'bg-zion-gold/10',;
         borderColor: 'border-zion-gold/20',;
         textColor: 'text-zion-gold',;
-        iconColor: 'text-zion-gold';,
-};
-export function Notification({ id, type, title, message, duration = 5000, onClose }) {;
+        iconColor: 'text-zion-gold'}
+export function Notification({ id, type, title, message, duration = 5000, onClose }) {
 
     const [isVisible, setIsVisible] = useState(true);
     const styles = notificationStyles[type];
     const Icon = styles.icon;
-    useEffect(() => {;
+    useEffect(() => {
   // TODO: Add dependencies if needed;
 
-  return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
-        if(duration > 0) {;
+  return () => {
+    // Cleanup function}}, []);, []);
+        if(duration > 0) {
 
-            const timer = setTimeout(() => {;
+            const timer = setTimeout(() => {
                 handleClose()}, duration);
             return () => clearTimeout(timer)}
     }, [duration]);
-    const handleClose = () => {;
+    const handleClose = () => {
         setIsVisible(false);
-        setTimeout(() => onClose(id), 300)};
+        setTimeout(() => onClose(id), 300)}
     if(!isVisible);
         return null;
     return (<div className={`${styles.bgColor} ${styles.borderColor} border rounded-lg p-4 shadow-lg animate-fade-in max-w-sm`} role="alert" aria-live="assertive">";
@@ -63,7 +58,7 @@ export function Notification({ id, type, title, message, duration = 5000, onClos
         </button>;
       </div>;
     </div>)}
-export function NotificationContainer({ notifications, onClose }) {;
+export function NotificationContainer({ notifications, onClose }) {
 ";
     return (<div className="fixed top-20 right-4 z-50 space-y-2">;
       {notifications.map((notification) => (<Notification key={notification.id} {...notification} onClose={onClose}/>))}

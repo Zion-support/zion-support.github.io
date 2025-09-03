@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
-const documentation = () => {;
+const documentation = () => {
   return (;
     <>;
       <Head>;
@@ -45,6 +45,5 @@ const documentation = () => {;
               </Link>;
             </div>;
     </>;
-  );,
-}
+  )}
 export default documentation

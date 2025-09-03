@@ -1,27 +1,24 @@
 import React, { useState } from 'react';
 import { Badge } from '@/components / ui / badge';
-export default function Page() {;
-;
-  const handleImageError = () => {;
-    if(!imageError) {;
+export default function Page() {
+
+  const handleImageError = () => {
+    if(!imageError) {
 
       // Prevent infinite loops if placeholder also fails';
       setImageSrc('/placeholder.svg');
-      setImageError(true);,
-}
-  };
-  const handleRequestQuote = e => {;
+      setImageError(true)}
+  }
+  const handleRequestQuote = e => {
 
     e.preventDefault();
     e.stopPropagation();
-    if(onRequestQuote) {;
+    if(onRequestQuote) {
 
-      onRequestQuote(listing.id);,
-} else {;
+      onRequestQuote(listing.id)} else {
 `;
-      router(`/request-quote?listing=${listing.id}`);,
-}
-  };
+      router(`/request-quote?listing=${listing.id}`)}
+  }
   const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48';
   return ();
     <div;
@@ -29,29 +26,27 @@ export default function Page() {;
       className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`}
       onClick={handleViewListing}
       tabIndex={0}";
-      ;
-      onKeyDown={e => {;
 
-        if(e.key === 'Enter' || e.key === ' ') {;
+      onKeyDown={e => {
+
+        if(e.key === 'Enter' || e.key === ' ') {
 
           e.preventDefault();
-          handleViewListing();,
-}
+          handleViewListing()}
       }}
     >;
       {/* Image */}
       <div';
         className={isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'}
         onClick={handleViewListing} // Keep existing onClick for navigation";
-        ;
-        tabIndex={-1} // Remove from tab order as parent is focusable;
-        onKeyDown={e => {;
 
-          if(e.key === 'Enter' || e.key === ' ') {;
+        tabIndex={-1} // Remove from tab order as parent is focusable;
+        onKeyDown={e => {
+
+          if(e.key === 'Enter' || e.key === ' ') {
 
             e.preventDefault();
-            handleViewListing();,
-}
+            handleViewListing()}
         }}
       >`;
         <div className={`relative ${imageContainerClasses}`}>;

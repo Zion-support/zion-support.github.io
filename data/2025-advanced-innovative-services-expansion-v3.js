@@ -1,6 +1,6 @@
 export const advancedAIServices2025 = [;
   // AI-Powered Business Intelligence;
-    {;
+    {
   id: "ai-business-intelligence",;
         name: "AI-Powered Business Intelligence",;
         category: "AI & Analytics",;
@@ -29,12 +29,11 @@ export const advancedAIServices2025 = [;
             "Cost savings";
         ],;
         targetAudience["Enterprises", "Data analysts", "Business users", "Executives", "Consultants"],;
-        contactInfo: {;
+        contactInfo: {
   mobile: "+1 302 464 0950",;
             email: "kleber@ziontechgroup.com",;
             address: "364 E Main St STE 1008 Middletown DE 19709",;
-            website: "https://ziontechgroup.com";,;,
-},;
+            website: "https://ziontechgroup.com"},;
         marketPrice: "$3,000 - $5,000/month",;
         aiModels["GPT-4", "BERT", "Transformer models", "Custom ML models"],;
         accuracy: "95% accuracy rate",;
@@ -48,10 +47,9 @@ export const advancedAIServices2025 = [;
         roi: "Companies report 400% ROI through improved decision making and operational efficiency.",;
         competitors["Tableau", "Power BI", "Qlik", "Looker"],;
         marketSize: "$4.8B business intelligence market",;
-        growthRate: "30% annual growth";,;,
-},;
+        growthRate: "30% annual growth"},;
     // AI-Powered Customer Service Automation;
-    {;
+    {
   id: "ai-customer-service-automation",;
         name: "AI-Powered Customer Service Automation",;
         category: "AI & Customer Experience",;
@@ -80,12 +78,11 @@ export const advancedAIServices2025 = [;
             "Scalable support";
         ],;
         targetAudience["E-commerce businesses", "SaaS companies", "Customer service teams", "Support organizations", "Enterprises"],;
-        contactInfo: {;
+        contactInfo: {
   mobile: "+1 302 464 0950",;
             email: "kleber@ziontechgroup.com",;
             address: "364 E Main St STE 1008 Middletown DE 19709",;
-            website: "https://ziontechgroup.com";,;,
-},;
+            website: "https://ziontechgroup.com"},;
         marketPrice: "$0.20 - $0.50 per interaction",;
         aiModels["GPT-4", "BERT", "Custom NLP models", "Intent classification models"],;
         accuracy: "92% accuracy rate",;
@@ -101,9 +98,8 @@ export const advancedAIServices2025 = [;
         marketSize: "$2.8B customer service automation market",;
         growthRate: "40% annual growth";
 ];
-export default {;
+export default {
   advancedInnovativeServices2025V3,;
     advancedITServices2025,;
-    advancedAIServices2025;,;,
-}
+    advancedAIServices2025}
 }}}

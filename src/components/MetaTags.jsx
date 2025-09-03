@@ -1,8 +1,8 @@
 import React from 'react';
-export const MetaTags = ({ title, description, keywords = 'AI, artificial intelligence, machine learning, cybersecurity, cloud computing, IT services, enterprise solutions, Zion Tech Group', image = 'https://ziontechgroup.com / og - image.jpg', url = 'https://ziontechgroup.com', type = 'website', author = 'Zion Tech Group', publishedTime, modifiedTime }) => {;
+export const MetaTags = ({ title, description, keywords = 'AI, artificial intelligence, machine learning, cybersecurity, cloud computing, IT services, enterprise solutions, Zion Tech Group', image = 'https://ziontechgroup.com / og - image.jpg', url = 'https://ziontechgroup.com', type = 'website', author = 'Zion Tech Group', publishedTime, modifiedTime }) => {
 import { Helmet } from 'react-helmet-async';
-;
-export default function Page() {;
+
+export default function Page() {
 </title>;
       <meta name="description" content={description}/>";
       <meta name="keywords" content={keywords}/>";
@@ -39,7 +39,7 @@ export default function Page() {;
       {type === 'article' && publishedTime && (<meta property="article:published_time" content={publishedTime}/>)}'";
       {type === 'article' && modifiedTime && (<meta property="article:modified_time" content={modifiedTime}/>)}'";
       {type === 'article' && (<meta property="article:author" content={author}/>)}
-;
+
       {/* Structured Data */}";
       <script type="application/ld+json">;
         {JSON.stringify({;
@@ -50,18 +50,16 @@ export default function Page() {;
             "url": "https://ziontechgroup.com",";
             "logo": "https://ziontechgroup.com/logo.png",";
             "description": "Leading provider of AI-powered solutions, cybersecurity, and enterprise IT services",";
-            "address": {;
+            "address": {
 ";
                 "@type": "PostalAddress",";
-                "addressCountry": "US";,
-},";
-            "contactPoint": {;
+                "addressCountry": "US"},";
+            "contactPoint": {
 ";
                 "@type": "ContactPoint",";
                 "telephone": "+1-302-464-0950",";
                 "contactType": "customer service",";
-                "email": "kleber@ziontechgroup.com";,
-},";
+                "email": "kleber@ziontechgroup.com"},";
             "sameAs"[;";
                 "https://linkedin.com/company/ziontechgroup",";
                 "https://twitter.com/ziontechgroup",";
@@ -69,8 +67,7 @@ export default function Page() {;
             ],";
             "foundingDate": "2020",";
             "industry": "Technology",";
-            "keywords": "AI, artificial intelligence, cybersecurity, cloud computing, IT services";,
-}) }
+            "keywords": "AI, artificial intelligence, cybersecurity, cloud computing, IT services"}) }
       </script>;
-    </Helmet>)};
+    </Helmet>)}
 '"`}

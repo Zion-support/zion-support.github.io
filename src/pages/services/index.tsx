@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3, Star, Award, Users, Globe, MapPin } from "lucide-react";
 import { REAL_MICRO_SAAS_SERVICES_2025 } from "../../data/realMicroSaasServices2025";
 
-export default function Index() {;
+export default function Index() {
   const features = [;
     "AI-powered customer churn prediction with 94% accuracy",;
     "Real-time fraud detection and prevention",;
@@ -29,23 +29,20 @@ export default function Index() {;
     "Marketing agencies scaling content creation";
   ];
   const pricing = [;
-    {;
+    {
       name: "Starter",;
       price: "$99/mo",;
-      details: ["Basic AI features", "Up to 1,000 users", "Email support", "Standard SLA"];,
-},;
-    {;
+      details: ["Basic AI features", "Up to 1,000 users", "Email support", "Standard SLA"]},;
+    {
       name: "Professional",;
       price: "$499/mo",;
-      details: ["Advanced AI features", "Up to 10,000 users", "Priority support", "99.9% SLA"];,
-},;
-    {;
+      details: ["Advanced AI features", "Up to 10,000 users", "Priority support", "99.9% SLA"]},;
+    {
       name: "Enterprise",;
       price: "$1,999/mo",;
-      details: ["Full AI suite", "Unlimited users", "24/7 support", "99.99% SLA", "Custom integrations"];,
-}
+      details: ["Full AI suite", "Unlimited users", "24/7 support", "99.99% SLA", "Custom integrations"]}
   ];
-;
+
   ];
   return (;
     <div className="min-h-screen bg-white">;
@@ -103,7 +100,7 @@ export default function Index() {;
                   <span className="text-gray-700">{feature}</span>;
                 </li>;
               ))}
-;
+
             </ul>;
             <div className="mt-6 text-sm text-gray-600">;
               Built with enterprise-grade security, SOC 2 compliance, and 99.9% uptime SLA.;
@@ -126,11 +123,11 @@ export default function Index() {;
                     {tier.details.map((detail, detailIndex) => (;
                       <li key={detailIndex}>{detail}</li>;
                     ))}
-;
+
                   </ul>;
                 </div>;
               ))}
-;
+
             </div>;
             <div className="mt-6 flex flex-wrap gap-3">;
               <Link href="/pricing" className="px-5 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors inline-flex items-center">;
@@ -157,7 +154,7 @@ export default function Index() {;
                 <p className="text-gray-600">{benefit}</p>;
               </div>;
             ))}
-;
+
           </div>;
       </section>;
       <section className="py-16">;
@@ -173,7 +170,7 @@ export default function Index() {;
                 <p className="text-gray-600">Comprehensive index solutions tailored for {industry.toLowerCase()}.</p>;
               </div>;
             ))}
-;
+
           </div>;
       </section>;
       <section className="py-16 bg-indigo-600">;
@@ -192,4 +189,4 @@ export default function Index() {;
           </div>;
       </section>;
     </div>;
-  ),}
+  )}

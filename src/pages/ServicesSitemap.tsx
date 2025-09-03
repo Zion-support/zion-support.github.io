@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link  } from 'react-router-dom';
-;
+
 const ServicesSitemap: React.FC = (): JSX.Element => {}
         {}
 "";
@@ -32,8 +32,7 @@ const ServicesSitemap: React.FC = (): JSX.Element => {}
           url: "/services/ai-iot-edge-computing-platform","";
           description: "Revolutionize IoT with AI-powered edge computing","";
           pricing: "$299 - $2,499/month","";
-          features["Sub-millisecond processing", "Edge AI intelligence", "Distributed computing", "Hybrid cloud integration"]}      ];,
-},;
+          features["Sub-millisecond processing", "Edge AI intelligence", "Distributed computing", "Hybrid cloud integration"]}      ]},;
     {}
 ";
 "";
@@ -63,8 +62,7 @@ const ServicesSitemap: React.FC = (): JSX.Element => {}
           url: "/services/digital-twin","";
           description: "Virtual representation of physical systems","";
           pricing: "Custom pricing","";
-          features["Real-time monitoring", "Predictive maintenance", "Performance optimization", "Simulation modeling"]}      ];,
-},;
+          features["Real-time monitoring", "Predictive maintenance", "Performance optimization", "Simulation modeling"]}      ]},;
     {}
 ";
 "";
@@ -94,8 +92,7 @@ const ServicesSitemap: React.FC = (): JSX.Element => {}
           url: "/services/iot-edge","";
           description: "Real-time edge data processing","";
           pricing: "Custom pricing","";
-          features["Edge processing", "Real-time analytics", "Data filtering", "Local decision making"]}      ];,
-},;
+          features["Edge processing", "Real-time analytics", "Data filtering", "Local decision making"]}      ]},;
     {}
 ";
 "";
@@ -125,8 +122,7 @@ const ServicesSitemap: React.FC = (): JSX.Element => {}
           url: "/services/ai-compliance-assistant","";
           description: "AI-powered compliance management","";
           pricing: "Custom pricing","";
-          features["Regulatory monitoring", "Compliance reporting", "Risk assessment", "Audit preparation"]}      ];,
-},;
+          features["Regulatory monitoring", "Compliance reporting", "Risk assessment", "Audit preparation"]}      ]},;
     {}
 ";
 "";
@@ -157,16 +153,16 @@ const ServicesSitemap: React.FC = (): JSX.Element => {}
           description: "Green technology solutions","";
           pricing: "Custom pricing","";
           features["Carbon tracking", "Energy optimization", "Waste reduction", "Environmental monitoring"]}
-      ]};
+      ]}
   ];
 ";
   const quickAccessLinks: unknown = ["";
     { title: "AI Services Showcase", url: "/ai-services-showcase", description: "Explore our AI solutions" },"";
     { title: "Comprehensive Services", url: "/comprehensive-services", description: "View all services" },"";
     { title: "Pricing Guide", url: "/pricing", description: "Transparent pricing information" },"";
-    { title: "Contact Sales", url: "/contact", description: "Get expert consultation" },;"    { title: "Request Quote", url: "/request-quote", description: "Get custom pricing" };
+    { title: "Contact Sales", url: "/contact", description: "Get expert consultation" },;"    { title: "Request Quote", url: "/request-quote", description: "Get custom pricing" }
   ];
-;
+
   return();
     <>";
       <SEO"";
@@ -182,12 +178,10 @@ const ServicesSitemap: React.FC = (): JSX.Element => {}
             <motion.div;
               initial = {}
   { opacity: 0,;
-  y: 20;,
-}}
+  y: 20}}
               animate = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
               transition={{ duration: 0.8 }}">"";
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">;
                 Complete Services Directory";
@@ -218,12 +212,10 @@ const ServicesSitemap: React.FC = (): JSX.Element => {}
             <motion.div;
               initial = {}
   { opacity: 0,;
-  y: 20;,
-}}
+  y: 20}}
               whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
               transition={{ duration: 0.8 }}";
               viewport={{ once: true }}"";
               className="text-center mb-12"">"";
@@ -240,16 +232,13 @@ const ServicesSitemap: React.FC = (): JSX.Element => {}
                   key={link.title}
                   initial = {}
   { opacity: 0,;
-  y: 20;,
-}}
+  y: 20}}
                   whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                   transition = {}
   { duration: 0.6,;
-  delay: index * 0.1;,
-}}
+  delay: index * 0.1}}
                   viewport={{ once: true }}
                 >;
                   <Link";
@@ -273,12 +262,10 @@ const ServicesSitemap: React.FC = (): JSX.Element => {}
             <motion.div;
               initial = {}
   { opacity: 0,;
-  y: 20;,
-}}
+  y: 20}}
               whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
               transition={{ duration: 0.8 }}";
               viewport={{ once: true }}"";
               className="text-center mb-16"">"";
@@ -296,16 +283,13 @@ const ServicesSitemap: React.FC = (): JSX.Element => {}
                   key={category.category}
                   initial = {}
   { opacity: 0,;
-  y: 20;,
-}}
+  y: 20}}
                   whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                   transition = {}
   { duration: 0.6,;
-  delay: categoryIndex * 0.1;,
-}}";
+  delay: categoryIndex * 0.1}}";
                   viewport={{ once: true }}"";
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20"">"";
                   <div className="text-center mb-12">"";
@@ -322,16 +306,13 @@ const ServicesSitemap: React.FC = (): JSX.Element => {}
                         key={service.title}
                         initial = {}
   { opacity: 0,;
-  scale: 0.9;,
-}}
+  scale: 0.9}}
                         whileInView = {}
   { opacity: 1,;
-  scale: 1;,
-}}
+  scale: 1}}
                         transition = {}
   { duration: 0.5,;
-  delay: serviceIndex * 0.1;,
-}}";
+  delay: serviceIndex * 0.1}}";
                         viewport={{ once: true }}"";
                         className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:border-white/30 transition-all duration-300"">"";
                         <div className="flex items-start justify-between mb-4">"";
@@ -376,12 +357,10 @@ const ServicesSitemap: React.FC = (): JSX.Element => {}
             <motion.div;
               initial = {}
   { opacity: 0,;
-  y: 20;,
-}}
+  y: 20}}
               whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}">"";
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">;
@@ -429,16 +408,11 @@ const ServicesSitemap: React.FC = (): JSX.Element => {}
               </Link>;
             </div>;
     </>;
-  )};
-;
+  )}
 export default ServicesSitemap;
-;
-export { ServicesSitemap };
-;
-export { ServicesSitemap };
-;
-export { ServicesSitemap };
-;
-export { ServicesSitemap };
-;
-export { ServicesSitemap };
+
+export { ServicesSitemap }
+export { ServicesSitemap }
+export { ServicesSitemap }
+export { ServicesSitemap }
+export { ServicesSitemap }

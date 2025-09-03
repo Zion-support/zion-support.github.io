@@ -4,15 +4,12 @@ import { ADVANCED_MICRO_SERVICES } from "../data/advancedMicroServices.jsx";
 const ServiceCard = ({ service, index, isVisible }) => {    const [isHovered, setIsHovered] = useState(false);
     return (<motion.div initial = {}
   { opacity: 0, y: 50,;
-  scale: 0.9;,
-}} animate = {}
+  scale: 0.9}} animate = {}
   isVisible ? { opacity: 1, y: 0,;
-  scale: 1;,
-} : {}} transition = {}
+  scale: 1} : {}} transition = {}
   { duration: 0.6,;
   delay: index * 0.1 ";
-"";,
-}} className="relative group" onHoverStart={() => setIsHovered(true)} onHoverEnd={() => setIsHovered(false)}>";
+""}} className="relative group" onHoverStart={() => setIsHovered(true)} onHoverEnd={() => setIsHovered(false)}>";
       {/* Animated Background */}"";
       <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>;
 
@@ -29,11 +26,10 @@ const ServiceCard = ({ service, index, isVisible }) => {    const [isHovered, se
         <div className="relative bg-black/90 backdrop-blur-xl rounded-2xl p-6 h-full">""";
           {/* comment */}"";
           <div className="absolute inset-0 overflow-hidden pointer-events-none">""""            {[...Array(8)].map((_, i) => (<motion .div key="{i}" className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" animate = {}
-;
+
   {}
-;
-                x[0, Math.random() * 100 - 50], y[0, Math.random() * 100 - 50], opacity[0.6, 0.2, 0.6];,
-}} transition = {}";
+
+                x[0, Math.random() * 100 - 50], y[0, Math.random() * 100 - 50], opacity[0.6, 0.2, 0.6]}} transition = {}";
   {}";
                 duration: 3 + Math.random() * 2, """;
                 repeat: Infinity,"";
@@ -57,7 +53,7 @@ const ServiceCard = ({ service, index, isVisible }) => {    const [isHovered, se
                   </span>"";
                   <span className="px-2 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full border border-blue-500/30">;
                     {service.subcategory}
-;
+
                   </span>;
                 </div>";
               </div>;
@@ -93,7 +89,7 @@ const ServiceCard = ({ service, index, isVisible }) => {    const [isHovered, se
                     <div className="w-1 h-1 bg-green-400 rounded-full"></div>;
                     <span>{benefit}</span>;
                   </div>) ) }
-;
+
               </div>";
             </div>;
 """;
@@ -117,9 +113,9 @@ const ServiceCard = ({ service, index, isVisible }) => {    const [isHovered, se
                 <h4 className="text-sm font-semibold text-purple-400 mb-2">Tech Stack</h4>"";
                 <div className="flex flex-wrap gap-1">"";
                   {service.technologyStack.slice(0, 4).map((tech, idx) => (<span key="{idx}" className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded border border-purple-500/30">                      {tech}
-;
+
                     </span>) ) }
-;
+
                 </div>";
               </div>) }
 """;
@@ -138,7 +134,7 @@ const ServiceCard = ({ service, index, isVisible }) => {    const [isHovered, se
                   <span className="text-purple-400">🌐</span>"";
                   <a href="{service.contactInfo.website}" className="hover: text-purple-300 transition-colors">,;
                     {service.contactInfo.website}
-;
+
                   </a>;
                 </div>;
             </div>";
@@ -149,7 +145,7 @@ const ServiceCard = ({ service, index, isVisible }) => {    const [isHovered, se
         </div>;
     </motion.div>)}";
 export const FuturisticServicesShowcase = () => {}
-;
+
 """;";
     const [selectedCategory, setSelectedCategory] = useState("all")";
     const [searchTerm, setSearchTerm] = useState("")";
@@ -159,19 +155,17 @@ export const FuturisticServicesShowcase = () => {}
     const [visibleServices, setVisibleServices] = useState(new Set())";
     const categories = [];
     const filteredServices = ADVANCED_MICRO_SERVICES.filter(service => {}
-;
+
         const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
             service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
         return matchesCategory && matchesSearch});
     // Set all services as visible initially for better UX;
-    useEffect(() => {;
+    useEffect(() => {
   // TODO: Add dependencies if needed;
 
-  return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
+  return () => {
+    // Cleanup function}}, []);, []);
         const allIndices = new Set(filteredServices.map((_, index) => index));
         setVisibleServices(allIndices)}, [filteredServices]);";
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 py-20">;
@@ -195,7 +189,7 @@ export const FuturisticServicesShowcase = () => {}
 "";
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,;
         {/* comment */}
-;
+
         <motion.div initial = {}";
   { opacity: 0, y: -50}} animate = {}
   { opacity: 1, y: 0 """"">;
@@ -225,9 +219,9 @@ export const FuturisticServicesShowcase = () => {}
                 ? "bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg shadow-cyan-500/30""""""",;
                 : "bg-black/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/20"}"}>";
                   {category === "all" ? "All Services" : category}
-;
+
                 </button>) ) }
-;
+
             </div>;
           </div>";
         </motion.div>;
@@ -239,9 +233,9 @@ export const FuturisticServicesShowcase = () => {}
           </AnimatePresence>;
         </div>;
         {/* comment */}
-;
+
         <motion.div initial = {}
-;
+
   { opacity: 0, y: 50}} animate = {}";
   { opacity: 1, y: 0}} transition = {}
   { duration: 0.8, delay: 0.5 """"">;

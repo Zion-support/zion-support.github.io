@@ -3,35 +3,31 @@ import type { NextPage } from 'next';
 import MainLayout from '../../components/layout/MainLayout';
 import { Cloud, Server, Shield, Zap, CheckCircle, ArrowRight, Database, Globe, Lock, TrendingUp } from 'lucide-react';
 import Link from 'next/link';
-;
-const CloudServices: NextPage = () => {;
+
+const CloudServices: NextPage = () => {
   const services = [;
-    {;
+    {
       icon: Cloud,;
       title: "Cloud Migration",;
       description: "Seamlessly migrate your infrastructure to the cloud with minimal downtime and maximum efficiency.",;
-      features: ["Assessment and planning", "Data migration", "Application modernization", "Performance optimization"];,
-},;
-    {;
+      features: ["Assessment and planning", "Data migration", "Application modernization", "Performance optimization"]},;
+    {
       icon: Server,;
       title: "Cloud Architecture",;
       description: "Design and implement scalable, secure, and cost-effective cloud infrastructure solutions.",;
-      features: ["Multi-cloud strategies", "Microservices architecture", "Auto-scaling solutions", "Load balancing"];,
-},;
-    {;
+      features: ["Multi-cloud strategies", "Microservices architecture", "Auto-scaling solutions", "Load balancing"]},;
+    {
       icon: Shield,;
       title: "Cloud Security",;
       description: "Comprehensive security solutions to protect your cloud infrastructure and data.",;
-      features: ["Identity and access management", "Data encryption", "Security monitoring", "Compliance management"];,
-},;
-    {;
+      features: ["Identity and access management", "Data encryption", "Security monitoring", "Compliance management"]},;
+    {
       icon: Database,;
       title: "Cloud Database Solutions",;
       description: "Managed database services with high availability, backup, and disaster recovery.",;
-      features: ["Database migration", "Performance tuning", "Backup and recovery", "Monitoring and maintenance"];,
-}
+      features: ["Database migration", "Performance tuning", "Backup and recovery", "Monitoring and maintenance"]}
   ];
-;
+
   const platforms = [;
     { name: "Amazon Web Services", icon: "AWS" },;
     { name: "Microsoft Azure", icon: "Azure" },;
@@ -39,30 +35,26 @@ const CloudServices: NextPage = () => {;
     { name: "IBM Cloud", icon: "IBM" },;
     { name: "Oracle Cloud", icon: "Oracle" }
   ];
-;
+
   const benefits = [;
-    {;
+    {
       icon: Zap,;
       title: "Scalability",;
-      description: "Scale your infrastructure up or down based on demand, paying only for what you use.";,
-},;
-    {;
+      description: "Scale your infrastructure up or down based on demand, paying only for what you use."},;
+    {
       icon: Shield,;
       title: "Security",;
-      description: "Enterprise-grade security with advanced threat protection and compliance features.";,
-},;
-    {;
+      description: "Enterprise-grade security with advanced threat protection and compliance features."},;
+    {
       icon: TrendingUp,;
       title: "Cost Optimization",;
-      description: "Reduce infrastructure costs while improving performance and reliability.";,
-},;
-    {;
+      description: "Reduce infrastructure costs while improving performance and reliability."},;
+    {
       icon: Globe,;
       title: "Global Reach",;
-      description: "Deploy applications worldwide with low latency and high availability.";,
-}
+      description: "Deploy applications worldwide with low latency and high availability."}
   ];
-;
+
   return (;
     <MainLayout;
       title="Cloud Services - Zion Tech Group";
@@ -209,17 +201,14 @@ const CloudServices: NextPage = () => {;
         </section>;
       </div>;
     </MainLayout>;
-  );,
-};
-;
+  )}
 export default CloudServices;
-;
-export default function CloudServices() {;
+
+export default function CloudServices() {
   return (;
     <main className="max-w-4xl mx-auto px-4 py-16">;
       <h1 className="text-3xl font-bold mb-4">Cloud Services</h1>;
       <p className="text-gray-700">Architecture, migration, and SRE.</p>;
     </main>;
-  );,
-}
-;
+  )}
+

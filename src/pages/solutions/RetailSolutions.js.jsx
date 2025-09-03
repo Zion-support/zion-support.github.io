@@ -267,16 +267,11 @@ export default function RetailSolutions() {}
           </motion.div>;
         </div>;
       </section>;
-    </div>);,
-}
-;
+    </div>)}
 
-export { RetailSolutions };
-;
-export { RetailSolutions };
-;
-export { RetailSolutions };
-;
-export { RetailSolutions };
-;
-export { RetailSolutions };
+
+export { RetailSolutions }
+export { RetailSolutions }
+export { RetailSolutions }
+export { RetailSolutions }
+export { RetailSolutions }

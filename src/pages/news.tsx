@@ -9,12 +9,11 @@ import { ;
   ExternalLink,;
   TrendingUp,;
   Award,;
-  Lightbulb;,
-} from 'lucide-react';
-;
-export default function NewsPage() {;
+  Lightbulb} from 'lucide-react';
+
+export default function NewsPage() {
   const newsArticles = [;
-    {;
+    {
       title: "Zion Tech Group Named Top AI Innovation Company 2025",;
       excerpt: "We're proud to announce that Zion Tech Group has been recognized as one of the top AI innovation companies of 2025 by TechInsights Magazine.",;
       category: "Company News",;
@@ -23,9 +22,8 @@ export default function NewsPage() {;
       readTime: "3 min read",;
       image: "/images/news/ai-innovation-award.jpg",;
       url: "/news/zion-tech-group-ai-innovation-award-2025",;
-      featured: true;,
-},;
-    {;
+      featured: true},;
+    {
       title: "New Partnership with Microsoft Azure for Enhanced Cloud Solutions",;
       excerpt: "Zion Tech Group announces strategic partnership with Microsoft Azure to deliver enhanced cloud infrastructure and AI-powered solutions.",;
       category: "Partnerships",;
@@ -33,9 +31,8 @@ export default function NewsPage() {;
       date: "December 8, 2025",;
       readTime: "4 min read",;
       image: "/images/news/microsoft-azure-partnership.jpg",;
-      url: "/news/microsoft-azure-partnership-announcement";,
-},;
-    {;
+      url: "/news/microsoft-azure-partnership-announcement"},;
+    {
       title: "AI-Powered Cybersecurity Platform Launches with 99.9% Threat Detection Rate",;
       excerpt: "Our revolutionary AI cybersecurity platform achieves industry-leading threat detection rates while reducing false positives by 80%.",;
       category: "Product Launch",;
@@ -43,9 +40,8 @@ export default function NewsPage() {;
       date: "December 5, 2025",;
       readTime: "5 min read",;
       image: "/images/news/ai-cybersecurity-platform.jpg",;
-      url: "/news/ai-cybersecurity-platform-launch";,
-},;
-    {;
+      url: "/news/ai-cybersecurity-platform-launch"},;
+    {
       title: "Zion Tech Group Expands to European Market",;
       excerpt: "Strategic expansion into European markets brings our cutting-edge AI solutions to new regions and industries.",;
       category: "Company News",;
@@ -53,9 +49,8 @@ export default function NewsPage() {;
       date: "December 3, 2025",;
       readTime: "3 min read",;
       image: "/images/news/european-expansion.jpg",;
-      url: "/news/european-market-expansion";,
-},;
-    {;
+      url: "/news/european-market-expansion"},;
+    {
       title: "Industry Report: AI Adoption in Manufacturing Reaches New Heights",;
       excerpt: "Our latest industry research reveals that AI adoption in manufacturing has increased by 300% in the past year.",;
       category: "Research",;
@@ -63,9 +58,8 @@ export default function NewsPage() {;
       date: "December 1, 2025",;
       readTime: "6 min read",;
       image: "/images/news/ai-manufacturing-report.jpg",;
-      url: "/news/ai-manufacturing-adoption-report";,
-},;
-    {;
+      url: "/news/ai-manufacturing-adoption-report"},;
+    {
       title: "Customer Success: RetailMax Achieves 40% Cost Reduction with AI Solutions",;
       excerpt: "Case study showcases how our AI solutions helped RetailMax transform their operations and achieve significant cost savings.",;
       category: "Customer Success",;
@@ -73,33 +67,29 @@ export default function NewsPage() {;
       date: "November 28, 2025",;
       readTime: "4 min read",;
       image: "/images/news/retailmax-success-story.jpg",;
-      url: "/news/retailmax-ai-transformation-success";,
-}
+      url: "/news/retailmax-ai-transformation-success"}
   ];
-;
+
   const pressReleases = [;
-    {;
+    {
       title: "Zion Tech Group Announces Q4 2025 Financial Results",;
       date: "December 15, 2025",;
       summary: "Strong growth in AI services and cloud solutions drives record quarterly performance.",;
-      url: "/press-releases/q4-2025-financial-results";,
-},;
-    {;
+      url: "/press-releases/q4-2025-financial-results"},;
+    {
       title: "New Board Member Appointment: Dr. Emily Watson Joins Advisory Board",;
       date: "December 12, 2025",;
       summary: "Leading AI ethics expert brings valuable perspective to company's responsible AI initiatives.",;
-      url: "/press-releases/dr-emily-watson-board-appointment";,
-},;
-    {;
+      url: "/press-releases/dr-emily-watson-board-appointment"},;
+    {
       title: "Zion Tech Group Receives ISO 27001 Certification for Information Security",;
       date: "December 10, 2025",;
       summary: "Certification demonstrates commitment to highest standards of information security and data protection.",;
-      url: "/press-releases/iso-27001-certification";,
-}
+      url: "/press-releases/iso-27001-certification"}
   ];
-;
+
   const categories = ["All", "Company News", "Product Launch", "Partnerships", "Research", "Customer Success", "Press Releases"];
-;
+
   return (;
     <div className="min-h-screen bg-zion-slate-dark text-white">;
       {/* Hero Section */}
@@ -145,15 +135,15 @@ export default function NewsPage() {;
                     </span>;
                     <span className="text-zion-slate-light text-sm">{article.date}</span>;
                   </div>;
-                  ;
+
                   <h3 className="text-2xl font-bold text-white mb-3">{article.title}</h3>;
                   <p className="text-zion-slate-light mb-4">{article.excerpt}</p>;
-                  ;
+
                   <div className="flex items-center justify-between text-sm text-zion-slate-light mb-4">;
                     <span>By {article.author}</span>;
                     <span>{article.readTime}</span>;
                   </div>;
-                  ;
+
                   <a href={article.url} className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light font-medium transition-colors">;
                     Read Full Article;
                     <ArrowRight className="w-4 h-4 ml-2" />;
@@ -190,15 +180,15 @@ export default function NewsPage() {;
                     </span>;
                     <span className="text-zion-slate-light text-xs">{article.date}</span>;
                   </div>;
-                  ;
+
                   <h3 className="text-lg font-semibold text-white mb-3">{article.title}</h3>;
                   <p className="text-zion-slate-light text-sm mb-4">{article.excerpt}</p>;
-                  ;
+
                   <div className="flex items-center justify-between text-xs text-zion-slate-light mb-4">;
                     <span>By {article.author}</span>;
                     <span>{article.readTime}</span>;
                   </div>;
-                  ;
+
                   <a href={article.url} className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light text-sm font-medium transition-colors">;
                     Read More;
                     <ArrowRight className="w-3 h-3 ml-1" />;
@@ -266,5 +256,4 @@ export default function NewsPage() {;
         </div>;
       </section>;
     </div>;
-  );,
-}
+  )}

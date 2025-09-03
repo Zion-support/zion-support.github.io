@@ -1,18 +1,18 @@
 import React from "react";""""""";
 export default function SimplePage()   {const location = useLocation()";
-  ;
+
   // comment;
 const getPageInfo = (pathname) => {";
     const pathMap = {},";
-          {;
+          {
             title: "Cloud Solutions",";
             description: "Scalable cloud infrastructure and migration services for modern businesses",";
             link: "/services/cloud"},";
-          {;
+          {
             title: "Cybersecurity",";
             description: "Advanced security solutions to protect your digital assets and ensure compliance",";
             link: "/services/cybersecurity"},";
-          {;
+          {
             title: "Digital Transformation",";
     const pathMap = {}, {";
             title: "Cloud Solutions",";
@@ -142,10 +142,9 @@ title: "Become a Partner",";
           {title: "Digital Transformation",";
             description: "End-to-end business transformation services to modernize your operations",";
             link: "/services/transformation"}
-;
-        ];,
-},";
-      "/solutions": {;
+
+        ]},";
+      "/solutions": {
         title: "Industry Solutions",";
         subtitle: "Tailored solutions for your specific industry needs",";
         description: "We understand that every industry has unique challenges. Our specialized solutions are designed to address the specific needs of your sector.",;
@@ -155,15 +154,15 @@ title: "Become a Partner",";
     e: "Manufacturing",";
             description: "Smart factory solutions and Industry 4.0 technologies",";
             link: "/solutions/manufacturing"},";
-          {;
+          {
             title: "Financial Services",";
             description: "FinTech solutions for modern banking and financial institutions",";
             link: "/solutions/financial"},";
-          {;
+          {
             title: "Healthcare",";
             description: "Digital health solutions and medical technology innovations",";
             link: "/solutions/healthcare"},";
-          {;
+          {
             title: "Retail",";
       "/solutions": {title: "Industry Solutions",";
         subtitle: "Tailored solutions for your specific industry needs",";
@@ -181,10 +180,9 @@ title: "Manufacturing",";
           {title: "Retail",";
             description: "E-commerce and omnichannel retail solutions",";
             link: "/solutions/retail"}
-;
-        ];,
-},";
-      "/about": {;
+
+        ]},";
+      "/about": {
         title: "About Zion Tech Group",";
         subtitle: "Innovating tomorrow through technology excellence",";
         description: "We are a forward-thinking technology company dedicated to transforming businesses through innovative solutions and cutting-edge technology.",;
@@ -194,15 +192,15 @@ title: "Manufacturing",";
     e: "Our Mission",";
             description: "To empower businesses with transformative technology solutions that drive innovation and growth",";
             link: "/about/mission"},";
-          {;
+          {
             title: "Our Team",";
             description: "Meet the experts behind our innovative solutions and exceptional service",";
             link: "/about/team"},";
-          {;
+          {
             title: "Our Values",";
             description: "Innovation, integrity, excellence, and customer success drive everything we do",";
             link: "/about/values"},";
-          {;
+          {
             title: "Our History",";
       "/about": {title: "About Zion Tech Group",";
         subtitle: "Innovating tomorrow through technology excellence",";
@@ -220,10 +218,9 @@ title: "Our Mission",";
           {title: "Our History",";
             description: "From startup to industry leader - our journey of innovation and growth",";
             link: "/about/history"}
-;
-        ];,
-},";
-      "/contact": {;
+
+        ]},";
+      "/contact": {
         title: "Contact Us",";
         subtitle: "Let"s discuss your technology needs",";
         description: "Ready to transform your business? Get in touch with our team of experts to discuss how we can help you achieve your goals.",;
@@ -233,15 +230,15 @@ title: "Our Mission",";
     e: "Get a Quote",";
             description: "Request a customized quote for your specific technology needs",";
             link: "/request-quote"},";
-          {;
+          {
             title: "Schedule a Consultation",";
             description: "Book a free consultation with our technology experts",";
             link: "/consultation"},";
-          {;
+          {
             title: "Support",";
             description: "Get technical support and assistance for existing solutions",";
             link: "/support"},";
-          {;
+          {
             title: "Partnership",";
       "/contact": {title: "Contact Us",";
         subtitle: "Let"s discuss your technology needs",";
@@ -259,10 +256,9 @@ title: "Get a Quote",";
           {title: "Partnership",";
             description: "Explore partnership opportunities with Zion Tech Group",";
             link: "/partners"}
-;
-        ];,
-},";
-      "/blog": {;
+
+        ]},";
+      "/blog": {
         title: "Blog & Insights",";
         subtitle: "Latest technology trends and industry insights",";
         description: "Stay updated with the latest technology trends, industry insights, and expert perspectives from our team.",;
@@ -272,15 +268,15 @@ title: "Get a Quote",";
     e: "Technology Trends",";
             description: "Explore emerging technologies and their impact on business",";
             link: "/blog/trends"},";
-          {;
+          {
             title: "Industry Insights",";
             description: "Deep dives into specific industry challenges and solutions",";
             link: "/blog/industry"},";
-          {;
+          {
             title: "Case Studies",";
             description: "Real-world examples of our solutions in action",";
             link: "/case-studies"},";
-          {;
+          {
             title: "Expert Opinions",";
       "/blog": {title: "Blog & Insights",";
         subtitle: "Latest technology trends and industry insights",";
@@ -298,10 +294,9 @@ title: "Technology Trends",";
           {title: "Expert Opinions",";
             description: "Thought leadership and expert perspectives on technology",";
             link: "/blog/expert"}
-;
-        ];,
-},";
-      "/careers": {;
+
+        ]},";
+      "/careers": {
         title: "Join Our Team",";
         subtitle: "Build the future with Zion Tech Group",";
         description: "Join our team of innovators and help us shape the future of technology. We offer exciting opportunities for growth and development.",;
@@ -311,15 +306,15 @@ title: "Technology Trends",";
     e: "Open Positions",";
             description: "Browse current job openings and opportunities",";
             link: "/careers/positions"},";
-          {;
+          {
             title: "Company Culture",";
             description: "Learn about our values, culture, and work environment",";
             link: "/careers/culture"},";
-          {;
+          {
             title: "Benefits & Perks",";
             description: "Discover the benefits of working at Zion Tech Group",";
             link: "/careers/benefits"},";
-          {;
+          {
             title: "Career Growth",";
       "/careers": {title: "Join Our Team",";
         subtitle: "Build the future with Zion Tech Group",";
@@ -337,10 +332,9 @@ title: "Open Positions",";
           {title: "Career Growth",";
             description: "Opportunities for professional development and advancement",";
             link: "/careers/growth"}
-;
-        ];,
-},";
-      "/partners": {;
+
+        ]},";
+      "/partners": {
         title: "Partnerships",";
         subtitle: "Collaborate with Zion Tech Group",";
         description: "Join our network of trusted partners and expand your business opportunities through strategic collaboration.",;
@@ -350,15 +344,15 @@ title: "Open Positions",";
     e: "Become a Partner",";
             description: "Learn about partnership opportunities and benefits",";
             link: "/partners/join"},";
-          {;
+          {
             title: "Partner Programs",";
             description: "Explore our various partnership programs and tiers",";
             link: "/partners/programs"},";
-          {;
+          {
             title: "Partner Resources",";
             description: "Access tools, training, and support for partners",";
             link: "/partners/resources"},";
-          {;
+          {
             title: "Partner Success Stories",";
       "/partners": {title: "Partnerships",";
         subtitle: "Collaborate with Zion Tech Group",";
@@ -376,14 +370,13 @@ title: "Become a Partner",";
           {title: "Partner Success Stories",";
             description: "See how our partners have grown with us",";
             link: "/partners/success"}
-;
+
         ];
 
-;,
 }
-;
+
 ";
-    return pathMap[pathname] || {;
+    return pathMap[pathname] || {
       title: "Page Not Found",";
     return pathMap[pathname] || {title: "Page Not Found",";
       subtitle: "The page you"re looking for doesn"t exist",;
@@ -405,7 +398,7 @@ title: "AI & Machine Learning,";
             description: "End-to-end business transformation services to modernize your operations,";
             link: "/services/transformation"}";
         ]},;
-      "/solutions": {;
+      "/solutions": {
         title: "Industry Solutions,";
         subtitle: "Tailored solutions for your specific industry needs,";
         description: "We understand that every industry has unique challenges. Our specialized solutions are designed to address the specific needs of your sector.",;
@@ -427,7 +420,7 @@ title: "Manufacturing,";
             description: "E-commerce and omnichannel retail solutions,";
             link: "/solutions/retail"}";
         ]},;
-      "/about": {;
+      "/about": {
         title: "About Zion Tech Group,";
         subtitle: "Innovating tomorrow through technology excellence,";
         description: "We are a forward-thinking technology company dedicated to transforming businesses through innovative solutions and cutting-edge technology.",;
@@ -449,7 +442,7 @@ title: "Our Mission,";
             description: "From startup to industry leader - our journey of innovation and growth,";
             link: "/about/history"}";
         ]},;
-      "/contact": {;
+      "/contact": {
         title: "Contact Us,";
         subtitle: "Let"s discuss your technology needs,";
         description: "Ready to transform your business? Get in touch with our team of experts to discuss how we can help you achieve your goals.",;
@@ -471,7 +464,7 @@ title: "Get a Quote,";
             description: "Explore partnership opportunities with Zion Tech Group,";
             link: "/partners"}";
         ]},;
-      "/blog": {;
+      "/blog": {
         title: "Blog & Insights,";
         subtitle: "Latest technology trends and industry insights,";
         description: "Stay updated with the latest technology trends, industry insights, and expert perspectives from our team.",;
@@ -493,7 +486,7 @@ title: "Technology Trends,";
             description: "Thought leadership and expert perspectives on technology,";
             link: "/blog/expert"}";
         ]},;
-      "/careers": {;
+      "/careers": {
         title: "Join Our Team,";
         subtitle: "Build the future with Zion Tech Group,";
         description: "Join our team of innovators and help us shape the future of technology. We offer exciting opportunities for growth and development.",;
@@ -515,7 +508,7 @@ title: "Open Positions,";
             description: "Opportunities for professional development and advancement,";
             link: "/careers/growth"}";
         ]},;
-      "/partners": {;
+      "/partners": {
         title: "Partnerships,";
         subtitle: "Collaborate with Zion Tech Group,";
         description: "Join our network of trusted partners and expand your business opportunities through strategic collaboration.",;
@@ -537,9 +530,8 @@ title: "Become a Partner,";
             description: "See how our partners have grown with us,";
             link: "/partners/success"}
         ]}
-;,
 }
-;
+
 ";
     return pathMap[pathname] || {";
       title: "Page Not Found", ";
@@ -551,11 +543,10 @@ title: "Become a Partner,";
       subtitle: "The page you"re looking for doesn"t exist,";
       description: "We couldn"t find the page you requested. Please check the URL or navigate back to our homepage.",;
       sections: []}}
-;
+
 ";
   const pageInfo = getPageInfo(location.pathname);
-  const breadcrumbs = location.pathname.split("/").filter(Boolean);,
-}
+  const breadcrumbs = location.pathname.split("/").filter(Boolean)}
 ";
   return (';
     <div className = "min-h-screen bg-zion-blue-dark">";
@@ -586,7 +577,7 @@ title: "Become a Partner,";
               <span className="capitalize">{crumb}</span>;
             </div>;
           ))}
-;
+
         </nav>;
       </div>;
 ";
@@ -603,7 +594,7 @@ title: "Become a Partner,";
           <div className="text-center max-w-4xl mx-auto">";
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">,;
               {pageInfo.title}
-;
+
             </h1>";
             <p className="text-xl md: text-2xl text-zion-cyan mb-6">",;
       {/* comment */}";
@@ -619,7 +610,7 @@ title: "Become a Partner,";
             </p>";
             <p className="text-lg text-zion-slate-light leading-relaxed">;
               {pageInfo.description}
-;
+
             </p>;
           </div>;
       </section>;
@@ -635,7 +626,7 @@ title: "Become a Partner,";
                   </h3>;
                   <p className="text-zion-slate-light mb-6 leading-relaxed">;
                     {section.description}
-;
+
                   </p>";
                   <Link to={section.link}
                     className="inline-flex items-center text-zion-cyan hover: text-white transition-colors group-hove,";
@@ -661,7 +652,7 @@ title: "Become a Partner,";
                   </h3>";
                   <p className="text-zion-slate-light mb-6 leading-relaxed">;
                     {section.description}
-;
+
                   </p>";
                   <Link to="{section.link}" className="inline-flex items-center text-zion-cyan hover: text-white transition-colors group-hover:translate-x-1">;
                     Learn More";
@@ -673,11 +664,11 @@ title: "Become a Partner,";
                   </Link>;
                 </div>,;
               ))}
-;
+
             </div>;
         </section>;
       )}
-;
+
 ";
       {/* comment */}
       <section className="py-20">;
@@ -706,7 +697,7 @@ title: "Become a Partner,";
         <div className="container mx-auto px-4">";
           <div className="bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 border border-zion-purple/30 rounded-2xl p-12 text-center">;
       )}
-;
+
 ";
       {/* comment */}";
       <section className="py-20">";

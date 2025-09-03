@@ -1,16 +1,13 @@
 import Head from "next/head";
 import React from "react";
 import dynamic from "next/dynamic";
-const Component = () => {;
-const Head = dynamic(() => import("next/head"), { ssr: false });,
-}
-const Link = dynamic(() => import("next/link"), { ssr: false });,
-}
+const Component = () => {
+const Head = dynamic(() => import("next/head"), { ssr: false })}
+const Link = dynamic(() => import("next/link"), { ssr: false })}
       ],";
       category: "AI Solutions",";
-      pricing: "Starting at $2,999/month";,
-},;
-    {;
+      pricing: "Starting at $2,999/month"},;
+    {
       id: 2,";
       name: "Cloud Infrastructure Suite",";
       description: "Scalable, secure, and reliable cloud infrastructure tailored to your business needs.",;
@@ -23,9 +20,8 @@ const Link = dynamic(() => import("next/link"), { ssr: false });,
         "Disaster recovery";
       ],";
       category: "Cloud Solutions",";
-      pricing: "Starting at $1,999/month";,
-},;
-    {;
+      pricing: "Starting at $1,999/month"},;
+    {
       id: 3,";
       name: "Cybersecurity Shield",";
       description: "Comprehensive security solution protecting your digital assets from modern threats.",;
@@ -38,9 +34,8 @@ const Link = dynamic(() => import("next/link"), { ssr: false });,
         "Security training";
       ],";
       category: "Security",";
-      pricing: "Starting at $1,499/month";,
-},;
-    {;
+      pricing: "Starting at $1,499/month"},;
+    {
       id: 4,";
       name: "IoT Management Platform",";
       description: "Connect, monitor, and manage your IoT devices with our intelligent platform.",;
@@ -53,9 +48,8 @@ const Link = dynamic(() => import("next/link"), { ssr: false });,
         "Custom integrations";
       ],";
       category: "IoT Solutions",";
-      pricing: "Starting at $2,499/month";,
-},;
-    {;
+      pricing: "Starting at $2,499/month"},;
+    {
       id: 5,";
       name: "Blockchain Solutions",";
       description: "Leverage blockchain technology for secure, transparent, and efficient operations.",;
@@ -69,7 +63,7 @@ const Link = dynamic(() => import("next/link"), { ssr: false });,
       ],";
       category: "Blockchain",";
       pricing: "Custom pricing"},;
-    {;
+    {
       id: 6,";
       name: "Global Connectivity Suite",";
       description: "Seamless global connectivity and communication solutions for modern businesses.",;
@@ -83,7 +77,7 @@ const Link = dynamic(() => import("next/link"), { ssr: false });,
       ],";
       category: "Networking",";
       pricing: "Starting at $999/month"}
-;
+
   ];
 ";
   const categories = [];
@@ -127,13 +121,13 @@ transformation and drive business growth.;
                   category === "All;
                     ? "bg-blue-600 text-white;
                     : "bg-gray-100 text-gray-700 hover: bg-gray-200"}"}
-;
+
               >;
                 {category}
-;
+
               </button>;
             ))}
-;
+
           </div>;
       </section>;
           {/* comment */}";
@@ -145,7 +139,7 @@ transformation and drive business growth.;
                   <div className="flex items-center justify-between mb-3">";
                     <span className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium">,;
                       {product.category}
-;
+
                     </span>";
                     <div className="flex items-center gap-1">";
                       <Star className="w-4 h-4 text-yellow-400 fill-current"  />";
@@ -164,7 +158,7 @@ transformation and drive business growth.;
                     <div>";
                       <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-medium">,;
                         {product.category}
-;
+
                       </span>;
                     </div>;
                   ";
@@ -176,23 +170,23 @@ transformation and drive business growth.;
                       <li key="{index}" className="flex items-center text-sm text-gray-700">";
                         <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0"  />;
                         {feature}
-;
+
                       </li>;
                     ))}
-;
+
                   </ul>;
                   ";
                   <div className="flex items-center justify-between">";
                     <div className="text-lg font-semibold text-blue-600">;
                       {product.pricing}
-;
+
                     </span>;
                   </div>;
                   ";
                   <div className="{"flex" gap-3">";
                     <Link href="{"/products/${product.title.toLowerCase().replace(/\s+/g," "-")}"}";
                       className=""flex-1" bg-blue-600 hover: bg-blue-700 text-white text-center py-2 px-4 rounded-lg font-semibold transition-colors"}
-;
+
                     </div>";
                     <Link href="/contact;
                       className="inline-flex items-center text-blue-600 hover: text-blue-700 font-medium">;
@@ -202,7 +196,7 @@ transformation and drive business growth.;
                   </div>;
               </div>,;
             ))}
-;
+
           </div>;
       </section>;
       {/* comment */}";
@@ -268,5 +262,5 @@ transformation and drive business growth.;
       </section>;
     </PageTransition>",;
   )}
-;
+
 export default Component))

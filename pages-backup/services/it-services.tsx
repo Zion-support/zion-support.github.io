@@ -21,5 +21,5 @@ import React from "react";
       </section>;
     </MainLayout>;,;
   )}
-;
+
 "export default ITServicesPage

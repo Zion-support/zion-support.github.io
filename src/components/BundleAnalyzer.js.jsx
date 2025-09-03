@@ -1,97 +1,92 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
-export default function Page() {;
+export default function Page() {
 ,;
-                    {;
+                    {
 
                         name: 'ServicesOverview',;
                         size: 42800,;
                         gzipSize: 10700,;
                         type: 'page',;
-                        optimization: 'good';,
-},;
-                    {;
+                        optimization: 'good'},;
+                    {
 
                         name: 'Pricing',;
                         size: 51200,;
                         gzipSize: 11900,;
                         type: 'page',;
-                        optimization: 'warning';,
-},;
-                    {;
+                        optimization: 'warning'},;
+                    {
 
                         name: 'stripe-vendor',;
                         size: 0,;
                         gzipSize: 0,;
                         type: 'vendor',;
-                        optimization: 'critical';,
-},;
-                    {;
+                        optimization: 'critical'},;
+                    {
 
                         name: 'pdf-vendor',;
                         size: 0,;
                         gzipSize: 0,;
                         type: 'vendor',;
-                        optimization: 'critical';,
-}
+                        optimization: 'critical'}
                 ],;
                 recommendations[;
                     'Consolidate empty vendor chunks(stripe-vendor, pdf-vendor),Consider code splitting for ServicesOverview page',Optimize animation-vendor bundle size',Implement tree shaking for unused dependencies',Add bundle size monitoring to CI/CD pipeline';
                 ],;
                 score: 78,;
-                lastUpdated: new Date () };
+                lastUpdated: new Date () }
             setAnalysis(mockAnalysis) }
-        catch(error) {;
+        catch(error) {
 
             // console.error('Bundle analysis failed:', error)}
-        finally {;
+        finally {
 
             setIsAnalyzing(false)}
     }, []);
-    useEffect(() => {;
-  // TODO: Add dependencies if needed;,
-}, []);
+    useEffect(() => {
+  // TODO: Add dependencies if needed}, []);
         analyzeBundle()}, [analyzeBundle]);
-    const formatBytes = (bytes) => {;
+    const formatBytes = (bytes) => {
 
         if(bytes === 0);
             return '0 B';
         const k = 1024;
         const sizes = ['B',KB',MB',GB'];
         const i = Math.floor(Math.log(bytes) / Math.log(k));
-        return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]};
-    const getScoreColor = (score) => {;
+        return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]}
+    const getScoreColor = (score) => {
 
         if(score >= 80);
             return 'text-green-500';
         if(score >= 60);
             return 'text-yellow-500';
-        return 'text-red-500'};
-    const getScoreIcon = (score) => {;
+        return 'text-red-500'}
+    const getScoreIcon = (score) => {
 
         if(score >= 80);
             return <CheckCircle className="w-5 h-5"/>;
         if(score >= 60)";
             return <AlertTriangle className="w-5 h-5"/>;";
-        return <AlertTriangle className="w-5 h-5"/>};
-    const getOptimizationColor = (optimization) => {;
+        return <AlertTriangle className="w-5 h-5"/>}
+    const getOptimizationColor = (optimization) => {
 
-        switch(optimization) {;
+        switch(optimization) {
 
             case 'good': return 'text-green-500 bg-green-100 dark:bg-green-900/20';
             case 'warning': return 'text-yellow-500 bg-yellow-100 dark:bg-yellow-900/20';
             case 'critical': return 'text-red-500 bg-red-100 dark:bg-red-900/20';
             default: return 'text-gray-500 bg-gray-100 dark:bg-gray-900/20'}
-    };
-    const getOptimizationIcon = (optimization) => {;
+    }
+    const getOptimizationIcon = (optimization) => {
 
-        switch(optimization) {;
+        switch(optimization) {
 '";
             case 'good': return <CheckCircle className="w-4 h-4"/>;'";
             case 'warning': return <AlertTriangle className="w-4 h-4"/>;'";
             case 'critical': return <AlertTriangle className="w-4 h-4"/>;";
             default: return <Info className="w-4 h-4"/>}
-    };
+    }
     if(!analysis) return null;
     return (<>;
       {/* Bundle Analyzer Button */}";
@@ -101,24 +96,20 @@ export default function Page() {;
 
       {/* Bundle Analysis Panel */}
       <AnimatePresence>;
-        {isOpen && (<motion.div initial = {;
+        {isOpen && (<motion.div initial = {
 
   { opacity: 0, y: 20,;
-  scale: 0.9 ;,
-}} animate = {;
+  scale: 0.9 }} animate = {
 
   { opacity: 1, y: 0,;
-  scale: 1 ;,
-}} exit = {;
+  scale: 1 }} exit = {
 
   { opacity: 0, y: 20,;
-  scale: 0.9 ;,
-}} transition = {;
+  scale: 0.9 }} transition = {
 ";
   { type: "spring", damping: 25,;
   stiffness: 300 ;
-";,
-}} className="fixed top-4 right-20 z-50 w-96 bg-white dark:bg-gray-900 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden" role="dialog">;
+"}} className="fixed top-4 right-20 z-50 w-96 bg-white dark:bg-gray-900 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden" role="dialog">;
             {/* Header */}";
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 p-4 text-white">";
               <div className="flex items-center justify-between">";
@@ -206,7 +197,7 @@ export default function Page() {;
                     </button>;
                   </div>;
                 </div>) }
-;
+
               {/* Chunks Tab */}'";
               {activeTab === 'chunks' && (<div className="space-y-3">";
                   <h4 className="font-medium text-gray-900 dark:text-white text-sm mb-3">Bundle Chunks</h4>";
@@ -240,7 +231,7 @@ export default function Page() {;
                         </div>) }
                     </div>) ) }
                 </div>) }
-;
+
               {/* Recommendations Tab */}'";
               {activeTab === 'recommendations' && (<div className="space-y-3">";
                   <h4 className="font-medium text-gray-900 dark:text-white text-sm mb-3">Optimization Tips</h4>";
@@ -273,5 +264,5 @@ export default function Page() {;
             </div>;
           </motion.div>) }
       </AnimatePresence>;
-    </>)};
+    </>)}
 '"`

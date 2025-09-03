@@ -40,7 +40,7 @@ const InnovativeNewServices2025 = () => {}
                 return Cloud;
             default: any;
                 return Zap}
-    };
+    }
     const getCategoryColor = (category) => {}
         switch(category) {}
             case 'AI & Analytics': any;
@@ -53,7 +53,7 @@ const InnovativeNewServices2025 = () => {}
                 return 'from - orange - 500 to - red - 600';
             default: any;
                 return 'from - gray - 500 to - gray - 600'}
-    };
+    }
     return (<div className="min - h-screen bg-gradient - to - br from - gray - 900 via - black to - blue - 900 text-white">;
       <SEOHead title="Innovative New Services 2025 - Zion Tech Group" description="Discover our cutting - edge AI solutions, 5G infrastructure, edge computing, and autonomous systems.Transform your business with next - generation technology." keywords="AI solutions 2025, 5G enterprise, edge computing, autonomous systems, quantum technology, Zion Tech Group" type="website" url="https://ziontechgroup.com / innovative - new-services - 2025"/>;
 
@@ -68,8 +68,7 @@ const InnovativeNewServices2025 = () => {}
             case 'Edge Computing':'';
                 return 'from-orange-500 to-red-600';';
             default:'';
-                return 'from-gray-500 to-gray-600'}";,
-};"";
+                return 'from-gray-500 to-gray-600'}"};"";
     return (<div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-blue-900 text-white">"";
       <SEOHead title="Innovative New Services 2025 - Zion Tech Group" description="Discover our cutting-edge AI solutions, 5G infrastructure, edge computing, and autonomous systems. Transform your business with next-generation technology." keywords="AI solutions 2025, 5G enterprise, edge computing, autonomous systems, quantum technology, Zion Tech Group" type="website" url="https://ziontechgroup.com/innovative-new-services-2025"/>;
 ";
@@ -260,17 +259,12 @@ const InnovativeNewServices2025 = () => {}
           </div>;
         </div>;
       </section>;
-    </div>)};
-export default InnovativeNewServices2025;,
-}}}
-;
-export { InnovativeNewServices2025, IconComponent };
-;
-export { InnovativeNewServices2025, IconComponent };
-;
-export { InnovativeNewServices2025, IconComponent };
-;
-export { InnovativeNewServices2025, IconComponent };
-;
-export { InnovativeNewServices2025, IconComponent };
+    </div>)}
+export default InnovativeNewServices2025}}}
+
+export { InnovativeNewServices2025, IconComponent }
+export { InnovativeNewServices2025, IconComponent }
+export { InnovativeNewServices2025, IconComponent }
+export { InnovativeNewServices2025, IconComponent }
+export { InnovativeNewServices2025, IconComponent }
 )

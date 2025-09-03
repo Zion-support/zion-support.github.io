@@ -1,8 +1,8 @@
 import React from 'react';
-;
-;
-;
-;
+
+
+
+
 import { Code, BookOpen, Zap, Shield, Users, MessageSquare, Github, ExternalLink, Terminal, Webhook, Key, Mail } from 'lucide-react';import { Link } from 'react-router-dom';
 export default function DeveloperPortal() {}
   const apiFeatures = [];
@@ -181,8 +181,7 @@ export default function DeveloperPortal() {}
 ';
 '';
 ''';
-                          feature.status === 'Stable' ? 'default' : 'secondary';,
-}
+                          feature.status === 'Stable' ? 'default' : 'secondary'}
                       >;
                         {feature.status}
                       </Badge>";
@@ -207,8 +206,7 @@ export default function DeveloperPortal() {}
                     </Button>;
                   </CardContent>;
                 </Card>;
-              );,
-})}
+              )})}
           </div>;
         </div>;
 ";
@@ -286,8 +284,7 @@ export default function DeveloperPortal() {}
                     </Button>;
                   </CardContent>;
                 </Card>;
-              );,
-})}
+              )})}
           </div>;
         </div>;
 ";
@@ -371,14 +368,10 @@ export default function DeveloperPortal() {}
         </Card>;
       </div>;
     </div>)}
-;
 
-export { DeveloperPortal, IconComponent, IconComponent };
-;
-export { DeveloperPortal, IconComponent, IconComponent };
-;
-export { DeveloperPortal, IconComponent, IconComponent };
-;
-export { DeveloperPortal, IconComponent, IconComponent };
-;
-export { DeveloperPortal, IconComponent, IconComponent };
+
+export { DeveloperPortal, IconComponent, IconComponent }
+export { DeveloperPortal, IconComponent, IconComponent }
+export { DeveloperPortal, IconComponent, IconComponent }
+export { DeveloperPortal, IconComponent, IconComponent }
+export { DeveloperPortal, IconComponent, IconComponent }

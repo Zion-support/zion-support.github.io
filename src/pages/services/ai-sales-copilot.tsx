@@ -11,10 +11,9 @@ import { ;
   ArrowRight,;
   Star,;
   Shield,;
-  Rocket;,
-} from 'lucide-react';
-;
-export default function AISalesCopilotPage() {;
+  Rocket} from 'lucide-react';
+
+export default function AISalesCopilotPage() {
   return (;
     <div className="min-h-screen bg-zion-slate-dark text-white">;
       {/* Hero Section */}
@@ -211,5 +210,4 @@ export default function AISalesCopilotPage() {;
         </div>;
       </section>;
     </div>;
-  );,
-}
+  )}

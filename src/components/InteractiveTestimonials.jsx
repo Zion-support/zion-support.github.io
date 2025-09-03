@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 ,;
-    {;
+    {
 
         id: '2',;
         name: 'Marcus Rodriguez',;
@@ -13,9 +13,8 @@ import { motion, AnimatePresence  } from 'framer-motion';
         category: 'Talent Matching',;
         date: '1 month ago',;
         likes: 89,;
-        verified: true;,
-},;
-    {;
+        verified: true},;
+    {
 
         id: '3',;
         name: 'Dr.Emily Watson',;
@@ -27,9 +26,8 @@ import { motion, AnimatePresence  } from 'framer-motion';
         category: 'Research & Development',;
         date: '3 weeks ago',;
         likes: 156,;
-        verified: true;,
-},;
-    {;
+        verified: true},;
+    {
 
         id: '4',;
         name: 'Alex Thompson',;
@@ -41,9 +39,8 @@ import { motion, AnimatePresence  } from 'framer-motion';
         category: 'Startup Solutions',;
         date: '1 week ago',;
         likes: 73,;
-        verified: true;,
-},;
-    {;
+        verified: true},;
+    {
 
         id: '5',;
         name: 'Lisa Park',;
@@ -59,7 +56,7 @@ import { motion, AnimatePresence  } from 'framer-motion';
 
 ];
 const categories = ['All',AI Infrastructure',Talent Matching',Research & Development',Startup Solutions',Global Operations'];
-export function InteractiveTestimonials() {;
+export function InteractiveTestimonials() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [selectedCategory, setSelectedCategory] = useState('All');
     const [isAutoPlaying, setIsAutoPlaying] = useState(true);
@@ -67,62 +64,56 @@ export function InteractiveTestimonials() {;
     const filteredTestimonials = selectedCategory === 'All';
         ? testimonials;
         : testimonials.filter(testimonial => testimonial.category === selectedCategory) ;
-    useEffect(() => {;
+    useEffect(() => {
   // TODO: Add dependencies if needed;
 
-  return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
+  return () => {
+    // Cleanup function}}, []);, []);
         if(!isAutoPlaying) return;
-        const interval = setInterval(() => {;
+        const interval = setInterval(() => {
             setCurrentIndex((prev) => (prev + 1) % filteredTestimonials.length) }, 5000) ;
         return () => clearInterval(interval) }, [isAutoPlaying, filteredTestimonials.length]) ;
-    const nextTestimonial = () => {;
-        setCurrentIndex((prev) => (prev + 1) % filteredTestimonials.length) };
-    const prevTestimonial = () => {;
-        setCurrentIndex((prev) => (prev - 1 + filteredTestimonials.length) % filteredTestimonials.length) };
-    const toggleLike = (testimonialId) => {;
+    const nextTestimonial = () => {
+        setCurrentIndex((prev) => (prev + 1) % filteredTestimonials.length) }
+    const prevTestimonial = () => {
+        setCurrentIndex((prev) => (prev - 1 + filteredTestimonials.length) % filteredTestimonials.length) }
+    const toggleLike = (testimonialId) => {
 
-        setLikedTestimonials(prev => {;
+        setLikedTestimonials(prev => {
 
             const newSet = new Set(prev);
-            if(newSet.has(testimonialId)) {;
+            if(newSet.has(testimonialId)) {
 
-                newSet.delete(testimonialId)}
-            else {;
+                newSet.delete(testimonialId)} else {
 
                 newSet.add(testimonialId)}
-            return newSet})};
-    const renderStars = (rating) => {;
+            return newSet})}
+    const renderStars = (rating) => {
 
-        return Array.from({ length: 5 }, (_, i) => (<Star key={i} className={`w-5 h-5 ${i < rating ? 'text-yellow-400 fill-current' : 'text-gray-400'}`}/>))};
-    const containerVariants = {;
+        return Array.from({ length: 5 }, (_, i) => (<Star key={i} className={`w-5 h-5 ${i < rating ? 'text-yellow-400 fill-current' : 'text-gray-400'}`}/>))}
+    const containerVariants = {
 
         hidden: { opacity: 0 },;
-        visible: {;
+        visible: {
 
             opacity: 1,;
-            transition: {;
+            transition: {
 
                 staggerChildren: 0.1,;
-                delayChildren: 0.2;,
-};
-    const itemVariants = {;
+                delayChildren: 0.2}
+    const itemVariants = {
 
   hidden: { opacity: 0, y: 20,;
-  scale: 0.95;,
-},;
-        visible: {;
+  scale: 0.95},;
+        visible: {
 
             opacity: 1,;
             y: 0,;
             scale: 1,;
-            transition: {;
+            transition: {
 
                 duration: 0.5,;
-                ease: "easeOut";,
-};";
+                ease: "easeOut"};";
     return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-blue-dark relative overflow-hidden">;
       {/* Enhanced background with animated elements */}";
       <div className="absolute inset-0">";

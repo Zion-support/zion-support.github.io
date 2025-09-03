@@ -1,5 +1,5 @@
 
-;
+
   'Quantum Computing Hardware',;
   'Data Science Consulting',;
   'Blockchain Development Service',;
@@ -7,7 +7,7 @@
   'DevOps Automation Tool',;
   'Network Security Solution';
 ];
-;
+
   'State-of-the-art quantum computing components for research and development.',;
   'Expert data science consulting services for machine learning and analytics projects.',;
   'Blockchain development and implementation services for decentralized applications.',;
@@ -15,7 +15,7 @@
   'DevOps automation tools for continuous integration and deployment pipelines.',;
   'Network security solution with advanced threat detection and prevention.';
 ];
-;
+
   ['Quantum',Research',Hardware'],;
   ['Data Science',Machine Learning',Consulting'],;
   ['Blockchain',Development',DApps'],;
@@ -40,13 +40,13 @@ const categories: Array<any> = ['';
   'SecureNet Professionals',;''';
 ''';
 
-;
+
   '$500',$1,200',$2,500',$5,000',$8,500',$15,000',$25,000',$50,000';
 ];
-;
+
   'San Francisco, CA',New York, NY',Austin, TX',Seattle, WA',Boston, MA',Remote';
 ];
-;
+
   'QuantumTech Labs',;
   'CloudMasters Inc',;
   'IoT Solutions Pro',;
@@ -61,10 +61,10 @@ const categories: Array<any> = ['';
   'DataGenius Consulting',;';
   'Innovation Labs',;'  'FutureTech Systems';
 ];
-;
-export function generateRandomListing(): MarketplaceItem {;
 
-  return {;
+export function generateRandomListing(): MarketplaceItem {
+
+  return {
 
     id: `listing-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,;
     title: sampleTitles[randomIndex] || 'Default Title',;
@@ -78,7 +78,7 @@ export function generateRandomListing(): MarketplaceItem {;
     image: image || 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib = rb-4.0.3&auto=format&fit=crop&w=2072&q=80',;
     tags: sampleTags[randomIndex] || ['Technology',Solution'],;
     featured: Math.random() > 0.7,;
-    seller: {;
+    seller: {
 
       name: sellerName || 'Default Seller',;
       rating: 4.0 + Math.random() * 1.0,;
@@ -86,12 +86,12 @@ export function generateRandomListing(): MarketplaceItem {;
     location: location || 'Remote',;
     availability: Math.random() > 0.8 ? 'limited' : 'available',;'`;
     deliveryTime: category === 'talent' ? 'Immediate' : `${Math.floor(Math.random() * 8) + 2}-${Math.floor(Math.random() * 4) + 4} weeks`,;'`;
-    warranty: category === 'talent' ? 'N/A' : `${Math.floor(Math.random() * 3) + 1} year${Math.floor(Math.random() * 3) + 1 > 1 ? 's' : ''}`};
-export function generateRandomListings(count: number): MarketplaceItem[] {;
+    warranty: category === 'talent' ? 'N/A' : `${Math.floor(Math.random() * 3) + 1} year${Math.floor(Math.random() * 3) + 1 > 1 ? 's' : ''}`}
+export function generateRandomListings(count: number): MarketplaceItem[] {
 
   const listings: MarketplaceItem[] = [];
-  for(let i = 0; i < count; i++) {;
+  for(let i = 0; i < count; i++) {
 
     listings.push(generateRandomListing());
-;
+
   return listings}}}'`;

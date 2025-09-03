@@ -1,4 +1,4 @@
-export interface MicroSaasService {;
+export interface MicroSaasService {
   id: string;
   title: string;
   description: string;
@@ -20,17 +20,15 @@ export interface MicroSaasService {;
   featured: boolean;
   location: string;
   availability: string;
-  author: {;
+  author: {
     name: string;
     id: string;
     avatarUrl?: string;
-    verified: boolean;,
-};
+    verified: boolean}
   images: string[];
-  createdAt: string;,
-}
+  createdAt: string}
 export const MICRO_SAAS_SERVICES: MicroSaasService[] = [;
-  {;
+  {
     id: "ai-quantum-computing",;
     title: "AI Quantum Computing Platform",;
     description: "Revolutionary quantum computing solutions powered by AI. Experience exponential speedup for complex calculations and quantum cryptography.",;
@@ -70,16 +68,14 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [;
     featured: true,;
     location: "Global",;
     availability: "Immediate",;
-    author: {;
+    author: {
       name: "Zion Tech Group",;
       id: "zion-tech-group",;
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",;
-      verified: true;,
-},;
+      verified: true},;
     images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],;
-    createdAt: "2024-01-15T10:00:00.000Z";,
-},;
-  {;
+    createdAt: "2024-01-15T10:00:00.000Z"},;
+  {
     id: "ai-space-technology",;
     title: "AI Space Technology Suite",;
     description: "Explore the final frontier with our AI-powered space technology solutions. From satellite operations to deep space exploration.",;
@@ -119,16 +115,14 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [;
     featured: true,;
     location: "Global",;
     availability: "Immediate",;
-    author: {;
+    author: {
       name: "Zion Tech Group",;
       id: "zion-tech-group",;
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",;
-      verified: true;,
-},;
+      verified: true},;
     images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],;
-    createdAt: "2024-01-15T10:00:00.000Z";,
-},;
-  {;
+    createdAt: "2024-01-15T10:00:00.000Z"},;
+  {
     id: "ai-biotechnology",;
     title: "AI Biotechnology Platform",;
     description: "Revolutionize healthcare and life sciences with our AI-powered biotechnology solutions. From drug discovery to personalized medicine.",;
@@ -168,16 +162,14 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [;
     featured: true,;
     location: "Global",;
     availability: "Immediate",;
-    author: {;
+    author: {
       name: "Zion Tech Group",;
       id: "zion-tech-group",;
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",;
-      verified: true;,
-},;
+      verified: true},;
     images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],;
-    createdAt: "2024-01-15T10:00:00.000Z";,
-},;
-  {;
+    createdAt: "2024-01-15T10:00:00.000Z"},;
+  {
     id: "ai-chatbot-builder",;
     title: "AI Chatbot Builder Pro",;
     description: "No-code AI chatbot creation platform with advanced NLP, multi-language support, and seamless integrations.",;
@@ -214,16 +206,14 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [;
     featured: true,;
     location: "Global",;
     availability: "Immediate",;
-    author: {;
+    author: {
       name: "Zion Tech Group",;
       id: "zion-tech-group",;
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",;
-      verified: true;,
-},;
+      verified: true},;
     images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],;
-    createdAt: "2024-01-15T10:00:00.000Z";,
-},;
-  {;
+    createdAt: "2024-01-15T10:00:00.000Z"},;
+  {
     id: "ai-content-generator",;
     title: "AI Content Generator Suite",;
     description: "Advanced AI-powered content creation platform for blogs, social media, marketing copy, and product descriptions.",;
@@ -260,16 +250,14 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [;
     featured: true,;
     location: "Global",;
     availability: "Immediate",;
-    author: {;
+    author: {
       name: "Zion Tech Group",;
       id: "zion-tech-group",;
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",;
-      verified: true;,
-},;
+      verified: true},;
     images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],;
-    createdAt: "2024-01-15T10:00:00.000Z";,
-},;
-  {;
+    createdAt: "2024-01-15T10:00:00.000Z"},;
+  {
     id: "ai-customer-service",;
     title: "AI Customer Service Platform",;
     description: "Intelligent customer service automation with AI-powered ticket routing, sentiment analysis, and automated responses for 24/7 support.",;
@@ -303,16 +291,14 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [;
     featured: true,;
     location: "Global",;
     availability: "Immediate",;
-    author: {;
+    author: {
       name: "Zion Tech Group",;
       id: "zion-tech-group",;
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",;
-      verified: true;,
-},;
+      verified: true},;
     images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],;
-    createdAt: "2024-01-15T10:00:00.000Z";,
-},;
-  {;
+    createdAt: "2024-01-15T10:00:00.000Z"},;
+  {
     id: "ai-sales-copilot",;
     title: "AI Sales Copilot Pro",;
     description: "Intelligent sales assistant that automates lead qualification, follow-ups, and sales process optimization using advanced AI.",;
@@ -349,16 +335,14 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [;
     featured: true,;
     location: "Global",;
     availability: "Immediate",;
-    author: {;
+    author: {
       name: "Zion Tech Group",;
       id: "zion-tech-group",;
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",;
-      verified: true;,
-},;
+      verified: true},;
     images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],;
-    createdAt: "2024-01-15T10:00:00.000Z";,
-},;
-  {;
+    createdAt: "2024-01-15T10:00:00.000Z"},;
+  {
     id: "ai-compliance-assistant",;
     title: "AI Compliance Assistant",;
     description: "Automated compliance monitoring and reporting platform for regulatory requirements across industries with real-time alerts.",;
@@ -395,16 +379,14 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [;
     featured: true,;
     location: "Global",;
     availability: "Immediate",;
-    author: {;
+    author: {
       name: "Zion Tech Group",;
       id: "zion-tech-group",;
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",;
-      verified: true;,
-},;
+      verified: true},;
     images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],;
-    createdAt: "2024-01-15T10:00:00.000Z";,
-},;
-  {;
+    createdAt: "2024-01-15T10:00:00.000Z"},;
+  {
     id: "ai-auto-email-responder",;
     title: "AI Auto Email Responder",;
     description: "Smart email automation platform that intelligently responds to customer inquiries, manages follow-ups, and optimizes email workflows.",;
@@ -441,16 +423,14 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [;
     featured: false,;
     location: "Global",;
     availability: "Immediate",;
-    author: {;
+    author: {
       name: "Zion Tech Group",;
       id: "zion-tech-group",;
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",;
-      verified: true;,
-},;
+      verified: true},;
     images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],;
-    createdAt: "2024-01-15T10:00:00.000Z";,
-},;
-  {;
+    createdAt: "2024-01-15T10:00:00.000Z"},;
+  {
     id: "llm-content-studio",;
     title: "LLM Content Studio",;
     description: "Advanced large language model platform for creating, editing, and optimizing content with enterprise-grade AI models.",;
@@ -487,16 +467,14 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [;
     featured: true,;
     location: "Global",;
     availability: "Immediate",;
-    author: {;
+    author: {
       name: "Zion Tech Group",;
       id: "zion-tech-group",;
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",;
-      verified: true;,
-},;
+      verified: true},;
     images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],;
-    createdAt: "2024-01-15T10:00:00.000Z";,
-},;
-  {;
+    createdAt: "2024-01-15T10:00:00.000Z"},;
+  {
     id: "finops-advisor",;
     title: "FinOps Advisor Pro",;
     description: "Cloud financial operations platform that optimizes cloud spending, provides cost insights, and automates cost management.",;
@@ -533,16 +511,14 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [;
     featured: false,;
     location: "Global",;
     availability: "Immediate",;
-    author: {;
+    author: {
       name: "Zion Tech Group",;
       id: "zion-tech-group",;
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",;
-      verified: true;,
-},;
+      verified: true},;
     images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],;
-    createdAt: "2024-01-15T10:00:00.000Z";,
-},;
-  {;
+    createdAt: "2024-01-15T10:00:00.000Z"},;
+  {
     id: "quantum-ai-platform",;
     title: "Quantum AI Platform",;
     description: "Next-generation quantum computing platform for AI applications, optimization problems, and complex simulations.",;
@@ -579,16 +555,14 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [;
     featured: true,;
     location: "Global",;
     availability: "Limited",;
-    author: {;
+    author: {
       name: "Zion Tech Group",;
       id: "zion-tech-group",;
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",;
-      verified: true;,
-},;
+      verified: true},;
     images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],;
-    createdAt: "2024-01-15T10:00:00.000Z";,
-},;
-  {;
+    createdAt: "2024-01-15T10:00:00.000Z"},;
+  {
     id: "edge-ai-processor",;
     title: "Edge AI Processor",;
     description: "Edge computing platform for AI inference and processing, enabling real-time AI applications on IoT devices.",;
@@ -625,16 +599,14 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [;
     featured: false,;
     location: "Global",;
     availability: "Immediate",;
-    author: {;
+    author: {
       name: "Zion Tech Group",;
       id: "zion-tech-group",;
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",;
-      verified: true;,
-},;
+      verified: true},;
     images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],;
-    createdAt: "2024-01-15T10:00:00.000Z";,
-},;
-  {;
+    createdAt: "2024-01-15T10:00:00.000Z"},;
+  {
     id: "ai-cybersecurity-suite",;
     title: "AI Cybersecurity Suite",;
     description: "Comprehensive AI-powered cybersecurity platform for threat detection, prevention, and incident response.",;
@@ -671,16 +643,14 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [;
     featured: true,;
     location: "Global",;
     availability: "Immediate",;
-    author: {;
+    author: {
       name: "Zion Tech Group",;
       id: "zion-tech-group",;
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",;
-      verified: true;,
-},;
+      verified: true},;
     images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],;
-    createdAt: "2024-01-15T10:00:00.000Z";,
-},;
-  {;
+    createdAt: "2024-01-15T10:00:00.000Z"},;
+  {
     id: "data-pipeline-automation",;
     title: "Data Pipeline Automation",;
     description: "Automated data engineering platform for building, monitoring, and optimizing data pipelines and ETL processes.",;
@@ -717,16 +687,14 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [;
     featured: false,;
     location: "Global",;
     availability: "Immediate",;
-    author: {;
+    author: {
       name: "Zion Tech Group",;
       id: "zion-tech-group",;
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",;
-      verified: true;,
-},;
+      verified: true},;
     images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],;
-    createdAt: "2024-01-15T10:00:00.000Z";,
-},;
-  {;
+    createdAt: "2024-01-15T10:00:00.000Z"},;
+  {
     id: "ai-testing-automation",;
     title: "AI Testing Automation",;
     description: "Intelligent testing platform that uses AI to automate test case generation, execution, and maintenance.",;
@@ -763,16 +731,14 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [;
     featured: false,;
     location: "Global",;
     availability: "Immediate",;
-    author: {;
+    author: {
       name: "Zion Tech Group",;
       id: "zion-tech-group",;
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",;
-      verified: true;,
-},;
+      verified: true},;
     images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],;
-    createdAt: "2024-01-15T10:00:00.000Z";,
-},;
-  {;
+    createdAt: "2024-01-15T10:00:00.000Z"},;
+  {
     id: "blockchain-ai-platform",;
     title: "Blockchain AI Platform",;
     description: "AI-powered blockchain platform for smart contracts, DeFi applications, and decentralized AI services.",;
@@ -809,16 +775,14 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [;
     featured: true,;
     location: "Global",;
     availability: "Immediate",;
-    author: {;
+    author: {
       name: "Zion Tech Group",;
       id: "zion-tech-group",;
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",;
-      verified: true;,
-},;
+      verified: true},;
     images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],;
-    createdAt: "2024-01-15T10:00:00.000Z";,
-},;
-  {;
+    createdAt: "2024-01-15T10:00:00.000Z"},;
+  {
     id: "ai-healthcare-analytics",;
     title: "AI Healthcare Analytics",;
     description: "AI-powered healthcare analytics platform for patient data analysis, predictive diagnostics, and treatment optimization.",;
@@ -855,16 +819,14 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [;
     featured: true,;
     location: "Global",;
     availability: "Immediate",;
-    author: {;
+    author: {
       name: "Zion Tech Group",;
       id: "zion-tech-group",;
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",;
-      verified: true;,
-},;
+      verified: true},;
     images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],;
-    createdAt: "2024-01-15T10:00:00.000Z";,
-},;
-  {;
+    createdAt: "2024-01-15T10:00:00.000Z"},;
+  {
     id: "ai-supply-chain-optimizer",;
     title: "AI Supply Chain Optimizer",;
     description: "Intelligent supply chain optimization platform using AI to predict demand, optimize inventory, and reduce costs.",;
@@ -901,16 +863,14 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [;
     featured: false,;
     location: "Global",;
     availability: "Immediate",;
-    author: {;
+    author: {
       name: "Zion Tech Group",;
       id: "zion-tech-group",;
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",;
-      verified: true;,
-},;
+      verified: true},;
     images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],;
-    createdAt: "2024-01-15T10:00:00.000Z";,
-},;
-  {;
+    createdAt: "2024-01-15T10:00:00.000Z"},;
+  {
     id: "ai-marketing-automation",;
     title: "AI Marketing Automation",;
     description: "Comprehensive marketing automation platform powered by AI for personalized campaigns, lead nurturing, and ROI optimization.",;
@@ -947,16 +907,14 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [;
     featured: false,;
     location: "Global",;
     availability: "Immediate",;
-    author: {;
+    author: {
       name: "Zion Tech Group",;
       id: "zion-tech-group",;
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",;
-      verified: true;,
-},;
+      verified: true},;
     images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],;
-    createdAt: "2024-01-15T10:00:00.000Z";,
-},;
-  {;
+    createdAt: "2024-01-15T10:00:00.000Z"},;
+  {
     id: "ai-hr-assistant",;
     title: "AI HR Assistant",;
     description: "Intelligent HR platform for recruitment, employee management, performance tracking, and HR process automation.",;
@@ -993,16 +951,14 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [;
     featured: false,;
     location: "Global",;
     availability: "Immediate",;
-    author: {;
+    author: {
       name: "Zion Tech Group",;
       id: "zion-tech-group",;
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",;
-      verified: true;,
-},;
+      verified: true},;
     images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],;
-    createdAt: "2024-01-15T10:00:00.000Z";,
-},;
-  {;
+    createdAt: "2024-01-15T10:00:00.000Z"},;
+  {
     id: "ai-legal-assistant",;
     title: "AI Legal Assistant",;
     description: "AI-powered legal research, document analysis, contract review, and legal process automation platform.",;
@@ -1039,16 +995,14 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [;
     featured: false,;
     location: "Global",;
     availability: "Immediate",;
-    author: {;
+    author: {
       name: "Zion Tech Group",;
       id: "zion-tech-group",;
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",;
-      verified: true;,
-},;
+      verified: true},;
     images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],;
-    createdAt: "2024-01-15T10:00:00.000Z";,
-},;
-  {;
+    createdAt: "2024-01-15T10:00:00.000Z"},;
+  {
     id: "ai-education-platform",;
     title: "AI Education Platform",;
     description: "Personalized learning platform using AI to adapt content, track progress, and optimize educational outcomes.",;
@@ -1085,19 +1039,16 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [;
     featured: false,;
     location: "Global",;
     availability: "Immediate",;
-    author: {;
+    author: {
       name: "Zion Tech Group",;
       id: "zion-tech-group",;
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",;
-      verified: true;,
-},;
+      verified: true},;
     images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],;
-    createdAt: "2024-01-15T10:00:00.000Z";,
-}
+    createdAt: "2024-01-15T10:00:00.000Z"}
 ];
-export const getMicroSaasServiceById = (id: string): MicroSaasService | undefined => {;
-  return MICRO_SAAS_SERVICES.find(service => service.id === id);,
-};
+export const getMicroSaasServiceById = (id: string): MicroSaasService | undefined => {
+  return MICRO_SAAS_SERVICES.find(service => service.id === id)}
 export const MICRO_SAAS_CATEGORIES = [;
   'AI Business Solutions',;
   'IT Infrastructure', ;
@@ -1109,30 +1060,24 @@ export const MICRO_SAAS_CATEGORIES = [;
   'EdTech';
 ];
 export const PRICING_TIERS = [;
-  {;
+  {
     name: 'Starter',;
     price: 29,;
-    features: ['Basic features', 'Email support', '1 user'];,
-},;
-  {;
+    features: ['Basic features', 'Email support', '1 user']},;
+  {
     name: 'Professional', ;
     price: 99,;
-    features: ['Advanced features', 'Priority support', 'Up to 10 users'];,
-},;
-  {;
+    features: ['Advanced features', 'Priority support', 'Up to 10 users']},;
+  {
     name: 'Enterprise',;
     price: 299,;
-    features: ['Custom features', '24/7 support', 'Unlimited users'];,
-}
+    features: ['Custom features', '24/7 support', 'Unlimited users']}
 ];
-export const CONTACT_INFO = {;
+export const CONTACT_INFO = {
   email: 'kleber@ziontechgroup.com',;
   phone: '+1 (555) 123-4567',;
-  address: '123 Tech Street, Innovation City, IC 12345';,
-};
-export const getMicroSaasServicesByCategory = (category: string): MicroSaasService[] => {;
-  return MICRO_SAAS_SERVICES.filter(service => service.category === category);,
-};
-export const getMicroSaasCategories = (): string[] => {;
-  return [...new Set(MICRO_SAAS_SERVICES.map(service => service.category))];,
-};
+  address: '123 Tech Street, Innovation City, IC 12345'}
+export const getMicroSaasServicesByCategory = (category: string): MicroSaasService[] => {
+  return MICRO_SAAS_SERVICES.filter(service => service.category === category)}
+export const getMicroSaasCategories = (): string[] => {
+  return [...new Set(MICRO_SAAS_SERVICES.map(service => service.category))]}

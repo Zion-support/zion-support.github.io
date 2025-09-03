@@ -575,13 +575,11 @@ import {}
   CheckCircle,';
   Shield,'';
   Zap,''';
-  Brain'''';,
-} from 'lucide-react';
-;
-    technologies["5G Analytics", "Performance Insights", "Predictive", "Reporting"];,
-}
+  Brain''''} from 'lucide-react';
+
+    technologies["5G Analytics", "Performance Insights", "Predictive", "Reporting"]}
 ];
-;
+
 const fiveGTechnologies = [];
   {}
 ";
@@ -590,8 +588,7 @@ const fiveGTechnologies = [];
     description: "Advanced 5G core network technologies",";
     icon: Network,"";
     useCase: "Network Infrastructure","";
-    reliability: "Critical";,
-},;
+    reliability: "Critical"},;
   {}
 ";
 "";
@@ -599,8 +596,7 @@ const fiveGTechnologies = [];
     description: "Radio access network technologies",";
     icon: Wifi,"";
     useCase: "Wireless Access","";
-    reliability: "Critical";,
-},;
+    reliability: "Critical"},;
   {}
 ";
 "";
@@ -608,8 +604,7 @@ const fiveGTechnologies = [];
     description: "5G network slicing capabilities",";
     icon: Layers,"";
     useCase: "Network Management","";
-    reliability: "High";,
-},;
+    reliability: "High"},;
   {}
 ";
 "";
@@ -619,7 +614,7 @@ const fiveGTechnologies = [];
     useCase: "Edge Processing","";
     reliability: "High";
 ];
-;
+
 const successStories = [];
   {}
 ";
@@ -629,8 +624,7 @@ const successStories = [];
     challenge: "Needed 5G network infrastructure for smart factory operations","";
     solution: "Built comprehensive 5G network with edge computing and IoT solutions","";
     results: "50% efficiency improvement, 60% cost reduction, real-time operations, better connectivity","";
-    logo: "GMC";,
-},;
+    logo: "GMC"},;
   {}
 ";
     id: 2,"";
@@ -639,8 +633,7 @@ const successStories = [];
     challenge: "Required 5G solutions for remote patient monitoring and telemedicine","";
     solution: "Implemented 5G network with custom healthcare applications","";
     results: "70% faster data transmission, 80% improved patient care, better connectivity, enhanced services","";
-    logo: "HTL";,
-},;
+    logo: "HTL"},;
   {}
 ";
     id: 3,"";
@@ -651,7 +644,7 @@ const successStories = [];
     results: "40% operational improvement, 50% cost savings, better citizen services, enhanced monitoring","";
     logo: "SCS";
 ];
-;
+
 const processSteps = [];
   {}
 ";
@@ -659,24 +652,21 @@ const processSteps = [];
     title: "5G Assessment","";
     description: "Evaluate current network and identify 5G opportunities",";
     icon: FileText,"";
-    duration: "2-4 weeks";,
-},;
+    duration: "2-4 weeks"},;
   {}
 ";
     step: 2,"";
     title: "5G Strategy Development","";
     description: "Develop 5G strategy and implementation roadmap",";
     icon: Code,"";
-    duration: "4-8 weeks";,
-},;
+    duration: "4-8 weeks"},;
   {}
 ";
     step: 3,"";
     title: "5G Implementation","";
     description: "Build and deploy 5G network and applications",";
     icon: Wrench,"";
-    duration: "18-48 weeks";,
-},;
+    duration: "18-48 weeks"},;
   {}
 ";
     step: 4,"";
@@ -685,7 +675,7 @@ const processSteps = [];
     icon: Gauge,"";
     duration: "4-8 weeks";
 ];
-;
+
 const fiveGBenefits = [];
   {}
 ";
@@ -693,34 +683,30 @@ const fiveGBenefits = [];
     title: "Ultra-Fast Connectivity","";
     description: "5G provides unprecedented speed and bandwidth for enterprise operations",";
     icon: Zap,"";
-    examples["High speed", "Low latency", "High bandwidth", "Better performance"];,
-},;
+    examples["High speed", "Low latency", "High bandwidth", "Better performance"]},;
   {}
 ";
 "";
     title: "Network Slicing","";
     description: "Custom network slices for different enterprise applications and requirements",";
     icon: Layers,"";
-    examples["Custom networks", "Application isolation", "Better security", "Optimized performance"];,
-},;
+    examples["Custom networks", "Application isolation", "Better security", "Optimized performance"]},;
   {}
 ";
 "";
     title: "Edge Computing","";
     description: "Local processing and reduced latency for enterprise applications",";
     icon: Server,"";
-    examples["Local processing", "Reduced latency", "Better performance", "Cost optimization"];,
-},;
+    examples["Local processing", "Reduced latency", "Better performance", "Cost optimization"]},;
   {}
 ";
 "";
     title: "IoT Integration","";
     description: "Seamless integration of IoT devices and applications",";
     icon: Wifi,"";
-    examples["Device connectivity", "Data collection", "Real-time monitoring", "Automation"];,
-}
+    examples["Device connectivity", "Data collection", "Real-time monitoring", "Automation"]}
 ];
-;
+
 export default function FiveGEnterpriseSolutions() {}
 ';
 '';
@@ -748,30 +734,24 @@ export default function FiveGEnterpriseSolutions() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             animate = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center max-w-4xl mx-auto";
             <motion.div;
               initial = {}
   { opacity: 0,;
-  scale: 0.8;,
-}}
+  scale: 0.8}}
               animate = {}
   { opacity: 1,;
-  scale: 1;,
-}}
+  scale: 1}}
               transition = {}
   { duration: 0.8,;
-  delay: 0.2;,
-}}
+  delay: 0.2}}
               className="inline - flex items - center justify - center w-20 h-20 bg-gradient - to - br from - zion - cyan to - zion - purple rounded-2xl mb-8";
-";,
-}}"";
+"}}"";
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"";
 "";
               <Network className="w-10 h-10 text-white" />;
@@ -811,12 +791,10 @@ export default function FiveGEnterpriseSolutions() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
 "";
@@ -832,19 +810,15 @@ export default function FiveGEnterpriseSolutions() {}
                 key={benefit.title}
                 initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                 transition = {}
   { duration: 0.6,;
-  delay: index * 0.1;,
-}}
+  delay: index * 0.1}}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 8 hover:border-zion - cyan / 40 transition - all duration -300";
-";,
-}}"";
+"}}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"";
 "";
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">"";
@@ -874,12 +848,10 @@ export default function FiveGEnterpriseSolutions() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
 "";
@@ -895,19 +867,15 @@ export default function FiveGEnterpriseSolutions() {}
                 key={technology.name}
                 initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                 transition = {}
   { duration: 0.6,;
-  delay: index * 0.1;,
-}}
+  delay: index * 0.1}}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 text-center hover:border-zion - cyan / 40 transition - all duration -300";
-";,
-}}"";
+"}}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"";
 "";
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">"";
@@ -926,8 +894,7 @@ export default function FiveGEnterpriseSolutions() {}
                     ? 'bg-red-500/20 text-red-400 border border-red-500/30'''''`;
                     : technology.reliability === 'High''''`'`;
                     ? 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30'''`'`'`;
-                    : 'bg-green-500/20 text-green-400 border border-green-500/30'````;,
-}`}>;
+                    : 'bg-green-500/20 text-green-400 border border-green-500/30'````}`}>;
                   {technology.reliability} Reliability;
                 </span>;
               </motion.div>;) ) }
@@ -941,12 +908,10 @@ export default function FiveGEnterpriseSolutions() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
 "";
@@ -962,17 +927,14 @@ export default function FiveGEnterpriseSolutions() {}
                 key={step.step}
                 initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                 transition = {}
   { duration: 0.6,;
   delay: index * 0.1;
-";,
-}}"";
+"}}"";
                 className="text-center"";
 "";
                 <div className="relative mb-6">"";
@@ -1000,12 +962,10 @@ export default function FiveGEnterpriseSolutions() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
 "";
@@ -1027,9 +987,8 @@ export default function FiveGEnterpriseSolutions() {}
 '''`;
                   selectedCategory === category'''`'`;
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'''`'`'`;
-                    : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````;,
-}`}
-;
+                    : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````}`}
+
                 {category}
               </button>) ) }
           </div>";
@@ -1040,21 +999,17 @@ export default function FiveGEnterpriseSolutions() {}
                 key={solution.id}
                 initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                 transition = {}
   { duration: 0.6,;
-  delay: index * 0.1;,
-}}
+  delay: index * 0.1}}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 hover:border-zion - cyan / 40 transition - all duration - 300 cursor -pointer";
                 onClick={ () => setSelectedSolution(solution) }
-;
-";,
-}}"";
+
+"}}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer";
                 onClick={() => setSelectedSolution(solution)}";
 "";
@@ -1108,12 +1063,10 @@ export default function FiveGEnterpriseSolutions() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
 "";
@@ -1129,19 +1082,15 @@ export default function FiveGEnterpriseSolutions() {}
                 key={story.id}
                 initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
                 whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                 transition = {}
   { duration: 0.6,;
-  delay: index * 0.1;,
-}}
+  delay: index * 0.1}}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 hover:border-zion - cyan / 40 transition - all duration -300";
-";,
-}}"";
+"}}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"";
 "";
                 <div className="flex items-center gap-4 mb-6">"";
@@ -1186,12 +1135,10 @@ export default function FiveGEnterpriseSolutions() {}
           <motion.div;
             initial = {}
   { opacity: 0,;
-  y: 30;,
-}}
+  y: 30}}
             whileInView = {}
   { opacity: 1,;
-  y: 0;,
-}}";
+  y: 0}}";
             transition={{ duration: 0.8 }}"";
             className="text-center max-w-4xl mx-auto"";
 "";
@@ -1218,14 +1165,10 @@ export default function FiveGEnterpriseSolutions() {}
       </section>;
     </div>;
   )}
-;
 
-export { FiveGEnterpriseSolutions };
-;
-export { FiveGEnterpriseSolutions };
-;
-export { FiveGEnterpriseSolutions };
-;
-export { FiveGEnterpriseSolutions };
-;
-export { FiveGEnterpriseSolutions };
+
+export { FiveGEnterpriseSolutions }
+export { FiveGEnterpriseSolutions }
+export { FiveGEnterpriseSolutions }
+export { FiveGEnterpriseSolutions }
+export { FiveGEnterpriseSolutions }

@@ -11,12 +11,11 @@ import { ;
   Rocket,;
   Shield,;
   Brain,;
-  Zap;,
-} from 'lucide-react';
-;
-export default function TeamPage() {;
+  Zap} from 'lucide-react';
+
+export default function TeamPage() {
   const leadership = [;
-    {;
+    {
       name: "Kleber Santos",;
       title: "Founder & CEO",;
       bio: "Visionary leader with over 15 years of experience in technology innovation and business transformation. Passionate about leveraging AI and emerging technologies to solve complex business challenges.",;
@@ -24,9 +23,8 @@ export default function TeamPage() {;
       linkedin: "https://linkedin.com/in/klebersantos",;
       twitter: "https://twitter.com/klebersantos",;
       email: "kleber@ziontechgroup.com",;
-      expertise: ["AI Strategy", "Business Innovation", "Technology Leadership"];,
-},;
-    {;
+      expertise: ["AI Strategy", "Business Innovation", "Technology Leadership"]},;
+    {
       name: "Dr. Sarah Chen",;
       title: "Chief Technology Officer",;
       bio: "Former Google AI researcher with a PhD in Computer Science from Stanford. Expert in machine learning, quantum computing, and scalable AI systems.",;
@@ -34,9 +32,8 @@ export default function TeamPage() {;
       linkedin: "https://linkedin.com/in/sarahchen",;
       twitter: "https://twitter.com/sarahchen",;
       email: "sarah@ziontechgroup.com",;
-      expertise: ["Machine Learning", "Quantum Computing", "AI Architecture"];,
-},;
-    {;
+      expertise: ["Machine Learning", "Quantum Computing", "AI Architecture"]},;
+    {
       name: "Marcus Rodriguez",;
       title: "Chief Operations Officer",;
       bio: "Operations expert with 20+ years in scaling technology companies. Previously led operations at Microsoft and Amazon, specializing in process optimization and team scaling.",;
@@ -44,29 +41,26 @@ export default function TeamPage() {;
       linkedin: "https://linkedin.com/in/marcusrodriguez",;
       twitter: "https://twitter.com/marcusrodriguez",;
       email: "marcus@ziontechgroup.com",;
-      expertise: ["Operations", "Process Optimization", "Team Scaling"];,
-}
+      expertise: ["Operations", "Process Optimization", "Team Scaling"]}
   ];
-;
+
   const advisors = [;
-    {;
+    {
       name: "Dr. Emily Watson",;
       title: "AI Ethics Advisor",;
       bio: "Leading expert in AI ethics and responsible AI development. Former advisor to the White House Office of Science and Technology Policy.",;
       image: "/images/team/emily-watson.jpg",;
       linkedin: "https://linkedin.com/in/emilywatson",;
-      expertise: ["AI Ethics", "Responsible AI", "Policy"];,
-},;
-    {;
+      expertise: ["AI Ethics", "Responsible AI", "Policy"]},;
+    {
       name: "James Kim",;
       title: "Cybersecurity Advisor",;
       bio: "Retired NSA cybersecurity expert with deep knowledge of threat intelligence and secure system design.",;
       image: "/images/team/james-kim.jpg",;
       linkedin: "https://linkedin.com/in/jameskim",;
-      expertise: ["Cybersecurity", "Threat Intelligence", "Secure Systems"];,
-}
+      expertise: ["Cybersecurity", "Threat Intelligence", "Secure Systems"]}
   ];
-;
+
   return (;
     <div className="min-h-screen bg-zion-slate-dark text-white">;
       {/* Hero Section */}
@@ -109,7 +103,7 @@ export default function TeamPage() {;
                   <h3 className="text-2xl font-bold text-white mb-2">{member.name}</h3>;
                   <p className="text-zion-cyan font-semibold mb-3">{member.title}</p>;
                   <p className="text-zion-slate-light text-sm mb-4">{member.bio}</p>;
-                  ;
+
                   <div className="flex flex-wrap gap-2 mb-4 justify-center">;
                     {member.expertise.map((skill, skillIndex) => (;
                       <span key={skillIndex} className="px-3 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded-full">;
@@ -127,7 +121,7 @@ export default function TeamPage() {;
                        className="text-zion-slate-light hover:text-zion-cyan transition-colors">;
                       <Twitter className="w-5 h-5" />;
                     </a>;
-                    <a href={`mailto:${member.email}`} ;
+                    <a href={`mailto:${member.email}`}
                        className="text-zion-slate-light hover:text-zion-cyan transition-colors">;
                       <Mail className="w-5 h-5" />;
                     </a>;
@@ -161,7 +155,7 @@ export default function TeamPage() {;
                   <h3 className="text-xl font-bold text-white mb-2">{advisor.name}</h3>;
                   <p className="text-zion-purple font-semibold mb-3">{advisor.title}</p>;
                   <p className="text-zion-slate-light text-sm mb-4">{advisor.bio}</p>;
-                  ;
+
                   <div className="flex flex-wrap gap-2 justify-center">;
                     {advisor.expertise.map((skill, skillIndex) => (;
                       <span key={skillIndex} className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full">;
@@ -253,5 +247,4 @@ export default function TeamPage() {;
         </div>;
       </section>;
     </div>;
-  );,
-}
+  )}

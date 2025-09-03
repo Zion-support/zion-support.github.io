@@ -1,14 +1,12 @@
-module.exports = {;
+module.exports = {
   apps : [{;
     script: 'index.js',;
-    watch: '.';,
-}, {;
+    watch: '.'}, {
     script: './service-worker/',;
-    watch: ['./service-worker'];,
-}],;
+    watch: ['./service-worker']}],;
 
-  deploy : {;
-    production : {;
+  deploy : {
+    production : {
       user : 'SSH_USERNAME',;
       host : 'SSH_HOSTMACHINE',;
       ref  : 'origin/master',;
@@ -16,7 +14,6 @@ module.exports = {;
       path : 'DESTINATION_PATH',;
       'pre-deploy-local': '',;
       'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production',;
-      'pre-setup': '';,
-}
+      'pre-setup': ''}
   }
-};
+}

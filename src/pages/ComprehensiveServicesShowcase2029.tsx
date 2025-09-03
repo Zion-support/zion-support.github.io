@@ -29,15 +29,14 @@ import { Brain, ;
   Search,;
   Filter,;
   ExternalLink,;
-  Server;,
-} from 'lucide-react.ts';
-;
-;
-export default function ComprehensiveServicesShowcase2029(...args: unknown[]): unknown {;
+  Server} from 'lucide-react.ts';
+
+
+export default function ComprehensiveServicesShowcase2029(...args: unknown[]): unknown {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
-;
-  const categories = {;
+
+  const categories = {
     'all': { name: 'All Services', icon: <Rocket className="w-6 h-6" />, color: 'from-cyan-500 to-blue-500' },;
     'ai-ml': { name: 'AI & Machine Learning', icon: <Brain className="w-6 h-6" />, color: 'from-purple-500 to-pink-500' },;
     'quantum': { name: 'Quantum Computing', icon: <Atom className="w-6 h-6" />, color: 'from-indigo-500 to-purple-500' },;
@@ -45,8 +44,7 @@ export default function ComprehensiveServicesShowcase2029(...args: unknown[]): u
     'cybersecurity': { name: 'Cybersecurity', icon: <Shield className="w-6 h-6" />, color: 'from-red-500 to-orange-500' },;
     'analytics': { name: 'Analytics & BI', icon: <BarChart3 className="w-6 h-6" />, color: 'from-green-500 to-emerald-500' },;
     'cloud': { name: 'Cloud & Infrastructure', icon: <Cloud className="w-6 h-6" />, color: 'from-sky-500 to-blue-500' },;
-    'micro-saas': { name: 'Micro SAAS', icon: <Code className="w-6 h-6" />, color: 'from-yellow-500 to-orange-500' }  };
-;
+    'micro-saas': { name: 'Micro SAAS', icon: <Code className="w-6 h-6" />, color: 'from-yellow-500 to-orange-500' }  }
   const services: unknown = [// AI & Machine Learning;
     {}
       id: 'ai - quantum - hybrid',;
@@ -64,8 +62,7 @@ export default function ComprehensiveServicesShowcase2029(...args: unknown[]): u
       icon: <Atom className="w-8 h-8" />,;
       color: 'from - purple - 500 to - pink - 500',;
       link: '/services / ai - quantum - hybrid - platform',;
-      featured: true;,
-},;
+      featured: true},;
     {}
       id: 'ai - devops - automation',;
       title: 'AI DevOps Automation Platform',;
@@ -81,8 +78,7 @@ export default function ComprehensiveServicesShowcase2029(...args: unknown[]): u
       icon: <Workflow className="w-8 h-8" />,;
       color: 'from - blue - 500 to - cyan - 500',;
       link: '/services / ai - devops - automation - platform',;
-      featured: true;,
-},;
+      featured: true},;
     {}
       id: 'ai - business - intelligence',;
       title: 'AI Business Intelligence Analytics',;
@@ -98,8 +94,7 @@ export default function ComprehensiveServicesShowcase2029(...args: unknown[]): u
       icon: <BarChart3 className="w-8 h-8" />,;
       color: 'from - green - 500 to - emerald - 500',;
       link: '/services / ai - business - intelligence - analytics',;
-      featured: true;,
-},;
+      featured: true},;
     {}
       id: 'ai - workflow-orchestrator',;
       title: 'AI Workflow Orchestrator',;
@@ -115,8 +110,7 @@ export default function ComprehensiveServicesShowcase2029(...args: unknown[]): u
       icon: <Brain className="w-8 h-8" />,;
       color: 'from - purple - 500 to - indigo - 500',;
       link: '/services / ai - workflow-orchestrator',;
-      featured: false;,
-},;
+      featured: false},;
     {}
       id: 'ai - data - governance',;
       title: 'AI Data Governance Platform',;
@@ -132,8 +126,7 @@ export default function ComprehensiveServicesShowcase2029(...args: unknown[]): u
       icon: <Shield className="w-8 h-8" />,;
       color: 'from - indigo - 500 to - purple - 500',;
       link: '/services / ai - data - governance - platform',;
-      featured: false;,
-},;
+      featured: false},;
     {}
       id: 'ai - customer - experience',;
       title: 'AI Customer Experience Analytics',;
@@ -149,8 +142,7 @@ export default function ComprehensiveServicesShowcase2029(...args: unknown[]): u
       icon: <Users className="w-8 h-8" />,;
       color: 'from - pink - 500 to - rose - 500',;
       link: '/services / ai - customer - experience - analytics',;
-      featured: false;,
-},;
+      featured: false},;
     {}
       id: 'ai - financial - risk',;
       title: 'AI Financial Risk Management',;
@@ -166,8 +158,7 @@ export default function ComprehensiveServicesShowcase2029(...args: unknown[]): u
       icon: <TrendingUp className="w-8 h-8" />,;
       color: 'from - emerald - 500 to - teal - 500',;
       link: '/services / ai - financial - risk - management',;
-      featured: false;,
-},;
+      featured: false},;
     {}
       id: 'ai - code - review-security',;
       title: 'AI Code Review Security Scanner',;
@@ -183,8 +174,7 @@ export default function ComprehensiveServicesShowcase2029(...args: unknown[]): u
       icon: <Code className="w-8 h-8" />,;
       color: 'from - red - 500 to - pink - 500',;
       link: '/services / ai - code - review-security - scanner',;
-      featured: false;,
-},;
+      featured: false},;
     {}
       id: 'zero - trust - network',;
       title: 'Zero Trust Network Access',;
@@ -200,8 +190,7 @@ export default function ComprehensiveServicesShowcase2029(...args: unknown[]): u
       icon: <Lock className="w-8 h-8" />,;
       color: 'from - orange - 500 to - red - 500',;
       link: '/services / zero - trust - network - access',;
-      featured: false;,
-},;
+      featured: false},;
     {}
       id: 'cloud - devops',;
       title: 'Cloud DevOps Solutions',;
@@ -217,8 +206,7 @@ export default function ComprehensiveServicesShowcase2029(...args: unknown[]): u
       icon: <Cloud className="w-8 h-8" />,;
       color: 'from - sky - 500 to - blue - 500',;
       link: '/services / cloud - devops',;
-      featured: false;,
-},;
+      featured: false},;
     {}
       id: 'it - infrastructure',;
       title: 'IT Infrastructure Solutions',;
@@ -234,8 +222,7 @@ export default function ComprehensiveServicesShowcase2029(...args: unknown[]): u
       icon: <Server className="w-8 h-8" />,;
       color: 'from - slate - 500 to - gray - 500',;
       link: '/services / it - infrastructure',;
-      featured: false;,
-},;
+      featured: false},;
     {}
       id: 'micro - crm',;
       title: 'Micro CRM Platform',;
@@ -251,10 +238,9 @@ export default function ComprehensiveServicesShowcase2029(...args: unknown[]): u
       icon: <Users className="w-8 h-8" />,;
       color: 'from - blue - 500 to - indigo - 500',;
       link: '/services / micro - crm',;
-      featured: false;,
-}
+      featured: false}
   ];
-;
+
   innovativeServices2029,';
   serviceCategories,'';
   pricingTiers,''';
@@ -265,9 +251,9 @@ export default function ComprehensiveServicesShowcase2029(...args: unknown[]): u
 ''';
   const [selectedCategory, setSelectedCategory] = useState('all');''';
   const [searchTerm, setSearchTerm] = useState('');
-;
+
     return matchesCategory && matchesSearch}) ;
-;
+
   return ("";
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">";
       <SEO"";
@@ -342,8 +328,7 @@ export default function ComprehensiveServicesShowcase2029(...args: unknown[]): u
 `;
                     selectedCategory === key`'`;
                       ? `bg-gradient-to-r ${category.color} text-white shadow-lg`''`;
-                      : 'bg-white/5 backdrop-blur-sm border border-cyan-400/20 text-gray-300 hover:bg-white/10 hover:border-cyan-400/40'``;,
-}`}">"";
+                      : 'bg-white/5 backdrop-blur-sm border border-cyan-400/20 text-gray-300 hover:bg-white/10 hover:border-cyan-400/40'``}`}">"";
                   <div className="flex items-center space-x-2">;
                     {category.icon}
                     <span>{category.name}</span>;
@@ -380,8 +365,7 @@ export default function ComprehensiveServicesShowcase2029(...args: unknown[]): u
                 viewport={{ once: true }}``;
                 className={`group cursor-pointer ${}
 '`;
-                  service.featured ? 'ring-2 ring-cyan-400/50' : ''``;,
-}`}
+                  service.featured ? 'ring-2 ring-cyan-400/50' : ''``}`}
               >";
                 <Link to={service.link}>"";
                   <div className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 hover:bg-white/10 hover:border-cyan-400/40 transition-all duration-300 h-full hover-lift">";
@@ -535,17 +519,11 @@ export default function ComprehensiveServicesShowcase2029(...args: unknown[]): u
         </div>;
       </section>;
     </div>;
-  );,
-};
-;
+  )}
 export default ComprehensiveServicesShowcase2029;
-;
-export { ComprehensiveServicesShowcase2029 };
-;
-export { ComprehensiveServicesShowcase2029 };
-;
-export { ComprehensiveServicesShowcase2029 };
-;
-export { ComprehensiveServicesShowcase2029 };
-;
-export { ComprehensiveServicesShowcase2029, ComprehensiveServicesShowcase2029 };
+
+export { ComprehensiveServicesShowcase2029 }
+export { ComprehensiveServicesShowcase2029 }
+export { ComprehensiveServicesShowcase2029 }
+export { ComprehensiveServicesShowcase2029 }
+export { ComprehensiveServicesShowcase2029, ComprehensiveServicesShowcase2029 }

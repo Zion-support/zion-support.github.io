@@ -11,82 +11,72 @@ import { ;
   ArrowRight,;
   ExternalLink,;
   Zap,;
-  Shield;,
-} from 'lucide-react';
-;
-export default function PartnersPage() {;
+  Shield} from 'lucide-react';
+
+export default function PartnersPage() {
   const strategicPartners = [;
-    {;
+    {
       name: "Microsoft Azure",;
       logo: "/images/partners/microsoft-azure.png",;
       description: "Strategic cloud partnership for enterprise solutions and AI-powered services.",;
       partnership: "Cloud Infrastructure & AI Services",;
       benefits: ["Joint go-to-market", "Technical integration", "Co-selling opportunities"],;
-      tier: "Platinum Partner";,
-},;
-    {;
+      tier: "Platinum Partner"},;
+    {
       name: "Amazon Web Services",;
       logo: "/images/partners/aws.png",;
       description: "Premier AWS partner delivering cloud-native solutions and managed services.",;
       partnership: "Cloud Solutions & Managed Services",;
       benefits: ["Advanced consulting", "Migration expertise", "Cost optimization"],;
-      tier: "Advanced Consulting Partner";,
-},;
-    {;
+      tier: "Advanced Consulting Partner"},;
+    {
       name: "Google Cloud",;
       logo: "/images/partners/google-cloud.png",;
       description: "Google Cloud partner specializing in AI/ML and data analytics solutions.",;
       partnership: "AI/ML & Data Analytics",;
       benefits: ["AI expertise", "Data solutions", "Innovation labs"],;
-      tier: "Specialization Partner";,
-}
+      tier: "Specialization Partner"}
   ];
-;
+
   const technologyPartners = [;
-    {;
+    {
       name: "NVIDIA",;
       category: "AI & GPU Computing",;
       description: "Partnership for AI acceleration and GPU-optimized solutions.",;
-      benefits: ["GPU optimization", "AI acceleration", "Joint R&D"];,
-},;
-    {;
+      benefits: ["GPU optimization", "AI acceleration", "Joint R&D"]},;
+    {
       name: "Intel",;
       category: "Hardware & Optimization",;
       description: "Strategic partnership for hardware optimization and performance tuning.",;
-      benefits: ["Performance tuning", "Hardware optimization", "Technical support"];,
-},;
-    {;
+      benefits: ["Performance tuning", "Hardware optimization", "Technical support"]},;
+    {
       name: "Cisco",;
       category: "Networking & Security",;
       description: "Partnership for enterprise networking and cybersecurity solutions.",;
-      benefits: ["Network solutions", "Security integration", "Enterprise support"];,
-}
+      benefits: ["Network solutions", "Security integration", "Enterprise support"]}
   ];
-;
+
   const partnerPrograms = [;
-    {;
+    {
       name: "Technology Partner Program",;
       description: "Integrate your technology with our platform and reach new customers.",;
       requirements: ["API integration", "Technical documentation", "Support agreement"],;
       benefits: ["Market access", "Technical support", "Co-marketing"],;
-      icon: Zap;,
-},;
-    {;
+      icon: Zap},;
+    {
       name: "Solution Partner Program",;
       description: "Build and sell joint solutions that address customer challenges.",;
       requirements: ["Solution development", "Go-to-market plan", "Revenue commitment"],;
       benefits: ["Revenue sharing", "Sales support", "Marketing resources"],;
-      icon: Building2;,
-},;
-    {;
+      icon: Building2},;
+    {
       name: "Referral Partner Program",;
       description: "Refer customers and earn commissions for successful deals.",;
       requirements: ["Business relationship", "Lead qualification", "Agreement signing"],;
       benefits: ["Commission structure", "Sales training", "Marketing materials"],;
-      icon: Users;,
-}
+      icon: Users}
   ];
-;
+
   return (;
     <div className="min-h-screen bg-zion-slate-dark text-white">;
       {/* Hero Section */}
@@ -139,10 +129,10 @@ export default function PartnersPage() {;
                     {partner.tier}
                   </span>;
                 </div>;
-                ;
+
                 <p className="text-zion-slate-light text-center mb-4">{partner.description}</p>;
                 <p className="text-zion-purple font-semibold text-center mb-4">{partner.partnership}</p>;
-                ;
+
                 <div className="mb-4">;
                   <h4 className="text-sm font-semibold text-white mb-2">Partnership Benefits:</h4>;
                   <ul className="space-y-1">;
@@ -181,9 +171,9 @@ export default function PartnersPage() {;
                     {partner.category}
                   </span>;
                 </div>;
-                ;
+
                 <p className="text-zion-slate-light text-sm text-center mb-4">{partner.description}</p>;
-                ;
+
                 <div className="mb-4">;
                   <h4 className="text-sm font-semibold text-white mb-2">Benefits:</h4>;
                   <ul className="space-y-1">;
@@ -214,7 +204,7 @@ export default function PartnersPage() {;
           </div>;
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-            {partnerPrograms.map((program, index) => {;
+            {partnerPrograms.map((program, index) => {
               const IconComponent = program.icon;
               return (;
                 <div key={index} className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/30 hover:border-zion-cyan/50 transition-all duration-300">;
@@ -225,7 +215,7 @@ export default function PartnersPage() {;
                     <h3 className="text-xl font-bold text-white mb-3">{program.name}</h3>;
                     <p className="text-zion-slate-light text-sm">{program.description}</p>;
                   </div>;
-                  ;
+
                   <div className="mb-6">;
                     <h4 className="text-sm font-semibold text-white mb-2">Requirements:</h4>;
                     <ul className="space-y-1 mb-4">;
@@ -236,7 +226,7 @@ export default function PartnersPage() {;
                         </li>;
                       ))}
                     </ul>;
-                    ;
+
                     <h4 className="text-sm font-semibold text-white mb-2">Benefits:</h4>;
                     <ul className="space-y-1">;
                       {program.benefits.map((benefit, benefitIndex) => (;
@@ -247,13 +237,12 @@ export default function PartnersPage() {;
                       ))}
                     </ul>;
                   </div>;
-                  ;
+
                   <button className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue text-white text-center py-3 rounded-lg hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300">;
                     Learn More;
                   </button>;
                 </div>;
-              );,
-})}
+              )})}
           </div>;
         </div>;
       </section>;
@@ -350,5 +339,4 @@ export default function PartnersPage() {;
         </div>;
       </section>;
     </div>;
-  );,
-}
+  )}

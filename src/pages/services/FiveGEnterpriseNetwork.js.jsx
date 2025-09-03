@@ -26,17 +26,12 @@ const FiveGEnterpriseNetwork = () => {}
         </div>;
       </section>;
     </div>;
-  );,
-};
+  )}
 export default FiveGEnterpriseNetwork;
-;
 
-export { FiveGEnterpriseNetwork };
-;
-export { FiveGEnterpriseNetwork };
-;
-export { FiveGEnterpriseNetwork };
-;
-export { FiveGEnterpriseNetwork };
-;
-export { FiveGEnterpriseNetwork };
+
+export { FiveGEnterpriseNetwork }
+export { FiveGEnterpriseNetwork }
+export { FiveGEnterpriseNetwork }
+export { FiveGEnterpriseNetwork }
+export { FiveGEnterpriseNetwork }

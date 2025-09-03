@@ -1,7 +1,7 @@
 import Head from "next/head";
 import React from "react";
 import dynamic from "next/dynamic";
-const Component = () => {;
+const Component = () => {
   return (;
     <>;
 <Head>;
@@ -54,14 +54,14 @@ const Component = () => {;
                       <li key="{i}" className="flex" items-center text-sm text-gray-600">";
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0       />;
                         {feature}
-;
+
                       </li>;
                     ))}
-;
+
                   </ul>;
                 </div>;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";
@@ -113,6 +113,6 @@ const Component = () => {;
       </Layout>;
     </>,;
   )}
-;
+
 ";
 export default BlockchainSolutions

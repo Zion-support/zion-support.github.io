@@ -6,7 +6,7 @@ import { Input } from '@/components / ui / input';
 import { PasswordStrengthMeter } from '@/components / PasswordStrengthMeter'; // Assuming this component exists;
 import { resetPassword } from '@/services / auth';
 import { toast } from '@/hooks / use -toast'; // Assuming this hook exists;
-export default function ResetPasswordPage () {;
+export default function ResetPasswordPage () {
 
 // Placeholder for the actual API call, to be implemented in a later step;
     const { token } = useParams () ;
@@ -15,39 +15,35 @@ export default function ResetPasswordPage () {;
     const [confirmPassword, setConfirmPassword] = useState('');
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState('');
-    useEffect(() => {;
+    useEffect(() => {
   // TODO: Add dependencies if needed;
 
-  return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
-        if(!token) {;
+  return () => {
+    // Cleanup function}}, []);, []);
+        if(!token) {
             setError('Invalid or missing reset token.') ;
-            // Consider redirecting to an error page or login page;,
-}, [token]) ;
-    const handleSubmit = async(e) => {;
+            // Consider redirecting to an error page or login page}, [token]) ;
+    const handleSubmit = async(e) => {
         e.preventDefault () ;
         setError('') ;
-        if(password !== confirmPassword) {;
+        if(password !== confirmPassword) {
             setError('Passwords do not match.') ;
             return}
-        // Basic password strength check(can be enhanced) if(password.length < 8) {;
+        // Basic password strength check(can be enhanced) if(password.length < 8) {
             setError('Password must be at least 8 characters long.') ;
             return}
         setIsLoading(true) ;
-        try {;
+        try {
             await resetPassword(token, password) ;
             toast.success('Password has been reset successfully!') ;
-            router('/login') ; // Redirect to login page on success;,
-}
-        catch(err) {;
+            router('/login') ; // Redirect to login page on success}
+        catch(err) {
             // Ensure err.message is a string.const errorMessage = err instanceof Error ? err.message : 'Failed to reset password.Please try again.';
             setError(errorMessage) ;
             toast.error(errorMessage) }
-        finally {;
+        finally {
             setIsLoading(false) }
-    };
+    }
     if(error && !token) { // If token was invalid from the start;
         return (<div className="flex min - h-screen items - center justify - center p - 4 text-red -500">;
         <p>{error}</p>;
@@ -67,14 +63,10 @@ export default function ResetPasswordPage () {;
         </Button>;
       </form>;
     </div>)}
-;
 
-export { ResetPasswordPage };
-;
-export { ResetPasswordPage };
-;
-export { ResetPasswordPage };
-;
-export { ResetPasswordPage };
-;
-export { ResetPasswordPage };
+
+export { ResetPasswordPage }
+export { ResetPasswordPage }
+export { ResetPasswordPage }
+export { ResetPasswordPage }
+export { ResetPasswordPage }

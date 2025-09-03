@@ -11,9 +11,9 @@
 const fs = require("fs");
 const path = require("path");
 const { execSync, spawn } = require("child_process");
-;
-class $1 {;
-  constructor() {;
+
+class $1 {
+  constructor() {
   this.projectRoot = process.cwd();
     this.logFile = path.join(;
       this.projectRoot,logs",;
@@ -22,115 +22,104 @@ class $1 {;
     this.performanceHistory = path.join(;
       this.projectRoot,logs",;
       "performance-history.json";
-    );    this.metrics = {;
+    );    this.metrics = {
   buildTime: 0,;
       bundleSize: 0,;
       loadTime: 0,;
       memoryUsage: 0,;
       cpuUsage: 0,;
-      errorRate: 0;,;,
-}
-    this.thresholds = {;
-  this.metrics = {;
+      errorRate: 0;}
+    this.thresholds = {
+  this.metrics = {
   buildTime: 0,;
       bundleSize: 0,;
       loadTime: 0,;
       memoryUsage: 0,;
       cpuUsage: 0,;
-      errorRate: 0;,;,
-}
-    this.thresholds = {;
+      errorRate: 0;}
+    this.thresholds = {
   buildTime: 30000, // 30 seconds;
       bundleSize: 1024 * 1024, // 1MB;
       loadTime: 3000, // 3 seconds;
       memoryUsage: 512 * 1024 * 1024, // 512MB;
       cpuUsage: 80, // 80%;
-      errorRate: 5 // 5%;,;,
-}
+      errorRate: 5 // 5%;}
   }
-;
-  async initialize() {;
+
+  async initialize() {
   console.log(`"📊 Intelligent Performance Monitor Initialized");
     this.ensureLogDirectory();
     this.loadPerformanceHistory();
         // Start continuous monitoring;
-    this.startContinuousMonitoring();,;,
-}
-;
-  ensureLogDirectory() {;
+    this.startContinuousMonitoring();}
+
+  ensureLogDirectory() {
   const logDir = path.dirname(this.logFile);
-    if (!fs.existsSync(logDir)) {;
-  fs.mkdirSync(logDir, { recursive: true });,;,
-}
+    if (!fs.existsSync(logDir)) {
+  fs.mkdirSync(logDir, { recursive: true });}
   }
-;
-  loadPerformanceHistory() {;
-  try {;
-  if (fs.existsSync(this.performanceHistory)) {;
+
+  loadPerformanceHistory() {
+  try {
+  if (fs.existsSync(this.performanceHistory)) {
   const data = fs.readFileSync(this.performanceHistory, "utf8");
-        this.history = JSON.parse(data);,;,
-} else {;
-  this.history = {;
+        this.history = JSON.parse(data);} else {
+  this.history = {
   totalMeasurements: 0,;
           averageBuildTime: 0,;
           averageBundleSize: 0,;
           averageLoadTime: 0,;
           performanceTrends: [],;
           bottlenecks: [],;
-          optimizations: [];,;,
-}
+          optimizations: [];}
       }
-    } catch (error) {;
+    } catch (error) {
   console.error("Error loading performance history: ", error);
-      this.history = {;
+      this.history = {
   totalMeasurements: 0,;
         averageBuildTime: 0,;
         averageBundleSize: 0,;
         averageLoadTime: 0,;
         performanceTrends: [],;
         bottlenecks: [],;
-        optimizations: [];,;,
-}
-    } catch (error) {;
+        optimizations: [];}
+    } catch (error) {
   console.error("Error loading performance history: ", error);
-      this.history = {;
+      this.history = {
   totalMeasurements: 0,;
         averageBuildTime: 0,;
         averageBundleSize: 0,;
         averageLoadTime: 0,;
         performanceTrends: [],;
         bottlenecks: [],;
-        optimizations: [];,;,
-}
+        optimizations: [];}
     }
   }
-;
-  startContinuousMonitoring() {;
+
+  startContinuousMonitoring() {
   console.log(`"🔍 Starting continuous performance monitoring...");
-    ;
+
     // Initial performance measurement;
     this.measurePerformance();
-    ;
+
     // Set up periodic monitoring;
-    setInterval(() => {;
-  this.measurePerformance();,;,
-}, 5 * 60 * 1000); // Every 5 minutes;
-    ;
+    setInterval(() => {
+  this.measurePerformance();}, 5 * 60 * 1000); // Every 5 minutes;
+
     // Set up build monitoring;
     this.monitorBuilds();
-    ;
+
     // Set up runtime monitoring;
-    this.monitorRuntime();,;,
-}
-;
-  async measurePerformance() {;
+    this.monitorRuntime();}
+
+  async measurePerformance() {
   console.log(`"📈 Measuring application performance...");
-    ;
-  async measurePerformance() {;
+
+  async measurePerformance() {
   console.log(``📈 Measuring application performance...`);
     console.log(`📈 Measuring application performance...`);
     const startTime = Date.now();
-    const measurement = {;
+    const measurement = {
   timestamp: new Date().toISOString(),;
       buildTime: 0,;
       bundleSize: 0,;
@@ -138,9 +127,8 @@ class $1 {;
       memoryUsage: 0,;
       cpuUsage: 0,;
       errorRate: 0,;
-      recommendations: [];,;,
-}
-    try {;
+      recommendations: [];}
+    try {
   // Measure build performance;
       await this.measureBuildPerformance(measurement);
       // Measure bundle size;
@@ -153,331 +141,271 @@ class $1 {;
       this.updatePerformanceHistory(measurement);
       // Log results;
       this.logPerformanceResults(measurement);
-      ;
+
       console.log(✅ Performance measurement completed in ${Date.now() - startTime}ms);
-      ;,;,
-} catch (error) {;
-  console.error(`❌ Error during performance measurement: `, error);,;,
-} catch (error) {;
+      ;} catch (error) {
+  console.error(`❌ Error during performance measurement: `, error);} catch (error) {
   console.error(`❌ Error during performance measurement: `, error);
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
-      this.logError(`Performance measurement failed`, error);,;,
-}
-      ;,;,
-} catch (error) {;
+      this.logError(`Performance measurement failed`, error);}
+      ;} catch (error) {
   console.error("❌ Error during performance measurement: ", error);
-      this.logError("Performance measurement failed", error);,;,
-}
+      this.logError("Performance measurement failed", error);}
   }
-;
-  async measureBuildPerformance(measurement) {;
+
+  async measureBuildPerformance(measurement) {
   console.log("🔨 Measuring build performance...");
-    ;
-    try {;
+
+    try {
   const buildStart = Date.now();
       // Run a test build;
       const buildResult = await this.runTestBuild();
-      ;
+
       measurement.buildTime = Date.now() - buildStart;
       measurement.buildSuccess = buildResult.success;
       measurement.buildErrors = buildResult.errors;
       // Check if build time exceeds threshold;
-      if (measurement.buildTime > this.thresholds.buildTime) {;
+      if (measurement.buildTime > this.thresholds.buildTime) {
   measurement.recommendations.push({;
   type: `build`,;
           severity: `warning`,message: Build time (${measurement.buildTime}ms) exceeds threshold (${this.thresholds.buildTime}ms),;
-          suggestion: `Consider optimizing build configuration, using build caching, or parallel builds`;,;,
-}`);,;,
-}
-      ;,;,
-} catch (error) {;
+          suggestion: `Consider optimizing build configuration, using build caching, or parallel builds`;}`);}
+      ;} catch (error) {
   console.error(`Error measuring build performance: `, error);
-      ;
+
       // Check if build time exceeds threshold;
-      if (measurement.buildTime > this.thresholds.buildTime) {;
+      if (measurement.buildTime > this.thresholds.buildTime) {
   measurement.recommendations.push({;
   type: "build",;
           severity: "warning",message: Build time (${measurement.buildTime}ms) exceeds threshold (${this.thresholds.buildTime}ms),;
-          suggestion: "Consider optimizing build configuration, using build caching, or parallel builds";,;,
-}`);,;,
-}
-      ;,;,
-} catch (error) {;
+          suggestion: "Consider optimizing build configuration, using build caching, or parallel builds";}`);}
+      ;} catch (error) {
   console.error("Error measuring build performance: ", error);
-      measurement.buildTime = -1;,;,
-} catch (error) {;
+      measurement.buildTime = -1;} catch (error) {
   console.error(`Error measuring build performance: `, error);      measurement.buildTime = -1;
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
-      measurement.buildSuccess = false;,;,
-}
+      measurement.buildSuccess = false;}
   }
-;
-  async runTestBuild() {;
-  try {;
+
+  async runTestBuild() {
+  try {
   // Check if it"s a Next.js project;
-      if (fs.existsSync("next.config.js") || fs.existsSync("next.config.mjs")) {;
+      if (fs.existsSync("next.config.js") || fs.existsSync("next.config.mjs")) {
   const buildStart = Date.now();
         // Run Next.js build;
-        execSync("npm run build", {;
+        execSync("npm run build", {
   cwd: this.projectRoot,;
           stdio: "pipe",;
-;
-  async runTestBuild() {;
-  try {;
+
+  async runTestBuild() {
+  try {
   // Check if it"s a Next.js project;
-      if (fs.existsSync("next.config.js") || fs.existsSync("next.config.mjs")) {;
+      if (fs.existsSync("next.config.js") || fs.existsSync("next.config.mjs")) {
   const buildStart = Date.now();
-        ;
+
         // Run Next.js build;
-        execSync("npm run build", {;
+        execSync("npm run build", {
   cwd: this.projectRoot,;
           stdio: "pipe",;
-          timeout: 120000 // 2 minutes timeout;,;,
-});
-        ;
-        return {;
+          timeout: 120000 // 2 minutes timeout;});
+
+        return {
   success: true,;
           duration: Date.now() - buildStart,;
-          errors: [];,;,
-}
+          errors: [];}
       }
-      ;
       // Check if it"s a Vite project;
-      if (fs.existsSync("vite.config.js") || fs.existsSync("vite.config.ts")) {;
+      if (fs.existsSync("vite.config.js") || fs.existsSync("vite.config.ts")) {
   const buildStart = Date.now();
         // Run Vite build;
-        execSync("npm run build", {;
+        execSync("npm run build", {
   cwd: this.projectRoot,;
           stdio: "pipe",;
-;,
 });
-        ;
-        return {;
+
+        return {
   success: true,;
           duration: Date.now() - buildStart,;
-          errors: [];,;,
-}
+          errors: [];}
       }
-      ;
       // Generic build check;
-      return {;
+      return {
   success: true,;
         duration: 0,;
-        errors: [];,;,
-}
-      ;,;,
-} catch (error) {;
-  return {;
+        errors: [];}
+      ;} catch (error) {
+  return {
   success: false,;
         duration: 0,;
-        errors: [error.message];,;,
-}
-      ;
+        errors: [error.message];}
       // Generic build check;
-      return {;
+      return {
   success: true,;
         duration: 0,;
-        errors: [];,;,
-}
-      ;,;,
-} catch (error) {;
-  return {;
+        errors: [];}
+      ;} catch (error) {
+  return {
   success: false,;
         duration: 0,;
-        errors: [error.message];,;,
-}
+        errors: [error.message];}
     }
   }
-;
-  async measureBundleSize(measurement) {;
+
+  async measureBundleSize(measurement) {
   console.log(`"📦 Measuring bundle size...");
-    ;
-    try {;
+
+    try {
   // Check for build output directory;
       const buildDirs = ["dist", "build", ".next", "out"];
       let totalSize = 0;
-      ;
-      for (const dir of buildDirs) {;
-  if (fs.existsSync(dir)) {;
+
+      for (const dir of buildDirs) {
+  if (fs.existsSync(dir)) {
   const size = this.calculateDirectorySize(dir);
-          totalSize += size;,;,
-}
+          totalSize += size;}
       }
-      ;
       measurement.bundleSize = totalSize;
       // Check if bundle size exceeds threshold;
-      if (totalSize > this.thresholds.bundleSize) {;
+      if (totalSize > this.thresholds.bundleSize) {
   measurement.recommendations.push({;
   type: `bundle`,;
           severity: `warning`,message: Bundle size (${this.formatBytes(totalSize)}) exceeds threshold (${this.formatBytes(this.thresholds.bundleSize)}),;
-          suggestion: `Consider code splitting, tree shaking, or removing unused dependencies`;,;,
-}`);,;,
-}
-      ;,;,
-} catch (error) {;
+          suggestion: `Consider code splitting, tree shaking, or removing unused dependencies`;}`);}
+      ;} catch (error) {
   console.error(`Error measuring bundle size: `, error);
-      ;
+
       // Check if bundle size exceeds threshold;
-      if (totalSize > this.thresholds.bundleSize) {;
+      if (totalSize > this.thresholds.bundleSize) {
   measurement.recommendations.push({;
   type: "bundle",;
           severity: "warning",message: Bundle size (${this.formatBytes(totalSize)}) exceeds threshold (${this.formatBytes(this.thresholds.bundleSize)}),;
-          suggestion: "Consider code splitting, tree shaking, or removing unused dependencies";,;,
-}`);,;,
-}
-      ;,;,
-} catch (error) {;
+          suggestion: "Consider code splitting, tree shaking, or removing unused dependencies";}`);}
+      ;} catch (error) {
   console.error("Error measuring bundle size: ", error);
-      measurement.bundleSize = -1;,;,
-} catch (error) {;
+      measurement.bundleSize = -1;} catch (error) {
   console.error(`Error measuring bundle size: `, error);      measurement.bundleSize = -1;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,;,
-}
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;}
   }
-;
-  calculateDirectorySize(dirPath) {;
+
+  calculateDirectorySize(dirPath) {
   let totalSize = 0;
-    ;
-    try {;
+
+    try {
   const items = fs.readdirSync(dirPath);
-      for (const item of items) {;
+      for (const item of items) {
   const fullPath = path.join(dirPath, `item);
-      ;
-      for (const item of items) {;
+
+      for (const item of items) {
   const fullPath = path.join(dirPath, "item);
         const stat = fs.statSync(fullPath);
-        ;
-        if (stat.isDirectory()) {;
-  totalSize += this.calculateDirectorySize(fullPath);,;,
-} else {;
-  totalSize += stat.size;,;,
-}
+
+        if (stat.isDirectory()) {
+  totalSize += this.calculateDirectorySize(fullPath);} else {
+  totalSize += stat.size;}
       }
-    } catch (error) {  console.error(`Error calculating size for ${dirPath  }:``, error);,;,
-}
-    ;
-    return totalSize;,;,
-}
-;
-  formatBytes(bytes) {;
+    } catch (error) {  console.error(`Error calculating size for ${dirPath  }:``, error);}
+    return totalSize;}
+
+  formatBytes(bytes) {
   if (bytes === 0) return `0 Bytes`;
     const k = 1024;
     const sizes = ["Bytes", "KB", "MB", "GB"];
     const i = Math.floor(Math.log(bytes) / Math.log(k));
-    ;
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " " + sizes[i];,;,
-}
-;
-  async measureRuntimePerformance(measurement) {;
+
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " " + sizes[i];}
+
+  async measureRuntimePerformance(measurement) {
   console.log(`"⚡ Measuring runtime performance...");
-    ;
-    try {;
+
+    try {
   // Get system resource usage;
-  async measureRuntimePerformance(measurement) {;
+  async measureRuntimePerformance(measurement) {
   console.log(`⚡ Measuring runtime performance...`);
-    try {;
+    try {
   // Get system resource usage;
       // Get system resource usage;
       const systemMetrics = await this.getSystemMetrics();
-      ;
+
       measurement.memoryUsage = systemMetrics.memory;
       measurement.cpuUsage = systemMetrics.cpu;
       // Check memory usage;
-      if (systemMetrics.memory > this.thresholds.memoryUsage) {;
+      if (systemMetrics.memory > this.thresholds.memoryUsage) {
   measurement.recommendations.push({;
   type: `memory`,;
           severity: `warning`,message: Memory usage (${this.formatBytes(systemMetrics.memory)}) exceeds threshold (${this.formatBytes(this.thresholds.memoryUsage)}),;
-          suggestion: `Check for memory leaks, optimize data structures, or increase memory limits`;,;,
-}`);,;,
-}
-      ;
+          suggestion: `Check for memory leaks, optimize data structures, or increase memory limits`;}`);}
       // Check CPU usage;
-      if (systemMetrics.cpu > this.thresholds.cpuUsage) {;
+      if (systemMetrics.cpu > this.thresholds.cpuUsage) {
   measurement.recommendations.push({;
   type: `cpu`,;
           severity: `warning`,message: `CPU usage (${systemMetrics.cpu}%) exceeds threshold (${this.thresholds.cpuUsage}%)`,;
-          suggestion: `Optimize algorithms, implement caching, or use worker threads for heavy operations`;,;,
-});,;,
-}
-      ;,;,
-} catch (error) {;
+          suggestion: `Optimize algorithms, implement caching, or use worker threads for heavy operations`;});}
+      ;} catch (error) {
   console.error(`Error measuring runtime performance: `, error);
-      ;
+
       // Check memory usage;
-      if (systemMetrics.memory > this.thresholds.memoryUsage) {;
+      if (systemMetrics.memory > this.thresholds.memoryUsage) {
   measurement.recommendations.push({;
   type: "memory",;
           severity: "warning",message: Memory usage (${this.formatBytes(systemMetrics.memory)}) exceeds threshold (${this.formatBytes(this.thresholds.memoryUsage)}),;
-          suggestion: "Check for memory leaks, optimize data structures, or increase memory limits";,;,
-}`);,;,
-}
-      ;
+          suggestion: "Check for memory leaks, optimize data structures, or increase memory limits";}`);}
       // Check CPU usage;
-      if (systemMetrics.cpu > this.thresholds.cpuUsage) {;
+      if (systemMetrics.cpu > this.thresholds.cpuUsage) {
   measurement.recommendations.push({;
   type: "cpu",;
           severity: "warning",message: `CPU usage (${systemMetrics.cpu}%) exceeds threshold (${this.thresholds.cpuUsage}%)`,;
-          suggestion: "Optimize algorithms, implement caching, or use worker threads for heavy operations";,;,
-});,;,
-}
-      ;,;,
-} catch (error) {;
+          suggestion: "Optimize algorithms, implement caching, or use worker threads for heavy operations";});}
+      ;} catch (error) {
   console.error("Error measuring runtime performance: ", error);
-      measurement.memoryUsage = -1;,;,
-} catch (error) {;
+      measurement.memoryUsage = -1;} catch (error) {
   console.error(`Error measuring runtime performance: `, error);      measurement.memoryUsage = -1;
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
-      measurement.cpuUsage = -1;,;,
-}
+      measurement.cpuUsage = -1;}
   }
-;
-  async getSystemMetrics() {;
-  try {;
-  async getSystemMetrics() {;
-  try {;
+
+  async getSystemMetrics() {
+  try {
+  async getSystemMetrics() {
+  try {
   // Get memory usage;
       const memUsage = process.memoryUsage();
       const memory = memUsage.heapUsed;
-      ;
+
       // Get CPU usage (simplified);
       const cpuUsage = process.cpuUsage();
       const cpu = Math.round((cpuUsage.user + cpuUsage.system) / 1000000); // Convert to percentage approximation;
       return { memory, cpu }
-      ;,;,
-} catch (error) {;
+      ;} catch (error) {
   return { memory, cpu }
-      ;,;,
-} catch (error) {;
+      ;} catch (error) {
   console.error("Error getting system metrics: ", error);
       return { memory: 0, cpu: 0   }
-    } catch (error) {;
+    } catch (error) {
   console.error("Error getting system metrics: ", error);      return { memory: 0, cpu: 0   }
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,;,
-}
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;}
   }
-;
-  async analyzePerformance(measurement) {;
+
+  async analyzePerformance(measurement) {
   console.log("🧠 Analyzing performance data...");
     // Analyze trends;
     this.analyzePerformanceTrends(measurement);
     // Identify bottlenecks;
     this.identifyBottlenecks(measurement);
-    ;
+
     // Analyze trends;
     this.analyzePerformanceTrends(measurement);
-    ;
+
     // Identify bottlenecks;
     this.identifyBottlenecks(measurement);
-    ;
+
     // Generate optimization suggestions;
-    this.generateOptimizationSuggestions(measurement);,;,
-}
-;
-  analyzePerformanceTrends(measurement) {;
-  if (this.history.performanceTrends.length > 0) {;
+    this.generateOptimizationSuggestions(measurement);}
+
+  analyzePerformanceTrends(measurement) {
+  if (this.history.performanceTrends.length > 0) {
   const recentTrends = this.history.performanceTrends.slice(-5);
       // Calculate trend for build time;
-      if (recentTrends.length > 1) {;
+      if (recentTrends.length > 1) {
   const buildTimeTrend = this.calculateTrend(;
           recentTrends.map(t => t.buildTime),;
           measurement.buildTime;
@@ -487,13 +415,10 @@ class $1 {;
   type: "trend",;
             severity: "info",;
             message: "Build time is trending upward",;
-            suggestion: "Investigate recent changes that may be affecting build performance";,;,
-});,;,
-}
+            suggestion: "Investigate recent changes that may be affecting build performance";});}
       }
-      ;
       // Calculate trend for bundle size;
-      if (recentTrends.length > 1) {;
+      if (recentTrends.length > 1) {
   const bundleSizeTrend = this.calculateTrend(;
           recentTrends.map(t => t.bundleSize),;
           measurement.bundleSize;
@@ -503,123 +428,98 @@ class $1 {;
   type: "trend",;
             severity: "info",;
             message: "Bundle size is trending upward",;
-            suggestion: "Review recent dependencies and code changes for size impact";,;,
-});,;,
-}
+            suggestion: "Review recent dependencies and code changes for size impact";});}
       }
     }
   }
-;
-  calculateTrend(historicalValues, currentValue) {;
+
+  calculateTrend(historicalValues, currentValue) {
   if (historicalValues.length === 0) return 0;
-    ;
+
     const average = historicalValues.reduce((a, b) => a + b, 0) / historicalValues.length;
-    return (currentValue - average) / average;,;,
-}
-;
-  identifyBottlenecks(measurement) {;
+    return (currentValue - average) / average;}
+
+  identifyBottlenecks(measurement) {
   const bottlenecks = [];
     // Check for critical performance issues;
-    if (measurement.buildTime > this.thresholds.buildTime * 2) {;
+    if (measurement.buildTime > this.thresholds.buildTime * 2) {
   bottlenecks.push({;
   type: "build",;
         severity: "critical",;
         message: "Build time is critically slow",;
         impact: "High",;
         suggestion: "Immediate investigation required - check build configuration and dependencies";
-    ;
+
     // Check for critical performance issues;
-    if (measurement.buildTime > this.thresholds.buildTime * 2) {;
+    if (measurement.buildTime > this.thresholds.buildTime * 2) {
   bottlenecks.push({;
   type: "build",;
         severity: "critical",;
         message: "Build time is critically slow",;
         impact: "High",;
-        suggestion: "Immediate investigation required - check build configuration and dependencies";,;,
-});,;,
-}
-    ;
-    if (measurement.bundleSize > this.thresholds.bundleSize * 2) {;
+        suggestion: "Immediate investigation required - check build configuration and dependencies";});}
+    if (measurement.bundleSize > this.thresholds.bundleSize * 2) {
   bottlenecks.push({;
   type: "bundle",;
         severity: "critical",;
         message: "Bundle size is critically large",;
         impact: "High",;
-        suggestion: "Immediate optimization required - implement code splitting and tree shaking";,;,
-});,;,
-}
-    ;
-    if (measurement.memoryUsage > this.thresholds.memoryUsage * 1.5) {;
+        suggestion: "Immediate optimization required - implement code splitting and tree shaking";});}
+    if (measurement.memoryUsage > this.thresholds.memoryUsage * 1.5) {
   bottlenecks.push({;
   type: "memory",;
         severity: "high",;
         message: "Memory usage is significantly high",;
         impact: "Medium",;
-        suggestion: "Investigate memory leaks and optimize data handling";,;,
-});,;,
-}
-    ;
-    measurement.bottlenecks = bottlenecks;,;,
-}
-;
-  generateOptimizationSuggestions(measurement) {;
+        suggestion: "Investigate memory leaks and optimize data handling";});}
+    measurement.bottlenecks = bottlenecks;}
+
+  generateOptimizationSuggestions(measurement) {
   const optimizations = [];
     // Build optimizations;
-    if (measurement.buildTime > this.thresholds.buildTime) {;
+    if (measurement.buildTime > this.thresholds.buildTime) {
   optimizations.push({;
   category: "build",;
         priority: "high",;
         suggestion: "Implement build caching using tools like Turborepo or Nx",;
-        expectedImpact: "20-40% reduction in build time";,;,
-});
-      ;
+        expectedImpact: "20-40% reduction in build time";});
+
       optimizations.push({;
   category: "build",;
         priority: "medium",;
         suggestion: "Use parallel builds for independent modules",;
-        expectedImpact: "15-25% reduction in build time";,;,
-});,;,
-}
-    ;
+        expectedImpact: "15-25% reduction in build time";});}
     // Bundle optimizations;
-    if (measurement.bundleSize > this.thresholds.bundleSize) {;
+    if (measurement.bundleSize > this.thresholds.bundleSize) {
   optimizations.push({;
   category: "bundle",;
         priority: "high",;
         suggestion: "Implement dynamic imports and code splitting",;
         expectedImpact: "30-50% reduction in initial bundle size";
-    ;
+
     // Bundle optimizations;
-    if (measurement.bundleSize > this.thresholds.bundleSize) {;
+    if (measurement.bundleSize > this.thresholds.bundleSize) {
   optimizations.push({;
   category: "bundle",;
         priority: "high",;
         suggestion: "Implement dynamic imports and code splitting",;
-        expectedImpact: "30-50% reduction in initial bundle size";,;,
-});
-      ;
+        expectedImpact: "30-50% reduction in initial bundle size";});
+
       optimizations.push({;
   category: "bundle",;
         priority: "medium",;
         suggestion: "Remove unused dependencies and implement tree shaking",;
-        expectedImpact: "10-20% reduction in bundle size";,;,
-});,;,
-}
-    ;
+        expectedImpact: "10-20% reduction in bundle size";});}
     // Runtime optimizations;
-    if (measurement.memoryUsage > this.thresholds.memoryUsage) {;
+    if (measurement.memoryUsage > this.thresholds.memoryUsage) {
   optimizations.push({;
   category: "runtime",;
         priority: "high",;
         suggestion: "Implement memory pooling and object reuse",;
-        expectedImpact: "25-40% reduction in memory usage";,;,
-});,;,
-}
-    ;
-    measurement.optimizations = optimizations;,;,
-}
-;
-  updatePerformanceHistory(measurement) {;
+        expectedImpact: "25-40% reduction in memory usage";});}
+    measurement.optimizations = optimizations;}
+
+  updatePerformanceHistory(measurement) {
   // Add to trends;
     this.history.performanceTrends.push({;
   timestamp: measurement.timestamp,;
@@ -627,13 +527,10 @@ class $1 {;
       bundleSize: measurement.bundleSize,;
       loadTime: measurement.loadTime,;
       memoryUsage: measurement.memoryUsage,;
-      cpuUsage: measurement.cpuUsage;,;,
-});
+      cpuUsage: measurement.cpuUsage;});
     // Keep only last 100 measurements;
-    if (this.history.performanceTrends.length > 100) {;
-  this.history.performanceTrends = this.history.performanceTrends.slice(-100);,;,
-}
-    ;
+    if (this.history.performanceTrends.length > 100) {
+  this.history.performanceTrends = this.history.performanceTrends.slice(-100);}
     // Update averages;
     this.history.totalMeasurements++;
     this.history.averageBuildTime = this.calculateRunningAverage(;
@@ -650,139 +547,113 @@ class $1 {;
     this.history.bottlenecks.push(...measurement.bottlenecks);
     this.history.optimizations.push(...measurement.optimizations);
     // Save updated history;
-    try {;
-  fs.writeFileSync(this.performanceHistory, JSON.stringify(this.history, null, 2));,;,
-} catch (error) {;
+    try {
+  fs.writeFileSync(this.performanceHistory, JSON.stringify(this.history, null, 2));} catch (error) {
   console.error("Error saving performance history: ", error)}
   }
-;
-  calculateRunningAverage(currentAverage, newValue, count) {;
-  return (currentAverage * (count - 1) + newValue) / count;,;,
-}
-;
-  logPerformanceResults(measurement) {;
-  const logEntry = {;
+
+  calculateRunningAverage(currentAverage, newValue, count) {
+  return (currentAverage * (count - 1) + newValue) / count;}
+
+  logPerformanceResults(measurement) {
+  const logEntry = {
   timestamp: new Date().toISOString(),;
-      metrics: {;
+      metrics: {
   buildTime: measurement.buildTime,;
         bundleSize: measurement.bundleSize,;
         loadTime: measurement.loadTime,;
         memoryUsage: measurement.memoryUsage,;
-        cpuUsage: measurement.cpuUsage;,;,
-},;
+        cpuUsage: measurement.cpuUsage;},;
       recommendations: measurement.recommendations,;
       bottlenecks: measurement.bottlenecks,;
-;
-  logPerformanceResults(measurement) {;
-  const logEntry = {;
+
+  logPerformanceResults(measurement) {
+  const logEntry = {
   timestamp: new Date().toISOString(),;
-      metrics: {;
+      metrics: {
   buildTime: measurement.buildTime,;
         bundleSize: measurement.bundleSize,;
         loadTime: measurement.loadTime,;
         memoryUsage: measurement.memoryUsage,;
-        cpuUsage: measurement.cpuUsage;,;,
-},;
+        cpuUsage: measurement.cpuUsage;},;
       recommendations: measurement.recommendations,;
       bottlenecks: measurement.bottlenecks,;
-      optimizations: measurement.optimizations;,;,
-}
-    ;
-    try {;
-  fs.appendFileSync(this.logFile, JSON.stringify(logEntry) + "\n");,;,
-} catch (error) {;
-  ,;,
-} catch (error) {;
-  console.error("Error logging performance results: ", error);,;,
-}
-    } catch (error) {;
+      optimizations: measurement.optimizations;}
+    try {
+  fs.appendFileSync(this.logFile, JSON.stringify(logEntry) + "\n");} catch (error) {
+  } catch (error) {
+  console.error("Error logging performance results: ", error);}
+    } catch (error) {
   console.error("Error logging performance results: ", error)}
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,;,
-}
-;
-  logError(message, error) {;
-  const errorEntry = {;
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;}
+
+  logError(message, error) {
+  const errorEntry = {
   timestamp: new Date().toISOString(),;
       message,;
       error: error.message,;
-;
-  logError(message, error) {;
-  const errorEntry = {;
+
+  logError(message, error) {
+  const errorEntry = {
   timestamp: new Date().toISOString(),;
       message,;
       error: error.message,;
-      stack: error.stack;,;,
-}
-    ;
-    try {;
-  fs.appendFileSync(this.logFile, JSON.stringify(errorEntry) + "\n");,;,
-} catch (error) {;
-  ,;,
-} catch (error) {;
-  console.error("Error logging error: ", error);,;,
-}
-    } catch (error) {;
+      stack: error.stack;}
+    try {
+  fs.appendFileSync(this.logFile, JSON.stringify(errorEntry) + "\n");} catch (error) {
+  } catch (error) {
+  console.error("Error logging error: ", error);}
+    } catch (error) {
   console.error("Error logging error: ", error)}
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,;,
-}
-;
-  monitorBuilds() {;
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;}
+
+  monitorBuilds() {
   console.log("🔨 Setting up build monitoring...");
     // Monitor for build commands;
-    process.on("message", (message) => {;
-  if (message && message.type === "build") {;
+    process.on("message", (message) => {
+  if (message && message.type === "build") {
   // Monitor for build commands;
-    process.on("message", (message) => {;
-  if (message && message.type === "build") {;
-  this.onBuildStart();,;,
-}
-    });,;,
-}
-;
-  onBuildStart() {;
+    process.on("message", (message) => {
+  if (message && message.type === "build") {
+  this.onBuildStart();}
+    });}
+
+  onBuildStart() {
   console.log("🚀 Build started - monitoring performance...");
-    this.measurePerformance();,;,
-}
-;
-  monitorRuntime() {;
+    this.measurePerformance();}
+
+  monitorRuntime() {
   console.log("⚡ Setting up runtime monitoring...");
     // Monitor process events;
-    process.on("exit", () => {;
-  this.onProcessExit();,;,
-});
+    process.on("exit", () => {
+  this.onProcessExit();});
     // Monitor uncaught exceptions;
-    process.on("uncaughtException", (error) => {;
-  this.onUncaughtException(error);,;,
-});
+    process.on("uncaughtException", (error) => {
+  this.onUncaughtException(error);});
     // Monitor unhandled rejections;
-    process.on("unhandledRejection", (reason, promise) => {;
-  this.onUnhandledRejection(reason, promise);,;,
-});,;,
-}
-;
-  onProcessExit() {;
+    process.on("unhandledRejection", (reason, promise) => {
+  this.onUnhandledRejection(reason, promise);});}
+
+  onProcessExit() {
   console.log("🔄 Process exiting - saving final performance data...");
-    this.measurePerformance();,;,
-}
-;
-  onUncaughtException(error) {;
+    this.measurePerformance();}
+
+  onUncaughtException(error) {
   console.error("💥 Uncaught exception: ", error);
-    this.logError("Uncaught exception", error);,;,
-}
-;
-  onUnhandledRejection(reason, promise) {;
+    this.logError("Uncaught exception", error);}
+
+  onUnhandledRejection(reason, promise) {
   console.error("💥 Unhandled rejection: ", reason);
-    this.logError("Unhandled rejection", { reason, promise });,;,
+    this.logError("Unhandled rejection", { reason, promise });}
 }
-}
-;
+
 // Start the intelligent performance monitor;
 const performanceMonitor = new IntelligentPerformanceMonitor();
 performanceMonitor.initialize().catch(console.error);
-;
+
 // Start the intelligent performance monitor;
 const performanceMonitor = new IntelligentPerformanceMonitor();
 performanceMonitor.initialize().catch(console.error);
-;
+
 // Export for PM2;
 module.exports = performanceMonitor}}}}}}}}}}}}}}}}}}))))

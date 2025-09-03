@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-;
-const Newsroom: React.FC = () => {;
+
+const Newsroom: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
-;
+
   const categories = [;
     { id: 'all', name: 'All News', count: 156 },;
     { id: 'press-releases', name: 'Press Releases', count: 23 },;
@@ -15,9 +15,9 @@ const Newsroom: React.FC = () => {;
     { id: 'awards', name: 'Awards & Recognition', count: 12 },;
     { id: 'thought-leadership', name: 'Thought Leadership', count: 24 },;
   ];
-;
+
   const featuredNews = [;
-    {;
+    {
       id: 1,;
       title: 'Zion App Named Leader in Gartner Magic Quadrant for Business Process Automation',;
       category: 'awards',;
@@ -27,9 +27,8 @@ const Newsroom: React.FC = () => {;
       readTime: '3 min read',;
       featured: true,;
       image: '/api/placeholder/400/250',;
-      tags: ['Gartner', 'Leadership', 'Automation', 'Recognition'];,
-},;
-    {;
+      tags: ['Gartner', 'Leadership', 'Automation', 'Recognition']},;
+    {
       id: 2,;
       title: 'Major Partnership Announcement: Zion App Joins Forces with Tech Giants',;
       category: 'partnerships',;
@@ -39,9 +38,8 @@ const Newsroom: React.FC = () => {;
       readTime: '4 min read',;
       featured: true,;
       image: '/api/placeholder/400/250',;
-      tags: ['Partnership', 'Innovation', 'Technology', 'Growth'];,
-},;
-    {;
+      tags: ['Partnership', 'Innovation', 'Technology', 'Growth']},;
+    {
       id: 3,;
       title: 'Q4 2024 Financial Results: Record Growth and Market Expansion',;
       category: 'company-news',;
@@ -51,12 +49,11 @@ const Newsroom: React.FC = () => {;
       readTime: '5 min read',;
       featured: true,;
       image: '/api/placeholder/400/250',;
-      tags: ['Financial Results', 'Growth', 'Q4 2024', 'Market Expansion'];,
-},;
+      tags: ['Financial Results', 'Growth', 'Q4 2024', 'Market Expansion']},;
   ];
-;
+
   const recentNews = [;
-    {;
+    {
       id: 4,;
       title: 'New AI-Powered Features Released in Latest Platform Update',;
       category: 'product-updates',;
@@ -65,9 +62,8 @@ const Newsroom: React.FC = () => {;
       author: 'Product Team',;
       readTime: '2 min read',;
       image: '/api/placeholder/300/200',;
-      tags: ['AI', 'Product Update', 'Innovation'];,
-},;
-    {;
+      tags: ['AI', 'Product Update', 'Innovation']},;
+    {
       id: 5,;
       title: 'Zion App Expands European Operations with New Office in Berlin',;
       category: 'company-news',;
@@ -76,9 +72,8 @@ const Newsroom: React.FC = () => {;
       author: 'Expansion Team',;
       readTime: '2 min read',;
       image: '/api/placeholder/300/200',;
-      tags: ['Expansion', 'Europe', 'Berlin', 'Growth'];,
-},;
-    {;
+      tags: ['Expansion', 'Europe', 'Berlin', 'Growth']},;
+    {
       id: 6,;
       title: 'Customer Success Story: How Company X Achieved 300% Efficiency Gains',;
       category: 'thought-leadership',;
@@ -87,9 +82,8 @@ const Newsroom: React.FC = () => {;
       author: 'Customer Success Team',;
       readTime: '4 min read',;
       image: '/api/placeholder/300/200',;
-      tags: ['Customer Success', 'Case Study', 'Efficiency'];,
-},;
-    {;
+      tags: ['Customer Success', 'Case Study', 'Efficiency']},;
+    {
       id: 7,;
       title: 'Zion App Named Best Workplace for Innovation by Tech Magazine',;
       category: 'awards',;
@@ -98,9 +92,8 @@ const Newsroom: React.FC = () => {;
       author: 'HR Team',;
       readTime: '2 min read',;
       image: '/api/placeholder/300/200',;
-      tags: ['Workplace', 'Innovation', 'Recognition'];,
-},;
-    {;
+      tags: ['Workplace', 'Innovation', 'Recognition']},;
+    {
       id: 8,;
       title: 'Industry Report: The Future of Business Automation in 2025',;
       category: 'thought-leadership',;
@@ -109,9 +102,8 @@ const Newsroom: React.FC = () => {;
       author: 'Research Team',;
       readTime: '6 min read',;
       image: '/api/placeholder/300/200',;
-      tags: ['Research', 'Industry Report', '2025 Trends'];,
-},;
-    {;
+      tags: ['Research', 'Industry Report', '2025 Trends']},;
+    {
       id: 9,;
       title: 'Security Enhancement: Advanced Threat Protection Now Available',;
       category: 'product-updates',;
@@ -120,65 +112,54 @@ const Newsroom: React.FC = () => {;
       author: 'Security Team',;
       readTime: '3 min read',;
       image: '/api/placeholder/300/200',;
-      tags: ['Security', 'Threat Protection', 'Enterprise'];,
-},;
+      tags: ['Security', 'Threat Protection', 'Enterprise']},;
   ];
-;
+
   const pressReleases = [;
-    {;
+    {
       id: 10,;
       title: 'Zion App Announces Series C Funding Round of $50 Million',;
       date: '2025-01-06',;
       excerpt: 'Funding will accelerate product development and global expansion efforts.',;
-      category: 'press-releases';,
-},;
-    {;
+      category: 'press-releases'},;
+    {
       id: 11,;
       title: 'New CEO Appointment: Industry Veteran Joins Zion App Leadership',;
       date: '2025-01-05',;
       excerpt: 'Experienced technology leader appointed to drive next phase of company growth.',;
-      category: 'press-releases';,
-},;
-    {;
+      category: 'press-releases'},;
+    {
       id: 12,;
       title: 'Zion App Acquires AI Startup to Strengthen Machine Learning Capabilities',;
       date: '2025-01-04',;
       excerpt: 'Strategic acquisition enhances our AI and machine learning offerings.',;
-      category: 'press-releases';,
-},;
+      category: 'press-releases'},;
   ];
-;
-  const getCategoryColor = (category: string) => {;
-    const colors: { [key: string]: string } = {;
+
+  const getCategoryColor = (category: string) => {
+    const colors: { [key: string]: string } = {
       'press-releases': 'bg-blue-100 text-blue-800',;
       'company-news': 'bg-green-100 text-green-800',;
       'product-updates': 'bg-purple-100 text-purple-800',;
       'partnerships': 'bg-orange-100 text-orange-800',;
       'awards': 'bg-yellow-100 text-yellow-800',;
-      'thought-leadership': 'bg-indigo-100 text-indigo-800',;,
-};
-    return colors[category] || 'bg-gray-100 text-gray-800';,
-};
-;
-  const getCategoryName = (category: string) => {;
-    const names: { [key: string]: string } = {;
+      'thought-leadership': 'bg-indigo-100 text-indigo-800'}
+    return colors[category] || 'bg-gray-100 text-gray-800'}
+  const getCategoryName = (category: string) => {
+    const names: { [key: string]: string } = {
       'press-releases': 'Press Releases',;
       'company-news': 'Company News',;
       'product-updates': 'Product Updates',;
       'partnerships': 'Partnerships',;
       'awards': 'Awards & Recognition',;
-      'thought-leadership': 'Thought Leadership',;,
-};
-    return names[category] || category;,
-};
-;
-  const filteredNews = recentNews.filter(item => {;
+      'thought-leadership': 'Thought Leadership'}
+    return names[category] || category}
+  const filteredNews = recentNews.filter(item => {
     const matchesCategory = activeCategory === 'all' || item.category === activeCategory;
     const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          item.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch;,
-});
-;
+    return matchesCategory && matchesSearch});
+
   return (;
     <div className="min-h-screen bg-gray-50">;
       <Head>;
@@ -230,8 +211,7 @@ const Newsroom: React.FC = () => {;
                   className={`px-4 py-2 rounded-lg font-medium transition-colors ${;
                     activeCategory === category.id;
                       ? 'bg-blue-600 text-white';
-                      : 'bg-gray-200 text-gray-700 hover:bg-gray-300';,
-}`}
+                      : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`}
                 >;
                   {category.name} ({category.count});
                 </button>;
@@ -392,7 +372,5 @@ const Newsroom: React.FC = () => {;
         </div>;
       </div>;
     </div>;
-  );,
-};
-;
+  )}
 export default Newsroom;

@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Activity, BarChart3, TrendingUp, Zap, Database, Network, Cpu, HardDrive, X, Maximize2, Minimize2, RefreshCw, AlertTriangle, CheckCircle, Download  } from 'lucide-react';
 ,;
-  {;
+  {
 
     id: '2',;
     name: 'API Requests',;
@@ -12,7 +12,7 @@ import { Activity, BarChart3, TrendingUp, Zap, Database, Network, Cpu, HardDrive
     prediction: 3200000,;
     category: 'API Load',;
     unit: 'requests/hour'},;
-  {;
+  {
 
     id: '3',;
     name: 'Data Storage',;
@@ -24,7 +24,7 @@ import { Activity, BarChart3, TrendingUp, Zap, Database, Network, Cpu, HardDrive
     category: 'Storage',;
     unit: 'TB'},;
 ];
-export function AdvancedPerformanceMonitor() {;
+export function AdvancedPerformanceMonitor() {
   const [isOpen, setIsOpen] = useState(false);
   const [isMinimized, setIsMinimized] = useState(false);
   const [isFullscreen, setIsFullscreen] = useState(false);
@@ -54,40 +54,35 @@ export function AdvancedPerformanceMonitor() {;
     selectedCategory === 'all';
       ? systemMetrics;
       : systemMetrics.filter(metric => metric.category === selectedCategory);
-  const refreshData = async () => {;
+  const refreshData = async () => {
     setIsRefreshing(true);
     // Simulate API call;
     await new Promise(resolve => setTimeout(resolve, 1500));
-    setIsRefreshing(false);,
-};
-  useEffect(() => {;
+    setIsRefreshing(false)}
+  useEffect(() => {
   // TODO: Add dependencies if needed;
 
-  return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
-    if(autoRefresh) {;
+  return () => {
+    // Cleanup function}}, []);, []);
+    if(autoRefresh) {
 
       const interval = setInterval(refreshData, 30000); // Refresh every 30 seconds;
-      return () => clearInterval(interval);,
-}
+      return () => clearInterval(interval)}
   }, [autoRefresh]);
-  const getStatusColor = status => {;
+  const getStatusColor = status => {
 
-    switch(status) {;
+    switch(status) {
 
       case 'critical':';
         return 'bg-red-500 text-white';
       case 'warning':';
         return 'bg-yellow-500 text-white';
       default:';
-        return 'bg-green-500 text-white';,
-}
-  };
-  const getSeverityColor = severity => {;
+        return 'bg-green-500 text-white'}
+  }
+  const getSeverityColor = severity => {
 
-    switch(severity) {;
+    switch(severity) {
 
       case 'critical':';
         return 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300';
@@ -96,24 +91,22 @@ export function AdvancedPerformanceMonitor() {;
       case 'medium':';
         return 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300';
       default:';
-        return 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300';,
-}
-  };
-  const getTrendIcon = trend => {;
+        return 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300'}
+  }
+  const getTrendIcon = trend => {
 
-    switch(trend) {;
+    switch(trend) {
 
       case 'up':;
         return <TrendingUp className="w-4 h-4 text-red-500" />;
       case 'down':";
         return <TrendingUp className="w-4 h-4 text-green-500 rotate-180" />;
       default:";
-        return <Activity className="w-4 h-4 text-gray-500" />;,
-}
-  };
-  const getCategoryIcon = category => {;
+        return <Activity className="w-4 h-4 text-gray-500" />}
+  }
+  const getCategoryIcon = category => {
 
-    switch(category) {;
+    switch(category) {
 
       case 'Processor':";
         return <Cpu className="w-5 h-5 text-blue-500" />;
@@ -126,16 +119,14 @@ export function AdvancedPerformanceMonitor() {;
       case 'Database':";
         return <Database className="w-5 h-5 text-cyan-500" />;
       default:";
-        return <Activity className="w-5 h-5 text-gray-500" />;,
-}
-  };
-  const getUtilizationColor = utilization => {;
+        return <Activity className="w-5 h-5 text-gray-500" />}
+  }
+  const getUtilizationColor = utilization => {
 
     if(utilization >= 80) return 'text-red-600';
     if(utilization >= 60) return 'text-yellow-600';
-    return 'text-green-600';,
-};
-  if(!isOpen) {;
+    return 'text-green-600'}
+  if(!isOpen) {
 
     return ();
       <button;
@@ -144,9 +135,8 @@ export function AdvancedPerformanceMonitor() {;
         title="Open Performance Monitor">";
         <Activity className="w-6 h-6" />;
       </button>;
-    );,
-}
-  if(isMinimized) {;
+    )}
+  if(isMinimized) {
 
     return (";
       <div className="fixed bottom-4 right-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-xl z-50">";
@@ -162,8 +152,7 @@ export function AdvancedPerformanceMonitor() {;
           </button>;
         </div>;
       </div>;
-    );,
-}
+    )}
   return ();
     <div';
       className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[1400px] h-[900px]'}`}
@@ -188,8 +177,7 @@ export function AdvancedPerformanceMonitor() {;
             className={`p-2 rounded-lg transition-colors ${autoRefresh ? 'bg-white/20' : 'hover:bg-white/10'}`}
             title={;
 
-              autoRefresh ? 'Auto-refresh enabled' : 'Auto-refresh disabled';,
-}
+              autoRefresh ? 'Auto-refresh enabled' : 'Auto-refresh disabled'}
           >;
             <RefreshCw'`;
               className={`w-4 h-4 ${autoRefresh ? 'animate-spin' : ''}`}
@@ -277,7 +265,7 @@ export function AdvancedPerformanceMonitor() {;
           { id: 'alerts', label: 'Performance Alerts', icon: AlertTriangle },;
           { id: 'scalability', label: 'Scalability', icon: TrendingUp },;
           { id: 'analytics', label: 'Analytics', icon: Zap },;
-        ].map(tab => {;
+        ].map(tab => {
 
           const Icon = tab.icon;
           return ();
@@ -286,14 +274,12 @@ export function AdvancedPerformanceMonitor() {;
               onClick={() => setActiveTab(tab.id)}`;
               className={`flex items-center gap-2 px-6 py-3 border-b-2 transition-colors ${activeTab === tab.id';
                   ? 'border-zion-blue text-zion-blue bg-zion-blue/5'';
-                  : 'border-transparent text-zion-slate-light hover:text-zion-slate hover:bg-zion-slate-light/20'`;,
-}`}
+                  : 'border-transparent text-zion-slate-light hover:text-zion-slate hover:bg-zion-slate-light/20'`}`}
             >";
               <Icon className="w-4 h-4" />;
               {tab.label}
             </button>;
-          );,
-})}
+          )})}
       </div>;
 
       {/* Content */}";
@@ -329,8 +315,7 @@ export function AdvancedPerformanceMonitor() {;
                           ? 'text-red-600'';
                           : metric.trend === 'down'';
                             ? 'text-green-600'';
-                            : 'text-gray-600'`;,
-}`}
+                            : 'text-gray-600'`}`}
                     >;
                       {metric.trend === 'up' ? '+' : ''}
                       {metric.change}%;
@@ -373,11 +358,10 @@ export function AdvancedPerformanceMonitor() {;
                       Active Alerts;
                     </span>";
                     <span className="px-3 py-1 bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300 rounded-full text-sm font-medium">;
-                      {;
+                      {
 
                         performanceAlerts.filter(a => a.status === 'active');
-                          .length;,
-}
+                          .length}
                     </span>;
                   </div>";
                   <div className="flex items-center justify-between">";
@@ -416,7 +400,7 @@ export function AdvancedPerformanceMonitor() {;
             </div>;
           </div>;
         )}
-;
+
         {activeTab === 'metrics' && (";
           <div className="space-y-4">;
             {filteredMetrics.map(metric => (;
@@ -480,7 +464,7 @@ export function AdvancedPerformanceMonitor() {;
             ))}
           </div>;
         )}
-;
+
         {activeTab === 'alerts' && (";
           <div className="space-y-4">;
             {performanceAlerts.map(alert => (;
@@ -506,8 +490,7 @@ export function AdvancedPerformanceMonitor() {;
                             ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300'';
                             : alert.status === 'acknowledged'';
                               ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300'';
-                              : 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300'`;,
-}`}
+                              : 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300'`}`}
                       >;
                         {alert.status}
                       </span>;
@@ -553,7 +536,7 @@ export function AdvancedPerformanceMonitor() {;
             ))}
           </div>;
         )}
-;
+
         {activeTab === 'scalability' && (";
           <div className="space-y-4">;
             {scalabilityMetrics.map(metric => (;
@@ -622,7 +605,7 @@ export function AdvancedPerformanceMonitor() {;
             ))}
           </div>;
         )}
-;
+
         {activeTab === 'analytics' && (";
           <div className="space-y-6">";
             <div className="text-center text-zion-slate-light">";
@@ -639,6 +622,5 @@ export function AdvancedPerformanceMonitor() {;
         )}
       </div>;
     </div>;
-  );,
-}
+  )}
 "export default ComponentName;";

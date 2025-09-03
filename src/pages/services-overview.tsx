@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-;
+
 import { ;
   Brain, ;
   Shield, ;
@@ -30,17 +30,14 @@ import { ;
   ShoppingCart,;
   DollarSign,;
   Wifi,;
-  Link as LinkIcon;,
-} from 'lucide-react';
-;
-const ServicesOverview = () => {;
-  const contactInfo = {;
+  Link as LinkIcon} from 'lucide-react';
+
+const ServicesOverview = () => {
+  const contactInfo = {
     phone: '+1 302 464 0950',;
     email: 'kleber@ziontechgroup.com',;
     address: '364 E Main St STE 1008 Middletown DE 19709',;
-    website: 'https://ziontechgroup.com';,
-};
-;
+    website: 'https://ziontechgroup.com'}
   return (;
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">;
       {/* Header */}
@@ -278,7 +275,7 @@ const ServicesOverview = () => {;
             <h2 className="text-4xl font-bold mb-4">Ready to Transform Your Business?</h2>;
             <p className="text-xl text-gray-300">Contact us today for a free consultation</p>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
             <div className="text-center">;
               <Phone className="w-8 h-8 text-blue-400 mx-auto mb-4" />;
@@ -320,7 +317,5 @@ const ServicesOverview = () => {;
         </div>;
       </footer>;
     </div>;
-  );,
-};
-;
+  )}
 export default ServicesOverview;

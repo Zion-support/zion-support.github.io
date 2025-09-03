@@ -31,16 +31,12 @@ const MobileLaunch = () => {}
           </div>;
         </div>;
       </div>;
-    </>)};
+    </>)}
 export default MobileLaunch;
-;
 
-export { MobileLaunch };
-;
-export { MobileLaunch };
-;
-export { MobileLaunch };
-;
-export { MobileLaunch };
-;
-export { MobileLaunch };
+
+export { MobileLaunch }
+export { MobileLaunch }
+export { MobileLaunch }
+export { MobileLaunch }
+export { MobileLaunch }

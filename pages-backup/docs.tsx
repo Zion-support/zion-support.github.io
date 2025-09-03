@@ -1,15 +1,14 @@
 import Head from "next/head";
 import React from "react";
 import dynamic from "next/dynamic";
-const Component = () => {;
+const Component = () => {
   Shield,;
   Users} from "lucide-react";
 
-const Docs: NextPage = () => {;
+const Docs: NextPage = () => {
   const quickStart = [];
 
-  const sections = [];,
-},;
+  const sections = []},;
     {";
       title: "API Reference",";
       description: "Complete API documentation with examples",;
@@ -19,8 +18,7 @@ const Docs: NextPage = () => {;
         "Request/Response",";
         "Error Handling",";
         "SDKs";
-      ];,
-},;
+      ]},;
     {";
       title: "Guides",";
       description: "Step-by-step tutorials and best practices",;
@@ -30,8 +28,7 @@ const Docs: NextPage = () => {;
         "Data Processing",";
         "Webhooks",";
         "Security";
-      ];,
-},;
+      ]},;
     {";
       title: "Advanced Features",";
       description: "Advanced functionality and customization",;
@@ -91,14 +88,14 @@ const Docs: NextPage = () => {;
                     <step.icon className="w-8 h-8 text-white" />";
                     <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">;
                       {step.step}
-;
+
                     </div>;
                   </div>";
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">{step.title}</h3>";
                   <p className="text-gray-600">{step.description}</p>;
                 </div>;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";
@@ -127,10 +124,10 @@ const Docs: NextPage = () => {;
                       <li key="{i}" className="flex items-center text-gray-600">";
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0"  />;
                         {item}
-;
+
                       </li>;
                     ))}
-;
+
                   </ul>";
                   <button className="mt-4 inline-flex items-center text-blue-600 hover: text-blue-700 font-medium">;
                     Read More";
@@ -138,7 +135,7 @@ const Docs: NextPage = () => {;
                   </button>;
                 </div>,;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";
@@ -160,10 +157,10 @@ const Docs: NextPage = () => {;
                       Popular,;
                     </span>;
                   )}
-;
+
                 </div>;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";
@@ -189,13 +186,11 @@ const Docs: NextPage = () => {;
                   <code>{"// comment;
 const zion = new ZionSDK({;
   apiKey: "your-api-key",;
-  environment: "production"});,
-}
+  environment: "production"})}
 // comment;
 const result = await zion.ai.process({;
   text: "Hello, world!",;
-  model: "gpt-4"});,
-}
+  model: "gpt-4"})}
 "}</code>;
                 </pre>;
               </div>;
@@ -206,8 +201,7 @@ const result = await zion.ai.process({;
                   <div className="bg-gray-100 rounded p-4">";
                     <pre className="text-sm text-gray-800">,;
                       <code>{"from zion,;
-result = zion.ai.process();,
-}
+result = zion.ai.process()}
 print(result)"}</code>;
                     </pre>;
                   </div>;
@@ -222,8 +216,7 @@ print(result)"}</code>;
   -H "Content-Type: application/json" ",;
   -d "{,";
     "text": "Hello, world!",";
-    "model": "gpt - 4",;,
-}'"}</code>;
+    "model": "gpt - 4"}'"}</code>;
                     </pre>;
                   </div>;
         </section>;
@@ -272,5 +265,5 @@ print(result)"}</code>;
       </Layout>;
     </>,;
   )}
-;
+
 "export default Docs

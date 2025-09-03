@@ -1,7 +1,7 @@
 
 // Enhanced real micro SAAS services and solutions;
 export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Services;
-  {;
+  {
 
     id: "ai-automation-suite",";
     title: "AI Process Automation Suite",";
@@ -10,13 +10,12 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     price: 2999,";
     currency: "$",";
     tags["Process Automation", "RPA", "Workflow Optimization", "AI"],;
-    author: {;
+    author: {
 ";
       name: "Zion Tech Group",";
       id: "zion-tech-group",";
       avatarUrl: "https://ziontechgroup.com/wp-content/uploads/2024/01/zion-logo.png",";
-      email: "kleber@ziontechgroup.com";,
-},";
+      email: "kleber@ziontechgroup.com"},";
     images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto = format&fit=crop&w=800&h=500"],";
     createdAt: "2024-01-15T10:00:00.000Z",;
     rating: 4.9,;
@@ -24,9 +23,8 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     featured: true,";
     location: "Global",";
     availability: "2-3 Weeks",;
-    aiScore: 96;,
-},;
-  {;
+    aiScore: 96},;
+  {
 ";
     id: "ai-customer-insights",";
     title: "AI-Powered Customer Insights Platform",";
@@ -35,21 +33,19 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     price: 1899,";
     currency: "$",";
     tags["Customer Analytics", "Predictive Analytics", "CRM Integration", "Personalization"],;
-    author: {;
+    author: {
 ";
       name: "Zion Tech Group",";
       id: "zion-tech-group",";
-      email: "kleber@ziontechgroup.com";,
-},";
+      email: "kleber@ziontechgroup.com"},";
     images["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],;";
     createdAt: "2024-01-20T14:30:00.000Z",;
     rating: 4.8,;
     reviewCount: 89,";
     location: "Global",";
     availability: "1-2 Weeks",;
-    aiScore: 93;,
-},;
-  {;
+    aiScore: 93},;
+  {
 ";
     id: "ai-content-optimization",";
     title: "AI Content Optimization Engine",";
@@ -58,23 +54,21 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     price: 799,";
     currency: "$",";
     tags["Content Optimization", "SEO", "NLP", "Marketing"],;
-    author: {;
+    author: {
 ";
       name: "Zion Tech Group",";
       id: "zion-tech-group",";
-      email: "kleber@ziontechgroup.com";,
-},";
+      email: "kleber@ziontechgroup.com"},";
     images["https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&h=500"],;";
     createdAt: "2024-01-25T09:15:00.000Z",;
     rating: 4.7,;
     reviewCount: 234,";
     location: "Global",";
     availability: "Immediate",;
-    aiScore: 91;,
-},;
+    aiScore: 91},;
 
   // Cloud & Infrastructure Services;
-  {;
+  {
 ";
     id: "multi-cloud-orchestration",";
     title: "Multi-Cloud Orchestration Platform",";
@@ -83,12 +77,11 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     price: 4499,";
     currency: "$",";
     tags["Multi-Cloud", "Cost Optimization", "Security", "Disaster Recovery"],;
-    author: {;
+    author: {
 ";
       name: "Zion Tech Group",";
       id: "zion-tech-group",";
-      email: "kleber@ziontechgroup.com";,
-},";
+      email: "kleber@ziontechgroup.com"},";
     images["https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=500"],;";
     createdAt: "2024-01-30T11:45:00.000Z",;
     rating: 4.9,;
@@ -96,9 +89,8 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     featured: true,";
     location: "Global",";
     availability: "3-4 Weeks",;
-    aiScore: 94;,
-},;
-  {;
+    aiScore: 94},;
+  {
 ";
     id: "edge-computing-solution",";
     title: "Edge Computing Infrastructure Solution",";
@@ -107,23 +99,21 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     price: 5999,";
     currency: "$",";
     tags["Edge Computing", "IoT", "Low Latency", "Real-time Analytics"],;
-    author: {;
+    author: {
 ";
       name: "Zion Tech Group",";
       id: "zion-tech-group",";
-      email: "kleber@ziontechgroup.com";,
-},";
+      email: "kleber@ziontechgroup.com"},";
     images["https://images.unsplash.com/photo-1591405351990-4726e331f141?auto=format&fit=crop&w=800&h=500"],;";
     createdAt: "2024-02-05T13:20:00.000Z",;
     rating: 4.8,;
     reviewCount: 45,";
     location: "Global",";
     availability: "4-6 Weeks",;
-    aiScore: 92;,
-},;
+    aiScore: 92},;
 
   // Cybersecurity Services;
-  {;
+  {
 ";
     id: "ai-threat-detection",";
     title: "AI-Powered Threat Detection System",";
@@ -132,12 +122,11 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     price: 6999,";
     currency: "$",";
     tags["Threat Detection", "Machine Learning", "Incident Response", "Behavioral Analysis"],;
-    author: {;
+    author: {
 ";
       name: "Zion Tech Group",";
       id: "zion-tech-group",";
-      email: "kleber@ziontechgroup.com";,
-},";
+      email: "kleber@ziontechgroup.com"},";
     images["https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500"],;";
     createdAt: "2024-02-10T15:30:00.000Z",;
     rating: 4.9,;
@@ -145,9 +134,8 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     featured: true,";
     location: "Global",";
     availability: "3-4 Weeks",;
-    aiScore: 95;,
-},;
-  {;
+    aiScore: 95},;
+  {
 ";
     id: "zero-trust-security",";
     title: "Zero Trust Security Implementation",";
@@ -156,23 +144,21 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     price: 8999,";
     currency: "$",";
     tags["Zero Trust", "Identity Management", "Compliance", "Security Framework"],;
-    author: {;
+    author: {
 ";
       name: "Zion Tech Group",";
       id: "zion-tech-group",";
-      email: "kleber@ziontechgroup.com";,
-},";
+      email: "kleber@ziontechgroup.com"},";
     images["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],;";
     createdAt: "2024-02-15T10:15:00.000Z",;
     rating: 4.8,;
     reviewCount: 67,";
     location: "Global",";
     availability: "6-8 Weeks",;
-    aiScore: 93;,
-},;
+    aiScore: 93},;
 
   // Data & Analytics Services;
-  {;
+  {
 ";
     id: "real-time-data-pipeline",";
     title: "Real-Time Data Pipeline Platform",";
@@ -181,21 +167,19 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     price: 3499,";
     currency: "$",";
     tags["Real-time Processing", "Data Pipeline", "Streaming", "Analytics"],;
-    author: {;
+    author: {
 ";
       name: "Zion Tech Group",";
       id: "zion-tech-group",";
-      email: "kleber@ziontechgroup.com";,
-},";
+      email: "kleber@ziontechgroup.com"},";
     images["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],;";
     createdAt: "2024-02-20T12:00:00.000Z",;
     rating: 4.7,;
     reviewCount: 89,";
     location: "Global",";
     availability: "2-3 Weeks",;
-    aiScore: 90;,
-},;
-  {;
+    aiScore: 90},;
+  {
 ";
     id: "predictive-maintenance-ai",";
     title: "AI-Powered Predictive Maintenance",";
@@ -204,23 +188,21 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     price: 5499,";
     currency: "$",";
     tags["Predictive Maintenance", "IoT", "Machine Learning", "Equipment Optimization"],;
-    author: {;
+    author: {
 ";
       name: "Zion Tech Group",";
       id: "zion-tech-group",";
-      email: "kleber@ziontechgroup.com";,
-},";
+      email: "kleber@ziontechgroup.com"},";
     images["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],;";
     createdAt: "2024-02-25T14:45:00.000Z",;
     rating: 4.8,;
     reviewCount: 56,";
     location: "Global",";
     availability: "4-5 Weeks",;
-    aiScore: 92;,
-},;
+    aiScore: 92},;
 
   // Business Intelligence & Reporting;
-  {;
+  {
 ";
     id: "ai-business-intelligence",";
     title: "AI-Enhanced Business Intelligence Suite",";
@@ -229,12 +211,11 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     price: 2499,";
     currency: "$",";
     tags["Business Intelligence", "Natural Language", "Predictive Analytics", "Automated Insights"],;
-    author: {;
+    author: {
 ";
       name: "Zion Tech Group",";
       id: "zion-tech-group",";
-      email: "kleber@ziontechgroup.com";,
-},";
+      email: "kleber@ziontechgroup.com"},";
     images["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],;";
     createdAt: "2024-03-01T09:30:00.000Z",;
     rating: 4.9,;
@@ -242,11 +223,10 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     featured: true,";
     location: "Global",";
     availability: "1-2 Weeks",;
-    aiScore: 94;,
-},;
+    aiScore: 94},;
 
   // Development & DevOps Services;
-  {;
+  {
 ";
     id: "ai-code-review",";
     title: "AI-Powered Code Review Assistant",";
@@ -255,21 +235,19 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     price: 1299,";
     currency: "$",";
     tags["Code Review", "Code Quality", "Security", "Performance Analysis"],;
-    author: {;
+    author: {
 ";
       name: "Zion Tech Group",";
       id: "zion-tech-group",";
-      email: "kleber@ziontechgroup.com";,
-},";
+      email: "kleber@ziontechgroup.com"},";
     images["https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=800&h=500"],;";
     createdAt: "2024-03-05T11:20:00.000Z",;
     rating: 4.8,;
     reviewCount: 234,";
     location: "Global",";
     availability: "Immediate",;
-    aiScore: 93;,
-},;
-  {;
+    aiScore: 93},;
+  {
 ";
     id: "devops-automation",";
     title: "DevOps Automation Platform",";
@@ -278,23 +256,21 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     price: 3999,";
     currency: "$",";
     tags["CI/CD", "Infrastructure as Code", "Automation", "Monitoring"],;
-    author: {;
+    author: {
 ";
       name: "Zion Tech Group",";
       id: "zion-tech-group",";
-      email: "kleber@ziontechgroup.com";,
-},";
+      email: "kleber@ziontechgroup.com"},";
     images["https://images.unsplash.com/photo-1591405351990-4726e331f141?auto=format&fit=crop&w=800&h=500"],;";
     createdAt: "2024-03-10T13:45:00.000Z",;
     rating: 4.8,;
     reviewCount: 98,";
     location: "Global",";
     availability: "2-3 Weeks",;
-    aiScore: 91;,
-},;
+    aiScore: 91},;
 
   // Digital Transformation Services;
-  {;
+  {
 ";
     id: "digital-transformation-consulting",";
     title: "Digital Transformation Strategy & Implementation",";
@@ -303,12 +279,11 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     price: 15999,";
     currency: "$",";
     tags["Digital Transformation", "Strategy", "Change Management", "Technology Assessment"],;
-    author: {;
+    author: {
 ";
       name: "Zion Tech Group",";
       id: "zion-tech-group",";
-      email: "kleber@ziontechgroup.com";,
-},";
+      email: "kleber@ziontechgroup.com"},";
     images["https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=500"],;";
     createdAt: "2024-03-15T10:00:00.000Z",;
     rating: 4.9,;
@@ -316,11 +291,10 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     featured: true,";
     location: "Global",";
     availability: "8-12 Weeks",;
-    aiScore: 95;,
-},;
+    aiScore: 95},;
 
   // Industry-Specific Solutions;
-  {;
+  {
 ";
     id: "healthcare-ai-platform",";
     title: "Healthcare AI Analytics Platform",";
@@ -329,21 +303,19 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     price: 12999,";
     currency: "$",";
     tags["Healthcare", "HIPAA", "Clinical Analytics", "Patient Outcomes"],;
-    author: {;
+    author: {
 ";
       name: "Zion Tech Group",";
       id: "zion-tech-group",";
-      email: "kleber@ziontechgroup.com";,
-},";
+      email: "kleber@ziontechgroup.com"},";
     images["https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=800&h=500"],;";
     createdAt: "2024-03-20T14:30:00.000Z",;
     rating: 4.9,;
     reviewCount: 34,";
     location: "Global",";
     availability: "6-8 Weeks",;
-    aiScore: 94;,
-},;
-  {;
+    aiScore: 94},;
+  {
 ";
     id: "fintech-compliance-ai",";
     title: "FinTech Compliance & Fraud Detection AI",";
@@ -352,23 +324,21 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     price: 8999,";
     currency: "$",";
     tags["FinTech", "Compliance", "Fraud Detection", "AML", "KYC"],;
-    author: {;
+    author: {
 ";
       name: "Zion Tech Group",";
       id: "zion-tech-group",";
-      email: "kleber@ziontechgroup.com";,
-},";
+      email: "kleber@ziontechgroup.com"},";
     images["https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&h=500"],;";
     createdAt: "2024-03-25T16:15:00.000Z",;
     rating: 4.8,;
     reviewCount: 67,";
     location: "Global",";
     availability: "4-6 Weeks",;
-    aiScore: 93;,
-},;
+    aiScore: 93},;
 
   // Emerging Technology Services;
-  {;
+  {
 ";
     id: "blockchain-enterprise",";
     title: "Enterprise Blockchain Solutions",";
@@ -377,12 +347,11 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     price: 19999,";
     currency: "$",";
     tags["Blockchain", "Smart Contracts", "Supply Chain", "DApps"],;
-    author: {;
+    author: {
 ";
       name: "Zion Tech Group",";
       id: "zion-tech-group",";
-      email: "kleber@ziontechgroup.com";,
-},";
+      email: "kleber@ziontechgroup.com"},";
     images["https://images.unsplash.com/photo-1639762681485-074d7f9d5b1b?auto=format&fit=crop&w=800&h=500"],;";
     createdAt: "2024-03-30T12:00:00.000Z",;
     rating: 4.9,;
@@ -390,9 +359,8 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     featured: true,";
     location: "Global",";
     availability: "8-12 Weeks",;
-    aiScore: 95;,
-},;
-  {;
+    aiScore: 95},;
+  {
 ";
     id: "quantum-computing-readiness",";
     title: "Quantum Computing Readiness Assessment",";
@@ -401,23 +369,21 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     price: 14999,";
     currency: "$",";
     tags["Quantum Computing", "Technology Assessment", "Strategic Planning", "Innovation"],;
-    author: {;
+    author: {
 ";
       name: "Zion Tech Group",";
       id: "zion-tech-group",";
-      email: "kleber@ziontechgroup.com";,
-},";
+      email: "kleber@ziontechgroup.com"},";
     images["https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=800&h=500"],;";
     createdAt: "2024-04-01T09:45:00.000Z",;
     rating: 4.8,;
     reviewCount: 12,";
     location: "Global",";
     availability: "4-6 Weeks",;
-    aiScore: 94;,
-},;
+    aiScore: 94},;
 
   // Advanced AI & Machine Learning Services;
-  {;
+  {
 ";
     id: "ai-video-generation",";
     title: "AI Video Generation & Editing Suite",";
@@ -426,12 +392,11 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     price: 3999,";
     currency: "$",";
     tags["Video Generation", "AI Editing", "Content Creation", "Automation"],;
-    author: {;
+    author: {
 ";
       name: "Zion Tech Group",";
       id: "zion-tech-group",";
-      email: "kleber@ziontechgroup.com";,
-},";
+      email: "kleber@ziontechgroup.com"},";
     images["https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=800&h=500"],;";
     createdAt: "2024-04-05T14:20:00.000Z",;
     rating: 4.9,;
@@ -439,9 +404,8 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     featured: true,";
     location: "Global",";
     availability: "2-3 Weeks",;
-    aiScore: 96;,
-},;
-  {;
+    aiScore: 96},;
+  {
 ";
     id: "ai-code-review",";
     title: "AI-Powered Code Review Assistant",";
@@ -450,21 +414,19 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     price: 1299,";
     currency: "$",";
     tags["Code Review", "AI Analysis", "Quality Assurance", "Development"],;
-    author: {;
+    author: {
 ";
       name: "Zion Tech Group",";
       id: "zion-tech-group",";
-      email: "kleber@ziontechgroup.com";,
-},";
+      email: "kleber@ziontechgroup.com"},";
     images["https://images.unsplash.com/photo-1555066931-4365d308bab7?auto=format&fit=crop&w=800&h=500"],;";
     createdAt: "2024-04-10T11:30:00.000Z",;
     rating: 4.8,;
     reviewCount: 156,";
     location: "Global",";
     availability: "Immediate",;
-    aiScore: 93;,
-},;
-  {;
+    aiScore: 93},;
+  {
 ";
     id: "ai-test-automation",";
     title: "AI Test Automation Framework",";
@@ -473,21 +435,19 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     price: 2499,";
     currency: "$",";
     tags["Test Automation", "AI Testing", "Quality Assurance", "Automation"],;
-    author: {;
+    author: {
 ";
       name: "Zion Tech Group",";
       id: "zion-tech-group",";
-      email: "kleber@ziontechgroup.com";,
-},";
+      email: "kleber@ziontechgroup.com"},";
     images["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],;";
     createdAt: "2024-04-15T09:15:00.000Z",;
     rating: 4.7,;
     reviewCount: 89,";
     location: "Global",";
     availability: "1-2 Weeks",;
-    aiScore: 91;,
-},;
-  {;
+    aiScore: 91},;
+  {
 ";
     id: "ai-document-processing",";
     title: "AI Document Processing & OCR Platform",";
@@ -496,21 +456,19 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     price: 1799,";
     currency: "$",";
     tags["Document Processing", "OCR", "Form Extraction", "Automation"],;
-    author: {;
+    author: {
 ";
       name: "Zion Tech Group",";
       id: "zion-tech-group",";
-      email: "kleber@ziontechgroup.com";,
-},";
+      email: "kleber@ziontechgroup.com"},";
     images["https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&h=500"],;";
     createdAt: "2024-04-20T16:45:00.000Z",;
     rating: 4.8,;
     reviewCount: 234,";
     location: "Global",";
     availability: "2-3 Weeks",;
-    aiScore: 94;,
-},;
-  {;
+    aiScore: 94},;
+  {
 ";
     id: "ai-chatbot-platform",";
     title: "Enterprise AI Chatbot Platform",";
@@ -519,12 +477,11 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     price: 3499,";
     currency: "$",";
     tags["Chatbot", "NLP", "Customer Service", "AI"],;
-    author: {;
+    author: {
 ";
       name: "Zion Tech Group",";
       id: "zion-tech-group",";
-      email: "kleber@ziontechgroup.com";,
-},";
+      email: "kleber@ziontechgroup.com"},";
     images["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],;";
     createdAt: "2024-04-25T13:20:00.000Z",;
     rating: 4.9,;
@@ -532,11 +489,10 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     featured: true,";
     location: "Global",";
     availability: "3-4 Weeks",;
-    aiScore: 95;,
-},;
+    aiScore: 95},;
 
   // Advanced Cloud & Infrastructure Services;
-  {;
+  {
 ";
     id: "kubernetes-orchestration",";
     title: "Kubernetes Orchestration & Management",";
@@ -545,21 +501,19 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     price: 5999,";
     currency: "$",";
     tags["Kubernetes", "Container Orchestration", "DevOps", "Cloud Native"],;
-    author: {;
+    author: {
 ";
       name: "Zion Tech Group",";
       id: "zion-tech-group",";
-      email: "kleber@ziontechgroup.com";,
-},";
+      email: "kleber@ziontechgroup.com"},";
     images["https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=500"],;";
     createdAt: "2024-05-01T10:00:00.000Z",;
     rating: 4.8,;
     reviewCount: 134,";
     location: "Global",";
     availability: "4-6 Weeks",;
-    aiScore: 92;,
-},;
-  {;
+    aiScore: 92},;
+  {
 ";
     id: "serverless-architecture",";
     title: "Serverless Architecture Implementation",";
@@ -568,21 +522,19 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     price: 3999,";
     currency: "$",";
     tags["Serverless", "Cloud Functions", "API Gateway", "Microservices"],;
-    author: {;
+    author: {
 ";
       name: "Zion Tech Group",";
       id: "zion-tech-group",";
-      email: "kleber@ziontechgroup.com";,
-},";
+      email: "kleber@ziontechgroup.com"},";
     images["https://images.unsplash.com/photo-1591405351990-4726e331f141?auto=format&fit=crop&w=800&h=500"],;";
     createdAt: "2024-05-05T14:30:00.000Z",;
     rating: 4.7,;
     reviewCount: 89,";
     location: "Global",";
     availability: "3-4 Weeks",;
-    aiScore: 90;,
-},;
-  {;
+    aiScore: 90},;
+  {
 ";
     id: "hybrid-cloud-solution",";
     title: "Hybrid Cloud Integration Platform",";
@@ -591,12 +543,11 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     price: 7999,";
     currency: "$",";
     tags["Hybrid Cloud", "Integration", "On-Premises", "Cloud Migration"],;
-    author: {;
+    author: {
 ";
       name: "Zion Tech Group",";
       id: "zion-tech-group",";
-      email: "kleber@ziontechgroup.com";,
-},";
+      email: "kleber@ziontechgroup.com"},";
     images["https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=500"],;";
     createdAt: "2024-05-10T11:15:00.000Z",;
     rating: 4.9,;
@@ -604,9 +555,8 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     featured: true,";
     location: "Global",";
     availability: "6-8 Weeks",;
-    aiScore: 94;,
-},;
-  {;
+    aiScore: 94},;
+  {
 ";
     id: "cloud-cost-optimization",";
     title: "Cloud Cost Optimization & Management",";
@@ -615,21 +565,19 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     price: 2499,";
     currency: "$",";
     tags["Cost Optimization", "Cloud Management", "Resource Optimization", "Automation"],;
-    author: {;
+    author: {
 ";
       name: "Zion Tech Group",";
       id: "zion-tech-group",";
-      email: "kleber@ziontechgroup.com";,
-},";
+      email: "kleber@ziontechgroup.com"},";
     images["https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&h=500"],;";
     createdAt: "2024-05-15T09:45:00.000Z",;
     rating: 4.8,;
     reviewCount: 234,";
     location: "Global",";
     availability: "2-3 Weeks",;
-    aiScore: 93;,
-},;
-  {;
+    aiScore: 93},;
+  {
 ";
     id: "cloud-security-compliance",";
     title: "Cloud Security & Compliance Framework",";
@@ -638,12 +586,11 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     price: 6499,";
     currency: "$",";
     tags["Cloud Security", "Compliance", "Identity Management", "Data Protection"],;
-    author: {;
+    author: {
 ";
       name: "Zion Tech Group",";
       id: "zion-tech-group",";
-      email: "kleber@ziontechgroup.com";,
-},";
+      email: "kleber@ziontechgroup.com"},";
     images["https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500"],;";
     createdAt: "2024-05-20T16:20:00.000Z",;
     rating: 4.9,;
@@ -651,11 +598,10 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     featured: true,";
     location: "Global",";
     availability: "4-6 Weeks",;
-    aiScore: 95;,
-},;
+    aiScore: 95},;
 
   // Advanced Cybersecurity Services;
-  {;
+  {
 ";
     id: "penetration-testing",";
     title: "Advanced Penetration Testing & Security Assessment",";
@@ -664,21 +610,19 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     price: 4999,";
     currency: "$",";
     tags["Penetration Testing", "Security Assessment", "Vulnerability Testing", "Security"],;
-    author: {;
+    author: {
 ";
       name: "Zion Tech Group",";
       id: "zion-tech-group",";
-      email: "kleber@ziontechgroup.com";,
-},";
+      email: "kleber@ziontechgroup.com"},";
     images["https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500"],;";
     createdAt: "2024-05-25T12:00:00.000Z",;
     rating: 4.9,;
     reviewCount: 89,";
     location: "Global",";
     availability: "2-4 Weeks",;
-    aiScore: 94;,
-},;
-  {;
+    aiScore: 94},;
+  {
 ";
     id: "incident-response",";
     title: "Incident Response & Digital Forensics",";
@@ -687,12 +631,11 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     price: 8999,";
     currency: "$",";
     tags["Incident Response", "Digital Forensics", "Security Breach", "Recovery"],;
-    author: {;
+    author: {
 ";
       name: "Zion Tech Group",";
       id: "zion-tech-group",";
-      email: "kleber@ziontechgroup.com";,
-},";
+      email: "kleber@ziontechgroup.com"},";
     images["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],;";
     createdAt: "2024-05-30T15:30:00.000Z",;
     rating: 4.8,;
@@ -700,9 +643,8 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     featured: true,";
     location: "Global",";
     availability: "Immediate",;
-    aiScore: 96;,
-},;
-  {;
+    aiScore: 96},;
+  {
 ";
     id: "security-awareness-training",";
     title: "Security Awareness Training Platform",";
@@ -711,21 +653,19 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     price: 1299,";
     currency: "$",";
     tags["Security Training", "Phishing Simulation", "Compliance", "Education"],;
-    author: {;
+    author: {
 ";
       name: "Zion Tech Group",";
       id: "zion-tech-group",";
-      email: "kleber@ziontechgroup.com";,
-},";
+      email: "kleber@ziontechgroup.com"},";
     images["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],;";
     createdAt: "2024-06-01T10:15:00.000Z",;
     rating: 4.7,;
     reviewCount: 178,";
     location: "Global",";
     availability: "1-2 Weeks",;
-    aiScore: 91;,
-},;
-  {;
+    aiScore: 91},;
+  {
 ";
     id: "vulnerability-management",";
     title: "Vulnerability Management & Patching",";
@@ -734,21 +674,19 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     price: 2999,";
     currency: "$",";
     tags["Vulnerability Management", "Patch Management", "Security Scanning", "Automation"],;
-    author: {;
+    author: {
 ";
       name: "Zion Tech Group",";
       id: "zion-tech-group",";
-      email: "kleber@ziontechgroup.com";,
-},";
+      email: "kleber@ziontechgroup.com"},";
     images["https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500"],;";
     createdAt: "2024-06-05T14:45:00.000Z",;
     rating: 4.8,;
     reviewCount: 123,";
     location: "Global",";
     availability: "2-3 Weeks",;
-    aiScore: 93;,
-},;
-  {;
+    aiScore: 93},;
+  {
 ";
     id: "compliance-automation",";
     title: "Compliance Automation & Audit Platform",";
@@ -757,23 +695,21 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     price: 4499,";
     currency: "$",";
     tags["Compliance", "Audit Automation", "Regulatory", "Monitoring"],;
-    author: {;
+    author: {
 ";
       name: "Zion Tech Group",";
       id: "zion-tech-group",";
-      email: "kleber@ziontechgroup.com";,
-},";
+      email: "kleber@ziontechgroup.com"},";
     images["https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&h=500"],;";
     createdAt: "2024-06-10T11:20:00.000Z",;
     rating: 4.9,;
     reviewCount: 67,";
     location: "Global",";
     availability: "3-4 Weeks",;
-    aiScore: 94;,
-},;
+    aiScore: 94},;
 
   // Advanced Data & Analytics Services;
-  {;
+  {
 ";
     id: "data-warehouse-design",";
     title: "Enterprise Data Warehouse Design & Implementation",";
@@ -782,12 +718,11 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     price: 12999,";
     currency: "$",";
     tags["Data Warehouse", "ETL", "Business Intelligence", "Cloud Analytics"],;
-    author: {;
+    author: {
 ";
       name: "Zion Tech Group",";
       id: "zion-tech-group",";
-      email: "kleber@ziontechgroup.com";,
-},";
+      email: "kleber@ziontechgroup.com"},";
     images["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],;";
     createdAt: "2024-06-15T13:00:00.000Z",;
     rating: 4.9,;
@@ -795,9 +730,8 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     featured: true,";
     location: "Global",";
     availability: "8-12 Weeks",;
-    aiScore: 95;,
-},;
-  {;
+    aiScore: 95},;
+  {
 ";
     id: "machine-learning-pipeline",";
     title: "Machine Learning Pipeline & MLOps",";
@@ -806,21 +740,19 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     price: 7999,";
     currency: "$",";
     tags["Machine Learning", "MLOps", "Model Deployment", "Automation"],;
-    author: {;
+    author: {
 ";
       name: "Zion Tech Group",";
       id: "zion-tech-group",";
-      email: "kleber@ziontechgroup.com";,
-},";
+      email: "kleber@ziontechgroup.com"},";
     images["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],;";
     createdAt: "2024-06-20T10:30:00.000Z",;
     rating: 4.8,;
     reviewCount: 134,";
     location: "Global",";
     availability: "6-8 Weeks",;
-    aiScore: 93;,
-},;
-  {;
+    aiScore: 93},;
+  {
 ";
     id: "data-governance-platform",";
     title: "Data Governance & Quality Management",";
@@ -829,21 +761,19 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     price: 5499,";
     currency: "$",";
     tags["Data Governance", "Data Quality", "Compliance", "Metadata Management"],;
-    author: {;
+    author: {
 ";
       name: "Zion Tech Group",";
       id: "zion-tech-group",";
-      email: "kleber@ziontechgroup.com";,
-},";
+      email: "kleber@ziontechgroup.com"},";
     images["https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&h=500"],;";
     createdAt: "2024-06-25T15:45:00.000Z",;
     rating: 4.7,;
     reviewCount: 78,";
     location: "Global",";
     availability: "4-6 Weeks",;
-    aiScore: 91;,
-},;
-  {;
+    aiScore: 91},;
+  {
 ";
     id: "real-time-analytics-dashboard",";
     title: "Real-Time Analytics Dashboard Platform",";
@@ -852,21 +782,19 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     price: 3999,";
     currency: "$",";
     tags["Real-Time Analytics", "Dashboard", "Visualization", "Business Intelligence"],;
-    author: {;
+    author: {
 ";
       name: "Zion Tech Group",";
       id: "zion-tech-group",";
-      email: "kleber@ziontechgroup.com";,
-},";
+      email: "kleber@ziontechgroup.com"},";
     images["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],;";
     createdAt: "2024-06-30T12:15:00.000Z",;
     rating: 4.8,;
     reviewCount: 156,";
     location: "Global",";
     availability: "3-4 Weeks",;
-    aiScore: 92;,
-},;
-  {;
+    aiScore: 92},;
+  {
 ";
     id: "data-migration-automation",";
     title: "Data Migration & Integration Automation",";
@@ -875,23 +803,21 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     price: 6499,";
     currency: "$",";
     tags["Data Migration", "Integration", "ETL", "Automation"],;
-    author: {;
+    author: {
 ";
       name: "Zion Tech Group",";
       id: "zion-tech-group",";
-      email: "kleber@ziontechgroup.com";,
-},";
+      email: "kleber@ziontechgroup.com"},";
     images["https://images.unsplash.com/photo-1591405351990-4726e331f141?auto=format&fit=crop&w=800&h=500"],;";
     createdAt: "2024-07-01T09:00:00.000Z",;
     rating: 4.9,;
     reviewCount: 67,";
     location: "Global",";
     availability: "4-6 Weeks",;
-    aiScore: 94;,
-},;
+    aiScore: 94},;
 
   // Business Intelligence & Development Services;
-  {;
+  {
 ";
     id: "bi-platform-development",";
     title: "Custom Business Intelligence Platform",";
@@ -900,12 +826,11 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     price: 8999,";
     currency: "$",";
     tags["Business Intelligence", "Dashboard", "Analytics", "Reporting"],;
-    author: {;
+    author: {
 ";
       name: "Zion Tech Group",";
       id: "zion-tech-group",";
-      email: "kleber@ziontechgroup.com";,
-},";
+      email: "kleber@ziontechgroup.com"},";
     images["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],;";
     createdAt: "2024-07-05T14:20:00.000Z",;
     rating: 4.9,;
@@ -913,9 +838,8 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     featured: true,";
     location: "Global",";
     availability: "6-8 Weeks",;
-    aiScore: 95;,
-},;
-  {;
+    aiScore: 95},;
+  {
 ";
     id: "devops-automation",";
     title: "DevOps Automation & CI/CD Pipeline",";
@@ -924,21 +848,19 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     price: 7499,";
     currency: "$",";
     tags["DevOps", "CI/CD", "Automation", "Infrastructure as Code"],;
-    author: {;
+    author: {
 ";
       name: "Zion Tech Group",";
       id: "zion-tech-group",";
-      email: "kleber@ziontechgroup.com";,
-},";
+      email: "kleber@ziontechgroup.com"},";
     images["https://images.unsplash.com/photo-1555066931-4365d308bab7?auto=format&fit=crop&w=800&h=500"],;";
     createdAt: "2024-07-10T11:30:00.000Z",;
     rating: 4.8,;
     reviewCount: 189,";
     location: "Global",";
     availability: "4-6 Weeks",;
-    aiScore: 93;,
-},;
-  {;
+    aiScore: 93},;
+  {
 ";
     id: "microservices-architecture",";
     title: "Microservices Architecture Design & Implementation",";
@@ -947,12 +869,11 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     price: 9999,";
     currency: "$",";
     tags["Microservices", "API Gateway", "Container Orchestration", "Scalability"],;
-    author: {;
+    author: {
 ";
       name: "Zion Tech Group",";
       id: "zion-tech-group",";
-      email: "kleber@ziontechgroup.com";,
-},";
+      email: "kleber@ziontechgroup.com"},";
     images["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],;";
     createdAt: "2024-07-15T09:15:00.000Z",;
     rating: 4.9,;
@@ -960,9 +881,8 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     featured: true,";
     location: "Global",";
     availability: "8-10 Weeks",;
-    aiScore: 94;,
-},;
-  {;
+    aiScore: 94},;
+  {
 ";
     id: "api-development-platform",";
     title: "Enterprise API Development & Management",";
@@ -971,21 +891,19 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     price: 3999,";
     currency: "$",";
     tags["API Development", "API Gateway", "Documentation", "Testing"],;
-    author: {;
+    author: {
 ";
       name: "Zion Tech Group",";
       id: "zion-tech-group",";
-      email: "kleber@ziontechgroup.com";,
-},";
+      email: "kleber@ziontechgroup.com"},";
     images["https://images.unsplash.com/photo-1555066931-4365d308bab7?auto=format&fit=crop&w=800&h=500"],;";
     createdAt: "2024-07-20T16:45:00.000Z",;
     rating: 4.7,;
     reviewCount: 145,";
     location: "Global",";
     availability: "3-4 Weeks",;
-    aiScore: 91;,
-},;
-  {;
+    aiScore: 91},;
+  {
 ";
     id: "performance-optimization",";
     title: "Application Performance Optimization",";
@@ -994,23 +912,21 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     price: 2999,";
     currency: "$",";
     tags["Performance Optimization", "Load Testing", "Bottleneck Analysis", "Optimization"],;
-    author: {;
+    author: {
 ";
       name: "Zion Tech Group",";
       id: "zion-tech-group",";
-      email: "kleber@ziontechgroup.com";,
-},";
+      email: "kleber@ziontechgroup.com"},";
     images["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],;";
     createdAt: "2024-07-25T13:20:00.000Z",;
     rating: 4.8,;
     reviewCount: 167,";
     location: "Global",";
     availability: "2-3 Weeks",;
-    aiScore: 92;,
-},;
+    aiScore: 92},;
 
   // Digital Transformation & Industry Solutions;
-  {;
+  {
 ";
     id: "digital-transformation-consulting",";
     title: "Digital Transformation Strategy & Consulting",";
@@ -1019,12 +935,11 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     price: 15999,";
     currency: "$",";
     tags["Digital Transformation", "Strategy", "Change Management", "Consulting"],;
-    author: {;
+    author: {
 ";
       name: "Zion Tech Group",";
       id: "zion-tech-group",";
-      email: "kleber@ziontechgroup.com";,
-},";
+      email: "kleber@ziontechgroup.com"},";
     images["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],;";
     createdAt: "2024-07-30T10:00:00.000Z",;
     rating: 4.9,;
@@ -1032,9 +947,8 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     featured: true,";
     location: "Global",";
     availability: "8-12 Weeks",;
-    aiScore: 95;,
-},;
-  {;
+    aiScore: 95},;
+  {
 ";
     id: "healthcare-ai-platform",";
     title: "Healthcare AI & Analytics Platform",";
@@ -1043,12 +957,11 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     price: 24999,";
     currency: "$",";
     tags["Healthcare AI", "Clinical Analytics", "HIPAA Compliance", "Predictive Medicine"],;
-    author: {;
+    author: {
 ";
       name: "Zion Tech Group",";
       id: "zion-tech-group",";
-      email: "kleber@ziontechgroup.com";,
-},";
+      email: "kleber@ziontechgroup.com"},";
     images["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],;";
     createdAt: "2024-08-01T14:30:00.000Z",;
     rating: 4.9,;
@@ -1056,9 +969,8 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     featured: true,";
     location: "Global",";
     availability: "12-16 Weeks",;
-    aiScore: 96;,
-},;
-  {;
+    aiScore: 96},;
+  {
 ";
     id: "fintech-payment-platform",";
     title: "FinTech Payment & Banking Platform",";
@@ -1067,12 +979,11 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     price: 19999,";
     currency: "$",";
     tags["FinTech", "Payment Processing", "Banking", "Fraud Detection"],;
-    author: {;
+    author: {
 ";
       name: "Zion Tech Group",";
       id: "zion-tech-group",";
-      email: "kleber@ziontechgroup.com";,
-},";
+      email: "kleber@ziontechgroup.com"},";
     images["https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&h=500"],;";
     createdAt: "2024-08-05T11:15:00.000Z",;
     rating: 4.8,;
@@ -1080,9 +991,8 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     featured: true,";
     location: "Global",";
     availability: "10-14 Weeks",;
-    aiScore: 94;,
-},;
-  {;
+    aiScore: 94},;
+  {
 ";
     id: "supply-chain-blockchain",";
     title: "Supply Chain Blockchain & IoT Platform",";
@@ -1091,12 +1001,11 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     price: 29999,";
     currency: "$",";
     tags["Supply Chain", "Blockchain", "IoT", "Smart Contracts"],;
-    author: {;
+    author: {
 ";
       name: "Zion Tech Group",";
       id: "zion-tech-group",";
-      email: "kleber@ziontechgroup.com";,
-},";
+      email: "kleber@ziontechgroup.com"},";
     images["https://images.unsplash.com/photo-1639762681485-074d7f9d5b1b?auto=format&fit=crop&w=800&h=500"],;";
     createdAt: "2024-08-10T16:45:00.000Z",;
     rating: 4.9,;
@@ -1104,9 +1013,8 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     featured: true,";
     location: "Global",";
     availability: "16-20 Weeks",;
-    aiScore: 96;,
-},;
-  {;
+    aiScore: 96},;
+  {
 ";
     id: "quantum-cryptography",";
     title: "Quantum Cryptography & Security Solutions",";
@@ -1115,12 +1023,11 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     price: 39999,";
     currency: "$",";
     tags["Quantum Cryptography", "Post-Quantum Security", "Quantum Key Distribution", "Future-Proof"],;
-    author: {;
+    author: {
 ";
       name: "Zion Tech Group",";
       id: "zion-tech-group",";
-      email: "kleber@ziontechgroup.com";,
-},";
+      email: "kleber@ziontechgroup.com"},";
     images["https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=800&h=500"],;";
     createdAt: "2024-08-15T09:20:00.000Z",;
     rating: 4.9,;
@@ -1128,11 +1035,10 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     featured: true,";
     location: "Global",";
     availability: "20-24 Weeks",;
-    aiScore: 97;,
-},;
+    aiScore: 97},;
 
   // Innovative & Emerging Technology Services;
-  {;
+  {
 ";
     id: "ai-voice-assistant",";
     title: "Enterprise AI Voice Assistant Platform",";
@@ -1141,21 +1047,19 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     price: 5999,";
     currency: "$",";
     tags["Voice Assistant", "AI", "NLP", "Enterprise Integration"],;
-    author: {;
+    author: {
 ";
       name: "Zion Tech Group",";
       id: "zion-tech-group",";
-      email: "kleber@ziontechgroup.com";,
-},";
+      email: "kleber@ziontechgroup.com"},";
     images["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],;";
     createdAt: "2024-08-20T12:00:00.000Z",;
     rating: 4.8,;
     reviewCount: 89,";
     location: "Global",";
     availability: "4-6 Weeks",;
-    aiScore: 93;,
-},;
-  {;
+    aiScore: 93},;
+  {
 ";
     id: "iot-platform-development",";
     title: "IoT Platform & Device Management",";
@@ -1164,12 +1068,11 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     price: 8999,";
     currency: "$",";
     tags["IoT Platform", "Device Management", "Edge Computing", "Real-time Analytics"],;
-    author: {;
+    author: {
 ";
       name: "Zion Tech Group",";
       id: "zion-tech-group",";
-      email: "kleber@ziontechgroup.com";,
-},";
+      email: "kleber@ziontechgroup.com"},";
     images["https://images.unsplash.com/photo-1591405351990-4726e331f141?auto=format&fit=crop&w=800&h=500"],;";
     createdAt: "2024-08-25T15:30:00.000Z",;
     rating: 4.9,;
@@ -1177,9 +1080,8 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     featured: true,";
     location: "Global",";
     availability: "8-10 Weeks",;
-    aiScore: 94;,
-},;
-  {;
+    aiScore: 94},;
+  {
 ";
     id: "ar-vr-development",";
     title: "AR/VR Application Development",";
@@ -1188,21 +1090,19 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     price: 14999,";
     currency: "$",";
     tags["AR/VR", "3D Modeling", "Interactive Experiences", "Cross-Platform"],;
-    author: {;
+    author: {
 ";
       name: "Zion Tech Group",";
       id: "zion-tech-group",";
-      email: "kleber@ziontechgroup.com";,
-},";
+      email: "kleber@ziontechgroup.com"},";
     images["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],;";
     createdAt: "2024-08-30T10:15:00.000Z",;
     rating: 4.8,;
     reviewCount: 45,";
     location: "Global",";
     availability: "10-14 Weeks",;
-    aiScore: 92;,
-},;
-  {;
+    aiScore: 92},;
+  {
 ";
     id: "robotic-process-automation",";
     title: "Robotic Process Automation(RPA) Platform",";
@@ -1211,12 +1111,11 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     price: 7999,";
     currency: "$",";
     tags["RPA", "Process Automation", "Workflow Orchestration", "AI Decision Making"],;
-    author: {;
+    author: {
 ";
       name: "Zion Tech Group",";
       id: "zion-tech-group",";
-      email: "kleber@ziontechgroup.com";,
-},";
+      email: "kleber@ziontechgroup.com"},";
     images["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],;";
     createdAt: "2024-09-01T14:45:00.000Z",;
     rating: 4.9,;
@@ -1224,9 +1123,8 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     featured: true,";
     location: "Global",";
     availability: "6-8 Weeks",;
-    aiScore: 95;,
-},;
-  {;
+    aiScore: 95},;
+  {
 ";
     id: "ai-ethics-framework",";
     title: "AI Ethics & Governance Framework",";
@@ -1235,21 +1133,20 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     price: 3999,";
     currency: "$",";
     tags["AI Ethics", "Bias Detection", "Explainability", "Governance"],;
-    author: {;
+    author: {
 ";
       name: "Zion Tech Group",";
       id: "zion-tech-group",";
-      email: "kleber@ziontechgroup.com";,
-},";
+      email: "kleber@ziontechgroup.com"},";
     images["https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&h=500"],;";
     createdAt: "2024-09-05T11:20:00.000Z",;
     rating: 4.7,;
     reviewCount: 78,;";
     location: "Global",;";
     availability: "3-4 Weeks",;
-    aiScore: 91};
+    aiScore: 91}
 ];
-;
+
 // Append additional diversified, real micro SaaS, IT, and AI services;
 export const MORE_ENHANCED_SERVICES: ProductListing[] = [{;
 ";
@@ -1266,9 +1163,8 @@ export const MORE_ENHANCED_SERVICES: ProductListing[] = [{;
     rating: 4.7,;
     reviewCount: 72,;
     featured: true,";
-    link: "https://ziontechgroup.com/ai-assistant";,
-},;
-  {;
+    link: "https://ziontechgroup.com/ai-assistant"},;
+  {
 ";
     id: "cloud-cost-optimizer-pro",";
     title: "Cloud Cost Optimizer Pro",";
@@ -1282,9 +1178,8 @@ export const MORE_ENHANCED_SERVICES: ProductListing[] = [{;
     createdAt: "2025-01-15T09:00:00.000Z",;
     rating: 4.6,;
     reviewCount: 54,";
-    link: "https://ziontechgroup.com/cloud-cost-optimizer";,
-},;
-  {;
+    link: "https://ziontechgroup.com/cloud-cost-optimizer"},;
+  {
 ";
     id: "database-performance-monitor",";
     title: "Database Performance Monitor",";
@@ -1298,9 +1193,8 @@ export const MORE_ENHANCED_SERVICES: ProductListing[] = [{;
     createdAt: "2024-12-12T10:00:00.000Z",;
     rating: 4.6,;
     reviewCount: 38,";
-    link: "https://ziontechgroup.com/database-performance-monitor";,
-},;
-  {;
+    link: "https://ziontechgroup.com/database-performance-monitor"},;
+  {
 ";
     id: "api-security-scanner",";
     title: "API Security Scanner",";
@@ -1314,9 +1208,8 @@ export const MORE_ENHANCED_SERVICES: ProductListing[] = [{;
     createdAt: "2025-02-10T10:00:00.000Z",;
     rating: 4.5,;
     reviewCount: 28,";
-    link: "https://ziontechgroup.com/api-security-scanner";,
-},;
-  {;
+    link: "https://ziontechgroup.com/api-security-scanner"},;
+  {
 ";
     id: "pdf-render-api",";
     title: "PDF Render API",";
@@ -1334,7 +1227,7 @@ export const MORE_ENHANCED_SERVICES: ProductListing[] = [{;
 export const ALL_ENHANCED_SERVICES: ProductListing[] = [...ENHANCED_SERVICES,;
   ...MORE_ENHANCED_SERVICES;
 ];
-;
+
 // Service categories for filtering;
 export ;
   { label: 'Financial Technology', value: 'fintech' },;
@@ -1342,18 +1235,16 @@ export ;
   { label: 'Quantum Computing', value: 'quantum-computing' },;
   { label: 'Edge Computing', value: 'edge-computing' },;
   { label: 'Emerging Technology', value: 'emerging-tech' },;
-  { label: 'AI Automation', value: 'ai-automation' };
+  { label: 'AI Automation', value: 'ai-automation' }
 ];
-;
+
 // Pricing tiers for different service levels;
-export const SERVICE_PRICING_TIERS = {;
+export const SERVICE_PRICING_TIERS = {
   basic: { range: "$500 - $2,000",;
-  description: "Essential services for small businesses and startups";,
-},;";
+  description: "Essential services for small businesses and startups"},;";
   professional: { range: "$2,000 - $8,000", description: "Advanced solutions for growing companies and mid-market" },;";
   enterprise: { range: "$8,000 - $25,000", description: "Custom enterprise solutions with dedicated support" },;";
-  premium: { range: "$25,000 - $50,000+", description: "Specialized industry solutions and cutting-edge technology" }};
-;
+  premium: { range: "$25,000 - $50,000+", description: "Specialized industry solutions and cutting-edge technology" }}
 // Contact information;
 export const CONTACT_INFO: unknown = {}
 ";
@@ -1362,8 +1253,7 @@ export const CONTACT_INFO: unknown = {}
   email: "kleber@ziontechgroup.com","";
   address: "364 E Main St STE 1008 Middletown DE 19709","";
   website: "https://ziontechgroup.com",;
-  domain: "ziontechgroup.com";,
-};
+  domain: "ziontechgroup.com"}
 import React from "react";
 import { SEO } from "@/components/SEO";
 export default function enhancedServices() {return (;

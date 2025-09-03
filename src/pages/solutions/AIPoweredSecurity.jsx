@@ -1,38 +1,33 @@
 import React from 'react';
 import { Brain, Shield, Users, Cpu, Database, Lightbulb, Lock, Eye, AlertTriangle, Cloud } from 'lucide-react';
-const AIPoweredSecurity = () => {;
+const AIPoweredSecurity = () => {
     const securitySolutions = [;
-        {;
+        {
             title: "Network Security",;
             description: "AI-powered network monitoring and threat prevention",;
             icon: Shield,;
-            capabilities: ["Intrusion detection", "Traffic analysis", "DDoS protection", "Firewall management"];,
-},;
-        {;
+            capabilities: ["Intrusion detection", "Traffic analysis", "DDoS protection", "Firewall management"]},;
+        {
             title: "Endpoint Security",;
             description: "Comprehensive protection for all devices and endpoints",;
             icon: Cpu,;
-            capabilities: ["Malware detection", "Device control", "Data protection", "Threat response"];,
-},;
-        {;
+            capabilities: ["Malware detection", "Device control", "Data protection", "Threat response"]},;
+        {
             title: "Cloud Security",;
             description: "Secure cloud infrastructure and application protection",;
             icon: Cloud,;
-            capabilities: ["Cloud monitoring", "API security", "Data encryption", "Compliance management"];,
-},;
-        {;
+            capabilities: ["Cloud monitoring", "API security", "Data encryption", "Compliance management"]},;
+        {
             title: "Data Security",;
             description: "Protection of sensitive data and information assets",;
             icon: Database,;
-            capabilities: ["Data classification", "Encryption", "Access control", "Audit trails"];,
-},;
-        {;
+            capabilities: ["Data classification", "Encryption", "Access control", "Audit trails"]},;
+        {
             title: "Identity Management",;
             description: "Secure user identity and access management",;
             icon: Users,;
-            capabilities: ["User provisioning", "Role management", "Single sign-on", "Identity verification"];,
-},;
-        {;
+            capabilities: ["User provisioning", "Role management", "Single sign-on", "Identity verification"]},;
+        {
             title: "Incident Response",;
             description: "Automated incident detection and response",;
             icon: AlertTriangle,;
@@ -48,32 +43,27 @@ const AIPoweredSecurity = () => {;
         "Cost-effective security operations";
     ];
     const implementation = [;
-        {;
+        {
             phase: "Security Assessment",;
             description: "Evaluate current security posture and identify gaps",;
-            duration: "2-4 weeks";,
-},;
-        {;
+            duration: "2-4 weeks"},;
+        {
             phase: "AI Integration",;
             description: "Integrate AI capabilities into existing security infrastructure",;
-            duration: "6-10 weeks";,
-},;
-        {;
+            duration: "6-10 weeks"},;
+        {
             phase: "Training & Tuning",;
             description: "Train AI models and optimize security parameters",;
-            duration: "4-8 weeks";,
-},;
-        {;
+            duration: "4-8 weeks"},;
+        {
             phase: "Deployment",;
             description: "Deploy AI-powered security across the organization",;
-            duration: "4-6 weeks";,
-},;
-        {;
+            duration: "4-6 weeks"},;
+        {
             phase: "Testing & Validation",;
             description: "Validate security effectiveness and performance",;
-            duration: "2-4 weeks";,
-},;
-        {;
+            duration: "2-4 weeks"},;
+        {
             phase: "Monitoring & Optimization",;
             description: "Continuous monitoring and system optimization",;
             duration: "Ongoing";
@@ -252,17 +242,11 @@ const AIPoweredSecurity = () => {;
           </div>;
         </div>;
       </section>;
-    </div>);,
-};
-export default AIPoweredSecurity;,
-}}}}
-;
-export { AIPoweredSecurity };
-;
-export { AIPoweredSecurity };
-;
-export { AIPoweredSecurity };
-;
-export { AIPoweredSecurity };
-;
-export { AIPoweredSecurity };
+    </div>)}
+export default AIPoweredSecurity}}}}
+
+export { AIPoweredSecurity }
+export { AIPoweredSecurity }
+export { AIPoweredSecurity }
+export { AIPoweredSecurity }
+export { AIPoweredSecurity }

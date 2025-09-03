@@ -1,22 +1,20 @@
 import { jsx as _jsx, jsxs as _jsxs } from 'react/jsx-runtime';
-export default function Page() {;
+export default function Page() {
 ,";
         { name: 'Cybersecurity Audit', icon: _jsx(Users, { className: "h-4 w-4" }), count: '1.5k' },";
         { name: 'Mobile App Development', icon: _jsx(Briefcase, { className: "h-4 w-4" }), count: '3.1k' }
     ];
-    useEffect(() => {;
-  // TODO: Add dependencies if needed;,
-}, []);
-        if(searchQuery.length > 2) {;
+    useEffect(() => {
+  // TODO: Add dependencies if needed}, []);
+        if(searchQuery.length > 2) {
 
             // Simulate AI-powered suggestions;
             const filtered = popularSearches.filter(item => item.toLowerCase().includes(searchQuery.toLowerCase()));
-            setSuggestions(filtered.slice(0, 5))}
-        else {;
+            setSuggestions(filtered.slice(0, 5))} else {
 
             setSuggestions([])}
     }, [searchQuery]);
-    const handleSearch = (query) => {;
+    const handleSearch = (query) => {
 
         setSearchQuery(query);
         // Navigate to search results;

@@ -79,13 +79,12 @@ import { ;
   Users as UsersIcon4,;
   Code as CodeIcon2,;
   HelpCircle as HelpCircleIcon2,;
-  DollarSign as DollarSignIcon2;,
-} from 'lucide-react';
+  DollarSign as DollarSignIcon2} from 'lucide-react';
 import { SEO } from '../components/SEO';
-;
-export default function ComprehensiveServicesShowcase2031(...args: unknown[]): unknown {;
+
+export default function ComprehensiveServicesShowcase2031(...args: unknown[]): unknown {
   const featuredServices = [;
-    {;
+    {
       id: "ai-quantum-hybrid-platform",;
       name: "AI Quantum Hybrid Platform",;
       description: "Revolutionary AI-Quantum hybrid computing platform combining quantum computing with artificial intelligence",;
@@ -95,9 +94,8 @@ export default function ComprehensiveServicesShowcase2031(...args: unknown[]): u
       features: ["Quantum-Classical Hybrid Processing", "AI-Quantum Algorithm Optimization", "Real-time Quantum Error Correction"],;
       href: "/services/ai-quantum-hybrid-platform",;
       category: "AI & Quantum Computing",;
-      featured: true;,
-},;
-    {;
+      featured: true},;
+    {
       id: "ai-autonomous-research-assistant",;
       name: "AI Autonomous Research Assistant",;
       description: "AI-powered research automation platform that discovers, analyzes, and synthesizes research autonomously",;
@@ -107,9 +105,8 @@ export default function ComprehensiveServicesShowcase2031(...args: unknown[]): u
       features: ["Autonomous Research Discovery", "Intelligent Literature Review", "Research Paper Generation"],;
       href: "/services/ai-autonomous-research-assistant",;
       category: "AI & Research",;
-      featured: true;,
-},;
-    {;
+      featured: true},;
+    {
       id: "ai-cybersecurity-threat-intelligence",;
       name: "AI Cybersecurity Threat Intelligence",;
       description: "Revolutionary AI-powered cybersecurity platform that detects, analyzes, and responds to cyber threats in real-time",;
@@ -119,9 +116,8 @@ export default function ComprehensiveServicesShowcase2031(...args: unknown[]): u
       features: ["AI-Powered Threat Detection", "24/7 Threat Monitoring", "Predictive Threat Intelligence"],;
       href: "/services/ai-cybersecurity-threat-intelligence",;
       category: "AI & Cybersecurity",;
-      featured: true;,
-},;
-    {;
+      featured: true},;
+    {
       id: "ai-business-intelligence",;
       name: "AI Business Intelligence",;
       description: "Advanced AI-powered business intelligence and analytics platform for data-driven decision making",      icon: Brain,;
@@ -133,8 +129,7 @@ export default function ComprehensiveServicesShowcase2031(...args: unknown[]): u
       ],;
       href: '/services / ai - business - intelligence',;
       category: 'AI & Analytics',;
-      featured: true;,
-},;
+      featured: true},;
     {}
       id: 'ai - financial - analytics',;
       name: 'AI Financial Analytics',;
@@ -149,8 +144,7 @@ export default function ComprehensiveServicesShowcase2031(...args: unknown[]): u
       ],;
       href: '/services / ai - financial - analytics',;
       category: 'AI & Finance',;
-      featured: true;,
-},;
+      featured: true},;
     {}
       id: 'ai - marketing - automation',;
       name: 'AI Marketing Automation',;
@@ -165,10 +159,9 @@ export default function ComprehensiveServicesShowcase2031(...args: unknown[]): u
       ],;
       href: '/services / ai - marketing - automation',;
       category: 'AI & Marketing',;
-      featured: true;,
-}
+      featured: true}
   ];
-;
+
   const serviceCategories: unknown = [{}
       title: 'AI & Machine Learning',;
       icon: Brain,;
@@ -180,8 +173,7 @@ export default function ComprehensiveServicesShowcase2031(...args: unknown[]): u
         'AI Customer Support',;
         'AI Content Creation',;
         'AI HR Platform';
-      ];,
-},;
+      ]},;
     {}
       title: 'Quantum Computing',;
       icon: Atom,;
@@ -190,8 +182,7 @@ export default function ComprehensiveServicesShowcase2031(...args: unknown[]): u
         'Quantum Computing Solutions',;
         'Quantum Machine Learning',;
         'Quantum Cryptography';
-      ];,
-},;
+      ]},;
     {}
       title: 'Cybersecurity',;
       icon: Shield,;
@@ -200,8 +191,7 @@ export default function ComprehensiveServicesShowcase2031(...args: unknown[]): u
         'Zero Trust Network Access',;
         'Security Headers & CSP',;
         'DSR Privacy Portal';
-      ];,
-},;
+      ]},;
     {}
       title: 'Research & Analytics',;
       icon: Search,;
@@ -210,8 +200,7 @@ export default function ComprehensiveServicesShowcase2031(...args: unknown[]): u
         'Data Analytics Platform',;
         'Business Intelligence',;
         'Predictive Analytics';
-      ];,
-},;
+      ]},;
     {}
       title: 'Cloud & Infrastructure',;
       icon: Cloud,;
@@ -220,8 +209,7 @@ export default function ComprehensiveServicesShowcase2031(...args: unknown[]): u
         'IT Infrastructure',;
         'Digital Twin Platform',;
         'IoT Edge Computing';
-      ];,
-},;
+      ]},;
     {}
       title: 'Micro SaaS Solutions',;
       icon: ShoppingCart,;
@@ -230,10 +218,9 @@ export default function ComprehensiveServicesShowcase2031(...args: unknown[]): u
         'Helpdesk Platform',;
         'Website Analytics',;
         'Affiliate Tracking';
-      ];,
-}
+      ]}
   ];
-;
+
   return();
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
       <SEO"";
@@ -437,8 +424,7 @@ export default function ComprehensiveServicesShowcase2031(...args: unknown[]): u
 ';
                   index === 1'';
                     ? 'border-purple-500/50 bg-purple-500/10'''`;
-                    : 'border-white/10'``;,
-} hover:border-purple-500/50 transition-all`}
+                    : 'border-white/10'``} hover:border-purple-500/50 transition-all`}
               >";
                 {index === 1 && ("";
                   <div className="inline-flex items-center px-3 py-1 bg-purple-500 text-white text-sm font-medium rounded-full mb-4">"";
@@ -473,8 +459,7 @@ export default function ComprehensiveServicesShowcase2031(...args: unknown[]): u
 '''`;
                     index === 1'''`'`;
                       ? 'bg-purple-600 hover:bg-purple-700 text-white'''`'`'`;
-                      : 'bg-white/10 hover:bg-white/20 text-white border border-white/20'````;,
-}`}
+                      : 'bg-white/10 hover:bg-white/20 text-white border border-white/20'````}`}
                 >;
                   Get Started;
                 </a>;
@@ -570,15 +555,10 @@ export default function ComprehensiveServicesShowcase2031(...args: unknown[]): u
         </div>;
       </section>;
     </div>;
-  );,
-}
-;
-export { ComprehensiveServicesShowcase2031 };
-;
-export { ComprehensiveServicesShowcase2031 };
-;
-export { ComprehensiveServicesShowcase2031 };
-;
-export { ComprehensiveServicesShowcase2031 };
-;
-export { ComprehensiveServicesShowcase2031 };
+  )}
+
+export { ComprehensiveServicesShowcase2031 }
+export { ComprehensiveServicesShowcase2031 }
+export { ComprehensiveServicesShowcase2031 }
+export { ComprehensiveServicesShowcase2031 }
+export { ComprehensiveServicesShowcase2031 }

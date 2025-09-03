@@ -15,15 +15,14 @@ import { ;
   MessageSquare,;
   Phone,;
   Mail,;
-  Globe;,
-} from 'lucide-react';
-;
-export default function PricingPage() {;
+  Globe} from 'lucide-react';
+
+export default function PricingPage() {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
   const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
-;
+
   const pricingPlans = [;
-    {;
+    {
       name: 'Starter',;
       description: 'Perfect for small businesses and startups',;
       monthlyPrice: 999,;
@@ -40,9 +39,8 @@ export default function PricingPage() {;
         'Monthly Reports',;
         'Standard SLA';
       ],;
-      popular: false;,
-},;
-    {;
+      popular: false},;
+    {
       name: 'Professional',;
       description: 'Ideal for growing businesses and mid-size companies',;
       monthlyPrice: 2499,;
@@ -62,9 +60,8 @@ export default function PricingPage() {;
         'Custom Integrations',;
         'Training & Onboarding';
       ],;
-      popular: true;,
-},;
-    {;
+      popular: true},;
+    {
       name: 'Enterprise',;
       description: 'For large organizations requiring enterprise-grade solutions',;
       monthlyPrice: 4999,;
@@ -86,12 +83,11 @@ export default function PricingPage() {;
         'On-site Implementation',;
         'Compliance & Audit Support';
       ],;
-      popular: false;,
-}
+      popular: false}
   ];
-;
+
   const servicePackages = [;
-    {;
+    {
       name: 'AI & Machine Learning',;
       icon: Brain,;
       description: 'Cutting-edge artificial intelligence solutions',;
@@ -103,9 +99,8 @@ export default function PricingPage() {;
         'Machine Learning Models',;
         'AI Strategy Consulting',;
         'Custom AI Development';
-      ];,
-},;
-    {;
+      ]},;
+    {
       name: 'Cybersecurity',;
       icon: Shield,;
       description: 'Comprehensive security and compliance solutions',;
@@ -117,9 +112,8 @@ export default function PricingPage() {;
         'Incident Response',;
         'Security Monitoring',;
         'Employee Training';
-      ];,
-},;
-    {;
+      ]},;
+    {
       name: 'Cloud & DevOps',;
       icon: Cloud,;
       description: 'Scalable cloud infrastructure and automation',;
@@ -131,9 +125,8 @@ export default function PricingPage() {;
         'Performance Optimization',;
         'Cost Optimization',;
         'Monitoring & Logging';
-      ];,
-},;
-    {;
+      ]},;
+    {
       name: 'Digital Transformation',;
       icon: TrendingUp,;
       description: 'End-to-end business transformation services',;
@@ -145,41 +138,34 @@ export default function PricingPage() {;
         'Change Management',;
         'Training & Support',;
         'ROI Measurement';
-      ];,
-}
+      ]}
   ];
-;
+
   const addOns = [;
-    {;
+    {
       name: '24/7 Support',;
       description: 'Round-the-clock technical support and monitoring',;
       price: 500,;
-      icon: Clock;,
-},;
-    {;
+      icon: Clock},;
+    {
       name: 'Custom Development',;
       description: 'Tailored solutions for your specific needs',;
       price: 150,;
-      icon: Users;,
-},;
-    {;
+      icon: Users},;
+    {
       name: 'Training & Certification',;
       description: 'Comprehensive training for your team',;
       price: 200,;
-      icon: Award;,
-},;
-    {;
+      icon: Award},;
+    {
       name: 'Compliance & Audit',;
       description: 'Industry-specific compliance support',;
       price: 300,;
-      icon: Shield;,
-}
+      icon: Shield}
   ];
-;
-  const getYearlyDiscount = (monthlyPrice: number) => {;
-    return Math.round((monthlyPrice * 12 - monthlyPrice * 10) / (monthlyPrice * 12) * 100);,
-};
-;
+
+  const getYearlyDiscount = (monthlyPrice: number) => {
+    return Math.round((monthlyPrice * 12 - monthlyPrice * 10) / (monthlyPrice * 12) * 100)}
   return (;
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">;
       {/* Hero Section */}
@@ -217,8 +203,7 @@ export default function PricingPage() {;
                   className={`px-6 py-3 rounded-md font-medium transition-all duration-300 ${;
                     billingCycle === 'monthly';
                       ? 'bg-blue-600 text-white shadow-lg';
-                      : 'text-gray-600 hover:text-gray-900';,
-}`}
+                      : 'text-gray-600 hover:text-gray-900'}`}
                 >;
                   Monthly;
                 </button>;
@@ -227,8 +212,7 @@ export default function PricingPage() {;
                   className={`px-6 py-3 rounded-md font-medium transition-all duration-300 ${;
                     billingCycle === 'yearly';
                       ? 'bg-blue-600 text-white shadow-lg';
-                      : 'text-blue-600';,
-}`}
+                      : 'text-blue-600'}`}
                 >;
                   Yearly;
                   <span className="ml-2 bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">;
@@ -249,8 +233,7 @@ export default function PricingPage() {;
               <div;
                 key={index}
                 className={`relative bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 ${;
-                  plan.popular ? 'ring-2 ring-purple-500 scale-105' : '';,
-}`}
+                  plan.popular ? 'ring-2 ring-purple-500 scale-105' : ''}`}
               >;
                 {plan.popular && (;
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">;
@@ -259,15 +242,14 @@ export default function PricingPage() {;
                     </span>;
                   </div>;
                 )}
-                ;
                 <div className="p-8">;
                   <div className={`w-16 h-16 bg-gradient-to-r ${plan.color} rounded-lg flex items-center justify-center mx-auto mb-6`}>;
                     <plan.icon className="w-8 h-8 text-white" />;
                   </div>;
-                  ;
+
                   <h3 className="text-2xl font-bold text-gray-900 text-center mb-2">{plan.name}</h3>;
                   <p className="text-gray-600 text-center mb-6">{plan.description}</p>;
-                  ;
+
                   <div className="text-center mb-8">;
                     <div className="text-4xl font-bold text-gray-900">;
                       ${billingCycle === 'monthly' ? plan.monthlyPrice : plan.yearlyPrice}
@@ -276,7 +258,7 @@ export default function PricingPage() {;
                       {billingCycle === 'monthly' ? 'per month' : 'per year'}
                     </div>;
                   </div>;
-                  ;
+
                   <ul className="space-y-4 mb-8">;
                     {plan.features.map((feature, featureIndex) => (;
                       <li key={featureIndex} className="flex items-start space-x-3">;
@@ -285,14 +267,13 @@ export default function PricingPage() {;
                       </li>;
                     ))}
                   </ul>;
-                  ;
+
                   <button;
                     onClick={() => setSelectedPlan(plan.name)}
                     className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 ${;
                       plan.popular;
                         ? 'bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white hover:scale-105';
-                        : 'bg-gray-100 hover:bg-gray-200 text-gray-900';,
-}`}
+                        : 'bg-gray-100 hover:bg-gray-200 text-gray-900'}`}
                   >;
                     {plan.popular ? 'Get Started' : 'Choose Plan'}
                   </button>;
@@ -435,5 +416,4 @@ export default function PricingPage() {;
         </div>;
       </section>;
     </div>;
-  );,
-}
+  )}

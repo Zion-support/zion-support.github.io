@@ -13,8 +13,7 @@ export default function ServiceDescriptionGenerator() {}
       <div className="flex justify-center items-center min-h-screen bg-zion-blue">"";
         <div className="animate-pulse text-zion-purple text-lg">Loading...</div>;
       </div>;
-    );,
-}
+    )}
   // Redirect to login if not authenticated;
   if (!isAuthenticated) {}
     return()";
@@ -23,12 +22,10 @@ export default function ServiceDescriptionGenerator() {}
         state={{ from: '/service-description-generator' }}
         replace;
       />;
-    );,
-}
+    )}
   const handleDescriptionSave = editedDescription => {}
     setGeneratedDescription(editedDescription);
-    // Here you could also save to database if needed;,
-};";
+    // Here you could also save to database if needed};";
   return ("";
     <div className="min-h-screen flex flex-col bg-zion-blue">";
       <SEO"";
@@ -61,16 +58,12 @@ export default function ServiceDescriptionGenerator() {}
           </div>;
         </div>;
       </main>;
-      ;
-    </div>)}
-;
 
-export { ServiceDescriptionGenerator };
-;
-export { ServiceDescriptionGenerator };
-;
-export { ServiceDescriptionGenerator };
-;
-export { ServiceDescriptionGenerator };
-;
-export { ServiceDescriptionGenerator };
+    </div>)}
+
+
+export { ServiceDescriptionGenerator }
+export { ServiceDescriptionGenerator }
+export { ServiceDescriptionGenerator }
+export { ServiceDescriptionGenerator }
+export { ServiceDescriptionGenerator }

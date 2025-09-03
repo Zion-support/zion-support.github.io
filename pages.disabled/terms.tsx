@@ -2,12 +2,12 @@ import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
 import { FileText, Scale, AlertTriangle, CheckCircle, XCircle } from 'lucide-react';
-;
-const Terms: NextPage = () => {;
+
+const Terms: NextPage = () => {
   const lastUpdated = 'January 27, 2025';
-;
+
   const termsSections = [;
-    {;
+    {
       icon: CheckCircle,;
       title: 'Acceptance of Terms',;
       content: [;
@@ -15,9 +15,8 @@ const Terms: NextPage = () => {;
         'If you do not agree to these terms, you may not use our services',;
         'These terms apply to all users of our website and services',;
         'We reserve the right to modify these terms at any time';
-      ];,
-},;
-    {;
+      ]},;
+    {
       icon: Scale,;
       title: 'Service Description',;
       content: [;
@@ -25,9 +24,8 @@ const Terms: NextPage = () => {;
         'Services are provided on an "as is" basis with no warranties',;
         'We reserve the right to modify or discontinue services at any time',;
         'Service availability may vary based on technical requirements and maintenance';
-      ];,
-},;
-    {;
+      ]},;
+    {
       icon: AlertTriangle,;
       title: 'User Responsibilities',;
       content: [;
@@ -35,9 +33,8 @@ const Terms: NextPage = () => {;
         'Maintain the confidentiality of your account credentials',;
         'Use our services in compliance with applicable laws and regulations',;
         'Not engage in any activities that could harm our systems or other users';
-      ];,
-},;
-    {;
+      ]},;
+    {
       icon: XCircle,;
       title: 'Prohibited Uses',;
       content: [;
@@ -45,25 +42,21 @@ const Terms: NextPage = () => {;
         'Transmitting malicious code or harmful content',;
         'Attempting to gain unauthorized access to our systems',;
         'Using our services for any illegal or unauthorized purpose';
-      ];,
-},;
-    {;
+      ]},;
+    {
       icon: Scale,;
       title: 'Legal Compliance',;
-      description: 'Our commitment to legal compliance and adherence to applicable laws and regulations.';,
-},;
-    {;
+      description: 'Our commitment to legal compliance and adherence to applicable laws and regulations.'},;
+    {
       icon: Shield,;
       title: 'Intellectual Property',;
-      description: 'Protection of intellectual property rights and proper usage of our proprietary technologies.';,
-},;
-    {;
+      description: 'Protection of intellectual property rights and proper usage of our proprietary technologies.'},;
+    {
       icon: AlertTriangle,;
       title: 'Limitations',;
-      description: 'Important limitations and disclaimers regarding our services and liability.';,
-}
+      description: 'Important limitations and disclaimers regarding our services and liability.'}
   ];
-;
+
   return (;
     <MainLayout;
       title="Terms of Service - Zion Tech Group";
@@ -347,7 +340,7 @@ const Terms: NextPage = () => {;
         </section>;
       </div>;
 
-export default function TermsPage() {;
+export default function TermsPage() {
   return (;
     <MainLayout;
       title="Terms of Service - Zion Tech Group";
@@ -373,7 +366,7 @@ export default function TermsPage() {;
 
           {/* Content */}
           <div className="bg-white rounded-lg shadow-lg p-8 space-y-8">;
-            ;
+
             {/* Introduction */}
             <section>;
               <h2 className="text-2xl font-semibold text-gray-900 mb-4 flex items-center">;
@@ -569,8 +562,6 @@ export default function TermsPage() {;
         </div>;
       </section>;
     </MainLayout>;
-  );,
-};
-  );,
-}
-;
+  )}
+  )}
+

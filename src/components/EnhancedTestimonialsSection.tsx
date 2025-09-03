@@ -1,7 +1,7 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
  from 'lucide-react';
-;
-interface Testimonial {;
+
+interface Testimonial {
   id: string;
   name: string;
   position: string;
@@ -11,9 +11,8 @@ interface Testimonial {;
   rating: number;
   industry: string;
   results: string[];
-  avatar: string;,
-}
-;
+  avatar: string}
+
 const testimonials: Testimonial[] = [{;
 
     id: '1',;
@@ -25,9 +24,8 @@ const testimonials: Testimonial[] = [{;
     rating: 5,;
     industry: 'Technology',;
     results['300% efficiency increase',450% ROI in 6 months',Real-time insights'],;
-    avatar: '/images/avatars/sarah-chen.jpg';,
-},;
-  {;
+    avatar: '/images/avatars/sarah-chen.jpg'},;
+  {
 
     id: '2',;
     name: 'Marcus Rodriguez',;
@@ -38,9 +36,8 @@ const testimonials: Testimonial[] = [{;
     rating: 5,;
     industry: 'Manufacturing',;
     results['$2M annual savings',Weeks to minutes',Supply chain optimization'],;
-    avatar: '/images/avatars/marcus-rodriguez.jpg';,
-},;
-  {;
+    avatar: '/images/avatars/marcus-rodriguez.jpg'},;
+  {
 
     id: '3',;
     name: 'Dr.Emily Watson',;
@@ -51,9 +48,8 @@ const testimonials: Testimonial[] = [{;
     rating: 5,;
     industry: 'Healthcare',;
     results['95% detection improvement',Reduced false positives',Lives saved'],;
-    avatar: '/images/avatars/emily-watson.jpg';,
-},;
-  {;
+    avatar: '/images/avatars/emily-watson.jpg'},;
+  {
 
     id: '4',;
     name: 'James Thompson',;
@@ -64,9 +60,8 @@ const testimonials: Testimonial[] = [{;
     rating: 5,;
     industry: 'Financial Services',;
     results['80% fewer incidents',Real-time threat detection',Zero-trust security'],;
-    avatar: '/images/avatars/james-thompson.jpg';,
-},;
-  {;
+    avatar: '/images/avatars/james-thompson.jpg'},;
+  {
 
     id: '5',;
     name: 'Lisa Park',;
@@ -80,36 +75,32 @@ const testimonials: Testimonial[] = [{;
     avatar: '/images/avatars/lisa-park.jpg';
 
 ];
-;
-export default function EnhancedTestimonialsSection(...args[]):  {;
+
+export default function EnhancedTestimonialsSection(...args[]):  {
 
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-;
-  useEffect(() => {;
+
+  useEffect(() => {
   // TODO: Add dependencies if needed;
 
-  return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
+  return () => {
+    // Cleanup function}}, []);, []);
     if(!isAutoPlaying) return;
-;
+
       setCurrentTestimonial((prev) => (prev + 1) % testimonials.length) }, 8000) ;
-;
+
     return () => clearInterval(interval) }, [isAutoPlaying, testimonials.length]) ;
-;
+
     setCurrentTestimonial((prev) => (prev + 1) % testimonials.length) ;
-    setIsAutoPlaying(false) };
-;
+    setIsAutoPlaying(false) }
     setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length) ;
-    setIsAutoPlaying(false) };
-                  animate = {;
+    setIsAutoPlaying(false) }
+                  animate = {
 
   { rotate: [0,;
-  360];,
-}}
-                  transition = {;
+  360]}}
+                  transition = {
 
   { duration: 20,;
   repeat: Infinity }}
@@ -140,16 +131,14 @@ export default function EnhancedTestimonialsSection(...args[]):  {;
                     {currentTestimonialData.results.map((result, index)  => (;
                       <motion.div;
                         key={result}
-                        initial = {;
+                        initial = {
 
   { opacity: 0,;
-  y: 20;,
-}}
-                        animate = {;
+  y: 20}}
+                        animate = {
 
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                         transition={{ delay: 0.3 + index * 0.1 }}";
                         className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-4 text-center";
 ";
@@ -198,8 +187,7 @@ export default function EnhancedTestimonialsSection(...args[]):  {;
                   onClick={() => goToTestimonial(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentTestimonial';
                       ? 'bg-zion-cyan w-8'';
-                      : 'bg-white/30 hover:bg-white/50'`;,
-}`}
+                      : 'bg-white/30 hover:bg-white/50'`}`}
                   whileHover={{ scale: 1.2 }}
                 />) ) }
             </div>;
@@ -216,14 +204,14 @@ export default function EnhancedTestimonialsSection(...args[]):  {;
 
         {/* Trust Indicators */}
         <motion.div;
-          initial = {;
+          initial = {
 
   { opacity: 0,;
-  y: 30 }}          whileInView = {;
+  y: 30 }}          whileInView = {
 
   { opacity: 1,;
   y: 0 }}          viewport={{ once: true }}
-          transition = {;
+          transition = {
 
   { duration: 0.6,;
   delay: 0.3 }}"          className="mt-20";
@@ -240,22 +228,19 @@ export default function EnhancedTestimonialsSection(...args[]):  {;
                 { icon: Building, label: '99.9% Uptime', value: 'Reliability' }
               ].map((indicator, index) => (<motion.div;
                   key={indicator.label}
-                  initial = {;
+                  initial = {
 
   { opacity: 0,;
-  y: 20;,
-}}
-                  whileInView = {;
+  y: 20}}
+                  whileInView = {
 
   { opacity: 1,;
-  y: 0;,
-}}
+  y: 0}}
                   viewport={{ once: true }}
-                  transition = {;
+                  transition = {
 
   { duration: 0.6,;
-  delay: index * 0.1;,
-}}";
+  delay: index * 0.1}}";
                   className="text-center";
 ";
                   <div className="w-16 h-16 bg-zion-cyan/20 rounded-2xl flex items-center justify-center mx-auto mb-4 border border-zion-cyan/30">";
@@ -271,14 +256,14 @@ export default function EnhancedTestimonialsSection(...args[]):  {;
 
         {/* Bottom CTA */}
         <motion.div;
-          initial = {;
+          initial = {
 
   { opacity: 0,;
-  y: 30 }}          whileInView = {;
+  y: 30 }}          whileInView = {
 
   { opacity: 1,;
   y: 0 }}          viewport={{ once: true }}
-          transition = {;
+          transition = {
 
   { duration: 0.6,;
   delay: 0.5 }}"          className="text-center mt-16";

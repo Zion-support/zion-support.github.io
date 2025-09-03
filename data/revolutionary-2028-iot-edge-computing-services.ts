@@ -1,5 +1,5 @@
 import { ServiceVariant  } from "../types/service-variants";
-export interface Revolutionary2028IoTEdgeComputingService {;
+export interface Revolutionary2028IoTEdgeComputingService {
   id: string;
   name: string;
   tagline: string;
@@ -26,7 +26,7 @@ export interface Revolutionary2028IoTEdgeComputingService {;
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -38,7 +38,7 @@ export interface Revolutionary2028IoTEdgeComputingService {;
   rating: number;
 export const revolutionary2028IoTEdgeComputingServices: Revolutionary2028IoTEdgeComputingService[] = [;
   // AI-Powered Smart City Platform;
-  {;
+  {
     id: "ai-smart-city-platform-2028",;
     name: "AI Smart City Platform 2028",;
     tagline: "Transform urban infrastructure with AI-powered IoT and edge computing",;
@@ -76,21 +76,19 @@ export const revolutionary2028IoTEdgeComputingServices: Revolutionary2028IoTEdge
     marketSize: "$78.5B market",;
     growthRate: "320% annual growth",;
     variant: "iot-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "AI-powered smart city platform with IoT sensors, edge computing, and comprehensive urban optimization.",;
     launchDate: "2028-01-10",;
     customers: 45,;
     rating: 4.9,;
-    reviews: 35;,;,
-},;
+    reviews: 35},;
   // Industrial IoT Edge Computing Platform;
-  {;
+  {
     id: "industrial-iot-edge-computing-2028",;
     name: "Industrial IoT Edge Computing Platform 2028",;
     tagline: "Revolutionize industrial operations with AI-powered edge computing and IoT",;
@@ -128,21 +126,19 @@ export const revolutionary2028IoTEdgeComputingServices: Revolutionary2028IoTEdge
     marketSize: "$42.8B market",;
     growthRate: "285% annual growth",;
     variant: "iot-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Industrial IoT edge computing platform with real-time processing, predictive maintenance, and comprehensive optimization.",;
     launchDate: "2028-03-25",;
     customers: 280,;
     rating: 4.8,;
-    reviews: 210;,;,
-},;
+    reviews: 210},;
   // AI-Powered Healthcare IoT Platform;
-  {;
+  {
     id: "ai-healthcare-iot-platform-2028",;
     name: "AI Healthcare IoT Platform 2028",;
     tagline: "Transform healthcare delivery with AI-powered IoT and edge computing",;
@@ -180,21 +176,19 @@ export const revolutionary2028IoTEdgeComputingServices: Revolutionary2028IoTEdge
     marketSize: "$58.9B market",;
     growthRate: "310% annual growth",;
     variant: "iot-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "AI-powered healthcare IoT platform with remote monitoring, predictive analytics, and comprehensive healthcare optimization.",;
     launchDate: "2028-02-15",;
     customers: 180,;
     rating: 4.9,;
-    reviews: 140;,;,
-},;
+    reviews: 140},;
   // Smart Agriculture IoT Platform;
-  {;
+  {
     id: "smart-agriculture-iot-platform-2028",;
     name: "Smart Agriculture IoT Platform 2028",;
     tagline: "Revolutionize farming with AI-powered IoT and precision agriculture",;
@@ -232,21 +226,19 @@ export const revolutionary2028IoTEdgeComputingServices: Revolutionary2028IoTEdge
     marketSize: "$22.8B market",;
     growthRate: "295% annual growth",;
     variant: "iot-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Smart agriculture IoT platform with soil monitoring, precision irrigation, and comprehensive crop management.",;
     launchDate: "2028-05-20",;
     customers: 520,;
     rating: 4.7,;
-    reviews: 380;,;,
-},;
+    reviews: 380},;
   // Edge AI Computing Infrastructure;
-  {;
+  {
     id: "edge-ai-computing-infrastructure-2028",;
     name: "Edge AI Computing Infrastructure 2028",;
     tagline: "Deploy AI at the edge with high-performance computing infrastructure",;
@@ -284,12 +276,11 @@ export const revolutionary2028IoTEdgeComputingServices: Revolutionary2028IoTEdge
     marketSize: "$28.5B market",;
     growthRate: "275% annual growth",;
     variant: "edge-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Edge AI computing infrastructure with distributed computing, AI optimization, and comprehensive edge capabilities.",;
     launchDate: "2028-07-30",;

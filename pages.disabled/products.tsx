@@ -4,10 +4,10 @@ import MainLayout from '../components/layout/MainLayout';
 import { ArrowRight, CheckCircle, Star, Zap, Shield, Globe, TrendingUp, Award, Clock, Users } from 'lucide-react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-;
-const Products: NextPage = () => {;
+
+const Products: NextPage = () => {
   const products = [;
-    {;
+    {
       id: 'ai-content-generator',;
       name: 'AI Content Generator',;
       description: 'Advanced AI-powered content creation platform for blogs, social media, and marketing materials.',;
@@ -15,9 +15,8 @@ const Products: NextPage = () => {;
       pricing: 'Starting at $99/month',;
       category: 'AI Tools',;
       icon: Zap,;
-      link: '/products/ai-content-generator';,
-},;
-    {;
+      link: '/products/ai-content-generator'},;
+    {
       id: 'project-management-suite',;
       name: 'Project Management Suite',;
       description: 'Comprehensive project management solution with AI-powered insights and automation.',;
@@ -25,9 +24,8 @@ const Products: NextPage = () => {;
       pricing: 'Starting at $49/month',;
       category: 'Productivity',;
       icon: TrendingUp,;
-      link: '/products/project-management-suite';,
-},;
-    {;
+      link: '/products/project-management-suite'},;
+    {
       id: 'social-media-scheduler',;
       name: 'Social Media Scheduler',;
       description: 'Intelligent social media management with AI-driven content optimization.',;
@@ -35,9 +33,8 @@ const Products: NextPage = () => {;
       pricing: 'Starting at $29/month',;
       category: 'Marketing',;
       icon: Globe,;
-      link: '/products/social-media-scheduler';,
-},;
-    {;
+      link: '/products/social-media-scheduler'},;
+    {
       id: 'expense-tracker',;
       name: 'Expense Tracker',;
       description: 'Smart expense management with receipt scanning and automated categorization.',;
@@ -45,9 +42,8 @@ const Products: NextPage = () => {;
       pricing: 'Starting at $19/month',;
       category: 'Finance',;
       icon: Shield,;
-      link: '/products/expense-tracker';,
-},;
-    {;
+      link: '/products/expense-tracker'},;
+    {
       id: 'lead-scoring-platform',;
       name: 'Lead Scoring Platform',;
       description: 'AI-powered lead qualification and scoring system for sales teams.',;
@@ -55,9 +51,8 @@ const Products: NextPage = () => {;
       pricing: 'Starting at $79/month',;
       category: 'Sales',;
       icon: Award,;
-      link: '/products/lead-scoring-platform';,
-},;
-    {;
+      link: '/products/lead-scoring-platform'},;
+    {
       id: 'time-tracking-analytics',;
       name: 'Time Tracking Analytics',;
       description: 'Advanced time tracking with productivity insights and team analytics.',;
@@ -65,11 +60,9 @@ const Products: NextPage = () => {;
       pricing: 'Starting at $39/month',;
       category: 'Productivity',;
       icon: Clock,;
-      link: '/products/time-tracking-analytics';,
-}
+      link: '/products/time-tracking-analytics'}
   ];
-;
+
   const categories = ['All', 'AI Tools', 'Productivity', 'Marketing', 'Finance', 'Sales'];
-  );,
-}
-;
+  )}
+

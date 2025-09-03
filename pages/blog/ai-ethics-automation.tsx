@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
-;
-export default function AIEthicsAutomation() {;
+
+export default function AIEthicsAutomation() {
   return (;
     <>;
       <Head>;
@@ -11,7 +11,7 @@ export default function AIEthicsAutomation() {;
         <meta property="og:description" content="Exploring the ethical implications and responsible development of autonomous technology." />;
         <meta name="twitter:card" content="summary_large_image" />;
       </Head>;
-      ;
+
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">;
         <main className="container mx-auto px-6 py-12">;
           <nav className="mb-8">;
@@ -19,7 +19,7 @@ export default function AIEthicsAutomation() {;
               ← Back to Blog;
             </a>;
           </nav>;
-          ;
+
           <article className="max-w-4xl mx-auto">;
             <header className="mb-12">;
               <div className="flex items-center gap-3 mb-4">;
@@ -38,7 +38,7 @@ export default function AIEthicsAutomation() {;
                 Discover how Zion Tech Group approaches responsible AI development.;
               </p>;
             </header>;
-            ;
+
             <div className="prose prose-invert prose-lg max-w-none">;
               <section className="mb-12">;
                 <h2 className="text-3xl font-bold mb-6 text-cyan-400">The Ethical Imperative</h2>;
@@ -51,7 +51,7 @@ export default function AIEthicsAutomation() {;
                   requirement—it's a moral imperative that guides everything we do.;
                 </p>;
               </section>;
-              ;
+
               <section className="mb-12">;
                 <h2 className="text-3xl font-bold mb-6 text-fuchsia-400">Transparency and Explainability</h2>;
                 <p className="text-white/80 mb-4">;
@@ -64,7 +64,7 @@ export default function AIEthicsAutomation() {;
                   remain accountable for their actions.;
                 </p>;
               </section>;
-              ;
+
               <section className="mb-12">;
                 <h2 className="text-3xl font-bold mb-6 text-green-400">Bias and Fairness</h2>;
                 <p className="text-white/80 mb-4">;
@@ -77,7 +77,7 @@ export default function AIEthicsAutomation() {;
                   ensuring equitable access to our automation services.;
                 </p>;
               </section>;
-              ;
+
               <section className="mb-12">;
                 <h2 className="text-3xl font-bold mb-6 text-blue-400">Privacy and Data Protection</h2>;
                 <p className="text-white/80 mb-4">;
@@ -90,7 +90,7 @@ export default function AIEthicsAutomation() {;
                   regulations, including GDPR and CCPA.;
                 </p>;
               </section>;
-              ;
+
               <section className="mb-12">;
                 <h2 className="text-3xl font-bold mb-6 text-purple-400">Human Oversight and Control</h2>;
                 <p className="text-white/80 mb-4">;
@@ -103,7 +103,7 @@ export default function AIEthicsAutomation() {;
                   rather than replace human judgment entirely.;
                 </p>;
               </section>;
-              ;
+
               <section className="mb-12">;
                 <h2 className="text-3xl font-bold mb-6 text-yellow-400">Safety and Security</h2>;
                 <p className="text-white/80 mb-4">;
@@ -115,7 +115,7 @@ export default function AIEthicsAutomation() {;
                   ensure the integrity of our automation systems.;
                 </p>;
               </section>;
-              ;
+
               <section className="mb-12">;
                 <h2 className="text-3xl font-bold mb-6 text-indigo-400">Continuous Ethical Review</h2>;
                 <p className="text-white/80 mb-4">;
@@ -128,7 +128,7 @@ export default function AIEthicsAutomation() {;
                 </p>;
               </section>;
             </div>;
-            ;
+
             <footer className="mt-16 pt-8 border-t border-white/20">;
               <div className="flex items-center justify-between">;
                 <div className="text-white/60 text-sm">;
@@ -148,5 +148,4 @@ export default function AIEthicsAutomation() {;
         </main>;
       </div>;
     </>;
-  );,
-}
+  )}

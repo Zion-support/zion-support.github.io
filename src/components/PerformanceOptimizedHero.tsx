@@ -1,60 +1,50 @@
 import { Link  } from 'react-router-dom';
-export default function Page() {;
+export default function Page() {
 </motion.div>}
 import { motion, AnimatePresence  } from 'framer-motion';
-;
-export default function Page() {;
+
+export default function Page() {
 ,;
-    { icon: Zap, text: "Digital Transformation", color: "from - yellow-500 to - orange - 500" };
-  ];,
-}) => {;
+    { icon: Zap, text: "Digital Transformation", color: "from - yellow-500 to - orange - 500" }
+  ]}) => {
   const [currentFeature, setCurrentFeature] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-;
-  useEffect(() => {;
+
+  useEffect(() => {
   // TODO: Add dependencies if needed;
 
-  return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
+  return () => {
+    // Cleanup function}}, []);, []);
     setIsVisible(true) ;
-;
-    const interval = setInterval(() => {;
-      setCurrentFeature((prev) => (prev + 1) % features.length) ;,
-}, 3000) ;
-;
+
+    const interval = setInterval(() => {
+      setCurrentFeature((prev) => (prev + 1) % features.length) }, 3000) ;
+
     return () => clearInterval(interval)}, [features.length]);
-;
+
     // // // // // // // // console.log('Hero CTA clicked');
-  ;
+
     // Analytics tracking could be added here;
     // console.log('Hero CTA clicked')}, []);
-;
-  const containerVariants = {;
+
+  const containerVariants = {
 
   hidden: { opacity: 0,;
-  y: 50;,
-},;
-    visible: {;
+  y: 50},;
+    visible: {
 
       opacity: 1,;      y: 0,;
-      transition: {;
+      transition: {
         duration: 0.8,;
-        staggerChildren: 0.2}}};
-;
-  ;
+        staggerChildren: 0.2}}}
+
   y: 30 ;
-;,
 },;
-    visible: { opacity: 1, y: 0 }};
-;
-  ;
+    visible: { opacity: 1, y: 0 }}
+
   scale: 0.8 ;
-;,
 },;
-    visible: { opacity: 1, scale: 1 }};
-;
+    visible: { opacity: 1, scale: 1 }}
 useEffect(() => { setIsVisible(true) ; setCurrentFeature((prev) => (prev + 1) % features.length) }, 3000) ; ;
   return (";
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
@@ -75,5 +65,5 @@ useEffect(() => { setIsVisible(true) ; setCurrentFeature((prev) => (prev + 1) % 
           </div>;
     </div>;,;
   )}
-;
+
 export default PerformanceOptimizedHero;

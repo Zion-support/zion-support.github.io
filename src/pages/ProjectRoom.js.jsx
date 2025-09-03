@@ -44,17 +44,15 @@ export default function ProjectRoom() {}
 ';
 '';
 ''';
-      setActiveTab('video');,
-}
-  };
+      setActiveTab('video')}
+  }
   const endVideoCall = () => {}
     setIsInCall(false);';
     toast.info('Video call ended', {}
 ';
 '';
 ''';
-      description: 'Call duration and participants will be logged'});,
-};
+      description: 'Call duration and participants will be logged'})}
   const simulateUserJoining = () => {}
     // This is just for demo purposes - in a real app, this would be handled by the video call service';
     const mockUsers = ['';
@@ -80,8 +78,7 @@ export default function ProjectRoom() {}
     const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)];
     if (!callParticipants.find(p => p.id === randomUser.id)) {}
       setCallParticipants(prev => [...prev, randomUser]);
-      toast(`${randomUser.name} joined the call`);,
-}
+      toast(`${randomUser.name} joined the call`)}
   };`;
   return()``;
     <>```;
@@ -272,16 +269,12 @@ export default function ProjectRoom() {}
           </TabsContent>;
         </Tabs>;
       </main>;
-      ;
-    </>)}
-;
 
-export { ProjectRoom };
-;
-export { ProjectRoom };
-;
-export { ProjectRoom };
-;
-export { ProjectRoom };
-;
-export { ProjectRoom };
+    </>)}
+
+
+export { ProjectRoom }
+export { ProjectRoom }
+export { ProjectRoom }
+export { ProjectRoom }
+export { ProjectRoom }

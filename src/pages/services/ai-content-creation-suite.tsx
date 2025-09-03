@@ -21,52 +21,43 @@ import { ;
   BarChart3,;
   MessageSquare,;
   Calendar,;
-  Award;,
-} from 'lucide-react';
-;
-const AIContentCreationSuite = () => {;
-  const contactInfo = {;
+  Award} from 'lucide-react';
+
+const AIContentCreationSuite = () => {
+  const contactInfo = {
     phone: "+1 302 464 0950",;
     email: "kleber@ziontechgroup.com",;
     address: "364 E Main St STE 1008, Middletown DE 19709",;
-    website: "https://ziontechgroup.com";,
-};
-;
+    website: "https://ziontechgroup.com"}
   const features = [;
-    {;
+    {
       title: "Multi-Language Support",;
       description: "Generate content in 50+ languages with native fluency and cultural context",;
-      icon: Globe;,
-},;
-    {;
+      icon: Globe},;
+    {
       title: "SEO Optimization",;
       description: "AI-powered SEO recommendations and keyword optimization for better search rankings",;
-      icon: Search;,
-},;
-    {;
+      icon: Search},;
+    {
       title: "Brand Voice Consistency",;
       description: "Maintain consistent brand voice across all content with AI style matching",;
-      icon: Palette;,
-},;
-    {;
+      icon: Palette},;
+    {
       title: "Plagiarism Detection",;
       description: "Advanced plagiarism checking with 99.9% accuracy and content originality scoring",;
-      icon: Shield;,
-},;
-    {;
+      icon: Shield},;
+    {
       title: "Content Analytics",;
       description: "Track content performance with detailed analytics and engagement metrics",;
-      icon: BarChart3;,
-},;
-    {;
+      icon: BarChart3},;
+    {
       title: "Collaborative Workflow",;
       description: "Team collaboration tools with real-time editing and approval workflows",;
-      icon: Users;,
-}
+      icon: Users}
   ];
-;
+
   const pricingPlans = [;
-    {;
+    {
       name: "Starter",;
       price: "$299",;
       period: "/month",;
@@ -78,9 +69,8 @@ const AIContentCreationSuite = () => {;
         "Email support",;
         "Content analytics dashboard";
       ],;
-      popular: false;,
-},;
-    {;
+      popular: false},;
+    {
       name: "Professional",;
       price: "$599",;
       period: "/month",;
@@ -94,9 +84,8 @@ const AIContentCreationSuite = () => {;
         "Team collaboration tools",;
         "API access";
       ],;
-      popular: true;,
-},;
-    {;
+      popular: true},;
+    {
       name: "Enterprise",;
       price: "$1,299",;
       period: "/month",;
@@ -111,34 +100,30 @@ const AIContentCreationSuite = () => {;
         "Custom integrations",;
         "White-label options";
       ],;
-      popular: false;,
-}
+      popular: false}
   ];
-;
+
   const testimonials = [;
-    {;
+    {
       name: "Sarah Johnson",;
       role: "Marketing Director",;
       company: "TechFlow Solutions",;
       content: "The AI Content Creation Suite has transformed our content marketing. We've seen a 300% increase in organic traffic and our content production time has been reduced by 70%.",;
-      rating: 5;,
-},;
-    {;
+      rating: 5},;
+    {
       name: "Michael Chen",;
       role: "CEO",;
       company: "StartupXYZ",;
       content: "As a startup, we needed to scale our content quickly. This platform has been a game-changer for our growth strategy.",;
-      rating: 5;,
-},;
-    {;
+      rating: 5},;
+    {
       name: "Emily Rodriguez",;
       role: "Content Manager",;
       company: "Global Enterprises Inc",;
       content: "The multi-language support and brand voice consistency features are incredible. Our international content strategy has never been stronger.",;
-      rating: 5;,
-}
+      rating: 5}
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">;
       {/* Header */}
@@ -155,7 +140,7 @@ const AIContentCreationSuite = () => {;
               <ArrowLeft className="w-4 h-4 mr-2" />;
               Back to Services;
             </Link>;
-            ;
+
             <div className="text-center mb-12">;
               <div className="flex items-center justify-center mb-6">;
                 <FileText className="w-16 h-16 text-cyan-400 mr-4" />;
@@ -166,7 +151,7 @@ const AIContentCreationSuite = () => {;
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">;
                 Advanced AI-powered content generation for marketing, blogs, and social media with SEO optimization and brand voice consistency.;
               </p>;
-              ;
+
               {/* Contact Info */}
               <div className="flex flex-wrap justify-center gap-6 mb-8">;
                 <a href={`tel:${contactInfo.phone}`} className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors">;
@@ -259,8 +244,7 @@ const AIContentCreationSuite = () => {;
                 className={`bg-gray-800/50 border rounded-xl p-8 relative ${;
                   plan.popular ;
                     ? 'border-cyan-500 shadow-lg shadow-cyan-500/20' ;
-                    : 'border-gray-700';,
-}`}
+                    : 'border-gray-700'}`}
               >;
                 {plan.popular && (;
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">;
@@ -269,7 +253,7 @@ const AIContentCreationSuite = () => {;
                     </span>;
                   </div>;
                 )}
-;
+
                 <div className="text-center mb-8">;
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>;
                   <div className="flex items-baseline justify-center mb-4">;
@@ -293,8 +277,7 @@ const AIContentCreationSuite = () => {;
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors flex items-center justify-center ${;
                     plan.popular;
                       ? 'bg-cyan-500 hover:bg-cyan-600 text-white';
-                      : 'bg-gray-700 hover:bg-gray-600 text-white';,
-}`}
+                      : 'bg-gray-700 hover:bg-gray-600 text-white'}`}
                 >;
                   Get Started;
                 </a>;
@@ -384,7 +367,5 @@ const AIContentCreationSuite = () => {;
         </div>;
       </section>;
     </div>;
-  );,
-};
-;
+  )}
 export default AIContentCreationSuite;

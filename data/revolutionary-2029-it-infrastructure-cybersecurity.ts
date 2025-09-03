@@ -1,5 +1,5 @@
 import { ServiceVariant  } from "../types/service-variants";
-export interface RevolutionaryITInfrastructureService2029 {;
+export interface RevolutionaryITInfrastructureService2029 {
   id: string;
   name: string;
   tagline: string;
@@ -26,7 +26,7 @@ export interface RevolutionaryITInfrastructureService2029 {;
   marketSize: string;
   growthRate: string;
   variant: string;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string}
@@ -41,7 +41,7 @@ export interface RevolutionaryITInfrastructureService2029 {;
 export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastructureService2029[] =;
   [;
     // Zero Trust Network Access;
-    {;
+    {
       id: "zero-trust-network-access",;
       name: "Zero Trust Network Access",;
       tagline: "Secure access to applications with zero trust principles",;
@@ -89,11 +89,10 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       marketSize: "$30B Zero Trust Security",;
       growthRate: "25% CAGR",;
       variant: "security-zero-trust",;
-      contactInfo: {;
+      contactInfo: {
         mobile: "+1 302 464 0950",;
         email: "kleber@ziontechgroup.com",;
-        address: "364 E Main St STE 1008 Middletown DE 19709",;,;,
-},;
+        address: "364 E Main St STE 1008 Middletown DE 19709"},;
       realImplementation: true,;
       implementationDetails:;
         "Zero trust engine, identity verification, access control",;
@@ -101,10 +100,9 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       customers: 38,;
       rating: 4.9,;
       reviews: 22,;
-      isPopular: true,;,;,
-},;
+      isPopular: true},;
     // Cloud FinOps Optimizer;
-    {;
+    {
       id: "cloud-finops-optimizer",;
       name: "Cloud FinOps Optimizer",;
       tagline: "Optimize cloud costs with AI-driven insights",;
@@ -148,21 +146,19 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       marketSize: "$15B Cloud Management",;
       growthRate: "20% CAGR",;
       variant: "cloud-finops",;
-      contactInfo: {;
+      contactInfo: {
         mobile: "+1 302 464 0950",;
         email: "kleber@ziontechgroup.com",;
-        address: "364 E Main St STE 1008 Middletown DE 19709",;,;,
-},;
+        address: "364 E Main St STE 1008 Middletown DE 19709"},;
       realImplementation: true,;
       implementationDetails: "AI models, cost analytics, optimization engine",;
       launchDate: "2025-01-08",;
       customers: 67,;
       rating: 4.7,;
       reviews: 35,;
-      isPopular: true,;,;,
-},;
+      isPopular: true},;
     // AI-Powered Compliance Assistant;
-    {;
+    {
       id: "ai-compliance-assistant",;
       name: "AI Compliance Assistant",;
       tagline: "Automate compliance with intelligent AI monitoring",;
@@ -206,21 +202,19 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       marketSize: "$25B GRC Market",;
       growthRate: "18% CAGR",;
       variant: "compliance-ai",;
-      contactInfo: {;
+      contactInfo: {
         mobile: "+1 302 464 0950",;
         email: "kleber@ziontechgroup.com",;
-        address: "364 E Main St STE 1008 Middletown DE 19709",;,;,
-},;
+        address: "364 E Main St STE 1008 Middletown DE 19709"},;
       realImplementation: true,;
       implementationDetails: "AI models, compliance engine, risk assessment",;
       launchDate: "2025-01-10",;
       customers: 42,;
       rating: 4.8,;
       reviews: 24,;
-      isNew: true,;,;,
-},;
+      isNew: true},;
     // Advanced Threat Intelligence Platform;
-    {;
+    {
       id: "advanced-threat-intelligence",;
       name: "Advanced Threat Intelligence Platform",;
       tagline: "Proactive threat detection with AI-powered intelligence",;
@@ -272,20 +266,18 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       marketSize: "$20B Threat Intelligence",;
       growthRate: "22% CAGR",;
       variant: "threat-intelligence",;
-      contactInfo: {;
+      contactInfo: {
         mobile: "+1 302 464 0950",;
         email: "kleber@ziontechgroup.com",;
-        address: "364 E Main St STE 1008 Middletown DE 19709",;,;,
-},;
+        address: "364 E Main St STE 1008 Middletown DE 19709"},;
       realImplementation: true,;
       implementationDetails: "AI models, threat feeds, intelligence engine",;
       launchDate: "2025-01-12",;
       customers: 28,;
       rating: 4.9,;
-      reviews: 18,;,;,
-},;
+      reviews: 18},;
     // Quantum-Ready Infrastructure;
-    {;
+    {
       id: "quantum-ready-infrastructure",;
       name: "Quantum-Ready Infrastructure",;
       tagline: "Future-proof your infrastructure for quantum computing",;
@@ -338,11 +330,10 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       marketSize: "$50B Quantum Computing",;
       growthRate: "35% CAGR",;
       variant: "quantum-infrastructure",;
-      contactInfo: {;
+      contactInfo: {
         mobile: "+1 302 464 0950",;
         email: "kleber@ziontechgroup.com",;
-        address: "364 E Main St STE 1008 Middletown DE 19709",;,;,
-},;
+        address: "364 E Main St STE 1008 Middletown DE 19709"},;
       realImplementation: true,;
       implementationDetails:;
         "Quantum algorithms, hybrid systems, migration tools",;
@@ -350,10 +341,9 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       customers: 15,;
       rating: 4.8,;
       reviews: 12,;
-      isNew: true,;,;,
-},;
+      isNew: true},;
     // Edge Computing Security;
-    {;
+    {
       id: "edge-computing-security",;
       name: "Edge Computing Security",;
       tagline: "Secure edge computing with zero-trust principles",;
@@ -397,21 +387,19 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       marketSize: "$40B Edge Computing",;
       growthRate: "30% CAGR",;
       variant: "edge-security",;
-      contactInfo: {;
+      contactInfo: {
         mobile: "+1 302 464 0950",;
         email: "kleber@ziontechgroup.com",;
-        address: "364 E Main St STE 1008 Middletown DE 19709",;,;,
-},;
+        address: "364 E Main St STE 1008 Middletown DE 19709"},;
       realImplementation: true,;
       implementationDetails:;
         "Edge security agents, monitoring platform, threat detection",;
       launchDate: "2025-01-18",;
       customers: 31,;
       rating: 4.7,;
-      reviews: 19,;,;,
-},;
+      reviews: 19},;
     // AI-Powered Network Monitoring;
-    {;
+    {
       id: "ai-network-monitoring",;
       name: "AI Network Monitoring",;
       tagline: "Intelligent network monitoring with AI insights",;
@@ -459,20 +447,18 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       marketSize: "$18B Network Monitoring",;
       growthRate: "16% CAGR",;
       variant: "network-ai",;
-      contactInfo: {;
+      contactInfo: {
         mobile: "+1 302 464 0950",;
         email: "kleber@ziontechgroup.com",;
-        address: "364 E Main St STE 1008 Middletown DE 19709",;,;,
-},;
+        address: "364 E Main St STE 1008 Middletown DE 19709"},;
       realImplementation: true,;
       implementationDetails: "AI models, network agents, monitoring platform",;
       launchDate: "2025-01-20",;
       customers: 53,;
       rating: 4.6,;
-      reviews: 28,;,;,
-},;
+      reviews: 28},;
     // DevSecOps Automation Platform;
-    {;
+    {
       id: "devsecops-automation",;
       name: "DevSecOps Automation Platform",;
       tagline: "Automate security in your DevOps pipeline",;
@@ -512,11 +498,10 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       marketSize: "$12B DevSecOps",;
       growthRate: "24% CAGR",;
       variant: "devsecops",;
-      contactInfo: {;
+      contactInfo: {
         mobile: "+1 302 464 0950",;
         email: "kleber@ziontechgroup.com",;
-        address: "364 E Main St STE 1008 Middletown DE 19709",;,;,
-},;
+        address: "364 E Main St STE 1008 Middletown DE 19709"},;
       realImplementation: true,;
       implementationDetails:;
         "Security scanning, CI/CD integration, automation engine",;
@@ -524,10 +509,9 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       customers: 39,;
       rating: 4.8,;
       reviews: 21,;
-      isPopular: true,;,;,
-},;
+      isPopular: true},;
     // Data Privacy & Governance Platform;
-    {;
+    {
       id: "data-privacy-governance",;
       name: "Data Privacy & Governance Platform",;
       tagline: "Manage data privacy and governance with AI",;
@@ -567,20 +551,18 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       marketSize: "$20B Data Privacy",;
       growthRate: "20% CAGR",;
       variant: "privacy-governance",;
-      contactInfo: {;
+      contactInfo: {
         mobile: "+1 302 464 0950",;
         email: "kleber@ziontechgroup.com",;
-        address: "364 E Main St STE 1008 Middletown DE 19709",;,;,
-},;
+        address: "364 E Main St STE 1008 Middletown DE 19709"},;
       realImplementation: true,;
       implementationDetails: "AI models, privacy engine, governance platform",;
       launchDate: "2025-01-25",;
       customers: 26,;
       rating: 4.7,;
-      reviews: 16,;,;,
-},;
+      reviews: 16},;
     // Hybrid Cloud Management;
-    {;
+    {
       id: "hybrid-cloud-management",;
       name: "Hybrid Cloud Management",;
       tagline: "Manage hybrid cloud environments seamlessly",;
@@ -624,11 +606,10 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       marketSize: "$35B Cloud Management",;
       growthRate: "18% CAGR",;
       variant: "hybrid-cloud",;
-      contactInfo: {;
+      contactInfo: {
         mobile: "+1 302 464 0950",;
         email: "kleber@ziontechgroup.com",;
-        address: "364 E Main St STE 1008 Middletown DE 19709",;,;,
-},;
+        address: "364 E Main St STE 1008 Middletown DE 19709"},;
       realImplementation: true,;
       implementationDetails:;
         "Multi-cloud platform, orchestration engine, management console",;
@@ -636,28 +617,24 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       customers: 34,;
       rating: 4.8,;
       reviews: 20,;
-      isNew: true,;,;,
-},;
+      isNew: true},;
   ];
-export const getITInfrastructureServicesByCategory = (category: string) => {;
+export const getITInfrastructureServicesByCategory = (category: string) => {
   return revolutionaryITInfrastructureServices2029.filter(;
     service => service.category === category;
   )}
-export const getPopularITInfrastructureServices = () => {;
+export const getPopularITInfrastructureServices = () => {
   return revolutionaryITInfrastructureServices2029.filter(;
     service => service.isPopular;
-  );,;,
-}
-export const getNewITInfrastructureServices = () => {;
+  )}
+export const getNewITInfrastructureServices = () => {
   return revolutionaryITInfrastructureServices2029.filter(;
     service => service.isNew;
-  );,;,
-}
+  )}
 export const getITInfrastructureServicesByPriceRange = (;
   minPrice: number,;
   maxPrice: number;
-) => {;
-  return revolutionaryITInfrastructureServices2029.filter(service => {;
+) => {
+  return revolutionaryITInfrastructureServices2029.filter(service => {
     const price = parseInt(service.price.replace("$", "").replace(",", ""));
-    return price >= minPrice && price <= maxPrice});,;,
-}>
+    return price >= minPrice && price <= maxPrice})}>

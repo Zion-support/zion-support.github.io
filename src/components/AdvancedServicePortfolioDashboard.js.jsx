@@ -142,9 +142,7 @@ const AdvancedServicePortfolioDashboard = () => {}
         .includes(searchTerm.toLowerCase());
       return ();
         matchesCategory && matchesStatus && matchesComplexity && matchesSearch;
-      );,
-});,
-}, [selectedCategory, selectedStatus, selectedComplexity, searchTerm]);
+      )})}, [selectedCategory, selectedStatus, selectedComplexity, searchTerm]);
   const portfolioMetrics = useMemo(() => {}
 ';
 '';
@@ -170,9 +168,7 @@ const AdvancedServicePortfolioDashboard = () => {}
       activeClients: totalClients,;
       averagePerformance: Math.round(avgPerformance),;
       portfolioGrowth: Math.round(portfolioGrowth),;
-      marketCoverage: Math.round((portfolioData.length / 50) * 100), // Assuming 50 total possible services;,
-};,
-}, [portfolioData]);
+      marketCoverage: Math.round((portfolioData.length / 50) * 100), // Assuming 50 total possible services}}, [portfolioData]);
   const getStatusColor = status => {}
     switch (status) {}
 ';
@@ -187,9 +183,8 @@ const AdvancedServicePortfolioDashboard = () => {}
       case 'Discontinued':'''';
         return 'bg-red-100 text-red-800';''';
       default:'''';
-        return 'bg-gray-100 text-gray-800';,
-}
-  };
+        return 'bg-gray-100 text-gray-800'}
+  }
   const getComplexityColor = complexity => {}
     switch (complexity) {}
 ';
@@ -204,9 +199,8 @@ const AdvancedServicePortfolioDashboard = () => {}
       case 'Enterprise':'''';
         return 'bg-purple-100 text-purple-800';''';
       default:'''';
-        return 'bg-gray-100 text-gray-800';,
-}
-  };
+        return 'bg-gray-100 text-gray-800'}
+  }
   const getMarketDemandColor = demand => {}
     switch (demand) {}
 ';
@@ -221,9 +215,8 @@ const AdvancedServicePortfolioDashboard = () => {}
       case 'Exploding':'''';
         return 'bg-red-100 text-red-800';''';
       default:'''';
-        return 'bg-gray-100 text-gray-800';,
-}
-  };
+        return 'bg-gray-100 text-gray-800'}
+  }
   const getTechnologyMaturityColor = maturity => {}
     switch (maturity) {}
 ';
@@ -238,9 +231,7 @@ const AdvancedServicePortfolioDashboard = () => {}
       case 'Leading':'''';
         return 'bg-purple-100 text-purple-800';''';
       default:'''';
-        return 'bg-gray-100 text-gray-800';';,
-}'';,
-};''';
+        return 'bg-gray-100 text-gray-800';'}''};''';
   const categories = ['''';
     { id: 'all', name: 'All Categories', count: portfolioData.length },;
     {}
@@ -483,8 +474,7 @@ const AdvancedServicePortfolioDashboard = () => {}
                 setSelectedCategory('all');';
                 setSelectedStatus('all');';
                 setSelectedComplexity('all');';
-                setSearchTerm('');,
-}}">"";
+                setSearchTerm('')}}">"";
               <Filter className="w-4 h-4 mr-2" />;
               Clear Filters;
             </Button>;
@@ -663,8 +653,7 @@ const AdvancedServicePortfolioDashboard = () => {}
                                   ? 'bg-orange-500'';
                                   : index === 4'';
                                     ? 'bg-red-500'''`;
-                                    : 'bg-gray-500'``;,
-}`}"></div>"";
+                                    : 'bg-gray-500'``}`}"></div>"";
                       <span className="font-medium text-zion-slate-dark">;
                         {category.name}
                       </span>";
@@ -686,8 +675,7 @@ const AdvancedServicePortfolioDashboard = () => {}
                                     ? 'bg-orange-500''''`;
                                     : index === 4'''`'`;
                                       ? 'bg-red-500'''`'`'`;
-                                      : 'bg-gray-500'````;,
-}`}
+                                      : 'bg-gray-500'````}`}
                           style={{}
 `;
 ``;
@@ -753,8 +741,7 @@ const AdvancedServicePortfolioDashboard = () => {}
 ''';
                       portfolioData.filter('''';
                         s => s.technologyMaturity === 'Leading'''';
-                      ).length'''';,
-}{' '}
+                      ).length''''}{' '}
                     services in leading position;
                   </p>;
                 </div>;
@@ -785,8 +772,7 @@ const AdvancedServicePortfolioDashboard = () => {}
               onClick={() =>';
                 window.open('';
                   'mailto:kleber@ziontechgroup.com?subject=Portfolio Expansion Consultation',_blank';
-                );,
-}">"";
+                )}">"";
               <Users className="w-5 h-5 mr-2" />;
               Get Portfolio Consultation;
             </Button>";
@@ -800,16 +786,12 @@ const AdvancedServicePortfolioDashboard = () => {}
           </div>;
         </div>;
       </motion.div>;
-    </div>)};
+    </div>)}
 export default AdvancedServicePortfolioDashboard;
-;
 
-export { AdvancedServicePortfolioDashboard };
-;
-export { AdvancedServicePortfolioDashboard };
-;
-export { AdvancedServicePortfolioDashboard };
-;
-export { AdvancedServicePortfolioDashboard };
-;
-export { AdvancedServicePortfolioDashboard };
+
+export { AdvancedServicePortfolioDashboard }
+export { AdvancedServicePortfolioDashboard }
+export { AdvancedServicePortfolioDashboard }
+export { AdvancedServicePortfolioDashboard }
+export { AdvancedServicePortfolioDashboard }

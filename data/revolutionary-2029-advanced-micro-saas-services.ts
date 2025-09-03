@@ -1,5 +1,5 @@
 import { ServiceVariant  } from "../types/service-variants";
-export interface RevolutionaryService2029 {;
+export interface RevolutionaryService2029 {
   id: string;
   name: string;
   tagline: string;
@@ -26,7 +26,7 @@ export interface RevolutionaryService2029 {;
   marketSize: string;
   growthRate: string;
   variant: string;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string}
@@ -36,7 +36,7 @@ export interface RevolutionaryService2029 {;
   customers: number;
   rating: number;
   reviews: number;
-  {;
+  {
     id: "ai-autonomous-business-operations",;
     name: "AI Autonomous Business Operations",;
     tagline: "Next-generation autonomous business operations platform",;
@@ -86,9 +86,8 @@ export interface RevolutionaryService2029 {;
     customers: 45,;
     rating: 4.9,;
     reviews: 127,;
-    popular: true;,;,
-},;
-  {;
+    popular: true},;
+  {
     id: "quantum-ai-hybrid-platform",;
     name: "Quantum AI Hybrid Platform",;
     tagline: "Quantum computing meets artificial intelligence",;
@@ -137,9 +136,8 @@ export interface RevolutionaryService2029 {;
     customers: 12,;
     rating: 4.8,;
     reviews: 34,;
-    popular: true;,;,
-},;
-  {;
+    popular: true},;
+  {
     id: "ai-cybersecurity-platform",;
     name: "AI-Powered Cybersecurity Platform",;
     tagline: "Intelligent threat detection and response",;
@@ -188,9 +186,8 @@ export interface RevolutionaryService2029 {;
     customers: 89,;
     rating: 4.9,;
     reviews: 156,;
-    popular: true;,;,
-},;
-  {;
+    popular: true},;
+  {
     id: "ai-content-marketing-suite",;
     name: "AI Content Marketing Suite",;
     tagline: "End-to-end AI-powered content creation and marketing",;
@@ -237,4 +234,4 @@ export interface RevolutionaryService2029 {;
     implementationDetails: "Brand voice training, content strategy, integration setup.",;
     launchDate: "2029-01-10",;
     customers: 234,;
-    rating: 4.8,}}
+    rating: 4.8}}

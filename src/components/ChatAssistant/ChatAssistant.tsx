@@ -1,52 +1,47 @@
-export interface Message {;
+export interface Message {
   id: string;
   role: 'user' | 'assistant';
   message: string;
   timestamp: Date;
-  read?: boolean;,
-};
-export interface ChatAssistantProps extends React.PropsWithChildren<{}> {;
+  read?: boolean}
+export interface ChatAssistantProps extends React.PropsWithChildren<{}> {
 
   isOpen?: boolean;
   onClose?: () => void}
-export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {;
+export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {
   const [isChatOpen, setIsChatOpen] = useState(isOpen);
   const [messages, setMessages] = useState<any>([]);
   const [inputMessage, setInputMessage] = useState('');
-  ;
+
       timestamp: new Date(),;
-  ;
-  ;
-  ;
-  ;
-;,
+
+
+
+
 };    setMessages(prev => [...prev, userMessage]);
     setInputMessage('');
     // Simulate AI response;
-    setTimeout(: unknown {;
-      const aiMessage: Message = {;
+    setTimeout(: unknown {
+      const aiMessage: Message = {
 
   id: (Date.now() + 1).toString(),;
         role: 'assistant',;
         message: 'Thank you for your message! Our team will get back to you soon.',;
         timestamp: new Date(),;
-  ;
-  ;
-  ;
-  ;
-;,
-};
-      setMessages(prev => [...prev, aiMessage]);,
-}, 1000);,
-};
-  ;
+
+
+
+
+}
+      setMessages(prev => [...prev, aiMessage])}, 1000)}
+
     e.preventDefault();
-    handleSendMessage(inputMessage)};
-  ;
-    setIsChatOpen(!isChatOpen)};
-  const closeChat = (...args: unknown[]): unknown => {;    setIsChatOpen(false);
-    if(onClose) onClose()};
-  if(!isChatOpen) {;
+    handleSendMessage(inputMessage)}
+
+    setIsChatOpen(!isChatOpen)}
+  const closeChat = (...args: unknown[]): unknown => {    setIsChatOpen(false);
+    if(onClose) onClose()}
+  if(!isChatOpen) {
 
     return ();
       <button;

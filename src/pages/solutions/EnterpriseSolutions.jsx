@@ -1,39 +1,34 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Building2, Users, Shield, BarChart3, Cloud, Zap, ArrowRight, CheckCircle, Star, TrendingUp } from 'lucide-react';
-export default function EnterpriseSolutions() {;
+export default function EnterpriseSolutions() {
     const solutions = [;
-        {;
+        {
             icon: Building2,;
             title: "Enterprise Architecture",;
             description: "Scalable, secure, and future-ready enterprise infrastructure design",;
-            features: ["Microservices Architecture", "Cloud-Native Design", "API-First Approach", "Scalability Planning"];,
-},;
-        {;
+            features: ["Microservices Architecture", "Cloud-Native Design", "API-First Approach", "Scalability Planning"]},;
+        {
             icon: Users,;
             title: "Digital Transformation",;
             description: "End-to-end digital transformation strategies for enterprise growth",;
-            features: ["Process Automation", "Legacy System Modernization", "Change Management", "ROI Optimization"];,
-},;
-        {;
+            features: ["Process Automation", "Legacy System Modernization", "Change Management", "ROI Optimization"]},;
+        {
             icon: Shield,;
             title: "Enterprise Security",;
             description: "Comprehensive security solutions for enterprise environments",;
-            features: ["Zero-Trust Architecture", "Compliance Management", "Threat Detection", "Incident Response"];,
-},;
-        {;
+            features: ["Zero-Trust Architecture", "Compliance Management", "Threat Detection", "Incident Response"]},;
+        {
             icon: BarChart3,;
             title: "Business Intelligence",;
             description: "Advanced analytics and insights for data-driven decision making",;
-            features: ["Real-time Dashboards", "Predictive Analytics", "Data Warehousing", "KPI Tracking"];,
-},;
-        {;
+            features: ["Real-time Dashboards", "Predictive Analytics", "Data Warehousing", "KPI Tracking"]},;
+        {
             icon: Cloud,;
             title: "Cloud Strategy",;
             description: "Multi-cloud and hybrid cloud solutions for enterprise needs",;
-            features: ["Cloud Migration", "Cost Optimization", "Performance Monitoring", "Disaster Recovery"];,
-},;
-        {;
+            features: ["Cloud Migration", "Cost Optimization", "Performance Monitoring", "Disaster Recovery"]},;
+        {
             icon: Zap,;
             title: "AI Integration",;
             description: "Seamless AI integration into existing enterprise workflows",;
@@ -49,14 +44,13 @@ export default function EnterpriseSolutions() {;
         "Better data insights and decision-making capabilities";
     ];
     const caseStudies = [;
-        {;
+        {
             comp: "Fortune 500 Manufacturing",;
             industry: "Manufacturing",;
             challenge: "Legacy system modernization and digital transformation",;
             solution: "Implemented cloud-native architecture with AI-powered analytics",;
-            results: "35% cost reduction, 50% faster time-to-market";,
-},;
-        {;
+            results: "35% cost reduction, 50% faster time-to-market"},;
+        {
             comp: "Global Financial Services",;
             industry: "Financial Services",;
             challenge: "Compliance automation and risk management",;
@@ -107,7 +101,7 @@ export default function EnterpriseSolutions() {;
           </div>;
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {solutions.map((solution, index) => {;
+            {solutions.map((solution, index) => {
             const Icon = solution.icon;
             return (<div key={index} className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">;
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-6">;
@@ -121,8 +115,7 @@ export default function EnterpriseSolutions() {;
                         {feature}
                       </li>))}
                   </ul>;
-                </div>);,
-})}
+                </div>)})}
           </div>;
         </div>;
       </section>;
@@ -211,15 +204,10 @@ export default function EnterpriseSolutions() {;
           </div>;
         </div>;
       </section>;
-    </div>);,
-}}}}
-;
-export { EnterpriseSolutions, Icon };
-;
-export { EnterpriseSolutions, Icon };
-;
-export { EnterpriseSolutions, Icon };
-;
-export { EnterpriseSolutions, Icon };
-;
-export { EnterpriseSolutions, Icon };
+    </div>)}}}}
+
+export { EnterpriseSolutions, Icon }
+export { EnterpriseSolutions, Icon }
+export { EnterpriseSolutions, Icon }
+export { EnterpriseSolutions, Icon }
+export { EnterpriseSolutions, Icon }

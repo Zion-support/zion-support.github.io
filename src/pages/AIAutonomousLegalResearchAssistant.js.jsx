@@ -17,26 +17,22 @@ const AIAutonomousLegalResearchAssistant = () => {}
 ";
             icon: Clock,"";
             title: "Time Efficiency","";
-            description: "Reduce research time from hours to minutes with AI-powered automation";,
-},;
+            description: "Reduce research time from hours to minutes with AI-powered automation"},;
         {}
 ";
             icon: BarChart3,"";
             title: "Accuracy & Precision","";
-            description: "AI algorithms ensure comprehensive and accurate legal research results";,
-},;
+            description: "AI algorithms ensure comprehensive and accurate legal research results"},;
         {}
 ";
             icon: TrendingUp,"";
             title: "Cost Reduction","";
-            description: "Lower legal research costs while improving quality and speed";,
-},;
+            description: "Lower legal research costs while improving quality and speed"},;
         {}
 ";
             icon: Shield,"";
             title: "Compliance & Updates","";
-            description: "Stay current with latest legal changes and regulatory updates";,
-}
+            description: "Stay current with latest legal changes and regulatory updates"}
     ];
     const pricingPlans = [];
         {}
@@ -52,8 +48,7 @@ const AIAutonomousLegalResearchAssistant = () => {}
                 "Standard legal databases access","";
                 "Email support","";
                 "Basic reporting dashboard";
-            ];,
-},;
+            ]},;
         {}
 ";
 "";
@@ -70,8 +65,7 @@ const AIAutonomousLegalResearchAssistant = () => {}
                 "Multi-user access","";
                 "Custom integration support";
             ],;
-            popular: true;,
-},;
+            popular: true},;
         {}
 ";
 "";
@@ -97,29 +91,25 @@ const AIAutonomousLegalResearchAssistant = () => {}
 "";
             title: "Case Preparation","";
             description: "Comprehensive legal research for case strategy and argument development",;
-            icon: FileText;,
-},;
+            icon: FileText},;
         {}
 ";
 "";
             title: "Contract Review","";
             description: "AI-powered analysis of contracts and legal documents",;
-            icon: Search;,
-},;
+            icon: Search},;
         {}
 ";
 "";
             title: "Regulatory Compliance","";
             description: "Stay updated with changing regulations and compliance requirements",;
-            icon: Shield;,
-},;
+            icon: Shield},;
         {}
 ";
 "";
             title: "Legal Opinions","";
             description: "Generate well-researched legal opinions with AI assistance",;
-            icon: BarChart3;,
-}
+            icon: BarChart3}
     ];";
     const industries = ["";
         "Corporate Law","";
@@ -330,16 +320,12 @@ const AIAutonomousLegalResearchAssistant = () => {}
           </div>;
         </div>;
       </section>;
-    </div>)};
+    </div>)}
 export default AIAutonomousLegalResearchAssistant;
-;
 
-export { AIAutonomousLegalResearchAssistant };
-;
-export { AIAutonomousLegalResearchAssistant };
-;
-export { AIAutonomousLegalResearchAssistant };
-;
-export { AIAutonomousLegalResearchAssistant };
-;
-export { AIAutonomousLegalResearchAssistant };
+
+export { AIAutonomousLegalResearchAssistant }
+export { AIAutonomousLegalResearchAssistant }
+export { AIAutonomousLegalResearchAssistant }
+export { AIAutonomousLegalResearchAssistant }
+export { AIAutonomousLegalResearchAssistant }

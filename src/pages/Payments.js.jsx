@@ -46,8 +46,7 @@ export default function Payments() {}
                     </p>;
                     <Button;
                       onClick={() =>';
-                        window.open('https://stripe.com',_blank')";,
-}"";
+                        window.open('https://stripe.com',_blank')"}"";
                       className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">;
                       Manage Payment Methods;
                     </Button>;
@@ -103,21 +102,17 @@ export default function Payments() {}
           </Tabs>;
         </div>;
       </div>;
-      ;
+
     </>)}
 // Import UI components for Payment Settings tab;
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
-;
 
-export { Payments };
-;
-export { Payments };
-;
-export { Payments };
-;
-export { Payments };
-;
-export { Payments };
+
+export { Payments }
+export { Payments }
+export { Payments }
+export { Payments }
+export { Payments }

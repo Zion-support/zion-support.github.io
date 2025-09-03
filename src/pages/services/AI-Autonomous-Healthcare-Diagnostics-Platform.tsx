@@ -23,39 +23,34 @@ import { ;
   Microscope,;
   FileText,;
   Eye,;
-  Brain as BrainIcon;,
-} from 'lucide-react';
-;
-const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {;
+  Brain as BrainIcon} from 'lucide-react';
+
+const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {
   const features = [;
-    {;
+    {
       title: "AI-Powered Disease Detection",;
       description: "Advanced machine learning algorithms that detect diseases with 99.7% accuracy",;
       icon: Brain,;
-      benefits: ["99.7% detection accuracy", "Early disease identification", "Multi-modal analysis"];,
-},;
-    {;
+      benefits: ["99.7% detection accuracy", "Early disease identification", "Multi-modal analysis"]},;
+    {
       title: "Autonomous Medical Imaging Analysis",;
       description: "Real-time analysis of X-rays, MRIs, CT scans, and ultrasound images",;
       icon: Eye,;
-      benefits: ["Instant image analysis", "Radiologist assistance", "Automated reporting"];,
-},;
-    {;
+      benefits: ["Instant image analysis", "Radiologist assistance", "Automated reporting"]},;
+    {
       title: "Predictive Health Analytics",;
       description: "Predictive models that forecast health risks and recommend preventive measures",;
       icon: TrendingUp,;
-      benefits: ["Risk prediction models", "Preventive care recommendations", "Population health insights"];,
-},;
-    {;
+      benefits: ["Risk prediction models", "Preventive care recommendations", "Population health insights"]},;
+    {
       title: "HIPAA-Compliant Security",;
       description: "Enterprise-grade security with full HIPAA compliance and data protection",;
       icon: Shield,;
-      benefits: ["HIPAA compliant", "End-to-end encryption", "Audit trails"];,
-}
+      benefits: ["HIPAA compliant", "End-to-end encryption", "Audit trails"]}
   ];
-;
+
   const pricingPlans = [;
-    {;
+    {
       name: "Clinic",;
       price: "$399",;
       period: "/month",;
@@ -66,9 +61,8 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {;
         "Patient reports",;
         "Email support";
       ],;
-      popular: false;,
-},;
-    {;
+      popular: false},;
+    {
       name: "Hospital",;
       price: "$1,299",;
       period: "/month",;
@@ -80,9 +74,8 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {;
         "Priority support",;
         "API integration";
       ],;
-      popular: true;,
-},;
-    {;
+      popular: true},;
+    {
       name: "Enterprise",;
       price: "$3,999",;
       period: "/month",;
@@ -94,56 +87,47 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {;
         "24/7 phone support",;
         "White-label solutions";
       ],;
-      popular: false;,
-}
+      popular: false}
   ];
-;
+
   const useCases = [;
-    {;
+    {
       title: "Radiology Departments",;
       description: "Automate X-ray, MRI, and CT scan analysis for faster diagnosis and treatment",;
-      icon: Eye;,
-},;
-    {;
+      icon: Eye},;
+    {
       title: "Primary Care",;
       description: "AI-assisted diagnosis and treatment recommendations for common conditions",;
-      icon: Stethoscope;,
-},;
-    {;
+      icon: Stethoscope},;
+    {
       title: "Emergency Medicine",;
       description: "Rapid diagnosis in emergency situations for critical patient care",;
-      icon: Activity;,
-},;
-    {;
+      icon: Activity},;
+    {
       title: "Research & Development",;
       description: "Advanced analytics for medical research and clinical trials",;
-      icon: Microscope;,
-}
+      icon: Microscope}
   ];
-;
+
   const benefits = [;
-    {;
+    {
       metric: "99.7%",;
       description: "Accuracy Rate",;
-      detail: "Disease detection accuracy across all diagnostic categories";,
-},;
-    {;
+      detail: "Disease detection accuracy across all diagnostic categories"},;
+    {
       metric: "60%",;
       description: "Faster Diagnosis",;
-      detail: "Reduced time from imaging to diagnosis";,
-},;
-    {;
+      detail: "Reduced time from imaging to diagnosis"},;
+    {
       metric: "24/7",;
       description: "Availability",;
-      detail: "Continuous diagnostic support and monitoring";,
-},;
-    {;
+      detail: "Continuous diagnostic support and monitoring"},;
+    {
       metric: "40%",;
       description: "Cost Reduction",;
-      detail: "Average reduction in diagnostic costs";,
-}
+      detail: "Average reduction in diagnostic costs"}
   ];
-;
+
   const specialties = [;
     "Cardiology",;
     "Neurology",;
@@ -154,7 +138,7 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {;
     "Ophthalmology",;
     "Orthopedics";
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">;
       <SEO ;
@@ -180,15 +164,15 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {;
                 <Heart className="w-8 h-8 text-white" />;
               </div>;
             </div>;
-            ;
+
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">;
               AI Autonomous Healthcare Diagnostics Platform;
             </h1>;
-            ;
+
             <p className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto mb-8 leading-relaxed">;
               Transform healthcare delivery with the world's most advanced AI platform for autonomous medical diagnostics, disease detection, and predictive health analytics.;
             </p>;
-            ;
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
               <a;
                 href="https://ziontechgroup.com/contact";
@@ -271,10 +255,10 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {;
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center mb-6">;
                   <feature.icon className="w-8 h-8 text-white" />;
                 </div>;
-                ;
+
                 <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>;
                 <p className="text-slate-300 mb-6 leading-relaxed">{feature.description}</p>;
-                ;
+
                 <ul className="space-y-3">;
                   {feature.benefits.map((benefit, idx) => (;
                     <li key={idx} className="flex items-center text-slate-300">;
@@ -350,8 +334,7 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {;
                 className={`relative bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border-2 ${;
                   plan.popular ;
                     ? 'border-blue-500 shadow-lg shadow-blue-500/25' ;
-                    : 'border-slate-700/50';,
-}`}
+                    : 'border-slate-700/50'}`}
               >;
                 {plan.popular && (;
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">;
@@ -360,11 +343,11 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {;
                     </span>;
                   </div>;
                 )}
-;
+
                 <div className="text-center mb-8">;
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>;
                   <p className="text-slate-400 mb-6">{plan.description}</p>;
-                  ;
+
                   <div className="flex items-baseline justify-center">;
                     <span className="text-5xl font-bold text-white">{plan.price}</span>;
                     <span className="text-slate-400 ml-1">{plan.period}</span>;
@@ -385,8 +368,7 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {;
                   className={`w-full block text-center py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${;
                     plan.popular;
                       ? 'bg-gradient-to-r from-blue-500 to-cyan-600 text-white hover:from-blue-600 hover:to-cyan-700';
-                      : 'bg-slate-700 text-white hover:bg-slate-600';,
-}`}
+                      : 'bg-slate-700 text-white hover:bg-slate-600'}`}
                 >;
                   Get Started;
                 </a>;
@@ -425,7 +407,7 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {;
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mb-6">;
                   <useCase.icon className="w-8 h-8 text-white" />;
                 </div>;
-                ;
+
                 <h3 className="text-2xl font-bold text-white mb-4">{useCase.title}</h3>;
                 <p className="text-slate-300 leading-relaxed">{useCase.description}</p>;
               </motion.div>;
@@ -446,12 +428,12 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {;
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
               Ready to Transform Healthcare Delivery?;
             </h2>;
-            ;
+
             <p className="text-xl text-slate-300 mb-8 leading-relaxed">;
               Join the future of healthcare with our AI Autonomous Diagnostics Platform. ;
               Get in touch today to schedule a personalized demo and see how we can improve patient care.;
             </p>;
-            ;
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
               <a;
                 href="https://ziontechgroup.com/contact";
@@ -465,7 +447,7 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {;
                 Contact Sales;
               </a>;
             </div>;
-            ;
+
             <div className="mt-8 text-slate-400">;
               <p>Questions? Call us at <a href="tel:+13024640950" className="text-blue-400 hover:text-blue-300">+1 302 464 0950</a></p>;
               <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>;
@@ -474,7 +456,5 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {;
         </div>;
       </section>;
     </div>;
-  );,
-};
-;
+  )}
 export default AIAutonomousHealthcareDiagnosticsPlatform;

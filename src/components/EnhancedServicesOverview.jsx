@@ -8,8 +8,8 @@ const ServiceCategory = ({ category, services }) => {}
     const categoryServices = services.filter(service => service.category.toLowerCase().includes(category.toLowerCase()));
     if(categoryServices.length === 0);
         return null;
-    const getCategoryIcon = (categoryName) => {;
-        const iconMap = {;
+    const getCategoryIcon = (categoryName) => {
+        const iconMap = {
   'AI & Machine Learning': <Brain className="w-6 h-6"/>,;
             'Cybersecurity & Compliance': <Shield className="w-6 h-6"/>,;
             'Data & Analytics': <Database className="w-6 h-6"/>,;
@@ -22,16 +22,11 @@ const ServiceCategory = ({ category, services }) => {}
             'Real Estate & Property': <Home className="w-6 h-6"/>,;
             'Legal & Compliance': <Lock className="w-6 h-6"/>,;
 
-;
-export { ServiceCategory };
-;
-export { ServiceCategory };
-;
-export { ServiceCategory };
-;
-export { ServiceCategory };
-;
-export { ServiceCategory };
-;
+
+export { ServiceCategory }
+export { ServiceCategory }
+export { ServiceCategory }
+export { ServiceCategory }
+export { ServiceCategory }
 export default Component;
 }}}

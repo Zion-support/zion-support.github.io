@@ -1,5 +1,5 @@
 import { ServiceVariant  } from "../types/service-variants";
-export interface InnovativeMicroSaas2026 {;
+export interface InnovativeMicroSaas2026 {
   id: string;
   name: string;
   tagline: string;
@@ -26,7 +26,7 @@ export interface InnovativeMicroSaas2026 {;
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -36,18 +36,17 @@ export interface InnovativeMicroSaas2026 {;
   launchDate: string;
   customers: number;
   rating: number;
-const contact = {;
+const contact = {
   mobile: "+1 302 464 0950",;
   email: "kleber@ziontechgroup.com",;
   address: "364 E Main St STE 1008 Middletown DE 19709";
-  ;
-  ;
-  ;
-  ;
-  website: "https://ziontechgroup.com";,;,
-}
+
+
+
+
+  website: "https://ziontechgroup.com"}
 export const innovativeMicroSaas2026: InnovativeMicroSaas2026[] = [;
-  {;
+  {
     id: "ai-powered-customer-feedback-analyzer",;
     name: "AI-Powered Customer Feedback Analyzer",;
     tagline: "Transform customer feedback into actionable insights",;
@@ -91,9 +90,8 @@ export const innovativeMicroSaas2026: InnovativeMicroSaas2026[] = [;
     launchDate: "2025-04-15",;
     customers: 89,;
     rating: 4.7,;
-    reviews: 234;,;,
-},;
-  {;
+    reviews: 234},;
+  {
     id: "virtual-reality-meeting-platform",;
     name: "Virtual Reality Meeting Platform",;
     tagline: "Immersive virtual meetings and collaboration",;
@@ -137,9 +135,8 @@ export const innovativeMicroSaas2026: InnovativeMicroSaas2026[] = [;
     launchDate: "2025-05-10",;
     customers: 45,;
     rating: 4.8,;
-    reviews: 123;,;,
-},;
-  {;
+    reviews: 123},;
+  {
     id: "ai-powered-inventory-optimization",;
     name: "AI-Powered Inventory Optimization",;
     tagline: "Optimize inventory levels with intelligent forecasting",;
@@ -183,9 +180,8 @@ export const innovativeMicroSaas2026: InnovativeMicroSaas2026[] = [;
     launchDate: "2025-03-20",;
     customers: 67,;
     rating: 4.6,;
-    reviews: 189;,;,
-},;
-  {;
+    reviews: 189},;
+  {
     id: "blockchain-supply-chain-tracker",;
     name: "Blockchain Supply Chain Tracker",;
     tagline: "Transparent and secure supply chain tracking",;
@@ -229,9 +225,8 @@ export const innovativeMicroSaas2026: InnovativeMicroSaas2026[] = [;
     launchDate: "2025-06-15",;
     customers: 34,;
     rating: 4.7,;
-    reviews: 98;,;,
-},;
-  {;
+    reviews: 98},;
+  {
     id: "ai-powered-social-media-scheduler",;
     name: "AI-Powered Social Media Scheduler",;
     tagline: "Intelligent social media content scheduling and optimization",;

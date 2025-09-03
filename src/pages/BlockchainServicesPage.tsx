@@ -21,74 +21,65 @@ import { ;
   Settings,;
   Lightbulb,;
   Rocket,;
-  Coins;,
-} from 'lucide-react';
-;
-const BlockchainServicesPage = () => {;
+  Coins} from 'lucide-react';
+
+const BlockchainServicesPage = () => {
   const blockchainServices = [;
-    {;
+    {
       id: 'smart-contracts',;
       title: 'Smart Contracts',;
       description: 'Develop and deploy secure, audited smart contracts for various use cases',;
       icon: <Database className="w-8 h-8" />,;
       features: ['Contract Development', 'Security Auditing', 'Testing & Deployment', 'Maintenance'],;
       useCases: ['DeFi Applications', 'NFT Platforms', 'Supply Chain', 'Voting Systems'],;
-      pricing: 'Starting from $4,500/month';,
-},;
-    {;
+      pricing: 'Starting from $4,500/month'},;
+    {
       id: 'defi-solutions',;
       title: 'DeFi Solutions',;
       description: 'Build decentralized finance applications and protocols',;
       icon: <Coins className="w-8 h-8" />,;
       features: ['DEX Development', 'Lending Protocols', 'Yield Farming', 'Staking Platforms'],;
       useCases: ['Cryptocurrency Trading', 'Lending & Borrowing', 'Asset Management', 'Insurance'],;
-      pricing: 'Starting from $6,000/month';,
-},;
-    {;
+      pricing: 'Starting from $6,000/month'},;
+    {
       id: 'nft-platforms',;
       title: 'NFT Platforms',;
       description: 'Create and manage non-fungible token marketplaces and applications',;
       icon: <LinkIcon className="w-8 h-8" />,;
       features: ['Marketplace Development', 'Minting Services', 'Metadata Management', 'Royalty Systems'],;
       useCases: ['Digital Art', 'Gaming', 'Collectibles', 'Real Estate'],;
-      pricing: 'Starting from $3,800/month';,
-},;
-    {;
+      pricing: 'Starting from $3,800/month'},;
+    {
       id: 'enterprise-blockchain',;
       title: 'Enterprise Blockchain',;
       description: 'Private and consortium blockchain solutions for enterprise use',;
       icon: <Globe className="w-8 h-8" />,;
       features: ['Private Networks', 'Consortium Management', 'Permission Systems', 'Integration'],;
       useCases: ['Supply Chain', 'Identity Management', 'Asset Tracking', 'Compliance'],;
-      pricing: 'Starting from $8,500/month';,
-}
+      pricing: 'Starting from $8,500/month'}
   ];
-;
+
   const blockchainPlatforms = [;
     'Ethereum', 'Polygon', 'Solana', 'Cardano', 'Polkadot', 'Hyperledger', 'Corda', 'Quorum';
   ];
-;
-  const containerVariants = {;
+
+  const containerVariants = {
     hidden: { opacity: 0 },;
-    visible: {;
+    visible: {
       opacity: 1,;
-      transition: {;
-        staggerChildren: 0.1;,
-}
+      transition: {
+        staggerChildren: 0.1}
     }
-  };
-;
-  const itemVariants = {;
+  }
+  const itemVariants = {
     hidden: { opacity: 0, y: 20 },;
-    visible: {;
+    visible: {
       opacity: 1,;
       y: 0,;
-      transition: {;
-        duration: 0.5;,
-}
+      transition: {
+        duration: 0.5}
     }
-  };
-;
+  }
   return (;
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 pt-24">;
       <div className="container mx-auto px-4 py-12">;
@@ -110,7 +101,7 @@ const BlockchainServicesPage = () => {;
             Transform your business with blockchain technology. From smart contracts to DeFi solutions, ;
             we help you build secure, transparent, and decentralized applications.;
           </p>;
-          ;
+
           {/* Quick Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto">;
             <div className="text-center">;
@@ -297,8 +288,7 @@ const BlockchainServicesPage = () => {;
         </motion.div>;
 import React from "react";
 import { SEO } from "@/components/SEO";
-;,"});,"});,
-}
+;,"});,"})}
 export default function BlockchainServicesPage() {return (";
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">";
       <SEO title="BlockchainServicesPage - Zion Tech Group" description="Professional BlockchainServicesPage services by Zion Tech Group"  />";
@@ -308,6 +298,5 @@ export default function BlockchainServicesPage() {return (";
           Professional BlockchainServicesPage services to help your business grow.;
         </p>;
       </div>;
-  );,
-}
+  )}
 }

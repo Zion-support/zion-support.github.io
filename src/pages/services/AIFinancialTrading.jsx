@@ -1,42 +1,36 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { TrendingUp, Brain, Shield, Users, BarChart3, Clock, Zap, LineChart, PieChart, Target, CheckCircle, Activity, Network, Monitor } from 'lucide-react';
-;
-export default function AIFinancialTrading() {;
+
+export default function AIFinancialTrading() {
     const features = [;
-        {;
+        {
             icon: Brain,;
             title: "AI Trading Algorithms",;
-            description: "Advanced machine learning algorithms that analyze market patterns and execute trades automatically";,
-},;
-        {;
+            description: "Advanced machine learning algorithms that analyze market patterns and execute trades automatically"},;
+        {
             icon: TrendingUp,;
             title: "Real-time Market Analysis",;
-            description: "Live market data processing with instant insights and trend identification";,
-},;
-        {;
+            description: "Live market data processing with instant insights and trend identification"},;
+        {
             icon: Shield,;
             title: "Risk Management",;
-            description: "Sophisticated risk assessment and portfolio protection mechanisms";,
-},;
-        {;
+            description: "Sophisticated risk assessment and portfolio protection mechanisms"},;
+        {
             icon: BarChart3,;
             title: "Portfolio Optimization",;
-            description: "AI-powered portfolio rebalancing and asset allocation optimization";,
-},;
-        {;
+            description: "AI-powered portfolio rebalancing and asset allocation optimization"},;
+        {
             icon: Zap,;
             title: "High-Frequency Trading",;
-            description: "Ultra-fast execution with microsecond precision for optimal trade timing";,
-},;
-        {;
+            description: "Ultra-fast execution with microsecond precision for optimal trade timing"},;
+        {
             icon: Users,;
             title: "Social Trading",;
-            description: "Copy successful traders and share strategies with the community";,
-}
+            description: "Copy successful traders and share strategies with the community"}
     ];
     const pricingPlans = [;
-        {;
+        {
             name: "Starter",;
             price: "$99",;
             period: "/month",;
@@ -50,9 +44,8 @@ export default function AIFinancialTrading() {;
                 "Mobile app access";
             ],;
             cta: "Start Free Trial",;
-            popular: false;,
-},;
-        {;
+            popular: false},;
+        {
             name: "Professional",;
             price: "$299",;
             period: "/month",;
@@ -68,9 +61,8 @@ export default function AIFinancialTrading() {;
                 "Custom strategies";
             ],;
             cta: "Start Free Trial",;
-            popular: true;,
-},;
-        {;
+            popular: true},;
+        {
             name: "Institutional",;
             price: "$1,999",;
             period: "/month",;
@@ -86,72 +78,59 @@ export default function AIFinancialTrading() {;
                 "Advanced compliance";
             ],;
             cta: "Contact Sales",;
-            popular: false;,
-}
+            popular: false}
     ];
     const benefits = [;
-        {;
+        {
             icon: TrendingUp,;
             title: "Increased Returns",;
-            description: "AI algorithms consistently outperform traditional trading strategies by 15-25% annually";,
-},;
-        {;
+            description: "AI algorithms consistently outperform traditional trading strategies by 15-25% annually"},;
+        {
             icon: Clock,;
             title: "24/7 Trading",;
-            description: "Automated trading operates around the clock, capturing opportunities in all time zones";,
-},;
-        {;
+            description: "Automated trading operates around the clock, capturing opportunities in all time zones"},;
+        {
             icon: Shield,;
             title: "Risk Reduction",;
-            description: "Advanced risk management reduces portfolio volatility and protects capital";,
-},;
-        {;
+            description: "Advanced risk management reduces portfolio volatility and protects capital"},;
+        {
             icon: Brain,;
             title: "Emotion-Free Trading",;
-            description: "AI eliminates human emotions and biases from trading decisions";,
-},;
-        {;
+            description: "AI eliminates human emotions and biases from trading decisions"},;
+        {
             icon: Zap,;
             title: "Speed Advantage",;
-            description: "Microsecond execution speed provides competitive edge in fast-moving markets";,
-},;
-        {;
+            description: "Microsecond execution speed provides competitive edge in fast-moving markets"},;
+        {
             icon: BarChart3,;
             title: "Data-Driven Insights",;
-            description: "Comprehensive analytics and reporting for informed decision making";,
-}
+            description: "Comprehensive analytics and reporting for informed decision making"}
     ];
     const tradingInstruments = [;
-        {;
+        {
             icon: LineChart,;
             title: "Stocks & ETFs",;
-            description: "AI-powered analysis of individual stocks, sectors, and market indices";,
-},;
-        {;
+            description: "AI-powered analysis of individual stocks, sectors, and market indices"},;
+        {
             icon: PieChart,;
             title: "Forex Trading",;
-            description: "Currency pair analysis with real-time exchange rate monitoring";,
-},;
-        {;
+            description: "Currency pair analysis with real-time exchange rate monitoring"},;
+        {
             icon: Target,;
             title: "Cryptocurrency",;
-            description: "Digital asset trading with blockchain-based security and transparency";,
-},;
-        {;
+            description: "Digital asset trading with blockchain-based security and transparency"},;
+        {
             icon: Activity,;
             title: "Commodities",;
-            description: "Oil, gold, silver, and agricultural commodity trading strategies";,
-},;
-        {;
+            description: "Oil, gold, silver, and agricultural commodity trading strategies"},;
+        {
             icon: Network,;
             title: "Options & Futures",;
-            description: "Derivatives trading with advanced hedging and speculation strategies";,
-},;
-        {;
+            description: "Derivatives trading with advanced hedging and speculation strategies"},;
+        {
             icon: Monitor,;
             title: "Bonds & Fixed Income",;
-            description: "Fixed income securities with yield optimization and risk management";,
-}
+            description: "Fixed income securities with yield optimization and risk management"}
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-purple-900 pt-20">;
       {/* Hero Section */}
@@ -249,7 +228,7 @@ export default function AIFinancialTrading() {;
                       Most Popular;
                     </span>;
                   </div>)}
-;
+
                 <div className="text-center mb-6">;
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>;
                   <div className="text-4xl font-bold text-purple-400 mb-1">;
@@ -315,16 +294,11 @@ export default function AIFinancialTrading() {;
         </div>;
       </div>;
     </div>;
-  );,
-}
-;
+  )}
 
-export { AIFinancialTrading };
-;
-export { AIFinancialTrading };
-;
-export { AIFinancialTrading };
-;
-export { AIFinancialTrading };
-;
-export { AIFinancialTrading };
+
+export { AIFinancialTrading }
+export { AIFinancialTrading }
+export { AIFinancialTrading }
+export { AIFinancialTrading }
+export { AIFinancialTrading }

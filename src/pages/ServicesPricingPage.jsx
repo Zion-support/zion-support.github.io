@@ -183,22 +183,19 @@ export default function ServicesPricingPage() {}
 "";
                 icon: <Zap className="w-8 h-8"/>,"";
                 title: "Competitive Pricing","";
-                description: "Market-leading rates without compromising on quality or features";,
-},;
+                description: "Market-leading rates without compromising on quality or features"},;
             {}
 ";
 "";
                 icon: <Shield className="w-8 h-8"/>,"";
                 title: "No Hidden Fees","";
-                description: "Transparent pricing with clear breakdowns of all costs";,
-},;
+                description: "Transparent pricing with clear breakdowns of all costs"},;
             {}
 ";
 "";
                 icon: <Users className="w-8 h-8"/>,"";
                 title: "Flexible Plans","";
-                description: "Customizable solutions that grow with your business needs";,
-},;
+                description: "Customizable solutions that grow with your business needs"},;
             {}
 ";
 "";
@@ -239,14 +236,10 @@ export default function ServicesPricingPage() {}
         </div>;
       </div>;
     </div>)}
-;
 
-export { ServicesPricingPage };
-;
-export { ServicesPricingPage };
-;
-export { ServicesPricingPage };
-;
-export { ServicesPricingPage };
-;
-export { ServicesPricingPage };
+
+export { ServicesPricingPage }
+export { ServicesPricingPage }
+export { ServicesPricingPage }
+export { ServicesPricingPage }
+export { ServicesPricingPage }

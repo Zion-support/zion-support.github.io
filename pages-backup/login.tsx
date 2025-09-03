@@ -1,38 +1,30 @@
 import Head from "next/head";
 import React, { useState } from "react";
-const Head = dynamic(() => import("next/head"), { ssr: false });,
-}
+const Head = dynamic(() => import("next/head"), { ssr: false })}
   Zap,;
   Star} from "lucide-react";
-export default function Login() {;
-;
+export default function Login() {
+
   const [formData, setFormData] = useState({";
     email: ",";
-    password: ""});,
-}
-  const [showPassword, setShowPassword] = useState(false);,
-}
-  const [isLoading, setIsLoading] = useState();,
-}
-  const [error, setError] = useState("");,
-}
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {,,;
+    password: ""})}
+  const [showPassword, setShowPassword] = useState(false)}
+  const [isLoading, setIsLoading] = useState()}
+  const [error, setError] = useState("")}
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {,;
     const { name, value } = e.target;
     setFormData(prev = > ({;
       ...prev,;
-      [name]: value}));,
-}
+      [name]: value}))}
   const handleSubmit = async (e: React.FormEvent) => {,;
-    e.preventDefault(),,;
+    e.preventDefault(),;
     setIsLoading(true),";
     setError(""),;
     // comment;
-await new Promise(resolve => setTimeout(resolve, 2000));,
-}
+await new Promise(resolve => setTimeout(resolve, 2000))}
     // comment;
-window.location.href = "/dashboard;,
-}
-;
+window.location.href = "/dashboard}
+
   const benefits = [];
 
   return (;
@@ -83,15 +75,15 @@ key="{index}
                   </div>";
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">;
                     {benefit.title}
-;
+
                   </h3>";
                   <p className="text-gray-600">;
                     {benefit.description}
-;
+
                   </p>;
                 </motion.div>;
               ))}
-;
+
             </div>;
         {/* comment */}";
         <div className="py-16">";
@@ -113,7 +105,7 @@ initial="{{" opacity: 0, y: 20 }}";
                   <p className="text-red-600 text-sm">{error}</p>;
                 </div>;
               )}
-;
+
 ";
               <form onSubmit="{handleSubmit}" className="space-y-6">;
                 <div>";
@@ -149,7 +141,7 @@ value="{formData.password}
                       onClick="{()" => setShowPassword(!showPassword)}";
                       className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover: text-gray-600">",;
                       {showPassword ? <EyeOff className="w-5 h-5"  /> : <Eye className="w-5 h-5"  />}
-;
+
                     </button>;
                   </div>;
 ";
@@ -181,7 +173,7 @@ value="{formData.password}
                         <ArrowRight className="ml-2 w-5 h-5"  />;
                       </>;
                     )}
-;
+
                   </button>;
                 </div>;
               </form>;

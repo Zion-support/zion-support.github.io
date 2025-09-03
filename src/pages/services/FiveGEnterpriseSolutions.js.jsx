@@ -26,17 +26,12 @@ const FiveGEnterpriseSolutions = () => {}
         </div>;
       </section>;
     </div>;
-  );,
-};
+  )}
 export default FiveGEnterpriseSolutions;
-;
 
-export { FiveGEnterpriseSolutions };
-;
-export { FiveGEnterpriseSolutions };
-;
-export { FiveGEnterpriseSolutions };
-;
-export { FiveGEnterpriseSolutions };
-;
-export { FiveGEnterpriseSolutions };
+
+export { FiveGEnterpriseSolutions }
+export { FiveGEnterpriseSolutions }
+export { FiveGEnterpriseSolutions }
+export { FiveGEnterpriseSolutions }
+export { FiveGEnterpriseSolutions }

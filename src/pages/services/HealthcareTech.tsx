@@ -2,83 +2,73 @@ import React from 'react';
 import { SEO } from "../../components/SEO";
 import { motion } from 'framer-motion';
 import { Heart, Shield, Database, Zap, Globe, Server, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Activity, FileText, CheckCircle, Stethoscope, Microscope, Pill, Brain } from 'lucide-react';
-;
-export default function HealthcareTech(...args: []):  {;
+
+export default function HealthcareTech(...args: []):  {
   const features = [;
-    {;
+    {
       icon: Heart,;
       title: 'Patient Care',;
       description: 'AI-powered diagnostics and personalized treatment recommendations',;
-      color: 'from-red-500 to-pink-500';,
-},;
-    {;
+      color: 'from-red-500 to-pink-500'},;
+    {
       icon: Shield,;
       title: 'Data Security',;
       description: 'HIPAA-compliant security with end-to-end encryption',;
-      color: 'from-blue-500 to-cyan-500';,
-},;
-    {;
+      color: 'from-blue-500 to-cyan-500'},;
+    {
       icon: Database,;
       title: 'Interoperability',;
       description: 'Seamless integration across healthcare systems and platforms',;
-      color: 'from-green-500 to-emerald-500';,
-},;
-    {;
+      color: 'from-green-500 to-emerald-500'},;
+    {
       icon: Zap,;
       title: 'Real-time Monitoring',;
       description: 'Continuous patient monitoring and alert systems',;
-      color: 'from-yellow-500 to-orange-500';,
-},;
-    {;
+      color: 'from-yellow-500 to-orange-500'},;
+    {
       icon: Brain,;
       title: 'AI Diagnostics',;
       description: 'Machine learning algorithms for accurate disease detection',;
-      color: 'from-purple-500 to-pink-500';,
-},;
-    {;
+      color: 'from-purple-500 to-pink-500'},;
+    {
       icon: Activity,;
       title: 'Predictive Analytics',;
       description: 'Early warning systems and preventive care insights',;
-      color: 'from-indigo-500 to-purple-500';,
-};
+      color: 'from-indigo-500 to-purple-500'}
   ];
-;
+
   const services = [;
-    {;
+    {
       title: 'Healthcare AI Platform',;
       description: 'Comprehensive AI platform for diagnostics and treatment planning',;
       price: 'From $25,000',;
-      features: ['AI diagnostics', 'Treatment recommendations', 'Patient monitoring', 'Analytics dashboard'];,
-},;
-    {;
+      features: ['AI diagnostics', 'Treatment recommendations', 'Patient monitoring', 'Analytics dashboard']},;
+    {
       title: 'Telemedicine Solutions',;
       description: 'Secure video consultations and remote patient care',;
       price: 'From $15,000',;
-      features: ['Video consultations', 'Patient portal', 'Prescription management', 'Insurance integration'];,
-},;
-    {;
+      features: ['Video consultations', 'Patient portal', 'Prescription management', 'Insurance integration']},;
+    {
       title: 'Health Data Analytics',;
       description: 'Advanced analytics for population health and clinical insights',;
       price: 'From $20,000',;
-      features: ['Population health', 'Clinical analytics', 'Predictive modeling', 'Reporting tools'];,
-},;
-    {;
+      features: ['Population health', 'Clinical analytics', 'Predictive modeling', 'Reporting tools']},;
+    {
       title: 'Medical Device Integration',;
       description: 'IoT integration for medical devices and wearables',;
       price: 'From $18,000',;
-      features: ['Device connectivity', 'Data collection', 'Real-time monitoring', 'Alert systems'];,
-};
+      features: ['Device connectivity', 'Data collection', 'Real-time monitoring', 'Alert systems']}
   ];
-;
+
   const applications = [;
     { name: 'Diagnostics', icon: Microscope, description: 'AI-powered disease detection' },;
     { name: 'Telemedicine', icon: Activity, description: 'Remote patient consultations' },;
     { name: 'Patient Monitoring', icon: Activity, description: 'Continuous health tracking' },;
     { name: 'Drug Discovery', icon: Pill, description: 'AI-assisted pharmaceutical research' },;
     { name: 'Medical Imaging', icon: Brain, description: 'Radiology and pathology analysis' },;
-    { name: 'Clinical Trials', icon: FileText, description: 'Research and trial management' };
+    { name: 'Clinical Trials', icon: FileText, description: 'Research and trial management' }
   ];
-;
+
   return (;
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <SEO ;
@@ -91,25 +81,23 @@ export default function HealthcareTech(...args: []):  {;
         <div className="absolute inset-0 bg-gradient-to-r from-red-600/20 to-pink-600/20"></div>;
         <div className="container mx-auto px-4 relative z-10">;
           <motion.div;
-            initial = {;
+            initial = {
   { opacity: 0,;
   y: 20 ;
 
-;
 
-;
 
-;,
+
+
 }}
-            animate = {;
+            animate = {
   { opacity: 1,;
   y: 0 ;
 
-;
 
-;
 
-;,
+
+
 }}
             transition={{ duration: 0.6 }}
             className="text-center max-w-4xl mx-auto";
@@ -153,25 +141,23 @@ export default function HealthcareTech(...args: []):  {;
       <section className="py-20">;
         <div className="container mx-auto px-4">;
           <motion.div;
-            initial = {;
+            initial = {
   { opacity: 0,;
   y: 20 ;
 
-;
 
-;
 
-;,
+
+
 }}
-            whileInView = {;
+            whileInView = {
   { opacity: 1,;
   y: 0 ;
 
-;
 
-;
 
-;,
+
+
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16";
@@ -189,35 +175,32 @@ export default function HealthcareTech(...args: []):  {;
             {features.map((feature, index)  => (;
               <motion.div;
                 key={feature.title}
-                initial = {;
+                initial = {
   { opacity: 0,;
   y: 20 ;
 
-;
 
-;
 
-;,
+
+
 }}
-                whileInView = {;
+                whileInView = {
   { opacity: 1,;
   y: 0 ;
 
-;
 
-;
 
-;,
+
+
 }}
-                transition = {;
+                transition = {
   { duration: 0.6,;
   delay: index * 0.1 ;
 
-;
 
-;
 
-;,
+
+
 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300";
 
@@ -236,25 +219,23 @@ export default function HealthcareTech(...args: []):  {;
       <section className="py-20 bg-slate-800/30">;
         <div className="container mx-auto px-4">;
           <motion.div;
-            initial = {;
+            initial = {
   { opacity: 0,;
   y: 20 ;
 
-;
 
-;
 
-;,
+
+
 }}
-            whileInView = {;
+            whileInView = {
   { opacity: 1,;
   y: 0 ;
 
-;
 
-;
 
-;,
+
+
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16";
@@ -272,35 +253,32 @@ export default function HealthcareTech(...args: []):  {;
             {services.map((service, index)  => (;
               <motion.div;
                 key={service.title}
-                initial = {;
+                initial = {
   { opacity: 0,;
   y: 20 ;
 
-;
 
-;
 
-;,
+
+
 }}
-                whileInView = {;
+                whileInView = {
   { opacity: 1,;
   y: 0 ;
 
-;
 
-;
 
-;,
+
+
 }}
-                transition = {;
+                transition = {
   { duration: 0.6,;
   delay: index * 0.1 ;
 
-;
 
-;
 
-;,
+
+
 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300";
 
@@ -332,25 +310,23 @@ export default function HealthcareTech(...args: []):  {;
       <section className="py-20">;
         <div className="container mx-auto px-4">;
           <motion.div;
-            initial = {;
+            initial = {
   { opacity: 0,;
   y: 20 ;
 
-;
 
-;
 
-;,
+
+
 }}
-            whileInView = {;
+            whileInView = {
   { opacity: 1,;
   y: 0 ;
 
-;
 
-;
 
-;,
+
+
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16";
@@ -368,35 +344,32 @@ export default function HealthcareTech(...args: []):  {;
             {applications.map((app, index)  => (;
               <motion.div;
                 key={app.name}
-                initial = {;
+                initial = {
   { opacity: 0,;
   scale: 0.8 ;
 
-;
 
-;
 
-;,
+
+
 }}
-                whileInView = {;
+                whileInView = {
   { opacity: 1,;
   scale: 1 ;
 
-;
 
-;
 
-;,
+
+
 }}
-                transition = {;
+                transition = {
   { duration: 0.6,;
   delay: index * 0.1 ;
 
-;
 
-;
 
-;,
+
+
 }}
                 className="text-center group";
 
@@ -415,28 +388,26 @@ export default function HealthcareTech(...args: []):  {;
       <section className="py-20 bg-gradient-to-r from-red-600/20 to-pink-600/20">;
         <div className="container mx-auto px-4 text-center">;
           <motion.div;
-            initial = {;
+            initial = {
   { opacity: 0,;
   y: 20 ;
 
-;
 
-;
 
-;,
+
+
 }}
-            whileInView = {;
+            whileInView = {
   { opacity: 1,;
   y: 0 ;
 
-;
 
-;
 
-;,
+
+
 }}
             transition={{ duration: 0.6 }}
-;
+
             <h2 className="text-4xl font-bold text-white mb-6">;
               Ready to Transform Healthcare?;
             </h2>;
@@ -463,15 +434,10 @@ export default function HealthcareTech(...args: []):  {;
         </div>;
       </section>;
     </div>;
-  );,
-}}}}
-;
-export { HealthcareTech };
-;
-export { HealthcareTech };
-;
-export { HealthcareTech };
-;
-export { HealthcareTech };
-;
-export { HealthcareTech };
+  )}}}}
+
+export { HealthcareTech }
+export { HealthcareTech }
+export { HealthcareTech }
+export { HealthcareTech }
+export { HealthcareTech }

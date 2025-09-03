@@ -42,8 +42,8 @@ import { ;
   Users,;
   TrendingUp,;
   DollarSign} from 'lucide-react';
-;
-interface AIConversation {;
+
+interface AIConversation {
 
   id: string;
   type: 'chat' | 'task' | 'analysis' | 'recommendation';
@@ -56,10 +56,9 @@ interface AIConversation {;
   messages: AIMessage[];
   insights: AIInsight[];
   actions: AIAction[];
-;,
 }
-;
-interface AIMessage {;
+
+interface AIMessage {
 
   id: string;
   type: 'user' | 'assistant' | 'system';
@@ -67,10 +66,9 @@ interface AIMessage {;
   timestamp: string;
   confidence?: number;
   suggestions?: string[];
-;,
 }
-;
-interface AIInsight {;
+
+interface AIInsight {
 
   id: string;
   title: string;
@@ -80,10 +78,9 @@ interface AIInsight {;
   confidence: number;
   data: Record<string, string | number | boolean>;
   createdAt: string;
-;,
 }
-;
-interface AIAction {;
+
+interface AIAction {
 
   id: string;
   name: string;
@@ -93,10 +90,9 @@ interface AIAction {;
   priority: number;
   estimatedTime: number;
   createdAt: string;
-;,
 }
-;
-interface AIFeature {;
+
+interface AIFeature {
 
   id: string;
   name: string;
@@ -105,11 +101,10 @@ interface AIFeature {;
   status: 'active' | 'beta' | 'coming-soon';
   usage: number;
   accuracy: number;
-;,
 }
-;
+
 const aiConversations: AIConversation[] = [;
-  {;
+  {
 
     id: '1',;
     type: 'chat',;
@@ -121,14 +116,14 @@ const aiConversations: AIConversation[] = [;
     createdAt: '2025-01-27 10:00',;
     lastUpdated: '2025-01-27 15:30',;
     messages: [;
-      {;
+      {
 
         id: '1',;
         type: 'user',;
         content:';
           'Analyze our current project portfolio and identify optimization opportunities',;
         timestamp: '2025-01-27 10:00'},;
-      {;
+      {
 
         id: '2',;
         type: 'assistant',;
@@ -139,7 +134,7 @@ const aiConversations: AIConversation[] = [;
         suggestions: [';
           'Optimize team allocation',Compress timeline by 15%',Implement automated testing',;
         ]},;
-      {;
+      {
 
         id: '3',;
         type: 'user',;
@@ -148,7 +143,7 @@ const aiConversations: AIConversation[] = [;
         timestamp: '2025-01-27 15:30'},;
     ],;
     insights: [;
-      {;
+      {
 
         id: '1',;
         title: 'Resource Utilization Optimization',;
@@ -161,7 +156,7 @@ const aiConversations: AIConversation[] = [;
         createdAt: '2025-01-27 10:05'},;
     ],;
     actions: [;
-      {;
+      {
 
         id: '1',;
         name: 'Resource Reallocation',;
@@ -173,7 +168,7 @@ const aiConversations: AIConversation[] = [;
         estimatedTime: 30,;
         createdAt: '2025-01-27 10:10'},;
     ]},;
-  {;
+  {
 
     id: '2',;
     type: 'task',;
@@ -185,13 +180,13 @@ const aiConversations: AIConversation[] = [;
     createdAt: '2025-01-27 09:00',;
     lastUpdated: '2025-01-27 14:00',;
     messages: [;
-      {;
+      {
 
         id: '1',;
         type: 'user',;
         content: 'Set up automated client communication for project milestones',;
         timestamp: '2025-01-27 09:00'},;
-      {;
+      {
 
         id: '2',;
         type: 'assistant',;
@@ -204,7 +199,7 @@ const aiConversations: AIConversation[] = [;
         ]},;
     ],;
     insights: [;
-      {;
+      {
 
         id: '1',;
         title: 'Communication Efficiency',;
@@ -217,7 +212,7 @@ const aiConversations: AIConversation[] = [;
         createdAt: '2025-01-27 09:10'},;
     ],;
     actions: [;
-      {;
+      {
 
         id: '1',;
         name: 'Template Customization',;
@@ -230,9 +225,9 @@ const aiConversations: AIConversation[] = [;
         createdAt: '2025-01-27 09:15'},;
     ]},;
 ];
-;
+
 const aiFeatures: AIFeature[] = [;
-  {;
+  {
 
     id: '1',;
     name: 'Natural Language Processing',;
@@ -241,7 +236,7 @@ const aiFeatures: AIFeature[] = [;
     status: 'active',;
     usage: 95,;
     accuracy: 94},;
-  {;
+  {
 
     id: '2',;
     name: 'Predictive Analytics',;
@@ -251,7 +246,7 @@ const aiFeatures: AIFeature[] = [;
     status: 'active',;
     usage: 87,;
     accuracy: 89},;
-  {;
+  {
 
     id: '3',;
     name: 'Intelligent Automation',;
@@ -260,7 +255,7 @@ const aiFeatures: AIFeature[] = [;
     status: 'active',;
     usage: 92,;
     accuracy: 91},;
-  {;
+  {
 
     id: '4',;
     name: 'Sentiment Analysis',;
@@ -269,7 +264,7 @@ const aiFeatures: AIFeature[] = [;
     status: 'beta',;
     usage: 73,;
     accuracy: 87},;
-  {;
+  {
 
     id: '5',;
     name: 'Resource Optimization',;
@@ -278,7 +273,7 @@ const aiFeatures: AIFeature[] = [;
     status: 'active',;
     usage: 89,;
     accuracy: 93},;
-  {;
+  {
 
     id: '6',;
     name: 'Risk Assessment',;
@@ -288,9 +283,9 @@ const aiFeatures: AIFeature[] = [;
     usage: 68,;
     accuracy: 85},;
 ];
-;
+
 const aiInsights: AIInsight[] = [;
-  {;
+  {
 
     id: '1',;
     title: 'Project Timeline Optimization',;
@@ -301,7 +296,7 @@ const aiInsights: AIInsight[] = [;
     confidence: 0.91,;
     data: { compression: 15, savings: '2 weeks', risk: 'low' },;
     createdAt: '2025-01-27 16:00'},;
-  {;
+  {
 
     id: '2',;
     title: 'Resource Allocation Warning',;
@@ -310,13 +305,13 @@ const aiInsights: AIInsight[] = [;
     type: 'warning',;
     impact: 'medium',;
     confidence: 0.87,;
-    data: {;
+    data: {
 
       underutilization: 23,;
       potentialSavings: '$8,500',;
       timeframe: '2 weeks'},;
     createdAt: '2025-01-27 15:45'},;
-  {;
+  {
 
     id: '3',;
     title: 'Client Satisfaction Trend',;
@@ -328,37 +323,33 @@ const aiInsights: AIInsight[] = [;
     data: { improvement: 12, aiContribution: 8, trend: 'positive' },;
     createdAt: '2025-01-27 15:30'},;
 ];
-;
-const statusColors = {;
+
+const statusColors = {
 
   active: 'from-green-500 to-emerald-500',;
   completed: 'from-blue-500 to-cyan-500',;
-  archived: 'from-gray-500 to-gray-600'};
-;
-const priorityColors = {;
+  archived: 'from-gray-500 to-gray-600'}
+const priorityColors = {
 
   low: 'bg-gray-500',;
   medium: 'bg-yellow-500',;
   high: 'bg-orange-500',;
-  critical: 'bg-red-500'};
-;
-const insightTypeColors = {;
+  critical: 'bg-red-500'}
+const insightTypeColors = {
 
   positive: 'from-green-500 to-emerald-500',;
   warning: 'from-yellow-500 to-orange-500',;
   critical: 'from-red-500 to-pink-500',;
-  info: 'from-blue-500 to-cyan-500'};
-;
-const actionStatusColors = {;
+  info: 'from-blue-500 to-cyan-500'}
+const actionStatusColors = {
 
   pending: 'from-gray-500 to-gray-600',;
   executing: 'from-yellow-500 to-orange-500',;
   completed: 'from-green-500 to-emerald-500',;
-  failed: 'from-red-500 to-pink-500'};
-;
+  failed: 'from-red-500 to-pink-500'}
 const MDiv: any = motion.div as any;
-;
-const AdvancedAIAssistant: React.FC = () => {;
+
+const AdvancedAIAssistant: React.FC = () => {
 
   const [selectedView, setSelectedView] = useState<';
     'overview' | 'conversations' | 'insights' | 'features'';
@@ -367,8 +358,8 @@ const AdvancedAIAssistant: React.FC = () => {;
     useState<AIConversation | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedFilter, setSelectedFilter] = useState<string>('all');
-;
-  const filteredConversations = aiConversations.filter(conversation => {;
+
+  const filteredConversations = aiConversations.filter(conversation => {
 
     const matchesSearch =;
       conversation.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
@@ -377,21 +368,19 @@ const AdvancedAIAssistant: React.FC = () => {;
         .includes(searchQuery.toLowerCase());
     const matchesFilter =';
       selectedFilter === 'all' || conversation.type === selectedFilter;
-;
-    return matchesSearch && matchesFilter;,
-});
-;
-  const filteredInsights = aiInsights.filter(insight => {;
+
+    return matchesSearch && matchesFilter});
+
+  const filteredInsights = aiInsights.filter(insight => {
 
     return();
       insight.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
       insight.description.toLowerCase().includes(searchQuery.toLowerCase());
-    );,
-});
-;
-  const getStatusIcon = (status: string) => {;
+    )});
 
-    switch (status) {;
+  const getStatusIcon = (status: string) => {
+
+    switch (status) {
 
       case 'active':";
         return <CheckCircle className="w-4 h-4 text-green-400" />;
@@ -400,13 +389,11 @@ const AdvancedAIAssistant: React.FC = () => {;
       case 'archived':";
         return <Clock className="w-4 h-4 text-gray-400" />;
       default:";
-        return <Clock className="w-4 h-4 text-gray-400" />;,
-}
-  };
-;
-  const getInsightIcon = (type: string) => {;
+        return <Clock className="w-4 h-4 text-gray-400" />}
+  }
+  const getInsightIcon = (type: string) => {
 
-    switch (type) {;
+    switch (type) {
 
       case 'positive':";
         return <CheckCircle className="w-6 h-6 text-white" />;
@@ -415,33 +402,29 @@ const AdvancedAIAssistant: React.FC = () => {;
       case 'critical':";
         return <AlertCircle className="w-6 h-6 text-white" />;
       default:";
-        return <Activity className="w-6 h-6 text-white" />;,
-}
-  };
-;
-  const containerVariants = {;
+        return <Activity className="w-6 h-6 text-white" />}
+  }
+  const containerVariants = {
 
     hidden: { opacity: 0 },;
-    visible: {;
+    visible: {
 
       opacity: 1,;
-      transition: {;
+      transition: {
 
         staggerChildren: 0.1,;
-        delayChildren: 0.2}}};
-;
-  const itemVariants = {;
+        delayChildren: 0.2}}}
+  const itemVariants = {
 
     hidden: { y: 30, opacity: 0 },;
-    visible: {;
+    visible: {
 
       y: 0,;
       opacity: 1,;
-      transition: {;
+      transition: {
 
         duration: 0.6,;
-        ease: 'easeOut' as const}}};
-;
+        ease: 'easeOut' as const}}}
   return (";
     <section className="py-20 bg-gradient-to-br from-gray-900 via-black to-gray-900">";
       <div className="container mx-auto px-4">;
@@ -548,8 +531,7 @@ const AdvancedAIAssistant: React.FC = () => {;
 
                 selectedView === view;
                   ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg shadow-blue-500/25';
-                  : 'text-gray-300 hover:text-white hover:bg-white/10';,
-}`}
+                  : 'text-gray-300 hover:text-white hover:bg-white/10'}`}
             >;
               {view === 'overview' && <Bot className="w-4 h-4 inline mr-2" />}
               {view === 'conversations' && <MessageCircle className="w-4 h-4 inline mr-2" />}
@@ -600,7 +582,7 @@ const AdvancedAIAssistant: React.FC = () => {;
               <Settings className="w-4 h-4" />;
               AI Settings;
             </MDiv>;
-            ;
+
             <button;
               className="flex items-center gap-2 px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300">;
               <Plus className="w-4 h-4" />;
@@ -687,7 +669,7 @@ const AdvancedAIAssistant: React.FC = () => {;
               </motion.div>;
             </motion.div>;
           )}
-;
+
           {selectedView === 'insights' && (;
             <motion.div;
               key="insights";
@@ -754,7 +736,7 @@ const AdvancedAIAssistant: React.FC = () => {;
               </motion.div>;
             </motion.div>;
           )}
-;
+
           {selectedView === 'features' && (;
             <motion.div;
               key="features";
@@ -825,7 +807,5 @@ const AdvancedAIAssistant: React.FC = () => {;
         </MDiv>;
       </div>;
     </section>;
-  );,
-};
-;
+  )}
 export default AdvancedAIAssistant;

@@ -1,5 +1,5 @@
 export const enterpriseITBreakthroughServices2025 = [;
-  {;
+  {
     id: "quantum-cloud-infrastructure-pro",;
     name: "Quantum Cloud Infrastructure Pro",;
     description: "Revolutionary cloud infrastructure platform leveraging quantum computing principles for unprecedented performance, security, and scalability in enterprise environments.",;
@@ -15,15 +15,13 @@ export const enterpriseITBreakthroughServices2025 = [;
       "Enterprise-grade reliability and availability",;
       "Custom infrastructure solutions and development";
     ],;
-    pricing: {;,;,
-},;
+    pricing: {},;
     category: "Cloud Infrastructure",;
     tags["Quantum Computing", "Cloud Infrastructure", "Security", "Scalability", "Enterprise"],;
     website: "https://ziontechgroup.com/quantum-cloud-infrastructure-pro",;
-    contact: {;
+    contact: {
       phone: "+1 302 464 0950",;
-      email: "kleber@ziontechgroup.com";,;,
-},;
+      email: "kleber@ziontechgroup.com"},;
     marketSize: "$178.6B",;
     targetAudience: "Enterprises, cloud providers, government agencies, research institutions",;
     competitiveAdvantage: "First quantum-enhanced cloud infrastructure, advanced security protocols, unprecedented performance optimization",;
@@ -35,9 +33,8 @@ export const enterpriseITBreakthroughServices2025 = [;
       "Quantum computing research";
     ],;
     integrations["AWS", "Azure", "Google Cloud", "Kubernetes", "Docker", "Terraform"],;
-    compliance["SOC2", "ISO 27001", "FedRAMP", "GDPR", "CCPA"];,;,
-},;
-  {;
+    compliance["SOC2", "ISO 27001", "FedRAMP", "GDPR", "CCPA"]},;
+  {
     id: "edge-computing-orchestrator-pro",;
     name: "Edge Computing Orchestrator Pro",;
     description: "Advanced edge computing platform that optimizes data processing, reduces latency, and enhances performance for IoT devices and edge applications.",;
@@ -53,15 +50,13 @@ export const enterpriseITBreakthroughServices2025 = [;
       "Advanced edge analytics and insights",;
       "Enterprise edge solutions and customization";
     ],;
-    pricing: {;,;,
-},;
+    pricing: {},;
     category: "Edge Computing",;
     tags["Edge Computing", "IoT", "Real-time Processing", "Performance Optimization", "Enterprise"],;
     website: "https://ziontechgroup.com/edge-computing-orchestrator-pro",;
-    contact: {;
+    contact: {
       phone: "+1 302 464 0950",;
-      email: "kleber@ziontechgroup.com";,;,
-},;
+      email: "kleber@ziontechgroup.com"},;
     marketSize: "$43.4B",;
     targetAudience: "IoT companies, manufacturing, smart cities, autonomous systems, edge computing providers",;
     competitiveAdvantage: "Advanced edge computing optimization, intelligent IoT management, comprehensive edge security",;
@@ -73,9 +68,8 @@ export const enterpriseITBreakthroughServices2025 = [;
       "Edge security and monitoring";
     ],;
     integrations["IoT platforms", "Cloud services", "Analytics tools", "Security systems", "Monitoring platforms"],;
-    compliance["SOC2", "ISO 27001", "IoT security standards", "GDPR", "CCPA"];,;,
-},;
-  {;
+    compliance["SOC2", "ISO 27001", "IoT security standards", "GDPR", "CCPA"]},;
+  {
     id: "zero-trust-security-platform",;
     name: "Zero Trust Security Platform",;
     description: "Comprehensive zero trust security platform providing advanced identity verification, continuous monitoring, and adaptive security for enterprise environments.",;
@@ -91,15 +85,13 @@ export const enterpriseITBreakthroughServices2025 = [;
       "Compliance monitoring and reporting",;
       "API for security automation and integration";
     ],;
-    pricing: {;,;,
-},;
+    pricing: {},;
     category: "Cybersecurity",;
     tags["Zero Trust", "Cybersecurity", "Identity Management", "Access Control", "Enterprise Security"],;
     website: "https://ziontechgroup.com/zero-trust-security-platform",;
-    contact: {;
+    contact: {
       phone: "+1 302 464 0950",;
-      email: "kleber@ziontechgroup.com";,;,
-},;
+      email: "kleber@ziontechgroup.com"},;
     marketSize: "$45.2B",;
     targetAudience: "Enterprises, government agencies, financial institutions, healthcare providers",;
     competitiveAdvantage: "Comprehensive zero trust platform, advanced identity verification, adaptive security policies",;
@@ -111,9 +103,8 @@ export const enterpriseITBreakthroughServices2025 = [;
       "Critical infrastructure protection";
     ],;
     integrations["Identity providers", "Security tools", "Monitoring systems", "Compliance platforms", "Enterprise systems"],;
-    compliance["SOC2", "ISO 27001", "FedRAMP", "GDPR", "CCPA", "NIST standards"];,;,
-},;
-  {;
+    compliance["SOC2", "ISO 27001", "FedRAMP", "GDPR", "CCPA", "NIST standards"]},;
+  {
     id: "ai-powered-devops-platform",;
     name: "AI-Powered DevOps Platform",;
     description: "Intelligent DevOps platform leveraging AI for automated deployment, monitoring, and optimization of enterprise applications and infrastructure.",;
@@ -129,15 +120,13 @@ export const enterpriseITBreakthroughServices2025 = [;
       "API for automation and integration",;
       "Enterprise-grade reliability and support";
     ],;
-    pricing: {;,;,
-},;
+    pricing: {},;
     category: "DevOps & Automation",;
     tags["AI", "DevOps", "Automation", "CI/CD", "Enterprise"],;
     website: "https://ziontechgroup.com/ai-powered-devops-platform",;
-    contact: {;
+    contact: {
       phone: "+1 302 464 0950",;
-      email: "kleber@ziontechgroup.com";,;,
-},;
+      email: "kleber@ziontechgroup.com"},;
     marketSize: "$67.8B",;
     targetAudience: "Enterprises, technology companies, development teams, DevOps engineers",;
     competitiveAdvantage: "First AI-powered DevOps platform, intelligent automation, comprehensive enterprise integration",;
@@ -149,9 +138,8 @@ export const enterpriseITBreakthroughServices2025 = [;
       "Security and compliance automation";
     ],;
     integrations["CI/CD tools", "Cloud platforms", "Monitoring systems", "Security tools", "Development platforms"],;
-    compliance["SOC2", "ISO 27001", "DevOps best practices", "Security standards", "Enterprise requirements"];,;,
-},;
-  {;
+    compliance["SOC2", "ISO 27001", "DevOps best practices", "Security standards", "Enterprise requirements"]},;
+  {
     id: "quantum-data-center-platform",;
     name: "Quantum Data Center Platform",;
     description: "Revolutionary data center platform leveraging quantum computing for unprecedented performance, security, and efficiency in enterprise data management.",;
@@ -167,15 +155,13 @@ export const enterpriseITBreakthroughServices2025 = [;
       "API for automation and integration",;
       "Enterprise-grade reliability and support";
     ],;
-    pricing: {;,;,
-},;
+    pricing: {},;
     category: "Data Center",;
     tags["Quantum Computing", "Data Center", "Data Management", "Enterprise", "Performance"],;
     website: "https://ziontechgroup.com/quantum-data-center-platform",;
-    contact: {;
+    contact: {
       phone: "+1 302 464 0950",;
-      email: "kleber@ziontechgroup.com";,;,
-},;
+      email: "kleber@ziontechgroup.com"},;
     marketSize: "$89.2B",;
     targetAudience: "Enterprises, data center providers, technology companies, research institutions",;
     competitiveAdvantage: "First quantum data center platform, quantum-enhanced performance, comprehensive enterprise integration",;

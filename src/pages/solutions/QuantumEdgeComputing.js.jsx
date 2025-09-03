@@ -5,22 +5,19 @@ import { Zap, Target, TrendingUp, Shield, Globe, Cpu, Lightbulb, Atom, Wifi cons
             icon: Wifi,;
             title: "Edge Processing","";
             description: "Process data at the edge for real-time decision making","";
-            features: ["Local computation", "Reduced latency", "Bandwidth optimization", "Offline capability"];,
-},;
+            features: ["Local computation", "Reduced latency", "Bandwidth optimization", "Offline capability"]},;
         {}
 ";
             icon: Atom,"";
             title: "Quantum Enhancement","";
             description: "Quantum algorithms for edge computing optimization","";
-            features: ["Quantum optimization", "Enhanced security", "Improved efficiency", "Future-proof technology"];,
-},;
+            features: ["Quantum optimization", "Enhanced security", "Improved efficiency", "Future-proof technology"]},;
         {}
 ";
             icon: Zap,"";
             title: "Real-time Analytics","";
             description: "Instant insights and decision making at the edge","";
-            features: ["Live data processing", "Instant responses", "Predictive analytics", "Actionable insights"];,
-},;
+            features: ["Live data processing", "Instant responses", "Predictive analytics", "Actionable insights"]},;
         {}
 ";
             icon: Shield,"";
@@ -36,40 +33,35 @@ import { Zap, Target, TrendingUp, Shield, Globe, Cpu, Lightbulb, Atom, Wifi cons
             title: "IoT Networks","";
             description: "Intelligent edge processing for IoT device networks",";
             icon: Wifi,"";
-            benefits: ["Reduced latency", "Lower bandwidth costs", "Improved reliability", "Scalable deployment"];,
-},;
+            benefits: ["Reduced latency", "Lower bandwidth costs", "Improved reliability", "Scalable deployment"]},;
         {}
 ";
 "";
             title: "Autonomous Vehicles","";
             description: "Real-time decision making for autonomous systems",";
             icon: Target,"";
-            benefits: ["Instant response", "Safety enhancement", "Efficient routing", "Continuous operation"];,
-},;
+            benefits: ["Instant response", "Safety enhancement", "Efficient routing", "Continuous operation"]},;
         {}
 ";
 "";
             title: "Smart Cities","";
             description: "Intelligent infrastructure management and optimization",";
             icon: Globe,"";
-            benefits: ["Traffic optimization", "Energy efficiency", "Public safety", "Resource management"];,
-},;
+            benefits: ["Traffic optimization", "Energy efficiency", "Public safety", "Resource management"]},;
         {}
 ";
 "";
             title: "Industrial IoT","";
             description: "Manufacturing and industrial process optimization",";
             icon: Cpu,"";
-            benefits: ["Predictive maintenance", "Quality control", "Efficiency improvement", "Cost reduction"];,
-},;
+            benefits: ["Predictive maintenance", "Quality control", "Efficiency improvement", "Cost reduction"]},;
         {}
 ";
 "";
             title: "Healthcare Monitoring","";
             description: "Real-time health monitoring and alert systems",";
             icon: Shield,"";
-            benefits: ["Instant alerts", "Continuous monitoring", "Data privacy", "Improved outcomes"];,
-},;
+            benefits: ["Instant alerts", "Continuous monitoring", "Data privacy", "Improved outcomes"]},;
         {}
 ";
 "";
@@ -93,36 +85,31 @@ import { Zap, Target, TrendingUp, Shield, Globe, Cpu, Lightbulb, Atom, Wifi cons
 "";
             phase: "Edge Assessment","";
             description: "Evaluate current edge infrastructure and requirements","";
-            duration: "2-3 weeks";,
-},;
+            duration: "2-3 weeks"},;
         {}
 ";
 "";
             phase: "Architecture Design","";
             description: "Design quantum-enhanced edge computing architecture","";
-            duration: "4-6 weeks";,
-},;
+            duration: "4-6 weeks"},;
         {}
 ";
 "";
             phase: "Edge Development","";
             description: "Build and configure edge computing nodes","";
-            duration: "8-12 weeks";,
-},;
+            duration: "8-12 weeks"},;
         {}
 ";
 "";
             phase: "Quantum Integration","";
             description: "Integrate quantum algorithms and optimization","";
-            duration: "6-10 weeks";,
-},;
+            duration: "6-10 weeks"},;
         {}
 ";
 "";
             phase: "Network Deployment","";
             description: "Deploy edge nodes across the network","";
-            duration: "4-8 weeks";,
-},;
+            duration: "4-8 weeks"},;
         {}
 ";
 "";
@@ -304,17 +291,11 @@ import { Zap, Target, TrendingUp, Shield, Globe, Cpu, Lightbulb, Atom, Wifi cons
           </div>;
         </div>;
       </section>;
-    </div>);,
-};
-export default QuantumEdgeComputing;,
-}}}}
-;
-export { QuantumEdgeComputing };
-;
-export { QuantumEdgeComputing };
-;
-export { QuantumEdgeComputing };
-;
-export { QuantumEdgeComputing };
-;
-export { QuantumEdgeComputing };
+    </div>)}
+export default QuantumEdgeComputing}}}}
+
+export { QuantumEdgeComputing }
+export { QuantumEdgeComputing }
+export { QuantumEdgeComputing }
+export { QuantumEdgeComputing }
+export { QuantumEdgeComputing }

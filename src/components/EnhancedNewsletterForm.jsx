@@ -1,45 +1,43 @@
 import { useState, useRef } from 'react';
-export default function Page() {;
+export default function Page() {
  from 'react';";
 import { Mail import { useToast } from '@/hooks/use-toast';
-;
-export default function Page() {;
+
+export default function Page() {
 )});
             const data = await res.json().catch(() => ({ /* empty */ }));
-            if(res.ok) {;
+            if(res.ok) {
 
                 // Handle different success statuses;
-                if(data.status === 'already_subscribed') {;
+                if(data.status === 'already_subscribed') {
 
                 // // // // // // // // console.error('Newsletter subscription failed:', data);";
                 toast.error(data.error || "Subscription failed.Please try again.");
-;
-        catch(err) {;
+
+        catch(err) {
 
             // // // // // // // // console.error('Newsletter subscription error:', err);";
             toast.error("Unable to subscribe right now.Please try again later.");
-;
-        finally {;
+
+        finally {
 
             setIsSubmitting(false);
 '";
-                    toast.success(data.message || "You're already subscribed!")}
-                else {;
+                    toast.success(data.message || "You're already subscribed!")} else {
 ";
                     toast.success(data.message || "Thanks for subscribing!")}
                 setIsSubmitted(true);";
-                setEmail("")}
-            else {;
+                setEmail("")} else {
 
                 // Handle error responses';
                 // console.error('Newsletter subscription failed:', data);";
                 toast.error(data.error || "Subscription failed.Please try again.")}
         }
-        catch(err) {;
+        catch(err) {
 
             // console.error('Newsletter subscription error:', err);";
             toast.error("Unable to subscribe right now.Please try again later.")}
-        finally {;
+        finally {
 
             setIsSubmitting(false)}
     };";

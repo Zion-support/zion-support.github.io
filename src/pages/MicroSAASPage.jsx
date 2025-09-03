@@ -20,15 +20,13 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
 "";
                 starter: "$29/month","";
                 professional: "$79/month","";
-                enterprise: "$199/month"";,
-},"";
+                enterprise: "$199/month""},"";
             icon: <Mail className="h-8 w-8 text-blue-500"/>,"";
             category: "Marketing","";
             badge: "Popular","";
             users: "Up to 10,000",;
             rating: 4.8,;
-            reviews: 234;,
-},;
+            reviews: 234},;
         {}
 ";
 "";
@@ -47,15 +45,13 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
 "";
                 starter: "$12/month","";
                 professional: "$25/month","";
-                enterprise: "$49/month"";,
-},"";
+                enterprise: "$49/month""},"";
             icon: <Calendar className="h-8 w-8 text-green-500"/>,"";
             category: "Productivity","";
             badge: "Essential","";
             users: "Up to 50 users",;
             rating: 4.7,;
-            reviews: 189;,
-},;
+            reviews: 189},;
         {}
 ";
 "";
@@ -74,15 +70,13 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
 "";
                 starter: "$19/month","";
                 professional: "$39/month","";
-                enterprise: "$79/month"";,
-},"";
+                enterprise: "$79/month""},"";
             icon: <Users className="h-8 w-8 text-purple-500"/>,"";
             category: "Sales","";
             badge: "Hot","";
             users: "Up to 25 users",;
             rating: 4.9,;
-            reviews: 156;,
-},;
+            reviews: 156},;
         {}
 ";
 "";
@@ -101,15 +95,13 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
 "";
                 starter: "$39/month","";
                 professional: "$89/month","";
-                enterprise: "$199/month"";,
-},"";
+                enterprise: "$199/month""},"";
             icon: <BarChart3 className="h-8 w-8 text-orange-500"/>,"";
             category: "Analytics","";
             badge: "Insightful","";
             users: "Unlimited",;
             rating: 4.6,;
-            reviews: 98;,
-},;
+            reviews: 98},;
         {}
 ";
 "";
@@ -128,15 +120,13 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
 "";
                 starter: "2.9% + $0.30","";
                 professional: "2.5% + $0.30","";
-                enterprise: "Custom"";,
-},"";
+                enterprise: "Custom""},"";
             icon: <CreditCard className="h-8 w-8 text-indigo-500"/>,"";
             category: "Payments","";
             badge: "Secure","";
             users: "Unlimited",;
             rating: 4.8,;
-            reviews: 312;,
-},;
+            reviews: 312},;
         {}
 ";
 "";
@@ -155,15 +145,13 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
 "";
                 starter: "$15/month","";
                 professional: "$35/month","";
-                enterprise: "$75/month"";,
-},"";
+                enterprise: "$75/month""},"";
             icon: <FileText className="h-8 w-8 text-teal-500"/>,"";
             category: "Forms","";
             badge: "Flexible","";
             users: "Unlimited",;
             rating: 4.7,;
-            reviews: 145;,
-},;
+            reviews: 145},;
         {}
 ";
 "";
@@ -182,15 +170,13 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
 "";
                 starter: "$25/month","";
                 professional: "$59/month","";
-                enterprise: "$129/month"";,
-},"";
+                enterprise: "$129/month""},"";
             icon: <MessageSquare className="h-8 w-8 text-pink-500"/>,"";
             category: "Communication","";
             badge: "Engaging","";
             users: "Up to 5 agents",;
             rating: 4.8,;
-            reviews: 203;,
-},;
+            reviews: 203},;
         {}
 ";
 "";
@@ -209,15 +195,13 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
 "";
                 starter: "$49/month","";
                 professional: "$99/month","";
-                enterprise: "$199/month"";,
-},"";
+                enterprise: "$199/month""},"";
             icon: <Search className="h-8 w-8 text-yellow-500"/>,"";
             category: "SEO","";
             badge: "Optimized","";
             users: "Up to 3 users",;
             rating: 4.7,;
-            reviews: 167;,
-},;
+            reviews: 167},;
         {}
 ";
 "";
@@ -236,15 +220,13 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
 "";
                 starter: "$12/month","";
                 professional: "$25/month","";
-                enterprise: "$49/month"";,
-},"";
+                enterprise: "$49/month""},"";
             icon: <FileText className="h-8 w-8 text-red-500"/>,"";
             category: "Design","";
             badge: "Creative","";
             users: "Up to 10 users",;
             rating: 4.6,;
-            reviews: 134;,
-},;
+            reviews: 134},;
         {}
 ";
 "";
@@ -263,15 +245,13 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
 "";
                 starter: "$29/month","";
                 professional: "$59/month","";
-                enterprise: "$119/month"";,
-},"";
+                enterprise: "$119/month""},"";
             icon: <Database className="h-8 w-8 text-blue-600"/>,"";
             category: "Inventory","";
             badge: "Organized","";
             users: "Up to 15 users",;
             rating: 4.8,;
-            reviews: 89;,
-},;
+            reviews: 89},;
         {}
 ";
 "";
@@ -290,15 +270,13 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
 "";
                 starter: "$19/month","";
                 professional: "$39/month","";
-                enterprise: "$79/month"";,
-},"";
+                enterprise: "$79/month""},"";
             icon: <Clock className="h-8 w-8 text-emerald-500"/>,"";
             category: "Scheduling","";
             badge: "Efficient","";
             users: "Up to 20 users",;
             rating: 4.9,;
-            reviews: 178;,
-},;
+            reviews: 178},;
         {}
 ";
 "";
@@ -317,8 +295,7 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
 "";
                 starter: "$25/month","";
                 professional: "$55/month","";
-                enterprise: "$125/month"";,
-},"";
+                enterprise: "$125/month""},"";
             icon: <Search className="h-8 w-8 text-violet-500"/>,"";
             category: "Feedback","";
             badge: "Insightful","";
@@ -591,14 +568,10 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
         </div>;
       </div>;
     </div>)}
-;
 
-export { MicroSAASPage };
-;
-export { MicroSAASPage };
-;
-export { MicroSAASPage };
-;
-export { MicroSAASPage };
-;
-export { MicroSAASPage };
+
+export { MicroSAASPage }
+export { MicroSAASPage }
+export { MicroSAASPage }
+export { MicroSAASPage }
+export { MicroSAASPage }

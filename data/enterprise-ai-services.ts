@@ -1,4 +1,4 @@
-export interface EnterpriseAIService {;
+export interface EnterpriseAIService {
   id: string;
   name: string;
   tagline: string;
@@ -25,7 +25,7 @@ export interface EnterpriseAIService {;
   marketSize: string;
   growthRate: string;
   variant: string;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -37,7 +37,7 @@ export interface EnterpriseAIService {;
   rating: number;
 export const enterpriseAIServices: EnterpriseAIService[] = [;
   // Enterprise AI Solutions;
-  {;
+  {
     id: "enterprise-ai-orchestrator",;
     name: "Enterprise AI Orchestrator",;
     tagline: "Complete AI platform for enterprise automation and intelligence",;
@@ -75,21 +75,19 @@ export const enterpriseAIServices: EnterpriseAIService[] = [;
     marketSize: "$500B enterprise AI market",;
     growthRate: "200% annual growth",;
     variant: "enterprise-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete enterprise AI platform with process automation, business intelligence, and system integration capabilities.",;
     launchDate: "2024-02-01",;
     customers: 8,;
     rating: 4.9,;
-    reviews: 12;,;,
-},;
+    reviews: 12},;
   // AI-Powered Supply Chain Optimization;
-  {;
+  {
     id: "ai-supply-chain-optimizer",;
     name: "AI Supply Chain Optimizer",;
     tagline: "Intelligent supply chain optimization with predictive analytics",;
@@ -127,21 +125,19 @@ export const enterpriseAIServices: EnterpriseAIService[] = [;
     marketSize: "$300B supply chain market",;
     growthRate: "180% annual growth",;
     variant: "supply-chain-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete AI supply chain platform with predictive analytics, optimization algorithms, and real-time monitoring.",;
     launchDate: "2024-01-15",;
     customers: 28,;
     rating: 4.7,;
-    reviews: 35;,;,
-},;
+    reviews: 35},;
   // AI-Powered Customer Experience Platform;
-  {;
+  {
     id: "ai-customer-experience-platform",;
     name: "AI Customer Experience Platform",;
     tagline: "Intelligent customer experience with predictive personalization",;
@@ -179,21 +175,19 @@ export const enterpriseAIServices: EnterpriseAIService[] = [;
     marketSize: "$200B customer experience market",;
     growthRate: "250% annual growth",;
     variant: "customer-experience-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete AI customer experience platform with personalization, automation, and analytics capabilities.",;
     launchDate: "2024-01-01",;
     customers: 42,;
     rating: 4.8,;
-    reviews: 38;,;,
-},;
+    reviews: 38},;
   // AI-Powered Financial Risk Management;
-  {;
+  {
     id: "ai-financial-risk-management",;
     name: "AI Financial Risk Management",;
     tagline: "Intelligent financial risk assessment and mitigation",;
@@ -231,21 +225,19 @@ export const enterpriseAIServices: EnterpriseAIService[] = [;
     marketSize: "$150B financial risk management market",;
     growthRate: "180% annual growth",;
     variant: "financial-risk-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete AI financial risk platform with real-time assessment, fraud detection, and compliance monitoring.",;
     launchDate: "2023-12-01",;
     customers: 15,;
     rating: 4.9,;
-    reviews: 22;,;,
-},;
+    reviews: 22},;
   // AI-Powered Healthcare Analytics;
-  {;
+  {
     id: "ai-healthcare-analytics",;
     name: "AI Healthcare Analytics Platform",;
     tagline: "Intelligent healthcare analytics and predictive medicine",;
@@ -283,21 +275,19 @@ export const enterpriseAIServices: EnterpriseAIService[] = [;
     marketSize: "$200B healthcare analytics market",;
     growthRate: "220% annual growth",;
     variant: "healthcare-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete AI healthcare analytics platform with predictive diagnostics, treatment optimization, and population health management.",;
     launchDate: "2023-11-01",;
     customers: 32,;
     rating: 4.8,;
-    reviews: 28;,;,
-},;
+    reviews: 28},;
   // AI-Powered Manufacturing Intelligence;
-  {;
+  {
     id: "ai-manufacturing-intelligence",;
     name: "AI Manufacturing Intelligence Platform",;
     tagline: "Intelligent manufacturing with predictive maintenance and quality control",;
@@ -335,21 +325,19 @@ export const enterpriseAIServices: EnterpriseAIService[] = [;
     marketSize: "$250B manufacturing intelligence market",;
     growthRate: "200% annual growth",;
     variant: "manufacturing-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete AI manufacturing platform with predictive maintenance, quality control, and production optimization.",;
     launchDate: "2023-10-01",;
     customers: 25,;
     rating: 4.7,;
-    reviews: 31;,;,
-},;
+    reviews: 31},;
   // AI-Powered Energy Management;
-  {;
+  {
     id: "ai-energy-management",;
     name: "AI Energy Management Platform",;
     tagline: "Intelligent energy optimization and renewable integration",;
@@ -387,21 +375,19 @@ export const enterpriseAIServices: EnterpriseAIService[] = [;
     marketSize: "$180B energy management market",;
     growthRate: "180% annual growth",;
     variant: "energy-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete AI energy management platform with optimization, renewable integration, and predictive analytics.",;
     launchDate: "2023-09-01",;
     customers: 38,;
     rating: 4.6,;
-    reviews: 42;,;,
-},;
+    reviews: 42},;
   // AI-Powered Education Platform;
-  {;
+  {
     id: "ai-education-platform",;
     name: "AI Education Platform",;
     tagline: "Intelligent personalized learning and educational analytics",;
@@ -439,21 +425,19 @@ export const enterpriseAIServices: EnterpriseAIService[] = [;
     marketSize: "$100B educational technology market",;
     growthRate: "200% annual growth",;
     variant: "education-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete AI education platform with personalized learning, intelligent tutoring, and educational analytics.",;
     launchDate: "2023-08-01",;
     customers: 55,;
     rating: 4.7,;
-    reviews: 48;,;,
-},;
+    reviews: 48},;
   // AI-Powered Real Estate Platform;
-  {;
+  {
     id: "ai-real-estate-platform",;
     name: "AI Real Estate Platform",;
     tagline: "Intelligent property analysis and market prediction",;
@@ -491,12 +475,11 @@ export const enterpriseAIServices: EnterpriseAIService[] = [;
     marketSize: "$120B real estate technology market",;
     growthRate: "180% annual growth",;
     variant: "real-estate-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete AI real estate platform with property valuation, market analysis, and investment recommendations.",;
     launchDate: "2023-07-01",;

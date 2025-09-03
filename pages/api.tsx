@@ -2,35 +2,32 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { Code, Key, Globe, Database, Shield, Zap, ArrowRight, Copy, CheckCircle, ExternalLink, Clock, Users } from 'lucide-react';
-;
-export default function API() {;
+
+export default function API() {
   const apiEndpoints = [;
-    {;
+    {
       name: 'Authentication',;
       method: 'POST',;
       endpoint: '/api/auth/login',;
       description: 'Authenticate users and get access tokens',;
       parameters: ['email', 'password'],;
-      response: 'JWT token',;,
-},;
-    {;
+      response: 'JWT token'},;
+    {
       name: 'User Profile',;
       method: 'GET',;
       endpoint: '/api/user/profile',;
       description: 'Get user profile information',;
       parameters: ['token'],;
-      response: 'User profile data';,
-},;
-    {;
+      response: 'User profile data'},;
+    {
       name: 'Services List',;
       method: 'GET',;
       endpoint: '/api/services',;
       description: 'Get list of available services',;
       parameters: ['category', 'limit'],;
-      response: 'Array of services';,
-}
+      response: 'Array of services'}
   ];
-;
+
   return (;
     <>;
       <Head>;
@@ -38,7 +35,7 @@ export default function API() {;
         <meta name="description" content="Comprehensive API documentation for Zion Tech Group services and integrations." />;
         <meta name="viewport" content="width=device-width, initial-scale=1" />;
       </Head>;
-      ;
+
       <div className="min-h-screen bg-gray-50">;
         {/* Header */}
         <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">;
@@ -93,8 +90,7 @@ export default function API() {;
                     <span className={`px-3 py-1 rounded-full text-sm font-medium ${;
                       endpoint.method === 'GET' ? 'bg-green-100 text-green-800' :;
                       endpoint.method === 'POST' ? 'bg-blue-100 text-blue-800' :;
-                      'bg-gray-100 text-gray-800';,
-}`}>;
+                      'bg-gray-100 text-gray-800'}`}>;
                       {endpoint.method}
                     </span>;
                   </div>;

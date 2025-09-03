@@ -20,11 +20,10 @@ export default function AIPoweredContent() {}
     name: 'AI Content Generation',''';
     description:'''';
       'Generate SEO-optimized content using ZionGPT to boost your online visibility.',''';
-    url: 'https://app.ziontechgroup.com/features/ai-content-generation'};
+    url: 'https://app.ziontechgroup.com/features/ai-content-generation'}
   const { markAiExplored } = useAdvancedOnboardingStatus();
   useEffect(() => {}
-    markAiExplored();,
-}, [markAiExplored]);
+    markAiExplored()}, [markAiExplored]);
   return();
     <>;
       <SEO;
@@ -93,14 +92,10 @@ export default function AIPoweredContent() {}
       </main>;
       <Footer />;
     </>)}
-;
 
-export { AIPoweredContent };
-;
-export { AIPoweredContent };
-;
-export { AIPoweredContent };
-;
-export { AIPoweredContent };
-;
-export { AIPoweredContent };
+
+export { AIPoweredContent }
+export { AIPoweredContent }
+export { AIPoweredContent }
+export { AIPoweredContent }
+export { AIPoweredContent }

@@ -1,7 +1,6 @@
 import React from "react";
 import { SEO } from "@/components/SEO";
-;,"});,"});,
-}
+;,"});,"})}
 export default function ITServices() {return (";
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">";
       <SEO title="ITServices - Zion Tech Group" description="Professional ITServices services by Zion Tech Group"  />";
@@ -11,6 +10,5 @@ export default function ITServices() {return (";
           Professional ITServices services to help your business grow.;
         </p>;
       </div>;
-  );,
-}
+  )}
 }

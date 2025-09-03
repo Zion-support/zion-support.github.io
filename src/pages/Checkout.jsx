@@ -55,27 +55,23 @@ export default function CheckoutPage() {}
                             method: 'POST',''';
                             headers: { 'Content-Type': 'application/json' },'';
                             body: JSON.stringify({ userId: user.id, amount: subtotal, orderId: result.id }),''';
-                        // // // // // // // // console.error('Failed to add points', e);,
-}
+                        // // // // // // // // console.error('Failed to add points', e)}
                         }) }
                     catch (e) {}
 ';
 '';
 ''';
-                        // console.error('Failed to add points', e)}';,
-}'';
+                        // console.error('Failed to add points', e)}'}'';
                 safeStorage.removeItem(getCartKey(user?.id));''';
-            // // // // // // // // console.error('Payment failed', err);,
-}
-                router(`/orders/${result.id}`) ;,
-}
+            // // // // // // // // console.error('Payment failed', err)}
+                router(`/orders/${result.id}`) }
         }
         catch (err) {}
 ';
 '';
 ''';
             // console.error('Payment failed', err)}
-    };
+    }
     return (<div className="max-w-2xl mx-auto p-6">"";
       <h1 className="text-2xl font-bold mb-6">Checkout</h1>"";
       <CheckoutProgress currentStep={0} className="mb-6"/>;
@@ -107,14 +103,10 @@ export default function CheckoutPage() {}
         </div>;
       </div>;
     </div>)}
-;
 
-export { CheckoutPage };
-;
-export { CheckoutPage };
-;
-export { CheckoutPage };
-;
-export { CheckoutPage };
-;
-export { CheckoutPage };
+
+export { CheckoutPage }
+export { CheckoutPage }
+export { CheckoutPage }
+export { CheckoutPage }
+export { CheckoutPage }

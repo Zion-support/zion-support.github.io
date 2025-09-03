@@ -1,5 +1,5 @@
 export const real2036ITServices = [;
-  {;
+  {
     id: "quantum-cloud-infrastructure-platform",;
     name: "Quantum Cloud Infrastructure Platform",;
     tagline: "Next-generation quantum cloud computing",;
@@ -29,9 +29,8 @@ export const real2036ITServices = [;
       "Financial modeling",;
       "Drug discovery",;
       "Climate simulation";
-    ];,;,
-},;
-  {;
+    ]},;
+  {
     id: "ai-powered-devops-platform",;
     name: "AI-Powered DevOps Platform",;
     tagline: "Intelligent DevOps automation",;
@@ -61,9 +60,8 @@ export const real2036ITServices = [;
       "Infrastructure automation",;
       "Testing automation",;
       "Monitoring and alerting";
-    ];,;,
-},;
-  {;
+    ]},;
+  {
     id: "quantum-cybersecurity-platform",;
     name: "Quantum Cybersecurity Platform",;
     tagline: "Quantum-resistant security solutions",;
@@ -93,9 +91,8 @@ export const real2036ITServices = [;
       "Financial institutions",;
       "Healthcare data protection",;
       "Critical infrastructure";
-    ];,;,
-},;
-  {;
+    ]},;
+  {
     id: "edge-computing-orchestration-platform",;
     name: "Edge Computing Orchestration Platform",;
     tagline: "Intelligent edge computing management",;
@@ -125,9 +122,8 @@ export const real2036ITServices = [;
       "Real-time analytics",;
       "Edge AI processing",;
       "Distributed computing";
-    ];,;,
-},;
-  {;
+    ]},;
+  {
     id: "quantum-database-platform",;
     name: "Quantum Database Platform",;
     tagline: "Quantum-powered data management",;
@@ -157,9 +153,8 @@ export const real2036ITServices = [;
       "Real-time search",;
       "Data warehousing",;
       "Business intelligence";
-    ];,;,
-},;
-  {;
+    ]},;
+  {
     id: "ai-powered-network-security",;
     name: "AI-Powered Network Security",;
     tagline: "Intelligent network protection",;
@@ -189,9 +184,8 @@ export const real2036ITServices = [;
       "Cloud security",;
       "IoT security",;
       "Remote work security";
-    ];,;,
-},;
-  {;
+    ]},;
+  {
     id: "quantum-internet-protocols",;
     name: "Quantum Internet Protocols",;
     tagline: "Next-generation quantum networking",;
@@ -221,9 +215,8 @@ export const real2036ITServices = [;
       "Financial networks",;
       "Research networks",;
       "Quantum internet backbone";
-    ];,;,
-},;
-  {;
+    ]},;
+  {
     id: "ai-powered-infrastructure-monitoring",;
     name: "AI-Powered Infrastructure Monitoring",;
     tagline: "Intelligent infrastructure oversight",;
@@ -253,9 +246,8 @@ export const real2036ITServices = [;
       "Network monitoring",;
       "Application monitoring",;
       "Cloud infrastructure";
-    ];,;,
-},;
-  {;
+    ]},;
+  {
     id: "quantum-storage-platform",;
     name: "Quantum Storage Platform",;
     tagline: "Quantum-accelerated data storage",;
@@ -285,9 +277,8 @@ export const real2036ITServices = [;
       "Data archiving",;
       "Cloud storage",;
       "Data backup";
-    ];,;,
-},;
-  {;
+    ]},;
+  {
     id: "ai-powered-disaster-recovery",;
     name: "AI-Powered Disaster Recovery",;
     tagline: "Intelligent recovery automation",;

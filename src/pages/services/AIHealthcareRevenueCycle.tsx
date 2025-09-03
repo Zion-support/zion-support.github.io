@@ -1,8 +1,8 @@
 import React from 'react';
 import { Heart, Check, ArrowRight } from 'lucide-react';
 import { SEO } from '../../components/SEO';
-;
-export default function AIHealthcareRevenueCycle() {;
+
+export default function AIHealthcareRevenueCycle() {
   const features = [;
     'Automated revenue cycle management',;
     'Predictive analytics for billing optimization',;
@@ -11,25 +11,22 @@ export default function AIHealthcareRevenueCycle() {;
     'Integration with major EHR systems',;
     'Custom reporting and analytics';
   ];
-;
+
   const tiers = [;
-    {;
+    {
       name: 'Starter',;
       price: '$299/mo',;
-      details: ['Basic RCM features', 'Standard support', 'Up to 100 claims/month'];,
-},;
-    {;
+      details: ['Basic RCM features', 'Standard support', 'Up to 100 claims/month']},;
+    {
       name: 'Professional',;
       price: '$999/mo',;
-      details: ['Advanced RCM features', 'Priority support', 'Up to 1000 claims/month'];,
-},;
-    {;
+      details: ['Advanced RCM features', 'Priority support', 'Up to 1000 claims/month']},;
+    {
       name: 'Enterprise',;
       price: '$2,999/mo',;
-      details: ['All RCM features', 'Dedicated support', 'Unlimited claims'];,
-}
+      details: ['All RCM features', 'Dedicated support', 'Unlimited claims']}
   ];
-;
+
   return (;
     <>;
       <SEO ;
@@ -71,7 +68,7 @@ export default function AIHealthcareRevenueCycle() {;
                 Built with enterprise-grade security, HIPAA compliance, and 99.9% uptime SLA.;
               </div>;
             </div>;
-            ;
+
             <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">;
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">;
                 Competitive Pricing;
@@ -107,5 +104,4 @@ export default function AIHealthcareRevenueCycle() {;
         </section>;
       </div>;
     </>;
-  );,
-}
+  )}

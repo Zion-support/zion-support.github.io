@@ -1,11 +1,9 @@
 import Head from "next/head";
 import React from "react";
 import dynamic from "next/dynamic";
-const Component = () => {;
-const Head = dynamic(() => import("next/head"), { ssr: false });,
-}
-const Link = dynamic(() => import("next/link"), { ssr: false });,
-}
+const Component = () => {
+const Head = dynamic(() => import("next/head"), { ssr: false })}
+const Link = dynamic(() => import("next/link"), { ssr: false })}
   return (;
     <>;
 <Head>;
@@ -58,17 +56,17 @@ const Link = dynamic(() => import("next/link"), { ssr: false });,
                       <div className="flex items-center space-x-4 mb-3">";
                         <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">,;
                           {release.category}
-;
+
                         </span>";
                         <div className="flex items-center text-gray-500 text-sm">";
                           <Calendar className="w-4 h-4 mr-1"  />;
                           {new Date(release.date).toLocaleDateString()}
-;
+
                         </div>";
                         <div className="flex items-center text-gray-500 text-sm">";
                           <FileText className="w-4 h-4 mr-1"  />;
                           {release.readTime}
-;
+
                         </div>;
                       </div>";
                       <h3 className="text-2xl font-bold text-gray-900 mb-3">{release.title}</h3>";
@@ -89,7 +87,7 @@ const Link = dynamic(() => import("next/link"), { ssr: false });,
                     </div>;
                 </div>,;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";
@@ -110,12 +108,12 @@ const Link = dynamic(() => import("next/link"), { ssr: false });,
                   <div className="flex items-center justify-between mb-4">";
                     <span className="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm font-semibold">,;
                       {coverage.type}
-;
+
                     </span>";
                     <div className="flex items-center text-gray-500 text-sm">";
                       <Calendar className="w-4 h-4 mr-1"  />;
                       {new Date(coverage.date).toLocaleDateString()}
-;
+
                     </div>;
                   </div>";
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{coverage.title}</h3>";
@@ -126,7 +124,7 @@ const Link = dynamic(() => import("next/link"), { ssr: false });,
                   </a>;
                 </div>,;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";
@@ -153,10 +151,10 @@ const Link = dynamic(() => import("next/link"), { ssr: false });,
                   <div className="flex items-center justify-center text-gray-500 text-sm">";
                     <Calendar className="w-4 h-4 mr-1"  />;
                     {new Date(award.date).toLocaleDateString()}
-;
+
                   </div>;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";
@@ -187,7 +185,7 @@ const Link = dynamic(() => import("next/link"), { ssr: false });,
                         <p className="text-gray-600">{member.title}</p>;
                       </div>;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";
@@ -212,5 +210,5 @@ const Link = dynamic(() => import("next/link"), { ssr: false });,
       </main>;
 </>",;
   )}
-;
+
 export default Component

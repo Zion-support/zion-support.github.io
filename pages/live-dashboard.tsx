@@ -1,94 +1,83 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-;
-const LiveDashboard: React.FC = () => {;
+
+const LiveDashboard: React.FC = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
   const [systemStatus, setSystemStatus] = useState('operational');
   const [activeUsers, setActiveUsers] = useState(1247);
   const [responseTime, setResponseTime] = useState(45);
   const [uptime, setUptime] = useState(99.97);
-;
+
   // Simulate real-time updates;
-  useEffect(() => {;
-    const timer = setInterval(() => {;
+  useEffect(() => {
+    const timer = setInterval(() => {
       setCurrentTime(new Date());
       setActiveUsers(prev => prev + Math.floor(Math.random() * 10) - 5);
-      setResponseTime(prev => Math.max(20, Math.min(80, prev + (Math.random() * 10) - 5)));,
-}, 5000);
-;
-    return () => clearInterval(timer);,
-}, []);
-;
+      setResponseTime(prev => Math.max(20, Math.min(80, prev + (Math.random() * 10) - 5)))}, 5000);
+
+    return () => clearInterval(timer)}, []);
+
   const metrics = [;
-    {;
+    {
       title: 'Active Users',;
       value: activeUsers.toLocaleString(),;
       change: '+12%',;
       changeType: 'positive',;
-      icon: '👥';,
-},;
-    {;
+      icon: '👥'},;
+    {
       title: 'Response Time',;
       value: `${responseTime}ms`,;
       change: '-8%',;
       changeType: 'positive',;
-      icon: '⚡';,
-},;
-    {;
+      icon: '⚡'},;
+    {
       title: 'System Uptime',;
       value: `${uptime}%`,;
       change: '+0.02%',;
       changeType: 'positive',;
-      icon: '🟢';,
-},;
-    {;
+      icon: '🟢'},;
+    {
       title: 'API Calls/min',;
       value: '2,847',;
       change: '+15%',;
       changeType: 'positive',;
-      icon: '📡';,
-}
+      icon: '📡'}
   ];
-;
+
   const recentEvents = [;
-    {;
+    {
       id: 1,;
       type: 'info',;
       message: 'System backup completed successfully',;
       timestamp: '2 minutes ago',;
-      icon: '💾';,
-},;
-    {;
+      icon: '💾'},;
+    {
       id: 2,;
       type: 'success',;
       message: 'New user registration milestone: 10,000 users',;
       timestamp: '5 minutes ago',;
-      icon: '🎉';,
-},;
-    {;
+      icon: '🎉'},;
+    {
       id: 3,;
       type: 'warning',;
       message: 'High memory usage detected on server-03',;
       timestamp: '8 minutes ago',;
-      icon: '⚠️';,
-},;
-    {;
+      icon: '⚠️'},;
+    {
       id: 4,;
       type: 'info',;
       message: 'Scheduled maintenance completed',;
       timestamp: '15 minutes ago',;
-      icon: '🔧';,
-},;
-    {;
+      icon: '🔧'},;
+    {
       id: 5,;
       type: 'success',;
       message: 'Performance optimization deployed',;
       timestamp: '1 hour ago',;
-      icon: '🚀';,
-}
+      icon: '🚀'}
   ];
-;
+
   const systemHealth = [;
     { service: 'Web Server', status: 'healthy', uptime: '99.99%', response: '12ms' },;
     { service: 'Database', status: 'healthy', uptime: '99.97%', response: '45ms' },;
@@ -96,26 +85,22 @@ const LiveDashboard: React.FC = () => {;
     { service: 'API Gateway', status: 'healthy', uptime: '99.96%', response: '28ms' },;
     { service: 'File Storage', status: 'healthy', uptime: '99.95%', response: '67ms' }
   ];
-;
-  const getStatusColor = (status: string) => {;
-    switch (status) {;
+
+  const getStatusColor = (status: string) => {
+    switch (status) {
       case 'healthy': return 'text-green-600 bg-green-100';
       case 'warning': return 'text-yellow-600 bg-yellow-100';
       case 'critical': return 'text-red-600 bg-red-100';
-      default: return 'text-gray-600 bg-gray-100';,
-}
-  };
-;
-  const getEventTypeColor = (type: string) => {;
-    switch (type) {;
+      default: return 'text-gray-600 bg-gray-100'}
+  }
+  const getEventTypeColor = (type: string) => {
+    switch (type) {
       case 'success': return 'text-green-600 bg-green-100';
       case 'warning': return 'text-yellow-600 bg-yellow-100';
       case 'error': return 'text-red-600 bg-red-100';
       case 'info': return 'text-blue-600 bg-blue-100';
-      default: return 'text-gray-600 bg-gray-100';,
-}
-  };
-;
+      default: return 'text-gray-600 bg-gray-100'}
+  }
   return (;
     <div className="min-h-screen bg-gray-900 text-white">;
       <Head>;
@@ -146,12 +131,10 @@ const LiveDashboard: React.FC = () => {;
 
           {/* System Status Banner */}
           <div className={`rounded-lg p-4 mb-8 ${;
-            systemStatus === 'operational' ? 'bg-green-900 border border-green-700' : 'bg-red-900 border border-red-700';,
-}`}>;
+            systemStatus === 'operational' ? 'bg-green-900 border border-green-700' : 'bg-red-900 border border-red-700'}`}>;
             <div className="flex items-center gap-3">;
               <div className={`w-3 h-3 rounded-full ${;
-                systemStatus === 'operational' ? 'bg-green-400' : 'bg-red-400';,
-} animate-pulse`}></div>;
+                systemStatus === 'operational' ? 'bg-green-400' : 'bg-red-400'} animate-pulse`}></div>;
               <span className="font-semibold">;
                 System Status: {systemStatus === 'operational' ? 'All Systems Operational' : 'System Issues Detected'}
               </span>;
@@ -165,8 +148,7 @@ const LiveDashboard: React.FC = () => {;
                 <div className="flex items-center justify-between mb-4">;
                   <span className="text-3xl">{metric.icon}</span>;
                   <span className={`text-sm px-2 py-1 rounded-full ${;
-                    metric.changeType === 'positive' ? 'text-green-400 bg-green-900' : 'text-red-400 bg-red-900';,
-}`}>;
+                    metric.changeType === 'positive' ? 'text-green-400 bg-green-900' : 'text-red-400 bg-red-900'}`}>;
                     {metric.change}
                   </span>;
                 </div>;
@@ -186,8 +168,7 @@ const LiveDashboard: React.FC = () => {;
                     <div key={index} className="flex items-center justify-between p-4 bg-gray-700 rounded-lg">;
                       <div className="flex items-center gap-3">;
                         <div className={`w-3 h-3 rounded-full ${;
-                          service.status === 'healthy' ? 'bg-green-400' : 'bg-red-400';,
-}`}></div>;
+                          service.status === 'healthy' ? 'bg-green-400' : 'bg-red-400'}`}></div>;
                         <span className="font-medium">{service.service}</span>;
                       </div>;
                       <div className="flex items-center gap-6 text-sm">;
@@ -282,7 +263,5 @@ const LiveDashboard: React.FC = () => {;
         </div>;
       </div>;
     </div>;
-  );,
-};
-;
+  )}
 export default LiveDashboard;

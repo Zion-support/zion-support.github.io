@@ -29,78 +29,65 @@ import { MessageSquare, ;
   Activity,;
   ShoppingCart,;
   Shield,;
-  Settings;,
-} from 'lucide-react.ts';
-;
-export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown {;
+  Settings} from 'lucide-react.ts';
+
+export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown {
   const features = [;
-    {;
+    {
       icon: Brain,;
       title: "AI Sentiment Analysis",;
-      description: "Advanced NLP algorithms analyze customer emotions, intent, and satisfaction levels across all feedback channels.";,
-},;
-    {;
+      description: "Advanced NLP algorithms analyze customer emotions, intent, and satisfaction levels across all feedback channels."},;
+    {
       icon: BarChart3,;
       title: "Real-time Analytics Dashboard",;
-      description: "Live insights into customer satisfaction trends, sentiment scores, and feedback patterns with customizable metrics.";,
-},;
-    {;
+      description: "Live insights into customer satisfaction trends, sentiment scores, and feedback patterns with customizable metrics."},;
+    {
       icon: MessageSquare,;
       title: "Multi-Channel Integration",;
-      description: "Seamlessly collect and analyze feedback from surveys, reviews, social media, support tickets, and more.";,
-},;
-    {;
+      description: "Seamlessly collect and analyze feedback from surveys, reviews, social media, support tickets, and more."},;
+    {
       icon: Target,;
       title: "Predictive Customer Insights",;
-      description: "AI-powered predictions for customer churn, satisfaction trends, and actionable recommendations.";,
-},;
-    {;
+      description: "AI-powered predictions for customer churn, satisfaction trends, and actionable recommendations."},;
+    {
       icon: PieChart,;
       title: "Advanced Segmentation",;
-      description: "Segment customers by demographics, behavior, satisfaction levels, and create targeted improvement strategies.";,
-},;
-    {;
+      description: "Segment customers by demographics, behavior, satisfaction levels, and create targeted improvement strategies."},;
+    {
       icon: Activity,;
       title: "Automated Reporting",;
-      description: "Generate comprehensive reports and alerts for stakeholders with actionable insights and recommendations.";,
-};
+      description: "Generate comprehensive reports and alerts for stakeholders with actionable insights and recommendations."}
   ];
-;
+
   const benefits = [;
-    {;
+    {
       icon: Zap,;
       title: "Improved Customer Retention",;
-      description: "Identify at-risk customers early and implement proactive retention strategies.";,
-},;
-    {;
+      description: "Identify at-risk customers early and implement proactive retention strategies."},;
+    {
       icon: Globe,;
       title: "Enhanced Customer Experience",;
-      description: "Understand customer pain points and optimize touchpoints across the entire customer journey.";,
-},;
-    {;
+      description: "Understand customer pain points and optimize touchpoints across the entire customer journey."},;
+    {
       icon: Lock,;
       title: "Data Security & Privacy",;
-      description: "Enterprise-grade security with GDPR/CCPA compliance and data encryption at rest and in transit.";,
-},;
-    {;
+      description: "Enterprise-grade security with GDPR/CCPA compliance and data encryption at rest and in transit."},;
+    {
       icon: Eye,;
       title: "Actionable Insights",;
-      description: "Transform raw feedback into actionable business intelligence with AI-powered recommendations.";,
-},;
-    {;
+      description: "Transform raw feedback into actionable business intelligence with AI-powered recommendations."},;
+    {
       icon: TrendingUp,;
       title: "Increased Revenue",;
-      description: "Improve customer satisfaction scores leading to higher retention rates and increased lifetime value.";,
-},;
-    {;
+      description: "Improve customer satisfaction scores leading to higher retention rates and increased lifetime value."},;
+    {
       icon: Clock,;
       title: "Time Savings",;
-      description: "Automate feedback analysis and reporting, saving hours of manual work each week.";,
-};
+      description: "Automate feedback analysis and reporting, saving hours of manual work each week."}
   ];
-;
+
   const pricingPlans = [;
-    {;
+    {
       name: "Starter",;
       price: "$299",;
       period: "/month",;
@@ -114,9 +101,8 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
         "5 team members";
       ],;
       cta: "Start Free Trial",;
-      popular: false;,
-},;
-    {;
+      popular: false},;
+    {
       name: "Professional",;
       price: "$799",;
       period: "/month",;
@@ -132,9 +118,8 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
         "API access";
       ],;
       cta: "Start Free Trial",;
-      popular: true;,
-},;
-    {;
+      popular: true},;
+    {
       name: "Enterprise",;
       price: "$2,499",;
       period: "/month",;
@@ -150,102 +135,87 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
         "SLA guarantees";
       ],;
       cta: "Contact Sales",;
-      popular: false;,
-};
+      popular: false}
   ];
-;
+
   const useCases = [;
-    {;
+    {
       industry: "E-commerce",;
       description: "Analyze product reviews, customer service feedback, and shopping experience to optimize conversion rates",;
-      icon: ShoppingCart;,
-},;
-    {;
+      icon: ShoppingCart},;
+    {
       industry: "SaaS",;
       description: "Monitor user satisfaction, feature requests, and churn indicators to improve product-market fit",;
-      icon: Cpu;,
-},;
-    {;
+      icon: Cpu},;
+    {
       industry: "Healthcare",;
       description: "Track patient satisfaction, service quality feedback, and improve healthcare delivery",;
-      icon: Users;,
-},;
-    {;
+      icon: Users},;
+    {
       industry: "Financial Services",;
       description: "Monitor customer satisfaction with banking services, investment products, and support quality",;
-      icon: Shield;,
-},;
-    {;
+      icon: Shield},;
+    {
       industry: "Education",;
       description: "Analyze student feedback, course satisfaction, and institutional improvement opportunities",;
-      icon: Award;,
-},;
-    {;
+      icon: Award},;
+    {
       industry: "Manufacturing",;
       description: "Track customer satisfaction with products, service quality, and identify improvement areas",;
-      icon: Settings;,
-};
+      icon: Settings}
   ];
-;
+
   const integrations = [;
-    {;
+    {
       name: "Survey Platforms",;
-      platforms: ["SurveyMonkey", "Typeform", "Google Forms", "Qualtrics"];,
-},;
-    {;
+      platforms: ["SurveyMonkey", "Typeform", "Google Forms", "Qualtrics"]},;
+    {
       name: "CRM Systems",;
-      platforms: ["Salesforce", "HubSpot", "Pipedrive", "Zoho"];,
-},;
-    {;
+      platforms: ["Salesforce", "HubSpot", "Pipedrive", "Zoho"]},;
+    {
       name: "Support Platforms",;
-      platforms: ["Zendesk", "Intercom", "Freshdesk", "HelpScout"];,
-},;
-    {;
+      platforms: ["Zendesk", "Intercom", "Freshdesk", "HelpScout"]},;
+    {
       name: "Social Media",;
-      platforms: ["Twitter", "Facebook", "Instagram", "LinkedIn"];,
-},;
-    {;
+      platforms: ["Twitter", "Facebook", "Instagram", "LinkedIn"]},;
+    {
       name: "Review Platforms",;
-      platforms: ["Google Reviews", "Yelp", "Trustpilot", "G2"];,
-},;
-    {;
+      platforms: ["Google Reviews", "Yelp", "Trustpilot", "G2"]},;
+    {
       name: "Analytics Tools",;
-      platforms: ["Google Analytics", "Mixpanel", "Amplitude", "Hotjar"];,
-};
+      platforms: ["Google Analytics", "Mixpanel", "Amplitude", "Hotjar"]}
   ];
-;
+
   return (;
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <SEO;
         title="AI Customer Feedback Analytics - Zion Tech Group";
         description="Transform customer feedback into actionable insights with our AI-powered analytics platform. Analyze sentiment, predict churn, and improve customer satisfaction.";
       />;
-      ;
+
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 lg:py-32">;
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-transparent to-purple-900/20"></div>;
-        ;
+
         <div className="relative max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8">;
           <motion.div;
-            initial = {;
+            initial = {
   { opacity: 0,;
   y: 20 ;
 
-;
 
-;
 
-;,
+
+
 }}
-            animate = {;
+            animate = {
   { opacity: 1,;
   y: 0 ;
 
-;
 
-;
 
-;,
+
+
 }}
             transition={{ duration: 0.8 }}
           >;
@@ -281,25 +251,23 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
       <section className="py-20">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion.div;
-            initial = {;
+            initial = {
   { opacity: 0,;
   y: 20 ;
 
-;
 
-;
 
-;,
+
+
 }}
-            whileInView = {;
+            whileInView = {
   { opacity: 1,;
   y: 0 ;
 
-;
 
-;
 
-;,
+
+
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -316,35 +284,32 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
             {features.map((feature, index)  => (;
               <motion.div;
                 key={feature.title}
-                initial = {;
+                initial = {
   { opacity: 0,;
   y: 20 ;
 
-;
 
-;
 
-;,
+
+
 }}
-                whileInView = {;
+                whileInView = {
   { opacity: 1,;
   y: 0 ;
 
-;
 
-;
 
-;,
+
+
 }}
-                transition = {;
+                transition = {
   { duration: 0.5,;
   delay: index * 0.1 ;
 
-;
 
-;
 
-;,
+
+
 }}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-blue-500/50">;
@@ -377,25 +342,23 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
       <section className="py-20 bg-slate-800/50">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion.div;
-            initial = {;
+            initial = {
   { opacity: 0,;
   y: 20 ;
 
-;
 
-;
 
-;,
+
+
 }}
-            whileInView = {;
+            whileInView = {
   { opacity: 1,;
   y: 0 ;
 
-;
 
-;
 
-;,
+
+
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -412,35 +375,32 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
             {benefits.map((benefit, index)  => (;
               <motion.div;
                 key={benefit.title}
-                initial = {;
+                initial = {
   { opacity: 0,;
   y: 20 ;
 
-;
 
-;
 
-;,
+
+
 }}
-                whileInView = {;
+                whileInView = {
   { opacity: 1,;
   y: 0 ;
 
-;
 
-;
 
-;,
+
+
 }}
-                transition = {;
+                transition = {
   { duration: 0.5,;
   delay: index * 0.1 ;
 
-;
 
-;
 
-;,
+
+
 }}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-blue-500/50">;
@@ -473,25 +433,23 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
       <section className="py-20">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion.div;
-            initial = {;
+            initial = {
   { opacity: 0,;
   y: 20 ;
 
-;
 
-;
 
-;,
+
+
 }}
-            whileInView = {;
+            whileInView = {
   { opacity: 1,;
   y: 0 ;
 
-;
 
-;
 
-;,
+
+
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -508,42 +466,38 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
             {pricingPlans.map((plan, index)  => (;
               <motion.div;
                 key={plan.name}
-                initial = {;
+                initial = {
   { opacity: 0,;
   y: 20 ;
 
-;
 
-;
 
-;,
+
+
 }}
-                whileInView = {;
+                whileInView = {
   { opacity: 1,;
   y: 0 ;
 
-;
 
-;
 
-;,
+
+
 }}
-                transition = {;
+                transition = {
   { duration: 0.5,;
   delay: index * 0.1 ;
 
-;
 
-;
 
-;,
+
+
 }}
                 viewport={{ once: true }}
                 className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 ${;
                   plan.popular ;
                     ? 'border-blue-500/50 bg-gradient-to-br from-blue-500/10 to-purple-500/10' ;
-                    : 'border-white/10 hover:border-blue-500/50';,
-}`}
+                    : 'border-white/10 hover:border-blue-500/50'}`}
               >;
                 {plan.popular && (;
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">;
@@ -552,7 +506,7 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
                     </span>;
                   </div>;
                 )}
-;
+
                 <div className="text-center mb-8">;
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>;
                   <p className="text-gray-400 text-sm mb-4">{plan.description}</p>;
@@ -574,8 +528,7 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${;
                   plan.popular;
                     ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700';
-                    : 'bg-white/10 text-white border border-white/20 hover:bg-white/20';,
-}`}>;
+                    : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'}`}>;
                   {plan.cta}
                 </button>;
               </motion.div>;
@@ -588,25 +541,23 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
       <section className="py-20 bg-slate-800/50">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion.div;
-            initial = {;
+            initial = {
   { opacity: 0,;
   y: 20 ;
 
-;
 
-;
 
-;,
+
+
 }}
-            whileInView = {;
+            whileInView = {
   { opacity: 1,;
   y: 0 ;
 
-;
 
-;
 
-;,
+
+
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -623,35 +574,32 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
             {useCases.map((useCase, index)  => (;
               <motion.div;
                 key={useCase.industry}
-                initial = {;
+                initial = {
   { opacity: 0,;
   y: 20 ;
 
-;
 
-;
 
-;,
+
+
 }}
-                whileInView = {;
+                whileInView = {
   { opacity: 1,;
   y: 0 ;
 
-;
 
-;
 
-;,
+
+
 }}
-                transition = {;
+                transition = {
   { duration: 0.5,;
   delay: index * 0.1 ;
 
-;
 
-;
 
-;,
+
+
 }}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-blue-500/50">;
@@ -684,25 +632,23 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
       <section className="py-20">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion.div;
-            initial = {;
+            initial = {
   { opacity: 0,;
   y: 20 ;
 
-;
 
-;
 
-;,
+
+
 }}
-            whileInView = {;
+            whileInView = {
   { opacity: 1,;
   y: 0 ;
 
-;
 
-;
 
-;,
+
+
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -719,35 +665,32 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
             {integrations.map((integration, index)  => (;
               <motion.div;
                 key={integration.name}
-                initial = {;
+                initial = {
   { opacity: 0,;
   y: 20 ;
 
-;
 
-;
 
-;,
+
+
 }}
-                whileInView = {;
+                whileInView = {
   { opacity: 1,;
   y: 0 ;
 
-;
 
-;
 
-;,
+
+
 }}
-                transition = {;
+                transition = {
   { duration: 0.5,;
   delay: index * 0.1 ;
 
-;
 
-;
 
-;,
+
+
 }}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-blue-500/50">;
@@ -773,25 +716,23 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
       <section className="py-20 bg-gradient-to-r from-blue-900/20 to-purple-900/20">;
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">;
           <motion.div;
-            initial = {;
+            initial = {
   { opacity: 0,;
   y: 20 ;
 
-;
 
-;
 
-;,
+
+
 }}
-            whileInView = {;
+            whileInView = {
   { opacity: 1,;
   y: 0 ;
 
-;
 
-;
 
-;,
+
+
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -817,15 +758,10 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
         </div>;
       </section>;
     </div>;
-  );,
-}
-;
-export { AICustomerFeedbackAnalytics };
-;
-export { AICustomerFeedbackAnalytics };
-;
-export { AICustomerFeedbackAnalytics };
-;
-export { AICustomerFeedbackAnalytics };
-;
-export { AICustomerFeedbackAnalytics };
+  )}
+
+export { AICustomerFeedbackAnalytics }
+export { AICustomerFeedbackAnalytics }
+export { AICustomerFeedbackAnalytics }
+export { AICustomerFeedbackAnalytics }
+export { AICustomerFeedbackAnalytics }

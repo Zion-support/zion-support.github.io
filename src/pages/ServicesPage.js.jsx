@@ -543,8 +543,7 @@ function generateRandomService(idNum) {}
             category: "Consulting",;
             min: 4000,";
             max: 12000,"";
-            tags["Automation", "AI Strategy", "Optimization"],;,
-},;
+            tags["Automation", "AI Strategy", "Optimization"]},;
         {}
 ";
 "";
@@ -552,8 +551,7 @@ function generateRandomService(idNum) {}
             category: "Management",;
             min: 3000,";
             max: 9000,"";
-            tags["Cloud", "Migration", "DevOps"],;,
-},;
+            tags["Cloud", "Migration", "DevOps"]},;
         {}
 ";
 "";
@@ -561,8 +559,7 @@ function generateRandomService(idNum) {}
             category: "Security",;
             min: 5000,";
             max: 15000,"";
-            tags["Cybersecurity", "PenTesting", "Compliance"],;,
-},;
+            tags["Cybersecurity", "PenTesting", "Compliance"]},;
         {}
 ";
 "";
@@ -570,8 +567,7 @@ function generateRandomService(idNum) {}
             category: "Analytics",;
             min: 3500,";
             max: 11000,"";
-            tags["Data Engineering", "Analytics", "ETL"],;,
-},;
+            tags["Data Engineering", "Analytics", "ETL"]},;
         {}
 ";
 "";
@@ -579,8 +575,7 @@ function generateRandomService(idNum) {}
             category: "Development",;
             min: 4500,";
             max: 13000,"";
-            tags["Machine Learning", "Model Training", "AI"],;,
-},;
+            tags["Machine Learning", "Model Training", "AI"]},;
         {}
 ";
 "";
@@ -588,8 +583,7 @@ function generateRandomService(idNum) {}
             category: "Strategy",;
             min: 6000,";
             max: 14000,"";
-            tags["Transformation", "Strategy", "Business"],;,
-}
+            tags["Transformation", "Strategy", "Business"]}
     ];";
     const authors = ["";
         "Global AI Experts","";
@@ -706,14 +700,10 @@ export default function ServicesPage() {}
         </div>;
       </div>;
     </div>)}
-;
 
-export { SERVICE_LISTINGS, SERVICE_FILTERS, ServicesPage };
-;
-export { SERVICE_LISTINGS, SERVICE_FILTERS, ServicesPage };
-;
-export { SERVICE_LISTINGS, SERVICE_FILTERS, ServicesPage };
-;
-export { SERVICE_LISTINGS, SERVICE_FILTERS, ServicesPage };
-;
-export { SERVICE_LISTINGS, SERVICE_FILTERS, ServicesPage };
+
+export { SERVICE_LISTINGS, SERVICE_FILTERS, ServicesPage }
+export { SERVICE_LISTINGS, SERVICE_FILTERS, ServicesPage }
+export { SERVICE_LISTINGS, SERVICE_FILTERS, ServicesPage }
+export { SERVICE_LISTINGS, SERVICE_FILTERS, ServicesPage }
+export { SERVICE_LISTINGS, SERVICE_FILTERS, ServicesPage }

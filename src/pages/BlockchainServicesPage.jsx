@@ -1,29 +1,26 @@
 import React from 'react';
-;
-;
-;
+
+
+
 import { Link } from "react-router-dom";
 import { Link as LinkIcon, DollarSign as Coins, Shield, Zap, Database, Globe, TrendingUp, CheckCircle, ArrowRight, Lock, Network, Wallet, BarChart3 } from "lucide-react";
-;
+
 const blockchainBenefits = [;
-    {;
+    {
         title: "Transparency",;
-        description: "Immutable, transparent records that build trust and enable verifiable transactions",        icon: <Globe className="h-6 w-6"/>;,
-},;
+        description: "Immutable, transparent records that build trust and enable verifiable transactions",        icon: <Globe className="h-6 w-6"/>},;
     {}
 ";
 "";
         title: "Security","";
         description: "Cryptographic security and decentralized architecture protect against fraud and attacks","";
-        icon: <Lock className="h-6 w-6"/>;,
-},;
+        icon: <Lock className="h-6 w-6"/>},;
     {}
 ";
 "";
         title: "Efficiency","";
         description: "Automated smart contracts reduce intermediaries and streamline complex processes","";
-        icon: <Zap className="h-6 w-6"/>;,
-},;
+        icon: <Zap className="h-6 w-6"/>},;
     {}
 ";
 "";
@@ -38,22 +35,19 @@ const useCases = [];
 "";
         title: "Supply Chain Management","";
         description: "Track products from origin to consumer with immutable records and real-time visibility","";
-        icon: <LinkIcon className="h-6 w-6"/>;,
-},;
+        icon: <LinkIcon className="h-6 w-6"/>},;
     {}
 ";
 "";
         title: "Digital Identity","";
         description: "Self-sovereign identity solutions for secure, privacy-preserving authentication","";
-        icon: <Shield className="h-6 w-6"/>;,
-},;
+        icon: <Shield className="h-6 w-6"/>},;
     {}
 ";
 "";
         title: "Asset Tokenization","";
         description: "Convert real-world assets into digital tokens for fractional ownership and trading","";
-        icon: <Coins className="h-6 w-6"/>;,
-},;
+        icon: <Coins className="h-6 w-6"/>},;
     {}
 ";
 "";
@@ -235,14 +229,10 @@ export default function BlockchainServicesPage() {}
 
       <TrustedBySection />;
     </div>)}
-;
 
-export { BlockchainServicesPage };
-;
-export { BlockchainServicesPage };
-;
-export { BlockchainServicesPage };
-;
-export { BlockchainServicesPage };
-;
-export { BlockchainServicesPage };
+
+export { BlockchainServicesPage }
+export { BlockchainServicesPage }
+export { BlockchainServicesPage }
+export { BlockchainServicesPage }
+export { BlockchainServicesPage }

@@ -1,6 +1,6 @@
 import React from 'react';
-;
-const ServicesPage: React.FC = () => {;
+
+const ServicesPage: React.FC = () => {
   return (;
     <div className="min-h-screen bg-gray-50 py-20">;
       <div className="container mx-auto px-4">;
@@ -10,7 +10,7 @@ const ServicesPage: React.FC = () => {;
             Comprehensive technology solutions to help your business thrive in the digital age.;
           </p>;
         </div>;
-        ;
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
           <div className="bg-white p-8 rounded-lg shadow-lg">;
             <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Services</h3>;
@@ -22,7 +22,7 @@ const ServicesPage: React.FC = () => {;
               Learn More →;
             </a>;
           </div>;
-          ;
+
           <div className="bg-white p-8 rounded-lg shadow-lg">;
             <h3 className="text-2xl font-bold text-gray-900 mb-4">IT Services</h3>;
             <p className="text-gray-600 mb-6">;
@@ -33,7 +33,7 @@ const ServicesPage: React.FC = () => {;
               Learn More →;
             </a>;
           </div>;
-          ;
+
           <div className="bg-white p-8 rounded-lg shadow-lg">;
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Micro SaaS</h3>;
             <p className="text-gray-600 mb-6">;
@@ -47,7 +47,5 @@ const ServicesPage: React.FC = () => {;
         </div>;
       </div>;
     </div>;
-  );,
-};
-;
+  )}
 export default ServicesPage;

@@ -1,5 +1,5 @@
 import React from "react";
-const Enterprise: React.FC = () => {;
+const Enterprise: React.FC = () => {
   return (;
     <div className="mx-auto max-w-7xl px-4 py-12">";
       <h1 className="text-3xl font-bold text-gray-900">Enterprise Solutions</h1>";
@@ -17,6 +17,6 @@ const Enterprise: React.FC = () => {;
       </a>;
     </div>;,;
   )}
-;
+
 );
 export default Enterprise;

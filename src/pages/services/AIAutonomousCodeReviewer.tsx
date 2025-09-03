@@ -40,43 +40,36 @@ import { ;
   GitBranch,;
   Github,;
   Gitlab,;
-  Bitbucket;,
-} from 'lucide-react';
-;
-const AIAutonomousCodeReviewer = () => {;
+  Bitbucket} from 'lucide-react';
+
+const AIAutonomousCodeReviewer = () => {
   const features = [;
-    {;
+    {
       icon: Code,;
       title: 'AI-Powered Code Analysis',;
-      description: 'Advanced machine learning algorithms that understand code patterns, detect bugs, and suggest improvements';,
-},;
-    {;
+      description: 'Advanced machine learning algorithms that understand code patterns, detect bugs, and suggest improvements'},;
+    {
       icon: Shield,;
       title: 'Security Vulnerability Detection',;
-      description: 'Automated scanning for security flaws, SQL injection, XSS, and other critical vulnerabilities';,
-},;
-    {;
+      description: 'Automated scanning for security flaws, SQL injection, XSS, and other critical vulnerabilities'},;
+    {
       icon: Zap,;
       title: 'Performance Optimization',;
-      description: 'Identify performance bottlenecks, memory leaks, and inefficient algorithms in your codebase';,
-},;
-    {;
+      description: 'Identify performance bottlenecks, memory leaks, and inefficient algorithms in your codebase'},;
+    {
       icon: GitBranch,;
       title: 'Git Integration',;
-      description: 'Seamless integration with GitHub, GitLab, Bitbucket, and other version control systems';,
-},;
-    {;
+      description: 'Seamless integration with GitHub, GitLab, Bitbucket, and other version control systems'},;
+    {
       icon: Monitor,;
       title: 'Real-time Monitoring',;
-      description: 'Continuous code quality monitoring with instant notifications and detailed reports';,
-},;
-    {;
+      description: 'Continuous code quality monitoring with instant notifications and detailed reports'},;
+    {
       icon: Users,;
       title: 'Team Collaboration',;
-      description: 'Built-in code review workflows, comments, and approval systems for development teams';,
-}
+      description: 'Built-in code review workflows, comments, and approval systems for development teams'}
   ];
-;
+
   const benefits = [;
     'Reduce code review time by 70%',;
     'Catch 90% of bugs before production',;
@@ -85,51 +78,43 @@ const AIAutonomousCodeReviewer = () => {;
     'Reduce technical debt',;
     'Ensure consistent coding standards';
   ];
-;
+
   const services = [;
-    {;
+    {
       icon: Server,;
       title: 'Static Code Analysis',;
-      description: 'Comprehensive static analysis for multiple programming languages including Python, JavaScript, Java, C++, Go, and Rust';,
-},;
-    {;
+      description: 'Comprehensive static analysis for multiple programming languages including Python, JavaScript, Java, C++, Go, and Rust'},;
+    {
       icon: Workflow,;
       title: 'Automated Review Workflows',;
-      description: 'Customizable review processes, automated approvals, and integration with CI/CD pipelines';,
-},;
-    {;
+      description: 'Customizable review processes, automated approvals, and integration with CI/CD pipelines'},;
+    {
       icon: Box,;
       title: 'Container Security Scanning',;
-      description: 'Docker and container security analysis, vulnerability scanning, and compliance checking';,
-},;
-    {;
+      description: 'Docker and container security analysis, vulnerability scanning, and compliance checking'},;
+    {
       icon: Database,;
       title: 'Database Code Review',;
-      description: 'SQL query optimization, database schema analysis, and performance tuning recommendations';,
-}
+      description: 'SQL query optimization, database schema analysis, and performance tuning recommendations'}
   ];
-;
+
   const useCases = [;
-    {;
+    {
       industry: 'Software Development',;
-      description: 'Automated code reviews for development teams, ensuring quality and consistency across projects';,
-},;
-    {;
+      description: 'Automated code reviews for development teams, ensuring quality and consistency across projects'},;
+    {
       industry: 'DevOps & CI/CD',;
-      description: 'Integration with automated pipelines for continuous code quality monitoring and deployment gates';,
-},;
-    {;
+      description: 'Integration with automated pipelines for continuous code quality monitoring and deployment gates'},;
+    {
       industry: 'Security Teams',;
-      description: 'Proactive security scanning and vulnerability detection in application code';,
-},;
-    {;
+      description: 'Proactive security scanning and vulnerability detection in application code'},;
+    {
       industry: 'Code Quality Management',;
-      description: 'Maintaining high coding standards and reducing technical debt in large codebases';,
-}
+      description: 'Maintaining high coding standards and reducing technical debt in large codebases'}
   ];
-;
+
   const pricing = [;
-    {;
+    {
       name: 'Starter',;
       price: '$299',;
       period: '/month',;
@@ -143,9 +128,8 @@ const AIAutonomousCodeReviewer = () => {;
         'Basic reporting';
       ],;
       cta: 'Start Free Trial',;
-      popular: false;,
-},;
-    {;
+      popular: false},;
+    {
       name: 'Professional',;
       price: '$799',;
       period: '/month',;
@@ -161,9 +145,8 @@ const AIAutonomousCodeReviewer = () => {;
         'Team collaboration tools';
       ],;
       cta: 'Start Free Trial',;
-      popular: true;,
-},;
-    {;
+      popular: true},;
+    {
       name: 'Enterprise',;
       price: '$1,999',;
       period: '/month',;
@@ -179,10 +162,9 @@ const AIAutonomousCodeReviewer = () => {;
         'SLA guarantees';
       ],;
       cta: 'Contact Sales',;
-      popular: false;,
-}
+      popular: false}
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       {/* Hero Section */}
@@ -198,17 +180,17 @@ const AIAutonomousCodeReviewer = () => {;
               <Code className="w-4 h-4 mr-2" />;
               AI-Powered Code Review;
             </div>;
-            ;
+
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">;
               AI Autonomous;
               <span className="bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent"> Code Reviewer</span>;
             </h1>;
-            ;
+
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">;
               Revolutionize your code review process with AI-powered analysis that catches bugs, ;
               improves security, and maintains code quality automatically.;
             </p>;
-            ;
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
               <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 flex items-center justify-center">;
                 <Play className="w-5 h-5 mr-2" />;
@@ -373,8 +355,7 @@ const AIAutonomousCodeReviewer = () => {;
                 className={`relative bg-slate-800/50 border rounded-xl p-8 ${;
                   plan.popular ;
                     ? 'border-blue-500/50 bg-blue-500/5' ;
-                    : 'border-slate-700/50';,
-}`}
+                    : 'border-slate-700/50'}`}
               >;
                 {plan.popular && (;
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">;
@@ -383,7 +364,6 @@ const AIAutonomousCodeReviewer = () => {;
                     </span>;
                   </div>;
                 )}
-                ;
                 <div className="text-center mb-8">;
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>;
                   <p className="text-gray-400 mb-4">{plan.description}</p>;
@@ -405,8 +385,7 @@ const AIAutonomousCodeReviewer = () => {;
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${;
                   plan.popular;
                     ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white hover:from-blue-600 hover:to-cyan-600';
-                    : 'bg-slate-700 text-white hover:bg-slate-600';,
-}`}>;
+                    : 'bg-slate-700 text-white hover:bg-slate-600'}`}>;
                   {plan.cta}
                 </button>;
               </motion.div>;
@@ -477,7 +456,7 @@ const AIAutonomousCodeReviewer = () => {;
               <h3 className="text-2xl font-bold text-white mb-2">$2.8B</h3>;
               <p className="text-gray-300">Global Market Size 2024</p>;
             </motion.div>;
-            ;
+
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -487,7 +466,7 @@ const AIAutonomousCodeReviewer = () => {;
               <h3 className="text-2xl font-bold text-white mb-2">24.3%</h3>;
               <p className="text-gray-300">Annual Growth Rate</p>;
             </motion.div>;
-            ;
+
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -497,7 +476,7 @@ const AIAutonomousCodeReviewer = () => {;
               <h3 className="text-2xl font-bold text-white mb-2">300%</h3>;
               <p className="text-gray-300">Average ROI</p>;
             </motion.div>;
-            ;
+
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -535,7 +514,7 @@ const AIAutonomousCodeReviewer = () => {;
                 Contact Sales;
               </button>;
             </div>;
-            ;
+
             <div className="mt-8 text-center">;
               <p className="text-gray-400 mb-4">Ready to get started? Contact our team:</p>;
               <div className="flex flex-col sm:flex-row gap-4 justify-center text-sm text-gray-300">;
@@ -557,17 +536,11 @@ const AIAutonomousCodeReviewer = () => {;
         </div>;
       </section>;
     </div>;
-  );,
-};
-;
+  )}
 export default AIAutonomousCodeReviewer;}}}}
-;
-export { AIAutonomousCodeReviewer };
-;
-export { AIAutonomousCodeReviewer };
-;
-export { AIAutonomousCodeReviewer };
-;
-export { AIAutonomousCodeReviewer };
-;
-export { AIAutonomousCodeReviewer };
+
+export { AIAutonomousCodeReviewer }
+export { AIAutonomousCodeReviewer }
+export { AIAutonomousCodeReviewer }
+export { AIAutonomousCodeReviewer }
+export { AIAutonomousCodeReviewer }

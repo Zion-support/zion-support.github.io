@@ -10,7 +10,7 @@ import { Footer } from "@/components/Footer";        <div className="container m
               Find answers to the most common questions about Zion Tech Group and our marketplace platform;
             </p>;
           </div>;
-          ;
+
           <div className="max-w-4xl mx-auto">;
             <Accordion type="single" collapsible className="w-full">;
               {faqData.map((item, index) => (<AccordionItem key={index} value={`item-${index}`} className="border-zion-blue-light">;
@@ -25,7 +25,7 @@ import { Footer } from "@/components/Footer";        <div className="container m
                 </AccordionItem>))}
             </Accordion>;
           </div>;
-          ;
+
           <div className="mt-16 text-center">;
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8">;
               <h2 className="text-2xl font-bold text-white mb-4">Still have questions?</h2>;
@@ -46,16 +46,11 @@ import { Footer } from "@/components/Footer";        <div className="container m
       </main>;
       <Footer />;
     </>;
-  );,
-}
-;
+  )}
 
-export { CustomAccordion, FAQ };
-;
-export { CustomAccordion, FAQ };
-;
-export { CustomAccordion, FAQ };
-;
-export { CustomAccordion, FAQ };
-;
-export { CustomAccordion, FAQ };
+
+export { CustomAccordion, FAQ }
+export { CustomAccordion, FAQ }
+export { CustomAccordion, FAQ }
+export { CustomAccordion, FAQ }
+export { CustomAccordion, FAQ }

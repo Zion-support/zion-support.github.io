@@ -8,13 +8,9 @@ const MessagingProvider({ children }) {}
             timestamp: new Date(),;
             isRead: false,;
 
-;
-export { MessagingProvider };
-;
-export { MessagingProvider };
-;
-export { MessagingProvider };
-;
-export { MessagingProvider };
-;
-export { MessagingProvider };
+
+export { MessagingProvider }
+export { MessagingProvider }
+export { MessagingProvider }
+export { MessagingProvider }
+export { MessagingProvider }

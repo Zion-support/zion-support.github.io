@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Search, Sparkles, Filter, TrendingUp, Clock, Star const mockSuggestions = [;
-;
+
     { id: '1', text: 'AI Development Services', type: 'service', relevance: 95, category: 'AI & ML' },;
     { id: '2', text: 'Cloud Infrastructure', type: 'service', relevance: 88, category: 'DevOps' },;
     { id: '3', text: 'React Native Apps', type: 'technology', relevance: 82, category: 'Mobile' },;
@@ -10,7 +10,7 @@ import { Search, Sparkles, Filter, TrendingUp, Clock, Star const mockSuggestions
     { id: '7', text: 'Machine Learning', type: 'technology', relevance: 87, category: 'AI & ML' },;
     { id: '8', text: 'Web Development', type: 'service', relevance: 80, category: 'Frontend' },;
 ];
-export function AdvancedSearch() {;
+export function AdvancedSearch() {
 
     const [query, setQuery] = useState('');
     const [suggestions, setSuggestions] = useState([]);
@@ -19,29 +19,25 @@ export function AdvancedSearch() {;
     const [showSuggestions, setShowSuggestions] = useState(false);
     const searchRef = useRef(null);
     const categories = ['AI & ML',DevOps',Mobile',Web3',Data Science',Security',Frontend',Backend'];
-    useEffect(() => {;
+    useEffect(() => {
   // TODO: Add dependencies if needed;
 
-  return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
-        const handleClickOutside = (event) => {;
+  return () => {
+    // Cleanup function}}, []);, []);
+        const handleClickOutside = (event) => {
 
-            if(searchRef.current && !searchRef.current.contains(event.target)) {;
+            if(searchRef.current && !searchRef.current.contains(event.target)) {
 
                 setShowSuggestions(false)}
-        };
+        }
         document.addEventListener('mousedown', handleClickOutside);
         return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
-    useEffect(() => {;
+    useEffect(() => {
   // TODO: Add dependencies if needed;
 
-  return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
-        if(query.trim()) {;
+  return () => {
+    // Cleanup function}}, []);, []);
+        if(query.trim()) {
 
             const filtered = mockSuggestions;
                 .filter(suggestion => suggestion.text.toLowerCase().includes(query.toLowerCase()) ||;
@@ -49,38 +45,36 @@ export function AdvancedSearch() {;
                 .sort((a, b) => b.relevance - a.relevance);
                 .slice(0, 8);
             setSuggestions(filtered);
-            setShowSuggestions(true)}
-        else {;
+            setShowSuggestions(true)} else {
 
             setSuggestions([]);
             setShowSuggestions(false)}
     }, [query]);
-    const handleSuggestionClick = (suggestion) => {;
+    const handleSuggestionClick = (suggestion) => {
 
         setQuery(suggestion.text);
         setShowSuggestions(false);
-        // Here you would typically trigger a search;,
-};
-    const toggleFilter = (category) => {;
+        // Here you would typically trigger a search}
+    const toggleFilter = (category) => {
 
         setSelectedFilters(prev => prev.includes(category);
             ? prev.filter(f => f !== category);
-            [...prev, category])};
-    const clearFilters = () => {;
-        setSelectedFilters([]) };
-    const getSuggestionIcon = (type) => {;
+            [...prev, category])}
+    const clearFilters = () => {
+        setSelectedFilters([]) }
+    const getSuggestionIcon = (type) => {
 
-        switch(type) {;
+        switch(type) {
 
             case 'service': return <Star className="w-4 h-4 text-zion-cyan"/>;'";
             case 'technology': return <Sparkles className="w-4 h-4 text-zion-purple"/>;'";
             case 'trending': return <TrendingUp className="w-4 h-4 text-zion-emerald"/>;'";
             case 'recent': return <Clock className="w-4 h-4 text-zion-gold"/>;";
             default: return <Search className="w-4 h-4 text-zion-slate"/>}
-    };
-    const getSuggestionColor = (type) => {;
+    }
+    const getSuggestionColor = (type) => {
 
-        switch(type) {;
+        switch(type) {
 
             case 'service': return 'bg-zion-cyan/10 border-zion-cyan/20';
             case 'technology': return 'bg-zion-purple/10 border-zion-purple/20';
@@ -121,7 +115,7 @@ export function AdvancedSearch() {;
               </button>) ) }
           </div>;
         </div>) }
-;
+
       {/* Search Suggestions */}";
       {showSuggestions && suggestions.length > 0 && (<div className="absolute top-full left-0 right-0 mt-2 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-xl z-50 max-h-96 overflow-y-auto">";
           {suggestions.map(suggestion => (<button key={suggestion.id} onClick={() => handleSuggestionClick(suggestion)} className="w-full p-3 text-left hover:bg-zion-slate-light/10 transition-colors border-b border-zion-slate-light last:border-b-0">";
@@ -155,7 +149,7 @@ export function AdvancedSearch() {;
             </div>;
           </div>;
         </div>) }
-;
+
       {/* No Results */}";
       {showSuggestions && query.trim() && suggestions.length === 0 && (<div className="absolute top-full left-0 right-0 mt-2 p-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-xl z-50 text-center">";
           <div className="text-zion-slate-light mb-2">No results found for "{query}"</div>";

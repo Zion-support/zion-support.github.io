@@ -5,13 +5,13 @@ import { Button } from "../components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../components/ui/tabs";
 import { Check, Star, Zap, Shield, TrendingUp, Users, Cloud, Brain, Code, Database, Globe, Smartphone, Server, Lock, BarChart3, Settings, Phone, Mail, MapPin, ExternalLink, DollarSign, Target, Award } from 'lucide-react';
 import enhancedMicroSaasServices2025 from "../data/enhancedMicroSaasServices2025";
-;
-;
-const ComprehensivePricing = () => {;
+
+
+const ComprehensivePricing = () => {
     const [activeTab, setActiveTab] = useState('microsaas');
     const [billingCycle, setBillingCycle] = useState('monthly');
-    const getCategoryIcon = (category) => {;
-        switch (category.toLowerCase()) {;
+    const getCategoryIcon = (category) => {
+        switch (category.toLowerCase()) {
             case 'productivity': return <Users className="h-5 w-5"/>;
             case 'finance': return <DollarSign className="h-5 w-5"/>;
             case 'marketing': return <TrendingUp className="h-5 w-5"/>;
@@ -40,9 +40,9 @@ const ComprehensivePricing = () => {;
             case 'managed services': return <Settings className="h-5 w-5"/>;
             case 'web development': return <Globe className="h-5 w-5"/>;
             default: return <Star className="h-5 w-5"/>}
-    };
-    const getCategoryColor = (category) => {;
-        switch (category.toLowerCase()) {;
+    }
+    const getCategoryColor = (category) => {
+        switch (category.toLowerCase()) {
             case 'productivity': return 'from-green-500 to-emerald-500';
             case 'finance': return 'from-blue-500 to-cyan-500';
             case 'marketing': return 'from-purple-500 to-pink-500';
@@ -71,27 +71,26 @@ const ComprehensivePricing = () => {;
             case 'managed services': return 'from-teal-500 to-cyan-500';
             case 'web development': return 'from-blue-500 to-green-500';
             default: return 'from-gray-500 to-slate-500'}
-    };
-    const formatPrice = (price, pricingModel) => {;
-        if (pricingModel === 'per API call') {;
+    }
+    const formatPrice = (price, pricingModel) => {
+        if (pricingModel === 'per API call') {
             return `$${price.toFixed(3)} per call`}
-        else if (pricingModel === 'per word') {;
+        else if (pricingModel === 'per word') {
             return `$${price.toFixed(2)} per word`}
-        else if (pricingModel === 'per recommendation') {;
+        else if (pricingModel === 'per recommendation') {
             return `$${price.toFixed(3)} per recommendation`}
-        else if (pricingModel === 'per employee/month') {;
+        else if (pricingModel === 'per employee/month') {
             return `$${price}/employee/month`}
-        else if (pricingModel === 'monthly') {;
+        else if (pricingModel === 'monthly') {
             return `$${price}/month`}
-        else if (pricingModel === 'usage-based') {;
+        else if (pricingModel === 'usage-based') {
             return `$${price} per unit`}
-        else if (pricingModel === 'tiered') {;
+        else if (pricingModel === 'tiered') {
             return `$${price}/month starting`}
-        else if (pricingModel === 'enterprise') {;
-            return `$${price}/month`}
-        else {;
+        else if (pricingModel === 'enterprise') {
+            return `$${price}/month`} else {
             return `$${price}`}
-    };
+    }
     const renderITPricing = () => (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
       {enhancedITServices2025.map((service) => (<Card key={service.id} className="group relative overflow-hidden bg-gradient-to-br from-blue-800/50 to-indigo-700/50 border-blue-600/30 hover:border-blue-500/50 transition-all duration-500 hover:scale-105 backdrop-blur-sm">;
           <CardHeader className="pb-4">;
@@ -187,8 +186,7 @@ const ComprehensivePricing = () => {;
                   size="sm"";
                   className="flex-1 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold transition-all duration-300";
                   onClick={() =>';
-                    window.open(service.contactInfo.website,_blank');,
-}
+                    window.open(service.contactInfo.website,_blank')}
                 >;
                   Get Started;
                 </Button>";
@@ -197,8 +195,7 @@ const ComprehensivePricing = () => {;
                   variant="outline"";
                   className="border-blue-500 text-blue-300 hover:border-indigo-500 hover:text-indigo-400"`;
                   onClick={() =>``;
-                    window.open(`mailto:${service.contactInfo.email}`);,
-}
+                    window.open(`mailto:${service.contactInfo.email}`)}
                 >;
                   Contact;
                 </Button>;
@@ -238,8 +235,7 @@ const ComprehensivePricing = () => {;
 '''`;
                   billingCycle === 'monthly''''`'`;
                     ? 'bg-blue-600 text-white'''`'`'`;
-                    : 'text-gray-300 hover:text-white'````;,
-}`}
+                    : 'text-gray-300 hover:text-white'````}`}
               >;
                 Monthly;
               </button>';
@@ -251,8 +247,7 @@ const ComprehensivePricing = () => {;
 '''`;
                   billingCycle === 'annual''''`'`;
                     ? 'bg-blue-600 text-white'''`'`'`;
-                    : 'text-gray-300 hover:text-white'````;,
-}`}
+                    : 'text-gray-300 hover:text-white'````}`}
               >;
                 Annual (Save 20%);
               </button>;
@@ -347,16 +342,12 @@ const ComprehensivePricing = () => {;
           </div>;
         </div>;
       </section>;
-    </div>)};
+    </div>)}
 export default ComprehensivePricing;
-;
 
-export { ComprehensivePricing };
-;
-export { ComprehensivePricing };
-;
-export { ComprehensivePricing };
-;
-export { ComprehensivePricing };
-;
-export { ComprehensivePricing };
+
+export { ComprehensivePricing }
+export { ComprehensivePricing }
+export { ComprehensivePricing }
+export { ComprehensivePricing }
+export { ComprehensivePricing }

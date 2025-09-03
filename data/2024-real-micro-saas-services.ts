@@ -1,5 +1,5 @@
 import { ServiceVariant  } from "../types/service-variants";
-export interface RealMicroSaasService2024 {;
+export interface RealMicroSaasService2024 {
   id: string;
   name: string;
   tagline: string;
@@ -28,7 +28,7 @@ export interface RealMicroSaasService2024 {;
   competitors?: string[];
   marketSize?: string;
   growthRate?: string;
-  contactInfo?: {;
+  contactInfo?: {
     mobile: string;
     email: string;
     address: string;
@@ -37,9 +37,9 @@ export interface RealMicroSaasService2024 {;
   implementationDetails?: string;
   launchDate?: string;
   reviews?: number}
-;
+
 export const realMicroSaasServices2024: RealMicroSaasService2024[] = [;
-  {;
+  {
     id: "ai-business-intelligence-pro",;
     name: "AI Business Intelligence Pro",;
     tagline: "Transform data into actionable insights with AI",;
@@ -84,23 +84,21 @@ export const realMicroSaasServices2024: RealMicroSaasService2024[] = [;
     marketSize: "$23.1B market",;
     growthRate: "12.3% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails:;
       "Fully functional SaaS platform with real-time data processing, AI models for predictive analytics, and comprehensive reporting capabilities.",;
     launchDate: "2024-03-15",;
     customers: 1800,;
     rating: 4.9,;
-    reviews: 890,;,;,
-},;
-;
+    reviews: 890},;
+
   // AI Customer Success Automation;
-  {;
+  {
     id: "ai-customer-success-automation",;
     name: "AI Customer Success Automation",;
     tagline: "Automate customer success with intelligent workflows",;
@@ -145,18 +143,16 @@ export const realMicroSaasServices2024: RealMicroSaasService2024[] = [;
     marketSize: "$1.5B market",;
     growthRate: "15.2% annual growth",;
     variant: "ai-automation",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails:;
       "Production-ready SaaS platform with AI models for churn prediction, automated workflow engine, and comprehensive analytics dashboard.",;
     launchDate: "2024-02-20",;
     customers: 1200,;
     rating: 4.8,;
-    reviews: 650,;,;,
-},;
+    reviews: 650},;
 ]

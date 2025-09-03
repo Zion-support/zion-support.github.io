@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { Brain, Menu } from 'lucide-react';
-;
-export default function Navigation() {;
+
+export default function Navigation() {
   const [open, setOpen] = useState(false);
   return (;
     <nav className="bg-white/80 backdrop-blur border-b sticky top-0 z-40">;
@@ -30,5 +30,4 @@ export default function Navigation() {;
         </div>;
       )}
     </nav>;
-  );,
-}
+  )}
