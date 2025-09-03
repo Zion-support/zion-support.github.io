@@ -5,15 +5,15 @@
     "dependencies": {
       "status": "warning",
       "issues": ["Security vulnerabilities detected"],
-      "totalDependencies": 92
-    },
+      "totalDependencies": 92;
+},
     "build": {
       "status": "error",
       "buildExists": false,
       "buildAge": null,
       "buildSuccess": false,
-      "issues": ["Build process failed"]
-    },
+      "issues": ["Build process failed"];
+},
     "codeQuality": {
       "status": "warning",
       "issues": [
@@ -22,25 +22,25 @@
         "94 console statements found"
       ],
       "consoleLogCount": 94,
-      "totalSourceFiles": 2217
-    },
+      "totalSourceFiles": 2217;
+},
     "performance": {
       "status": "healthy",
       "issues": [],
       "bundleSize": 0,
-      "imageSize": 3447
-    },
+      "imageSize": 3447;
+},
     "security": {
       "status": "warning",
       "issues": [
         "Potential hardcoded secrets found",
         "High severity vulnerabilities detected"
       ]
-    },
+},
     "accessibility": {
       "status": "warning",
       "issues": ["242 accessibility issues found"],
-      "accessibilityIssues": 242
-    }
+      "accessibilityIssues": 242;
+}
   }
 }

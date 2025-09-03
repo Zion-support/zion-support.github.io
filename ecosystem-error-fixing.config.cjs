@@ -1,0 +1,1 @@
+module.exports = { apps: [ // Enhanced Error Fixing Automation - Main error fixer { name: "enhanced-error-fixing-automation", script: "./scripts/automation/enhanced-error-fixing-automation.cjs", instances: 1, autorestart: true, watch: false, max_memory_restart: "1G", env: { NODE_ENV: "production", AUTOMATION_INTERVAL: "900000", // 15 minutes;

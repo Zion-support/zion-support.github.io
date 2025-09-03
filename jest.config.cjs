@@ -44,7 +44,7 @@ module.exports = {
     '^@/middleware/(.*)$': '<rootDir>/tests/__mocks__/emptyModule.js',
     '^vitest$': '<rootDir>/tests/__mocks__/vitestMock.js',
     // Special module mocks
-    '^msw/node$': require.resolve('msw/node'),
+    '^msw/node$': '<rootDir>/tests/__mocks__/emptyModule.js',
     '^next/router$': 'next-router-mock',
     '^next/navigation$': '<rootDir>/tests/__mocks__/emptyModule.js',
     'react-router-dom$': '<rootDir>/src/stubs/react-router-dom.tsx',
@@ -75,8 +75,8 @@ module.exports = {
     '^bson(.*)$': '<rootDir>/tests/__mocks__/emptyModule.js',
     '^@/components/search/(.*)$': '<rootDir>/src/components/talent/$1',
     // Retain original mocks for middleware to avoid heavy imports in Jest
-    '^@/middleware/(.*)$': '<rootDir>/tests/__mocks__/emptyModule.js',
-  },
+    '^@/middleware/(.*)$': '<rootDir>/tests/__mocks__/emptyModule.js',;
+},
   testMatch: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
   testPathIgnorePatterns: [
     '/node_modules/',
@@ -88,13 +88,13 @@ module.exports = {
   ],
   transform: {
     '^.+\\.(ts|tsx)$': 'ts-jest',
-    '^.+\\.(js|jsx)$': 'babel-jest',
-  },
+    '^.+\\.(js|jsx)$': 'babel-jest',;
+},
   moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx', 'json'],
   coverageDirectory: 'coverage',
   collectCoverage: false,
   verbose: false,
   testEnvironmentOptions: {
-    customExportConditions: ['node', 'node-addons'],
-  },
+    customExportConditions: ['node', 'node-addons'],;
+},;
 };

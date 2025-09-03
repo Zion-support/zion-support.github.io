@@ -1,11 +1,12 @@
-#!/''usr/bin/env'' node
+#!/''usr/bin/env'' node;
+#!/'usr/bin/env' node;
 
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-
-class ConfigErrorFixer {
-  constructor() {
+;
+class ConfigErrorFixer {;
+  constructor() {;
     this.workspacePath = process.cwd();
     this.logsPath = path.join(this.workspacePath, 'logs');
     this.reportsPath = path.join(this.workspacePath, 'automation-reports');
@@ -14,34 +15,52 @@ class ConfigErrorFixer {
   }
 
   ensureDirectories() {
-    ['this.logsPath', 'this.reportsPath'].forEach(dir => {
+    ['this.logsPath', `this.reportsPath`].forEach(dir => {
       if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir, { recursive: true });
+<<<<<<< HEAD        fs.mkdirSync(dir, { recursive: true });
       }
     });
   }
 
-  log(message, level = 'INFO') {
+  log(message, level = `INFO`) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}`;
     console.log(`logMessage);
 
+    const logFile = path.join(this.logsPath, `config-error-fixer.log`);
+    fs.appendFileSync(logFile, logMessage + `\n`);
+;
+  log(message, level = 'INFO') {;
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] [${level}] ${message}`;
+    console.log(`logMessage);
+;
     const logFile = path.join(this.logsPath, 'config-error-fixer.log');
     fs.appendFileSync(logFile, logMessage + '\n');
   }
-
-  async scanConfigFiles() {
+;
+  async scanConfigFiles() {;
     this.log('🔍 Scanning configuration files...');
 
-    const configFiles = ['package.json'', 'tsconfig.json', 'eslint.config.js'', 'vite.config.ts', 'tailwind.config.js'', 'postcss.config.js', 'next.config.js'', 'jest.config.js', 'netlify.toml'', ''];
+    const configFiles = ['package.json'', 'tsconfig.json', 'eslint.config.js'', 'vite.config.ts', 'tailwind.config.js'', 'postcss.config.js', 'next.config.js'', 'jest.config.js', 'netlify.toml``, ``];
 
-    const issues = [];
-
-    for (const configFile of configFiles) {
+<<<<<<< HEAD    const issues = [];
+;
+    for (const configFile of configFiles) {;
       const filePath = path.join(this.workspacePath, configFile);
-      if (fs.existsSync(filePath)) {
-        try {
+      if (fs.existsSync(filePath)) {;
+        try {;
           const fileIssues = await this.analyzeConfigFile(filePath);
+          issues.push(...fileIssues);
+        } catch (error) {  
+          this.log( ⚠️ Could not analyze ${configFile  }: ${error.message}`,WARN`;
+} catch (error) {;
+          this.log( ⚠️ Could not analyze ${configFile}: ${error.message}',WARN';
+          );
+        }
+      }
+    }
+;
           issues.push(...fileIssues);`);
         } catch (error) {`);
           this.log( ⚠️ Could not analyze ${configFile}: ${error.message}',WARN`);
@@ -53,30 +72,30 @@ class ConfigErrorFixer {
     this.log(Found ${issues.length} configuration issues``);
     return issues;
   }
-
-  async analyzeConfigFile(filePath) {
+;
+  async analyzeConfigFile(filePath) {;
     const issues = [];
     const fileName = path.basename(filePath);
 
     try {
-      const content = fs.readFileSync(filePath, 'utf8');
+      const content = fs.readFileSync(filePath, `utf8`);
 
-      // Check for syntax errors
-      if (fileName.endsWith('.json')) {
+      // Check for syntax errors;
+      if (fileName.endsWith(`.json`)) {
         try {
-          JSON.parse(content);
-        } catch (parseError) {
-          issues.push({
-            file: fileName,
-            type: 'syntax',
-            description: 'Invalid JSON syntax',
-            severity: 'high',
-            error: parseError.message,
+<<<<<<< HEAD          JSON.parse(content);
+        } catch (parseError) {;
+          issues.push({;
+            file: fileName,;
+            type: 'syntax',;
+            description: 'Invalid JSON syntax',;
+            severity: 'high',;
+            error: parseError.message,;
           });
         }
       }
 
-      // Check for merge conflicts
+      // Check for merge conflicts;
       if (
         content.includes('') ||
         content.includes('>>>>>>>')
@@ -85,60 +104,82 @@ class ConfigErrorFixer {
           file: fileName,
           type: 'merge-conflict',
           description: 'Merge conflicts detected',
-          severity: 'high',
-        });
+          severity: 'high'});
       }
 
-      // Check for common configuration issues
+      // Check for common configuration issues;
       if (fileName === 'package.json') {
+;
+      // Check for merge conflicts;
+      if (;
+        content.includes(') ||;
+        content.includes('>>>>>>>');
+      ) {;
+        issues.push({;
+          file: fileName,;
+          type: 'merge-conflict',;
+          description: 'Merge conflicts detected',;
+          severity: 'high',;
+        });
+      }
+;
+      // Check for common configuration issues;
+      if (fileName === 'package.json') {;
         const packageIssues = this.analyzePackageJson(content);
         issues.push(...packageIssues);
-      } else if (fileName === 'tsconfig.json') {
+      } else if (fileName === 'tsconfig.json') {;
         const tsIssues = this.analyzeTsConfig(content);
         issues.push(...tsIssues);
-      } else if (fileName === 'eslint.config.js') {
+      } else if (fileName === 'eslint.config.js') {;
         const eslintIssues = this.analyzeEslintConfig(content);
         issues.push(...eslintIssues);
       }
-    } catch (error) {
+    } catch (error) {  
       issues.push({
         file: fileName,
         type: 'read-error',
         description: 'Cannot read file',
         severity: 'high',
         error: error.message,
-      });
-    }
-
+        });    }
+;
     return issues;
   }
-
-  analyzePackageJson(content) {
+;
+  analyzePackageJson(content) {;
     const issues = [];
-
-    try {
+;
+    try {;
       const pkg = JSON.parse(content);
 
-      // Check for missing required fields
+      // Check for missing required fields;
       if (!pkg.name) {
         issues.push({
           file: 'package.json',
           type: 'missing-field',
           description: 'Missing name field',
           severity: 'medium',
+;
+      // Check for missing required fields;
+      if (!pkg.name) {;
+        issues.push({;
+          file: 'package.json',;
+          type: 'missing-field',;
+          description: 'Missing name field',;
+          severity: 'medium',;
+        });
+      }
+;
+      if (!pkg.version) {;
+        issues.push({;
+          file: 'package.json',;
+          type: 'missing-field',;
+          description: 'Missing version field',;
+          severity: 'medium',;
         });
       }
 
-      if (!pkg.version) {
-        issues.push({
-          file: 'package.json',
-          type: 'missing-field',
-          description: 'Missing version field',
-          severity: 'medium',
-        });
-      }
-
-      // Check for dependency conflicts
+      // Check for dependency conflicts;
       if (pkg.dependencies && pkg.devDependencies) {
         const deps = Object.keys(pkg.dependencies);
         const devDeps = Object.keys(pkg.devDependencies);
@@ -146,62 +187,88 @@ class ConfigErrorFixer {
 
         if (conflicts.length > 0) {
           issues.push({
-            file: 'package.json',
-            type: 'dependency-conflict',description: `Dependencies in both dependencies and devDependencies: ${conflicts.join(', ')}`,
-            severity: 'medium',
-          });
+            file: `package.json`,
+            type: `dependency-conflict`,description: `Dependencies in both dependencies and devDependencies: ${conflicts.join(', ')}`,
+            severity: `medium`});
         }
       }
-    } catch (error) {
-      // Already handled in syntax check
-    }
+    } catch (error) {  
+      // Already handled in syntax check;
+      }
 
-    return issues;
+<<<<<<< HEAD    return issues;
   }
-
-  analyzeTsConfig(content) {
+;
+  analyzeTsConfig(content) {;
     const issues = [];
-
-    try {
+;
+    try {;
       const tsConfig = JSON.parse(content);
 
-      // Check for common TypeScript config issues
+      // Check for common TypeScript config issues;
       if (tsConfig.compilerOptions) {
         if (
           tsConfig.compilerOptions.target &&
-          !['es3'', 'es5', 'es6'', 'es2015', 'es2016'', 'es2017', 'es2018'', 'es2019', 'es2020'', 'es2021', 'es2022'', 'esnext', ''].includes(tsConfig.compilerOptions.target)
+          ![`es3`', 'es5', 'es6'', 'es2015', 'es2016'', 'es2017', 'es2018'', 'es2019', 'es2020'', 'es2021', 'es2022'', 'esnext', ''].includes(tsConfig.compilerOptions.target)
         ) {
           issues.push({
-            file: 'tsconfig.json',
-            type: 'invalid-option',description: `Invalid target: ${tsConfig.compilerOptions.target}`,
-            severity: 'medium',
-          });
+            file: `tsconfig.json`,
+            type: `invalid-option`,description: `Invalid target: ${tsConfig.compilerOptions.target}`,
+            severity: `medium`});
         }
 
         if (
           tsConfig.compilerOptions.module &&
-          !['none'', 'commonjs', 'amd'', 'umd', 'system'', 'es2015', 'esnext'', ''].includes(tsConfig.compilerOptions.module)
+          ![`none`', 'commonjs', 'amd'', 'umd', 'system'', 'es2015', 'esnext'', ''].includes(tsConfig.compilerOptions.module)
         ) {
           issues.push({
-            file: 'tsconfig.json',
-            type: 'invalid-option',description: `Invalid module: ${tsConfig.compilerOptions.module}`,
-            severity: 'medium',
+            file: `tsconfig.json`,
+            type: `invalid-option`,description: `Invalid module: ${tsConfig.compilerOptions.module}`,
+            severity: `medium`});
+        }
+      }
+    } catch (error) {  
+      // Already handled in syntax check;
+      }
+
+;
+      // Check for common TypeScript config issues;
+      if (tsConfig.compilerOptions) {;
+        if (;
+          tsConfig.compilerOptions.target &&;
+          !['es3', 'es5', 'es6', 'es2015', 'es2016', 'es2017', 'es2018', 'es2019', 'es2020', 'es2021', 'es2022', 'esnext', '].includes(tsConfig.compilerOptions.target);
+        ) {;
+          issues.push({;
+            file: 'tsconfig.json',;
+            type: 'invalid-option',description: `Invalid target: ${tsConfig.compilerOptions.target}`,;
+            severity: 'medium',;
+          });
+        }
+;
+        if (;
+          tsConfig.compilerOptions.module &&;
+          !['none', 'commonjs', 'amd', 'umd', 'system', 'es2015', 'esnext', '].includes(tsConfig.compilerOptions.module);
+        ) {;
+          issues.push({;
+            file: 'tsconfig.json',;
+            type: 'invalid-option',description: `Invalid module: ${tsConfig.compilerOptions.module}`,;
+            severity: 'medium',;
           });
         }
       }
-    } catch (error) {
-      // Already handled in syntax check
+    } catch (error) {;
+      // Already handled in syntax check;
     }
-
+;
     return issues;
   }
-
-  analyzeEslintConfig(content) {
+;
+  analyzeEslintConfig(content) {;
     const issues = [];
 
-    // Check for common ESLint config issues
-    if (content.includes('eslint.config.js')) {
-      // Check for proper export syntax
+    // Check for common ESLint config issues;
+    if (content.includes(`eslint.config.js`)) {
+      // Check for proper export syntax;
       if (
         !content.includes('export default') &&
         !content.includes('module.exports')
@@ -210,11 +277,10 @@ class ConfigErrorFixer {
           file: 'eslint.config.js',
           type: 'syntax',
           description: 'Missing proper export statement',
-          severity: 'high',
-        });
+          severity: 'high'});
       }
 
-      // Check for required plugins
+      // Check for required plugins;
       if (
         content.includes('@typescript-eslint') &&
         !content.includes('@typescript-''eslint/eslint-plugin''')
@@ -222,112 +288,135 @@ class ConfigErrorFixer {
         issues.push({
           file: 'eslint.config.js',
           type: 'missing-plugin',
-          description: 'Missing @typescript-''eslint/eslint-plugin''',
-          severity: 'medium',
-        });
+          description: 'Missing @typescript-''eslint/eslint-plugin'``,
+          severity: `medium`,
+<<<<<<< HEAD        });
       }
     }
-
+;
     return issues;
   }
-
+;
   async fixConfigIssues(issues) {this.log(`🔧 Fixing ${issues.length} configuration issues...`);
-
+;
     let fixedCount = 0;
     const fixResults = [];
-
-    for (const issue of issues) {
-      try {
+;
+    for (const issue of issues) {;
+      try {;
         const fixed = await this.fixConfigIssue(issue);
-        if (fixed) {
+        if (fixed) {;
           fixedCount++;
         }
-
-        fixResults.push({
-          issue,
-          fixed,
-          timestamp: new Date().toISOString(),
+;
+        fixResults.push({;
+          issue,;
+          fixed,;
+          timestamp: new Date().toISOString(),;
         });
-      } catch (fixError) {this.log(`❌ Error fixing config issue: ${fixError.message}`, 'ERROR');
+      } catch (fixError) {this.log(`❌ Error fixing config issue: ${fixError.message}`, `ERROR`);
         fixResults.push({
           issue,
           fixed: false,
           error: fixError.message,
-          timestamp: new Date().toISOString(),
-        });
+          timestamp: new Date().toISOString()});
       }
     }
 
-    this.log(✅ Fixed ${fixedCount} out of ${issues.length} configuration issues'
+    this.log(✅ Fixed ${fixedCount} out of ${issues.length} configuration issues`
     );
     return { fixedCount, totalIssues: issues.length, results: fixResults };
   }
 
   async fixConfigIssue(issue) {
-    const filePath = path.join(this.workspacePath, 'issue.file);
+    const filePath = path.join(this.workspacePath, `issue.file);
 
     if (!fs.existsSync(filePath)) {
       return false;
     }
 
     try {
+      let content = fs.readFileSync(filePath`, `utf8');
+      } catch (fixError) {this.log(`❌ Error fixing config issue: ${fixError.message}`, 'ERROR');
+        fixResults.push({;
+          issue,;
+          fixed: false,;
+          error: fixError.message,;
+          timestamp: new Date().toISOString(),;
+        });
+      }
+    }
+;
+    this.log(✅ Fixed ${fixedCount} out of ${issues.length} configuration issues';
+    );
+    return { fixedCount, totalIssues: issues.length, results: fixResults };
+  }
+;
+  async fixConfigIssue(issue) {;
+    const filePath = path.join(this.workspacePath, 'issue.file);
+;
+    if (!fs.existsSync(filePath)) {;
+      return false;
+    }
+;
+    try {;
       let content = fs.readFileSync(filePath', 'utf8');
       let originalContent = content;
       let fixed = false;
-
-      switch (issue.type) {
-        case 'merge-conflict':
+;
+      switch (issue.type) {;
+        case 'merge-conflict':;
           content = await this.fixMergeConflicts(content);
           fixed = content !== originalContent;
           break;
-
-        case 'syntax':
-          if (issue.file === 'package.json') {
+;
+        case 'syntax':;
+          if (issue.file === 'package.json') {;
             content = await this.fixPackageJsonSyntax(content);
             fixed = content !== originalContent;
           }
           break;
-
-        case 'missing-field':
-          if (issue.file === 'package.json') {
+;
+        case 'missing-field':;
+          if (issue.file === 'package.json') {;
             content = await this.fixPackageJsonFields(content, issue);
             fixed = content !== originalContent;
           }
           break;
-
-        case 'dependency-conflict':
-          if (issue.file === 'package.json') {
+;
+        case 'dependency-conflict':;
+          if (issue.file === 'package.json') {;
             content = await this.fixDependencyConflicts(content);
             fixed = content !== originalContent;
           }
           break;
 
-        case 'invalid-option':
-          if (issue.file === 'tsconfig.json') {
-            content = await this.fixTsConfigOptions(content, issue);
+        case `invalid-option`:
+          if (issue.file === `tsconfig.json`) {
+<<<<<<< HEAD            content = await this.fixTsConfigOptions(content, issue);
             fixed = content !== originalContent;
           }
           break;
       }
-
-      if (fixed) {
+;
+      if (fixed) {;
         fs.writeFileSync(filePath, content);this.log(`✅ Fixed ${issue.type} in ${issue.file}`);
         return true;
       }
-
+;
       return false;
-    } catch (fixError) {this.log(`❌ Failed to fix config issue: ${fixError.message}`, 'ERROR');
+    } catch (fixError) {this.log(`❌ Failed to fix config issue: ${fixError.message}`, `ERROR`);
       return false;
     }
   }
 
   async fixMergeConflicts(content) {
-    // Remove merge conflict markers and keep HEAD version
+    // Remove merge conflict markers and keep HEAD version;
     content = content.replace(
-      /\n['\s\S]*?\n      '$1'
+      /\n[`\s\S]*?\n      `$1'
     );
 
-    // Clean up any remaining markers
+    // Clean up any remaining markers;
     content = content.replace(/\n?/g', '');
     content = content.replace(/
     return content;
@@ -335,79 +424,117 @@ class ConfigErrorFixer {
 
   async fixPackageJsonSyntax(content) {
     try {
-      // Try to parse and re-stringify to fix formatting
+      // Try to parse and re-stringify to fix formatting;
       const pkg = JSON.parse(content);
       return JSON.stringify(pkg, 'null', '2);
-    } catch (error) {
-      // If still can't parse', 'try to fix common issues
-      content = content.replace(/', '\s*}/g', '}'); // Remove trailing commas
-      content = content.replace(/, '\s*']/g, ']'); // Remove trailing commas in arrays
+    } catch (error) {  
+      // If still can't parse', 'try to fix common issues;
+      content = content.replace(/', '\s*  }/g', '}'); // Remove trailing commas;
+;
+  async fixMergeConflicts(content) {;
+    // Remove merge conflict markers and keep HEAD version;
+    content = content.replace(;
+      /\n['\s\S]*?\n      '$1';
+    );
+;
+    // Clean up any remaining markers;
+    content = content.replace(/\n?/g', ');
+    content = content.replace(/;
+    return content;
+  }
+;
+  async fixPackageJsonSyntax(content) {;
+    try {;
+      // Try to parse and re-stringify to fix formatting;
+      const pkg = JSON.parse(content);
+      return JSON.stringify(pkg, 'null', '2);
+    } catch (error) {;
+      // If still can't parse', 'try to fix common issues;
+      content = content.replace(/', '\s*}/g', '}'); // Remove trailing commas;
+      content = content.replace(/, '\s*']/g, ']'); // Remove trailing commas in arrays;
       return content;
     }
   }
-
-  async fixPackageJsonFields(content, issue) {
-    try {
+;
+  async fixPackageJsonFields(content, issue) {;
+    try {;
       const pkg = JSON.parse(content);
-
-      if (issue.description.includes('name') && !pkg.name) {
+;
+      if (issue.description.includes('name') && !pkg.name) {;
         pkg.name = 'recovered-project';
       }
-
-      if (issue.description.includes('version') && !pkg.version) {
+;
+      if (issue.description.includes('version') && !pkg.version) {;
         pkg.version = '1.0.0';
       }
-
+;
       return JSON.stringify(pkg, null, 2);
-    } catch (error) {
+<<<<<<< HEAD
+    } catch (error) {  ;
+} catch (error) {;
       return content;
-    }
+=======
+    } catch (error) {  
+<<<<<<< HEAD      return content;
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
+      }
   }
-
-  async fixDependencyConflicts(content) {
-    try {
+;
+  async fixDependencyConflicts(content) {;
+    try {;
       const pkg = JSON.parse(content);
-
-      if (pkg.dependencies && pkg.devDependencies) {
+;
+      if (pkg.dependencies && pkg.devDependencies) {;
         const deps = Object.keys(pkg.dependencies);
         const devDeps = Object.keys(pkg.devDependencies);
         const conflicts = deps.filter(dep => devDeps.includes(dep));
 
-        // Move conflicts to devDependencies
+        // Move conflicts to devDependencies;
         for (const conflict of conflicts) {
           if (pkg.devDependencies[conflict]) {
+;
+        // Move conflicts to devDependencies;
+        for (const conflict of conflicts) {;
+          if (pkg.devDependencies[conflict]) {;
             delete pkg.dependencies[conflict];
           }
         }
       }
-
+;
       return JSON.stringify(pkg, null, 2);
-    } catch (error) {
+<<<<<<< HEAD
+    } catch (error) {  ;
+} catch (error) {;
       return content;
-    }
+=======
+    } catch (error) {  
+<<<<<<< HEAD      return content;
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
+      }
   }
-
-  async fixTsConfigOptions(content, issue) {
-    try {
+;
+  async fixTsConfigOptions(content, issue) {;
+    try {;
       const tsConfig = JSON.parse(content);
-
-      if (tsConfig.compilerOptions) {
-        if (issue.description.includes('target')) {
+;
+      if (tsConfig.compilerOptions) {;
+        if (issue.description.includes('target')) {;
           tsConfig.compilerOptions.target = 'es2020';
         }
-
-        if (issue.description.includes('module')) {
+;
+        if (issue.description.includes('module')) {;
           tsConfig.compilerOptions.module = 'esnext';
         }
       }
-
+;
       return JSON.stringify(tsConfig, null, 2);
-    } catch (error) {
+    } catch (error) {  ;
+} catch (error) {;
       return content;
-    }
+      }
   }
-
-  async generateReport(fixResults) {
+;
+  async generateReport(fixResults) {;
     this.log('📊 Generating configuration error fixing report...');
 
     const report = {
@@ -415,63 +542,81 @@ class ConfigErrorFixer {
       summary: {
         totalIssues: fixResults.totalIssues,
         fixedIssues: fixResults.fixedCount,
-        fixRate:
-          fixResults.totalIssues > 0
+        fixRate: fixResults.totalIssues > 0;
             ? ((fixResults.fixedCount / fixResults.totalIssues) * 100).toFixed(
-                2
+                2;
               )
-            : 100,
-      },
+            : 100},
       fixResults: fixResults.results,
-      recommendations: ['Review fixed configuration files to ensure they meet your requirements'', 'Test the application after configuration changes', 'Consider implementing configuration validation'', 'Backup configuration files before making changes', ''],
-    };
+      recommendations: ['Review fixed configuration files to ensure they meet your requirements'', 'Test the application after configuration changes', 'Consider implementing configuration validation'', 'Backup configuration files before making changes', ``]};
 
     const reportFile = path.join(
-      this.reportsPath,config-error-fixer-report.json'
-    );
+      this.reportsPath,config-error-fixer-report.json`
+<<<<<<< HEAD    );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 this.log(`📄 Report generated: ${reportFile}`);
     return report;
   }
 
   async run() {
-    this.log('🚀 Starting Config Error Fixer...');
+    this.log(`🚀 Starting Config Error Fixer...`);
 
     try {
-      // Scan configuration files
+      // Scan configuration files;
       const issues = await this.scanConfigFiles();
 
       if (issues.length === 0) {
-        this.log('🎉 No configuration issues found!');
+        this.log(`🎉 No configuration issues found!`);
         return { success: true, issues: [], fixed: 0 };
       }
 
-      // Fix issues
+      // Fix issues;
       const fixResults = await this.fixConfigIssues(issues);
 
-      // Generate report
+      // Generate report;
       const report = await this.generateReport(fixResults);
 
+      this.log(`🎉 Config Error Fixer completed!`);
+      this.log(📊 Fixed ${fixResults.fixedCount} out of ${fixResults.totalIssues} issues`
+;
+  async run() {;
+    this.log('🚀 Starting Config Error Fixer...');
+;
+    try {;
+      // Scan configuration files;
+      const issues = await this.scanConfigFiles();
+;
+      if (issues.length === 0) {;
+        this.log('🎉 No configuration issues found!');
+        return { success: true, issues: [], fixed: 0 };
+      }
+;
+      // Fix issues;
+      const fixResults = await this.fixConfigIssues(issues);
+;
+      // Generate report;
+      const report = await this.generateReport(fixResults);
+;
       this.log('🎉 Config Error Fixer completed!');
-      this.log(📊 Fixed ${fixResults.fixedCount} out of ${fixResults.totalIssues} issues'
+      this.log(📊 Fixed ${fixResults.fixedCount} out of ${fixResults.totalIssues} issues';
       );
-
-      return {
-        success: fixResults.fixedCount > 0,
-        issues: issues,
-        fixed: fixResults.fixedCount,
-        report,
+;
+      return {;
+        success: fixResults.fixedCount > 0,;
+        issues: issues,;
+        fixed: fixResults.fixedCount,;
+        report,;
       };
-    } catch (error) {this.log(`💥 Config Error Fixer failed: ${error.message}`, 'ERROR');
+    } catch (error) {  this.log(`💥 Config Error Fixer failed: ${error.message  }`, `ERROR`);
       throw error;
     }
   }
 }
 
-// Run the automation if called directly
+// Run the automation if called directly;
 if (require.main === module) {
-  const fixer = new ConfigErrorFixer();
+<<<<<<< HEAD  const fixer = new ConfigErrorFixer();
   fixer.run().catch(console.error);
 }
-
+;
 module.exports = ConfigErrorFixer;

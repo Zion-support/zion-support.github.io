@@ -24,8 +24,8 @@ if (fs.existsSync(packageJsonPath)) {
     'test:watch': 'jest --watch',
     'clean': 'rm -rf .next out dist',
     'prebuild': 'npm run clean',
-    'postbuild': 'npm run type-check'
-  };
+    'postbuild': 'npm run type-check';
+};
   
   fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
   console.log('✅ Optimized package.json scripts');
@@ -40,8 +40,7 @@ const nextConfig = {
   poweredByHeader: false,
   
   eslint: {
-    ignoreDuringBuilds: process.env.NODE_ENV === 'production',
-  },
+    ignoreDuringBuilds: process.env.NODE_ENV === 'production'},
   
   experimental: {
     optimizePackageImports: ['lucide-react', 'framer-motion', '@heroicons/react'],
@@ -49,17 +48,12 @@ const nextConfig = {
       rules: {
         '*.svg': {
           loaders: ['@svgr/webpack'],
-          as: '*.js',
-        },
-      },
-    },
+          as: '*.js'}}},
     optimizeCss: true,
-    scrollRestoration: true,
-  },
+    scrollRestoration: true},
   
   typescript: {
-    ignoreBuildErrors: process.env.NODE_ENV === 'production',
-  },
+    ignoreBuildErrors: process.env.NODE_ENV === 'production'},
   
   images: {
     domains: ['ziontechgroup.com'],
@@ -68,19 +62,16 @@ const nextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 60,
     dangerouslyAllowSVG: true,
-    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-  },
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;"},
   
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
-    styledComponents: true,
-  },
+    styledComponents: true},
   
   // Performance optimizations
   onDemandEntries: {
     maxInactiveAge: 25 * 1000,
-    pagesBufferLength: 2,
-  },
+    pagesBufferLength: 2},
   
   // Security headers
   async headers() {
@@ -90,31 +81,22 @@ const nextConfig = {
         headers: [
           {
             key: 'X-Frame-Options',
-            value: 'DENY',
-          },
+            value: 'DENY'},
           {
             key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
+            value: 'nosniff'},
           {
             key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin',
-          },
+            value: 'origin-when-cross-origin'},
           {
             key: 'Permissions-Policy',
-            value: 'camera=(), microphone=(), geolocation=()',
-          },
+            value: 'camera=(), microphone=(), geolocation=()'},
           {
             key: 'X-DNS-Prefetch-Control',
-            value: 'on',
-          },
+            value: 'on'},
           {
             key: 'Strict-Transport-Security',
-            value: 'max-age=31536000; includeSubDomains',
-          },
-        ],
-      },
-    ];
+            value: 'max-age=31536000; includeSubDomains'}]}];
   },
   
   // Webpack optimizations
@@ -136,9 +118,7 @@ const nextConfig = {
         /hardhat/,
         /__tests__/,
         /tests/,
-        /test/,
-      ],
-    });
+        /test/]});
 
     // Performance optimizations
     if (!dev && !isServer) {
@@ -148,16 +128,12 @@ const nextConfig = {
           vendor: {
             test: /[\\\\/]node_modules[\\\\/]/,
             name: 'vendors',
-            chunks: 'all',
-          },
+            chunks: 'all'},
           common: {
             name: 'common',
             minChunks: 2,
             chunks: 'all',
-            enforce: true,
-          },
-        },
-      };
+            enforce: true}}};
     }
 
     // Add fallback for problematic modules
@@ -174,8 +150,7 @@ const nextConfig = {
       https: false,
       assert: false,
       os: false,
-      path: false,
-    };
+      path: false};
 
     return config;
   },
@@ -187,13 +162,10 @@ const nextConfig = {
       config.plugins.push(
         new BundleAnalyzerPlugin({
           analyzerMode: 'static',
-          openAnalyzer: false,
-        })
+          openAnalyzer: false})
       );
       return config;
-    },
-  }),
-};
+    }})};
 
 export default nextConfig;
 `;
@@ -208,7 +180,7 @@ const fs = require('fs');
 const path = require('path');
 
 console.log('📊 Performance Analysis Report');
-console.log('==============================');
+console.log('==');
 
 // Check bundle sizes
 const nextDir = path.join(__dirname, '.next');
@@ -273,8 +245,7 @@ console.log('✅ Created performance analysis script');
 const eslintConfig = `module.exports = {
   extends: [
     'next/core-web-vitals',
-    '@typescript-eslint/recommended',
-  ],
+    '@typescript-eslint/recommended'],
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint'],
   rules: {
@@ -284,8 +255,7 @@ const eslintConfig = `module.exports = {
     'no-var': 'error',
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
     'react-hooks/exhaustive-deps': 'warn',
-    'react/no-unescaped-entities': 'off',
-  },
+    'react/no-unescaped-entities': 'off'},
   ignorePatterns: [
     'node_modules/',
     '.next/',
@@ -300,9 +270,7 @@ const eslintConfig = `module.exports = {
     'automation_backup/',
     'broken_files_backup/',
     'contracts/',
-    'hardhat/',
-  ],
-};
+    'hardhat/']};
 `;
 
 fs.writeFileSync('.eslintrc.js', eslintConfig);
@@ -317,8 +285,7 @@ if (fs.existsSync(tsConfigPath)) {
     ...tsConfig.compilerOptions,
     skipLibCheck: true,
     incremental: true,
-    tsBuildInfoFile: '.next/cache/tsconfig.tsbuildinfo',
-  };
+    tsBuildInfoFile: '.next/cache/tsconfig.tsbuildinfo'};
   
   tsConfig.exclude = [
     ...(tsConfig.exclude || []),
@@ -335,8 +302,7 @@ if (fs.existsSync(tsConfigPath)) {
     'automation_backup',
     'broken_files_backup',
     'contracts',
-    'hardhat',
-  ];
+    'hardhat'];
   
   fs.writeFileSync(tsConfigPath, JSON.stringify(tsConfig, null, 2));
   console.log('✅ Optimized TypeScript configuration');
