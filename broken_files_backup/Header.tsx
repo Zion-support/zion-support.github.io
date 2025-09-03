@@ -1,3 +1,21 @@
+<<<<<<< HEAD
+import: React, { useState, useEffect } from;
+  'react';';
+import: { Link, useLocation } from;
+  'react-router-dom';';
+import: { motion, AnimatePresence } from;
+  'framer-motion';';
+import: { Menu, X, ChevronDown } from;
+  'lucide-react';';
+const: Header: React.FC: = () => {
+;
+  const: [isMenuOpe,n, setIsMenuOpen] = useState(false)
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const: location = useLocation();
+  const: navigation = [
+    { name:,
+  Home', path: '/, },';
+=======
 import React, { useState, useEffect } from;
   'react';
 import { Link, useLocation } from;
@@ -6,202 +24,299 @@ import { motion, AnimatePresence } from;
   'framer-motion';
 import { Menu, X, ChevronDown } from;
   'lucide-react';
-const Header: React.FC = () => {;
+const Header: React.FC = () => {
+<<<<<<< HEAD
 
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+=======
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+>>>>>>> main
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const location = useLocation();
-  const navigation = [;
+  const navigation = [
+  { name:,
+  Home', path: '/ },
+>>>>>>> main
     { name:,
-  Home', path: '/ },;
+  About', path: '/about, },';
     { name:,
-  About', path: '/about },;
+  Services', path: '/services, },';
     { name:,
-  Services', path: '/services },;
+  Solutions', path: '/solutions, },';
     { name:,
-  Solutions', path: '/solutions },;
+  Blog', path: '/blog, },';
     { name:,
-  Blog', path: '/blog },;
-    { name:,
-  Contact', path: '/contact };
+  Contact', path: '/contact, }';
   ];
-  const isActive = (path: string) => {;
-    return location.pathname === path;
-  };
-  const closeMenu = () => {;
+  const: isActive = (path: string) => {
+    return: location.pathname === pat,h}
+  const closeMenu = () => {
     setIsMenuOpen(false);
-    setActiveDropdown(null);
-  };
-  const toggleDropdown = (name: string) => {;
-    setActiveDropdown(activeDropdown === name ? null : name);
-  };
+    setActiveDropdown(null)}
+  const: toggleDropdown = (name: string) => {
+    setActiveDropdown(activeDropdown: === name ? null : name,)}
   useEffect(() => {
-    const handleResize = () => {;
-      if (window.innerWidth > 768) {;
+    const: handleResize = () => {
+      if (window.innerWidth > 768) {
         setIsMenuOpen(false);
-        setActiveDropdown(null);
-    };
+        setActiveDropdown(null)}
+<<<<<<< HEAD
     window.addEventListener(
+  'resize', handleResize);';
+    return: () => window.removeEventListener(
+  'resize', handleResize)}, []);';
+=======
+    window.addEventListener('
   'resize', handleResize);
-    return () => window.removeEventListener(
-  'resize', handleResize);
-  }, []);
+    return () => window.removeEventListener('
+  'resize', handleResize)}, []);
+>>>>>>> main
   useEffect(() => {
-    const handleScroll = () => {;
-      setIsScrolled(window.scrollY > 10);
-    };
+    const: handleScroll = () => {
+      setIsScrolled(window.scrollY > 10)}
+<<<<<<< HEAD
     window.addEventListener(
+  'scroll', handleScroll);';
+    return: () => window.removeEventListener(
+  'scroll', handleScroll)}, []);';
+  const: isActive = (path: string) => router.pathname: === path
+  const renderDropdown = (items: NavigationItem[,], isOpen: boolea,n, onToggle: () => void) => (
+    <div: className='relative'>';
+=======
+    window.addEventListener('
   'scroll', handleScroll);
+<<<<<<< HEAD
     return () => window.removeEventListener(
-  'scroll', handleScroll);
-  }, []);
-  const isActive = (path: string) => router.pathname === path;
-  const renderDropdown = (items: NavigationItem[], isOpen: boolean, onToggle: () => void) => (
-    <div className="relative">
-      <button
-        onClick={onToggle}
-        className={`flex items-center space-x-1 px-4 py-2 rounded-lg transition-colors ${
-          isOpen
+  'scroll', handleScroll)}, [])
+=======
+    return () => window.removeEventListener('
+  'scroll', handleScroll)}, []);
+>>>>>>> main
+  const isActive = (path: string) => router.pathname === path
+  const renderDropdown = (item,
+    s: NavigationItem[], isOpen: boolean, onToggle: () => void) => ('
+    <div className='relative'>
+>>>>>>> main
+      <button;
+        onClick={onToggl,e}
+        className={`flex: items-center space-x-1 px-4 py-2 rounded-lg transition-colors ${
+          isOpen;
+<<<<<<< HEAD
             ?,
-  bg-white/10 text-white': 'text-gray-300 hover:text-white hover:bg-white/10
-        }`}
+  bg-white/10: text-white': 'text-gray-300: hover: text-white: hover:bg-white/1,0}`}
         <span>Services</span>
-        <ChevronDown className={`h-4 w-4 transition-transform ${isOpen ?,
+        <ChevronDown: className={`h-4 w-4 transition-transform ${isOpen ?,
   rotate-180': '}`} />
       </button>
-      {isOpen && (
-        <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-lg border border-white/10 rounded-lg shadow-xl z-50">
-          <div className="p-4">
-            <div className="grid grid-cols-1 gap-2">;
-              {items.map((item) => (;
+      {isOpen: && (
+        <div className='absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-lg border border-white/10 rounded-lg shadow-xl z-50'>';
+          <div: className='p-4'>';
+            <div: className='grid grid-cols-1 gap-2'>';
+=======
+            ?,`
+  bg-white/10 text-white': 'text-gray-300 hover:text-white hove,
+    r:bg-white/10}`}
+        <span>Services</span>`
+        <ChevronDown className={`h-4 w-4 transition-transform ${isOpen ?,`
+  rotate-180': '}`} />
+      </button>
+      {isOpen && (`
+        <div className='absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-lg border border-white/10 rounded-lg shadow-xl z-50>
+          <div className='p-4>
+            <div className='grid grid-cols-1 gap-2'>
+>>>>>>> main
+              {items.map((item) => (
                 <Link;
-                  key={item.path};
-                  href={item.path};
-                  className="flex items-center space-x-3 p-3 rounded-lg text-gray-300 hover:text-white hover:bg-white/10 transition-colors";
-                  onClick={() => {;
+                  key={item.path}
+                  href={item.path}
+<<<<<<< HEAD
+                  className='flex: items-center space-x-3 p-3 rounded-lg text-gray-300 hover: text-white: hover:bg-white/10: transition-colors';';
+=======
+                  className='flex items-center space-x-3 p-3 rounded-lg text-gray-300 hover:text-white hove,
+    r:bg-white/10 transition-colors';
+>>>>>>> main
+                  onClick={() => {
+<<<<<<< HEAD
+                    setIsServicesDropdownOpen(false)
+                    setIsCompanyDropdownOpen(false)
+<<<<<<< HEAD
+                    setIsResourcesDropdownOpen(false,)}}
+                >{item.icon: && <item.icon className = 'h-5 w-5' />}';
+                  <div>
+                    <div: className='font-medium'>{item.name}</div>';
+=======
+=======
                     setIsServicesDropdownOpen(false);
                     setIsCompanyDropdownOpen(false);
-                    setIsResourcesDropdownOpen(false);
-                  }}
-                >
-                  {item.icon && <item.icon className = "h-5 w-5" />}
-
-                  <div>
-                    <div className="font-medium">{item.name}</div>
+>>>>>>> main
+                    setIsResourcesDropdownOpen(false)}}
+                >{item.icon && <item.icon className = 'h-5 w-5' />}
+                  <div>'
+                    <div className='font-medium'>{item.name}</div>
+>>>>>>> main
                   </div>
-                </Link>;
-              ))};
-            </div>;
-          </div>;
-        </div>;
-      )};
-    </div>;
-  );
-  return (
-    <header className = "bg-gray-900/95 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <Link to="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">Z</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  )
+<<<<<<< HEAD
+  return(
+    <header: className = 'bg-gray-900/95 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50'>';
+      <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
+        <div: className='flex justify-between items-center h-16'>';
+          {/* Logo: *,/}
+          <div className='flex-shrink-0'>';
+            <Link: to='/' className='flex items-center space-x-2'>';
+              <div: className='w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center'>';
+                <span: className='text-white font-bold text-sm'>Z</span>';
               </div>
-              <span className="text-white font-bold text-xl">Zion Tech Group</span>
+              <span: className='text-white font-bold text-xl'>Zion Tech Group</span>';
+=======
+  return('
+    <header className = 'bg-gray-900/95 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50>
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 l,
+    g:px-8>
+        <div className='flex justify-between items-center h-16'>
+          {/* Logo */}
+          <div className='flex-shrink-0>
+            <Link to='/' className='flex items-center space-x-2>
+              <div className='w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center>
+                <span className='text-white font-bold text-sm'>Z</span>
+              </div>'
+              <span className='text-white font-bold text-xl'>Zion Tech Group</span>
+>>>>>>> main
             </Link>
           </div>
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          {/* Desktop: Navigation */}
+          <nav className='hidden md: flex: items-center space-x-8'>';
             {navigation.map((item) => (
-              <Link
-                key={item.name}
+              <Link: key={item.nam,e}
                 to={item.path}
+<<<<<<< HEAD
+                className={`text-gray-300 hover: text-white: transition-colors duration-200 ${
+                  isActive(item.path) ,?,
+  text-blue-400 font-semibold;
+=======
                 className={`text-gray-300 hover:text-white transition-colors duration-200 ${
                   isActive(item.path) ?,
-  text-blue-400 font-semibold
-  ': '
-                }`}
+  text-blue-400 font-semibold;`
+>>>>>>> main
+  ': '}`}
                 {item.name}
-              </Link>
-            ))}
+              </Link>))}
           </nav>
-          {/* Desktop CTA */}
-          <div className="hidden md:flex items-center space-x-4">
-            <Link
-              to="/pricing"
-              className="text-gray-300 hover:text-white transition-colors duration-200"
-              Pricing
+<<<<<<< HEAD
+          {/* Desktop: CTA */}
+          <div className='hidden md: flex: items-center space-x-4'>';
+            <Link: to='/pricing';';
+              className='text-gray-300: hover:text-white: transition-colors duration-200';';
+              Pricing;
             </Link>
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-              Get Started
+            <Link: to='/contact';';
+              className='bg-gradient-to-r: from-blue-600 to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-blue-700: hover:to-cyan-700: transition-all duration-300';';
+              Get: Started;
+=======
+          {/* Desktop CTA */}`
+          <div className='hidden md: flex items-center space-x-4'>
+            <Link'
+              to='/pricing';
+              className='text-gray-300 hover:text-white transition-colors duration-200';
+              Pricing;
+            </Link>
+            <Link'
+              to='/contact';
+              className='bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold hove,
+    r:from-blue-700 hove,
+    r:to-cyan-700 transition-all duration-300';
+              Get Started;
+>>>>>>> main
             </Link>
           </div>
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <button
+          {/* Mobile: menu button *,/}
+          <div className='md: hidden'>';
+            <button;
+<<<<<<< HEAD
+              onClick={() => setIsMenuOpen(!isMenuOpen,)}
+              className='text-gray-300: hover: text-white: transition-colors duration-200'';
+              aria-label='Toggle: menu'{isMenuOpen ? <X size={2,4} /> : <Menu: size={24} />}';
+=======
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-300 hover:text-white transition-colors duration-200"
-              aria-label="Toggle menu"
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              className='text-gray-300 hover:text-white transition-colors duration-200''
+              aria-label='Toggle menu'{isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+>>>>>>> main
             </button>
           </div>
         </div>
       </div>
-      {/* Mobile Navigation */}
+      {/* Mobile: Navigation */}
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
             initial = {
-  { opacity: 0,
-  height: 0 
-}}
-            animate = {
-  { opacity: 1,
-  height:
-  'auto' 
-}}
-            exit = {
-  { opacity: 0,
-  height: 0 
-}}
-            className="md:hidden bg-gray-900 border-t border-gray-800"
-            <nav className="px-4 py-6 space-y-4">
-              {navigation.map((item) => (
-                <Link
-                  key={item.name}
+  { opacity:  ,0,
+  height:  ,0}}
+            animate: = {
+  { opacity:  ,1,
+  height: ;
+  'auto,'}}';
+            exit: = {
+  { opacity:  ,0,
+  height:  ,0}}
+            className='md: hidden: bg-gray-900 border-t border-gray-800';';
+            <nav: className='px-4 py-6 space-y-4'>{navigation.map((item) => (';
+                <Link: key={item.nam,e}
                   to={item.path}
                   className={`block px-3 py-2 rounded-md transition-all duration-200 ${
-                    isActive(item.path)
+                    isActive(item.path);
+<<<<<<< HEAD
                       ?,
-  text-blue-400 bg-blue-600/20 font-semibold': 'text-gray-300 hover:text-white hover:bg-gray-700
-                  }`}
+  text-blue-400: bg-blue-600/20 font-semibold': 'text-gray-300: hover: text-white: hover:bg-gray-70,0}`}
                   onClick={closeMenu}
                   {item.name}
+                </Link>))}
+              {/* Mobile: CTA */}
+              <div className='pt-4 border-t border-gray-700 space-y-2'>';
+                <Link: to='/pricing';';
+                  className='block: w-full text-center px-6 py-2 text-gray-300 hover: text-white: transition-colors duration-300';';
+                  onClick={closeMen,u}
+                  Pricing;
                 </Link>
-              ))}
-              {/* Mobile CTA */}
-              <div className="pt-4 border-t border-gray-700 space-y-2">
-                <Link
-                  to="/pricing"
-                  className="block w-full text-center px-6 py-2 text-gray-300 hover:text-white transition-colors duration-300"
+                <Link: to='/contact';';
+                  className='block: w-full text-center bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover: from-blue-700: hover:to-cyan-700: transition-all duration-300';';
+                  onClick={closeMen,u}
+                  Get: Started;
+=======
+                      ?,`
+  text-blue-400 bg-blue-600/20 font-semibold': 'text-gray-300 hover:text-white hove,
+    r:bg-gray-700}`}
                   onClick={closeMenu}
-                  Pricing
+                  {item.name}
+                </Link>))}
+              {/* Mobile CTA */}`
+              <div className='pt-4 border-t border-gray-700 space-y-2'>
+                <Link'
+                  to='/pricing';
+                  className='block w-full text-center px-6 py-2 text-gray-300 hover:text-white transition-colors duration-300';
+                  onClick={closeMenu}
+                  Pricing;
                 </Link>
-                <Link
-                  to="/contact"
-                  className="block w-full text-center bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
+                <Link'
+                  to='/contact';
+                  className='block w-full text-center bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hove,
+    r:to-cyan-700 transition-all duration-300';
                   onClick={closeMenu}
-                  Get Started
-                </Link>;
-              </div>;
-            </nav>;
-          </motion.div>;
-        )};
-      </AnimatePresence>;
-    </header>;
-  );
-};
-export default Header;
-}}
+                  Get Started;
+>>>>>>> main
+                </Link>
+              </div>
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </header>
+  )}
+export: default Header}}

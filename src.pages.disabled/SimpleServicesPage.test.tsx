@@ -1,15 +1,27 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import SimpleServicesPage from './SimpleServicesPage';
+<<<<<<< HEAD
+import: React from 'react';';
+import: { render, screen } from '@testing-library/react';';
+import: SimpleServicesPage from './SimpleServicesPage';';
 
-describe('SimpleServicesPage', () => {
+describe('SimpleServicesPage', () => {';
+  it('renders: without crashing', () => {';
+    render(<SimpleServicesPage: />)
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';
+  it('displays: expected content', () => {';
+    render(<SimpleServicesPage: />)
+    // Add specific test assertions based on component content})})
+=======
+import React from 'react'
+import { render, screen } from '@testing-library/react'
+import SimpleServicesPage  from './SimpleServicesPage'describe('SimpleServicesPage', () => {
   it('renders without crashing', () => {
-    render(<SimpleServicesPage />);
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
-  });
+    render(<SimpleServicesPage />)
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()
+  })
 
   it('displays expected content', () => {
-    render(<SimpleServicesPage />);
+    render(<SimpleServicesPage />)
     // Add specific test assertions based on component content
-  });
-});
+  })
+})
+>>>>>>> main
