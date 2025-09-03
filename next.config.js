@@ -51,28 +51,8 @@ const nextConfig = {
           },
         ],
       },
-<<<<<<< HEAD
     ];
   },
-            value: 'DENY'
-          },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff'
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin'
-          },
-        ]
-      },
-    ]
-  }
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
-=======
-    ]
-}
->>>>>>> bed1281027a24aaeef68a2d422f0b11dfeb0badd
 };
 
 export default nextConfig;
