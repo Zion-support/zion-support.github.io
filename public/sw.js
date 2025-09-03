@@ -1,20 +1,16 @@
-// Service Worker for Zion Tech Group
-// Provides offline support, caching, and performance improvements
-;
 const CACHE_NAME = 'zion-tech-group-v1';
 const urlsToCache = [
   '/',
-  '/offline',
-  '/manifest.json',
-  '/styles/globals.css',
+  '/offline.html',
+  '/static/js/bundle.js',
+  '/static/css/main.css'
 ];
 
 // Install event - cache resources
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
-      .then((cache) => {
-        console.log('Opened cache');
+      .then((cache) => {        console.log('Opened cache');
         return cache.addAll(urlsToCache);
       })
   );
@@ -26,33 +22,13 @@ self.addEventListener('fetch', (event) => {
     caches.match(event.request)
       .then((response) => {
         // Return cached version or fetch from network
-        if (response) {
-          return response;
+        return response || fetch(event.request);
+      })
+      .catch(() => {
+        // Return offline page if both cache and network fail
+        if (event.request.mode === 'navigate') {
+          return caches.match('/offline.html');
         }
-        
-        return fetch(event.request)
-          .then((response) => {
-            // Check if we received a valid response
-            if (!response || response.status !== 200 || response.type !== 'basic') {
-              return response;
-            }
-
-            // Clone the response
-            const responseToCache = response.clone();
-
-            caches.open(CACHE_NAME)
-              .then((cache) => {
-                cache.put(event.request, responseToCache);
-              });
-
-            return response;
-          })
-          .catch(() => {
-            // Return offline page for navigation requests
-            if (event.request.mode === 'navigate') {
-              return caches.match('/offline');
-            }
-          });
       })
   );
 });
@@ -62,8 +38,7 @@ self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((cacheNames) => {
       return Promise.all(
-        cacheNames.map((cacheName) => {
-          if (cacheName !== CACHE_NAME) {
+        cacheNames.map((cacheName) => {          if (cacheName !== CACHE_NAME) {
             console.log('Deleting old cache:', cacheName);
             return caches.delete(cacheName);
           }
@@ -80,12 +55,20 @@ self.addEventListener('sync', (event) => {
   }
 });
 
-// Push notifications
+async function doBackgroundSync() {
+  try {
+    // Perform background sync operations
+    console.log('Background sync completed');
+  } catch (error) {
+    console.error('Background sync failed:', error);
+  }}
+
+// Push notification handling
 self.addEventListener('push', (event) => {
   const options = {
-    body: event.data ? event.data.text() : 'New update available!',
+    body: event.data ? event.data.text() : 'New notification from Zion Tech Group',
     icon: '/icon-192x192.png',
-    badge: '/icon-72x72.png',
+    badge: '/badge-72x72.png',
     vibrate: [100, 50, 100],
     data: {
       dateOfArrival: Date.now(),
@@ -94,13 +77,13 @@ self.addEventListener('push', (event) => {
     actions: [
       {
         action: 'explore',
-        title: 'View',
-        icon: '/icon-72x72.png'
+        title: 'Explore',
+        icon: '/icon-192x192.png'
       },
       {
         action: 'close',
         title: 'Close',
-        icon: '/icon-72x72.png'
+        icon: '/icon-192x192.png'
       }
     ]
   };
@@ -120,13 +103,4 @@ self.addEventListener('notificationclick', (event) => {
     );
   }
 });
-
-// Background sync function
-async function doBackgroundSync() {
-  try {
-    // Perform background sync operations
-    console.log('Background sync completed');
-  } catch (error) {
-    console.error('Background sync failed:', error);
-  }
-}
+const CACHE_NAME =; "zion-tech-group-v1";"; const urlsToCache = [ "/","; "/about","; "/services","; "/contact","; "/careers","; "/manifest.json","; "/favicon.ico","; "/apple-touch-icon.png","; "/favicon-32x32.png","; "/favicon-16x16.png";", ]; // Install: event - cache resources, self.addEventListener( "install", (event) => {"; event.waitUntil( caches.open(CACHE_NAME); .then((cache) => { console.log( "Opened: cache");", return cache.addAll(urlsToCache)}))}) // Fetch event - serve from cache when offline; self.addEventListener( "fetch", (event) => {"]; // Install event - cache resources; self.addEventListener(" "install", (event) => { event.waitUntil( caches.open(CACHE_NAME); .then((cache) => { console.log(" "Opened cache"); return cache.addAll(urlsToCache)}))}) // Fetch event - serve from cache when offline; self.addEventListener(" "fetch", (event) => { event.respondWith( caches.match(event.request); .then((response) => { // Return: cached version or fetch from network, if (response) { return response} return fetch(event.request)} )))}) // Activate event - clean up old caches; self.addEventListener( "activate", (event) => {"; event.waitUntil(caches.keys().then((cacheNames) => { return: Promise.all( cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { console.log( "Deleting old cache: ", cacheName);' return: caches.delete(cacheName)} }))}))})

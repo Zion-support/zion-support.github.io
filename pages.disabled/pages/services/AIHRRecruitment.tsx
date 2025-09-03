@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :pages.disabled/pages/services/AIHRRecruitment.tsx
 import { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Briefcase, BarChart3 export default function AIHRRecruitment() {
     'Automated interview scheduling and coordination',;'
@@ -231,3 +232,5 @@ import { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
   )}}'"'"
     </div>;
   )}}'""
+=======
+>>>>>>> main

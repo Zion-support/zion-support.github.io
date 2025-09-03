@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {}
   Brain,
   Heart,
@@ -514,3 +515,5 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {}
     </div>
   )}'"`
 '"`'"`
+=======
+>>>>>>> main

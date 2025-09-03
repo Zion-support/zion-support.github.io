@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 :pages.disabled/pages/services/QuantumTechnology.tsx
 const QuantumTechnology = () => {
@@ -364,3 +365,5 @@ const QuantumTechnology: any = () => {}
 export default QuantumTechnology}}}'"'"
 
 export default QuantumTechnology}}}'""
+=======
+>>>>>>> main

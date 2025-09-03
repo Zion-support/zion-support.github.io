@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';'
 import { Link } from 'react-router-dom';'
 import { Heart, Shield, Users, Activity, Microscope, Pill } from 'lucide-react';
@@ -340,3 +341,5 @@ export default HealthcareSolutions;'"
 '"'"
 export default HealthcareSolutions;
 '""
+=======
+>>>>>>> main

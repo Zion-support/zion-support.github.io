@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
 <:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
 import React from 'react.ts';
@@ -851,3 +852,5 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
     </div>;
   )}'"`
 '"`'"`
+=======
+>>>>>>> main

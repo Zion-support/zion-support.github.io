@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :pages.disabled/pages/services/AIDevOps.tsx
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIDevOps() {
     'Automated DevOps monitoring and alerting',;'
@@ -231,3 +232,5 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
   )}}'"'"
     </div>;
   )}}'""
+=======
+>>>>>>> main

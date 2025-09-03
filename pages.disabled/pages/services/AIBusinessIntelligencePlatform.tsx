@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :pages.disabled/pages/services/AIBusinessIntelligencePlatform.tsx
 :pages.disabled/pages/services/AIBusinessIntelligencePlatform.tsx
 <:pages.disabled/pages/services/AIBusinessIntelligencePlatform.tsx
@@ -847,3 +848,5 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {}
 '"`'"`
   )}
 '"`
+=======
+>>>>>>> main

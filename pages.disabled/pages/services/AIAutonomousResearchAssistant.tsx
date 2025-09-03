@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx
 <:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx
 import React, { useState, useEffect } from 'react';
@@ -1342,3 +1343,5 @@ export default function AIAutonomousResearchAssistant(function AIAutonomousResea
 '"`'"`
 }
 '"`
+=======
+>>>>>>> main

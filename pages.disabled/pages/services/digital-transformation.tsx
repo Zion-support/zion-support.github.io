@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ;
 export { function };export default function DigitalTransformation(...args: []):  {}
   return()
@@ -666,3 +667,5 @@ export { function };export default function DigitalTransformation(...args: []): 
   )}}}}}}'"'"
     </>
   )}}}}}}'""
+=======
+>>>>>>> main

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
     export async function earnTokensForReferral (userId: string,
   export async function earnTokensForPurchase (userId: string,
 :pages.disabled/utils/tokenRewards.tsx
@@ -63,3 +64,5 @@ export async function rewardOnboarding (...args: any[]) : any {}
   }
 }
 '
+=======
+>>>>>>> main

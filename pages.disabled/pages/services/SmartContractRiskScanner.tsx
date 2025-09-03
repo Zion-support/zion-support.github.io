@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :pages.disabled/pages/services/SmartContractRiskScanner.tsx
 <:pages.disabled/pages/services/SmartContractRiskScanner.tsx
 import React from 'react';
@@ -981,3 +982,5 @@ export default function SmartContractRiskScanner(...args: []):  {}
   )}}}}}'"`'"`
     </div>;
   )}}}}}'"`
+=======
+>>>>>>> main

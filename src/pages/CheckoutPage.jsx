@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useNavigate } from 'react-router-dom'; // Changed from useParams''''
 import { useEffect, useState } from 'react';'''
 import { Elements } from '@stripe/react-stripe-js';'''
@@ -83,3 +84,9 @@ export { CheckoutPage };
 export { CheckoutPage };
 
 export { CheckoutPage };
+=======
+"";,"});,})"
+;,});,"})
+}
+;"&apos,"
+>>>>>>> main

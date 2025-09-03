@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {}
   Shield,
   FileText,
@@ -907,3 +908,5 @@ import {}
 
 export default AIFinancialCompliancePlatform;'"`
 '"`'"`
+=======
+>>>>>>> main

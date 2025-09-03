@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import SEO from "@/components/SEO";'
 import { Shield, Database, Monitor } from 'lucide-react';
@@ -332,3 +333,5 @@ export default ITSolutions;'"
 }}'"'"
 export default ITSolutions;
 }}'""
+=======
+>>>>>>> main

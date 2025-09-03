@@ -1,0 +1,25 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+describe('DataAnalytics', () => {}; '; it('renders without crashing', () => {}; render(<DataAnalytics />) ;'; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; '; it('displays expected content', () => {}; render(<DataAnalytics />) ;
+=======
+describe("DataAnalytics", () => {}; "; it("renders without crashing", () => {}; render(<DataAnalytics / >) , expect(screen.getByRole ("main") || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; "; it("displays expected content", () => {}; render(<DataAnalytics  />)
+}
+    render()
+}
+    expect(screen.getByRole("main) || screen.getByText(/.*/)).toBeInTheDocument()
+}
+  })
+}
+""
+  it("displays expected content", () => {
+    render(<DataAnalytics /" >)
+}
+    // comment
+  })
+}
+  });"
+"
+});""
+>>>>>>> main
+>>>>>>> main

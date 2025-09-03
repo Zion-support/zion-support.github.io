@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -86,216 +87,53 @@ const ComprehensivePricing2026 = () => {
           >'`'`'`
             <span'`'`'`'`
               className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}
+=======
+import React from "react"
+export default ComprehensivePricing2026,
+export default ComprehensivePricing2026""
+ export: default ComprehensivePricing2026,,"
+export: default ComprehensivePricing2026""",,
+ export default ComprehensivePricing2026,",
+ export default ComprehensivePricing2026","
+export default function ComprehensivePricing2026() {return (
+    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
+      <SEO title="ComprehensivePricing2026 - Zion Tech Group" description="Professional ComprehensivePricing2026 services by Zion Tech Group"  />"
+      <div className="container mx-auto px-4 py-20">"
+        <h1 className="text-4xl font-bold text-white mb-8">ComprehensivePricing2026</h1>"
+        <p className="text-gray-300 text-lg">
+          Professional ComprehensivePricing2026 services to help your business grow.
+        </p>
+      </div>
+  )
+}
+ );
+export default ComprehensivePricing2026,
+export default ComprehensivePricing2026&apos;&apos,
+"""
+const ComprehensivePricing2026: React.FC = () => {
+  return ("
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
+      <SEO title="ComprehensivePricing2026 - Zion Tech Group""
+        description="Professional ComprehensivePricing2026 services by Zion Tech Group"">
+        keywords="comprehensivepricing2026, technology, services" />"
+      <div className="container mx-auto px-4 py-20">"
+        <div className="text-center">"
+          <h1 className="text-4xl font-bold text-white mb-6">ComprehensivePricing2026</h1>"
+          <p className="text-xl text-gray-300 mb-8">
+            Professional ComprehensivePricing2026 services to help your business grow.
+          </p>"
+          <div className="flex justify-center">"
+            <a href="/contact" "
+              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover: shadow-lg transition-all duration-300"
+>>>>>>> main
             >
-              Monthly;
-            </span>
-            <button;
-              onClick={() =>'
-                setBillingCycle(''
-                  billingCycle === 'monthly' ? 'annual' : 'monthly'
-                )'`
-              }'`'`
-              className={`relative w-16 h-8 bg-white/20 rounded-full p-1 transition-all duration-300 ${billingCycle === 'annual' ? 'bg-cyan-500' : ''}`}
-            >'`
-              <div'`'`
-                className={`w-6 h-6 bg-white rounded-full transition-all duration-300 ${billingCycle === 'annual' ? 'translate-x-8' : ''}`}
-              />
-            </button>'`
-            <span'`'`
-              className={`text-lg ${billingCycle === 'annual' ? 'text-white' : 'text-gray-400'}`}"""
-            >""""
-              Annual <span className="text-cyan-400 text-sm">(Save 20%)</span>
-            </span>
-          </motion.div>
-
-          {/* Contact Information */}"""
-          <motion.div""""
-            className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 mb-8 max-w-2xl mx-auto"""
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}"""
-          >""""
-            <h3 className="text-2xl font-bold mb-4 text-cyan-400">
-              Contact Zion Tech Group"""
-            </h3>""""
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-              <div>
-                <strong > Mobile:</strong> +1 302 464 0950;
-              </div>
-              <div>
-                <strong > Email:</strong > kleber@ziontechgroup.com;
-              </div>
-              <div>
-                <strong > Address:</strong > 364 E Main St STE 1008 Middletown DE;
-                19709;
-              </div>
-              <div>'
-                <strong>Website:</strong>{' '}"""
-                <a""""
-                  href="https://ziontechgroup.com""""
-                  className="text-cyan-400 hover:text-cyan-300 underline"""
-                >
-                  ziontechgroup.com;
-                </a>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-"""
-      {/* Category Filter */}""""
-      <section className="py-8 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm">""""
-        <div className="max-w-7xl mx-auto">""""
-          <div className="flex flex-wrap justify-center gap-4">
-            {categories.map(category => (
-              <button;
-                key={category}`
-                onClick={() => setSelectedCategory(category)}``
-                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${}
-'
-''
-'''`
-                  selectedCategory === category'''`'`
-                    ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg'''`'`'`
-                    : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'```'`
-                }`}''
-              >'''
-                {category === 'all' ? 'All Services' : category}
-              </button>) ) }
+              Get Started,
+            </a>
           </div>
-        </div>
-      </section>
-"""
-      {/* Pricing Grid */}""""
-      <section className="py-16 px-4 sm:px-6 lg:px-8">""""
-        <div className="max-w-7xl mx-auto">"""
-          <motion.div""""
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8""""
-            variants={containerVariants}""""
-            initial="hidden""""
-            animate="visible"""
-          >
-            {filteredServices.map((service, index) => (
-              <motion.div;
-                key={service.id}"""
-                variants={itemVariants}""""
-                className="group"""
-                whileHover={{ scale: 1.02, y: -5 }}'
-                transition={{ type: 'spring', stiffness: 300 }}"""
-              >""""
-                <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 hover:border-cyan-400/50 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/25 h-full">"""
-                  {/* Service Header */}""""
-                  <div className="flex items-start justify-between mb-4">""""
-                    <div className="text-4xl">{service.icon}</div>"""
-                    {service.popular && (""""
-                      <span className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full">
-                        Popular;
-                      </span>) }
-                  </div>
-"""
-                  {/* Service Info */}""""
-                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
-                    {service.name}"""
-                  </h3>""""
-                  <p className="text-gray-300 text-sm mb-3">
-                    {service.tagline}
-                  </p>
-"""
-                  {/* Pricing */}""""
-                  <div className="mb-4">""""
-                    <div className="text-3xl font-bold text-cyan-400">'
-                      {billingCycle === 'monthly'
-                        ? service.price;
-                        : getAnnualPrice(service.price)}"""
-                    </div>""""
-                    <div className="text-gray-400">'
-                      {billingCycle === 'monthly' ? service.period : '/year'}
-                    </div>'"""
-                    {billingCycle === 'annual' && (""""
-                      <div className="text-sm text-green-400 mt-1">
-                        Save 20% with annual billing;
-                      </div>) }
-                  </div>
-"""
-                  {/* Category */}""""
-                  <div className="flex items-center gap-2 mb-4">""""
-                    <span className="text-sm text-gray-400">
-                      {service.category}
-                    </span>
-                  </div>
-"""
-                  {/* Key Features */}""""
-                  <div className="mb-4">""""
-                    <h4 className="text-sm font-semibold text-white mb-2">
-                      Key Features:"""
-                    </h4>""""
-                    <ul className="text-xs text-gray-300 space-y-1">"""
-                      {service.features.slice(0, 4).map((feature, idx) => (""""
-                        <li key={idx} className="flex items-center gap-2">""""
-                          <span className="text-cyan-400">✓</span>
-                          {feature}
-                        </li>) ) }
-                    </ul>
-                  </div>
-"""
-                  {/* Market Info */}""""
-                  <div className="mb-4 text-xs text-gray-400">""""
-                    <div className="flex justify-between mb-1">"""
-                      <span>Market Size:</span>""""
-                      <span className="text-cyan-400">
-                        {service.marketSize}
-                      </span>"""
-                    </div>""""
-                    <div className="flex justify-between mb-1">"""
-                      <span>Growth Rate:</span>""""
-                      <span className="text-green-400">
-                        {service.growthRate}
-                      </span>"""
-                    </div>""""
-                    <div className="flex justify-between">"""
-                      <span>Rating:</span>""""
-                      <span className="text-yellow-400">
-                        {service.rating}/5({service.reviews} reviews) {' '}
-                      </span>
-                    </div>
-                  </div>
-"""
-                  {/* ROI */}""""
-                  <div className="mb-4 p-3 bg-green-500/10 border border-green-500/20 rounded-lg">""""
-                    <p className="text-xs text-green-400 font-semibold">
-                      ROI: {service.roi}
-                    </p>
-                  </div>
-"""
-                  {/* Trial Info */}""""
-                  <div className="mb-4 text-center p-2 bg-blue-500/10 border border-blue-500/20 rounded-lg">""""
-                    <span className="text-xs text-blue-400">'
-                      {service.trialDays}-day free trial • Setup in{' '}
-                      {service.setupTime}
-                    </span>
-                  </div>
-"""
-                  {/* Action Buttons */}""""
-                  <div className="flex gap-2">
-                    <a"""
-                      href={service.link}""""
-                      target="_blank""""
-                      rel="noopener noreferrer""""
-                      className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white text-sm font-semibold py-2 px-4 rounded-lg transition-all duration-300 text-center"""
-                    >
-                      Learn More;
-                    </a>"""
-                    <Link""""
-                      to="/contact""""
-                      className="flex-1 bg-white/10 hover:bg-white/20 text-white text-sm font-semibold py-2 px-4 rounded-lg border border-white/30 hover:border-cyan-400/50 transition-all duration-300 text-center"""
-                    >
-                      Get Quote;
-                    </Link>
-                  </div>
-                </div>
-              </motion.div>) ) }
-          </motion.div>
+    </div>;,
+  )}
 
+<<<<<<< HEAD
           {/* No Results */}
           {filteredServices.length === 0 && ("""
             <motion.div""""
@@ -491,3 +329,6 @@ export { ComprehensivePricing2026 };
 export { ComprehensivePricing2026 };
 
 export { ComprehensivePricing2026 };
+=======
+export default ComprehensivePricing2026;""
+>>>>>>> main

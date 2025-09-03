@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :pages.disabled/pages/services/ReturnsManagement.tsx
           Reduce support workload and increase customer satisfaction with a self‑serve, branded
           returns portal that automates labels, RMAs, inspections, and refunds while syncing
@@ -98,3 +99,5 @@ export default ReturnsManagement;'"
 '"'"
 export default ReturnsManagement;
 '""
+=======
+>>>>>>> main

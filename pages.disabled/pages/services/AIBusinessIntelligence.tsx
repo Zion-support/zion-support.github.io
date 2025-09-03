@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :pages.disabled/pages/services/AIBusinessIntelligence.tsx
 <:pages.disabled/pages/services/AIBusinessIntelligence.tsx
 import React from 'react';
@@ -1403,3 +1404,5 @@ export default AIBusinessIntelligence;'"`
 '"`'"`
 export default AIBusinessIntelligence;
 '"`
+=======
+>>>>>>> main

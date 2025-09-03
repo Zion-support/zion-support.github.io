@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 />
 
 export default function InnovativeServicesShowcase2028(...args: unknown[]): unknown {
@@ -502,102 +503,55 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
               Get expert consultation, custom pricing, and implementation;
               support. Our team is ready to help you choose the right solutions;
               for your business needs.
+=======
+import React from "react"
+import Head from "next/head"
+import Link from "next/link"
+const InnovativeServicesShowcase2028 = () => {
+  return (
+    <>
+      <Head>
+        <title>Innovative Services Showcase2028 - Zion Tech Group</title>
+        <meta name="description" content="Professional Innovative Services Showcase2028 services"  />
+      </Head>
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-8">
+              Innovative Services Showcase2028
+            </h1>
+            <p className="text-xl text-gray-600 mb-12">
+              Professional Innovative Services Showcase2028 services and solutions
+>>>>>>> main
             </p>
-          </motion.div>"""
-""""
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {/* Contact Info */}
-            <motion.div;
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}"""
-              viewport={{ once: true }}""""
-              className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8""""
-            >""""
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">""""
-                <Phone className="w-8 h-8 text-white"  />"""
-              </div>""""
-              <h3 className="text-2xl font-bold text-white mb-4 text-center">
-                Call Us"""
-              </h3>""""
-              <p className="text-slate-300 text-center mb-4">
-                Speak with our experts directly;
-              </p>`
-              <a`"`
-                href={`tel:${contactInfo.phone}`}"                className="text-2xl font-bold text-cyan-400 text-center block hover:text-cyan-300 transition-colors duration-300"""
-              >
-                {contactInfo.phone}
-              </a>
-            </motion.div>
-
-            <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}"""
-              viewport={{ once: true }}""""
-              className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8""""
-            >""""
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-6">""""
-                <Mail className="w-8 h-8 text-white"  />"""
-              </div>""""
-              <h3 className="text-2xl font-bold text-white mb-4 text-center">
-                Email Us"""
-              </h3>""""
-              <p className="text-slate-300 text-center mb-4">
-                Send us your requirements;
-              </p>`
-              <a`"`
-                href={`mailto:${contactInfo.email}`}"                className="text-lg font-semibold text-cyan-400 text-center block hover:text-cyan-300 transition-colors duration-300 break-all"""
-              >
-                {contactInfo.email}
-              </a>
-            </motion.div>
-
-            <motion.div;
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}"""
-              viewport={{ once: true }}""""
-              className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8""""
-            >""""
-              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-6">""""
-                <MapPin className="w-8 h-8 text-white"  />"""
-              </div>""""
-              <h3 className="text-2xl font-bold text-white mb-4 text-center">
-                Visit Us"""
-              </h3>""""
-              <p className="text-slate-300 text-center mb-4">
-                Our headquarters location"""
-              </p>"              <p className="text-slate-300 text-center text-sm leading-relaxed">
-                {contactInfo.address}
-              </p>
-            </motion.div>
-          </div>
-
-      {/* Micro SaaS Services Section */}"""
-      <section className="py-20 px-4">"""
-        <div className="max-w-7xl mx-auto">
-          <motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}"""
-            viewport={{ once: true }}""""
-            className="text-center mt-12""""
-          >""""
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"""
-              <Link""""
-                to="/contact""""
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-cyan-500/25"""
-              >
-                Get Free Consultation;
-              </Link>"""
-              <Link""""
-                to="/pricing""""
-                className="px-8 py-4 border border-cyan-500 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"""
-              >
-                View Full Pricing;
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h2 className="text-2xl font-semibold mb-4">Our Services</h2>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Professional Solutions</li>
+                  <li>• Expert Implementation</li>
+                  <li>• 24/7 Support</li>
+                  <li>• Custom Development</li>
+                </ul>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Industry Expertise</li>
+                  <li>• Proven Results</li>
+                  <li>• Scalable Solutions</li>
+                  <li>• Competitive Pricing</li>
+                </ul>
+              </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                View Pricing
+              </Link>
+              <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
+                Contact Us
               </Link>
             </div>
+<<<<<<< HEAD
           </motion.div>
 """
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -710,3 +664,9 @@ export { InnovativeServicesShowcase2028 };
 export { InnovativeServicesShowcase2028 };
 
 export { InnovativeServicesShowcase2028 };
+=======
+    </>
+  );
+}
+export default InnovativeServicesShowcase2028
+>>>>>>> main

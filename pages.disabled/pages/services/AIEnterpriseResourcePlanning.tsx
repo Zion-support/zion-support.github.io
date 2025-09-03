@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :pages.disabled/pages/services/AIEnterpriseResourcePlanning.tsx
 <:pages.disabled/pages/services/AIEnterpriseResourcePlanning.tsx
 import React from 'react.ts';
@@ -609,3 +610,5 @@ import { Brain,
     </div>;
   )};'"`
 export default AIEnterpriseResourcePlanning;'"`'"`
+=======
+>>>>>>> main

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :src/pages/services/ai-customer-support-automation.tsx
 import React from 'react&apos;;
 import { motion } from 'framer-motion&apos;;
@@ -399,3 +400,5 @@ export default function AIBusinessIntelligence() {
     </div>
   );
 }
+=======
+>>>>>>> main

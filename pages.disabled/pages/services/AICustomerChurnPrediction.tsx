@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerChurnPrediction.tsx
 :pages.disabled/pages/services/AICustomerChurnPrediction.tsx
 <:pages.disabled/pages/services/AICustomerChurnPrediction.tsx
@@ -753,3 +754,5 @@ export default AICustomerChurnPrediction}}}'"`'"`
   )};
 
 export default AICustomerChurnPrediction}}}'"`
+=======
+>>>>>>> main

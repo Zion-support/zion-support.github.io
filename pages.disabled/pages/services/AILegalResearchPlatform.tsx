@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx
 <:pages.disabled/pages/services/AILegalResearchPlatform.tsx
@@ -808,3 +809,5 @@ export default function AILegalResearchPlatform(...args[]):  {}
 '"`'"`
   )}
 '"`
+=======
+>>>>>>> main

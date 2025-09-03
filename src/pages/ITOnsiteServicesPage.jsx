@@ -1,26 +1,16 @@
-import { useState, useEffect } from "react";""""
-import { useSearchParams } from "react-router-dom";""""
-import { ITServicePricingTable } from "@/components/services/ITServicePricingTable";""""
-import { GlobalServiceSection } from "@/components/GlobalServiceSection";""""
-import { QuoteFormSection } from "@/components/QuoteFormSection";""""
-import { TrustedBySection } from "@/components/TrustedBySection";""""
-import { onsiteServicePricing } from "@/data/onsiteServicePricing";""""
-import { toast } from "@/hooks/use-toast";""""
-import { PageHero } from "@/components/services/PageSections/PageHero";""""
-import { CountryTabs } from "@/components/services/PageSections/CountryTabs";""""
-import { ServiceDetailsSection } from "@/components/services/PageSections/ServiceDetailsSection";""""
-import { ServiceProcessSteps } from "@/components/services/PageSections/ServiceProcessSteps";""""
-import { ServiceIncludes } from "@/components/services/PageSections/ServiceIncludes";""""
-import { EnterpriseCallToAction } from "@/components/services/PageSections/EnterpriseCallToAction";
-export default function ITOnsiteServicesPage() {}
-    const [searchParams] = useSearchParams();"""
-    const [selectedCountry, setSelectedCountry] = useState(null);""""
-    const [searchQuery, setSearchQuery] = useState("");"""
-    // Check for success parameter in URL""""
-    const success = searchParams.get("success");
-    // Show success toast if redirected from successful payment;
-    useEffect(() => {}
+<<<<<<< HEAD
+import React from 'react'; export default function ITOnsiteServicesPage () { const [searchParams] = useSearchParams () ; const [selectedCountry, setSelectedCountry] = useState(null); const [searchQuery, setSearchQuery] = useState(");
+=======
+import React from "react"; export default function ITOnsiteServicesPage () { const [searchParams] = useSearchParams () ; const [selectedCountry, setSelectedCountry] = useState(null); const [searchQuery, setSearchQuery] = useState(");"
+ export default function ITOnsiteServicesPage () { const [searchParams] = useSearchParams () ; const [selectedCountry, setSelectedCountry] = useState(null); const [searchQuery, setSearchQuery] = useState(");,"});,"});"
+}"});,"})"
+ export: default function ITOnsiteServicesPage () { const [searchParams] = useSearchParams ()  const [selectedCountry, setSelectedCountry] = useState(null) const [searchQuery, setSearchQuery] = useState(")}";";";"
+ export default function ITOnsiteServicesPage () { const [searchParams] = useSearchParams ()  const [selectedCountry, setSelectedCountry] = useState(null) const [searchQuery, setSearchQuery] = useState(")}"""
+ export default function ITOnsiteServicesPage ()   {const [searchParams] = useSearchParams ()  const [selectedCountry, setSelectedCountry] = useState(null) const [searchQuery, setSearchQuery] = useState(")}""
+ export default function ITOnsiteServicesPage () ;{} const [searchParams] = useSearchParams ()  const [selectedCountry, setSelectedCountry] = useState(null) const;const [searchQuery, setSearchQuery] = useState(&quot)}";""
+ export default function ITOnsiteServicesPage () { const [searchParams] = useSearchParams ()  const [selectedCountry, setSelectedCountry] = useState(null) const [searchQuery, setSearchQuery] = useState(")}""
 """
+<<<<<<< HEAD
 """"
         if (success === "true") {}
             toast({}
@@ -111,3 +101,7 @@ export { ITOnsiteServicesPage };
 export { ITOnsiteServicesPage };
 
 export { ITOnsiteServicesPage };
+=======
+ export default function ITOnsiteServicesPage () { const [searchParams] = useSearchParams ()  const [selectedCountry, setSelectedCountry] = useState(null) const [searchQuery, setSearchQuery] = useState(")}"""
+>>>>>>> main
+>>>>>>> main

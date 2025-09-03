@@ -1,3 +1,4 @@
+<<<<<<< HEAD
     {;
       icon: GitBranch,;
       title: 'Git Integration & Workflow',;'
@@ -580,3 +581,5 @@
     </div>;
   )};'"`
 export default AICodeReviewSecurityScanner;'"`'"`
+=======
+>>>>>>> main

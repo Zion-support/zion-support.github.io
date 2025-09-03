@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react.ts';'
 import Head from 'next/head.ts';
 '
@@ -585,3 +586,5 @@ export default function ServicesAdvertisingPage(...args[]):  {
   );
 }'"
 '"'"
+=======
+>>>>>>> main

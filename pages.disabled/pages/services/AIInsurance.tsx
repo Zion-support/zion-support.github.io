@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :pages.disabled/pages/services/AIInsurance.tsx
 import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Lock, FileText, BarChart3 export default function AIInsurance() {
     'Automated policy management and customer service',;'
@@ -231,3 +232,5 @@ import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
   )}}'"'"
     </div>;
   )}}'""
+=======
+>>>>>>> main

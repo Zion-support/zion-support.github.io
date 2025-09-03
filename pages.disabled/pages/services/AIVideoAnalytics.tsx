@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :pages.disabled/pages/services/AIVideoAnalytics.tsx
 import { Video, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Eye, Zap, Shield, Users, BarChart3 export default function AIVideoAnalytics() {
     'Behavioral analysis and anomaly detection',;'
@@ -231,3 +232,5 @@ import { Video, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Eye, Zap, S
   )}}'"'"
     </div>;
   )}}'""
+=======
+>>>>>>> main

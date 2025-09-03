@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';'
 import { Brain, TrendingUp, Users, Globe, Cpu, Lightbulb, BarChart3, PieChart, Activity, Search } from 'lucide-react';
 :pages.disabled/solutions/AIBusinessIntelligence.jsx
@@ -346,3 +347,5 @@ export default AIBusinessIntelligence;'"
 }}}}'"'"
 export default AIBusinessIntelligence;
 }}}}'""
+=======
+>>>>>>> main

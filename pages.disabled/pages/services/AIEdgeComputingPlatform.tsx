@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {}
   Cpu,
   TrendingUp,
@@ -521,3 +522,5 @@ export default function AIEdgeComputingPlatform(function AIEdgeComputingPlatform
     </div>
   )}'"`
 '"`'"`
+=======
+>>>>>>> main

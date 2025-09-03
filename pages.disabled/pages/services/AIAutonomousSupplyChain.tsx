@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :pages.disabled/pages/services/AIAutonomousSupplyChain.tsx
 :pages.disabled/pages/services/AIAutonomousSupplyChain.tsx
 <:pages.disabled/pages/services/AIAutonomousSupplyChain.tsx
@@ -784,3 +785,5 @@ export default AIAutonomousSupplyChain;'"`'"`
   )};
 
 export default AIAutonomousSupplyChain;'"`
+=======
+>>>>>>> main

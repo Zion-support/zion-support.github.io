@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Header } from "@/components/Header";""""
 import { Footer } from "@/components/Footer";""""
 import { TrustedBySection } from "@/components/TrustedBySection";""""
@@ -126,3 +127,14 @@ export { Index };
 export { Index };
 
 export { Index };
+=======
+';
+;";";,
+}}}}";,
+}}}}const { t } = useTranslation ()  ;const;const { isRTL } = useLanguage () &apos;&apos,&apos,";
+"""""";
+;",";";,
+}}}}""";
+;"}}}}"";
+"
+>>>>>>> main

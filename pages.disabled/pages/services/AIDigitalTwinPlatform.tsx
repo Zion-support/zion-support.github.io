@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {}
   Cpu,
   TrendingUp,
@@ -520,3 +521,5 @@ export default function AIDigitalTwinPlatform(function AIDigitalTwinPlatform() {
     </div>
   )}'"`
 '"`'"`
+=======
+>>>>>>> main

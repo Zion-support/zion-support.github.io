@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';'
 import { motion } from 'framer-motion';
 import { Settings, Brain, Target, BarChart3, Zap, Shield, ArrowRight, CheckCircle, Factory, Cog export { function };
@@ -595,3 +596,5 @@ export default function ManufacturingSolutions() {}
 }}}}'"'"
     </div>);
 }}}}'""
+=======
+>>>>>>> main

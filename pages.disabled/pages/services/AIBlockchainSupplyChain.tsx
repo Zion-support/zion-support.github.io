@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
 <:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
 import React from 'react.ts';
@@ -608,3 +609,5 @@ import { Brain,
     </div>;
   )};'"`
 export default AIBlockchainSupplyChain;'"`'"`
+=======
+>>>>>>> main

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :pages.disabled/pages/services/AIRetail.tsx
 import { ShoppingCart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Store, BarChart3 export default function AIRetail() {
     'Automated pricing optimization and dynamic pricing',;'
@@ -231,3 +232,5 @@ import { ShoppingCart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Targ
   )}}'"'"
     </div>;
   )}}'""
+=======
+>>>>>>> main

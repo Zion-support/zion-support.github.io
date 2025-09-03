@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ;
 export { function };export default function AIAutoEmailResponder(...args: []):  {}
   return()
@@ -665,3 +666,5 @@ export { function };export default function AIAutoEmailResponder(...args: []):  
   )}}}}}}'"'"
     </>
   )}}}}}}'""
+=======
+>>>>>>> main

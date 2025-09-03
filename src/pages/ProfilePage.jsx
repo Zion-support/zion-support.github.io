@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from "react";""""
 import { useParams } from "react-router-dom";""""
 import { supabase } from "@/integrations/supabase/client";""""
@@ -175,3 +176,6 @@ export { ProfilePage };
 export { ProfilePage };
 
 export { ProfilePage };
+=======
+export default ProfilePage
+>>>>>>> main

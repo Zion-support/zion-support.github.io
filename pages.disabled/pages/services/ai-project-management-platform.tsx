@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :pages.disabled/pages/services/ai-project-management-platform.tsx
 :pages.disabled/pages/services/ai-project-management-platform.tsx
 <:pages.disabled/pages/services/ai-project-management-platform.tsx
@@ -663,3 +664,5 @@ export default function AIProjectManagementPlatform(...args: []):  {}
   )}}}}}}'"`'"`
     </div>;
   )}}}}}}'"`
+=======
+>>>>>>> main

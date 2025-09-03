@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {}
   Atom,
   TrendingUp,
@@ -932,3 +933,5 @@ export default function QuantumAITradingPlatform(...args: any[]): any {}
     </div>
   )}'"`
 '"`'"`
+=======
+>>>>>>> main

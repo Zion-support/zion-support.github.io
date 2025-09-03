@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { jsx as _jsx, Fragment as _Fragment, jsxs as _jsxs } from "react/jsx-runtime";""""
 import { useEffect, useState } from "react";""""
 import { useNavigate } from "react-router-dom";""""
@@ -61,3 +62,9 @@ export { OpenAppRedirect };
 export { OpenAppRedirect };
 
 export { OpenAppRedirect };
+=======
+ export default OpenAppRedirect,,"});,})"
+;,});,"})
+}
+;"&apos,"
+>>>>>>> main

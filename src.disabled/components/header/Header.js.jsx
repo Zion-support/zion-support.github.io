@@ -1,0 +1,1 @@
+import React, { useState, useEffect } from; "react""; "react-router-dom""; "@/layout/MainNavigation"";"; "@/hooks/useAuth"""; "@/context/WhitelabelContext""; const [query, setQuery] = useState(") const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false) const [isScrolled, setIsScrolled] = useState(false) const searchSuggestions = generateSearchSuggestions()";"

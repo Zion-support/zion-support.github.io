@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ;const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {}
   return()
     <>
@@ -871,3 +872,5 @@
     </>
   )};'"`
 export default AICustomerExperienceAnalytics;'"`'"`
+=======
+>>>>>>> main

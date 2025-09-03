@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ;
 export { function };export default function MicroSAASSolutions(...args: []):  {}
   return()
@@ -687,3 +688,5 @@ export { function };export default function MicroSAASSolutions(...args: []):  {}
       </div>;
     </>"`
   )}}}}}}'"`'"`
+=======
+>>>>>>> main

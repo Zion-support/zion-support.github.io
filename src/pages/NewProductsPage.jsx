@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from "react";
 import { DynamicListingPage } from "@/components/DynamicListingPage";
 import { NEW_PRODUCTS } from "@/data/newProductsData";
@@ -26,3 +27,6 @@ export { CATEGORY_FILTERS, NewProductsPage };
 export { CATEGORY_FILTERS, NewProductsPage };
 
 export { CATEGORY_FILTERS, NewProductsPage };
+=======
+import React from 'react'; "export default function NewProductsPage () {" const CATEGORY_FILTERS = Array.from(new Set (NEW_PRODUCTS.map (p => p.category) ) ) .map(c => ({ label: c, value: c }) ) ; const [listings] = useState([...NEW_PRODUCTS]); return (<DynamicListingPage title="New Products" description="Explore our latest products priced for today&apos;s market." categorySlug="new-products" detailBasePath="/product" listings={listings}" categoryFilters={CATEGORY_FILTERS} ";"
+>>>>>>> main

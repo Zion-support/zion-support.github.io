@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :pages.disabled/pages/services/AIEducation.tsx
 import { GraduationCap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, BookOpen, BarChart3 export default function AIEducation() {
     'Automated content generation and curriculum optimization',;'
@@ -231,3 +232,5 @@ import { GraduationCap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Tar
   )}}'"'"
     </div>;
   )}}'""
+=======
+>>>>>>> main

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :pages.disabled/pages/services/AIHealthcare.tsx
 import { Heart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Activity, BarChart3 export default function AIHealthcare() {
     'Automated medical record processing and coding',;'
@@ -231,3 +232,5 @@ import { Heart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
   )}}'"'"
     </div>;
   )}}'""
+=======
+>>>>>>> main

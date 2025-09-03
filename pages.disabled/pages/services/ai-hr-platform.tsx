@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :pages.disabled/pages/services/ai-hr-platform.tsx
 import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search, Award, Shield, Globe, Zap, Heart, Building, UserCheck, UserPlus const AIHRPlatform: React.FC = props {
 
@@ -540,3 +541,5 @@ export default AIHRPlatform}}}'"'"
   )};
 
 export default AIHRPlatform}}}'""
+=======
+>>>>>>> main

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {}
   Atom,
   Brain,
@@ -476,3 +477,5 @@ export default function AIQuantumHybridPlatform(...args: unknown[]): unknown {}
     </div>
   )}'"`
 '"`'"`
+=======
+>>>>>>> main

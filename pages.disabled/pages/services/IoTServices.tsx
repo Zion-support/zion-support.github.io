@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 :pages.disabled/pages/services/IoTServices.tsx
 const IoTServices = () => {
@@ -306,3 +307,5 @@ export { IoTServices };'"
 export default IoTServices}}}'"'"
 export { IoTServices };
 export default IoTServices}}}'""
+=======
+>>>>>>> main

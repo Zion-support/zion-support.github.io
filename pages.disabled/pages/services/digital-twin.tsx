@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ;
 export { function };export default function DigitalTwin(...args: []):  {}
   return()
@@ -503,3 +504,5 @@ export { function };export default function DigitalTwin(...args: []):  {}
       </div>;
     </>"`
   )}}}}'"`'"`
+=======
+>>>>>>> main

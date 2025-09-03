@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';'
 import { SEO } from '../../components/SEO';
 import {}
@@ -426,3 +427,5 @@ export default function MicroSAASSolutions() {}
 '"'"
 }
 '""
+=======
+>>>>>>> main

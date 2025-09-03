@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :pages.disabled/pages/services/AI.tsx
       ],;""
       price: "From $2,500",""
@@ -450,3 +451,5 @@ export default function AIServices(...args[]):  {}
 '"'"
   )}
 '""
+=======
+>>>>>>> main

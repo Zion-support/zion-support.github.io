@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useMemo } from 'react';'''
 import { motion } from 'framer-motion';'''
 import { Search, Filter, Grid, List, ExternalLink, Phone, Mail, Globe, Clock, Users, CheckCircle, TrendingUp, Award } from 'lucide-react';
@@ -444,3 +445,6 @@ export { NextGenInnovativeServices };
 export { NextGenInnovativeServices };
 
 export { NextGenInnovativeServices };
+=======
+import React from 'react'; export default function NextGenInnovativeServices () { const [searchTerm, setSearchTerm] = useState("); const [selectedCategory, setSelectedCategory] = useState("all"); const [selectedService, setSelectedService] = useState(null); const [viewMode, setViewMode] = useState("grid");
+>>>>>>> main

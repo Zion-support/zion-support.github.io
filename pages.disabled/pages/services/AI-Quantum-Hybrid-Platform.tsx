@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {}
   Brain,
   Atom,
@@ -534,3 +535,5 @@ const AIQuantumHybridPlatform: React.FC = () => {}
 
 export default AIQuantumHybridPlatform;'"`
 '"`'"`
+=======
+>>>>>>> main

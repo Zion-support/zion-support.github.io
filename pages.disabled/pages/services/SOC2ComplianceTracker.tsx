@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ;
 export { function };
 :pages.disabled/pages/services/SOC2ComplianceTracker.tsx
@@ -700,3 +701,5 @@ export default function SOC2ComplianceTracker(...args: []):  {}
       </div>;
     </>'"`
   )}}}}}}}'"`'"`
+=======
+>>>>>>> main

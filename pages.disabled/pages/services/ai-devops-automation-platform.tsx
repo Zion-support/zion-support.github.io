@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ;const AIDevOpsAutomationPlatform: React.FC = (): JSX.Element => {}
   return()
     <>
@@ -955,3 +956,5 @@
     </>
   )};'"`
 export default AIDevOpsAutomationPlatform;'"`'"`
+=======
+>>>>>>> main

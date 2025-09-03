@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :pages.disabled/pages/services/AIHRTalentPlatform.tsx
 import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Sparkles, Target, TrendingUp, Shield, Briefcase, Award export default function AIHRTalentPlatform() {
     'Intelligent interview scheduling and feedback',;'
@@ -448,3 +449,5 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
       </section>;
     </div>;
   )}}}'"`
+=======
+>>>>>>> main

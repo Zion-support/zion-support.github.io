@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {}
   Rocket,
   Zap,
@@ -608,3 +609,5 @@ export default function MicroSAASPlatform(...args: any[]): any {}
     </div>
   )}'"`
 '"`'"`
+=======
+>>>>>>> main

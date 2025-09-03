@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :pages.disabled/pages/services/AIRealEstate.tsx
 import { Home, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Building, BarChart3 export default function AIRealEstate() {
     'Automated market trend forecasting',;'
@@ -231,3 +232,5 @@ import { Home, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap,
   )}}'"'"
     </div>;
   )}}'""
+=======
+>>>>>>> main

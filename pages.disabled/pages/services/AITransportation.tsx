@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :pages.disabled/pages/services/AITransportation.tsx
 import { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Route, BarChart3 export default function AITransportation() {
     'Automated vehicle maintenance and predictive diagnostics',;'
@@ -231,3 +232,5 @@ import { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
   )}}'"'"
     </div>;
   )}}'""
+=======
+>>>>>>> main

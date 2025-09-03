@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
 <:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
 import React from 'react.ts';
@@ -755,3 +756,5 @@ export default function AIFinancialComplianceAssistant(...args[]): {
     </div>;
   )}'"`
 '"`'"`
+=======
+>>>>>>> main

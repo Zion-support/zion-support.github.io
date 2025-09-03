@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useMemo } from 'react';'''
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';'''
 import { Button } from '@/components/ui/button';'''
@@ -365,3 +366,5 @@ export { ALL_SERVICES, ComprehensiveServicesOverview };
 export { ALL_SERVICES, ComprehensiveServicesOverview };
 
 export { ALL_SERVICES, ComprehensiveServicesOverview };
+=======
+>>>>>>> main

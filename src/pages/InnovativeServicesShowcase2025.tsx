@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -300,63 +301,55 @@ export default function InnovativeServicesShowcase2025(...args: unknown[]): unkn
                     <li key={idx} className="flex items-start text-sm text-zion-slate-dark">""""
                       <Check className="w-4 h-4 text-zion-cyan mr-2 mt-0.5 flex-shrink-0"  />                      <span>{feature}</span>
                     </li>) ) }
+=======
+import React from "react"
+import Head from "next/head"
+import Link from "next/link"
+const InnovativeServicesShowcase2025 = () => {
+  return (
+    <>
+      <Head>
+        <title>Innovative Services Showcase2025 - Zion Tech Group</title>
+        <meta name="description" content="Professional Innovative Services Showcase2025 services"  />
+      </Head>
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-8">
+              Innovative Services Showcase2025
+            </h1>
+            <p className="text-xl text-gray-600 mb-12">
+              Professional Innovative Services Showcase2025 services and solutions
+            </p>
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h2 className="text-2xl font-semibold mb-4">Our Services</h2>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Professional Solutions</li>
+                  <li>• Expert Implementation</li>
+                  <li>• 24/7 Support</li>
+                  <li>• Custom Development</li>
+>>>>>>> main
                 </ul>
-              </div>"""
-""""
-              <div className="mb-6">""""
-                <h4 className="font-semibold text-zion-slate-dark mb-2">Key Benefits:</h4>""""
-                <ul className="space-y-1">"""
-                  {service.benefits.slice(0, 2).map((benefit, idx) => (""""
-                    <li key={idx} className="flex items-start text-sm text-zion-slate-dark">""""
-                      <Zap className="w-4 h-4 text-zion-cyan mr-2 mt-0.5 flex-shrink-0"  />                      <span>{benefit}</span>
-                    </li>) ) }
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Industry Expertise</li>
+                  <li>• Proven Results</li>
+                  <li>• Scalable Solutions</li>
+                  <li>• Competitive Pricing</li>
                 </ul>
-              </div>"""
-""""
-              <div className="flex flex-col gap-2">
-                <a """
-                  href={service.path} """"
-                  className="w-full px-4 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan-dark transition-colors text-center font-medium inline-flex items-center justify-center""""
-                >""""
-                  Learn More <ArrowRight className="w-4 h-4 ml-2"  />                </a>
               </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>"""
-      {/* Contact Information Banner */}""""
-      <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-8 px-4">""""
-        <div className="max-w-7xl mx-auto">""""
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-white">""""
-            <div className="flex items-center space-x-3">""""
-              <Phone className="w-5 h-5"  />"""
-              <div>""""
-                <p className="text-sm text-blue-100">Phone</p>""""
-                <p className="font-semibold">{contactInfo.phone}</p>
-              </div>"""
-            </div>""""
-            <div className="flex items-center space-x-3">""""
-              <Mail className="w-5 h-5"  />"""
-              <div>""""
-                <p className="text-sm text-blue-100">Email</p>""""
-                <p className="font-semibold">{contactInfo.email}</p>
-              </div>"""
-            </div>""""
-            <div className="flex items-center space-x-3">""""
-              <Globe className="w-5 h-5"  />"""
-              <div>""""
-                <p className="text-sm text-blue-100">Website</p>""""
-                <a href={contactInfo.website} className="font-semibold hover:underline" target="_blank" rel="noopener noreferrer">'
-                  {contactInfo.website.replace('https://',)}
-                </a>
-              </div>"""
-            </div>""""
-            <div className="flex items-center space-x-3">""""
-              <MapPin className="w-5 h-5"  />"""
-              <div>""""
-                <p className="text-sm text-blue-100">Address</p>"                <p className="font-semibold text-sm">{contactInfo.address}</p>
-              </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                View Pricing
+              </Link>
+              <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
+                Contact Us
+              </Link>
             </div>
+<<<<<<< HEAD
           </div>
         </div>
       </section>"""
@@ -638,3 +631,9 @@ export { InnovativeServicesShowcase2025 };
 export { InnovativeServicesShowcase2025 };
 
 export { InnovativeServicesShowcase2025 };
+=======
+    </>
+  );
+}
+export default InnovativeServicesShowcase2025
+>>>>>>> main

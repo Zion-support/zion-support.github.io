@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx
 <:pages.disabled/pages/services/EdgeComputingPlatform.tsx
@@ -848,3 +849,5 @@ export default EdgeComputingPlatform}}}}}}'"`'"`
   )};
 
 export default EdgeComputingPlatform}}}}}}'"`
+=======
+>>>>>>> main

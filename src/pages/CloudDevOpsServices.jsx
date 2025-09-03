@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';'''
 import { Search, Zap, Cloud, Shield, Server, Code, GitFork, Phone, Mail, MapPin } from 'lucide-react';
 const CloudDevOpsServices = () => {}
@@ -169,3 +170,6 @@ export { CloudDevOpsServices };
 export { CloudDevOpsServices };
 
 export { CloudDevOpsServices };
+=======
+import React from 'react'; export default CloudDevOpsServices; const CloudDevOpsServices = () => { const [searchTerm, setSearchTerm] = useState("); const [selectedCategory, setSelectedCategory] = useState("all"); const [selectedPricing, setSelectedPricing] = useState("all");
+>>>>>>> main

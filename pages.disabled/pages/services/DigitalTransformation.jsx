@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';'
 import { Link } from 'react-router-dom';'
 import { SEO } from '@/components/SEO';'
@@ -603,3 +604,5 @@ export default DigitalTransformation;'"
 '"'"
 export default DigitalTransformation;
 '""
+=======
+>>>>>>> main

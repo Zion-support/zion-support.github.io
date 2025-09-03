@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx
 const QuantumComputingAsAService: React.FC = (): JSX.Element => {
 
@@ -1097,3 +1098,5 @@ export default QuantumComputingAsAService}}}}}'"`'"`
   )};
 
 export default QuantumComputingAsAService}}}}}'"`
+=======
+>>>>>>> main
