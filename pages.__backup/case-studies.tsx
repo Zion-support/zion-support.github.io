@@ -15,7 +15,12 @@ const CaseStudies: NextPage = () => {
   All');
   const [selectedService, setSelectedService] = useState('
   'All');
+<<<<<<< HEAD
   const caseStudies = [{'
+=======
+  const caseStudies = [
+  {
+>>>>>>> main
       id: 'fintech-ai-fraud-detection,
       title:,
   FinTech Revolution: AI-Powered Fraud Detection System,
@@ -42,11 +47,16 @@ const CaseStudies: NextPage = () => {
       technologies: [;
   'Machine Learning,
 ,
+<<<<<<< HEAD
   Real-time Analytics',
   'Behavioral Analysis',
   'Pattern Recognition'],
       metrics: [{ labe,
     l:'
+=======
+  Real-time Analytics,Behavioral Analysis,Pattern Recognition'],
+      metrics: [{ label:
+>>>>>>> main
   'Fraud Detection Rate, value:,
   99.2%', improvement: '+89% },
         { label:,
@@ -100,11 +110,16 @@ const CaseStudies: NextPage = () => {
       technologies: [;
   'Computer Vision,
 ,
+<<<<<<< HEAD
   Deep Learning',
   'Medical Imaging',
   'Predictive Analytics'],
       metrics: [{ labe,
     l:;
+=======
+  Deep Learning,Medical Imaging,Predictive Analytics'],
+      metrics: [{ label:;
+>>>>>>> main
   'Diagnostic Accuracy, value:,
   96.7%', improvement: '+94% },
         { label:,
@@ -165,9 +180,9 @@ const CaseStudies: NextPage = () => {
   ',
       technologies: ['AWS, ,
   Kubernetes;
-  ', 'Auto-scaling;
-  ', 'Load Balancing;
-  ', 'CDN;
+  ,Auto-scaling;
+  ,Load Balancing;
+  ,CDN;
   '],
       metrics: [{ labe,
     l: 'Uptime, value:,
@@ -235,8 +250,8 @@ const CaseStudies: NextPage = () => {
   ',
       technologies: ['IoT Sensors, ,
   Edge Computing;
-  ', 'Predictive Maintenance;
-  ', 'Real-time Analytics;
+  ,Predictive Maintenance;
+  ,Real-time Analytics;
   '],
       metrics: [{ labe,
     l: 'Production Efficiency, value:,
@@ -304,9 +319,9 @@ const CaseStudies: NextPage = () => {
   ',
       technologies: ['CI/CD Pipeline, ,
   Docker;
-  ', 'Kubernetes;
-  ', 'Monitoring;
-  ', 'Infrastructure as Code;
+  ,Kubernetes;
+  ,Monitoring;
+  ,Infrastructure as Code;
   '],
       metrics: [{ labe,
     l: 'Deployment Speed, value:,
@@ -342,6 +357,7 @@ const CaseStudies: NextPage = () => {
   ',
       teamSize: '5 experts}
   ];
+<<<<<<< HEAD
   const industries = ['All'
   ', 'Financial Services;
   ', 'Healthcare;
@@ -355,6 +371,21 @@ const CaseStudies: NextPage = () => {
   ', 'DevOps & Infrastructure;
   ', 'IoT & Automation;
   ', 'Cybersecurity;
+=======
+  const industries = ['All
+  ,Financial Services;
+  ,Healthcare;
+  ,E-commerce;
+  ,Manufacturing;
+  ,Technology;
+  '];
+  const services = ['All
+  ,AI & Machine Learning;
+  ,Cloud & Infrastructure;
+  ,DevOps & Infrastructure;
+  ,IoT & Automation;
+  ,Cybersecurity;
+>>>>>>> main
   '];
   const filteredCaseStudies = caseStudies.filter(study => {'
     const matchesIndustry = selectedIndustry === 'All;

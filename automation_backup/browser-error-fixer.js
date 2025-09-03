@@ -208,12 +208,19 @@ class BrowserErrorFixer {
     return content;
   // Fix implementations;
   async fixUnexpectedToken(token, filePath) {
+<<<<<<< HEAD
     const commonFixes = {'
   '(': ),[':],{'
   ': },;
   ':,
   ';
   ',
+=======
+    const commonFixes = {
+  '(': ),[':]',{
+  ': },:,
+  ,
+>>>>>>> main
       ''': '',`':,
   `'}
     if (commonFixes[token]) {
@@ -311,8 +318,13 @@ module.exports = BrowserErrorFixer;
 if (require.main === module) {
   const fixer = new BrowserErrorFixer();
   // Example usage;
+<<<<<<< HEAD
   const sampleErrors = [`
     { message: 'Cannot read property;
+=======
+  const sampleErrors = [
+  { message: 'Cannot read property;
+>>>>>>> main
   'length of null' },
     { message: 'ReferenceErro,
     r: userData is not defined' },

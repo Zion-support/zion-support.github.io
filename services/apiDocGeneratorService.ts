@@ -127,6 +127,7 @@ export interface DocumentationConfig {'
    branding?: { logo?: string;
    primaryColor?: string;
    compName?: string}}
+<<<<<<< HEAD
 export class APIDocGeneratorService {'
   private supportedFrameworks = ['express',
   'fastify',
@@ -138,15 +139,12 @@ export class APIDocGeneratorService {'
   'spring',
   'aspnet',
   'laravel';
+=======
+export class APIDocGeneratorService {
+  private supportedFrameworks = ['express,fastify,koa,hapi,django,flask,fastapi,spring,aspnet,laravel';
+>>>>>>> main
   ];
-  private supportedLanguages = ['javascript',
-  'typescript',
-  'python',
-  'java',
-  'csharp',
-  'php',
-  'go',
-  'ruby';
+  private supportedLanguages = ['javascript,typescript,python,java,csharp,php,go,ruby';
   ];
   async generateDocumentation(
     sourcePath: string,
@@ -219,6 +217,7 @@ documentation.examples = await this.generateExamples(documentation.endpoints)}
       if (extension = ==;
   'js' || extension ===;
   'ts') {
+<<<<<<< HEAD
         languages.push('
   'javascript',
   'typescript');
@@ -226,14 +225,27 @@ documentation.examples = await this.generateExamples(documentation.endpoints)}
   'express',
   'fastify');
         endpoints.push(...this.analyzeJavaScriptFile(file)); else if (extension = ==;
+=======
+        languages.push(
+  'javascript,typescript');
+        frameworks.push(
+  'express,fastify');
+        endpoints.push(...this.analyzeJavaScriptFile(file))} else if (extension = ==;
+>>>>>>> main
   'py') {
         languages.push('
   'python');
+<<<<<<< HEAD
         frameworks.push('
   'django',
   'flask',
   'fastapi');
         endpoints.push(...this.analyzePythonFile(file)); else if (extension = ==;
+=======
+        frameworks.push(
+  'django,flask,fastapi');
+        endpoints.push(...this.analyzePythonFile(file))} else if (extension = ==;
+>>>>>>> main
   'java') {
         languages.push('
   'java');
@@ -251,13 +263,7 @@ documentation.examples = await this.generateExamples(documentation.endpoints)}
   private async scanDirectory(path: string): Promise<string[]> {
     // Simulate directory scanning;
     return [,
-  src/routes/users.js',
-  'src/routes/products.js',
-  'src/routes/orders.js',
-  'src/models/User.js',
-  'src/models/Product.js',
-  'src/middleware/auth.js',
-  'src/config/database.js';
+  src/routes/users.js,src/routes/products.js,src/routes/orders.js,src/models/User.js,src/models/Product.js,src/middleware/auth.js,src/config/database.js';
     ]}
   private analyzeJavaScriptFile(filePath: string): APIEndpoint[] {
     const endpoint,
@@ -445,10 +451,7 @@ documentation.examples = await this.generateExamples(documentation.endpoints)}
             schema: { typ,
     e:,
   string', enum[;
-  'pending',
-  'processing',
-  'completed',
-  'cancelled'] },
+  'pending,processing,completed,cancelled'] },
             description: 'Filter orders by status;
         ],
         requestBody: null,
@@ -498,9 +501,7 @@ documentation.examples = await this.generateExamples(documentation.endpoints)}
   string', format: 'date-time }
         },
         required[,
-  id',
-  'email',
-  'name'],
+  id,email,name'],
         description: 'User entity schema},
       {
         type:,
@@ -528,9 +529,7 @@ documentation.examples = await this.generateExamples(documentation.endpoints)}
   'boolean }
         },
         required[,
-  id',
-  'name',
-  'price'],
+  id,name,price'],
         description: 'Product entity schema},
       {
         type:,
@@ -572,16 +571,10 @@ documentation.examples = await this.generateExamples(documentation.endpoints)}
           status: { typ,
     e:,
   string', enum[;
-  'pending',
-  'processing',
-  'completed',
-  'cancelled'] }
+  'pending,processing,completed,cancelled'] }
         },
         required[;
-  'id',
-  'userId',
-  'items',
-  'total'],
+  'id,userId,items,total'],
         description: 'Order entity schema},
       {
         type:,
@@ -602,10 +595,7 @@ documentation.examples = await this.generateExamples(documentation.endpoints)}
   'integer', minimum: 1 }
         },
         required[,
-  page',
-  'limit',
-  'total',
-  'pages'],
+  page,limit,total,pages'],
         description: 'Pagination metadata schema;
     ];
     return schemas}

@@ -25,7 +25,7 @@ import Link from 'next/link';
 
 const API: NextPage = () => {
   const apiEndpoints = [
-    {
+  {
 :pages.disabled_auto/api.tsx;
       metho,
     d:;
@@ -71,8 +71,13 @@ const API: NextPage = () => {
       category:,
   Webhooks'}
   ];
+<<<<<<< HEAD
   const sdkLanguages = ['
     { name: 'JavaScript, version:,
+=======
+  const sdkLanguages = [
+  { name: 'JavaScript, version:,
+>>>>>>> main
   2.1.0', icon: '🟨 },
     { name:,
   Python', version: '1.8.2, icon:,
@@ -116,8 +121,13 @@ const API: NextPage = () => {
       endpoint: '/api/v1/webhooks',
       description: 'Create a webhook',
       category: 'Webhooks'}];
+<<<<<<< HEAD
   const sdkLanguages = ['
     { name: 'JavaScript', version: '2.1.0', icon: '🟨' },
+=======
+  const sdkLanguages = [
+  { name: 'JavaScript', version: '2.1.0', icon: '🟨' },
+>>>>>>> main
     { name: 'Python', version: '1.8.2', icon: '🐍' },
     { name: 'PHP', version: '1.5.0', icon: '🐘' },
     { name: 'Java', version: '1.3.0', icon: '☕' },

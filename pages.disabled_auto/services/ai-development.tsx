@@ -92,11 +92,18 @@ export default function AIDevelopmentService() {
       <section className="container mx-auto px-4 py-12 max-w-6xl">"
         <h2 className="text-2xl md: text-3xl font-bold text-gray-900">
           Tech Stack
+<<<<<<< HEAD
         </h2>"
         <div className="mt-6 grid grid-cols-2 m,
     d:grid-cols-3 l,
     g:grid-cols-6 gap-3 text-sm">
           {["
+=======
+        </h2>
+        <div className="mt-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 text-sm">
+          {[
+<<<<<<< HEAD
+>>>>>>> main
             'OpenAI',
             'Gemini',
             'Cohere',
@@ -109,6 +116,9 @@ export default function AIDevelopmentService() {
             'Postgres',
             'Pinecone',
             'Weaviate',
+=======
+            'OpenAI,Gemini,Cohere,HuggingFace,PyTorch,TensorFlow,LangChain,LlamaIndex,Supabase,Postgres,Pinecone,Weaviate',
+>>>>>>> main
           ].map(t => (
             <div
               key={t}

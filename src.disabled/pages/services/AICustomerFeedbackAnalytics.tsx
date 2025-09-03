@@ -32,9 +32,14 @@ import { MessageSquare,
   Settings} from 'lucide-react.ts';
 export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown {
   const features = [
+<<<<<<< HEAD
     {
       ico,
     n: Brain,
+=======
+  {
+      icon: Brain,
+>>>>>>> main
       title: 'AI Sentiment Analysis',
       description: 'Advanced NLP algorithms analyze customer emotions, intent, and satisfaction levels across all feedback channels.'},
     {
@@ -59,7 +64,7 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
       description: 'Generate comprehensive reports and alerts for stakeholders with actionable insights and recommendations.'}
   ];
   const benefits = [
-    {
+  {
       icon: Zap,
       title: 'Improved Customer Retention',
       description: 'Identify at-risk customers early and implement proactive retention strategies.'},
@@ -84,18 +89,18 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
       title: 'Time Savings',
       description: 'Automate feedback analysis and reporting, saving hours of manual work each week.'}
   ];
+<<<<<<< HEAD
   const pricingPlans = [{'
+=======
+  const pricingPlans = [
+  {
+>>>>>>> main
       name: 'Starter',
       price: '$299',
       period: '/month',
       description: 'Perfect for small businesses starting their feedback analytics journey',
       features: [;
-        'Up to 10,000 feedback entries/month',
-        'Basic sentiment analysis',
-        'Email support',
-        'Standard integrations',
-        'Basic reporting',
-        '5 team members';
+        'Up to 10,000 feedback entries/month,Basic sentiment analysis,Email support,Standard integrations,Basic reporting,5 team members';
       ],
       cta: 'Start Free Trial',
       popular: false},
@@ -105,14 +110,7 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
       period: '/month',
       description: 'Ideal for growing companies with advanced analytics needs',
       features: [;
-        'Up to 100,000 feedback entries/month',
-        'Advanced AI sentiment analysis',
-        'Priority support',
-        'Custom integrations',
-        'Advanced reporting & dashboards',
-        'Predictive analytics',
-        'Unlimited team members',
-        'API access';
+        'Up to 100,000 feedback entries/month,Advanced AI sentiment analysis,Priority support,Custom integrations,Advanced reporting & dashboards,Predictive analytics,Unlimited team members,API access';
       ],
       cta: 'Start Free Trial',
       popular: true},
@@ -122,18 +120,26 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
       period: '/month',
       description: 'For large organizations requiring enterprise-grade solutions',
       features: [;
+<<<<<<< HEAD
         'Unlimited feedback entries',
         'Custom AI models',
         'Dedicated account manager',
         'White-label solutions',
         'Advanced security features',
         'Custom reporting',;On-premise deployment options',;SLA guarantees';
+=======
+        'Unlimited feedback entries,Custom AI models,Dedicated account manager,White-label solutions,Advanced security features,Custom reporting,;On-premise deployment options,;SLA guarantees';
+>>>>>>> main
       ],
       cta: 'Contact Sales',
       popular: false}
   ];
   const useCases = [
+<<<<<<< HEAD
     {'
+=======
+  {
+>>>>>>> main
       industry: 'E-commerce',
       description: 'Analyze product reviews, customer service feedback, and shopping experience to optimize conversion rates',
       icon: ShoppingCart},
@@ -159,28 +165,35 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
       icon: Settings}
   ];
   const integrations = [
+<<<<<<< HEAD
     {'
       name: 'Survey Platforms',
       platforms: ['SurveyMonkey', 'Typeform', 'Google Forms', 'Qualtrics']},
     {'
+=======
+  {
+      name: 'Survey Platforms',
+      platforms: ['SurveyMonkey,Typeform,Google Forms,Qualtrics']},
+    {
+>>>>>>> main
       name: 'CRM Systems',
-      platforms: ['Salesforce', 'HubSpot', 'Pipedrive', 'Zoho']
+      platforms: ['Salesforce,HubSpot,Pipedrive,Zoho']
     },
     {'
       name: 'Support Platforms',
-      platforms: ['Zendesk', 'Intercom', 'Freshdesk', 'HelpScout']
+      platforms: ['Zendesk,Intercom,Freshdesk,HelpScout']
     },
     {'
       name: 'Social Media',
-      platforms: ['Twitter', 'Facebook', 'Instagram', 'LinkedIn']
+      platforms: ['Twitter,Facebook,Instagram,LinkedIn']
     },
     {'
       name: 'Review Platforms',
-      platforms: ['Google Reviews', 'Yelp', 'Trustpilot', 'G2']
+      platforms: ['Google Reviews,Yelp,Trustpilot,G2']
     },
     {'
       name: 'Analytics Tools',
-      platforms: ['Google Analytics', 'Mixpanel', 'Amplitude', 'Hotjar']
+      platforms: ['Google Analytics,Mixpanel,Amplitude,Hotjar']
     }
   ];
   return('

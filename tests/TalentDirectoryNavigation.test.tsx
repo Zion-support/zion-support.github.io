@@ -1,9 +1,8 @@
-import { render, screen, fireEvent } from '@testing-library/react';
-import { MemoryRouter, Routes, Route } from 'react-router-dom';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import TalentDirectory from '@/pages/TalentDirectory';
-import TalentDetail from '@/pages/TalentDetail';
-
+import { render, screen, fireEvent } from '@testing-library/react'
+import { MemoryRouter, Routes, Route } from 'react-router-dom'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import TalentDirectory from '@/pages/TalentDirectory'
+import TalentDetail from '@/pages/TalentDetail'
 function renderWithRouter() {
   return render(
     <QueryClientProvider client={new QueryClient()}>
@@ -18,6 +17,7 @@ function renderWithRouter() {
   )}
 test('
   'opens first talent profile from directory', async () => {
+<<<<<<< HEAD
   renderWithRouter();
   const firstCard = await screen.findByText('
   'Alexandra Chen');
@@ -25,3 +25,12 @@ test('
   expect(await screen.findByTestId('
   'talent-details')).toHaveTextContent('
   'Alexandra Chen')})
+=======
+  renderWithRouter()
+  const firstCard = await screen.findByText(
+  'Alexandra Chen')
+  fireEvent.click(firstCard)
+  expect(await screen.findByTestId(
+  'talent-details')).toHaveTextContent(
+  'Alexandra Chen')})
+>>>>>>> main

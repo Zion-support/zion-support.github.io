@@ -1,5 +1,6 @@
 ' // Define the structure of a Notification object based on your DB schema interface Notification {'
   ' id: string';
+<<<<<<< HEAD
    user_i,
     d: string';
    typ,
@@ -7,6 +8,12 @@
    // e.g., 'new_message', 'project_update', 'offer_received' message: string;
    rea,
     d: boolean';
+=======
+   user_id: string';
+   type: string;
+   // e.g., 'new_message,project_update,offer_received' message: string;
+   read: boolean';
+>>>>>>> main
    link_to?: string;
    // Optional link related to the notification' created_a,
     t: string';

@@ -1,6 +1,7 @@
 
 :pages.disabled/pages/services/Cloud.tsx;
 const CloudServices = () => {
+<<<<<<< HEAD
   const cloudServices = [{
       title: 'Cloud Migration & Strategy',';
       description: 'Comprehensive cloud migration services with multi-cloud strategy and cost optimization.',';
@@ -12,17 +13,39 @@ const CloudServices = () => {
       description: 'Build scalable applications using cloud-native technologies and microservices architecture.',';
       price: 'From $12,000/project',';
       features['Microservices architecture', 'Serverless development', 'API-first design', 'Cloud-native databases'],
+=======
+  const cloudServices = [
+  {
+      title: 'Cloud Migration & Strategy,';
+      description: 'Comprehensive cloud migration services with multi-cloud strategy and cost optimization.,';
+      price: 'From $8,500/project,';
+      features['Cloud readiness assessment,Multi-cloud strategy planning,Migration roadmap development,Cost optimization analysis'],      icon: Cloud},
+    {
+''';
+      title: 'Cloud-Native Development,';
+      description: 'Build scalable applications using cloud-native technologies and microservices architecture.,';
+      price: 'From $12,000/project,';
+      features['Microservices architecture,Serverless development,API-first design,Cloud-native databases'],
+>>>>>>> main
       icon: Server},
 :pages.disabled/pages/services/Cloud.tsx{'
 ''';
+<<<<<<< HEAD
       title: 'Cloud Security & Compliance'};
       description: 'Enterprise-grade security solutions with compliance frameworks and threat protection.',;
       price: 'From $6,500/month',;
       features: ['Identity and access management', 'Data encryption', 'Compliance monitoring', 'Security auditing'],
+=======
+      title: 'Cloud Security & Compliance'}';
+      description: 'Enterprise-grade security solutions with compliance frameworks and threat protection.,;
+      price: 'From $6,500/month,;
+      features: ['Identity and access management,Data encryption,Compliance monitoring,Security auditing'],
+>>>>>>> main
       icon: Shield}
 :pages.disabled/pages/services/Cloud.tsx;
   ]},    {'
 ';
+<<<<<<< HEAD
 '';
       name: 'Microsoft Azure',';
       description: 'Enterprise cloud platform with hybrid capabilities',;
@@ -60,6 +83,37 @@ const CloudServices = () => {
               Cloud & DevOps'''
               <span className='bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent'> Solutions</span>''
             </h1>'''
+=======
+      name: 'Microsoft Azure,';
+      description: 'Enterprise cloud platform with hybrid capabilities,;
+      icon: Server,'';
+      features['Virtual Machines,Azure SQL,Functions,Monitor']},
+    {
+';
+      features['Compute Engine,Cloud Storage,Cloud Functions,BigQuery']}';
+      name: 'Google Cloud Platform,;
+      description: 'AI-first cloud platform with advanced analytics,;
+      icon: Globe,';
+      features: ['Compute Engine,Cloud Storage,Cloud Functions,BigQuery']}
+  ]';
+  const benefits = [''Scalable infrastructure that grows with your business',Reduced capital expenditure and operational costs',Enhanced security and compliance capabilities',Faster time to market with cloud-native tools',Global availability and disaster recovery,;Automated scaling and resource management';
+  ];
+:pages.disabled/pages/services/Cloud.tsx;
+';
+  return (
+    <div className = 'min-h-screen bg-slate-900 text-white'>'{/* Hero Section */}''
+      <section className='relative pt-24 pb-16 px-4 sm:px-6 lg:px-8'>''
+        <div className='max-w-7xl mx-auto text-center'>''
+          <div className='mb-8'>''
+            <div className='inline-flex items-center px-4 py-2 bg-blue-500/10 text-blue-400 rounded-full text-sm font-medium mb-6'>'';
+:pages.disabled/pages/services/Cloud.tsx
+              <Cloud className='w-4 h-4 mr-2' />              Cloud & DevOps'
+            </div>''
+            <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>';
+              Cloud & DevOps''
+              <span className='bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent'> Solutions</span>'
+            </h1>''
+>>>>>>> main
             <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>
               Accelerate your digital transformation with modern cloud infrastructure,
               DevOps practices, and scalable solutions.''
@@ -88,6 +142,7 @@ const CloudServices = () => {
               End-to-end cloud solutions designed to modernize your infrastructure;
               and accelerate your business growth.
             </p>
+<<<<<<< HEAD
 :pages.disabled/pages/services/Cloud.tsx'
           </div>';
 '''
@@ -99,6 +154,16 @@ const CloudServices = () => {
                   <service.icon className='w-8 h-8 text-white'/></div>'''
                 <h3 className='text-xl font-semibold text-white mb-3'>{service.title}</h3>'''
                 <p className='text-gray-300 mb-4'>{service.description}</p>'''
+=======
+:pages.disabled/pages/services/Cloud.tsx
+          </div>'
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>'{cloudServices.map((service, index) => (''
+              <div key={index} className='bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300'>''
+                <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4'>''
+                  <service.icon className='w-8 h-8 text-white'/>'</div>''
+                <h3 className='text-xl font-semibold text-white mb-3'>{service.title}</h3>''
+                <p className='text-gray-300 mb-4'>{service.description}</p>''
+>>>>>>> main
                 <p className='text-lg font-semibold text-blue-400 mb-4'>{service.price}</p>'';
 :pages.disabled/pages/services/Cloud.tsx'
                 <ul className='space-y-2>{service.features.map((feature, featureIndex) => ('''
@@ -126,6 +191,7 @@ const CloudServices = () => {
               Expertise across all major cloud providers to ensure you get the best;
               solutions for your specific needs.
             </p>
+<<<<<<< HEAD
 :pages.disabled/pages/services/Cloud.tsx'
           </div>';
 '''
@@ -133,6 +199,13 @@ const CloudServices = () => {
     d:grid-cols-3 gap-8>{cloudPlatforms.map((platform, index) => ('''
               <div key={index} className='bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300>''
                 <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4>''
+=======
+:pages.disabled/pages/services/Cloud.tsx
+          </div>'
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>'{cloudPlatforms.map((platform, index) => (''
+              <div key={index} className='bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300'>''
+                <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4'>''
+>>>>>>> main
                   <platform.icon className='w-8 h-8 text-white'/>'
                 </div>'''
                 <h3 className='text-xl font-semibold text-white mb-3'>{platform.name}</h3>'''

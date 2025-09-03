@@ -5,7 +5,8 @@ import React, { useState, useEffect } from;
   'lucide-react' const EnhancedHeader: React.FC = () => { const [isOpen, setIsOpen] = useState(false) const [isScrolled, setIsScrolled] = useState(false) const [activeDropdown, setActiveDropdown] = useState<string | null>(null) const [searchQuery, setSearchQuery] = useState(,
   ') const location = useLocation() useEffect(() => { const handleScroll = () => { setIsScrolled(window.scrollY > 20) } window.addEventListener('scroll;
   ', handleScroll) return () => window.removeEventListener('scroll;
-  ', handleScroll) }, []) const navigationItems = [ { name: 'Home, href:,
+  ', handleScroll) }, []) const navigationItems = [
+  { name: 'Home, href:,
   /;
   ' }, { name: 'Services, href:,
   /services;
@@ -76,7 +77,8 @@ import React, { useState, useEffect } from;
   ' }, { name: 'Blog, href:,
   /blog;
   ' }, { name: 'Contact, href: '/contact;
-  ' } ] const contactInfo = [ { icon: Phone, text:,
+  ' } ] const contactInfo = [
+  { icon: Phone, text:,
   +1 302 464 0950;
   ', href: 'te,
     l:+13024640950 }, { icon: Mail, text:,

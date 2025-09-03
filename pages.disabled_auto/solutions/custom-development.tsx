@@ -26,128 +26,129 @@ import Link from 'next/link';
 
 const CustomDevelopment: NextPage = () => {
   const developmentServices = [
+<<<<<<< HEAD
     {
       ico,
     n: Code,
+=======
+  {
+      icon: Code,
+>>>>>>> main
 :pages.disabled_auto/solutions/custom-development.tsx;
       title:,
   Web Application Development',
       description: 'Custom web applications built with modern frameworks and technologies.,
       features: [;
-  'React, Vue.js, Angular',
-  'Node.js, Python, PHP',
-  'Responsive design',
-  'API integration']},
+  'React, Vue.js, Angular,Node.js, Python, PHP,Responsive design,API integration']},
     {
       icon: Smartphone,
       title:,
   Mobile App Development',
       description: 'Native and cross-platform mobile applications for iOS and Android.,
+<<<<<<< HEAD
       features: ['
   'React Native, Flutter',
   'Swift, Kotlin',
   'App Store optimization',
   'Push notifications']},
+=======
+      features: [
+  'React Native, Flutter,Swift, Kotlin,App Store optimization,Push notifications']},
+>>>>>>> main
     {
       icon: Globe,
       title:,
   E-commerce Solutions',
       description: 'Complete e-commerce platforms with payment integration and inventory management.,
+<<<<<<< HEAD
       features: ['
   'Shopping cart functionality',
   'Payment gateway integration',
   'Inventory management',
   'Order tracking']},
+=======
+      features: [
+  'Shopping cart functionality,Payment gateway integration,Inventory management,Order tracking']},
+>>>>>>> main
     {
       icon: Database,
       title:,
   Database Design & Management',
       description: 'Custom database solutions optimized for performance and scalability.,
+<<<<<<< HEAD
       features: ['
   'MySQL, PostgreSQL, MongoDB',
   'Data modeling',
   'Performance optimization',
   'Backup & recovery']},
+=======
+      features: [
+  'MySQL, PostgreSQL, MongoDB,Data modeling,Performance optimization,Backup & recovery']},
+>>>>>>> main
     {
       icon: Zap,
       title:,
   API Development',
       description: 'RESTful and GraphQL APIs for seamless integration between systems.,
+<<<<<<< HEAD
       features: ['
   'RESTful APIs',
   'GraphQL endpoints',
   'Authentication & authorization',
   'Rate limiting']},
+=======
+      features: [
+  'RESTful APIs,GraphQL endpoints,Authentication & authorization,Rate limiting']},
+>>>>>>> main
     {
       icon: Shield,
       title:,
   Security Implementation',
       description: 'Comprehensive security measures to protect your applications and data.,
       features: [,
-  SSL/TLS encryption',
-  'Authentication systems',
-  'Data validation',
-  'Security audits']}
+  SSL/TLS encryption,Authentication systems,Data validation,Security audits']}
       title: 'Web Application Development',
       description:;
         'Custom web applications built with modern frameworks and technologies.',
       features: [;
-        'React, Vue.js, Angular',
-        'Node.js, Python, PHP',
-        'Responsive design',
-        'API integration']},
+        'React, Vue.js, Angular,Node.js, Python, PHP,Responsive design,API integration']},
     {
       icon: Smartphone,
       title: 'Mobile App Development',
       description:;
         'Native and cross-platform mobile applications for iOS and Android.',
       features: [;
-        'React Native, Flutter',
-        'Swift, Kotlin',
-        'App Store optimization',
-        'Push notifications']},
+        'React Native, Flutter,Swift, Kotlin,App Store optimization,Push notifications']},
     {
       icon: Globe,
       title: 'E-commerce Solutions',
       description:;
         'Complete e-commerce platforms with payment integration and inventory management.',
       features: [;
-        'Shopping cart functionality',
-        'Payment gateway integration',
-        'Inventory management',
-        'Order tracking']},
+        'Shopping cart functionality,Payment gateway integration,Inventory management,Order tracking']},
     {
       icon: Database,
       title: 'Database Design & Management',
       description:;
         'Custom database solutions optimized for performance and scalability.',
       features: [;
-        'MySQL, PostgreSQL, MongoDB',
-        'Data modeling',
-        'Performance optimization',
-        'Backup & recovery']},
+        'MySQL, PostgreSQL, MongoDB,Data modeling,Performance optimization,Backup & recovery']},
     {
       icon: Zap,
       title: 'API Development',
       description:;
         'RESTful and GraphQL APIs for seamless integration between systems.',
       features: [;
-        'RESTful APIs',
-        'GraphQL endpoints',
-        'Authentication & authorization',
-        'Rate limiting']},
+        'RESTful APIs,GraphQL endpoints,Authentication & authorization,Rate limiting']},
     {
       icon: Shield,
       title: 'Security Implementation',
       description:;
         'Comprehensive security measures to protect your applications and data.',
       features: [;
-        'SSL/TLS encryption',
-        'Authentication systems',
-        'Data validation',
-        'Security audits']}];
+        'SSL/TLS encryption,Authentication systems,Data validation,Security audits']}];
   const developmentProcess = [
-    {
+  {
 :pages.disabled_auto/solutions/custom-development.tsx;
       step: '01,
       title:,
@@ -182,8 +183,13 @@ const CustomDevelopment: NextPage = () => {
       description:,
   Ongoing support and maintenance to keep your solution running smoothly.'}
   ];
+<<<<<<< HEAD
   const technologies = ['
     { name: 'React, category:,;
+=======
+  const technologies = [
+  { name: 'React, category:,';
+>>>>>>> main
   Frontend' }, '{ name: 'Vue.js, category:, ';
   Frontend' },{ name: 'Angular, category:,;
   Frontend' }, '{ name: 'Node.js, category:, ';
@@ -193,9 +199,14 @@ const CustomDevelopment: NextPage = () => {
   Database' }, '{ name: 'PostgreSQL, category:, ';
   Database' },{ name: 'MongoDB, category:,;
   Database' }, '{ name: 'AWS, category:, ';
+<<<<<<< HEAD
   Cloud' },{ name: 'Azure, category:,;
   Cloud' }, '{ name: 'Docker, category: ';
   'DevOps' }
+=======
+  Cloud' },'{ name: 'Azure, category:,';
+  Cloud' }, '{ name: 'Docker, category: DevOps' }
+>>>>>>> main
       step: '01',
       title: 'Discovery & Planning',
       description:;
@@ -224,8 +235,13 @@ const CustomDevelopment: NextPage = () => {
       title: 'Maintenance & Support',
       description:;
         'Ongoing support and maintenance to keep your solution running smoothly.'}];
+<<<<<<< HEAD
   const technologies = ['
     { name: 'React', category: 'Frontend' },
+=======
+  const technologies = [
+  { name: 'React', category: 'Frontend' },
+>>>>>>> main
     { name: 'Vue.js', category: 'Frontend' },
     { name: 'Angular', category: 'Frontend' },
     { name: 'Node.js', category: 'Backend' },

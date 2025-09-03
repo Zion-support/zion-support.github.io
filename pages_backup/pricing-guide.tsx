@@ -37,6 +37,7 @@ import {
 
 const PricingGuide: React.FC = () => {
   const pricingFactors = [
+<<<<<<< HEAD
     {'
       facto,
     r: 'Project Complexity',
@@ -45,8 +46,24 @@ const PricingGuide: React.FC = () => {
       details: ['
         'Simple automatio,
     n: $2,000 - $5,000',
+=======
+<<<<<<< HEAD
+    {
+=======
+  {
+>>>>>>> main
+      factor: 'Project Complexity',
+      description:
+        'The complexity of your AI solution directly impacts development time and cost',
+      details: [
+<<<<<<< HEAD
+        'Simple automation: $2,000 - $5,000',
+>>>>>>> main
         'Custom AI models: $5,000 - $15,000',
         'Enterprise solutions: $15,000 - $50,000+',
+=======
+        'Simple automation: $2,000 - $5,000,Custom AI models: $5,000 - $15,000,Enterprise solutions: $15,000 - $50,000+',
+>>>>>>> main
       ],
       icon: Brain,
       color: 'from-blue-500 to-cyan-500',
@@ -55,11 +72,20 @@ const PricingGuide: React.FC = () => {
       factor: 'Data Requirements',
       description:'
         'Amount and quality of data needed for training and implementation',
+<<<<<<< HEAD
       details: ['
         'Small dataset,
     s: $1,000 - $3,000',
+=======
+      details: [
+<<<<<<< HEAD
+        'Small datasets: $1,000 - $3,000',
+>>>>>>> main
         'Medium datasets: $3,000 - $8,000',
         'Large datasets: $8,000 - $20,000+',
+=======
+        'Small datasets: $1,000 - $3,000,Medium datasets: $3,000 - $8,000,Large datasets: $8,000 - $20,000+',
+>>>>>>> main
       ],
       icon: Database,
       color: 'from-green-500 to-emerald-500',
@@ -68,11 +94,20 @@ const PricingGuide: React.FC = () => {
       factor: 'Integration Needs',
       description:'
         'Complexity of integrating with existing systems and platforms',
+<<<<<<< HEAD
       details: ['
         'Basic integration,
     s: $1,500 - $4,000',
+=======
+      details: [
+<<<<<<< HEAD
+        'Basic integrations: $1,500 - $4,000',
+>>>>>>> main
         'Complex integrations: $4,000 - $10,000',
         'Enterprise integrations: $10,000 - $25,000+',
+=======
+        'Basic integrations: $1,500 - $4,000,Complex integrations: $4,000 - $10,000,Enterprise integrations: $10,000 - $25,000+',
+>>>>>>> main
       ],
       icon: Network,
       color: 'from-purple-500 to-pink-500',
@@ -80,11 +115,20 @@ const PricingGuide: React.FC = () => {
     {'
       factor: 'Timeline Requirements',
       description: 'How quickly you need the solution delivered',
+<<<<<<< HEAD
       details: ['
         'Standard timelin,
     e: Base price',
+=======
+      details: [
+<<<<<<< HEAD
+        'Standard timeline: Base price',
+>>>>>>> main
         'Rush delivery (50% faster): +30% cost',
         'Emergency delivery (75% faster): +50% cost',
+=======
+        'Standard timeline: Base price,Rush delivery (50% faster): +30% cost,Emergency delivery (75% faster): +50% cost',
+>>>>>>> main
       ],
       icon: Clock,
       color: 'from-orange-500 to-red-500',
@@ -92,15 +136,31 @@ const PricingGuide: React.FC = () => {
   ];
 
   const pricingExamples = [
+<<<<<<< HEAD
     {'
+=======
+<<<<<<< HEAD
+    {
+=======
+  {
+>>>>>>> main
+>>>>>>> main
       scenario: 'Small Business Automation',
       description:'
         'AI-powered customer service chatbot for a small e-commerce business',
+<<<<<<< HEAD
       features: ['
+=======
+      features: [
+<<<<<<< HEAD
+>>>>>>> main
         'Natural language processing',
         'Basic customer support automation',
         'Integration with existing CRM',
         'Monthly maintenance included',
+=======
+        'Natural language processing,Basic customer support automation,Integration with existing CRM,Monthly maintenance included',
+>>>>>>> main
       ],
       price: '$3,500 - $5,500',
       timeline: '4-6 weeks',
@@ -109,12 +169,20 @@ const PricingGuide: React.FC = () => {
     {'
       scenario: 'Enterprise AI Platform',
       description: 'Comprehensive AI platform for large manufacturing company',
+<<<<<<< HEAD
       features: ['
+=======
+      features: [
+<<<<<<< HEAD
+>>>>>>> main
         'Custom machine learning models',
         'Predictive maintenance system',
         'Real-time analytics dashboard',
         'Multi-site deployment',
         '24/7 support and monitoring',
+=======
+        'Custom machine learning models,Predictive maintenance system,Real-time analytics dashboard,Multi-site deployment,24/7 support and monitoring',
+>>>>>>> main
       ],
       price: '$25,000 - $75,000',
       timeline: '12-16 weeks',
@@ -123,12 +191,20 @@ const PricingGuide: React.FC = () => {
     {'
       scenario: 'Healthcare AI Solution',
       description: 'AI-powered diagnostic tool for medical practice',
+<<<<<<< HEAD
       features: ['
+=======
+      features: [
+<<<<<<< HEAD
+>>>>>>> main
         'Medical image analysis',
         'Patient data integration',
         'HIPAA compliance',
         'Clinical decision support',
         'Training and certification',
+=======
+        'Medical image analysis,Patient data integration,HIPAA compliance,Clinical decision support,Training and certification',
+>>>>>>> main
       ],
       price: '$15,000 - $35,000',
       timeline: '8-12 weeks',
@@ -137,7 +213,15 @@ const PricingGuide: React.FC = () => {
   ];
 
   const costSavingTips = [
+<<<<<<< HEAD
     {'
+=======
+<<<<<<< HEAD
+    {
+=======
+  {
+>>>>>>> main
+>>>>>>> main
       tip: 'Start with MVP',
       description:'
         'Begin with a minimum viable product and iterate based on results',

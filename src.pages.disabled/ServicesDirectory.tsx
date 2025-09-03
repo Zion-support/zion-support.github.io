@@ -19,7 +19,11 @@ import {
   Star} from 'lucide-react';
 const ServicesDirectory = () => {
   const serviceCategories = [
+<<<<<<< HEAD
     {'
+=======
+  {
+>>>>>>> main
       title: 'Artificial Intelligence & Machine Learning', description: 'Advanced AI solutions to transform your business operations',
       icon: Brain, color: 'from-purple-500 to-indigo-500',
       services: [{'
@@ -84,8 +88,13 @@ const ServicesDirectory = () => {
           description: 'Strategic insights and decision support', path: '/services/business-intelligence'}
       ]}
   ];
+<<<<<<< HEAD
   const stats = ['
     { number: '500+', label: 'Services Delivered' },
+=======
+  const stats = [
+  { number: '500+', label: 'Services Delivered' },
+>>>>>>> main
     { number: '99.9%', label: 'Success Rate' },
     { number: '24/7', label: 'Support Available' },
     { number: '150+', label: 'Technologies' }

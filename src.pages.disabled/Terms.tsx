@@ -13,4 +13,8 @@ const Terms: React.FC = () => {
       </div>
     </>
   )}
+<<<<<<< HEAD
 export default Terms'
+=======
+export default Terms
+>>>>>>> main

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 export default function BlockchainEnterpriseSolutions(...args[]):  {
   const features = [
-    {
+  {
       icon: Lock,
       title: 'Enhanced Security',
       description: 'Immutable ledger technology with cryptographic security and audit trails',
@@ -36,34 +36,53 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
       color: 'from-indigo-500 to-purple-500'}
   ];
   const services = [
+<<<<<<< HEAD
     {'
       title: 'Blockchain Strategy',
       description: 'Comprehensive blockchain roadmap and implementation strategy',
       price: 'From $5,000',
       features['Technology assessment', 'Use case identification', 'ROI analysis', 'Implementation plan']},
     {'
+=======
+  {
+      title: 'Blockchain Strategy',
+      description: 'Comprehensive blockchain roadmap and implementation strategy',
+      price: 'From $5,000',
+      features['Technology assessment,Use case identification,ROI analysis,Implementation plan']},
+    {
+>>>>>>> main
       title: 'Smart Contract Development',
       description: 'Custom smart contracts for business automation and compliance',
       price: 'From $8,000',
-      features['Contract design', 'Security auditing', 'Testing & deployment', 'Maintenance']
+      features['Contract design,Security auditing,Testing & deployment,Maintenance']
     },
     {'
       title: 'Private Blockchain Networks',
       description: 'Enterprise-grade private blockchain infrastructure',
       price: 'From $15,000',
-      features['Network setup', 'Node configuration', 'Security implementation', 'Monitoring']
+      features['Network setup,Node configuration,Security implementation,Monitoring']
     },
+<<<<<<< HEAD
     {'
       features['Protocol development', 'Liquidity management', 'Risk assessment', 'Integration']
+=======
+    {
+      features['Protocol development,Liquidity management,Risk assessment,Integration']
+>>>>>>> main
     }
       title: 'DeFi Solutions',
       description: 'Decentralized finance applications and protocols',
       price: 'From $20,000',
-      features: ['Protocol development', 'Liquidity management', 'Risk assessment', 'Integration']
+      features: ['Protocol development,Liquidity management,Risk assessment,Integration']
     }
   ];
+<<<<<<< HEAD
   const useCases = ['
     { name: 'Supply Chain', icon: Network, description: 'End-to-end traceability and transparency' },
+=======
+  const useCases = [
+  { name: 'Supply Chain', icon: Network, description: 'End-to-end traceability and transparency' },
+>>>>>>> main
     { name: 'Financial Services', icon: Bitcoin, description: 'Cross-border payments and settlements' },
     { name: 'Healthcare', icon: Shield, description: 'Patient data security and interoperability' },
     { name: 'Real Estate', icon: FileText, description: 'Property records and title management' },

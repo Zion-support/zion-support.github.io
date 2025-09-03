@@ -1,17 +1,9 @@
 :src.disabled/pages/services/AIFinancialAnalyticsPlatform.tsx;
 export default function AIFinancialAnalyticsPlatform(...args: unknown[]): unknown {
   const features = [
-    'AI-powered financial forecasting and modeling',
-    'Real-time market data analysis and insights',
-    'Predictive risk assessment and management',
-    'Portfolio optimization and rebalancing',
-    'Automated financial reporting and compliance',
-    'Cash flow prediction and optimization',
-    'Investment opportunity identification',
-    'Regulatory compliance monitoring',
-    'Multi-currency and multi-asset support',
-    'Executive dashboard with KPI tracking';
+    'AI-powered financial forecasting and modeling,Real-time market data analysis and insights,Predictive risk assessment and management,Portfolio optimization and rebalancing,Automated financial reporting and compliance,Cash flow prediction and optimization,Investment opportunity identification,Regulatory compliance monitoring,Multi-currency and multi-asset support,Executive dashboard with KPI tracking';
   ];
+<<<<<<< HEAD
   const benefits = ['
     'Improve investment returns by 15-35%',
     'Reduce financial risk by 40-60%',
@@ -34,15 +26,30 @@ export default function AIFinancialAnalyticsPlatform(...args: unknown[]): unknow
       price: '$2,999/mo',
       details: ['Up to 10 portfolios', 'Basic AI insights', 'Email support', 'Standard market data']},
     {'
+=======
+  const benefits = [
+    'Improve investment returns by 15-35%,Reduce financial risk by 40-60%,Automate 80% of financial analysis tasks,Real-time market insights and alerts,Data-driven investment decisions,Comprehensive compliance coverage';
+  ];
+  const useCases = [
+    'Investment portfolio management,Corporate financial planning,Risk management and compliance,Trading strategy optimization,Mergers and acquisitions analysis,Financial market research';
+  ];
+  const tiers = [
+  {
+      name: 'Professional',
+      price: '$2,999/mo',
+      details: ['Up to 10 portfolios,Basic AI insights,Email support,Standard market data']},
+    {
+>>>>>>> main
       name: 'Institutional',
       price: '$7,999/mo',
-      details: ['Up to 100 portfolios', 'Advanced AI analytics', 'Priority support', 'Premium market data']
+      details: ['Up to 100 portfolios,Advanced AI analytics,Priority support,Premium market data']
     },
     {'
       name: 'Enterprise',
       price: '$19,999/mo',
-      details: ['Unlimited portfolios', 'Custom AI models', 'Dedicated support', 'White-label solution']
+      details: ['Unlimited portfolios,Custom AI models,Dedicated support,White-label solution']
     }];
+<<<<<<< HEAD
   const financialTools = ['
     'Portfolio Analytics',
     'Risk Management',
@@ -58,6 +65,13 @@ export default function AIFinancialAnalyticsPlatform(...args: unknown[]): unknow
     'Portfolio optimization',
     'Anomaly detection',
     'Trend forecasting';
+=======
+  const financialTools = [
+    'Portfolio Analytics,Risk Management,Performance Attribution,Asset Allocation,Scenario Analysis,Compliance Reporting';
+  ];
+  const aiCapabilities = [
+    'Predictive modeling,Risk assessment,Market analysis,Portfolio optimization,Anomaly detection,Trend forecasting';
+>>>>>>> main
   ];
   return('
     <div className='min-h-screen bg-white>

@@ -5,8 +5,7 @@
   ';
   primary: 'border-cyan-400,;
   secondary:,
-  border-blue-400',
-  ';
+  border-blue-400,;
   white: 'border-white,
   cyan:,
   border-cyan-400;
@@ -66,11 +65,18 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({'
   'md className?: string }> = ({
   size =,
   sm',
+<<<<<<< HEAD
   className = ';
   '}) => ('``
   <div className={`inline-flex items-center ${className}`} role='status' aria-label='Loading>
     <motion.div'`;`
       className={`${size ===;`
+=======
+  className = }) => ('`
+  <div className={`inline-flex items-center ${className}`} role='status' aria-label='Loading'>
+    <motion.div'`;
+      className={`${size ===;
+>>>>>>> main
   'sm' ?;
   'w-4 h-4': 'w-6 h-6} border-2 border-t-transparent border-cyan-400 rounded-full`}
       animate={{ rotate: 360 }}
@@ -90,6 +96,7 @@ export const FullScreenLoader: React.FC<{
   className?: string}> = ({'
   '  text = 'Loading amazing experiences...;
   ',
+<<<<<<< HEAD
   showLogo = true,;
   className = ';
   '}) => (``
@@ -99,6 +106,16 @@ export const FullScreenLoader: React.FC<{
         <div className='mb-6>'
           <div className='w-24 h-24 border-4 border-cyan-400/20 rounded-full mx-auto mb-4'></div>''
           <div className='absolute top-0 left-1/2 transform -translate-x-1/2 w-24 h-24 border-4 border-cyan-400 border-t-transparent rounded-full animate-spin'></div>''
+=======
+  showLogo = true,';
+  className = }) => (`
+  <div className={`fixed inset-0 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center z-50 ${className}`}>'
+    <div className='relative text-center'>
+      {showLogo && ('
+        <div className='mb-6'>'
+          <div className='w-24 h-24 border-4 border-cyan-400/20 rounded-full mx-auto mb-4'></div>'
+          <div className='absolute top-0 left-1/2 transform -translate-x-1/2 w-24 h-24 border-4 border-cyan-400 border-t-transparent rounded-full animate-spin'></div>'
+>>>>>>> main
           <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-cyan-400 font-bold text-xl'>
             ZION
           </div>
@@ -111,10 +128,16 @@ export const FullScreenLoader: React.FC<{
 // Skeleton loading component
 export const SkeletonLoader: React.FC<{
   className?: string;
+<<<<<<< HEAD
   lines?: number}> = ({'
 '  className = ';
   ',
   lines = 3}) => (``
+=======
+  lines?: number}> = ({
+'  className = ,
+  lines = 3}) => (`
+>>>>>>> main
   <div className={`animate-pulse ${className}`}>
     {Array.from({ length: lines }).map(_: unknown, index: unknown(
       <div`

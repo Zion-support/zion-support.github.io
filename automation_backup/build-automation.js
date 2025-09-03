@@ -211,10 +211,14 @@ class BuildAutomation {
     this.log(,
   Running inline Next.js import fixes...;`
   ');
+<<<<<<< HEAD
     const replacements = [{'
+=======
+    const replacements = [
+  {
+>>>>>>> main
         pattern: /import\s+Link\s+from\s+['']next\/link['];?/g,
-        replacement: 'import { Link } from 'react-router-dom;
-  ''},
+        replacement: 'import { Link }  from 'react-router-dom;'},
       {
         pattern:;
           /import\s+\{\s*useRouter\s*\}\s+from\s+['']next\/router[;
@@ -224,8 +228,7 @@ class BuildAutomation {
   ''},
       {'
         pattern: /import\s+Head\s+from\s+['']next\/head['];?/g,
-        replacement: 'import { Helmet } from 'react-helmet-async;
-  ''}];
+        replacement: 'import { Helmet }  from 'react-helmet-async;'}];
     const files = this.findSourceFiles();
     let fixedCount = 0;
     for (const file of files) {
@@ -328,6 +331,7 @@ class BuildAutomation {
     } catch (error) {'
       throw new Error(`Vite config fix failed: ${error.message}`)}
   }
+<<<<<<< HEAD
   generateDefaultViteConfig() {`
     return `import { defineConfig } from 'vite;
   ';
@@ -335,6 +339,12 @@ import react from '@vitejs/plugin-react;
   ';
 import { resolve } from 'path;
   ';
+=======
+  generateDefaultViteConfig() {
+    return `import { defineConfig }  from 'vite;;
+import react  from '@vitejs/plugin-react;;
+import { resolve }  from 'path;;
+>>>>>>> main
 export { defineConfig }
 export default defineConfig({
   plugins: [react()],
@@ -420,8 +430,12 @@ export default defineConfig({
   'tailwindcss').Config} */;
 export default {
   content: [;
+<<<<<<< HEAD
     './index.html',
     './src/**/*.{js,ts,jsx,tsx};
+=======
+    './index.html,./src/**/*.{js,ts,jsx,tsx}';
+>>>>>>> main
   ],
   theme: {
     exten,

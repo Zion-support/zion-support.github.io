@@ -2,49 +2,55 @@ import React from 'react.ts';
 
 const MicroSAAS: React.FC = ($2) => {
   const microsaasServices = [
+<<<<<<< HEAD
     {
       ico,
     n: Package,
+=======
+  {
+      icon: Package,
+>>>>>>> main
       title: 'SAAS Development',
       description: 'End-to-end development of scalable software-as-a-service applications',
       price: 'From $25,000/project',
-      features: ['Custom SAAS platforms', 'Multi-tenant architecture', 'Subscription management', 'API development']},
+      features: ['Custom SAAS platforms,Multi-tenant architecture,Subscription management,API development']},
     {
       icon: Zap,
       title: 'Rapid Prototyping',
       description: 'Quick development of MVPs and prototypes to validate business ideas',
       price: 'From $15,000/project',
-      features: ['MVP development', 'Proof of concept', 'User testing', 'Iterative design']
+      features: ['MVP development,Proof of concept,User testing,Iterative design']
     },
     {
       icon: Users,
       title: 'User Management',
       description: 'Comprehensive user authentication, authorization, and management systems',
       price: 'From $8,500/month',
-      features: ['User registration', 'Role-based access', 'Single sign-on', 'User analytics']
+      features: ['User registration,Role-based access,Single sign-on,User analytics']
     },
     {
       icon: Database,
       title: 'Data Management',
       description: 'Scalable database design and data processing solutions',
       price: 'From $12,000/month',
-      features: ['Database architecture', 'Data migration', 'Backup strategies', 'Performance optimization']
+      features: ['Database architecture,Data migration,Backup strategies,Performance optimization']
     },
     {
       icon: Shield,
       title: 'Security & Compliance',
       description: 'Enterprise-grade security and compliance for SAAS applications',
       price: 'From $18,000/month',
-      features: ['Data encryption', 'GDPR compliance', 'SOC 2 certification', 'Security auditing']
+      features: ['Data encryption,GDPR compliance,SOC 2 certification,Security auditing']
     },
     {
       icon: Globe,
       title: 'Cloud Deployment',
       description: 'Scalable cloud infrastructure and deployment solutions',
       price: 'From $15,000/month',
-      features: ['AWS/Azure deployment', 'Container orchestration', 'Auto-scaling', 'Monitoring']
+      features: ['AWS/Azure deployment,Container orchestration,Auto-scaling,Monitoring']
     }
   ];
+<<<<<<< HEAD
   const benefits = ['Lower development costs and faster time to market',;Scalable architecture that grows with your business',;Reduced infrastructure management overhead',;Access to enterprise-grade security and compliance',;Flexible subscription models and pricing strategies',;Continuous updates and feature improvements';
   ];
   const technologies = [
@@ -54,20 +60,35 @@ const MicroSAAS: React.FC = ($2) => {
       icon: Cpu,
       features: ['Modern frameworks', 'Responsive design', 'Component architecture', 'State management']},
     {'
+=======
+  const benefits = ['Lower development costs and faster time to market,;Scalable architecture that grows with your business,;Reduced infrastructure management overhead,;Access to enterprise-grade security and compliance,;Flexible subscription models and pricing strategies,;Continuous updates and feature improvements';
+  ];
+  const technologies = [
+  {
+      name: 'Frontend',
+      description: 'React, Vue.js, Angular with modern UI frameworks',
+      icon: Cpu,
+      features: ['Modern frameworks,Responsive design,Component architecture,State management']},
+    {
+>>>>>>> main
       name: 'Backend',
       description: 'Node.js, Python, Java with microservices architecture',
       icon: Database,
-      features: ['Microservices', 'API development', 'Scalable architecture', 'Performance optimization']
+      features: ['Microservices,API development,Scalable architecture,Performance optimization']
     },
     {'
       name: 'Cloud',
       description: 'AWS, Azure, GCP with containerization and orchestration',
       icon: Globe,
-      features: ['Cloud platforms', 'Containerization', 'Auto-scaling', 'Load balancing']
+      features: ['Cloud platforms,Containerization,Auto-scaling,Load balancing']
     }
   ];
   const industries = [
+<<<<<<< HEAD
     {'
+=======
+  {
+>>>>>>> main
       title: 'Healthcare',
       description: 'HIPAA-compliant patient management and telemedicine platforms',
       icon: Shield},

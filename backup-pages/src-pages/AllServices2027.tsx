@@ -187,11 +187,18 @@
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-12'>
             {/* AI Services */}
             <motion.div;
+<<<<<<< HEAD
               variants={itemVariants};
               className='bg-zion-slate-dark rounded-xl p-8 border border-zion-slate-light';
 ';
               <div className='flex items-center space-x-4 mb-6>'
                 <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center>'
+=======
+              variants={itemVariants}';
+              className='bg-zion-slate-dark rounded-xl p-8 border border-zion-slate-light;
+              <div className='flex items-center space-x-4 mb-6'>'
+                <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center'>'
+>>>>>>> main
                   <Brain className='w-6 h-6 text-white'  />
                 </div>'                <h3 className='text-2xl font-bold text-white'>AI Services</h3>'
               </div>''
@@ -216,11 +223,18 @@
             </motion.div>
             {/* Cybersecurity */}
             <motion.div;
+<<<<<<< HEAD
               variants={itemVariants};
               className='bg-zion-slate-dark rounded-xl p-8 border border-zion-slate-light';
 ';
               <div className='flex items-center space-x-4 mb-6>'
                 <div className='w-12 h-12 bg-gradient-to-r from-red-500 to-orange-600 rounded-lg flex items-center justify-center>'
+=======
+              variants={itemVariants}';
+              className='bg-zion-slate-dark rounded-xl p-8 border border-zion-slate-light;
+              <div className='flex items-center space-x-4 mb-6'>'
+                <div className='w-12 h-12 bg-gradient-to-r from-red-500 to-orange-600 rounded-lg flex items-center justify-center'>'
+>>>>>>> main
                   <Shield className='w-6 h-6 text-white'  />
                 </div>'                <h3 className='text-2xl font-bold text-white'>Cybersecurity</h3>'
               </div>''
@@ -398,9 +412,14 @@ const ServiceCard: React.FC<{ servic,
           <div className='flex flex-wrap gap-2'>
             {service.features.slice(0, 2).map((feature: string, index: number)  => (
               <span;
+<<<<<<< HEAD
                 key={index};
                 className='inline-flex items-center space-x-1 bg-zion-slate-dark px-2 py-1 rounded text-xs text-cyan-300';
 ';
+=======
+                key={index}';
+                className='inline-flex items-center space-x-1 bg-zion-slate-dark px-2 py-1 rounded text-xs text-cyan-300;
+>>>>>>> main
                 <CheckCircle className='w-3 h-3'  />                <span>{feature}</span>
               </span>) ) }
           </div>

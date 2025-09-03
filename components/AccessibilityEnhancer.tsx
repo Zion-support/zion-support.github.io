@@ -12,10 +12,21 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [fontSize, setFontSize] = useState('normal');
   const [reducedMotion, setReducedMotion] = useState(false);
+<<<<<<< HEAD
   useEffect(() => {'
     // Check for user's motion preferences
     const prefersReducedMotion = window.matchMedia('
       '(prefers-reduced-motion: reduce);
+=======
+  useEffect(() => {
+<<<<<<< HEAD
+    // Check for user&apos;s motion preferences'
+=======
+    // Check for user's motion preferences
+>>>>>>> main
+    const prefersReducedMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)'
+>>>>>>> main
     ).matches;
     setReducedMotion(prefersReducedMotion);
     // Apply accessibility settings from localStorage'
@@ -24,6 +35,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     setIsHighContrast(savedHighContrast);
     setFontSize(savedFontSize);
     setReducedMotion(prefersReducedMotion);
+<<<<<<< HEAD
 
     // Apply initial styles
     applyAccessibilityStyles(
@@ -33,6 +45,17 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     );
   }, []);
 
+=======
+
+    // Apply initial styles
+    applyAccessibilityStyles(
+      savedHighContrast,
+      savedFontSize,
+      prefersReducedMotion
+    );
+  }, []);
+
+>>>>>>> main
   const applyAccessibilityStyles = (
     highContrast: boolean,
     fontSize: string,
@@ -77,9 +100,18 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   return (
     <>
       {/* Accessibility Controls */}
+<<<<<<< HEAD
       <div className="accessibility-controls fixed top-4 right-4 z-50 bg-white dark:bg-gray-800 shadow-lg rounded-lg p-4 border">"
         <h3 className="text-sm font-semibold mb-2 text-gray-900 dar,
     k:text-white">
+=======
+<<<<<<< HEAD
+      <div className="accessibility-controls fixed top-4 right-4 z-50 bg-white dark: bg-gray-800 shadow-lg rounded-lg p-4 border">
+=======
+      <div className="accessibility-controls fixed top-4 right-4 z-50 bg-white dark:bg-gray-800 shadow-lg rounded-lg p-4 border">
+>>>>>>> main
+        <h3 className="text-sm font-semibold mb-2 text-gray-900 dark:text-white">
+>>>>>>> main
           Accessibility Options
         </h3>"
         <div className="space-y-2">
@@ -117,11 +149,21 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         </div>
       </div>
       {/* Skip to main content link */}
+<<<<<<< HEAD
       <a`
         href="#main-content""
         className="sr-only focus: not-sr-only focus:absolute focu,
     s:top-4 focu,
     s:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50"
+=======
+      <a
+        href="#main-content"
+<<<<<<< HEAD
+        className="sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50"
+=======
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50"
+>>>>>>> main
+>>>>>>> main
       >
         Skip to main content
       </a>

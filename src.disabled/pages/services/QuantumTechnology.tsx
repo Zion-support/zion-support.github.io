@@ -1,13 +1,22 @@
 
 :pages.disabled/pages/services/QuantumTechnology.tsx;
 const QuantumTechnology = () => {
+<<<<<<< HEAD
   const quantumServices = [{title: 'Quantum Neural Networks',';
       description: 'Advanced quantum machine learning algorithms for pattern recognition and data analysis.',';
       price: 'From $35,000/project',';
       features: ['Quantum algorithms', 'Pattern recognition', 'Data analysis', 'Machine learning'],
+=======
+  const quantumServices = [
+  {title: 'Quantum Neural Networks,';
+      description: 'Advanced quantum machine learning algorithms for pattern recognition and data analysis.,';
+      price: 'From $35,000/project,';
+      features: ['Quantum algorithms,Pattern recognition,Data analysis,Machine learning'],
+>>>>>>> main
       icon: Box},
 :pages.disabled/pages/services/QuantumTechnology.tsx{'
 ''';
+<<<<<<< HEAD
       title: 'Quantum Edge Computing',';
       description: 'Distributed quantum computing solutions for real-time processing at the edge.',';
       price: 'From $28,000/month',';
@@ -47,6 +56,43 @@ const QuantumTechnology = () => {
               Quantum'''
               <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'> Technology</span>''
             </h1>'''
+=======
+      title: 'Quantum Edge Computing,';
+      description: 'Distributed quantum computing solutions for real-time processing at the edge.,';
+      price: 'From $28,000/month,';
+      features: ['Edge processing,Real-time analytics,Distributed computing,Low latency'],
+:pages.disabled/pages/services/QuantumTechnology.tsx;
+      icon: Zap},'{'
+      title: 'Quantum Cryptography,;
+      description: 'Unbreakable encryption using quantum key distribution and quantum-resistant algorithms.,;
+      price: 'From $42,000/month,      features: ['Quantum key distribution,Post-quantum cryptography,Secure communications,Threat protection'],
+      icon: Shield}
+  ];
+:pages.disabled/pages/services/QuantumTechnology.tsx;
+  '{'
+      name: 'Quantum Communications,;
+      description: 'Secure communication using quantum principles,;
+      icon: Globe,';
+      features: ['Quantum key distribution,Entanglement,Secure channels,Quantum networks']}
+  ]';
+  const benefits = [''Exponential speedup for complex computational problems',Unbreakable encryption and enhanced security',Advanced machine learning and AI capabilities',Revolutionary breakthroughs in scientific research',Competitive advantage in technology innovation,;Future-proof solutions for emerging challenges';
+  ];
+:pages.disabled/pages/services/QuantumTechnology.tsx;
+';
+  return (
+    <div className = 'min-h-screen bg-slate-900 text-white'>'{/* Hero Section */}''
+      <section className='relative pt-24 pb-16 px-4 sm:px-6 lg:px-8'>''
+        <div className='max-w-7xl mx-auto text-center'>''
+          <div className='mb-8'>''
+            <div className='inline-flex items-center px-4 py-2 bg-purple-500/10 text-purple-400 rounded-full text-sm font-medium mb-6'>'';
+:pages.disabled/pages/services/QuantumTechnology.tsx
+              <Box className='w-4 h-4 mr-2' />              Quantum Technology'
+            </div>''
+            <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>';
+              Quantum''
+              <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'> Technology</span>'
+            </h1>''
+>>>>>>> main
             <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>
               Harness the power of quantum computing to solve complex problems that are impossible;
               for classical computers. Experience the future of computation.''
@@ -116,6 +162,7 @@ const QuantumTechnology = () => {
               Cutting-edge quantum technology solutions designed to solve;
               the most complex computational challenges.
             </p>
+<<<<<<< HEAD
 :pages.disabled/pages/services/QuantumTechnology.tsx'
           </div>';
 '''
@@ -127,6 +174,16 @@ const QuantumTechnology = () => {
                   <service.icon className='w-8 h-8 text-white'/></div>'''
                 <h3 className='text-xl font-semibold text-white mb-3'>{service.title}</h3>'''
                 <p className='text-gray-300 mb-4'>{service.description}</p>'''
+=======
+:pages.disabled/pages/services/QuantumTechnology.tsx
+          </div>'
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>'{quantumServices.map((service, index) => (''
+              <div key={index} className='bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300'>''
+                <div className='w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4'>''
+                  <service.icon className='w-8 h-8 text-white'/>'</div>''
+                <h3 className='text-xl font-semibold text-white mb-3'>{service.title}</h3>''
+                <p className='text-gray-300 mb-4'>{service.description}</p>''
+>>>>>>> main
                 <p className='text-lg font-semibold text-purple-400 mb-4'>{service.price}</p>'';
 :pages.disabled/pages/services/QuantumTechnology.tsx'
                 <ul className='space-y-2>{service.features.map((feature, featureIndex) => ('''
@@ -154,6 +211,7 @@ const QuantumTechnology = () => {
               Advanced quantum technologies and platforms to build;
               revolutionary computing solutions.
             </p>
+<<<<<<< HEAD
 :pages.disabled/pages/services/QuantumTechnology.tsx'
           </div>';
 '''
@@ -161,6 +219,13 @@ const QuantumTechnology = () => {
     d:grid-cols-3 gap-8>{quantumTechnologies.map((tech, index) => ('''
               <div key={index} className='bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-purple-500/50 transition-all duration-300>''
                 <div className='w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4>''
+=======
+:pages.disabled/pages/services/QuantumTechnology.tsx
+          </div>'
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>'{quantumTechnologies.map((tech, index) => (''
+              <div key={index} className='bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-purple-500/50 transition-all duration-300'>''
+                <div className='w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4'>''
+>>>>>>> main
                   <tech.icon className='w-8 h-8 text-white'/>'
                 </div>'''
                 <h3 className='text-xl font-semibold text-white mb-3'>{tech.name}</h3>'''

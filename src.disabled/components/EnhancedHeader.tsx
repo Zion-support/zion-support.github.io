@@ -5,9 +5,15 @@ import { ChevronDown, Menu, X, Zap, Brain, Cloud, Shield } from 'lucide-react';
 export const EnhancedHeader: React.FC = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+<<<<<<< HEAD
   const navLinks = ['
     { label: 'Home', href: '/' },
     {'
+=======
+  const navLinks = [
+  { label: 'Home', href: '/' },
+    {
+>>>>>>> main
       label: 'Services',
       href: '/services',
       dropdown: [{ labe,

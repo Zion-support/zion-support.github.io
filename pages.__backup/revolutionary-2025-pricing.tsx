@@ -8,7 +8,12 @@ import { Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, 
   'lucide-react';
 export default function Revolutionary2025PricingPage() {
   // Placeholder data for services;
+<<<<<<< HEAD
   const services = [{'
+=======
+  const services = [
+  {
+>>>>>>> main
       name: 'Starter,
       description:,
   Perfect for small businesses and startups',
@@ -22,20 +27,13 @@ export default function Revolutionary2025PricingPage() {
   'Save 20%': ',
       features: [;
         'Access to 25+ Core Services;
-  ',
-        'Basic AI Integration;
-  ',
-        'Standard Support (24/7);
-  ',
-        '30-Day Free Trial;
-  ',
-        'Basic Analytics Dashboard;
-  ',
-        'Email Support;
-  ',
-        '99.5% Uptime Guarantee;
-  ',
-        'Standard Security Features;
+  ,Basic AI Integration;
+  ,Standard Support (24/7);
+  ,30-Day Free Trial;
+  ,Basic Analytics Dashboard;
+  ,Email Support;
+  ,99.5% Uptime Guarantee;
+  ,Standard Security Features;
   '      ],
       icon: <Sparkles className='w-8 h-8' />,
       variant: 'quantum;
@@ -60,6 +58,7 @@ export default function Revolutionary2025PricingPage() {
   yearly;
   ' ? 'Save 20%;
   ': ',
+<<<<<<< HEAD
       features: ['
   'Access to 50+ Services',
   'Advanced AI Integration',
@@ -71,6 +70,10 @@ export default function Revolutionary2025PricingPage() {
   'Advanced Security Features',
   'Custom Integrations',
   'Performance Monitoring'      ],
+=======
+      features: [
+  'Access to 50+ Services,Advanced AI Integration,Priority Support (24/7),60-Day Free Trial,Advanced Analytics Dashboard,Phone & Email Support,99.9% Uptime Guarantee,Advanced Security Features,Custom Integrations,Performance Monitoring'      ],
+>>>>>>> main
       icon: <Rocket className='w-8 h-8' />,
       variant:;
   'ai-futuristic' as const,
@@ -92,6 +95,7 @@ export default function Revolutionary2025PricingPage() {
   'Save 20%': ',
       features: [;
         'Access to ALL Services;
+<<<<<<< HEAD
   ',
         'Full AI & Quantum Integration;
   ',
@@ -114,6 +118,19 @@ export default function Revolutionary2025PricingPage() {
         'API Access;
   ',
         'SLA Guarantees'
+=======
+  ,Full AI & Quantum Integration;
+  ,Dedicated Support Team;
+  ,90-Day Free Trial;
+  ,Enterprise Analytics Suite;
+  ,24/7 Dedicated Support;
+  ,99.99% Uptime Guarantee;
+  ,Enterprise Security Features;
+  ,Custom Development;
+  ,White-label Solutions;
+  ,API Access;
+  ,SLA Guarantees
+>>>>>>> main
   '      ],
       icon: <Crown className='w-8 h-8' />,
       variant: 'quantum-futuristic;

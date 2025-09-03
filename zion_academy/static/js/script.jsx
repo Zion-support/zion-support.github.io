@@ -56,5 +56,10 @@ document.addEventListener(,
           summaryArea.innerHTML = `<p>An error occurred while trying to generate the summary: ${error.message}. Please check the console.</p>`})
         .finally(() => {
           summarizeButton.disabled = false // Re-enable button})})}
+<<<<<<< HEAD
   console.log(`
   'Zion Academy script.js loaded and updated for API call.')})
+=======
+  console.log(
+  'Zion Academy script.js loaded and updated for API call.')})
+>>>>>>> main

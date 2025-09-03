@@ -46,7 +46,12 @@ export type ServiceType = 'service' | 'talent' | 'equipment' | ' export type Ser
    is_archived: boolean;
    viewed_at?: string;
    replied_at?: string;
+<<<<<<< HEAD
    created_a,
     t: string;
    updated_a,
     t: string} '';";"
+=======
+   created_at: string;
+   updated_at: string} ';
+>>>>>>> main

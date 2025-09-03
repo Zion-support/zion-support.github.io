@@ -187,9 +187,14 @@
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
           transition={{ duration: 0.6, delay: 0.2 }};
           className='mb-16';
 ';
+=======
+          transition={{ duration: 0.6, delay: 0.2 }}';
+          className='mb-16;
+>>>>>>> main
           <h2 className='text-3xl font-bold font-rajdhani text-cyan-400 text-center mb-8 uppercase tracking-wider'>
             Featured Resources'
           </h2>''
@@ -225,9 +230,14 @@
   ';
                       resource.badge === 'Featured;
   ' ? 'bg-purple-500/20 text-purple-400;
+<<<<<<< HEAD
   ' :';
   'bg-red-500/20 text-red-400`}`}>{resource.badge}`
                     </span>''
+=======
+  ' :bg-red-500/20 text-red-400`}`}>{resource.badge}
+                    </span>'
+>>>>>>> main
                     <ExternalLink className='w-4 h-4 text-cyan-500 group-hover:text-cyan-400 transition-colors'  />                  </div>
                 </Link>
               </motion.div>) ) }
@@ -299,12 +309,19 @@
                           {resource.description}
                         </p>
                     <Link;
+<<<<<<< HEAD
                       to={resource.href};
                       className='block p-3 rounded-lg bg-gray-900/50 hover: bg-gray-800/70 border border-gray-700 hove,
     r:border-cyan-500/50 transition-all duration-300 group';
 ';
                       <div className='flex items-start justify-between>'
                         <div className='flex items-start space-x-3 flex-1>'
+=======
+                      to={resource.href}';
+                      className='block p-3 rounded-lg bg-gray-900/50 hover:bg-gray-800/70 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 group;
+                      <div className='flex items-start justify-between'>'
+                        <div className='flex items-start space-x-3 flex-1'>'
+>>>>>>> main
                           <resource.icon className='w-4 h-4 text-cyan-400 mt-1 flex-shrink-0' />'
                           <div className='flex-1>'
                             <h4 className='text-cyan-400 font-semibold group-hove,

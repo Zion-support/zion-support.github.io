@@ -1,1 +1,24 @@
+<<<<<<< HEAD
  export default function Cookies () { return (<div className="min - h-screen bg-gradient - to - br from - zinc - 900 via - zinc - 800 to - zinc - 700 pt -20"> <SEO title="Cookie Policy | Zion Tech Group" description="Learn about how Zion Tech Group uses cookies to improve your browsing experience and provide personalized content." keywords="cookie policy, privacy, data collection, website cookies" canonical="https:""
+=======
+<<<<<<< HEAD
+ export default function Cookies () { return (<div className="min - h-screen bg-gradient - to - br from - zinc - 900 via - zinc - 800 to - zinc - 700 pt -20"> <SEO title="Cookie Policy | Zion Tech Group" description="Learn about how Zion Tech Group uses cookies to improve your browsing experience and provide personalized content." keywords="cookie policy, privacy, data collection, website cookies" canonical="https:;
+}
+=======
+<<<<<<< HEAD
+ export default function Cookies ()   { return (<div className="min - h-screen bg-gradient - to - br from - zinc - 900 via - zinc - 800 to - zinc - 700 pt -20"> <SEO title="Cookie Policy | Zion Tech Group" description="Learn about how Zion Tech Group uses cookies to improve your browsing experience and provide personalized content." keywords="cookie policy, privacy, data collection, website cookies" canonical="https:"
+=======
+<<<<<<< HEAD
+ export default function Cookies () ;{ return (}<div className=&quot;min - h-screen bg-gradient - to - br from - zinc - 900 via - zinc - 800 to - zinc - 700 pt -20&quot;>&quot;" <SEO title=&quot;Cookie Policy | Zion Tech Group&quot; description=&quot;Learn about how Zion Tech Group uses cookies to improve your browsing experience and provide personalized content.&quot; keywords=&quot;cookie policy, privacy, data collection, website cookies&quot; canonical=&quot;https:
+}&quot;"
+=======
+<<<<<<< HEAD
+ export default function Cookies () { return (<div className="min - h-screen bg-gradient - to - br from - zinc - 900 via - zinc - 800 to - zinc - 700 pt -20"> <SEO title="Cookie Policy | Zion Tech Group" description="Learn about how Zion Tech Group uses cookies to improve your browsing experience and provide personalized content." keywords="cookie policy, privacy, data collection, website cookies" canonical="https:"
+=======
+ export default function Cookies () { return (<div className="min - h-screen bg-gradient - to - br from - zinc - 900 via - zinc - 800 to - zinc - 700 pt -20"></div> <SEO title="Cookie Policy | Zion Tech Group" description="Learn about how Zion Tech Group uses cookies to improve your browsing experience and provide personalized content." keywords="cookie policy, privacy, data collection, website cookies" canonical="https:"
+>>>>>>> main
+}
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

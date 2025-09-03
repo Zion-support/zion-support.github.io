@@ -133,7 +133,8 @@ import React, { useState } from;
   Cookie usage and preferences;
   ' }, { name: 'Legal Information, href:,
   /legal;
-  ', description: 'Legal notices and compliance } ] } ]  const filteredSections = sitemapData.map(section => ({ ...section, links: section.links.filter(link => link.name.toLowerCase().includes(searchQuery.toLowerCase()) || (link.description && link.description.toLowerCase().includes(searchQuery.toLowerCase())) ) })).filter(section => section.links.length > 0)  const quickLinks = [ { name:,
+  ', description: 'Legal notices and compliance } ] } ]  const filteredSections = sitemapData.map(section => ({ ...section, links: section.links.filter(link => link.name.toLowerCase().includes(searchQuery.toLowerCase()) || (link.description && link.description.toLowerCase().includes(searchQuery.toLowerCase())) ) })).filter(section => section.links.length > 0)  const quickLinks = [
+  { name:,
   Contact Sales;
   ', href: '/contact, icon: Phone, color:,
   text-blue-500;

@@ -24,8 +24,7 @@ class CodeQualityMonitor {
   lastUpdated: new Date().toISOString()}
     this.logFile = path.join(__dirname,
 ,
-  logs',
-  'code-quality.log')}
+  logs,code-quality.log')}
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
@@ -129,10 +128,16 @@ class CodeQualityMonitor {
         cwd: this.projectRoot,
         encoding:,
   utf8',
+<<<<<<< HEAD
         stdio: 'pipe});
       return []} catch (error) {'
       const errorOutput = error.stdout || ';
   ';
+=======
+        stdio: 'pipe})
+      return []} catch (error) {
+      const errorOutput = error.stdout || ;
+>>>>>>> main
       const unusedImportErrors = errorOutput.split('\n;
   ');
         .filter(line => line.includes('no-unused-vars;
@@ -149,10 +154,16 @@ class CodeQualityMonitor {
         cwd: this.projectRoot,
         encoding:,
   utf8',
+<<<<<<< HEAD
         stdio: 'pipe});
       return []} catch (error) {'
       const errorOutput = error.stdout || ';
   ';
+=======
+        stdio: 'pipe})
+      return []} catch (error) {
+      const errorOutput = error.stdout || ;
+>>>>>>> main
       const formattingErrors = errorOutput.split('\n;
   ');
         .filter(line => line.includes('Code style issues found;
@@ -320,10 +331,9 @@ class CodeQualityMonitor {
         let modified = false;
         let newContent = content;
         // Remove empty import statements;
-        newContent = newContent.replace(/import\s*{\s*}\s*from\s*[';
-  '][^'']*[';
-  '];?\n?/g, '');
+        newContent = newContent.replace(/import\s*{\s*}\s*from\s*[][^'']*[];?\n?/g, '');
         // Remove unused React imports if no JSX;
+<<<<<<< HEAD
         if (!newContent.includes('
   '<') && newContent.includes('
   'import React')) {'
@@ -331,6 +341,13 @@ class CodeQualityMonitor {
   ']react[''];?\n?/g, ';
   ');
         if (modified) {'
+=======
+        if (!newContent.includes(
+  '<') && newContent.includes(
+  'import React')) {
+          newContent = newContent.replace(/import\s+React\s+from\s+[]react[''];?\n?/g, );
+        if (modified) {
+>>>>>>> main
           fs.writeFileSync(file, newContent, 'utf8;
   ');
           cleanedCount++} catch (error) {'
@@ -341,9 +358,14 @@ class CodeQualityMonitor {
   'Fixing formatting issues...');
     try {
       // Use Prettier to auto-format;
+<<<<<<< HEAD
       execSync('
   'npx prettier --write 'src/**/*.{ts,tsx,js,jsx}";"
   ', {
+=======
+      execSync(
+  'npx prettier --write 'src/**/*.{ts,tsx,js,jsx}, {
+>>>>>>> main
         cwd: this.projectRoot,
         stdio: 'pipe;
   '});
@@ -437,9 +459,14 @@ class CodeQualityMonitor {
   'pipe'});
       this.log('
   'No security vulnerabilities found')} catch (error) {
+<<<<<<< HEAD
       this.log('
   'Security vulnerabilities detected, consider running npm audit fix',
   'WARN');
+=======
+      this.log(
+  'Security vulnerabilities detected, consider running npm audit fix,WARN');
+>>>>>>> main
   async cleanupOldReports() {
     this.log('
   'Cleaning up old reports...');
@@ -473,11 +500,16 @@ class CodeQualityMonitor {
     this.log('
   'Quality rules update completed');
   findSourceFiles() {
+<<<<<<< HEAD
     const extensions = ['
   '.ts',
   '.tsx',
   '.js',
   '.jsx'];
+=======
+    const extensions = [
+  '.ts,.tsx,.js,.jsx'];
+>>>>>>> main
     const files = [];
     function traverse(dir) {
       const items = fs.readdirSync(dir);
@@ -496,9 +528,14 @@ class CodeQualityMonitor {
     return files}
   saveMetrics() {
     const metricsFile = path.join(__dirname,
+<<<<<<< HEAD
   'logs',
   'code-quality-metrics.json');
     fs.writeFileSync(metricsFile, JSON.stringify(this.metrics, null, 2));
+=======
+  'logs,code-quality-metrics.json');
+    fs.writeFileSync(metricsFile, JSON.stringify(this.metrics, null, 2))}
+>>>>>>> main
 }
 const monitor = new CodeQualityMonitor();
 monitor.analyzeCodeQuality().then(metrics => {

@@ -19,7 +19,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     if (highContrast) {'
       root.classList.add('high-contrast')} else {'
       root.classList.remove('high-contrast')}
-    root.classList.remove('font-small', 'font-normal', 'font-large', 'font-extra-large');
+    root.classList.remove('font-small,font-normal,font-large,font-extra-large');
     root.classList.add(`font-${size}`);
     if (reduced) {`
       root.classList.add('reduced-motion')} else {'
@@ -46,11 +46,18 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
             className={`w-full px-3 py-1 text-xs rounded ${isHighContrast ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`}`
             aria-label={`${isHighContrast ? 'Disable' : 'Enable'} high contrast mode`}`
           >{isHighContrast ? 'Disable' : 'Enable'} High Contrast
+<<<<<<< HEAD
           </button>'
           <div className='text-xs text-gray-600 dark:text-gray-300'>Font Siz,
     e:</div>'
           <div className='flex gap-1>
             {(['small', 'normal', 'large', 'extra-large'] as const).map((size) => (
+=======
+          </button>
+          <div className='text-xs text-gray-600 dark:text-gray-300'>Font Size:</div>
+          <div className='flex gap-1'>
+            {(['small,normal,large,extra-large'] as const).map((size) => (
+>>>>>>> main
               <button;
                 key={size}
                 onClick={() => changeFontSize(size)}

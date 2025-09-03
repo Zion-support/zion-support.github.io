@@ -19,8 +19,7 @@ class LintMonitor {
     this.errorCount = 0;
     this.lastCheck = null;
     this.logFile = path.join(__dirname,
-  'logs',
-  'lint-monitor.log');
+  'logs,lint-monitor.log');
     // // // // // // // // console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
     this.ensureLogDirectory()}
@@ -98,10 +97,14 @@ class LintMonitor {
     this.log(`
   '📁 Starting file watcher...');
     const watcher = chokidar.watch([;
+<<<<<<< HEAD
   'pages/**/*.{js,jsx,ts,tsx},
   'components/**/*.{js,jsx,ts,tsx},
   'utils/**/*.{js,jsx,ts,tsx},
   'hooks/**/*.{js,jsx,ts,tsx};
+=======
+  'pages/**/*.{js,jsx,ts,tsx},components/**/*.{js,jsx,ts,tsx},utils/**/*.{js,jsx,ts,tsx},hooks/**/*.{js,jsx,ts,tsx}';
+>>>>>>> main
     ], {
       ignored: /(node_modules|\.git|\.next)/,
       persistent: true})

@@ -28,9 +28,14 @@ export const ContactForm: React.FC = () => {
     message:,
   ',
     budget: ',
+<<<<<<< HEAD
     timeline: ';
   '});
   const [isSubmitting, setIsSubmitting] = useState(false);
+=======
+    timeline: })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+>>>>>>> main
   const [submitStatus, setSubmitStatus] = useState<'idle;
   ' | 'success;
   ' | 'error;

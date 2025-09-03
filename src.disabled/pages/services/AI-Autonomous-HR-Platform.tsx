@@ -136,11 +136,7 @@ const AIAutonomousHRPlatform: React.FC = () => {
                   period: '/month',
                   description: 'Perfect for small teams',
                   features: [;
-                    'Up to 50 employees',
-                    'Basic AI recruitment',
-                    'Performance tracking',
-                    'Standard analytics',
-                    'Email support';
+                    'Up to 50 employees,Basic AI recruitment,Performance tracking,Standard analytics,Email support';
                   ]},
                 {'
                   name: 'Professional',
@@ -148,12 +144,7 @@ const AIAutonomousHRPlatform: React.FC = () => {
                   period: '/month',
                   description: 'Ideal for growing companies',
                   features: [;
-                    'Up to 500 employees',
-                    'Advanced AI features',
-                    'Employee engagement',
-                    'Workforce planning',
-                    'Priority support',
-                    'Custom integrations';
+                    'Up to 500 employees,Advanced AI features,Employee engagement,Workforce planning,Priority support,Custom integrations';
                   ],
                   popular: true},
                 {'
@@ -161,6 +152,7 @@ const AIAutonomousHRPlatform: React.FC = () => {
                   price: '$799',
                   period: '/month',
                   description: 'For large organizations',
+<<<<<<< HEAD
                   features: ['
                     'Unlimited employees',
                     'Full AI capabilities',
@@ -168,6 +160,10 @@ const AIAutonomousHRPlatform: React.FC = () => {
                     'Dedicated support',
                     'White-label options',
                     'Advanced reporting'
+=======
+                  features: [
+                    'Unlimited employees,Full AI capabilities,Custom AI models,Dedicated support,White-label options,Advanced reporting'
+>>>>>>> main
                   ]}
               ].map((plan, index) => (
                 <motion.div
@@ -236,6 +232,7 @@ const AIAutonomousHRPlatform: React.FC = () => {
                 <h3 className='text-3xl font-bold text-white mb-6'>Revolutionary Benefits</h3>'
                 <div className='space-y-6'>
                   {[;
+<<<<<<< HEAD
                     'Reduce recruitment time by 70% with AI automation',
                     'Improve employee retention by 45% through predictive analytics',
                     'Increase hiring quality by 80% with intelligent matching',
@@ -246,6 +243,13 @@ const AIAutonomousHRPlatform: React.FC = () => {
                     <div key={index} className='flex items-start>
                       <div className='flex-shrink-0 w-6 h-6 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mr-4 mt-1>
                         <svg className='w-4 h-4 text-white' fill='currentColor' viewBox='0 0 20 20>
+=======
+                    'Reduce recruitment time by 70% with AI automation,Improve employee retention by 45% through predictive analytics,Increase hiring quality by 80% with intelligent matching,Save 25+ hours per week on manual HR tasks,Boost employee satisfaction by 60% with engagement optimization,Scale HR operations across unlimited employees efficiently'
+                  ].map((benefit, index) => (
+                    <div key={index} className='flex items-start'>
+                      <div className='flex-shrink-0 w-6 h-6 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mr-4 mt-1'>
+                        <svg className='w-4 h-4 text-white' fill='currentColor' viewBox='0 0 20 20'>
+>>>>>>> main
                           <path fillRule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clipRule='evenodd' />
                         </svg>
                       </div>'

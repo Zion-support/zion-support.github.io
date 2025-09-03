@@ -13,4 +13,8 @@ const AIServices: React.FC = () => {
       </div>
     </>
   )}
+<<<<<<< HEAD
 export default AIServices'
+=======
+export default AIServices
+>>>>>>> main

@@ -28,13 +28,16 @@ const categoryColors: { [ke,
 export default function InnovativeServices2027() {
   const [selectedCategory, setSelectedCategory] = useState<string>('
   'all');
+<<<<<<< HEAD
   const [searchQuery, setSearchQuery] = useState(';
   ');
+=======
+  const [searchQuery, setSearchQuery] = useState()
+>>>>>>> main
   const [sortBy, setSortBy] = useState<'price;
   ' | 'innovation;
   ' | 'roi;
-  '>(';
-  'innovation');
+  '>(innovation');
       return matchesCategory && matchesSearch})
       case;
   'roi': return a.price - b.price'      case;
@@ -105,9 +108,14 @@ export default function InnovativeServices2027() {
                   whileTap={{ scale: 0.95 }}
                   onClick={() => setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-full font-medium transition-all duration-300 ${
+<<<<<<< HEAD
                     selectedCategory === category,`
   ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg';
   ': 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50`}`}`
+=======
+                    selectedCategory === category,
+  ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg: 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50`}`}
+>>>>>>> main
                 >{category === 'all;
   ' ? 'All Services'
   ' : category}
@@ -245,10 +253,15 @@ export default function InnovativeServices2027() {
                     {/* CTA Button */}
                     <motion.button;
                       whileHover={{ scale: 1.05 }}
+<<<<<<< HEAD
                       whileTap={{ scale: 0.95 }};
                       className='w-full py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hove,
     r:to-blue-700 transition-all duration-300 shadow-lg';
   ';
+=======
+                      whileTap={{ scale: 0.95 }}';
+                      className='w-full py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg;
+>>>>>>> main
                       onClick={() => (window.location.href = '/contact;
   ')}
                     >
@@ -319,12 +332,18 @@ export default function InnovativeServices2027() {
             <div className='flex flex-col s,
     m:flex-row gap-4 justify-center'>
               <motion.button;
+<<<<<<< HEAD
                 whileHover={{ scal,
     e: 1.05 }}
                 whileTap={{ scale: 0.95 }};
                 className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hove,
     r:to-blue-700 transition-all duration-300 shadow-lg text-lg';
   ';
+=======
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}';
+                className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg text-lg;
+>>>>>>> main
                 onClick={() => (window.location.href = '/contact;
   ')}
               >

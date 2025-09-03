@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from react''; import { motion } from 'framer-motion;
   ''; import { Link } from 'react-router-dom;
   ' import {} Brain, TrendingUp, Zap, BarChart3, ' CheckCircle, ';
@@ -22,6 +23,19 @@ import React from react''; import { motion } from 'framer-motion;
   ';Get instant insights and analytics for better decision-making and performance optimization., '' icon: BarChart3, ,
   ';
   ' color: 'from-green-500 to-emerald-500}, {}
+=======
+import React from,
+  react''; import { motion }  from 'framer-motion;'; import { Link }  from 'react-router-dom; import {} Brain, TrendingUp, Zap, BarChart3, ' CheckCircle,  ArrowRight, ' Play} from 'lucide-react;
+  ''; import SEO  from '../SEO; const features = [] {}; title: 'AI-Powered Autonomous Scientific Researcher, ,
+   description: '';Intelligent autonomous scientific researcher system that learns and adapts to your specific needs and requirements., '' icon: Brain, ,
+   color: 'from-purple-500 to-pink-500}, {}
+  ; title: 'Automated Operations, ,
+   description: '';Streamline autonomous scientific researcher processes with intelligent automation and optimization., '' icon: Zap, ,
+   color: 'from-blue-500 to-cyan-500}, {}
+  ; title: 'Real-time Insights, ,
+   description: '';Get instant insights and analytics for better decision-making and performance optimization., '' icon: BarChart3, ,
+   color: 'from-green-500 to-emerald-500}, {}
+>>>>>>> main
    title: 'Scalable Solution,
 ,
    description: '';Built to grow with your business needs, from startup to enterprise scale.', icon: TrendingUp,

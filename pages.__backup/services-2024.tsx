@@ -21,7 +21,12 @@ import { innovativeITServices2024 } from;
 const allServices = [
   ...ultimateInnovativeServices2026,
   ...enterpriseITInfrastructureServices2026];
+<<<<<<< HEAD
 const serviceCategories = [{'
+=======
+const serviceCategories = [
+  {
+>>>>>>> main
     id: 'ai-services,
     title:,
   🧠 AI & Machine Learning',
@@ -101,9 +106,14 @@ const serviceCategories = [{'
   'Social)),
     gradient:,
   from-orange-500/20 to-pink-500/20'}];
+<<<<<<< HEAD
 export default function Services2024Page() {'
   const [searchTerm, setSearchTerm] = useState(';
   ');
+=======
+export default function Services2024Page() {
+  const [searchTerm, setSearchTerm] = useState();
+>>>>>>> main
   const [selectedCategory, setSelectedCategory] = useState('all;
   ');
   const [priceRange, setPriceRange] = useState('all;
@@ -120,6 +130,7 @@ export default function Services2024Page() {'
     const matchesPrice = priceRange === 'all;
   ' ||;
                         (priceRange === 'low;
+<<<<<<< HEAD
   ' && parseInt(service.price.replace('$'
   ', '')) < 200) ||;
                         (priceRange ===;
@@ -134,6 +145,20 @@ export default function Services2024Page() {'
     return matchesSearch && matchesCategory && matchesPrice})
 const categories = ['
     { id: 'all, name: 'All Services;
+=======
+  ' && parseInt(service.price.replace('$
+  ,')) < 200) ||;
+                        (priceRange ===;
+  'medium' && parseInt(service.price.replace(
+  '$', )) >= 200 && parseInt(service.price.replace('$
+  ,')) < 500) ||;
+                        (priceRange ===;
+  'high' && parseInt(service.price.replace(
+  '$', )) >= 500);
+    return matchesSearch && matchesCategory && matchesPrice})
+const categories = [
+  { id: 'all, name: 'All Services;
+>>>>>>> main
   ', icon: Sparkles, count: allServices.length },
     { id:,
   ai;
@@ -450,6 +475,7 @@ const categories = ['
                       <div className='flex items-center justify-between'>
                         <Link
                           href={service.link}
+<<<<<<< HEAD
                           className='flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-200 group>
                           <span className='font-medium'>Learn More</span>'
                           <ArrowRight className='w-4 h-4 group-hove,
@@ -460,6 +486,16 @@ const categories = ['
   ', '').replace('
   '-',
   ' ')}                        </div>
+=======
+                          className='flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-200 group'>
+                          <span className='font-medium'>Learn More</span>
+                          <ArrowRight className='w-4 h-4 group-hover:translate-x-1 transition-transform duration-200' />
+                        </Link>
+                        <div className='text-xs text-gray-400 bg-gray-800/50 px-2 py-1 rounded'>
+                          {service.variant.replace('-futuristic
+  ,').replace(
+  '-, ')}                        </div>
+>>>>>>> main
                       </div>
                     </div>
                   </motion.div>

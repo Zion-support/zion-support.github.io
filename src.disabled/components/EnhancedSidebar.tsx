@@ -29,7 +29,11 @@ export const EnhancedSidebar: React.FC = (): JSX.Element => {'
   const [expandedSections, setExpandedSections] = useState<string[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
   const navigationSections = [
+<<<<<<< HEAD
     {'
+=======
+  {
+>>>>>>> main
       id: 'main',
       title: 'Main',
       icon: Home,
@@ -117,8 +121,13 @@ export const EnhancedSidebar: React.FC = (): JSX.Element => {'
         { name: 'Accessibility', href: '/accessibility', icon: Eye, description: 'Accessibility statement' },
         { name: 'Sitemap', href: '/sitemap', icon: Globe, description: 'Site navigation structure' }]}
   ];
+<<<<<<< HEAD
   const quickActions = ['
     { name: 'Request Quote', href: '/request-quote', icon: DollarSign, color: 'bg-blue-500' },
+=======
+  const quickActions = [
+  { name: 'Request Quote', href: '/request-quote', icon: DollarSign, color: 'bg-blue-500' },
+>>>>>>> main
     { name: 'Schedule Demo', href: '/schedule-demo', icon: Calendar, color: 'bg-green-500' },
     { name: 'Contact Sales', href: '/contact', icon: Phone, color: 'bg-purple-500' },
     { name: 'Support Chat', href: '/chat', icon: MessageCircle, color: 'bg-orange-500' }];

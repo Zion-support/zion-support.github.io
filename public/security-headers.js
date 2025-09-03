@@ -4,6 +4,7 @@ const securityHeaders = {
   // Content Security Policy,
   Content-Security-Policy': [;
     'default-src;
+<<<<<<< HEAD
   'self',
     'script-src;
   'self';
@@ -33,6 +34,19 @@ const securityHeaders = {
     'form-action;
   'self'',
     'frame-ancestors;
+=======
+  'self,script-src;
+  'selfunsafe-inlineunsafe-eval' https://cdn.gpteng.co https://www.google-analytics.com,style-src;
+  'selfunsafe-inline' https://fonts.googleapis.com,font-src;
+  'self' https://fonts.gstatic.com,img-src;
+  'self' data: https: blob:,media-src;
+  'self' https:,connect-src;
+  'self' https: wss:,frame-src,
+  self',object-src;
+  'none',base-uri;
+  'self',form-action;
+  'self',frame-ancestors;
+>>>>>>> main
   'none'',upgrade-insecure-requests;
   '].join('),
   // X-Frame-Options;

@@ -13,4 +13,8 @@ const Privacy: React.FC = () => {
       </div>
     </>
   )}
+<<<<<<< HEAD
 export default Privacy'
+=======
+export default Privacy
+>>>>>>> main

@@ -4,9 +4,14 @@ import { motion } from 'framer-motion';
 
 export default function HealthcareTech(...args: []):  {
   const features = [
+<<<<<<< HEAD
     {
       ico,
     n: Heart,
+=======
+  {
+      icon: Heart,
+>>>>>>> main
       title: 'Patient Care',
       description: 'AI-powered diagnostics and personalized treatment recommendations',
       color: 'from-red-500 to-pink-500'},
@@ -37,32 +42,46 @@ export default function HealthcareTech(...args: []):  {
       color: 'from-indigo-500 to-purple-500'}
   ];
   const services = [
+<<<<<<< HEAD
     {'
       title: 'Healthcare AI Platform',
       description: 'Comprehensive AI platform for diagnostics and treatment planning',
       price: 'From $25,000',
       features: ['AI diagnostics', 'Treatment recommendations', 'Patient monitoring', 'Analytics dashboard']},
     {'
+=======
+  {
+      title: 'Healthcare AI Platform',
+      description: 'Comprehensive AI platform for diagnostics and treatment planning',
+      price: 'From $25,000',
+      features: ['AI diagnostics,Treatment recommendations,Patient monitoring,Analytics dashboard']},
+    {
+>>>>>>> main
       title: 'Telemedicine Solutions',
       description: 'Secure video consultations and remote patient care',
       price: 'From $15,000',
-      features: ['Video consultations', 'Patient portal', 'Prescription management', 'Insurance integration']
+      features: ['Video consultations,Patient portal,Prescription management,Insurance integration']
     },
     {'
       title: 'Health Data Analytics',
       description: 'Advanced analytics for population health and clinical insights',
       price: 'From $20,000',
-      features: ['Population health', 'Clinical analytics', 'Predictive modeling', 'Reporting tools']
+      features: ['Population health,Clinical analytics,Predictive modeling,Reporting tools']
     },
     {'
       title: 'Medical Device Integration',
       description: 'IoT integration for medical devices and wearables',
       price: 'From $18,000',
-      features: ['Device connectivity', 'Data collection', 'Real-time monitoring', 'Alert systems']
+      features: ['Device connectivity,Data collection,Real-time monitoring,Alert systems']
     }
   ];
+<<<<<<< HEAD
   const applications = ['
     { name: 'Diagnostics', icon: Microscope, description: 'AI-powered disease detection' },
+=======
+  const applications = [
+  { name: 'Diagnostics', icon: Microscope, description: 'AI-powered disease detection' },
+>>>>>>> main
     { name: 'Telemedicine', icon: Activity, description: 'Remote patient consultations' },
     { name: 'Patient Monitoring', icon: Activity, description: 'Continuous health tracking' },
     { name: 'Drug Discovery', icon: Pill, description: 'AI-assisted pharmaceutical research' },

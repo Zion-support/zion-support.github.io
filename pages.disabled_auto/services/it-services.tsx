@@ -28,9 +28,14 @@ const ITServicesPage: NextPage = () => {
   const itServices = getServicesByCategory('
   'it-services);
   const benefits = [
+<<<<<<< HEAD
     {'
       ico,
     n: <Shield className='w-8 h-8' />,
+=======
+  {
+      icon: <Shield className='w-8 h-8' />,
+>>>>>>> main
 :pages.disabled_auto/services/it-services.tsx
       title:,
   Enterprise Security',

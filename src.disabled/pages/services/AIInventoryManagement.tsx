@@ -39,9 +39,14 @@ import { Package,
   Store} from 'lucide-react.ts';
 export default function AIInventoryManagement(...args: unknown[]): unknown {
   const features = [
+<<<<<<< HEAD
     {
       ico,
     n: Brain,
+=======
+  {
+      icon: Brain,
+>>>>>>> main
       title: 'AI Demand Forecasting',
       description: 'Predict future demand with 95% accuracy using machine learning algorithms and historical data analysis.'},
     {
@@ -66,7 +71,7 @@ export default function AIInventoryManagement(...args: unknown[]): unknown {
       description: 'Seamless integration with suppliers, logistics partners, and e-commerce platforms for end-to-end visibility.'}
   ];
   const benefits = [
-    {
+  {
       icon: Zap,
       title: 'Reduced Stockouts',
       description: 'Prevent lost sales and customer dissatisfaction with intelligent demand forecasting and automated reordering.'},
@@ -91,19 +96,18 @@ export default function AIInventoryManagement(...args: unknown[]): unknown {
       title: 'Time Savings',
       description: 'Automate routine inventory tasks and focus on strategic business decisions.'}
   ];
+<<<<<<< HEAD
   const pricingPlans = [{'
+=======
+  const pricingPlans = [
+  {
+>>>>>>> main
       name: 'Starter',
       price: '$199',
       period: '/month',
       description: 'Perfect for small businesses with basic inventory management needs',
       features: [;
-        'Up to 1,000 SKUs',
-        'Basic demand forecasting',
-        'Email support',
-        'Standard integrations',
-        'Basic reporting',
-        '2 warehouse locations',
-        'Mobile app access';
+        'Up to 1,000 SKUs,Basic demand forecasting,Email support,Standard integrations,Basic reporting,2 warehouse locations,Mobile app access';
       ],
       cta: 'Start Free Trial',
       popular: false},
@@ -113,15 +117,7 @@ export default function AIInventoryManagement(...args: unknown[]): unknown {
       period: '/month',
       description: 'Ideal for growing businesses with advanced inventory requirements',
       features: [;
-        'Up to 10,000 SKUs',
-        'Advanced AI forecasting',
-        'Priority support',
-        'Custom integrations',
-        'Advanced analytics',
-        'Multi-location support',
-        'API access',
-        'Barcode scanning',
-        'Supplier management';
+        'Up to 10,000 SKUs,Advanced AI forecasting,Priority support,Custom integrations,Advanced analytics,Multi-location support,API access,Barcode scanning,Supplier management';
       ],
       cta: 'Start Free Trial',
       popular: true},
@@ -131,6 +127,7 @@ export default function AIInventoryManagement(...args: unknown[]): unknown {
       period: '/month',
       description: 'For large organizations requiring enterprise-grade inventory solutions',
       features: [;
+<<<<<<< HEAD
         'Unlimited SKUs',
         'Custom AI models',
         'Dedicated account manager',
@@ -138,12 +135,19 @@ export default function AIInventoryManagement(...args: unknown[]): unknown {
         'Advanced security features',
         'Custom reporting',
         'On-premise deployment',;SLA guarantees',;24/7 support';
+=======
+        'Unlimited SKUs,Custom AI models,Dedicated account manager,White-label solutions,Advanced security features,Custom reporting,On-premise deployment,;SLA guarantees,;24/7 support';
+>>>>>>> main
       ],
       cta: 'Contact Sales',
       popular: false}
   ];
   const useCases = [
+<<<<<<< HEAD
     {'
+=======
+  {
+>>>>>>> main
       industry: 'E-commerce',
       description: 'Manage inventory across multiple sales channels, prevent stockouts, and optimize fulfillment',
       icon: ShoppingCart},
@@ -169,32 +173,43 @@ export default function AIInventoryManagement(...args: unknown[]): unknown {
       icon: Truck}
   ];
   const integrations = [
+<<<<<<< HEAD
     {'
       name: 'E-commerce Platforms',
       platforms: ['Shopify', 'WooCommerce', 'Magento', 'BigCommerce']},
     {'
+=======
+  {
+      name: 'E-commerce Platforms',
+      platforms: ['Shopify,WooCommerce,Magento,BigCommerce']},
+    {
+>>>>>>> main
       name: 'Accounting Software',
-      platforms: ['QuickBooks', 'Xero', 'Sage', 'NetSuite']
+      platforms: ['QuickBooks,Xero,Sage,NetSuite']
     },
     {'
       name: 'Shipping & Logistics',
-      platforms: ['FedEx', 'UPS', 'DHL', 'ShipStation']
+      platforms: ['FedEx,UPS,DHL,ShipStation']
     },
     {'
       name: 'POS Systems',
-      platforms: ['Square', 'Toast', 'Lightspeed', 'ShopKeep']
+      platforms: ['Square,Toast,Lightspeed,ShopKeep']
     },
     {'
       name: 'ERP Systems',
-      platforms: ['SAP', 'Oracle', 'Microsoft Dynamics', 'Infor']
+      platforms: ['SAP,Oracle,Microsoft Dynamics,Infor']
     },
     {'
       name: 'Supplier Platforms',
-      platforms: ['Alibaba', 'Amazon Business', 'ThomasNet', 'Global Sources']
+      platforms: ['Alibaba,Amazon Business,ThomasNet,Global Sources']
     }
   ];
   const keyMetrics = [
+<<<<<<< HEAD
     {'
+=======
+  {
+>>>>>>> main
       metric: '95%',
       label: 'Forecast Accuracy',
       description: 'AI-powered demand prediction accuracy'},

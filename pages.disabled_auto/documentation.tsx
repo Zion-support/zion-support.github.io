@@ -26,9 +26,14 @@ import Link from 'next/link';
 
 const Documentation: NextPage = () => {
   const docCategories = [
+<<<<<<< HEAD
     {
       ico,
     n: Book,
+=======
+  {
+      icon: Book,
+>>>>>>> main
       title:,
   Getting Started',
       description: 'Quick start guides and basic setup instructions,

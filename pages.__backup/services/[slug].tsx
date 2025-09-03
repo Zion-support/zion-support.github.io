@@ -110,8 +110,7 @@ return enhancedRealMicroSaasServices;
 		.concat(real2027Q3Additions as unknown as Service[]);
 		.concat(real2027Q4Additions as unknown as Service[])}
 return value.toLowerCase().replace(/[^a-z0-9]+/g,
-  '-').replace(/(^-|-$)/g, ';
-  ')}
+  '-').replace(/(^-|-$)/g, )}
 function extractServiceSlugFromLink(link: string): string | null {
 	try {
 		const url = new URL(link);
@@ -134,8 +133,7 @@ export default function ServiceSlugPage({ params }: { params?: { slug: string } 
 		features: [;
   'Feature 1,
 ,
-  Feature 2',
-  'Feature 3'],
+  Feature 2,Feature 3'],
 		price: '$99/month,
 		rating:,
   4.8',

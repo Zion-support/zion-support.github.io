@@ -13,8 +13,12 @@ const supabase = createClient(
   { auth: { persistSessio,
     n: false } })
 const stripe = new Stripe(Deno.env.get(,
+<<<<<<< HEAD
   STRIPE_SECRET_KEY') || ';
   ', {'
+=======
+  STRIPE_SECRET_KEY') || , {
+>>>>>>> main
   apiVersion: '2023-10-16})
 const webhookSecret = Deno.env.get('STRIPE_WEBHOOK_SECRET;
   ') || '';
@@ -22,9 +26,14 @@ serve(async req => {
   if (req.method ===;
   'POST') {
     const body = await req.text();
+<<<<<<< HEAD
     const signature = req.headers.get('
   'stripe-signature') || ';
   ';
+=======
+    const signature = req.headers.get(
+  'stripe-signature') || ;
+>>>>>>> main
     let event;
     try {
       event = stripe.webhooks.constructEvent(body, signature, webhookSecret)} catch (err) {'

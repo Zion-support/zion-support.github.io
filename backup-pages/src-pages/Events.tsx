@@ -18,6 +18,7 @@ import {
   MessageCircle,
   BookOpen,
   CheckCircle} from;
+<<<<<<< HEAD
   'lucide-react.ts';All',;
   'AI & ML',
   ';
@@ -32,14 +33,23 @@ import {
   'Digital Transformation;
   '];
 export default function Events(...args: any[]): any {
+=======
+  'lucide-react.ts';All',AI & ML',
+  Cybersecurity;
+  ',Cloud & DevOps',
+  Data Analytics;
+  ',IoT & Edge',
+  Digital Transformation;
+  ']';
+export default function Events() {
+>>>>>>> main
   const [selectedType, setSelectedType] = useState(,
   All');
   const [selectedCategory, setSelectedCategory] = useState('
   'All');
   const [selectedStatus, setSelectedStatus] = useState('
   'All');
-  const [searchTerm, setSearchTerm] = useState(';
-  ');
+  const [searchTerm, setSearchTerm] = useState();
 return matchesType && matchesCategory && matchesStatus && matchesSearch})return date.toLocaleDateString('en-US;
   ', {'
       weekday: 'long,
@@ -160,11 +170,8 @@ case 'Cybersecurity;
                 >{statuses.map(status => (
                     <option key={status} value={status}>
                       {status ===,
-  upcoming';
-  ';
-                        ? 'Upcoming';
-  ': status === 'past';
-  ';
+  upcoming;
+                        ? 'Upcoming: status === 'past;
                           ? 'Past
                           : status}
                     </option>

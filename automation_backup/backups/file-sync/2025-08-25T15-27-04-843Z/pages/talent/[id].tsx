@@ -53,10 +53,15 @@ const TalentProfilePag,
             full_nam,
     e: `Talent ${id}`,
             }
+<<<<<<< HEAD
             skills: [,`
   React',
   'TypeScript',
   'Node.js'],
+=======
+            skills: [,
+  React,TypeScript,Node.js'],
+>>>>>>> main
             availability_type: 'Full-time,
             social: {
               linkedi,

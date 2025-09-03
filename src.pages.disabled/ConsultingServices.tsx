@@ -13,4 +13,8 @@ const ConsultingServices: React.FC = () => {
       </div>
     </>
   )}
+<<<<<<< HEAD
 export default ConsultingServices'
+=======
+export default ConsultingServices
+>>>>>>> main

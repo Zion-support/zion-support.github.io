@@ -1,13 +1,18 @@
 import { GradientHeading } from './GradientHeading';
 import { Link } from 'react-router-dom';
 import { Briefcase, HardDrive, Lightbulb, Users, ArrowRight, Zap, Shield, Globe import { motion } from 'framer-motion';
+<<<<<<< HEAD
 const categories = [{'
+=======
+const categories = [
+  {
+>>>>>>> main
     title: 'Services',
     description: 'On-demand IT support, consulting, development, and more',
     icon: <Briefcase className='w-10 h-10' />,
     link: '/services',
     color: 'from-purple-500 to-indigo-600',
-    features['24/7 Support', 'Global Coverage', 'Certified Experts'],
+    features['24/7 Support,Global Coverage,Certified Experts'],
     stats: '500+ Services'},
   {'
     title: 'AI & IT Services',
@@ -22,7 +27,7 @@ const categories = [{'
     icon: <Users className='w-10 h-10' />,
     link: '/talent',
     color: 'from-cyan-500 to-blue-600',
-    features['AI Matching', 'Verified Profiles', 'Skill Validation'],
+    features['AI Matching,Verified Profiles,Skill Validation'],
     stats: '10,000+ Talents'},
   {'
     title: 'Equipment & Hardware',
@@ -30,7 +35,7 @@ const categories = [{'
     icon: <HardDrive className='w-10 h-10' />,
     link: '/equipment',
     color: 'from-amber-500 to-orange-600',
-    features['Flexible Rental', 'Buy Options', 'Maintenance Included'],
+    features['Flexible Rental,Buy Options,Maintenance Included'],
     stats: '1,000+ Items'},
   {'
     title: 'Innovation Hub',
@@ -38,7 +43,7 @@ const categories = [{'
     icon: <Lightbulb className='w-10 h-10' />,
     link: '/category/innovation',
     color: 'from-emerald-500 to-green-600',
-    features['Latest Tech', 'Research Labs', 'Startup Solutions'],
+    features['Latest Tech,Research Labs,Startup Solutions'],
     stats: '100+ Innovations'},
   {'
     title: 'AI Hiring Platform',

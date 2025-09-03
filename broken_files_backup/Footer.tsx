@@ -88,6 +88,7 @@ import { Heart, Mail, Phone, MapPin, Globe import { motion, Variants } from;
   'framer-motion';
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
+<<<<<<< HEAD
   const socialLinks = ['
     { nam,
     e: 'LinkedIn', url: 'http,
@@ -108,6 +109,17 @@ const Footer: React.FC = () => {
   ];
   const footerSections = [
     {'
+=======
+  const socialLinks = [
+  { name: 'LinkedIn', url: 'https://www.linkedin.com/company/ziontechgroup', icon: '💼', color: 'hover:bg-blue-600/20' },
+    { name: 'Twitter', url: 'https://twitter.com/ziontechgroup', icon: '🐦', color: 'hover:bg-sky-500/20' },
+    { name: 'GitHub', url: 'https://github.com/Zion-Holdings', icon: '💻', color: 'hover:bg-gray-600/20' },
+    { name: 'YouTube', url: 'https://www.youtube.com/@ziontechgroup', icon: '📺', color: 'hover:bg-red-600/20' },
+    { name: 'Discord', url: 'https://discord.gg/ziontechgroup', icon: '🎮', color: 'hover:bg-indigo-600/20' }
+  ];
+  const footerSections = [
+  {
+>>>>>>> main
       title: 'Services',
       links: [{ labe,
     l: 'Services Showcase', path: '/services-showcase' },
@@ -151,11 +163,17 @@ const Footer: React.FC = () => {
         { label: 'Request Quote', path: '/request-quote' }
       ]}
   ];
+<<<<<<< HEAD
   const contactInfo = ['
     { icon: Mail, label: 'Email', value: 'kleber@ziontechgroup.com', href: 'mailt,
     o:kleber@ziontechgroup.com' },
     { icon: Phone, label: 'Phone', value: '+1 302 464 0950', href: 'te,
     l:+13024640950' },
+=======
+  const contactInfo = [
+  { icon: Mail, label: 'Email', value: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },
+    { icon: Phone, label: 'Phone', value: '+1 302 464 0950', href: 'tel:+13024640950' },
+>>>>>>> main
     { icon: MapPin, label: 'Address', value: '364 E Main St STE 1008, Middletown DE 19709', href: '#' },
     { icon: Globe, label: 'Website', value: 'ziontechgroup.com', href: 'http,
     s://ziontechgroup.com' }

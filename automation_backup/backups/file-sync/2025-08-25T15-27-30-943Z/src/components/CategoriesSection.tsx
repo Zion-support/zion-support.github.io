@@ -4,7 +4,12 @@ import { Link } from;
   'react-router-dom';
 import { Briefcase, HardDrive, Lightbulb, Users, ArrowRight, Zap, Shield, Globe import { motion } from;
   'framer-motion';
+<<<<<<< HEAD
 const categories = [{'
+=======
+const categories = [
+  {
+>>>>>>> main
     title: 'Services,
     description:,
   On-demand IT support, consulting, development, and more',
@@ -14,9 +19,7 @@ const categories = [{'
   /services',
     color: 'from-purple-500 to-indigo-600,
     features[,
-  24/7 Support',
-  'Global Coverage',
-  'Certified Experts'],
+  24/7 Support,Global Coverage,Certified Experts'],
     stats: '500+ Services},
   {
     title:,
@@ -40,9 +43,7 @@ const categories = [{'
   /talent',
     color: 'from-cyan-500 to-blue-600,
     features[,
-  AI Matching',
-  'Verified Profiles',
-  'Skill Validation'],
+  AI Matching,Verified Profiles,Skill Validation'],
     stats: 10,000+ Talents,
   },
   {'
@@ -55,9 +56,7 @@ const categories = [{'
   /equipment',
     color: 'from-amber-500 to-orange-600,
     features[,
-  Flexible Rental',
-  'Buy Options',
-  'Maintenance Included'],
+  Flexible Rental,Buy Options,Maintenance Included'],
     stats: 1,000+ Items,
   },
   {'
@@ -70,9 +69,7 @@ const categories = [{'
   /category/innovation',
     color: 'from-emerald-500 to-green-600,
     features[,
-  Latest Tech',
-  'Research Labs',
-  'Startup Solutions'],
+  Latest Tech,Research Labs,Startup Solutions'],
     stats: '100+ Innovations},
   {
 ursor/website-audit-content-update-and-deployment-efec

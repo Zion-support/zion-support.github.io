@@ -212,9 +212,14 @@ class BrowserErrorMonitor {
   '❌ Error during auto-fix attempt:,
   , fixError);
       this.stats.failedFixes++;
+<<<<<<< HEAD
   identifyFixStrategy(error) {'
     const message = error.message || error.failureReason || ';
   ';
+=======
+  identifyFixStrategy(error) {
+    const message = error.message || error.failureReason || ;
+>>>>>>> main
     for (const [category, patterns] of Object.entries(CONFIG.errorPatterns)) {
       for (const [pattern, strategy] of Object.entries(patterns)) {
         if (message.includes(pattern)) {

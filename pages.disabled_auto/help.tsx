@@ -26,23 +26,22 @@ import Link from 'next/link';
 
 const Help: NextPage = () => {
   const helpCategories = [
+<<<<<<< HEAD
     {
       ico,
     n: Book,
+=======
+  {
+      icon: Book,
+>>>>>>> main
       title:,
   Getting Started',
       description: 'Learn the basics and get up and running quickly,
       articles: [;
 :pages.disabled_auto/help.tsx;
-  'Welcome to Zion Tech Group',
-  'Setting up your account',
-  'Understanding our services',
-  'First steps guide';
+  'Welcome to Zion Tech Group,Setting up your account,Understanding our services,First steps guide';
       ];
-        'Welcome to Zion Tech Group',
-        'Setting up your account',
-        'Understanding our services',
-        'First steps guide']},
+        'Welcome to Zion Tech Group,Setting up your account,Understanding our services,First steps guide']},
     {
       icon: FileText,
       title:,
@@ -50,15 +49,9 @@ const Help: NextPage = () => {
       description: 'Detailed guides for using our services,
       articles: [
 :pages.disabled_auto/help.tsx;
-  'Service management',
-  'Account settings',
-  'Billing and payments',
-  'Security best practices';
+  'Service management,Account settings,Billing and payments,Security best practices';
       ];
-        'Service management',
-        'Account settings',
-        'Billing and payments',
-        'Security best practices']},
+        'Service management,Account settings,Billing and payments,Security best practices']},
     {
       icon: Video,
       title:,
@@ -66,36 +59,24 @@ const Help: NextPage = () => {
       description: 'Watch step-by-step video tutorials,
       articles: [
 :pages.disabled_auto/help.tsx;
-  'Platform overview',
-  'Service configuration',
-  'Troubleshooting common issues',
-  'Advanced features';
+  'Platform overview,Service configuration,Troubleshooting common issues,Advanced features';
       ]}, {
       icon: MessageCircle,
       title:,
   FAQ',
       description: 'Frequently asked questions and answers,
       articles: [,
-  General questions',
-  'Technical support',
-  'Billing questions',
-  'Service-specific FAQs';
+  General questions,Technical support,Billing questions,Service-specific FAQs';
       ]}
-        'Platform overview',
-        'Service configuration',
-        'Troubleshooting common issues',
-        'Advanced features']},
+        'Platform overview,Service configuration,Troubleshooting common issues,Advanced features']},
     {
       icon: MessageCircle,
       title: 'FAQ',
       description: 'Frequently asked questions and answers',
       articles: [;
-        'General questions',
-        'Technical support',
-        'Billing questions',
-        'Service-specific FAQs']}];
+        'General questions,Technical support,Billing questions,Service-specific FAQs']}];
   const popularArticles = [
-    {
+  {
 :pages.disabled_auto/help.tsx;
       title: 'How to get started with our services,
       category:,
@@ -143,7 +124,7 @@ const Help: NextPage = () => {
       category: 'Account',
       views: '521 views'}];
   const supportOptions = [
-    {
+  {
       icon: MessageCircle,
 :pages.disabled_auto/help.tsx;
       title:,

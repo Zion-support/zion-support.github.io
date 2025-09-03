@@ -17,9 +17,14 @@ import {
   CheckCircle} from 'lucide-react';
 const Sitemap: React.FC = () => {'
   const lastUpdated = new Date().toISOString().split('T')[0];
+<<<<<<< HEAD
   const mainPages = ['
     { nam,
     e: 'Home', url: '/', description: 'Welcome to Zion Tech Group', icon: Home },
+=======
+  const mainPages = [
+  { name: 'Home', url: '/', description: 'Welcome to Zion Tech Group', icon: Home },
+>>>>>>> main
     { name: 'About', url: '/about', description: 'Learn about our company and mission', icon: Users },
     { name: 'Services', url: '/services', description: 'Our AI and technology solutions', icon: Briefcase },
     { name: 'Contact', url: '/contact', description: 'Get in touch with our team', icon: Phone },
@@ -33,8 +38,13 @@ const Sitemap: React.FC = () => {'
     { name: 'Privacy Policy', url: '/privacy', description: 'How we protect your data', icon: Shield },
     { name: 'Terms of Service', url: '/terms', description: 'Terms and conditions', icon: FileText }
   ];
+<<<<<<< HEAD
   const servicePages = ['
     { name: 'AI Services', url: '/ai-services', description: 'Artificial Intelligence solutions', icon: Brain },
+=======
+  const servicePages = [
+  { name: 'AI Services', url: '/ai-services', description: 'Artificial Intelligence solutions', icon: Brain },
+>>>>>>> main
     { name: 'IT Services', url: '/it-services', description: 'Information Technology services', icon: Network },
     { name: 'Micro SaaS', url: '/micro-saas', description: 'Micro Software as a Service solutions', icon: Cloud },
     { name: 'AI Cybersecurity Platform', url: '/services/ai-autonomous-cybersecurity-platform', description: 'AI-powered security solutions', icon: Shield },
@@ -45,8 +55,13 @@ const Sitemap: React.FC = () => {'
     { name: 'AI Supply Chain', url: '/services/ai-autonomous-supply-chain', description: 'Supply chain optimization', icon: Target },
     { name: 'AI Financial Planning', url: '/services/ai-financial-planning', description: 'AI financial planning tools', icon: DollarSign }
   ];
+<<<<<<< HEAD
   const contentPages = ['
     { name: 'AI Insights', url: '/ai-insights', description: 'Latest AI trends and insights', icon: Brain },
+=======
+  const contentPages = [
+  { name: 'AI Insights', url: '/ai-insights', description: 'Latest AI trends and insights', icon: Brain },
+>>>>>>> main
     { name: 'Technology News', url: '/tech-news', description: 'Technology industry news', icon: TrendingUp },
     { name: 'Research Papers', url: '/research', description: 'Technical research and papers', icon: FileText },
     { name: 'Tutorials', url: '/tutorials', description: 'Learning resources and tutorials', icon: BookOpen }

@@ -20,10 +20,24 @@ export function useLocation() {
   const hashIndex = asPath.indexOf('#');
   const hash = hashIndex >= 0 ? asPath.substring(hashIndex) : ''
   return {
+<<<<<<< HEAD
     pathname: path, '
+=======
+<<<<<<< HEAD
+    pathname: path, search: query ? `?${query}` : '',
+    hash, state: undefined as unknown,
+=======
+<<<<<<< HEAD
+    pathname: path, search: query ? `?${query}` : '',
+    hash, state: undefined as unknown,
+=======
+    pathname: path, 
+>>>>>>> main
     search: query ? `?${query}` : '',
     hash, 
     state: undefined as unknown,
+>>>>>>> main
+>>>>>>> main
     key: 'next'
   }}
 export const BrowserRouter: React.FC<React.PropsWithChildren<{}>> = ({ children }) => <>{children}</>
@@ -34,4 +48,4 @@ export const useHistory = () => ({ push: (ur,
     l: string) => (window.location.href = url) })
 export const useParams = () => ({})
 export const NavLink = Link;
-export default {}
+export default {} as Record<string, unknown>

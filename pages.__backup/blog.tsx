@@ -13,9 +13,15 @@ import Footer from;
 const Blog: NextPage = () => {
   const [selectedCategory, setSelectedCategory] = useState(,
   All');
+<<<<<<< HEAD
   const [searchTerm, setSearchTerm] = useState(';
   ');
   const blogPosts = [{'
+=======
+  const [searchTerm, setSearchTerm] = useState();
+  const blogPosts = [
+  {
+>>>>>>> main
       id: 'quantum-ai-future-business,
       title:,
   The Future of Business Intelligence: How Quantum AI is Revolutionizing Data Analytics,
@@ -35,9 +41,9 @@ const Blog: NextPage = () => {
       category: 'AI & Technology,
       tags: [,
   Quantum Computing;
-  ', 'AI;
-  ', 'Business Intelligence;
-  ', 'Data Analytics;
+  ,AI;
+  ,Business Intelligence;
+  ,Data Analytics;
   '],
       image: '🧬,
       featured: true,
@@ -66,8 +72,8 @@ const Blog: NextPage = () => {
   ',
       tags: ['DevOps, ,
   Automation;
-  ', 'Infrastructure;
-  ', 'Cloud Computing;
+  ,Infrastructure;
+  ,Cloud Computing;
   '],
       image: '🤖,
       featured: true,
@@ -95,9 +101,9 @@ const Blog: NextPage = () => {
       category: 'Cybersecurity,
       tags: [,
   Cybersecurity;
-  ', 'AI Defense;
-  ', 'Threat Detection;
-  ', 'Security Analytics;
+  ,AI Defense;
+  ,Threat Detection;
+  ,Security Analytics;
   '],
       image: '🛡️,
       featured: false,
@@ -125,9 +131,9 @@ const Blog: NextPage = () => {
       category: 'Metaverse & VR,
       tags: [,
   Metaverse;
-  ', 'E-commerce;
-  ', 'Virtual Reality;
-  ', 'Digital Transformation;
+  ,E-commerce;
+  ,Virtual Reality;
+  ,Digital Transformation;
   '],
       image: '🌐,
       featured: false,
@@ -155,9 +161,9 @@ const Blog: NextPage = () => {
       category: 'Business Strategy,
       tags: [,
   Micro SaaS;
-  ', 'Scaling;
-  ', 'Product Development;
-  ', 'Market Strategy;
+  ,Scaling;
+  ,Product Development;
+  ,Market Strategy;
   '],
       image: '🚀,
       featured: false,
@@ -186,14 +192,15 @@ const Blog: NextPage = () => {
   ',
       tags: ['Healthcare, ,
   AI Diagnostics;
-  ', 'Medical Technology;
-  ', 'Machine Learning;
+  ,Medical Technology;
+  ,Machine Learning;
   '],
       image: '🏥,
       featured: false,
       views: 1876,
       likes: 103}
   ];
+<<<<<<< HEAD
   const categories = ['All'
   ', 'AI & Technology;
   ', 'DevOps & Infrastructure;
@@ -201,6 +208,15 @@ const Blog: NextPage = () => {
   ', 'Metaverse & VR;
   ', 'Business Strategy;
   ', 'Healthcare & AI;
+=======
+  const categories = ['All
+  ,AI & Technology;
+  ,DevOps & Infrastructure;
+  ,Cybersecurity;
+  ,Metaverse & VR;
+  ,Business Strategy;
+  ,Healthcare & AI;
+>>>>>>> main
   '];
   const filteredPosts = blogPosts.filter(post => {'
     const matchesCategory = selectedCategory === 'All;

@@ -213,11 +213,16 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
         const cssVar = `--${key.replace(/([A-Z])/g, '-$1').toLowerCase()}`;
         root.style.setProperty(cssVar, value)}
     })
+<<<<<<< HEAD
     // Set theme class;`
     root.classList.remove('light', 'dark');
+=======
+    // Set theme class;
+    root.classList.remove('light,dark');
+>>>>>>> main
     root.classList.add(getEffectiveTheme());
     // Set color scheme class;
-    root.classList.remove('blue', 'purple', 'green', 'orange', 'red', 'pink');
+    root.classList.remove('blue,purple,green,orange,red,pink');
     root.classList.add(colorScheme)}, [config, getEffectiveTheme, colorScheme]);
   // Listen for system theme changes;
   useEffect(() => {'

@@ -33,5 +33,11 @@ import React from;
   /api' }, { name: 'Developer Portal, href:,
   /developer' }, { name: 'Training, href:,
   /training' }, { name: 'Support, href:,
+<<<<<<< HEAD
   /support' } ] } const socialLinks = [ { name: 'Facebook, icon: Facebook, href:,
   https: '''
+=======
+  /support' } ] } const socialLinks = [
+  { name: 'Facebook, icon: Facebook, href:,
+  https: ''
+>>>>>>> main

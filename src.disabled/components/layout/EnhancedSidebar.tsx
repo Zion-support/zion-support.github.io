@@ -14,7 +14,7 @@ export function EnhancedSidebar({ isOpen, onClose }: SidebarProps) {
   const location = useLocation();
 :src.disabled/components/layout/EnhancedSidebar.tsx;
   const items = [
-    { label:,
+  { label:,
   Home', href: '/ },
     { label:,
   Services', href: '/services },
@@ -26,7 +26,8 @@ export function EnhancedSidebar({ isOpen, onClose }: SidebarProps) {
   About', href: '/about },
     { label:,
   Contact', href: '/contact }
-  const items = [{ label: 'Home', href: '/' },
+  const items = [
+  { label: 'Home', href: '/' },
     { label: 'Services', href: '/services' },
     { label: 'Enterprise', href: '/enterprise' },
     { label: 'Request Quote', href: '/request-quote' },

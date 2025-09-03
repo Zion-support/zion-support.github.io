@@ -13,4 +13,8 @@ const News: React.FC = () => {
       </div>
     </>
   )}
+<<<<<<< HEAD
 export default News'
+=======
+export default News
+>>>>>>> main

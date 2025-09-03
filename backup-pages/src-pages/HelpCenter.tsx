@@ -326,10 +326,15 @@ export function HelpCenter() {'
   'getting-started']))
   const [selectedCategory, setSelectedCategory] = useState<string>('
   'All');
+<<<<<<< HEAD
     if (query.trim() === ';
   ') {'
 setSearchQuery(query)    if (query.trim() === ';
   ') {
+=======
+    if (query.trim() === ) {
+setSearchQuery(query)'    if (query.trim() === ) {
+>>>>>>> main
       setFilteredFAQs(faqData);
       return;
     setFilteredFAQs (filtered) }
@@ -545,10 +550,16 @@ setSearchQuery(query)    if (query.trim() === ';
                                             article.difficulty ===;
   'Intermediate' ?;
   'bg-yellow-500/20 text-yellow-400' :;
+<<<<<<< HEAD
   ';
                                             'bg-red-500/20 text-red-400`}`}>{article.difficulty}`
                                           </span>''
                                           <span className='text-gray-500 text-sm flex items-center>'
+=======
+  bg-red-500/20 text-red-400`}`}>{article.difficulty}
+                                          </span>'
+                                          <span className='text-gray-500 text-sm flex items-center'>'
+>>>>>>> main
                                             <Clock className='w-4 h-4 mr-1'  />
                                             {article.readTime}
                                           </span>
@@ -569,10 +580,16 @@ setSearchQuery(query)    if (query.trim() === ';
                                         article.difficulty ===;
   'Intermediate' ?;
   'bg-yellow-500/20 text-yellow-400' :;
+<<<<<<< HEAD
   ';
                                         'bg-red-500/20 text-red-400`}`}>{article.difficulty}`
                                       </span>''
                                       <span className='text-gray-500 text-sm flex items-center>'
+=======
+  bg-red-500/20 text-red-400`}`}>{article.difficulty}
+                                      </span>'
+                                      <span className='text-gray-500 text-sm flex items-center'>'
+>>>>>>> main
                                         <Clock className='w-4 h-4 mr-1'  />                                        {article.readTime}
                                       </span>
                                     </div>

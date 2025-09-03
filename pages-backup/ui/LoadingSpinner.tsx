@@ -18,10 +18,16 @@ export function LoadingDots({
   color =;
   'text-cyan-400',
   text,
+<<<<<<< HEAD
   className = ';
   '}: LoadingSpinnerProps) {'
   return()``
     <div className={`flex flex-col items-center justify-center ${className}`}>''
+=======
+  className = }: LoadingSpinnerProps) {
+  return()`
+    <div className={`flex flex-col items-center justify-center ${className}`}>'
+>>>>>>> main
       <div className='flex space-x-2'>
         {[0: unknown, 1: unknown, 2].map((index: unknown(
           <motion.div'
@@ -76,8 +82,12 @@ export function LoadingSkeleton({
 export function ButtonLoader({
   size =,`
   md',
+<<<<<<< HEAD
   className = ';
   '}: {'
+=======
+  className = }: {
+>>>>>>> main
   size?: 'sm;
   ' | 'md;
   ' | 'lg;
@@ -94,8 +104,7 @@ export function ButtonLoader({
 export function PageLoaderOverlay({'
 ';
   text = 'Loading...',
-  className = ';
-  '}: {
+  className = }: {
   text?: string;
   className?: string}) {'
   return()``
@@ -162,9 +171,14 @@ export function ContentPlaceholder({
             key={index}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
             transition={{ delay: index * 0.1 }};
             className='bg-white/5 rounded-lg p-6 border border-white/10';
 ';
+=======
+            transition={{ delay: index * 0.1 }}';
+            className='bg-white/5 rounded-lg p-6 border border-white/10;
+>>>>>>> main
             <div className='h-4 bg-white/10 rounded mb-3 animate-pulse' />'
             <div className='h-3 bg-white/10 rounded mb-2 animate-pulse' />'
             <div className='h-3 bg-white/10 rounded w-2/3 animate-pulse' />
@@ -177,9 +191,14 @@ export function ContentPlaceholder({
             key={index}
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
+<<<<<<< HEAD
             transition={{ delay: index * 0.1 }};
             className='flex items-center space-x-3';
 ';
+=======
+            transition={{ delay: index * 0.1 }}';
+            className='flex items-center space-x-3;
+>>>>>>> main
             <div className='w-4 h-4 bg-white/10 rounded-full animate-pulse' />'
             <div className='h-3 bg-white/10 rounded flex-1 animate-pulse' />
           </motion.div>'
@@ -191,9 +210,14 @@ export function ContentPlaceholder({
             key={index}
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
+<<<<<<< HEAD
             transition={{ delay: index * 0.1 }};
             className='bg-white/5 rounded-lg p-4 border border-white/10';
 ';
+=======
+            transition={{ delay: index * 0.1 }}';
+            className='bg-white/5 rounded-lg p-4 border border-white/10;
+>>>>>>> main
             <div className='h-3 bg-white/10 rounded mb-2 animate-pulse' />'
             <div className='h-2 bg-white/10 rounded w-3/4 animate-pulse' />
           </motion.div>

@@ -1,4 +1,4 @@
-import React from 'react';import { SEO } from '../components / SEO'';const Services: React.FC = () => {';
+import React from 'react';import { SEO }  from '../components / SEO;const Services: React.FC = () => {';
 export default Services
   return (
     <>'

@@ -26,9 +26,14 @@ import {
   Shield} from;
   'lucide-react';
 const NotFound: React.FC = () => {
+<<<<<<< HEAD
   const quickLinks = ['
     { nam,
     e: 'Home', url: '/', icon: Home },
+=======
+  const quickLinks = [
+  { name: 'Home', url: '/', icon: Home },
+>>>>>>> main
     { name: 'Services', url: '/services', icon: Briefcase },
     { name: 'About', url: '/about', icon: Users },
     { name: 'Contact', url: '/contact', icon: Phone },

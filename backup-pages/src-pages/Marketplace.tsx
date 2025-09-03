@@ -178,10 +178,16 @@ const Marketplace: React.FC = () => {
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}`;`
                   className={`flex items-center space-x-2 px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
+<<<<<<< HEAD
                     selectedCategory === category.id,`
   ? 'bg-zion-purple text-white shadow-lg';
   ': 'bg-white/10 text-zion-cyan-light hover:bg-white/20 border border-white/20`}`}`
                 >''
+=======
+                    selectedCategory === category.id,
+  ? 'bg-zion-purple text-white shadow-lg: 'bg-white/10 text-zion-cyan-light hover:bg-white/20 border border-white/20`}`}
+                >'
+>>>>>>> main
                   <category.icon className='w-5 h-5' />
                   <span>{category.name}</span>''
                   <span className='text-sm opacity-75'>({category.count})</span>

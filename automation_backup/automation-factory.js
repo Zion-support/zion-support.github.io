@@ -12,11 +12,9 @@ class AutomationFactory {
     this.scripts = new Map();
     this.runningScripts = new Map();
     this.logFile = path.join(__dirname,
-  'logs',
-  'automation-factory.log');
+  'logs,automation-factory.log');
     this.statusFile = path.join(__dirname,
-  'logs',
-  'automation-status.json');
+  'logs,automation-status.json');
     this.ensureLogDirectory();
     this.loadExistingScripts();
     this.loadStatus()}
@@ -96,12 +94,10 @@ class CodeQualityMonitor {
       lastUpdated: new Date().toISOString()}
     this.logFile = path.join(__dirname,
 ,
-  logs',
-  'code-quality.log')}
+  logs,code-quality.log')}
 }
     this.logFile = path.join(__dirname,
-  'logs',
-  'code-quality.log');
+  'logs,code-quality.log');
     // // // // // // // // console.log(message);
     fs.appendFileSync(this.logFile, logMessage)}
   log(message) {
@@ -182,9 +178,14 @@ class CodeQualityMonitor {
     return files}
   saveMetrics() {
     const metricsFile = path.join(__dirname,
+<<<<<<< HEAD
   'logs',
   'code-quality-metrics.json');
     fs.writeFileSync(metricsFile, JSON.stringify(this.metrics, null, 2));
+=======
+  'logs,code-quality-metrics.json');
+    fs.writeFileSync(metricsFile, JSON.stringify(this.metrics, null, 2))}
+>>>>>>> main
 }
 const monitor = new CodeQualityMonitor();
 monitor.analyzeCodeQuality().then(metrics => {
@@ -222,8 +223,7 @@ class PerformanceOptimizer {
     this.optimizations = [];
     // // // // // // // // console.log(message);
     fs.appendFileSync(this.logFile, logMessage);this.logFile = path.join(__dirname,
-  'logs',
-  'performance-optimizer.log')}
+  'logs,performance-optimizer.log')}
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = \`[\${timestamp}] \${message}\\n\`;
@@ -263,9 +263,14 @@ class PerformanceOptimizer {
         totalSize: '2.1MB,
         gzippedSize:;
   '650KB',
+<<<<<<< HEAD
         recommendations['
   'Consider code splitting',
   'Remove unused dependencies']}} catch (error) {
+=======
+        recommendations[
+  'Consider code splitting,Remove unused dependencies']}} catch (error) {
+>>>>>>> main
       return { error: error.message }}
   }
   optimizeImages() {
@@ -295,6 +300,7 @@ class PerformanceOptimizer {
     // Placeholder for unused dependency detection;
     return [;
   'example-unused-package']}
+<<<<<<< HEAD
   generateRecommendations() {'
     return [';Implement code splitting for better performance',;Optimize images using WebP format',;Remove unused dependencies',;Enable gzip compression',;Use React.memo for expensive components';
     // // // // // // // // console.log('
@@ -304,6 +310,16 @@ class PerformanceOptimizer {
   'logs',
   'performance-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+=======
+  generateRecommendations() {
+    return [';Implement code splitting for better performance,;Optimize images using WebP format,;Remove unused dependencies,;Enable gzip compression,;Use React.memo for expensive components';
+    // // // // // // // // console.log(
+  'Performance report:', report)}]}
+  saveReport(report) {
+    const reportFile = path.join(__dirname,
+  'logs,performance-report.json');
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2))}
+>>>>>>> main
 }
 const optimizer = new PerformanceOptimizer();
 optimizer.optimizePerformance().then(report => {

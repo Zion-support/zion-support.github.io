@@ -26,128 +26,129 @@ import Link from 'next/link';
 
 const DigitalTransformation: NextPage = () => {
   const transformationServices = [
+<<<<<<< HEAD
     {
       ico,
     n: Cloud,
+=======
+  {
+      icon: Cloud,
+>>>>>>> main
 :pages.disabled_auto/solutions/digital-transformation.tsx;
       title:,
   Cloud Migration',
       description: 'Seamlessly migrate your infrastructure to the cloud for improved scalability and cost efficiency.,
       benefits: [;
-  'Reduced infrastructure costs',
-  'Improved scalability',
-  'Enhanced security',
-  'Better performance']},
+  'Reduced infrastructure costs,Improved scalability,Enhanced security,Better performance']},
     {
       icon: Database,
       title:,
   Data Modernization',
       description: 'Transform your data architecture to support modern analytics and business intelligence.,
+<<<<<<< HEAD
       benefits: ['
   'Real-time analytics',
   'Improved data quality',
   'Better insights',
   'Automated reporting']},
+=======
+      benefits: [
+  'Real-time analytics,Improved data quality,Better insights,Automated reporting']},
+>>>>>>> main
     {
       icon: Users,
       title:,
   Process Automation',
       description: 'Automate repetitive tasks and workflows to improve efficiency and reduce errors.,
+<<<<<<< HEAD
       benefits: ['
   'Increased productivity',
   'Reduced errors',
   'Cost savings',
   'Better compliance']},
+=======
+      benefits: [
+  'Increased productivity,Reduced errors,Cost savings,Better compliance']},
+>>>>>>> main
     {
       icon: Zap,
       title:,
   AI Integration',
       description: 'Integrate artificial intelligence into your business processes for enhanced decision making.,
+<<<<<<< HEAD
       benefits: ['
   'Predictive analytics',
   'Automated insights',
   'Improved accuracy',
   'Competitive advantage']},
+=======
+      benefits: [
+  'Predictive analytics,Automated insights,Improved accuracy,Competitive advantage']},
+>>>>>>> main
     {
       icon: Shield,
       title:,
   Security Enhancement',
       description: 'Implement modern security measures to protect your digital assets and ensure compliance.,
+<<<<<<< HEAD
       benefits: ['
   'Enhanced security',
   'Compliance assurance',
   'Risk reduction',
   'Peace of mind']},
+=======
+      benefits: [
+  'Enhanced security,Compliance assurance,Risk reduction,Peace of mind']},
+>>>>>>> main
     {
       icon: Target,
       title:,
   Customer Experience',
       description: 'Improve customer interactions through digital channels and personalized experiences.,
       benefits: [,
-  Better customer satisfaction',
-  'Increased engagement',
-  'Higher retention',
-  'Improved loyalty']}
+  Better customer satisfaction,Increased engagement,Higher retention,Improved loyalty']}
       title: 'Cloud Migration',
       description:;
         'Seamlessly migrate your infrastructure to the cloud for improved scalability and cost efficiency.',
       benefits: [;
-        'Reduced infrastructure costs',
-        'Improved scalability',
-        'Enhanced security',
-        'Better performance']},
+        'Reduced infrastructure costs,Improved scalability,Enhanced security,Better performance']},
     {
       icon: Database,
       title: 'Data Modernization',
       description:;
         'Transform your data architecture to support modern analytics and business intelligence.',
       benefits: [;
-        'Real-time analytics',
-        'Improved data quality',
-        'Better insights',
-        'Automated reporting']},
+        'Real-time analytics,Improved data quality,Better insights,Automated reporting']},
     {
       icon: Users,
       title: 'Process Automation',
       description:;
         'Automate repetitive tasks and workflows to improve efficiency and reduce errors.',
       benefits: [;
-        'Increased productivity',
-        'Reduced errors',
-        'Cost savings',
-        'Better compliance']},
+        'Increased productivity,Reduced errors,Cost savings,Better compliance']},
     {
       icon: Zap,
       title: 'AI Integration',
       description:;
         'Integrate artificial intelligence into your business processes for enhanced decision making.',
       benefits: [;
-        'Predictive analytics',
-        'Automated insights',
-        'Improved accuracy',
-        'Competitive advantage']},
+        'Predictive analytics,Automated insights,Improved accuracy,Competitive advantage']},
     {
       icon: Shield,
       title: 'Security Enhancement',
       description:;
         'Implement modern security measures to protect your digital assets and ensure compliance.',
       benefits: [;
-        'Enhanced security',
-        'Compliance assurance',
-        'Risk reduction',
-        'Peace of mind']},
+        'Enhanced security,Compliance assurance,Risk reduction,Peace of mind']},
     {
       icon: Target,
       title: 'Customer Experience',
       description:;
         'Improve customer interactions through digital channels and personalized experiences.',
       benefits: [;
-        'Better customer satisfaction',
-        'Increased engagement',
-        'Higher retention',
-        'Improved loyalty']}];
+        'Better customer satisfaction,Increased engagement,Higher retention,Improved loyalty']}];
   const transformationStages = [
-    {
+  {
 :pages.disabled_auto/solutions/digital-transformation.tsx;
       stage: 'Assessment,
       title:,
@@ -180,8 +181,13 @@ const DigitalTransformation: NextPage = () => {
   const industries = [;
 ursor/automate-test-fix-improve-and-merge-code-48f3;
   ];
+<<<<<<< HEAD
   const successMetrics = ['
     { metric: '85%, label:,
+=======
+  const successMetrics = [
+  { metric: '85%, label:,
+>>>>>>> main
   Cost Reduction', description: 'Average cost savings achieved through digital transformation },
     { metric:,
   60%', label: 'Efficiency Gain, description:,
@@ -215,7 +221,11 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
         'We monitor performance and continuously optimize your digital solutions for maximum impact.',
       duration: 'Ongoing'}];
   const industries = [
+<<<<<<< HEAD
     {'
+=======
+  {
+>>>>>>> main
       name: 'Healthcare',
       description:;
         'Digital health records, telemedicine, and patient management systems'},
@@ -240,7 +250,11 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
       description:;
         'Citizen services, digital governance, and public safety systems'}];
   const successMetrics = [
+<<<<<<< HEAD
     {'
+=======
+  {
+>>>>>>> main
       metric: '85%',
       label: 'Cost Reduction',
       description:;

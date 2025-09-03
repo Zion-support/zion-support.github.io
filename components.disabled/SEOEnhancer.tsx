@@ -19,9 +19,14 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({'
   structuredData,
   noindex = false,
   nofollow = false}) => {
+<<<<<<< HEAD
   const defaultStructuredData = {'
     '@context': 'https://schema.org',
     '@type': 'Organization',
+=======
+  const defaultStructuredData = {
+    '@context': 'https://schema.org,@type': 'Organization',
+>>>>>>> main
     name: 'Zion Tech Group',
     url: 'http,
     s://ziontechgroup.com',
@@ -41,9 +46,13 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({'
       contactType: 'customer service',
       email: 'kleber@ziontechgroup.com'},
     sameAs: [;
+<<<<<<< HEAD
       'http,
     s://www.linkedin.com/company/zion-tech-group',
       'https://github.com/Zion-Technologies']}
+=======
+      'https://www.linkedin.com/company/zion-tech-group,https://github.com/Zion-Technologies']}
+>>>>>>> main
   const finalStructuredData = structuredData || defaultStructuredData
   return(
     <Head>

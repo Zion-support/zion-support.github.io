@@ -137,11 +137,7 @@ const AIAutonomousDevOpsPlatform: React.FC = () => {
                   period: '/month',
                   description: 'Perfect for small teams',
                   features: [;
-                    'Up to 10 applications',
-                    'Basic automation',
-                    'Standard monitoring',
-                    'Email support',
-                    'Cloud integrations';
+                    'Up to 10 applications,Basic automation,Standard monitoring,Email support,Cloud integrations';
                   ]},
                 {'
                   name: 'Professional',
@@ -149,12 +145,7 @@ const AIAutonomousDevOpsPlatform: React.FC = () => {
                   period: '/month',
                   description: 'Ideal for growing teams',
                   features: [;
-                    'Up to 50 applications',
-                    'Advanced AI automation',
-                    'Predictive monitoring',
-                    'Priority support',
-                    'Custom integrations',
-                    'Self-healing systems';
+                    'Up to 50 applications,Advanced AI automation,Predictive monitoring,Priority support,Custom integrations,Self-healing systems';
                   ],
                   popular: true},
                 {'
@@ -162,6 +153,7 @@ const AIAutonomousDevOpsPlatform: React.FC = () => {
                   price: '$2,499',
                   period: '/month',
                   description: 'For large organizations',
+<<<<<<< HEAD
                   features: ['
                     'Unlimited applications',
                     'Full AI capabilities',
@@ -169,6 +161,10 @@ const AIAutonomousDevOpsPlatform: React.FC = () => {
                     'Dedicated support',
                     'White-label options',
                     'On-premise deployment'
+=======
+                  features: [
+                    'Unlimited applications,Full AI capabilities,Custom AI models,Dedicated support,White-label options,On-premise deployment'
+>>>>>>> main
                   ]}
               ].map((plan, index) => (
                 <motion.div
@@ -237,6 +233,7 @@ const AIAutonomousDevOpsPlatform: React.FC = () => {
                 <h3 className='text-3xl font-bold text-white mb-6'>Revolutionary Benefits</h3>'
                 <div className='space-y-6'>
                   {[;
+<<<<<<< HEAD
                     'Reduce deployment time by 80% with AI automation',
                     'Decrease infrastructure costs by 50% through intelligent optimization',
                     'Improve system reliability by 95% with self-healing capabilities',
@@ -247,6 +244,13 @@ const AIAutonomousDevOpsPlatform: React.FC = () => {
                     <div key={index} className='flex items-start>
                       <div className='flex-shrink-0 w-6 h-6 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mr-4 mt-1>
                         <svg className='w-4 h-4 text-white' fill='currentColor' viewBox='0 0 20 20>
+=======
+                    'Reduce deployment time by 80% with AI automation,Decrease infrastructure costs by 50% through intelligent optimization,Improve system reliability by 95% with self-healing capabilities,Save 40+ hours per week on manual DevOps tasks,Boost deployment frequency by 300% with automated pipelines,Eliminate 90% of production incidents with predictive monitoring'
+                  ].map((benefit, index) => (
+                    <div key={index} className='flex items-start'>
+                      <div className='flex-shrink-0 w-6 h-6 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mr-4 mt-1'>
+                        <svg className='w-4 h-4 text-white' fill='currentColor' viewBox='0 0 20 20'>
+>>>>>>> main
                           <path fillRule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clipRule='evenodd' />
                         </svg>
                       </div>'

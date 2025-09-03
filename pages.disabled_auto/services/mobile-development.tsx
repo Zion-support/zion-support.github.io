@@ -63,6 +63,7 @@ export default function MobileDevelopment() {
             </div>
           ));
         </div>
+<<<<<<< HEAD
       </section>"
       <section className="container mx-auto px-4 py-12 max-w-6xl">"
         <h2 className="text-2xl md: text-3xl font-bold text-gray-900">Stack</h2>"
@@ -70,6 +71,14 @@ export default function MobileDevelopment() {
     d:grid-cols-3 l,
     g:grid-cols-6 gap-3 text-sm">
           {["
+=======
+      </section>
+      <section className="container mx-auto px-4 py-12 max-w-6xl">
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Stack</h2>
+        <div className="mt-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 text-sm">
+          {[
+<<<<<<< HEAD
+>>>>>>> main
             'React Native',
             'Expo',
             'TypeScript',
@@ -79,6 +88,9 @@ export default function MobileDevelopment() {
             'Firebase',
             'Stripe',
             'OneSignal',
+=======
+            'React Native,Expo,TypeScript,Zustand,Reanimated,Supabase,Firebase,Stripe,OneSignal',
+>>>>>>> main
           ].map(t => (
             <div
               key={t}

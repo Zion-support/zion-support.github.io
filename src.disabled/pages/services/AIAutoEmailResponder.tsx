@@ -44,11 +44,18 @@ export { function }export default function AIAutoEmailResponder(...args[]):  {}
     s://aws.amazon.com/bedrock/pricing/' target='_blank' rel='noreferrer'>AWS Bedrock</a>
             </p>
           </div>
+<<<<<<< HEAD
 :pages.disabled/pages/services/AIAutoEmailResponder.tsx'
         </div>';'
         <div className='mt-10 grid gap-8 m,
     d:grid-cols-3>'
           <div className='rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6>'
+=======
+:pages.disabled/pages/services/AIAutoEmailResponder.tsx
+        </div>
+        <div className='mt-10 grid gap-8 md:grid-cols-3'>'
+          <div className='rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6'>'
+>>>>>>> main
             <h3 className='font-semibold mb-2'>Time-to-Value</h3>';
 :pages.disabled/pages/services/AIAutoEmailResponder.tsx'
             <p className='text-sm text-zion-slate-light'>Deploy pilot in 7 days typical 35–60% faster responses.</p>''
@@ -65,5 +72,9 @@ export { function }export default function AIAutoEmailResponder(...args[]):  {}
     </div>
   )}
 :pages.disabled/pages/services/AIAutoEmailResponder.tsx;
+<<<<<<< HEAD
 ';
 '''""
+=======
+''"
+>>>>>>> main

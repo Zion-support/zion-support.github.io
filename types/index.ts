@@ -126,14 +126,20 @@ export interface SEOProps {
    type?: string;
    noindex?: boolean}
 export interface PerformanceMetrics {
-  fcp?: number; // First Contentful Paint
-  lcp?: number; // Largest Contentful Paint
-  fid?: number; // First Input Delay
-  cls?: number; // Cumulative Layout Shift
-  ttfb?: number; // Time to First Byte
+  fcp?: number;
+  // First Contentful Paint
+  lcp?: number;
+  // Largest Contentful Paint
+  fid?: number;
+  // First Input Delay
+  cls?: number;
+  // Cumulative Layout Shift
+  ttfb?: number;
+  // Time to First Byte
 }
 export interface AccessibilitySettings {
   highContrast: boolean;
+<<<<<<< HEAD
   fontSize: number;
   reducedMotio,
     n: boolean;
@@ -141,6 +147,12 @@ export interface AccessibilitySettings {
     r: boolean;
 }
 export interface UserPreferences {'
+=======
+   fontSize: number;
+   reducedMotion: boolean;
+   screenReader: boolean}
+export interface UserPreferences {
+>>>>>>> main
   theme: 'light' | 'dark' | 'system';
    language: string;
    accessibility: AccessibilitySettings;
@@ -187,7 +199,7 @@ contact: {phone: string;
 export interface ErrorInfo {
   message: string;
    code?: string;
-   details?: Record<string, unknown>;
+   details?: unknown;
    timestamp: string;
    userAgent?: string;
    url?: string}
@@ -212,7 +224,7 @@ export interface FormField {
     message?: string}
 }
 export interface FormState {
-  values: Record<string, string | number | boolean>
+  values: Record<string, unknown>
    errors: Record<string, string>
    touched: Record<string, boolean>
    isSubmitting: boolean;
@@ -222,6 +234,7 @@ export interface FormState {
 export type RequiredFields<T, K extends keyof T> = T & Required<Pick<T, K>>;
 export type DeepPartial<T> = {
   [P in keyof T]?: T[P] extends object ? DeepPartial<T[P]> : T[P]}
+;
 // Component prop types;
 export interface BaseComponentProps {
   className?: string;
@@ -251,6 +264,7 @@ export interface ApiError {
    messag,
     e: string;
    code?: string;
+<<<<<<< HEAD
    details?: Record<string, unknown>}
 export interface ApiRequest {'
   method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
@@ -258,6 +272,14 @@ export interface ApiRequest {'
     l: string;
   data?: Record<string, unknown>;
   params?: Record<string, string | number | boolean>;
+=======
+   details?: unknown}
+export interface ApiRequest {
+  method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
+  url: string;
+  data?: unknown;
+  params?: Record<string, unknown>;
+>>>>>>> main
   headers?: Record<string, string>}
 // Environment types;
 export interface Environment {'

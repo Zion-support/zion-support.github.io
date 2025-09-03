@@ -24,6 +24,7 @@ const EnhancedLayout: React.FC<EnhancedLayoutProps> = {
   ',
   ogImage = 'https: //ziontechgroup.com/og-image.png,
   structuredData} {
+<<<<<<< HEAD
   const defaultStructuredData = {'
     '@context': 'https://schema.org',
     '@type': 'Organization',
@@ -43,11 +44,17 @@ const EnhancedLayout: React.FC<EnhancedLayoutProps> = {
       'addressRegion': 'DE',
       'postalCode': '19709',
       'addressCountry': 'US'},
+=======
+  const defaultStructuredData = {
+    '@context': 'https://schema.org,@type': 'Organization,name': 'Zion Tech Group,description': 'Leading technology consulting firm specializing in AI development, cloud architecture, and digital transformation solutions.,url': 'https://ziontechgroup.com,logo': 'https://ziontechgroup.com/logo.png,contactPoint': {
+      '@type': 'ContactPoint,telephone': '+1-302-464-0950,contactType': 'customer service,email': 'kleber@ziontechgroup.com'},
+    'address': {
+      '@type': 'PostalAddress,streetAddress': '364 E Main St STE 1008,addressLocality': 'Middletown,addressRegion': 'DE,postalCode': '19709,addressCountry': 'US'},
+>>>>>>> main
     'sameAs': [;
-      'https://twitter.com/ziontechgroup',
-      'https://linkedin.com/company/ziontechgroup',
-      'https://github.com/ziontechgroup';
+      'https://twitter.com/ziontechgroup,https://linkedin.com/company/ziontechgroup,https://github.com/ziontechgroup';
     ],
+<<<<<<< HEAD
     'foundingDate': '2010',
     'numberOfEmployees': '50-100',
     'serviceType': ['
@@ -57,6 +64,10 @@ const EnhancedLayout: React.FC<EnhancedLayoutProps> = {
       'Cybersecurity',
       'IoT Platforms',
       'Digital Transformation';
+=======
+    'foundingDate': '2010,numberOfEmployees': '50-100,serviceType': [
+      'AI Development,Cloud Architecture,Web Development,Cybersecurity,IoT Platforms,Digital Transformation';
+>>>>>>> main
     ]}
   const finalStructuredData = structuredData || defaultStructuredData
   return(

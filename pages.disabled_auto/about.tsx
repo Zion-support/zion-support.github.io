@@ -21,8 +21,13 @@ const AboutPage: NextPage = () => {
     { number: '500+', label: 'Projects Completed', icon: <Award className='w-8 h-8' /> }, { number: '50+', label: 'Happy Clients', icon: <Users className='w-8 h-8' /> },
     { number: '99.9%', label: 'Uptime Guarantee', icon: <Shield className='w-8 h-8' /> }, { number: '24/7', label: 'Support Available', icon: <Globe className='w-8 h-8' /> }];
   const values = [
+<<<<<<< HEAD
     {
 :pages.disabled_auto/about.tsx'
+=======
+  {
+:pages.disabled_auto/about.tsx
+>>>>>>> main
       icon: <Lightbulb className='w-8 h-8' />,
       title:,
   Innovation',
@@ -59,7 +64,7 @@ const AboutPage: NextPage = () => {
       description: 'We focus on delivering measurable outcomes that directly impact your business growth and efficiency.'}
   ];
   const team = [
-    {
+  {
 :pages.disabled_auto/about.tsx;
       name:,
   Kleber Silva;
@@ -110,7 +115,7 @@ const AboutPage: NextPage = () => {
       bio: 'UX/UI expert dedicated to creating intuitive, beautiful, and functional user experiences.', image: '/team/emily.jpg'}
   ];
   const timeline = [
-    {
+  {
 :pages.disabled_auto/about.tsx;
       year:,
   2020;

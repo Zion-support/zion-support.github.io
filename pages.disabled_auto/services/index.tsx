@@ -41,8 +41,12 @@ const ServicesPage: NextPage = () => {
   const aiServices = getServicesByCategory('
   'ai-services');
   const stats = [
+<<<<<<< HEAD
     { numbe,
     r:;
+=======
+  { number:;
+>>>>>>> main
   '80+, label:;
   'Micro SaaS Solutions', icon: Zap },
     { number:,
@@ -52,7 +56,11 @@ const ServicesPage: NextPage = () => {
     { number:,
   500+', label: 'Projects Completed, icon: TrendingUp }]
   const benefits = [
+<<<<<<< HEAD
     {'
+=======
+  {
+>>>>>>> main
       icon: <DollarSign className='w-8 h-8' />,
 :pages.disabled_auto/services/index.tsx
       title:,

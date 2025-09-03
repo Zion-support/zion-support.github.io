@@ -47,9 +47,15 @@ import {
   'lucide-react';
   Search} from 'lucide-react';
 const CaseStudies: React.FC = () => {
+<<<<<<< HEAD
   const caseStudies = [{
       i,
     d: 1,
+=======
+  const caseStudies = [
+  {
+      id: 1,
+>>>>>>> main
       title: 'AI-Powered Supply Chain Optimization for Global Manufacturing',
       company: 'TechCorp Industries',
       industry: 'Manufacturing',
@@ -58,17 +64,11 @@ const CaseStudies: React.FC = () => {
       solution:;
         'Implemented AI-driven demand forecasting and autonomous logistics optimization',
       results: [;
-        '40% reduction in inventory costs',
-        '60% improvement in delivery times',
-        '25% increase in customer satisfaction',
-        '$2.5M annual cost savings'],
+        '40% reduction in inventory costs,60% improvement in delivery times,25% increase in customer satisfaction,$2.5M annual cost savings'],
       duration: '6 months',
       teamSize: '12 experts',
       technologies: [;
-        'Machine Learning',
-        'IoT',
-        'Predictive Analytics',
-        'Cloud Computing'],
+        'Machine Learning,IoT,Predictive Analytics,Cloud Computing'],
       image: '/api/placeholder/600/400',
       featured: true},
     {
@@ -80,17 +80,11 @@ const CaseStudies: React.FC = () => {
       solution:;
         'Developed AI-powered medical imaging analysis and clinical decision support system',
       results: [;
-        '95% diagnostic accuracy improvement',
-        '50% reduction in patient wait times',
-        '30% increase in patient throughput',
-        'Compliance with HIPAA regulations'],
+        '95% diagnostic accuracy improvement,50% reduction in patient wait times,30% increase in patient throughput,Compliance with HIPAA regulations'],
       duration: '8 months',
       teamSize: '15 experts',
       technologies: [;
-        'Computer Vision',
-        'Deep Learning',
-        'Medical AI',
-        'Data Security'],
+        'Computer Vision,Deep Learning,Medical AI,Data Security'],
       image: '/api/placeholder/600/400',
       featured: false},
     {
@@ -103,17 +97,11 @@ const CaseStudies: React.FC = () => {
       solution:;
         'Built comprehensive AI risk assessment and fraud detection system',
       results: [;
-        '80% faster loan processing',
-        '90% reduction in false positives',
-        '35% decrease in fraud losses',
-        'Full regulatory compliance'],
+        '80% faster loan processing,90% reduction in false positives,35% decrease in fraud losses,Full regulatory compliance'],
       duration: '10 months',
       teamSize: '18 experts',
       technologies: [;
-        'Risk Analytics',
-        'Fraud Detection',
-        'Regulatory AI',
-        'Real-time Processing'],
+        'Risk Analytics,Fraud Detection,Regulatory AI,Real-time Processing'],
       image: '/api/placeholder/600/400',
       featured: false},
     {
@@ -125,17 +113,11 @@ const CaseStudies: React.FC = () => {
       solution:;
         'Implemented AI-powered personalization and customer service automation',
       results: [;
-        '45% increase in conversion rates',
-        '60% improvement in customer satisfaction',
-        '25% reduction in support costs',
-        '40% increase in average order value'],
+        '45% increase in conversion rates,60% improvement in customer satisfaction,25% reduction in support costs,40% increase in average order value'],
       duration: '5 months',
       teamSize: '10 experts',
       technologies: [;
-        'Personalization AI',
-        'NLP',
-        'Recommendation Engines',
-        'Chatbots'],
+        'Personalization AI,NLP,Recommendation Engines,Chatbots'],
       image: '/api/placeholder/600/400',
       featured: false},
     {
@@ -147,17 +129,11 @@ const CaseStudies: React.FC = () => {
       solution:;
         'Deployed AI-powered predictive maintenance and asset optimization platform',
       results: [;
-        '70% reduction in unplanned downtime',
-        '50% decrease in maintenance costs',
-        '35% improvement in equipment efficiency',
-        '$5M annual savings'],
+        '70% reduction in unplanned downtime,50% decrease in maintenance costs,35% improvement in equipment efficiency,$5M annual savings'],
       duration: '7 months',
       teamSize: '14 experts',
       technologies: [;
-        'IoT Analytics',
-        'Predictive Maintenance',
-        'Asset Optimization',
-        'Edge Computing'],
+        'IoT Analytics,Predictive Maintenance,Asset Optimization,Edge Computing'],
       image: '/api/placeholder/600/400',
       featured: false},
     {
@@ -169,21 +145,20 @@ const CaseStudies: React.FC = () => {
       solution:;
         'Created personalized AI learning platform with adaptive content delivery',
       results: [;
-        '40% improvement in student performance',
-        '60% increase in course completion rates',
-        '50% reduction in learning time',
-        '95% student satisfaction rate'],
+        '40% improvement in student performance,60% increase in course completion rates,50% reduction in learning time,95% student satisfaction rate'],
       duration: '9 months',
       teamSize: '16 experts',
       technologies: [;
-        'Adaptive Learning',
-        'Educational AI',
-        'Content Personalization',
-        'Learning Analytics'],
+        'Adaptive Learning,Educational AI,Content Personalization,Learning Analytics'],
       image: '/api/placeholder/600/400',
       featured: false}];
+<<<<<<< HEAD
   const industries = ['
     { name: 'All Industries', count: 24, active: true },
+=======
+  const industries = [
+  { name: 'All Industries', count: 24, active: true },
+>>>>>>> main
     { name: 'Manufacturing', count: 6, active: false },
     { name: 'Healthcare', count: 4, active: false },
     { name: 'Financial Services', count: 5, active: false },

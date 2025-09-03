@@ -19,11 +19,9 @@ class FileIntegrityMonitor {
     this.issuesFixed = 0;
     this.monitoring = false;
     this.logFile = path.join(this.projectRoot,
-  'logs',
-  'file-integrity.log');
+  'logs,file-integrity.log');
     this.checksumsFile = path.join(this.projectRoot,
-  'logs',
-  'file-checksums.json');
+  'logs,file-checksums.json');
     // Ensure logs directory exists;
     this.ensureLogsDirectory();
     // Initialize monitoring;
@@ -118,8 +116,13 @@ class FileIntegrityMonitor {
         description: `${structureIssues.length} project structure issues found`,
         details: structureIssues});
     return issues;
+<<<<<<< HEAD
   async checkMissingCriticalFiles() {`
     const criticalFiles = ['package.json',;vite.config.ts',;tsconfig.json',;src/main.tsx',;index.html',;tailwind.config.js',;postcss.config.js';
+=======
+  async checkMissingCriticalFiles() {
+    const criticalFiles = ['package.json,;vite.config.ts,;tsconfig.json,;src/main.tsx,;index.html,;tailwind.config.js,;postcss.config.js';
+>>>>>>> main
     ];
     const missingFiles = [];
     for (const file of criticalFiles) {
@@ -165,8 +168,13 @@ class FileIntegrityMonitor {
     return corruptedFiles;
   async checkFilePermissions() {
     const permissionIssues = [];
+<<<<<<< HEAD
     try {'
       const criticalFiles = ['package.json',;vite.config.ts',;src/main.tsx';
+=======
+    try {
+      const criticalFiles = ['package.json,;vite.config.ts,;src/main.tsx';
+>>>>>>> main
       ];
       for (const file of criticalFiles) {
         const filePath = path.join(this.projectRoot, file);
@@ -206,7 +214,11 @@ class FileIntegrityMonitor {
     const structureIssues = [];
     try {
       // Check for essential directories;
+<<<<<<< HEAD
       const essentialDirs = ['src',;src/components',;src/pages',;src/utils',;public',;logs';
+=======
+      const essentialDirs = ['src,;src/components,;src/pages,;src/utils,;public,;logs';
+>>>>>>> main
       ];
       for (const dir of essentialDirs) {
         const dirPath = path.join(this.projectRoot, dir);
@@ -388,10 +400,16 @@ export default defineConfig({
   lib': [;
   'ES2020,
 ,
+<<<<<<< HEAD
   DOM',
   'DOM.Iterable'],;module': 'ESNext,;skipLibCheck': true,
   moduleResolution': 'bundler,;allowImportingTsExtensions': true,;resolveJsonModule': true,;isolatedModules': true,;noEmit': true,
   jsx': 'react-jsx,;strict': true,;noUnusedLocals': true,;noUnusedParameters': true,;noFallthroughCasesInSwitch': true,
+=======
+  DOM,DOM.Iterable'],';module': 'ESNext,';skipLibCheck': true,
+  moduleResolution': 'bundler,';allowImportingTsExtensions': true,';resolveJsonModule': true,';isolatedModules': true,';noEmit': true,
+  jsx': 'react-jsx,';strict': true,';noUnusedLocals': true,';noUnusedParameters': true,';noFallthroughCasesInSwitch': true,
+>>>>>>> main
   baseUrl': '.,
   paths': {';@/*': [;
   'src/*],
@@ -459,8 +477,7 @@ ReactDOM.createRoot(document.getElementById('
     fs.writeFileSync(
       path.join(this.projectRoot,
 ,
-  src',
-  'main.tsx'),
+  src,main.tsx'),
       mainTsx);
   async createIndexHtml() {'
     const indexHtml = `<!doctype html>
@@ -694,6 +711,7 @@ export default {'
       this.log(`Project integrity validation failed: ${error.message}`,`
   'ERROR');
   findSourceFiles() {
+<<<<<<< HEAD
     const extensions = ['
   '.ts',
   '.tsx',
@@ -702,6 +720,10 @@ export default {'
   '.json',
   '.html',
   '.css'];
+=======
+    const extensions = [
+  '.ts,.tsx,.js,.jsx,.json,.html,.css'];
+>>>>>>> main
     const files = [];
     function traverse(dir) {
       const items = fs.readdirSync(dir);
@@ -710,12 +732,7 @@ export default {'
         const stat = fs.statSync(fullPath);
         if (stat.isDirectory()) {
           if (![;
-  'node_modules',
-  '.git',
-  'dist',
-  'build',
-  '.next',
-  'logs'].includes(item)) {
+  'node_modules,.git,dist,build,.next,logs'].includes(item)) {
             traverse(fullPath)} else if (extensions.some(ext => item.endsWith(ext))) {
           files.push(fullPath);
     traverse(this.projectRoot);

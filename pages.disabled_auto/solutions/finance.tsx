@@ -81,11 +81,18 @@ export default function FinanceSolutions() {
       <section className="container mx-auto px-4 py-12 max-w-6xl">"
         <h2 className="text-2xl md: text-3xl font-bold text-gray-900">
           Compliance & Platforms
+<<<<<<< HEAD
         </h2>"
         <div className="mt-6 grid grid-cols-2 m,
     d:grid-cols-3 l,
     g:grid-cols-6 gap-3 text-sm">
           {["
+=======
+        </h2>
+        <div className="mt-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 text-sm">
+          {[
+<<<<<<< HEAD
+>>>>>>> main
             'PCI DSS',
             'SOC 2',
             'SOX',
@@ -96,6 +103,9 @@ export default function FinanceSolutions() {
             'Marqeta',
             'Stripe',
             'Adyen',
+=======
+            'PCI DSS,SOC 2,SOX,Open Banking,FDX,ISO 20022,Plaid,Marqeta,Stripe,Adyen',
+>>>>>>> main
           ].map(t => (
             <div
               key={t}

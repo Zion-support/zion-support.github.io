@@ -24,7 +24,7 @@ import Link from 'next/link';
 
 const Whitepapers: NextPage = () => {
   const whitepapers = [
-    {
+  {
 :pages.disabled_auto/whitepapers.tsx;
       i,
     d:;
@@ -52,11 +52,16 @@ const Whitepapers: NextPage = () => {
       featured: true,
 :pages.disabled_auto/whitepapers.tsx;
       topics: [,
+<<<<<<< HEAD
   Machine Learning',
   'Business Strategy',
   'Digital Transformation',
   'ROI Analysis']},
     {'
+=======
+  Machine Learning,Business Strategy,Digital Transformation,ROI Analysis']},
+    {
+>>>>>>> main
       id: 'cloud-migration-strategies,
       title:,
   Cloud Migration Strategies for Enterprise Success',
@@ -67,11 +72,16 @@ const Whitepapers: NextPage = () => {
       category:;
   'Cloud Computing',
       topics: [;
+<<<<<<< HEAD
         'Machine Learning',
         'Business Strategy',
         'Digital Transformation',
         'ROI Analysis']},
     {'
+=======
+        'Machine Learning,Business Strategy,Digital Transformation,ROI Analysis']},
+    {
+>>>>>>> main
       id: 'cloud-migration-strategies',
       title: 'Cloud Migration Strategies for Enterprise Success',
       description:;
@@ -86,11 +96,16 @@ const Whitepapers: NextPage = () => {
       featured: true,
 :pages.disabled_auto/whitepapers.tsx;
       topics: [,
+<<<<<<< HEAD
   Cloud Architecture',
   'Migration Planning',
   'Cost Optimization',
   'Security']},
     {'
+=======
+  Cloud Architecture,Migration Planning,Cost Optimization,Security']},
+    {
+>>>>>>> main
       id: 'cybersecurity-framework,
       title:,
   Modern Cybersecurity Framework for Digital Businesses',
@@ -101,11 +116,16 @@ const Whitepapers: NextPage = () => {
       category:;
   'Cybersecurity',
       topics: [;
+<<<<<<< HEAD
         'Cloud Architecture',
         'Migration Planning',
         'Cost Optimization',
         'Security']},
     {'
+=======
+        'Cloud Architecture,Migration Planning,Cost Optimization,Security']},
+    {
+>>>>>>> main
       id: 'cybersecurity-framework',
       title: 'Modern Cybersecurity Framework for Digital Businesses',
       description:;
@@ -120,11 +140,16 @@ const Whitepapers: NextPage = () => {
       featured: false,
 :pages.disabled_auto/whitepapers.tsx;
       topics: [,
+<<<<<<< HEAD
   Threat Detection',
   'Risk Management',
   'Compliance',
   'Incident Response']},
     {'
+=======
+  Threat Detection,Risk Management,Compliance,Incident Response']},
+    {
+>>>>>>> main
       id: 'microservices-architecture,
       title:,
   Microservices Architecture: Design Patterns and Best Practices,
@@ -135,11 +160,16 @@ const Whitepapers: NextPage = () => {
   2024-01-05',
       category: 'Software Architecture,
       topics: [;
+<<<<<<< HEAD
         'Threat Detection',
         'Risk Management',
         'Compliance',
         'Incident Response']},
     {'
+=======
+        'Threat Detection,Risk Management,Compliance,Incident Response']},
+    {
+>>>>>>> main
       id: 'microservices-architecture',
       title: 'Microservices Architectur,
     e: Design Patterns and Best Practices',
@@ -155,11 +185,16 @@ const Whitepapers: NextPage = () => {
       featured: false,
 :pages.disabled_auto/whitepapers.tsx;
       topics: [,
+<<<<<<< HEAD
   Service Design',
   'API Management',
   'Scalability',
   'DevOps']},
     {'
+=======
+  Service Design,API Management,Scalability,DevOps']},
+    {
+>>>>>>> main
       id: 'data-analytics-insights,
       title:,
   Data Analytics for Business Intelligence: From Insights to Action,
@@ -169,8 +204,13 @@ const Whitepapers: NextPage = () => {
       date:,
   2023-12-28',
       category: 'Data Analytics,
+<<<<<<< HEAD
       topics: ['Service Design', 'API Management', 'Scalability', 'DevOps']},
     {'
+=======
+      topics: ['Service Design,API Management,Scalability,DevOps']},
+    {
+>>>>>>> main
       id: 'data-analytics-insights',
       title:;
         'Data Analytics for Business Intelligenc,
@@ -187,11 +227,16 @@ const Whitepapers: NextPage = () => {
       featured: false,
 :pages.disabled_auto/whitepapers.tsx;
       topics: [,
+<<<<<<< HEAD
   Business Intelligence',
   'Data Visualization',
   'Predictive Analytics',
   'KPIs']},
     {'
+=======
+  Business Intelligence,Data Visualization,Predictive Analytics,KPIs']},
+    {
+>>>>>>> main
       id: 'mobile-app-development,
       title:,
   Mobile App Development: Native vs Cross-Platform Strategies,
@@ -202,11 +247,16 @@ const Whitepapers: NextPage = () => {
   2023-12-20',
       category: 'Mobile Development,
       topics: [;
+<<<<<<< HEAD
         'Business Intelligence',
         'Data Visualization',
         'Predictive Analytics',
         'KPIs']},
     {'
+=======
+        'Business Intelligence,Data Visualization,Predictive Analytics,KPIs']},
+    {
+>>>>>>> main
       id: 'mobile-app-development',
       title: 'Mobile App Developmen,
     t: Native vs Cross-Platform Strategies',
@@ -221,6 +271,7 @@ const Whitepapers: NextPage = () => {
       rating: 4.5,
       featured: false,
 :pages.disabled_auto/whitepapers.tsx;
+<<<<<<< HEAD
       topics: ['
   'React Native',
   'Flutter',
@@ -244,6 +295,16 @@ const Whitepapers: NextPage = () => {
     'Software Architecture',
     'Data Analytics',
     'Mobile Development']
+=======
+      topics: [
+  'React Native,Flutter,Performance,User Experience']}
+  ];
+  const categories = [
+  'All,Artificial Intelligence,Cloud Computing,Cybersecurity,Software Architecture,Data Analytics,Mobile Development'];
+      topics: ['React Native,Flutter,Performance,User Experience']}];
+  const categories = [
+    'All,Artificial Intelligence,Cloud Computing,Cybersecurity,Software Architecture,Data Analytics,Mobile Development']
+>>>>>>> main
   return (
     <MainLayout'
       title='Whitepapers - Zion Tech Group';

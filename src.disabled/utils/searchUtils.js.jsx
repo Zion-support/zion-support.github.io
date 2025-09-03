@@ -177,8 +177,13 @@ export const extractKeywords = (query) => {
     return query;
         .toLowerCase();
         .split(/[\s,.-]+/);
+<<<<<<< HEAD
         .filter(word => word.length > 2);`
         .filter(word => !['and', 'or', 'the', 'for', 'with', 'from'].includes(word));
+=======
+        .filter(word => word.length > 2);
+        .filter(word => !['and,or,the,for,with,from'].includes(word))}
+>>>>>>> main
 /**;
  * Format search query for display;
  */;

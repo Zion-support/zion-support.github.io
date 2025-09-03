@@ -48,8 +48,12 @@
     services: CYBERSECURITY_SERVICES.filter(s  => s.title.includes('
   'Zero Trust'));
 ];
+<<<<<<< HEAD
 export default function CybersecurityServicesPage(...arg,
     s: any[]): any {
+=======
+export default function CybersecurityServicesPage() {
+>>>>>>> main
   const [selectedCategory, setSelectedCategory] = useState(,
   all');
     return categoryData?.icon || Shield}
@@ -81,13 +85,13 @@ export default function CybersecurityServicesPage(...arg,
     <>
       <SEOHead;
         title='Cybersecurity Services - Zion Tech Group'';
-        description='Comprehensive cybersecurity solutions including zero trust security, threat detection, and compliance services to protect your business.';
-  '        keywords={['cybersecurity;
-  ', 'security services;
-  ', 'threat detection;
-  ', 'compliance;
-  ', 'zero trust;
+        description='Comprehensive cybersecurity solutions including zero trust security, threat detection, and compliance services to protect your business.        keywords={['cybersecurity;
+  ,security services;
+  ,threat detection;
+  ,compliance;
+  ,zero trust;
   ']}
+<<<<<<< HEAD
         structuredData={{'
 ';
           '@context': 'https://schema.org',;
@@ -99,6 +103,11 @@ export default function CybersecurityServicesPage(...arg,
 ';
             '@type': 'Organization',;
             'name': 'Zion Tech Group'}
+=======
+        structuredData={{
+@context': 'https://schema.org',@type': 'Service',name': 'Cybersecurity Services',description': 'Comprehensive cybersecurity solutions',url': 'https://ziontechgroup.com/services/cybersecurity',provider': {
+@type': 'Organization',name': 'Zion Tech Group'}
+>>>>>>> main
         }}
       />      <div className='min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-black>
         {/* Hero Section */}

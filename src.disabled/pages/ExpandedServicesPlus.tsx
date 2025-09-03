@@ -100,8 +100,13 @@ import React from;
       </section>
     </div>
   )}
+<<<<<<< HEAD
 '
 import React from 'react'';export default React.memo(function ExpandedServicesPlus () {
+=======
+
+import React  from 'react;export default React.memo(function ExpandedServicesPlus () {
+>>>>>>> main
 
   return('
     <div className='min - h-screen bg - slate - 950 text - slate - 100>      <section className='py - 12 border - b border - slate - 800>        <div className='container mx - auto px - 4 sm: px - 6 l,

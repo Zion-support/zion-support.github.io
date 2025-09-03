@@ -176,9 +176,15 @@ const AdvancedPerformanceMonitor: React.FC = () => {
         <div className='text-center>
           <div className={`text-3xl font-bold ${overallScore.color}`}>
             {overallScore.score}
+<<<<<<< HEAD
           </div>`
           <div className='text-sm text-zion-slate-light>
             Overall Score ({overallScore.rating.replace('-', ' ')})
+=======
+          </div>
+          <div className='text-sm text-zion-slate-light'>
+            Overall Score ({overallScore.rating.replace('-, ')})
+>>>>>>> main
           </div>
         </div>
       </div>

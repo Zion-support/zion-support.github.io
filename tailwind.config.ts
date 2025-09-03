@@ -533,5 +533,10 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
   '@tailwindcss/forms'),
     require('
   '@tailwindcss/typography'),
+<<<<<<< HEAD
     require('
   '@tailwindcss/aspect-ratio')]} satisfies Config;
+=======
+    require(
+  '@tailwindcss/aspect-ratio')]} satisfies Config;
+>>>>>>> main

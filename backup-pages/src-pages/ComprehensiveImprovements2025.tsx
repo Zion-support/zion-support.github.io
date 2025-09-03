@@ -49,6 +49,7 @@ import {
   Palette,
   PhoneCall,
   Mail as MailIcon,
+<<<<<<< HEAD
   MapPin as MapPinIcon} from 'lucide-react;
   ';Quantum Computing - Next-gen computational power;
   ',;IoT Edge Computing - Smart device networks;
@@ -58,6 +59,16 @@ import {
       ]}
 items: [';Quantum Computing - Next-gen computational power,
   'IoT Edge Computing - Smart device networks',;Space Tech - Space technology solutions',;Green IT - Sustainable technology solutions';
+=======
+  MapPin as MapPinIcon}  from 'lucide-react;;Quantum Computing - Next-gen computational power;
+  ,;IoT Edge Computing - Smart device networks;
+  ,;Space Tech - Space technology solutions;
+  ,;Green IT - Sustainable technology solutions;
+  ';
+      ]}
+items: [';Quantum Computing - Next-gen computational power,
+  'IoT Edge Computing - Smart device networks,;Space Tech - Space technology solutions,;Green IT - Sustainable technology solutions';
+>>>>>>> main
       ]}
   ]{'
       title: 'Analytics Driven,

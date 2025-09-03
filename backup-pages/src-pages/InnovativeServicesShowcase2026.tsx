@@ -1,12 +1,20 @@
 
 ,
   const [selectedCategory, setSelectedCategory] = useState('all;
+<<<<<<< HEAD
   ');
   const [searchQuery, setSearchQuery] = useState(';
   ');
   const [selectedCategory, setSelectedCategory] = useState('
   'All');
   const [sortBy, setSortBy] = useState('
+=======
+  ')';
+  const [searchQuery, setSearchQuery] = useState()';
+  const [selectedCategory, setSelectedCategory] = useState(
+  'All')';
+  const [sortBy, setSortBy] = useState(
+>>>>>>> main
   'innovation');
     // Filter by search query;
     if (searchQuery) {
@@ -180,6 +188,7 @@
                 <span className='text-slate-400 text-sm'>Sort by:</span>
                 <select;
                   value={sortBy}
+<<<<<<< HEAD
                   onChange={(e) => setSortBy(e.target.value)};
                   className='bg-slate-800 border border-slate-600 rounded-lg px-3 py-2 text-white focus: border-cyan-400 focu,
     s:ring-2 focu,
@@ -187,6 +196,12 @@
 ''
                   <option value='innovation'>Innovation Level</option>''
                   <option value='price'>Price</option>''
+=======
+                  onChange={(e) => setSortBy(e.target.value)}';
+                  className='bg-slate-800 border border-slate-600 rounded-lg px-3 py-2 text-white focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none
+                  <option value='innovation'>Innovation Level</option>'
+                  <option value='price'>Price</option>'
+>>>>>>> main
                   <option value='roi'>ROI</option>
                 </select>
               </div>
@@ -221,6 +236,7 @@
     r:shadow-cyan-400/10'>{/* Innovation Level Badge */}
                 <div className='absolute top-4 right-4'>``
                   <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
+<<<<<<< HEAD
                     service.innovationLevel ===,`
   Cutting-edge';
   ';
@@ -229,6 +245,12 @@
   ';
                       ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white';
   ';
+=======
+                    service.innovationLevel ===,
+  Cutting-edge;
+                      ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white: service.innovationLevel === 'Advanced;
+                      ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white;
+>>>>>>> main
                       : 'bg-gradient-to-r from-green-500 to-emerald-500 text-white`}`}>{service.innovationLevel}
                   </span>
                 </div>`

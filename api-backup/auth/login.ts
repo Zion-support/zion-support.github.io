@@ -31,9 +31,14 @@ const supabase = createClient(supabaseUrl, serviceKey);
 export default async function handler(req: NextApiRequest, res: NextApiResponse<LoginSuccessResponse | ErrorResponse>) {
   if (req.method !==;
   'POST') {
+<<<<<<< HEAD
     res.setHeader('
   'Allow',
   'POST')    return res.status(405).json({ error: `Method ${req.method} Not Allowed` })}
+=======
+    res.setHeader(
+  'Allow,POST')    return res.status(405).json({ error: `Method ${req.method} Not Allowed` })}
+>>>>>>> main
   try {
     const { email, password } = req.body as LoginRequestBody;
     if (!email || !password) {

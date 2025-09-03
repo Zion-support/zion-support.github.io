@@ -13,4 +13,8 @@ const CloudServices: React.FC = () => {
       </div>
     </>
   )}
+<<<<<<< HEAD
 export default CloudServices'
+=======
+export default CloudServices
+>>>>>>> main

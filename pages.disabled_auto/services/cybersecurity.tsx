@@ -67,11 +67,18 @@ export default function Cybersecurity() {
       <section className="container mx-auto px-4 py-12 max-w-6xl">"
         <h2 className="text-2xl md: text-3xl font-bold text-gray-900">
           Standards & Platforms
+<<<<<<< HEAD
         </h2>"
         <div className="mt-6 grid grid-cols-2 m,
     d:grid-cols-3 l,
     g:grid-cols-6 gap-3 text-sm">
           {["
+=======
+        </h2>
+        <div className="mt-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 text-sm">
+          {[
+<<<<<<< HEAD
+>>>>>>> main
             'NIST CSF',
             'ISO 27001',
             'SOC 2',
@@ -82,6 +89,9 @@ export default function Cybersecurity() {
             'Wazuh',
             'Cloudflare',
             'Defender for Cloud',
+=======
+            'NIST CSF,ISO 27001,SOC 2,OWASP ASVS,CIS Benchmarks,OSQuery,Falco,Wazuh,Cloudflare,Defender for Cloud',
+>>>>>>> main
           ].map(t => (
             <div
               key={t}

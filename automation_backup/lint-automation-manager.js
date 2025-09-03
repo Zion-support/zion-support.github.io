@@ -17,8 +17,7 @@ class LintAutomationManager {
     this.isRunning = false;
     this.watcher = null;
     this.logFile = path.join(__dirname,
-  'logs',
-  'lint-automation.log');
+  'logs,lint-automation.log');
     // // // // // // // // console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
     this.ensureLogDirectory()}
@@ -65,7 +64,11 @@ class LintAutomationManager {
   startFileWatcher() {
     this.log(`
   '👀 Starting file watcher...');
+<<<<<<< HEAD
     const watcher = chokidar.watch([';pages/**/*.{js,jsx,ts,tsx},;components/**/*.{js,jsx,ts,tsx},;utils/**/*.{js,jsx,ts,tsx},;hooks/**/*.{js,jsx,ts,tsx};
+=======
+    const watcher = chokidar.watch([';pages/**/*.{js,jsx,ts,tsx},;components/**/*.{js,jsx,ts,tsx},;utils/**/*.{js,jsx,ts,tsx},;hooks/**/*.{js,jsx,ts,tsx}';
+>>>>>>> main
     ], {
       ignored: /(node_modules|\.git|\.next)/,
       persistent: true})

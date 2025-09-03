@@ -1,17 +1,9 @@
 
 export default function AIIoTEdgeComputing() {
   const features = [
-    'AI-powered edge computing and processing',
-    'Real-time IoT device management and monitoring',
-    'Intelligent edge analytics and decision making',
-    'Advanced device connectivity and protocol support',
-    'Automated edge device provisioning and updates',
-    'Real-time data processing and filtering',
-    'Advanced security and encryption at the edge',
-    'Scalable edge computing infrastructure',
-    'AI-driven predictive maintenance for IoT devices',
-    'Multi-cloud edge orchestration and management';
+    'AI-powered edge computing and processing,Real-time IoT device management and monitoring,Intelligent edge analytics and decision making,Advanced device connectivity and protocol support,Automated edge device provisioning and updates,Real-time data processing and filtering,Advanced security and encryption at the edge,Scalable edge computing infrastructure,AI-driven predictive maintenance for IoT devices,Multi-cloud edge orchestration and management';
   ];
+<<<<<<< HEAD
   const benefits = ['
     'Reduce latency by 80-90%',
     'Lower bandwidth costs by 60%',
@@ -34,14 +26,28 @@ export default function AIIoTEdgeComputing() {
       price: '$499/mo',
       details: ['Up to 100 devices', 'Basic AI processing', 'Standard monitoring', 'Email support']},
     {'
+=======
+  const benefits = [
+    'Reduce latency by 80-90%,Lower bandwidth costs by 60%,Improve device reliability by 75%,Enable real-time decision making,Reduce cloud computing costs by 40%,Enhance data privacy and security';
+  ];
+  const useCases = [
+    'Smart manufacturing and Industry 4.0,Connected healthcare and medical devices,Smart cities and infrastructure,Autonomous vehicles and transportation,Energy management and smart grids,Retail and supply chain monitoring';
+  ];
+  const tiers = [
+  {
+      name: 'Edge Starter',
+      price: '$499/mo',
+      details: ['Up to 100 devices,Basic AI processing,Standard monitoring,Email support']},
+    {
+>>>>>>> main
       name: 'Edge Professional',
       price: '$1,299/mo',
-      details: ['Up to 1,000 devices', 'Advanced AI features', 'Custom dashboards', 'Priority support']
+      details: ['Up to 1,000 devices,Advanced AI features,Custom dashboards,Priority support']
     },
     {'
       name: 'Enterprise Edge',
       price: '$3,999/mo',
-      details: ['Unlimited devices', 'Full AI suite', 'White-label options', '24/7 support']
+      details: ['Unlimited devices,Full AI suite,White-label options,24/7 support']
     }
   ];
   return('

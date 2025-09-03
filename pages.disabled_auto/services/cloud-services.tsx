@@ -82,11 +82,18 @@ export default function CloudServices() {
       <section className="container mx-auto px-4 py-12 max-w-6xl">"
         <h2 className="text-2xl md: text-3xl font-bold text-gray-900">
           Tools & IaC
+<<<<<<< HEAD
         </h2>"
         <div className="mt-6 grid grid-cols-2 m,
     d:grid-cols-3 l,
     g:grid-cols-6 gap-3 text-sm">
           {["
+=======
+        </h2>
+        <div className="mt-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 text-sm">
+          {[
+<<<<<<< HEAD
+>>>>>>> main
             'Terraform',
             'Pulumi',
             'ArgoCD',
@@ -99,6 +106,9 @@ export default function CloudServices() {
             'GCP',
             'Azure',
             'Cloudflare',
+=======
+            'Terraform,Pulumi,ArgoCD,FluxCD,Prometheus,Grafana,Loki,OpenTelemetry,AWS,GCP,Azure,Cloudflare',
+>>>>>>> main
           ].map(t => (
             <div
               key={t}

@@ -28,9 +28,14 @@ const AIServicesPage: NextPage = () => {
   const aiServices = getServicesByCategory('
   'ai-services);
   const benefits = [
+<<<<<<< HEAD
     {'
       ico,
     n: <Brain className='w-8 h-8' />,
+=======
+  {
+      icon: <Brain className='w-8 h-8' />,
+>>>>>>> main
 :pages.disabled_auto/services/ai-services.tsx
       title:,
   Advanced AI',

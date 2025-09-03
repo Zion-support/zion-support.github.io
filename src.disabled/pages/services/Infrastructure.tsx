@@ -1,13 +1,22 @@
 
 :pages.disabled/pages/services/Infrastructure.tsx;
 const InfrastructureServices = () => {
+<<<<<<< HEAD
   const infrastructureServices = [{title: 'Network Design & Management',';
       description: 'Scalable network architecture and optimization for enterprise needs.',';
       price: 'From $5,000/month',';
       features: ['Network architecture design', 'Performance optimization', 'Security implementation', '24/7 monitoring'],
+=======
+  const infrastructureServices = [
+  {title: 'Network Design & Management,';
+      description: 'Scalable network architecture and optimization for enterprise needs.,';
+      price: 'From $5,000/month,';
+      features: ['Network architecture design,Performance optimization,Security implementation,24/7 monitoring'],
+>>>>>>> main
       icon: Network},
 :pages.disabled/pages/services/Infrastructure.tsx{'
 ''';
+<<<<<<< HEAD
       title: 'System Administration',';
       description: 'Comprehensive system management and maintenance services.',';
       price: 'From $3,500/month',';
@@ -49,6 +58,43 @@ const InfrastructureServices = () => {
               IT Infrastructure'''
               <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'> Solutions</span>''
             </h1>'''
+=======
+      title: 'System Administration,';
+      description: 'Comprehensive system management and maintenance services.,';
+      price: 'From $3,500/month,';
+      features: ['Server management,Performance tuning,Backup & recovery,Security updates'],
+:pages.disabled/pages/services/Infrastructure.tsx;
+      icon: Server},'{'
+      title: 'Data Center Solutions,;
+      description: 'Reliable hosting, colocation, and data center management.,;
+      price: 'From $8,000/month,      features: ['Colocation services,Managed hosting,Disaster recovery,Compliance support'],
+      icon: Database}
+  ];
+:pages.disabled/pages/services/Infrastructure.tsx;
+  '{'
+      name: 'Network Security,;
+      description: 'Advanced network protection and monitoring,;
+      icon: Shield,';
+      features: ['Firewall management,Intrusion detection,VPN solutions,Security monitoring']}
+  ]';
+  const benefits = [''Improved system reliability and uptime',Enhanced security and compliance',Scalable infrastructure that grows with your business',Reduced operational costs and complexity',Expert support and maintenance,;Future-proof technology solutions';
+  ];
+:pages.disabled/pages/services/Infrastructure.tsx;
+';
+  return (
+    <div className = 'min-h-screen bg-slate-900 text-white'>'{/* Hero Section */}''
+      <section className='relative pt-24 pb-16 px-4 sm:px-6 lg:px-8'>''
+        <div className='max-w-7xl mx-auto text-center'>''
+          <div className='mb-8'>''
+            <div className='inline-flex items-center px-4 py-2 bg-purple-500/10 text-purple-400 rounded-full text-sm font-medium mb-6'>'';
+:pages.disabled/pages/services/Infrastructure.tsx
+              <Server className='w-4 h-4 mr-2' />              IT Infrastructure'
+            </div>''
+            <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>';
+              IT Infrastructure''
+              <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'> Solutions</span>'
+            </h1>''
+>>>>>>> main
             <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>
               Build robust, scalable infrastructure that provides the foundation;
               for your business growth and digital transformation.''
@@ -77,6 +123,7 @@ const InfrastructureServices = () => {
               Comprehensive infrastructure solutions designed to provide the;
               reliability and performance your business demands.
             </p>
+<<<<<<< HEAD
 :pages.disabled/pages/services/Infrastructure.tsx'
           </div>';
 '''
@@ -88,6 +135,16 @@ const InfrastructureServices = () => {
                   <service.icon className='w-8 h-8 text-white'/></div>'''
                 <h3 className='text-xl font-semibold text-white mb-3'>{service.title}</h3>'''
                 <p className='text-gray-300 mb-4'>{service.description}</p>'''
+=======
+:pages.disabled/pages/services/Infrastructure.tsx
+          </div>'
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>'{infrastructureServices.map((service, index) => (''
+              <div key={index} className='bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300'>''
+                <div className='w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4'>''
+                  <service.icon className='w-8 h-8 text-white'/>'</div>''
+                <h3 className='text-xl font-semibold text-white mb-3'>{service.title}</h3>''
+                <p className='text-gray-300 mb-4'>{service.description}</p>''
+>>>>>>> main
                 <p className='text-lg font-semibold text-purple-400 mb-4'>{service.price}</p>'';
 :pages.disabled/pages/services/Infrastructure.tsx'
                 <ul className='space-y-2>{service.features.map((feature, featureIndex) => ('''
@@ -116,12 +173,20 @@ const InfrastructureServices = () => {
               Cutting-edge technologies and platforms to build robust,
               scalable infrastructure solutions.
             </p>
+<<<<<<< HEAD
 :pages.disabled/pages/services/Infrastructure.tsx'
           </div>';
 '''
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8>{technologies.map((tech, index) => ('''
               <div key={index} className='bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-purple-500/50 transition-all duration-300>''
                 <div className='w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4>''
+=======
+:pages.disabled/pages/services/Infrastructure.tsx
+          </div>'
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>'{technologies.map((tech, index) => (''
+              <div key={index} className='bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-purple-500/50 transition-all duration-300'>''
+                <div className='w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4'>''
+>>>>>>> main
                   <tech.icon className='w-8 h-8 text-white'/>'
                 </div>'''
                 <h3 className='text-xl font-semibold text-white mb-3'>{tech.name}</h3>'''

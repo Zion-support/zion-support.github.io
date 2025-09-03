@@ -28,9 +28,14 @@ const MicroSaasPage: NextPage = () => {
   const microSaasServices = getServicesByCategory('
   'micro-saas);
   const benefits = [
+<<<<<<< HEAD
     {'
       ico,
     n: <Zap className='w-8 h-8' />,
+=======
+  {
+      icon: <Zap className='w-8 h-8' />,
+>>>>>>> main
 :pages.disabled_auto/services/micro-saas.tsx
       title:,
   Lightning Fast Setup',

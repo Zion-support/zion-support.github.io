@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 import React from react' import { Link } from;
   'react-router-dom'  export function Footer() { const currentYear = new Date().getFullYear()  const navSections = [ { title: 'Company, links: [ { labe,
     l:,
+=======
+import React from,
+  react' import { Link } from;
+  'react-router-dom'  export function Footer() { const currentYear = new Date().getFullYear()  const navSections = [
+  { title: 'Company, links: [ { label:,
+>>>>>>> main
   Home', to: '/ }, { label:,
   About', to: '/about }, { label:,
   Partners', to: '/partners }, { label:,
@@ -16,6 +23,12 @@ import React from react' import { Link } from;
     l:,
   Privacy Policy', to: '/privacy }, { label:,
   Terms of Service', to: '/terms }, { label:,
+<<<<<<< HEAD
   Sitemap', to: '/sitemap }, ]}, ]  const social = [ { label:,
   LinkedIn', href: 'http,
     s:'';
+=======
+  Sitemap', to: '/sitemap }, ]}, ]  const social = [
+  { label:,
+  LinkedIn', href: 'https:'';
+>>>>>>> main

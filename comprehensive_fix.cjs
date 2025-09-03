@@ -10,7 +10,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint working' });
 }`;
   }
-
+  
   return `import type { NextPage } from 'next';
 import Head from 'next/head';
 
@@ -109,9 +109,9 @@ function fixFile(filePath) {
   try {
     const fileName = path.basename(filePath, path.extname(filePath));
     const dirName = path.dirname(filePath);
-
+    
     let content = '';
-
+    
     // Determine the type of file and create appropriate content
     if (filePath.includes('/api/')) {
       content = createProperPageTemplate(fileName, true);
@@ -124,9 +124,9 @@ function fixFile(filePath) {
     } else if (filePath.includes('/pages/')) {
       content = createProperPageTemplate(fileName);
     }
-
+    
     fs.writeFileSync(filePath, content);
-    console.log(`Fixed: ${filePath}`);
+    // Fixed: ${filePath}
     return true;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
@@ -137,11 +137,11 @@ function fixFile(filePath) {
 // Function to recursively find and fix corrupted files
 function fixCorruptedFiles(directory) {
   const files = fs.readdirSync(directory);
-
+  
   for (const file of files) {
     const filePath = path.join(directory, file);
     const stat = fs.statSync(filePath);
-
+    
     if (stat.isDirectory()) {
       fixCorruptedFiles(filePath);
     } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
@@ -151,7 +151,7 @@ function fixCorruptedFiles(directory) {
 }
 
 // Start fixing from the pages and components directories
-console.log('Fixing corrupted TypeScript files with proper templates...');
+// Fixing corrupted TypeScript files with proper templates...
 fixCorruptedFiles('./pages');
 fixCorruptedFiles('./components');
-console.log('Finished fixing corrupted files with proper templates.');
+// Finished fixing corrupted files with proper templates.

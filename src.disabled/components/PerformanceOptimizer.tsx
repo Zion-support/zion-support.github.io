@@ -5,11 +5,17 @@ import { useEffect } from;
     // Preload critical resources;
 const preloadCriticalResources = () => {
       const criticalFonts = [;
+<<<<<<< HEAD
   https: //fonts.googleapis.com/css2?family=Orbitro,
     n:wght@400;600&display=swap';
   '      ];criticalFonts.forEach(font => {
         const link = document.createElement('
   'link')        link.rel =;
+=======
+  https: //fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap      ]';criticalFonts.forEach(font => {
+        const link = document.createElement(
+  'link')'        link.rel =;
+>>>>>>> main
   'preload'        link.as =;
   'style'        link.href = font        document.head.appendChild(link)})}
     // Optimize images;

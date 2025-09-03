@@ -2,8 +2,7 @@
 export default function ComprehensiveServicesLanding2028(...args[]):  {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [selectedService, setSelectedService] = useState(null)}
-      company: 'BioTech Innovations',
-  ';
+      company: 'BioTech Innovations,;
       content: 'Their quantum AI drug discovery platform has accelerated our research by 10x. Were now able to analyze molecular interactions that were previously impossible to model.',
       rating: 5,;
       avatar: 'http,
@@ -13,6 +12,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
     { number: '500+', label: 'Successful Projects', icon: CheckCircle },{ number: '15+', label: 'Years of Innovation', icon: Award },{ number: '99.9%', label: 'Client Satisfaction', icon: Star },    { number: '24/7', label: 'Support Available', icon: Clock }
   ];
       default: return Rocket}
+<<<<<<< HEAD
   };from-green-600 to-emerald-600;
   ',;from-red-600 to-orange-600;
   ',;from-indigo-600 to-purple-600;
@@ -22,6 +22,16 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   ';from-blue-600 to-cyan-600;
   ',;
   'from-purple-600 to-pink-600',;from-green-600 to-emerald-600',;from-red-600 to-orange-600',;from-indigo-600 to-purple-600',;from-yellow-600 to-orange-600',;from-teal-600 to-blue-600',;from-pink-600 to-red-600';
+=======
+  }';from-green-600 to-emerald-600;
+  ,;from-red-600 to-orange-600;
+  ,;from-indigo-600 to-purple-600;
+  ,;from-yellow-600 to-orange-600;
+  ,;from-teal-600 to-blue-600;
+  ,;from-pink-600 to-red-600;
+  ';from-blue-600 to-cyan-600;
+  ',from-purple-600 to-pink-600,;from-green-600 to-emerald-600,;from-red-600 to-orange-600,;from-indigo-600 to-purple-600,;from-yellow-600 to-orange-600,;from-teal-600 to-blue-600,;from-pink-600 to-red-600';
+>>>>>>> main
     ];
     return colors[Math.abs (category.length) % colors.length]}
     setCurrentTestimonial ( (prev) => (prev + 1) % testimonials.length) }
@@ -110,10 +120,16 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   y: 0}}
                 transition = {
   { duration: 0.6,
+<<<<<<< HEAD
   delay: index * 0.1}};
                 className='text-center';
 ';
                 <div className='bg-zion-cyan/20 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4>'
+=======
+  delay: index * 0.1}}';
+                className='text-center;
+                <div className='bg-zion-cyan/20 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4'>'
+>>>>>>> main
                   <stat.icon className='w-8 h-8 text-zion-cyan' />
                 </div>''
                 <div className='text-3xl font-bold text-zion-cyan mb-2'>{stat.number}</div>''
@@ -133,10 +149,16 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
             whileInView = {
   { opacity: 1,
   y: 0}}
+<<<<<<< HEAD
             transition={{ duration: 0.6 }};
             className='text-center mb-16';
 ';
             <h2 className='text-4xl font-bold text-white mb-4'>Our Comprehensive Service Portfolio</h2>''
+=======
+            transition={{ duration: 0.6 }}';
+            className='text-center mb-16;
+            <h2 className='text-4xl font-bold text-white mb-4'>Our Comprehensive Service Portfolio</h2>'
+>>>>>>> main
             <p className='text-zion-slate-light max-w-3xl mx-auto'>
               Discover our revolutionary solutions designed to transform your business operations and drive growth
             </p>
@@ -155,11 +177,17 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   y: 0}}
                 transition = {
   { duration: 0.6,
+<<<<<<< HEAD
   delay: index * 0.1}};
                 className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-zion-cyan/50 transition-all duration-300 hove,
     r:scale-105 group';
 ';
                 <div className='flex items-start justify-between mb-4>
+=======
+  delay: index * 0.1}}';
+                className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-zion-cyan/50 transition-all duration-300 hover:scale-105 group;
+                <div className='flex items-start justify-between mb-4'>
+>>>>>>> main
                   <div className={`p-3 rounded-lg bg-gradient-to-r ${getCategoryColor(service.category)}`}>'{React.createElement(getCategoryIcon(service.category), { className: 'w-6 h-6 text-white' })}
                   </div>''
                   <Badge variant='secondary' className='bg-zion-cyan/20 text-zion-cyan border-zion-cyan/30'>
@@ -227,9 +255,13 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
             <Button';
               size='lg';
               variant='outline';
+<<<<<<< HEAD
               className='border-zion-cyan text-zion-cyan hover:bg-zion-cyan hove,
     r:text-white px-8 py-3 rounded-lg font-semibold transition-colors';
   ';
+=======
+              className='border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors;
+>>>>>>> main
               onClick={() => window.location.href = '/innovative-services-showcase-2028;
   '}
               View All Services
@@ -247,10 +279,16 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
             whileInView = {
   { opacity: 1,
   y: 0}}
+<<<<<<< HEAD
             transition={{ duration: 0.6 }};
             className='text-center mb-16';
 ';
             <h2 className='text-4xl font-bold text-white mb-4'>What Our Clients Say</h2>''
+=======
+            transition={{ duration: 0.6 }}';
+            className='text-center mb-16;
+            <h2 className='text-4xl font-bold text-white mb-4'>What Our Clients Say</h2>'
+>>>>>>> main
             <p className='text-zion-slate-light max-w-3xl mx-auto'>
               Real feedback from businesses that have transformed their operations with our innovative solutions
             </p>
@@ -265,6 +303,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
               animate = {
   { opacity: 1,
   x: 0}}
+<<<<<<< HEAD
               transition={{ duration: 0.5 }};
               className='bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center';
 ';
@@ -276,6 +315,17 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
                 '{testimonials[currentTestimonial].content}
               </blockquote>'
 ''
+=======
+              transition={{ duration: 0.5 }}';
+              className='bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center;
+              <div className='flex justify-center mb-6'>{[...Array(testimonials[currentTestimonial].rating)].map((_, i) => ('
+                  <Star key={i} className='w-6 h-6 text-yellow-400 fill-current'  />                ))}
+              </div>
+'
+              <blockquote className='text-xl text-white mb-6 italic'>{testimonials[currentTestimonial].content}'
+              </blockquote>
+'
+>>>>>>> main
               <div className='flex items-center justify-center gap-4'>
                 <img;
                   src={testimonials[currentTestimonial].avatar}
@@ -292,11 +342,18 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
             <div className='flex items-center justify-center gap-4 mt-8>
               <Button';
                 variant='ghost''                size='sm';
+<<<<<<< HEAD
                 onClick={prevTestimonial};
                 className='text-zion-slate-light hover:text-white';
 ';
                 <ChevronLeft className='w-5 h-5'  />              </Button>'
 ''
+=======
+                onClick={prevTestimonial}';
+                className='text-zion-slate-light hover:text-white;
+                <ChevronLeft className='w-5 h-5'  />              </Button>
+'
+>>>>>>> main
               <div className='flex gap-2'>
                 {testimonials.map((_, index) => (
                   <button;
@@ -310,9 +367,14 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
               </div>`
               <Button';
                 variant='ghost''                size='sm';
+<<<<<<< HEAD
                 onClick={nextTestimonial};
                 className='text-zion-slate-light hover:text-white';
 ';
+=======
+                onClick={nextTestimonial}';
+                className='text-zion-slate-light hover:text-white;
+>>>>>>> main
                 <ChevronRight className='w-5 h-5'  />              </Button>
             </div>
           </div>
@@ -328,10 +390,16 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
             whileInView = {
   { opacity: 1,
   y: 0}}
+<<<<<<< HEAD
             transition={{ duration: 0.6 }};
             className='text-center mb-16';
 ';
             <h2 className='text-4xl font-bold text-white mb-4'>Why Choose Zion Tech Group?</h2>''
+=======
+            transition={{ duration: 0.6 }}';
+            className='text-center mb-16;
+            <h2 className='text-4xl font-bold text-white mb-4'>Why Choose Zion Tech Group?</h2>'
+>>>>>>> main
             <p className='text-zion-slate-light max-w-3xl mx-auto'>
               We combine cutting-edge technology with proven business expertise to deliver exceptional results
             </p>
@@ -349,10 +417,16 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   y: 0}}
               transition = {
   { duration: 0.6,
+<<<<<<< HEAD
   delay: 0.1}};
               className='text-center';
 ';
               <div className='bg-zion-cyan/20 p-6 rounded-xl border border-zion-cyan/30 mb-6>'
+=======
+  delay: 0.1}}';
+              className='text-center;
+              <div className='bg-zion-cyan/20 p-6 rounded-xl border border-zion-cyan/30 mb-6'>'
+>>>>>>> main
                 <Award className='w-12 h-12 text-zion-cyan mx-auto'  />
               </div>''
               <h3 className='text-xl font-semibold text-white mb-3'>Proven Expertise</h3>'              <p className='text-zion-slate-light'>
@@ -368,10 +442,16 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   y: 0}}
               transition = {
   { duration: 0.6,
+<<<<<<< HEAD
   delay: 0.2}};
               className='text-center';
 ';
               <div className='bg-zion-cyan/20 p-6 rounded-xl border border-zion-cyan/30 mb-6>'
+=======
+  delay: 0.2}}';
+              className='text-center;
+              <div className='bg-zion-cyan/20 p-6 rounded-xl border border-zion-cyan/30 mb-6'>'
+>>>>>>> main
                 <Lightbulb className='w-12 h-12 text-zion-cyan mx-auto'  />
               </div>''
               <h3 className='text-xl font-semibold text-white mb-3'>Innovation First</h3>'              <p className='text-zion-slate-light'>
@@ -387,10 +467,16 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   y: 0}}
               transition = {
   { duration: 0.6,
+<<<<<<< HEAD
   delay: 0.3}};
               className='text-center';
 ';
               <div className='bg-zion-cyan/20 p-6 rounded-xl border border-zion-cyan/30 mb-6>'
+=======
+  delay: 0.3}}';
+              className='text-center;
+              <div className='bg-zion-cyan/20 p-6 rounded-xl border border-zion-cyan/30 mb-6'>'
+>>>>>>> main
                 <TrendingUp className='w-12 h-12 text-zion-cyan mx-auto'  />
               </div>''
               <h3 className='text-xl font-semibold text-white mb-3'>Proven ROI</h3>'              <p className='text-zion-slate-light'>
@@ -406,10 +492,16 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   y: 0}}
               transition = {
   { duration: 0.6,
+<<<<<<< HEAD
   delay: 0.4}};
               className='text-center';
 ';
               <div className='bg-zion-cyan/20 p-6 rounded-xl border border-zion-cyan/30 mb-6>'
+=======
+  delay: 0.4}}';
+              className='text-center;
+              <div className='bg-zion-cyan/20 p-6 rounded-xl border border-zion-cyan/30 mb-6'>'
+>>>>>>> main
                 <Users className='w-12 h-12 text-zion-cyan mx-auto'  />
               </div>''
               <h3 className='text-xl font-semibold text-white mb-3'>Expert Team</h3>'              <p className='text-zion-slate-light'>
@@ -425,10 +517,16 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   y: 0}}
               transition = {
   { duration: 0.6,
+<<<<<<< HEAD
   delay: 0.5}};
               className='text-center';
 ';
               <div className='bg-zion-cyan/20 p-6 rounded-xl border border-zion-cyan/30 mb-6>'
+=======
+  delay: 0.5}}';
+              className='text-center;
+              <div className='bg-zion-cyan/20 p-6 rounded-xl border border-zion-cyan/30 mb-6'>'
+>>>>>>> main
                 <Shield className='w-12 h-12 text-zion-cyan mx-auto'  />
               </div>''
               <h3 className='text-xl font-semibold text-white mb-3'>Enterprise Security</h3>'              <p className='text-zion-slate-light'>
@@ -444,10 +542,16 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   y: 0}}
               transition = {
   { duration: 0.6,
+<<<<<<< HEAD
   delay: 0.6}};
               className='text-center';
 ';
               <div className='bg-zion-cyan/20 p-6 rounded-xl border border-zion-cyan/30 mb-6>'
+=======
+  delay: 0.6}}';
+              className='text-center;
+              <div className='bg-zion-cyan/20 p-6 rounded-xl border border-zion-cyan/30 mb-6'>'
+>>>>>>> main
                 <Clock className='w-12 h-12 text-zion-cyan mx-auto'  />
               </div>''
               <h3 className='text-xl font-semibold text-white mb-3'>24/7 Support</h3>'              <p className='text-zion-slate-light'>
@@ -469,12 +573,20 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   scale: 1}}
             exit = {
   { opacity: 0,
+<<<<<<< HEAD
   scale: 0.9}};
             className='bg-zion-blue-dark border border-zion-cyan/30 rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto';
 ';
             <div className='p-6>'
               <div className='flex items-start justify-between mb-6>'
                 <div className='flex items-center gap-3'>``
+=======
+  scale: 0.9}}';
+            className='bg-zion-blue-dark border border-zion-cyan/30 rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto;
+            <div className='p-6'>'
+              <div className='flex items-start justify-between mb-6'>'
+                <div className='flex items-center gap-3'>`
+>>>>>>> main
                   <div className={`p-3 rounded-lg bg-gradient-to-r ${getCategoryColor(selectedService.category)}`}>'{React.createElement(getCategoryIcon(selectedService.category), { className: 'w-6 h-6 text-white' })}
                   </div>'
                   <div>''
@@ -594,10 +706,16 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
             whileInView = {
   { opacity: 1,
   y: 0}}
+<<<<<<< HEAD
             transition={{ duration: 0.6 }};
             className='text-center mb-16';
 ';
             <h2 className='text-4xl font-bold text-white mb-4'>Ready to Transform Your Business?</h2>''
+=======
+            transition={{ duration: 0.6 }}';
+            className='text-center mb-16;
+            <h2 className='text-4xl font-bold text-white mb-4'>Ready to Transform Your Business?</h2>'
+>>>>>>> main
             <p className='text-zion-slate-light max-w-3xl mx-auto'>
               Contact our team of technology experts to discuss how our innovative solutions can drive your business forward
             </p>
@@ -614,10 +732,16 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   y: 0}}
               transition = {
   { duration: 0.6,
+<<<<<<< HEAD
   delay: 0.1}};
               className='text-center';
 ';
               <div className='bg-zion-cyan/20 p-6 rounded-xl border border-zion-cyan/30>'
+=======
+  delay: 0.1}}';
+              className='text-center;
+              <div className='bg-zion-cyan/20 p-6 rounded-xl border border-zion-cyan/30'>'
+>>>>>>> main
                 <Phone className='w-12 h-12 text-zion-cyan mx-auto mb-4'  />'
                 <h3 className='text-xl font-semibold text-white mb-2'>Call Us</h3>'                <p className='text-zion-slate-light mb-3'>Speak directly with our experts</p>'
                 <a''
@@ -638,10 +762,16 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   y: 0}}
               transition = {
   { duration: 0.6,
+<<<<<<< HEAD
   delay: 0.2}};
               className='text-center';
 ';
               <div className='bg-zion-cyan/20 p-6 rounded-xl border border-zion-cyan/30>'
+=======
+  delay: 0.2}}';
+              className='text-center;
+              <div className='bg-zion-cyan/20 p-6 rounded-xl border border-zion-cyan/30'>'
+>>>>>>> main
                 <Mail className='w-12 h-12 text-zion-cyan mx-auto mb-4'  />'
                 <h3 className='text-xl font-semibold text-white mb-2'>Email Us</h3>'                <p className='text-zion-slate-light mb-3'>Send us a detailed message</p>'
                 <a''
@@ -662,10 +792,16 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   y: 0}}
               transition = {
   { duration: 0.6,
+<<<<<<< HEAD
   delay: 0.3}};
               className='text-center';
 ';
               <div className='bg-zion-cyan/20 p-6 rounded-xl border border-zion-cyan/30>'
+=======
+  delay: 0.3}}';
+              className='text-center;
+              <div className='bg-zion-cyan/20 p-6 rounded-xl border border-zion-cyan/30'>'
+>>>>>>> main
                 <MapPin className='w-12 h-12 text-zion-cyan mx-auto mb-4'  />'
                 <h3 className='text-xl font-semibold text-white mb-2'>Visit Us</h3>''
                 <p className='text-zion-slate-light mb-3'>Our headquarters location</p>'                <address className='text-zion-cyan font-semibold text-sm not-italic'>

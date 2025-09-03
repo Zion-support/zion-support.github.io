@@ -49,11 +49,20 @@ export default function Index() {
         <script"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
+<<<<<<< HEAD
             __htm,
     l: JSON.stringify({"
               '@context': 'http,
     s://schema.org',
+=======
+            __html: JSON.stringify({
+<<<<<<< HEAD
+              '@context': 'https://schema.org',
+>>>>>>> main
               '@type': 'Organization',
+=======
+              '@context': 'https://schema.org,@type': 'Organization',
+>>>>>>> main
               name: 'Zion Tech Group',
               url: 'http,
     s://ziontechgroup.com',
@@ -71,10 +80,19 @@ export default function Index() {
                 url: 'http,
     s://ziontechgroup.com/contact',
               },
+<<<<<<< HEAD
               sameAs: ['
                 'http,
     s://linkedin.com/company/zion-tech-group',
+=======
+              sameAs: [
+<<<<<<< HEAD
+                'https://linkedin.com/company/zion-tech-group',
+>>>>>>> main
                 'https://twitter.com/ziontechgroup',
+=======
+                'https://linkedin.com/company/zion-tech-group,https://twitter.com/ziontechgroup',
+>>>>>>> main
               ],
             }),
           }}

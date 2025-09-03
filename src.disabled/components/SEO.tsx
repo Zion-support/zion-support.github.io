@@ -43,6 +43,7 @@ export const SEO: React.FC<SEOProps> = ({'
       <meta httpEquiv='X-UA-Compatible' content='IE=edge' />
       {/* Structured Data */}
       <script type='application/ld+json'>
+<<<<<<< HEAD
         {JSON.stringify({'
           '@context': 'https://schema.org',
           '@type': 'Organization',
@@ -50,14 +51,22 @@ export const SEO: React.FC<SEOProps> = ({'
           'url': 'https://ziontechgroup.com',
           'logo': 'https://ziontechgroup.com/logo.svg',
           'description': description,
+=======
+        {JSON.stringify({
+          '@context': 'https://schema.org,@type': 'Organization,name': 'Zion Tech Group,url': 'https://ziontechgroup.com,logo': 'https://ziontechgroup.com/logo.svg,description': description,
+>>>>>>> main
           'sameAs': [;
-            'https://linkedin.com/company/zion-tech-group',
-            'https://twitter.com/ziontechgroup'
+            'https://linkedin.com/company/zion-tech-group,https://twitter.com/ziontechgroup'
           ],
+<<<<<<< HEAD
           'contactPoint': {'
             '@type': 'ContactPoint',
             'telephone': '+1-302-464-0950',
             'contactType': 'customer service'}
+=======
+          'contactPoint': {
+            '@type': 'ContactPoint,telephone': '+1-302-464-0950,contactType': 'customer service'}
+>>>>>>> main
         })}
       </script>
     </Helmet>

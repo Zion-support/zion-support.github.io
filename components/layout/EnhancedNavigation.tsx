@@ -1,14 +1,30 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
+<<<<<<< HEAD
+import { ChevronDown, Menu, X } from 'lucide-react';
+
+const EnhancedNavigation: React.FC = () => {
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [solutionsOpen, setSolutionsOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+=======
 import { ChevronDown, Cloud, Home, Menu, X } from 'lucide-react';
 
 const EnhancedNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [solutionsOpen, setSolutionsOpen] = useState(false);
+<<<<<<< HEAD
   return ('
     <nav className="bg-white shadow-lg sticky top-0 z-50">"
       <div className="container mx-auto px-4">"
+=======
+>>>>>>> main
+  return (
+    <nav className="bg-white shadow-lg sticky top-0 z-50">
+      <div className="container mx-auto px-4">
+>>>>>>> main
         <div className="flex justify-between items-center py-4">
           {/* Logo */}"
           <Link href="/" className="flex items-center space-x-2">"
@@ -22,13 +38,30 @@ const EnhancedNavigation: React.FC = () => {
             </div>
           </Link>
 
+<<<<<<< HEAD
           {/* Desktop Navigation */}"
           <div className="hidden lg:flex items-center space-x-8">
             <Link"
               href="/""
               className="text-gray-600 hove,
     r:text-blue-600 transition-colors"
+=======
+          {/* Desktop Navigation */}
+<<<<<<< HEAD
+          <div className='hidden lg: flex items-center space-x-8'>
+            <Link href='/' className='text-gray-600 hover:text-blue-600 transition-colors'>
+=======
+<<<<<<< HEAD
+          <div className="hidden lg: flex items-center space-x-8">
+=======
+          <div className="hidden lg:flex items-center space-x-8">
+>>>>>>> main
+            <Link
+              href="/"
+              className="text-gray-600 hover:text-blue-600 transition-colors"
+>>>>>>> main
             >
+>>>>>>> main
               Home
             </Link>
 
@@ -47,11 +80,26 @@ const EnhancedNavigation: React.FC = () => {
                 onMouseEnter={() => setServicesOpen(true)}
                 onMouseLeave={() => setServicesOpen(false)}
               >
+<<<<<<< HEAD
                 <Link`
                   href="/services/ai-development""
                   className="block px-4 py-2 text-gray-700 hover: bg-blue-50 hover:text-blue-600"
+=======
+<<<<<<< HEAD
+                <Link href='/services/ai-services' className='block px-4 py-2 text-gray-700 hover: bg-blue-50 hover:text-blue-600'>
+                  AI Services
+=======
+                <Link
+                  href="/services/ai-development"
+<<<<<<< HEAD
+                  className="block px-4 py-2 text-gray-700 hover: bg-blue-50 hover:text-blue-600"
+=======
+                  className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+>>>>>>> main
+>>>>>>> main
                 >
                   AI Development
+>>>>>>> main
                 </Link>
                 <Link"
                   href="/services/cloud-services""
@@ -109,10 +157,27 @@ const EnhancedNavigation: React.FC = () => {
                 onMouseEnter={() => setSolutionsOpen(true)}
                 onMouseLeave={() => setSolutionsOpen(false)}
               >
+<<<<<<< HEAD
                 <Link`
                   href="/solutions/enterprise""
                   className="block px-4 py-2 text-gray-700 hover: bg-blue-50 hover:text-blue-600"
+=======
+<<<<<<< HEAD
+                <Link href='/solutions' className='block px-4 py-2 text-gray-700 hover: bg-blue-50 hover:text-blue-600'>
+                  Solutions Overview
+                </Link>
+                <Link href='/solutions/enterprise' className='block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600'>
+=======
+                <Link
+                  href="/solutions/enterprise"
+<<<<<<< HEAD
+                  className="block px-4 py-2 text-gray-700 hover: bg-blue-50 hover:text-blue-600"
+=======
+                  className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+>>>>>>> main
+>>>>>>> main
                 >
+>>>>>>> main
                   Enterprise Solutions
                 </Link>
                 <Link"
@@ -194,23 +259,47 @@ const EnhancedNavigation: React.FC = () => {
           </div>
 
           {/* Mobile menu button */}
+<<<<<<< HEAD
           <button"
             className="lg:hidden text-gray-600 hove,
     r:text-gray-900"
+=======
+          <button
+<<<<<<< HEAD
+            className='lg:hidden text-gray-600 hover:text-gray-900'
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            {mobileMenuOpen ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' />}
+=======
+            className="lg:hidden text-gray-600 hover:text-gray-900"
+>>>>>>> main
             onClick={() => setIsOpen(!isOpen)}
           >"
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+>>>>>>> main
           </button>
         </div>
 
         {/* Mobile Navigation */}
+<<<<<<< HEAD
         {isOpen && ("
           <div className="lg: hidden border-t border-gray-200 py-4">"
+=======
+<<<<<<< HEAD
+        {mobileMenuOpen && (
+          <div className='lg:hidden border-t border-gray-200 py-4'>
+            <div className='space-y-2'>
+              <Link href='/' className='block py-2 text-gray-600 hover:text-blue-600'>
+=======
+        {isOpen && (
+          <div className="lg:hidden border-t border-gray-200 py-4">
+>>>>>>> main
             <div className="space-y-2">
               <Link"
                 href="/""
                 className="block py-2 text-gray-600 hover:text-blue-600"
               >
+>>>>>>> main
                 Home
               </Link>"
               <div className="py-2">"

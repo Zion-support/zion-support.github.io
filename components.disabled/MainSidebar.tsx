@@ -129,8 +129,14 @@ const navigation = {
   ' }, { name: 'Press, href: '/press;
   ', icon: Quote, description:,
   Media resources;
+<<<<<<< HEAD
   ' }]  };
   const quickActions = [{ name: 'Request Quote, href:;
+=======
+  ' }]'  }';
+  const quickActions = [
+  { name: 'Request Quote, href:;
+>>>>>>> main
   '/request-quote', icon: Quote, color:,
   from-cyan-500 to-blue-600' },
   '    { name: 'Get Support, href: '/contact;
@@ -143,17 +149,28 @@ const navigation = {
   ', icon: FileText, color: 'from-purple-500 to-pink-600;
   ' },  ];
   const contactInfo = [
+<<<<<<< HEAD
     { icon: Phone, text:,
   +1 (302) 464-0950', href: 'te,
     l:+13024640950 },
+=======
+  { icon: Phone, text:,
+  +1 (302) 464-0950', href: 'tel:+13024640950 },
+>>>>>>> main
   '    { icon: Mail, text:,
   kleber@ziontechgroup.com;
   ', href: 'mailt,
     o:kleber@ziontechgroup.com }, { icon: MapPin, text:,
   Middletown, DE 19709;
+<<<<<<< HEAD
   ', href: 'http,
     s://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709 }];
   '  const socialLinks = [{ name: 'LinkedIn, href:,
+=======
+  ', href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709 }];
+  '  const socialLinks = [
+  { name: 'LinkedIn, href:,
+>>>>>>> main
   https: //www.linkedin.com/company/zion-tech-group/, icon: Linkedin, color:,
   text-blue-500' },
   '    { name: 'Twitter, href:,
@@ -228,8 +245,12 @@ className = 'fixed inset-0 bg-black/50 z-40 lg: hidden''          onClick={onClo
   ')}          {/* Solutions Section */}
           {renderNavSection('
   'Solutions', navigation.solutions,
+<<<<<<< HEAD
   'solutions')};
   '          {/* Resources Section */}
+=======
+  'solutions')}          {/* Resources Section */}
+>>>>>>> main
           {renderNavSection('Resources;
   ', navigation.resources, 'resources'
   ')}          {/* Comp Section */}

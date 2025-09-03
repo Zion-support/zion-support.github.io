@@ -59,6 +59,7 @@
     d:grid-cols-2 gap-8'>
             {cyberServices.map((service, index
               <div;
+<<<<<<< HEAD
                 key={index};
                 className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover: border-cyan-500/50 transition-all duration-300 hove,
     r:transform hove,
@@ -66,6 +67,12 @@
 ';
                 <div className='flex items-center mb-6>'
                   <div className='p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg>'
+=======
+                key={index}';
+                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105;
+                <div className='flex items-center mb-6'>'
+                  <div className='p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg'>'
+>>>>>>> main
                     <service.icon className='h-8 w-8 text-white' />
                   </div>''
                   <div className='ml-4>'
@@ -112,10 +119,16 @@
             {securityTechnologies.map(tec,
     h: unknown, index: unknown(
               <div;
+<<<<<<< HEAD
                 key={index};
                 className='text-center p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:border-cyan-500/50 transition-all duration-300';
 ';
                 <div className='p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg w-16 h-16 mx-auto mb-4 flex items-center justify-center>'
+=======
+                key={index}';
+                className='text-center p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:border-cyan-500/50 transition-all duration-300;
+                <div className='p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg w-16 h-16 mx-auto mb-4 flex items-center justify-center'>'
+>>>>>>> main
                   <tech.icon className='h-8 w-8 text-white' />
                 </div>''
                 <h3 className='text-lg font-semibold text-white mb-2'>{tech.name}</h3>''

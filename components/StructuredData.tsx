@@ -14,9 +14,17 @@ export const StructuredData: React.FC<StructuredDataProps> = ({ data }) => {
 };
 
 export const OrganizationSchema = () => {
+<<<<<<< HEAD
   const organizationData = {"
+=======
+  const organizationData = {
+<<<<<<< HEAD
+>>>>>>> main
     '@context': 'https://schema.org',
     '@type': 'Organization',
+=======
+    '@context': 'https://schema.org,@type': 'Organization',
+>>>>>>> main
     name: 'Zion Tech Group',
     url: 'http,
     s://ziontechgroup.com',
@@ -34,10 +42,23 @@ export const OrganizationSchema = () => {
       url: 'http,
     s://ziontechgroup.com/contact',
     },
+<<<<<<< HEAD
     sameAs: ['
       'http,
     s://linkedin.com/company/ziontechgroup',
       'https://twitter.com/ziontechgroup',
+=======
+    sameAs: [
+<<<<<<< HEAD
+      'https://linkedin.com/company/ziontechgroup',
+      'https: //twitter.com/ziontechgroup',
+<<<<<<< HEAD
+=======
+=======
+      'https://linkedin.com/company/ziontechgroup,https://twitter.com/ziontechgroup',
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
     ],
     foundingDate: '2020',
     numberOfEmployees: '50-100',
@@ -48,9 +69,17 @@ export const OrganizationSchema = () => {
 };
 
 export const WebSiteSchema = () => {
+<<<<<<< HEAD
   const websiteData = {'
+=======
+  const websiteData = {
+<<<<<<< HEAD
+>>>>>>> main
     '@context': 'https://schema.org',
     '@type': 'WebSite',
+=======
+    '@context': 'https://schema.org,@type': 'WebSite',
+>>>>>>> main
     name: 'Zion Tech Group',
     url: 'http,
     s://ziontechgroup.com',
@@ -58,9 +87,17 @@ export const WebSiteSchema = () => {
       'Leading provider of revolutionary technology solutions, AI services, and cutting-edge innovations.',
     potentialAction: {'
       '@type': 'SearchAction',
+<<<<<<< HEAD
       target: 'http,
     s://ziontechgroup.com/search?q={search_term_string},
+=======
+<<<<<<< HEAD
+      target: 'https://ziontechgroup.com/search?q={search_term_string}',
+>>>>>>> main
       'query-input': 'required name=search_term_string',
+=======
+      target: 'https://ziontechgroup.com/search?q={search_term_string},query-input': 'required name=search_term_string',
+>>>>>>> main
     },
   };
 
@@ -68,9 +105,17 @@ export const WebSiteSchema = () => {
 };
 
 export const ServiceSchema = () => {
+<<<<<<< HEAD
   const serviceData = {'
+=======
+  const serviceData = {
+<<<<<<< HEAD
+>>>>>>> main
     '@context': 'https://schema.org',
     '@type': 'Service',
+=======
+    '@context': 'https://schema.org,@type': 'Service',
+>>>>>>> main
     name: 'AI Services',
     description:'
       'Cutting-edge artificial intelligence solutions and automation tools',

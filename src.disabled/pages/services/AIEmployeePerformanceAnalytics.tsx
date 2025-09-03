@@ -39,9 +39,14 @@ import { Users,
   Lightbulb} from 'lucide-react.ts';
 export default function AIEmployeePerformanceAnalytics(...args: unknown[]): unknown {
   const features = [
+<<<<<<< HEAD
     {
       ico,
     n: Brain,
+=======
+  {
+      icon: Brain,
+>>>>>>> main
       title: 'AI Performance Scoring',
       description: 'Advanced algorithms analyze multiple performance indicators to provide comprehensive employee scoring and insights.'},
     {
@@ -66,7 +71,7 @@ export default function AIEmployeePerformanceAnalytics(...args: unknown[]): unkn
       description: 'Track employee engagement, burnout indicators, and wellness metrics to support employee well-being.'}
   ];
   const benefits = [
-    {
+  {
       icon: Zap,
       title: 'Improved Performance',
       description: 'Identify performance gaps and provide targeted coaching to enhance individual and team productivity.'},
@@ -91,19 +96,18 @@ export default function AIEmployeePerformanceAnalytics(...args: unknown[]): unkn
       title: 'Time Savings',
       description: 'Automate performance reviews and analytics, saving HR teams hours of manual work each month.'}
   ];
+<<<<<<< HEAD
   const pricingPlans = [{'
+=======
+  const pricingPlans = [
+  {
+>>>>>>> main
       name: 'Starter',
       price: '$399',
       period: '/month',
       description: 'Perfect for small teams and startups beginning their performance analytics journey',
       features: [;
-        'Up to 50 employees',
-        'Basic performance scoring',
-        'Email support',
-        'Standard integrations',
-        'Basic reporting',
-        'Goal tracking',
-        'Mobile app access';
+        'Up to 50 employees,Basic performance scoring,Email support,Standard integrations,Basic reporting,Goal tracking,Mobile app access';
       ],
       cta: 'Start Free Trial',
       popular: false},
@@ -113,15 +117,7 @@ export default function AIEmployeePerformanceAnalytics(...args: unknown[]): unkn
       period: '/month',
       description: 'Ideal for growing companies with advanced performance management needs',
       features: [;
-        'Up to 500 employees',
-        'Advanced AI analytics',
-        'Priority support',
-        'Custom integrations',
-        'Advanced reporting & dashboards',
-        'Predictive insights',
-        'API access',
-        '360-degree feedback',
-        'Engagement monitoring';
+        'Up to 500 employees,Advanced AI analytics,Priority support,Custom integrations,Advanced reporting & dashboards,Predictive insights,API access,360-degree feedback,Engagement monitoring';
       ],
       cta: 'Start Free Trial',
       popular: true},
@@ -131,6 +127,7 @@ export default function AIEmployeePerformanceAnalytics(...args: unknown[]): unkn
       period: '/month',
       description: 'For large organizations requiring enterprise-grade performance analytics',
       features: [;
+<<<<<<< HEAD
         'Unlimited employees',
         'Custom AI models',
         'Dedicated account manager',
@@ -138,12 +135,19 @@ export default function AIEmployeePerformanceAnalytics(...args: unknown[]): unkn
         'Advanced security features',
         'Custom reporting',
         'On-premise deployment',;SLA guarantees',;24/7 support';
+=======
+        'Unlimited employees,Custom AI models,Dedicated account manager,White-label solutions,Advanced security features,Custom reporting,On-premise deployment,;SLA guarantees,;24/7 support';
+>>>>>>> main
       ],
       cta: 'Contact Sales',
       popular: false}
   ];
   const useCases = [
+<<<<<<< HEAD
     {'
+=======
+  {
+>>>>>>> main
       industry: 'Technology',
       description: 'Track developer productivity, code quality metrics, and project completion rates for engineering teams',
       icon: Cpu},
@@ -169,32 +173,43 @@ export default function AIEmployeePerformanceAnalytics(...args: unknown[]): unkn
       icon: DollarSign}
   ];
   const integrations = [
+<<<<<<< HEAD
     {'
       name: 'HRIS Systems',
       platforms: ['Workday', 'BambooHR', 'ADP', 'Paychex']},
     {'
+=======
+  {
+      name: 'HRIS Systems',
+      platforms: ['Workday,BambooHR,ADP,Paychex']},
+    {
+>>>>>>> main
       name: 'Project Management',
-      platforms: ['Jira', 'Asana', 'Trello', 'Monday.com']
+      platforms: ['Jira,Asana,Trello,Monday.com']
     },
     {'
       name: 'Communication Tools',
-      platforms: ['Slack', 'Microsoft Teams', 'Zoom', 'Google Meet']
+      platforms: ['Slack,Microsoft Teams,Zoom,Google Meet']
     },
     {'
       name: 'CRM Systems',
-      platforms: ['Salesforce', 'HubSpot', 'Pipedrive', 'Zoho']
+      platforms: ['Salesforce,HubSpot,Pipedrive,Zoho']
     },
     {'
       name: 'Learning Platforms',
-      platforms: ['LinkedIn Learning', 'Coursera', 'Udemy', 'Skillshare']
+      platforms: ['LinkedIn Learning,Coursera,Udemy,Skillshare']
     },
     {'
       name: 'Time Tracking',
-      platforms: ['Toggl', 'Harvest', 'Time Doctor', 'RescueTime']
+      platforms: ['Toggl,Harvest,Time Doctor,RescueTime']
     }
   ];
   const keyMetrics = [
+<<<<<<< HEAD
     {'
+=======
+  {
+>>>>>>> main
       metric: '85%',
       label: 'Performance Improvement',
       description: 'Average improvement in employee performance scores'},
@@ -212,20 +227,27 @@ export default function AIEmployeePerformanceAnalytics(...args: unknown[]): unkn
       description: 'Return on investment for performance analytics'}
   ];
   const performanceIndicators = [
+<<<<<<< HEAD
     {'
       category: 'Productivity Metrics',
       indicators: ['Tasks Completed', 'Project Delivery', 'Code Quality', 'Sales Targets']},
     {'
+=======
+  {
+      category: 'Productivity Metrics',
+      indicators: ['Tasks Completed,Project Delivery,Code Quality,Sales Targets']},
+    {
+>>>>>>> main
       category: 'Quality Metrics',
-      indicators: ['Error Rates', 'Customer Satisfaction', 'Code Reviews', 'Quality Scores']
+      indicators: ['Error Rates,Customer Satisfaction,Code Reviews,Quality Scores']
     },
     {'
       category: 'Collaboration Metrics',
-      indicators: ['Team Participation', 'Knowledge Sharing', 'Cross-functional Projects', 'Mentoring']
+      indicators: ['Team Participation,Knowledge Sharing,Cross-functional Projects,Mentoring']
     },
     {'
       category: 'Growth Metrics',
-      indicators: ['Skill Development', 'Learning Progress', 'Career Advancement', 'Certifications']
+      indicators: ['Skill Development,Learning Progress,Career Advancement,Certifications']
     }
   ];
   return('

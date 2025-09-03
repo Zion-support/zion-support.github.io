@@ -38,6 +38,7 @@ title='AI Compliance Assistant - Zion Tech Group''        description='Automate 
     y: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+<<<<<<< HEAD
           >''
             <div className='inline-flex items-center px-4 py-2 bg-emerald-600/20 text-emerald-400 rounded-full text-sm font-medium mb-6>'
               <Shield className='w-4 h-4 mr-2'  />              AI-Powered Compliance'
@@ -49,6 +50,18 @@ title='AI Compliance Assistant - Zion Tech Group''        description='Automate 
   '}Assistant
               </span>'
             </h1>''
+=======
+          >'
+            <div className='inline-flex items-center px-4 py-2 bg-emerald-600/20 text-emerald-400 rounded-full text-sm font-medium mb-6'>'
+              <Shield className='w-4 h-4 mr-2'  />              AI-Powered Compliance
+            </div>'
+            <h1 className='text-4xl md:text-7xl font-bold text-white mb-6'>
+              AI Compliance'
+              <span className='bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent'>
+                {}Assistant
+              </span>
+            </h1>'
+>>>>>>> main
             <p className='text-xl text-gray-300 max-w-4xl mx-auto mb-8'>
               Automate regulatory compliance with intelligent monitoring, risk assessment, and policy management.;
               Stay ahead of regulatory changes and ensure your organization maintains compliance across all frameworks.'

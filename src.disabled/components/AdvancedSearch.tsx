@@ -16,6 +16,7 @@ import React, { useState, useEffect, useRef, useCallback } from,
    ratin,
     g: number} interface SearchFilter {
    type: string[];
+<<<<<<< HEAD
    categor,
     y: string[];
    tag,
@@ -26,3 +27,11 @@ import React, { useState, useEffect, useRef, useCallback } from,
   ') const [results, setResults] = useState<SearchResult[]>([]) const [suggestions, setSuggestions] = useState<string[]>([]) const [filters, setFilters] = useState<SearchFilter>({ type: [], category: [], tags: [], dateRange:,
   all'
   ', sortBy: 'relevance }) const [isSearching, setIsSearching] = useState(false) const [showFilters, setShowFilters] = useState(false) const [recentSearches, setRecentSearches] = useState<string[]>([]) const [popularSearches, setPopularSearches] = useState<string[]>([])  const searchInputRef = useRef<HTMLInputElement>(null) const searchTimeoutRef = useRef<NodeJS.Timeout>() ''
+=======
+   category: string[];
+   tags: string[];
+   dateRange:, all' | 'week' | 'month' | 'year';
+   sortBy: 'relevance' | 'date' | 'popularity' | 'rating} export function AdvancedSearch() { const [isOpen, setIsOpen] = useState(false) const [query, setQuery] = useState() const [results, setResults] = useState<SearchResult[]>([]) const [suggestions, setSuggestions] = useState<string[]>([]) const [filters, setFilters] = useState<SearchFilter>({ type: [], category: [], tags: [], dateRange:,
+  all
+  ', sortBy: 'relevance }) const [isSearching, setIsSearching] = useState(false) const [showFilters, setShowFilters] = useState(false) const [recentSearches, setRecentSearches] = useState<string[]>([]) const [popularSearches, setPopularSearches] = useState<string[]>([])  const searchInputRef = useRef<HTMLInputElement>(null) const searchTimeoutRef = useRef<NodeJS.Timeout>() '
+>>>>>>> main

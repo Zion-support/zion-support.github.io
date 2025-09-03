@@ -49,11 +49,18 @@ import {
   'lucide-react';
   Mail} from 'lucide-react';
 const Blog: React.FC = () => {
+<<<<<<< HEAD
   const blogPosts = [{
       i,
     d: 1,
       title: 'The Future of AI in Busines,
     s: 2025 Trends and Predictions',
+=======
+  const blogPosts = [
+  {
+      id: 1,
+      title: 'The Future of AI in Business: 2025 Trends and Predictions',
+>>>>>>> main
       excerpt:;
         'Explore the latest AI trends shaping the business landscape in 2025 and how companies can leverage these technologies for competitive advantage.',
       author: 'Sarah Johnson',
@@ -61,7 +68,7 @@ const Blog: React.FC = () => {
       readTime: '8 min read',
       category: 'AI Trends',
       image: '/api/placeholder/600/400',
-      tags: ['AI', 'Business', 'Trends', '2025'],
+      tags: ['AI,Business,Trends,2025'],
       featured: true},
     {
       id: 2,
@@ -74,7 +81,7 @@ const Blog: React.FC = () => {
       readTime: '12 min read',
       category: 'Technical',
       image: '/api/placeholder/600/400',
-      tags: ['AI Architecture', 'Scalability', 'Best Practices'],
+      tags: ['AI Architecture,Scalability,Best Practices'],
       featured: false},
     {
       id: 3,
@@ -87,7 +94,7 @@ const Blog: React.FC = () => {
       readTime: '10 min read',
       category: 'Security',
       image: '/api/placeholder/600/400',
-      tags: ['Cybersecurity', 'AI Security', 'Threat Protection'],
+      tags: ['Cybersecurity,AI Security,Threat Protection'],
       featured: false},
     {
       id: 4,
@@ -100,7 +107,7 @@ const Blog: React.FC = () => {
       readTime: '15 min read',
       category: 'Cloud',
       image: '/api/placeholder/600/400',
-      tags: ['Cloud Migration', 'Strategy', 'Best Practices'],
+      tags: ['Cloud Migration,Strategy,Best Practices'],
       featured: false},
     {
       id: 5,
@@ -114,7 +121,7 @@ const Blog: React.FC = () => {
       readTime: '9 min read',
       category: 'Customer Experience',
       image: '/api/placeholder/600/400',
-      tags: ['Customer Experience', 'AI', 'Automation'],
+      tags: ['Customer Experience,AI,Automation'],
       featured: false},
     {
       id: 6,
@@ -128,10 +135,15 @@ const Blog: React.FC = () => {
       readTime: '11 min read',
       category: 'Analytics',
       image: '/api/placeholder/600/400',
-      tags: ['Data Analytics', 'Machine Learning', 'Business Intelligence'],
+      tags: ['Data Analytics,Machine Learning,Business Intelligence'],
       featured: false}];
+<<<<<<< HEAD
   const categories = ['
     { name: 'All', count: 24, active: true },
+=======
+  const categories = [
+  { name: 'All', count: 24, active: true },
+>>>>>>> main
     { name: 'AI Trends', count: 6, active: false },
     { name: 'Technical', count: 8, active: false },
     { name: 'Security', count: 4, active: false },
@@ -365,6 +377,7 @@ const Blog: React.FC = () => {
                     Popular Tags
                   </h3>'
                   <div className='flex flex-wrap gap-2'>
+<<<<<<< HEAD
                     {['
                       'AI',
                       'Machine Learning',
@@ -374,6 +387,10 @@ const Blog: React.FC = () => {
                       'Analytics',
                       'IoT',
                       'Blockchain'].map((tag, index) => (
+=======
+                    {[
+                      'AI,Machine Learning,Cloud,Security,Automation,Analytics,IoT,Blockchain'].map((tag, index) => (
+>>>>>>> main
                       <Badge
                         key={index}
                         variant='outline';

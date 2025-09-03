@@ -98,8 +98,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
     content = content.replace(
       /htt,\s*p,\s*s:\/\/placehold,\s*e,\s*r.supaba,\s*s,\s*e.co,
   /g,
-      ';
-  'https: //placeholder.supabase.co',
+      https: //placeholder.supabase.co',
     );
     content = content.replace(/supabaseAnonKe,\s*y/g, 'supabaseAnonKey');
     content = content.replace(
@@ -118,10 +117,17 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
 // // // console.log(`Fixed: ${filePath}`);return true;
     return false} catch (error) {`
 // // // console.error(`Error processing ${filePath}:`, error.message);return false;
+<<<<<<< HEAD
 async function fixAllUtilsFiles(...args: unknown[]): unknown {`
   const files = await glob('utils/**/*.{ts,tsx}, {'
     ignore: ['node_modules/**', '.next/**']
   });
+=======
+async function fixAllUtilsFiles(...args: unknown[]): unknown {
+  const files = await glob('utils/**/*.{ts,tsx}', {
+    ignore: ['node_modules/**,.next/**']
+  })
+>>>>>>> main
   const fixedCount = 0;
   for (const file of files) {
     if (fixUtilsFile(file)) {

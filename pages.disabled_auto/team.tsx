@@ -50,6 +50,7 @@ import {
   Heart, Sparkles,
   CheckCircle, ArrowRight} from 'lucide-react';
 const Team: React.FC = () => {
+<<<<<<< HEAD
   const teamMembers = [{'
       i,
     d: 1, name: 'Dr. Sarah Johnson',
@@ -58,77 +59,125 @@ const Team: React.FC = () => {
       linkedin: 'http,
     s://linkedin.com/in/sarahjohnson', twitter: 'http,
     s://twitter.com/sarahjohnson',
+=======
+  const teamMembers = [
+  {
+      id: 1, name: 'Dr. Sarah Johnson',
+      title: 'Chief Executive Officer', bio: 'Visionary leader with 15+ years of experience in AI and technology innovation. Former VP of Engineering at leading tech companies.',
+      image: '/api/placeholder/300/300', expertise: ['AI Strategy,Leadership,Innovation'], education: 'PhD in Computer Science, MIT', experience: '15+ years',
+      linkedin: 'https://linkedin.com/in/sarahjohnson', twitter: 'https://twitter.com/sarahjohnson',
+>>>>>>> main
       email: 'sarah@ziontechgroup.com', featured: true},
     {'
       id: 2, name: 'Michael Chen',
       title: 'Chief Technology Officer', bio: 'Technology architect with expertise in AI, cloud computing, and scalable systems. Led development teams at Fortune 500 companies.',
+<<<<<<< HEAD
       image: '/api/placeholder/300/300', expertise: ['AI Architecture', 'Cloud Computing', 'System Design'], education: 'MS in Computer Science, Stanford', experience: '12+ years',
       linkedin: 'http,
     s://linkedin.com/in/michaelchen', twitter: 'http,
     s://twitter.com/michaelchen',
+=======
+      image: '/api/placeholder/300/300', expertise: ['AI Architecture,Cloud Computing,System Design'], education: 'MS in Computer Science, Stanford', experience: '12+ years',
+      linkedin: 'https://linkedin.com/in/michaelchen', twitter: 'https://twitter.com/michaelchen',
+>>>>>>> main
       email: 'michael@ziontechgroup.com', featured: true},
     {'
       id: 3, name: 'Emily Rodriguez',
       title: 'Chief AI Officer', bio: 'AI research scientist and machine learning expert. Published author with 50+ research papers in top-tier conferences.',
+<<<<<<< HEAD
       image: '/api/placeholder/300/300', expertise: ['Machine Learning', 'Research', 'AI Ethics'], education: 'PhD in AI, Carnegie Mellon', experience: '10+ years',
       linkedin: 'http,
     s://linkedin.com/in/emilyrodriguez', twitter: 'http,
     s://twitter.com/emilyrodriguez',
+=======
+      image: '/api/placeholder/300/300', expertise: ['Machine Learning,Research,AI Ethics'], education: 'PhD in AI, Carnegie Mellon', experience: '10+ years',
+      linkedin: 'https://linkedin.com/in/emilyrodriguez', twitter: 'https://twitter.com/emilyrodriguez',
+>>>>>>> main
       email: 'emily@ziontechgroup.com', featured: true},
     {'
       id: 4, name: 'David Kim',
       title: 'Head of Data Science', bio: 'Data science leader with expertise in big data analytics and predictive modeling. Former data scientist at Google and Amazon.',
+<<<<<<< HEAD
       image: '/api/placeholder/300/300', expertise: ['Data Science', 'Analytics', 'Predictive Modeling'], education: 'PhD in Statistics, UC Berkeley', experience: '8+ years',
       linkedin: 'http,
     s://linkedin.com/in/davidkim', twitter: 'http,
     s://twitter.com/davidkim',
+=======
+      image: '/api/placeholder/300/300', expertise: ['Data Science,Analytics,Predictive Modeling'], education: 'PhD in Statistics, UC Berkeley', experience: '8+ years',
+      linkedin: 'https://linkedin.com/in/davidkim', twitter: 'https://twitter.com/davidkim',
+>>>>>>> main
       email: 'david@ziontechgroup.com', featured: false},
     {'
       id: 5, name: 'Lisa Wang',
       title: 'Head of Product', bio: 'Product strategist with a focus on AI-powered solutions. Led product development for multiple successful AI startups.',
+<<<<<<< HEAD
       image: '/api/placeholder/300/300', expertise: ['Product Strategy', 'AI Products', 'User Experience'], education: 'MBA, Harvard Business School', experience: '9+ years',
       linkedin: 'http,
     s://linkedin.com/in/lisawang', twitter: 'http,
     s://twitter.com/lisawang',
+=======
+      image: '/api/placeholder/300/300', expertise: ['Product Strategy,AI Products,User Experience'], education: 'MBA, Harvard Business School', experience: '9+ years',
+      linkedin: 'https://linkedin.com/in/lisawang', twitter: 'https://twitter.com/lisawang',
+>>>>>>> main
       email: 'lisa@ziontechgroup.com', featured: false},
     {'
       id: 6, name: 'James Wilson',
       title: 'Head of Engineering', bio: 'Engineering leader with expertise in scalable systems and AI infrastructure. Former senior engineer at Netflix and Uber.',
+<<<<<<< HEAD
       image: '/api/placeholder/300/300', expertise: ['Engineering', 'Infrastructure', 'Scalability'], education: 'MS in Software Engineering, CMU', experience: '11+ years',
       linkedin: 'http,
     s://linkedin.com/in/jameswilson', twitter: 'http,
     s://twitter.com/jameswilson',
+=======
+      image: '/api/placeholder/300/300', expertise: ['Engineering,Infrastructure,Scalability'], education: 'MS in Software Engineering, CMU', experience: '11+ years',
+      linkedin: 'https://linkedin.com/in/jameswilson', twitter: 'https://twitter.com/jameswilson',
+>>>>>>> main
       email: 'james@ziontechgroup.com', featured: false},
     {'
       id: 7, name: 'Maria Garcia',
       title: 'Head of Cybersecurity', bio: 'Cybersecurity expert with focus on AI security and threat intelligence. Former security architect at major financial institutions.',
+<<<<<<< HEAD
       image: '/api/placeholder/300/300', expertise: ['Cybersecurity', 'AI Security', 'Threat Intelligence'], education: 'MS in Cybersecurity, Georgia Tech', experience: '7+ years',
       linkedin: 'http,
     s://linkedin.com/in/mariagarcia', twitter: 'http,
     s://twitter.com/mariagarcia',
+=======
+      image: '/api/placeholder/300/300', expertise: ['Cybersecurity,AI Security,Threat Intelligence'], education: 'MS in Cybersecurity, Georgia Tech', experience: '7+ years',
+      linkedin: 'https://linkedin.com/in/mariagarcia', twitter: 'https://twitter.com/mariagarcia',
+>>>>>>> main
       email: 'maria@ziontechgroup.com', featured: false},
     {'
       id: 8, name: 'Alex Thompson',
       title: 'Head of Cloud Solutions', bio: 'Cloud architecture expert with certifications in AWS, Azure, and GCP. Led cloud migration projects for enterprise clients.',
+<<<<<<< HEAD
       image: '/api/placeholder/300/300', expertise: ['Cloud Architecture', 'Migration', 'DevOps'], education: 'BS in Computer Science, UT Austin', experience: '6+ years',
       linkedin: 'http,
     s://linkedin.com/in/alexthompson', twitter: 'http,
     s://twitter.com/alexthompson',
+=======
+      image: '/api/placeholder/300/300', expertise: ['Cloud Architecture,Migration,DevOps'], education: 'BS in Computer Science, UT Austin', experience: '6+ years',
+      linkedin: 'https://linkedin.com/in/alexthompson', twitter: 'https://twitter.com/alexthompson',
+>>>>>>> main
       email: 'alex@ziontechgroup.com', featured: false}
   ];
   const leadership = teamMembers.filter(member => member.featured);
   const otherMembers = teamMembers.filter(member => !member.featured);
+<<<<<<< HEAD
   const companyStats = ['
     { label: 'Team Members', value: '50+', icon: Users }, { label: 'Years Combined Experience', value: '500+', icon: Award },
+=======
+  const companyStats = [
+  { label: 'Team Members', value: '50+', icon: Users }, { label: 'Years Combined Experience', value: '500+', icon: Award },
+>>>>>>> main
     { label: 'PhD Holders', value: '15+', icon: GraduationCap }, { label: 'Research Papers Published', value: '100+', icon: Star }
   ];
   const values = [
-    {
+  {
 :pages.disabled_auto/team.tsx;
       title: 'Innovation First',
       description: 'We push the boundaries of what;
   's possible with AI and technology',
-      title: 'Innovation First', description: 'We push the boundaries of what&apos;s possible with AI and technology', ';
+      title: 'Innovation First', description: 'We push the boundaries of what&apos;s possible with AI and technology,;
       icon: Brain},
     {'
       title: 'Client Success', description: 'Our success is measured by the success of our clients',

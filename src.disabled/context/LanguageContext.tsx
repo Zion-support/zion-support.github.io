@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 export type SupportedLanguage = 'en' | 'es' | 'pt' | 'ar' export type LanguageContextType = { currentLanguage: SupportedLanguage changeLanguage: (lang: SupportedLanguage) => Promise<void> isRTL: boolean supportedLanguages: { code: SupportedLanguage nam,
     e: string fla,
     g: string }[] } const supportedLanguages = [ { code: 'en' as SupportedLanguage, name: 'English', flag: ' }, { code: 'es' as SupportedLanguage, name: 'Espaol', flag: ' }, { code: 'pt' as SupportedLanguage, name: 'Portugus', flag: ' }, { code: 'ar' as SupportedLanguage, name: ', flag: '' } ] const defaultLanguageContext: LanguageContextType = { currentLanguag,
     e: 'en', changeLanguage: async () => {}, isRTL: false, supportedLanguages } const LanguageContext = createContext(defaultLanguageContext) export const useLanguage = (): LanguageContextType => useContext(LanguageContext) interface LanguageProviderProps {
+=======
+export type SupportedLanguage = 'en' | 'es' | 'pt' | 'ar' export type LanguageContextType = { currentLanguage: SupportedLanguage changeLanguage: (lang: SupportedLanguage) => Promise<void> isRTL: boolean supportedLanguages: { code: SupportedLanguage name: string flag: string }[] } const supportedLanguages = [
+  { code: 'en' as SupportedLanguage, name: 'English', flag: ' }, { code: 'es' as SupportedLanguage, name: 'Espaol', flag: ' }, { code: 'pt' as SupportedLanguage, name: 'Portugus', flag: ' }, { code: 'ar' as SupportedLanguage, name: ', flag: '' } ] const defaultLanguageContext: LanguageContextType = { currentLanguage: 'en', changeLanguage: async () => {}, isRTL: false, supportedLanguages } const LanguageContext = createContext(defaultLanguageContext) export const useLanguage = (): LanguageContextType => useContext(LanguageContext) interface LanguageProviderProps {
+>>>>>>> main
   children: ReactNode;
    authState?: { isAuthenticate,
     d: boolean'

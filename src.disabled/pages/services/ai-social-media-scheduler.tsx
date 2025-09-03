@@ -52,7 +52,11 @@ const AISocialMediaScheduler = () => {'
   useEffect(() => {
     setIsVisible(true)}, [])
   const features = [
+<<<<<<< HEAD
     {'
+=======
+  {
+>>>>>>> main
       icon: <Bot className='w-6 h-6' />,
       title: 'AI Content Generation',
       description: 'Generate engaging posts, captions, and hashtags using advanced AI algorithms tailored to your brand voice.'},
@@ -77,18 +81,18 @@ const AISocialMediaScheduler = () => {'
       title: 'Team Collaboration',
       description: 'Multi-user access with role-based permissions, approval workflows, and collaborative content creation.'}
   ];
+<<<<<<< HEAD
   const pricingPlans = [{'
+=======
+  const pricingPlans = [
+  {
+>>>>>>> main
       name: 'Starter',
       price: '$19',
       period: '/month',
       description: 'Perfect for individuals and small businesses',
       features: [;
-        'Up to 3 social accounts',
-        '30 posts per month',
-        'Basic AI content generation',
-        'Standard scheduling',
-        'Basic analytics',
-        'Email support';
+        'Up to 3 social accounts,30 posts per month,Basic AI content generation,Standard scheduling,Basic analytics,Email support';
       ],
       popular: false},
     {'
@@ -97,6 +101,7 @@ const AISocialMediaScheduler = () => {'
       period: '/month',
       description: 'Ideal for growing businesses and agencies',
       features: [;
+<<<<<<< HEAD
         'Up to 10 social accounts',
         'Unlimited posts',
         'Advanced AI content generation',
@@ -104,6 +109,9 @@ const AISocialMediaScheduler = () => {'
         'Advanced analytics',
         'Team collaboration (3 users),
         'Priority support';
+=======
+        'Up to 10 social accounts,Unlimited posts,Advanced AI content generation,Smart scheduling,Advanced analytics,Team collaboration (3 users),Priority support';
+>>>>>>> main
       ],
       popular: true},
     {'
@@ -112,19 +120,16 @@ const AISocialMediaScheduler = () => {'
       period: '/month',
       description: 'For large organizations and agencies',
       features: [;
-        'Unlimited social accounts',
-        'Unlimited posts',
-        'Custom AI training',
-        'White-label options',
-        'Advanced team features',
-        'API access',
-        'Dedicated support',
-        'Custom integrations';
+        'Unlimited social accounts,Unlimited posts,Custom AI training,White-label options,Advanced team features,API access,Dedicated support,Custom integrations';
       ],
       popular: false}
   ]
   const platforms = [
+<<<<<<< HEAD
     {'
+=======
+  {
+>>>>>>> main
       name: 'Facebook',
       icon: <div className='w-8 h-8 bg-blue-600 rounded flex items-center justify-center text-white font-bold'>f</div>,
       description: 'Schedule posts, stories, and reels with optimal timing'},
@@ -150,7 +155,11 @@ const AISocialMediaScheduler = () => {'
       description: 'Video upload scheduling and community post management'}
   ]
   const useCases = [
+<<<<<<< HEAD
     {'
+=======
+  {
+>>>>>>> main
       title: 'Content Marketing Agencies',
       description: 'Manage multiple client accounts with white-label solutions and advanced reporting.',
       icon: <Users className='w-8 h-8 text-blue-500' />
@@ -206,20 +215,34 @@ const AISocialMediaScheduler = () => {'
         </div>
       </div>
       {/* Navigation Tabs */}
+<<<<<<< HEAD
       <div className='bg-white shadow-sm sticky top-0 z-40>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 l,
     g:px-8>
           <nav className='flex space-x-8 overflow-x-auto>
             {['overview', 'features', 'platforms', 'pricing', 'use-cases', 'contact'].map((tab) => (
+=======
+      <div className='bg-white shadow-sm sticky top-0 z-40'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <nav className='flex space-x-8 overflow-x-auto'>
+            {['overview,features,platforms,pricing,use-cases,contact'].map((tab) => (
+>>>>>>> main
               <button;
                 key={tab}
                 onClick={() => setActiveTab(tab)}
                 className={`py-4 px-1 border-b-2 font-medium text-sm whitespace-nowrap capitalize ${
+<<<<<<< HEAD
                   activeTab === tab;`
                     ? 'border-purple-500 text-purple-600''
                     : 'border-transparent text-gray-500 hover:text-gray-700 hove,
     r:border-gray-300'}`}`
               >{tab.replace('-', ' ')}
+=======
+                  activeTab === tab;
+                    ? 'border-purple-500 text-purple-600'
+                    : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'}`}
+              >{tab.replace('-, ')}
+>>>>>>> main
               </button>
             ))}
           </nav>

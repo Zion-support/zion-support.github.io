@@ -15,8 +15,7 @@ class AutomationDashboard {
     this.metrics = new Map();
     this.alerts = [];
     this.logFile = path.join(__dirname,
-  'logs',
-  'automation-dashboard.log');
+  'logs,automation-dashboard.log');
     this.ensureLogDirectory();
     this.loadAutomationSystems();
   log(message) {
@@ -25,8 +24,13 @@ class AutomationDashboard {
     // // // // // // // // console.log(message);
 fs.appendFileSync(this.logFile, logMessage);fs.appendFileSync(this.logFile, logMessage);
   loadAutomationSystems() {
+<<<<<<< HEAD
     const systems = [`
       { name: 'lint-monitor, path:,
+=======
+    const systems = [
+  { name: 'lint-monitor, path:,
+>>>>>>> main
   lint-monitor.js', category: 'code-quality, status:,
   available' },
       { name: 'lint-fixer, path:,
@@ -220,9 +224,14 @@ const systems = Array.from(this.automationSystems.values());
                         <p>Avg Time: ${system.averageExecutionTime.toFixed(0)}ms</p>
                         <p>Last Run: ${system.lastRun ? new Date(system.lastRun).toLocaleString() :,
   Never'}</p>
+<<<<<<< HEAD
                     </div>'
                 </div>`).join(';
   ')}
+=======
+                    </div>
+                </div>`).join()}
+>>>>>>> main
         </div>
         <!-- Alerts -->'
         <div class='bg-white rounded-lg shadow-md p-6 mb-8'
@@ -403,6 +412,7 @@ createServer() {createServer() {
 const server = http.createServer((req, res) => {
       const pathname = parsedUrl.pathname;
       res.setHeader(,
+<<<<<<< HEAD
   Content-Type',
   'application/json');
       res.setHeader('
@@ -414,6 +424,15 @@ const server = http.createServer((req, res) => {
       res.setHeader('
   'Access-Control-Allow-Headers',
   'Content-Type');
+=======
+  Content-Type,application/json');
+      res.setHeader(
+  'Access-Control-Allow-Origin,*');
+      res.setHeader(
+  'Access-Control-Allow-Methods,GET, POST, OPTIONS');
+      res.setHeader(
+  'Access-Control-Allow-Headers,Content-Type');
+>>>>>>> main
       if (req.method ===;
   'OPTIONS') {
         res.writeHead(200);
@@ -450,9 +469,14 @@ break;break;
 case;
   '/api/run': ;
           if (req.method ===;
+<<<<<<< HEAD
   'POST') {'
             const body = ';
   ';
+=======
+  'POST') {
+            const body = ;
+>>>>>>> main
             req.on('data, chunk => body += chunk);
             req.on(,
   end;

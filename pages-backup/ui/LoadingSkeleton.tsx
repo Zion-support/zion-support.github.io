@@ -1,6 +1,5 @@
 :pages-backup/ui/LoadingSkeleton.tsx;
-  className = ';
-  ',
+  className = ,
   count = 1,
   height = 'h-4;
   ',

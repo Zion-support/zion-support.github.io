@@ -1,8 +1,13 @@
 import React from react' import { Link } from;
   'react-router-dom' import { motion } from;
   'framer-motion' import {  Globe, Brain, Cloud, Shield, Zap, Users, Phone, Mail, MapPin, Linkedin, Twitter, Github, ArrowUp, ExternalLink } from;
+<<<<<<< HEAD
   'lucide-react'  const ModernFooter = () => { const currentYear = new Date().getFullYear()  const footerSections = [ { title: 'Services, links: [ { nam,
     e:,
+=======
+  'lucide-react'  const ModernFooter = () => { const currentYear = new Date().getFullYear()  const footerSections = [
+  { title: 'Services, links: [ { name:,
+>>>>>>> main
   AI Solutions', href: '/ai-services, icon: Brain }, { name:,
   Cloud & DevOps', href: '/services/cloud-devops, icon: Cloud }, { name:,
   Cybersecurity', href: '/services/ai-compliance-copilot, icon: Shield }, { name:,
@@ -29,5 +34,11 @@ import React from react' import { Link } from;
   /terms' }, { name: 'Cookie Policy, href:,
   /cookies' }, { name: 'GDPR Compliance, href:,
   /gdpr' }, { name: 'Security, href:,
+<<<<<<< HEAD
   /security' } ] } ]  const socialLinks = [ { name: 'LinkedIn, href:,
   https: '''
+=======
+  /security' } ] } ]  const socialLinks = [
+  { name: 'LinkedIn, href:,
+  https: ''
+>>>>>>> main

@@ -30,8 +30,7 @@ import {
   Eye,
   Calendar as CalendarIcon,
   User,
-  Tag as TagIcon} from 'lucide-react;
-  ';
+  Tag as TagIcon}  from 'lucide-react;;
 interface SearchResult {
   id: string;
    type: 'service ' | 'talent ' | 'equipment ' | 'comp ';
@@ -292,8 +291,7 @@ interface SearchResult {
     setSelectedFilters (newFilters) }
   // Clear all filters;
     setSelectedTags([]);
-  setSearchQuery(';
-  ');
+  setSearchQuery();
     setSearchParams({})}
       case 'page;
   ': return FileText;
@@ -416,11 +414,18 @@ interface SearchResult {
                     onClick={() => toggleFilter(filter.id)}
                     className={`w-full flex items-center justify-between p-3 rounded-lg transition-colors ${
                       selectedFilters.has(filter.id);
+<<<<<<< HEAD
                         ?,`
   bg-blue-50 border border-blue-200';
   ': 'hover:bg-gray-50`}`}`
                   >''
                     <div className='flex items-center space-x-3>'
+=======
+                        ?,
+  bg-blue-50 border border-blue-200: 'hover:bg-gray-50`}`}
+                  >'
+                    <div className='flex items-center space-x-3'>'
+>>>>>>> main
                       <filter.icon className='h-5 w-5 text-gray-600' />'
                       <span className='text-sm font-medium text-gray-700'>{filter.name}</span>'
                     </div>''

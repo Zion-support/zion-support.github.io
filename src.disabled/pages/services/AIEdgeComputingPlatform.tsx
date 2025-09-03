@@ -1,17 +1,9 @@
 
 export default function AIEdgeComputingPlatform() {
   const features = [
-    'AI-powered edge device management and optimization',
-    'Real-time data processing at the edge',
-    'Distributed AI model deployment and inference',
-    'Edge-to-cloud synchronization and analytics',
-    'Automatic load balancing and failover',
-    'Edge security and threat detection',
-    'IoT device integration and management',
-    'Custom edge computing workflows',
-    'Edge analytics and reporting tools',
-    'Scalable edge infrastructure management';
+    'AI-powered edge device management and optimization,Real-time data processing at the edge,Distributed AI model deployment and inference,Edge-to-cloud synchronization and analytics,Automatic load balancing and failover,Edge security and threat detection,IoT device integration and management,Custom edge computing workflows,Edge analytics and reporting tools,Scalable edge infrastructure management';
   ];
+<<<<<<< HEAD
   const benefits = ['
     'Reduce latency by 80-90%',
     'Cut bandwidth costs by 60-70%',
@@ -21,21 +13,29 @@ export default function AIEdgeComputingPlatform() {
     'Scalable edge infrastructure';
   ];
   const pricing = [{'
+=======
+  const benefits = [
+    'Reduce latency by 80-90%,Cut bandwidth costs by 60-70%,Improve data privacy and security,Real-time edge processing,Enhanced offline capabilities,Scalable edge infrastructure';
+  ];
+  const pricing = [
+  {
+>>>>>>> main
       name: 'Starter',
       price: '$499/mo',
-      features: ['Up to 50 edge devices', 'Basic edge processing', 'Standard monitoring', 'Email support', 'Monthly reports'],
+      features: ['Up to 50 edge devices,Basic edge processing,Standard monitoring,Email support,Monthly reports'],
       popular: false},
     {'
       name: 'Professional',
       price: '$1,199/mo',
-      features: ['Up to 200 edge devices', 'Advanced AI analytics', 'Real-time processing', 'Priority support', 'Custom workflows', 'API access'],
+      features: ['Up to 200 edge devices,Advanced AI analytics,Real-time processing,Priority support,Custom workflows,API access'],
       popular: true},
     {'
       name: 'Enterprise',
       price: '$3,499/mo',
-      features: ['Unlimited edge devices', 'Full AI suite', 'Custom edge models', 'Dedicated support', 'White-label solutions', 'Advanced integrations'],
+      features: ['Unlimited edge devices,Full AI suite,Custom edge models,Dedicated support,White-label solutions,Advanced integrations'],
       popular: false}
   ];
+<<<<<<< HEAD
   const useCases = ['
     'Smart city infrastructure',
     'Industrial IoT monitoring',
@@ -51,6 +51,13 @@ export default function AIEdgeComputingPlatform() {
     'Healthcare & Medical Devices',
     'Retail & E-commerce',
     'Energy & Utilities';
+=======
+  const useCases = [
+    'Smart city infrastructure,Industrial IoT monitoring,Autonomous vehicle systems,Healthcare edge computing,Retail edge analytics,Energy grid optimization';
+  ];
+  const industries = [
+    'Smart Cities & Infrastructure,Manufacturing & Industry 4.0,Transportation & Logistics,Healthcare & Medical Devices,Retail & E-commerce,Energy & Utilities';
+>>>>>>> main
   ];
   return('
     <div className = 'min-h-screen bg-white'>

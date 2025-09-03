@@ -22,7 +22,8 @@ import {
   Shield,
 } from 'lucide-react';
 const Products: NextPage = () => {
-  const products = [{
+  const products = [
+  {
 :pages.disabled_auto/products.tsx;
       titl,
     e:;
@@ -32,19 +33,12 @@ const Products: NextPage = () => {
       features: [;
   'Real-time data visualization,
 ,
-  Predictive analytics',
-  'Custom dashboard creation',
-  'Automated reporting',
-  'Multi-source data integration';
+  Predictive analytics,Custom dashboard creation,Automated reporting,Multi-source data integration';
       title: 'AI Business Intelligence Platform',
       description:;
         'Transform your data into actionable insights with our advanced AI-powered analytics platform.',
       features: [;
-        'Real-time data visualization',
-        'Predictive analytics',
-        'Custom dashboard creation',
-        'Automated reporting',
-        'Multi-source data integration'],
+        'Real-time data visualization,Predictive analytics,Custom dashboard creation,Automated reporting,Multi-source data integration'],
       pricing: 'Starting at $299/month,
       category:;
   'AI & Analytics',
@@ -58,11 +52,7 @@ const Products: NextPage = () => {
   Cloud Migration Suite',
       description: 'Seamlessly migrate your infrastructure to the cloud with our comprehensive migration tools.,
       features: [,
-  Automated migration planning',
-  'Zero-downtime migration',
-  'Cost optimization analysis',
-  'Security compliance checks',
-  '24/7 migration support';
+  Automated migration planning,Zero-downtime migration,Cost optimization analysis,Security compliance checks,24/7 migration support';
       users: '500+',
       image: '/products/ai-bi-platform.jpg'},
     {'
@@ -70,11 +60,7 @@ const Products: NextPage = () => {
       description:;
         'Seamlessly migrate your infrastructure to the cloud with our comprehensive migration tools.',
       features: [;
-        'Automated migration planning',
-        'Zero-downtime migration',
-        'Cost optimization analysis',
-        'Security compliance checks',
-        '24/7 migration support'],
+        'Automated migration planning,Zero-downtime migration,Cost optimization analysis,Security compliance checks,24/7 migration support'],
       pricing: 'Starting at $199/month,
       category:;
   'Cloud Computing',
@@ -88,11 +74,7 @@ const Products: NextPage = () => {
   Cybersecurity Monitoring System',
       description: 'Protect your business with our advanced threat detection and response platform.,
       features: [,
-  Real-time threat monitoring',
-  'Automated incident response',
-  'Compliance reporting',
-  'Security awareness training',
-  '24/7 SOC support';
+  Real-time threat monitoring,Automated incident response,Compliance reporting,Security awareness training,24/7 SOC support';
       users: '300+',
       image: '/products/cloud-migration.jpg'},
     {'
@@ -100,11 +82,7 @@ const Products: NextPage = () => {
       description:;
         'Protect your business with our advanced threat detection and response platform.',
       features: [;
-        'Real-time threat monitoring',
-        'Automated incident response',
-        'Compliance reporting',
-        'Security awareness training',
-        '24/7 SOC support'],
+        'Real-time threat monitoring,Automated incident response,Compliance reporting,Security awareness training,24/7 SOC support'],
       pricing: 'Starting at $399/month,
       category:;
   'Cybersecurity',
@@ -118,11 +96,7 @@ const Products: NextPage = () => {
   Micro SaaS Development Kit',
       description: 'Build and launch your own micro SaaS products with our comprehensive development framework.,
       features: [,
-  Pre-built templates',
-  'Payment integration',
-  'User management system',
-  'Analytics dashboard',
-  'Deployment automation';
+  Pre-built templates,Payment integration,User management system,Analytics dashboard,Deployment automation';
       users: '200+',
       image: '/products/cybersecurity-monitoring.jpg'},
     {'
@@ -130,11 +104,7 @@ const Products: NextPage = () => {
       description:;
         'Build and launch your own micro SaaS products with our comprehensive development framework.',
       features: [;
-        'Pre-built templates',
-        'Payment integration',
-        'User management system',
-        'Analytics dashboard',
-        'Deployment automation'],
+        'Pre-built templates,Payment integration,User management system,Analytics dashboard,Deployment automation'],
       pricing: 'Starting at $149/month,
       category:;
   'SaaS Development',
@@ -148,11 +118,7 @@ const Products: NextPage = () => {
   Digital Transformation Hub',
       description: 'Accelerate your digital transformation with our integrated suite of modernization tools.,
       features: [,
-  Process automation',
-  'Legacy system integration',
-  'Workflow optimization',
-  'Change management tools',
-  'ROI tracking';
+  Process automation,Legacy system integration,Workflow optimization,Change management tools,ROI tracking';
       users: '150+',
       image: '/products/micro-saas-kit.jpg'},
     {'
@@ -160,11 +126,7 @@ const Products: NextPage = () => {
       description:;
         'Accelerate your digital transformation with our integrated suite of modernization tools.',
       features: [;
-        'Process automation',
-        'Legacy system integration',
-        'Workflow optimization',
-        'Change management tools',
-        'ROI tracking'],
+        'Process automation,Legacy system integration,Workflow optimization,Change management tools,ROI tracking'],
       pricing: 'Starting at $249/month,
       category:;
   'Digital Transformation',
@@ -178,11 +140,7 @@ const Products: NextPage = () => {
   IoT Edge Computing Platform',
       description: 'Connect and manage your IoT devices with our powerful edge computing solution.,
       features: [,
-  Device management',
-  'Edge analytics',
-  'Real-time processing',
-  'Data synchronization',
-  'Remote monitoring';
+  Device management,Edge analytics,Real-time processing,Data synchronization,Remote monitoring';
       users: '400+',
       image: '/products/digital-transformation.jpg'},
     {'
@@ -190,11 +148,7 @@ const Products: NextPage = () => {
       description:;
         'Connect and manage your IoT devices with our powerful edge computing solution.',
       features: [;
-        'Device management',
-        'Edge analytics',
-        'Real-time processing',
-        'Data synchronization',
-        'Remote monitoring'],
+        'Device management,Edge analytics,Real-time processing,Data synchronization,Remote monitoring'],
       pricing: 'Starting at $179/month,
       category:;
   'IoT & Edge Computing',
@@ -204,6 +158,7 @@ const Products: NextPage = () => {
   100+',
       image: '/products/iot-edge-platform.jpg}
   ];
+<<<<<<< HEAD
   const categories = ['
   'All Products',
   'AI & Analytics',
@@ -222,6 +177,14 @@ const Products: NextPage = () => {
     'SaaS Development',
     'Digital Transformation',
     'IoT & Edge Computing']
+=======
+  const categories = [
+  'All Products,AI & Analytics,Cloud Computing,Cybersecurity,SaaS Development,Digital Transformation,IoT & Edge Computing';
+      users: '100+',
+      image: '/products/iot-edge-platform.jpg'}];
+  const categories = [
+    'All Products,AI & Analytics,Cloud Computing,Cybersecurity,SaaS Development,Digital Transformation,IoT & Edge Computing']
+>>>>>>> main
   return(
     <MainLayout'
       title='Products - Zion Tech Group';

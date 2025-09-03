@@ -11,7 +11,7 @@ const Header: React.FC = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const location = useLocation();
   const navigation = [
-    { name:,
+  { name:,
   Home', path: '/ },
     { name:,
   About', path: '/about },

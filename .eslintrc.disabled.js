@@ -21,10 +21,14 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
+<<<<<<< HEAD
   plugins: [
     'react',
     '@typescript-eslint'
   ],
+=======
+  plugins: ['react', '@typescript-eslint'],
+>>>>>>> main
   rules: {
     '@typescript-eslint/no-unused-vars': 'warn',
     '@typescript-eslint/no-explicit-any': 'warn',
@@ -47,4 +51,8 @@ module.exports = {
     '**/*.backup',
     '**/*.tsbackup',
   ],
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> main

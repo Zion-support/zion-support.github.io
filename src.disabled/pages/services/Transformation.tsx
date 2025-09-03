@@ -1,13 +1,22 @@
 
 :pages.disabled/pages/services/Transformation.tsx;
 const DigitalTransformation = () => {
+<<<<<<< HEAD
   const transformationServices = [{title: 'Process Automation',';
       description: 'Streamline workflows with intelligent automation and AI-powered solutions.',';
       price: 'From $15,000/project',';
       features: ['Workflow automation', 'AI-powered decision making', 'Process optimization', 'Performance monitoring'],
+=======
+  const transformationServices = [
+  {title: 'Process Automation,';
+      description: 'Streamline workflows with intelligent automation and AI-powered solutions.,';
+      price: 'From $15,000/project,';
+      features: ['Workflow automation,AI-powered decision making,Process optimization,Performance monitoring'],
+>>>>>>> main
       icon: Zap},
 :pages.disabled/pages/services/Transformation.tsx{'
 ''';
+<<<<<<< HEAD
       title: 'Legacy Modernization',';
       description: 'Update and integrate legacy systems with modern technologies.',';
       price: 'From $25,000/project',';
@@ -47,6 +56,43 @@ const DigitalTransformation = () => {
               Digital'''
               <span className='bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent'> Transformation</span>''
             </h1>'''
+=======
+      title: 'Legacy Modernization,';
+      description: 'Update and integrate legacy systems with modern technologies.,';
+      price: 'From $25,000/project,';
+      features: ['System assessment,Modernization planning,Data migration,Integration services'],
+:pages.disabled/pages/services/Transformation.tsx;
+      icon: RefreshCw},'{'
+      title: 'Change Management,;
+      description: 'Guide your team through digital adoption and transformation.,;
+      price: 'From $8,000/month,      features: ['Change strategy,Training programs,Communication plans,Success measurement'],
+      icon: Users}
+  ];
+:pages.disabled/pages/services/Transformation.tsx;
+  '{'
+      name: 'Technology,;
+      description: 'Modernize your technology stack and infrastructure,;
+      icon: BarChart3,';
+      features: ['Cloud migration,API integration,Data modernization,Security enhancement']}
+  ]';
+  const benefits = [''Increased operational efficiency and productivity',Enhanced customer experience and satisfaction',Improved data insights and decision making',Reduced operational costs and manual work',Faster time to market for new products,;Better competitive positioning in the market';
+  ];
+:pages.disabled/pages/services/Transformation.tsx;
+';
+  return (
+    <div className = 'min-h-screen bg-slate-900 text-white'>'{/* Hero Section */}''
+      <section className='relative pt-24 pb-16 px-4 sm:px-6 lg:px-8'>''
+        <div className='max-w-7xl mx-auto text-center'>''
+          <div className='mb-8'>''
+            <div className='inline-flex items-center px-4 py-2 bg-indigo-500/10 text-indigo-400 rounded-full text-sm font-medium mb-6'>'';
+:pages.disabled/pages/services/Transformation.tsx
+              <RefreshCw className='w-4 h-4 mr-2' />              Digital Transformation'
+            </div>''
+            <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>';
+              Digital''
+              <span className='bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent'> Transformation</span>'
+            </h1>''
+>>>>>>> main
             <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>
               Modernize your business processes and operations with cutting-edge;
               technology solutions that drive growth and innovation.''
@@ -75,6 +121,7 @@ const DigitalTransformation = () => {
               Comprehensive digital transformation solutions designed to modernize;
               your business and drive sustainable growth.
             </p>
+<<<<<<< HEAD
 :pages.disabled/pages/services/Transformation.tsx'
           </div>';
 '''
@@ -86,6 +133,16 @@ const DigitalTransformation = () => {
                   <service.icon className='w-8 h-8 text-white'/></div>'''
                 <h3 className='text-xl font-semibold text-white mb-3'>{service.title}</h3>'''
                 <p className='text-gray-300 mb-4'>{service.description}</p>'''
+=======
+:pages.disabled/pages/services/Transformation.tsx
+          </div>'
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>'{transformationServices.map((service, index) => (''
+              <div key={index} className='bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-indigo-500/50 transition-all duration-300'>''
+                <div className='w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4'>''
+                  <service.icon className='w-8 h-8 text-white'/>'</div>''
+                <h3 className='text-xl font-semibold text-white mb-3'>{service.title}</h3>''
+                <p className='text-gray-300 mb-4'>{service.description}</p>''
+>>>>>>> main
                 <p className='text-lg font-semibold text-indigo-400 mb-4'>{service.price}</p>'';
 :pages.disabled/pages/services/Transformation.tsx'
                 <ul className='space-y-2>{service.features.map((feature, featureIndex) => ('''
@@ -113,6 +170,7 @@ const DigitalTransformation = () => {
               We help transform every aspect of your business to create a;
               comprehensive digital-first organization.
             </p>
+<<<<<<< HEAD
 :pages.disabled/pages/services/Transformation.tsx'
           </div>';
 '''
@@ -120,6 +178,13 @@ const DigitalTransformation = () => {
     d:grid-cols-3 gap-8>{transformationAreas.map((area, index) => ('''
               <div key={index} className='bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-indigo-500/50 transition-all duration-300>''
                 <div className='w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4>''
+=======
+:pages.disabled/pages/services/Transformation.tsx
+          </div>'
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>'{transformationAreas.map((area, index) => (''
+              <div key={index} className='bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-indigo-500/50 transition-all duration-300'>''
+                <div className='w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4'>''
+>>>>>>> main
                   <area.icon className='w-8 h-8 text-white'/>'
                 </div>'''
                 <h3 className='text-xl font-semibold text-white mb-3'>{area.name}</h3>'''

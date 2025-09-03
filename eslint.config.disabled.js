@@ -62,13 +62,24 @@ export default [
       react,
       'react-hooks': reactHooks,
     },
+<<<<<<< HEAD
     rules: {'
+=======
+    rules: {
+<<<<<<< HEAD
+>>>>>>> main
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
       'no-unused-vars': 'warn',
       'no-console': 'warn',
       'no-undef': 'error',
     },
+<<<<<<< HEAD
+=======
+=======
+      'react/react-in-jsx-scope': 'off,react/prop-types': 'off,no-unused-vars': 'warn,no-console': 'warn,no-undef': 'error'},
+>>>>>>> main
+>>>>>>> main
     settings: {
       reac,
     t: {'
@@ -142,7 +153,12 @@ export default [
       'react-hooks': reactHooks,
       '@typescript-eslint': tseslint,
     },
+<<<<<<< HEAD
     rules: {'
+=======
+    rules: {
+<<<<<<< HEAD
+>>>>>>> main
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
       '@typescript-eslint/no-unused-vars': ['
@@ -155,6 +171,13 @@ export default [
       'no-console': 'warn',
       'no-undef': 'off',
     },
+<<<<<<< HEAD
+=======
+=======
+      'react/react-in-jsx-scope': 'off,react/prop-types': 'off,@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
+      '@typescript-eslint/explicit-function-return-type': 'off,@typescript-eslint/explicit-module-boundary-types': 'off,no-unused-vars': 'off,no-console': 'warn,no-undef': 'off'},
+>>>>>>> main
+>>>>>>> main
     settings: {
       reac,
     t: {'
@@ -164,7 +187,12 @@ export default [
     },
   },
   {
+<<<<<<< HEAD
     ignores: ['
+=======
+    ignores: [
+<<<<<<< HEAD
+>>>>>>> main
       'src/**',
       'components/**',
       'backup-pages/**',
@@ -290,4 +318,16 @@ export default [
     ],
   },
 ];
+<<<<<<< HEAD
 '
+=======
+<<<<<<< HEAD
+=======
+=======
+      'src/**,components/**,backup-pages/**,pages-backup/**,pages.__backup/**,broken_files_backup/**,api/**,api-backup/**,automation_backup/**,ai-optimization-backups/**,ai-optimization-reports/**,ai-analysis-reports/**,__tests__/**,tests/**,*.test.*,.eslintrc.*,mcp*.*,fix_*.*,fix-*.js,fix-*.jsx,fix-variable-names.jsx,health-endpoint.js,services/**,data/**,temp_working/**,supabase/**,ecosystem*.js,jest.*,node_modules/,.next/,out/,dist/,build/,*.config.js,*.config.ts,scripts/,automation/,public/reports/**,netlify/,ecosystem*.cjs,**/*.cjs,**/*.disabled/**,**/tests.disabled/**,**/typechain-types.disabled/**,**/types.disabled/**,**/utils.disabled/**,**/zion-os.disabled/**,**/zion_academy/**,**/src_backup/**,**/src_disabled/**,**/services.disabled.temp/**,test-*.js,workbox-config.js,*.backup.*,**/data/*.ts,**/pages/*.tsx,**/public/*.js,**/*.mjs,**/server.mjs,**/seed.js,**/jest.setup.js,**/extractFailingCode.js,**/fix-corrupted-files.js,**/fix-corruption.js,**/fix-merge-conflicts.js,**/fix-syntax-errors.js,**/mcp-automation-system.js,**/run-cursor-memory-automation.js,**/script.js,**/simple-mcp-test.js,**/simple-server.js,**/start-all-automations.js,**/backup/**,**/.temp_backup_components/**,**/src.broken/**,**/data.temp/**,**/contracts/**,**/cypress/**,**/src/components/disabled/**,**/src/components/header/**,**/src/components/ui/Futuristic*.tsx,**/src/components/ui/accordion.tsx,**/src/components/ui/alert.tsx,**/src/components/ui/avatar.tsx,**/src/components/ui/badge.tsx,**/src/components/ui/button.tsx,**/src/components/ui/card.tsx,**/src/components/ui/floating-action-button.tsx,**/src/components/ui/input.tsx,**/src/components/ui/loading-spinner.tsx,**/src/components/ui/loading.tsx,**/src/components/ui/select.jsx,**/src/components/ui/separator.jsx,**/src/components/ui/skeleton.jsx,**/src/components/ui/steps.jsx,**/src/components/ui/tabs.jsx,**/src/components/ui/textarea.jsx,**/src/components/ui/use-toast.jsx,**/src/hooks/use-toast.js,**/src/hooks/usePerformance.js,**/src/lib/utils.js,**/src/main.jsx,**/src/types/listings.js,**/src/components/AccessibilityEnhancer.jsx,**/src/components/Breadcrumb.jsx,**/src/components/ErrorBoundary.jsx,**/src/components/GradientHeading.jsx,**/src/components/LazyImage.jsx,**/src/components/LoadingSkeleton.jsx,**/src/components/SEO.jsx,**/src/components/SecurityHeaders.jsx,**/src/components/Sidebar.jsx,**/src/components/TrustIndicators.jsx,**/auto-fix-watcher.js,**/auto-run-all.js,**/comprehensive-automation-test.js,**/debug-paths.js,**/pages/**,**/components/**,test*.js,test*.ts,test*.tsx'
+    ]
+  }
+];
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

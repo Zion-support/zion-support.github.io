@@ -25,10 +25,15 @@
       description: 'Quick start tutorial for new developers,
       icon:,
   🚀',
+<<<<<<< HEAD
       difficulty: 'Beginner';
   ';
       titl,
     e: 'Getting Started Guide,
+=======
+      difficulty: 'Beginner;
+      title: 'Getting Started Guide,
+>>>>>>> main
   description: 'Quick start tutorial for new developers,
 ,
   icon: '🚀,      difficulty:,
@@ -82,6 +87,7 @@ const data = await response.json()`;`
   5K+',
       icon: '📝}  ];
   return();
+<<<<<<< HEAD
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900>
       <SEO ''
         title='Developer Portal - Zion Tech Group',
@@ -89,6 +95,14 @@ const data = await response.json()`;`
       <section className='relative py-32 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue overflow-hidden>'
         <div className='absolute inset-0 opacity-10>'
           <div className='absolute top-20 left-20 w-64 h-64 border border-zion-cyan rounded-full animate-pulse'></div>''
+=======
+    <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
+      <SEO '
+        title='Developer Portal - Zion Tech Group,        description='Access developer tools, documentation, SDKs, and community resources. Build amazing applications with Zion Tech Group's developer platform.'/>{/* Hero Section */}'
+      <section className='relative py-32 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue overflow-hidden'>'
+        <div className='absolute inset-0 opacity-10'>'
+          <div className='absolute top-20 left-20 w-64 h-64 border border-zion-cyan rounded-full animate-pulse'></div>'
+>>>>>>> main
           <div className='absolute bottom-20 right-20 w-48 h-48 border border-zion-purple rounded-full animate-pulse delay-1000'></div>
         </div>'
 ''
@@ -133,9 +147,14 @@ const data = await response.json()`;`
             whileInView = {
   { opacity: 1,
   y: 0}}
+<<<<<<< HEAD
             transition={{ duration: 0.6 }};
             className='text-center mb-16';
 ';
+=======
+            transition={{ duration: 0.6 }}';
+            className='text-center mb-16;
+>>>>>>> main
             <h2 className='text-4xl font-bold text-white mb-4'>
               Developer Tools'
             </h2>''
@@ -199,9 +218,14 @@ const data = await response.json()`;`
             whileInView = {
   { opacity: 1,
   y: 0}}
+<<<<<<< HEAD
             transition={{ duration: 0.6 }};
             className='text-center mb-16';
 ';
+=======
+            transition={{ duration: 0.6 }}';
+            className='text-center mb-16;
+>>>>>>> main
             <h2 className='text-4xl font-bold text-white mb-4'>
               Learning Resources'
             </h2>''
@@ -309,6 +333,7 @@ const data = await response.json()`;`
   x: 0}}
                 transition = {
   { duration: 0.6,
+<<<<<<< HEAD
   delay: index * 0.1}};
                 className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-200';
 ';
@@ -317,6 +342,15 @@ const data = await response.json()`;`
                   <div className='flex-1>'
                     <div className='flex items-center justify-between mb-2>'
                       <h3 className='text-xl font-semibold text-white'>{resource.title}</h3>``
+=======
+  delay: index * 0.1}}';
+                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-200;
+                <div className='flex items-start space-x-4'>'
+                  <div className='text-4xl'>{resource.icon}</div>'
+                  <div className='flex-1'>'
+                    <div className='flex items-center justify-between mb-2'>'
+                      <h3 className='text-xl font-semibold text-white'>{resource.title}</h3>`
+>>>>>>> main
                       <span className={`px-2 py-1 rounded-full text-xs ${
                         resource.difficulty ===,
   Beginner;`
@@ -325,10 +359,16 @@ const data = await response.json()`;`
                         resource.difficulty ===;
   'Intermediate' ?;
   'bg-yellow-500/20 text-yellow-400' :;
+<<<<<<< HEAD
   ';
                         'bg-blue-500/20 text-blue-400`}`}>{resource.difficulty}
                       </span>`
                     </div>''
+=======
+  bg-blue-500/20 text-blue-400`}`}>{resource.difficulty}
+                      </span>
+                    </div>'
+>>>>>>> main
                     <p className='text-gray-300'>{resource.description}</p>
                   </div>
                 </div>'
@@ -355,12 +395,19 @@ const data = await response.json()`;`
   ';
                     resource.badge === 'Community;
   ' ? 'bg-indigo-500/20 text-indigo-400;
+<<<<<<< HEAD
   ' :';
   'bg-green-500/20 text-green-400`}`}>{resource.badge}
                   </span>`
 ''
                   <button className='text-zion-cyan hover:text-white transition-colors duration-300 text-sm group-hove,
     r:translate-x-1 transition-transform duration-300'>
+=======
+  ' :bg-green-500/20 text-green-400`}`}>{resource.badge}
+                  </span>
+'
+                  <button className='text-zion-cyan hover:text-white transition-colors duration-300 text-sm group-hover:translate-x-1 transition-transform duration-300'>
+>>>>>>> main
                     View Resource
                   </button>
                 </div>
@@ -378,9 +425,14 @@ const data = await response.json()`;`
             whileInView = {
   { opacity: 1,
   y: 0}}
+<<<<<<< HEAD
             transition={{ duration: 0.6 }};
             className='text-center mb-12';
 ';
+=======
+            transition={{ duration: 0.6 }}';
+            className='text-center mb-12;
+>>>>>>> main
             <h2 className='text-4xl font-bold text-white mb-4'>
               Quick Start'
             </h2>''
@@ -397,6 +449,7 @@ const data = await response.json()`;`
   y: 0}}
             transition = {
   { duration: 0.6,
+<<<<<<< HEAD
   delay: 0.2}};
             className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8';
 ';
@@ -405,6 +458,15 @@ const data = await response.json()`;`
                 <div className='w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold'>1</div>'
                 <div>''
                   <h3 className='text-lg font-semibold text-white'>Get Your API Key</h3>''
+=======
+  delay: 0.2}}';
+            className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8;
+            <div className='space-y-6'>'
+              <div className='flex items-center space-x-4'>'
+                <div className='w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold'>1</div>
+                <div>'
+                  <h3 className='text-lg font-semibold text-white'>Get Your API Key</h3>'
+>>>>>>> main
                   <p className='text-gray-300'>Sign up and generate your API key from the dashboard</p>
                 </div>'
               </div>''

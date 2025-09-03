@@ -25,77 +25,86 @@ import Link from 'next/link';
 
 const SmallBusiness: NextPage = () => {
   const solutions = [
+<<<<<<< HEAD
     {
       titl,
     e:;
+=======
+  {
+      title:;
+>>>>>>> main
   'Cloud-Based Business Management,
       description:'
   'Complete business management suite in the cloud',
       icon: <Globe className='w-8 h-8' />,
 :pages.disabled_auto/solutions/small-business.tsx;
       features: [,
-  Customer relationship management',
-  'Inventory tracking',
-  'Financial reporting',
-  'Team collaboration tools';
+  Customer relationship management,Inventory tracking,Financial reporting,Team collaboration tools';
       ];
       features: [;
+<<<<<<< HEAD
         'Customer relationship management',
         'Inventory tracking',
         'Financial reporting',
         'Team collaboration tools']},
     {'
+=======
+        'Customer relationship management,Inventory tracking,Financial reporting,Team collaboration tools']},
+    {
+>>>>>>> main
       title: 'AI-Powered Customer Support,
       description:'
   'Automated customer service with human touch',
       icon: <Users className='w-8 h-8' />,
 :pages.disabled_auto/solutions/small-business.tsx;
       features: [,
-  24/7 chatbot support',
-  'Ticket management system',
-  'Knowledge base integration',
-  'Performance analytics';
+  24/7 chatbot support,Ticket management system,Knowledge base integration,Performance analytics';
       ];
       features: [;
+<<<<<<< HEAD
         '24/7 chatbot support',
         'Ticket management system',
         'Knowledge base integration',
         'Performance analytics']},
     {'
+=======
+        '24/7 chatbot support,Ticket management system,Knowledge base integration,Performance analytics']},
+    {
+>>>>>>> main
       title: 'Digital Marketing Automation,
       description:'
   'Streamline your marketing efforts with AI',
       icon: <Zap className='w-8 h-8' />,
 :pages.disabled_auto/solutions/small-business.tsx;
       features: [,
-  Email marketing campaigns',
-  'Social media management',
-  'Content generation',
-  'Lead nurturing automation';
+  Email marketing campaigns,Social media management,Content generation,Lead nurturing automation';
       ];
       features: [;
+<<<<<<< HEAD
         'Email marketing campaigns',
         'Social media management',
         'Content generation',
         'Lead nurturing automation']},
     {'
+=======
+        'Email marketing campaigns,Social media management,Content generation,Lead nurturing automation']},
+    {
+>>>>>>> main
       title: 'Cybersecurity Protection,
       description:'
   'Comprehensive security for your business data',
       icon: <Shield className='w-8 h-8' />,
       features: [
 :pages.disabled_auto/solutions/small-business.tsx;
-  'Data encryption',
-  'Regular security audits',
-  'Backup and recovery',
-  'Employee training';
+  'Data encryption,Regular security audits,Backup and recovery,Employee training';
       ]}
-        'Data encryption',
-        'Regular security audits',
-        'Backup and recovery',
-        'Employee training']}]
+        'Data encryption,Regular security audits,Backup and recovery,Employee training']}]
   const benefits = [
+<<<<<<< HEAD
     {'
+=======
+  {
+>>>>>>> main
       icon: <DollarSign className='w-6 h-6' />,
 :pages.disabled_auto/solutions/small-business.tsx
       title:,
@@ -132,7 +141,7 @@ const SmallBusiness: NextPage = () => {
       title: 'Dedicated Support',
       description: 'Personal support team for your business needs'}];
   const pricing = [
-    {
+  {
 :pages.disabled_auto/solutions/small-business.tsx;
       name:,
   Starter',
@@ -141,23 +150,24 @@ const SmallBusiness: NextPage = () => {
   /month',
       description: 'Perfect for small businesses just getting started,
       features: [,
-  Up to 5 users',
-  'Basic CRM functionality',
-  'Email support',
-  'Standard security features',
-  'Monthly reporting';
+  Up to 5 users,Basic CRM functionality,Email support,Standard security features,Monthly reporting';
       ];
       name: 'Starter',
       price: '$299',
       period: '/month',
       description: 'Perfect for small businesses just getting started',
       features: [;
+<<<<<<< HEAD
         'Up to 5 users',
         'Basic CRM functionality',
         'Email support',
         'Standard security features',
         'Monthly reporting']},
     {'
+=======
+        'Up to 5 users,Basic CRM functionality,Email support,Standard security features,Monthly reporting']},
+    {
+>>>>>>> main
       name: 'Growth,
       price:,
   $599',
@@ -168,12 +178,9 @@ const SmallBusiness: NextPage = () => {
 :pages.disabled_auto/solutions/small-business.tsx;
   'Up to 15 users,
 ,
-  Advanced CRM features',
-  'AI customer support',
-  'Priority support',
-  'Advanced analytics',
-  'Custom integrations';
+  Advanced CRM features,AI customer support,Priority support,Advanced analytics,Custom integrations';
       ];
+<<<<<<< HEAD
         'Up to 15 users',
         'Advanced CRM features',
         'AI customer support',
@@ -181,6 +188,10 @@ const SmallBusiness: NextPage = () => {
         'Advanced analytics',
         'Custom integrations']},
     {'
+=======
+        'Up to 15 users,Advanced CRM features,AI customer support,Priority support,Advanced analytics,Custom integrations']},
+    {
+>>>>>>> main
       name: 'Professional,
       price:,
   $999',
@@ -190,18 +201,9 @@ const SmallBusiness: NextPage = () => {
       features: [
 :pages.disabled_auto/solutions/small-business.tsx;
   'Unlimited users,
-  'Full feature access',
-  'Dedicated account manager',
-  '24/7 phone support',
-  'Custom development',
-  'Advanced security features';
+  'Full feature access,Dedicated account manager,24/7 phone support,Custom development,Advanced security features';
       ]}
-        'Unlimited users',
-        'Full feature access',
-        'Dedicated account manager',
-        '24/7 phone support',
-        'Custom development',
-        'Advanced security features']}]
+        'Unlimited users,Full feature access,Dedicated account manager,24/7 phone support,Custom development,Advanced security features']}]
   return(
     <MainLayout'
       title='Small Business Solutions - Zion Tech Group';

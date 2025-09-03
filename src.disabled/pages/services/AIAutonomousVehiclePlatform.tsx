@@ -1,26 +1,39 @@
 import React from 'react';
 import { SEO } from '../../components/SEO';
 
+<<<<<<< HEAD
 export default function AIAutonomousVehiclePlatform() {'
   const features = ['Advanced computer vision and sensor fusion',;Real-time decision making and path planning',;Predictive maintenance and fleet optimization',;Multi-vehicle coordination and traffic management',;Safety-first autonomous driving algorithms',;Cloud-based vehicle monitoring and control';
   ];
   const tiers = [
     {'
+=======
+export default function AIAutonomousVehiclePlatform() {
+  const features = ['Advanced computer vision and sensor fusion,;Real-time decision making and path planning,;Predictive maintenance and fleet optimization,;Multi-vehicle coordination and traffic management,;Safety-first autonomous driving algorithms,;Cloud-based vehicle monitoring and control';
+  ];
+  const tiers = [
+  {
+>>>>>>> main
       name: 'Developer',
       price: '$2,499/mo',
       description: 'Perfect for autonomous vehicle development teams',
       details: [;
+<<<<<<< HEAD
         'Up to 5 vehicle simulations',
         'Basic autonomous driving algorithms',
         'Standard support (8/5),
         'API access and documentation',
         'Community forum access',
         'Basic safety testing tools';
+=======
+        'Up to 5 vehicle simulations,Basic autonomous driving algorithms,Standard support (8/5),API access and documentation,Community forum access,Basic safety testing tools';
+>>>>>>> main
       ]},
     {'
       name: 'Business',
       price: '$5,999/mo',
       description: 'Ideal for fleet operators and transportation companies',
+<<<<<<< HEAD
       details: ['
         'Up to 25 vehicle management',
         'Advanced autonomous algorithms',
@@ -29,11 +42,16 @@ export default function AIAutonomousVehiclePlatform() {'
         'Dedicated account manager',
         'Fleet analytics dashboard',
         'Safety compliance monitoring';
+=======
+      details: [
+        'Up to 25 vehicle management,Advanced autonomous algorithms,Priority support (12/7),Custom route optimization,Dedicated account manager,Fleet analytics dashboard,Safety compliance monitoring';
+>>>>>>> main
       ]},
     {'
       name: 'Enterprise',
       price: '$15,999/mo',
       description: 'Full-scale autonomous vehicle platform',
+<<<<<<< HEAD
       details: ['
         'Unlimited vehicle management',
         'Custom autonomous algorithms',
@@ -45,6 +63,17 @@ export default function AIAutonomousVehiclePlatform() {'
   const benefits = ['Reduce transportation costs by 40-60% through automation',;Improve safety by eliminating human error factors',;Increase fleet efficiency and utilization rates',;Enable 24/7 operation without driver fatigue',;Reduce carbon emissions through optimized routing';
   ];
   const industries = ['Transportation and Logistics',;Automotive Manufacturing',;Ride-sharing Services',;Public Transit',;Construction and Mining',;Agriculture and Farming';
+=======
+      details: [
+        'Unlimited vehicle management,Custom autonomous algorithms,24/7 dedicated support,;On-premise deployment options,;Custom integrations and APIs,;White-label solutions available,;Regulatory compliance tools';
+      ]}
+  ];
+  const useCases = ['Ride-sharing and taxi services,;Logistics and delivery fleets,;Public transportation systems,;Mining and construction vehicles,;Agricultural machinery automation,;Emergency response vehicles';
+  ];
+  const benefits = ['Reduce transportation costs by 40-60% through automation,;Improve safety by eliminating human error factors,;Increase fleet efficiency and utilization rates,;Enable 24/7 operation without driver fatigue,;Reduce carbon emissions through optimized routing';
+  ];
+  const industries = ['Transportation and Logistics,;Automotive Manufacturing,;Ride-sharing Services,;Public Transit,;Construction and Mining,;Agriculture and Farming';
+>>>>>>> main
   ];
   return(
     <>

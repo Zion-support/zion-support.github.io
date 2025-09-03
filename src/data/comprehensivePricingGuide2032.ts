@@ -1,5 +1,9 @@
-export interface PricingTier2032 {
+<<<<<<< HEAD
+export interface PricingTier2032 {;
   id: string;
+=======
+export interface PricingTier2032 {id: string;
+>>>>>>> main
    name: string;
    price: number;
    currency: string;
@@ -11,8 +15,12 @@ export interface PricingTier2032 {
    bestFo,
     r: string;
    popular?: boolean;
-   savings?: string} export interface ServicePricing2032 {
+<<<<<<< HEAD
+   savings?: string} export interface ServicePricing2032 {;
   serviceId: string;
+=======
+   savings?: string} export interface ServicePricing2032 {serviceId: string;
+>>>>>>> main
    serviceName: string;
    category: string;
    basePrice: number;
@@ -21,6 +29,7 @@ export interface PricingTier2032 {
    tiers: PricingTier2032[];
    enterprisePricing: {  custom: boolean;
    startingPrice: number;
+<<<<<<< HEAD
    contactRequire,
     d: boolean
    feature,
@@ -31,3 +40,11 @@ export interface PricingTier2032 {
     t: number  }[] annualDiscount: number freeTrial: boolean trialDuration: string moneyBackGuarantee: boolean guaranteeDuration: string sla: string supportLevels: { level: string responseTim,
     e: string feature,
     s: string[]  }[] } export const COMPREHENSIVE_PRICING_GUIDE_2032: ServicePricing2032[] = [;
+=======
+   contactRequired: boolean
+<<<<<<< HEAD
+   features: string[]} addOns: {name: string price: number description: string  }[] volumeDiscounts: {users: number discount: number  }[] annualDiscount: number freeTrial: boolean trialDuration: string moneyBackGuarantee: boolean guaranteeDuration: string sla: string supportLevels: {level: string responseTime: string features: string[]  }[] } export const COMPREHENSIVE_PRICING_GUIDE_2032: ServicePricing2032[] = [;
+=======
+   features: string[]} addOns: { name: string price: number description: string  }[] volumeDiscounts: { users: number discount: number  }[] annualDiscount: number freeTrial: boolean trialDuration: string moneyBackGuarantee: boolean guaranteeDuration: string sla: string supportLevels: { level: string responseTime: string features: string[]  }[] } export const COMPREHENSIVE_PRICING_GUIDE_2032: ServicePricing2032[] = [;
+>>>>>>> main
+>>>>>>> main

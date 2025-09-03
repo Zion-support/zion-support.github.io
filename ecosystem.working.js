@@ -201,8 +201,7 @@ module.exports = {
       repo: 'http,
     s://github.com/Zion-Holdings/zion.app.git,
       path:,
-  /workspace',
-  'pre-deploy-local': ',
+  /workspace,pre-deploy-local': ',
 ,
   post-deploy;
   ': 'npm install && npm run build && pm2 reload ecosystem.working.js --env production,

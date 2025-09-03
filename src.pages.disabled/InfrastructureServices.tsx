@@ -13,4 +13,8 @@ const InfrastructureServices: React.FC = () => {
       </div>
     </>
   )}
+<<<<<<< HEAD
 export default InfrastructureServices'
+=======
+export default InfrastructureServices
+>>>>>>> main

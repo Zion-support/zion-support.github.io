@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Send, CheckCircle, AlertCircle, User, Mail, MessageSquare } from 'lucide-react'';const ContactFormEnhanced: React.FC = () => {
+import { Send, CheckCircle, AlertCircle, User, Mail, MessageSquare }  from 'lucide-react;const ContactFormEnhanced: React.FC = () => {
   const [formData, setFormData] = useState({
     name:,
+<<<<<<< HEAD
   ', email: ',    subject:,
   ', message: ''  })  const [isSubmitting, setIsSubmitting] = useState(false);
+=======
+  ', email: ,    subject:,
+  ', message: ''  })'  const [isSubmitting, setIsSubmitting] = useState(false)
+>>>>>>> main
   const [submitStatus, setSubmitStatus] = useState<;
   'idle' |;
   'success' |;

@@ -1,2 +1,29 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react' import { motion    } from 'framer-motion' import {  Brain, Shield, Zap, Globe, Cpu, Database, Lock, TrendingUp, Users, Target, Star, CheckCircle, ArrowRight, Phone, Mail, MapPin, ExternalLink, Rocket, Atom, Dna, Satellite, Activity, Eye, CpuIcon, Network, Cloud, Smartphone, Monitor, Server, ShieldCheck, BrainCircuit, Quantum, Robot, Car, Gamepad2, Wifi, Fingerprint    } from 'lucide-react' import { CUTTING_EDGE_SERVICES_2025, SPECIALIZED_SERVICES_2025  } from '../data/2025-cutting-edge-innovations' import { EMERGING_TECH_SERVICES_2025, ADDITIONAL_EMERGING_TECH_SERVICES  } from '../data/emerging-tech-services-2025'  const ComprehensiveServicesOverview2025: React.FC = () => { const [selectedCategory, setSelectedCategory] = useState<string>('all') const [searchTerm, setSearchTerm] = useState<string>('') const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid') ;"
 }"
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react' import { motion    } from 'framer-motion' import {  Brain, Shield, Zap, Globe, Cpu, Database, Lock, TrendingUp, Users, Target, Star, CheckCircle, ArrowRight, Phone, Mail, MapPin, ExternalLink, Rocket, Atom, Dna, Satellite, Activity, Eye, CpuIcon, Network, Cloud, Smartphone, Monitor, Server, ShieldCheck, BrainCircuit, Quantum, Robot, Car, Gamepad2, Wifi, Fingerprint    } from 'lucide-react' import { CUTTING_EDGE_SERVICES_2025, SPECIALIZED_SERVICES_2025  } from '../data/2025-cutting-edge-innovations' import { EMERGING_TECH_SERVICES_2025, ADDITIONAL_EMERGING_TECH_SERVICES  } from '../data/emerging-tech-services-2025'  const ComprehensiveServicesOverview2025: React.FC = () => { const [selectedCategory, setSelectedCategory] = useState<string>('all') const [searchTerm, setSearchTerm] = useState<string>(') const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
+=======
+<<<<<<< HEAD
+import React, {useState, useEffect } from 'react' ;
+import {motion    } from 'framer-motion' import {Brain, Shield, Zap, Globe, Cpu, Database, Lock, TrendingUp, Users, Target, Star, CheckCircle, ArrowRight, Phone, Mail, MapPin, ExternalLink, Rocket, Atom, Dna, Satellite, Activity, Eye, CpuIcon, Network, Cloud, Smartphone, Monitor, Server, ShieldCheck, BrainCircuit, Quantum, Robot, Car, Gamepad2, Wifi, Fingerprint    } from 'lucide-react' ;
+import {CUTTING_EDGE_SERVICES_2025, SPECIALIZED_SERVICES_2025  } from '../data/2025-cutting-edge-innovations' import {EMERGING_TECH_SERVICES_2025, ADDITIONAL_EMERGING_TECH_SERVICES  } from '../data/emerging-tech-services-2025'  const ComprehensiveServicesOverview2025: React.FC = () => {const [selectedCategory, setSelectedCategory] = useState<string>('all') const [searchTerm, setSearchTerm] = useState<string>('') const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid') ;"
+}
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect } from &apos;react&apos; import { motion    } from &apos;framer-motion&apos; import {  Brain, Shield, Zap, Globe, Cpu, Database, Lock, TrendingUp, Users, Target, Star, CheckCircle, ArrowRight, Phone, Mail, MapPin, ExternalLink, Rocket, Atom, Dna, Satellite, Activity, Eye, CpuIcon, Network, Cloud, Smartphone, Monitor, Server, ShieldCheck, BrainCircuit, Quantum, Robot, Car, Gamepad2, Wifi, Fingerprint    } from &apos;lucide-react&apos; import { CUTTING_EDGE_SERVICES_2025, SPECIALIZED_SERVICES_2025  } from &apos;../data/2025-cutting-edge-innovations&apos; import { EMERGING_TECH_SERVICES_2025, ADDITIONAL_EMERGING_TECH_SERVICES  } from &apos;../data/emerging-tech-services-2025&apos;&apos;'  const ComprehensiveServicesOverview2025: React.FC = () => {} const [selectedCategory, setSelectedCategory] = useState<;<string>(&apos;all&apos;)&apos;' const [searchTerm, setSearchTerm] = useState<;<string>(&apos;&apos;)&apos;&apos; const [viewMode, setViewMode] = useState<;<;<&apos;grid&apos; | &apos;list&apos;>(&apos;grid&apos;) ;&apos;'
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react' import { motion    } from 'framer-motion' import {  Brain, Shield, Zap, Globe, Cpu, Database, Lock, TrendingUp, Users, Target, Star, CheckCircle, ArrowRight, Phone, Mail, MapPin, ExternalLink, Rocket, Atom, Dna, Satellite, Activity, Eye, CpuIcon, Network, Cloud, Smartphone, Monitor, Server, ShieldCheck, BrainCircuit, Quantum, Robot, Car, Gamepad2, Wifi, Fingerprint    } from 'lucide-react' import { CUTTING_EDGE_SERVICES_2025, SPECIALIZED_SERVICES_2025  } from '../data/2025-cutting-edge-innovations' import { EMERGING_TECH_SERVICES_2025, ADDITIONAL_EMERGING_TECH_SERVICES  } from '../data/emerging-tech-services-2025'  const ComprehensiveServicesOverview2025: React.FC = () => { const [selectedCategory, setSelectedCategory] = useState<string>('all') const [searchTerm, setSearchTerm] = useState<string>('') const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid') ;","
+}
+""
+=======
+import React, { useState, useEffect } from 'react' import { motion    } from 'framer-motion' import {  Brain, Shield, Zap, Globe, Cpu, Database, Lock, TrendingUp, Users, Target, Star, CheckCircle, ArrowRight, Phone, Mail, MapPin, ExternalLink, Rocket, Atom, Dna, Satellite, Activity, Eye, CpuIcon, Network, Cloud, Smartphone, Monitor, Server, ShieldCheck, BrainCircuit, Quantum, Robot, Car, Gamepad2, Wifi, Fingerprint    } from 'lucide-react' import { CUTTING_EDGE_SERVICES_2025, SPECIALIZED_SERVICES_2025  } from '../data/2025-cutting-edge-innovations' import { EMERGING_TECH_SERVICES_2025, ADDITIONAL_EMERGING_TECH_SERVICES  }  from '../data/emerging-tech-services-2025';const ComprehensiveServicesOverview2025: React.FC = () => { const [selectedCategory, setSelectedCategory] = useState<string>('all') const [searchTerm, setSearchTerm] = useState<string>('') const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid') ;",
+}
+"
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

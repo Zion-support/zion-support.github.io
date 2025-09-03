@@ -6,9 +6,14 @@ import React, { useState } from;
   '../data/enhancedInnovativeServices2030' import { SPECIALIZED_MICRO_SAAS_SERVICES_2030 } from;
   '../data/specializedMicroSaasServices2030' import { COMPREHENSIVE_PRICING_GUIDE_2030 } from;
   '../data/comprehensivePricingGuide2030' import { SEO } from;
+<<<<<<< HEAD
   '../components/SEO'  const EnhancedServicesShowcase2030: React.FC = () => { const [activeCategory, setActiveCategory] = useState('
   'all') const [searchTerm, setSearchTerm] = useState(';
   ') const [sortBy, setSortBy] = useState('rating'
+=======
+  '../components/SEO'  const EnhancedServicesShowcase2030: React.FC = () => { const [activeCategory, setActiveCategory] = useState(
+  'all') const [searchTerm, setSearchTerm] = useState() const [sortBy, setSortBy] = useState('rating
+>>>>>>> main
   ') const [viewMode, setViewMode] = useState<'grid;
   ' | 'list;
   '>('grid'

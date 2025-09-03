@@ -136,11 +136,7 @@ const AIAutonomousCustomerSuccessPlatform: React.FC = () => {
                   period: '/month',
                   description: 'Perfect for small businesses',
                   features: [;
-                    'Up to 1,000 customers',
-                    'Basic churn prediction',
-                    'Email automation',
-                    'Health score tracking',
-                    'Standard support';
+                    'Up to 1,000 customers,Basic churn prediction,Email automation,Health score tracking,Standard support';
                   ]},
                 {'
                   name: 'Professional',
@@ -148,12 +144,7 @@ const AIAutonomousCustomerSuccessPlatform: React.FC = () => {
                   period: '/month',
                   description: 'Ideal for growing companies',
                   features: [;
-                    'Up to 10,000 customers',
-                    'Advanced AI predictions',
-                    'Multi-channel automation',
-                    'Real-time analytics',
-                    'Priority support',
-                    'Custom integrations';
+                    'Up to 10,000 customers,Advanced AI predictions,Multi-channel automation,Real-time analytics,Priority support,Custom integrations';
                   ],
                   popular: true},
                 {'
@@ -161,6 +152,7 @@ const AIAutonomousCustomerSuccessPlatform: React.FC = () => {
                   price: '$1,499',
                   period: '/month',
                   description: 'For large organizations',
+<<<<<<< HEAD
                   features: ['
                     'Unlimited customers',
                     'AI strategy consulting',
@@ -168,6 +160,10 @@ const AIAutonomousCustomerSuccessPlatform: React.FC = () => {
                     'Advanced reporting',
                     'Dedicated success manager',
                     'Custom AI models'
+=======
+                  features: [
+                    'Unlimited customers,AI strategy consulting,White-label options,Advanced reporting,Dedicated success manager,Custom AI models'
+>>>>>>> main
                   ]}
               ].map((plan, index) => (
                 <motion.div
@@ -236,6 +232,7 @@ const AIAutonomousCustomerSuccessPlatform: React.FC = () => {
                 <h3 className='text-3xl font-bold text-white mb-6'>Revolutionary Benefits</h3>'
                 <div className='space-y-6'>
                   {[;
+<<<<<<< HEAD
                     'Reduce customer churn by up to 40% with predictive interventions',
                     'Increase customer lifetime value by 250% through AI optimization',
                     'Improve customer satisfaction scores by 60% with personalized experiences',
@@ -246,6 +243,13 @@ const AIAutonomousCustomerSuccessPlatform: React.FC = () => {
                     <div key={index} className='flex items-start>
                       <div className='flex-shrink-0 w-6 h-6 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mr-4 mt-1>
                         <svg className='w-4 h-4 text-white' fill='currentColor' viewBox='0 0 20 20>
+=======
+                    'Reduce customer churn by up to 40% with predictive interventions,Increase customer lifetime value by 250% through AI optimization,Improve customer satisfaction scores by 60% with personalized experiences,Save 30+ hours per week on manual customer success tasks,Boost revenue retention by 180% with automated expansion strategies,Scale customer success across unlimited accounts efficiently'
+                  ].map((benefit, index) => (
+                    <div key={index} className='flex items-start'>
+                      <div className='flex-shrink-0 w-6 h-6 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mr-4 mt-1'>
+                        <svg className='w-4 h-4 text-white' fill='currentColor' viewBox='0 0 20 20'>
+>>>>>>> main
                           <path fillRule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clipRule='evenodd' />
                         </svg>
                       </div>'

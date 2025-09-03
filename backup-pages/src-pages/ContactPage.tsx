@@ -33,8 +33,12 @@ lastName: ',email:,
   ',
     service: ',
 :backup-pages/src-pages/ContactPage.tsx;
+<<<<<<< HEAD
 message: ';
   '});
+=======
+message: })
+>>>>>>> main
   const [isSubmitting, setIsSubmitting] = useState (false) ;
   const [isSubmitted, setIsSubmitted] = useState (false) }
   const handleSubmit = async (e: anyReact.FormEvent) => {

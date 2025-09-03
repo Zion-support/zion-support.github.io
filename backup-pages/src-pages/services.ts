@@ -141,59 +141,35 @@ export const allServices: (
     currency: '$',
     pricingModel: 'monthly',
     features: [;
-      'AI-powered data analysis',
-      'Automated insight generation',
-      'Natural language queries',
-      'Predictive analytics',
-      'Custom dashboard creation',
-      'Real-time data processing',
-      'Multi-source data integration',
-      'Advanced visualization tools',
-      'Automated reporting',
-      'Mobile app access'],
+      'AI-powered data analysis,Automated insight generation,Natural language queries,Predictive analytics,Custom dashboard creation,Real-time data processing,Multi-source data integration,Advanced visualization tools,Automated reporting,Mobile app access'],
     benefits: [;
-      'Reduce analysis time by 80%',
-      'Improve decision accuracy by 60%',
-      'Automated insight discovery',
-      'Real-time business monitoring',
-      'Scalable analytics infrastructure'],
+      'Reduce analysis time by 80%,Improve decision accuracy by 60%,Automated insight discovery,Real-time business monitoring,Scalable analytics infrastructure'],
     useCases: [;
-      'Sales performance analysis',
-      'Customer behavior insights',
-      'Financial reporting automation',
-      'Operational efficiency tracking',
-      'Market trend analysis'],
+      'Sales performance analysis,Customer behavior insights,Financial reporting automation,Operational efficiency tracking,Market trend analysis'],
     targetAudience: [;
-      'Business analysts',
-      'Data scientists',
-      'Executives',
-      'Marketing teams',
-      'Sales teams'],
+      'Business analysts,Data scientists,Executives,Marketing teams,Sales teams'],
     tags: [;
-      'AI',
-      'Analytics',
-      'Business Intelligence',
-      'Data Science',
-      'Reporting'],
+      'AI,Analytics,Business Intelligence,Data Science,Reporting'],
     estimatedDelivery: '6-8 weeks',
     supportLevel: 'enterprise',
     marketPrice: '$2,999 - $8,999/month',
     roi: '250-400%',
     innovationLevel: 'Advanced',
     contactInfo: contactInfo,
+<<<<<<< HEAD
     technicalSpecs: {'
       technolog,
     y: ['Python', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL'],
+=======
+    technicalSpecs: {
+      technology: ['Python,TensorFlow,React,Node.js,PostgreSQL'],
+>>>>>>> main
       integrations: [;
-        'Salesforce',
-        'HubSpot',
-        'QuickBooks',
-        'Google Analytics',
-        'Shopify'],
+        'Salesforce,HubSpot,QuickBooks,Google Analytics,Shopify'],
       apiEndpoints: 150,
       uptime: '99.9%',
-      security: ['SOC 2', 'GDPR', 'HIPAA', 'End-to-end encryption']},
-    competitors: ['Tableau', 'Power BI', 'Looker', 'Qlik'],
+      security: ['SOC 2,GDPR,HIPAA,End-to-end encryption']},
+    competitors: ['Tableau,Power BI,Looker,Qlik'],
     marketSize: '$29.9 billion by 2025'},
   // AI-Powered Autonomous DevOps Platform{'
     id: 'ai-autonomous-devops-platform',
@@ -206,35 +182,14 @@ export const allServices: (
     currency: '$',
     pricingModel: 'monthly',
     features: [;
-      'AI-powered incident detection',
-      'Automated root cause analysis',
-      'Self-healing infrastructure',
-      'Predictive maintenance',
-      'Intelligent scaling',
-      'Security vulnerability scanning',
-      'Performance optimization',
-      'Cost optimization',
-      'Multi-cloud management',
-      'Real-time monitoring'],
+      'AI-powered incident detection,Automated root cause analysis,Self-healing infrastructure,Predictive maintenance,Intelligent scaling,Security vulnerability scanning,Performance optimization,Cost optimization,Multi-cloud management,Real-time monitoring'],
     benefits: [;
-      'Reduce downtime by 90%',
-      'Cut operational costs by 40%',
-      'Improve deployment success rate to 99.9%',
-      'Automated security compliance',
-      '24/7 infrastructure monitoring'],
+      'Reduce downtime by 90%,Cut operational costs by 40%,Improve deployment success rate to 99.9%,Automated security compliance,24/7 infrastructure monitoring'],
     useCases: [;
-      'Enterprise DevOps automation',
-      'Cloud infrastructure management',
-      'Microservices orchestration',
-      'Security operations automation',
-      'Performance monitoring'],
+      'Enterprise DevOps automation,Cloud infrastructure management,Microservices orchestration,Security operations automation,Performance monitoring'],
     targetAudience: [;
-      'DevOps engineers',
-      'Site reliability engineers',
-      'Cloud architects',
-      'IT operations teams',
-      'Startups and enterprises'],
-    tags: ['AI', 'DevOps', 'Automation', 'Infrastructure', 'Monitoring'],
+      'DevOps engineers,Site reliability engineers,Cloud architects,IT operations teams,Startups and enterprises'],
+    tags: ['AI,DevOps,Automation,Infrastructure,Monitoring'],
     estimatedDelivery: '8-10 weeks',
     supportLevel: 'enterprise',
     marketPrice: '$3,499 - $9,999/month',
@@ -242,6 +197,7 @@ export const allServices: (
     innovationLevel: 'Cutting-edge',
     contactInfo: contactInfo,
     technicalSpecs: {
+<<<<<<< HEAD
       technolog,
     y: [;
         'Kubernetes',
@@ -250,10 +206,15 @@ export const allServices: (
         'Prometheus',
         'Grafana'],
       integrations: ['AWS', 'Azure', 'GCP', 'GitHub', 'Jira'],
+=======
+      technology: [;
+        'Kubernetes,Docker,Terraform,Prometheus,Grafana'],
+      integrations: ['AWS,Azure,GCP,GitHub,Jira'],
+>>>>>>> main
       apiEndpoints: 200,
       uptime: '99.95%',
-      security: ['Zero-trust architecture', 'SOC 2 Type II', 'ISO 27001']},
-    competitors: ['DataDog', 'New Relic', 'Splunk', 'Elastic'],
+      security: ['Zero-trust architecture,SOC 2 Type II,ISO 27001']},
+    competitors: ['DataDog,New Relic,Splunk,Elastic'],
     marketSize: '$8.2 billion by 2026'},
   // Quantum AI Hybrid Platform{'
     id: 'quantum-ai-hybrid-platform',
@@ -266,35 +227,14 @@ export const allServices: (
     currency: '$',
     pricingModel: 'monthly',
     features: [;
-      'Quantum-classical hybrid algorithms',
-      'AI-powered quantum circuit optimization',
-      'Real-time quantum error correction',
-      'Multi-qubit entanglement management',
-      'Quantum machine learning models',
-      'Financial portfolio optimization',
-      'Drug discovery simulations',
-      'Climate modeling capabilities',
-      'Quantum cryptography integration',
-      'Hybrid cloud deployment'],
+      'Quantum-classical hybrid algorithms,AI-powered quantum circuit optimization,Real-time quantum error correction,Multi-qubit entanglement management,Quantum machine learning models,Financial portfolio optimization,Drug discovery simulations,Climate modeling capabilities,Quantum cryptography integration,Hybrid cloud deployment'],
     benefits: [;
-      'Solve problems 1000x faster than classical computers',
-      'Reduce computational costs by 90%',
-      'Enable breakthrough discoveries in science',
-      'Revolutionize financial modeling',
-      'Accelerate drug development by 10x'],
+      'Solve problems 1000x faster than classical computers,Reduce computational costs by 90%,Enable breakthrough discoveries in science,Revolutionize financial modeling,Accelerate drug development by 10x'],
     useCases: [;
-      'Financial portfolio optimization',
-      'Drug discovery and molecular modeling',
-      'Climate change prediction models',
-      'Supply chain optimization',
-      'Cryptographic security enhancement'],
+      'Financial portfolio optimization,Drug discovery and molecular modeling,Climate change prediction models,Supply chain optimization,Cryptographic security enhancement'],
     targetAudience: [;
-      'Pharmaceutical companies',
-      'Financial institutions',
-      'Research institutions',
-      'Government agencies',
-      'Tech companies'],
-    tags: ['Quantum Computing', 'AI', 'Optimization', 'Research', 'Innovation'],
+      'Pharmaceutical companies,Financial institutions,Research institutions,Government agencies,Tech companies'],
+    tags: ['Quantum Computing,AI,Optimization,Research,Innovation'],
     estimatedDelivery: '12-16 weeks',
     supportLevel: 'enterprise',
     marketPrice: '$15,000 - $50,000/month',
@@ -302,6 +242,7 @@ export const allServices: (
     innovationLevel: 'Revolutionary',
     contactInfo: contactInfo,
     technicalSpecs: {
+<<<<<<< HEAD
       technolog,
     y: [;
         'Qiskit',
@@ -309,22 +250,18 @@ export const allServices: (
         'Python',
         'Quantum Hardware',
         'Cloud Computing'],
+=======
+      technology: [;
+        'Qiskit,TensorFlow,Python,Quantum Hardware,Cloud Computing'],
+>>>>>>> main
       integrations: [;
-        'AWS Braket',
-        'IBM Quantum',
-        'Google Quantum',
-        'Azure Quantum'],
+        'AWS Braket,IBM Quantum,Google Quantum,Azure Quantum'],
       apiEndpoints: 500,
       uptime: '99.95%',
       security: [;
-        'Quantum-resistant encryption',
-        'Zero-trust architecture',
-        'SOC 2 Type II']},
+        'Quantum-resistant encryption,Zero-trust architecture,SOC 2 Type II']},
     competitors: [;
-      'IBM Quantum',
-      'Google Quantum AI',
-      'D-Wave Systems',
-      'Rigetti Computing'],
+      'IBM Quantum,Google Quantum AI,D-Wave Systems,Rigetti Computing'],
     marketSize: '$65 billion by 2030'},
   // AI-Powered Autonomous Manufacturing Platform{'
     id: 'ai-autonomous-manufacturing-platform',
@@ -337,40 +274,15 @@ export const allServices: (
     currency: '$',
     pricingModel: 'monthly',
     features: [;
-      'Autonomous production line management',
-      'AI-powered quality control',
-      'Predictive maintenance scheduling',
-      'Real-time supply chain optimization',
-      'Energy consumption optimization',
-      'Worker safety monitoring',
-      'Inventory management automation',
-      'Production forecasting',
-      'Quality assurance automation',
-      'Performance analytics dashboard'],
+      'Autonomous production line management,AI-powered quality control,Predictive maintenance scheduling,Real-time supply chain optimization,Energy consumption optimization,Worker safety monitoring,Inventory management automation,Production forecasting,Quality assurance automation,Performance analytics dashboard'],
     benefits: [;
-      'Increase production efficiency by 45%',
-      'Reduce defects by 80%',
-      'Lower energy costs by 35%',
-      'Improve worker safety by 90%',
-      'Reduce downtime by 70%'],
+      'Increase production efficiency by 45%,Reduce defects by 80%,Lower energy costs by 35%,Improve worker safety by 90%,Reduce downtime by 70%'],
     useCases: [;
-      'Automotive manufacturing',
-      'Electronics production',
-      'Pharmaceutical manufacturing',
-      'Food and beverage production',
-      'Textile manufacturing'],
+      'Automotive manufacturing,Electronics production,Pharmaceutical manufacturing,Food and beverage production,Textile manufacturing'],
     targetAudience: [;
-      'Manufacturing companies',
-      'Industrial facilities',
-      'Production managers',
-      'Quality assurance teams',
-      'Operations directors'],
+      'Manufacturing companies,Industrial facilities,Production managers,Quality assurance teams,Operations directors'],
     tags: [;
-      'Manufacturing',
-      'AI',
-      'Automation',
-      'Quality Control',
-      'Supply Chain'],
+      'Manufacturing,AI,Automation,Quality Control,Supply Chain'],
     estimatedDelivery: '8-12 weeks',
     supportLevel: 'enterprise',
     marketPrice: '$8,500 - $25,000/month',
@@ -378,6 +290,7 @@ export const allServices: (
     innovationLevel: 'Advanced',
     contactInfo: contactInfo,
     technicalSpecs: {
+<<<<<<< HEAD
       technolog,
     y: [;
         'Computer Vision',
@@ -385,23 +298,18 @@ export const allServices: (
         'IoT Sensors',
         'Edge Computing',
         'Cloud Platform'],
+=======
+      technology: [;
+        'Computer Vision,Machine Learning,IoT Sensors,Edge Computing,Cloud Platform'],
+>>>>>>> main
       integrations: [;
-        'SAP',
-        'Oracle',
-        'Siemens',
-        'Rockwell Automation',
-        'MES Systems'],
+        'SAP,Oracle,Siemens,Rockwell Automation,MES Systems'],
       apiEndpoints: 300,
       uptime: '99.9%',
       security: [;
-        'Industrial cybersecurity',
-        'Data encryption',
-        'Access control systems']},
+        'Industrial cybersecurity,Data encryption,Access control systems']},
     competitors: [;
-      'Siemens Mindsphere',
-      'GE Digital',
-      'PTC ThingWorx',
-      'SAP Leonardo'],
+      'Siemens Mindsphere,GE Digital,PTC ThingWorx,SAP Leonardo'],
     marketSize: '$12.3 billion by 2027'},
   // Blockchain Supply Chain Transparency Platform{'
     id: 'blockchain-supply-chain-transparency',
@@ -414,40 +322,15 @@ export const allServices: (
     currency: '$',
     pricingModel: 'monthly',
     features: [;
-      'Real-time supply chain tracking',
-      'Smart contract automation',
-      'Product authentication',
-      'Compliance monitoring',
-      'Supplier performance analytics',
-      'Risk assessment tools',
-      'Sustainability tracking',
-      'Multi-party collaboration',
-      'API integrations',
-      'Mobile app access'],
+      'Real-time supply chain tracking,Smart contract automation,Product authentication,Compliance monitoring,Supplier performance analytics,Risk assessment tools,Sustainability tracking,Multi-party collaboration,API integrations,Mobile app access'],
     benefits: [;
-      'Improve supply chain visibility by 95%',
-      'Reduce fraud and counterfeiting by 80%',
-      'Cut compliance costs by 60%',
-      'Enhance supplier relationships',
-      'Accelerate dispute resolution'],
+      'Improve supply chain visibility by 95%,Reduce fraud and counterfeiting by 80%,Cut compliance costs by 60%,Enhance supplier relationships,Accelerate dispute resolution'],
     useCases: [;
-      'Food safety tracking',
-      'Pharmaceutical supply chains',
-      'Luxury goods authentication',
-      'Automotive parts tracking',
-      'Textile supply chains'],
+      'Food safety tracking,Pharmaceutical supply chains,Luxury goods authentication,Automotive parts tracking,Textile supply chains'],
     targetAudience: [;
-      'Manufacturing companies',
-      'Retail chains',
-      'Logistics providers',
-      'Regulatory bodies',
-      'Consumer goods companies'],
+      'Manufacturing companies,Retail chains,Logistics providers,Regulatory bodies,Consumer goods companies'],
     tags: [;
-      'Blockchain',
-      'Supply Chain',
-      'Transparency',
-      'Compliance',
-      'Traceability'],
+      'Blockchain,Supply Chain,Transparency,Compliance,Traceability'],
     estimatedDelivery: '10-14 weeks',
     supportLevel: 'enterprise',
     marketPrice: '$4,200 - $12,000/month',
@@ -455,6 +338,7 @@ export const allServices: (
     innovationLevel: 'Advanced',
     contactInfo: contactInfo,
     technicalSpecs: {
+<<<<<<< HEAD
       technolog,
     y: [;
         'Ethereum',
@@ -463,17 +347,17 @@ export const allServices: (
         'Node.js',
         'React'],
       integrations: ['SAP', 'Oracle', 'Salesforce', 'Shopify', 'WMS Systems'],
+=======
+      technology: [;
+        'Ethereum,Hyperledger Fabric,IPFS,Node.js,React'],
+      integrations: ['SAP,Oracle,Salesforce,Shopify,WMS Systems'],
+>>>>>>> main
       apiEndpoints: 250,
       uptime: '99.9%',
       security: [;
-        'Multi-signature wallets',
-        'Encrypted data storage',
-        'Permissioned networks']},
+        'Multi-signature wallets,Encrypted data storage,Permissioned networks']},
     competitors: [;
-      'IBM Food Trust',
-      'VeChain',
-      'Walmart Blockchain',
-      'Maersk TradeLens'],
+      'IBM Food Trust,VeChain,Walmart Blockchain,Maersk TradeLens'],
     marketSize: '$3.3 billion by 2028'},
   // AI-Powered Cybersecurity Threat Intelligence{'
     id: 'ai-cybersecurity-threat-intelligence',
@@ -486,40 +370,15 @@ export const allServices: (
     currency: '$',
     pricingModel: 'monthly',
     features: [;
-      'Real-time threat detection',
-      'AI-powered behavioral analysis',
-      'Automated incident response',
-      'Threat hunting automation',
-      'Vulnerability assessment',
-      'Security posture monitoring',
-      'Compliance reporting',
-      'Threat intelligence sharing',
-      'Machine learning models',
-      '24/7 security operations'],
+      'Real-time threat detection,AI-powered behavioral analysis,Automated incident response,Threat hunting automation,Vulnerability assessment,Security posture monitoring,Compliance reporting,Threat intelligence sharing,Machine learning models,24/7 security operations'],
     benefits: [;
-      'Detect threats 10x faster than traditional methods',
-      'Reduce false positives by 85%',
-      'Automate 70% of security responses',
-      'Improve threat prediction accuracy',
-      'Reduce security incident costs'],
+      'Detect threats 10x faster than traditional methods,Reduce false positives by 85%,Automate 70% of security responses,Improve threat prediction accuracy,Reduce security incident costs'],
     useCases: [;
-      'Enterprise security operations',
-      'Financial institution protection',
-      'Healthcare data security',
-      'Government cybersecurity',
-      'Critical infrastructure protection'],
+      'Enterprise security operations,Financial institution protection,Healthcare data security,Government cybersecurity,Critical infrastructure protection'],
     targetAudience: [;
-      'CISOs and security teams',
-      'Financial institutions',
-      'Healthcare organizations',
-      'Government agencies',
-      'Technology companies'],
+      'CISOs and security teams,Financial institutions,Healthcare organizations,Government agencies,Technology companies'],
     tags: [;
-      'AI',
-      'Cybersecurity',
-      'Threat Intelligence',
-      'Machine Learning',
-      'Security'],
+      'AI,Cybersecurity,Threat Intelligence,Machine Learning,Security'],
     estimatedDelivery: '6-10 weeks',
     supportLevel: 'enterprise',
     marketPrice: '$5,500 - $15,000/month',
@@ -527,6 +386,7 @@ export const allServices: (
     innovationLevel: 'Cutting-edge',
     contactInfo: contactInfo,
     technicalSpecs: {
+<<<<<<< HEAD
       technolog,
     y: [;
         'TensorFlow',
@@ -534,20 +394,17 @@ export const allServices: (
         'Elasticsearch',
         'Kafka',
         'Kubernetes'],
+=======
+      technology: [;
+        'TensorFlow,PyTorch,Elasticsearch,Kafka,Kubernetes'],
+>>>>>>> main
       integrations: [;
-        'SIEM systems',
-        'EDR platforms',
-        'Firewalls',
-        'Identity providers',
-        'Cloud platforms'],
+        'SIEM systems,EDR platforms,Firewalls,Identity providers,Cloud platforms'],
       apiEndpoints: 400,
       uptime: '99.99%',
       security: [;
-        'Zero-trust architecture',
-        'SOC 2 Type II',
-        'ISO 27001',
-        'GDPR compliance']},
-    competitors: ['CrowdStrike', 'SentinelOne', 'Darktrace', 'Cylance'],
+        'Zero-trust architecture,SOC 2 Type II,ISO 27001,GDPR compliance']},
+    competitors: ['CrowdStrike,SentinelOne,Darktrace,Cylance'],
     marketSize: '$15.8 billion by 2027'},
   // IoT Edge Computing Platform{'
     id: 'iot-edge-computing-platform',
@@ -560,67 +417,37 @@ export const allServices: (
     currency: '$',
     pricingModel: 'monthly',
     features: [;
-      'Edge data processing',
-      'Real-time analytics',
-      'Local AI inference',
-      'Device management',
-      'Data synchronization',
-      'Security at the edge',
-      'Scalable architecture',
-      'Cloud integration',
-      'API gateway',
-      'Monitoring dashboard'],
+      'Edge data processing,Real-time analytics,Local AI inference,Device management,Data synchronization,Security at the edge,Scalable architecture,Cloud integration,API gateway,Monitoring dashboard'],
     benefits: [;
-      'Reduce latency by 90%',
-      'Cut bandwidth costs by 70%',
-      'Improve data privacy',
-      'Enable offline operation',
-      'Scale to millions of devices'],
+      'Reduce latency by 90%,Cut bandwidth costs by 70%,Improve data privacy,Enable offline operation,Scale to millions of devices'],
     useCases: [;
-      'Smart city infrastructure',
-      'Industrial IoT monitoring',
-      'Connected vehicles',
-      'Healthcare monitoring',
-      'Retail analytics'],
+      'Smart city infrastructure,Industrial IoT monitoring,Connected vehicles,Healthcare monitoring,Retail analytics'],
     targetAudience: [;
-      'IoT solution providers',
-      'Manufacturing companies',
-      'Smart city planners',
-      'Healthcare providers',
-      'Retail chains'],
+      'IoT solution providers,Manufacturing companies,Smart city planners,Healthcare providers,Retail chains'],
     tags: [;
-      'IoT',
-      'Edge Computing',
-      'Real-time Analytics',
-      'Device Management',
-      'AI'],
+      'IoT,Edge Computing,Real-time Analytics,Device Management,AI'],
     estimatedDelivery: '8-12 weeks',
     supportLevel: 'enterprise',
     marketPrice: '$3,800 - $10,000/month',
     roi: '250-450%',
     innovationLevel: 'Advanced',
     contactInfo: contactInfo,
+<<<<<<< HEAD
     technicalSpecs: {'
       technolog,
     y: ['Kubernetes', 'Docker', 'TensorFlow Lite', 'MQTT', 'WebRTC'],
+=======
+    technicalSpecs: {
+      technology: ['Kubernetes,Docker,TensorFlow Lite,MQTT,WebRTC'],
+>>>>>>> main
       integrations: [;
-        'AWS IoT',
-        'Azure IoT',
-        'Google Cloud IoT',
-        'MQTT brokers',
-        'Time-series databases'],
+        'AWS IoT,Azure IoT,Google Cloud IoT,MQTT brokers,Time-series databases'],
       apiEndpoints: 300,
       uptime: '99.9%',
       security: [;
-        'Edge encryption',
-        'Device authentication',
-        'Secure boot',
-        'Over-the-air updates']},
+        'Edge encryption,Device authentication,Secure boot,Over-the-air updates']},
     competitors: [;
-      'AWS Greengrass',
-      'Azure IoT Edge',
-      'Google Cloud IoT Edge',
-      'FogHorn'],
+      'AWS Greengrass,Azure IoT Edge,Google Cloud IoT Edge,FogHorn'],
     marketSize: '$18.7 billion by 2028'},
   // AI-Powered Customer Experience Optimization{'
     id: 'ai-customer-experience-optimization',
@@ -633,58 +460,36 @@ export const allServices: (
     currency: '$',
     pricingModel: 'monthly',
     features: [;
-      'Customer behavior prediction',
-      'Personalized recommendations',
-      'Sentiment analysis',
-      'Journey optimization',
-      'A/B testing automation',
-      'Customer segmentation',
-      'Churn prediction',
-      'Lifetime value optimization',
-      'Multi-channel orchestration',
-      'Real-time personalization'],
+      'Customer behavior prediction,Personalized recommendations,Sentiment analysis,Journey optimization,A/B testing automation,Customer segmentation,Churn prediction,Lifetime value optimization,Multi-channel orchestration,Real-time personalization'],
     benefits: [;
-      'Increase customer satisfaction by 40%',
-      'Improve conversion rates by 35%',
-      'Reduce customer churn by 50%',
-      'Boost customer lifetime value',
-      'Automate personalization at scale'],
+      'Increase customer satisfaction by 40%,Improve conversion rates by 35%,Reduce customer churn by 50%,Boost customer lifetime value,Automate personalization at scale'],
     useCases: [;
-      'E-commerce personalization',
-      'Banking customer experience',
-      'Healthcare patient engagement',
-      'Travel and hospitality',
-      'Retail customer service'],
+      'E-commerce personalization,Banking customer experience,Healthcare patient engagement,Travel and hospitality,Retail customer service'],
     targetAudience: [;
-      'Marketing teams',
-      'Customer success managers',
-      'Product managers',
-      'E-commerce businesses',
-      'Service companies'],
+      'Marketing teams,Customer success managers,Product managers,E-commerce businesses,Service companies'],
     tags: [;
-      'AI',
-      'Customer Experience',
-      'Personalization',
-      'Analytics',
-      'Marketing'],
+      'AI,Customer Experience,Personalization,Analytics,Marketing'],
     estimatedDelivery: '6-8 weeks',
     supportLevel: 'enterprise',
     marketPrice: '$2,800 - $7,500/month',
     roi: '300-500%',
     innovationLevel: 'Advanced',
     contactInfo: contactInfo,
+<<<<<<< HEAD
     technicalSpecs: {'
       technolog,
     y: ['Python', 'TensorFlow', 'React', 'Node.js', 'Redis'],
       integrations: ['Salesforce', 'HubSpot', 'Shopify', 'Zendesk', 'Intercom'],
+=======
+    technicalSpecs: {
+      technology: ['Python,TensorFlow,React,Node.js,Redis'],
+      integrations: ['Salesforce,HubSpot,Shopify,Zendesk,Intercom'],
+>>>>>>> main
       apiEndpoints: 200,
       uptime: '99.9%',
       security: [;
-        'Data encryption',
-        'GDPR compliance',
-        'SOC 2',
-        'Privacy by design']},
-    competitors: ['Segment', 'Optimizely', 'Dynamic Yield', 'Evergage'],
+        'Data encryption,GDPR compliance,SOC 2,Privacy by design']},
+    competitors: ['Segment,Optimizely,Dynamic Yield,Evergage'],
     marketSize: '$11.8 billion by 2026'},
   // Quantum Financial Trading Platform{'
     id: 'quantum-financial-trading-platform',
@@ -697,40 +502,15 @@ export const allServices: (
     currency: '$',
     pricingModel: 'monthly',
     features: [;
-      'Quantum portfolio optimization',
-      'Real-time risk assessment',
-      'Algorithmic trading strategies',
-      'Market prediction models',
-      'Portfolio rebalancing',
-      'Risk management tools',
-      'Compliance monitoring',
-      'Performance analytics',
-      'Multi-asset support',
-      'API trading access'],
+      'Quantum portfolio optimization,Real-time risk assessment,Algorithmic trading strategies,Market prediction models,Portfolio rebalancing,Risk management tools,Compliance monitoring,Performance analytics,Multi-asset support,API trading access'],
     benefits: [;
-      'Optimize portfolios 100x faster',
-      'Reduce trading costs by 60%',
-      'Improve risk-adjusted returns',
-      'Real-time market analysis',
-      'Automated compliance'],
+      'Optimize portfolios 100x faster,Reduce trading costs by 60%,Improve risk-adjusted returns,Real-time market analysis,Automated compliance'],
     useCases: [;
-      'Hedge fund management',
-      'Institutional trading',
-      'Portfolio optimization',
-      'Risk management',
-      'Algorithmic trading'],
+      'Hedge fund management,Institutional trading,Portfolio optimization,Risk management,Algorithmic trading'],
     targetAudience: [;
-      'Hedge funds',
-      'Investment banks',
-      'Asset managers',
-      'Trading firms',
-      'Financial institutions'],
+      'Hedge funds,Investment banks,Asset managers,Trading firms,Financial institutions'],
     tags: [;
-      'Quantum Computing',
-      'Financial Trading',
-      'Portfolio Management',
-      'Risk Management',
-      'AI'],
+      'Quantum Computing,Financial Trading,Portfolio Management,Risk Management,AI'],
     estimatedDelivery: '16-20 weeks',
     supportLevel: 'enterprise',
     marketPrice: '$25,000 - $75,000/month',
@@ -738,6 +518,7 @@ export const allServices: (
     innovationLevel: 'Revolutionary',
     contactInfo: contactInfo,
     technicalSpecs: {
+<<<<<<< HEAD
       technolog,
     y: [;
         'Qiskit',
@@ -745,24 +526,18 @@ export const allServices: (
         'C++',
         'Quantum Hardware',
         'High-frequency trading systems'],
+=======
+      technology: [;
+        'Qiskit,Python,C++,Quantum Hardware,High-frequency trading systems'],
+>>>>>>> main
       integrations: [;
-        'Bloomberg',
-        'Reuters',
-        'Trading platforms',
-        'Risk management systems',
-        'Compliance tools'],
+        'Bloomberg,Reuters,Trading platforms,Risk management systems,Compliance tools'],
       apiEndpoints: 1000,
       uptime: '99.99%',
       security: [;
-        'Quantum encryption',
-        'Multi-factor authentication',
-        'SOC 2 Type II',
-        'Financial regulations compliance']},
+        'Quantum encryption,Multi-factor authentication,SOC 2 Type II,Financial regulations compliance']},
     competitors: [;
-      'Goldman Sachs Quantum',
-      'JP Morgan Quantum',
-      'Citadel Securities',
-      'Two Sigma'],
+      'Goldman Sachs Quantum,JP Morgan Quantum,Citadel Securities,Two Sigma'],
     marketSize: '$45 billion by 2030'},
   // AI-Powered Healthcare Analytics Platform{'
     id: 'ai-healthcare-analytics-platform',
@@ -775,40 +550,15 @@ export const allServices: (
     currency: '$',
     pricingModel: 'monthly',
     features: [;
-      'Patient outcome prediction',
-      'Disease risk assessment',
-      'Treatment optimization',
-      'Operational efficiency analysis',
-      'Resource allocation optimization',
-      'Clinical decision support',
-      'Population health management',
-      'Predictive analytics',
-      'Real-time monitoring',
-      'Compliance reporting'],
+      'Patient outcome prediction,Disease risk assessment,Treatment optimization,Operational efficiency analysis,Resource allocation optimization,Clinical decision support,Population health management,Predictive analytics,Real-time monitoring,Compliance reporting'],
     benefits: [;
-      'Improve patient outcomes by 30%',
-      'Reduce healthcare costs by 25%',
-      'Optimize resource allocation',
-      'Enable preventive care',
-      'Enhance clinical decision-making'],
+      'Improve patient outcomes by 30%,Reduce healthcare costs by 25%,Optimize resource allocation,Enable preventive care,Enhance clinical decision-making'],
     useCases: [;
-      'Hospital operations',
-      'Clinical research',
-      'Population health',
-      'Pharmaceutical development',
-      'Insurance risk assessment'],
+      'Hospital operations,Clinical research,Population health,Pharmaceutical development,Insurance risk assessment'],
     targetAudience: [;
-      'Hospitals and health systems',
-      'Pharmaceutical companies',
-      'Insurance providers',
-      'Research institutions',
-      'Healthcare startups'],
+      'Hospitals and health systems,Pharmaceutical companies,Insurance providers,Research institutions,Healthcare startups'],
     tags: [;
-      'AI',
-      'Healthcare',
-      'Analytics',
-      'Predictive Medicine',
-      'Population Health'],
+      'AI,Healthcare,Analytics,Predictive Medicine,Population Health'],
     estimatedDelivery: '10-14 weeks',
     supportLevel: 'enterprise',
     marketPrice: '$6,800 - $18,000/month',
@@ -816,6 +566,7 @@ export const allServices: (
     innovationLevel: 'Advanced',
     contactInfo: contactInfo,
     technicalSpecs: {
+<<<<<<< HEAD
       technolog,
     y: [;
         'TensorFlow',
@@ -823,24 +574,18 @@ export const allServices: (
         'Python',
         'Apache Spark',
         'PostgreSQL'],
+=======
+      technology: [;
+        'TensorFlow,PyTorch,Python,Apache Spark,PostgreSQL'],
+>>>>>>> main
       integrations: [;
-        'Epic',
-        'Cerner',
-        'HL7 FHIR',
-        'EMR systems',
-        'Lab systems'],
+        'Epic,Cerner,HL7 FHIR,EMR systems,Lab systems'],
       apiEndpoints: 350,
       uptime: '99.95%',
       security: [;
-        'HIPAA compliance',
-        'SOC 2 Type II',
-        'Data encryption',
-        'Audit logging']},
+        'HIPAA compliance,SOC 2 Type II,Data encryption,Audit logging']},
     competitors: [;
-      'IBM Watson Health',
-      'Google Health',
-      'Microsoft Healthcare',
-      'Cerner'],
+      'IBM Watson Health,Google Health,Microsoft Healthcare,Cerner'],
     marketSize: '$36.1 billion by 2027'},
   // AI-Powered Autonomous Research Assistant{'
     id: 'ai-autonomous-research-assistant',
@@ -853,63 +598,36 @@ export const allServices: (
     currency: '$',
     pricingModel: 'monthly',
     features: [;
-      'Autonomous literature review',
-      'Data mining and analysis',
-      'Research hypothesis generation',
-      'Citation management',
-      'Plagiarism detection',
-      'Research trend analysis',
-      'Collaborative research tools',
-      'Publication recommendations',
-      'Grant writing assistance',
-      'Research impact assessment'],
+      'Autonomous literature review,Data mining and analysis,Research hypothesis generation,Citation management,Plagiarism detection,Research trend analysis,Collaborative research tools,Publication recommendations,Grant writing assistance,Research impact assessment'],
     benefits: [;
-      'Accelerate research by 5x',
-      'Reduce research time by 80%',
-      'Improve research quality',
-      'Automate repetitive tasks',
-      'Enhance collaboration'],
+      'Accelerate research by 5x,Reduce research time by 80%,Improve research quality,Automate repetitive tasks,Enhance collaboration'],
     useCases: [;
-      'Academic research',
-      'Pharmaceutical R&D',
-      'Market research',
-      'Scientific discovery',
-      'Policy research'],
+      'Academic research,Pharmaceutical R&D,Market research,Scientific discovery,Policy research'],
     targetAudience: [;
-      'Research institutions',
-      'Universities',
-      'Pharmaceutical companies',
-      'Consulting firms',
-      'Government agencies'],
+      'Research institutions,Universities,Pharmaceutical companies,Consulting firms,Government agencies'],
     tags: [;
-      'AI',
-      'Research',
-      'Automation',
-      'Data Analysis',
-      'Literature Review'],
+      'AI,Research,Automation,Data Analysis,Literature Review'],
     estimatedDelivery: '8-12 weeks',
     supportLevel: 'enterprise',
     marketPrice: '$4,200 - $12,000/month',
     roi: '300-500%',
     innovationLevel: 'Advanced',
     contactInfo: contactInfo,
+<<<<<<< HEAD
     technicalSpecs: {'
       technolog,
     y: ['GPT-4', 'BERT', 'Python', 'Elasticsearch', 'PostgreSQL'],
+=======
+    technicalSpecs: {
+      technology: ['GPT-4,BERT,Python,Elasticsearch,PostgreSQL'],
+>>>>>>> main
       integrations: [;
-        'PubMed',
-        'Google Scholar',
-        'Research databases',
-        'Citation managers',
-        'Academic platforms'],
+        'PubMed,Google Scholar,Research databases,Citation managers,Academic platforms'],
       apiEndpoints: 300,
       uptime: '99.9%',
       security: [;
-        'Data encryption',
-        'Access control',
-        'Audit logging',
-        'Compliance monitoring']},
-    competitors: ['Semantic Scholar', 'ResearchGate', 'Mendeley', 'Zotero'],
+        'Data encryption,Access control,Audit logging,Compliance monitoring']},
+    competitors: ['Semantic Scholar,ResearchGate,Mendeley,Zotero'],
     marketSize: '$8.5 billion by 2026'},
   // Quantum Machine Learning Platform{'
     id: 'quantum-machine-learning-platform',
@@ -922,40 +640,15 @@ export const allServices: (
     currency: '$',
     pricingModel: 'monthly',
     features: [;
-      'Quantum neural networks',
-      'Quantum feature selection',
-      'Quantum clustering algorithms',
-      'Quantum optimization',
-      'Hybrid quantum-classical training',
-      'Quantum error correction',
-      'Real-time quantum processing',
-      'API access',
-      'Model deployment',
-      'Performance monitoring'],
+      'Quantum neural networks,Quantum feature selection,Quantum clustering algorithms,Quantum optimization,Hybrid quantum-classical training,Quantum error correction,Real-time quantum processing,API access,Model deployment,Performance monitoring'],
     benefits: [;
-      'Train models 1000x faster',
-      'Solve complex optimization problems',
-      'Improve model accuracy',
-      'Reduce computational costs',
-      'Enable new AI capabilities'],
+      'Train models 1000x faster,Solve complex optimization problems,Improve model accuracy,Reduce computational costs,Enable new AI capabilities'],
     useCases: [;
-      'Drug discovery',
-      'Financial modeling',
-      'Climate prediction',
-      'Logistics optimization',
-      'Material science'],
+      'Drug discovery,Financial modeling,Climate prediction,Logistics optimization,Material science'],
     targetAudience: [;
-      'AI research labs',
-      'Pharmaceutical companies',
-      'Financial institutions',
-      'Research universities',
-      'Technology companies'],
+      'AI research labs,Pharmaceutical companies,Financial institutions,Research universities,Technology companies'],
     tags: [;
-      'Quantum Computing',
-      'Machine Learning',
-      'AI',
-      'Optimization',
-      'Research'],
+      'Quantum Computing,Machine Learning,AI,Optimization,Research'],
     estimatedDelivery: '14-18 weeks',
     supportLevel: 'enterprise',
     marketPrice: '$18,000 - $60,000/month',
@@ -963,6 +656,7 @@ export const allServices: (
     innovationLevel: 'Revolutionary',
     contactInfo: contactInfo,
     technicalSpecs: {
+<<<<<<< HEAD
       technolog,
     y: [;
         'Qiskit',
@@ -970,25 +664,18 @@ export const allServices: (
         'PyTorch',
         'Quantum Hardware',
         'Cloud Computing'],
+=======
+      technology: [;
+        'Qiskit,TensorFlow,PyTorch,Quantum Hardware,Cloud Computing'],
+>>>>>>> main
       integrations: [;
-        'AWS Braket',
-        'IBM Quantum',
-        'Google Quantum',
-        'Azure Quantum',
-        'ML platforms'],
+        'AWS Braket,IBM Quantum,Google Quantum,Azure Quantum,ML platforms'],
       apiEndpoints: 600,
       uptime: '99.95%',
       security: [;
-        'Quantum encryption',
-        'Zero-trust architecture',
-        'SOC 2 Type II',
-        'Data privacy']},
+        'Quantum encryption,Zero-trust architecture,SOC 2 Type II,Data privacy']},
     competitors: [;
-      'IBM Quantum',
-      'Google Quantum AI',
-      'D-Wave',
-      'Rigetti',
-      'Xanadu'],
+      'IBM Quantum,Google Quantum AI,D-Wave,Rigetti,Xanadu'],
     marketSize: '$75 billion by 2030'},
   // AI-Powered Content Creation Suite{'
     id: 'ai-content-creation-suite',
@@ -1001,58 +688,35 @@ export const allServices: (
     currency: '$',
     pricingModel: 'monthly',
     features: [;
-      'AI article generation',
-      'Marketing copy creation',
-      'Social media content',
-      'Video script writing',
-      'SEO optimization',
-      'Content personalization',
-      'Multi-language support',
-      'Brand voice consistency',
-      'Content scheduling',
-      'Performance analytics'],
+      'AI article generation,Marketing copy creation,Social media content,Video script writing,SEO optimization,Content personalization,Multi-language support,Brand voice consistency,Content scheduling,Performance analytics'],
     benefits: [;
-      'Create content 10x faster',
-      'Reduce content costs by 70%',
-      'Improve SEO performance',
-      'Maintain brand consistency',
-      'Scale content production'],
+      'Create content 10x faster,Reduce content costs by 70%,Improve SEO performance,Maintain brand consistency,Scale content production'],
     useCases: [;
-      'Digital marketing',
-      'Content marketing',
-      'Social media management',
-      'E-commerce',
-      'Blog management'],
+      'Digital marketing,Content marketing,Social media management,E-commerce,Blog management'],
     targetAudience: [;
-      'Marketing agencies',
-      'E-commerce businesses',
-      'Content creators',
-      'Small businesses',
-      'Enterprises'],
-    tags: ['AI', 'Content Creation', 'Marketing', 'SEO', 'Automation'],
+      'Marketing agencies,E-commerce businesses,Content creators,Small businesses,Enterprises'],
+    tags: ['AI,Content Creation,Marketing,SEO,Automation'],
     estimatedDelivery: '2-4 weeks',
     supportLevel: 'standard',
     marketPrice: '$1,200 - $3,500/month',
     roi: '200-400%',
     innovationLevel: 'Advanced',
     contactInfo: contactInfo,
+<<<<<<< HEAD
     technicalSpecs: {'
       technolog,
     y: ['GPT-4', 'Claude', 'Python', 'React', 'Node.js'],
+=======
+    technicalSpecs: {
+      technology: ['GPT-4,Claude,Python,React,Node.js'],
+>>>>>>> main
       integrations: [;
-        'WordPress',
-        'Shopify',
-        'Social media platforms',
-        'CMS systems',
-        'Analytics tools'],
+        'WordPress,Shopify,Social media platforms,CMS systems,Analytics tools'],
       apiEndpoints: 150,
       uptime: '99.9%',
       security: [;
-        'Content filtering',
-        'Plagiarism detection',
-        'Data encryption',
-        'Access control']},
-    competitors: ['Jasper', 'Copy.ai', 'Writesonic', 'ContentBot', 'Rytr'],
+        'Content filtering,Plagiarism detection,Data encryption,Access control']},
+    competitors: ['Jasper,Copy.ai,Writesonic,ContentBot,Rytr'],
     marketSize: '$15.2 billion by 2027'},
   // Blockchain Identity Management Platform{'
     id: 'blockchain-identity-management',
@@ -1065,40 +729,15 @@ export const allServices: (
     currency: '$',
     pricingModel: 'monthly',
     features: [;
-      'Self-sovereign identity',
-      'Decentralized identifiers',
-      'Verifiable credentials',
-      'Zero-knowledge proofs',
-      'Multi-factor authentication',
-      'Identity verification',
-      'Compliance management',
-      'API integration',
-      'Mobile app',
-      'Audit logging'],
+      'Self-sovereign identity,Decentralized identifiers,Verifiable credentials,Zero-knowledge proofs,Multi-factor authentication,Identity verification,Compliance management,API integration,Mobile app,Audit logging'],
     benefits: [;
-      'Eliminate identity fraud',
-      'Reduce verification costs',
-      'Improve user privacy',
-      'Streamline compliance',
-      'Enable trustless interactions'],
+      'Eliminate identity fraud,Reduce verification costs,Improve user privacy,Streamline compliance,Enable trustless interactions'],
     useCases: [;
-      'Financial services',
-      'Healthcare',
-      'Government services',
-      'Education',
-      'Supply chain'],
+      'Financial services,Healthcare,Government services,Education,Supply chain'],
     targetAudience: [;
-      'Financial institutions',
-      'Healthcare providers',
-      'Government agencies',
-      'Educational institutions',
-      'Technology companies'],
+      'Financial institutions,Healthcare providers,Government agencies,Educational institutions,Technology companies'],
     tags: [;
-      'Blockchain',
-      'Identity Management',
-      'Security',
-      'Privacy',
-      'Compliance'],
+      'Blockchain,Identity Management,Security,Privacy,Compliance'],
     estimatedDelivery: '10-14 weeks',
     supportLevel: 'enterprise',
     marketPrice: '$3,500 - $10,000/month',
@@ -1106,6 +745,7 @@ export const allServices: (
     innovationLevel: 'Advanced',
     contactInfo: contactInfo,
     technicalSpecs: {
+<<<<<<< HEAD
       technolog,
     y: [;
         'Ethereum',
@@ -1113,20 +753,17 @@ export const allServices: (
         'DID',
         'Zero-knowledge proofs',
         'React Native'],
+=======
+      technology: [;
+        'Ethereum,Hyperledger Indy,DID,Zero-knowledge proofs,React Native'],
+>>>>>>> main
       integrations: [;
-        'OAuth',
-        'SAML',
-        'Active Directory',
-        'LDAP',
-        'SSO systems'],
+        'OAuth,SAML,Active Directory,LDAP,SSO systems'],
       apiEndpoints: 200,
       uptime: '99.9%',
       security: [;
-        'Cryptographic security',
-        'Multi-signature',
-        'Encrypted storage',
-        'Compliance standards']},
-    competitors: ['Microsoft Identity', 'Okta', 'Auth0', 'Sovrin', 'uPort'],
+        'Cryptographic security,Multi-signature,Encrypted storage,Compliance standards']},
+    competitors: ['Microsoft Identity,Okta,Auth0,Sovrin,uPort'],
     marketSize: '$28.1 billion by 2028'},
   // AI-Powered Predictive Maintenance Platform{'
     id: 'ai-predictive-maintenance-platform',
@@ -1139,35 +776,14 @@ export const allServices: (
     currency: '$',
     pricingModel: 'monthly',
     features: [;
-      'Predictive failure detection',
-      'IoT sensor integration',
-      'Maintenance optimization',
-      'Real-time monitoring',
-      'Cost analysis',
-      'Work order automation',
-      'Inventory management',
-      'Performance analytics',
-      'Mobile app access',
-      'API integration'],
+      'Predictive failure detection,IoT sensor integration,Maintenance optimization,Real-time monitoring,Cost analysis,Work order automation,Inventory management,Performance analytics,Mobile app access,API integration'],
     benefits: [;
-      'Reduce unplanned downtime by 75%',
-      'Cut maintenance costs by 30%',
-      'Extend equipment lifespan',
-      'Improve safety',
-      'Optimize resource allocation'],
+      'Reduce unplanned downtime by 75%,Cut maintenance costs by 30%,Extend equipment lifespan,Improve safety,Optimize resource allocation'],
     useCases: [;
-      'Manufacturing',
-      'Oil and gas',
-      'Utilities',
-      'Transportation',
-      'Healthcare equipment'],
+      'Manufacturing,Oil and gas,Utilities,Transportation,Healthcare equipment'],
     targetAudience: [;
-      'Manufacturing companies',
-      'Industrial facilities',
-      'Utility companies',
-      'Transportation companies',
-      'Healthcare providers'],
-    tags: ['AI', 'IoT', 'Predictive Maintenance', 'Industrial', 'Automation'],
+      'Manufacturing companies,Industrial facilities,Utility companies,Transportation companies,Healthcare providers'],
+    tags: ['AI,IoT,Predictive Maintenance,Industrial,Automation'],
     estimatedDelivery: '8-12 weeks',
     supportLevel: 'enterprise',
     marketPrice: '$4,500 - $15,000/month',
@@ -1175,6 +791,7 @@ export const allServices: (
     innovationLevel: 'Advanced',
     contactInfo: contactInfo,
     technicalSpecs: {
+<<<<<<< HEAD
       technolog,
     y: [;
         'TensorFlow',
@@ -1182,24 +799,18 @@ export const allServices: (
         'IoT platforms',
         'Time-series databases',
         'React Native'],
+=======
+      technology: [;
+        'TensorFlow,Python,IoT platforms,Time-series databases,React Native'],
+>>>>>>> main
       integrations: [;
-        'SCADA systems',
-        'MES systems',
-        'ERP systems',
-        'IoT gateways',
-        'Cloud platforms'],
+        'SCADA systems,MES systems,ERP systems,IoT gateways,Cloud platforms'],
       apiEndpoints: 250,
       uptime: '99.9%',
       security: [;
-        'Industrial cybersecurity',
-        'Data encryption',
-        'Access control',
-        'Audit logging']},
+        'Industrial cybersecurity,Data encryption,Access control,Audit logging']},
     competitors: [;
-      'Siemens Mindsphere',
-      'GE Digital',
-      'PTC ThingWorx',
-      'IBM Watson IoT'],
+      'Siemens Mindsphere,GE Digital,PTC ThingWorx,IBM Watson IoT'],
     marketSize: '$23.5 billion by 2028'},
   // Quantum Cryptography Platform{'
     id: 'quantum-cryptography-platform',
@@ -1212,40 +823,15 @@ export const allServices: (
     currency: '$',
     pricingModel: 'monthly',
     features: [;
-      'Quantum key distribution',
-      'Post-quantum cryptography',
-      'Secure key management',
-      'Real-time encryption',
-      'Quantum random number generation',
-      'Multi-party computation',
-      'Zero-knowledge proofs',
-      'API access',
-      'Compliance reporting',
-      'Audit logging'],
+      'Quantum key distribution,Post-quantum cryptography,Secure key management,Real-time encryption,Quantum random number generation,Multi-party computation,Zero-knowledge proofs,API access,Compliance reporting,Audit logging'],
     benefits: [;
-      'Unbreakable encryption',
-      'Future-proof security',
-      'Quantum-resistant algorithms',
-      'Real-time key generation',
-      'Compliance with regulations'],
+      'Unbreakable encryption,Future-proof security,Quantum-resistant algorithms,Real-time key generation,Compliance with regulations'],
     useCases: [;
-      'Government communications',
-      'Financial transactions',
-      'Healthcare data',
-      'Military communications',
-      'Critical infrastructure'],
+      'Government communications,Financial transactions,Healthcare data,Military communications,Critical infrastructure'],
     targetAudience: [;
-      'Government agencies',
-      'Financial institutions',
-      'Healthcare organizations',
-      'Military organizations',
-      'Technology companies'],
+      'Government agencies,Financial institutions,Healthcare organizations,Military organizations,Technology companies'],
     tags: [;
-      'Quantum Computing',
-      'Cryptography',
-      'Security',
-      'Encryption',
-      'Compliance'],
+      'Quantum Computing,Cryptography,Security,Encryption,Compliance'],
     estimatedDelivery: '16-20 weeks',
     supportLevel: 'enterprise',
     marketPrice: '$22,000 - $80,000/month',
@@ -1253,6 +839,7 @@ export const allServices: (
     innovationLevel: 'Revolutionary',
     contactInfo: contactInfo,
     technicalSpecs: {
+<<<<<<< HEAD
       technolog,
     y: [;
         'Quantum hardware',
@@ -1260,24 +847,18 @@ export const allServices: (
         'Python',
         'C++',
         'Quantum networks'],
+=======
+      technology: [;
+        'Quantum hardware,Post-quantum algorithms,Python,C++,Quantum networks'],
+>>>>>>> main
       integrations: [;
-        'VPN systems',
-        'Messaging platforms',
-        'Cloud services',
-        'Hardware security modules',
-        'PKI systems'],
+        'VPN systems,Messaging platforms,Cloud services,Hardware security modules,PKI systems'],
       apiEndpoints: 800,
       uptime: '99.99%',
       security: [;
-        'Quantum-resistant encryption',
-        'Zero-trust architecture',
-        'SOC 2 Type II',
-        'FIPS compliance']},
+        'Quantum-resistant encryption,Zero-trust architecture,SOC 2 Type II,FIPS compliance']},
     competitors: [;
-      'ID Quantique',
-      'Qrypt',
-      'Quantum Xchange',
-      'QuintessenceLabs'],
+      'ID Quantique,Qrypt,Quantum Xchange,QuintessenceLabs'],
     marketSize: '$55 billion by 2030'}];
 // Export individual service types for specific use cases;
 export const microSaasServices = allServices.filter(

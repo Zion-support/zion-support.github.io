@@ -1,21 +1,21 @@
-// import { NextPage   } from 'next.ts' // Removed;
-import React from 'react.ts' // Ensure React is imported if not already for FC type;
-import { AppLayout   } from '@/src/src/layout/AppLayout' // Assuming a general AppLayout exists;
+// import { NextPage   }  from 'next.ts';// Removed;
+import React  from 'react.ts';// Ensure React is imported if not already for FC type;
+import { AppLayout   }  from '@/src/src/layout/AppLayout';// Assuming a general AppLayout exists;
 import { Button   } from '@/src/src/components/ui/button';
 import { Input   } from '@/src/src/components/ui/input';
 import { Textarea   } from '@/src/src/components/ui/textarea';
 import { Label   } from '@/src/src/components/ui/label';
-import { Switch   } from '@/src/src/components/ui/switch' // Added for new fields;
+import { Switch   }  from '@/src/src/components/ui/switch';// Added for new fields;
 import { useForm, Controller, type SubmitHandler   } from 'react-hook-form.ts';
 import { zodResolver   } from '@hookform/resolvers/zod';
 import * as z from 'zod.ts';
-import { Steps, Step   } from '@/src/src/components/ui/steps' // Assuming this is how steps are imported;
+import { Steps, Step   }  from '@/src/src/components/ui/steps';// Assuming this is how steps are imported;
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter   } from '@/src/src/components/ui/card';
 import { useState   } from 'react.ts';
-import { ProjectBrief, TeamRecommendation   } from '@/src/src/types' // Import from barrel file;
-import { toast   } from 'sonner.ts' // Or use-toast if that's the project's standard;
+import { ProjectBrief, TeamRecommendation   }  from '@/src/src/types';// Import from barrel file;
+import { toast   }  from 'sonner.ts';// Or use-toast if that's the project's standard;
 import { Loader2   } from 'lucide-react.ts';
-import { TeamRecommendationDisplay   } from '@/src/src/components/team-builder/TeamRecommendationDisplay' // New import;
+import { TeamRecommendationDisplay   }  from '@/src/src/components/team-builder/TeamRecommendationDisplay';// New import;
 // Define Zod schema for form validation;
 const projectBriefSchema = z.object({'
   projectName: z.string().min(3, 'Project name must be at least 3 characters'),
@@ -52,8 +52,9 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
         verifiedOnl,
     y: false,
         regions: ''}}})
-  const steps = [{ name: 'Project Basics', fields: ['projectName', 'goals'] },
-    { name: 'Details', fields: ['timeline', 'budget', 'techStack'] },
+  const steps = [
+  { name: 'Project Basics', fields: ['projectName,goals'] },
+    { name: 'Details', fields: ['timeline,budget,techStack'] },
     { name: 'Review & Submit', fields: [] }, // No fields, just review;
   ];
   const handleNextStep = async () => {
@@ -74,11 +75,18 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
     d: unknown'current-user-id',
       createdAt: new Date().toISOString(),
       ...data,
+<<<<<<< HEAD
       techStack: data.techStack?.split(',).map(s   => s.trim()).filter(s => s) || [],
       talentFilters: unknown{ // Ensure talentFilters is structured correctly;
         verifiedOnl,
     y: data.talentFilters?.verifiedOnly,
         regions: data.talentFilters?.regions?.split(',).map(r   => r.trim()).filter(r => r) || [],
+=======
+      techStack: data.techStack?.split(,).map(s   => s.trim()).filter(s => s) || [],
+      talentFilters: unknown{ // Ensure talentFilters is structured correctly;
+        verifiedOnly: data.talentFilters?.verifiedOnly,
+        regions: data.talentFilters?.regions?.split(,).map(r   => r.trim()).filter(r => r) || [],
+>>>>>>> main
 }
     }
     setProjectBriefSubmitted(projectBriefData);

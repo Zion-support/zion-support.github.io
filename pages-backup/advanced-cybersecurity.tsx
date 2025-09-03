@@ -9,8 +9,12 @@ import { ADVANCED_CYBERSECURITY_SERVICES_2027 } from '../data/advancedCybersecur
 const AdvancedCybersecurityServices: NextPage = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>(,
   all');
+<<<<<<< HEAD
   const [searchTerm, setSearchTerm] = useState(';
   ');
+=======
+  const [searchTerm, setSearchTerm] = useState()
+>>>>>>> main
   const [sortBy, setSortBy] = useState<any>('innovation;
   ');
   const categories = [''
@@ -20,7 +24,8 @@ const AdvancedCybersecurityServices: NextPage = () => {
   Quantum Security', color: 'from-indigo-500 to-blue-600 },{ id: 'Network Security, name:,
   Network Security', color: 'from-green-500 to-teal-600 },{ id: 'Endpoint Security, name:,
   Endpoint Security', color: 'from-orange-500 to-red-600 },
-  const categories = [{ id: 'all, name:,
+  const categories = [
+  { id: 'all, name:,
   All Security', color: 'from-blue-500 to-purple-600 },
     { id:,
   AI Security', name: 'AI Security, color:,
@@ -205,6 +210,7 @@ const AdvancedCybersecurityServices: NextPage = () => {
             <div className='relative'>
               <select;
                 value={sortBy}
+<<<<<<< HEAD
                 onChange={(e) => setSortBy(e.target.value)};
                 className='w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 focus: outline-none focus:ring-2 focu,
     s:ring-blue-400/50 focu,
@@ -215,6 +221,15 @@ const AdvancedCybersecurityServices: NextPage = () => {
                 <option value='roi'>Sort by ROI</option>'
               </select>''
               <svg className='absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none' fill='none' stroke='currentColor' viewBox='0 0 24 24>'
+=======
+                onChange={(e) => setSortBy(e.target.value)}';
+                className='w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400/50 appearance-none
+                <option value='innovation'>Sort by Innovation Level</option>'
+                <option value='price'>Sort by Price</option>'
+                <option value='roi'>Sort by ROI</option>
+              </select>'
+              <svg className='absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none' fill='none' stroke='currentColor' viewBox='0 0 24 24'>'
+>>>>>>> main
                 <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M19 9l-7 7-7-7' />
               </svg>
             </div>
