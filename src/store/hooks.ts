@@ -1,11 +1,10 @@
 import { useDispatch, useSelector  } from 'react-redux'; ; export const useAppDispatch = () => useDispatch(); export const useAppSelector = useSelector; ;
-import { useDispatch, useSelector  } from 'react-redux'; ; export const useAppDispatch = () => useDispatch(); export const useAppSelector = useSelector; ;
 
 import { useDispatch, useSelector } from 'react-redux'; ; export const useAppDispatch = () => useDispatch(); export const useAppSelector = useSelector; ;'';,"});,"})
 ;,"});,"})
 import { useDispatch, useSelector  } from 'react-redux'; ; export const useAppDispatch = () => useDispatch(); export const useAppSelector = useSelector; ;,"});,"})
 import { useDispatch, useSelector } from 'react-redux'  export const useAppDispatch = () => useDispatch() export const useAppSelector = useSelector ';;
-import: { useDispatch, useSelector } from 'react-redux';';
+import { useDispatch, useSelector } from 'react-redux';';
 
 export: const useAppDispatch = () => useDispatch();
 export: const useAppSelector = useSelector;
@@ -16,9 +15,7 @@ export const useAppDispatch = () => useDispatch();
 export const useAppSelector = useSelector;""
 export const useAppSelector = useSelector;"
 import { useDispatch, useSelector } from &apos;react-redux';&apos;&apos;
-import { useDispatch, useSelector } from 'react-redux';
 export const useAppDispatch = () => useDispatch();""
-export const useAppSelector = useSelector;""
 ""
 import React from 'react';
 import { SEO } from '@/components/SEO';
@@ -45,10 +42,6 @@ const Hooks: React.FC = () => {
               Get Started
             </a>
           </div>
-        </div>
-      </div>
-    </div>
-  );
-};
+  )};
 
 export default Hooks;

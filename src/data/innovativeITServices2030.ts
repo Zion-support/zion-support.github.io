@@ -1,11 +1,10 @@
 '';,"});,"})
 import React from "react";
-import: React from 'react';';
+import React from 'react';';
 ';';
 import React from 'react''
 ';
 '
-import React from 'react;
 import React from 'react';
 import {SEO } from '@/components/SEO';
 
@@ -18,11 +17,8 @@ export default function innovativeITServices2030() {return (
           Professional innovativeITServices2030 services to help your business grow.
         </p>
       </div>
-    </div>
-  );
-}
+  )}
 import React from &apos;react
-';
 &apos;'
 import React from 'react'
 ';'

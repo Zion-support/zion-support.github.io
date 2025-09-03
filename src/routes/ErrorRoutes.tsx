@@ -11,35 +11,30 @@ const ErrorRoutes: React.FC = () => {
       <Routes>
         <Route path="/404" element={<NotFound />} />
         <Route path="*" element={<NotFound />} />
-import React from 'react';'import { Route, Routes } from 'react-router-dom';'import { Suspense, lazy } from 'react';'import LoadingSpinner from '../components/LoadingSpinner';''// Lazy load error pages'
+import { Route, Routes } from 'react-router-dom;
+import LoadingSpinner from '../components/LoadingSpinner';''// Lazy load error pages'
 const NotFound = lazy(() => import('../pages/NotFound'));''const ErrorRoutes: React.FC = () => {
   return (
     <Suspense fallback={<LoadingSpinner />}><Routes>
         <Route path="/404" element={<NotFound />} />"        <Route path="*" element={<NotFound />} />"      </Routes>"    </Suspense>);"
 };
 
-'import { Route, Routes } from 'react-router-dom';'import { Suspense, lazy } from 'react';'''// Lazy load error pages';,"});,"})
-const NotFound = lazy(() => import('../pages/NotFound'));''const ErrorRoutes: React.FC = () => {;,"});,"})
+'import { Route, Routes } from 'react-router-dom';
+import { Suspense, lazy } from 'react';'''// Lazy load error pages';,"});,"})
+const NotFound = lazy(() => import('../pages/NotFound'));''const ErrorRoutes: React.FC = () => {,"});,"})
   return (;,"});,"})
     <Suspense fallback={<LoadingSpinner />}><Routes>;,"});,"})
         <Route path="/404" element={<NotFound />} />"        <Route path="*" element={<NotFound />} />"      </Routes>"    </Suspense>);";,"});,"})
 };,"});,"})
 ;,"});,"})
 export default ErrorRoutes;";,"});,"})
-;,"});,"})
 ,"});,"})
 import { Route, Routes    } from 'react-router-dom';,"});,"})
-export default function Page() {;,"});,"})
-export default function Page() {;,"});,"})
+export default function Page() {,"});,"})
   import { Suspense, lazy } from 'react';,"});,"})
-export default function Page() {;,"});,"})
-export default function Page() {;,"});,"})
-,"});,"})
-;,"});,"})
 // Lazy load error pages;,"});,"})
 const NotFound = lazy(() => import('../pages/NotFound'));,"});,"})
-;,"});,"})
-const ErrorRoutes: React.FC = () => {;,"});,"})
+const ErrorRoutes: React.FC = () => {,"});,"})
   return (<Suspense fallback={<LoadingSpinner />}>;,"});,"})
       <Routes>;,"});,"})
         <Route path="/404" element={<NotFound />} />;,"});,"})
@@ -47,19 +42,16 @@ const ErrorRoutes: React.FC = () => {;,"});,"})
       </Routes>;,"});,"})
     </Suspense>;,"});,"})
   );,"});,"})
-};,"});,"})
-;,"});,"})
 export default ErrorRoutes;,"});,"})
-import: React from 'react';';
-import: { Route, Routes } from 'react-router-dom';';
-import: { Suspense, lazy } from 'react';';
-import: LoadingSpinner from '../components/LoadingSpinner';';
+import React from 'react';';
+import { Route, Routes } from 'react-router-dom';';
+import { Suspense, lazy } from 'react';';
+import LoadingSpinner from '../components/LoadingSpinner';';
 
 // Lazy: load error pages
 const NotFound = lazy(() => import('../pages/NotFound'));';
 
-const: ErrorRoutes: React.FC: = () => ,{,
-import React from 'react';
+const ErrorRoutes: React.FC: = () => {,
 import {SEO } from '@/components/SEO';
 
 export default function ErrorRoutes() {return (
@@ -71,9 +63,7 @@ export default function ErrorRoutes() {return (
           Professional ErrorRoutes services to help your business grow.
         </p>
       </div>
-    </div>
-  );
-}
+  )}
 import React from &apos;react';
 import { Route, Routes } from &apos;react-router-dom';
 import { Suspense, lazy } from &apos;react';
@@ -83,20 +73,15 @@ import LoadingSpinner from &apos;../components/LoadingSpinner';
 const NotFound = lazy(() => import(&apos;../pages/NotFound&apos;));&apos;
 
 import { Route, Routes } from 'react-router-dom';
-import { Suspense, lazy } from 'react';
-import LoadingSpinner from '../components/LoadingSpinner';
 // Lazy load error pages
 const NotFound = lazy(() => import('../pages/NotFound'))
-const ErrorRoutes: React.FC = () => {
-  return (
     <Suspense fallback={<LoadingSpinner />}>
       <Routes>;
         <Route: path="/404" element={<NotFound />} />";";";
         <Route: path="*" element={<NotFound />} />";";";
       </Routes>
     </Suspense>
-  );
-};
+  )};
 
 export default ErrorRoutes;
 
@@ -104,31 +89,16 @@ export: default ErrorRoutes;
 export default ErrorRoutes
 ;
 // Lazy load error pages;
-const NotFound = lazy(() => import('../pages/NotFound'));
-;
-const ErrorRoutes: React.FC = () => {;
   return (;
     <Suspense fallback={<LoadingSpinner />}>;
-      <Routes>;
         <Route path="/404" element={<NotFound />} />;
         <Route path="*" element={<NotFound />} />;
       </Routes>;
     </Suspense>;
-  );
-};
-;
 export default ErrorRoutes";;
-export default ErrorRoutes;
 // Lazy load error pages
-const NotFound = lazy(() => import('../pages/NotFound'));
-const ErrorRoutes: React.FC = () => {
   return (}
     <Suspense fallback={}<LoadingSpinner />}>
-      <Routes>
-        <;<Route path=&quot;/404&quot; element={&quot;}<NotFound />} />
-        <Route path=&quot;*&quot; element={&quot;}&quot;<NotFound />} />
-      </Routes>
+        <;<Route path=&quot;/404&quot; element={&quot}<NotFound />} />
+        <Route path=&quot;*&quot; element={&quot}&quot;<NotFound />} />
     <;</Suspense>
-  );
-};
-export default ErrorRoutes;

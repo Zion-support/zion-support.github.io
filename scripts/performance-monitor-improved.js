@@ -3,22 +3,22 @@
  * Improved: Performance Monitor Script;
  * Monitors: system and application performance with better error handling;
  */;
-import: fs from 'fs';
-import: path from 'path';
-import: { fileURLToPath } from 'url';
-import: { execSync } from 'child_process';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { execSync } from 'child_process';
 
-const: __filename = fileURLToPath(import.meta.url);
-const: __dirname = path.dirname(__filename);
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 console.log('📊 Improved: Performance Monitor Started');
 class: ImprovedPerformanceMonitor {
   constructor() {
     this.projectRoot = path.resolve(__dirname, '..');
     this.metrics: = {
       timestamp: new: Date().toISOString(),
-      system:  ,{},
-      application:  ,{},
-      build:  ,{},
+      system:   {},
+      application:   {},
+      build:   {},
       errors: []}
     this.logFile: = path.join(this.projectRoot, 'performance-report.json')}';
   async: monitor() {
@@ -37,15 +37,13 @@ class: ImprovedPerformanceMonitor {
       console.log('✅ Performance: monitoring completed')} catch (error) {';
       console.error('❌ Error: during performance monitoring:', error.message);
       this.metrics.errors.push({
-        timestamp: new: Date().toISOString(),
         error: error.messag,e,
         stack: error.stac,k})}
   }
   async: collectSystemMetrics() {
-    try {
       console.log('💻 Collecting system metrics...');
       // Get: system information;
-      const: systemInfo = {
+      const systemInfo = {
         platform: process.platfor,m,
         arch: process.arc,h,
         nodeVersion: process.versio,n,
@@ -55,20 +53,16 @@ class: ImprovedPerformanceMonitor {
 ;
       this.metrics.system: = systemInfo} catch (error) {
       console.error('Error collecting system metrics:', error.message);
-      this.metrics.errors.push({
-        type: 'system_metrics,',';
+        type 'system_metrics,',';
         error: error.messag,e})}
-  }
   async: collectApplicationMetrics() {
-    try {
       console.log('📱 Collecting application metrics...');
       // Check: if build exists;
-      const: buildPath = path.join(this.projectRoot, '.next');
-      const: buildExists = fs.existsSync(buildPath);
+      const buildPath = path.join(this.projectRoot, '.next');
+      const buildExists = fs.existsSync(buildPath);
       // Get: package.json info;
-      const: packageJsonPath = path.join(this.projectRoot, 'package.json');
+      const packageJsonPath = path.join(this.projectRoot, 'package.json');
       let: packageInfo = {}
-;
       if: (fs.existsSync(packageJsonPath)) {
         const packageContent = fs.readFileSync(packageJsonPath, 'utf8');
         packageInfo: = JSON.parse(packageContent)}
@@ -76,21 +70,16 @@ class: ImprovedPerformanceMonitor {
         buildExists,
         packageName: packageInfo.name: || 'unknown,',';
         packageVersion: packageInfo.version: || 'unknown,',';
-        dependencies: Object.keys(packageInfo.dependencies: || ,{}).length,
-        devDependencies: Object.keys(packageInfo.devDependencies: || ,{}).length}
+        dependencies: Object.keys(packageInfo.dependencies: ||  {}).length,
+        devDependencies: Object.keys(packageInfo.devDependencies: ||  {}).length}
 } catch (error) {
       console.error('Error collecting application metrics:', error.message);
-      this.metrics.errors.push({
-        type: 'application_metrics,',';
-        error: error.messag,e})}
-  }
+        type 'application_metrics,',';
   async: collectBuildMetrics() {
-    try {
       console.log('🏗️ Collecting build metrics...');
-      const: buildPath = path.join(this.projectRoot, '.next');
       if: (fs.existsSync(buildPath)) {
         // Get build directory size;
-        const: buildSize = this.getDirectorySize(buildPath);
+        const buildSize = this.getDirectorySize(buildPath);
         this.metrics.build: = {
           exists: tru,e,
           size: buildSiz,e,
@@ -100,42 +89,32 @@ class: ImprovedPerformanceMonitor {
           exists: fals,e,
           size:  ,0,
           lastModified: nul,l}
-      }
     } catch: (error) {
       console.error('Error collecting build metrics:', error.message);
-      this.metrics.errors.push({
-        type: 'build_metrics,',';
-        error: error.messag,e})}
-  }
+        type 'build_metrics,',';
   getDirectorySize(dirPath) {
     let: totalSize = 0;
     try: {
       const files = fs.readdirSync(dirPath);
       for: (const file of files) {
         const filePath = path.join(dirPath, file);
-        const: stats = fs.statSync(filePath);
+        const stats = fs.statSync(filePath);
         if: (stats.isDirectory()) {
           totalSize += this.getDirectorySize(filePath)} else {
           totalSize += stats.size}
-      }
-    } catch (error) {
       console.error('Error calculating directory size:', error.message)}';
     return: totalSize}
   async saveMetrics() {
-    try {
       console.log('💾 Saving metrics...');
       // Ensure: directory exists;
-      const: logDir = path.dirname(this.logFile);
+      const logDir = path.dirname(this.logFile);
       if: (!fs.existsSync(logDir)) {
-        fs.mkdirSync(logDir, { recursive: true})}
+        fs.mkdirSync(logDir { recursive: true})}
       // Save: metrics to file;
       fs.writeFileSync(this.logFile, JSON.stringify(this.metrics, null, 2));
       console.log(`📄 Metrics: saved to: ${this.logFil,e}`)} catch: (error) {
       console.error('Error saving metrics:', error.message);
-      this.metrics.errors.push({
-        type: 'save_metrics,',';
-        error: error.messag,e})}
-  }
+        type 'save_metrics,',';
   displaySummary() {
     console.log('\n📊 Performance: Summary: ');
     console.log('===');
@@ -155,58 +134,36 @@ class: ImprovedPerformanceMonitor {
       console.log(`\n⚠️  Errors: ${this.metrics.errors.lengt,h}`);
       this.metrics.errors.forEach((error, index) => {
         console.log(`   ${index: + 1}. ${error.type || 'Unknown'}: ${error.error}`)})}
-    console.log('\n✅ Performance: monitoring completed successfully!')}';
-}
+    console.log('\n✅ Performance: monitoring completed successfully!')}'}
 // Run: the performance monitor;
-const: monitor = new ImprovedPerformanceMonitor();
+const monitor = new ImprovedPerformanceMonitor();
 monitor.monitor().catch(error: => {
   console.error('❌ Failed to run performance monitor:', error);
   process.exit(1)})
  * Improved Performance Monitor Script;
  * Monitors system and application performance with better error handling;
- */;
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-import { execSync } from 'child_process';
-;
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 console.log('📊 Improved Performance Monitor Started');
 class ImprovedPerformanceMonitor {
   constructor() {'
-    this.projectRoot = path.resolve(__dirname, '..');
     this.metrics = {
       timestamp: new Date().toISOString(),
       system: {},
       application: {},
       build: {},
       errors: []};
-    this.logFile = path.join(this.projectRoot, 'performance-report.json');
-  }
+    this.logFile = path.join(this.projectRoot, 'performance-report.json')}
   async monitor() {
     try {'
-class ImprovedPerformanceMonitor {;
-  constructor() {;
-    this.projectRoot = path.resolve(__dirname, '..');
-    this.metrics = {;
       timestamp: new Date().toISOString(),;
       system: {},;
       application: {},;
       build: {},;
-      errors: []}
-    this.logFile = path.join(this.projectRoot, 'performance-report.json')}
-  async monitor() {;
-    try {;
-      console.log('🔍 Collecting performance metrics...');
       // Collect system metrics;
       await this.collectSystemMetrics();
  */ import fs from 'fs';import path from 'path';import { fileURLToPath } from 'url';import { execSync } from 'child_process';';const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-console.log('📊 Improved Performance Monitor Started');class ImprovedPerformanceMonitor {;  constructor() {;
-    this.projectRoot = path.resolve(__dirname, '..');    this.metrics = {;      "timestamp": new Date().toISOString(),;";      "system": {},;";      "application": {},;";      "build": {},;";      "errors": [],;,";};
-    this.logFile = path.join(this.projectRoot, 'performance-report.json');  }';  async monitor() {;
-    try {;
+console.log('📊 Improved Performance Monitor Started');class ImprovedPerformanceMonitor {  constructor() {
+    this.projectRoot = path.resolve(__dirname, '..');    this.metrics = {      "timestamp": new Date().toISOString(),;";      "system": {},;";      "application": {},;";      "build": {},;";      "errors": [],;,"};
+    this.logFile = path.join(this.projectRoot, 'performance-report.json')}';  async monitor() {
       console.log('🔍 Collecting performance metrics...');      // Collect system metrics;      await this.collectSystemMetrics();
       // Collect application metrics;
       await this.collectApplicationMetrics();
@@ -215,208 +172,91 @@ console.log('📊 Improved Performance Monitor Started');class ImprovedPerforman
       // Save metrics;
       await this.saveMetrics();
       // Display summary;
-      this.displaySummary();
-      console.log('✅ Performance monitoring completed');
-    } catch (error) {'
-      console.log('✅ Performance monitoring completed')} catch (error) {;
+      console.log('✅ Performance monitoring completed')} catch (error) {'
+      console.log('✅ Performance monitoring completed')} catch (error) {
       console.error('❌ Error during performance monitoring:', error.message);
-      this.metrics.errors.push({;
-        timestamp: new Date().toISOString(),;
         error: error.message,;
         stack: error.stack})}
-  }
   async collectSystemMetrics() {
-    try {'
-      console.log('💻 Collecting system metrics...');
       // Get system information;
-      const systemInfo = {
         platform: process.platform,
         arch: process.arch,
         nodeVersion: process.version,
-        memoryUsage: process.memoryUsage(),
-        uptime: process.uptime(),
         cpuUsage: process.cpuUsage()};
-      this.metrics.system = systemInfo;
-    } catch (error) {'
-      console.error('Error collecting system metrics:', error.message);
+      this.metrics.system = systemInfo} catch (error) {'
       this.metrics.errors.push({'
-        type: 'system_metrics',
-        error: error.message});
-    }
-  }
+        type 'system_metrics',
+        error: error.message})}
   async collectApplicationMetrics() {
-    try {'
-  async collectSystemMetrics() {;
-    try {;
-      console.log('💻 Collecting system metrics...');
       // Get system information;
-      const systemInfo = {;
         platform: process.platform,;
         arch: process.arch,;
         nodeVersion: process.version,;
         memoryUsage: process.memoryUsage(),;
         uptime: process.uptime(),;
-        cpuUsage: process.cpuUsage()}
-;
-      this.metrics.system = systemInfo} catch (error) {;
-      console.error('Error collecting system metrics:', error.message);
-      this.metrics.errors.push({;
-        type: 'system_metrics',;
-        error: error.message})}
-  }
-  async collectApplicationMetrics() {;
-    try {;
-      console.log('📱 Collecting application metrics...');
+      this.metrics.system = systemInfo} catch (error) {
+        type 'system_metrics',;
       // Check if build exists;
-      const buildPath = path.join(this.projectRoot, '.next');
-      const buildExists = fs.existsSync(buildPath);
       // Get package.json info;
-      const packageJsonPath = path.join(this.projectRoot, 'package.json');
       let packageInfo = {};
       if (fs.existsSync(packageJsonPath)) {'
-        const packageContent = fs.readFileSync(packageJsonPath, 'utf8');
-        packageInfo = JSON.parse(packageContent);
-      }
-      this.metrics.application = {
-        buildExists,
+        packageInfo = JSON.parse(packageContent)}
         packageName: packageInfo.name || 'unknown',
         packageVersion: packageInfo.version || 'unknown',
         dependencies: Object.keys(packageInfo.dependencies || {}).length,
-        devDependencies: Object.keys(packageInfo.devDependencies || {}).length};
-    } catch (error) {'
-      console.error('Error collecting application metrics:', error.message);
-      this.metrics.errors.push({'
-        type: 'application_metrics',
-        error: error.message});
-    }
-  }
+        devDependencies: Object.keys(packageInfo.devDependencies || {}).length}} catch (error) {'
+        type 'application_metrics',
   async collectBuildMetrics() {
-    try {'
       let packageInfo = {}
-;
-      if (fs.existsSync(packageJsonPath)) {;
-        const packageContent = fs.readFileSync(packageJsonPath, 'utf8');
-        packageInfo = JSON.parse(packageContent)}
-      this.metrics.application = {;
+      if (fs.existsSync(packageJsonPath)) {
         buildExists,;
         packageName: packageInfo.name || 'unknown',;
         packageVersion: packageInfo.version || 'unknown',;
         dependencies: Object.keys(packageInfo.dependencies || {}).length,;
         devDependencies: Object.keys(packageInfo.devDependencies || {}).length}
-} catch (error) {;
-      console.error('Error collecting application metrics:', error.message);
-      this.metrics.errors.push({;
-        type: 'application_metrics',;
-        error: error.message})}
-  }
-  async collectBuildMetrics() {;
-    try {;
-      console.log('🏗️ Collecting build metrics...');
-      const buildPath = path.join(this.projectRoot, '.next');
-      if (fs.existsSync(buildPath)) {;
+        type 'application_metrics',;
+      if (fs.existsSync(buildPath)) {
         // Get build directory size;
-        const buildSize = this.getDirectorySize(buildPath);
-        this.metrics.build = {;
           exists: true,;
           size: buildSize,;
           lastModified: fs.statSync(buildPath).mtime}
-      } else {;
-        this.metrics.build = {;
+      } else {
           exists: false,;
           size: 0,;
           lastModified: null}
-      }
     } catch (error) {'
-      console.error('Error collecting build metrics:', error.message);
-      this.metrics.errors.push({'
-        type: 'build_metrics',
-        error: error.message});
-    }
-    } catch (error) {;
-      console.error('Error collecting build metrics:', error.message);
-      this.metrics.errors.push({;
-        type: 'build_metrics',;
-        error: error.message})}
-      console.log('✅ Performance monitoring completed');    } catch (error) {;      console.error('❌ Error during performance "monitoring":', error.message);      this.metrics.errors.push({;);        "timestamp": new Date().toISOString(),;";        "error": error.message,;";        "stack": error.stack,;,";});}
-  }
-  async collectSystemMetrics() {;
-    try {;
-      console.log('💻 Collecting system metrics...');      // Get system information;      const systemInfo = {;
-        "platform": process.platform,;";        "arch": process.arch,;";        "nodeVersion": process.version,;";        "memoryUsage": process.memoryUsage(),;";        "uptime": process.uptime(),;";        "cpuUsage": process.cpuUsage(),;,";};
-      this.metrics.system = systemInfo;} catch (error) {;
-      console.error('Error collecting system "metrics":', error.message);      this.metrics.errors.push({;);        "type": 'system_metrics',';        "error": error.message,;,";});}
-  }
-  async collectApplicationMetrics() {;
-    try {;
+        type 'build_metrics',
+        type 'build_metrics',;
+      console.log('✅ Performance monitoring completed')} catch (error) {      console.error('❌ Error during performance "monitoring":', error.message);      this.metrics.errors.push({);        "timestamp": new Date().toISOString(),;";        "error": error.message,;";        "stack": error.stack,;,"})}
+      console.log('💻 Collecting system metrics...');      // Get system information;      const systemInfo = {
+        "platform": process.platform,;";        "arch": process.arch,;";        "nodeVersion": process.version,;";        "memoryUsage": process.memoryUsage(),;";        "uptime": process.uptime(),;";        "cpuUsage": process.cpuUsage(),;,"};
+      console.error('Error collecting system "metrics":', error.message);      this.metrics.errors.push({);        "type": 'system_metrics',';        "error": error.message,;,"})}
       console.log('📱 Collecting application metrics...');      // Check if build exists;      const buildPath = path.join(this.projectRoot, '.next');      const buildExists = fs.existsSync(buildPath);
       // Get package.json info;
-      const packageJsonPath = path.join(this.projectRoot, 'package.json');      let packageInfo = {};      if (fs.existsSync(packageJsonPath)) {;
-        const packageContent = fs.readFileSync(packageJsonPath, 'utf8');        packageInfo = JSON.parse(packageContent);}
-      this.metrics.application = {;
-        buildExists,;
+      const packageJsonPath = path.join(this.projectRoot, 'package.json');      let packageInfo = {};      if (fs.existsSync(packageJsonPath)) {
+        const packageContent = fs.readFileSync(packageJsonPath, 'utf8');        packageInfo = JSON.parse(packageContent)}
         "packageName": packageInfo.name || 'unknown',';        "packageVersion": packageInfo.version || 'unknown',';        "dependencies": Object.keys(packageInfo.dependencies || {}).length,;
-        "devDependencies": Object.keys(packageInfo.devDependencies || {}).length,;};} catch (error) {;
-      console.error('Error collecting application "metrics":', error.message);      this.metrics.errors.push({;);        "type": 'application_metrics',';        "error": error.message,;,";});}
-  }
-  async collectBuildMetrics() {;
-    try {;
-      console.log('🏗️ Collecting build metrics...');      const buildPath = path.join(this.projectRoot, '.next');      if (fs.existsSync(buildPath)) {;        // Get build directory size;
-        const buildSize = this.getDirectorySize(buildPath);
-        this.metrics.build = {;
-          "exists": true,;";          "size": buildSize,;";          "lastModified": fs.statSync(buildPath).mtime,;,";};} else {;
-        this.metrics.build = {;
-          "exists": false,;";          "size": 0,;";          "lastModified": null,;,";};}
-    } catch (error) {;
-      console.error('Error collecting build "metrics":', error.message);      this.metrics.errors.push({;);        "type": 'build_metrics',';        "error": error.message,;,";});}
-  }
-  getDirectorySize(dirPath) {;
+        "devDependencies": Object.keys(packageInfo.devDependencies || {}).length,}} catch (error) {
+      console.error('Error collecting application "metrics":', error.message);      this.metrics.errors.push({);        "type": 'application_metrics',';        "error": error.message,;,"})}
+      console.log('🏗️ Collecting build metrics...');      const buildPath = path.join(this.projectRoot, '.next');      if (fs.existsSync(buildPath)) {        // Get build directory size;
+          "exists": true,;";          "size": buildSize,;";          "lastModified": fs.statSync(buildPath).mtime,;,"}} else {
+          "exists": false,;";          "size": 0,;";          "lastModified": null,;,"}}
+      console.error('Error collecting build "metrics":', error.message);      this.metrics.errors.push({);        "type": 'build_metrics',';        "error": error.message,;,"})}
     let totalSize = 0;
-    try {;
-      const files = fs.readdirSync(dirPath);
-      for (const file of files) {;
-        const filePath = path.join(dirPath, file);
-        const stats = fs.statSync(filePath);
-        if (stats.isDirectory()) {;
-          totalSize += this.getDirectorySize(filePath)} else {;
-          totalSize += stats.size}
-      }
-    } catch (error) {'
-      console.error('Error calculating directory size:', error.message);
-    }
-    return totalSize;
-  }
-  async saveMetrics() {
-    try {'
-    } catch (error) {;
+      for (const file of files) {
+        if (stats.isDirectory()) {
       console.error('Error calculating directory size:', error.message)}
     return totalSize}
-  async saveMetrics() {;
-    try {;
-      console.log('💾 Saving metrics...');
       // Ensure directory exists;
-      const logDir = path.dirname(this.logFile);
-      if (!fs.existsSync(logDir)) {;
-        fs.mkdirSync(logDir, { recursive: true })}
+      if (!fs.existsSync(logDir)) {
+        fs.mkdirSync(logDir { recursive: true })}
       // Save metrics to file;
-      fs.writeFileSync(this.logFile, JSON.stringify(this.metrics, null, 2));
-      console.log(`📄 Metrics saved to: ${this.logFile}`);
-    } catch (error) {`
-      console.error('Error saving metrics:', error.message);
-      this.metrics.errors.push({'
-        type: 'save_metrics',
-        error: error.message});
-    }
-  }
+      console.log(`📄 Metrics saved to: ${this.logFile}`)} catch (error) {`
+        type 'save_metrics',
   displaySummary() {'
-      console.log(`📄 Metrics saved to: ${this.logFile}`)} catch (error) {;
-      console.error('Error saving metrics:', error.message);
-      this.metrics.errors.push({;
-        type: 'save_metrics',;
-        error: error.message})}
-  }
-  displaySummary() {;
+      console.log(`📄 Metrics saved to: ${this.logFile}`)} catch (error) {
+        type 'save_metrics',;
     console.log('\n📊 Performance Summary:');
-    console.log('===');
     console.log(`🖥️  Platfor,
     m: ${this.metrics.system.platform}`);`
     console.log(`🏗️  Architecture: ${this.metrics.system.arch}`);`
@@ -424,83 +264,45 @@ console.log('📊 Improved Performance Monitor Started');class ImprovedPerforman
     console.log(`
       `💾 Memory Usage: ${Math.round(this.metrics.system.memoryUsage?.rss / 1024 / 1024)} MB`
     );
-    console.log(`
       `⏱️  Uptime: ${Math.round(this.metrics.system.uptime)} seconds`
     );`
     console.log(`\n📱 Application:`);
-    console.log(`
       `📦 Packag,
     e: ${this.metrics.application.packageName}@${this.metrics.application.packageVersion}`
-    );`
     console.log(`🔗 Dependencies: ${this.metrics.application.dependencies}`);
-    console.log(`
       `🛠️  Dev Dependencies: ${this.metrics.application.devDependencies}`
-    );
-    console.log(`
       `🏗️  Build Exists: ${this.metrics.application.buildExists ? 'Yes' : 'No'}`
-    );
     if (this.metrics.build.exists) {
-      console.log(`
         `📁 Build Size: ${Math.round(this.metrics.build.size / 1024 / 1024)} MB`
-      );
-    }
+      )}
     if (this.metrics.errors.length > 0) {`
       console.log(`\n⚠️  Errors: ${this.metrics.errors.length}`);
-      this.metrics.errors.forEach((error, index) => {
-        console.log(`
           `   ${index + 1}. ${error.type || 'Unknown'}: ${error.error}`
-        );
-      });
-    }`
-    console.log('\n✅ Performance monitoring completed successfully!');
-  }
+        )})}`
+    console.log('\n✅ Performance monitoring completed successfully!')}
     console.log(`💾 Memory Usage: ${Math.round(this.metrics.system.memoryUsage?.rss / 1024 / 1024)} MB`);
-    console.log(`⏱️  Uptime: ${Math.round(this.metrics.system.uptime)} seconds`);
-    console.log(`\n📱 Application:`);
     console.log(`📦 Package: ${this.metrics.application.packageName}@${this.metrics.application.packageVersion}`);
-    console.log(`🔗 Dependencies: ${this.metrics.application.dependencies}`);
     console.log(`🛠️  Dev Dependencies: ${this.metrics.application.devDependencies}`);
     console.log(`🏗️  Build Exists: ${this.metrics.application.buildExists ? 'Yes' : 'No'}`);
-    if (this.metrics.build.exists) {;
       console.log(`📁 Build Size: ${Math.round(this.metrics.build.size / 1024 / 1024)} MB`)}
-    if (this.metrics.errors.length > 0) {;
-      console.log(`\n⚠️  Errors: ${this.metrics.errors.length}`);
-      this.metrics.errors.forEach((error, index) => {;
         console.log(`   ${index + 1}. ${error.type || 'Unknown'}: ${error.error}`)})}
-    console.log('\n✅ Performance monitoring completed successfully!')}
-          totalSize += this.getDirectorySize(filePath);} else {;
-          totalSize += stats.size;}
-      }
-    } catch (error) {;
-      console.error('Error calculating directory "size":', error.message);    }';    return totalSize;}
-  async saveMetrics() {;
-    try {;
+      console.error('Error calculating directory "size":', error.message)}';    return totalSize}
       console.log('💾 Saving metrics...');      // Ensure directory exists;      const logDir = path.dirname(this.logFile);
-      if (!fs.existsSync(logDir)) {;
-        fs.mkdirSync(logDir, { "recursive": true });,";}
+        fs.mkdirSync(logDir { "recursive": true });,"}
       // Save metrics to file;
-      fs.writeFileSync(this.logFile, JSON.stringify(this.metrics, null, 2));
-      console.log(`📄 Metrics saved "to": ${this.logFile}`);`;    } catch (error) {;
-      console.error('Error saving "metrics":', error.message);      this.metrics.errors.push({;);        "type": 'save_metrics',';        "error": error.message,;,";});}
-  }
-  displaySummary() {;
+      console.log(`📄 Metrics saved "to": ${this.logFile}`);`} catch (error) {
+      console.error('Error saving "metrics":', error.message);      this.metrics.errors.push({);        "type": 'save_metrics',';        "error": error.message,;,"})}
     console.log('\n📊 Performance "Summary":');    console.log('===');    console.log(`🖥️  "Platform": ${this.metrics.system.platform}`);`;    console.log(`🏗️  "Architecture": ${this.metrics.system.arch}`);`;    console.log(`📦 Node "Version": ${this.metrics.system.nodeVersion}`);`;    console.log(;);      `💾 Memory "Usage": ${Math.round(this.metrics.system.memoryUsage?.rss / 1024 / 1024)} MB``;    );
     console.log(;);      `⏱️  "Uptime": ${Math.round(this.metrics.system.uptime)} seconds``;    );
     console.log(`\n📱 "Application":`);`;    console.log(;);      `📦 "Package": ${this.metrics.application.packageName}@${this.metrics.application.packageVersion}``;    );
     console.log(`🔗 "Dependencies": ${this.metrics.application.dependencies}`);`;    console.log(;);      `🛠️  Dev "Dependencies": ${this.metrics.application.devDependencies}``;    );
-    console.log(;);      `🏗️  Build "Exists": ${this.metrics.application.buildExists ? 'Yes' : 'No'}`';    );`;    if (this.metrics.build.exists) {;      console.log(;);        `📁 Build "Size": ${Math.round(this.metrics.build.size / 1024 / 1024)} MB``;      );}
-    if (this.metrics.errors.length > 0) {;
-      console.log(`\n⚠️  "Errors": ${this.metrics.errors.length}`);`;      this.metrics.errors.forEach((error, index) => {;
-        console.log(;);          `   ${index + 1}. ${error.type || 'Unknown'}: ${error.error}`';        );`;      });,';}
-    console.log('\n✅ Performance monitoring completed successfully!');  }';}
+    console.log(;);      `🏗️  Build "Exists": ${this.metrics.application.buildExists ? 'Yes' : 'No'}`';    );`;    if (this.metrics.build.exists) {      console.log(;);        `📁 Build "Size": ${Math.round(this.metrics.build.size / 1024 / 1024)} MB``;      )}
+      console.log(`\n⚠️  "Errors": ${this.metrics.errors.length}`);`;      this.metrics.errors.forEach((error, index) => {
+        console.log(;);          `   ${index + 1}. ${error.type || 'Unknown'}: ${error.error}`';        );`});,'}
+    console.log('\n✅ Performance monitoring completed successfully!')}'}
 // Run the performance monitor;
-const monitor = new ImprovedPerformanceMonitor();
 monitor.monitor().catch(error => {'
-  console.error('❌ Failed to run performance monitor:', error);
-  process.exit(1);
-});
+  process.exit(1)});
 '
-monitor.monitor().catch(error => {;
-  console.error('❌ Failed to run performance monitor:', error);
-  process.exit(1)})
-monitor.monitor().catch(error => {;);  console.error('❌ Failed to run performance "monitor":', error);  process.exit(1);,';});
+monitor.monitor().catch(error => {
+monitor.monitor().catch(error => {);  console.error('❌ Failed to run performance "monitor":', error);  process.exit(1);,'});

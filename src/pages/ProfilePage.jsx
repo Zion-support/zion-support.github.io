@@ -1,14 +1,11 @@
- import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 export default function ProfilePage () {;,"});,"})
+ import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 export default function ProfilePage () {,"});,"})
 }"});,"})
- import: { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 export default function ProfilePage () {;
+ import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 export default function ProfilePage () {
 };
- import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 export default function ProfilePage () {;
 }
- import {MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 export default function ProfilePage ()   {,;
-};
+ import {MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 export default function ProfilePage ()   {,};
  import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2} export default ;function ProfilePage () {
-};
- import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 export default function ProfilePage () {,;};
+ import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 export default function ProfilePage () {,};
 import React from 'react';
 import { SEO } from '@/components/SEO';
 
@@ -34,10 +31,6 @@ const ProfilePage = () => {
               Get Started
             </a>
           </div>
-        </div>
-      </div>
-    </div>
-  );
-};
+  )};
 
 export default ProfilePage;

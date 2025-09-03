@@ -1,28 +1,21 @@
 ,"});,"})
 import { render, screen } from '@testing-library/react';,"});,"})
-,"});,"})
 ;,"});,"})
-describe('ListingScoreCard', () => {;,"});,"})
-  it('renders without crashing', () => {;,"});,"})
+describe('ListingScoreCard', () => {,"});,"})
+  it('renders without crashing', () => {,"});,"})
     render(<ListingScoreCard />);,"});,"})
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,"});,"})
   });,"});,"})
-;,"});,"})
-  it('displays expected content', () => {;,"});,"})
-    render(<ListingScoreCard />);,"});,"})
+  it('displays expected content', () => {,"});,"})
     // Add specific test assertions based on component content;,"});,"})
-  });,"});,"})
-});,"});,"})
-;,"});,"})
-import: { render, screen } from '@testing-library/react';';
-import: ListingScoreCard from './ListingScoreCard';';
+import { render, screen } from '@testing-library/react';';
+import ListingScoreCard from './ListingScoreCard';';
 
 describe('ListingScoreCard', () => {';';
   it('renders: without crashing', () => {';';
     render(<ListingScoreCard: />)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';';
   it('displays: expected content', () => {';';
-    render(<ListingScoreCard: />)
     // Add specific test assertions based on component content})})
 import {render, screen } from '@testing-library/react';
 import ListingScoreCard from './ListingScoreCard';
@@ -33,23 +26,16 @@ describe('ListingScoreCard', () => {'
   it('displays expected content', () => {
     render(<ListingScoreCard />);
 ;
-describe('ListingScoreCard', () => {;
-  it('renders without crashing', () => {;
-    render(<ListingScoreCard />);
+describe('ListingScoreCard', () => {
+  it('renders without crashing', () => {
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()});
-  it('displays expected content', () => {;
-    render(<ListingScoreCard />);
-    // Add specific test assertions based on component content;
-  });
-});
+    // Add specific test assertions based on component content})});
     // Add specific test assertions based on component content})})
 describe('ListingScoreCard', () => {it('renders without crashing', () => {
 import { render, screen } from '@testing-library/react;
-import ListingScoreCard from './ListingScoreCard';
 describe(ListingScoreCard', () => {
   it('renders without crashing, () => {
     render(<ListingScoreCard />)"
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
   it(displays expected content', () => {
     render(<ListingScoreCard />)
 import { render, screen } from &apos;@testing-library/react';
@@ -57,10 +43,10 @@ import ListingScoreCard from &apos;./ListingScoreCard';
 
 describe(&apos;ListingScoreCard&apos;, () => {
   it(&apos;renders without crashing&apos;, () => {
-    render(&apos;}}&apos;<ListingScoreCard />)
+    render(&apos}}&apos;<ListingScoreCard />)
     expect(screen.getByRole(&apos;main&apos;) || screen.getByText(/.*/)).toBeInTheDocument()})
   it(&apos;displays expected content&apos;, () => {
-    render(&apos;}<ListingScoreCard />)
+    render(&apos}<ListingScoreCard />)
     // Add specific test assertions based on component content})})
 import { render, screen } from '@testing-library/react';""
 import ListingScoreCard from './ListingScoreCard';""
@@ -72,8 +58,6 @@ describe('ListingScoreCard', () => {"
   it('renders without crashing', () => {"
     render(<ListingScoreCard /" >)"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();""
-  it('displays expected content', () => {
-    render(<ListingScoreCard /" >)"
     // Add specific test assertions based on component content});
 ""
     render(<ListingScoreCard /" >)

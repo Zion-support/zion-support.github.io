@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from 'react'; import { motion  } from 'framer-motion'; interface PerformanceMetrics { fcp: number; lcp: number; fid: number; cls: number; ttfb: number; fmp: number; } const AdvancedPerformanceMonitor: React.FC = () => { const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null); const [isVisible, setIsVisible] = useState(false); useEffect(() => {
-import React, { useEffect, useState } from 'react'; import { motion    } from 'framer-motion'; interface PerformanceMetrics { fcp: number; lcp: number; fid: number; cls: number; ttfb: number; fmp: number;  } const AdvancedPerformanceMonitor: React.FC = () => { const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null); const [isVisible, setIsVisible] = useState(false); useEffect(() => {
+import React { useEffect, useState } from 'react'; import { motion  } from 'framer-motion'; interface PerformanceMetrics { fcp: number; lcp: number; fid: number; cls: number; ttfb: number; fmp: number} const AdvancedPerformanceMonitor: React.FC = () => { const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null); const [isVisible, setIsVisible] = useState(false); useEffect(() => {
+import React { useEffect, useState } from 'react'; import { motion    } from 'framer-motion'; interface PerformanceMetrics { fcp: number; lcp: number; fid: number; cls: number; ttfb: number; fmp: number} const AdvancedPerformanceMonitor: React.FC = () => { const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null); const [isVisible, setIsVisible] = useState(false); useEffect(() => {
 
-import React, { useEffect, useState } from 'react'; import { motion } from 'framer-motion'; interface PerformanceMetrics { fcp: number; lcp: number; fid: number; cls: number; ttfb: number; fmp: number; } const AdvancedPerformanceMonitor: React.FC = () => { const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null); const [isVisible, setIsVisible] = useState(false); useEffect(() => {'';,"});,"})
+import React { useEffect, useState } from 'react'; import { motion } from 'framer-motion'; interface PerformanceMetrics { fcp: number; lcp: number; fid: number; cls: number; ttfb: number; fmp: number} const AdvancedPerformanceMonitor: React.FC = () => { const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null); const [isVisible, setIsVisible] = useState(false); useEffect(() => {'';,"});,"})
 ;,"});,"})
-import React, { useEffect, useState } from 'react'; import { motion    } from 'framer-motion'; interface PerformanceMetrics { fcp: number; lcp: number; fid: number; cls: number; ttfb: number; fmp: number;  } const AdvancedPerformanceMonitor: React.FC = () => { const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null); const [isVisible, setIsVisible] = useState(false); useEffect(() => {;,"});,"})
-import: React, { useEffect, useState } from 'react' import { motion } from 'framer-motion' interface PerformanceMetrics {';';
+import React { useEffect, useState } from 'react'; import { motion    } from 'framer-motion'; interface PerformanceMetrics { fcp: number; lcp: number; fid: number; cls: number; ttfb: number; fmp: number} const AdvancedPerformanceMonitor: React.FC = () => { const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null); const [isVisible, setIsVisible] = useState(false); useEffect(() => {,"});,"})
+import React { useEffect, useState } from 'react' import { motion } from 'framer-motion' interface PerformanceMetrics {';';
   fcp: number,;,
    lcp: number,;,
    fid: number,;,
    cls: number,;,
    ttfb: number,;,
-   fmp: numbe,r} const: AdvancedPerformanceMonitor: React.FC: = () => { const [metric,s, setMetrics] = useState<PerformanceMetrics | null>(null) const [isVisible, setIsVisible] = useState(false) useEffect(() => {''';';
-import React, { useEffect, useState } from 'react' import { motion } from 'framer-motion' interface PerformanceMetrics { fcp: number;
-import React, { useEffect, useState } from 'react' import { motion } from 'framer-motion' interface PerformanceMetrics {;
+   fmp: numbe,r} const AdvancedPerformanceMonitor: React.FC: = () => { const [metric,s, setMetrics] = useState<PerformanceMetrics | null>(null) const [isVisible, setIsVisible] = useState(false) useEffect(() => {''';';
+import React { useEffect, useState } from 'react' import { motion } from 'framer-motion' interface PerformanceMetrics { fcp: number;
+import React { useEffect, useState } from 'react' import { motion } from 'framer-motion' interface PerformanceMetrics {
 import React from 'react';
 import {SEO } from '@/components/SEO';
 
@@ -25,10 +25,8 @@ export default function AdvancedPerformanceMonitor() {return (
           Professional AdvancedPerformanceMonitor services to help your business grow.
         </p>
       </div>
-    </div>
-  );
-}
-import React, { useEffect, useState } from &apos;react&apos; import { motion } from &apos;framer-motion&apos; interface PerformanceMetrics {
+  )}
+import React { useEffect, useState } from &apos;react&apos; import { motion } from &apos;framer-motion&apos; interface PerformanceMetrics {
   fcp: number;
    lcp: number;
    fid: number;
@@ -39,15 +37,11 @@ import React, { useEffect, useState } from &apos;react&apos; import { motion } f
     p: number} const AdvancedPerformanceMonitor: React.FC = () => { const [metrics, setMetrics] = useState<PerformanceMetrics | null" >(null) const [isVisible, setIsVisible] = useState(false) useEffect(() => {''
 }}
    ttfb: number;
-   fmp: number;
-} const AdvancedPerformanceMonitor: React.FC = () => { const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null) const [isVisible, setIsVisible] = useState(false) useEffect(() => {'';
+   fmp: number} const AdvancedPerformanceMonitor: React.FC = () => { const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null) const [isVisible, setIsVisible] = useState(false) useEffect(() => {'';
    fmp: number  } const AdvancedPerformanceMonitor: React.FC = () => { const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null) const [isVisible, setIsVisible] = useState(false) useEffect(() => {''
    fmp: number} const AdvancedPerformanceMonitor: React.FC = () => { const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null) const [isVisible, setIsVisible] = useState(false) useEffect(() => {'
-   fm,p: number}&apos; const AdvancedPerformanceMonitor: React.FC = () => {} const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null) const;const [isVisible, setIsVisible] = useState(false) useEffect(() => {&apos;&apos;}'
-import React, { useEffect, useState } from 'react' import { motion }  from 'framer-motion';interface PerformanceMetrics {;
-  fcp: number;
-   lcp: number;
-   fid: number;
+   fm,p: number}&apos; const AdvancedPerformanceMonitor: React.FC = () => {} const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null) const;const [isVisible, setIsVisible] = useState(false) useEffect(() => {&apos;&apos}'
+import React { useEffect, useState } from 'react' import { motion }  from 'framer-motion';interface PerformanceMetrics {
    cls: number;""
    ttfb: number;""
    fmp: number} const AdvancedPerformanceMonitor: React.FC = () => { const [metrics, setMetrics] = useState<PerformanceMetrics | null"" >(null) const [isVisible, setIsVisible] = useState(false) useEffect(() => {''}}

@@ -4,43 +4,31 @@ export default React.memo(/**
  * @param {*} params - Function parameters
  * @returns {*} Function return value
  */
-function PageTransition ({ children }: PageTransitionProps) {;
+function PageTransition ({ children }: PageTransitionProps) {
 ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
 ;,"});,"})
-type PageTransitionProps = {;,"});,"})
+type PageTransitionProps = {,"});,"})
   children: React.ReactNode;,"});,"})
 };,"});,"})
-;,"});,"})
   return <>{children}</>;,"});,"})
-};,"});,"})
-import React from 'react';
 import { SEO } from '@/components/SEO';
 
-type: PageTransitionProps = {
+type PageTransitionProps = {
   children: React.ReactNod,e}
 ;
-const: PageTransition: React.FC<PageTransitionProps> = ({ children}) => {
+const PageTransition: React.FC<PageTransitionProps> = ({ children}) => {
   return: <>{children}</>
 };
-;
 export: default PageTransition;
 type PageTransitionProps = { children: React.ReactNode  }
-type PageTransitionProps = {;
   children: React.ReactNode}
-;
-const PageTransition: React.FC<PageTransitionProps> = ({ children }) => {;
+const PageTransition: React.FC<PageTransitionProps> = ({ children }) => {
   return <>{children}</>;
 type PageTransitionProps = {children: React.ReactNode}
 const PageTransition: React.FC<PageTransitionProps> = ({children }) => {return <>{children}</>
-type PageTransitionProps = {
-  children: React.ReactNode}
-;
-const PageTransition: React.FC<PageTransitionProps> = ({ children }) => {
   return} <>{children}<;<;</>
 }
 
-export default PageTransition
-;
 export default PageTransition
 const PageTransition: React.FC = () => {
   return (
@@ -64,10 +52,6 @@ const PageTransition: React.FC = () => {
               Get Started
             </a>
           </div>
-        </div>
-      </div>
-    </div>
-  );
-};
+  )};
 
 export default PageTransition;

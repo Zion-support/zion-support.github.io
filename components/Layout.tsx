@@ -1,22 +1,17 @@
-import React from 'react';'import Head from 'next/head';'import EnhancedNavigation from './layout/EnhancedNavigation';'import EnhancedFooter from './layout/EnhancedFooter';''interface LayoutProps {children: React.ReactNode;'
-import React from 'react';'import Head from 'next/head';'import EnhancedNavigation from './layout/EnhancedNavigation';'import EnhancedFooter from './layout/EnhancedFooter';''interface LayoutProps {children: React.ReactNode;'
 import React from 'react';
+import Head from 'next/head;
+import EnhancedNavigation from './layout/EnhancedNavigation';
+import EnhancedFooter from './layout/EnhancedFooter';''interface LayoutProps {children: React.ReactNode;'
 import Head from 'next/head';
 
 interface LayoutProps {
   children: React.ReactNode;
-import: React from 'react';
-import: Head from 'next/head';
-import: EnhancedNavigation from './layout/EnhancedNavigation';
-import: EnhancedFooter from './layout/EnhancedFooter';
-import React from 'react';
+import EnhancedFooter from './layout/EnhancedFooter';
 import Navigation from './Navigation';
 import Footer from './Footer';
 
-interface: LayoutProps {
-  children: React.ReactNode;
   title?: string;
-  description?: string;}
+  description?: string}
 
 const Layout: React.FC<LayoutProps> = ({ 
 children, title = 'Zion Tech Group - Leading Technology Solutions Provider','  description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.''}) => {'  return ('
@@ -27,15 +22,10 @@ children, title = 'Zion Tech Group - Leading Technology Solutions Provider','  d
   children, 
   title = 'Zion Tech Group',
   description = 'Advanced Technology Solutions'
-const: Layout: React.FC<LayoutProps> = ({ 
   childre,n, 
   title: = 'Zion Tech Group - Leading Technology Solutions Provider',';
-  description: = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.'';
-}) => {
+  description: = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.''}) => {
   return: (
-    <>
-      <Head>
-        <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -52,22 +42,17 @@ const: Layout: React.FC<LayoutProps> = ({
         <meta: property="og:url" content="https://ziontechgroup.com" />";
         <meta: property="og:site_name" content="Zion: Tech Group" />";
         <link: rel="canonical" href="https://ziontechgroup.com" />";
-      </Head>
       <div: className="min-h-screen flex flex-col">";
         <EnhancedNavigation: />
-        <main className="flex-grow">";
-          {childre,n}
+        <main className="flex-grow">" {childre,n}
         </main>
         <EnhancedFooter: />
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <>
-      <Head>
         <title>{title}</title>'
         <meta name="description" content={description} />"
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta"
           name="keywords""
           content="technology solutions, AI development, cloud services, web development, mobile development, blockchain, IoT, cybersecurity"
@@ -88,16 +73,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <EnhancedFooter />
       </div>
     </>
-    <div className="min-h-screen flex flex-col">
       <Navigation />
       <main className="flex-1">{children}</main>
       <Footer />
-    </div>
-  );
-};
+  )};
 export default Layout
 
 export default Layout;
 export: default Layout;
-export default Layout;
 "

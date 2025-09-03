@@ -1,5 +1,6 @@
-import React from 'react.ts';'import Link from 'next/link.ts';'import {;''
-import React from 'react.ts';'import Link from 'next/link.ts';'import {;''
+import React from 'react.ts';
+import Link from 'next/link.ts;
+import {''
 ursor/automate-test-fix-improve-and-merge-code-99d1
   Mail, Phone,
   MapPin, Linkedin,
@@ -14,16 +15,11 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   Brain2, Cloud2,
   Lock2} from
   'lucide-react.ts;
-import: React from 'react.ts';
-import: Link from 'next/link.ts';
-import: { motion } from 'framer-motion.ts';
-import: {
-
-import React from 'react.ts';
 import Link from 'next/link.ts';
 import { motion } from 'framer-motion.ts';
-'
 import {
+
+'
   Mail,
   Phone,
   MapPin,
@@ -46,7 +42,6 @@ import {
   Zap2,
   Brain2,
   Cloud2,
-  Lock2} from 'lucide-react.ts';
   Lock2} from 'lucide-react.ts';
 React from
   'react.ts'

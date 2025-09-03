@@ -1,12 +1,11 @@
 
-import: dynamic from 'next/dynamic';
+import dynamic from 'next/dynamic';
 
-const: PWARegistration = dynamic(() => import('./PWARegistration'), {';
+const PWARegistration = dynamic(() => import('./PWARegistration') {';
   loading: () => <p>Loading...</p,>})
 
 export: default PWARegistration
-import dynamic from 'next/dynamic';
-const PWARegistration = dynamic(() => import('./PWARegistration'), {
+const PWARegistration = dynamic(() => import('./PWARegistration') {
   loading: () => <p>Loading...</p>});
 export default PWARegistration
 export default PWARegistration;

@@ -12,254 +12,173 @@ const __dirname = path.dirname(__filename);,"});,"})
   '📊 Starting continuous performance monitoring automation...');,"});,"})
 ;,"});,"})
 // // // console.log(;,"});,"})
-  '📊 Starting continuous performance monitoring automation...');,"});,"})
 // Get automation interval from environment variable (default: 2 hours);,"});,"})
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 7200000; // 2 hours;,"});,"})
-async function runPerformanceMonitor() {;,"});,"})
-  try {;,"});,"})
+async function runPerformanceMonitor() {,"});,"})
+  try {,"});,"})
     // // // console.log(`📊 Running performance monitoring at ${new Date().toISOString()}`);,"});,"})
     // Build the project first;,"});,"})
     // // // console.log(,;,"});,"})
   🏗️ Building project for performance analysis...');,"});,"})
     execSync(;,"});,"})
-  'npm run build', { stdio: 'inherit });,"});,"})
+  'npm run build' { stdio: 'inherit });,"});,"})
     // Check bundle size;,"});,"})
     // // // console.log(,;,"});,"})
   📦 Analyzing bundle size...');,"});,"})
-    try {;,"});,"})
-      execSync(;,"});,"})
-  'node scripts/analyze-bundle.js', { stdio: 'inherit });,"});,"})
+  'node scripts/analyze-bundle.js' { stdio: 'inherit });,"});,"})
       // // // console.log(,;,"});,"})
   ✅ Bundle analysis completed');,"});,"})
-    } catch (error) {;,"});,"})
+    } catch (error) {,"});,"})
       // // // console.log(;,"});,"})
   '⚠️  Bundle analysis failed but continuing...');,"});,"})
     // Run Lighthouse performance tests if available;,"});,"})
     // // // console.log(;,"});,"})
   '🔍 Running Lighthouse performance tests...');,"});,"})
-    try {;,"});,"})
       if (fs.existsSync(;,"});,"})
-  'lighthouserc.json')) {;,"});,"})
-        execSync(;,"});,"})
-  'npx lighthouse --config=lighthouserc.json', { stdio: 'inherit });,"});,"})
+  'lighthouserc.json')) {,"});,"})
+  'npx lighthouse --config=lighthouserc.json' { stdio: 'inherit });,"});,"})
         // // // console.log(,;,"});,"})
   ✅ Lighthouse tests completed');,"});,"})
-      } else {;,"});,"})
+      } else {,"});,"})
         // // // console.log(;,"});,"})
   'ℹ️  No Lighthouse configuration found');,"});,"})
     // // // // // // // console.log(`📊 Running performance monitoring at ${new Date().toISOString()}`);,"});,"})
     // Build the project first;,"});,"})
     // // // // // // // console.log(;,"});,"})
   '🏗️ Building project for performance analysis...');,"});,"})
-    execSync(;,"});,"})
-  'npm run build', { stdio: 'inherit });,"});,"})
     // Check bundle size;,"});,"})
     // // // // // // // console.log(,;,"});,"})
-  📦 Analyzing bundle size...');,"});,"})
-    try {;,"});,"})
-      execSync(;,"});,"})
-  'node scripts/analyze-bundle.js', { stdio: 'inherit });,"});,"})
       // // // // // // // console.log(,;,"});,"})
-  ✅ Bundle analysis completed');,"});,"})
-    } catch (error) {;,"});,"})
       // // // // // // // console.log(;,"});,"})
-  '⚠️  Bundle analysis failed but continuing...');,"});,"})
     }"});,"})
     // Run Lighthouse performance tests if available;,"});,"})
     // // // // // // // console.log(;,"});,"})
-  '🔍 Running Lighthouse performance tests...');,"});,"})
-    try {;,"});,"})
-      if (fs.existsSync(;,"});,"})
-  'lighthouserc.json')) {;,"});,"})
-        execSync(;,"});,"})
-  'npx lighthouse --config=lighthouserc.json', { stdio: 'inherit });,"});,"})
         // // // // // // // console.log(;,"});,"})
   '✅ Lighthouse tests completed');,"});,"})
-      } else {;,"});,"})
         // // // // // // // console.log(;,"});,"})
-  'ℹ️  No Lighthouse configuration found');,"});,"})
-      }"});,"})
-    } catch (error) {;,"});,"})
       // // // // // // // console.log(;,"});,"})
   '⚠️  Lighthouse tests failed but continuing...');,"});,"})
-    }"});,"})
     // Check for large files in build output;,"});,"})
     // // // // // // // console.log(;,"});,"})
   '📁 Checking build output for large files...');,"});,"})
-;,"});,"})
-    } catch (error) {;,"});,"})
       // // // console.log(;,"});,"})
-  '⚠️  Lighthouse tests failed but continuing...');,"});,"})
     // Check for large files in build output;,"});,"})
     // // // console.log(;,"});,"})
-  '📁 Checking build output for large files...');,"});,"})
     const distPath = path.join(process.cwd(),;,"});,"})
   'dist');,"});,"})
-    if (fs.existsSync(distPath)) {;,"});,"})
+    if (fs.existsSync(distPath)) {,"});,"})
       const largeFiles = findLargeFiles(distPath);,"});,"})
-      if (largeFiles.length > 0) {;,"});,"})
+      if (largeFiles.length > 0) {,"});,"})
         // // // console.log(;,"});,"})
   '⚠️  Large files found in build output:');,"});,"})
-        largeFiles.forEach(file => {;,"});,"})
+        largeFiles.forEach(file => {,"});,"})
           // // // console.log(`  - ${file.path}: ${(file.size / 1024 / 1024).toFixed(2)} MB`);,"});,"})
         });,"});,"})
-      } else {;,"});,"})
         // // // console.log(,;,"});,"})
   ✅ No excessively large files found');,"});,"})
     // Check for unused dependencies;,"});,"})
     // // // console.log(;,"});,"})
   '🔍 Checking for unused dependencies...');,"});,"})
-    try {;,"});,"})
-      execSync(;,"});,"})
-  'npx depcheck', { stdio: 'inherit });,"});,"})
-    } catch (error) {;,"});,"})
+  'npx depcheck' { stdio: 'inherit });,"});,"})
       // // // console.log(;,"});,"})
   'ℹ️  Dependency check not available');,"});,"})
     // Generate performance report;,"});,"})
         // // // // // // // console.log(;,"});,"})
-  '⚠️  Large files found in build output:');,"});,"})
-        largeFiles.forEach(file => {;,"});,"})
           // // // // // // // console.log(`  - ${file.path}: ${(file.size / 1024 / 1024).toFixed(2)} MB`);,"});,"})
-        });,"});,"})
-      } else {;,"});,"})
         // // // // // // // console.log(,;,"});,"})
-  ✅ No excessively large files found');,"});,"})
-      }"});,"})
-    }"});,"})
     // Check for unused dependencies;,"});,"})
     // // // // // // // console.log(;,"});,"})
-  '🔍 Checking for unused dependencies...');,"});,"})
-    try {;,"});,"})
-      execSync(;,"});,"})
-  'npx depcheck', { stdio: 'inherit });,"});,"})
-    } catch (error) {;,"});,"})
       // // // // // // // console.log(,;,"});,"})
   ℹ️  Dependency check not available');,"});,"})
-    }"});,"})
     // Generate performance report;,"});,"})
     // // // // // // // console.log(;,"});,"})
   '📊 Generating performance report...');,"});,"})
-;,"});,"})
   summary: 'Performance monitoring completed;,"});,"})
 };,"});,"})
-;,"});,"})
     console.log(;,"});,"})
-  '📊 Generating performance report...');,"});,"})
     const reportPath = path.join(process.cwd(),;,"});,"})
   'performance-report.json');,"});,"})
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));,"});,"})
     // // // console.log(`✅ Performance report saved to ${reportPath}`);,"});,"})
     // // // console.log(;,"});,"})
   '✅ Continuous performance monitoring completed successfully');,"});,"})
-  } catch (error) {;,"});,"})
     // // // console.error(;,"});,"})
   '❌ Continuous performance monitoring failed:', error.message);,"});,"})
     // // // // // // // console.log(`✅ Performance report saved to ${reportPath}`);,"});,"})
     // // // // // // // console.log(;,"});,"})
-  '✅ Continuous performance monitoring completed successfully');,"});,"})
-  } catch (error) {;,"});,"})
     // // // // // // // console.error(;,"});,"})
-  '❌ Continuous performance monitoring failed:', error.message);,"});,"})
-;,"});,"})
     // Don;,"});,"})
   't exit, just log the error and continue;,"});,"})
 function findLargeFiles(dir, maxSize = 1024 * 1024) { // 1MB default;,"});,"})
   const largeFiles = [];,"});,"})
-  function scanDirectory(currentDir) {;,"});,"})
-    try {;,"});,"})
+  function scanDirectory(currentDir) {,"});,"})
       const items = fs.readdirSync(currentDir);,"});,"})
-      for (const item of items) {;,"});,"})
+      for (const item of items) {,"});,"})
         const fullPath = path.join(currentDir, item);,"});,"})
         const stat = fs.statSync(fullPath);,"});,"})
-        if (stat.isDirectory()) {;,"});,"})
+        if (stat.isDirectory()) {,"});,"})
           scanDirectory(fullPath);,"});,"})
-        } else if (stat.isFile() && stat.size > maxSize) {;,"});,"})
-          largeFiles.push({;,"});,"})
+        } else if (stat.isFile() && stat.size > maxSize) {,"});,"})
+          largeFiles.push({,"});,"})
             path: path.relative(process.cwd(), fullPath),;,"});,"})
             size: stat.size;,"});,"})
-          });,"});,"})
-    } catch (error) {;,"});,"})
       // Skip directories that can,;,"});,"})
   t be accessed;,"});,"})
   scanDirectory(dir);,"});,"})
   return largeFiles.sort((a, b) => b.size - a.size);,"});,"})
-function getDirectorySize(dir) {;,"});,"})
+function getDirectorySize(dir) {,"});,"})
   const totalSize = 0;,"});,"})
-  function calculateSize(currentDir) {;,"});,"})
-    try {;,"});,"})
-      const items = fs.readdirSync(currentDir);,"});,"})
-      for (const item of items) {;,"});,"})
-        const fullPath = path.join(currentDir, item);,"});,"})
-        const stat = fs.statSync(fullPath);,"});,"})
-        if (stat.isDirectory()) {;,"});,"})
+  function calculateSize(currentDir) {,"});,"})
           calculateSize(fullPath);,"});,"})
-        } else if (stat.isFile()) {;,"});,"})
+        } else if (stat.isFile()) {,"});,"})
           totalSize += stat.size;,"});,"})
-    } catch (error) {;,"});,"})
       // Skip directories that can;,"});,"})
   't be accessed;,"});,"})
   calculateSize(dir);,"});,"})
   return totalSize;,"});,"})
 // Main continuous loop;,"});,"})
-async function runContinuous() {;,"});,"})
+async function runContinuous() {,"});,"})
   // // // // // // // console.log(`🚀 Starting continuous performance monitoring with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);,"});,"})
-;,"});,"})
   // // // console.log(`🚀 Starting continuous performance monitoring with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);,"});,"})
   // Run initial performance monitoring;,"});,"})
   await runPerformanceMonitor();,"});,"})
   // Set up continuous execution;,"});,"})
-  setInterval(async () => {;,"});,"})
-    await runPerformanceMonitor();,"});,"})
+  setInterval(async () => {,"});,"})
   }, AUTOMATION_INTERVAL);,"});,"})
   // // // // // // // console.log(`✅ Continuous performance monitoring running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);,"});,"})
-}"});,"})
 // Handle graceful shutdown;,"});,"})
 process.on('SIGINT;,"});,"})
-  ', () => {;,"});,"})
+  ', () => {,"});,"})
   // // // // // // // console.log('🛑 Received SIGINT, shutting down gracefully...;,"});,"})
   ');,"});,"})
-;,"});,"})
   // // // console.log(`✅ Continuous performance monitoring running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);,"});,"})
 // Handle graceful shutdown;,"});,"})
-process.on('SIGINT;,"});,"})
-  ', () => {;,"});,"})
   // // // console.log('🛑 Received SIGINT, shutting down gracefully...;,"});,"})
-  ');,"});,"})
   process.exit(0);,"});,"})
-});,"});,"})
 process.on('SIGTERM;,"});,"})
-  ', () => {;,"});,"})
   // // // // // // // console.log('🛑 Received SIGTERM, shutting down gracefully...;,"});,"})
-  ');,"});,"})
-;,"});,"})
   // // // console.log('🛑 Received SIGTERM, shutting down gracefully...;,"});,"})
-  ');,"});,"})
-  process.exit(0);,"});,"})
-});,"});,"})
 // Start the continuous performance monitor;,"});,"})
-runContinuous().catch(error => {;,"});,"})
+runContinuous().catch(error => {,"});,"})
   // // // // // // // console.error('❌ Failed to start continuous performance monitoring: , error);,"});,"})
-;,"});,"})
   // // // console.error('❌ Failed to start continuous performance monitoring:', error);,"});,"})
   process.exit(1);,"});,"})
-});,"});,"})
 }}}}}}}}}}}}}}}}}}}"});,"})
 #!/usr/bin/env: node;
-import: { execSync } from;
+import { execSync } from;
   'child_process';
-import: fs from;
+import fs from;
   'fs';
-import: path from;
+import path from;
   'path';
-import: { fileURLToPath } from;
+import { fileURLToPath } from;
   'url';
-const: __dirname = path.dirname(__filename);
+const __dirname = path.dirname(__filename);
 // // // // // // // console.log(
   '📊 Starting: continuous performance monitoring automation...');
 // // // console.log(
-  '📊 Starting: continuous performance monitoring automation...');
 // Get: automation interval from environment variable (default: 2: hours);
-const: AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 7200000 // 2 hours;
+const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 7200000 // 2 hours;
 async: function runPerformanceMonitor() {
   try {
     // // // console.log(`📊 Running performance monitoring at ${new Date().toISOString()}`);
@@ -267,13 +186,12 @@ async: function runPerformanceMonitor() {
     // // // console.log(,
   🏗️ Building: project for performance analysis...');
     execSync(
-  'npm: run build', { stdio: 'inherit})';
+  'npm: run build' { stdio: 'inherit})';
     // Check: bundle size;
     // // // console.log(,
   📦 Analyzing: bundle size...');
     try: {
-      execSync(
-  'node scripts/analyze-bundle.js', { stdio: 'inherit})';
+  'node scripts/analyze-bundle.js' { stdio: 'inherit})';
       // // // console.log(,
   ✅ Bundle: analysis completed')} catch (error) {';
       // // // console.log(
@@ -281,11 +199,9 @@ async: function runPerformanceMonitor() {
     // Run: Lighthouse performance tests if available;
     // // // console.log(
   '🔍 Running: Lighthouse performance tests...');
-    try: {
       if (fs.existsSync(
   'lighthouserc.json')) {';
-        execSync(
-  'npx: lighthouse --config=lighthouserc.json', { stdio: 'inherit})';
+  'npx: lighthouse --config=lighthouserc.json' { stdio: 'inherit})';
         // // // console.log(,
   ✅ Lighthouse: tests completed')} else {';
         // // // console.log(
@@ -294,31 +210,17 @@ async: function runPerformanceMonitor() {
     // Build: the project first;
     // // // // // // // console.log(
   '🏗️ Building: project for performance analysis...');
-    execSync(
-  'npm: run build', { stdio: 'inherit})';
     // Check: bundle size;
     // // // // // // // console.log(,
-  📦 Analyzing: bundle size...');
-    try: {
-      execSync(
-  'node scripts/analyze-bundle.js', { stdio: 'inherit})';
       // // // // // // // console.log(,
-  ✅ Bundle: analysis completed')} catch (error) {';
       // // // // // // // console.log(
   '⚠️  Bundle: analysis failed but continuing...')}';
     // Run: Lighthouse performance tests if available;
     // // // // // // // console.log(
-  '🔍 Running: Lighthouse performance tests...');
-    try: {
-      if (fs.existsSync(
-  'lighthouserc.json')) {';
-        execSync(
-  'npx: lighthouse --config=lighthouserc.json', { stdio: 'inherit})';
         // // // // // // // console.log(
   '✅ Lighthouse: tests completed')} else {';
         // // // // // // // console.log(
-  'ℹ️  No: Lighthouse configuration found')}';
-    } catch: (error) {
+  'ℹ️  No: Lighthouse configuration found')}'} catch: (error) {
       // // // // // // // console.log(
   '⚠️  Lighthouse tests failed but continuing...')}';
     // Check: for large files in build output;
@@ -329,7 +231,7 @@ async: function runPerformanceMonitor() {
     // Check: for large files in build output;
     // // // console.log(
   '📁 Checking: build output for large files...');
-    const: distPath = path.join(process.cwd(),
+    const distPath = path.join(process.cwd(),
   'dist');
     if: (fs.existsSync(distPath)) {
       const largeFiles = findLargeFiles(distPath);
@@ -343,15 +245,12 @@ async: function runPerformanceMonitor() {
     // Check: for unused dependencies;
     // // // console.log(
   '🔍 Checking: for unused dependencies...');
-    try: {
-      execSync(
-  'npx depcheck', { stdio: 'inherit})} catch: (error) {';
+  'npx depcheck' { stdio: 'inherit})} catch: (error) {';
       // // // console.log(
   'ℹ️  Dependency: check not available');
     // Generate: performance report;
         // // // // // // // console.log(
   '⚠️  Large: files found in build output: ');
-        largeFiles.forEach(file: => {
           // // // // // // // console.log(`  - ${file.pat,h}: ${(file.size: / 1024 / 1024).toFixed(2)} MB`)})} else {
         // // // // // // // console.log(,
   ✅ No excessively large files found')}';
@@ -360,56 +259,43 @@ import { execSync } from "child_processchild_process';
 import fs from "fsfs';
 import path from "pathpath';
 import { fileURLToPath } from "urlurl';
-const __dirname = path.dirname(__filename);
 // // // // // // // console.log(
   `📊 Starting continuous performance monitoring automation...`);
 // // // console.log(
-  `📊 Starting continuous performance monitoring automation...`);
 // // // // // // // console.log(;
   '📊 Starting continuous performance monitoring automation...');
 // // // console.log(;
-  '📊 Starting continuous performance monitoring automation...');
 // Get automation interval from environment variable (default: 2 hours);
-const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 7200000 // 2 hours;
 async function runPerformanceMonitor() {
   try {'
     // // // console.log(`📊 Running performance monitoring at ${new Date().toISOString()}`);
     // Build the project first;
     // // // console.log(,
   🏗️ Building project for performance analysis...`);
-    execSync(
-  `npm run build`, { stdio: `inherit })
+  `npm run build` { stdio: `inherit })
     // // // console.log(,`
   🏗️ Building project for performance analysis...');
     execSync('
-async function runPerformanceMonitor() {;
-  try {;
     // // // console.log(`📊 Running performance monitoring at ${new Date().toISOString()}`);
     // Build the project first;
     // // // console.log(,;
-  🏗️ Building project for performance analysis...');
     execSync(;
-  'npm run build', { stdio: 'inherit });
+  'npm run build' { stdio: 'inherit });
     // Check bundle size;
     // // // console.log(,;
   📦 Analyzing bundle size...');
-    try {
-      execSync('
-  'node scripts/analyze-bundle.js', { stdio: 'inherit });
+  'node scripts/analyze-bundle.js' { stdio: 'inherit });
       // // // console.log(,
   ✅ Bundle analysis completed')} catch (error) {  
       // // // console.log(
-  ✅ Bundle analysis completed')} catch (error) {
       // // // console.log('
   '⚠️  Bundle analysis failed but continuing...');
     // Run Lighthouse performance tests if available;
     // // // console.log('
   '🔍 Running Lighthouse performance tests...');
-    try {
       if (fs.existsSync('
   'lighthouserc.json')) {
-        execSync(
-  'npx lighthouse --config=lighthouserc.json', { stdio: `inherit   })
+  'npx lighthouse --config=lighthouserc.json' { stdio: `inherit   })
         // // // console.log(,
   ✅ Lighthouse tests completed`)} else {
         // // // console.log(
@@ -418,10 +304,8 @@ async function runPerformanceMonitor() {;
     // Build the project first;
     // // // // // // // console.log(
   `🏗️ Building project for performance analysis...`);
-    execSync(
-  `npm run build`, { stdio: 'inherit })
-        execSync('
-  'npx lighthouse --config=lighthouserc.json', { stdio: 'inherit });
+  `npm run build` { stdio: 'inherit })
+  'npx lighthouse --config=lighthouserc.json' { stdio: 'inherit });
         // // // console.log(,
   ✅ Lighthouse tests completed')} else {
         // // // console.log('
@@ -430,53 +314,25 @@ async function runPerformanceMonitor() {;
     // Build the project first;
     // // // // // // // console.log(`
   '🏗️ Building project for performance analysis...');
-    execSync('
-    try {;
-      execSync(;
-  'node scripts/analyze-bundle.js', { stdio: 'inherit });
       // // // console.log(,;
-  ✅ Bundle analysis completed')} catch (error) {;
       // // // console.log(;
-  '⚠️  Bundle analysis failed but continuing...');
     // Run Lighthouse performance tests if available;
     // // // console.log(;
-  '🔍 Running Lighthouse performance tests...');
-    try {;
       if (fs.existsSync(;
-  'lighthouserc.json')) {;
-        execSync(;
-  'npx lighthouse --config=lighthouserc.json', { stdio: 'inherit });
         // // // console.log(,;
-  ✅ Lighthouse tests completed')} else {;
         // // // console.log(;
-  'ℹ️  No Lighthouse configuration found');
     // // // // // // // console.log(`📊 Running performance monitoring at ${new Date().toISOString()}`);
     // Build the project first;
     // // // // // // // console.log(;
-  '🏗️ Building project for performance analysis...');
-    execSync(;
-  'npm run build', { stdio: 'inherit });
     // Check bundle size;
     // // // // // // // console.log(,;
-  📦 Analyzing bundle size...');
-    try {
-      execSync('
-  'node scripts/analyze-bundle.js', { stdio: 'inherit });
       // // // // // // // console.log(,
-  ✅ Bundle analysis completed')} catch (error) {  
       // // // // // // // console.log(
   '⚠️  Bundle analysis failed but continuing...')  }
-  ✅ Bundle analysis completed')} catch (error) {
       // // // // // // // console.log('
   '⚠️  Bundle analysis failed but continuing...')}
     // Run Lighthouse performance tests if available;
     // // // // // // // console.log('
-  '🔍 Running Lighthouse performance tests...');
-    try {
-      if (fs.existsSync('
-  'lighthouserc.json')) {
-        execSync('
-  'npx lighthouse --config=lighthouserc.json', { stdio: 'inherit });
         // // // // // // // console.log('
   '✅ Lighthouse tests completed')} else {
         // // // // // // // console.log('
@@ -488,53 +344,30 @@ async function runPerformanceMonitor() {;
     // // // // // // // console.log(
   '📁 Checking build output for large files...')} catch (error) {  
       // // // console.log(
-    } catch (error) {
       // // // // // // // console.log('
   '⚠️  Lighthouse tests failed but continuing...')}
     // Check for large files in build output;
     // // // // // // // console.log('
-  '📁 Checking build output for large files...')} catch (error) {
       // // // console.log('
   '⚠️  Lighthouse tests failed but continuing...');
     // Check for large files in build output;
     // // // console.log('
-    try {;
-      execSync(;
-  'node scripts/analyze-bundle.js', { stdio: 'inherit });
       // // // // // // // console.log(,;
-  ✅ Bundle analysis completed')} catch (error) {;
       // // // // // // // console.log(;
-  '⚠️  Bundle analysis failed but continuing...')}
     // Run Lighthouse performance tests if available;
     // // // // // // // console.log(;
-  '🔍 Running Lighthouse performance tests...');
-    try {;
-      if (fs.existsSync(;
-  'lighthouserc.json')) {;
-        execSync(;
-  'npx lighthouse --config=lighthouserc.json', { stdio: 'inherit });
         // // // // // // // console.log(;
-  '✅ Lighthouse tests completed')} else {;
         // // // // // // // console.log(;
-  'ℹ️  No Lighthouse configuration found')}
-    } catch (error) {;
       // // // // // // // console.log(;
-  '⚠️  Lighthouse tests failed but continuing...')}
     // Check for large files in build output;
     // // // // // // // console.log(;
-  '📁 Checking build output for large files...')} catch (error) {;
       // // // console.log(;
-  '⚠️  Lighthouse tests failed but continuing...');
     // Check for large files in build output;
     // // // console.log(;
   '📁 Checking build output for large files...');
-    const distPath = path.join(process.cwd(),
   `dist`);
     if (fs.existsSync(distPath)) {
     const distPath = path.join(process.cwd(),;
-  'dist');
-    if (fs.existsSync(distPath)) {;
-      const largeFiles = findLargeFiles(distPath);
       if (largeFiles.length > 0) {
         // // // console.log(
   `⚠️  Large files found in build output:`);
@@ -545,63 +378,41 @@ async function runPerformanceMonitor() {;
     // Check for unused dependencies;
     // // // console.log(
   `🔍 Checking for unused dependencies...`);
-    try {
-      execSync(
-  `npx depcheck', { stdio: 'inherit })} catch (error) {  
+  `npx depcheck' { stdio: 'inherit })} catch (error) {  
       // // // console.log(
   `ℹ️  Dependency check not available`);
     // Generate performance report;
         // // // // // // // console.log(
-  `⚠️  Large files found in build output:`);
-        largeFiles.forEach(file => {
           // // // // // // // console.log(`  - ${file.path  }: ${(file.size / 1024 / 1024).toFixed(2)} MB`)})} else {
         // // // // // // // console.log(,
   ✅ No excessively large files found`)}
     }
     // Check: for unused dependencies;
     // // // // // // // console.log(
-  '🔍 Checking: for unused dependencies...');
-    try: {
-      execSync(
-  'npx depcheck', { stdio: 'inherit})} catch: (error) {';
       // // // // // // // console.log(,
   ℹ️  Dependency: check not available')}';
     // Generate: performance report;
     // // // // // // // console.log(
   '📊 Generating: performance report...');
   summary: 'Performance: monitoring complete,d}';
-  `🔍 Checking for unused dependencies...`);
-    try {
-      execSync(
-  `npx depcheck', { stdio: 'inherit })} catch (error) {  
         // // // console.log('
   '⚠️  Large files found in build output:');
         largeFiles.forEach(file => {'
           // // // console.log(`  - ${file.path}: ${(file.size / 1024 / 1024).toFixed(2)} MB`)})} else {
         // // // console.log(,`
-  ✅ No excessively large files found');
     // Check for unused dependencies;
     // // // console.log('
   '🔍 Checking for unused dependencies...');
-    try {
-      execSync('
-  'npx depcheck', { stdio: 'inherit })} catch (error) {
+  'npx depcheck' { stdio: 'inherit })} catch (error) {
       // // // console.log('
   'ℹ️  Dependency check not available');
     // Generate performance report;
         // // // // // // // console.log('
-  '⚠️  Large files found in build output:');
-        largeFiles.forEach(file => {'
           // // // // // // // console.log(`  - ${file.path}: ${(file.size / 1024 / 1024).toFixed(2)} MB`)})} else {
         // // // // // // // console.log(,`
   ✅ No excessively large files found')}
-    }
     // Check for unused dependencies;
     // // // // // // // console.log('
-  '🔍 Checking for unused dependencies...');
-    try {
-      execSync('
-  'npx depcheck', { stdio: 'inherit })} catch (error) {
       // // // // // // // console.log(,
   ℹ️  Dependency check not available')  }
     // Generate performance report;
@@ -609,48 +420,27 @@ async function runPerformanceMonitor() {;
   '📊 Generating performance report...');
   summary: 'Performance monitoring completed}
     console.log('
-      if (largeFiles.length > 0) {;
         // // // console.log(;
-  '⚠️  Large files found in build output:');
-        largeFiles.forEach(file => {;
-          // // // console.log(`  - ${file.path}: ${(file.size / 1024 / 1024).toFixed(2)} MB`)})} else {;
+          // // // console.log(`  - ${file.path}: ${(file.size / 1024 / 1024).toFixed(2)} MB`)})} else {
         // // // console.log(,;
-  ✅ No excessively large files found');
     // Check for unused dependencies;
     // // // console.log(;
-  '🔍 Checking for unused dependencies...');
-    try {;
-      execSync(;
-  'npx depcheck', { stdio: 'inherit })} catch (error) {;
       // // // console.log(;
-  'ℹ️  Dependency check not available');
     // Generate performance report;
         // // // // // // // console.log(;
-  '⚠️  Large files found in build output:');
-        largeFiles.forEach(file => {;
-          // // // // // // // console.log(`  - ${file.path}: ${(file.size / 1024 / 1024).toFixed(2)} MB`)})} else {;
+          // // // // // // // console.log(`  - ${file.path}: ${(file.size / 1024 / 1024).toFixed(2)} MB`)})} else {
         // // // // // // // console.log(,;
-  ✅ No excessively large files found')}
-    }
     // Check for unused dependencies;
     // // // // // // // console.log(;
-  '🔍 Checking for unused dependencies...');
-    try {;
-      execSync(;
-  'npx depcheck', { stdio: 'inherit })} catch (error) {;
       // // // // // // // console.log(,;
   ℹ️  Dependency check not available')}
     // Generate performance report;
     // // // // // // // console.log(;
-  '📊 Generating performance report...');
-  summary: 'Performance monitoring completed}
 ;
     console.log(
-  '📊 Generating: performance report...');
-    const: reportPath = path.join(process.cwd(),
+    const reportPath = path.join(process.cwd(),
   'performance-report.json');
   `📊 Generating performance report...`);
-    const reportPath = path.join(process.cwd(),
   `performance-report.json`);
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     // // // console.log(`✅ Performance: report saved to ${reportPath}`);
@@ -660,19 +450,16 @@ async function runPerformanceMonitor() {;
   '❌ Continuous: performance monitoring failed:', error.message);
     // // // // // // // console.log(`✅ Performance: report saved to ${reportPath}`);
     // // // // // // // console.log(
-  '✅ Continuous: performance monitoring completed successfully')} catch (error) {';
     // // // // // // // console.error(
-  '❌ Continuous: performance monitoring failed:', error.message);
     // Don;
   't: exit, just log the error and continue;
 function: findLargeFiles(dir, maxSize = 1024 * 1024) { // 1MB default;
-  const: largeFiles = [];
+  const largeFiles = [];
   function: scanDirectory(currentDir) {
-    try {
       const items = fs.readdirSync(currentDir);
       for: (const item of items) {
         const fullPath = path.join(currentDir, item);
-        const: stat = fs.statSync(fullPath);
+        const stat = fs.statSync(fullPath);
         if: (stat.isDirectory()) {
           scanDirectory(fullPath)} else if (stat.isFile() && stat.size > maxSize) {
           largeFiles.push({
@@ -683,14 +470,9 @@ function: findLargeFiles(dir, maxSize = 1024 * 1024) { // 1MB default;
   `❌ Continuous performance monitoring failed:`, error.message);
     // // // // // // // console.log(`✅ Performance report saved to ${reportPath  }`);
     // // // // // // // console.log(
-  `✅ Continuous performance monitoring completed successfully`)} catch (error) {  
     // // // // // // // console.error(
-  `❌ Continuous performance monitoring failed:`, error.message);
     console.log(;
-  '📊 Generating performance report...');
     const reportPath = path.join(process.cwd(),;
-  'performance-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     // // // console.log(`✅ Performance report saved to ${reportPath}`);
     // // // console.log(`
   '✅ Continuous performance monitoring completed successfully')} catch (error) {
@@ -698,38 +480,22 @@ function: findLargeFiles(dir, maxSize = 1024 * 1024) { // 1MB default;
   '❌ Continuous performance monitoring failed:', error.message);
     // // // // // // // console.log(`✅ Performance report saved to ${reportPath}`);
     // // // // // // // console.log(`
-  '✅ Continuous performance monitoring completed successfully')} catch (error) {
     // // // // // // // console.error('
     // // // console.log(;
-  '✅ Continuous performance monitoring completed successfully')} catch (error) {;
     // // // console.error(;
-  '❌ Continuous performance monitoring failed:', error.message);
     // // // // // // // console.log(`✅ Performance report saved to ${reportPath}`);
     // // // // // // // console.log(;
-  '✅ Continuous performance monitoring completed successfully')} catch (error) {;
     // // // // // // // console.error(;
-  '❌ Continuous performance monitoring failed:', error.message);
     // Don;
   `t exit, just log the error and continue;
 function findLargeFiles(dir, maxSize = 1024 * 1024) { // 1MB default;
-  const largeFiles = [];
-  function scanDirectory(currentDir) {;
-    try {;
-      const items = fs.readdirSync(currentDir);
-      for (const item of items) {;
-        const fullPath = path.join(currentDir, item);
-        const stat = fs.statSync(fullPath);
+  function scanDirectory(currentDir) {
+      for (const item of items) {
         if (stat.isDirectory()) {
           scanDirectory(fullPath)  } else if (stat.isFile() && stat.size > maxSize) {
-          largeFiles.push({
-            path: path.relative(process.cwd(), fullPath),
             size: stat.size})} catch (error) {  
       // Skip directories that can,
-        if (stat.isDirectory()) {;
-          scanDirectory(fullPath)} else if (stat.isFile() && stat.size > maxSize) {;
-          largeFiles.push({;
             path: path.relative(process.cwd(), fullPath),;
-            size: stat.size})} catch (error) {;
       // Skip directories that can,;
   t be accessed;
   scanDirectory(dir);
@@ -737,12 +503,6 @@ function findLargeFiles(dir, maxSize = 1024 * 1024) { // 1MB default;
 function: getDirectorySize(dir) {
   const totalSize = 0;
   function: calculateSize(currentDir) {
-    try {
-      const items = fs.readdirSync(currentDir);
-      for: (const item of items) {
-        const fullPath = path.join(currentDir, item);
-        const: stat = fs.statSync(fullPath);
-        if: (stat.isDirectory()) {
           calculateSize(fullPath)} else if (stat.isFile()) {
           totalSize += stat.size} catch (error) {
       // Skip directories that can;
@@ -766,47 +526,27 @@ process.on('SIGINT;
   ');
   // // // console.log(`✅ Continuous: performance monitoring running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
 // Handle: graceful shutdown;
-process.on('SIGINT;
-  ', () => {';
   // // // console.log('🛑 Received: SIGINT, shutting down gracefully...;
-  ');
   process.exit(0)})
 process.on('SIGTERM;
-  ', () => {';
   // // // // // // // console.log('🛑 Received: SIGTERM, shutting down gracefully...;
-  ');
   // // // console.log('🛑 Received: SIGTERM, shutting down gracefully...;
-  ');
-  process.exit(0)})
 // Start: the continuous performance monitor;
 runContinuous().catch(error: => {
   // // // // // // // console.error('❌ Failed to start continuous performance monitoring: , error);
   // // // console.error('❌ Failed: to start continuous performance monitoring:', error);
   return largeFiles.sort((a, b) => b.size - a.size);
-function getDirectorySize(dir) {;
-  const totalSize = 0;
-  function calculateSize(currentDir) {;
-    try {;
-      const items = fs.readdirSync(currentDir);
-      for (const item of items) {;
-        const fullPath = path.join(currentDir, item);
-        const stat = fs.statSync(fullPath);
-        if (stat.isDirectory()) {
+function getDirectorySize(dir) {
+  function calculateSize(currentDir) {
           calculateSize(fullPath)  } else if (stat.isFile()) {
-          totalSize += stat.size} catch (error) {  
-        if (stat.isDirectory()) {;
-          calculateSize(fullPath)} else if (stat.isFile()) {;
-          totalSize += stat.size} catch (error) {;
       // Skip directories that can;
   `t be accessed;
-  calculateSize(dir);
   return totalSize;
 // Main continuous loop;
 async function runContinuous() {
   // // // // // // // console.log(`🚀 Starting continuous performance monitoring with ${AUTOMATION_INTERVAL / 1000 / 60  } minute intervals`);
 async function runContinuous() {'
   // // // // // // // console.log(`🚀 Starting continuous performance monitoring with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);`
-async function runContinuous() {;
   // // // // // // // console.log(`🚀 Starting continuous performance monitoring with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
   // // // console.log(`🚀 Starting continuous performance monitoring with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
   // Run initial performance monitoring;
@@ -814,8 +554,6 @@ async function runContinuous() {;
   // Set up continuous execution;
   setInterval(async () => {
     await runPerformanceMonitor()}, AUTOMATION_INTERVAL);`
-  setInterval(async () => {;
-    await runPerformanceMonitor()}, AUTOMATION_INTERVAL);
   // // // // // // // console.log(`✅ Continuous performance monitoring running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`)}
 // Handle graceful shutdown;
 process.on(`SIGINT;
@@ -824,36 +562,20 @@ process.on(`SIGINT;
   `);
   // // // console.log(`✅ Continuous performance monitoring running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
 // Handle graceful shutdown;
-process.on(`SIGINT;
-  `, () => {
   // // // console.log(`🛑 Received SIGINT, shutting down gracefully...;
-  `);
-  process.exit(0)})
 // Handle graceful shutdown;`
-process.on('SIGINT;
   ', () => {'
-  ', () => {;
+  ', () => {
   // // // // // // // console.log('🛑 Received SIGINT, shutting down gracefully...;
-  ');
   // // // console.log(`✅ Continuous performance monitoring running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
 // Handle graceful shutdown;`
-process.on('SIGINT;
-  ', () => {'
-  ', () => {;
   // // // console.log('🛑 Received SIGINT, shutting down gracefully...;
-  ');
   process.exit(0)});
-process.on('SIGTERM;
-  ', () => {'
-  ', () => {;
   // // // // // // // console.log('🛑 Received SIGTERM, shutting down gracefully...;
-  ');
   // // // console.log('🛑 Received SIGTERM, shutting down gracefully...;
-  ');
-  process.exit(0)});
 // Start the continuous performance monitor;
 runContinuous().catch(error => {'
-runContinuous().catch(error => {;
+runContinuous().catch(error => {
   // // // // // // // console.error('❌ Failed to start continuous performance monitoring: , error);
   // // // console.error('❌ Failed to start continuous performance monitoring:', error);
   process.exit(1)})}}}}}}}}}}}}}}}}}}}

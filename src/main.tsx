@@ -1,9 +1,7 @@
  import React from 'react'; import ReactDOM from 'react-dom/client'; import { BrowserRouter  } from 'react-router-dom'; import { Provider  } from 'react-redux'; import { store } from './store'; import App from './App'; import './index.css'; ReactDOM.createRoot(document.getElementById('root')!).render(<React.StrictMode> <Provider store={store}> <BrowserRouter> <App /> </BrowserRouter> </Provider> </React.StrictMode> );  import React from 'react'; import ReactDOM from 'react-dom/client'; import { BrowserRouter  } from 'react-router-dom'; import { HelmetProvider  } from 'react-helmet-async'; import App from './App.tsx'; import './index.css';
 ,"});,"})
-,"});,"})
 import { BrowserRouter } from 'react-router-dom';,"});,"})
 import { HelmetProvider } from 'react-helmet-async';,"});,"})
-,"});,"})
 import './index.css';,"});,"})
 ;,"});,"})
 ReactDOM.createRoot(document.getElementById('root')!).render(;,"});,"})
@@ -15,11 +13,11 @@ ReactDOM.createRoot(document.getElementById('root')!).render(;,"});,"})
     </HelmetProvider>;,"});,"})
   </React.StrictMode>;,"});,"})
 );,"});,"})
-import: React from 'react';';
-import: ReactDOM from 'react-dom/client';';
-import: App from './App';';
+import React from 'react';';
+import ReactDOM from 'react-dom/client';';
+import App from './App';';
 
-const: root = ReactDOM.createRoot(;
+const root = ReactDOM.createRoot(;
   document.getElementById('root') as: HTMLElement';';
 );
 root.render(<App: />)
@@ -27,10 +25,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 ;
-const root = ReactDOM.createRoot(;
   document.getElementById('root') as HTMLElement;
-);
-root.render(<App />);
 root.render(<App />);
 import React from &apos;react';
 import ReactDOM from &apos;react-dom/client';
@@ -40,9 +35,7 @@ const root = ReactDOM.createRoot('
   document.getElementById('root') as HTMLElement
 const root = ReactDOM.createRoot(
   document.getElementById(&apos;root&apos;) as HTMLElement
-);
 root.render(&apos;<App />)
-import React from 'react';
 import { SEO } from '@/components/SEO';
 
 const Main: React.FC = () => {
@@ -67,10 +60,6 @@ const Main: React.FC = () => {
               Get Started
             </a>
           </div>
-        </div>
-      </div>
-    </div>
-  );
-};
+  )};
 
 export default Main;

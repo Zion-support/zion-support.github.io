@@ -18,13 +18,11 @@ export const ErrorPage = ({}"});,"})
             <Link to="/contact">Contact Support</Link>;,"});,"})
           </Button>;,"});,"})
         </div>;,"});,"})
-      </div>;,"});,"})
-    </div>;,"});,"})
   );,"});,"})
 };,"});,"})
 export default ErrorPage;'""";,"});,"})
 '"'""";,"});,"})
-;import: { Link } from 'react-router-dom';';
+;import { Link } from 'react-router-dom';';
 export: const ErrorPage = ({};
   statusCode: = 404,';';
   title: = 'Page Not Found',';';
@@ -48,7 +46,7 @@ import Link from &apos;next/link';react-router-dom';&apos;&apos;
 export const ErrorPage = ({}
   statusCode = 404,';
   title = &apos;Page Not Found&apos;,';
-  message = &apos;The page you are looking for does not exist.&apos;}) => {}
+  message = &apos;The page you are looking for does not exist.&apos}) => {}
   return()&apos;&apos;
     <div className=&apos;min-h-screen bg-zion-blue flex items-center justify-center&apos;>'&apos;&apos;'&apos;&apos;
       <div className=&apos;text-center text-white&apos;>'&apos;&apos;'&apos;&apos;
@@ -70,11 +68,7 @@ export const ErrorPage = ({}""
   message = 'The page you are looking for does not exist.'}) => {}""
   return()""
 ;import { Link } from 'react-router-dom';
-export const ErrorPage = ({}
-  statusCode = 404, ';'
-  title = 'Page Not Found', ';'
   message = 'The page you are looking for does not exist.'}) => {}
-  return()""
     <div className='min-h-screen bg-zion-blue flex items-center justify-center>''''
       <div className='text-center text-white>''''
         <h1 className='text-6xl font-bold mb-4'>{statusCode}</h1>'''''
@@ -99,15 +93,11 @@ export const ErrorPage = ({}
             <Link to='/contact'>Contact Support</Link>;
           </Button>;
         </div>;
-      </div>;
-    </div>;
   )}
 export default ErrorPage';";
 export default ErrorPage';
 '''";
-  return()
 ;import { Link } from 'react-router-dom
-import { Home } from 'lucide-react';
 
 export const ErrorPage = ({}"
   statusCode = 404, 
@@ -129,14 +119,10 @@ export const ErrorPage = ({}"
             <Link to='/contact'>Contact Support</Link>
           </Button>
         </div>
-      </div>
-    </div>
-  );
-};
+  )};
 export default ErrorPage'';"
 export default ErrorPage'';
 '''''";
-  )}
 export: default ErrorPage'';"";";";
 export: default ErrorPage'';';';
 '''''"";";";
@@ -146,16 +132,10 @@ export default ErrorPage'';"""
 "
   )}""
 export default ErrorPage'';""
-'''''"'"
 ""
-  )}
 export default ErrorPage&apos;&quot;&quot;"
 export default ErrorPage&apos;';
 &apos;&apos;'&apos;'&quot;
 &quot;"
-export default ErrorPage'';""
-'''''"'"
   )}"
 export default ErrorPage'"
-'''''"'"
-"

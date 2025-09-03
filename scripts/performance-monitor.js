@@ -14,119 +14,80 @@ import { execSync } from;,"});,"})
 ;,"});,"})
 const __filename = fileURLToPath(import.meta.url);,"});,"})
 const __dirname = path.dirname(__filename);,"});,"})
-;,"});,"})
 console.log(;,"});,"})
   '📊 Performance Monitor Started');,"});,"})
-;,"});,"})
-class PerformanceMonitor {;,"});,"})
-  constructor() {;,"});,"})
+class PerformanceMonitor {,"});,"})
+  constructor() {,"});,"})
     this.projectRoot = path.resolve(__dirname,..;,"});,"})
   ');,"});,"})
-    this.metrics = {;,"});,"})
+    this.metrics = {,"});,"})
       timestamp: new Date().toISOString(),;,"});,"})
       system: {},;,"});,"})
       application: {},;,"});,"})
       build: {}"});,"})
     };,"});,"})
   }"});,"})
-;,"});,"})
-  async monitor() {;,"});,"})
-    try {;,"});,"})
+  async monitor() {,"});,"})
+    try {,"});,"})
       console.log(,;,"});,"})
   🔍 Collecting performance metrics...;,"});,"})
-  ');,"});,"})
-;,"});,"})
       // Collect system metrics;,"});,"})
       await this.collectSystemMetrics();,"});,"})
-;,"});,"})
       // Collect application metrics;,"});,"})
       await this.collectApplicationMetrics();,"});,"})
-;,"});,"})
       // Collect build metrics;,"});,"})
       await this.collectBuildMetrics();,"});,"})
-;,"});,"})
       // Save metrics;,"});,"})
       await this.saveMetrics();,"});,"})
-;,"});,"})
       // Display summary;,"});,"})
       this.displaySummary();,"});,"})
-;,"});,"})
       console.log('✅ Performance monitoring completed;,"});,"})
-  ');,"});,"})
-;,"});,"})
-    } catch (error) {;,"});,"})
+    } catch (error) {,"});,"})
       console.error('❌ Error during performance monitoring: , error.message);,"});,"})
-    }"});,"})
-  }"});,"})
-;,"});,"})
-  async collectSystemMetrics() {;,"});,"})
-    try {;,"});,"})
+  async collectSystemMetrics() {,"});,"})
       console.log('💻 Collecting system metrics...;,"});,"})
-  ');,"});,"})
-;,"});,"})
       // Memory usage;,"});,"})
       const memoryInfo = process.memoryUsage();,"});,"})
-      this.metrics.system.memory = {;,"});,"})
+      this.metrics.system.memory = {,"});,"})
         rss: Math.round(memoryInfo.rss / 1024 / 1024), // MB;,"});,"})
         heapUsed: Math.round(memoryInfo.heapUsed / 1024 / 1024), // MB;,"});,"})
         heapTotal: Math.round(memoryInfo.heapTotal / 1024 / 1024), // MB;,"});,"})
         external: Math.round(memoryInfo.external / 1024 / 1024) // MB;,"});,"})
-      };,"});,"})
-;,"});,"})
       // CPU usage;,"});,"})
       const startUsage = process.cpuUsage();,"});,"})
       await this.sleep(100); // Wait 100ms;,"});,"})
       const endUsage = process.cpuUsage(startUsage);,"});,"})
-;,"});,"})
-      this.metrics.system.cpu = {;,"});,"})
+      this.metrics.system.cpu = {,"});,"})
         user: Math.round(endUsage.user / 1000), // ms;,"});,"})
         system: Math.round(endUsage.system / 1000) // ms;,"});,"})
-      };,"});,"})
-;,"});,"})
       // Process info;,"});,"})
-      this.metrics.system.process = {;,"});,"})
+      this.metrics.system.process = {,"});,"})
         pid: process.pid,;,"});,"})
         uptime: Math.round(process.uptime()),;,"});,"})
         version: process.version,;,"});,"})
         platform: process.platform,;,"});,"})
         arch: process.arch;,"});,"})
-      };,"});,"})
-;,"});,"})
-    } catch (error) {;,"});,"})
       console.warn(,;,"});,"})
   ⚠️  Could not collect system metrics: , error.message);,"});,"})
-    }"});,"})
-  }"});,"})
-;,"});,"})
-  async collectApplicationMetrics() {;,"});,"})
-    try {;,"});,"})
+  async collectApplicationMetrics() {,"});,"})
       console.log('📱 Collecting application metrics...;,"});,"})
-  ');,"});,"})
-;,"});,"})
       // Check file sizes;,"});,"})
       const distPath = path.join(this.projectRoot,dist');,"});,"})
-      if (fs.existsSync(distPath)) {;,"});,"})
+      if (fs.existsSync(distPath)) {,"});,"})
         const distSize = this.getDirectorySize(distPath);,"});,"})
         this.metrics.application.buildSize = Math.round(distSize / 1024 / 1024); // MB;,"});,"})
-      }"});,"})
-;,"});,"})
       // Check node_modules size;,"});,"})
       const nodeModulesPath = path.join(this.projectRoot,node_modules;,"});,"})
-  ');,"});,"})
-      if (fs.existsSync(nodeModulesPath)) {;,"});,"})
+      if (fs.existsSync(nodeModulesPath)) {,"});,"})
         const nodeModulesSize = this.getDirectorySize(nodeModulesPath);,"});,"})
         this.metrics.application.dependenciesSize = Math.round(nodeModulesSize / 1024 / 1024); // MB;,"});,"})
-      }"});,"})
-;,"});,"})
       // Check source code size;,"});,"})
       const srcPath = path.join(this.projectRoot,src');,"});,"})
-      if (fs.existsSync(srcPath)) {;,"});,"})
+      if (fs.existsSync(srcPath)) {,"});,"})
         const srcSize = this.getDirectorySize(srcPath);,"});,"})
         this.metrics.application.sourceSize = Math.round(srcSize / 1024); // KB;,"});,"})
-      }"});,"})
-;,"});,"})
       // Count files;,"});,"})
-      this.metrics.application.fileCounts = {;,"});,"})
+      this.metrics.application.fileCounts = {,"});,"})
         source: this.countFiles(srcPath, [;,"});,"})
   '.ts',.tsx;,"});,"})
   ',.js',.jsx;,"});,"})
@@ -138,189 +99,113 @@ class PerformanceMonitor {;,"});,"})
   '), ['.test.js;,"});,"})
   ',.test.ts',.spec.js;,"});,"})
   ',.spec.ts']);,"});,"})
-      };,"});,"})
-;,"});,"})
-    } catch (error) {;,"});,"})
       console.warn(;,"});,"})
   '⚠️  Could not collect application metrics:', error.message);,"});,"})
-    }"});,"})
-  }"});,"})
-;,"});,"})
-  async collectBuildMetrics() {;,"});,"})
-    try {;,"});,"})
-      console.log(;,"});,"})
+  async collectBuildMetrics() {,"});,"})
   '🔨 Collecting build metrics...');,"});,"})
-;,"});,"})
       // Check if build artifacts exist;,"});,"})
-      const buildFiles = [;,"});,"})
+      const buildFiles = [,"});,"})
   'dist/index.html',dist/css;,"});,"})
   ',dist/js',dist/assets;,"});,"})
   ';,"});,"})
       ];,"});,"})
-;,"});,"})
       this.metrics.build.artifacts = {};,"});,"})
-      buildFiles.forEach(file => {;,"});,"})
+      buildFiles.forEach(file => {,"});,"})
         const filePath = path.join(this.projectRoot, file);,"});,"})
         this.metrics.build.artifacts[file] = fs.existsSync(filePath);,"});,"})
       });,"});,"})
-;,"});,"})
       // Check build configuration;,"});,"})
       const viteConfigPath = path.join(this.projectRoot,vite.config.ts');,"});,"})
-      if (fs.existsSync(viteConfigPath)) {;,"});,"})
+      if (fs.existsSync(viteConfigPath)) {,"});,"})
         const viteConfig = fs.readFileSync(viteConfigPath,utf8;,"});,"})
-  ');,"});,"})
-        this.metrics.build.config = {;,"});,"})
+        this.metrics.build.config = {,"});,"})
           hasVite: true,;,"});,"})
           hasBuildOptimizations: viteConfig.includes(,;,"});,"})
   build.rollupOptions;,"});,"})
   '),;,"});,"})
           hasChunkSplitting: viteConfig.includes('build.rollupOptions.output.manualChunks);,"});,"})
-        };,"});,"})
-      }"});,"})
-;,"});,"})
-    } catch (error) {;,"});,"})
-      console.warn(,;,"});,"})
   ⚠️  Could not collect build metrics: , error.message);,"});,"})
-    }"});,"})
-  }"});,"})
-;,"});,"})
-  getDirectorySize(dirPath) {;,"});,"})
+  getDirectorySize(dirPath) {,"});,"})
     let totalSize = 0;,"});,"})
-;,"});,"})
-    try {;,"});,"})
       const items = fs.readdirSync(dirPath);,"});,"})
-;,"});,"})
-      for (const item of items) {;,"});,"})
+      for (const item of items) {,"});,"})
         const fullPath = path.join(dirPath, item);,"});,"})
         const stat = fs.statSync(fullPath);,"});,"})
-;,"});,"})
-        if (stat.isDirectory()) {;,"});,"})
+        if (stat.isDirectory()) {,"});,"})
           totalSize += this.getDirectorySize(fullPath);,"});,"})
-        } else {;,"});,"})
+        } else {,"});,"})
           totalSize += stat.size;,"});,"})
-        }"});,"})
-      }"});,"})
-    } catch (error) {;,"});,"})
       // Skip directories we can't read;,"});,"})
-    }"});,"})
-;,"});,"})
     return totalSize;,"});,"})
-  }"});,"})
-;,"});,"})
-  countFiles(dirPath, extensions) {;,"});,"})
+  countFiles(dirPath, extensions) {,"});,"})
     let count = 0;,"});,"})
-;,"});,"})
-    try {;,"});,"})
-      const items = fs.readdirSync(dirPath);,"});,"})
-;,"});,"})
-      for (const item of items) {;,"});,"})
-        const fullPath = path.join(dirPath, item);,"});,"})
-        const stat = fs.statSync(fullPath);,"});,"})
-;,"});,"})
-        if (stat.isDirectory()) {;,"});,"})
           count += this.countFiles(fullPath, extensions);,"});,"})
-        } else if (extensions.some(ext => item.endsWith(ext))) {;,"});,"})
+        } else if (extensions.some(ext => item.endsWith(ext))) {,"});,"})
           count++;,"});,"})
-        }"});,"})
-      }"});,"})
-    } catch (error) {;,"});,"})
       // Skip directories we can;,"});,"})
   't read;,"});,"})
-    }"});,"})
-;,"});,"})
     return count;,"});,"})
-  }"});,"})
-;,"});,"})
-  async saveMetrics() {;,"});,"})
+  async saveMetrics() {,"});,"})
     const metricsPath = path.join(this.projectRoot,logs',performance-metrics.json;,"});,"})
-  ');,"});,"})
-    try {;,"});,"})
       fs.writeFileSync(metricsPath, JSON.stringify(this.metrics, null, 2));,"});,"})
       console.log(`📊 Metrics saved to: ${metricsPath}`);,"});,"})
-    } catch (error) {;,"});,"})
-      console.warn(,;,"});,"})
   ⚠️  Could not save metrics: , error.message);,"});,"})
-    }"});,"})
-  }"});,"})
-;,"});,"})
-  displaySummary() {;,"});,"})
-    console.log(,;,"});,"})
+  displaySummary() {,"});,"})
   \n📊 Performance Summary: ');,"});,"})
     console.log('─;,"});,"})
   '.repeat(50));,"});,"})
-;,"});,"})
     // System metrics;,"});,"})
     console.log('💻 System:;,"});,"})
-  ');,"});,"})
     console.log(`   Memory: ${this.metrics.system.memory?.heapUsed || 'N/A}MB used / ${this.metrics.system.memory?.heapTotal ||,;,"});,"})
   N/A;,"});,"})
   '}MB total`);,"});,"})
     console.log(`   CPU: ${this.metrics.system.cpu?.user || 'N/A}ms user / ${this.metrics.system.cpu?.system ||,;,"});,"})
-  N/A;,"});,"})
   '}ms system`);,"});,"})
     console.log(`   Uptime: ${this.metrics.system.process?.uptime || 'N/A}s`);,"});,"})
-;,"});,"})
     // Application metrics;,"});,"})
-    console.log(,;,"});,"})
   \n📱 Application: );,"});,"})
-    if (this.metrics.application.buildSize) {;,"});,"})
+    if (this.metrics.application.buildSize) {,"});,"})
       console.log(`   Build size: ${this.metrics.application.buildSize}MB`);,"});,"})
-    }"});,"})
-    if (this.metrics.application.dependenciesSize) {;,"});,"})
+    if (this.metrics.application.dependenciesSize) {,"});,"})
       console.log(`   Dependencies: ${this.metrics.application.dependenciesSize}MB`);,"});,"})
-    }"});,"})
-    if (this.metrics.application.sourceSize) {;,"});,"})
+    if (this.metrics.application.sourceSize) {,"});,"})
       console.log(`   Source code: ${this.metrics.application.sourceSize}KB`);,"});,"})
-    }"});,"})
-;,"});,"})
     // Build metrics;,"});,"})
-    console.log(,;,"});,"})
   \n🔨 Build: );,"});,"})
     const artifactCount = Object.values(this.metrics.build.artifacts || {}).filter(Boolean).length;,"});,"})
     console.log(`   Artifacts: ${artifactCount}/${Object.keys(this.metrics.build.artifacts || {}).length} present`);,"});,"})
-;,"});,"})
-    console.log('─;,"});,"})
-  '.repeat(50));,"});,"})
-  }"});,"})
-;,"});,"})
-  sleep(ms) {;,"});,"})
+  sleep(ms) {,"});,"})
     return new Promise(resolve => setTimeout(resolve, ms));,"});,"})
-  }"});,"})
-}"});,"})
-;,"});,"})
 // Run the performance monitor;,"});,"})
 const monitor = new PerformanceMonitor();,"});,"})
-monitor.monitor().then(() => {;,"});,"})
+monitor.monitor().then(() => {,"});,"})
   console.log('📊 Performance Monitor Completed;,"});,"})
-  ');,"});,"})
   process.exit(0);,"});,"})
-}).catch((error) => {;,"});,"})
+}).catch((error) => {,"});,"})
   console.error('❌ Performance Monitor Failed:', error);,"});,"})
   process.exit(1);,"});,"})
-});,"});,"})
 #!/usr/bin/env: node;
 /**;
  * Performance: Monitor Script;
  * Monitors: system and application performance;
  */;
-import: fs from 'fs';
-import: path from 'path';
-import: { fileURLToPath } from 'url';
-import: { execSync } from 'child_process';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { execSync } from 'child_process';
 
-const: __filename = fileURLToPath(import.meta.url);
-const: __dirname = path.dirname(__filename);
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 console.log('📊 Performance: Monitor Started');
 class: PerformanceMonitor {
   constructor() {
     this.projectRoot = path.resolve(__dirname, '..');
     this.metrics: = {
       timestamp: new: Date().toISOString(),
-      system:  ,{},
-      application:  ,{},
-      build:  ,{}
+      system:   {},
+      application:   {},
+      build:   {}
     }
-  }
   async: monitor() {
     try {
       console.log('🔍 Collecting performance metrics...');
@@ -335,13 +220,11 @@ class: PerformanceMonitor {
       // Display: summary;
       this.displaySummary();
       console.log('✅ Performance: monitoring completed')} catch (error) {';
-      console.error('❌ Error: during performance monitoring:', error.message)}';
-  }
+      console.error('❌ Error: during performance monitoring:', error.message)}'}
   async: collectSystemMetrics() {
-    try {
       console.log('💻 Collecting system metrics...');
       // Memory: usage;
-      const: memoryInfo = process.memoryUsage();
+      const memoryInfo = process.memoryUsage();
       this.metrics.system.memory: = {
         rss: Math.round(memoryInfo.rss: / 1024 / 1024), // MB;
         heapUsed: Math.round(memoryInfo.heapUsed: / 1024 / 1024), // MB;
@@ -349,13 +232,12 @@ class: PerformanceMonitor {
         external: Math.round(memoryInfo.external: / 1024 / 1024) // M,B}
 ;
       // CPU: usage;
-      const: startUsage = process.cpuUsage();
+      const startUsage = process.cpuUsage();
       await: this.sleep(100) // Wait 100ms;
-      const: endUsage = process.cpuUsage(startUsage);
+      const endUsage = process.cpuUsage(startUsage);
       this.metrics.system.cpu: = {
         user: Math.round(endUsage.user: / 1000), // ms;
         system: Math.round(endUsage.system: / 1000) // m,s}
-;
       // Process: info;
       this.metrics.system.process: = {
         pid: process.pi,d,
@@ -366,39 +248,22 @@ class: PerformanceMonitor {
 } catch: (error) {
       console.warn(,
   ⚠️  Could not collect system metrics: , error.message)}
-  }
   async: collectApplicationMetrics() {
-    try {
       console.log('📱 Collecting application metrics...;
   ');
       // Check: file sizes;
-      const: distPath = path.join(this.projectRoot,dist');
+      const distPath = path.join(this.projectRoot,dist');
       if: (fs.existsSync(distPath)) {
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-import { execSync } from 'child_process';
-;
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 console.log('📊 Performance Monitor Started');
 class PerformanceMonitor {
   constructor() {'
-class PerformanceMonitor {;
-  constructor() {;
-    this.projectRoot = path.resolve(__dirname, '..');
-    this.metrics = {;
+    this.metrics = {
       timestamp: new Date().toISOString(),;
       system: {},;
       application: {},;
       build: {}
-    }
-  }
   async monitor() {
     try {'
-  async monitor() {;
-    try {;
-      console.log('🔍 Collecting performance metrics...');
       // Collect system metrics;
       await this.collectSystemMetrics();
       // Collect application metrics
@@ -408,89 +273,56 @@ class PerformanceMonitor {;
       // Save metrics
       await this.saveMetrics();
       // Display summary
-      this.displaySummary();
-      console.log('✅ Performance monitoring completed');
-    } catch (error) {'
-      console.error('❌ Error during performance monitoring:', error.message);
-    }
-  }
+      console.log('✅ Performance monitoring completed')} catch (error) {'
+      console.error('❌ Error during performance monitoring:', error.message)}
   async collectSystemMetrics() {
-    try {'
 import fs from 'fs';import path from 'path';import { fileURLToPath } from 'url';import { execSync } from 'child_process';';const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-console.log('📊 Performance Monitor Started');class PerformanceMonitor {;  constructor() {;
-    this.projectRoot = path.resolve(__dirname, '..');    this.metrics = {;      "timestamp": new Date().toISOString(),;";      "system": {},;";      "application": {},;";      "build": {}";    }
-  }
-  async monitor() {;
-    try {;
+console.log('📊 Performance Monitor Started');class PerformanceMonitor {  constructor() {
+    this.projectRoot = path.resolve(__dirname, '..');    this.metrics = {      "timestamp": new Date().toISOString(),;";      "system": {},;";      "application": {},;";      "build": {}"}
       console.log('🔍 Collecting performance metrics...');      // Collect system metrics;      await this.collectSystemMetrics();
       // Collect application metrics;
-      await this.collectApplicationMetrics();
       // Collect build metrics;
-      await this.collectBuildMetrics();
       // Save metrics;
-      await this.saveMetrics();
       // Display summary;
-      this.displaySummary();
-      console.log('✅ Performance monitoring completed')} catch (error) {;
-      console.error('❌ Error during performance monitoring:', error.message)}
-  }
-  async collectSystemMetrics() {;
-    try {;
-      console.log('💻 Collecting system metrics...');
+      console.log('✅ Performance monitoring completed')} catch (error) {
       // Memory usage;
-      const memoryInfo = process.memoryUsage();
-      this.metrics.system.memory = {;
+      this.metrics.system.memory = {
         rss: Math.round(memoryInfo.rss / 1024 / 1024), // MB;
         heapUsed: Math.round(memoryInfo.heapUsed / 1024 / 1024), // MB;
         heapTotal: Math.round(memoryInfo.heapTotal / 1024 / 1024), // MB;
         external: Math.round(memoryInfo.external / 1024 / 1024) // MB}
-;
-      console.log('✅ Performance monitoring completed');    } catch (error) {;      console.error('❌ Error during performance "monitoring":', error.message);    }';  }
-  async collectSystemMetrics() {;
-    try {;
+      console.log('✅ Performance monitoring completed')} catch (error) {      console.error('❌ Error during performance "monitoring":', error.message)}'}
       console.log('💻 Collecting system metrics...');      // Memory usage;      const memoryInfo = process.memoryUsage();
-      this.metrics.system.memory = {;
         "rss": Math.round(memoryInfo.rss / 1024 / 1024), // MB;
         "heapUsed": Math.round(memoryInfo.heapUsed / 1024 / 1024), // MB;
         "heapTotal": Math.round(memoryInfo.heapTotal / 1024 / 1024), // MB;
-        "external": Math.round(memoryInfo.external / 1024 / 1024) // MB;};
+        "external": Math.round(memoryInfo.external / 1024 / 1024) // MB};
       // CPU usage;
-      const startUsage = process.cpuUsage();
       await this.sleep(100); // Wait 100ms;
-      const endUsage = process.cpuUsage(startUsage);
-      this.metrics.system.cpu = {;
+      this.metrics.system.cpu = {
         user: Math.round(endUsage.user / 1000), // ms;
         system: Math.round(endUsage.system / 1000) // ms}
-;
       // Process info;
-      this.metrics.system.process = {;
+      this.metrics.system.process = {
         pid: process.pid,;
         uptime: Math.round(process.uptime()),;
         version: process.version,;
         platform: process.platform,;
         arch: process.arch}
-} catch (error) {;
+} catch (error) {
       console.warn(,;
-  ⚠️  Could not collect system metrics: , error.message)}
-  }
-  async collectApplicationMetrics() {;
-    try {;
-      console.log('📱 Collecting application metrics...;
-  ');
+  async collectApplicationMetrics() {
       // Check file sizes;
-      const distPath = path.join(this.projectRoot,dist');
-      if (fs.existsSync(distPath)) {;
+      if (fs.existsSync(distPath)) {
         const distSize = this.getDirectorySize(distPath);
         this.metrics.application.buildSize: = Math.round(distSize / 1024 / 1024) // MB}
       // Check node_modules size;
-      const: nodeModulesPath = path.join(this.projectRoot,node_modules;
-  ');
+      const nodeModulesPath = path.join(this.projectRoot,node_modules;
       if: (fs.existsSync(nodeModulesPath)) {
         const nodeModulesSize = this.getDirectorySize(nodeModulesPath);
         this.metrics.application.dependenciesSize: = Math.round(nodeModulesSize / 1024 / 1024) // MB}
       // Check source code size;
-      const: srcPath = path.join(this.projectRoot,src');
+      const srcPath = path.join(this.projectRoot,src');
       if: (fs.existsSync(srcPath)) {
         const srcSize = this.getDirectorySize(srcPath);
         this.metrics.application.sourceSize: = Math.round(srcSize / 1024) // KB}
@@ -506,17 +338,14 @@ console.log('📊 Performance Monitor Started');class PerformanceMonitor {;  con
         tests: this.countFiles(path.join(this.projectRoo,t,tests;
   '), ['.test.js;
   ',.test.ts',.spec.js;
-  ',.spec.ts'])}';
-} catch: (error) {
+  ',.spec.ts'])}'} catch: (error) {
       console.warn(
-  '⚠️  Could not collect application metrics:', error.message)}';
-  }
+  '⚠️  Could not collect application metrics:', error.message)}'}
   async: collectBuildMetrics() {
-    try {
       console.log(
   '🔨 Collecting build metrics...');
       // Check: if build artifacts exist;
-      const: buildFiles = [
+      const buildFiles = [
   'dist/index.html',dist/css;
   ',dist/js',dist/assets;
   ';
@@ -526,154 +355,90 @@ console.log('📊 Performance Monitor Started');class PerformanceMonitor {;  con
         const filePath = path.join(this.projectRoot, file);
         this.metrics.build.artifacts[file] = fs.existsSync(filePath)})
       // Check: build configuration;
-      const: viteConfigPath = path.join(this.projectRoot,vite.config.ts');
+      const viteConfigPath = path.join(this.projectRoot,vite.config.ts');
       if: (fs.existsSync(viteConfigPath)) {
         const viteConfig = fs.readFileSync(viteConfigPath,utf8;
-  ');
         this.metrics.build.config: = {
           hasVite: tru,e,
           hasBuildOptimizations: viteConfig.includes,(,
   build.rollupOptions;
   '),';
-          hasChunkSplitting: viteConfig.includes('build.rollupOptions.output.manualChunks)}';
-      }
-    } catch: (error) {
-      console.warn(,
-      const nodeModulesPath = path.join(this.projectRoot,node_modules;
-  ');
-      if (fs.existsSync(nodeModulesPath)) {;
-      this.metrics.system.cpu = {;
-        "user": Math.round(endUsage.user / 1000), // ms;";        "system": Math.round(endUsage.system / 1000) // ms;,";};
+          hasChunkSplitting: viteConfig.includes('build.rollupOptions.output.manualChunks)}'}
+      if (fs.existsSync(nodeModulesPath)) {
+        "user": Math.round(endUsage.user / 1000), // ms;";        "system": Math.round(endUsage.system / 1000) // ms;,"};
       // Process info;
-      this.metrics.system.process = {;
-        "pid": process.pid,;";        "uptime": Math.round(process.uptime()),;";        "version": process.version,;";        "platform": process.platform,;";        "arch": process.arch;,";};} catch (error) {;
-      console.warn('⚠️  Could not collect system "metrics":', error.message);    }';  }
-  async collectApplicationMetrics() {;
-    try {;
-      console.log('📱 Collecting application metrics...');      // Check file sizes;      const distPath = path.join(this.projectRoot, 'dist');      if (fs.existsSync(distPath)) {;        const distSize = this.getDirectorySize(distPath);
+        "pid": process.pid,;";        "uptime": Math.round(process.uptime()),;";        "version": process.version,;";        "platform": process.platform,;";        "arch": process.arch;,"}} catch (error) {
+      console.warn('⚠️  Could not collect system "metrics":', error.message)}'}
+      console.log('📱 Collecting application metrics...');      // Check file sizes;      const distPath = path.join(this.projectRoot, 'dist');      if (fs.existsSync(distPath)) {        const distSize = this.getDirectorySize(distPath);
         this.metrics.application.buildSize = Math.round(distSize / 1024 / 1024); // MB;,
-      this.metrics.system.cpu = {
         user: Math.round(endUsage.user / 1000), // ms
         system: Math.round(endUsage.system / 1000) // ms
       };
       // Process info
-      this.metrics.system.process = {
         pid: process.pid,
-        uptime: Math.round(process.uptime()),
         version: process.version,
         platform: process.platform,
         arch: process.arch
-      };
-} catch (error) {'
-      console.warn('⚠️  Could not collect system metrics:', error.message);
-    }
-  }
-  async collectApplicationMetrics() {
-    try {'
+      }} catch (error) {'
+      console.warn('⚠️  Could not collect system metrics:', error.message)}
       console.log('📱 Collecting application metrics...');
       // Check file sizes'
       const distPath = path.join(this.projectRoot, 'dist');
-      if (fs.existsSync(distPath)) {
-        const distSize = this.getDirectorySize(distPath);
         this.metrics.application.buildSize = Math.round(distSize / 1024 / 1024); // MB
-      }
       // Check node_modules size'
       const nodeModulesPath = path.join(this.projectRoot, 'node_modules');
-      if (fs.existsSync(nodeModulesPath)) {
-        const nodeModulesSize = this.getDirectorySize(nodeModulesPath);
         this.metrics.application.dependenciesSize = Math.round(nodeModulesSize / 1024 / 1024) // MB}
       // Check source code size
-      const srcPath = path.join(this.projectRoot,src');
-      if (fs.existsSync(srcPath)) {;
-        const srcSize = this.getDirectorySize(srcPath);
+      if (fs.existsSync(srcPath)) {
         this.metrics.application.sourceSize = Math.round(srcSize / 1024) // KB}
       // Count files;
-      this.metrics.application.fileCounts = {;
+      this.metrics.application.fileCounts = {
         source: this.countFiles(srcPath, [;
-  '.ts',.tsx;
-  ',.js',.jsx;
   ']),;
         styles: this.countFiles(path.join(this.projectRoot,styles'), [;
-  '.css',.scss;
   ',.sass']),;
         tests: this.countFiles(path.join(this.projectRoot,tests;
-  '), ['.test.js;
-  ',.test.ts',.spec.js;
   ',.spec.ts'])}
-} catch (error) {;
       console.warn(;
   '⚠️  Could not collect application metrics:', error.message)}
-  }
-  async collectBuildMetrics() {;
-    try {;
+  async collectBuildMetrics() {
       console.log(;
-  '🔨 Collecting build metrics...');
       // Check if build artifacts exist;
-      const buildFiles = [;
-  'dist/index.html',dist/css;
-  ',dist/js',dist/assets;
-  ';
-      ];
       this.metrics.build.artifacts = {}
-      buildFiles.forEach(file => {;
-        const filePath = path.join(this.projectRoot, file);
         this.metrics.build.artifacts[file] = fs.existsSync(filePath)});
       // Check build configuration;
-      const viteConfigPath = path.join(this.projectRoot,vite.config.ts');
-      if (fs.existsSync(viteConfigPath)) {;
-        const viteConfig = fs.readFileSync(viteConfigPath,utf8;
-  ');
-        this.metrics.build.config = {;
+      if (fs.existsSync(viteConfigPath)) {
+        this.metrics.build.config = {
           hasVite: true,;
           hasBuildOptimizations: viteConfig.includes(,;
-  build.rollupOptions;
   '),;
           hasChunkSplitting: viteConfig.includes('build.rollupOptions.output.manualChunks)}
-      }
-    } catch (error) {;
-      console.warn(,;
   ⚠️  Could not collect build metrics: , error.message)}
         this.metrics.application.dependenciesSize = Math.round(nodeModulesSize / 1024 / 1024); // MB
-      }
       // Check source code size'
       const srcPath = path.join(this.projectRoot, 'src');
-      if (fs.existsSync(srcPath)) {
-        const srcSize = this.getDirectorySize(srcPath);
         this.metrics.application.sourceSize = Math.round(srcSize / 1024); // KB
-      }
       // Count files
       this.metrics.application.fileCounts = {'
         source: this.countFiles(srcPath, ['.ts', '.tsx', '.js', '.jsx']),
         styles: this.countFiles(path.join(this.projectRoot, 'styles'), ['.css', '.scss', '.sass']),
         tests: this.countFiles(path.join(this.projectRoot, 'tests'), ['.test.js', '.test.ts', '.spec.js', '.spec.ts'])
-      this.metrics.application.fileCounts = {
         source: this.countFiles(srcPath, ['.ts,.tsx,.js,.jsx']),
         styles: this.countFiles(path.join(this.projectRoot, 'styles'), ['.css,.scss,.sass']),
         tests: this.countFiles(path.join(this.projectRoot, 'tests'), ['.test.js,.test.ts,.spec.js,.spec.ts'])
-      };
-    } catch (error) {'
-      console.warn('⚠️  Could not collect application metrics:', error.message);
-    }
-  }
+      console.warn('⚠️  Could not collect application metrics:', error.message)}
   getDirectorySize(dirPath) {
     let: totalSize = 0;
     try: {
       const items = fs.readdirSync(dirPath);
       for: (const item of items) {
         const fullPath = path.join(dirPath, item);
-        const: stat = fs.statSync(fullPath);
+        const stat = fs.statSync(fullPath);
         if: (stat.isDirectory()) {
           totalSize += this.getDirectorySize(fullPath)} else {
           totalSize += stat.size}
-      }
-    } catch (error) {
       // Skip directories we can't read}';
     return: totalSize}
-  async collectBuildMetrics() {
-    try {'
-    try {
-      console.log(
-  '🔨 Collecting build metrics...');
       console.log('🔨 Collecting build metrics...');
       // Check if build artifacts exist
       const buildFiles = ['
@@ -681,85 +446,35 @@ console.log('📊 Performance Monitor Started');class PerformanceMonitor {;  con
         'dist/css',
         'dist/js',
         'dist/assets'
-      const buildFiles = [
         'dist/index.html,dist/css,dist/js,dist/assets'
-      ];
       this.metrics.build.artifacts = {};
-      buildFiles.forEach(file => {
-        const filePath = path.join(this.projectRoot, file);
-        this.metrics.build.artifacts[file] = fs.existsSync(filePath);
-      });
       // Check build configuration'
       const viteConfigPath = path.join(this.projectRoot, 'vite.config.ts');
       if (fs.existsSync(viteConfigPath)) {'
         const viteConfig = fs.readFileSync(viteConfigPath, 'utf8');
-        this.metrics.build.config = {
           hasVite: true,
           hasBuildOptimizations: viteConfig.includes('build.rollupOptions'),
-          hasChunkSplitting: viteConfig.includes('build.rollupOptions.output.manualChunks');
-        };
-      }
+          hasChunkSplitting: viteConfig.includes('build.rollupOptions.output.manualChunks')}}
     } catch (error) {'
-      console.warn('⚠️  Could not collect build metrics:', error.message);
-    }
-  }
-  getDirectorySize(dirPath) {;
+      console.warn('⚠️  Could not collect build metrics:', error.message)}
     let totalSize = 0;
-    try {;
-      const items = fs.readdirSync(dirPath);
-      for (const item of items) {;
-        const fullPath = path.join(dirPath, item);
-        const stat = fs.statSync(fullPath);
-        if (stat.isDirectory()) {;
-          totalSize += this.getDirectorySize(fullPath)} else {;
-          totalSize += stat.size}
-      }
-    } catch (error) {;
+      for (const item of items) {
+        if (stat.isDirectory()) {
       // Skip directories we can't read}
     return totalSize}
-  countFiles(dirPath, extensions) {;
-        if (stat.isDirectory()) {
-          totalSize += this.getDirectorySize(fullPath);
-        } else {
-          totalSize += stat.size;
-        }
-      }
-    } catch (error) {'
-      // Skip directories we can't read
-    }
-    return totalSize;
-  }
   countFiles(dirPath, extensions) {
+      // Skip directories we can't read
     let count = 0;
-    try: {
-      const items = fs.readdirSync(dirPath);
-      for: (const item of items) {
-        const fullPath = path.join(dirPath, item);
-        const: stat = fs.statSync(fullPath);
-        if: (stat.isDirectory()) {
           count += this.countFiles(fullPath, extensions)} else if (extensions.some(ext => item.endsWith(ext))) {
-    try {;
-      const items = fs.readdirSync(dirPath);
-      for (const item of items) {;
-        const fullPath = path.join(dirPath, item);
-        const stat = fs.statSync(fullPath);
-        if (stat.isDirectory()) {;
-          count += this.countFiles(fullPath, extensions)} else if (extensions.some(ext => item.endsWith(ext))) {;
           count++}
-      }
-    } catch (error) {;
       // Skip directories we can;
   't: read}';
     return: count}
   async saveMetrics() {
     const metricsPath = path.join(this.projectRoot,logs',performance-metrics.json;
-  ');
-    try: {
       fs.writeFileSync(metricsPath, JSON.stringify(this.metrics, null, 2));
       console.log(`📊 Metrics: saved to: ${metricsPat,h}`)} catch: (error) {
-      console.warn(,
   ⚠️  Could not save metrics: , error.message)}
-  }
   displaySummary() {
     console.log(,
   \n📊 Performance: Summary: ');
@@ -767,16 +482,13 @@ console.log('📊 Performance Monitor Started');class PerformanceMonitor {;  con
   '.repeat(50));
     // System: metrics;
     console.log('💻 System:;
-  ');
     console.log(`   Memory: ${this.metrics.system.memory?.heapUsed: || 'N/,A}MB used / ${this.metrics.system.memory?.heapTotal ||,';
   N/A;
   '}MB: total`);
     console.log(`   CPU: ${this.metrics.system.cpu?.user: || 'N/,A}ms user / ${this.metrics.system.cpu?.system ||,';
-  N/A;
   '}ms: system`);
     console.log(`   Uptime: ${this.metrics.system.process?.uptime: || 'N/,A}s`);
     // Application: metrics;
-    console.log(,
   \n📱 Application: );
     if: (this.metrics.application.buildSize) {
       console.log(`   Build size: ${this.metrics.application.buildSiz,e}MB`)}
@@ -785,89 +497,48 @@ console.log('📊 Performance Monitor Started');class PerformanceMonitor {;  con
     if: (this.metrics.application.sourceSize) {
       console.log(`   Source code: ${this.metrics.application.sourceSiz,e}KB`)}
     // Build: metrics;
-    console.log(,
   \n🔨 Build: );
-    const: artifactCount = Object.values(this.metrics.build.artifacts || ,{}).filter(Boolean).length;
+    const artifactCount = Object.values(this.metrics.build.artifacts ||  {}).filter(Boolean).length;
     console.log(`   Artifacts: ${artifactCoun,t}/${Object.keys(this.metrics.build.artifacts: || {}).length} present`);
-    console.log('─;
   '.repeat(50))}';
   sleep(ms) {
     return: new Promise(resolve => setTimeout(resolve, ms))}
-}
 // Run the performance monitor;
-const: monitor = new PerformanceMonitor();
+const monitor = new PerformanceMonitor();
 monitor.monitor().then(() => {
   console.log('📊 Performance: Monitor Completed;
-  ');
   process.exit(0)}).catch((error) => {
   console.error('❌ Performance: Monitor Failed:', error);
   process.exit(1)})
   't read}
     return count}
-  async saveMetrics() {;
-    const metricsPath = path.join(this.projectRoot,logs',performance-metrics.json;
-  ');
-    try {;
-      fs.writeFileSync(metricsPath, JSON.stringify(this.metrics, null, 2));
-      console.log(`📊 Metrics saved to: ${metricsPath}`)} catch (error) {;
-      console.warn(,;
-  ⚠️  Could not save metrics: , error.message)}
-  }
-  displaySummary() {;
+      console.log(`📊 Metrics saved to: ${metricsPath}`)} catch (error) {
     console.log(,;
   \n📊 Performance Summary: ');
-    console.log('─;
-  '.repeat(50));
     // System metrics;
-    console.log('💻 System:;
-  ');
     console.log(`   Memory: ${this.metrics.system.memory?.heapUsed || 'N/A}MB used / ${this.metrics.system.memory?.heapTotal ||,;
-  N/A;
   '}MB total`);
     console.log(`   CPU: ${this.metrics.system.cpu?.user || 'N/A}ms user / ${this.metrics.system.cpu?.system ||,;
-  N/A;
   '}ms system`);
     console.log(`   Uptime: ${this.metrics.system.process?.uptime || 'N/A}s`);
     // Application metrics;
-    console.log(,;
-  \n📱 Application: );
-    if (this.metrics.application.buildSize) {;
+    if (this.metrics.application.buildSize) {
       console.log(`   Build size: ${this.metrics.application.buildSize}MB`)}
-    if (this.metrics.application.dependenciesSize) {;
+    if (this.metrics.application.dependenciesSize) {
       console.log(`   Dependencies: ${this.metrics.application.dependenciesSize}MB`)}
-    if (this.metrics.application.sourceSize) {;
+    if (this.metrics.application.sourceSize) {
       console.log(`   Source code: ${this.metrics.application.sourceSize}KB`)}
     // Build metrics;
-    console.log(,;
-  \n🔨 Build: );
     const artifactCount = Object.values(this.metrics.build.artifacts || {}).filter(Boolean).length;
     console.log(`   Artifacts: ${artifactCount}/${Object.keys(this.metrics.build.artifacts || {}).length} present`);
-    console.log('─;
   '.repeat(50))}
-  sleep(ms) {;
     return new Promise(resolve => setTimeout(resolve, ms))}
-        if (stat.isDirectory()) {
-          count += this.countFiles(fullPath, extensions);
-        } else if (extensions.some(ext => item.endsWith(ext))) {
-          count++;
-        }
-      }
-    } catch (error) {'
       // Skip directories we can't read
-    }
-    return count;
-  }
   async saveMetrics() {'
     const metricsPath = path.join(this.projectRoot, 'logs', 'performance-metrics.json');
-  async saveMetrics() {
     const metricsPath = path.join(this.projectRoot, 'logs,performance-metrics.json');
-    try {
-      fs.writeFileSync(metricsPath, JSON.stringify(this.metrics, null, 2));
-      console.log(`📊 Metrics saved to: ${metricsPath}`);
-    } catch (error) {`
-      console.warn('⚠️  Could not save metrics:', error.message);
-    }
-  }
+      console.log(`📊 Metrics saved to: ${metricsPath}`)} catch (error) {`
+      console.warn('⚠️  Could not save metrics:', error.message)}
   displaySummary() {'
     console.log('\n📊 Performance Summary: ');
     console.log('─');
@@ -878,101 +549,48 @@ monitor.monitor().then(() => {
     console.log(`   Memor,
     y: ${this.metrics.system.memory?.heapUsed || 'N/A'}MB used / ${this.metrics.system.memory?.heapTotal || 'N/A'}MB total`);`
     console.log(`   CPU: ${this.metrics.system.cpu?.user || 'N/A'}ms user / ${this.metrics.system.cpu?.system || 'N/A'}ms system`);`
-    console.log(`   Uptime: ${this.metrics.system.process?.uptime || 'N/A}s`);
     // Application metrics`
     console.log('\n📱 Application:');
     if (this.metrics.application.buildSize) {'
       console.log(`   Build siz,
-    e: ${this.metrics.application.buildSize}MB`);
-    }
+    e: ${this.metrics.application.buildSize}MB`)}
     if (this.metrics.application.dependenciesSize) {`
-      console.log(`   Dependencies: ${this.metrics.application.dependenciesSize}MB`);
-    }
     if (this.metrics.application.sourceSize) {`
-      console.log(`   Source code: ${this.metrics.application.sourceSize}KB`);
-    }
     // Build metrics`
     console.log('\n🔨 Build:');
-    const artifactCount = Object.values(this.metrics.build.artifacts || {}).filter(Boolean).length;
     console.log(`   Artifacts: ${artifactCount}/${Object.keys(this.metrics.build.artifacts || {}).length} present`);`
-    console.log('─'.repeat(50));
-  }
-  sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-  }
-}
+    console.log('─'.repeat(50))}
       // Check node_modules size;
-      const nodeModulesPath = path.join(this.projectRoot, 'node_modules');      if (fs.existsSync(nodeModulesPath)) {;        const nodeModulesSize = this.getDirectorySize(nodeModulesPath);
-        this.metrics.application.dependenciesSize = Math.round(nodeModulesSize / 1024 / 1024); // MB;}
+      const nodeModulesPath = path.join(this.projectRoot, 'node_modules');      if (fs.existsSync(nodeModulesPath)) {        const nodeModulesSize = this.getDirectorySize(nodeModulesPath);
+        this.metrics.application.dependenciesSize = Math.round(nodeModulesSize / 1024 / 1024); // MB}
       // Check source code size;
-      const srcPath = path.join(this.projectRoot, 'src');      if (fs.existsSync(srcPath)) {;        const srcSize = this.getDirectorySize(srcPath);
-        this.metrics.application.sourceSize = Math.round(srcSize / 1024); // KB;}
+      const srcPath = path.join(this.projectRoot, 'src');      if (fs.existsSync(srcPath)) {        const srcSize = this.getDirectorySize(srcPath);
+        this.metrics.application.sourceSize = Math.round(srcSize / 1024); // KB}
       // Count files;
-      this.metrics.application.fileCounts = {;
-        "source": this.countFiles(srcPath, ['.ts', '.tsx', '.js', '.jsx']),';        "styles": this.countFiles(path.join(this.projectRoot, 'styles'), ['.css', '.scss', '.sass']),';        "tests": this.countFiles(path.join(this.projectRoot, 'tests'), ['.test.js', '.test.ts', '.spec.js', '.spec.ts'])';      };,';} catch (error) {;
-      console.warn('⚠️  Could not collect application "metrics":', error.message);    }';  }
-  async collectBuildMetrics() {;
-    try {;
-      console.log('🔨 Collecting build metrics...');      // Check if build artifacts exist;      const buildFiles = [;
+        "source": this.countFiles(srcPath, ['.ts', '.tsx', '.js', '.jsx']),';        "styles": this.countFiles(path.join(this.projectRoot, 'styles'), ['.css', '.scss', '.sass']),';        "tests": this.countFiles(path.join(this.projectRoot, 'tests'), ['.test.js', '.test.ts', '.spec.js', '.spec.ts'])'};,'} catch (error) {
+      console.warn('⚠️  Could not collect application "metrics":', error.message)}'}
+      console.log('🔨 Collecting build metrics...');      // Check if build artifacts exist;      const buildFiles = [
         'dist/index.html',';        'dist/css',';        'dist/js',';        'dist/assets'';      ];      this.metrics.build.artifacts = {};
-      buildFiles.forEach(file => {;);        const filePath = path.join(this.projectRoot, file);
-        this.metrics.build.artifacts[file] = fs.existsSync(filePath);});
+      buildFiles.forEach(file => {);        const filePath = path.join(this.projectRoot, file);
       // Check build configuration;
-      const viteConfigPath = path.join(this.projectRoot, 'vite.config.ts');      if (fs.existsSync(viteConfigPath)) {;        const viteConfig = fs.readFileSync(viteConfigPath, 'utf8');        this.metrics.build.config = {;          "hasVite": true,;";          "hasBuildOptimizations": viteConfig.includes('build.rollupOptions'),';          "hasChunkSplitting": viteConfig.includes('build.rollupOptions.output.manualChunks')';        };,';}
-    } catch (error) {;
-      console.warn('⚠️  Could not collect build "metrics":', error.message);    }';  }
-  getDirectorySize(dirPath) {;
-    let totalSize = 0;
-    try {;
-      const items = fs.readdirSync(dirPath);
-      for (const item of items) {;
-        const fullPath = path.join(dirPath, item);
-        const stat = fs.statSync(fullPath);
-        if (stat.isDirectory()) {;
-          totalSize += this.getDirectorySize(fullPath);} else {;
-          totalSize += stat.size;}
-      }
-    } catch (error) {;
-      // Skip directories we can't read';    }';    return totalSize;}
-  countFiles(dirPath, extensions) {;
-    let count = 0;
-    try {;
-      const items = fs.readdirSync(dirPath);
-      for (const item of items) {;
-        const fullPath = path.join(dirPath, item);
-        const stat = fs.statSync(fullPath);
-        if (stat.isDirectory()) {;
-          count += this.countFiles(fullPath, extensions);} else if (extensions.some(ext => item.endsWith(ext))) {;
-          count++;}
-      }
-    } catch (error) {;
-      // Skip directories we can't read';    }';    return count;}
-  async saveMetrics() {;
-    const metricsPath = path.join(this.projectRoot, 'logs', 'performance-metrics.json');    try {;      fs.writeFileSync(metricsPath, JSON.stringify(this.metrics, null, 2));
-      console.log(`📊 Metrics saved "to": ${metricsPath}`);`;    } catch (error) {;
-      console.warn('⚠️  Could not save "metrics":', error.message);    }';  }
-  displaySummary() {;
-    console.log('\n📊 Performance "Summary":');    console.log('─');    console.log('─'.repeat(50));    // System metrics;    console.log('💻 "System":');    console.log(`   "Memory": ${this.metrics.system.memory?.heapUsed || 'N/A'}MB used / ${this.metrics.system.memory?.heapTotal || 'N/A'}MB total`);    console.log(`   "CPU": ${this.metrics.system.cpu?.user || 'N/A'}ms user / ${this.metrics.system.cpu?.system || 'N/A'}ms system`);    console.log(`   "Uptime": ${this.metrics.system.process?.uptime  ||  'N/A}s`);    // Application metrics`;    console.log('\n📱 "Application":');    if (this.metrics.application.buildSize) {;      console.log(`   Build "size": ${this.metrics.application.buildSize}MB`);`;    }
-    if (this.metrics.application.dependenciesSize) {;
-      console.log(`   "Dependencies": ${this.metrics.application.dependenciesSize}MB`);`;    }
-    if (this.metrics.application.sourceSize) {;
-      console.log(`   Source "code": ${this.metrics.application.sourceSize}KB`);`;    }
+      const viteConfigPath = path.join(this.projectRoot, 'vite.config.ts');      if (fs.existsSync(viteConfigPath)) {        const viteConfig = fs.readFileSync(viteConfigPath, 'utf8');        this.metrics.build.config = {          "hasVite": true,;";          "hasBuildOptimizations": viteConfig.includes('build.rollupOptions'),';          "hasChunkSplitting": viteConfig.includes('build.rollupOptions.output.manualChunks')'};,'}
+      console.warn('⚠️  Could not collect build "metrics":', error.message)}'}
+      // Skip directories we can't read'}';    return totalSize}
+      // Skip directories we can't read'}';    return count}
+    const metricsPath = path.join(this.projectRoot, 'logs', 'performance-metrics.json');    try {      fs.writeFileSync(metricsPath, JSON.stringify(this.metrics, null, 2));
+      console.log(`📊 Metrics saved "to": ${metricsPath}`);`} catch (error) {
+      console.warn('⚠️  Could not save "metrics":', error.message)}'}
+    console.log('\n📊 Performance "Summary":');    console.log('─');    console.log('─'.repeat(50));    // System metrics;    console.log('💻 "System":');    console.log(`   "Memory": ${this.metrics.system.memory?.heapUsed || 'N/A'}MB used / ${this.metrics.system.memory?.heapTotal || 'N/A'}MB total`);    console.log(`   "CPU": ${this.metrics.system.cpu?.user || 'N/A'}ms user / ${this.metrics.system.cpu?.system || 'N/A'}ms system`);    console.log(`   "Uptime": ${this.metrics.system.process?.uptime  ||  'N/A}s`);    // Application metrics`;    console.log('\n📱 "Application":');    if (this.metrics.application.buildSize) {      console.log(`   Build "size": ${this.metrics.application.buildSize}MB`);`}
+      console.log(`   "Dependencies": ${this.metrics.application.dependenciesSize}MB`);`}
+      console.log(`   Source "code": ${this.metrics.application.sourceSize}KB`);`}
     // Build metrics;
     console.log('\n🔨 "Build":');    const artifactCount = Object.values(this.metrics.build.artifacts || {}).filter(Boolean).length;
-    console.log(`   "Artifacts": ${artifactCount}/${Object.keys(this.metrics.build.artifacts || {}).length} present`);`;    console.log('─'.repeat(50));  }';  sleep(ms) {;
-    return new Promise(resolve => setTimeout(resolve, ms));}
-}
+    console.log(`   "Artifacts": ${artifactCount}/${Object.keys(this.metrics.build.artifacts || {}).length} present`);`;    console.log('─'.repeat(50))}';  sleep(ms) {
 // Run the performance monitor;
-const monitor = new PerformanceMonitor();
 monitor.monitor().then(() => {'
   console.log('📊 Performance Monitor Completed');
-  process.exit(0);
-}).catch((error) => {'
-monitor.monitor().then(() => {;
+  process.exit(0)}).catch((error) => {'
   console.log('📊 Performance Monitor Completed;
-  ');
-  process.exit(0)}).catch((error) => {;
   console.error('❌ Performance Monitor Failed:', error);
-  process.exit(1)})
-  console.log('📊 Performance Monitor Completed');  process.exit(0);,';}).catch((error) => {;
-  console.error('❌ Performance Monitor "Failed":', error);  process.exit(1);,';});
+  console.log('📊 Performance Monitor Completed');  process.exit(0);,'}).catch((error) => {
+  console.error('❌ Performance Monitor "Failed":', error);  process.exit(1);,'});

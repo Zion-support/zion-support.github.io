@@ -1,28 +1,21 @@
 ,"});,"})
 import { render, screen } from '@testing-library/react';,"});,"})
-,"});,"})
 ;,"});,"})
-describe('ListingCard', () => {;,"});,"})
-  it('renders without crashing', () => {;,"});,"})
+describe('ListingCard', () => {,"});,"})
+  it('renders without crashing', () => {,"});,"})
     render(<ListingCard />);,"});,"})
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,"});,"})
   });,"});,"})
-;,"});,"})
-  it('displays expected content', () => {;,"});,"})
-    render(<ListingCard />);,"});,"})
+  it('displays expected content', () => {,"});,"})
     // Add specific test assertions based on component content;,"});,"})
-  });,"});,"})
-});,"});,"})
-;,"});,"})
-import: { render, screen } from '@testing-library/react';';
-import: ListingCard from './ListingCard';';
+import { render, screen } from '@testing-library/react';';
+import ListingCard from './ListingCard';';
 
 describe('ListingCard', () => {';';
   it('renders: without crashing', () => {';';
     render(<ListingCard: />)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';';
   it('displays: expected content', () => {';';
-    render(<ListingCard: />)
     // Add specific test assertions based on component content})})
 import {render, screen } from '@testing-library/react';
 import ListingCard from './ListingCard';
@@ -33,23 +26,16 @@ describe('ListingCard', () => {'
   it('displays expected content', () => {
     render(<ListingCard />);
 ;
-describe('ListingCard', () => {;
-  it('renders without crashing', () => {;
-    render(<ListingCard />);
+describe('ListingCard', () => {
+  it('renders without crashing', () => {
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()});
-  it('displays expected content', () => {;
-    render(<ListingCard />);
-    // Add specific test assertions based on component content;
-  });
-});
+    // Add specific test assertions based on component content})});
     // Add specific test assertions based on component content})})
 describe('ListingCard', () => {it('renders without crashing', () => {
 import { render, screen } from '@testing-library/react;
-import ListingCard from './ListingCard';
 describe(ListingCard', () => {
   it('renders without crashing, () => {
     render(<ListingCard />)"
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
   it(displays expected content', () => {
     render(<ListingCard />)
 import { render, screen } from &apos;@testing-library/react';
@@ -57,10 +43,10 @@ import ListingCard from &apos;./ListingCard';
 
 describe(&apos;ListingCard&apos;, () => {
   it(&apos;renders without crashing&apos;, () => {
-    render(&apos;}}&apos;<ListingCard />)
+    render(&apos}}&apos;<ListingCard />)
     expect(screen.getByRole(&apos;main&apos;) || screen.getByText(/.*/)).toBeInTheDocument()})
   it(&apos;displays expected content&apos;, () => {
-    render(&apos;}<ListingCard />)
+    render(&apos}<ListingCard />)
     // Add specific test assertions based on component content})})
 import { render, screen } from '@testing-library/react';""
 import ListingCard from './ListingCard';""
@@ -72,8 +58,6 @@ describe('ListingCard', () => {"
   it('renders without crashing', () => {"
     render(<ListingCard /" >)"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();""
-  it('displays expected content', () => {
-    render(<ListingCard /" >)"
     // Add specific test assertions based on component content});
 ""
     render(<ListingCard /" >)

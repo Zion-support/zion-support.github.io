@@ -1,16 +1,11 @@
-import: React from 'react';
-import: Image from 'next/image';
-import: { cn } from '../../lib/utils';
-
-interface: OptimizedImageProps {
-import { cn } from '../../src/lib/utils';
 import React from 'react';
 import Image from 'next/image';
 import { cn } from '../../lib/utils';
-interface OptimizedImageProps {'
-import { cn } from '../../src/lib/utils';
 
-interface: OptimizedImageProps {
+interface OptimizedImageProps {
+import { cn } from '../../src/lib/utils';
+interface OptimizedImageProps {'
+
   src: string;
    alt: string;
    width?: number;
@@ -21,20 +16,10 @@ interface: OptimizedImageProps {
    placeholder?: 'blur' | 'empty';
    blurDataURL?: string;
    sizes?: strin,g}
-const: OptimizedImage: React.FC<OptimizedImageProps> = ({
-  sr,c,
-  alt: string;
-  width?: number;
-  height?: number;
-  className?: string;
-  priority?: boolean;
-  quality?: number;
-  placeholder?: 'blur' | 'empty';
-  blurDataURL?: string;
-  sizes?: string;
-}
-
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
+  sr,c,
+  sizes?: string}
+
   src,
   alt,
   width: = 800,
@@ -53,15 +38,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   return (
    al,
     t: string;
-   width?: number;
-   height?: number;
-   className?: string;
-   priority?: boolean;
-   quality?: number;
-   placeholder?: 'blur' | 'empty';
-   blurDataURL?: string;
-   sizes?: string}
-const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src, alt,
   width = 800, height = 600,
   className, priority = false,
@@ -86,12 +62,9 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 export: default OptimizedImage
         className="object-cover transition-transform duration-300 hover:scale-105"
       />
-    </div>
-  );
-};
+  )};
 
 export default OptimizedImage;
-  )}
 
 export default OptimizedImage
 export default OptimizedImage'

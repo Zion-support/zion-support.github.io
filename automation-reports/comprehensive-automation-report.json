@@ -1,258 +1,46 @@
 {
-<<<<<<< HEAD
-  "timestamp": "2025-09-02T21:51:41.137Z",
-  "summary": {
-    "total": 20,
-    "successful": 4,
-    "failed": 16
+  "mergeConflicts": {
+    "fixed": 0,
+    "errors": [
+      "Command failed: node scripts/resolve-merge-conflicts.cjs\n/workspace/scripts/resolve-merge-conflicts.cjs:16\n      '      '      ''\n                    ^^\n\nSyntaxError: Unexpected string\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
+    ]
   },
-  "categories": {
-    "linting": {
-      "total": 3,
-      "successful": 0,
-      "failed": 3,
-      "results": [
-        {
-          "command": "npm run lint",
-          "description": "ESLint Check",
-          "success": false,
-          "error": "Command failed: npm run lint\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n/workspace/node_modules/next/dist/shared/lib/router/utils/path-has-prefix.js:3\n    value: true;\n               ^\n\nSyntaxError: Unexpected token ';'\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Module.<anonymous> (node:internal/modules/cjs/loader:1487:12)\n    at mod.require (/workspace/node_modules/next/dist/server/require-hook.js:68:28)\n    at require (node:internal/modules/helpers:135:16)\n\nNode.js v22.16.0\n"
-        },
-        {
-          "command": "npm run format:check",
-          "description": "Prettier Format Check",
-          "success": false,
-          "error": "spawnSync /bin/sh ENOBUFS"
-        },
-        {
-          "command": "npm run type-check",
-          "description": "TypeScript Type Check",
-          "success": false,
-          "error": "spawnSync /bin/sh ENOBUFS"
-        }
-      ]
-    },
-    "testing": {
-      "total": 2,
-      "successful": 0,
-      "failed": 2,
-      "results": [
-        {
-          "command": "npm run test",
-          "description": "Jest Test Suite",
-          "success": false,
-          "error": "Command failed: npm run test\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nError: Cannot find module 'msw/node'\nRequire stack:\n- /workspace/jest.config.cjs\n- /workspace/node_modules/jest-util/build/requireOrImportModule.js\n- /workspace/node_modules/jest-util/build/index.js\n- /workspace/node_modules/@jest/core/build/FailedTestsInteractiveMode.js\n- /workspace/node_modules/@jest/core/build/plugins/FailedTestsInteractive.js\n- /workspace/node_modules/@jest/core/build/watch.js\n- /workspace/node_modules/@jest/core/build/cli/index.js\n- /workspace/node_modules/@jest/core/build/index.js\n- /workspace/node_modules/jest-cli/build/run.js\n- /workspace/node_modules/jest-cli/build/index.js\n- /workspace/node_modules/jest-cli/bin/jest.js\n- /workspace/node_modules/jest/bin/jest.js\n    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)\n    at Function.resolve (node:internal/modules/helpers:145:19)\n    at Object.<anonymous> (/workspace/jest.config.cjs:47:27)\n    at Module._compile (node:internal/modules/cjs/loader:1730:14)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Module.require (node:internal/modules/cjs/loader:1487:12)\n"
-        },
-        {
-          "command": "npm run test:coverage",
-          "description": "Test Coverage",
-          "success": false,
-          "error": "Command failed: npm run test:coverage\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nError: Cannot find module 'msw/node'\nRequire stack:\n- /workspace/jest.config.cjs\n- /workspace/node_modules/jest-util/build/requireOrImportModule.js\n- /workspace/node_modules/jest-util/build/index.js\n- /workspace/node_modules/@jest/core/build/FailedTestsInteractiveMode.js\n- /workspace/node_modules/@jest/core/build/plugins/FailedTestsInteractive.js\n- /workspace/node_modules/@jest/core/build/watch.js\n- /workspace/node_modules/@jest/core/build/cli/index.js\n- /workspace/node_modules/@jest/core/build/index.js\n- /workspace/node_modules/jest-cli/build/run.js\n- /workspace/node_modules/jest-cli/build/index.js\n- /workspace/node_modules/jest-cli/bin/jest.js\n- /workspace/node_modules/jest/bin/jest.js\n    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)\n    at Function.resolve (node:internal/modules/helpers:145:19)\n    at Object.<anonymous> (/workspace/jest.config.cjs:47:27)\n    at Module._compile (node:internal/modules/cjs/loader:1730:14)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Module.require (node:internal/modules/cjs/loader:1487:12)\n"
-        }
-      ]
-    },
-    "build": {
-      "total": 2,
-      "successful": 0,
-      "failed": 2,
-      "results": [
-        {
-          "command": "npm run build",
-          "description": "Next.js Build",
-          "success": false,
-          "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n/workspace/node_modules/next/dist/shared/lib/router/utils/path-has-prefix.js:3\n    value: true;\n               ^\n\nSyntaxError: Unexpected token ';'\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Module.<anonymous> (node:internal/modules/cjs/loader:1487:12)\n    at mod.require (/workspace/node_modules/next/dist/server/require-hook.js:68:28)\n    at require (node:internal/modules/helpers:135:16)\n\nNode.js v22.16.0\n"
-        },
-        {
-          "command": "npm run analyze",
-          "description": "Bundle Analysis",
-          "success": false,
-          "error": "Command failed: npm run analyze\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n/workspace/node_modules/next/dist/shared/lib/router/utils/path-has-prefix.js:3\n    value: true;\n               ^\n\nSyntaxError: Unexpected token ';'\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Module.<anonymous> (node:internal/modules/cjs/loader:1487:12)\n    at mod.require (/workspace/node_modules/next/dist/server/require-hook.js:68:28)\n    at require (node:internal/modules/helpers:135:16)\n\nNode.js v22.16.0\n"
-        }
-      ]
-    },
-    "security": {
-      "total": 2,
-      "successful": 2,
-      "failed": 0,
-      "results": [
-        {
-          "command": "npm audit",
-          "description": "NPM Security Audit",
-          "success": true,
-          "output": "found 0 vulnerabilities\n"
-        },
-        {
-          "command": "npm audit --audit-level=moderate",
-          "description": "NPM Audit Moderate",
-          "success": true,
-          "output": "found 0 vulnerabilities\n"
-        }
-      ]
-    },
-    "performance": {
-      "total": 3,
-      "successful": 1,
-      "failed": 2,
-      "results": [
-        {
-          "script": "scripts/performance-monitor.js",
-          "success": false,
-          "error": "Command failed: node scripts/performance-monitor.js\nfile:///workspace/scripts/performance-monitor.js:186\n    console.log(`   Uptime: ${this.metrics.system.process?.uptime || 'N/A}s`);\n                                                                     ^^^^^^^^^\n\nSyntaxError: Invalid or unexpected token\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n\nNode.js v22.16.0\n"
-        },
-        {
-          "script": "scripts/performance-monitor.cjs",
-          "success": true,
-          "output": "🚀 Starting performance monitoring...\n\n❌ Build failed\n❌ Performance monitoring failed: Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n/workspace/node_modules/next/dist/shared/lib/router/utils/path-has-prefix.js:3\n    value: true;\n               ^\n\nSyntaxError: Unexpected token ';'\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Module.<anonymous> (node:internal/modules/cjs/loader:1487:12)\n    at mod.require (/workspace/node_modules/next/dist/server/require-hook.js:68:28)\n    at require (node:internal/modules/helpers:135:16)\n\nNode.js v22.16.0\n\n📄 Performance report saved to: /workspace/performance-report.json\n"
-        },
-        {
-          "script": "scripts/automation/performance-monitor.cjs",
-          "success": false,
-          "error": "Command failed: node scripts/automation/performance-monitor.cjs\n/workspace/scripts/automation/performance-monitor.cjs:17\n    console.log(``🏗️ Building project for performance analysis...`);\n                ^^\n\nSyntaxError: missing ) after argument list\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
-        }
-      ]
-    },
-    "errorDetection": {
-      "total": 3,
-      "successful": 0,
-      "failed": 3,
-      "results": [
-        {
-          "script": "scripts/automation/comprehensive-error-fixer.cjs",
-          "success": false,
-          "error": "Command failed: node scripts/automation/comprehensive-error-fixer.cjs\n/workspace/scripts/automation/comprehensive-error-fixer.cjs:10\nconst { execSync } = require('child_process`);\n                             ^^^^^^^^^^^^^^^^^\n\nSyntaxError: Invalid or unexpected token\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
-        },
-        {
-          "script": "scripts/automation/error-monitor.cjs",
-          "success": false,
-          "error": "Command failed: node scripts/automation/error-monitor.cjs\n/workspace/scripts/automation/error-monitor.cjs:38\n    console.log(`message);\n\nSyntaxError: missing ) after argument list\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
-        },
-        {
-          "script": "scripts/automation/master-error-fixer.cjs",
-          "success": false,
-          "error": "Command failed: node scripts/automation/master-error-fixer.cjs\n/workspace/scripts/automation/master-error-fixer.cjs:9\n    this.logFile = path.join(this.projectRoot, '''logs/master-error-fixer.log'');\n                                               ^^\n\nSyntaxError: missing ) after argument list\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
-        }
-      ]
-    },
-    "quality": {
-      "total": 3,
-      "successful": 0,
-      "failed": 3,
-      "results": [
-        {
-          "script": "scripts/automation/quality-checks.cjs",
-          "success": false,
-          "error": "Command failed: node scripts/automation/quality-checks.cjs\n/workspace/scripts/automation/quality-checks.cjs:6\nconsole.log(``🔍 Starting continuous quality checks automation...`);\n            ^^\n\nSyntaxError: missing ) after argument list\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
-        },
-        {
-          "script": "scripts/automation/code-quality-automation.cjs",
-          "success": false,
-          "error": "Command failed: node scripts/automation/code-quality-automation.cjs\n/workspace/scripts/automation/code-quality-automation.cjs:6\nconsole.log(``🎯 Starting comprehensive code quality automation...`);\n            ^^\n\nSyntaxError: missing ) after argument list\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
-        },
-        {
-          "script": "scripts/automation/linting-error-fixer.cjs",
-          "success": false,
-          "error": "Command failed: node scripts/automation/linting-error-fixer.cjs\n/workspace/scripts/automation/linting-error-fixer.cjs:9\n    this.logFile = path.join(this.projectRoot, ``automation/logs/linting-error-fixer.log``);\n                                               ^^\n\nSyntaxError: missing ) after argument list\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
-        }
-      ]
-    },
-    "dependencies": {
-      "total": 2,
-      "successful": 1,
-      "failed": 1,
-      "results": [
-        {
-          "command": "npm outdated",
-          "description": "Check Outdated Dependencies",
-          "success": false,
-          "error": "Command failed: npm outdated\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
-        },
-        {
-          "command": "npm ls --depth=0",
-          "description": "List Dependencies",
-          "success": true,
-          "output": "bolt.new.zion.app@0.1.0 /workspace\n├── @eslint/js@9.34.0\n├── @netlify/plugin-nextjs@5.12.1\n├── @next/bundle-analyzer@13.5.11\n├── @testing-library/jest-dom@6.8.0\n├── @testing-library/react@13.4.0\n├── @types/node@20.19.11\n├── @types/react-dom@18.3.7\n├── @types/react@19.1.12\n├── @typescript-eslint/eslint-plugin@8.41.0\n├── @typescript-eslint/parser@8.41.0\n├── @vitejs/plugin-react@5.0.2\n├── autoprefixer@10.4.21\n├── axios@1.11.0\n├── class-variance-authority@0.7.1\n├── clsx@2.1.1\n├── critters@0.0.23\n├── cssnano@7.1.1\n├── eslint-config-next@13.5.11\n├── eslint-plugin-react-hooks@5.2.0\n├── eslint-plugin-react-refresh@0.4.20\n├── eslint-plugin-react@7.37.5\n├── eslint@8.57.1\n├── framer-motion@10.18.0\n├── glob@11.0.3\n├── globals@16.3.0\n├── jest-environment-jsdom@30.1.2\n├── jest@29.7.0\n├── lucide-react@0.292.0\n├── next@15.5.2\n├── postcss-preset-env@10.3.1\n├── postcss@8.5.6\n├── prettier@3.6.2\n├── react-dom@18.3.1\n├── react-error-boundary@6.0.0\n├── react-helmet-async@2.0.5\n├── react-router-dom@7.8.2\n├── react@18.3.1\n├── tailwind-merge@3.3.1\n├── tailwindcss@3.4.17\n├── typescript@5.9.2\n├── vite@7.1.3\n└── web-vitals@3.5.2\n\n"
-        }
-      ]
-    }
+  "dependencies": {
+    "installed": true,
+    "errors": []
   },
-  "recommendations": [
-    "Fix failed automation scripts",
-    "Address linting issues",
-    "Fix failing tests",
-    "Fix build issues"
-=======
-  "timestamp": "2025-09-02T22:11:03.435Z",
-  "summary": {
-    "totalScripts": 8,
-    "successful": 2,
-    "failed": 6
+  "syntaxErrors": {
+    "fixed": 0,
+    "errors": [
+      "Command failed: node scripts/fix-syntax-errors-fixed.cjs\n/workspace/scripts/fix-syntax-errors-fixed.cjs:29\n      content = content.replace(/we\\\\'ll\\s*\"'\\s*$/gm, 'we\\\\'ll\"');\n                                                      ^^^^^^\n\nSyntaxError: missing ) after argument list\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
+    ]
   },
-  "results": [
-    {
-      "path": "scripts/comprehensive-error-fixer.cjs",
-      "description": "Comprehensive Error Fixer",
-      "success": false,
-      "error": "Command failed: node scripts/comprehensive-error-fixer.cjs\n/workspace/scripts/comprehensive-error-fixer.cjs:46\n    const sourceDirs = [src',\n                           ^^\n\nSyntaxError: Invalid or unexpected token\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
-    },
-    {
-      "path": "scripts/advanced-app-optimizer.cjs",
-      "description": "Advanced App Optimizer",
-      "success": true,
-      "output": "[2025-09-02T22:10:31.274Z] 🚀 Starting Advanced App Optimization\n[2025-09-02T22:10:31.275Z] 🔍 Analyzing bundle size...\n\n> zion-tech-group@0.1.0 build:analyze\n> ANALYZE=true npm run build\n\n\n> zion-tech-group@0.1.0 build\n> NEXT_TELEMETRY_DISABLED=1 NEXT_DISABLE_ESLINT=1 next build\n\n   ▲ Next.js 15.5.2\n   - Environments: .env\n   - Experiments (use with caution):\n     ⨯ esmExternals\n     ✓ newNextLinkBehavior\n\n   Skipping validation of types\n   Skipping linting\n   Creating an optimized production build ...\n ✓ Compiled successfully in 4.1s\n   Collecting page data ...\n   Generating static pages (0/19) ...\n   Generating static pages (4/19) \r\n   Generating static pages (9/19) \r\n   Generating static pages (14/19) \r\n ✓ Generating static pages (19/19)\n   Finalizing page optimization ...\n   Collecting build traces ...\n\nRoute (pages)                                Size  First Load JS\n┌ ○ /                                        3 kB        88.4 kB\n├   /_app                                     0 B        82.3 kB\n├ ○ /404                                    180 B        82.4 kB\n├ ○ /about                                2.61 kB        91.6 kB\n├ ○ /ai-services                          6.74 kB        92.1 kB\n├ ○ /blog                                  2.9 kB        91.9 kB\n├ ○ /contact                              2.45 kB        91.4 kB\n├ ○ /help                                  3.6 kB        92.6 kB\n├ ○ /index.p                              1.45 kB        83.7 kB\n├ ○ /it-services                          6.66 kB          92 kB\n├ ○ /micro-saas                           7.01 kB        92.4 kB\n├ ○ /NotFound                             40.4 kB         123 kB\n├ ○ /pricing                              3.77 kB        92.7 kB\n├ ○ /privacy                               3.4 kB        92.4 kB\n├ ○ /services                               13 kB        98.4 kB\n├ ○ /services/ai-development              2.87 kB        91.8 kB\n├ ○ /services/cloud-services              2.75 kB        91.7 kB\n├ ○ /services/web-development             2.84 kB        91.8 kB\n└ ○ /terms                                3.79 kB        92.8 kB\n+ First Load JS shared by all             82.3 kB\n  ├ chunks/framework-a6e0b7e30f98059a.js  44.8 kB\n  ├ chunks/main-1c70fbb5f14855b5.js       36.5 kB\n  └ other shared chunks (total)           1.03 kB\n\nƒ Middleware                                34 kB\n\n○  (Static)  prerendered as static content\n\n[2025-09-02T22:10:41.706Z] ✅ Bundle analysis completed\n[2025-09-02T22:10:41.707Z] 🖼️ Optimizing images...\n[2025-09-02T22:10:41.709Z] 📦 Optimizing code splitting...\n[2025-09-02T22:10:41.709Z] ✅ Optimized code splitting for NotFound.tsx\n[2025-09-02T22:10:41.710Z] ✅ Optimized code splitting for _app.tsx\n[2025-09-02T22:10:41.710Z] ✅ Optimized code splitting for _document.js\n[2025-09-02T22:10:41.710Z] ✅ Optimized code splitting for _document.tsx\n[2025-09-02T22:10:41.710Z] ✅ Optimized code splitting for about.tsx\n[2025-09-02T22:10:41.710Z] ✅ Optimized code splitting for ai-services.tsx\n[2025-09-02T22:10:41.710Z] ✅ Optimized code splitting for blog.tsx\n[2025-09-02T22:10:41.711Z] ✅ Optimized code splitting for contact.tsx\n[2025-09-02T22:10:41.711Z] ✅ Optimized code splitting for help.tsx\n[2025-09-02T22:10:41.711Z] ✅ Optimized code splitting for index.p.tsx\n[2025-09-02T22:10:41.711Z] ✅ Optimized code splitting for index.tsx\n[2025-09-02T22:10:41.711Z] ✅ Optimized code splitting for it-services.tsx\n[2025-09-02T22:10:41.712Z] ✅ Optimized code splitting for micro-saas.tsx\n[2025-09-02T22:10:41.712Z] ✅ Optimized code splitting for pricing.tsx\n[2025-09-02T22:10:41.712Z] ✅ Optimized code splitting for privacy.tsx\n[2025-09-02T22:10:41.713Z] ✅ Optimized code splitting for services.tsx\n[2025-09-02T22:10:41.713Z] ✅ Optimized code splitting for terms.tsx\n[2025-09-02T22:10:41.713Z] ⚡ Optimizing performance...\n[2025-09-02T22:10:41.713Z] ✅ Created optimized Next.js configuration\n[2025-09-02T22:10:41.713Z] 📊 Generating optimization report...\n[2025-09-02T22:10:41.713Z] ✅ Report saved to /workspace/optimization-reports/optimization-report.json\n[2025-09-02T22:10:41.714Z] 🎉 Advanced App Optimization completed successfully\n"
-    },
-    {
-      "path": "scripts/security-enhancer.cjs",
-      "description": "Security Enhancer",
-      "success": true,
-      "output": "[2025-09-02T22:10:41.736Z] 🛡️ Starting Security Enhancement\n[2025-09-02T22:10:41.737Z] 🔍 Auditing dependencies for security vulnerabilities...\n[2025-09-02T22:10:41.948Z] ⚠️ Security vulnerabilities found: Command failed: npm audit --audit-level=moderate\n[2025-09-02T22:10:41.948Z] 🛡️ Creating security headers configuration...\n[2025-09-02T22:10:41.948Z] ✅ Security headers middleware created\n[2025-09-02T22:10:41.948Z] 🔐 Creating security utility functions...\n[2025-09-02T22:10:41.949Z] ✅ Security utility functions created\n[2025-09-02T22:10:41.949Z] 🔒 Creating environment security configuration...\n[2025-09-02T22:10:41.949Z] ✅ Environment security template created\n[2025-09-02T22:10:41.949Z] 📊 Generating security report...\n[2025-09-02T22:10:41.949Z] ✅ Security report saved to /workspace/security-reports/security-enhancement-report.json\n[2025-09-02T22:10:41.949Z] 🎉 Security Enhancement completed successfully\n"
-    },
-    {
-      "path": "scripts/performance-monitor.js",
-      "description": "Performance Monitor",
-      "success": false,
-      "error": "Command failed: node scripts/performance-monitor.js\nfile:///workspace/scripts/performance-monitor.js:50\n;\n^\n\nSyntaxError: Unexpected token ';'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n\nNode.js v22.16.0\n"
-    },
-    {
-      "path": "scripts/health-checker.js",
-      "description": "Health Checker",
-      "success": false,
-      "error": "Command failed: node scripts/health-checker.js\nfile:///workspace/scripts/health-checker.js:2\nimport fs from;\n              ^\n\nSyntaxError: Unexpected token ';'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n\nNode.js v22.16.0\n"
-    },
-    {
-      "command": "npm run lint:fix",
-      "description": "ESLint Fix",
-      "success": false,
-      "error": "Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
-    },
-    {
-      "command": "npm run type-check",
-      "description": "TypeScript Check",
-      "success": false,
-      "error": "spawnSync /bin/sh ENOBUFS"
-    },
-    {
-      "command": "npm run build",
-      "description": "Build Test",
-      "success": false,
-      "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⚠ Invalid next.config.js options detected: \n ⚠     Unrecognized key(s) in object: 'newNextLinkBehavior' at \"experimental\"\n ⚠ See more info here: https://nextjs.org/docs/messages/invalid-next-config\n ⚠ The \"experimental.esmExternals\" option has been modified. experimental.esmExternals is not recommended to be modified as it may disrupt module resolution. It should be removed from your next.config.js.\nReferenceError: dynamic is not defined\n    at 3010 (.next/server/pages/about.js:1:3424)\n    at c (.next/server/webpack-runtime.js:1:127)\n    at <unknown> (.next/server/pages/about.js:1:13148)\n    at c.X (.next/server/webpack-runtime.js:1:1181)\n    at <unknown> (.next/server/pages/about.js:1:13126)\n    at Object.<anonymous> (.next/server/pages/about.js:1:13179)\n\n> Build error occurred\n[Error: Failed to collect page data for /about] { type: 'Error' }\n"
-    }
-  ],
-  "recommendations": [
-    "Review failed scripts and fix issues",
-    "Run automation scripts regularly",
-    "Monitor performance metrics",
-    "Keep dependencies updated",
-    "Implement continuous integration",
-    "Set up automated testing",
-    "Monitor security vulnerabilities",
-    "Optimize bundle size regularly"
-  ],
-  "nextSteps": [
-    "Commit changes to version control",
-    "Deploy to staging environment",
-    "Run end-to-end tests",
-    "Deploy to production",
-    "Monitor application performance"
->>>>>>> main
-  ]
+  "tests": {
+    "passed": 0,
+    "failed": 2,
+    "errors": [
+      "spawnSync /bin/sh ENOBUFS",
+      "Command failed: npm run lint\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nCannot read config file: /workspace/.eslintrc.js\nError: Unexpected string\n"
+    ]
+  },
+  "build": {
+    "success": false,
+    "errors": [
+      "Command failed: NODE_OPTIONS=\"--max-old-space-size=8192\" npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nFailed to compile.\n\n./components/Layout.tsx\nError: \n  \u001b[31mx\u001b[0m Expected ';', '}' or <eof>\n   ,-[\u001b[36;1;4m/workspace/components/Layout.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | import React from 'react';'import Head from 'next/head';'import EnhancedNavigation from './layout/EnhancedNavigation';'import EnhancedFooter from './layout/EnhancedFooter';''interface LayoutProps {children: React.ReactNode;'\n   : \u001b[31;1m                          ^^^^^^^^^|^^^^^^^^^\u001b[0m\u001b[33;1m^^^^\u001b[0m\n   :                                    \u001b[31;1m`-- \u001b[31;1mThis is the expression part of an expression statement\u001b[0m\u001b[0m\n \u001b[2m2\u001b[0m | import React from 'react';'import Head from 'next/head';'import EnhancedNavigation from './layout/EnhancedNavigation';'import EnhancedFooter from './layout/EnhancedFooter';''interface LayoutProps {children: React.ReactNode;'\n \u001b[2m3\u001b[0m | import React from 'react';\n \u001b[2m4\u001b[0m | import Head from 'next/head';\n   `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./components/Layout.tsx\n./pages/blockchain-solutions.tsx\n\n./components/Navigation.tsx\nError: \n  \u001b[31mx\u001b[0m Expected 'from', got ':'\n   ,-[\u001b[36;1;4m/workspace/components/Navigation.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | import: React, { useState } from 'react';\n   : \u001b[31;1m      ^\u001b[0m\n \u001b[2m2\u001b[0m | import: Link from 'next/link';\n \u001b[2m3\u001b[0m | import: { Menu, X, ChevronDown } from 'lucide-react';\n   `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./components/Navigation.tsx\n./components/layout/Header.tsx\n./components/layout/MainLayout.tsx\n./pages/blog/index.tsx\n\n./components/SEO.tsx\nError: \n  \u001b[31mx\u001b[0m Expected ';', '}' or <eof>\n   ,-[\u001b[36;1;4m/workspace/components/SEO.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | import React from 'react';'import { Helmet } from 'react-helmet-async';''interface SEOProps {title: string;'\n   : \u001b[31;1m                          ^^^^^^^^^^^^|^^^^^^^^^^^^\u001b[0m\u001b[33;1m^^^^^\u001b[0m\n   :                                       \u001b[31;1m`-- \u001b[31;1mThis is the expression part of an expression statement\u001b[0m\u001b[0m\n \u001b[2m2\u001b[0m |   description: string;\n \u001b[2m3\u001b[0m | import React from 'react';'import { Helmet } from 'react-helmet-async';''interface SEOProps {title: string;'\n \u001b[2m4\u001b[0m | ursor/automate-test-fix-improve-and-merge-code-99d1\n   `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./components/SEO.tsx\n./pages/solutions/ai-content-creation.tsx\n\n./components/ui/Button.tsx\nError: \n  \u001b[31mx\u001b[0m Expected ';', '}' or <eof>\n   ,-[\u001b[36;1;4m/workspace/components/ui/Button.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | import React from 'react';'import { cva, type VariantProps } from 'class-variance-authority';'import { cn } from '../../src/lib/utils';''const buttonVariants = cva(;\n   : \u001b[31;1m                          ^^^^^^^^^^^^^^^^^^^^|^^^^^^^^^^^^^^^^^^^^\u001b[0m\u001b[33;1m^^^^^\u001b[0m\n   :                                               \u001b[31;1m`-- \u001b[31;1mThis is the expression part of an expression statement\u001b[0m\u001b[0m\n \u001b[2m2\u001b[0m |   'inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50', {'    variants: {'      variant: {;\n \u001b[2m3\u001b[0m |         default: 'bg-primary text-primary-foreground hover: bg-primary/90', '        destructive: 'bg-destructive text-destructive-foreground hover:bg-destructive/90', outline: 'border border-input bg-background hover:bg-accent hover:text-accent-foreground', '        secondary: 'bg-secondary text-secondary-foreground hover:bg-secondary/80', ghost: 'hover:bg-accent hover:text-accent-foreground', '        link: 'text-primary underline-offset-4 hover:underline'}, '      size: {'        default: 'h-10 px-4 py-2', sm: 'h-9 rounded-md px-3', '        lg: 'h-11 rounded-md px-8', icon: 'h-10 w-10', '      }}, '    defaultVariants: {;\n \u001b[2m4\u001b[0m |       variant: 'default', size: 'default','    }}');\n   `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./components/ui/Button.tsx\n./pages/solutions/ai-content-creation.tsx\n\n./pages/help.tsx\nError: \n  \u001b[31mx\u001b[0m Unterminated string constant\n   ,-[\u001b[36;1;4m/workspace/pages/help.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | import type { NextPage } from 'next;\n   : \u001b[31;1m                              ^^^^^^\u001b[0m\n \u001b[2m2\u001b[0m | import Layout from '../components/Layout;\n \u001b[2m3\u001b[0m | import Link from 'next/link;\n \u001b[2m4\u001b[0m | import { HelpCircle, Search, MessageCircle, Phone, Mail, BookOpen, Video, FileText, Users, Clock, CheckCircle } from 'lucide-react;\n   `----\n\n  \u001b[31mx\u001b[0m Unterminated string constant\n   ,-[\u001b[36;1;4m/workspace/pages/help.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | import type { NextPage } from 'next;\n \u001b[2m2\u001b[0m | import Layout from '../components/Layout;\n   : \u001b[31;1m                   ^^^^^^^^^^^^^^^^^^^^^^\u001b[0m\n \u001b[2m3\u001b[0m | import Link from 'next/link;\n \u001b[2m4\u001b[0m | import { HelpCircle, Search, MessageCircle, Phone, Mail, BookOpen, Video, FileText, Users, Clock, CheckCircle } from 'lucide-react;\n   `----\n\n  \u001b[31mx\u001b[0m Unterminated string constant\n   ,-[\u001b[36;1;4m/workspace/pages/help.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | import type { NextPage } from 'next;\n \u001b[2m2\u001b[0m | import Layout from '../components/Layout;\n \u001b[2m3\u001b[0m | import Link from 'next/link;\n   : \u001b[31;1m                 ^^^^^^^^^^^\u001b[0m\n \u001b[2m4\u001b[0m | import { HelpCircle, Search, MessageCircle, Phone, Mail, BookOpen, Video, FileText, Users, Clock, CheckCircle } from 'lucide-react;\n \u001b[2m5\u001b[0m | \n \u001b[2m6\u001b[0m | const: Help: NextPage: = () => ,{,\n   `----\n\n  \u001b[31mx\u001b[0m Unterminated string constant\n   ,-[\u001b[36;1;4m/workspace/pages/help.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | import type { NextPage } from 'next;\n \u001b[2m2\u001b[0m | import Layout from '../components/Layout;\n \u001b[2m3\u001b[0m | import Link from 'next/link;\n \u001b[2m4\u001b[0m | import { HelpCircle, Search, MessageCircle, Phone, Mail, BookOpen, Video, FileText, Users, Clock, CheckCircle } from 'lucide-react;\n   : \u001b[31;1m                                                                                                                     ^^^^^^^^^^^^^^\u001b[0m\n \u001b[2m5\u001b[0m | \n \u001b[2m6\u001b[0m | const: Help: NextPage: = () => ,{,\n \u001b[2m7\u001b[0m |   const faqs = [;\n   `----\n\n  \u001b[31mx\u001b[0m Unexpected token `:`. Expected yield, an identifier, [ or {\n   ,-[\u001b[36;1;4m/workspace/pages/help.tsx\u001b[0m:3:1]\n \u001b[2m3\u001b[0m | import Link from 'next/link;\n \u001b[2m4\u001b[0m | import { HelpCircle, Search, MessageCircle, Phone, Mail, BookOpen, Video, FileText, Users, Clock, CheckCircle } from 'lucide-react;\n \u001b[2m5\u001b[0m | \n \u001b[2m6\u001b[0m | const: Help: NextPage: = () => ,{,\n   : \u001b[31;1m     ^\u001b[0m\n \u001b[2m7\u001b[0m |   const faqs = [;\n \u001b[2m8\u001b[0m |     {;\n \u001b[2m9\u001b[0m |       question: \"What: services does Zion Tech Group offer?,\",\";\";\";\n   `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/help.tsx\n\n\n> Build failed because of webpack errors\n"
+    ]
+  },
+  "performance": {
+    "optimized": true,
+    "errors": [
+      "scripts/optimize-build.js: Command failed: node scripts/optimize-build.js\nfile:///workspace/scripts/optimize-build.js:6\n*/;,\"});,\"})\n   ^\n\nSyntaxError: Unexpected token ','\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n\nNode.js v22.16.0\n",
+      "scripts/performance-optimizer.js: Command failed: node scripts/performance-optimizer.js\nfile:///workspace/scripts/performance-optimizer.js:5\n */;,\"});,\"})\n    ^\n\nSyntaxError: Unexpected token ','\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n\nNode.js v22.16.0\n",
+      "scripts/optimize-imports.js: Command failed: node scripts/optimize-imports.js\nfile:///workspace/scripts/optimize-imports.js:5\n */;,\"});,\"})\n    ^\n\nSyntaxError: Unexpected token ','\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n\nNode.js v22.16.0\n"
+    ]
+  },
+  "security": {
+    "audited": false,
+    "errors": [
+      "Command failed: npm audit --audit-level=moderate\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error code ENOLOCK\nnpm error audit This command requires an existing lockfile.\nnpm error audit Try creating one first with: npm i --package-lock-only\nnpm error audit Original error: loadVirtual requires existing shrinkwrap file\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-03T02_39_51_938Z-debug-0.log\n"
+    ]
+  }
 }

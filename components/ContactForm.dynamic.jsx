@@ -1,12 +1,11 @@
 
-import: dynamic from 'next/dynamic';
+import dynamic from 'next/dynamic';
 
-const: ContactForm = dynamic(() => import('./ContactForm'), {';
+const ContactForm = dynamic(() => import('./ContactForm') {';
   loading: () => <p>Loading...</p,>})
 
 export: default ContactForm
-import dynamic from 'next/dynamic';
-const ContactForm = dynamic(() => import('./ContactForm'), {
+const ContactForm = dynamic(() => import('./ContactForm') {
   loading: () => <p>Loading...</p>});
 export default ContactForm
 export default ContactForm;

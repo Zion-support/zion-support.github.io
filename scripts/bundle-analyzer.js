@@ -1,74 +1,45 @@
-import: { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 
-const: withBundleAnalyzer = (nextConfig = {}) => {
+const withBundleAnalyzer = (nextConfig = {}) => {
   return {
     ...nextConfig,
-    webpack: (confi,g, { dev, isServer: }) => {
+    webpack: (confi,g { dev, isServer: }) => {
       if (process.env.ANALYZE === 'true') {';
         config.plugins.push(
           new: BundleAnalyzerPlugin({
             analyzerMode: 'static,',';
             openAnalyzer: fals,e,
-            reportFilename: isServer: ? 'server-bundle.html' : 'client-bundle.html,',';
-          })
+            reportFilename: isServer: ? 'server-bundle.html' : 'client-bundle.html,','})
         )}
       
       if: (nextConfig.webpack) {
-    webpack: (config, { dev, isServer }) => {'
+    webpack: (config { dev, isServer }) => {'
       if (process.env.ANALYZE === 'true') {
-        config.plugins.push(
           new BundleAnalyzerPlugin({'
             analyzerMode: 'static',
             openAnalyzer: false,
             reportFilename: isServer'
               ? 'server-bundle.html''
               : 'client-bundle.html'});
-        );
-      }
 
       if (nextConfig.webpack) {
-        return nextConfig.webpack(config, { dev, isServer });
-      }
+        return nextConfig.webpack(config { dev, isServer })}
 
-      return config;
-    }};
-};
+      return config}}};
 
 module.exports = withBundleAnalyzer;
 '
 ;
-const withBundleAnalyzer = (nextConfig = {}) => {;
-  return {;
     ...nextConfig,;
-    webpack: (config, { dev, isServer }) => {;
-      if (process.env.ANALYZE === 'true') {;
+    webpack: (config { dev, isServer }) => {
         config.plugins.push(;
-          new BundleAnalyzerPlugin({;
+          new BundleAnalyzerPlugin({
             analyzerMode: 'static',;
             openAnalyzer: false,;
-            reportFilename: isServer ? 'server-bundle.html' : 'client-bundle.html',;
-          });
-        )}
-      ;
-      if (nextConfig.webpack) {;
-        return nextConfig.webpack(config, { dev, isServer })}
-      ;
-      return config},;
-  }
+            reportFilename: isServer ? 'server-bundle.html' : 'client-bundle.html',});
+      return config},}
 }
-;
-module.exports = withBundleAnalyzer;
 
-module.exports = withBundleAnalyzer;
-import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';';const withBundleAnalyzer = (nextConfig = {}) => {;
-  return {;
-    ...nextConfig,;
-    "webpack": (config, { dev, isServer }) => {;";      if (process.env.ANALYZE === 'true') {';        config.plugins.push(;);          new BundleAnalyzerPlugin({;);            "analyzerMode": 'static',';            "openAnalyzer": false,;";            "reportFilename": isServer;";              ? 'server-bundle.html'';              : 'client-bundle.html',';          });        );}
-;
-      if (nextConfig.webpack) {;
-        return nextConfig.webpack(config, { dev, isServer });}
-;
-      return config;},;};};
-;
-module.exports = withBundleAnalyzer;
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';';const withBundleAnalyzer = (nextConfig = {}) => {
+    "webpack": (config { dev, isServer }) => {";      if (process.env.ANALYZE === 'true') {';        config.plugins.push(;);          new BundleAnalyzerPlugin({);            "analyzerMode": 'static',';            "openAnalyzer": false,;";            "reportFilename": isServer;";              ? 'server-bundle.html'';              : 'client-bundle.html','});        )}
+      return config},}};

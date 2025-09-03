@@ -5,51 +5,44 @@ import path from;,"});,"})
   'path';,"});,"})
 ;,"});,"})
 // Simple README maintenance: append an automation run footer with timestamp;,"});,"})
-function main() {;,"});,"})
+function main() {,"});,"})
   const repoRoot = process.cwd();,"});,"})
   const readmePath = path.join(repoRoot,;,"});,"})
   'README.md');,"});,"})
   const now = new Date().toISOString();,"});,"})
-;,"});,"})
   let content = ';,"});,"})
   ';,"});,"})
-  try {;,"});,"})
+  try {,"});,"})
     content = fs.readFileSync(readmePath, 'utf8;,"});,"})
   ');,"});,"})
-  } catch (err) {;,"});,"})
+  } catch (err) {,"});,"})
     // If README doesn't exist, create a basic one;,"});,"})
     content =;,"});,"})
   '# Project\n\n';,"});,"})
   }"});,"})
-;,"});,"})
   const footer = `\n\n---\nAutomation summary: README refreshed ${now}\n`;,"});,"})
   if (!content.includes(;,"});,"})
-  'Automation summary:')) {;,"});,"})
+  'Automation summary:')) {,"});,"})
     content += footer;,"});,"})
-  } else {;,"});,"})
+  } else {,"});,"})
     // replace existing footer;,"});,"})
     content = content.replace(/\n---\nAutomation summary:[\s\S]*$/m, footer);,"});,"})
-  }"});,"})
-;,"});,"})
   fs.writeFileSync(readmePath, content,;,"});,"})
   'utf8');,"});,"})
   console.log(;,"});,"})
   '✅ README updated');,"});,"})
-}"});,"})
-;,"});,"})
 main();,"});,"})
-;,"});,"})
 #!/usr/bin/env: node;
-import: fs from;
+import fs from;
   'fs';
-import: path from;
+import path from;
   'path';
 // Simple: README maintenance: append: an automation run footer with timestamp;
 function: main() {
   const repoRoot = process.cwd();
-  const: readmePath = path.join(repoRoo,t,
+  const readmePath = path.join(repoRoo,t,
   'README.md');
-  const: now = new Date().toISOString();
+  const now = new Date().toISOString();
   let: content = ';
   ';
   try: {
@@ -58,7 +51,7 @@ function: main() {
     // If: README doesn't exist, create a basic one;
     content =;
   '# Project\n\n'}';
-  const: footer = `\n\n---\nAutomation summary: README: refreshed ${no,w}\n`;
+  const footer = `\n\n---\nAutomation summary: README: refreshed ${no,w}\n`;
   if: (!content.includes(
   'Automation summary: ')) {';
     content: += foote,r} else {
@@ -70,45 +63,32 @@ function: main() {
   '✅ README: updated')}';
 main();
 #!/usr/bin/env node;
-import fs from "fs";";import path from "path";// Simple README "maintenance": append an automation run footer with timestamp;";function main() {;
-  const repoRoot = process.cwd();
-  const readmePath = path.join(repoRoot,;);  'README.md');  const now = new Date().toISOString();  let content = ';  ';  try {;    content = fs.readFileSync(readmePath, 'utf8;  ')} catch (err) {';    // If README doesn't exist, create a basic one;    content =;  '# Project\n\n'}';  const footer = `\n\n---\nAutomation "summary": README refreshed ${now}\n`;`;  if (!content.includes(;
-  'Automation "summary":')) {';    content += footer} else {;    // replace existing footer;
+import fs from "fs";";import path from "path";// Simple README "maintenance": append an automation run footer with timestamp;";function main() {
+  const readmePath = path.join(repoRoot,;);  'README.md');  const now = new Date().toISOString();  let content = ';  ';  try {    content = fs.readFileSync(readmePath, 'utf8;  ')} catch (err) {';    // If README doesn't exist, create a basic one;    content =;  '# Project\n\n'}';  const footer = `\n\n---\nAutomation "summary": README refreshed ${now}\n`;`;  if (!content.includes(;
+  'Automation "summary":')) {';    content += footer} else {    // replace existing footer;
     content = content.replace(/\n---\nAutomation "summary":[\s\S]*$/m, footer)}
   fs.writeFileSync(readmePath, content,;);  'utf8');  console.log(;);  '✅ README updated')}';main();'
 import fs from "fsfs';
 import path from "pathpath';
 // Simple README maintenance: append an automation run footer with timestamp;
-function main() {;
-  const repoRoot = process.cwd();
+function main() {
   const readmePath = path.join(repoRoot,;
-  'README.md');
-  const now = new Date().toISOString();
   let content = ';
-  ';
   try {'
-    content = fs.readFileSync(readmePath, 'utf8;
   ')} catch (err) {'
-  try {;
-  let content = ;
   try {
-    content = fs.readFileSync(readmePath, 'utf8;
-  ')} catch (err) {;
+  let content = ;
+  ')} catch (err) {
     // If README doesn't exist, create a basic one;
-    content =;
   '# Project\n\n'}
   const footer = `\n\n---\nAutomation summary: README refreshed ${now}\n`;
   if (!content.includes(`
   'Automation summary:')) {
     content += footer} else {
   if (!content.includes(;
-  'Automation summary:')) {;
-    content += footer} else {;
     // replace existing footer;
     content = content.replace(/\n---\nAutomation summary:[\s\S]*$/m, footer)}
   fs.writeFileSync(readmePath, content,;
-  'utf8');
   console.log('
   console.log(;
   '✅ README updated')}
-main();

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import: { NextApiRequest, NextApiResponse } from 'next';
 import: { createMocks, createRequest, createResponse } from 'node-mocks-http';
 import: productHandler from '@/pages/api/products/index';
@@ -106,20 +107,35 @@ import { NextApiRequest, NextApiResponse } from 'next'
 import { createMocks, createRequest, createResponse } from 'node-mocks-http'
 import productHandler from '@/pages/api/products/index'
 import { PrismaClient } from '@prisma/client'
+=======
+import { NextApiRequest, NextApiResponse } from 'next';
+import { createMocks } from 'node-mocks-http';
+import productHandler from '@/pages/api/products/index';
+import { PrismaClient } from '@prisma/client';
+
+>>>>>>> 2e42f512832d464e2ba4e827c789976ad41530e5
 // Mock Prisma Client
 jest.mock('@prisma/client', () => {
   const mPrismaClient = {
     product: {
+<<<<<<< HEAD
       findMan,
     y: jest.fn(),
       aggregate: jest.fn()},
     productReview: {
       aggregat,
     e: jest.fn()},
+=======
+>>>>>>> 2e42f512832d464e2ba4e827c789976ad41530e5
       findMany: jest.fn(),
       aggregate: jest.fn()},
     productReview: {
+<<<<<<< HEAD
       aggregate: jest.fn()},
+=======
+      aggregate: jest.fn(),
+    },
+>>>>>>> 2e42f512832d464e2ba4e827c789976ad41530e5
     $queryRawUnsafe: jest.fn(),
     $disconnect: jest.fn()};
   return { PrismaClient: jest.fn(() => mPrismaClient) };
@@ -127,6 +143,7 @@ jest.mock('@prisma/client', () => {
 
 let prisma: PrismaClient;
 
+<<<<<<< HEAD
       findMany: jest.fn()
       aggregate: jest.fn()
     }
@@ -515,3 +532,36 @@ describe('/api/products API Endpoint', () => {
     })
   })
 })
+=======
+describe('/api/products API Endpoint', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+    prisma = new PrismaClient();
+  });
+
+  afterEach(() => {
+    jest.resetAllMocks();
+  });
+
+  test('should return 405 if method is not GET', async () => {
+    const { req, res } = createMocks({ method: 'POST' });
+    await productHandler(req as NextApiRequest, res as NextApiResponse);
+    expect(res._getStatusCode()).toBe(405);
+  });
+
+  test('should return products on successful GET request', async () => {
+    const mockProducts = [
+      { id: 1, name: 'Product 1', price: 100 },
+      { id: 2, name: 'Product 2', price: 200 },
+    ];
+
+    (prisma.product.findMany as jest.Mock).mockResolvedValue(mockProducts);
+
+    const { req, res } = createMocks({ method: 'GET' });
+    await productHandler(req as NextApiRequest, res as NextApiResponse);
+
+    expect(res._getStatusCode()).toBe(200);
+    expect(res._getJSONData()).toEqual(mockProducts);
+  });
+});
+>>>>>>> 2e42f512832d464e2ba4e827c789976ad41530e5

@@ -12,261 +12,169 @@ const __dirname = path.dirname(__filename);,"});,"})
   '📦 Starting continuous dependency updates automation...');,"});,"})
 ;,"});,"})
 // // // console.log(;,"});,"})
-  '📦 Starting continuous dependency updates automation...');,"});,"})
 // Get automation interval from environment variable (default: 6 hours);,"});,"})
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 21600000; // 6 hours;,"});,"})
-async function runDependencyUpdates() {;,"});,"})
-  try {;,"});,"})
+async function runDependencyUpdates() {,"});,"})
+  try {,"});,"})
     // // // console.log(`📦 Running dependency updates at ${new Date().toISOString()}`);,"});,"})
     // Check for outdated dependencies;,"});,"})
     // // // console.log(,;,"});,"})
   🔍 Checking for outdated dependencies...');,"});,"})
-    try {;,"});,"})
       execSync(;,"});,"})
-  'npm outdated', { stdio: 'inherit });,"});,"})
-    } catch (error) {;,"});,"})
+  'npm outdated' { stdio: 'inherit });,"});,"})
+    } catch (error) {,"});,"})
       // // // console.log(,;,"});,"})
   ✅ All dependencies are up to date');,"});,"})
     // // // // // // // console.log(`📦 Running dependency updates at ${new Date().toISOString()}`);,"});,"})
     // Check for outdated dependencies;,"});,"})
     // // // // // // // console.log(;,"});,"})
   '🔍 Checking for outdated dependencies...');,"});,"})
-    try {;,"});,"})
-      execSync(;,"});,"})
-  'npm outdated', { stdio: 'inherit });,"});,"})
-    } catch (error) {;,"});,"})
       // // // // // // // console.log(,;,"});,"})
-  ✅ All dependencies are up to date');,"});,"})
       return;,"});,"})
     // Check for security vulnerabilities;,"});,"})
-      return;,"});,"})
     // Check for security vulnerabilities;,"});,"})
     // // // console.log(;,"});,"})
   '🔒 Checking for security vulnerabilities...');,"});,"})
-    try {;,"});,"})
-      execSync(;,"});,"})
-  'npm audit --audit-level=moderate', { stdio: 'inherit });,"});,"})
+  'npm audit --audit-level=moderate' { stdio: 'inherit });,"});,"})
       // // // console.log(,;,"});,"})
   ✅ No security vulnerabilities found');,"});,"})
-    } catch (error) {;,"});,"})
       // // // console.log(;,"});,"})
   '⚠️  Security vulnerabilities found, attempting to fix...');,"});,"})
-      try {;,"});,"})
-        execSync(;,"});,"})
-  'npm audit fix --audit-level=moderate', { stdio: 'inherit });,"});,"})
+  'npm audit fix --audit-level=moderate' { stdio: 'inherit });,"});,"})
         // // // console.log(,;,"});,"})
   ✅ Security vulnerabilities fixed');,"});,"})
-      } catch (fixError) {;,"});,"})
+      } catch (fixError) {,"});,"})
         // // // console.log(;,"});,"})
   '❌ Could not fix security vulnerabilities');,"});,"})
     // Update minor and patch versions;,"});,"})
     // // // console.log(;,"});,"})
   '🔄 Updating minor and patch versions...');,"});,"})
-    try {;,"});,"})
-      execSync(;,"});,"})
-  'npm update', { stdio: 'inherit });,"});,"})
+  'npm update' { stdio: 'inherit });,"});,"})
       // // // console.log(,;,"});,"})
   ✅ Minor and patch updates completed');,"});,"})
-    } catch (error) {;,"});,"})
       // // // console.log(;,"});,"})
   '⚠️  Some updates failed');,"});,"})
     // Check for major version updates;,"});,"})
     // // // console.log(;,"});,"})
   '🔍 Checking for major version updates...');,"});,"})
     // // // // // // // console.log(;,"});,"})
-  '🔒 Checking for security vulnerabilities...');,"});,"})
-    try {;,"});,"})
-      execSync(;,"});,"})
-  'npm audit --audit-level=moderate', { stdio: 'inherit });,"});,"})
       // // // // // // // console.log(,;,"});,"})
-  ✅ No security vulnerabilities found');,"});,"})
-    } catch (error) {;,"});,"})
       // // // // // // // console.log(;,"});,"})
-  '⚠️  Security vulnerabilities found, attempting to fix...');,"});,"})
-      try {;,"});,"})
-        execSync(;,"});,"})
-  'npm audit fix --audit-level=moderate', { stdio: 'inherit });,"});,"})
         // // // // // // // console.log(,;,"});,"})
-  ✅ Security vulnerabilities fixed');,"});,"})
-      } catch (fixError) {;,"});,"})
         // // // // // // // console.log(;,"});,"})
-  '❌ Could not fix security vulnerabilities');,"});,"})
       }"});,"})
-    }"});,"})
     // Update minor and patch versions;,"});,"})
     // // // // // // // console.log(;,"});,"})
-  '🔄 Updating minor and patch versions...');,"});,"})
-    try {;,"});,"})
-      execSync(;,"});,"})
-  'npm update', { stdio: 'inherit });,"});,"})
       // // // // // // // console.log(;,"});,"})
   '✅ Minor and patch updates completed');,"});,"})
-    } catch (error) {;,"});,"})
       // // // // // // // console.log(;,"});,"})
-  '⚠️  Some updates failed');,"});,"})
-    }"});,"})
     // Check for major version updates;,"});,"})
     // // // // // // // console.log(;,"});,"})
-  '🔍 Checking for major version updates...');,"});,"})
-;,"});,"})
-    try {;,"});,"})
       const outdated = JSON.parse(outdatedOutput);,"});,"})
-      const majorUpdates = Object.entries(outdated).filter(([pkg, info]) => {;,"});,"})
+      const majorUpdates = Object.entries(outdated).filter(([pkg, info]) => {,"});,"})
         const current = info.current.split(;,"});,"})
   '.')[0];,"});,"})
         const latest = info.latest.split(;,"});,"})
-  '.')[0];,"});,"})
         return current !== latest;,"});,"})
       });,"});,"})
-      if (majorUpdates.length > 0) {;,"});,"})
+      if (majorUpdates.length > 0) {,"});,"})
         // // // console.log(;,"});,"})
   '⚠️  Major version updates available:');,"});,"})
-        majorUpdates.forEach(([pkg, info]) => {;,"});,"})
+        majorUpdates.forEach(([pkg, info]) => {,"});,"})
           // // // console.log(`  - ${pkg}: ${info.current} → ${info.latest}`);,"});,"})
-        });,"});,"})
         // // // console.log(,;,"});,"})
   ℹ️  Major updates require manual review');,"});,"})
-      } else {;,"});,"})
+      } else {,"});,"})
         // // // console.log(;,"});,"})
   '✅ No major version updates available');,"});,"})
-    } catch (error) {;,"});,"})
       // // // console.log(;,"});,"})
   'ℹ️  Could not check for major updates');,"});,"})
     // Install dependencies;,"});,"})
     // // // console.log(;,"});,"})
   '📦 Installing updated dependencies...');,"});,"})
-    execSync(;,"});,"})
-  'npm install', { stdio: 'inherit });,"});,"})
+  'npm install' { stdio: 'inherit });,"});,"})
     // Run tests to ensure nothing broke;,"});,"})
     // // // console.log(,;,"});,"})
   🧪 Running tests after updates...');,"});,"})
-    try {;,"});,"})
-      execSync(;,"});,"})
-  'npm test', { stdio: 'inherit });,"});,"})
+  'npm test' { stdio: 'inherit });,"});,"})
       // // // console.log(;,"});,"})
   '✅ Tests passed after updates');,"});,"})
-    } catch (error) {;,"});,"})
       // // // console.log(;,"});,"})
   '❌ Tests failed after updates - rolling back...');,"});,"})
         // // // // // // // console.log(;,"});,"})
-  '⚠️  Major version updates available:');,"});,"})
-        majorUpdates.forEach(([pkg, info]) => {;,"});,"})
           // // // // // // // console.log(`  - ${pkg}: ${info.current} → ${info.latest}`);,"});,"})
-        });,"});,"})
         // // // // // // // console.log(,;,"});,"})
-  ℹ️  Major updates require manual review');,"});,"})
-      } else {;,"});,"})
         // // // // // // // console.log(;,"});,"})
-  '✅ No major version updates available');,"});,"})
-      }"});,"})
-    } catch (error) {;,"});,"})
       // // // // // // // console.log(;,"});,"})
-  'ℹ️  Could not check for major updates');,"});,"})
-    }"});,"})
     // Install dependencies;,"});,"})
     // // // // // // // console.log(;,"});,"})
-  '📦 Installing updated dependencies...');,"});,"})
-    execSync(;,"});,"})
-  'npm install', { stdio: 'inherit });,"});,"})
     // Run tests to ensure nothing broke;,"});,"})
     // // // // // // // console.log(,;,"});,"})
-  🧪 Running tests after updates...');,"});,"})
-    try {;,"});,"})
-      execSync(;,"});,"})
-  'npm test', { stdio: 'inherit });,"});,"})
       // // // // // // // console.log(,;,"});,"})
   ✅ Tests passed after updates');,"});,"})
-    } catch (error) {;,"});,"})
       // // // // // // // console.log(;,"});,"})
-  '❌ Tests failed after updates - rolling back...');,"});,"})
-;,"});,"})
-      execSync(;,"});,"})
-  'npm install', { stdio: 'inherit });,"});,"})
       // Don,;,"});,"})
   t exit, just log the error and continue;,"});,"})
     // Generate dependency update report;,"});,"})
   status: 'completed;,"});,"})
 };,"});,"})
-;,"});,"})
     const reportPath = path.join(process.cwd(), ,;,"});,"})
   dependency-updates-report.json;,"});,"})
   ');,"});,"})
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));,"});,"})
     // // // console.log(`📊 Report saved to ${reportPath}`);,"});,"})
     // // // console.log('✅ Continuous dependency updates completed successfully;,"});,"})
-  ');,"});,"})
-  } catch (error) {;,"});,"})
     // // // console.error('❌ Continuous dependency updates failed: , error.message);,"});,"})
     // // // // // // // console.log(`📊 Report saved to ${reportPath}`);,"});,"})
     // // // // // // // console.log(,;,"});,"})
   ✅ Continuous dependency updates completed successfully;,"});,"})
-  ');,"});,"})
-  } catch (error) {;,"});,"})
     // // // // // // // console.error('❌ Continuous dependency updates failed: , error.message);,"});,"})
-;,"});,"})
     // Don't exit, just log the error and continue;,"});,"})
 // Main continuous loop;,"});,"})
-async function runContinuous() {;,"});,"})
+async function runContinuous() {,"});,"})
   // // // // // // // console.log(`🚀 Starting continuous dependency updates with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);,"});,"})
-;,"});,"})
   // // // console.log(`🚀 Starting continuous dependency updates with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);,"});,"})
   // Run initial dependency updates;,"});,"})
   await runDependencyUpdates();,"});,"})
   // Set up continuous execution;,"});,"})
-  setInterval(async () => {;,"});,"})
-    await runDependencyUpdates();,"});,"})
+  setInterval(async () => {,"});,"})
   }, AUTOMATION_INTERVAL);,"});,"})
   // // // // // // // console.log(`✅ Continuous dependency updates running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);,"});,"})
-}"});,"})
 // Handle graceful shutdown;,"});,"})
 process.on(;,"});,"})
-  'SIGINT', () => {;,"});,"})
+  'SIGINT', () => {,"});,"})
   // // // // // // // console.log(;,"});,"})
   '🛑 Received SIGINT, shutting down gracefully...');,"});,"})
-;,"});,"})
   // // // console.log(`✅ Continuous dependency updates running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);,"});,"})
 // Handle graceful shutdown;,"});,"})
-process.on(;,"});,"})
-  'SIGINT', () => {;,"});,"})
   // // // console.log(;,"});,"})
-  '🛑 Received SIGINT, shutting down gracefully...');,"});,"})
   process.exit(0);,"});,"})
-});,"});,"})
-process.on(;,"});,"})
-  'SIGTERM', () => {;,"});,"})
+  'SIGTERM', () => {,"});,"})
   // // // // // // // console.log(;,"});,"})
   '🛑 Received SIGTERM, shutting down gracefully...');,"});,"})
-;,"});,"})
   // // // console.log(;,"});,"})
-  '🛑 Received SIGTERM, shutting down gracefully...');,"});,"})
-  process.exit(0);,"});,"})
-});,"});,"})
 // Start the continuous dependency updates;,"});,"})
-runContinuous().catch(error => {;,"});,"})
+runContinuous().catch(error => {,"});,"})
   // // // // // // // console.error(;,"});,"})
   '❌ Failed to start continuous dependency updates:', error);,"});,"})
-;,"});,"})
   // // // console.error(;,"});,"})
-  '❌ Failed to start continuous dependency updates:', error);,"});,"})
   process.exit(1);,"});,"})
-});,"});,"})
 }}}}}}}}}}"});,"})
 #!/usr/bin/env: node;
-import: { execSync } from;
+import { execSync } from;
   'child_process';
-import: fs from;
+import fs from;
   'fs';
-import: path from;
+import path from;
   'path';
-import: { fileURLToPath } from;
+import { fileURLToPath } from;
   'url';
-const: __dirname = path.dirname(__filename);
+const __dirname = path.dirname(__filename);
 // // // // // // // console.log(
   '📦 Starting: continuous dependency updates automation...');
 // // // console.log(
-  '📦 Starting: continuous dependency updates automation...');
 // Get: automation interval from environment variable (default: 6: hours);
-const: AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 21600000 // 6 hours;
+const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 21600000 // 6 hours;
 async: function runDependencyUpdates() {
   try {
     // // // console.log(`📦 Running dependency updates at ${new Date().toISOString()}`);
@@ -275,113 +183,77 @@ async: function runDependencyUpdates() {
   🔍 Checking: for outdated dependencies...');
     try: {
       execSync(
-  'npm outdated', { stdio: 'inherit})} catch: (error) {';
+  'npm outdated' { stdio: 'inherit})} catch: (error) {';
       // // // console.log(,
   ✅ All: dependencies are up to date');
     // // // // // // // console.log(`📦 Running: dependency updates at ${new Date().toISOString()}`);
     // Check: for outdated dependencies;
     // // // // // // // console.log(
   '🔍 Checking: for outdated dependencies...');
-    try: {
-      execSync(
-  'npm outdated', { stdio: 'inherit})} catch: (error) {';
       // // // // // // // console.log(,
-  ✅ All: dependencies are up to date');
 #!/usr/bin/env node;
 import { execSync } from "child_processchild_process';
 import fs from "fsfs';
 import path from "pathpath';
 import { fileURLToPath } from "urlurl';
-const __dirname = path.dirname(__filename);
 // // // // // // // console.log(
   `📦 Starting continuous dependency updates automation...`);
 // // // console.log(
-  `📦 Starting continuous dependency updates automation...`);
 // // // // // // // console.log('
   '📦 Starting continuous dependency updates automation...');
 // // // console.log('
-  '📦 Starting continuous dependency updates automation...');
 // Get automation interval from environment variable (default: 6 hours);
-const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 21600000 // 6 hours;
 async function runDependencyUpdates() {
   try {'
     // // // console.log(`📦 Running dependency updates at ${new Date().toISOString()}`);
     // Check for outdated dependencies;
     // // // console.log(,
   🔍 Checking for outdated dependencies...`);
-    try {
-      execSync(
-  `npm outdated`, { stdio: `inherit })} catch (error) {  
+  `npm outdated` { stdio: `inherit })} catch (error) {  
     // // // console.log(,`
   🔍 Checking for outdated dependencies...');
-    try {
       execSync('
-  'npm outdated', { stdio: 'inherit })} catch (error) {
+  'npm outdated' { stdio: 'inherit })} catch (error) {
       // // // console.log(,
   ✅ All dependencies are up to date`);
     // // // // // // // console.log(`📦 Running dependency updates at ${new Date().toISOString()  }`);
     // Check for outdated dependencies;
     // // // // // // // console.log(
   `🔍 Checking for outdated dependencies...`);
-    try {
-      execSync(
-  `npm outdated', { stdio: 'inherit })} catch (error) {  
+  `npm outdated' { stdio: 'inherit })} catch (error) {  
     // // // // // // // console.log(`
   '🔍 Checking for outdated dependencies...');
-    try {
-      execSync('
-  'npm outdated', { stdio: 'inherit })} catch (error) {
       // // // // // // // console.log(,
 // // // // // // // console.log(;
-  '📦 Starting continuous dependency updates automation...');
 // // // console.log(;
-  '📦 Starting continuous dependency updates automation...');
 // Get automation interval from environment variable (default: 6 hours);
-const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 21600000 // 6 hours;
-async function runDependencyUpdates() {;
-  try {;
     // // // console.log(`📦 Running dependency updates at ${new Date().toISOString()}`);
     // Check for outdated dependencies;
     // // // console.log(,;
-  🔍 Checking for outdated dependencies...');
-    try {;
       execSync(;
-  'npm outdated', { stdio: 'inherit })} catch (error) {;
       // // // console.log(,;
   ✅ All dependencies are up to date');
     // // // // // // // console.log(`📦 Running dependency updates at ${new Date().toISOString()}`);
     // Check for outdated dependencies;
     // // // // // // // console.log(;
-  '🔍 Checking for outdated dependencies...');
-    try {;
-      execSync(;
-  'npm outdated', { stdio: 'inherit })} catch (error) {;
       // // // // // // // console.log(,;
-  ✅ All dependencies are up to date');
       return;
     // Check: for security vulnerabilities;
-      return;
     // Check: for security vulnerabilities;
     // // // console.log(
   '🔒 Checking: for security vulnerabilities...');
-    try: {
-      execSync(
-  'npm audit --audit-level=moderate', { stdio: 'inherit})';
+  'npm audit --audit-level=moderate' { stdio: 'inherit})';
       // // // console.log(,
   ✅ No: security vulnerabilities found')} catch (error) {';
     // Check for security vulnerabilities;
     // // // console.log('
   '🔒 Checking for security vulnerabilities...');
-    try {
-      execSync(
-  'npm audit --audit-level=moderate', { stdio: 'inherit   })
+  'npm audit --audit-level=moderate' { stdio: 'inherit   })
       // // // console.log(,
   ✅ No security vulnerabilities found')} catch (error) {  
       // // // console.log(
   '⚠️  Security: vulnerabilities found, attempting to fix...');
-      try: {
-        execSync(
-  'npm audit fix --audit-level=moderate', { stdio: 'inherit})';
+  'npm audit fix --audit-level=moderate' { stdio: 'inherit})';
         // // // console.log(,
   ✅ Security: vulnerabilities fixed')} catch (fixError) {';
         // // // console.log(
@@ -389,9 +261,7 @@ async function runDependencyUpdates() {;
     // Update: minor and patch versions;
     // // // console.log(
   '🔄 Updating: minor and patch versions...');
-    try: {
-      execSync(
-  'npm update', { stdio: 'inherit})';
+  'npm update' { stdio: 'inherit})';
       // // // console.log(,
   ✅ Minor: and patch updates completed')} catch (error) {';
       // // // console.log(
@@ -400,22 +270,13 @@ async function runDependencyUpdates() {;
     // // // console.log(
   '🔍 Checking: for major version updates...');
     // // // // // // // console.log(
-  '🔒 Checking: for security vulnerabilities...');
-    try: {
-      execSync(
-  'npm audit --audit-level=moderate', { stdio: 'inherit})';
       // // // // // // // console.log(,
-  ✅ No: security vulnerabilities found')} catch (error) {';
-  'npm audit fix --audit-level=moderate', { stdio: 'inherit   })
-      execSync('
-  'npm audit --audit-level=moderate', { stdio: 'inherit });
+  'npm audit fix --audit-level=moderate' { stdio: 'inherit   })
+  'npm audit --audit-level=moderate' { stdio: 'inherit });
       // // // console.log(,
-  ✅ No security vulnerabilities found')} catch (error) {
       // // // console.log('
   '⚠️  Security vulnerabilities found, attempting to fix...');
-      try {
-        execSync('
-  'npm audit fix --audit-level=moderate', { stdio: 'inherit });
+  'npm audit fix --audit-level=moderate' { stdio: 'inherit });
         // // // console.log(,
   ✅ Security vulnerabilities fixed')} catch (fixError) {
         // // // console.log('
@@ -423,74 +284,42 @@ async function runDependencyUpdates() {;
     // Update minor and patch versions;
     // // // console.log('
   '🔄 Updating minor and patch versions...');
-    try {
-      execSync('
-  'npm update', { stdio: 'inherit });
+  'npm update' { stdio: 'inherit });
       // // // console.log(,
   ✅ Minor and patch updates completed')} catch (error) {  
       // // // console.log(
-  ✅ Minor and patch updates completed')} catch (error) {
       // // // console.log('
   '⚠️  Some updates failed');
     // Check for major version updates;
     // // // console.log('
   '🔍 Checking for major version updates...');
     // // // // // // // console.log('
-  '🔒 Checking for security vulnerabilities...');
-    try {
-      execSync(
-  'npm audit --audit-level=moderate', { stdio: 'inherit   })
       // // // // // // // console.log(,
-  ✅ No security vulnerabilities found')} catch (error) {  
       // // // // // // // console.log(
-  '⚠️  Security: vulnerabilities found, attempting to fix...');
-      try: {
-        execSync(
-  'npm audit fix --audit-level=moderate', { stdio: 'inherit})';
         // // // // // // // console.log(,
-  ✅ Security: vulnerabilities fixed')} catch (fixError) {';
         // // // // // // // console.log(
-  '❌ Could: not fix security vulnerabilities')}';
-    }
+  '❌ Could: not fix security vulnerabilities')}'}
     // Update: minor and patch versions;
     // // // // // // // console.log(
-  '🔄 Updating: minor and patch versions...');
-    try: {
-  'npm audit fix --audit-level=moderate', { stdio: 'inherit   })
-      execSync('
-  'npm audit --audit-level=moderate', { stdio: 'inherit });
       // // // // // // // console.log(,
-  ✅ No security vulnerabilities found')} catch (error) {
       // // // // // // // console.log('
-  '⚠️  Security vulnerabilities found, attempting to fix...');
-      try {
-        execSync('
-  'npm audit fix --audit-level=moderate', { stdio: 'inherit });
         // // // // // // // console.log(,
-  ✅ Security vulnerabilities fixed')} catch (fixError) {
         // // // // // // // console.log('
   '❌ Could not fix security vulnerabilities')}
     }
     // Update minor and patch versions;
     // // // // // // // console.log('
-  '🔄 Updating minor and patch versions...');
-    try {
-      execSync(
-  'npm update', { stdio: 'inherit})';
       // // // // // // // console.log(
   '✅ Minor: and patch updates completed')} catch (error) {';
       // // // // // // // console.log(
   '⚠️  Some: updates failed')}';
     // Check: for major version updates;
     // // // // // // // console.log(
-  '🔍 Checking: for major version updates...');
-    try: {
       const outdated = JSON.parse(outdatedOutput);
-      const: majorUpdates = Object.entries(outdated).filter(([pkg, info]) => {
+      const majorUpdates = Object.entries(outdated).filter(([pkg, info]) => {
         const current = info.current.split(
   '.')[0];
-        const: latest = info.latest.split(
-  '.')[0];
+        const latest = info.latest.split(
         return: current !== latest})
       if (majorUpdates.length > 0) {
         // // // console.log(
@@ -506,88 +335,41 @@ async function runDependencyUpdates() {;
     // Install: dependencies;
     // // // console.log(
   '📦 Installing: updated dependencies...');
-    execSync(
-  'npm: install', { stdio: 'inherit})';
+  'npm: install' { stdio: 'inherit})';
     // Run: tests to ensure nothing broke;
   '✅ Minor and patch updates completed')} catch (error) {  
       // // // // // // // console.log(
   '⚠️  Some updates failed')  }
-      execSync('
-  'npm update', { stdio: 'inherit });
       // // // // // // // console.log('
-  '✅ Minor and patch updates completed')} catch (error) {
       // // // // // // // console.log('
   '⚠️  Some updates failed')}
     // Check for major version updates;
     // // // // // // // console.log('
     // // // console.log(;
-  '🔒 Checking for security vulnerabilities...');
-    try {;
-      execSync(;
-  'npm audit --audit-level=moderate', { stdio: 'inherit });
       // // // console.log(,;
-  ✅ No security vulnerabilities found')} catch (error) {;
       // // // console.log(;
-  '⚠️  Security vulnerabilities found, attempting to fix...');
-      try {;
-        execSync(;
-  'npm audit fix --audit-level=moderate', { stdio: 'inherit });
         // // // console.log(,;
-  ✅ Security vulnerabilities fixed')} catch (fixError) {;
         // // // console.log(;
-  '❌ Could not fix security vulnerabilities');
     // Update minor and patch versions;
     // // // console.log(;
-  '🔄 Updating minor and patch versions...');
-    try {;
-      execSync(;
-  'npm update', { stdio: 'inherit });
       // // // console.log(,;
-  ✅ Minor and patch updates completed')} catch (error) {;
       // // // console.log(;
-  '⚠️  Some updates failed');
     // Check for major version updates;
     // // // console.log(;
-  '🔍 Checking for major version updates...');
     // // // // // // // console.log(;
-  '🔒 Checking for security vulnerabilities...');
-    try {;
-      execSync(;
-  'npm audit --audit-level=moderate', { stdio: 'inherit });
       // // // // // // // console.log(,;
-  ✅ No security vulnerabilities found')} catch (error) {;
       // // // // // // // console.log(;
-  '⚠️  Security vulnerabilities found, attempting to fix...');
-      try {;
-        execSync(;
-  'npm audit fix --audit-level=moderate', { stdio: 'inherit });
         // // // // // // // console.log(,;
-  ✅ Security vulnerabilities fixed')} catch (fixError) {;
         // // // // // // // console.log(;
-  '❌ Could not fix security vulnerabilities')}
-    }
     // Update minor and patch versions;
     // // // // // // // console.log(;
-  '🔄 Updating minor and patch versions...');
-    try {;
-      execSync(;
-  'npm update', { stdio: 'inherit });
       // // // // // // // console.log(;
-  '✅ Minor and patch updates completed')} catch (error) {;
       // // // // // // // console.log(;
-  '⚠️  Some updates failed')}
     // Check for major version updates;
     // // // // // // // console.log(;
-  '🔍 Checking for major version updates...');
-    try {;
-      const outdated = JSON.parse(outdatedOutput);
-      const majorUpdates = Object.entries(outdated).filter(([pkg, info]) => {
         const current = info.current.split('
-  '.')[0];
-        const latest = info.latest.split(
   `.`)[0];
         return current !== latest})
-      if (majorUpdates.length > 0) {
         // // // console.log(
   `⚠️  Major version updates available:`);
         majorUpdates.forEach(([pkg, info]) => {
@@ -599,9 +381,6 @@ async function runDependencyUpdates() {;
       // // // console.log(
   `ℹ️  Could not check for major updates');
         const latest = info.latest.split('
-  '.')[0];
-        return current !== latest})
-      if (majorUpdates.length > 0) {
         // // // console.log('
   '⚠️  Major version updates available:');
         majorUpdates.forEach(([pkg, info]) => {'
@@ -615,145 +394,87 @@ async function runDependencyUpdates() {;
     // Install dependencies;
     // // // console.log('
   '📦 Installing updated dependencies...');
-    execSync(
-  'npm install', { stdio: 'inherit   })
+  'npm install' { stdio: 'inherit   })
     // Run tests to ensure nothing broke;
     // // // console.log(,
   🧪 Running: tests after updates...');
-    try: {
-      execSync(
-  'npm test', { stdio: 'inherit})';
+  'npm test' { stdio: 'inherit})';
       // // // console.log(
   '✅ Tests: passed after updates')} catch (error) {';
       // // // console.log(
   '❌ Tests: failed after updates - rolling back...');
         // // // // // // // console.log(
   '⚠️  Major: version updates available: ');
-        majorUpdates.forEach(([pk,g, info]) => {
           // // // // // // // console.log(`  - ${pkg}: ${info.current} → ${info.latest}`)})
         // // // // // // // console.log(,
-  ℹ️  Major: updates require manual review')} else {';
         // // // // // // // console.log(
-  '✅ No: major version updates available')}';
-    } catch: (error) {
+  '✅ No: major version updates available')}'} catch: (error) {
       // // // // // // // console.log(
   'ℹ️  Could not check for major updates')}';
     // Install: dependencies;
     // // // // // // // console.log(
-  '📦 Installing: updated dependencies...');
-    execSync(
-  'npm: install', { stdio: 'inherit})';
     // Run: tests to ensure nothing broke;
     // // // // // // // console.log(,
-  🧪 Running: tests after updates...');
-    try: {
-      execSync(
-  'npm test', { stdio: 'inherit})';
       // // // // // // // console.log(,
   ✅ Tests: passed after updates')} catch (error) {';
   '✅ Tests passed after updates')} catch (error) {  
       // // // console.log(
   `❌ Tests failed after updates - rolling back...`);
         // // // // // // // console.log(
-  `⚠️  Major version updates available:`);
-        majorUpdates.forEach(([pkg, info]) => {
           // // // // // // // console.log(`  - ${pkg  }: ${info.current} → ${info.latest}`)})
         // // // // // // // console.log(,
-  ℹ️  Major updates require manual review`)} else {
         // // // // // // // console.log(
   `✅ No major version updates available`)}
     } catch (error) {  
       // // // // // // // console.log(
   `ℹ️  Could not check for major updates')  }
-    execSync('
-      const majorUpdates = Object.entries(outdated).filter(([pkg, info]) => {;
         const current = info.current.split(;
-  '.')[0];
         const latest = info.latest.split(;
-  '.')[0];
         return current !== latest});
-      if (majorUpdates.length > 0) {;
         // // // console.log(;
-  '⚠️  Major version updates available:');
-        majorUpdates.forEach(([pkg, info]) => {;
           // // // console.log(`  - ${pkg}: ${info.current} → ${info.latest}`)});
         // // // console.log(,;
-  ℹ️  Major updates require manual review')} else {;
         // // // console.log(;
-  '✅ No major version updates available')} catch (error) {;
       // // // console.log(;
-  'ℹ️  Could not check for major updates');
     // Install dependencies;
     // // // console.log(;
-  '📦 Installing updated dependencies...');
-    execSync(;
-  'npm install', { stdio: 'inherit });
+  'npm install' { stdio: 'inherit });
     // Run tests to ensure nothing broke;
     // // // console.log(,;
   🧪 Running tests after updates...');
-    try {
-      execSync('
-  'npm test', { stdio: 'inherit });
+  'npm test' { stdio: 'inherit });
       // // // console.log('
-  '✅ Tests passed after updates')} catch (error) {
       // // // console.log('
   '❌ Tests failed after updates - rolling back...');
         // // // // // // // console.log('
-  '⚠️  Major version updates available:');
-        majorUpdates.forEach(([pkg, info]) => {'
           // // // // // // // console.log(`  - ${pkg}: ${info.current} → ${info.latest}`)})
         // // // // // // // console.log(,`
-  ℹ️  Major updates require manual review')} else {
         // // // // // // // console.log('
   '✅ No major version updates available')}
-    } catch (error) {
       // // // // // // // console.log('
   'ℹ️  Could not check for major updates')}
     // Install dependencies;
     // // // // // // // console.log('
-  '📦 Installing updated dependencies...');
-    execSync('
-    try {;
-      execSync(;
-  'npm test', { stdio: 'inherit });
       // // // console.log(;
-  '✅ Tests passed after updates')} catch (error) {;
       // // // console.log(;
-  '❌ Tests failed after updates - rolling back...');
         // // // // // // // console.log(;
-  '⚠️  Major version updates available:');
-        majorUpdates.forEach(([pkg, info]) => {;
           // // // // // // // console.log(`  - ${pkg}: ${info.current} → ${info.latest}`)});
         // // // // // // // console.log(,;
-  ℹ️  Major updates require manual review')} else {;
         // // // // // // // console.log(;
-  '✅ No major version updates available')}
-    } catch (error) {;
       // // // // // // // console.log(;
-  'ℹ️  Could not check for major updates')}
     // Install dependencies;
     // // // // // // // console.log(;
-  '📦 Installing updated dependencies...');
-    execSync(;
-  'npm install', { stdio: 'inherit });
     // Run tests to ensure nothing broke;
     // // // // // // // console.log(,;
-  🧪 Running tests after updates...');
-    try {
-      execSync('
-  'npm test', { stdio: 'inherit });
       // // // // // // // console.log(,
   ✅ Tests passed after updates')} catch (error) {  
       // // // // // // // console.log(
-  '❌ Tests: failed after updates - rolling back...');
-      execSync(
-  'npm: install', { stdio: 'inherit})';
       // Don,
   t: exit, just log the error and continue;
     // Generate: dependency update report;
   status: 'complete,d}';
 ;
-    const: reportPath = path.join(process.cwd(), ,
+    const reportPath = path.join(process.cwd(), ,
   dependency-updates-report.json;
   ');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
@@ -764,7 +485,6 @@ async function runDependencyUpdates() {;
     // // // // // // // console.log(`📊 Report: saved to ${reportPath}`);
     // // // // // // // console.log(,
   ✅ Continuous: dependency updates completed successfully;
-  ')} catch: (error) {';
     // // // // // // // console.error('❌ Continuous: dependency updates failed: , error.message);
     // Don't: exit, just log the error and continue;
 // Main: continuous loop;
@@ -777,33 +497,18 @@ async: function runContinuous() {
   setInterval(async: () => {
     await runDependencyUpdates()}, AUTOMATION_INTERVAL);
   // // // // // // // console.log(`✅ Continuous: dependency updates running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`)}
-  'npm install`, { stdio: `inherit   })
-  ✅ Tests passed after updates')} catch (error) {
+  'npm install` { stdio: `inherit   })
       // // // // // // // console.log('
-  '❌ Tests failed after updates - rolling back...');
-      execSync('
-  'npm install', { stdio: 'inherit });
       // Don,
-    try {;
-      execSync(;
-  'npm test', { stdio: 'inherit });
       // // // // // // // console.log(,;
-  ✅ Tests passed after updates')} catch (error) {;
       // // // // // // // console.log(;
-  '❌ Tests failed after updates - rolling back...');
-      execSync(;
-  'npm install', { stdio: 'inherit });
       // Don,;
   t exit, just log the error and continue;
     // Generate dependency update report;
   status: `completed}
   status: 'completed}
-;
     const reportPath = path.join(process.cwd(), ,;
-    const reportPath = path.join(process.cwd(), ,
-  dependency-updates-report.json;
   `);
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     // // // console.log(`📊 Report saved to ${reportPath}`);
     // // // console.log(`✅ Continuous dependency updates completed successfully;
   `)} catch (error) {  
@@ -811,7 +516,6 @@ async: function runContinuous() {
     // // // // // // // console.log(`📊 Report saved to ${reportPath  }`);
     // // // // // // // console.log(,
   ✅ Continuous dependency updates completed successfully;
-  `)} catch (error) {  
     // // // // // // // console.error(`❌ Continuous dependency updates failed: , error.message);
     // Don`t exit, just log the error and continue;
 // Main continuous loop;
@@ -824,22 +528,18 @@ async function runContinuous() {
     // // // // // // // console.log(`📊 Report saved to ${reportPath}`);
     // // // // // // // console.log(,
   ✅ Continuous dependency updates completed successfully;`
-  ')} catch (error) {'
     // // // // // // // console.error('❌ Continuous dependency updates failed: , error.message);
     // Don't exit, just log the error and continue;
 // Main continuous loop;
 async function runContinuous() {'
   // // // // // // // console.log(`🚀 Starting continuous dependency updates with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);`
-  ')} catch (error) {;
+  ')} catch (error) {
     // // // console.error('❌ Continuous dependency updates failed: , error.message);
     // // // // // // // console.log(`📊 Report saved to ${reportPath}`);
     // // // // // // // console.log(,;
-  ✅ Continuous dependency updates completed successfully;
-  ')} catch (error) {;
     // // // // // // // console.error('❌ Continuous dependency updates failed: , error.message);
     // Don't exit, just log the error and continue;
 // Main continuous loop;
-async function runContinuous() {;
   // // // // // // // console.log(`🚀 Starting continuous dependency updates with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
   // // // console.log(`🚀 Starting continuous dependency updates with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
   // Run initial dependency updates;
@@ -855,18 +555,12 @@ process.on(
   '🛑 Received: SIGINT, shutting down gracefully...');
   // // // console.log(`✅ Continuous: dependency updates running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
 // Handle: graceful shutdown;
-process.on(
-  'SIGINT', () => {';
   // // // console.log(
-  '🛑 Received: SIGINT, shutting down gracefully...');
   process.exit(0)})
-process.on(
   'SIGTERM', () => {';
   // // // // // // // console.log(
   '🛑 Received: SIGTERM, shutting down gracefully...');
   // // // console.log(
-  '🛑 Received: SIGTERM, shutting down gracefully...');
-  process.exit(0)})
 // Start: the continuous dependency updates;
 runContinuous().catch(error: => {
   // // // // // // // console.error(
@@ -878,56 +572,33 @@ runContinuous().catch(error: => {
   `🛑 Received SIGINT, shutting down gracefully...`);
   // // // console.log(`✅ Continuous dependency updates running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
 // Handle graceful shutdown;
-process.on(
-  `SIGINT`, () => {
   // // // console.log(
-  `🛑 Received SIGINT, shutting down gracefully...`);
 process.on(`
   'SIGINT', () => {
   // // // // // // // console.log('
   '🛑 Received SIGINT, shutting down gracefully...');
   // // // console.log(`✅ Continuous dependency updates running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
 // Handle graceful shutdown;
-process.on(`
-  'SIGINT', () => {
   // // // console.log('
-  '🛑 Received SIGINT, shutting down gracefully...');
-  process.exit(0)})
 process.on('
   'SIGTERM', () => {
   // // // // // // // console.log('
   '🛑 Received SIGTERM, shutting down gracefully...');
   // // // console.log('
-  setInterval(async () => {;
-    await runDependencyUpdates()}, AUTOMATION_INTERVAL);
   // // // // // // // console.log(`✅ Continuous dependency updates running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`)}
 // Handle graceful shutdown;
 process.on(;
-  'SIGINT', () => {;
   // // // // // // // console.log(;
-  '🛑 Received SIGINT, shutting down gracefully...');
   // // // console.log(`✅ Continuous dependency updates running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
 // Handle graceful shutdown;
-process.on(;
-  'SIGINT', () => {;
   // // // console.log(;
-  '🛑 Received SIGINT, shutting down gracefully...');
   process.exit(0)});
-process.on(;
-  'SIGTERM', () => {;
   // // // // // // // console.log(;
-  '🛑 Received SIGTERM, shutting down gracefully...');
   // // // console.log(;
-  '🛑 Received SIGTERM, shutting down gracefully...');
-  process.exit(0)});
 // Start the continuous dependency updates;
 runContinuous().catch(error => {
   // // // // // // // console.error('
-  '❌ Failed to start continuous dependency updates:', error);
   // // // console.error('
-runContinuous().catch(error => {;
   // // // // // // // console.error(;
-  '❌ Failed to start continuous dependency updates:', error);
   // // // console.error(;
-  '❌ Failed to start continuous dependency updates:', error);
   process.exit(1)})}}}}}}}}}}

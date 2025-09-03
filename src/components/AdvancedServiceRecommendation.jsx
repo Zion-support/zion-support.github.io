@@ -1,4 +1,4 @@
-import React, { useState } from 'react';''';,"});,"})
+import React { useState } from 'react';''';,"});,"})
 import { motion } from 'framer-motion';''';,"});,"})
 import { Brain, CheckCircle, ArrowRight, Zap, Users, Lightbulb, BarChart3 } from 'lucide-react';,"});,"})
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";"""";,"});,"})
@@ -25,24 +25,17 @@ const AdvancedServiceRecommendation = () => {}"});,"})
     ];''';,"});,"})
     const compSizes = ['''';,"});,"})
         'Startup (1-50 employees),Small Business (51-200 employees),Medium Business (201-1000 employees),Enterprise (1000+ employees)'';,"});,"})
-    ];''';,"});,"})
     const budgets = ['''';,"});,"})
         'Under $50K',$50K-$200K',$200K-$500K',$500K-$1M',$1M+''';,"});,"})
-    ];''';,"});,"})
     const technologyMaturityLevels = ['''';,"});,"})
         'Early Adopter',Growing',Mature',Advanced',Innovation Leader''';,"});,"})
-    ];''';,"});,"})
     const primaryGoals = ['''';,"});,"})
         'Cost Reduction',Revenue Growth',Operational Efficiency',Digital Transformation',Innovation',Competitive Advantage',Customer Experience',Risk Management',Sustainability''';,"});,"})
-    ];''';,"});,"})
     const challenges = ['''';,"});,"})
         'Legacy Systems',Data Security',Scalability Issues',Talent Shortage',Regulatory Compliance',Integration Complexity',Performance Issues',Cost Management',Technology Debt';,"});,"})
     ];,"});,"})
     const mockServices = [];,"});,"})
         {}"});,"})
-';,"});,"})
-'';,"});,"})
-''';,"});,"})
             id: 'ai-crm-platform',''';,"});,"})
             title: 'AI-Powered CRM Platform',''';,"});,"})
             description: 'Advanced customer relationship management platform with AI-driven insights and automation.',''';,"});,"})
@@ -59,10 +52,6 @@ const AdvancedServiceRecommendation = () => {}"});,"})
             contactInfo: '+1 302 464 0950',''';,"});,"})
             email: 'kleber@ziontechgroup.com';,"});,"})
         },;,"});,"})
-        {}"});,"})
-';,"});,"})
-'';,"});,"})
-''';,"});,"})
             id: 'quantum-computing-service',''';,"});,"})
             title: 'Quantum Computing as a Service',''';,"});,"})
             description: 'Enterprise-grade quantum computing platform for complex computational problems.',''';,"});,"})
@@ -76,13 +65,6 @@ const AdvancedServiceRecommendation = () => {}"});,"})
             targetAudience['Research Institutions',Pharmaceutical Companies',Financial Services'],;''';,"});,"})
             image: '/images/services/quantum-computing.jpg',''';,"});,"})
             link: 'https://ziontechgroup.com/services/quantum-computing-service',''';,"});,"})
-            contactInfo: '+1 302 464 0950',''';,"});,"})
-            email: 'kleber@ziontechgroup.com';,"});,"})
-        },;,"});,"})
-        {}"});,"})
-';,"});,"})
-'';,"});,"})
-''';,"});,"})
             id: 'blockchain-supply-chain',''';,"});,"})
             title: 'Blockchain Supply Chain Solution',''';,"});,"})
             description: 'Transparent and secure supply chain management using blockchain technology.',''';,"});,"})
@@ -96,9 +78,6 @@ const AdvancedServiceRecommendation = () => {}"});,"})
             targetAudience['Manufacturing',Retail',Logistics',Food & Beverage'],;''';,"});,"})
             image: '/images/services/blockchain-supply-chain.jpg',''';,"});,"})
             link: 'https://ziontechgroup.com/services/blockchain-supply-chain',''';,"});,"})
-            contactInfo: '+1 302 464 0950',''';,"});,"})
-            email: 'kleber@ziontechgroup.com';,"});,"})
-    ];,"});,"})
     const calculateMatchScore = (service, profile) => {}"});,"})
         const score = 0;,"});,"})
         // Industry match;,"});,"})
@@ -109,34 +88,22 @@ const AdvancedServiceRecommendation = () => {}"});,"})
         if (profile.budget === 'Under $50K' && servicePrice < 50);,"});,"})
             score += 20;,"});,"})
         else if (profile.budget === '$50K-$200K' && servicePrice >= 50 && servicePrice < 200);,"});,"})
-            score += 20;,"});,"})
         else if (profile.budget === '$200K-$500K' && servicePrice >= 200 && servicePrice < 500);,"});,"})
-            score += 20;,"});,"})
         else if (profile.budget === '$500K-$1M' && servicePrice >= 500 && servicePrice < 1000);,"});,"})
-            score += 20;,"});,"})
         else if (profile.budget === '$1M+' && servicePrice >= 1000);,"});,"})
-            score += 20;,"});,"})
         // Timeline compatibility'';,"});,"})
         const serviceDuration = parseInt(service.duration.split('-')[0]);,"});,"})
         if (profile.timeline === 'Immediate (0-3 months)' && serviceDuration <= 3);,"});,"})
             score += 15;,"});,"})
         else if (profile.timeline === 'Short-term (3-6 months)' && serviceDuration <= 6);,"});,"})
-            score += 15;,"});,"})
         else if (profile.timeline === 'Medium-term (6-12 months)' && serviceDuration <= 12);,"});,"})
-            score += 15;,"});,"})
         else if (profile.timeline === 'Long-term (12+ months)' && serviceDuration > 12);,"});,"})
-            score += 15;,"});,"})
         // Technology maturity alignment'';,"});,"})
         if (profile.technologyMaturity === 'Innovation Leader' && service.category === 'quantum');,"});,"})
-            score += 20;,"});,"})
         else if (profile.technologyMaturity === 'Advanced' && ['ai',blockchain'].includes(service.category));,"});,"})
-            score += 20;,"});,"})
         else if (profile.technologyMaturity === 'Mature' && ['iot',edge-computing'].includes(service.category));,"});,"})
-            score += 20;,"});,"})
         else if (profile.technologyMaturity === 'Growing' && ['cloud-services',web-development'].includes(service.category));,"});,"})
-            score += 20;,"});,"})
         else if (profile.technologyMaturity === 'Early Adopter' && ['basic-services',consulting'].includes(service.category));,"});,"})
-            score += 20;,"});,"})
         // Goal alignment;,"});,"})
         const goalMatches = profile.primaryGoals.filter(goal => service.benefits.some ( (benefit) => benefit.toLowerCase () .includes(goal.toLowerCase () ) ) ) .length;,"});,"})
         score += (goalMatches / profile.primaryGoals.length) * 20;,"});,"})
@@ -159,14 +126,12 @@ const AdvancedServiceRecommendation = () => {}"});,"})
                     complexity = 'Complex';,"});,"})
                 else if (service.category === 'blockchain' || service.category === 'iot')';,"});,"})
                     complexity = 'Moderate';,"});,"})
-                else'';,"});,"})
                     complexity = 'Simple';,"});,"})
                 const reasoning = [];,"});,"})
                     `High match with ${clientProfile.industry} industry requirements`,``;,"});,"})
                     `Budget alignment with ${clientProfile.budget} range`,``;,"});,"})
                     `Timeline compatibility with ${clientProfile.timeline} expectations`,``;,"});,"})
                     `Technology maturity level appropriate for ${clientProfile.technologyMaturity}`;,"});,"})
-                ];,"});,"})
                 const expectedROI = matchScore >= 80 ? 'High ROI expected' :'';,"});,"})
                     matchScore >= 60 ? 'Moderate ROI expected' : 'ROI to be evaluated';,"});,"})
                 const timeToValue = complexity === 'Simple' ? '2-4 months' :'';,"});,"})
@@ -185,9 +150,6 @@ const AdvancedServiceRecommendation = () => {}"});,"})
             setShowResults(true) }, 2000) };,"});,"})
     const getPriorityColor = (priority) => {}"});,"})
         switch (priority) {}"});,"})
-';,"});,"})
-'';,"});,"})
-''';,"});,"})
             case 'High': return 'bg-red-100 text-red-800';''';,"});,"})
             case 'Medium': return 'bg-yellow-100 text-yellow-800';''';,"});,"})
             case 'Low': return 'bg-green-100 text-green-800';''';,"});,"})
@@ -195,14 +157,9 @@ const AdvancedServiceRecommendation = () => {}"});,"})
     };,"});,"})
     const getComplexityColor = (complexity) => {}"});,"})
         switch (complexity) {}"});,"})
-';,"});,"})
-'';,"});,"})
-''';,"});,"})
             case 'Complex': return 'bg-red-100 text-red-800';''';,"});,"})
             case 'Moderate': return 'bg-yellow-100 text-yellow-800';''';,"});,"})
             case 'Simple': return 'bg-green-100 text-green-800';''';,"});,"})
-            default: return 'bg-gray-100 text-gray-800'}"});,"})
-    };,"});,"})
     const isFormComplete = () => {}"});,"})
         return clientProfile.industry && clientProfile.compSize && clientProfile.budget &&;,"});,"})
             clientProfile.timeline && clientProfile.technologyMaturity &&""";,"});,"})
@@ -225,91 +182,44 @@ const AdvancedServiceRecommendation = () => {}"});,"})
           Get personalized service recommendations based on your industry, goals, and requirements.Our AI analyzes your profile to suggest the perfect solutions for your business.</p>;,"});,"})
       </motion.div>;,"});,"})
       {/* Client Profile Form */}"});,"})
-      <motion.div initial = {}"});,"})
-  { opacity: 0,;,"});,"})
-  y: 20;,"});,"})
-}} animate = {}"});,"})
-  { opacity: 1,;,"});,"})
-  y: 0;,"});,"})
-""";,"});,"})
-"""";,"});,"})
 }} transition={{ delay: 0.1 }} className="bg-white rounded-lg shadow-lg p-6 mb-8">"""";,"});,"})
         <h2 className="text-2xl font-bold text-zion-blue-dark mb-6 flex items-center gap-2">"""";,"});,"})
           <Brain className="w-6 h-6 text-zion-cyan"/>;,"});,"})
           Tell Us About Your Business;,"});,"})
         </h2>""";,"});,"})
-"""";,"});,"})
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">""";,"});,"})
           <div>"""";,"});,"})
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Industry</label>;,"});,"})
             <select value={clientProfile.industry} onChange = {}"});,"})
   (e) => setClientProfile(prev => ({ ...prev,;,"});,"})
   industry: e.target.value;,"});,"})
-""";,"});,"})
-"""";,"});,"})
 }))} className="w-full p-3 border border-zion-slate-light rounded-md">"""";,"});,"})
               <option value="">Select Industry</option>;,"});,"})
               {industries.map(industry => (<option key={industry} value={industry}>{industry}</option>) ) }"});,"})
             </select>;,"});,"})
           </div>;,"});,"})
           <div>""";,"});,"})
-""";,"});,"})
-          <div>"""";,"});,"})
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Company Size</label>;,"});,"})
             <select value={clientProfile.companySize} onChange = {}"});,"})
-  (e) => setClientProfile(prev => ({ ...prev,;,"});,"})
   companySize: e.target.value;,"});,"})
-""";,"});,"})
-"""";,"});,"})
-}))} className="w-full p-3 border border-zion-slate-light rounded-md">"""";,"});,"})
               <option value="">Select Company Size</option>;,"});,"})
               {companySizes.map(size => (<option key={size} value={size}>{size}</option>) ) }"});,"})
-            </select>;,"});,"})
-          </div>;,"});,"})
-          <div>""";,"});,"})
-""";,"});,"})
-          <div>"""";,"});,"})
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Budget Range</label>;,"});,"})
             <select value={clientProfile.budget} onChange = {}"});,"})
-  (e) => setClientProfile(prev => ({ ...prev,;,"});,"})
   budget: e.target.value;,"});,"})
-""";,"});,"})
-"""";,"});,"})
-}))} className="w-full p-3 border border-zion-slate-light rounded-md">"""";,"});,"})
               <option value="">Select Budget Range</option>;,"});,"})
               {budgets.map(budget => (<option key={budget} value={budget}>{budget}</option>) ) }"});,"})
-            </select>;,"});,"})
-          </div>;,"});,"})
-          <div>""";,"});,"})
-""";,"});,"})
-          <div>"""";,"});,"})
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Implementation Timeline</label>;,"});,"})
             <select value={clientProfile.timeline} onChange = {}"});,"})
-  (e) => setClientProfile(prev => ({ ...prev,;,"});,"})
   timeline: e.target.value;,"});,"})
-""";,"});,"})
-"""";,"});,"})
-}))} className="w-full p-3 border border-zion-slate-light rounded-md">"""";,"});,"})
               <option value="">Select Timeline</option>;,"});,"})
               {timelines.map(timeline => (<option key={timeline} value={timeline}>{timeline}</option>) ) }"});,"})
-            </select>;,"});,"})
-          </div>;,"});,"})
-          <div>""";,"});,"})
-""";,"});,"})
-          <div>"""";,"});,"})
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Technology Maturity Level</label>;,"});,"})
             <select value={clientProfile.technologyMaturity} onChange = {}"});,"})
-  (e) => setClientProfile(prev => ({ ...prev,;,"});,"})
   technologyMaturity: e.target.value;,"});,"})
-""";,"});,"})
-"""";,"});,"})
-}))} className="w-full p-3 border border-zion-slate-light rounded-md">"""";,"});,"})
               <option value="">Select Technology Maturity</option>;,"});,"})
               {technologyMaturityLevels.map(level => (<option key={level} value={level}>{level}</option>) ) }"});,"})
-            </select>;,"});,"})
-          </div>;,"});,"})
         </div>""";,"});,"})
-"""";,"});,"})
         <div className="mt-6">"""";,"});,"})
           <label className="block text-sm font-medium text-zion-slate-dark mb-2">Primary Business Goals</label>"""";,"});,"})
           <div className="grid grid-cols-2 md:grid-cols-3 gap-2">"""";,"});,"})
@@ -322,34 +232,17 @@ const AdvancedServiceRecommendation = () => {}"});,"})
 }) ) ;,"});,"})
                 }"});,"})
                 else {}"});,"})
-""";,"});,"})
                     setClientProfile(prev => ({ ...prev, primaryGoals: prev.primaryGoals.filter(g => g !== goal) }))}"""";,"});,"})
             }} className="rounded text-zion-cyan"/>"""";,"});,"})
                 <span className="text-sm text-zion-slate-light">{goal}</span>;,"});,"})
               </label>))}"});,"})
-          </div>;,"});,"})
-        </div>""";,"});,"})
-"""";,"});,"})
-        <div className="mt-6">"""";,"});,"})
           <label className="block text-sm font-medium text-zion-slate-dark mb-2">Current Challenges</label>"""";,"});,"})
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-2">"""";,"});,"})
             {challenges.map(challenge => (<label key={challenge} className="flex items-center gap-2 cursor-pointer">"""";,"});,"})
                 <input type="checkbox" checked={clientProfile.challenges.includes(challenge)} onChange = {}"});,"})
-  (e) => {}"});,"})
-                if(e.target.checked) {}"});,"})
                     setClientProfile(prev => ({ ...prev, challenges: [...prev.challenges,;,"});,"})
   challenge];,"});,"})
-}) ) ;,"});,"})
-                }"});,"})
-                else {}"});,"})
-""";,"});,"})
                     setClientProfile(prev => ({ ...prev, challenges: prev.challenges.filter(c => c !== challenge) }))}"""";,"});,"})
-            }} className="rounded text-zion-cyan"/>"""";,"});,"})
                 <span className="text-sm text-zion-slate-light">{challenge}</span>;,"});,"})
-              </label>))}"});,"})
-          </div>;,"});,"})
-        </div>""";,"});,"})
-"""";,"});,"})
         <div className="mt-8 text-center">"""";,"});,"})
           <Button className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-lg px-8 py-4" onClick={generateRecommendations} disabled={!isFormComplete() || isAnalyzing}>""";,"});,"})
             {isAnalyzing ? (<>"""";,"});,"})
@@ -360,29 +253,15 @@ const AdvancedServiceRecommendation = () => {}"});,"})
                 Get AI Recommendations;,"});,"})
               </>) }"});,"})
           </Button>;,"});,"})
-        </div>;,"});,"})
-      </motion.div>;,"});,"})
       {/* Recommendations Results */}"});,"})
       {showResults && (<motion.div initial = {}"});,"})
-  { opacity: 0,;,"});,"})
-  y: 20;,"});,"})
-}} animate = {}"});,"})
-  { opacity: 1,;,"});,"})
-  y: 0;,"});,"})
-""";,"});,"})
 }} transition={{ delay: 0.2 }}>"""";,"});,"})
           <h2 className="text-2xl font-bold text-zion-blue-dark mb-6 text-center">;,"});,"})
             Your Personalized Service Recommendations;,"});,"})
-          </h2>""";,"});,"})
-"""";,"});,"})
           <div className="space-y-6">;,"});,"})
             {recommendations.map((rec, index) => (<motion.div key={rec.service.id} initial = {}"});,"})
-  { opacity: 0,;,"});,"})
   x: -20;,"});,"})
-}} animate = {}"});,"})
-  { opacity: 1,;,"});,"})
   x: 0;,"});,"})
-""";,"});,"})
 }} transition={{ delay: 0.1 * index }}>"""";,"});,"})
                 <Card className="hover:shadow-lg transition-shadow">""";,"});,"})
                   <CardHeader>"""";,"});,"})
@@ -394,7 +273,6 @@ const AdvancedServiceRecommendation = () => {}"});,"})
                         <p className="text-zion-slate-light mb-3">;,"});,"})
                           {rec.service.description}"});,"})
                         </p>""";,"});,"})
-"""";,"});,"})
                         <div className="flex flex-wrap gap-2 mb-4">;,"});,"})
                           <Badge className={getPriorityColor(rec.priority)}>;,"});,"})
                             Priority: {rec.priority}"});,"})
@@ -404,24 +282,15 @@ const AdvancedServiceRecommendation = () => {}"});,"})
                           </Badge>"""";,"});,"})
                           <Badge className="bg-zion-cyan/10 text-zion-cyan">;,"});,"})
                             Match Score: {rec.matchScore}%;,"});,"})
-                          </Badge>;,"});,"})
-                        </div>;,"});,"})
-                      </div>""";,"});,"})
-"""";,"});,"})
                       <div className="text-right ml-4">"""";,"});,"})
                         <div className="text-2xl font-bold text-zion-cyan mb-1">;,"});,"})
                           {rec.service.price}""";,"});,"})
                         </div>"""";,"});,"})
                         <div className="text-sm text-zion-slate-light">;,"});,"})
                           {rec.service.duration}"});,"})
-                        </div>;,"});,"})
-                      </div>;,"});,"})
-                    </div>;,"});,"})
                   </CardHeader>;,"});,"})
-""";,"});,"})
                   <CardContent>"""";,"});,"})
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">""";,"});,"})
-                      <div>"""";,"});,"})
                         <h4 className="font-semibold text-zion-slate-dark mb-3 flex items-center gap-2">"""";,"});,"})
                           <Lightbulb className="w-4 h-4 text-zion-purple"/>;,"});,"})
                           Why This Service Matches""";,"});,"})
@@ -432,56 +301,27 @@ const AdvancedServiceRecommendation = () => {}"});,"})
                               {reason}"});,"})
                             </li>) ) }"});,"})
                         </ul>;,"});,"})
-                      </div>;,"});,"})
-""";,"});,"})
-                      <div>"""";,"});,"})
-                        <h4 className="font-semibold text-zion-slate-dark mb-3 flex items-center gap-2">"""";,"});,"})
                           <BarChart3 className="w-4 h-4 text-zion-cyan"/>;,"});,"})
                           Implementation Details""";,"});,"})
-                        </h4>"""";,"});,"})
                         <div className="space-y-3">"""";,"});,"})
                           <div className="flex justify-between">"""";,"});,"})
                             <span className="text-sm text-zion-slate-light">Expected ROI:</span>"""";,"});,"})
                             <span className="text-sm font-medium text-zion-slate-dark">{rec.expectedROI}</span>""";,"});,"})
-                          </div>"""";,"});,"})
-                          <div className="flex justify-between">"""";,"});,"})
                             <span className="text-sm text-zion-slate-light">Time to Value:</span>"""";,"});,"})
                             <span className="text-sm font-medium text-zion-slate-dark">{rec.timeToValue}</span>""";,"});,"})
-                          </div>"""";,"});,"})
-                          <div className="flex justify-between">"""";,"});,"})
                             <span className="text-sm text-zion-slate-light">Category:</span>"""";,"});,"})
                             <Badge variant="outline" className="text-xs">;,"});,"})
                               {rec.service.category.toUpperCase()}"});,"})
-                            </Badge>;,"});,"})
-                          </div>;,"});,"})
-                        </div>""";,"});,"})
-"""";,"});,"})
                         <div className="mt-4">"""";,"});,"})
                           <Button className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark" onClick = {}"});,"})
-';,"});,"})
-'';,"});,"})
-''';,"});,"})
   () => window.open(rec.service.link,_blank');,"});,"})
 }>""";,"});,"})
                             Learn More"""";,"});,"})
                             <ArrowRight className="w-4 h-4 ml-2"/>;,"});,"})
-                          </Button>;,"});,"})
-                        </div>;,"});,"})
-                      </div>;,"});,"})
-                    </div>;,"});,"})
                   </CardContent>;,"});,"})
                 </Card>;,"});,"})
               </motion.div>) ) }"});,"})
-          </div>;,"});,"})
           {/* CTA Section */}"});,"})
-          <motion.div initial = {}"});,"})
-  { opacity: 0,;,"});,"})
-  y: 20;,"});,"})
-}} animate = {}"});,"})
-  { opacity: 1,;,"});,"})
-  y: 0;,"});,"})
-""";,"});,"})
-"""";,"});,"})
 }} transition={{ delay: 0.4 }} className="mt-12 text-center">"""";,"});,"})
             <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">"""";,"});,"})
               <h3 className="text-3xl font-bold mb-4">Ready to Get Started?</h3>"""";,"});,"})
@@ -491,43 +331,22 @@ const AdvancedServiceRecommendation = () => {}"});,"})
               </p>"""";,"});,"})
               <div className="flex flex-col sm:flex-row gap-4 justify-center">"""";,"});,"})
                 <Button className="bg-white text-zion-purple hover:bg-zion-slate-light" onClick = {}"});,"})
-';,"});,"})
-'';,"});,"})
-''';,"});,"})
   () => window.open('mailto:kleber@ziontechgroup.com?subject=Service Recommendation Consultation',_blank');,"});,"})
-""";,"});,"})
 }>"""";,"});,"})
                   <Users className="w-5 h-5 mr-2"/>;,"});,"})
                   Get Expert Consultation""";,"});,"})
                 </Button>"""";,"});,"})
                 <Button variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick = {}"});,"})
-';,"});,"})
-'';,"});,"})
-''';,"});,"})
   () => window.open('tel:+13024640950',_blank');,"});,"})
-""";,"});,"})
-}>"""";,"});,"})
                   <Zap className="w-5 h-5 mr-2"/>;,"});,"})
                   Call Now;,"});,"})
-                </Button>;,"});,"})
-              </div>;,"});,"})
-            </div>;,"});,"})
-          </motion.div>;,"});,"})
         </motion.div>)}"});,"})
     </div>)};,"});,"})
 export default AdvancedServiceRecommendation;,"});,"})
 }}}}}}}}}"});,"})
 ;,"});,"})
 export { AdvancedServiceRecommendation };,"});,"})
-;,"});,"})
-export { AdvancedServiceRecommendation };,"});,"})
-;,"});,"})
-export { AdvancedServiceRecommendation };,"});,"})
-;,"});,"})
-export { AdvancedServiceRecommendation };,"});,"})
-;,"});,"})
-export { AdvancedServiceRecommendation };,"});,"})
-import React, { useState } from 'react';
+import React { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Brain, CheckCircle, ArrowRight, Zap, Users, Lightbulb, BarChart3 } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
@@ -535,7 +354,6 @@ import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 const AdvancedServiceRecommendation = () => {}
     const [clientProfile, setClientProfile] = useState({}
-';
 ';
 '';
         industry: ','';
@@ -553,23 +371,16 @@ const AdvancedServiceRecommendation = () => {}
     ]';
     const compSizes = ['';
         'Startup (1-50 employees),Small Business (51-200 employees),Medium Business (201-1000 employees),Enterprise (1000+ employees)';
-    ]';
     const budgets = ['';
         'Under $50K',$50K-$200K',$200K-$500K',$500K-$1M',$1M+'';
-    ]';
     const technologyMaturityLevels = ['';
         'Early Adopter',Growing',Mature',Advanced',Innovation Leader'';
-    ]';
     const primaryGoals = ['';
         'Cost Reduction',Revenue Growth',Operational Efficiency',Digital Transformation',Innovation',Competitive Advantage',Customer Experience',Risk Management',Sustainability'';
-    ]';
     const challenges = ['';
         'Legacy Systems',Data Security',Scalability Issues',Talent Shortage',Regulatory Compliance',Integration Complexity',Performance Issues',Cost Management',Technology Debt';
     ];
     const mockServices = []{}
-';
-';
-'';
             id: 'ai-crm-platform','';
             title: 'AI-Powered CRM Platform','';
             description: 'Advanced customer relationship management platform with AI-driven insights and automation.','';
@@ -584,11 +395,7 @@ const AdvancedServiceRecommendation = () => {}
             image: '/images/services/ai-crm.jpg','';
             link: 'https://ziontechgroup.com/services/ai-crm-platform','';
             contactInfo: '+1 302 464 0950','';
-            email: 'kleber@ziontechgroup.com'},;
-        {}
-';
-';
-'';
+            email: 'kleber@ziontechgroup.com'}, {}
             id: 'quantum-computing-service','';
             title: 'Quantum Computing as a Service','';
             description: 'Enterprise-grade quantum computing platform for complex computational problems.','';
@@ -602,12 +409,6 @@ const AdvancedServiceRecommendation = () => {}
             targetAudience['Research Institutions',Pharmaceutical Companies',Financial Services'],';
             image: '/images/services/quantum-computing.jpg','';
             link: 'https://ziontechgroup.com/services/quantum-computing-service','';
-            contactInfo: '+1 302 464 0950','';
-            email: 'kleber@ziontechgroup.com'},;
-        {}
-';
-';
-'';
             id: 'blockchain-supply-chain','';
             title: 'Blockchain Supply Chain Solution','';
             description: 'Transparent and secure supply chain management using blockchain technology.','';
@@ -621,7 +422,6 @@ const AdvancedServiceRecommendation = () => {}
             targetAudience['Manufacturing',Retail',Logistics',Food & Beverage'],';
             image: '/images/services/blockchain-supply-chain.jpg','';
             link: 'https://ziontechgroup.com/services/blockchain-supply-chain','';
-            contactInfo: '+1 302 464 0950','';
 import React from 'react';
 import {SEO } from '@/components/SEO';
 
@@ -634,18 +434,14 @@ export default function AdvancedServiceRecommendation() {return (
           Professional AdvancedServiceRecommendation services to help your business grow.
         </p>
       </div>
-    </div>
-  );
-}
-import React, { useState } from &apos;react&apos;
+  )}
+import React { useState } from &apos;react&apos;
 import { motion } from &apos;framer-motion&apos;
 import { Brain, CheckCircle, ArrowRight, Zap, Users, Lightbulb, BarChart3 } from &apos;lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from &apos;./ui/card&apos;&apos;
 import { Button } from &apos;./ui/button&apos;&apos;
 import { Badge } from &apos;./ui/badge';&apos;&apos;
-const AdvancedServiceRecommendation = () => {}
     const;const;const [clientProfile, setClientProfile] = useState({}
-';
 &apos;
 &apos;&apos;
         industry: &apos;&apos;,&apos;&apos;
@@ -663,23 +459,15 @@ const AdvancedServiceRecommendation = () => {}
     ]';&apos;&apos;
     const compSizes = [&apos;&apos;'';
         &apos;Startup (1-50 employees),Small Business (51-200 employees),Medium Business (201-1000 employees),Enterprise (1000+ employees)&apos;
-    ]';&apos;&apos;
     const budgets = [&apos;&apos;'';
         &apos;Under $50K&apos;,$50K-$200K&apos;,$200K-$500K&apos;,$500K-$1M&apos;,$1M+&apos;&apos;
-    ]';&apos;&apos;
     const technologyMaturityLevels = [&apos;&apos;'';
         &apos;Early Adopter&apos;,Growing&apos;,Mature&apos;,Advanced&apos;,Innovation Leader&apos;&apos;
-    ]';&apos;&apos;
     const primaryGoals = [&apos;&apos;'';
         &apos;Cost Reduction&apos;,Revenue Growth&apos;,Operational Efficiency&apos;,Digital Transformation&apos;,Innovation&apos;,Competitive Advantage&apos;,Customer Experience&apos;,Risk Management&apos;,Sustainability&apos;&apos;
-    ]';&apos;&apos;
     const challenges = [&apos;&apos;'&apos;
         &apos;Legacy Systems&apos;,Data Security&apos;,Scalability Issues&apos;,Talent Shortage&apos;,Regulatory Compliance&apos;,Integration Complexity&apos;,Performance Issues&apos;,Cost Management&apos;,Technology Debt';
     ];&apos;&apos;
-    const mockServices = []{}
-';
-&apos;
-&apos;&apos;
             id: &apos;ai-crm-platform&apos;,'&apos;
             title: &apos;AI-Powered CRM Platform&apos;,'&apos;
             description: &apos;Advanced customer relationship management platform with AI-driven insights and automation.&apos;,'&apos;
@@ -694,11 +482,7 @@ const AdvancedServiceRecommendation = () => {}
             image: &apos;/images/services/ai-crm.jpg&apos;,'&apos;
             link: &apos;http,s://ziontechgroup.com/services/ai-crm-platform&apos;,'&apos;
             contactInfo: &apos;+1 302 464 0950&apos;,'&apos;
-            email: &apos;kleber@ziontechgroup.com&apos;},
-        {}
-';
-&apos;
-&apos;&apos;
+            email: &apos;kleber@ziontechgroup.com&apos} {}
             id: &apos;quantum-computing-service&apos;,'&apos;
             title: &apos;Quantum Computing as a Service&apos;,'&apos;
             description: &apos;Enterprise-grade quantum computing platform for complex computational problems.&apos;,'&apos;
@@ -712,12 +496,6 @@ const AdvancedServiceRecommendation = () => {}
             targetAudience[&apos;Research Institutions&apos;,Pharmaceutical Companies&apos;,Financial Services&apos;],';
             image: &apos;/images/services/quantum-computing.jpg&apos;,'&apos;
             link: &apos;http,s://ziontechgroup.com/services/quantum-computing-service&apos;,'&apos;
-            contactInfo: &apos;+1 302 464 0950&apos;,'&apos;
-            email: &apos;kleber@ziontechgroup.com&apos;},
-        {}
-';
-&apos;
-&apos;&apos;
             id: &apos;blockchain-supply-chain&apos;,'&apos;
             title: &apos;Blockchain Supply Chain Solution&apos;,'&apos;
             description: &apos;Transparent and secure supply chain management using blockchain technology.&apos;,'&apos;
@@ -731,26 +509,16 @@ const AdvancedServiceRecommendation = () => {}
             targetAudience[&apos;Manufacturing&apos;,Retail&apos;,Logistics&apos;,Food & Beverage&apos;],';
             image: &apos;/images/services/blockchain-supply-chain.jpg&apos;,'&apos;
             link: &apos;http,s://ziontechgroup.com/services/blockchain-supply-chain&apos;,'&apos;
-            contactInfo: &apos;+1 302 464 0950&apos;,'&apos;
-            email: &apos;kleber@ziontechgroup.com&apos;}
-    ];&apos;&apos;
-import React, { useState } from 'react'';'
+            email: &apos;kleber@ziontechgroup.com&apos}
+import React { useState } from 'react'';'
 import { motion } from 'framer-motion'';'
-import { Brain, CheckCircle, ArrowRight, Zap, Users, Lightbulb, BarChart3 } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card'';'
 import { Button } from './ui/button'';'
 import { Brain, CheckCircle, ArrowRight, Zap, Users, Lightbulb, BarChart3 } from 'lucide-react';""
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card'';'';'
 import { Button } from './ui/button'';'';'
 ""
-import { Brain, CheckCircle, ArrowRight, Zap, Users, Lightbulb, BarChart3 } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card'';'';'
-import { Button } from './ui/button'';'';'
-import { Badge } from './ui/badge';
-const AdvancedServiceRecommendation = () => {}
-    const [clientProfile, setClientProfile] = useState({}
 ';'
-'';
 ''';'
         industry: '', ''';'
         compSize: '', ''';'
@@ -759,29 +527,18 @@ const AdvancedServiceRecommendation = () => {}
         technologyMaturity: '', primaryGoals[], challenges[]})
     const [recommendations, setRecommendations] = useState([])';'
     const [isAnalyzing, setIsAnalyzing] = useState(false)';'
-    const [showResults, setShowResults] = useState(false)';
     const industries = ['''';
         'Technology', Healthcare',Financial Services', Manufacturing',Retail', Education',Government', Energy',Transportation', Media''';'
-    ]';
     const compSizes = ['''';
         'Startup (1-50 employees), Small Business (51-200 employees), Medium Business (201-1000 employees), Enterprise (1000+ employees)'';'
-    ]';
     const budgets = ['''';
         'Under $50K', $50K-$200K',$200K-$500K', $500K-$1M',$1M+''';
-    ]';
     const technologyMaturityLevels = ['''';
         'Early Adopter', Growing',Mature', Advanced',Innovation Leader''';
-    ]';
     const primaryGoals = ['''';
         'Cost Reduction', Revenue Growth',Operational Efficiency', Digital Transformation',Innovation', Competitive Advantage',Customer Experience', Risk Management',Sustainability''';
-    ]';
     const challenges = [''''
         'Legacy Systems', Data Security',Scalability Issues', Talent Shortage',Regulatory Compliance', Integration Complexity',Performance Issues', Cost Management',Technology Debt';
-    ];
-    const mockServices = []{}
-';'
-'';
-''';'
             id: 'ai-crm-platform', ''';'
             title: 'AI-Powered CRM Platform', ''';'
             description: 'Advanced customer relationship management platform with AI-driven insights and automation.', ''';'
@@ -796,10 +553,7 @@ const AdvancedServiceRecommendation = () => {}
             image: '/images/services/ai-crm.jpg', ''';'
             link: 'https://ziontechgroup.com/services/ai-crm-platform', ''';'
             contactInfo: '+1 302 464 0950', ''';'
-            email: 'kleber@ziontechgroup.com'}, {}
-';'
-'';
-''';'
+            email: 'kleber@ziontechgroup.com'} {}
             id: 'quantum-computing-service', ''';'
             title: 'Quantum Computing as a Service', ''';'
             description: 'Enterprise-grade quantum computing platform for complex computational problems.', ''';'
@@ -813,11 +567,6 @@ const AdvancedServiceRecommendation = () => {}
             targetAudience['Research Institutions', Pharmaceutical Companies',Financial Services'], ';
             image: '/images/services/quantum-computing.jpg', ''';'
             link: 'https://ziontechgroup.com/services/quantum-computing-service', ''';'
-            contactInfo: '+1 302 464 0950', ''';'
-            email: 'kleber@ziontechgroup.com'}, {}
-';'
-'';
-''';'
             id: 'blockchain-supply-chain', ''';'
             title: 'Blockchain Supply Chain Solution', ''';'
             description: 'Transparent and secure supply chain management using blockchain technology.', ''';'
@@ -831,9 +580,7 @@ const AdvancedServiceRecommendation = () => {}
             targetAudience['Manufacturing', Retail',Logistics', Food & Beverage'], ';'
             image: '/images/services/blockchain-supply-chain.jpg', ''';'
             link: 'https://ziontechgroup.com/services/blockchain-supply-chain', ''';'
-            contactInfo: '+1 302 464 0950', ''';'
             email: 'kleber@ziontechgroup.com'}
-    ];
     const calculateMatchScore = (service, profile) => {}
         let score = 0;
         // Industry match;
@@ -846,32 +593,21 @@ const AdvancedServiceRecommendation = () => {}
         if (profile.budget === &apos;Under $50K&apos; && servicePrice&apos; <;< 50);
             score += 20';
         else if (profile.budget === &apos;$50K-$200K&apos; && servicePrice >= 50 && servicePrice&apos;&apos; < 200);
-            score += 20';
         else if (profile.budget === &apos;$200K-$500K&apos; && servicePrice >= 200 && servicePrice&apos;&apos; < 500);
-            score += 20';
         else if (profile.budget === &apos;$500K-$1M&apos; && servicePrice >= 500 && servicePrice&apos;&apos; < 1000);
-            score += 20';
         else if (profile.budget === &apos;$1M+&apos; && servicePrice >= 1000);
-            score += 20';
         // Timeline compatibility&apos;&apos;&apos;
         const serviceDuration = parseInt(service.duration.split(&apos;-&apos;)[0])&apos;
         if (profile.timeline === &apos;Immediate (0-3 months)&apos; && serviceDuration&apos;&apos; <;<= 3);
             score += 15';
         else if (profile.timeline === &apos;Short-term (3-6 months)&apos; && serviceDuration&apos;&apos; <= 6);
-            score += 15';
         else if (profile.timeline === &apos;Medium-term (6-12 months)&apos; && serviceDuration&apos;&apos; <= 12);
-            score += 15';
         else if (profile.timeline === &apos;Long-term (12+ months)&apos; && serviceDuration > 12);
-            score += 15';
         // Technology maturity alignment&apos;
         if (profile.technologyMaturity === &apos;Innovation Leader&apos; && service.category === &apos;quantum&apos;);
-            score += 20';
         else if (profile.technologyMaturity === &apos;Advanced&apos; && [&apos;ai&apos;,blockchain&apos;].includes(service.category));
-            score += 20';
         else if (profile.technologyMaturity === &apos;Mature&apos; && [&apos;iot&apos;,edge-computing&apos;].includes(service.category));
-            score += 20';
         else if (profile.technologyMaturity === &apos;Growing&apos; && [&apos;cloud-services&apos;,web-development&apos;].includes(service.category));
-            score += 20';
         else if (profile.technologyMaturity === &apos;Early Adopter&apos; && [&apos;basic-services&apos;,consulting&apos;].includes(service.category));
             score += 25}';'
         // Budget compatibility''
@@ -879,37 +615,24 @@ const AdvancedServiceRecommendation = () => {}
         if (profile.budget === 'Under $50K' && servicePrice < 50);
             score += 20';'
         else if (profile.budget === '$50K-$200K' && servicePrice >= 50 && servicePrice < 200);
-            score += 20';'
         else if (profile.budget === '$200K-$500K' && servicePrice >= 200 && servicePrice < 500);
-            score += 20';'
         else if (profile.budget === '$500K-$1M' && servicePrice >= 500 && servicePrice < 1000);
-            score += 20';'
         else if (profile.budget === '$1M+' && servicePrice >= 1000);
-            score += 20';
         // Timeline compatibility';
         const serviceDuration = parseInt(service.duration.split('-')[0])';
-            score += 20';'
         // Timeline compatibility''
         const serviceDuration = parseInt(service.duration.split('-')[0])''
         if (profile.timeline === 'Immediate (0-3 months)' && serviceDuration <= 3);
             score += 15';'
         else if (profile.timeline === 'Short-term (3-6 months)' && serviceDuration <= 6);
-            score += 15';'
         else if (profile.timeline === 'Medium-term (6-12 months)' && serviceDuration <= 12);
-            score += 15';'
         else if (profile.timeline === 'Long-term (12+ months)' && serviceDuration > 12);
-            score += 15';
         // Technology maturity alignment';
-            score += 15';'
         // Technology maturity alignment'';
         if (profile.technologyMaturity === 'Innovation Leader' && service.category === 'quantum');
-            score += 20';'
         else if (profile.technologyMaturity === 'Advanced' && ['ai', blockchain'].includes(service.category));'
-            score += 20';'
         else if (profile.technologyMaturity === 'Mature' && ['iot', edge-computing'].includes(service.category));'
-            score += 20';'
         else if (profile.technologyMaturity === 'Growing' && ['cloud-services', web-development'].includes(service.category));'
-            score += 20';'
         else if (profile.technologyMaturity === 'Early Adopter' && ['basic-services', consulting'].includes(service.category));'
             score += 20;
         // Goal alignment;&apos;&apos;
@@ -934,7 +657,6 @@ const AdvancedServiceRecommendation = () => {}
                     complexity = &apos;Complex';
                 else if (service.category === &apos;blockchain&apos; || service.category === &apos;iot&apos;)';
                     complexity = &apos;Moderate';
-                else&apos;
                     complexity = &apos;Simple';&apos;&apos;
                 if (matchScore >= 80)';'
                     priority = 'High';
@@ -947,25 +669,21 @@ const AdvancedServiceRecommendation = () => {}
                     complexity = 'Complex';
                 else if (service.category === 'blockchain' || service.category === 'iot')';'
                     complexity = 'Moderate';
-                else';
                     complexity = 'Simple';
                 const reasoning = [];
                     `High match with ${clientProfile.industry} industry requirements`, ``;
                     `Budget alignment with ${clientProfile.budget} range`, ``;
                     `Timeline compatibility with ${clientProfile.timeline} expectations`, ``;
                     `Technology maturity level appropriate for ${clientProfile.technologyMaturity}`;
-                ]';
                 const expectedROI = matchScore >= 80 ? 'High ROI expected' :';
                     matchScore >= 60 ? 'Moderate ROI expected' : 'ROI to be evaluated';
                 const timeToValue = complexity === 'Simple' ? '2-4 months' :';
-                ]';&apos;&apos;
                 const expectedROI = matchScore >= 80 ? &apos;High ROI expected&apos; :&apos;
                     matchScore >= 60 ? &apos;Moderate ROI expected&apos; : &apos;ROI to be evaluated';&apos;&apos;
                 const timeToValue = complexity === &apos;Simple&apos; ? &apos;2-4 months&apos; :&apos;
                     complexity === &apos;Moderate&apos; ? &apos;4-8 months&apos; : &apos;8-12 months';
                 ]';'
                 const expectedROI = matchScore >= 80 ? 'High ROI expected' : '';
-                    matchScore >= 60 ? 'Moderate ROI expected' : 'ROI to be evaluated';
                 const timeToValue = complexity === 'Simple' ? '2-4 months' : '';
                     complexity === 'Moderate' ? '4-8 months' : '8-12 months';
                 return {}
@@ -984,61 +702,36 @@ const AdvancedServiceRecommendation = () => {}
             setShowResults(true) }, 2000) }&apos;&apos;
     const getPriorityColor = (priority) => {}
         switch (priority) {}
-';
-';
-'';
             case 'High': return 'bg-red-100 text-red-800';
             case 'Medium': return 'bg-yellow-100 text-yellow-800';
             case 'Low': return 'bg-green-100 text-green-800';
-&apos;
-&apos;&apos;
             case &apos;High&apos;: return &apos;bg-red-100 text-red-800&apos;
             case &apos;Medium&apos;: return &apos;bg-yellow-100 text-yellow-800&apos;
             case &apos;Low&apos;: return &apos;bg-green-100 text-green-800&apos;
-            default: return &apos;bg-gray-100 text-gray-800&apos;}
+            default: return &apos;bg-gray-100 text-gray-800&apos}
     }&apos;&apos;
     const getComplexityColor = (complexity) => {}
         switch (complexity) {}
-';
-&apos;
-&apos;&apos;
             case &apos;Complex&apos;: return &apos;bg-red-100 text-red-800&apos;
             case &apos;Moderate&apos;: return &apos;bg-yellow-100 text-yellow-800&apos;
             case &apos;Simple&apos;: return &apos;bg-green-100 text-green-800&apos;
-            default: return &apos;bg-gray-100 text-gray-800&apos;}
-    }&apos;&apos;
     const isFormComplete = () => {}
         return clientProfile.industry && clientProfile.compSize && clientProfile.budget &&;
             clientProfile.timeline && clientProfile.technologyMaturity &&'&apos;
             clientProfile.primaryGoals.length > 0 && clientProfile.challenges.length > 0}';&apos;&apos;
     return (&apos;&apos;<div className=&apos;max-w-7xl mx-auto p-6&apos;>
       {/* Header */}&apos;
-';'
-'';
-''';'
             case 'High': return 'bg-red-100 text-red-800'';'
             case 'Medium': return 'bg-yellow-100 text-yellow-800'';'
             case 'Low': return 'bg-green-100 text-green-800'';'
             default: return 'bg-gray-100 text-gray-800'}
     }
-    const getComplexityColor = (complexity) => {}
-        switch (complexity) {}
-';
-';
-'';
             case 'Complex': return 'bg-red-100 text-red-800';
             case 'Moderate': return 'bg-yellow-100 text-yellow-800';
             case 'Simple': return 'bg-green-100 text-green-800';
-';'
-'';
-''';'
             case 'Complex': return 'bg-red-100 text-red-800'';'
             case 'Moderate': return 'bg-yellow-100 text-yellow-800'';'
             case 'Simple': return 'bg-green-100 text-green-800'';'
-            default: return 'bg-gray-100 text-gray-800'}
-    }
-    const isFormComplete = () => {}
-        return clientProfile.industry && clientProfile.compSize && clientProfile.budget &&;
             clientProfile.timeline && clientProfile.technologyMaturity &&'';
             clientProfile.primaryGoals.length > 0 && clientProfile.challenges.length > 0}';
     return (<div className='max-w-7xl mx-auto p-6'>;
@@ -1057,19 +750,12 @@ const AdvancedServiceRecommendation = () => {}
         </h1>'';
         <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>;
           Get personalized service recommendations based on your industry, goals, and requirements.Our AI analyzes your profile to suggest the perfect solutions for your business.</p>;
-      </motion.div>;
-      {/* Client Profile Form */}
-      <motion.div initial = {}
-  { opacity: 0,;
-  y: 20}} animate = {}
-  { opacity: 1,;
-  y: 0 '';
+      </motion.div> {/* Client Profile Form */}
 ''}} transition={{ delay: 0.1 }} className='bg-white rounded-lg shadow-lg p-6 mb-8'>'';
         <h2 className='text-2xl font-bold text-zion-blue-dark mb-6 flex items-center gap-2'>'';
           <Brain className='w-6 h-6 text-zion-cyan'/>;
           Tell Us About Your Business;
         </h2>'';
-        '';
         <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>'';
           <div>'';
             <label className='block text-sm font-medium text-zion-slate-dark mb-2'>Industry</label>;
@@ -1077,63 +763,32 @@ const AdvancedServiceRecommendation = () => {}
   (e) => setClientProfile(prev => ({ ...prev,;
   industry: e.target.value '';
 ''}))} className='w-full p-3 border border-zion-slate-light rounded-md'>'';
-              <option value='>Select Industry</option>;
-              {industries.map(industry => (<option key={industry} value={industry}>{industry}</option>) ) }
+              <option value='>Select Industry</option> {industries.map(industry => (<option key={industry} value={industry}>{industry}</option>) ) }
             </select>;
           </div>;
-          '';
-          <div>'';
             <label className='block text-sm font-medium text-zion-slate-dark mb-2'>Comp Size</label>;
             <select value={clientProfile.compSize} onChange = {}
-  (e) => setClientProfile(prev => ({ ...prev,;
   compSize: e.target.value '';
-''}))} className='w-full p-3 border border-zion-slate-light rounded-md'>'';
-              <option value='>Select Comp Size</option>;
-              {compSizes.map(size => (<option key={size} value={size}>{size}</option>) ) }
-            </select>;
-          </div>;
-          '';
-          <div>'';
+              <option value='>Select Comp Size</option> {compSizes.map(size => (<option key={size} value={size}>{size}</option>) ) }
             <label className='block text-sm font-medium text-zion-slate-dark mb-2'>Budget Range</label>;
             <select value={clientProfile.budget} onChange = {}
-  (e) => setClientProfile(prev => ({ ...prev,;
   budget: e.target.value '';
-''}))} className='w-full p-3 border border-zion-slate-light rounded-md'>'';
-              <option value='>Select Budget Range</option>;
-              {budgets.map(budget => (<option key={budget} value={budget}>{budget}</option>) ) }
-            </select>;
-          </div>;
-          '';
-          <div>'';
+              <option value='>Select Budget Range</option> {budgets.map(budget => (<option key={budget} value={budget}>{budget}</option>) ) }
             <label className='block text-sm font-medium text-zion-slate-dark mb-2'>Implementation Timeline</label>;
             <select value={clientProfile.timeline} onChange = {}
-  (e) => setClientProfile(prev => ({ ...prev,;
   timeline: e.target.value '';
-''}))} className='w-full p-3 border border-zion-slate-light rounded-md'>'';
-              <option value='>Select Timeline</option>;
-              {timelines.map(timeline => (<option key={timeline} value={timeline}>{timeline}</option>) ) }
-            </select>;
-          </div>;
-          '';
-          <div>'';
+              <option value='>Select Timeline</option> {timelines.map(timeline => (<option key={timeline} value={timeline}>{timeline}</option>) ) }
             <label className='block text-sm font-medium text-zion-slate-dark mb-2'>Technology Maturity Level</label>;
             <select value={clientProfile.technologyMaturity} onChange = {}
-  (e) => setClientProfile(prev => ({ ...prev,;
   technologyMaturity: e.target.value '';
-''}))} className='w-full p-3 border border-zion-slate-light rounded-md'>'';
-              <option value='>Select Technology Maturity</option>;
-              {technologyMaturityLevels.map(level => (<option key={level} value={level}>{level}</option>) ) }
-            </select>;
-          </div>;
+              <option value='>Select Technology Maturity</option> {technologyMaturityLevels.map(level => (<option key={level} value={level}>{level}</option>) ) }
         </div>'';
-'';
         <div className='mt-6'>'';
           <label className='block text-sm font-medium text-zion-slate-dark mb-2'>Primary Business Goals</label>'';
-          <div className='grid grid-cols-2 md:grid-cols-3 gap-2'>''{primaryGoals.map(goal => (<label key={goal} className='flex items-center gap-2 cursor-pointer'>'';
-  { opacity: 0, y: 20}} animate = {}
+          <div className='grid grid-cols-2 md:grid-cols-3 gap-2'>''{primaryGoals.map(goal => (<label key={goal} className='flex items-center gap-2 cursor-pointer'>'' { opacity: 0, y: 20}} animate = {}
   { opacity: 1,
   y: 0 &apos;&apos;
-&apos;&apos;'&apos;}} className=&apos;text-center mb-8&apos;>'&apos;&apos;'&apos;&apos;
+&apos;&apos;'&apos}} className=&apos;text-center mb-8&apos;>'&apos;&apos;'&apos;&apos;
         <h1 className=&apos;text-4xl font-bold text-zion-blue-dark mb-4&apos;>
           AI-Powered Service Recommendation Engine&apos;&apos;'&apos;&apos;
         </h1>&apos;&apos;'&apos;&apos;'
@@ -1148,11 +803,8 @@ const AdvancedServiceRecommendation = () => {}
           Get personalized service recommendations based on your industry, goals, and requirements.Our AI analyzes your profile to suggest the perfect solutions for your business.</p>
       </motion.div>
       {/* Client Profile Form */}
-      <motion.div initial = {}
   { opacity: 0, y: 20}} animate = {}
-  { opacity: 1,
-  y: 0 &apos;&apos;
-&apos;&apos;'&apos;}} transition={{ delay: 0.1 }} className=&apos;bg-white rounded-lg shadow-lg p-6 mb-8&apos;>'&apos;&apos;'&apos;&apos;
+&apos;&apos;'&apos}} transition={{ delay: 0.1 }} className=&apos;bg-white rounded-lg shadow-lg p-6 mb-8&apos;>'&apos;&apos;'&apos;&apos;
         <h2 className=&apos;text-2xl font-bold text-zion-blue-dark mb-6 flex items-center gap-2&apos;>'&apos;&apos;'&apos;&apos;
           <Brain className=&apos;w-6 h-6 text-zion-cyan&apos;/>
           Tell Us About Your Business&apos;
@@ -1161,65 +813,34 @@ const AdvancedServiceRecommendation = () => {}
         <div className=&apos;grid grid-cols-1 md:grid-cols-2 gap-6&apos;>'&apos;&apos;''
           <div>&apos;&apos;'&apos;&apos;'
             <label className=&apos;block text-sm font-medium text-zion-slate-dark mb-2&apos;>Industry&apos;</label>
-            <select value={clientProfile.industry} onChange = {}
   (e) => setClientProfile(prev => ({ ...prev,
   industry: e.target.value &apos;&apos;
-&apos;&apos;'&apos;}))} className=&apos;w-full p-3 border border-zion-slate-light rounded-md&apos;>'&apos;&apos;'&apos;&apos;
+&apos;&apos;'&apos}))} className=&apos;w-full p-3 border border-zion-slate-light rounded-md&apos;>'&apos;&apos;'&apos;&apos;
               <option value=&apos;&apos;>Select Industry&apos;&apos;</option>
               {industries.map(industry => (}<option key={industry} value={industry}>{industry}</option>) ) }
             </select>
-          </div>
           &apos;&apos;'&apos;&apos;
-          <div>&apos;&apos;'&apos;&apos;'
             <label className=&apos;block text-sm font-medium text-zion-slate-dark mb-2&apos;>Comp Size&apos;</label>
-            <select value={clientProfile.compSize} onChange = {}
-  (e) => setClientProfile(prev => ({ ...prev,
   compSize: e.target.value &apos;&apos;
-&apos;&apos;'&apos;}))} className=&apos;w-full p-3 border border-zion-slate-light rounded-md&apos;>'&apos;&apos;'&apos;&apos;
               <option value=&apos;&apos;>Select Comp Size&apos;&apos;</option>
               {compSizes.map(size => (}<option key={size} value={size}>{size}</option>) ) }
-            </select>
-          </div>
-          &apos;&apos;'&apos;&apos;
-          <div>&apos;&apos;'&apos;&apos;'
             <label className=&apos;block text-sm font-medium text-zion-slate-dark mb-2&apos;>Budget Range&apos;</label>
-            <select value={clientProfile.budget} onChange = {}
-  (e) => setClientProfile(prev => ({ ...prev,
   budget: e.target.value &apos;&apos;
-&apos;&apos;'&apos;}))} className=&apos;w-full p-3 border border-zion-slate-light rounded-md&apos;>'&apos;&apos;'&apos;&apos;
               <option value=&apos;&apos;>Select Budget Range&apos;&apos;</option>
               {budgets.map(budget => (}<option key={budget} value={budget}>{budget}</option>) ) }
-            </select>
-          </div>
-          &apos;&apos;'&apos;&apos;
-          <div>&apos;&apos;'&apos;&apos;'
             <label className=&apos;block text-sm font-medium text-zion-slate-dark mb-2&apos;>Implementation Timeline&apos;</label>
-            <select value={clientProfile.timeline} onChange = {}
-  (e) => setClientProfile(prev => ({ ...prev,
   timeline: e.target.value &apos;&apos;
-&apos;&apos;'&apos;}))} className=&apos;w-full p-3 border border-zion-slate-light rounded-md&apos;>'&apos;&apos;'&apos;&apos;
               <option value=&apos;&apos;>Select Timeline&apos;&apos;</option>
               {timelines.map(timeline => (}<option key={timeline} value={timeline}>{timeline}</option>) ) }
-            </select>
-          </div>
-          &apos;&apos;'&apos;&apos;
-          <div>&apos;&apos;'&apos;&apos;'
             <label className=&apos;block text-sm font-medium text-zion-slate-dark mb-2&apos;>Technology Maturity Level&apos;</label>
-            <select value={clientProfile.technologyMaturity} onChange = {}
-  (e) => setClientProfile(prev => ({ ...prev,
   technologyMaturity: e.target.value &apos;&apos;
-&apos;&apos;'&apos;}))} className=&apos;w-full p-3 border border-zion-slate-light rounded-md&apos;>'&apos;&apos;'&apos;&apos;
               <option value=&apos;&apos;>Select Technology Maturity&apos;&apos;</option>
               {technologyMaturityLevels.map(level => (}<option key={level} value={level}>{level}</option>) ) }
-            </select>
-          </div>
         </div>&apos;&apos;
-&apos;&apos;'&apos;&apos;'
         <div className=&apos;mt-6&apos;>'&apos;&apos;'&apos;&apos;
           <label className=&apos;block text-sm font-medium text-zion-slate-dark mb-2&apos;>Primary Business Goals&apos;</label>&apos;&apos;'&apos;&apos;'
-          <div className=&apos;grid grid-cols-2 md:grid-cols-3 gap-2&apos;>'&apos;&apos;'{primaryGoals.map(goal => (&apos;}&apos;<label key={goal} className=&apos;flex items-center gap-2 cursor-pointer&apos;>'&apos;&apos;'&apos;&apos;
+          <div className=&apos;grid grid-cols-2 md:grid-cols-3 gap-2&apos;>'&apos;&apos;'{primaryGoals.map(goal => (&apos}&apos;<label key={goal} className=&apos;flex items-center gap-2 cursor-pointer&apos;>'&apos;&apos;'&apos;&apos;
                 <input type=&apos;checkbox&apos; checked={clientProfile.primaryGoals.includes(goal)} onChange = {}
-  y: 0 ''';'
 ''''}} transition={{ delay: 0.1 }} className='bg-white rounded-lg shadow-lg p-6 mb-8'>''''
         <h2 className='text-2xl font-bold text-zion-blue-dark mb-6 flex items-center gap-2'>''''
           <Brain className='w-6 h-6 text-zion-cyan'/>
@@ -1229,55 +850,27 @@ const AdvancedServiceRecommendation = () => {}
         <div className='grid grid-cols-1 md: grid-cols-2 gap-6'>''''
           <div>''''
             <label className='block text-sm font-medium text-zion-slate-dark mb-2'>Industry</label>
-            <select value={clientProfile.industry} onChange = {}
   (e) => setClientProfile(prev => ({ ...prev, industry: e.target.value ''''
 ''''}))} className='w-full p-3 border border-zion-slate-light rounded-md'>''''
               <option value=''>Select Industry</option>
               {industries.map(industry => (<option key={industry} value={industry}>{industry}</option>) ) }
-            </select>
-          </div>
-          ''''
-          <div>''''
             <label className='block text-sm font-medium text-zion-slate-dark mb-2'>Comp Size</label>
-            <select value={clientProfile.compSize} onChange = {}
   (e) => setClientProfile(prev => ({ ...prev, compSize: e.target.value ''''
-''''}))} className='w-full p-3 border border-zion-slate-light rounded-md'>''''
               <option value=''>Select Comp Size</option>
               {compSizes.map(size => (<option key={size} value={size}>{size}</option>) ) }
-            </select>
-          </div>
-          ''''
-          <div>''''
             <label className='block text-sm font-medium text-zion-slate-dark mb-2'>Budget Range</label>
-            <select value={clientProfile.budget} onChange = {}
   (e) => setClientProfile(prev => ({ ...prev, budget: e.target.value ''''
-''''}))} className='w-full p-3 border border-zion-slate-light rounded-md'>''''
               <option value=''>Select Budget Range</option>
               {budgets.map(budget => (<option key={budget} value={budget}>{budget}</option>) ) }
-            </select>
-          </div>
-          ''''
-          <div>''''
             <label className='block text-sm font-medium text-zion-slate-dark mb-2'>Implementation Timeline</label>
-            <select value={clientProfile.timeline} onChange = {}
   (e) => setClientProfile(prev => ({ ...prev, timeline: e.target.value ''''
-''''}))} className='w-full p-3 border border-zion-slate-light rounded-md'>''''
               <option value=''>Select Timeline</option>
               {timelines.map(timeline => (<option key={timeline} value={timeline}>{timeline}</option>) ) }
-            </select>
-          </div>
-          ''''
-          <div>''''
             <label className='block text-sm font-medium text-zion-slate-dark mb-2'>Technology Maturity Level</label>
-            <select value={clientProfile.technologyMaturity} onChange = {}
   (e) => setClientProfile(prev => ({ ...prev, technologyMaturity: e.target.value ''''
-''''}))} className='w-full p-3 border border-zion-slate-light rounded-md'>''''
               <option value=''>Select Technology Maturity</option>
               {technologyMaturityLevels.map(level => (<option key={level} value={level}>{level}</option>) ) }
-            </select>
-          </div>
         </div>''''
-''''
         <div className='mt-6'>''''
           <label className='block text-sm font-medium text-zion-slate-dark mb-2'>Primary Business Goals</label>''''
           <div className='grid grid-cols-2 md: grid-cols-3 gap-2'>''''{primaryGoals.map(goal => (<label key={goal} className='flex items-center gap-2 cursor-pointer'>''''
@@ -1287,52 +880,25 @@ const AdvancedServiceRecommendation = () => {}
                     setClientProfile(prev => ({ ...prev, primaryGoals[...prev.primaryGoals,;
   goal] }) ) }
                 else {}
-''''
-'';
                     setClientProfile(prev => ({ ...prev, primaryGoals: prev.primaryGoals.filter(g => g !== goal) }))}''}} className='rounded text-zion-cyan'/>'';
                 <span className='text-sm text-zion-slate-light'>{goal}</span>;
               </label>))}
-          </div>;
-        </div>'';
-'';
-        <div className='mt-6'>'';
           <label className='block text-sm font-medium text-zion-slate-dark mb-2'>Current Challenges</label>'';
           <div className='grid grid-cols-2 md:grid-cols-3 gap-2'>''{challenges.map(challenge => (<label key={challenge} className='flex items-center gap-2 cursor-pointer'>'';
-&apos;&apos;
-                    setClientProfile(prev => ({ ...prev, primaryGoals: prev.primaryGoals.filter(g => g !== goal) }))}&apos;&apos;'&apos;}} className=&apos;rounded text-zion-cyan&apos;/>&apos;&apos;'&apos;&apos;'
+                    setClientProfile(prev => ({ ...prev, primaryGoals: prev.primaryGoals.filter(g => g !== goal) }))}&apos;&apos;'&apos}} className=&apos;rounded text-zion-cyan&apos;/>&apos;&apos;'&apos;&apos;'
                 <span className=&apos;text-sm text-zion-slate-light&apos;>{goal}&apos;</span>
-              </label>))}
-          </div>
-        </div>&apos;&apos;
-&apos;&apos;'&apos;&apos;'
-        <div className=&apos;mt-6&apos;>'&apos;&apos;'&apos;&apos;
           <label className=&apos;block text-sm font-medium text-zion-slate-dark mb-2&apos;>Current Challenges&apos;</label>&apos;&apos;'&apos;&apos;'
-          <div className=&apos;grid grid-cols-2 md:grid-cols-3 gap-2&apos;>'&apos;&apos;'{challenges.map(challenge => (&apos;}&apos;<label key={challenge} className=&apos;flex items-center gap-2 cursor-pointer&apos;>'&apos;&apos;'&apos;&apos;
+          <div className=&apos;grid grid-cols-2 md:grid-cols-3 gap-2&apos;>'&apos;&apos;'{challenges.map(challenge => (&apos}&apos;<label key={challenge} className=&apos;flex items-center gap-2 cursor-pointer&apos;>'&apos;&apos;'&apos;&apos;
                 <input type=&apos;checkbox&apos; checked={clientProfile.challenges.includes(challenge)} onChange = {}
-''';'
                     setClientProfile(prev => ({ ...prev, primaryGoals: prev.primaryGoals.filter(g => g !== goal) }))}''''}} className='rounded text-zion-cyan'/>''''
                 <span className='text-sm text-zion-slate-light'>{goal}</span>
-              </label>))}
-          </div>
-        </div>''''
-''''
-        <div className='mt-6'>''''
           <label className='block text-sm font-medium text-zion-slate-dark mb-2'>Current Challenges</label>''''
           <div className='grid grid-cols-2 md: grid-cols-3 gap-2'>''''{challenges.map(challenge => (<label key={challenge} className='flex items-center gap-2 cursor-pointer'>''''
                 <input type='checkbox' checked={clientProfile.challenges.includes(challenge)} onChange = {}
-  (e) => {}
-                if(e.target.checked) {}
                     setClientProfile(prev => ({ ...prev, challenges[...prev.challenges,;
   challenge] }) ) }
-                else {}
-''''
-'';
                     setClientProfile(prev => ({ ...prev, challenges: prev.challenges.filter(c => c !== challenge) }))}''}} className='rounded text-zion-cyan'/>'';
                 <span className='text-sm text-zion-slate-light'>{challenge}</span>;
-              </label>))}
-          </div>;
-        </div>'';
-'';
         <div className='mt-8 text-center'>'';
           <Button className='bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-lg px-8 py-4' onClick={generateRecommendations} disabled={!isFormComplete() || isAnalyzing}>''{isAnalyzing ? (<>'';
                 <div className='animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2'></div>;
@@ -1342,35 +908,22 @@ const AdvancedServiceRecommendation = () => {}
                 Get AI Recommendations;
               </>) }
           </Button>;
-        </div>;
-      </motion.div>;
-      {/* Recommendations Results */}
+      </motion.div> {/* Recommendations Results */}
       {showResults && (<motion.div initial = {}
-  { opacity: 0,;
-  y: 20}} animate = {}
-  { opacity: 1,;
   y: 0';'}} transition={{ delay: 0.2 }}>'';
           <h2 className='text-2xl font-bold text-zion-blue-dark mb-6 text-center'>;
             Your Personalized Service Recommendations;
-          </h2>'';
-          '';
-          <div className='space-y-6'>;
-            {recommendations.map((rec, index) => (<motion.div key={rec.service.id} initial = {}
-  { opacity: 0,;
+          <div className='space-y-6'> {recommendations.map((rec, index) => (<motion.div key={rec.service.id} initial = {}
   x: -20}} animate = {}
-  { opacity: 1,;
   x: 0';'}} transition={{ delay: 0.1 * index }}>'';
                 <Card className='hover:shadow-lg transition-shadow'>'';
                   <CardHeader>'';
                     <div className='flex items-start justify-between'>'';
                       <div className='flex-1'>'';
-                        <CardTitle className='text-xl text-zion-blue-dark mb-2'>;
-                          {rec.service.title}'';
+                        <CardTitle className='text-xl text-zion-blue-dark mb-2'> {rec.service.title}'';
                         </CardTitle>'';
-                        <p className='text-zion-slate-light mb-3'>;
-                          {rec.service.description}
+                        <p className='text-zion-slate-light mb-3'> {rec.service.description}
                         </p>'';
-                        '';
                         <div className='flex flex-wrap gap-2 mb-4'>;
                           <Badge className={getPriorityColor(rec.priority)}>;
                             Priority: {rec.priority}
@@ -1380,91 +933,48 @@ const AdvancedServiceRecommendation = () => {}
                           </Badge>'';
                           <Badge className='bg-zion-cyan/10 text-zion-cyan'>;
                             Match Score: {rec.matchScore}%;
-                          </Badge>;
-                        </div>;
-                      </div>'';
-                      '';
                       <div className='text-right ml-4'>'';
-                        <div className='text-2xl font-bold text-zion-cyan mb-1'>;
-                          {rec.service.price}'';
-                        </div>'';
-                        <div className='text-sm text-zion-slate-light'>;
-                          {rec.service.duration}
-                        </div>;
-                      </div>;
-                    </div>;
+                        <div className='text-2xl font-bold text-zion-cyan mb-1'> {rec.service.price}'';
+                        <div className='text-sm text-zion-slate-light'> {rec.service.duration}
                   </CardHeader>;
-                  '';
                   <CardContent>'';
                     <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>'';
-                      <div>'';
                         <h4 className='font-semibold text-zion-slate-dark mb-3 flex items-center gap-2'>'';
                           <Lightbulb className='w-4 h-4 text-zion-purple'/>;
                           Why This Service Matches'';
                         </h4>'';
                         <ul className='space-y-2'>''{rec.reasoning.map((reason, idx) => (<li key={idx} className='text-sm text-zion-slate-light flex items-start gap-2'>'';
-                              <CheckCircle className='w-4 h-4 text-green-500 mt-0.5 flex-shrink-0'/>;
-                              {reason}
+                              <CheckCircle className='w-4 h-4 text-green-500 mt-0.5 flex-shrink-0'/> {reason}
                             </li>) ) }
                         </ul>;
-                      </div>;
-                      '';
-                      <div>'';
-                        <h4 className='font-semibold text-zion-slate-dark mb-3 flex items-center gap-2'>'';
                           <BarChart3 className='w-4 h-4 text-zion-cyan'/>;
                           Implementation Details'';
-                        </h4>'';
                         <div className='space-y-3'>'';
                           <div className='flex justify-between'>'';
                             <span className='text-sm text-zion-slate-light'>Expected ROI:</span>'';
                             <span className='text-sm font-medium text-zion-slate-dark'>{rec.expectedROI}</span>'';
-                          </div>'';
-                          <div className='flex justify-between'>'';
                             <span className='text-sm text-zion-slate-light'>Time to Value:</span>'';
                             <span className='text-sm font-medium text-zion-slate-dark'>{rec.timeToValue}</span>'';
-                          </div>'';
-                          <div className='flex justify-between'>'';
                             <span className='text-sm text-zion-slate-light'>Category:</span>'';
-                            <Badge variant='outline' className='text-xs'>;
-                              {rec.service.category.toUpperCase()}
-                            </Badge>;
-                          </div>;
-                        </div>'';
-                        '';
+                            <Badge variant='outline' className='text-xs'> {rec.service.category.toUpperCase()}
                         <div className='mt-4'>'';
                           <Button className='w-full bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark' onClick = {}
-';
-  () => window.open(rec.service.link,_blank')}>'';
+' () => window.open(rec.service.link,_blank')}>'';
                             Learn More'';
                             <ArrowRight className='w-4 h-4 ml-2'/>;
-                          </Button>;
-                        </div>;
-                      </div>;
-                    </div>;
                   </CardContent>;
                 </Card>;
-&apos;&apos;
-                    setClientProfile(prev => ({ ...prev, challenges: prev.challenges.filter(c => c !== challenge) }))}&apos;&apos;'&apos;}} className=&apos;rounded text-zion-cyan&apos;/>&apos;&apos;'&apos;&apos;'
+                    setClientProfile(prev => ({ ...prev, challenges: prev.challenges.filter(c => c !== challenge) }))}&apos;&apos;'&apos}} className=&apos;rounded text-zion-cyan&apos;/>&apos;&apos;'&apos;&apos;'
                 <span className=&apos;text-sm text-zion-slate-light&apos;>{challenge}&apos;</span>
-              </label>))}
-          </div>
-        </div>&apos;&apos;
-&apos;&apos;'&apos;&apos;'
         <div className=&apos;mt-8 text-center&apos;>'&apos;&apos;'&apos;&apos;
-          <Button className=&apos;bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hove,r:to-zion-purple-dark text-lg px-8 py-4&apos; onClick={generateRecommendations} disabled={!isFormComplete() || isAnalyzing}>&apos;&apos;'{isAnalyzing ? (&apos;}&apos;<>&apos;&apos;'&apos;&apos;'
+          <Button className=&apos;bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hove,r:to-zion-purple-dark text-lg px-8 py-4&apos; onClick={generateRecommendations} disabled={!isFormComplete() || isAnalyzing}>&apos;&apos;'{isAnalyzing ? (&apos}&apos;<>&apos;&apos;'&apos;&apos;'
                 <div className=&apos;animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2&apos;>&apos;'</div>
                 Analyzing Your Profile...&apos;&apos;'&apos;&apos;
               </>) : (<>&apos;&apos;'&apos;&apos;'
                 <Brain className=&apos;w-5 h-5 mr-2&apos;/>
                 Get AI Recommendations&apos;
-              </>) }
-''';'
                     setClientProfile(prev => ({ ...prev, challenges: prev.challenges.filter(c => c !== challenge) }))}''''}} className='rounded text-zion-cyan'/>''''
                 <span className='text-sm text-zion-slate-light'>{challenge}</span>
-              </label>))}
-          </div>
-        </div>''''
-''''
         <div className='mt-8 text-center'>''''
           <Button className='bg-gradient-to-r from-zion-cyan to-zion-purple hover: from-zion-cyan-dark hover:to-zion-purple-dark text-lg px-8 py-4' onClick={generateRecommendations} disabled={!isFormComplete() || isAnalyzing}>'''{isAnalyzing ? (<>'''''
                 <div className='animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2'></div>
@@ -1472,26 +982,16 @@ const AdvancedServiceRecommendation = () => {}
 </>) : (<>''''
                 <Brain className='w-5 h-5 mr-2'/>
                 Get AI Recommendations
-</>) }
           </Button>
-        </div>
-      </motion.div>
       {/* Recommendations Results */}
       {showResults && (}<motion.div initial = {}
   { opacity: 0,
-  y: 20}} animate = {}
-  { opacity: 1,
-  y: 0';&apos;}} transition={{ delay: 0.2 }}>&apos;&apos;'&apos;&apos;'
+  y: 0';&apos}} transition={{ delay: 0.2 }}>&apos;&apos;'&apos;&apos;'
           <h2 className=&apos;text-2xl font-bold text-zion-blue-dark mb-6 text-center&apos;>
             Your Personalized Service Recommendations&apos;
-          </h2>&apos;&apos;
-          &apos;&apos;'&apos;&apos;'
           <div className=&apos;space-y-6&apos;>
-            {recommendations.map((rec, index) => (&apos;}<motion.div key={rec.service.id} initial = {}
-  { opacity: 0,
-  x: -20}} animate = {}
-  { opacity: 1,
-  x: 0';&apos;}} transition={{ delay: 0.1 * index }}>&apos;&apos;'&apos;&apos;'
+            {recommendations.map((rec, index) => (&apos}<motion.div key={rec.service.id} initial = {}
+  x: 0';&apos}} transition={{ delay: 0.1 * index }}>&apos;&apos;'&apos;&apos;'
                 <Card className=&apos;hover:shadow-lg transition-shadow&apos;>'&apos;&apos;''
                   <CardHeader>&apos;&apos;'&apos;&apos;'
                     <div className=&apos;flex items-start justify-between&apos;>'&apos;&apos;'&apos;&apos;
@@ -1502,20 +1002,13 @@ const AdvancedServiceRecommendation = () => {}
                         <p className=&apos;text-zion-slate-light mb-3&apos;>
                           {rec.service.description}&apos;
                         </p>&apos;&apos;
-                        &apos;&apos;'&apos;&apos;'
                         <div className=&apos;flex flex-wrap gap-2 mb-4&apos;>&apos;'
-      {showResults && (<motion.div initial = {}
-  { opacity: 0, y: 20}} animate = {}
-  { opacity: 1,
   y: 0';'}} transition={{ delay: 0.2 }}>''''
           <h2 className='text-2xl font-bold text-zion-blue-dark mb-6 text-center'>
             Your Personalized Service Recommendations
-          </h2>''''
-          ''''
           <div className='space-y-6'>
             {recommendations.map((rec, index) => (<motion.div key={rec.service.id} initial = {}
   { opacity: 0, x: -20}} animate = {}
-  { opacity: 1,
   x: 0';'}} transition={{ delay: 0.1 * index }}>''''
                 <Card className='hover:shadow-lg transition-shadow'>''''
                   <CardHeader>''''
@@ -1527,20 +1020,14 @@ const AdvancedServiceRecommendation = () => {}
                         <p className='text-zion-slate-light mb-3'>
                           {rec.service.description}
                         </p>''''
-                        ''''
                         <div className='flex flex-wrap gap-2 mb-4'>
                           <Badge className={getPriorityColor(rec.priority)}>
-                            Priority: {rec.priority}
                           </Badge>
                           <Badge className={getComplexityColor (rec.implementationComplexity) }>
                             Complexity: {rec.implementationComplexity}&apos;&apos;'&apos;&apos;
                           </Badge>&apos;&apos;'&apos;&apos;'
                           <Badge className=&apos;bg-zion-cyan/10 text-zion-cyan&apos;>
                             Match Score: {rec.matchScore}%&apos;
-                          </Badge>
-                        </div>
-                      </div>&apos;&apos;
-                      &apos;&apos;'&apos;&apos;'
                       <div className=&apos;text-right ml-4&apos;>'&apos;&apos;'&apos;&apos;
                         <div className=&apos;text-2xl font-bold text-zion-cyan mb-1&apos;>
                           {rec.service.price}&apos;&apos;'&apos;&apos;
@@ -1551,67 +1038,40 @@ const AdvancedServiceRecommendation = () => {}
                           </Badge>''''
                           <Badge className='bg-zion-cyan/10 text-zion-cyan'>
                             Match Score: {rec.matchScore}%
-                          </Badge>
-                        </div>
-                      </div>''''
-                      ''''
                       <div className='text-right ml-4'>''''
                         <div className='text-2xl font-bold text-zion-cyan mb-1'>
                           {rec.service.price}''''
-                        </div>''''
                         <div className='text-sm text-zion-slate-light'>
                           {rec.service.duration}
-                        </div>
-                      </div>
-                    </div>
                   </CardHeader>
-                  &apos;&apos;'&apos;&apos;
                   <CardContent>&apos;&apos;'&apos;&apos;'
                     <div className=&apos;grid grid-cols-1 lg:grid-cols-2 gap-6&apos;>'&apos;&apos;''
-                      <div>&apos;&apos;'&apos;&apos;'
                         <h4 className=&apos;font-semibold text-zion-slate-dark mb-3 flex items-center gap-2&apos;>'&apos;&apos;'&apos;&apos;
                           <Lightbulb className=&apos;w-4 h-4 text-zion-purple&apos;/>
                           Why This Service Matches&apos;&apos;'&apos;&apos;
                         </h4>&apos;&apos;'&apos;&apos;'
-                        <ul className=&apos;space-y-2&apos;>'&apos;&apos;'{rec.reasoning.map((reason, idx) => (&apos;}&apos;<li key={idx} className=&apos;text-sm text-zion-slate-light flex items-start gap-2&apos;>'&apos;&apos;'&apos;&apos;
+                        <ul className=&apos;space-y-2&apos;>'&apos;&apos;'{rec.reasoning.map((reason, idx) => (&apos}&apos;<li key={idx} className=&apos;text-sm text-zion-slate-light flex items-start gap-2&apos;>'&apos;&apos;'&apos;&apos;
                               <CheckCircle className=&apos;w-4 h-4 text-green-500 mt-0.5 flex-shrink-0&apos;/>
                               {reason}&apos;
-                            </li>) ) }
                         </ul>
-                      </div>
-                      &apos;&apos;'&apos;&apos;
-                      <div>&apos;&apos;'&apos;&apos;'
-                        <h4 className=&apos;font-semibold text-zion-slate-dark mb-3 flex items-center gap-2&apos;>'&apos;&apos;'&apos;&apos;
                           <BarChart3 className=&apos;w-4 h-4 text-zion-cyan&apos;/>
                           Implementation Details&apos;&apos;'&apos;&apos;
-                        </h4>&apos;&apos;'&apos;&apos;'
                         <div className=&apos;space-y-3&apos;>'&apos;&apos;'&apos;&apos;
                           <div className=&apos;flex justify-between&apos;>'&apos;&apos;'&apos;&apos;
                             <span className=&apos;text-sm text-zion-slate-light&apos;>Expected ROI:&apos;</span>&apos;&apos;'&apos;&apos;'
                             <span className=&apos;text-sm font-medium text-zion-slate-dark&apos;>{rec.expectedROI}&apos;</span>&apos;&apos;'&apos;&apos;
-                          </div>&apos;&apos;'&apos;&apos;'
-                          <div className=&apos;flex justify-between&apos;>'&apos;&apos;'&apos;&apos;
                             <span className=&apos;text-sm text-zion-slate-light&apos;>Time to Value:&apos;</span>&apos;&apos;'&apos;&apos;'
                             <span className=&apos;text-sm font-medium text-zion-slate-dark&apos;>{rec.timeToValue}&apos;</span>&apos;&apos;'&apos;&apos;
-                          </div>&apos;&apos;'&apos;&apos;'
-                          <div className=&apos;flex justify-between&apos;>'&apos;&apos;'&apos;&apos;
                             <span className=&apos;text-sm text-zion-slate-light&apos;>Category:&apos;</span>&apos;&apos;'&apos;&apos;'
                             <Badge variant=&apos;outline&apos; className=&apos;text-xs&apos;>
                               {rec.service.category.toUpperCase()}&apos;
-                            </Badge>
-                          </div>
-                        </div>&apos;&apos;
-                        &apos;&apos;'&apos;&apos;'
                         <div className=&apos;mt-4&apos;>'&apos;&apos;'&apos;&apos;
                           <Button className=&apos;w-full bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hove,r:to-zion-purple-dark&apos; onClick = {}
-';
-  () => window.open(rec.service.link,_blank&apos;)}>&apos;&apos;
+' () => window.open(rec.service.link,_blank&apos;)}>&apos;&apos;
                             Learn More&apos;&apos;'&apos;&apos;'
                             <ArrowRight className=&apos;w-4 h-4 ml-2&apos;/>&apos;
-                  ''''
                   <CardContent>''''
                     <div className='grid grid-cols-1 lg: grid-cols-2 gap-6'>''''
-                      <div>''''
                         <h4 className='font-semibold text-zion-slate-dark mb-3 flex items-center gap-2'>''''
                           <Lightbulb className='w-4 h-4 text-zion-purple'/>
                           Why This Service Matches''''
@@ -1619,142 +1079,85 @@ const AdvancedServiceRecommendation = () => {}
                         <ul className='space-y-2'>''''{rec.reasoning.map((reason, idx) => (<li key={idx} className='text-sm text-zion-slate-light flex items-start gap-2'>''''
                               <CheckCircle className='w-4 h-4 text-green-500 mt-0.5 flex-shrink-0'/>
                               {reason}
-                            </li>) ) }
-                        </ul>
-                      </div>
-                      ''''
-                      <div>''''
-                        <h4 className='font-semibold text-zion-slate-dark mb-3 flex items-center gap-2'>''''
                           <BarChart3 className='w-4 h-4 text-zion-cyan'/>
                           Implementation Details''''
-                        </h4>''''
                         <div className='space-y-3'>''''
                           <div className='flex justify-between'>''''
                             <span className='text-sm text-zion-slate-light'>Expected ROI: </span>''''
                             <span className='text-sm font-medium text-zion-slate-dark'>{rec.expectedROI}</span>''''
-                          </div>''''
-                          <div className='flex justify-between'>''''
                             <span className='text-sm text-zion-slate-light'>Time to Value:</span>''''
                             <span className='text-sm font-medium text-zion-slate-dark'>{rec.timeToValue}</span>''''
-                          </div>''''
-                          <div className='flex justify-between'>''''
                             <span className='text-sm text-zion-slate-light'>Category:</span>''''
                             <Badge variant='outline' className='text-xs'>
                               {rec.service.category.toUpperCase()}
-                            </Badge>
-                          </div>
-                        </div>''''
-                        ''''
                         <div className='mt-4'>''''
                           <Button className='w-full bg-gradient-to-r from-zion-cyan to-zion-purple hover: from-zion-cyan-dark hover:to-zion-purple-dark' onClick = {}
-';'
   () => window.open(rec.service.link, _blank')}>'''
                             Learn More''''
                             <ArrowRight className='w-4 h-4 ml-2'/>
-                          </Button>
-                        </div>
-                      </div>
-                    </div>
                   </CardContent>
                 </Card>
               </motion.div>) ) }
-          </div>;
-          {/* CTA Section */}
-          <motion.div initial = {}
-  { opacity: 0,;
-  y: 20}} animate = {}
-  { opacity: 1,;
-  y: 0 '';
+          </div> {/* CTA Section */}
 ''}} transition={{ delay: 0.4 }} className='mt-12 text-center'>'';
             <div className='bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white'>'';
               <h3 className='text-3xl font-bold mb-4'>Ready to Get Started?</h3>'';
               <p className='text-xl mb-6 max-w-2xl mx-auto'>;
                 Our expert team is ready to help you implement the perfect solution;
                 for your business needs. Contact us today for a personalized consultation.'';
-              </p>'';
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>'';
                 <Button className='bg-white text-zion-purple hover:bg-zion-slate-light' onClick = {}
-';
-  () => window.open('mailto:kleber@ziontechgroup.com?subject=Service Recommendation Consultation',_blank');
+' () => window.open('mailto:kleber@ziontechgroup.com?subject=Service Recommendation Consultation',_blank');
 ''}>'';
                   <Users className='w-5 h-5 mr-2'/>;
                   Get Expert Consultation'';
                 </Button>'';
                 <Button variant='outline' className='border-white text-white hover:bg-white hover:text-zion-purple' onClick = {}
-';
-  () => window.open('tel:+13024640950',_blank');
-''}>'';
+' () => window.open('tel:+13024640950',_blank');
                   <Zap className='w-5 h-5 mr-2"/>;
                   Call Now;
-                </Button>;
-              </div>;
-            </div>;
-          </motion.div>;
-  { opacity: 0, y: 20}} animate = {}
-  { opacity: 1,
-  y: 0 &apos;&apos;
-&apos;&apos;'&apos;}} transition={{ delay: 0.4 }} className=&apos;mt-12 text-center&apos;>'&apos;&apos;'&apos;&apos;
+          </motion.div> { opacity: 0, y: 20}} animate = {}
+&apos;&apos;'&apos}} transition={{ delay: 0.4 }} className=&apos;mt-12 text-center&apos;>'&apos;&apos;'&apos;&apos;
             <div className=&apos;bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white&apos;>'&apos;&apos;'&apos;&apos;
               <h3 className=&apos;text-3xl font-bold mb-4&apos;>Ready to Get Started?&apos;</h3>&apos;&apos;'&apos;&apos;'
               <p className=&apos;text-xl mb-6 max-w-2xl mx-auto&apos;>
-                Our expert team is ready to help you implement the perfect solution;
                 for your business needs. Contact us today for a personalized consultation.&apos;&apos;'&apos;&apos;
               </p>&apos;&apos;'&apos;&apos;'
               <div className=&apos;flex flex-col sm:flex-row gap-4 justify-center&apos;>'&apos;&apos;'&apos;&apos;
                 <Button className=&apos;bg-white text-zion-purple hove,r:bg-zion-slate-light&apos; onClick = {}
-';
-  () => window.open(&apos;mailto:kleber@ziontechgroup.com?subject=Service Recommendation Consultation&apos;,_blank&apos;);
+' () => window.open(&apos;mailto:kleber@ziontechgroup.com?subject=Service Recommendation Consultation&apos;,_blank&apos;);
 &apos;&apos;'}>&apos;&apos;'&apos;&apos;'
                   <Users className=&apos;w-5 h-5 mr-2&apos;/>
                   Get Expert Consultation&apos;&apos;'&apos;&apos;
                 </Button>&apos;&apos;'&apos;&apos;'
                 <Button variant=&apos;outline&apos; className=&apos;border-white text-white hover:bg-white hove,r:text-zion-purple&apos; onClick = {}
-';
-  () => window.open(&apos;tel:+13024640950&apos;,_blank&apos;);
-&apos;&apos;'}>&apos;&apos;'&apos;&apos;'
+' () => window.open(&apos;tel:+13024640950&apos;,_blank&apos;);
                   <Zap className=&apos;w-5 h-5 mr-2&quot;/>
                   Call Now&quot;
-  y: 0 ''';'
 ''''}} transition={{ delay: 0.4 }} className='mt-12 text-center'>''''
             <div className='bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white'>''''
               <h3 className='text-3xl font-bold mb-4'>Ready to Get Started?</h3>''''
               <p className='text-xl mb-6 max-w-2xl mx-auto'>
                 Our expert team is ready to help you implement the perfect solution
                 for your business needs. Contact us today for a personalized consultation.''''
-              </p>''''
               <div className='flex flex-col sm: flex-row gap-4 justify-center'>''''
-                <Button className='bg-white text-zion-purple hover:bg-zion-slate-light' onClick = {}
-';'
   () => window.open('mailto: kleber@ziontechgroup.com?subject=Service Recommendation Consultation', _blank')'
 '''}>'''''
                   <Users className='w-5 h-5 mr-2'/>
                   Get Expert Consultation''''
                 </Button>''''
                 <Button variant='outline' className='border-white text-white hover: bg-white hover:text-zion-purple' onClick = {}
-';'
   () => window.open('tel: +13024640950', _blank')'
-'''}>'''''
                   <Zap className='w-5 h-5 mr-2"/>'"
                   Call Now
-                </Button>
-              </div>
-            </div>
-          </motion.div>
         </motion.div>)}
     </div>)}
 export default AdvancedServiceRecommendation;
 export { AdvancedServiceRecommendation }
 ;
-export { AdvancedServiceRecommendation }
-;
-export { AdvancedServiceRecommendation }
 
-export { AdvancedServiceRecommendation }
-;
-export { AdvancedServiceRecommendation }
 
-export { AdvancedServiceRecommendation }
-import React, { useState }  from 'react;'
+import React { useState }  from 'react;'
 import { motion }  from 'framer-motion;'
 import { Brain, CheckCircle, ArrowRight, Zap, Users, Lightbulb, BarChart3 } from 'lucide-react
 import { Card, CardContent, CardHeader, CardTitle }  from './ui/card;'

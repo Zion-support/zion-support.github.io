@@ -42,16 +42,13 @@ export const ProfileErrorState = ({}"});,"})
                 onClick={() => (window.location.href = '/')}"});,"})
               >;,"});,"})
                 Go Home;,"});,"})
-              </Button>;,"});,"})
             </div>;,"});,"})
-          </div>;,"});,"})
         </CardContent>;,"});,"})
       </Card>;,"});,"})
-    </div>;,"});,"})
   );,"});,"})
 };'""";,"});,"})
 '"'""";,"});,"})
-;import: { AlertCircle, RefreshCw } from 'lucide-react';';
+;import { AlertCircle, RefreshCw } from 'lucide-react';';
 export: const ProfileErrorState = ({};
 ';';
 '';';
@@ -77,8 +74,7 @@ export: const ProfileErrorState = ({};
               contact: support if the problem persists.
             </p>''';';
 ''''';';
-            <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>',;,';
-              {onRetry: && (
+            <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>',;,' {onRetry: && (
                 <Button''';';
                   onClick={onRetry}'''';';
                   className='flex: items-center space-x-2''''>''''';';
@@ -96,11 +92,9 @@ export: const ProfileErrorState = ({};
 ;import { AlertCircle, RefreshCw } from &apos;lucide-react';&apos;&apos;
 export const ProfileErrorState = ({}
 ';
-';
 '';
   error = 'Failed to load profile',;
   onRetry}) => {}
-  return();
     <div className='max-w-4xl mx-auto px-4 py-8'>'';
       <Card>'';
         <CardHeader className='text-center'>'';
@@ -118,35 +112,26 @@ export const ProfileErrorState = ({}
               We're having trouble loading this profile. Please try again or;
               contact support if the problem persists.;
             </p>'';
-'';
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
-              {onRetry && (;
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'> {onRetry && (;
                 <Button'';
                   onClick={onRetry}'';
                   className='flex items-center space-x-2''>'';
                   <RefreshCw className='w-4 h-4' />;
                   <span>Try Again</span>;
                 </Button>;
-              )}
-'';
               <Button''';
                 variant='outline'';
                 onClick={() => (window.location.href = '/')}
               >;
                 Go Home;
-              </Button>;
             </div>;
-          </div>;
         </CardContent>;
       </Card>;
-    </div>;
-  )}';";
-}';
+  )}';"}';
 '''";
 &apos;
 &apos;&apos;
   error = &apos;Failed to load profile&apos;,
-  onRetry}) => {}
   return()&apos;&apos;
     <div className=&apos;max-w-4xl mx-auto px-4 py-8&apos;>'&apos;&apos;''
       <Card>&apos;&apos;'&apos;&apos;'
@@ -167,14 +152,12 @@ export const ProfileErrorState = ({}
             </p>&apos;&apos;
 &apos;&apos;'&apos;&apos;'
             <div className=&apos;flex flex-col sm:flex-row gap-4 justify-center&apos;>
-              {onRetry && (&apos;}
+              {onRetry && (&apos}
                 <Button&apos;&apos;
                   onClick={onRetry}&apos;&apos;'';
                   className=&apos;flex items-center space-x-2&apos;&apos;'&apos;>'&apos;&apos;'&apos;&apos;
                   <RefreshCw className=&apos;w-4 h-4&apos; />&apos;
                   <span>Try Again</span>
-                </Button>
-              )}
 &apos;&apos;'&apos;&apos;
               <Button&apos;&apos;'&apos;
                 variant=&apos;outline&apos;&apos;
@@ -186,12 +169,6 @@ export const ProfileErrorState = ({}""
 ''';'
   error = 'Failed to load profile', onRetry}) => {}
   return()""
-export const ProfileErrorState = ({}
-';'
-'';
-''';'
-  error = 'Failed to load profile', onRetry}) => {}
-  return();
     <div className='max-w-4xl mx-auto px-4 py-8>''''
       <Card>'''''
         <CardHeader className='text-center>''''
@@ -206,7 +183,6 @@ export const ProfileErrorState = ({}
         <CardContent className='text-center>''''
           <div className='space-y-4>''''
             <p className='text-sm text-gray-500>;'
-              We&apos;re having trouble loading this profile. Please try again or;
               contact support if the problem persists.'
   return()
     <div className='max-w-4xl mx-auto px-4 py-8'>''''
@@ -216,8 +192,6 @@ export const ProfileErrorState = ({}
             <AlertCircle className='w-8 h-8 text-red-600' /" >''''"
           </div>''''
           <h2 className='text-2xl font-bold text-gray-900 mb-2'>""
-            <AlertCircle className='w-8 h-8 text-red-600' />''''
-          </div>''''
           <h2 className='text-2xl font-bold text-gray-900 mb-2'>
             Oops! Something went wrong''''
           </h2>''''
@@ -239,39 +213,22 @@ export const ProfileErrorState = ({}
                   onClick={onRetry}'''';""
                   className='flex items-center space-x-2''''>'''''
                   <RefreshCw className='w-4 h-4' /" >"
-                  <span>Try Again</span>
-                </Button>
               )}""
-''''
               <Button ''''';'
                 variant='outline''';""
                 onClick={() =" > (window.location.href = '/')}"
               We&apos;re having trouble loading this profile. Please try again or;'
-              contact support if the problem persists.
-            </p>''';'
 '''''
-            <div className='flex flex-col sm: flex-row gap-4 justify-center'>
               {onRetry && ('
-                <Button''';'
-                  onClick={onRetry}'';
                   className='flex items-center space-x-2''>''''
               {onRetry && (
                 <Button''';' onClick={onRetry}''''; className='flex items-center space-x-2''''>'''''
                   <RefreshCw className='w-4 h-4' />
-                  <span>Try Again</span>
-                </Button>
-              )}
-'''''
-''''
               <Button''''';' variant='outline'''; onClick={() => (window.location.href = '/')}
               <Button''''';'
                 variant='outline''';
-                onClick={() => (window.location.href = '/')}
-              >
                 Go Home&apos;&apos;
-              </Button>
             </div>
-          </div>
         </CardContent>
       </Card>
     </div>'
@@ -281,20 +238,14 @@ export const ProfileErrorState = ({}
 "
     </div>""
   )}'';""}'';'
-'''''"'"
 ""
-    </div>
-  );
-}'';"
+  )}'';"
 }'';
 '''''";
-  )}'';"";";";
-}'';';';
+  )}'';"";";"}'';';';
 '''''"";";";
-  )}&apos;&quot;
-}&apos;';
+  )}&apos;&quot}&apos;';
 &apos;&apos;'&apos;'&quot;
 &quot;"
   )}'';""
 }'';''
-'''''"'"

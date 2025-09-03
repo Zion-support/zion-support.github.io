@@ -2,7 +2,12 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+<<<<<<< HEAD
     node: true},
+=======
+    node: true,
+  },
+>>>>>>> 2e42f512832d464e2ba4e827c789976ad41530e5
   extends: [
     'next/core-web-vitals',
     'next/typescript',
@@ -23,8 +28,12 @@ module.exports = {
     "no-unused-vars": [
       "warn",
       { argsIgnorePattern: "^_" }
+<<<<<<< HEAD
     ]
   }
+=======
+    ],
+>>>>>>> 2e42f512832d464e2ba4e827c789976ad41530e5
     '@typescript-eslint/no-unused-vars': 'warn',
     '@typescript-eslint/no-explicit-any': 'warn',
     'react/react-in-jsx-scope': 'off',
@@ -43,4 +52,10 @@ module.exports = {
     'cypress/',
     '**/*.disabled',
     '**/*.backup',
+<<<<<<< HEAD
     '**/*.tsbackup']};
+=======
+    '**/*.tsbackup',
+  ],
+};
+>>>>>>> 2e42f512832d464e2ba4e827c789976ad41530e5
