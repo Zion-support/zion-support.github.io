@@ -192,9 +192,14 @@ const CloudServices: NextPage = () => {
             <h2 className="text-4xl font-bold text-white mb-4">
               Ready to Move to the Cloud?
             </h2>
+<<<<<<< HEAD
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
               Let our cloud experts help you design, migrate, and optimize your cloud infrastructure 
               for maximum performance and cost efficiency.
+=======
+            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+              Let&apos;s discuss your cloud strategy and create a migration plan that transforms your business.
+>>>>>>> origin/main
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link

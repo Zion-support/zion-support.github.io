@@ -8,6 +8,7 @@ const compat = new FlatCompat({
   recommendedConfig: js.configs.recommended,;,
 });
 module.exports = [
+<<<<<<< HEAD
   ...compat.extends("next/core-web-vitals"),;
   {
   files: ["**/*.{js,jsx,ts,tsx}"],;
@@ -44,3 +45,9 @@ module.exports = [
     ],;,
 },;
 ]
+=======
+  {
+    ignores: ['**/*'],
+  },
+];
+>>>>>>> origin/main

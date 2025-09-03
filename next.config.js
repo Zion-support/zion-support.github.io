@@ -1,6 +1,7 @@
 /** @type {import("next").NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+<<<<<<< HEAD
   poweredByHeader: false,
   eslint: {
     ignoreDuringBuilds: true,
@@ -98,6 +99,18 @@ const nextConfig = {
     ]
   },
 }
+=======
+  images: {
+    domains: ["localhost"],
+  },
+  typescript: {
+    ignoreBuildErrors: true
+  },
+  eslint: {
+    ignoreDuringBuilds: true
+  }
+};
+>>>>>>> origin/main
 
 <<<<<<< HEAD
 export default nextConfig; 
