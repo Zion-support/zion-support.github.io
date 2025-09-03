@@ -868,6 +868,402 @@ export default function MicroSaaS() {
         'Improved user onboarding'
       ],
       category: 'Identity Management'
+    },
+    {
+      icon: Globe,
+      name: 'AI-Powered Affiliate Marketing Tracker',
+      description: 'Comprehensive affiliate marketing management with fraud detection and performance optimization.',
+      features: [
+        'Cross-device attribution tracking',
+        'Fraud detection and prevention',
+        'Automated commission calculations',
+        'Performance analytics and reporting',
+        'Custom referral link generation',
+        'Payment automation workflows'
+      ],
+      pricing: '$199 – $1,999/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '40% increase in affiliate ROI',
+        'Automated fraud prevention',
+        'Improved affiliate relationships',
+        'Better performance tracking'
+      ],
+      category: 'Marketing Automation'
+    },
+    {
+      icon: BarChart3,
+      name: 'Smart Website Analytics for SMBs',
+      description: 'Intuitive analytics dashboard designed for small businesses without technical expertise.',
+      features: [
+        'User-friendly analytics interface',
+        'Traffic and engagement insights',
+        'Conversion rate optimization',
+        'Marketing performance tracking',
+        'Competitor analysis tools',
+        'Automated reporting and alerts'
+      ],
+      pricing: '$49 – $299/month',
+      timeline: '1–2 weeks',
+      benefits: [
+        'Data-driven business decisions',
+        'Improved website performance',
+        'Better marketing ROI',
+        'Simplified analytics management'
+      ],
+      category: 'Business Analytics'
+    },
+    {
+      icon: Users,
+      name: 'IT Helpdesk Management System',
+      description: 'Customizable ticketing system for managed IT service providers with SLA tracking.',
+      features: [
+        'Email and portal-based ticketing',
+        'SLA tracking and management',
+        'Knowledge base integration',
+        'Client reporting and dashboards',
+        'Remote monitoring tool integration',
+        'Automated escalation workflows'
+      ],
+      pricing: '$149 – $999/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '60% faster ticket resolution',
+        'Improved client satisfaction',
+        'Better SLA compliance',
+        'Streamlined support processes'
+      ],
+      category: 'IT Management'
+    },
+    {
+      icon: Mail,
+      name: 'E-Commerce Return Management System',
+      description: 'Automated return processing with label generation and status tracking for online retailers.',
+      features: [
+        'Automated return request processing',
+        'Return label generation',
+        'Status tracking and notifications',
+        'Refund processing automation',
+        'Return analytics and reporting',
+        'Integration with e-commerce platforms'
+      ],
+      pricing: '$99 – $599/month',
+      timeline: '1–2 weeks',
+      benefits: [
+        '50% reduction in return processing time',
+        'Improved customer satisfaction',
+        'Automated refund workflows',
+        'Better return analytics'
+      ],
+      category: 'E-Commerce Solutions'
+    },
+    {
+      icon: Zap,
+      name: 'Automated Email Follow-up Service',
+      description: 'Intelligent email follow-up automation with personalized timing and content optimization.',
+      features: [
+        'Automated follow-up scheduling',
+        'Personalized content generation',
+        'Optimal timing prediction',
+        'Engagement tracking and analytics',
+        'A/B testing for follow-ups',
+        'Integration with CRM systems'
+      ],
+      pricing: '$79 – $399/month',
+      timeline: '1–2 weeks',
+      benefits: [
+        '35% increase in response rates',
+        'Automated lead nurturing',
+        'Improved customer engagement',
+        'Reduced manual follow-up work'
+      ],
+      category: 'Email Automation'
+    },
+    {
+      icon: Brain,
+      name: 'AI-Powered Content Creation Suite',
+      description: 'Comprehensive AI content generation platform for articles, social media, and marketing materials.',
+      features: [
+        'Multi-format content generation',
+        'Brand voice consistency',
+        'SEO optimization',
+        'Content scheduling and publishing',
+        'Performance analytics',
+        'Multi-language support'
+      ],
+      pricing: '$149 – $999/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '80% reduction in content creation time',
+        'Consistent brand messaging',
+        'Improved content quality',
+        'Better SEO performance'
+      ],
+      category: 'Content Marketing'
+    },
+    {
+      icon: Mail,
+      name: 'AI-Powered Email Responder',
+      description: 'Intelligent email assistant that reads, responds, and manages business communications.',
+      features: [
+        'Automated email response generation',
+        'Sentiment analysis and routing',
+        'Priority email identification',
+        'Calendar integration',
+        'Follow-up reminder automation',
+        'Customer service integration'
+      ],
+      pricing: '$199 – $1,299/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '70% reduction in email response time',
+        'Improved customer satisfaction',
+        'Automated email management',
+        'Better communication efficiency'
+      ],
+      category: 'Communication Automation'
+    },
+    {
+      icon: Shield,
+      name: 'Smart Password Security Manager',
+      description: 'Enterprise-grade password management with team collaboration and security auditing.',
+      features: [
+        'Secure password generation and storage',
+        'Team password sharing and collaboration',
+        'Security breach monitoring',
+        'Multi-factor authentication',
+        'Password strength auditing',
+        'Compliance reporting and tracking'
+      ],
+      pricing: '$99 – $599/month',
+      timeline: '1–2 weeks',
+      benefits: [
+        '99.9% reduction in password-related breaches',
+        'Improved team security practices',
+        'Automated security monitoring',
+        'Compliance with security standards'
+      ],
+      category: 'Cybersecurity'
+    },
+    {
+      icon: Globe,
+      name: 'Multi-Language Website Translator Pro',
+      description: 'Advanced AI-powered website translation with SEO optimization and cultural adaptation.',
+      features: [
+        'Real-time website translation',
+        'SEO-optimized multilingual content',
+        'Cultural adaptation and localization',
+        'Automatic language detection',
+        'Translation quality assurance',
+        'Multi-currency and payment support'
+      ],
+      pricing: '$299 – $2,499/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '400% increase in global reach',
+        'Automated content localization',
+        'Improved international SEO',
+        'Reduced translation costs'
+      ],
+      category: 'Internationalization'
+    },
+    {
+      icon: BarChart3,
+      name: 'Smart Inventory Optimization Engine',
+      description: 'AI-driven inventory management with demand forecasting and automated reordering.',
+      features: [
+        'Demand forecasting and prediction',
+        'Automated reorder point calculation',
+        'Multi-location inventory tracking',
+        'Supplier performance monitoring',
+        'Dead stock identification',
+        'Cost optimization recommendations'
+      ],
+      pricing: '$399 – $2,999/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '30% reduction in inventory costs',
+        'Automated stock management',
+        'Reduced stockouts and overstock',
+        'Improved cash flow'
+      ],
+      category: 'Supply Chain Management'
+    },
+    {
+      icon: Users,
+      name: 'AI-Powered Customer Support Chatbot',
+      description: 'Intelligent chatbot with natural language processing and seamless human handoff.',
+      features: [
+        'Natural language understanding',
+        'Multi-channel support integration',
+        'Seamless human agent handoff',
+        'Knowledge base integration',
+        'Sentiment analysis',
+        'Performance analytics and optimization'
+      ],
+      pricing: '$199 – $1,499/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '60% reduction in support tickets',
+        '24/7 customer support availability',
+        'Improved response times',
+        'Better customer satisfaction'
+      ],
+      category: 'Customer Support'
+    },
+    {
+      icon: Zap,
+      name: 'Smart Workflow Automation Builder',
+      description: 'No-code workflow automation platform for business process optimization.',
+      features: [
+        'Visual workflow builder',
+        'Pre-built automation templates',
+        'Multi-app integration',
+        'Conditional logic and branching',
+        'Real-time monitoring and analytics',
+        'Custom trigger and action creation'
+      ],
+      pricing: '$199 – $1,499/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '75% reduction in manual tasks',
+        'Improved process efficiency',
+        'Reduced human errors',
+        'Faster business process execution'
+      ],
+      category: 'Process Automation'
+    },
+    {
+      icon: Globe,
+      name: 'Website Performance Optimizer Pro',
+      description: 'Advanced website speed optimization with Core Web Vitals improvement and monitoring.',
+      features: [
+        'Automated image optimization',
+        'Code minification and compression',
+        'CDN integration and management',
+        'Core Web Vitals monitoring',
+        'Performance reporting and alerts',
+        'Mobile optimization tools'
+      ],
+      pricing: '$149 – $999/month',
+      timeline: '1–2 weeks',
+      benefits: [
+        '60% improvement in page load speed',
+        'Better search engine rankings',
+        'Improved user experience',
+        'Reduced bounce rates'
+      ],
+      category: 'Web Performance'
+    },
+    {
+      icon: Users,
+      name: 'Remote Team Collaboration Hub Pro',
+      description: 'Comprehensive remote work platform with project management and team communication.',
+      features: [
+        'Project management and task tracking',
+        'Video conferencing integration',
+        'File sharing and collaboration',
+        'Time tracking and productivity analytics',
+        'Team communication tools',
+        'Performance monitoring and reporting'
+      ],
+      pricing: '$199 – $1,499/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '45% improvement in team productivity',
+        'Better remote collaboration',
+        'Reduced communication overhead',
+        'Enhanced project visibility'
+      ],
+      category: 'Remote Work Solutions'
+    },
+    {
+      icon: BarChart3,
+      name: 'Business Intelligence Dashboard Pro',
+      description: 'Real-time business analytics with customizable dashboards and automated reporting.',
+      features: [
+        'Real-time data visualization',
+        'Customizable dashboard creation',
+        'Automated report generation',
+        'Data source integration',
+        'Predictive analytics and forecasting',
+        'Mobile-responsive design'
+      ],
+      pricing: '$299 – $2,499/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        'Data-driven decision making',
+        'Real-time business insights',
+        'Automated reporting processes',
+        'Improved operational efficiency'
+      ],
+      category: 'Business Intelligence'
+    },
+    {
+      icon: Shield,
+      name: 'Compliance Management System Pro',
+      description: 'Automated compliance tracking and reporting for regulatory requirements.',
+      features: [
+        'Regulatory requirement tracking',
+        'Automated compliance reporting',
+        'Risk assessment and monitoring',
+        'Document management and versioning',
+        'Audit trail and logging',
+        'Compliance training management'
+      ],
+      pricing: '$399 – $2,999/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '95% reduction in compliance violations',
+        'Automated regulatory reporting',
+        'Improved risk management',
+        'Reduced compliance costs'
+      ],
+      category: 'Compliance Management'
+    },
+    {
+      icon: Brain,
+      name: 'AI-Powered Financial Planning Assistant',
+      description: 'Intelligent financial planning and budgeting with expense tracking and investment recommendations.',
+      features: [
+        'Automated expense categorization',
+        'Budget planning and tracking',
+        'Investment opportunity analysis',
+        'Financial goal setting and monitoring',
+        'Tax optimization recommendations',
+        'Financial health scoring'
+      ],
+      pricing: '$99 – $799/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '35% improvement in financial health',
+        'Automated financial planning',
+        'Better investment decisions',
+        'Reduced financial stress'
+      ],
+      category: 'FinTech Solutions'
+    },
+    {
+      icon: Users,
+      name: 'AI-Powered Learning Management System Pro',
+      description: 'Intelligent learning platform with personalized content delivery and progress tracking.',
+      features: [
+        'Personalized learning paths',
+        'Adaptive content delivery',
+        'Progress tracking and analytics',
+        'Skill gap identification',
+        'Automated assessment and grading',
+        'Learning outcome prediction'
+      ],
+      pricing: '$199 – $2,499/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '55% improvement in learning outcomes',
+        'Personalized learning experience',
+        'Automated progress tracking',
+        'Better skill development'
+      ],
+      category: 'EdTech Solutions'
     }
   ];
 

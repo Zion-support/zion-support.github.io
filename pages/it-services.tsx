@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { Cloud, Shield, Database, Smartphone, Globe, Code, Server, BarChart3, Link as LinkIcon, Cpu, TestTube, BookOpen, Wrench } from 'lucide-react';
+import { Cloud, Shield, Database, Smartphone, Globe, Code, Server, BarChart3, Link as LinkIcon, Cpu, TestTube, BookOpen, Wrench, Users } from 'lucide-react';
 
 export default function ITServices() {
   const contact = {
@@ -815,6 +815,397 @@ export default function ITServices() {
         'Cost-effective compliance management'
       ],
       category: 'Compliance'
+    },
+    {
+      icon: Cloud,
+      name: 'Multi-Cloud Strategy & Management',
+      description: 'Comprehensive multi-cloud architecture design and management across AWS, Azure, and GCP.',
+      features: [
+        'Multi-cloud architecture design',
+        'Cloud cost optimization',
+        'Disaster recovery planning',
+        'Cloud security implementation',
+        'Performance monitoring',
+        'Cloud governance and compliance'
+      ],
+      pricing: '$150 – $400/hour',
+      projectPricing: '$25,000 – $150,000/project',
+      timeline: '6–16 weeks',
+      benefits: [
+        'Optimized cloud costs',
+        'Improved reliability',
+        'Enhanced security',
+        'Better performance'
+      ],
+      category: 'Cloud Services'
+    },
+    {
+      icon: Shield,
+      name: 'Zero Trust Security Architecture',
+      description: 'Implementation of zero trust security model with identity verification and micro-segmentation.',
+      features: [
+        'Identity and access management',
+        'Network micro-segmentation',
+        'Endpoint security',
+        'Data encryption and protection',
+        'Security monitoring and analytics',
+        'Incident response automation'
+      ],
+      pricing: '$200 – $500/hour',
+      projectPricing: '$50,000 – $300,000/project',
+      timeline: '8–20 weeks',
+      benefits: [
+        'Enhanced security posture',
+        'Reduced attack surface',
+        'Automated threat response',
+        'Compliance with security standards'
+      ],
+      category: 'Cybersecurity'
+    },
+    {
+      icon: Database,
+      name: 'Data Lake & Analytics Platform',
+      description: 'Enterprise data lake implementation with advanced analytics and machine learning capabilities.',
+      features: [
+        'Data lake architecture design',
+        'Data ingestion and processing',
+        'Advanced analytics implementation',
+        'Machine learning model deployment',
+        'Data governance and quality',
+        'Real-time analytics dashboards'
+      ],
+      pricing: '$180 – $450/hour',
+      projectPricing: '$40,000 – $200,000/project',
+      timeline: '10–24 weeks',
+      benefits: [
+        'Unified data platform',
+        'Advanced analytics capabilities',
+        'Improved data quality',
+        'Better business insights'
+      ],
+      category: 'Data & Analytics'
+    },
+    {
+      icon: Globe,
+      name: 'Edge Computing Infrastructure',
+      description: 'Edge computing solutions for low-latency applications and IoT device management.',
+      features: [
+        'Edge infrastructure design',
+        'IoT device management',
+        'Real-time data processing',
+        'Edge security implementation',
+        'Network optimization',
+        'Monitoring and management'
+      ],
+      pricing: '$160 – $380/hour',
+      projectPricing: '$30,000 – $120,000/project',
+      timeline: '6–14 weeks',
+      benefits: [
+        'Reduced latency',
+        'Improved performance',
+        'Better scalability',
+        'Enhanced reliability'
+      ],
+      category: 'Infrastructure'
+    },
+    {
+      icon: Code,
+      name: 'DevSecOps Implementation',
+      description: 'Secure DevOps practices with automated security testing and compliance monitoring.',
+      features: [
+        'CI/CD pipeline security',
+        'Automated security testing',
+        'Infrastructure as code',
+        'Security monitoring',
+        'Compliance automation',
+        'Threat modeling'
+      ],
+      pricing: '$140 – $350/hour',
+      projectPricing: '$25,000 – $100,000/project',
+      timeline: '4–12 weeks',
+      benefits: [
+        'Faster secure deployments',
+        'Automated security testing',
+        'Reduced security risks',
+        'Improved compliance'
+      ],
+      category: 'DevOps'
+    },
+    {
+      icon: Users,
+      name: 'Digital Workplace Solutions',
+      description: 'Modern digital workplace implementation with collaboration tools and productivity optimization.',
+      features: [
+        'Collaboration platform setup',
+        'Productivity tool integration',
+        'Remote work infrastructure',
+        'Security and compliance',
+        'User training and adoption',
+        'Performance monitoring'
+      ],
+      pricing: '$120 – $300/hour',
+      projectPricing: '$20,000 – $80,000/project',
+      timeline: '4–10 weeks',
+      benefits: [
+        'Improved collaboration',
+        'Enhanced productivity',
+        'Better remote work experience',
+        'Reduced IT support costs'
+      ],
+      category: 'Digital Transformation'
+    },
+    {
+      icon: Shield,
+      name: 'Advanced Threat Intelligence Platform',
+      description: 'Comprehensive threat intelligence and security operations center implementation.',
+      features: [
+        'Threat intelligence gathering',
+        'Security monitoring and analysis',
+        'Incident response automation',
+        'Threat hunting capabilities',
+        'Security orchestration',
+        'Compliance reporting'
+      ],
+      pricing: '$200 – $500/hour',
+      projectPricing: '$60,000 – $250,000/project',
+      timeline: '12–24 weeks',
+      benefits: [
+        'Proactive threat detection',
+        'Automated incident response',
+        'Improved security posture',
+        'Reduced security incidents'
+      ],
+      category: 'Cybersecurity'
+    },
+    {
+      icon: Database,
+      name: 'High-Performance Computing Solutions',
+      description: 'High-performance computing infrastructure for scientific computing and data processing.',
+      features: [
+        'HPC cluster design and setup',
+        'Parallel processing optimization',
+        'GPU computing implementation',
+        'High-speed networking',
+        'Storage optimization',
+        'Performance monitoring'
+      ],
+      pricing: '$180 – $450/hour',
+      projectPricing: '$50,000 – $300,000/project',
+      timeline: '8–20 weeks',
+      benefits: [
+        'Massive computing power',
+        'Faster data processing',
+        'Scalable infrastructure',
+        'Cost-effective computing'
+      ],
+      category: 'Infrastructure'
+    },
+    {
+      icon: Globe,
+      name: 'IoT Platform & Device Management',
+      description: 'Comprehensive IoT platform with device management, data processing, and analytics.',
+      features: [
+        'IoT device management',
+        'Data ingestion and processing',
+        'Real-time analytics',
+        'Device security',
+        'Firmware management',
+        'Performance monitoring'
+      ],
+      pricing: '$160 – $400/hour',
+      projectPricing: '$35,000 – $150,000/project',
+      timeline: '8–16 weeks',
+      benefits: [
+        'Centralized device management',
+        'Real-time data insights',
+        'Improved device security',
+        'Reduced operational costs'
+      ],
+      category: 'IoT Solutions'
+    },
+    {
+      icon: Users,
+      name: 'Enterprise Digital Transformation Consulting',
+      description: 'Comprehensive digital transformation strategy and implementation for enterprise organizations.',
+      features: [
+        'Digital strategy development',
+        'Technology roadmap planning',
+        'Change management',
+        'Process optimization',
+        'Technology implementation',
+        'Performance measurement'
+      ],
+      pricing: '$200 – $500/hour',
+      projectPricing: '$100,000 – $500,000/project',
+      timeline: '12–36 weeks',
+      benefits: [
+        'Modernized business processes',
+        'Improved operational efficiency',
+        'Enhanced customer experience',
+        'Competitive advantage'
+      ],
+      category: 'Digital Transformation'
+    },
+    {
+      icon: Shield,
+      name: 'Blockchain & Distributed Ledger Solutions',
+      description: 'Blockchain implementation and distributed ledger solutions for secure transactions and data integrity.',
+      features: [
+        'Blockchain architecture design',
+        'Smart contract development',
+        'Consensus mechanism implementation',
+        'Security and encryption',
+        'Integration with existing systems',
+        'Performance optimization'
+      ],
+      pricing: '$180 – $450/hour',
+      projectPricing: '$40,000 – $200,000/project',
+      timeline: '8–20 weeks',
+      benefits: [
+        'Enhanced data security',
+        'Transparent transactions',
+        'Reduced fraud',
+        'Improved trust'
+      ],
+      category: 'Emerging Technologies'
+    },
+    {
+      icon: Database,
+      name: 'Real-Time Data Streaming Platform',
+      description: 'Real-time data streaming and processing platform for high-volume data analytics.',
+      features: [
+        'Stream processing architecture',
+        'Real-time data ingestion',
+        'Event-driven processing',
+        'Scalable infrastructure',
+        'Data quality monitoring',
+        'Performance optimization'
+      ],
+      pricing: '$160 – $400/hour',
+      projectPricing: '$30,000 – $120,000/project',
+      timeline: '6–14 weeks',
+      benefits: [
+        'Real-time data insights',
+        'Scalable processing',
+        'Improved decision making',
+        'Reduced latency'
+      ],
+      category: 'Data & Analytics'
+    },
+    {
+      icon: Globe,
+      name: '5G Network Implementation',
+      description: '5G network infrastructure design and implementation for high-speed connectivity.',
+      features: [
+        '5G network architecture',
+        'Network slicing implementation',
+        'Edge computing integration',
+        'Security and encryption',
+        'Performance monitoring',
+        'Optimization and tuning'
+      ],
+      pricing: '$200 – $500/hour',
+      projectPricing: '$75,000 – $400,000/project',
+      timeline: '12–28 weeks',
+      benefits: [
+        'Ultra-high-speed connectivity',
+        'Low latency communication',
+        'Massive device connectivity',
+        'Enhanced mobile experience'
+      ],
+      category: 'Network Infrastructure'
+    },
+    {
+      icon: Users,
+      name: 'Enterprise Application Integration',
+      description: 'Comprehensive enterprise application integration with API management and data synchronization.',
+      features: [
+        'Application integration architecture',
+        'API gateway implementation',
+        'Data synchronization',
+        'Message queuing systems',
+        'Error handling and monitoring',
+        'Performance optimization'
+      ],
+      pricing: '$140 – $350/hour',
+      projectPricing: '$25,000 – $100,000/project',
+      timeline: '6–16 weeks',
+      benefits: [
+        'Seamless data flow',
+        'Improved system efficiency',
+        'Reduced integration complexity',
+        'Better data consistency'
+      ],
+      category: 'Integration'
+    },
+    {
+      icon: Shield,
+      name: 'Quantum-Safe Cryptography Implementation',
+      description: 'Implementation of quantum-resistant cryptographic solutions for future-proof security.',
+      features: [
+        'Quantum-safe algorithm implementation',
+        'Cryptographic key management',
+        'Security assessment',
+        'Migration planning',
+        'Performance optimization',
+        'Compliance verification'
+      ],
+      pricing: '$250 – $600/hour',
+      projectPricing: '$100,000 – $500,000/project',
+      timeline: '16–32 weeks',
+      benefits: [
+        'Future-proof security',
+        'Quantum-resistant encryption',
+        'Enhanced data protection',
+        'Compliance with future standards'
+      ],
+      category: 'Advanced Security'
+    },
+    {
+      icon: Database,
+      name: 'Autonomous Database Management',
+      description: 'Self-managing database systems with automated optimization and maintenance.',
+      features: [
+        'Autonomous database setup',
+        'Performance optimization',
+        'Automated scaling',
+        'Backup and recovery',
+        'Security automation',
+        'Monitoring and alerting'
+      ],
+      pricing: '$120 – $300/hour',
+      projectPricing: '$20,000 – $80,000/project',
+      timeline: '4–10 weeks',
+      benefits: [
+        'Reduced administrative overhead',
+        'Automated optimization',
+        'Improved performance',
+        'Enhanced security'
+      ],
+      category: 'Database Services'
+    },
+    {
+      icon: Globe,
+      name: 'Smart City Infrastructure Solutions',
+      description: 'Comprehensive smart city infrastructure with IoT, data analytics, and citizen services.',
+      features: [
+        'Smart city architecture design',
+        'IoT sensor deployment',
+        'Data analytics platform',
+        'Citizen service applications',
+        'Infrastructure monitoring',
+        'Performance optimization'
+      ],
+      pricing: '$200 – $500/hour',
+      projectPricing: '$150,000 – $1,000,000/project',
+      timeline: '24–52 weeks',
+      benefits: [
+        'Improved city services',
+        'Enhanced citizen experience',
+        'Optimized resource usage',
+        'Better urban planning'
+      ],
+      category: 'Smart Infrastructure'
     }
   ];
 
