@@ -3,30 +3,30 @@ const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   eslint: {
-    ignoreDuringBuilds: true;
-},
+    ignoreDuringBuilds: true
+  },
   typescript: {
-    ignoreBuildErrors: true;
-},
+    ignoreBuildErrors: true
+  },
   experimental: {
     optimizeCss: true,
     scrollRestoration: true,
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'];
-},
+    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons']
+  },
   images: {
     domains: ['images.unsplash.com', 'via.placeholder.com'],
-    formats: ['image/webp', 'image/avif'];
-},
+    formats: ['image/webp', 'image/avif']
+  },
   compress: true,
   compiler: {
-    removeConsole: process.env.NODE_ENV === 'production';
-},
+    removeConsole: process.env.NODE_ENV === 'production'
+  },
   webpack: (config, { dev, isServer }) => {
     if (!dev && !isServer) {
       config.resolve.alias = {
         ...config.resolve.alias,
-        '@': new URL('./src', import.meta.url).pathname;
-};
+        '@': new URL('./src', import.meta.url).pathname
+      };
     }
     return config;
   },
@@ -37,18 +37,18 @@ const nextConfig = {
         headers: [
           {
             key: 'X-Frame-Options',
-            value: 'DENY';
-},
+            value: 'DENY'
+          },
           {
             key: 'X-Content-Type-Options',
-            value: 'nosniff';
-},
+            value: 'nosniff'
+          },
           {
             key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin';
-},
+            value: 'origin-when-cross-origin'
+          },
         ]
-},
+      }
     ]
 }
 };

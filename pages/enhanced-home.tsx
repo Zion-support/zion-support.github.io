@@ -24,25 +24,25 @@ const EnhancedHome: NextPage = () => {
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Cutting-edge artificial intelligence to transform your business operations',
-      color: 'from-blue-500 to-cyan-500';
+      color: 'from-blue-500 to-cyan-500'
 },
     {
       icon: Cloud,
       title: 'Cloud Infrastructure',
       description: 'Scalable and secure cloud solutions for modern applications',
-      color: 'from-purple-500 to-pink-500';
+      color: 'from-purple-500 to-pink-500'
 },
     {
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Advanced security measures to protect your data and systems',
-      color: 'from-green-500 to-emerald-500';
+      color: 'from-green-500 to-emerald-500'
 },
     {
       icon: Zap,
       title: 'Lightning Fast',
       description: 'Optimized performance for the best user experience',
-      color: 'from-yellow-500 to-orange-500';
+      color: 'from-yellow-500 to-orange-500'
 }
   ]
 
@@ -51,25 +51,25 @@ const EnhancedHome: NextPage = () => {
       title: 'AI Development',
       description: 'Custom AI solutions tailored to your business needs',
       icon: Brain,
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'];
+      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
 },
     {
       title: 'Cloud Services',
       description: 'Comprehensive cloud infrastructure and management',
       icon: Cloud,
-      features: ['AWS/Azure/GCP', 'DevOps', 'Microservices', 'Containerization'];
+      features: ['AWS/Azure/GCP', 'DevOps', 'Microservices', 'Containerization']
 },
     {
       title: 'Web Development',
       description: 'Modern, responsive web applications',
       icon: Code,
-      features: ['React/Next.js', 'Node.js', 'TypeScript', 'Progressive Web Apps'];
+      features: ['React/Next.js', 'Node.js', 'TypeScript', 'Progressive Web Apps']
 },
     {
       title: 'Mobile Development',
       description: 'Native and cross-platform mobile solutions',
       icon: Globe,
-      features: ['iOS/Android', 'React Native', 'Flutter', 'App Store Optimization'];
+      features: ['iOS/Android', 'React Native', 'Flutter', 'App Store Optimization']
 }
   ]
 
@@ -103,24 +103,24 @@ const EnhancedHome: NextPage = () => {
               className="absolute top-20 left-20 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl"
               animate={{
                 x: [0, 100, 0],
-                y: [0, -100, 0],;
+                y: [0, -100, 0]
 }}
               transition={{
                 duration: 20,
                 repeat: Infinity,
-                ease: "linear";
+                ease: "linear"
 }}
             />
             <motion.div
               className="absolute bottom-20 right-20 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl"
               animate={{
                 x: [0, -100, 0],
-                y: [0, 100, 0],;
+                y: [0, 100, 0]
 }}
               transition={{
                 duration: 25,
                 repeat: Infinity,
-                ease: "linear";
+                ease: "linear"
 }}
             />
           </div>

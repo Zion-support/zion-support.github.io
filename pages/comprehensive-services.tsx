@@ -62,7 +62,7 @@ import {
   BarChart as Analytics,
   Users2 as Team,
   Settings as Configuration,
-  Palette as Design;
+  Palette as Design
 } from 'lucide-react';
 
 export default function ComprehensiveServices() {
@@ -80,28 +80,28 @@ export default function ComprehensiveServices() {
           description: 'Advanced content creation and optimization with AI-powered insights',
           pricing: '$2,500 - $8,000/month',
           features: ['SEO optimization', 'Multi-language support', 'Brand consistency'],
-          delivery: '3-5 weeks';
+          delivery: '3-5 weeks'
 },
         {
           name: 'AI Customer Success Automation',
           description: 'Intelligent customer success with automated engagement and churn prediction',
           pricing: '$4,000 - $12,000/month',
           features: ['Churn prediction', 'Automated campaigns', 'Health scoring'],
-          delivery: '5-7 weeks';
+          delivery: '5-7 weeks'
 },
         {
           name: 'AI Financial Forecasting Engine',
           description: 'Advanced financial planning with machine learning predictions',
           pricing: '$6,000 - $20,000/month',
           features: ['Risk assessment', 'Cash flow optimization', 'Real-time dashboards'],
-          delivery: '6-8 weeks';
+          delivery: '6-8 weeks'
 },
         {
           name: 'AI Healthcare Diagnostic Platform',
           description: 'Medical diagnostic assistance with AI-powered image analysis',
           pricing: '$8,000 - $25,000/month',
           features: ['Image analysis', 'HIPAA compliance', 'EHR integration'],
-          delivery: '8-12 weeks';
+          delivery: '8-12 weeks'
 }
       ]
 },
@@ -115,14 +115,14 @@ export default function ComprehensiveServices() {
           description: 'Comprehensive zero trust security implementation and management',
           pricing: '$5,000 - $30,000/month',
           features: ['IAM systems', 'Micro-segmentation', 'Continuous monitoring'],
-          delivery: '6-12 weeks';
+          delivery: '6-12 weeks'
 },
         {
           name: 'Edge Computing Solutions',
           description: 'Distributed computing infrastructure for IoT and real-time applications',
           pricing: '$6,000 - $35,000/month',
           features: ['IoT integration', 'Real-time processing', 'Latency optimization'],
-          delivery: '6-12 weeks';
+          delivery: '6-12 weeks'
 },
         {
           name: 'Quantum Computing Integration',
@@ -171,7 +171,7 @@ export default function ComprehensiveServices() {
           description: 'Intelligent return processing with fraud detection',
           pricing: '$1,500 - $5,000/month',
           features: ['Fraud detection', 'Automated processing', 'Analytics dashboard'],
-          delivery: '3-5 weeks';
+          delivery: '3-5 weeks'
 }
       ]
 },

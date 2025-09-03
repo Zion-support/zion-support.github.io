@@ -1,57 +1,45 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import Navigation from '../src/components/Navigation';
-import Footer from '../src/components/Footer';
-import { Play, Calendar, Users, Zap, Brain, Cloud, Shield, ArrowRight, CheckCircle, Star } from 'lucide-react';
+import { 
+  Play, 
+  CheckCircle, 
+  Star, 
+  ArrowRight, 
+  Users, 
+  Zap, 
+  Shield, 
+  Brain,
+  Cloud,
+  Code
+} from 'lucide-react';
 
-const Demo = () => {
-  const [selectedDemo, setSelectedDemo] = useState('ai-services');
+export default function Demo() {
+  const [selectedDemo, setSelectedDemo] = useState(1);
 
   const demos = [
     {
-      id: 'ai-services',
+      id: 1,
       title: 'AI Services Demo',
-      description: 'See how our AI solutions can transform your business processes',
-      duration: '15 minutes',
+      description: 'See our AI solutions in action',
       icon: Brain,
-      features: [
-        'Natural Language Processing',
-        'Computer Vision',
-        'Predictive Analytics',
-        'Chatbot Integration',
-        'Document Processing'
-      ]
-},
+      features: ['Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
+    },
     {
-      id: 'it-services',
-      title: 'IT Services Demo',
-      description: 'Explore our comprehensive IT infrastructure and support solutions',
-      duration: '20 minutes',
+      id: 2,
+      title: 'Cloud Solutions Demo',
+      description: 'Explore our cloud infrastructure',
       icon: Cloud,
-      features: [
-        'Cloud Migration',
-        'Network Security',
-        'System Monitoring',
-        'Backup Solutions',
-        'Performance Optimization'
-      ]
-},
+      features: ['Auto-scaling', 'Load Balancing', 'Security']
+    },
     {
-      id: 'micro-saas',
+      id: 3,
       title: 'Micro SaaS Demo',
-      description: 'Discover our scalable software-as-a-service development capabilities',
-      duration: '25 minutes',
-      icon: Zap,
-      features: [
-        'Custom SaaS Development',
-        'API Integration',
-        'User Management',
-        'Payment Processing',
-        'Analytics Dashboard'
-      ]
-}
-  ]
+      description: 'Experience our business automation tools',
+      icon: Code,
+      features: ['Workflow Automation', 'Data Integration', 'Custom Dashboards']
+    }
+  ];
 
   const testimonials = [
     {
@@ -59,23 +47,23 @@ const Demo = () => {
       company: 'TechCorp Inc.',
       role: 'CTO',
       content: 'The AI demo was incredible. We could see exactly how it would integrate with our existing systems.',
-      rating: 5;
-},
+      rating: 5
+    },
     {
       name: 'Michael Chen',
-      company: 'StartupXYZ',
-      role: 'Founder',
-      content: 'The micro SaaS demo showed us the potential for our product. Highly recommended!',
-      rating: 5;
-},
+      company: 'InnovateLab',
+      role: 'CEO',
+      content: 'The cloud demo showed us the scalability we needed. Very impressive performance.',
+      rating: 5
+    },
     {
       name: 'Emily Rodriguez',
       company: 'Enterprise Solutions',
       role: 'IT Director',
       content: 'The IT services demo covered everything we needed. Very comprehensive and professional.',
-      rating: 5;
-}
-  ]
+      rating: 5
+    }
+  ];
 
   return (
     <>
@@ -86,27 +74,28 @@ const Demo = () => {
         <link rel="canonical" href="https://ziontechgroup.com/demo" />
       </Head>
       
-      <Navigation />
-      
-      <main className="min-h-screen bg-white">
+      <div className="min-h-screen bg-white">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <h1 className="text-5xl font-bold text-gray-900 mb-6">
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 See Our Solutions in <span className="text-blue-600">Action</span>
               </h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-                Experience firsthand how our AI services, IT solutions, and micro SaaS development can transform your business.
+                Experience our AI services, cloud solutions, and micro SaaS platforms through interactive demos
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center">
-                  <Play className="w-5 h-5 mr-2" />
-                  Watch Demo Video
+                <button className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors font-semibold text-lg inline-flex items-center justify-center">
+                  <Play className="mr-2 h-5 w-5" />
+                  Start Demo
                 </button>
-                <Link href="#schedule" className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors flex items-center justify-center">
-                  <Calendar className="w-5 h-5 mr-2" />
-                  Schedule Live Demo
+                <Link
+                  href="/contact"
+                  className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg hover:bg-blue-50 transition-colors font-semibold text-lg inline-flex items-center justify-center"
+                >
+                  Book Live Demo
+                  <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </div>
             </div>
@@ -114,94 +103,81 @@ const Demo = () => {
         </section>
 
         {/* Demo Selection */}
-        <section className="py-20 bg-white">
+        <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Choose Your Demo</h2>
-              <p className="text-lg text-gray-600">
-                Select the solution you'd like to see in action
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Choose Your Demo
+              </h2>
+              <p className="text-xl text-gray-600">
+                Select from our range of technology solutions
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              {demos.map((demo) => (
-                <div
-                  key={demo.id}
-                  onClick={() => setSelectedDemo(demo.id)}
-                  className={`cursor-pointer rounded-lg p-6 border-2 transition-all ${
-                    selectedDemo === demo.id
-                      ? 'border-blue-500 bg-blue-50'
-                      : 'border-gray-200 hover:border-gray-300';
-}`}
-                >
-                  <div className="flex items-center mb-4">
-                    <div className="p-3 bg-blue-100 rounded-lg mr-4">
-                      <demo.icon className="w-6 h-6 text-blue-600" />
+              {demos.map((demo) => {
+                const IconComponent = demo.icon;
+                return (
+                  <div
+                    key={demo.id}
+                    onClick={() => setSelectedDemo(demo.id)}
+                    className={`cursor-pointer rounded-lg p-6 border-2 transition-all ${
+                      selectedDemo === demo.id
+                        ? 'border-blue-600 bg-blue-50'
+                        : 'border-gray-200 hover:border-gray-300'
+                    }`}
+                  >
+                    <div className="flex items-center mb-4">
+                      <div className={`p-3 rounded-lg ${
+                        selectedDemo === demo.id ? 'bg-blue-600' : 'bg-gray-100'
+                      }`}>
+                        <IconComponent className={`h-6 w-6 ${
+                          selectedDemo === demo.id ? 'text-white' : 'text-gray-600'
+                        }`} />
+                      </div>
+                      <div className="ml-4">
+                        <h3 className="text-lg font-semibold text-gray-900">{demo.title}</h3>
+                        <p className="text-gray-600">{demo.description}</p>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-gray-900">{demo.title}</h3>
-                      <p className="text-sm text-gray-600">{demo.duration}</p>
-                    </div>
+                    <ul className="space-y-2">
+                      {demo.features.map((feature, index) => (
+                        <li key={index} className="flex items-center text-sm text-gray-600">
+                          <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                  <p className="text-gray-600 mb-4">{demo.description}</p>
-                  <ul className="space-y-2">
-                    {demo.features.map((feature, index) => (
-                      <li key={index} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-
-            {/* Selected Demo Details */}
-            <div className="bg-gray-50 rounded-lg p-8">
-              <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  {demos.find(d => d.id === selectedDemo)?.title} - Live Demo
-                </h3>
-                <p className="text-lg text-gray-600 mb-6">
-                  {demos.find(d => d.id === selectedDemo)?.description}
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center">
-                    <Play className="w-5 h-5 mr-2" />
-                    Start Demo
-                  </button>
-                  <Link href="/contact" className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors flex items-center justify-center">
-                    <Users className="w-5 h-5 mr-2" />
-                    Request Custom Demo
-                  </Link>
-                </div>
-              </div>
+                );
+              })}
             </div>
           </div>
         </section>
 
         {/* Testimonials */}
-        <section className="py-20 bg-gray-50">
+        <section className="py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
-              <p className="text-lg text-gray-600">
-                Hear from businesses that have experienced our demos
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                What Our Clients Say
+              </h2>
+              <p className="text-xl text-gray-600">
+                Trusted by leading companies worldwide
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
-                <div key={index} className="bg-white rounded-lg p-6 shadow-sm">
+                <div key={index} className="bg-white rounded-lg p-6 shadow-lg">
                   <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                      <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
-                  <p className="text-gray-600 mb-4">"{testimonial.content}"</p>
+                  <p className="text-gray-600 mb-6 italic">"{testimonial.content}"</p>
                   <div>
-                    <p className="font-semibold text-gray-900">{testimonial.name}</p>
-                    <p className="text-sm text-gray-600">{testimonial.role}, {testimonial.company}</p>
+                    <div className="font-semibold text-gray-900">{testimonial.name}</div>
+                    <div className="text-gray-500 text-sm">{testimonial.role}, {testimonial.company}</div>
                   </div>
                 </div>
               ))}
@@ -209,58 +185,33 @@ const Demo = () => {
           </div>
         </section>
 
-        {/* Schedule Demo Section */}
-        <section id="schedule" className="py-20 bg-white">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Schedule Your Demo</h2>
-              <p className="text-lg text-gray-600">
-                Book a personalized demo with our experts
-              </p>
-            </div>
-
-            <div className="bg-gray-50 rounded-lg p-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Demo Information</h3>
-                  <ul className="space-y-3">
-                    <li className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                      <span className="text-gray-600">Personalized to your business needs</span>
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                      <span className="text-gray-600">Live Q&A with our experts</span>
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                      <span className="text-gray-600">Custom use case scenarios</span>
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                      <span className="text-gray-600">Follow-up consultation included</span>
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Ready to Get Started?</h3>
-                  <p className="text-gray-600 mb-6">
-                    Contact us to schedule your personalized demo and see how our solutions can benefit your business.
-                  </p>
-                  <Link href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center">
-                    Schedule Demo
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Link>
-                </div>
-              </div>
+        {/* CTA Section */}
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+              Book a personalized demo with our team and see how our solutions can transform your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-50 transition-colors font-semibold text-lg inline-flex items-center justify-center"
+              >
+                Book Demo
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+              <Link
+                href="/pricing"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold text-lg inline-flex items-center justify-center"
+              >
+                View Pricing
+              </Link>
             </div>
           </div>
         </section>
-      </main>
-      
-      <Footer />
+      </div>
     </>
   );
-};
-
-export default Demo;
+}

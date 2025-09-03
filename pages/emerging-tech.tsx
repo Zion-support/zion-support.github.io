@@ -10,37 +10,37 @@ export default function EmergingTech() {
       icon: Brain,
       title: 'Artificial Intelligence',
       description: 'Advanced AI solutions including machine learning, deep learning, and neural networks for intelligent automation.',
-      features: ['Machine Learning Models', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'];
+      features: ['Machine Learning Models', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
 },
     {
       icon: Lock,
       title: 'Blockchain & Web3',
       description: 'Decentralized applications, smart contracts, and blockchain solutions for secure, transparent operations.',
-      features: ['Smart Contracts', 'DeFi Solutions', 'NFT Platforms', 'Cryptocurrency Integration'];
+      features: ['Smart Contracts', 'DeFi Solutions', 'NFT Platforms', 'Cryptocurrency Integration']
 },
     {
       icon: Globe,
       title: 'Internet of Things (IoT)',
       description: 'Connected devices and IoT ecosystems for smart homes, cities, and industrial automation.',
-      features: ['Device Management', 'Data Analytics', 'Remote Monitoring', 'Automation Systems'];
+      features: ['Device Management', 'Data Analytics', 'Remote Monitoring', 'Automation Systems']
 },
     {
       icon: Eye,
       title: 'Augmented & Virtual Reality',
       description: 'Immersive AR/VR experiences for training, entertainment, and business applications.',
-      features: ['AR Applications', 'VR Experiences', 'Mixed Reality', '3D Visualization'];
+      features: ['AR Applications', 'VR Experiences', 'Mixed Reality', '3D Visualization']
 },
     {
       icon: Zap,
       title: 'Edge Computing',
       description: 'Distributed computing solutions that bring processing power closer to data sources.',
-      features: ['Real-time Processing', 'Reduced Latency', 'Bandwidth Optimization', 'Offline Capabilities'];
+      features: ['Real-time Processing', 'Reduced Latency', 'Bandwidth Optimization', 'Offline Capabilities']
 },
     {
       icon: Database,
       title: 'Quantum Computing',
       description: 'Next-generation computing solutions leveraging quantum mechanics for complex problem solving.',
-      features: ['Quantum Algorithms', 'Optimization Problems', 'Cryptography', 'Simulation'];
+      features: ['Quantum Algorithms', 'Optimization Problems', 'Cryptography', 'Simulation']
 }
   ]
 
@@ -48,17 +48,17 @@ export default function EmergingTech() {
     {
       icon: Rocket,
       title: 'Competitive Advantage',
-      description: 'Stay ahead of the competition by adopting cutting-edge technologies before your competitors.';
+      description: 'Stay ahead of the competition by adopting cutting-edge technologies before your competitors.'
 },
     {
       icon: Zap,
       title: 'Innovation Leadership',
-      description: 'Position your company as an innovation leader in your industry with emerging technology solutions.';
+      description: 'Position your company as an innovation leader in your industry with emerging technology solutions.'
 },
     {
       icon: Globe,
       title: 'Future-Proof Solutions',
-      description: 'Build solutions that are designed to evolve and adapt to future technological advancements.';
+      description: 'Build solutions that are designed to evolve and adapt to future technological advancements.'
 },
     {
       icon: Shield,

@@ -16,7 +16,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   keywords = 'technology, AI, software development, IT services',
   image = '/images/zion-tech-group-og.jpg',
   url = 'https://ziontechgroup.com',
-  type = 'website';
+  type = 'website'
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   

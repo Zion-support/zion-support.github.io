@@ -14,7 +14,7 @@ import {
   Globe,
   Database,
   Shield,
-  Users;
+  Users
 } from 'lucide-react';
 
 const Docs: NextPage = () => {
@@ -23,7 +23,7 @@ const Docs: NextPage = () => {
       step: 1,
       title: 'Get Your API Key',
       description: 'Sign up for a free account and get your API key',
-      icon: Shield;
+      icon: Shield
 },
     {
       step: 2,

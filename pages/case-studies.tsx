@@ -10,7 +10,7 @@ import {
   TrendingUp,
   Award,
   Globe,
-  Zap;
+  Zap
 } from 'lucide-react';
 
 const CaseStudies: NextPage = () => {
@@ -32,7 +32,7 @@ const CaseStudies: NextPage = () => {
       teamSize: '8 experts',
       technologies: ['React', 'Node.js', 'Machine Learning', 'AWS'],
       image: '/api/placeholder/600/400',
-      featured: true;
+      featured: true
 },
     {
       id: 2,
@@ -51,7 +51,7 @@ const CaseStudies: NextPage = () => {
       teamSize: '12 experts',
       technologies: ['AWS', 'Docker', 'Kubernetes', 'Terraform'],
       image: '/api/placeholder/600/400',
-      featured: true;
+      featured: true
 },
     {
       id: 3,
@@ -70,7 +70,7 @@ const CaseStudies: NextPage = () => {
       teamSize: '16 experts',
       technologies: ['Adaptive Learning', 'Educational AI', 'Content Personalization', 'Learning Analytics'],
       image: '/api/placeholder/600/400',
-      featured: false;
+      featured: false
 }
   ]
 
