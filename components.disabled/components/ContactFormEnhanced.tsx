@@ -56,7 +56,7 @@ const ContactFormEnhanced: React.FC = () => {
                   name='name'
                   value={formData.name}
                   onChange={handleChange}
-                  required;
+                  required
                   className='w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
                   placeholder='Your full name'/>
               </div>

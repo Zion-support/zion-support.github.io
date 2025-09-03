@@ -1,6 +1,6 @@
 'use client';
 import { useEffect, useState, useCallback } from 'react';
-import { User } from 'lucide-react';
+import { User as UserIcon } from 'lucide-react';
 
 // Common interfaces for better type safety
 interface ApiResponse<T = unknown> {
@@ -183,11 +183,6 @@ const AnalyticsManager: React.FC = () => {
     [isInitialized]
   );
 
-      // Custom analytics
-      sendAnalyticsEvent(event);
-    },
-    [isInitialized]
-  );
   const sendAnalyticsEvent = useCallback(async (event: AnalyticsEvent) => {
     try {
       const eventData = {
@@ -206,12 +201,15 @@ const AnalyticsManager: React.FC = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(eventData)
-      })} catch (error) {
-      console.error('Analytics: Failed to send event', error)}
-  }, [])
+      });
+    } catch (error) {
+      console.error('Analytics: Failed to send event', error);
+    }
+  }, []);
+
   const trackUserProperties = useCallback((properties: Record<string, unknown>) => {
     if (typeof gtag !== 'undefined') {
-      gtag('config,GA_MEASUREMENT_ID', {
+      gtag('config', 'GA_MEASUREMENT_ID', {
         custom_map: properties,
       });
     }
@@ -368,7 +366,7 @@ const AnalyticsManager: React.FC = () => {
     };
   }, [trackEvent, trackConversion, trackPerformance, trackUserProperties]);
 
-  return null; // This component doesn't render unknownthing
+  return null; // This component doesn't render anything
 }
 
 export default AnalyticsManager;

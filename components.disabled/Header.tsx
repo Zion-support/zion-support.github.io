@@ -41,21 +41,21 @@ const Header: React.FC = () => {
                 key={item.name}
                 href={item.href}
                 className={`transition-colors duration-200 font-medium ${
-                  router.pathname === item.href;
-                    ? 'text-blue-600';
+                  router.pathname === item.href
+                    ? 'text-blue-600'
                     : 'text-gray-700 hover:text-blue-600'}`}
               >{item.name}
               </Link>
             ))}
             <Link
-              href='/contact';
+              href='/contact'
               className='bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium'>
               Get Started
             </Link>
           </div>
           {/* Mobile menu button */}
           <div className='md:hidden'>
-            <button;
+            <button
               onClick={() => setIsOpen(!isOpen)}
               className='text-gray-700 hover:text-blue-600 transition-colors duration-200'
             >{isOpen ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' />}
@@ -72,20 +72,20 @@ const Header: React.FC = () => {
               className='md:hidden overflow-hidden'>
               <div className='px-2 pt-2 pb-3 space-y-1 bg-white border-t'>
                 {navigationItems.map((item) => (
-                  <Link;
+                  <Link
                     key={item.name}
                     href={item.href}
                     className={`block px-3 py-2 rounded-md transition-colors duration-200 ${
-                      router.pathname === item.href;
-                        ? 'text-blue-600 bg-blue-50';
+                      router.pathname === item.href
+                        ? 'text-blue-600 bg-blue-50'
                         : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'}`}
                     onClick={() => setIsOpen(false)}
                   >{item.name}
                   </Link>
                 ))}
-                <Link;
-                  href='/contact';
-                  className='block px-3 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors duration-200 text-center';
+                <Link
+                  href='/contact'
+                  className='block px-3 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors duration-200 text-center'
                   onClick={() => setIsOpen(false)}
                 >
                   Get Started
@@ -96,5 +96,7 @@ const Header: React.FC = () => {
         </AnimatePresence>
       </div>
     </header>
-  )}
-export default Header
+  );
+};
+
+export default Header;

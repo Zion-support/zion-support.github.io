@@ -20,7 +20,8 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   noindex = false,
   nofollow = false}) => {
   const defaultStructuredData = {
-    '@context': 'https://schema.org,@type': 'Organization',
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
     name: 'Zion Tech Group',
     url: 'https://ziontechgroup.com',
     logo: 'https://ziontechgroup.com/logo.png',
@@ -37,10 +38,13 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       telephone: '+1-302-464-0950',
       contactType: 'customer service',
       email: 'kleber@ziontechgroup.com'},
-    sameAs: [;
-      'https://www.linkedin.com/company/zion-tech-group,https://github.com/Zion-Technologies']}
-  const finalStructuredData = structuredData || defaultStructuredData
-  return(
+    sameAs: [
+      'https://www.linkedin.com/company/zion-tech-group',
+      'https://github.com/Zion-Technologies'
+    ]
+  };
+  const finalStructuredData = structuredData || defaultStructuredData;
+  return (
     <Head>
       <title>{title}</title>
       <meta name='description' content={description} />
@@ -82,7 +86,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       <link rel='dns-prefetch' href='//www.google-analytics.com' />
       <link rel='dns-prefetch' href='//www.googletagmanager.com' />
       <script
-        type='application/ld+json';
+        type='application/ld+json'
         dangerouslySetInnerHTML={{ __html: JSON.stringify(finalStructuredData) }}
       />
       <meta httpEquiv='x-dns-prefetch-control' content='on' />

@@ -49,7 +49,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
           <div className='text-xs text-gray-600 dark:text-gray-300'>Font Size:</div>
           <div className='flex gap-1'>
             {(['small,normal,large,extra-large'] as const).map((size) => (
-              <button;
+              <button
                 key={size}
                 onClick={() => changeFontSize(size)}
                 className={`px-2 py-1 text-xs rounded ${fontSize === size ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`}
@@ -61,7 +61,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         </div>
       </div>
       <a
-        href='#main-content';
+        href='#main-content'
         className='sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50'>
         Skip to main content
       </a>

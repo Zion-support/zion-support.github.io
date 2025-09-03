@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook } from 'lucide-react';
 
 const EnhancedFooter: React.FC = () => {
-  return(
+  return (
     <footer className='bg-gray-900 text-white'>
       <div className='container mx-auto px-4 py-12'>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
@@ -119,9 +119,6 @@ const EnhancedFooter: React.FC = () => {
           </div>
         </div>
       </div>
-          </div>
-        </div>
-      </div>
       <div className='border-t border-gray-700 py-6'>
         <div className='container mx-auto px-4'>
           <div className='flex flex-col md:flex-row justify-between items-center'>
@@ -134,9 +131,8 @@ const EnhancedFooter: React.FC = () => {
           </div>
         </div>
       </div>
-          </div>
-        </div>
-      </div>
     </footer>
-  )}
-export default EnhancedFooter
+  );
+};
+
+export default EnhancedFooter;
