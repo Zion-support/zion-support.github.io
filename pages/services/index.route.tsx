@@ -1,6 +1,5 @@
 import React from 'react';
-import ModernLayout from '../../../components/layout/ModernLayout';
-import { servicesList } from './_servicesData.route.js';
+import ModernLayout from '../../components/layout/ModernLayout';
 import { Zap, Brain, Cloud, Shield, Database, Rocket, ArrowRight, CheckCircle, DollarSign, Clock } from 'lucide-react';
 
 export default function ServicesPage() {
@@ -29,6 +28,23 @@ export default function ServicesPage() {
   ];
 
   const getServicesByCategory = (categoryId: string) => {
+    // Simple services list for demonstration
+    const servicesList = [
+      {
+        id: 'ai-churn-predictor',
+        title: 'AI Customer Churn Predictor',
+        description: 'Predict customer churn with 94% accuracy',
+        categoryName: 'micro-saas',
+        price: '$299/month'
+      },
+      {
+        id: 'ai-fraud-detection',
+        title: 'AI Fraud Detection',
+        description: 'Real-time fraud detection and prevention',
+        categoryName: 'micro-saas',
+        price: '$499/month'
+      }
+    ];
     return servicesList.filter(service => service.categoryName === categoryId);
   };
 

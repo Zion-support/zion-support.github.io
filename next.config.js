@@ -1,3 +1,5 @@
+import path from 'path';
+
 /** @type {import("next").NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -26,7 +28,7 @@ const nextConfig = {
     if (!dev && !isServer) {
       config.resolve.alias = {
         ...config.resolve.alias,
-        "@": require("path").resolve(__dirname, "./src"),
+        "@": path.resolve(process.cwd(), "./src"),
       }
     }
     
@@ -98,12 +100,4 @@ const nextConfig = {
   },
 }
 
-<<<<<<< HEAD
-module.exports = nextConfig
-=======
-<<<<<<< HEAD
-export default nextConfig; 
-=======
 export default nextConfig
->>>>>>> main
->>>>>>> b391e90bda07aa170ffa9dbe6b590d05c5af574b
