@@ -1,7 +1,29 @@
 import type { AppProps } from 'next/app';
 import Link from 'next/link';
+import { useState } from 'react';
 
 function Header(): any {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const navigationItems = [
+    { href: '/', label: 'Home' },
+    { href: '/about', label: 'About' },
+    { 
+      href: '/services', 
+      label: 'Services',
+      submenu: [
+        { href: '/services', label: 'All Services' },
+        { href: '/micro-saas', label: 'Micro SaaS' },
+        { href: '/ai-services', label: 'AI Services' },
+        { href: '/it-services', label: 'IT Services' },
+        { href: '/services-catalog', label: 'Services Catalog' }
+      ]
+    },
+    { href: '/pricing', label: 'Pricing' },
+    { href: '/faq', label: 'FAQ' },
+    { href: '/contact', label: 'Contact' }
+  ];
+
   return (
     <header style={{
       position: 'sticky', top: 0, zIndex: 50, background: 'rgba(11, 18, 32, 0.95)', 
@@ -16,46 +38,97 @@ function Header(): any {
           background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent',
-          backgroundClip: 'text'
+          backgroundClip: 'text',
+          textDecoration: 'none'
         }}>Zion Tech Group</Link>
         
+        {/* Desktop Navigation */}
         <div style={{ 
           display: 'flex', gap: 8, flexWrap: 'wrap', alignItems: 'center',
           '@media (max-width: 768px)': { display: 'none' }
         }}>
-          <Link href="/" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease'
-          }}>Home</Link>
-          <Link href="/services" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease'
-          }}>All Services</Link>
-          <Link href="/services-catalog" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease'
-          }}>Catalog</Link>
-          <Link href="/pricing" style={{ 
-            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-            transition: 'all 0.2s ease'
-          }}>Pricing</Link>
-          <Link href="/contact" style={{ 
-            fontWeight: 600, background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', 
-            color: 'white', padding: '8px 16px', borderRadius: 8,
-            transition: 'all 0.2s ease'
-          }}>Contact</Link>
+          {navigationItems.map((item) => (
+            <div key={item.href} style={{ position: 'relative' }}>
+              <Link href={item.href} style={{ 
+                padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+                transition: 'all 0.2s ease', textDecoration: 'none',
+                display: 'flex', alignItems: 'center', gap: 4
+              }}>
+                {item.label}
+                {item.submenu && <span style={{ fontSize: '0.8rem' }}>▼</span>}
+              </Link>
+              {item.submenu && (
+                <div style={{
+                  position: 'absolute', top: '100%', left: 0, 
+                  background: 'rgba(11, 18, 32, 0.98)', 
+                  border: '1px solid rgba(255,255,255,0.1)',
+                  borderRadius: 8, padding: '8px 0', minWidth: 200,
+                  display: 'none', zIndex: 1000
+                }}>
+                  {item.submenu.map((subItem) => (
+                    <Link key={subItem.href} href={subItem.href} style={{
+                      display: 'block', padding: '8px 16px', 
+                      textDecoration: 'none', opacity: 0.9,
+                      transition: 'all 0.2s ease'
+                    }}>
+                      {subItem.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
         </div>
 
         {/* Mobile menu button */}
-        <button style={{
-          display: 'none',
-          '@media (max-width: 768px)': { display: 'block' },
-          background: 'none', border: 'none', color: 'white', fontSize: '1.5rem',
-          cursor: 'pointer', padding: '8px'
-        }}>
+        <button 
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          style={{
+            display: 'none',
+            '@media (max-width: 768px)': { display: 'block' },
+            background: 'none', border: 'none', color: 'white', fontSize: '1.5rem',
+            cursor: 'pointer', padding: '8px'
+          }}
+        >
           ☰
         </button>
       </nav>
+
+      {/* Mobile Navigation Menu */}
+      {isMobileMenuOpen && (
+        <div style={{
+          display: 'block',
+          '@media (min-width: 769px)': { display: 'none' },
+          background: 'rgba(11, 18, 32, 0.98)', 
+          borderTop: '1px solid rgba(255,255,255,0.1)',
+          padding: '16px 20px'
+        }}>
+          {navigationItems.map((item) => (
+            <div key={item.href}>
+              <Link href={item.href} style={{
+                display: 'block', padding: '12px 0', 
+                textDecoration: 'none', opacity: 0.9,
+                borderBottom: '1px solid rgba(255,255,255,0.1)'
+              }}>
+                {item.label}
+              </Link>
+              {item.submenu && (
+                <div style={{ paddingLeft: '16px' }}>
+                  {item.submenu.map((subItem) => (
+                    <Link key={subItem.href} href={subItem.href} style={{
+                      display: 'block', padding: '8px 0', 
+                      textDecoration: 'none', opacity: 0.7,
+                      fontSize: '0.9rem'
+                    }}>
+                      {subItem.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      )}
     </header>
   );
 }
@@ -89,6 +162,7 @@ function Footer(): any {
             <div>📞 <a href="tel:+13024640950" style={{ color: '#93c5fd' }}>+1 302 464 0950</a></div>
             <div>✉️ <a href="mailto:kleber@ziontechgroup.com" style={{ color: '#93c5fd' }}>kleber@ziontechgroup.com</a></div>
             <div>📍 364 E Main St STE 1008, Middletown DE 19709</div>
+            <div>🌐 <a href="https://ziontechgroup.com" style={{ color: '#93c5fd' }}>ziontechgroup.com</a></div>
           </div>
         </div>
 
@@ -97,8 +171,22 @@ function Footer(): any {
           <h3 style={{ fontWeight: 700, fontSize: '1.1rem' }}>Services</h3>
           <div style={{ display: 'grid', gap: 8 }}>
             <Link href="/services" style={{ opacity: 0.8, textDecoration: 'none' }}>All Services</Link>
+            <Link href="/micro-saas" style={{ opacity: 0.8, textDecoration: 'none' }}>Micro SaaS Products</Link>
+            <Link href="/ai-services" style={{ opacity: 0.8, textDecoration: 'none' }}>AI Services</Link>
+            <Link href="/it-services" style={{ opacity: 0.8, textDecoration: 'none' }}>IT Services</Link>
             <Link href="/services-catalog" style={{ opacity: 0.8, textDecoration: 'none' }}>Services Catalog</Link>
             <Link href="/pricing" style={{ opacity: 0.8, textDecoration: 'none' }}>Pricing</Link>
+          </div>
+        </div>
+
+        {/* Company */}
+        <div style={{ display: 'grid', gap: 12 }}>
+          <h3 style={{ fontWeight: 700, fontSize: '1.1rem' }}>Company</h3>
+          <div style={{ display: 'grid', gap: 8 }}>
+            <Link href="/" style={{ opacity: 0.8, textDecoration: 'none' }}>Home</Link>
+            <Link href="/about" style={{ opacity: 0.8, textDecoration: 'none' }}>About Us</Link>
+            <Link href="/contact" style={{ opacity: 0.8, textDecoration: 'none' }}>Contact Us</Link>
+            <Link href="/faq" style={{ opacity: 0.8, textDecoration: 'none' }}>FAQ</Link>
             <div style={{ opacity: 0.8, fontSize: '0.9rem', marginTop: 8 }}>
               <div>• 60+ Micro SaaS Products</div>
               <div>• 40+ AI Services</div>
@@ -107,14 +195,14 @@ function Footer(): any {
           </div>
         </div>
 
-        {/* Quick Links */}
+        {/* Legal & Support */}
         <div style={{ display: 'grid', gap: 12 }}>
-          <h3 style={{ fontWeight: 700, fontSize: '1.1rem' }}>Quick Links</h3>
+          <h3 style={{ fontWeight: 700, fontSize: '1.1rem' }}>Legal & Support</h3>
           <div style={{ display: 'grid', gap: 8 }}>
-            <Link href="/" style={{ opacity: 0.8, textDecoration: 'none' }}>Home</Link>
-            <Link href="/contact" style={{ opacity: 0.8, textDecoration: 'none' }}>Contact Us</Link>
             <Link href="/privacy" style={{ opacity: 0.8, textDecoration: 'none' }}>Privacy Policy</Link>
-            <a href="https://ziontechgroup.com" style={{ opacity: 0.8, textDecoration: 'none' }}>Main Website</a>
+            <Link href="/terms" style={{ opacity: 0.8, textDecoration: 'none' }}>Terms of Service</Link>
+            <Link href="/faq" style={{ opacity: 0.8, textDecoration: 'none' }}>Support</Link>
+            <a href="mailto:kleber@ziontechgroup.com" style={{ opacity: 0.8, textDecoration: 'none' }}>Support Email</a>
           </div>
         </div>
 
@@ -135,6 +223,12 @@ function Footer(): any {
               padding: '10px 16px', borderRadius: 8,
               textAlign: 'center', textDecoration: 'none', fontWeight: 600
             }}>Call Now</a>
+            <Link href="/services-catalog" style={{ 
+              background: 'rgba(255,255,255,0.05)', color: 'white', 
+              padding: '10px 16px', borderRadius: 8,
+              textAlign: 'center', textDecoration: 'none', fontWeight: 600,
+              border: '1px solid rgba(255,255,255,0.1)'
+            }}>View Catalog</Link>
           </div>
         </div>
       </div>
@@ -145,7 +239,8 @@ function Footer(): any {
       }}>
         <small style={{ opacity: 0.7 }}>
           © {new Date().getFullYear()} Zion Tech Group. All rights reserved. | 
-          <a href="/privacy" style={{ color: '#93c5fd', marginLeft: 8 }}>Privacy Policy</a>
+          <Link href="/privacy" style={{ color: '#93c5fd', marginLeft: 8, textDecoration: 'none' }}>Privacy Policy</Link> | 
+          <Link href="/terms" style={{ color: '#93c5fd', marginLeft: 8, textDecoration: 'none' }}>Terms of Service</Link>
         </small>
       </div>
     </footer>
