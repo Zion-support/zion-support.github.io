@@ -13,5 +13,32 @@ import { Helmet  } from 'react-helmet-async'; import { motion  } from 'framer-mo
     description: 'Instant notifications across multiple channels with customizable escalation paths and response teams,' icon: <AlertTriangle className='w-6 h-6'/" > },' {' title: 'Incident Timeline Tracking',
     description: 'Comprehensive tracking of all incident activities, communications, and resolution steps for audit compliance,' icon: <Clock className='w-6 h-6'/" > ] const benefits = [' {' metric: '70%,' description: 'Reduction in response time,' icon: <Clock className='w-5 h-5'/" > },' {' metric: '45%,' description: 'Improvement in resolution quality,' icon: <TrendingUp className='w-5 h-5'/" > },' {' metric: '24/7,' description: 'Automated monitoring,' icon: <Activity className='w-5 h-5'/" > },' {' metric: '90%,' description: 'Compliance assurance,' icon: <Shield className='w-5 h-5'/" > ] const pricingPlans = [' {' name: 'Professional,' price: '$299,' period: '/month,' description: 'Perfect for growing security teams,' features: ['';Up to 50 users,';Basic threat detection,';Standard response workflows,';Email & Slack notifications,';Basic reporting,';Email support' ], popular: false },' {' name: 'Enterprise,' price: '$599,' period: '/month,' description: 'Ideal for large organizations,' features: ['';Unlimited users,';Advanced AI detection,';Custom response workflows,';Multi-channel notifications,';Advanced analytics,';Priority support,';Compliance reporting' ], popular: true },' {' name: 'Custom,' price: 'Custom,' period: , description: 'For complex enterprise needs,' features: ['';Custom integrations,';Dedicated support team,';Custom training,';SLA guarantees,';On-premise options,';Custom development' ], popular: false' ]'; const integrations = ['';SIEM Systems,EDR Solutions,Firewall,IDS/IPS,Slack,Teams,Jira,ServiceNow'' ]'; const useCases = [''Security incident management,';IT operations,';Compliance management,';Team collaboration,';Audit preparation,';Risk mitigation' ] return (<>' <Helmet>'' <title>Intelligent Incident Response Platform — Zion Tech Group | AI-Driven Security</title>'' <meta name='description' content='Transform your security operations with our AI-driven incident response platform. Automated threat detection, response workflows, and compliance reporting.'/ / / /" >'' <meta property='og: title' content='Intelligent Incident Response Platform — Zion Tech Group'/ / / /" >'' <meta property='og: description' content='AI-powered incident response platform with automated workflows and real-time threat detection.'/ / / /" >'' <meta property='og:url' content='https:''"
 
-"
-}}}}}}}}}}
+const IncidentResponsePlatform = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="IncidentResponsePlatform - Zion Tech Group"
+        description="Professional IncidentResponsePlatform services by Zion Tech Group"
+        keywords="incidentresponseplatform, technology, services"
+      />
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">IncidentResponsePlatform</h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Professional IncidentResponsePlatform services to help your business grow.
+          </p>
+          <div className="flex justify-center">
+            <a 
+              href="/contact" 
+              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300"
+            >
+              Get Started
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default IncidentResponsePlatform;

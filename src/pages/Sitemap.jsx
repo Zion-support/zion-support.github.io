@@ -153,7 +153,7 @@ export default function Sitemap() {
                   {section.pages.map((page, pageIndex) => ("
                     <div key={pageIndex} className="group">
                       <Link to={page.path}"
-                        className="flex items-start space-x-3 p-3 rounded-lg hover:bg-zion-purple/10 transition-all duration-300"" >"
+                        className='flex items-start space-x-3 p-3 rounded-lg hover:bg-zion-purple/10 transition-all duration-300  >'
                         <ArrowRight className="h-4 w-4 text-zion-cyan mt-1 flex-shrink-0 group-hover:translate-x-1 transition-transform" /" >"
                         <div className="flex-1">"
                           <div className="text-white font-medium group-hover:text-zion-cyan transition-colors">
@@ -191,7 +191,7 @@ export default function Sitemap() {
                 href={link.url}"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-zion-blue-dark/50 border border-zion-purple/20 rounded-xl p-6 hover:border-zion-purple/40 transition-all duration-300 group"" >"
+                className='bg-zion-blue-dark/50 border border-zion-purple/20 rounded-xl p-6 hover:border-zion-purple/40 transition-all duration-300 group  >'
                 <div className="flex items-center justify-between mb-4">"
                   <div className="w-10 h-10 rounded-lg bg-zion-purple/20 flex items-center justify-center">"
                     <ExternalLink className="h-5 w-5 text-zion-cyan" /" >
@@ -223,13 +223,13 @@ export default function Sitemap() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link "
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white font-semibold rounded-lg hover:from-zion-purple/80 hover:to-zion-cyan/80 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/25"" >
-                Contact Support"
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white font-semibold rounded-lg hover:from-zion-purple/80 hover:to-zion-cyan/80 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/25  >
+                Contact Support'
                 <ArrowRight className="ml-2 h-5 w-5" /" >
               </Link>
               <Link "
                 to="/search"
-                className="inline-flex items-center px-8 py-4 border-2 border-zion-purple/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-purple/10 hover:border-zion-purple/50 transition-all duration-300"" >
+                className='inline-flex items-center px-8 py-4 border-2 border-zion-purple/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-purple/10 hover:border-zion-purple/50 transition-all duration-300  >
                 Search Website
               </Link>
             </div>

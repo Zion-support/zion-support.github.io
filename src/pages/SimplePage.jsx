@@ -260,8 +260,8 @@ export default function SimplePage() {
                     {section.description}
                   </p>
                   <Link to={section.link}"
-                    className="inline-flex items-center text-zion-cyan hover:text-white transition-colors group-hover:translate-x-1"" >
-                    Learn More"
+                    className='inline-flex items-center text-zion-cyan hover:text-white transition-colors group-hover:translate-x-1  >
+                    Learn More'
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" /" >
                   </Link>
                 </div>
@@ -284,13 +284,13 @@ export default function SimplePage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link "
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white font-semibold rounded-lg hover:from-zion-purple/80 hover:to-zion-cyan/80 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/25"" >
-                Contact Us"
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white font-semibold rounded-lg hover:from-zion-purple/80 hover:to-zion-cyan/80 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/25  >
+                Contact Us'
                 <ArrowRight className="ml-2 h-5 w-5" /" >
               </Link>
               <Link "
                 to="/services"
-                className="inline-flex items-center px-8 py-4 border-2 border-zion-purple/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-purple/10 hover:border-zion-purple/50 transition-all duration-300"" >
+                className='inline-flex items-center px-8 py-4 border-2 border-zion-purple/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-purple/10 hover:border-zion-purple/50 transition-all duration-300  >
                 Explore Services
               </Link>
             </div>
@@ -299,4 +299,4 @@ export default function SimplePage() {
       </section>
     </div>
   );,
-}"
+}'

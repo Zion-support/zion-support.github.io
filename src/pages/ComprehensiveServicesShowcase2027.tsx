@@ -56,8 +56,8 @@ interface Service {
     address: string}
 }
 "
-const ComprehensiveServicesShowcase2027: React.FC = () => {"
-  const [searchTerm, setSearchTerm] = useState('');"
+const ComprehensiveServicesShowcase2027: React.FC = () => {'
+  const [searchTerm, setSearchTerm] = useState( );'
   const [selectedCategory, setSelectedCategory] = useState<string>('All');"
   const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'newest'>('name');
   const [selectedService, setSelectedService] = useState<Service | null" >(null);
@@ -177,7 +177,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {"
                 Watch Demo
               </motion.button>
               <motion .button
-                whileHover={{ scale: 1.05 }}"
+                whileHover={{ scale: 1.05 }}'
                 whileTap={{ scale: 0.95 }}"
                 className='border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2' >"
                 <BookOpen className="w-5 h-5" /"" >
@@ -187,7 +187,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {"
           </motion.div>
         </div>
       </div>
-"
+'
       {/* Search and Filters */}"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">"
         <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">"
@@ -195,7 +195,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {"
             {/* Search */}"
             <div className="flex-1">"
               <div className="relative">"
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" /"" >"
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' /  >'
                 <input "
                   type="text"
                   placeholder="Search services..."
@@ -212,12 +212,12 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {"
                 onChange={(e) =" > setSelectedCategory(e.target.value)}"
                 className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-purple-500"
               >
-                {categories.map(category => ("
-                  <option key={category} value={category}"" >{category}</option>
+                {categories.map(category => ('
+                  <option key={category} value={category}  >{category}</option>
                 ))}
               </select>
             </div>
-"
+'
             {/* Sort */}"
             <div className="flex-shrink-0">
               <select value={sortBy}
@@ -245,22 +245,22 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {"
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}"
                 whileHover={{ y: -5 }}"
-                className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-purple-400/50 transition-all duration-300 cursor-pointer"
-                onClick={() ="" > setSelectedService(service)}
-              >"
+                className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-purple-400/50 transition-all duration-300 cursor-pointer'
+                onClick={() =  > setSelectedService(service)}
+              >'
                 {/* Service Header */}"
                 <div className="flex items-start justify-between mb-4">"
                   <div className="flex items-center gap-3">
                     {getCategoryIcon(service.category)}"
                     <div>"
-                      <h3 className="text-xl font-semibold text-white mb-1">{service.name}</h3>"
-                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(service.status)}`}"" >
+                      <h3 className="text-xl font-semibold text-white mb-1">{service.name}</h3>'
+                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(service.status)}`}  >
                         {service.status}
                       </span>
-                    </div>"
+                    </div>'
                   </div>"
                   <div className="flex items-center gap-1">"
-                    <Star className="w-4 h-4 text-yellow-400 fill-current" /"" >"
+                    <Star className="w-4 h-4 text-yellow-400 fill-current' /  >'
                     <span className="text-sm text-gray-300">{service.rating}</span>"
                     <span className="text-xs text-gray-400">({service.reviewCount})</span>
                   </div>
@@ -272,7 +272,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {"
                 {/* Pricing */}"
                 <div className="mb-4">"
                   <div className="flex items-center gap-2 mb-2">"
-                    <DollarSign className="w-4 h-4 text-green-400" /"" >"
+                    <DollarSign className="w-4 h-4 text-green-400' /  >'
                     <span className="text-sm text-gray-300">Starting from</span>"
                     <span className="text-lg font-bold text-green-400">
                       {service.pricing.currency}{service.pricing.starter.toLocaleString()}"
@@ -307,7 +307,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {"
                     Get Started"
                   </button>"
                   <button className="px-4 py-2 border border-white/20 text-white rounded-lg text-sm font-medium hover:bg-white/10 transition-all duration-200">"
-                    <Eye className="w-4 h-4" /"" >
+                    <Eye className="w-4 h-4' /  >
                   </button>
                 </div>
               </motion.div>
@@ -318,7 +318,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {"
         {/* No Results */}
         {filteredServices.length === 0 && (
           <motion .div
-            initial={{ opacity: 0 }}"
+            initial={{ opacity: 0 }}'
             animate={{ opacity: 1 }}"
             className='text-center py-16' >"
             <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" /"" >"
@@ -335,62 +335,60 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}"
             exit={{ opacity: 0 }}"
-            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-            onClick={() ="" > setSelectedService(null)}
+            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'
+            onClick={() =  > setSelectedService(null)}
           >
             <motion .div
               initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}"
+              animate={{ scale: 1, opacity: 1 }}'
               exit={{ scale: 0.9, opacity: 0 }}"
-              className="bg-slate-800 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
-              onClick={(e) ="" > e.stopPropagation()}"
+              className="bg-slate-800 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto'
+              onClick={(e) =  > e.stopPropagation()}'
             >"
               <div className="p-6">"
                 <div className="flex items-start justify-between mb-6">"
                   <div className="flex items-center gap-4">
                     {getCategoryIcon(selectedService.category)}"
                     <div>"`
-                      <h2 className="text-3xl font-bold text-white mb-2">{selectedService.name}</h2>`"`
-                      <span className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(selectedService.status)}`}"" >
+                      <h2 className="text-3xl font-bold text-white mb-2">{selectedService.name}</h2>`'`
+                      <span className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(selectedService.status)}`}  >
                         {selectedService.status}
                       </span>
                     </div>
                   </div>
-                  <button onClick={() =" > setSelectedService(null)}"
+                  <button onClick={() =' > setSelectedService(null)}"
                     className="p-2 hover: bg-white/10 rounded-lg transition-colors"
                   >"
-                    <X className="w-6 h-6 text-gray-400" /" >
+                    <X className="w-6 h-6 text-gray-400" /' >
                   </button>
-                </div>"
-"
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                </div> 
+                <div className='grid grid-cols-1 lg:grid-cols-2 gap-8">
                   {/* Left Column */}"
                   <div>"
                     <h3 className="text-xl font-semibold text-white mb-4">Description</h3>"
-                    <p className="text-gray-300 mb-6">{selectedService.description}</p>"
-"
-                    <h3 className="text-xl font-semibold text-white mb-4">Features</h3>"
+                    <p className="text-gray-300 mb-6'>{selectedService.description}</p> 
+                    <h3 className='text-xl font-semibold text-white mb-4">Features</h3>"
                     <ul className="space-y-2 mb-6">"
                       {selectedService.features.map((feature, idx) => ("
                         <li key={idx} className="flex items-center gap-2 text-gray-300">"
-                          <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" /"" >
+                          <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0' /  >
                           {feature}
                         </li>
                       ))}
-                    </ul>"
+                    </ul>'
 "
                     <h3 className="text-xl font-semibold text-white mb-4">Benefits</h3>"
                     <ul className="space-y-2 mb-6">"
                       {selectedService.benefits.map((benefit, idx) => ("
                         <li key={idx} className="flex items-center gap-2 text-gray-300">"
-                          <Star className="w-4 h-4 text-yellow-400 flex-shrink-0" /"" >
+                          <Star className="w-4 h-4 text-yellow-400 flex-shrink-0' /  >
                           {benefit}
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  {/* Right Column */}"
+                  {/* Right Column */}'
                   <div>"
                     <h3 className="text-xl font-semibold text-white mb-4">Pricing Plans</h3>"
                     <div className="space-y-4 mb-6">"
@@ -401,20 +399,18 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {"
                             {selectedService.pricing.currency}{selectedService.pricing.starter.toLocaleString()}
                           </span>"
                         </div>"
-                        <span className="text-sm text-gray-400">/{selectedService.pricing.billingCycle}</span>
-                      </div>"
-"
-                      <div className="bg-white/10 rounded-lg p-4">"
+                        <span className="text-sm text-gray-400'>/{selectedService.pricing.billingCycle}</span>
+                      </div> 
+                      <div className='bg-white/10 rounded-lg p-4">"
                         <div className="flex justify-between items-center mb-2">"
                           <span className="font-medium text-white">Professional</span>"
                           <span className="text-2xl font-bold text-blue-400">
                             {selectedService.pricing.currency}{selectedService.pricing.professional.toLocaleString()}
                           </span>"
                         </div>"
-                        <span className="text-sm text-gray-400">/{selectedService.pricing.billingCycle}</span>
-                      </div>"
-"
-                      <div className="bg-white/10 rounded-lg p-4">"
+                        <span className="text-sm text-gray-400'>/{selectedService.pricing.billingCycle}</span>
+                      </div> 
+                      <div className='bg-white/10 rounded-lg p-4">"
                         <div className="flex justify-between items-center mb-2">"
                           <span className="font-medium text-white">Enterprise</span>"
                           <span className="text-2xl font-bold text-purple-400">
@@ -448,15 +444,15 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {"
                         <h4 className="text-white font-semibold mb-3">Contact Information</h4>"
                         <div className="space-y-2 text-sm">"
                           <div className="flex items-center gap-2 text-gray-300">"
-                            <Phone className="w-4 h-4" /"" >
-                            {selectedService.contactInfo.phone}"
+                            <Phone className="w-4 h-4' /  >
+                            {selectedService.contactInfo.phone}'
                           </div>"
                           <div className="flex items-center gap-2 text-gray-300">"
-                            <Mail className="w-4 h-4" /"" >
-                            {selectedService.contactInfo.email}"
+                            <Mail className="w-4 h-4' /  >
+                            {selectedService.contactInfo.email}'
                           </div>"
                           <div className="flex items-center gap-2 text-gray-300">"
-                            <MapPin className="w-4 h-4" /"" >
+                            <MapPin className="w-4 h-4' /  >
                             {selectedService.contactInfo.address}
                           </div>
                         </div>
@@ -465,7 +461,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {"
                   </div>
                 </div>
 
-                {/* Action Buttons */}"
+                {/* Action Buttons */}'
                 <div className="flex gap-4 mt-8 pt-6 border-t border-white/20">"
                   <button className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover: from-blue-700 hover:to-purple-700 transition-all duration-200">
                     Get Started Now"
@@ -499,12 +495,12 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {"
               Call +1 302 464 0950
             </motion.button>
             <motion .button
-              whileHover={{ scale: 1.05 }}"
+              whileHover={{ scale: 1.05 }}'
               whileTap={{ scale: 0.95 }}"
               className='border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 justify-center' >"
               <Mail className="w-5 h-5" /"" >
               Email kleber@ziontechgroup.com
-            </motion.button>"
+            </motion.button>'
           </div>"
           <div className="mt-6 text-gray-400">"
             <p>364 E Main St STE 1008, Middletown DE 19709</p>"

@@ -4,9 +4,9 @@ import { Bottom, By, Clock, ExternalLink, Globe, Mail, MapPin, MessageSquare, No
 export function ContactInfo() {"
     return (<section className='py-20 bg-zion-blue-dark'>"
       <div className='container mx-auto px-4'>"
-        <div className='text-center mb-16'>          <h2 className='text-3xl md: text-4xl font-bold text-white mb-4'>"
-            Get In Touch''''
-          </h2>''''
+        <div className='text-center mb-16'>          <h2 className='text-3xl md: text-4xl font-bold text-white mb-4'>'
+            Get In Touch ''
+          </h2> ''
           <p className='text-zion-slate-light text-lg max-w-3xl mx-auto'>;
             Ready to transform your business with cutting-edge technology?;
             Contact our experts today for a free consultation.
@@ -40,16 +40,16 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star ex
                   Contact Details'''
                 </CardTitle>''''
                 <CardDescription className='text-zion-slate-light'>
-                  Reach out to us through  of these channels"
-                </CardDescription>'''
-              </CardHeader>''''
-              <CardContent className='space-y-4'>''''
-                <div className='flex items-center gap-3'>''''
-                  <div className='w-10 h-10 bg-zion-purple/20 rounded-full flex items-center justify-center'>''''
-                    <Phone className='h-5 w-5 text-zion-purple' /" >"
-                  </div>''''
-                  <div>''''
-                    <p className='text-white font-medium'>Phone</p>''''
+                  Reach out to us through  of these channels'
+                </CardDescription> '
+              </CardHeader>' '
+              <CardContent className='space-y-4'> ''
+                <div className='flex items-center gap-3'> ''
+                  <div className='w-10 h-10 bg-zion-purple/20 rounded-full flex items-center justify-center'> ''
+                    <Phone className='h-5 w-5 text-zion-purple' /" >'
+                  </div> ''
+                  <div> ''
+                    <p className='text-white font-medium'>Phone</p> ''
                     <p className='text-zion-cyan'>+1 302 464 0950</p>
                   </div>;"
                 </div>''
@@ -71,8 +71,8 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star ex
                   <div>''''
                     <p className='text-white font-medium'>Address</p>''''
                     <p className='text-zion-slate-light'>
-                      364 E Main St STE 1008"
-                      <br /"" >
+                      364 E Main St STE 1008'
+                      <br /  >
                       Middletown DE 19709
                     </p>
                   </div>"
@@ -105,28 +105,28 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star ex
                 </CardTitle>''''
                 <CardDescription className='text-zion-slate-light'>
                   We&apos;re available when you need us'
-                </CardDescription>"
-              </CardHeader>''''
-              <CardContent>''''
-                <div className='space-y-2 text-zion-slate-light'>''''
-                  <div className='flex justify-between'>''''
-                    <span>Monday - Friday</span>''''
+                </CardDescription>'
+              </CardHeader> ''
+              <CardContent> ''
+                <div className='space-y-2 text-zion-slate-light'> ''
+                  <div className='flex justify-between'> ''
+                    <span>Monday - Friday</span> ''
                     <span className='text-zion-cyan'>
-                      9: 00 AM - 6:00 PM EST"
-                    </span>''''
-                  </div>''''
-                  <div className='flex justify-between'>''''
-                    <span>Saturday</span>''''
+                      9: 00 AM - 6:00 PM EST'
+                    </span> ''
+                  </div> ''
+                  <div className='flex justify-between'> ''
+                    <span>Saturday</span> ''
                     <span className='text-zion-cyan'>
-                      10:00 AM - 4:00 PM EST"
-                    </span>''''
-                  </div>''''
-                  <div className='flex justify-between'>''''
-                    <span>Sunday</span>''''
-                    <span className='text-zion-cyan'>By Appointment</span>''''
-                  </div>''''
-                  <div className='pt-2 border-t border-zion-blue-light'>''''
-                    <div className='flex justify-between'>''''
+                      10:00 AM - 4:00 PM EST'
+                    </span> ''
+                  </div> ''
+                  <div className='flex justify-between'> ''
+                    <span>Sunday</span> ''
+                    <span className='text-zion-cyan'>By Appointment</span> ''
+                  </div> ''
+                  <div className='pt-2 border-t border-zion-blue-light'> ''
+                    <div className='flex justify-between'> ''
                       <span className='text-zion-cyan font-medium'>
                         24/7 Support"
                       </span>''''
@@ -140,21 +140,20 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star ex
                 </div>
               </CardContent>
             </Card>
-          </div>"
-'''{/* Quick Actions & Services */}'''''
-          <div className='space-y-6'>''''
-            <Card className='bg-zion-blue border-zion-blue-light'>''''
-              <CardHeader>''''
-                <CardTitle className='text-white flex items-center gap-2'>''''
-                  <MessageSquare className='h-5 w-5 text-zion-cyan' /" >"
-                  Quick Actions''''
-                </CardTitle>''''
+          </div> ''{/* Quick Actions & Services */} '''
+          <div className='space-y-6'> ''
+            <Card className='bg-zion-blue border-zion-blue-light'> ''
+              <CardHeader> ''
+                <CardTitle className='text-white flex items-center gap-2'> ''
+                  <MessageSquare className='h-5 w-5 text-zion-cyan' /" >'
+                  Quick Actions ''
+                </CardTitle> ''
                 <CardDescription className='text-zion-slate-light'>
-                  Get started with our most popular services"
-                </CardDescription>''''
-              </CardHeader>''''
-              <CardContent className='space-y-4'>''''
-                <Link to='/request-quote'>''''
+                  Get started with our most popular services'
+                </CardDescription> ''
+              </CardHeader> ''
+              <CardContent className='space-y-4'> ''
+                <Link to='/request-quote'> ''
                   <Button className='w-full bg-zion-purple hover: bg-zion-purple-dark text-white'>
                     Request Free Quote
                   </Button>"
@@ -198,27 +197,27 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star ex
                 </CardTitle>''''
                 <CardDescription className='text-zion-slate-light'>
                   What makes us different from the competition
-                </CardDescription>"
-              </CardHeader>''''
-              <CardContent>''''
-                <div className='space-y-3 text-zion-slate-light'>''''
-                  <div className='flex items-start gap-2'>''''
-                    <div className='w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0'></div>"
-                    <span>Global reach with local expertise</span>''''
-                  </div>''''
-                  <div className='flex items-start gap-2'>''''
-                    <div className='w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0'></div>"
-                    <span>24/7 support and monitoring</span>''''
-                  </div>''''
-                  <div className='flex items-start gap-2'>''''
-                    <div className='w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0'></div>"
-                    <span>Certified professionals</span>''''
-                  </div>''''
-                  <div className='flex items-start gap-2'>''''
-                    <div className='w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0'></div>"
-                    <span>Competitive pricing</span>''''
-                  </div>''''
-                  <div className='flex items-start gap-2'>''''
+                </CardDescription>'
+              </CardHeader> ''
+              <CardContent> ''
+                <div className='space-y-3 text-zion-slate-light'> ''
+                  <div className='flex items-start gap-2'> ''
+                    <div className='w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0'></div>'
+                    <span>Global reach with local expertise</span> ''
+                  </div> ''
+                  <div className='flex items-start gap-2'> ''
+                    <div className='w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0'></div>'
+                    <span>24/7 support and monitoring</span> ''
+                  </div> ''
+                  <div className='flex items-start gap-2'> ''
+                    <div className='w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0'></div>'
+                    <span>Certified professionals</span> ''
+                  </div> ''
+                  <div className='flex items-start gap-2'> ''
+                    <div className='w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0'></div>'
+                    <span>Competitive pricing</span> ''
+                  </div> ''
+                  <div className='flex items-start gap-2'> ''
                     <div className='w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0'></div>
                     <span>Proven track record</span>
                   </div>
@@ -226,13 +225,12 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star ex
               </CardContent>
             </Card>
           </div>
-        </div>"
-'''{/* Bottom CTA */}'''''
-        <div className='text-center mt-16'>''''
-          <div className='bg-gradient-to-r from-zion-purple to-zion-purple-dark rounded-lg p-8 max-w-4xl mx-auto'>''''
-            <h3 className='text-2xl font-bold text-white mb-4'>"
-              Ready to Get Started?''''
-            </h3>''''
+        </div> ''{/* Bottom CTA */} '''
+        <div className='text-center mt-16'> ''
+          <div className='bg-gradient-to-r from-zion-purple to-zion-purple-dark rounded-lg p-8 max-w-4xl mx-auto'> ''
+            <h3 className='text-2xl font-bold text-white mb-4'>'
+              Ready to Get Started? ''
+            </h3> ''
             <p className='text-zion-slate-light mb-6'>
               Join hundreds of satisfied clients who have transformed their;"
               businesses with our technology solutions''''

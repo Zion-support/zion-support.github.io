@@ -154,8 +154,6 @@ const PerformanceOptimizedHero = memo(() => {}
               Get Free Consultation
             </Link>
           </div>
-          {/* Optimized Stats Component */}
-          <HeroStats stats={stats} /" >
         </div>
       </div>
       {/* Optimized Floating Elements */}
@@ -181,13 +179,4 @@ const PerformanceOptimizedHero = memo(() => {}
 PerformanceOptimizedHero.displayName = 'PerformanceOptimizedHero'
 export default PerformanceOptimizedHero
 
-export { HeroStats, PerformanceOptimizedHero }
-
-export { HeroStats, PerformanceOptimizedHero }
-
-export { HeroStats, PerformanceOptimizedHero }
-
-export { HeroStats, PerformanceOptimizedHero }
-
-export { HeroStats, PerformanceOptimizedHero }
-;"`
+export default PerformanceOptimizedHeroJs;

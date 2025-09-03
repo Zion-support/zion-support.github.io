@@ -72,12 +72,8 @@
           </div>
         </div>
       </div>
-    </div>)}
-export { ReplyCard }
-export { ReplyCard }
-export { ReplyCard }
-export { ReplyCard }
-export { ReplyCard }"`
-"`
-"
-}}`
+    </div>
+  );
+};
+
+export default ReplyCard;

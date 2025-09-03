@@ -37,11 +37,10 @@ const renderWithRouter = (component) => {
     <BrowserRouter>
       {component}
     </BrowserRouter>
-  )}"
-"
+  )} 
 describe('App Component', () => {"
-  test('renders without crashing', () => {"
-    renderWithRouter(<App /"" >);"
+  test('renders without crashing', () => {'
+    renderWithRouter(<App /  >);'
     expect(screen.getByTestId('index-page')).toBeInTheDocument()})})
 export { MockIndex, MockAbout, MockContact }
 export { MockIndex, MockAbout, MockContact }

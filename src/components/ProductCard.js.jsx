@@ -176,14 +176,8 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}
           </div>
         </div>
       </div>
-
-      <Button onClick={handleBuy}
-        disabled={buyDisabled}"
-        className='w-full'
-        size={isMobile ? 'sm' : 'default'}" >"
-        {buyDisabled ? 'Out of Stock' : 'Add to Cart'}
-      </Button>
     </div>
-  );,
-}
-"`
+  );
+};
+
+export default ProductCardJs;

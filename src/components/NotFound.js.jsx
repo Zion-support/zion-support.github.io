@@ -2,8 +2,7 @@
 import { Link } from 'react-router-dom''
 import { motion }  from 'framer-motion
 import { Home, Search, ArrowRight, AlertTriangle } from 'lucide-react';
-const NotFound = () => {}"
-'
+const NotFound = () => {} 
 ''
 '''
     const popularPages = [''''
@@ -20,13 +19,13 @@ const NotFound = () => {}"
         { path: '/services/cybersecurity', label: 'Cybersecurity', description: 'Security and protection' },'''
         { path: '/services/infrastructure', label: 'IT Infrastructure', description: 'Enterprise IT solutions' }
     ]"
-    return (<div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center px-4'>''''
+    return (<div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center px-4'> ''
       <motion .div className='max-w-4xl mx-auto text-center' initial = {}
   { opacity: 0, y: 20,
 }} animate = {}
   { opacity: 1, y: 0",
-}} transition={{ duration: 0.5 }}" >'''
-        {/* 404 Icon */}''''
+}} transition={{ duration: 0.5 }}' > '
+        {/* 404 Icon */}' '
         <motion .div className='mb-8' animate = {}
   { scale[1, 1.1,
   1],
@@ -36,31 +35,28 @@ const NotFound = () => {}"
           <div className='w-32 h-32 mx-auto bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center'>''''
             <AlertTriangle className='w-16 h-16 text-white'/" >
           </div>
-        </motion.div>"
-'''
-        {/* Main Message */}''''
-        <h1 className='text-6xl md:text-8xl font-bold text-white mb-4'>"
-          404'''
-        </h1>''''
-        <h2 className='text-3xl md:text-4xl font-semibold text-white mb-4'>"
-          Page Not Found'''
-        </h2>''''
+        </motion.div> ''
+        {/* Main Message */} ''
+        <h1 className='text-6xl md:text-8xl font-bold text-white mb-4'>'
+          404 '
+        </h1>' '
+        <h2 className='text-3xl md:text-4xl font-semibold text-white mb-4'>'
+          Page Not Found '
+        </h2>' '
         <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>'
           The page you're looking for doesn't exist or has been moved.
           Let us help you find what you need.
-        </p>"
-'''
-        {/* Search Section */}''''
-        <motion .div className='mb-12' initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}" >''''
-          <div className='max-w-md mx-auto relative'>''''
-            <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5'/" >''''
-            <input type='text' placeholder='Search our website...' className='w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 transition-colors'/" >
+        </p> ''
+        {/* Search Section */} ''
+        <motion .div className='mb-12' initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}' > ''
+          <div className='max-w-md mx-auto relative'> ''
+            <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5'/' > ''
+            <input type='text' placeholder='Search our website...' className='w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 transition-colors'/' >
           </div>
-        </motion.div>"
-'''
-        {/* Popular Pages */}''''
-        <motion .div className='mb-12' initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}" >''''
-          <h3 className='text-2xl font-semibold text-white mb-6'>Popular Pages</h3>''''
+        </motion.div> ''
+        {/* Popular Pages */} ''
+        <motion .div className='mb-12' initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}' > ''
+          <h3 className='text-2xl font-semibold text-white mb-6'>Popular Pages</h3> ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
             {popularPages.map((page, index) => (<motion .div key={page.path} initial = {}
   { opacity: 0, y: 20,
@@ -80,11 +76,10 @@ const NotFound = () => {}"
                 </Link>
               </motion.div>) ) }
           </div>
-        </motion.div>"
-'''
-        {/* Service Pages */}''''
-        <motion .div className='mb-12' initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.7 }}" >''''
-          <h3 className='text-2xl font-semibold text-white mb-6'>Our Services</h3>''''
+        </motion.div> ''
+        {/* Service Pages */} ''
+        <motion .div className='mb-12' initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.7 }}' > ''
+          <h3 className='text-2xl font-semibold text-white mb-6'>Our Services</h3> ''
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
             {servicePages.map((service, index) => (<motion .div key={service.path} initial = {}
   { opacity: 0, y: 20,
@@ -104,27 +99,25 @@ const NotFound = () => {}"
                 </Link>
               </motion.div>) ) }
           </div>
-        </motion.div>"
-'''
-        {/* CTA Buttons */}''''
-        <motion .div className='flex flex-col sm:flex-row gap-4 justify-center' initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.9 }}" >''''
-          <Link to='/' className='inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl'>''''
-            <Home className='w-5 h-5'/" >"
-            Go Home'''
-          </Link>''''
-          <Link to='/contact' className='inline-flex items-center gap-2 px-6 py-3 bg-white/10 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/20 hover:border-white/30 transition-all duration-300'>'''
-            Contact Support''''
-            <ArrowRight className='w-5 h-5'/" >
+        </motion.div> ''
+        {/* CTA Buttons */} ''
+        <motion .div className='flex flex-col sm:flex-row gap-4 justify-center' initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.9 }}' > ''
+          <Link to='/' className='inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl'> ''
+            <Home className='w-5 h-5'/" >'
+            Go Home '
+          </Link>' '
+          <Link to='/contact' className='inline-flex items-center gap-2 px-6 py-3 bg-white/10 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/20 hover:border-white/30 transition-all duration-300'> '
+            Contact Support' '
+            <ArrowRight className='w-5 h-5'/' >
           </Link>
-        </motion.div>"
-'''
-        {/* Help Text */}''''
-        <motion .p className='text-gray-400 mt-8 text-sm' initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.1 }}" >''''
-          Can't find what you're looking for?{' '}''''
+        </motion.div> ''
+        {/* Help Text */} ''
+        <motion .p className='text-gray-400 mt-8 text-sm' initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.1 }}' > ''
+          Can't find what you're looking for?{ }'' 
           <a href='mailto:kleber@ziontechgroup.com' className='text-blue-400 hover:text-blue-300 underline'>'
-            Email us''
-          </a>{' '}''''
-          or call us at{' '}''''
+            Email us 
+          </a>{' '} ''
+          or call us at{ }'' 
           <a href='tel:+13024640950' className='text-blue-400 hover:text-blue-300 underline">
             +1 302 464 0950
           </a>

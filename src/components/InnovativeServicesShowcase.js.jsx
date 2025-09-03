@@ -398,17 +398,9 @@ const InnovativeServicesShowcase = () => {"
             </a>
           </div>
         </div>
-      </section>
-    </div>)}
-export default InnovativeServicesShowcase
+      </div>
+    </div>
+  );
+};
 
-export { InnovativeServicesShowcase }
-
-export { InnovativeServicesShowcase }
-
-export { InnovativeServicesShowcase }
-
-export { InnovativeServicesShowcase }
-
-export { InnovativeServicesShowcase }
-;"`
+export default InnovativeServicesShowcaseJs;

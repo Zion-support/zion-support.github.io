@@ -15,8 +15,8 @@ import { EnhancedHeader } from './components/EnhancedHeader
   import { EnhancedFooter } from './components/EnhancedFooter';
 // Optimized lazy loading with preloading hints;
 const createLazyComponent = (importFn: () => Promise<>, fallback?: React.ReactNode) => {  const LazyComponent = lazy(importFn)
-  return (props: ) => ("
-<Suspense fallback={fallback || <LoadingSpinner /"" >}><LazyComponent {...props} /"" >
+  return (props: ) => ('
+<Suspense fallback={fallback || <LoadingSpinner /  >}><LazyComponent {...props} /'" >
     </Suspense>  )}
 // Core pages with optimized imports;
 ursor/automate-test-fix-improve-and-merge-code-48f3;
@@ -36,49 +36,48 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
 )
 function App() {
   return(
-    <HelmetProvider>"
-      <ErrorBoundary fallback={<ErrorFallback error={new Error("
-  'App failed to load')} resetErrorBoundary={() ="" > window.location.reload()} />}>
-        <PerformanceOptimizer>"
-          <SEO /"" >"
-          <div className='min-h-screen bg-gray-50'>"
-            <EnhancedHeader /"" >"
+    <HelmetProvider>'
+      <ErrorBoundary fallback={<ErrorFallback error={new Error( App failed to load')} resetErrorBoundary={() ="" > window.location.reload()} />}>
+        <PerformanceOptimizer>'
+          <SEO /  >'
+          <div className='min-h-screen bg-gray-50'>'
+            <EnhancedHeader /  >'
             <main className='flex-1'>
               <Routes>"
                 {/* Core Pages */}"
-                <Route path='/' element={<Home /"" >} />"
-                <Route path='/about' element={<About /"" >} />"
-                <Route path='/contact' element={<Contact /"" >} />"
-                <Route path='/careers' element={<Careers /"" >} />"
-                <Route path='/solutions' element={<Solutions /"" >} />"
-                <Route path='/research-development' element={<Solutions /"" >} />"
-                <Route path='/case-studies' element={<CaseStudies /"" >} />"
-                <Route path='/news' element={<News /"" >} />"
-                <Route path='/events' element={<News /"" >} />{/* Services */}"
-                <Route path='/services' element={<Services /"" >} />"
-                <Route path='/enterprise' element={<Enterprise /"" >} />"
-                <Route path='/request-quote' element={<RequestQuote /"" >} />"
-                <Route path='/services/ai' element={<AIServices /"" >} />"
-                <Route path='/services/cloud' element={<CloudServices /"" >} />"
-                <Route path='/services/cybersecurity' element={<CybersecurityServices /"" >} />"
-                <Route path='/services/infrastructure' element={<InfrastructureServices /"" >} />"
-                <Route path='/services/transformation' element={<TransformationServices /"" >} />"
-                <Route path='/services/consulting' element={<ConsultingServices /"" >} />{/* Legal */}"
-                <Route path='/privacy' element={<Privacy /"" >} />"
-                <Route path='/terms' element={<Terms /"" >} />{/* 404 Fallback */}"
+                <Route path='/' element={<Home /  >} />'
+                <Route path='/about' element={<About /  >} />'
+                <Route path='/contact' element={<Contact /  >} />'
+                <Route path='/careers' element={<Careers /  >} />'
+                <Route path='/solutions' element={<Solutions /  >} />'
+                <Route path='/research-development' element={<Solutions /  >} />'
+                <Route path='/case-studies' element={<CaseStudies /  >} />'
+                <Route path='/news' element={<News /  >} />'
+                <Route path='/events' element={<News /  >} />{/* Services */}'
+                <Route path='/services' element={<Services /  >} />'
+                <Route path='/enterprise' element={<Enterprise /  >} />'
+                <Route path='/request-quote' element={<RequestQuote /  >} />'
+                <Route path='/services/ai' element={<AIServices /  >} />'
+                <Route path='/services/cloud' element={<CloudServices /  >} />'
+                <Route path='/services/cybersecurity' element={<CybersecurityServices /  >} />'
+                <Route path='/services/infrastructure' element={<InfrastructureServices /  >} />'
+                <Route path='/services/transformation' element={<TransformationServices /  >} />'
+                <Route path='/services/consulting' element={<ConsultingServices /  >} />{/* Legal */}'
+                <Route path='/privacy' element={<Privacy /  >} />'
+                <Route path='/terms' element={<Terms /  >} />{/* 404 Fallback */}'
                 <Route path='*' element={<div className='min-h-screen flex items-center justify-center'><div className='text-center'><h1 className='text-4xl font-bold text-gray-900 mb-4'>404</h1><p className='text-gray-600 mb-8'>Page not found</p><a href='/' className='bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors'>Go Home</a></div></div>} />
               </Routes>
-            </main>"
-            <EnhancedFooter /"" >
+            </main>'
+            <EnhancedFooter /  >
           </div>
         </PerformanceOptimizer>
       </ErrorBoundary>
     </HelmetProvider>
   )}
 ursor/automate-test-fix-improve-and-merge-code-48f3
-const createLazyComponent = (importFn: () => Promise<>, fallback?: React.ReactNode) => {const LazyComponent = lazy(importFn)  return(props: ) => ("
-    <Suspense fallback={fallback || <LoadingSpinner /"" >}>"
-      <LazyComponent {...props} /"" >
+const createLazyComponent = (importFn: () => Promise<>, fallback?: React.ReactNode) => {const LazyComponent = lazy(importFn)  return(props: ) => ('
+    <Suspense fallback={fallback || <LoadingSpinner /"" >}>'
+      <LazyComponent {...props} /  >
     </Suspense>
   )}
 // Core pages with optimized imports;
@@ -89,22 +88,22 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
 )
 function App() {
 return(
-    <HelmetProvider>"
+    <HelmetProvider>'
       <ErrorBoundary fallback={<ErrorFallback error={new Error("
-  'App failed to load')} resetErrorBoundary={() ="" > window.location.reload()} />}>"
-  '        <PerformanceOptimizer>'          <SEO /"" >"
-          <div className='min-h-screen bg-gray-50'>'            <EnhancedHeader /"" >'            <main className='flex-1'>'              <Routes>'                {/* Core Pages */}"
-                <Route path='/' element={<Home /"" >} />'                <Route path='/about' element={<About /"" >} />'                <Route path='/contact' element={<Contact /"" >} />'                <Route path='/careers' element={<Careers /"" >} />'                <Route path='/solutions' element={<Solutions /"" >} />'                <Route path='/research-development' element={<Solutions /"" >} />'                <Route path='/case-studies' element={<CaseStudies /"" >} />'                <Route path='/news' element={<News /"" >} />'                <Route path='/events' element={<News /"" >} />'                '                {/* Services */}"
-                <Route path='/services' element={<Services /"" >} />'                <Route path='/services/ai' element={<AIServices /"" >} />'                <Route path='/services/cloud' element={<CloudServices /"" >} />'                <Route path='/services/cybersecurity' element={<CybersecurityServices /"" >} />'                <Route path='/services/infrastructure' element={<InfrastructureServices /"" >} />'                <Route path='/services/transformation' element={<TransformationServices /"" >} />'                <Route path='/services/consulting' element={<ConsultingServices /"" >} />'                '                {/* Legal */}"
-                <Route path='/privacy' element={<Privacy /"" >} />'                <Route path='/terms' element={<Terms /"" >} />'                '                {/* 404 Fallback */}'
-                <Route path='*' element={'                  <div className='min-h-screen flex items-center justify-center'>'                    <div className='text-center'>'                      <h1 className='text-4xl font-bold text-gray-900 mb-4'>404</h1>'                      <p className='text-gray-600 mb-8'>Page not found</p>'                      <a href='/' className='bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors'>'                        Go Home'                      </a></div><Route path='/services/ai' element={<AIServices /"" >} />'
-                <Route path='/services/cloud' element={<CloudServices /"" >} />"
-                <Route path='/services/cybersecurity' element={<CybersecurityServices /"" >} />"
-                <Route path='/services/infrastructure' element={<InfrastructureServices /"" >} />"
-                <Route path='/services/transformation' element={<TransformationServices /"" >} />"
-                <Route path='/services/consulting' element={<ConsultingServices /"" >} />{/* Legal */}"
-                <Route path='/privacy' element={<Privacy /"" >} />"
-                <Route path='/terms' element={<Terms /"" >} />{/* 404 Fallback */}"
+  'App failed to load')} resetErrorBoundary={() =  > window.location.reload()} />}>'
+  '        <PerformanceOptimizer>'          <SEO /  >'
+          <div className='min-h-screen bg-gray-50'>'            <EnhancedHeader /  >'            <main className='flex-1'>'              <Routes>'                {/* Core Pages */}"
+                <Route path='/' element={<Home /  >} />'                <Route path='/about' element={<About /  >} />'                <Route path='/contact' element={<Contact /  >} />'                <Route path='/careers' element={<Careers /  >} />'                <Route path='/solutions' element={<Solutions /  >} />'                <Route path='/research-development' element={<Solutions /  >} />'                <Route path='/case-studies' element={<CaseStudies /  >} />'                <Route path='/news' element={<News /  >} />'                <Route path='/events' element={<News /  >} />'                '                {/* Services */}"
+                <Route path='/services' element={<Services /  >} />'                <Route path='/services/ai' element={<AIServices /  >} />'                <Route path='/services/cloud' element={<CloudServices /  >} />'                <Route path='/services/cybersecurity' element={<CybersecurityServices /  >} />'                <Route path='/services/infrastructure' element={<InfrastructureServices /  >} />'                <Route path='/services/transformation' element={<TransformationServices /  >} />'                <Route path='/services/consulting' element={<ConsultingServices /  >} />'                '                {/* Legal */}"
+                <Route path='/privacy' element={<Privacy /  >} />'                <Route path='/terms' element={<Terms /  >} />'                '                {/* 404 Fallback */}'
+                <Route path='*' element={'                  <div className='min-h-screen flex items-center justify-center'>'                    <div className='text-center'>'                      <h1 className='text-4xl font-bold text-gray-900 mb-4'>404</h1>'                      <p className='text-gray-600 mb-8'>Page not found</p>'                      <a href='/' className='bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors'>'                        Go Home'                      </a></div><Route path='/services/ai' element={<AIServices /  >} />'
+                <Route path='/services/cloud' element={<CloudServices /  >} />'
+                <Route path='/services/cybersecurity' element={<CybersecurityServices /  >} />'
+                <Route path='/services/infrastructure' element={<InfrastructureServices /  >} />'
+                <Route path='/services/transformation' element={<TransformationServices /  >} />'
+                <Route path='/services/consulting' element={<ConsultingServices /  >} />{/* Legal */}'
+                <Route path='/privacy' element={<Privacy /  >} />'
+                <Route path='/terms' element={<Terms /  >} />{/* 404 Fallback */}'
                 <Route path='*' element={"
                   <div className='min-h-screen flex items-center justify-center'>"
                     <div className='text-center'>"
@@ -116,8 +115,8 @@ return(
                     </div>,
 } />
               </Routes>
-            </main>"
-            <EnhancedFooter /"" >
+            </main>'
+            <EnhancedFooter /  >
           </div>
         </PerformanceOptimizer>
       </ErrorBoundary>
@@ -162,8 +161,8 @@ return (
                     </div>,
 } />
               </Routes>
-            </main>"
-            <EnhancedFooter /"" >
+            </main>'
+            <EnhancedFooter /  >
           </div>
         </PerformanceOptimizer>
       </ErrorBoundary>

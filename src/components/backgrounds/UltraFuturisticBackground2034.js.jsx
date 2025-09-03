@@ -11,8 +11,7 @@
         canvas.width = window.innerWidth
         canvas.height = window.innerHeight
         const particles = []
-        const colors = {}"
-'
+        const colors = {} 
 ''
 ''
   quantum['#00ffff',#ff00ff',#ffff00',#00ff00'],
@@ -60,7 +59,7 @@
                         ctx.lineWidth = 1
                         ctx.stroke()}",
 })})'
-            // Add quantum effects''
+            // Add quantum effects 
             if (theme === 'quantum') {}"
                 ctx.save()'
                 ctx.globalCompositeOperation = 'screen'
@@ -74,7 +73,7 @@
                     ctx.lineWidth = 2
                     ctx.stroke()}"
                 ctx.restore()}'
-            // Add neon effects''
+            // Add neon effects 
             if (theme === 'neon') {}"
                 ctx.save()'
                 ctx.shadowColor = '#ff0080'
@@ -88,7 +87,7 @@
                         ctx.stroke()}
                 })"
                 ctx.restore()}'
-            // Add holographic effects''
+            // Add holographic effects 
             if (theme === 'holographic') {}"
                 ctx.save()'
                 ctx.globalCompositeOperation = 'overlay'

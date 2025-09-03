@@ -10,8 +10,8 @@ export default function PrivacyPolicy() {
       <SEO "
         title="Privacy Policy - Zion Tech Group | Data Protection & Privacy"
         description="Learn how Zion Tech Group protects your privacy and handles your personal data. Our comprehensive privacy policy outlines our data protection practices."
-        keywords="privacy policy, data protection, privacy, GDPR, CCPA, data security, Zion Tech Group"
-      /"" >"
+        keywords="privacy policy, data protection, privacy, GDPR, CCPA, data security, Zion Tech Group'
+      /  >'
       "
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
         {/* Hero Section */}"
@@ -49,54 +49,50 @@ export default function PrivacyPolicy() {
                   We collect information you provide directly to us, such as when you create an account, 
                   use our services, or contact us for support."
                 </p>"
-                <ul className="text-gray-300 space-y-2">
+                <ul className="text-gray-300 space-y-2'>
                   <li>• Contact information (name, email, phone number)</li>
                   <li>• Account credentials and preferences</li>
                   <li>• Payment and billing information</li>
                   <li>• Communications with our support team</li>
                 </ul>
-              </div>"
-"
-              <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-8 border border-slate-600/50 mt-8">"
+              </div> 
+              <div className='bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-8 border border-slate-600/50 mt-8">"
                 <h2 className="text-2xl font-bold text-white mb-4">How We Use Your Information</h2>"
                 <p className="text-gray-300 mb-4">
                   We use the information we collect to provide, maintain, and improve our services."
                 </p>"
-                <ul className="text-gray-300 space-y-2">
+                <ul className="text-gray-300 space-y-2'>
                   <li>• Provide and maintain our services</li>
                   <li>• Process transactions and send related information</li>
                   <li>• Send technical notices and support messages</li>
                   <li>• Respond to your comments and questions</li>
                 </ul>
-              </div>"
-"
-              <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-8 border border-slate-600/50 mt-8">"
+              </div> 
+              <div className='bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-8 border border-slate-600/50 mt-8">"
                 <h2 className="text-2xl font-bold text-white mb-4">Data Security</h2>"
                 <p className="text-gray-300 mb-4">
                   We implement appropriate security measures to protect your personal information 
                   against unauthorized access, alteration, disclosure, or destruction."
                 </p>"
-                <ul className="text-gray-300 space-y-2">
+                <ul className="text-gray-300 space-y-2'>
                   <li>• Encryption of data in transit and at rest</li>
                   <li>• Regular security audits and assessments</li>
                   <li>• Access controls and authentication</li>
                   <li>• Employee training on data protection</li>
                 </ul>
-              </div>"
-"
-              <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-8 border border-slate-600/50 mt-8">"
+              </div> 
+              <div className='bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-8 border border-slate-600/50 mt-8">"
                 <h2 className="text-2xl font-bold text-white mb-4">Your Rights</h2>"
                 <p className="text-gray-300 mb-4">
                   You have certain rights regarding your personal information, including: </p>"
-                <ul className="text-gray-300 space-y-2">
+                <ul className="text-gray-300 space-y-2'>
                   <li>• Access to your personal information</li>
                   <li>• Correction of inaccurate information</li>
                   <li>• Deletion of your personal information</li>
                   <li>• Objection to processing of your information</li>
                 </ul>
-              </div>"
-"
-              <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-8 border border-slate-600/50 mt-8">"
+              </div> 
+              <div className='bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-8 border border-slate-600/50 mt-8">"
                 <h2 className="text-2xl font-bold text-white mb-4">Contact Us</h2>"
                 <p className="text-gray-300 mb-4">
                   If you have any questions about this Privacy Policy, please contact us at: </p>"

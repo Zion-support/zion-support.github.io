@@ -322,16 +322,9 @@ const EnhancedServicesShowcase = () => {}"
             </p>
           </motion.div>
         </div>
-      </section>
-    </div>)}
-export default EnhancedServicesShowcase
+      </div>
+    </div>
+  );
+};
 
-export { EnhancedServicesShowcase }
-
-export { EnhancedServicesShowcase }
-
-export { EnhancedServicesShowcase }
-
-export { EnhancedServicesShowcase }
-
-export { EnhancedServicesShowcase }"`
+export default EnhancedServicesShowcaseJs;
