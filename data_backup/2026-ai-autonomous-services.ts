@@ -10,9 +10,12 @@ export interface AiAutonomousService2026 {
    category: string;
    realImplementation: boolean;
    contactInfo: { mobile: string;
-   email: string;
-   address: string}export const aiAutonomousServices2026: AiAutonomousService2026[] = [{
-    id: '2026-ai-autonomous',
+   emai,
+    l: string;
+   addres,
+    s: string}export const aiAutonomousServices2026: AiAutonomousService2026[] = [{
+    i,
+    d: '2026-ai-autonomous',
     name: '2026 AI Autonomous Platform',
     tagline: 'Fully autonomous AI systems',
     price: '$499/month',
@@ -27,8 +30,9 @@ export interface AiAutonomousService2026 {
     link: '/services/2026-ai-autonomous',
     category: 'AI Autonomous 2026',
     realImplementation: true,
-    contactInfo: {
-      mobile: '+1 302 464 0950',
+    contactInfo: {'
+      mobil,
+    e: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709';
 ]}}}

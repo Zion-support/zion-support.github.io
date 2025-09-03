@@ -9,11 +9,25 @@ class ErrorBoundary extends React.Component {
     return { hasError: true, error };
   }
 
-  componentDidCatch(error, errorInfo) {}
+<<<<<<< HEAD
+  componentDidCatch(error, errorInfo) {'
+=======
+  componentDidCatch(error, errorInfo) {
+<<<<<<< HEAD
+    console.error('Error caught by boundary: ', error, errorInfo);
+=======
+<<<<<<< HEAD
+    console.error('Error caught by boundary: ', error, errorInfo);
+=======
+>>>>>>> main
+    console.error('Error caught by boundary:', error, errorInfo);
+>>>>>>> main
+>>>>>>> main
+  }
 
   render() {
     if (this.state.hasError) {
-      return (
+      return ('
         <div className="error-boundary">
           <h2>Something went wrong.</h2>
           <details>{this.state.error && this.state.error.toString()}</details>
@@ -25,4 +39,9 @@ class ErrorBoundary extends React.Component {
   }
 }
 
+<<<<<<< HEAD
+export default ErrorBoundary
+=======
 export default ErrorBoundary;
+"
+>>>>>>> main

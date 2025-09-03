@@ -12,14 +12,13 @@ export function WhitelabelProvider({ children }) {
     setPrimaryColor,
     customTheme,
     setCustomTheme}
-;
   return (
     <WhitelabelContext.Provider value={value}>
       {children}
     </WhitelabelContext.Provider>
   )}
 export function useWhitelabel() {
-  const context = useContext(WhitelabelContext)
-  if (context === undefined) {
+  const context = useContext(WhitelabelContext);
+  if (context === undefined) {'
     throw new Error('useWhitelabel must be used within a WhitelabelProvider')}
   return context}

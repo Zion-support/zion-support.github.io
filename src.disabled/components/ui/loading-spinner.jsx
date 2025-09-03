@@ -1,5 +1,4 @@
-import React from,
-  react' import { motion } from;
+import React from react' import { motion } from;
   'framer-motion' import { cn } from;
   '@/lib/utils' export function LoadingSpinner({ size =;
   'md', variant =;
@@ -12,4 +11,4 @@ import React from,
   text-zion-blue;
   ', secondary: 'text-zion-purple, white: 'text-white;
   ' } return ( <div className={cn('flex flex-col items-center gap-3;
-  ', className)}> <motion.div className={cn( 'animate-spin rounded-full border-2 border-current border-t-transparent', sizeClasses[size], variantClasses[variant] )} role='status' aria-label='Loading' > <span className='sr-only'>Loading...</span> </motion.div> {text && ( <motion.p initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className='text-zion-slate-light font-medium text-sm' > {text} </motion.p> )} </div> ) }''
+  ', className)}> <motion.div className={cn( 'animate-spin rounded-full border-2 border-current border-t-transparent', sizeClasses[size], variantClasses[variant] )} role='status' aria-label='Loading' > <span className='sr-only'>Loading...</span> </motion.div> {text && ( <motion.p initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className='text-zion-slate-light font-medium text-sm' > {text} </motion.p> )} </div> ) }'

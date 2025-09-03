@@ -6,33 +6,33 @@ const AIAutonomousSalesPlatform: React.FC = () => {
   return(
     <>
       <Helmet>
-        <title>AI Autonomous Sales Platform | Zion Tech Group</title>
+        <title>AI Autonomous Sales Platform | Zion Tech Group</title>'
         <meta name='description' content='Revolutionary AI-powered sales platform that autonomously manages leads, predicts buying behavior, and closes deals through intelligent automation and personalized engagement strategies.' />
         <meta name='keywords' content='AI sales platform, autonomous sales, lead management, sales automation, AI sales prediction, sales intelligence' />
         <link rel='canonical' href='https://ziontechgroup.com/services/ai-autonomous-sales-platform' />
-      </Helmet>
+      </Helmet>'
       <div className='min-h-screen bg-gradient-to-br from-slate-900 via-orange-900 to-slate-900'>
         {/* Hero Section */}
-        <motion.section
+        <motion.section'
           className='relative py-20 px-4';
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
-        >
+        >'
           <div className='max-w-7xl mx-auto text-center'>
             <motion.div
               initial={{ y: 30, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2 }}
-              className='mb-8'>
-              <div className='inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-orange-500 to-red-500 rounded-full mb-6'>
-                <svg className='w-10 h-10 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+              className='mb-8>
+              <div className='inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-orange-500 to-red-500 rounded-full mb-6>
+                <svg className='w-10 h-10 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24>
                   <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M13 7h8m0 0v8m0-8l-8 8-4-4-6 6' />
                 </svg>
-              </div>
+              </div>'
               <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>
                 AI Autonomous Sales Platform
-              </h1>
+              </h1>'
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
                 Revolutionary AI-powered sales platform that autonomously manages leads, predicts buying behavior, and closes deals through intelligent automation and personalized engagement strategies.
               </p>
@@ -41,57 +41,61 @@ const AIAutonomousSalesPlatform: React.FC = () => {
               initial={{ y: 30, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.4 }}
-              className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <a
+              className='flex flex-col sm: flex-row gap-4 justify-center'>
+              <a'
                 href='tel:+13024640950';
                 className='bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-orange-700 hover:to-red-700 transition-all duration-300'>
                 Call Now: +1 302 464 0950
               </a>
-              <a
+              <a'
                 href='mailto:kleber@ziontechgroup.com';
-                className='border-2 border-orange-500 text-orange-300 px-8 py-4 rounded-lg font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300'>
+                className='border-2 border-orange-500 text-orange-300 px-8 py-4 rounded-lg font-semibold hove,
+    r:bg-orange-500 hove,
+    r:text-white transition-all duration-300'>
                 Email Us
               </a>
             </motion.div>
           </div>
         </motion.section>
         {/* Features Section */}
-        <motion.section
+        <motion.section'
           className='py-20 px-4';
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-        >
-          <div className='max-w-7xl mx-auto'>
-            <div className='text-center mb-16'>
-              <h2 className='text-4xl font-bold text-white mb-6'>Platform Features</h2>
+        >'
+          <div className='max-w-7xl mx-auto>
+            <div className='text-center mb-16>
+              <h2 className='text-4xl font-bold text-white mb-6'>Platform Features</h2>'
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
                 Comprehensive AI-driven sales capabilities that transform your sales operations
               </p>
-            </div>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-              {[{
-                  icon: '🎯',
+            </div>'
+            <div className='grid grid-cols-1 md: grid-cols-2 l,
+    g:grid-cols-3 gap-8'>
+              {[{'
+                  ico,
+    n: '🎯',
                   title: 'Lead Intelligence AI',
                   description: 'Advanced AI analyzes lead behavior, predicts buying intent, and automatically scores and prioritizes prospects for maximum conversion.'},
-                {
+                {'
                   icon: '🤖',
                   title: 'Autonomous Outreach',
                   description: 'AI automatically manages email sequences, social media engagement, and follow-up campaigns with personalized messaging.'},
-                {
+                {'
                   icon: '📊',
                   title: 'Sales Forecasting',
                   description: 'Predictive analytics with 95% accuracy for sales forecasting, pipeline management, and revenue optimization.'},
-                {
+                {'
                   icon: '💬',
                   title: 'AI Sales Assistant',
                   description: 'Intelligent sales assistant that provides real-time coaching, objection handling, and deal-closing strategies.'},
-                {
+                {'
                   icon: '🚀',
                   title: 'Deal Automation',
                   description: 'Automated proposal generation, contract management, and closing processes with AI-powered negotiation support.'},
-                {
+                {'
                   icon: '📈',
                   title: 'Performance Analytics',
                   description: 'Comprehensive sales analytics with AI insights, performance optimization, and team coaching recommendations.'}
@@ -101,9 +105,9 @@ const AIAutonomousSalesPlatform: React.FC = () => {
                   initial={{ y: 30, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
                   transition={{ delay: index * 0.1 }}
-                  className='bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20'>
-                  <div className='text-4xl mb-4'>{feature.icon}</div>
-                  <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>
+                  className='bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20>
+                  <div className='text-4xl mb-4'>{feature.icon}</div>'
+                  <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>'
                   <p className='text-gray-300'>{feature.description}</p>
                 </motion.div>
               ))}
@@ -111,58 +115,64 @@ const AIAutonomousSalesPlatform: React.FC = () => {
           </div>
         </motion.section>
         {/* Pricing Section */}
-        <motion.section
+        <motion.section'
           className='py-20 px-4';
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-        >
-          <div className='max-w-7xl mx-auto'>
-            <div className='text-center mb-16'>
-              <h2 className='text-4xl font-bold text-white mb-6'>Pricing Plans</h2>
+        >'
+          <div className='max-w-7xl mx-auto>
+            <div className='text-center mb-16>
+              <h2 className='text-4xl font-bold text-white mb-6'>Pricing Plans</h2>'
               <p className='text-xl text-gray-300'>Choose the perfect plan for your sales needs</p>
-            </div>
+            </div>'
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
               {[
-                {
-                  name: 'Starter',
+                {'
+                  nam,
+    e: 'Starter',
                   price: '$149',
                   period: '/month',
                   description: 'Perfect for small sales teams',
                   features: [;
-                    'Up to 1,000 leads',
-                    'Basic AI automation',
-                    'Email sequences',
-                    'Standard analytics',
-                    'Email support';
+                    'Up to 1,000 leads,Basic AI automation,Email sequences,Standard analytics,Email support';
                   ]},
-                {
+                {'
                   name: 'Professional',
                   price: '$399',
                   period: '/month',
                   description: 'Ideal for growing teams',
                   features: [;
+<<<<<<< HEAD
                     'Up to 10,000 leads',
                     'Advanced AI features',
                     'Multi-channel outreach',
                     'Sales forecasting',
                     'Priority support',
-                    'Custom integrations';
+                    'Custom integrations'
+=======
+                    'Up to 10,000 leads,Advanced AI features,Multi-channel outreach,Sales forecasting,Priority support,Custom integrations';
+>>>>>>> main
                   ],
                   popular: true},
-                {
+                {'
                   name: 'Enterprise',
                   price: '$999',
                   period: '/month',
                   description: 'For large sales organizations',
-                  features: [
+<<<<<<< HEAD
+                  features: ['
                     'Unlimited leads',
                     'Full AI capabilities',
                     'Custom AI models',
                     'Dedicated support',
                     'White-label options',
                     'Advanced reporting'
+=======
+                  features: [
+                    'Unlimited leads,Full AI capabilities,Custom AI models,Dedicated support,White-label options,Advanced reporting'
+>>>>>>> main
                   ]}
               ].map((plan, index) => (
                 <motion.div
@@ -170,37 +180,39 @@ const AIAutonomousSalesPlatform: React.FC = () => {
                   initial={{ y: 30, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
                   transition={{ delay: index * 0.1 }}
-                  className={`bg-white/10 backdrop-blur-lg rounded-xl p-8 border ${
+                  className={`bg-white/10 backdrop-blur-lg rounded-xl p-8 border ${`
                     plan.popular ? 'border-orange-500' : 'border-white/20'} relative`}
-                >{plan.popular && (
-                    <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
+                >{plan.popular && (`
+                    <div className='absolute -top-4 left-1/2 transform -translate-x-1/2>
                       <span className='bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>
                         Most Popular
                       </span>
                     </div>
                   )}
-                  <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>
-                  <p className='text-gray-300 mb-6'>{plan.description}</p>
-                  <div className='mb-6'>
-                    <span className='text-4xl font-bold text-white'>{plan.price}</span>
+                  <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>'
+                  <p className='text-gray-300 mb-6'>{plan.description}</p>'
+                  <div className='mb-6>
+                    <span className='text-4xl font-bold text-white'>{plan.price}</span>'
                     <span className='text-gray-300'>{plan.period}</span>
-                  </div>
+                  </div>'
                   <ul className='space-y-3 mb-8'>
-                    {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className='flex items-center text-gray-300'>
-                        <svg className='w-5 h-5 text-green-500 mr-3' fill='currentColor' viewBox='0 0 20 20'>
+                    {plan.features.map((feature, featureIndex) => ('
+                      <li key={featureIndex} className='flex items-center text-gray-300>
+                        <svg className='w-5 h-5 text-green-500 mr-3' fill='currentColor' viewBox='0 0 20 20>
                           <path fillRule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clipRule='evenodd' />
                         </svg>
                         {feature}
                       </li>
                     ))}
                   </ul>
-                  <a
-                    href='tel:+13024640950';
+                  <a'
+                    href='tel: +13024640950';
                     className={`w-full block text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
-                      plan.popular;
+                      plan.popular;`
                         ? 'bg-gradient-to-r from-orange-600 to-red-600 text-white hover:from-orange-700 hover:to-red-700';
-                        : 'border-2 border-orange-500 text-orange-300 hover:bg-orange-500 hover:text-white'}`}
+                        : 'border-2 border-orange-500 text-orange-300 hove,
+    r:bg-orange-500 hove,
+    r:text-white'}`}
                   >
                     Get Started
                   </a>
@@ -210,60 +222,72 @@ const AIAutonomousSalesPlatform: React.FC = () => {
           </div>
         </motion.section>
         {/* Benefits Section */}
-        <motion.section
+        <motion.section`
           className='py-20 px-4';
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-        >
-          <div className='max-w-7xl mx-auto'>
-            <div className='text-center mb-16'>
-              <h2 className='text-4xl font-bold text-white mb-6'>Why Choose Our Platform?</h2>
+        >'
+          <div className='max-w-7xl mx-auto>
+            <div className='text-center mb-16>
+              <h2 className='text-4xl font-bold text-white mb-6'>Why Choose Our Platform?</h2>'
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
                 Transform your sales operations with AI-powered automation and intelligent insights
               </p>
-            </div>
+            </div>'
             <div className='grid grid-cols-1 md:grid-cols-2 gap-12 items-center'>
-              <div>
-                <h3 className='text-3xl font-bold text-white mb-6'>Revolutionary Benefits</h3>
+              <div>'
+                <h3 className='text-3xl font-bold text-white mb-6'>Revolutionary Benefits</h3>'
                 <div className='space-y-6'>
+<<<<<<< HEAD
+                  {[
+=======
                   {[;
+<<<<<<< HEAD
+>>>>>>> main
                     'Increase sales conversion rates by 200% with AI optimization',
                     'Reduce sales cycle time by 60% through intelligent automation',
                     'Improve lead qualification accuracy by 85% with AI scoring',
                     'Save 35+ hours per week on manual sales tasks',
                     'Boost revenue per rep by 300% with AI assistance',
                     'Scale sales operations across unlimited prospects efficiently'
+                  ].map((benefit, index) => ('
+                    <div key={index} className='flex items-start>
+                      <div className='flex-shrink-0 w-6 h-6 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mr-4 mt-1>
+                        <svg className='w-4 h-4 text-white' fill='currentColor' viewBox='0 0 20 20>
+=======
+                    'Increase sales conversion rates by 200% with AI optimization,Reduce sales cycle time by 60% through intelligent automation,Improve lead qualification accuracy by 85% with AI scoring,Save 35+ hours per week on manual sales tasks,Boost revenue per rep by 300% with AI assistance,Scale sales operations across unlimited prospects efficiently'
                   ].map((benefit, index) => (
                     <div key={index} className='flex items-start'>
                       <div className='flex-shrink-0 w-6 h-6 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mr-4 mt-1'>
                         <svg className='w-4 h-4 text-white' fill='currentColor' viewBox='0 0 20 20'>
+>>>>>>> main
                           <path fillRule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clipRule='evenodd' />
                         </svg>
-                      </div>
+                      </div>'
                       <p className='text-gray-300 text-lg'>{benefit}</p>
                     </div>
                   ))}
                 </div>
-              </div>
-              <div className='bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20'>
-                <h4 className='text-2xl font-bold text-white mb-6'>Sales Impact</h4>
-                <div className='space-y-4'>
-                  <div className='flex justify-between items-center'>
-                    <span className='text-gray-300'>Conversion Rate</span>
+              </div>'
+              <div className='bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20>
+                <h4 className='text-2xl font-bold text-white mb-6'>Sales Impact</h4>'
+                <div className='space-y-4>
+                  <div className='flex justify-between items-center>
+                    <span className='text-gray-300'>Conversion Rate</span>'
                     <span className='text-green-400 font-bold'>+200%</span>
-                  </div>
-                  <div className='flex justify-between items-center'>
-                    <span className='text-gray-300'>Sales Cycle</span>
+                  </div>'
+                  <div className='flex justify-between items-center>
+                    <span className='text-gray-300'>Sales Cycle</span>'
                     <span className='text-green-400 font-bold'>-60%</span>
-                  </div>
-                  <div className='flex justify-between items-center'>
-                    <span className='text-gray-300'>Lead Accuracy</span>
+                  </div>'
+                  <div className='flex justify-between items-center>
+                    <span className='text-gray-300'>Lead Accuracy</span>'
                     <span className='text-green-400 font-bold'>+85%</span>
-                  </div>
-                  <div className='flex justify-between items-center'>
-                    <span className='text-gray-300'>Time Savings</span>
+                  </div>'
+                  <div className='flex justify-between items-center>
+                    <span className='text-gray-300'>Time Savings</span>'
                     <span className='text-green-400 font-bold'>35+ hrs/week</span>
                   </div>
                 </div>
@@ -272,39 +296,45 @@ const AIAutonomousSalesPlatform: React.FC = () => {
           </div>
         </motion.section>
         {/* CTA Section */}
-        <motion.section
+        <motion.section'
           className='py-20 px-4';
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-        >
-          <div className='max-w-4xl mx-auto text-center'>
+        >'
+          <div className='max-w-4xl mx-auto text-center>
             <h2 className='text-4xl font-bold text-white mb-6'>
               Ready to Transform Your Sales?
-            </h2>
+            </h2>'
             <p className='text-xl text-gray-300 mb-8'>
               Join thousands of sales teams already using our AI-powered platform to revolutionize their sales operations.
-            </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <a
+            </p>'
+            <div className='flex flex-col sm: flex-row gap-4 justify-center'>
+              <a'
                 href='tel:+13024640950';
                 className='bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-orange-700 hover:to-red-700 transition-all duration-300'>
                 Call +1 302 464 0950
               </a>
-              <a
+              <a'
                 href='mailto:kleber@ziontechgroup.com';
-                className='border-2 border-orange-500 text-orange-300 px-8 py-4 rounded-lg font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300'>
+                className='border-2 border-orange-500 text-orange-300 px-8 py-4 rounded-lg font-semibold hover:bg-orange-500 hove,
+    r:text-white transition-all duration-300'>
                 Email kleber@ziontechgroup.com
               </a>
-            </div>
+            </div>'
             <div className='mt-8 text-gray-400'>
-              <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
+              <p>Addres,
+    s: 364 E Main St STE 1008, Middletown DE 19709</p>
             </div>
           </div>
         </motion.section>
       </div>
     </>
   )}
-;
+<<<<<<< HEAD
+
 export default AIAutonomousSalesPlatform
+=======
+export default AIAutonomousSalesPlatform'
+>>>>>>> main

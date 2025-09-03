@@ -9,9 +9,12 @@ export interface Revolutionary2026Innovation {
    category: string;
    realImplementation: boolean;
    contactInfo: { mobile: string;
-   email: string;
-   address: string}export const revolutionary2026Innovations: Revolutionary2026Innovation[] = [{
-    id: '2026-revolutionary-innovation',
+   emai,
+    l: string;
+   addres,
+    s: string}export const revolutionary2026Innovations: Revolutionary2026Innovation[] = [{
+    i,
+    d: '2026-revolutionary-innovation',
     name: '2026 Revolutionary Innovation Platform',
     tagline: 'Breakthrough innovations for 2026',
     price: '$399/month',
@@ -26,8 +29,9 @@ export interface Revolutionary2026Innovation {
     link: '/services/2026-revolutionary-innovation',
     category: 'Revolutionary 2026 Innovations',
     realImplementation: true,
-    contactInfo: {
-      mobile: '+1 302 464 0950',
+    contactInfo: {'
+      mobil,
+    e: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709';
 ]}}}

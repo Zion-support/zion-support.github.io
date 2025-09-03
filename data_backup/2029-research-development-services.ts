@@ -34,9 +34,12 @@ export interface ResearchDevelopmentService2029 {
    exit: string;
    contact: { mobile: string;
    email: string;
-   website: string;
-   address: string}export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] = [{
-    id:,
+   websit,
+    e: string;
+   addres,
+    s: string}export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] = [{
+    i,
+    d:,
   advanced-research-automation',
     name: 'Advanced Research Automation,
     description:,
@@ -131,14 +134,15 @@ export interface ResearchDevelopmentService2029 {
   Series A funding, $60M valuation',
     exit: 'Acquisition by major research platform,
     contact: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       website:,
   https: //ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709'},
-  {
+  {'
     id: 'quantum-research-platform,
     name:,
   Quantum Research Platform',
@@ -233,14 +237,15 @@ export interface ResearchDevelopmentService2029 {
   Series B funding, $150M valuation',
     exit: 'IPO or quantum acquisition,
     contact: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       website:,
   https: //ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709'},
-  {
+  {'
     id: 'ai-research-assistant,
     name:,
   AI Research Assistant',
@@ -336,14 +341,15 @@ export interface ResearchDevelopmentService2029 {
   Series A funding, $80M valuation',
     exit: 'Acquisition by major research platform,
     contact: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       website:,
   https: //ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709'},
-  {
+  {'
     id: 'biotech-research-suite,
     name:,
   Biotech Research Suite',
@@ -440,7 +446,8 @@ export interface ResearchDevelopmentService2029 {
   Series B funding, $120M valuation',
     exit: 'IPO or biotech acquisition,
     contact: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       website:,

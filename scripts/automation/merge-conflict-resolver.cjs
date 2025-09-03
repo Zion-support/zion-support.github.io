@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/''usr/bin/env'' node;
 const fs = require('fs');
 const path = require('path`);
@@ -10,15 +11,31 @@ class MergeConflictResolver {
     this.conflictsFound = [];
     this.logFile = path.join(
       this.projectRoot,merge-conflict-resolver-report.json`
+=======
+#!/'usr/bin/env' node;
+
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+;
+class MergeConflictResolver {;
+  constructor() {;
+    this.projectRoot = process.cwd();
+    this.conflictsResolved = 0;
+    this.conflictsFound = [];
+    this.logFile = path.join(;
+      this.projectRoot,merge-conflict-resolver-report.json';
+>>>>>>> main
     );
     this.isRunning = false;
     this.checkInterval = 2 * 60 * 1000; // Check every 2 minutes;
   }
-
-  log(message) {
+;
+  log(message) {;
     const timestamp = new Date().toISOString();
     console.log(`[${timestamp}] ${message}`);
   }
+<<<<<<< HEAD
 
   async start() {
     this.log(`🚀 Starting Merge Conflict Resolver...`);
@@ -30,43 +47,76 @@ class MergeConflictResolver {
     // Set up continuous monitoring;
     this.monitorInterval = setInterval(async () => {
       if (this.isRunning) {
+=======
+;
+  async start() {;
+    this.log('🚀 Starting Merge Conflict Resolver...');
+    this.isRunning = true;
+;
+    // Initial check;
+    await this.checkAndResolveConflicts();
+;
+    // Set up continuous monitoring;
+    this.monitorInterval = setInterval(async () => {;
+      if (this.isRunning) {;
+>>>>>>> main
         await this.checkAndResolveConflicts();
       }
     }, this.checkInterval);
   }
+<<<<<<< HEAD
 
   stop() {
     this.log(`🛑 Stopping Merge Conflict Resolver...`);
+=======
+;
+  stop() {;
+    this.log('🛑 Stopping Merge Conflict Resolver...');
+>>>>>>> main
     this.isRunning = false;
-    if (this.monitorInterval) {
+    if (this.monitorInterval) {;
       clearInterval(this.monitorInterval);
     }
   }
+<<<<<<< HEAD
 
   async checkAndResolveConflicts() {
     try {
       this.log(`🔍 Checking for merge conflicts...`);
 
+=======
+;
+  async checkAndResolveConflicts() {;
+    try {;
+      this.log('🔍 Checking for merge conflicts...');
+;
+>>>>>>> main
       const conflicts = await this.findMergeConflicts();
-
+;
       if (conflicts.length > 0) {this.log(`⚠️ Found ${conflicts.length} merge conflicts`);
         this.conflictsFound = conflicts;
-
-        for (const conflict of conflicts) {
+;
+        for (const conflict of conflicts) {;
           await this.resolveConflict(conflict);
         }
 this.log(`✅ Resolved ${this.conflictsResolved} conflicts`);
+<<<<<<< HEAD
       } else {
         this.log(`✅ No merge conflicts found`);
+=======
+      } else {;
+        this.log('✅ No merge conflicts found');
+>>>>>>> main
       }
-
+;
       this.saveReport();
     } catch (error) {  this.log(`❌ Error during conflict resolution: ${error.message  }`);
     }
   }
-
-  async findMergeConflicts() {
+;
+  async findMergeConflicts() {;
     const conflicts = [];
+<<<<<<< HEAD
     const files = this.findFiles(`.ts,.tsx,.js,.jsx,.json,.md,.yml,.yaml`);
 
     for (const file of files) {
@@ -80,26 +130,48 @@ this.log(`✅ Resolved ${this.conflictsResolved} conflicts`);
             file,
             type: `merge_conflict`,
             markers: this.extractConflictMarkers(content),
+=======
+    const files = this.findFiles('.ts,.tsx,.js,.jsx,.json,.md,.yml,.yaml');
+;
+    for (const file of files) {;
+      try {;
+        const content = fs.readFileSync(file, 'utf8');
+;
+        if (;
+          content.includes(') ||;
+          content.includes('        ) {;
+          conflicts.push({;
+            file,;
+            type: 'merge_conflict',;
+            markers: this.extractConflictMarkers(content),;
+>>>>>>> main
           });
         }
       } catch (error) {  this.log(`⚠️ Could not read ${file  }: ${error.message}`);
       }
     }
-
+;
     return conflicts;
   }
-
-  extractConflictMarkers(content) {
+;
+  extractConflictMarkers(content) {;
     const markers = [];
+<<<<<<< HEAD
 
     // Find all conflict markers;
     const lines = content.split(`\n`);
+=======
+;
+    // Find all conflict markers;
+    const lines = content.split('\n');
+>>>>>>> main
     let inConflict = false;
     let conflictStart = 0;
     let conflictEnd = 0;
-
-    for (let i = 0; i < lines.length; i++) {
+;
+    for (let i = 0; i < lines.length; i++) {;
       const line = lines[i];
+<<<<<<< HEAD
 
       if (line.includes(``) && inConflict) {
         // Middle marker;
@@ -110,15 +182,28 @@ this.log(`✅ Resolved ${this.conflictsResolved} conflicts`);
           start: conflictStart,
           end: conflictEnd,
           content: lines.slice(conflictStart, conflictEnd + 1).join(`\n`),
+=======
+;
+      if (line.includes(') && inConflict) {;
+        // Middle marker;
+      } else if (line.includes('        inConflict = false;
+        conflictEnd = i;
+;
+        markers.push({;
+          start: conflictStart,;
+          end: conflictEnd,;
+          content: lines.slice(conflictStart, conflictEnd + 1).join('\n'),;
+>>>>>>> main
         });
       }
     }
-
+;
     return markers;
   }
-
-  async resolveConflict(conflict) {
+;
+  async resolveConflict(conflict) {;
     try {this.log(`🔧 Resolving conflict in ${conflict.file}`);
+<<<<<<< HEAD
 
       const content = fs.readFileSync(conflict.file, `utf8`);
       let resolvedContent = content;
@@ -126,43 +211,72 @@ this.log(`✅ Resolved ${this.conflictsResolved} conflicts`);
       // Try to auto-resolve based on file type and content;
       resolvedContent = await this.autoResolveConflict(
         conflict.file,
+=======
+;
+      const content = fs.readFileSync(conflict.file, 'utf8');
+      let resolvedContent = content;
+;
+      // Try to auto-resolve based on file type and content;
+      resolvedContent = await this.autoResolveConflict(;
+        conflict.file,;
+>>>>>>> main
         resolvedContent;
       );
-
-      if (resolvedContent !== content) {
+;
+      if (resolvedContent !== content) {;
         fs.writeFileSync(conflict.file, resolvedContent);this.log(`✅ Auto-resolved conflict in ${conflict.file}`);
         this.conflictsResolved++;
+<<<<<<< HEAD
 
         // Stage the resolved file;
         try {execSync(`git add "${conflict.file}"`, { stdio: `pipe` });this.log(`📝 Staged resolved file ${conflict.file}`);
         } catch (error) {  this.log(`⚠️ Could not stage ${conflict.file  }: ${error.message}`);
+=======
+;
+        // Stage the resolved file;
+        try {execSync(`git add "${conflict.file}"`, { stdio: 'pipe' });this.log(`📝 Staged resolved file ${conflict.file}`);
+        } catch (error) {this.log(`⚠️ Could not stage ${conflict.file}: ${error.message}`);
+>>>>>>> main
         }
       } else {this.log(`⚠️ Could not auto-resolve conflict in ${conflict.file}`);
       }
+<<<<<<< HEAD
     } catch (error) {  
       this.log(❌ Error resolving conflict in ${conflict.file  }: ${error.message}`
+=======
+    } catch (error) {;
+      this.log(❌ Error resolving conflict in ${conflict.file}: ${error.message}';
+>>>>>>> main
       );
     }
   }
-
-  async autoResolveConflict(filePath, content) {
+;
+  async autoResolveConflict(filePath, content) {;
     const ext = path.extname(filePath);
+<<<<<<< HEAD
 
     switch (ext) {
       case `.ts':
       case '.tsx':
+=======
+;
+    switch (ext) {;
+      case '.ts':;
+      case '.tsx':;
+>>>>>>> main
         return this.resolveTypeScriptConflict(content);
-      case '.js':
-      case '.jsx':
+      case '.js':;
+      case '.jsx':;
         return this.resolveJavaScriptConflict(content);
-      case '.json':
+      case '.json':;
         return this.resolveJsonConflict(content);
-      case '.md':
+      case '.md':;
         return this.resolveMarkdownConflict(content);
-      default:
+      default:;
         return this.resolveGenericConflict(content);
     }
   }
+<<<<<<< HEAD
 
   resolveTypeScriptConflict(content) {
     // For TypeScript files, prefer the HEAD version but merge imports;
@@ -174,11 +288,25 @@ this.log(`✅ Resolved ${this.conflictsResolved} conflicts`);
     // Clean up any duplicate imports;
     resolved = this.cleanupDuplicateImports(resolved);
 
+=======
+;
+  resolveTypeScriptConflict(content) {;
+    // For TypeScript files, prefer the HEAD version but merge imports;
+    let resolved = content;
+;
+    // Remove all conflict markers;
+    resolved = resolved.replace(/\n?/g, ');
+    resolved = resolved.replace(/;
+    // Clean up any duplicate imports;
+    resolved = this.cleanupDuplicateImports(resolved);
+;
+>>>>>>> main
     // Fix any syntax issues;
     resolved = this.fixTypeScriptSyntax(resolved);
-
+;
     return resolved;
   }
+<<<<<<< HEAD
 
   resolveJavaScriptConflict(content) {
     // Similar to TypeScript but without type-specific fixes;
@@ -187,11 +315,22 @@ this.log(`✅ Resolved ${this.conflictsResolved} conflicts`);
     // Remove all conflict markers;
     resolved = resolved.replace(/\n?/g, ``);
     resolved = resolved.replace(/
+=======
+;
+  resolveJavaScriptConflict(content) {;
+    // Similar to TypeScript but without type-specific fixes;
+    let resolved = content;
+;
+    // Remove all conflict markers;
+    resolved = resolved.replace(/\n?/g, ');
+    resolved = resolved.replace(/;
+>>>>>>> main
     // Clean up any duplicate imports;
     resolved = this.cleanupDuplicateImports(resolved);
-
+;
     return resolved;
   }
+<<<<<<< HEAD
 
   resolveJsonConflict(content) {
     // For JSON files, try to merge the objects;
@@ -209,10 +348,30 @@ this.log(`✅ Resolved ${this.conflictsResolved} conflicts`);
         // Remove conflict markers and replace with merged content;
         let resolved = content.replace(
           /\n[\s\S]*?          JSON.stringify(merged, null, 2)
+=======
+;
+  resolveJsonConflict(content) {;
+    // For JSON files, try to merge the objects;
+    try {;
+      // Extract the different versions;
+      const headMatch = content.match(/\n/);
+      const incomingMatch = content.match(/=======\n([\s\S]*?)\n;
+      if (headMatch && incomingMatch) {;
+        const headJson = JSON.parse(headMatch[1].trim());
+        const incomingJson = JSON.parse(incomingMatch[1].trim());
+;
+        // Merge the objects, preferring incoming for conflicts;
+        const merged = { ...headJson, ...incomingJson };
+;
+        // Remove conflict markers and replace with merged content;
+        let resolved = content.replace(;
+          /\n[\s\S]*?          JSON.stringify(merged, null, 2);
+>>>>>>> main
         );
-
+;
         return resolved;
       }
+<<<<<<< HEAD
     } catch (error) {  
       this.log(`⚠️ Could not parse JSON in conflict: ${error.message  }`);
     }
@@ -220,12 +379,22 @@ this.log(`✅ Resolved ${this.conflictsResolved} conflicts`);
     // Fallback: remove conflict markers and keep HEAD;
     return content;
       .replace(/\n?/g, ``)
+=======
+    } catch (error) {;
+      this.log(`⚠️ Could not parse JSON in conflict: ${error.message}`);
+    }
+;
+    // Fallback: remove conflict markers and keep HEAD;
+    return content;
+      .replace(/\n?/g, ');
+>>>>>>> main
       .replace(/  }
-
-  resolveMarkdownConflict(content) {
-    // For markdown, prefer the longer version (more content)
+;
+  resolveMarkdownConflict(content) {;
+    // For markdown, prefer the longer version (more content);
     const headMatch = content.match(/\n/);
     const incomingMatch = content.match(/=======\n([\s\S]*?)\n;
+<<<<<<< HEAD
     if (headMatch && incomingMatch) {
       const headContent = headMatch[1];
       const incomingContent = incomingMatch[1];
@@ -237,10 +406,24 @@ this.log(`✅ Resolved ${this.conflictsResolved} conflicts`);
         );
       } else {
         return content.replace(
+=======
+    if (headMatch && incomingMatch) {;
+      const headContent = headMatch[1];
+      const incomingContent = incomingMatch[1];
+;
+      // Choose the longer version;
+      if (incomingContent.length > headContent.length) {;
+        return content.replace(;
+          /\n[\s\S]*?          incomingContent;
+        );
+      } else {;
+        return content.replace(;
+>>>>>>> main
           /\n[\s\S]*?          headContent;
         );
       }
     }
+<<<<<<< HEAD
 
     // Fallback: remove conflict markers;
     return content;
@@ -251,26 +434,39 @@ this.log(`✅ Resolved ${this.conflictsResolved} conflicts`);
     // Generic resolution: remove conflict markers and keep HEAD;
     return content;
       .replace(/\n?/g, '')
+=======
+;
+    // Fallback: remove conflict markers;
+    return content;
+      .replace(/\n?/g, ');
       .replace(/  }
-
-  cleanupDuplicateImports(content) {
+;
+  resolveGenericConflict(content) {;
+    // Generic resolution: remove conflict markers and keep HEAD;
+    return content;
+      .replace(/\n?/g, ');
+>>>>>>> main
+      .replace(/  }
+;
+  cleanupDuplicateImports(content) {;
     const lines = content.split('\n');
     const imports = new Set();
     const cleanedLines = [];
-
-    for (const line of lines) {
-      if (line.trim().startsWith('import ')) {
-        if (!imports.has(line.trim())) {
+;
+    for (const line of lines) {;
+      if (line.trim().startsWith('import ')) {;
+        if (!imports.has(line.trim())) {;
           imports.add(line.trim());
           cleanedLines.push(line);
         }
-      } else {
+      } else {;
         cleanedLines.push(line);
       }
     }
-
+;
     return cleanedLines.join('\n');
   }
+<<<<<<< HEAD
 
   fixTypeScriptSyntax(content) {
     // Fix common TypeScript syntax issues;
@@ -283,10 +479,25 @@ this.log(`✅ Resolved ${this.conflictsResolved} conflicts`);
     // Fix JSX syntax;
     fixed = fixed.replace(
       /<>([\s\S]*?)<\/>/g,<React.Fragment>$1</React.Fragment>'
+=======
+;
+  fixTypeScriptSyntax(content) {;
+    // Fix common TypeScript syntax issues;
+    let fixed = content;
+;
+    // Fix missing type annotations;
+    fixed = fixed.replace(/} catch \(error: \)/g, '} catch (error: any)');
+    fixed = fixed.replace(/\(([^)]+): \)/g, '($1: any)');
+;
+    // Fix JSX syntax;
+    fixed = fixed.replace(;
+      /<>([\s\S]*?)<\/>/g,<React.Fragment>$1</React.Fragment>';
+>>>>>>> main
     );
-
+;
     return fixed;
   }
+<<<<<<< HEAD
 
   async checkGitStatus() {
     try {
@@ -294,82 +505,118 @@ this.log(`✅ Resolved ${this.conflictsResolved} conflicts`);
       return status;
         .trim()
         .split(`\n`)
+=======
+;
+  async checkGitStatus() {;
+    try {;
+      const status = execSync('git status --porcelain', { encoding: 'utf8' });
+      return status;
+        .trim();
+        .split('\n');
+>>>>>>> main
         .filter(line => line.length > 0);
     } catch (error) {  this.log(`❌ Could not check git status: ${error.message  }`);
       return [];
     }
   }
-
-  async commitResolvedConflicts() {
-    try {
+;
+  async commitResolvedConflicts() {;
+    try {;
       const status = await this.checkGitStatus();
+<<<<<<< HEAD
       const resolvedFiles = status.filter(
         line => line.startsWith(`M `) || line.startsWith(`A `)
+=======
+      const resolvedFiles = status.filter(;
+        line => line.startsWith('M ') || line.startsWith('A ');
+>>>>>>> main
       );
-
+;
       if (resolvedFiles.length > 0) {this.log(`📝 Committing ${resolvedFiles.length} resolved files...`);
+<<<<<<< HEAD
 const message = `Auto-resolve merge conflicts: ${resolvedFiles.length} files resolved`;execSync(`git commit -m "${message}"`, { stdio: `pipe` });
 
         this.log(`✅ Conflicts committed successfully`);
+=======
+const message = `Auto-resolve merge conflicts: ${resolvedFiles.length} files resolved`;execSync(`git commit -m "${message}"`, { stdio: 'pipe' });
+;
+        this.log('✅ Conflicts committed successfully');
+>>>>>>> main
         return true;
       }
     } catch (error) {  this.log(`❌ Could not commit resolved conflicts: ${error.message  }`);
     }
-
+;
     return false;
   }
+<<<<<<< HEAD
 
   findFiles(extensions) {
     const exts = extensions.split(`,`);
+=======
+;
+  findFiles(extensions) {;
+    const exts = extensions.split(',');
+>>>>>>> main
     const files = [];
-
-    const walkDir = dir => {
+;
+    const walkDir = dir => {;
       const items = fs.readdirSync(dir);
-
-      for (const item of items) {
+;
+      for (const item of items) {;
         const fullPath = path.join(dir, item);
         const stat = fs.statSync(fullPath);
+<<<<<<< HEAD
 
         if (
           stat.isDirectory() &&
           !item.startsWith(`.`) &&
           item !== 'node_modules'
         ) {
+=======
+;
+        if (;
+          stat.isDirectory() &&;
+          !item.startsWith('.') &&;
+          item !== 'node_modules';
+        ) {;
+>>>>>>> main
           walkDir(fullPath);
-        } else if (stat.isFile()) {
+        } else if (stat.isFile()) {;
           const ext = path.extname(item);
-          if (exts.some(e => e.trim() === ext)) {
+          if (exts.some(e => e.trim() === ext)) {;
             files.push(fullPath);
           }
         }
       }
     };
-
+;
     walkDir(this.projectRoot);
     return files;
   }
-
-  saveReport() {
-    const report = {
-      timestamp: new Date().toISOString(),
-      conflictsResolved: this.conflictsResolved,
-      conflictsFound: this.conflictsFound,
-      status: 'completed',
+;
+  saveReport() {;
+    const report = {;
+      timestamp: new Date().toISOString(),;
+      conflictsResolved: this.conflictsResolved,;
+      conflictsFound: this.conflictsFound,;
+      status: 'completed',;
     };
-
+;
     fs.writeFileSync(this.logFile, JSON.stringify(report, null, 2));
   }
-
-  getStatus() {
-    return {
-      isRunning: this.isRunning,
-      conflictsResolved: this.conflictsResolved,
-      conflictsFound: this.conflictsFound.length,
-      lastCheck: new Date().toISOString(),
-      logFile: this.logFile,
+;
+  getStatus() {;
+    return {;
+      isRunning: this.isRunning,;
+      conflictsResolved: this.conflictsResolved,;
+      conflictsFound: this.conflictsFound.length,;
+      lastCheck: new Date().toISOString(),;
+      logFile: this.logFile,;
     };
   }
 }
+<<<<<<< HEAD
 
 // Export for use in other modules;
 module.exports = MergeConflictResolver;
@@ -380,15 +627,31 @@ if (require.main === module) {
 
   // Handle graceful shutdown;
   process.on('SIGINT', () => {
+=======
+;
+// Export for use in other modules;
+module.exports = MergeConflictResolver;
+;
+// If run directly, start the conflict resolver;
+if (require.main === module) {;
+  const conflictResolver = new MergeConflictResolver();
+;
+  // Handle graceful shutdown;
+  process.on('SIGINT', () => {;
+>>>>>>> main
     conflictResolver.stop();
     process.exit(0);
   });
-
-  process.on('SIGTERM', () => {
+;
+  process.on('SIGTERM', () => {;
     conflictResolver.stop();
     process.exit(0);
   });
+<<<<<<< HEAD
 
+=======
+;
+>>>>>>> main
   // Start the conflict resolver;
   conflictResolver.start();
 }

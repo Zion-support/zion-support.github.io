@@ -143,5 +143,5 @@ export default function ProjectManagement() {
         </div>
       </section>
     </>
-  );
+  )
 }

@@ -6,14 +6,7 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   experimental: {
-    esmExternals: false,
-    newNextLinkBehavior: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
+    // Removed deprecated options
   },
   typescript: {
     ignoreBuildErrors: true,
@@ -41,6 +34,7 @@ const nextConfig = {
         /broken_files_backup/,
         /contracts/,
         /hardhat/,
+        /^components\//, // Exclude root components directory
       ],
     });
 
@@ -56,7 +50,6 @@ const nextConfig = {
   },
   // Try to exclude problematic directories at the Next.js level
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
-  pageExtensions: ['tsxtsjsx', 'js'],
   onDemandEntries: {
     // period (in ms) where the server will keep pages in the buffer
     maxInactiveAge: 25 * 1000,

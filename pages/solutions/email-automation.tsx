@@ -250,5 +250,5 @@ export default function EmailAutomation() {
         </div>
       </section>
     </>
-  );
+  )
 }

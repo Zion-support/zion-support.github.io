@@ -1,11 +1,11 @@
 #!/usr/bin/env node;
 const fs = require(
   'fs');
-const path = require(
+const path = require('
   'path');
-const { execSync, spawn } = require(
+const { execSync, spawn } = require('
   'child_process');
-const cron = require(
+const cron = require('
   'node-cron');
 class DependencyMonitor {
   constructor() {
@@ -29,58 +29,83 @@ class DependencyMonitor {
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
     try {
+<<<<<<< HEAD
       fs.appendFileSync(this.logFile, logEntry)} catch (error) { 
       console.error(
   `Failed to write to log file:`, error.message) }
+=======
+      fs.appendFileSync(this.logFile, logEntry)} catch (error) {
+      console.error(`
+  'Failed to write to log file:', error.message)}
+>>>>>>> main
   }
   async startMonitoring() {
-    this.log(
+    this.log('
   'Starting dependency monitoring...');
     // Schedule regular dependency checks;
-    cron.schedule(
+    cron.schedule('
   '0 */2 * * *', () => {
       this.performDependencyCheck()})
     // Schedule daily security audit;
-    cron.schedule(
+    cron.schedule('
   '0 1 * * *', () => {
       this.performSecurityAudit()})
     // Schedule weekly dependency updates;
-    cron.schedule(
+    cron.schedule('
   '0 7 * * 0', () => {
       this.performWeeklyUpdates()})
     // Initial dependency check;
     setTimeout(() => {
       this.performDependencyCheck()}, 15000);
-    this.log(
+    this.log('
   'Dependency monitoring started successfully')}
   async performDependencyCheck() {
     if (this.monitoring) return;
     this.monitoring = true;
+<<<<<<< HEAD
     this.log(
   `Performing dependency check...`);
+=======
+    this.log('
+  'Performing dependency check...');
+>>>>>>> main
     try {
       const issues = await this.detectDependencyIssues();
       if (issues.length > 0) {
-        this.log(
+        this.log('
           `Found ${issues.length} dependency issues, attempting fixes...`);
         await this.autoFixDependencyIssues(issues)} else {
+<<<<<<< HEAD
         this.log(
   `No dependency issues detected, all packages are up to date`)}
     } catch (error) { 
       this.log(`Dependency check failed: ${error.message }`,ERROR,
+=======
+        this.log(`
+  'No dependency issues detected, all packages are up to date')}
+    } catch (error) {'
+      this.log(`Dependency check failed: ${error.message}`,ERROR,
+>>>>>>> main
   )} finally {
       this.monitoring = false}
   }
   async detectDependencyIssues() {
     const issues = [];
     try {
+<<<<<<< HEAD
       // Check for outdated packages;
       const outdatedResult = execSync(`npm outdated --json;
   `, {
         encoding: 'utf8})
+=======
+      // Check for outdated packages;`
+      const outdatedResult = execSync('npm outdated --json;
+  ', {'
+        encoding: 'utf8});
+>>>>>>> main
       const outdated = JSON.parse(outdatedResult);
       if (Object.keys(outdated).length > 0) {
-        issues.push({
+        issues.push({'
           type: 'outdated;
   ',
           packages: Object.keys(outdated),
@@ -92,12 +117,12 @@ class DependencyMonitor {
     try {
       // Check for security vulnerabilities;
       const auditResult = execSync('npm audit --json;
-  ', { encoding: 'utf8 })
+  ', { encoding: 'utf8 });
       const audit = JSON.parse(auditResult);
       if(
         audit.vulnerabilities &&;
         Object.keys(audit.vulnerabilities).length > 0) {
-        issues.push({
+        issues.push({'
           type: 'vulnerability;
   ',
           packages: Object.keys(audit.vulnerabilities),
@@ -109,6 +134,7 @@ class DependencyMonitor {
     return issues}
   async autoFixDependencyIssues(issues) {
     for (const issue of issues) {
+<<<<<<< HEAD
       try {
         if (issue.type === `vulnerability;
   `) {
@@ -126,10 +152,30 @@ class DependencyMonitor {
       } catch (error) { 
         this.log(
           `Failed to fix issue ${issue.type }: ${error.message}`,ERROR,
+=======
+      try {'
+        if (issue.type === 'vulnerability;
+  ') {
+          this.log('
+            `Attempting to fix vulnerability in ${issue.packages.join(',)}`);
+          execSync(`
+  'npm audit fix', { stdio: 'inherit });
+          this.vulnerabilitiesFound++} else if (issue.type ===,
+  outdated') {'
+          this.log(`Updating outdated packages: ${issue.packages.join(,)}`);
+          execSync(,
+  npm update;`
+  ', { stdio: 'inherit });
+          this.dependenciesUpdated++}
+      } catch (error) {
+        this.log('
+          `Failed to fix issue ${issue.type}: ${error.message}`,ERROR,
+>>>>>>> main
   )}
     }
   }
   async performSecurityAudit() {
+<<<<<<< HEAD
     this.log(
   `Performing security audit...`);
     try {
@@ -149,6 +195,27 @@ class DependencyMonitor {
       this.log(`Weekly updates completed;
   `)} catch (error) { 
       this.log(`Weekly updates failed: ${error.message }`,ERROR`)}
+=======
+    this.log(`
+  'Performing security audit...');
+    try {
+      execSync('
+  'npm audit', { stdio: 'inherit });
+      this.log('
+  'Security audit completed')} catch (error) {'
+      this.log(`Security audit failed: ${error.message}`,ERROR,
+  )}
+  }
+  async performWeeklyUpdates() {`
+    this.log('Performing weekly dependency updates...;
+  ');
+    try {'
+      execSync('npm update;
+  ', { stdio: 'inherit });
+      this.log('Weekly updates completed;
+  ')} catch (error) {'
+      this.log(`Weekly updates failed: ${error.message}`,ERROR')}
+>>>>>>> main
   }
   getStats() {
     return {
@@ -159,8 +226,13 @@ class DependencyMonitor {
   }
   stop() {
     this.monitoring = false;
+<<<<<<< HEAD
     this.log(
   `Dependency monitoring stopped')}
+=======
+    this.log('
+  'Dependency monitoring stopped')}
+>>>>>>> main
 }
 // Export the class;
 module.exports = DependencyMonitor;
@@ -168,15 +240,15 @@ module.exports = DependencyMonitor;
 if (require.main === module) {
   const monitor = new DependencyMonitor();
   // Handle graceful shutdown;
-  process.on(
+  process.on('
   'SIGINT', () => {
-    monitor.log(
+    monitor.log('
   'Shutting down Dependency Monitor...');
     monitor.stop();
     process.exit(0)})
-  process.on(
+  process.on('
   'SIGTERM', () => {
-    monitor.log(
+    monitor.log('
   'Shutting down Dependency Monitor...');
     monitor.stop();
     process.exit(0)})}

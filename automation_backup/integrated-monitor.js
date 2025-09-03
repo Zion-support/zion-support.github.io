@@ -12,11 +12,11 @@
  */;
 const BrowserErrorMonitor = require(
   './browser-error-monitor');
-const BrowserErrorFixer = require(
+const BrowserErrorFixer = require('
   './browser-error-fixer');
-const fs = require(
+const fs = require('
   'fs').promises;
-const path = require(
+const path = require('
   'path');
 class IntegratedMonitor {
   constructor() {
@@ -25,42 +25,47 @@ class IntegratedMonitor {
     this.isRunning = false;
     this.fixCycleInterval = null;
     this.stats = {
-      totalErrors: 0,
+      totalError,
+    s: 0,
       runtimeFixes: 0,
       sourceCodeFixes: 0,
       failedFixes: 0,
       lastFixCycle: null,
       uptime: Date.now()}
-;
   async initialize() {
     try {
-      // console.log(
+      // console.log('
   '🚀 Initializing Integrated Browser Error Monitor...');
       // Initialize browser monitor;
       await this.browserMonitor.initialize();
       // Set up error handling for browser monitor;
-      this.browserMonitor.on(
+      this.browserMonitor.on('
   'error', this.handleBrowserMonitorError.bind(this));
       // Set up fix cycle interval (every 10 minutes);
       this.fixCycleInterval = setInterval(async () => {
         await this.runFixCycle()}, 10 * 60 * 1000);
-      // console.log(
+      // console.log('
   '✅ Integrated Monitor initialized successfully');
+<<<<<<< HEAD
       return true} catch (error) { 
       console.error(
+=======
+      return true} catch (error) {
+      console.error('
+>>>>>>> main
   '❌ Failed to initialize Integrated Monitor:', error);
       return false;
   async start() {
     if (this.isRunning) {
-      // console.log(
+      // console.log('
   '⚠️  Integrated Monitor is already running');
       return;
     const initialized = await this.initialize();
     if (!initialized) {
-      throw new Error(
+      throw new Error('
   'Failed to initialize Integrated Monitor');
     this.isRunning = true;
-    // console.log(
+    // console.log('
   '🚀 Integrated Browser Error Monitor started');
     // Start browser monitoring;
     await this.browserMonitor.start();
@@ -72,25 +77,30 @@ class IntegratedMonitor {
       clearInterval(this.fixCycleInterval);
     if (this.browserMonitor) {
       await this.browserMonitor.stop();
-    // console.log(
+    // console.log('
   '🛑 Integrated Browser Error Monitor stopped');
   async restart() {
-    // console.log(
+    // console.log('
   '🔄 Restarting Integrated Browser Error Monitor...');
     await this.stop();
     await new Promise(resolve => setTimeout(resolve, 2000));
     await this.start();
   async handleBrowserMonitorError(error) {
-    console.error(
+    console.error('
   '🔴 Browser Monitor Error:', error);
     // Attempt to recover;
     try {
+<<<<<<< HEAD
       await this.browserMonitor.restart() } catch (restartError) {
       console.error(
+=======
+      await this.browserMonitor.restart()} catch (restartError) {
+      console.error('
+>>>>>>> main
   '❌ Failed to restart browser monitor:', restartError);
   async runFixCycle() {
     try {
-      // console.log(
+      // console.log('
   '🔧 Starting integrated fix cycle...');
       // Get recent errors from browser monitor;
       const recentErrors = this.browserMonitor.errorLog.filter(error => {
@@ -98,8 +108,13 @@ class IntegratedMonitor {
         const cutoffTime = new Date(Date.now() - 30 * 60 * 1000) // Last 30 minutes;
         return errorTime > cutoffTime})
       if (recentErrors.length === 0) {
+<<<<<<< HEAD
         // console.log(
   `✅ No recent errors to fix`);
+=======
+        // console.log('
+  '✅ No recent errors to fix');
+>>>>>>> main
         return;
       // console.log(`🔍 Found ${recentErrors.length} recent errors to analyze`);
       // Run source code fixes;
@@ -108,10 +123,17 @@ class IntegratedMonitor {
       this.stats.sourceCodeFixes += fixesApplied.length;
       this.stats.lastFixCycle = new Date().toISOString();
       // Generate comprehensive report;
+<<<<<<< HEAD
       await this.generateIntegratedReport(recentErrors, fixesApplied);
       // console.log(`✅ Fix cycle completed. Applied ${fixesApplied.length} source code fixes.`)} catch (error) { 
       console.error(
   `❌ Error during fix cycle:`, error);
+=======
+      await this.generateIntegratedReport(recentErrors, fixesApplied);`
+      // console.log(`✅ Fix cycle completed. Applied ${fixesApplied.length} source code fixes.`)} catch (error) {
+      console.error(`
+  '❌ Error during fix cycle:', error);
+>>>>>>> main
       this.stats.failedFixes++;
   async generateIntegratedReport(recentErrors, fixesApplied) {
     try {
@@ -126,13 +148,13 @@ class IntegratedMonitor {
         fixesApplied: fixesApplied.slice(-20), // Last 20 fixes;
         browserMonitorStats: this.browserMonitor.stats,
         summary: {
-          totalErrors: this.stats.totalErrors,
+          totalError,
+    s: this.stats.totalErrors,
           runtimeFixes: this.stats.runtimeFixes,
           sourceCodeFixes: this.stats.sourceCodeFixes,
           failedFixes: this.stats.failedFixes,
           successRate: this.stats.totalErrors > 0 ?;
             (((this.stats.runtimeFixes + this.stats.sourceCodeFixes) / this.stats.totalErrors) * 100).toFixed(2) : 100}
-;
       const reportPath = path.join(this.browserMonitor.CONFIG.logDir,integrated-monitor-report.json;
   `);
       await fs.writeFile(reportPath, JSON.stringify(report, null, 2));
@@ -145,6 +167,7 @@ class IntegratedMonitor {
       stats: this.stats,
       browserMonitorStatus: this.browserMonitor ? this.browserMonitor.isRunning : false,
       lastFixCycle: this.stats.lastFixCycle,
+<<<<<<< HEAD
       uptime: Date.now() - this.stats.uptime }
 ;
   async performHealthCheck() {
@@ -152,6 +175,14 @@ class IntegratedMonitor {
       // console.log(,
   🔍 Performing integrated health check...;
   `);
+=======
+      uptime: Date.now() - this.stats.uptime}
+  async performHealthCheck() {
+    try {
+      // console.log(,
+  🔍 Performing integrated health check...;`
+  ');
+>>>>>>> main
       // Check browser monitor health;
       const browserHealth = await this.browserMonitor.performHealthCheck();
       // Check fixer health;
@@ -170,33 +201,39 @@ class IntegratedMonitor {
 const integratedMonitor = new IntegratedMonitor();
 // Handle process signals;
 process.on(,
+<<<<<<< HEAD
   SIGINT;
   `, async () => {
   // console.log(`🛑 Received SIGINT, shutting down...;
+=======
+  SIGINT;`
+  ', async () => {'
+  // console.log('🛑 Received SIGINT, shutting down...;
+>>>>>>> main
   ');
   await integratedMonitor.stop();
   process.exit(0) })
 process.on('SIGTERM;
-  ', async () => {
+  ', async () => {'
   // console.log('🛑 Received SIGTERM, shutting down...;
   ');
   await integratedMonitor.stop();
   process.exit(0)})
 // Handle uncaught exceptions;
 process.on('uncaughtException;
-  ', async (error) => {
+  ', async (error) => {'
   console.error('❌ Uncaught Exception: , error);
   await integratedMonitor.stop();
   process.exit(1)})
 process.on(,
   unhandledRejection;
-  ', async (reason, promise) => {
+  ', async (reason, promise) => {'
   console.error('❌ Unhandled Rejection at: , promise,reason:', reason);
   await integratedMonitor.stop();
   process.exit(1)})
 // Start the integrated monitor;
 integratedMonitor.start().catch(async (error) => {
-  console.error(
+  console.error('
   '❌ Failed to start integrated monitor:', error);
   await integratedMonitor.stop();
   process.exit(1)})
