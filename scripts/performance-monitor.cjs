@@ -3,8 +3,8 @@
  * Performance Monitor
  * Monitors and optimizes application performance
  */
-const fs = require("$1");
-const path = require("$1");
+const fs = require("$1")
+const path = require("$1")
 const { execSync } = require("child_process")
 class PerformanceMonitor {
   constructor() {
@@ -29,7 +29,7 @@ class PerformanceMonitor {
       this.log("Measuring bundle size...")
       // Check if .next directory exists
       if (fs.existsSync(".next")) {
-        const { execSync } = require("$1");
+        const { execSync } = require("$1")
 const result = execSync("du -sh .next", { encoding: "utf8" })
         const size = result.split("\t")[0]
         this.metrics.bundleSize = size

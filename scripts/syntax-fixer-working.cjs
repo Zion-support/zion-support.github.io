@@ -1,26 +1,24 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
 class SyntaxFixer {
   constructor() {
-    this.projectRoot = process.cwd();
-    this.fixedFiles = [];
-    this.errors = [];
+    this.projectRoot = process.cwd()
+    this.fixedFiles = []
+    this.errors = []
   }
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
+    console.log(`[${new Date().toISOString()}] ${message}`)
   }
 
   fixFile(filePath) {
     try {
-      let content = fs.readFileSync(filePath, 'utf8');
-      let originalContent = content;
-      let hasChanges = false;
-
+      let content = fs.readFileSync(filePath, 'utf8')
+      let originalContent = content
+      let hasChanges = false
       // Fix common syntax errors
       const fixes = [
         // Remove trailing semicolons after closing braces
@@ -37,104 +35,94 @@ class SyntaxFixer {
         { pattern: /{\s*;\s*/g, replacement: '{\n  ' },
         // Fix malformed array literals
         { pattern: /\[\s*;\s*/g, replacement: '[\n  ' }
-      ];
-
+      ]
       fixes.forEach(fix => {
-        const newContent = content.replace(fix.pattern, fix.replacement);
+        const newContent = content.replace(fix.pattern, fix.replacement)
         if (newContent !== content) {
-          content = newContent;
-          hasChanges = true;
+          content = newContent
+          hasChanges = true
         }
-      });
-
+      })
       if (hasChanges) {
-        fs.writeFileSync(filePath, content);
-        this.fixedFiles.push(filePath);
-        this.log(`✅ Fixed syntax errors in: ${filePath}`);
-        return true;
+        fs.writeFileSync(filePath, content)
+        this.fixedFiles.push(filePath)
+        this.log(`✅ Fixed syntax errors in: ${filePath}`)
+        return true
       }
 
-      return false;
+      return false
     } catch (error) {
-      this.errors.push({ file: filePath, error: error.message });
-      this.log(`❌ Error fixing ${filePath}: ${error.message}`);
-      return false;
+      this.errors.push({ file: filePath, error: error.message })
+      this.log(`❌ Error fixing ${filePath}: ${error.message}`)
+      return false
     }
   }
 
   findJavaScriptFiles(dir = this.projectRoot) {
-    const files = [];
-    
+    const files = []
     const scanDir = (currentDir) => {
       try {
-        const items = fs.readdirSync(currentDir);
-        
+        const items = fs.readdirSync(currentDir)
         for (const item of items) {
-          const fullPath = path.join(currentDir, item);
-          const stat = fs.statSync(fullPath);
-          
+          const fullPath = path.join(currentDir, item)
+          const stat = fs.statSync(fullPath)
           if (stat.isDirectory()) {
             // Skip node_modules, .git, and other common directories
             if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
-              scanDir(fullPath);
+              scanDir(fullPath)
             }
           } else if (item.endsWith('.js') || item.endsWith('.cjs') || item.endsWith('.mjs')) {
-            files.push(fullPath);
+            files.push(fullPath)
           }
         }
       } catch (error) {
-        this.log(`Warning: Could not scan directory ${currentDir}: ${error.message}`);
+        this.log(`Warning: Could not scan directory ${currentDir}: ${error.message}`)
       }
-    };
-    
-    scanDir(dir);
-    return files;
+    }
+    scanDir(dir)
+    return files
   }
 
   async run() {
-    this.log('🔧 Starting syntax fixer...');
-    
-    const files = this.findJavaScriptFiles();
-    this.log(`Found ${files.length} JavaScript files to check`);
-    
-    let fixedCount = 0;
-    
+    this.log('🔧 Starting syntax fixer...')
+    const files = this.findJavaScriptFiles()
+    this.log(`Found ${files.length} JavaScript files to check`)
+    let fixedCount = 0
     for (const file of files) {
       if (this.fixFile(file)) {
-        fixedCount++;
+        fixedCount++
       }
     }
     
-    this.log(`\n📊 Syntax Fixer Results:`);
-    this.log(`- Files processed: ${files.length}`);
-    this.log(`- Files fixed: ${fixedCount}`);
-    this.log(`- Errors encountered: ${this.errors.length}`);
-    
+    this.log(`\n📊 Syntax Fixer Results:`)
+    this.log(`- Files processed: ${files.length}`)
+    this.log(`- Files fixed: ${fixedCount}`)
+    this.log(`- Errors encountered: ${this.errors.length}`)
     if (this.errors.length > 0) {
-      this.log('\n❌ Errors encountered:');
+      this.log('\n❌ Errors encountered:')
       this.errors.forEach(err => {
-        this.log(`  - ${err.file}: ${err.error}`);
-      });
+        this.log(`  - ${err.file}: ${err.error}`)
+      })
     }
     
     if (fixedCount > 0) {
-      this.log('\n✅ Syntax fixing completed successfully!');
+      this.log('\n✅ Syntax fixing completed successfully!')
     } else {
-      this.log('\n✅ No syntax errors found!');
+      this.log('\n✅ No syntax errors found!')
     }
     
     return {
       filesProcessed: files.length,
       filesFixed: fixedCount,
       errors: this.errors
-    };
+    }
   }
 }
 
 // Run the syntax fixer
 if (require.main === module) {
-  const fixer = new SyntaxFixer();
-  fixer.run().catch(console.error);
+  const fixer = new SyntaxFixer()
+  fixer.run().catch(console.error)
 }
 
 module.exports = SyntaxFixer;

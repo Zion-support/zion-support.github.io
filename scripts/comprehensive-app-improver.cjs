@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-const fs = require("$1");
-const path = require("$1");
+const fs = require("$1")
+const path = require("$1")
 const { execSync } = require("child_process")
 class ComprehensiveAppImprover {
   constructor() {
@@ -517,7 +517,7 @@ echo "✅ Deployment completed successfully!"
 
   createTestingPipeline() {
     const testingPipeline = `#!/usr/bin/env node
-const { execSync } = require("$1");
+const { execSync } = require("$1")
 const fs = require("fs")
 class TestingPipeline {
   constructor() {
@@ -617,7 +617,7 @@ pipeline.runPipeline().catch(console.error)
 
   createCodeQualityChecks() {
     const qualityChecks = `#!/usr/bin/env node
-const { execSync } = require("$1");
+const { execSync } = require("$1")
 const fs = require("fs")
 class CodeQualityChecks {
   constructor() {
@@ -729,8 +729,8 @@ qualityChecks.runChecks().catch(console.error)
 
   createBackupSystem() {
     const backupSystem = `#!/usr/bin/env node
-const fs = require("$1");
-const path = require("$1");
+const fs = require("$1")
+const path = require("$1")
 const { execSync } = require("child_process")
 class BackupSystem {
   constructor() {
@@ -866,8 +866,8 @@ switch (command) {
 
   createBuildOptimization() {
     const buildOptimization = `#!/usr/bin/env node
-const { execSync } = require("$1");
-const fs = require("$1");
+const { execSync } = require("$1")
+const fs = require("$1")
 const path = require("path")
 class BuildOptimizer {
   constructor() {

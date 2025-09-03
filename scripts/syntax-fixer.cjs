@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 const fs = require("fs").promises
-const path = require("$1");
-const { exec } = require("$1");
-const util = require("$1");
+const path = require("$1")
+const { exec } = require("$1")
+const util = require("$1")
 const execAsync = util.promisify(exec)
 class SyntaxFixer {
   constructor() {
@@ -292,7 +292,7 @@ class SyntaxFixer {
         syntaxErrors: { found: 0, fixed: 0 },,
 }
       await this.log("Starting syntax fixer", "INFO");";      const results = {
-        "timestamp": new Date().toISOString(),;        mergeConflicts": { "found: 0, fixed": 0 },";        syntaxErrors: { "found": 0, fixed: 0 },,"}
+        "timestamp": new Date().toISOString();mergeConflicts": { "found: 0, fixed": 0 },";        syntaxErrors: { "found": 0, fixed: 0 },,"}
 
       // Fix merge conflicts
       const conflictFiles = await this.findMergeConflicts()

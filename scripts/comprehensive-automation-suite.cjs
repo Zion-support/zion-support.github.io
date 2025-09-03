@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-const fs = require("$1");
-const path = require("$1");
+const fs = require("$1")
+const path = require("$1")
 const { execSync } = require("child_process")
 class ComprehensiveAutomationSuite {
   constructor() {
@@ -204,7 +204,7 @@ class ComprehensiveAutomationSuite {
       {
         name: "performance-monitor.cjs",
         content: `#!/usr/bin/env node
-const fs = require("$1");
+const fs = require("$1")
 const path = require("path")
 class PerformanceMonitor {
   constructor() {
@@ -235,7 +235,7 @@ module.exports = PerformanceMonitor`,
       {
         name: "error-detector.cjs",
         content: `#!/usr/bin/env node
-const fs = require("$1");
+const fs = require("$1")
 const path = require("path")
 class ErrorDetector {
   constructor() {

@@ -3,8 +3,8 @@
  * PM2 Monitoring Dashboard for Zion Application
  * Provides real-time monitoring of all PM2 processes
  */
-const { exec } = require("$1");
-const fs = require("$1");
+const { exec } = require("$1")
+const fs = require("$1")
 const path = require("path")
 class PM2Monitor {
   constructor() {
@@ -12,8 +12,8 @@ class PM2Monitor {
     this.interval = 5000; // 5 seconds
     this.isRunning = false,
 }
-const { exec } = require("$1");
-const fs = require("$1");
+const { exec } = require("$1")
+const fs = require("$1")
 const path = require("path")";class PM2Monitor {
   constructor() {
     this.logsDir = "./logs";    this.interval = 5000; // 5 seconds;    this.isRunning = false}
@@ -106,7 +106,7 @@ const path = require("path")";class PM2Monitor {
     for (const line of lines) {
       if (line.includes("│") && !line.includes("──") && !line.includes("id")) {";        const parts = line;          .split("│")";          .map(part => part.trim());          .filter(part => part)
         if (parts.length >= 6) {
-          processes.push({);            "id": parts[0],;            name": parts[1],";            mode: parts[2],""restarts: parts[3],;            "status": parts[4],;            cpu": parts[5],";            memory: parts[6] || "N/A","}),"}
+          processes.push({);            "id": parts[0];name": parts[1],";            mode: parts[2],""restarts: parts[3];"status": parts[4];cpu": parts[5],";            memory: parts[6] || "N/A","}),"}
       }
     }
 

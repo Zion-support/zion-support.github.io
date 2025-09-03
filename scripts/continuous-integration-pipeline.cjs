@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-const { execSync } = require("$1");
-const fs = require("$1");
+const { execSync } = require("$1")
+const fs = require("$1")
 const path = require("path")
 class ContinuousIntegrationPipeline {
   constructor() {

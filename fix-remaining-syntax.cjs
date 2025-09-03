@@ -1,69 +1,69 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
-const fs = require("fs");
-const path = require("path");
-function fixFile(filePath) {
+const fs = require('fs')
+const path = require('path')
+function fixRemainingSyntaxErrors(filePath) {
   try {
-  let content = fs.readFileSync(filePath, "utf8");
-    let originalContent = content;
-    // Fix extra quotes at end of lines;
-    content = content.replace(/;"/g, ";");
-    content = content.replace(/,"/g, ",");
-    content = content.replace(/}"/g, "}");
-    content = content.replace(/\)"/g, ")");
-    content = content.replace(/\]"/g, "]");
-    content = content.replace(/}"/g, "}");
-    content = content.replace(/\/>"/g, "/>");
-    content = content.replace(/">"/g, ">");
-    content = content.replace(/">"/g, ">");
-    // Fix broken import statements;
-    content = content.replace(/import\s+(\w+)\s+from\s*,\s*[""`]([^""`]+)[""`]/g, "import $1 from "$2"");
-    // Fix missing semicolons;
-    content = content.replace(/(\w+\([^)]*\))\s*$/gm, "$1;");
-    // Fix broken object properties;
-    content = content.replace(/(\w+):\s*([^,}]+)\s*(\w+):/g, "$1: $2,\n    $3:");
-    // Fix broken function calls;
-    content = content.replace(/(\w+\([^)]*\))\s*\)\s*}/g, "$1);");
-    // Only write if content changed;
-    if (content !== originalContent) {
-  fs.writeFileSync(filePath, content, "utf8");
-      console.log(`Fixed: ${filePath}`);
-      return true;,
-}
-    ;
-    return false;,
-} catch (error) {
-  console.error(`Error fixing ${filePath}:`, error.message);
-    return false;,
-}
-}
-;
-function findFiles(dir, extensions = [".js", ".jsx", ".ts", ".tsx"]) {
-  const files = [];
-  function traverse(currentDir) {
-  const items = fs.readdirSync(currentDir);
-    for (const item of items) {
-  const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {
-  traverse(fullPath);,
-} else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
-  files.push(fullPath);,
-}
+    let content = fs.readFileSync(filePath, 'utf8')
+    let fixed = false
+    // More specific fixes for remaining syntax errors
+    const fixes = [
+      // Fix encoding syntax
+      { pattern: /encoding:\s*"utf8",\s*;/g, replacement: 'encoding: "utf8",' },
+      // Fix cwd syntax
+      { pattern: /cwd:\s*this\.projectRoot,\s*;/g, replacement: 'cwd: this.projectRoot,' },
+      // Fix stdio syntax
+      { pattern: /stdio:\s*options\.silent\s*\?\s*"pipe"\s*:\s*"inherit",\s*;/g, replacement: 'stdio: options.silent ? "pipe" : "inherit",' },
+      // Fix spread operator syntax
+      { pattern: /\.\.\.options\s*;\s*}/g, replacement: '...options }' },
+      // Fix return statement syntax
+      { pattern: /return\s+result;\s*}\s*catch/g, replacement: 'return result;\n    } catch' },
+      // Fix error handling syntax
+      { pattern: /return\s+null;\s*}/g, replacement: 'return null;\n    }' },
+      // Fix method definitions
+      { pattern: /async\s+(\w+)\([^)]*\)\s*{\s*\n\s*this\./g, replacement: 'async $1() {\n    this.' },
+      // Fix class method syntax
+      { pattern: /}\s*;\s*\n\s*async/g, replacement: '}\n\n  async' },
+      // Fix constructor syntax
+      { pattern: /constructor\(\)\s*{\s*\n\s*this\./g, replacement: 'constructor() {\n    this.' }
+    ]
+    fixes.forEach(fix => {
+      const newContent = content.replace(fix.pattern, fix.replacement)
+      if (newContent !== content) {
+        content = newContent
+        fixed = true
+      }
+    })
+    if (fixed) {
+      fs.writeFileSync(filePath, content)
+      console.log(`✅ Fixed remaining syntax errors in ${filePath}`)
+      return true
     }
+    
+    return false
+  } catch (error) {
+    console.error(`❌ Error fixing ${filePath}:`, error.message)
+    return false
   }
-  ;
-  traverse(dir);
-  return files;,
 }
-;
-// Main execution;
-const files = findFiles(".");
-let fixedCount = 0;
-console.log(`Found ${files.length} files to check...`);
-files.forEach(file => {
-  if (fixFile(file)) {
-  fixedCount++;,
+
+function main() {
+  const automationDir = path.join(process.cwd(), 'automation')
+  const files = fs.readdirSync(automationDir)
+    .filter(file => file.endsWith('.cjs'))
+    .map(file => path.join(automationDir, file))
+  console.log('🔧 Fixing remaining automation script syntax errors...')
+  let fixedCount = 0
+  files.forEach(file => {
+    if (fixRemainingSyntaxErrors(file)) {
+      fixedCount++
+    }
+  })
+  console.log(`✅ Fixed ${fixedCount} automation scripts`)
 }
-});
-console.log(`Fixed ${fixedCount} files`)
+
+if (require.main === module) {
+  main()
+}
+
+module.exports = { fixRemainingSyntaxErrors };

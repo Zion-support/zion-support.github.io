@@ -3,8 +3,8 @@
  * Comprehensive Automation Orchestrator
  * Orchestrates all automation scripts for maximum efficiency
  */
-const fs = require("$1");
-const path = require("$1");
+const fs = require("$1")
+const path = require("$1")
 const { execSync, spawn } = require("child_process")
 class ComprehensiveAutomationOrchestrator {
   constructor() {

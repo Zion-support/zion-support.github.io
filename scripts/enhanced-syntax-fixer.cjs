@@ -3,7 +3,7 @@
  * Enhanced Syntax Fixer
  * Advanced syntax error detection and fixing
  */
-const fs = require("$1");
+const fs = require("$1")
 const path = require("path")
 class EnhancedSyntaxFixer {
   constructor() {

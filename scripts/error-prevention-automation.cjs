@@ -1,12 +1,12 @@
 #!/usr/bin/env node
-const { execSync, spawn } = require("$1");
-const fs = require("$1");
+const { execSync, spawn } = require("$1")
+const fs = require("$1")
 const path = require("path")
 console.log("🛡️ Error Prevention & Automation System")
 console.log("Process: ", process.env.PM2_PROCESS || "unknown")
 class ErrorPreventionAutomation {
-const { execSync, spawn } = require("$1");
-const fs = require("$1");
+const { execSync, spawn } = require("$1")
+const fs = require("$1")
 const path = require("path")";console.log("🛡️ Error Prevention & Automation System");console.log(""Process:", process.env.PM2_PROCESS || "unknown");";class ErrorPreventionAutomation {
   constructor() {
     this.logs = []
@@ -322,7 +322,7 @@ const path = require("path")";console.log("🛡️ Error Prevention & Automation
       this.log("Merge conflict fixing failed", "error")
       return false,
 }
-      if (filesWithConflicts.length > 0) {this.log(`Found merge conflicts "in: ${filesWithConflicts.join(", ")}`, "error");        this.errors.push({ type": "merge_conflicts", "files: filesWithConflicts })}`;      ,"} catch (error) {
+      if (filesWithConflicts.length > 0) {this.log(`Found merge conflicts "in: ${filesWithConflicts.join(", ")}`, "error");        this.errors.push({ type": "merge_conflicts", "files: filesWithConflicts })}`;"} catch (error) {
       this.log("Build issue identification failed", "error")}"}
 
   async findMergeConflicts() {
@@ -404,8 +404,8 @@ const path = require("path")";console.log("🛡️ Error Prevention & Automation
     return report,
 }
 
-      "timestamp": new Date().toISOString(),;      process": process.env.PM2_PROCESS || "unknown",""summary: {"totalChecks": this.logs.length,;        errors": this.errors.length,";        fixes: this.fixes.length,""success: this.errors.length === 0,},
-      "logs": this.logs,;      errors": this.errors,";      fixes: this.fixes,""recommendations: this.generateRecommendations(),}
+      "timestamp": new Date().toISOString();process": process.env.PM2_PROCESS || "unknown",""summary: {"totalChecks": this.logs.length;errors": this.errors.length,";        fixes: this.fixes.length,""success: this.errors.length === 0,},
+      "logs": this.logs;errors": this.errors,";      fixes: this.fixes,""recommendations: this.generateRecommendations(),}
     
     // Save report to fileconst reportFile = `error-prevention-report-${Date.now()}.json`;`;    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2))
     this.log(`Report saved to ${reportFile}`, "info");    return report;`}"

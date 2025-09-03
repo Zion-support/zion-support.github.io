@@ -3,8 +3,8 @@
  * Health Checker
  * Comprehensive health check for the application
  */
-const fs = require("$1");
-const path = require("$1");
+const fs = require("$1")
+const path = require("$1")
 const { execSync } = require("child_process")
 class HealthChecker {
   constructor() {

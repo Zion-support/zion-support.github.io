@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-const fs = require("$1");
-const path = require("$1");
+const fs = require("$1")
+const path = require("$1")
 const { execSync } = require("child_process")
 // ANSI color codes for better output
 const colors = {
@@ -13,8 +13,8 @@ const colors = {
   cyan: "\x1b[36m"}
 function log(message, color = `reset`) {
 
-const fs = require("$1");
-const path = require("$1");
+const fs = require("$1")
+const path = require("$1")
 const { execSync } = require("child_process")
 // ANSI color codes for better output
 const colors = {

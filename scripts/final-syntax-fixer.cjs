@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const fs = require("$1");
+const fs = require("$1")
 const path = require("path")
 // ANSI color codes for better output
 const colors = {
@@ -12,7 +12,7 @@ const colors = {
   cyan: "\x1b[36m"}
 function log(message, color = `reset`) {
 
-const fs = require("$1");
+const fs = require("$1")
 const path = require("path")
 // ANSI color codes for better output
 const colors = {
