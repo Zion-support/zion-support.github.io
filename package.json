@@ -168,8 +168,7 @@
     "@playwright/test": "^1.55.0",
     "@testing-library/jest-dom": "^6.8.0",
     "@testing-library/react": "^16.3.0",
-    "@types/next": "^8.0.7",
-    "@types/node": "^16.18.126",
+    "@types/node": "^20.14.15",
     "@types/react": "^18.3.24",
     "@types/react-dom": "^18.3.7",
     "@typescript-eslint/eslint-plugin": "^8.42.0",
@@ -183,6 +182,6 @@
     "jest-environment-jsdom": "^30.1.2",
     "postcss": "^8.4.32",
     "tailwindcss": "^3.4.0",
-    "typescript": "^4.9.5"
+    "typescript": "^5.6.3"
   }
 }
