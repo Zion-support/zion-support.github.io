@@ -12,9 +12,55 @@ export default function Home() {
     <>
       <Head>
         <title>Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions</title>
-        <meta name="description" content="Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions." />
-        <meta name="keywords" content="micro SaaS, AI services, IT solutions, cloud computing, automation, machine learning, DevOps, cybersecurity" />
+        <meta name="description" content="Leading provider of micro SaaS products, AI services, and IT solutions. 280+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions." />
+        <meta name="keywords" content="micro SaaS, AI services, IT solutions, cloud computing, automation, machine learning, DevOps, cybersecurity, enterprise software, digital transformation" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Zion Tech Group" />
+        <meta property="og:title" content="Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions" />
+        <meta property="og:description" content="Leading provider of micro SaaS products, AI services, and IT solutions. 280+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={contact.site} />
+        <meta property="og:site_name" content="Zion Tech Group" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions" />
+        <meta name="twitter:description" content="Leading provider of micro SaaS products, AI services, and IT solutions. 280+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions." />
         <link rel="canonical" href={contact.site} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Zion Tech Group",
+              "url": contact.site,
+              "logo": `${contact.site}/favicon.svg`,
+              "description": "Leading provider of innovative micro SaaS products, AI services, and IT solutions. Empowering businesses with cutting-edge technology.",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "364 E Main St STE 1008",
+                "addressLocality": "Middletown",
+                "addressRegion": "DE",
+                "postalCode": "19709",
+                "addressCountry": "US"
+              },
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": contact.phone,
+                "contactType": "customer service",
+                "email": contact.email
+              },
+              "sameAs": [
+                contact.site
+              ],
+              "offers": {
+                "@type": "AggregateOffer",
+                "offerCount": "280",
+                "description": "Micro SaaS Products, AI Services, and IT Solutions"
+              }
+            })
+          }}
+        />
       </Head>
       
       <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
