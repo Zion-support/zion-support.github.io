@@ -4,3 +4,4 @@ const MainSidebar = dynamic(() => import('./MainSidebar'), {
 });
 
 export default MainSidebar;
+'

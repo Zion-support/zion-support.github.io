@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 export default function BlockchainEnterpriseSolutions(...args[]):  {
   const features = [
-    {
+  {
       icon: Lock,
       title: 'Enhanced Security',
       description: 'Immutable ledger technology with cryptographic security and audit trails',
@@ -36,47 +36,66 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
       color: 'from-indigo-500 to-purple-500'}
   ];
   const services = [
-    {
+<<<<<<< HEAD
+    {'
       title: 'Blockchain Strategy',
       description: 'Comprehensive blockchain roadmap and implementation strategy',
       price: 'From $5,000',
       features['Technology assessment', 'Use case identification', 'ROI analysis', 'Implementation plan']},
+    {'
+=======
+  {
+      title: 'Blockchain Strategy',
+      description: 'Comprehensive blockchain roadmap and implementation strategy',
+      price: 'From $5,000',
+      features['Technology assessment,Use case identification,ROI analysis,Implementation plan']},
     {
+>>>>>>> main
       title: 'Smart Contract Development',
       description: 'Custom smart contracts for business automation and compliance',
       price: 'From $8,000',
-      features['Contract design', 'Security auditing', 'Testing & deployment', 'Maintenance']
+      features['Contract design,Security auditing,Testing & deployment,Maintenance']
     },
-    {
+    {'
       title: 'Private Blockchain Networks',
       description: 'Enterprise-grade private blockchain infrastructure',
       price: 'From $15,000',
-      features['Network setup', 'Node configuration', 'Security implementation', 'Monitoring']
+      features['Network setup,Node configuration,Security implementation,Monitoring']
     },
-    {
+<<<<<<< HEAD
+    {'
       features['Protocol development', 'Liquidity management', 'Risk assessment', 'Integration']
+=======
+    {
+      features['Protocol development,Liquidity management,Risk assessment,Integration']
+>>>>>>> main
     }
       title: 'DeFi Solutions',
       description: 'Decentralized finance applications and protocols',
       price: 'From $20,000',
-      features: ['Protocol development', 'Liquidity management', 'Risk assessment', 'Integration']
+      features: ['Protocol development,Liquidity management,Risk assessment,Integration']
     }
   ];
-  const useCases = [
+<<<<<<< HEAD
+  const useCases = ['
     { name: 'Supply Chain', icon: Network, description: 'End-to-end traceability and transparency' },
+=======
+  const useCases = [
+  { name: 'Supply Chain', icon: Network, description: 'End-to-end traceability and transparency' },
+>>>>>>> main
     { name: 'Financial Services', icon: Bitcoin, description: 'Cross-border payments and settlements' },
     { name: 'Healthcare', icon: Shield, description: 'Patient data security and interoperability' },
     { name: 'Real Estate', icon: FileText, description: 'Property records and title management' },
     { name: 'Voting Systems', icon: CheckCircle, description: 'Secure and transparent elections' },
     { name: 'Intellectual Property', icon: Lock, description: 'Digital rights management and protection' }
   ];
-  return(
+  return('
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
-      <SEO
+      <SEO'
         title='Blockchain Enterprise Solutions - Zion Tech Group';
         description='Transform your business with enterprise-grade blockchain solutions. From smart contracts to DeFi applications, we help you leverage the power of distributed ledger technology.'/>{/* Hero Section */}
-      <section className='relative overflow-hidden py-20'>
-        <div className='absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20'></div>
+      <section className='relative overflow-hidden py-20>
+        <div className='absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20'></div>'
         <div className='container mx-auto px-4 relative z-10'>
           <motion.div
             initial = {
@@ -87,32 +106,35 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
   y: 0}}
             transition={{ duration: 0.6 }}
             className='text-center max-w-4xl mx-auto';
-            <div className='flex justify-center mb-6'>
-              <div className='w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center'>
+            <div className='flex justify-center mb-6>
+              <div className='w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center>
                 <Lock className='w-10 h-10 text-white' />
               </div>
-            </div>
+            </div>'
             <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>
-              Blockchain
+              Blockchain'
               <span className='block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
                 Enterprise Solutions
               </span>
-            </h1>
+            </h1>'
             <p className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto'>
               Unlock the potential of distributed ledger technology with our enterprise blockchain solutions.;
               Build trust, transparency, and efficiency into your business processes.
-            </p>
+            </p>'
             <div className='flex flex-wrap justify-center gap-4'>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className='px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300';
+                className='px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover: from-purple-600 hove,
+    r:to-pink-600 transition-all duration-300';
                 Get Started;
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scal,
+    e: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className='px-8 py-4 border border-slate-600 text-white font-semibold rounded-lg hover:border-slate-500 hover:bg-slate-800/50 transition-all duration-300';
+                className='px-8 py-4 border border-slate-600 text-white font-semibold rounded-lg hover:border-slate-500 hove,
+    r:bg-slate-800/50 transition-all duration-300';
                 Learn More;
               </motion.button>
             </div>
@@ -120,7 +142,7 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
         </div>
       </section>
       {/* Features Section */}
-      <section className='py-20'>
+      <section className='py-20>
         <div className='container mx-auto px-4'>
           <motion.div
             initial = {
@@ -133,13 +155,14 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
             className='text-center mb-16';
             <h2 className='text-4xl font-bold text-white mb-4'>
               Why Choose Blockchain Technology?
-            </h2>
+            </h2>'
             <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
               Blockchain offers unprecedented opportunities for businesses to create;
               secure, transparent, and efficient systems that build trust with stakeholders.
             </p>
-          </motion.div>
-          <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>
+          </motion.div>'
+          <div className='grid grid-cols-1 md: grid-cols-2 l,
+    g:grid-cols-3 gap-8'>
             {features.map((feature, index)  => (
               <motion.div
                 key={feature.title}
@@ -153,10 +176,10 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
   { duration: 0.6,
   delay: index * 0.1}}
                 className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300';
-                <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center mb-4`}>
+                <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center mb-4`}>`
                   <feature.icon className='w-6 h-6 text-white' />
-                </div>
-                <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>
+                </div>'
+                <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>'
                 <p className='text-slate-300'>{feature.description}</p>
               </motion.div>
             ))}
@@ -164,7 +187,7 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
         </div>
       </section>
       {/* Services & Pricing */}
-      <section className='py-20 bg-slate-800/30'>
+      <section className='py-20 bg-slate-800/30>
         <div className='container mx-auto px-4'>
           <motion.div
             initial = {
@@ -177,12 +200,13 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
             className='text-center mb-16';
             <h2 className='text-4xl font-bold text-white mb-4'>
               Our Blockchain Services
-            </h2>
+            </h2>'
             <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
               Comprehensive blockchain solutions tailored to your business needs and industry requirements
             </p>
-          </motion.div>
-          <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6'>
+          </motion.div>'
+          <div className='grid grid-cols-1 md: grid-cols-2 l,
+    g:grid-cols-4 gap-6'>
             {services.map((service, index)  => (
               <motion.div;
                 key={service.title}
@@ -196,12 +220,12 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
   { duration: 0.6,
   delay: index * 0.1}}
                 className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300';
-                <h3 className='text-xl font-semibold text-white mb-3'>{service.title}</h3>
-                <p className='text-slate-300 mb-4'>{service.description}</p>
-                <div className='text-2xl font-bold text-pink-400 mb-4'>{service.price}</div>
+                <h3 className='text-xl font-semibold text-white mb-3'>{service.title}</h3>'
+                <p className='text-slate-300 mb-4'>{service.description}</p>'
+                <div className='text-2xl font-bold text-pink-400 mb-4'>{service.price}</div>'
                 <ul className='space-y-2'>
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className='flex items-center text-sm text-slate-300'>
+                  {service.features.map((feature, featureIndex) => ('
+                    <li key={featureIndex} className='flex items-center text-sm text-slate-300>
                       <div className='w-2 h-2 bg-pink-400 rounded-full mr-3'></div>
                       {feature}
                     </li>
@@ -210,7 +234,8 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className='w-full mt-6 px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300';
+                  className='w-full mt-6 px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hove,
+    r:to-pink-600 transition-all duration-300';
                   Get Quote;
                 </motion.button>
               </motion.div>
@@ -219,7 +244,7 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
         </div>
       </section>
       {/* Use Cases */}
-      <section className='py-20'>
+      <section className='py-20>
         <div className='container mx-auto px-4'>
           <motion.div
             initial = {
@@ -232,13 +257,14 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
             className='text-center mb-16';
             <h2 className='text-4xl font-bold text-white mb-4'>
               Blockchain Use Cases
-            </h2>
+            </h2>'
             <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
               Discover how blockchain technology can transform various industries;
               and business processes
             </p>
-          </motion.div>
-          <div className='grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-8'>
+          </motion.div>'
+          <div className='grid grid-cols-2 md: grid-cols-3 l,
+    g:grid-cols-6 gap-8'>
             {useCases.map((useCase, index)  => (
               <motion.div
                 key={useCase.name}
@@ -252,10 +278,10 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
   { duration: 0.6,
   delay: index * 0.1}}
                 className='text-center group';
-                <div className='w-16 h-16 bg-slate-800 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-slate-700 transition-all duration-300'>
+                <div className='w-16 h-16 bg-slate-800 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-slate-700 transition-all duration-300>
                   <useCase.icon className='w-8 h-8 text-pink-400' />
-                </div>
-                <h3 className='text-lg font-semibold text-white mb-2'>{useCase.name}</h3>
+                </div>'
+                <h3 className='text-lg font-semibold text-white mb-2'>{useCase.name}</h3>'
                 <p className='text-sm text-slate-400'>{useCase.description}</p>
               </motion.div>
             ))}
@@ -263,7 +289,7 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
         </div>
       </section>
       {/* CTA Section */}
-      <section className='py-20 bg-gradient-to-r from-purple-600/20 to-pink-600/20'>
+      <section className='py-20 bg-gradient-to-r from-purple-600/20 to-pink-600/20>
         <div className='container mx-auto px-4 text-center'>
           <motion.div
             initial = {
@@ -275,22 +301,25 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
             transition={{ duration: 0.6 }}
             <h2 className='text-4xl font-bold text-white mb-6'>
               Ready to Transform Your Business?
-            </h2>
-            <p className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto'>
+            </h2>'
+            <p className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto>
               Let's discuss how blockchain technology can revolutionize your operations,
               enhance security, and create new opportunities for growth and innovation.
-            </p>
+            </p>'
             <div className='flex flex-wrap justify-center gap-4'>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className='px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300';
+                className='px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover: from-purple-600 hove,
+    r:to-pink-600 transition-all duration-300';
                 Schedule Consultation;
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scal,
+    e: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className='px-8 py-4 border border-slate-600 text-white font-semibold rounded-lg hover:border-slate-500 hover:bg-slate-800/50 transition-all duration-300';
+                className='px-8 py-4 border border-slate-600 text-white font-semibold rounded-lg hover:border-slate-500 hove,
+    r:bg-slate-800/50 transition-all duration-300';
                 View Case Studies;
               </motion.button>
             </div>

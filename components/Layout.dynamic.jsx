@@ -4,3 +4,4 @@ const Layout = dynamic(() => import('./Layout'), {
 });
 
 export default Layout;
+'

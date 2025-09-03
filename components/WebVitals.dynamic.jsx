@@ -4,3 +4,4 @@ const WebVitals = dynamic(() => import('./WebVitals'), {
 });
 
 export default WebVitals;
+'

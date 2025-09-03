@@ -186,7 +186,10 @@ monitor.run()
   });
 `;
 
-    fs.writeFileSync(path.join(this.scriptsDir, 'enhanced-performance-monitor.js'), content);
+    fs.writeFileSync(
+      path.join(this.scriptsDir, 'enhanced-performance-monitor.js'),
+      content
+    );
     this.createdCount++;
     this.log('✅ Created enhanced performance monitor');
   }
@@ -390,7 +393,10 @@ checker.run()
   });
 `;
 
-    fs.writeFileSync(path.join(this.scriptsDir, 'enhanced-health-checker.js'), content);
+    fs.writeFileSync(
+      path.join(this.scriptsDir, 'enhanced-health-checker.js'),
+      content
+    );
     this.createdCount++;
     this.log('✅ Created enhanced health checker');
   }
@@ -601,7 +607,10 @@ optimizer.run()
   });
 `;
 
-    fs.writeFileSync(path.join(this.scriptsDir, 'enhanced-seo-optimizer.js'), content);
+    fs.writeFileSync(
+      path.join(this.scriptsDir, 'enhanced-seo-optimizer.js'),
+      content
+    );
     this.createdCount++;
     this.log('✅ Created enhanced SEO optimizer');
   }
@@ -824,7 +833,10 @@ auditor.run()
   });
 `;
 
-    fs.writeFileSync(path.join(this.scriptsDir, 'enhanced-security-auditor.js'), content);
+    fs.writeFileSync(
+      path.join(this.scriptsDir, 'enhanced-security-auditor.js'),
+      content
+    );
     this.createdCount++;
     this.log('✅ Created enhanced security auditor');
   }
@@ -839,11 +851,15 @@ auditor.run()
       this.createSecurityAuditor();
 
       this.log(`🎉 Enhanced Automation Script Creator Completed`);
-      this.log(`📊 Summary: Created ${this.createdCount} enhanced automation scripts`);
+      this.log(
+        `📊 Summary: Created ${this.createdCount} enhanced automation scripts`
+      );
 
       return { createdCount: this.createdCount };
     } catch (error) {
-      this.log(`💥 Enhanced Automation Script Creator Failed: ${error.message}`);
+      this.log(
+        `💥 Enhanced Automation Script Creator Failed: ${error.message}`
+      );
       throw error;
     }
   }
@@ -851,12 +867,16 @@ auditor.run()
 
 // Run the enhanced automation script creator
 const creator = new EnhancedAutomationScriptCreator();
-creator.run()
+creator
+  .run()
   .then(result => {
     console.log('✅ Enhanced automation scripts created successfully');
     process.exit(0);
   })
   .catch(error => {
-    console.error('❌ Enhanced automation script creation failed:', error.message);
+    console.error(
+      '❌ Enhanced automation script creation failed:',
+      error.message
+    );
     process.exit(1);
   });

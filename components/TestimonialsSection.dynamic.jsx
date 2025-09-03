@@ -4,3 +4,4 @@ const TestimonialsSection = dynamic(() => import('./TestimonialsSection'), {
 });
 
 export default TestimonialsSection;
+'

@@ -4,3 +4,4 @@ const AccessibilityEnhancer = dynamic(() => import('./AccessibilityEnhancer'), {
 });
 
 export default AccessibilityEnhancer;
+'

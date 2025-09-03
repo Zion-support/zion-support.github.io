@@ -1,6 +1,6 @@
 import dynamic from 'next/dynamic';
 
-const EnhancedPerformanceMonitor = dynamic(
+const EnhancedPerformanceMonitor = dynamic('
   () => import('./EnhancedPerformanceMonitor'),
   {
     loading: () => <p>Loading...</p>,
@@ -8,3 +8,4 @@ const EnhancedPerformanceMonitor = dynamic(
 );
 
 export default EnhancedPerformanceMonitor;
+'

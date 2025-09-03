@@ -1,5 +1,4 @@
-import React from,
-  react' import { motion } from;
+import React from react' import { motion } from;
   'framer-motion' import {  Home, TrendingUp, BarChart3, Target, CheckCircle, Users, Zap, Award, Star, Phone, Mail, MapPin, ExternalLink, ArrowRight, Building, MapPin as MapPinIcon, DollarSign, BarChart, Eye, Search, Calculator, Shield, Clock, Globe, Database, Analytics, PieChart, LineChart } from;
   'lucide-react' import { SEO } from;
   '../../components/SEO'  export default function AIRealEstateAnalyticsPlatform() { const contactInfo = { phone: '+1 302 464 0950, email:,

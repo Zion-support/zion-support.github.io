@@ -28,16 +28,21 @@ export interface EmergingTechService {
    variant: ServiceVariant;
    contactInfo: { mobile: string;
    email: string;
-   address: string;
-   website: string}
+   addres,
+    s: string;
+   websit,
+    e: string}
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-reviews: number;export const emergingTechServices: EmergingTechService[] = [;
+review,
+    s: number;export const emergingTechService,
+    s: EmergingTechService[] = [;
   // Quantum Internet Security Platform{
-    id:,
+    i,
+    d:,
   quantum-internet-security-platform',
     name: 'Quantum Internet Security Platform,
     tagline:,
@@ -48,7 +53,7 @@ reviews: number;export const emergingTechServices: EmergingTechService[] = [;
     description:;
   'Next-generation quantum internet security platform that provides unbreakable encryption using quantum key distribution and post-quantum cryptography algorithms.',
     features[;
-  'Quantum key distribution (QKD)',
+  'Quantum key distribution (QKD),
   'Post-quantum cryptography algorithms',
   'Quantum-resistant encryption',
   'Real-time threat detection',
@@ -65,7 +70,8 @@ reviews: number;export const emergingTechServices: EmergingTechService[] = [;
     color: 'from-indigo-600 to-purple-700,
     textColor:,
   text-indigo-400',
-    link: 'https://ziontechgroup.com/quantum-internet-security,
+    link: 'http,
+    s://ziontechgroup.com/quantum-internet-security,
     marketPosition:,
   Leading edge in quantum internet security. First-to-market solution for post-quantum cryptography with no direct competitors.',
     targetAudience: Government agencies, Financial institutions, Healthcare organizations, Defense contractors, Critical infrastructure',
@@ -103,12 +109,14 @@ reviews: number;export const emergingTechServices: EmergingTechService[] = [;
   800% annual growth',
     variant: 'quantum-advanced,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Full quantum security platform with QKD hardware, post-quantum algorithms, comprehensive monitoring, and government compliance.',
@@ -145,7 +153,8 @@ reviews: number;export const emergingTechServices: EmergingTechService[] = [;
     color: 'from-pink-600 to-rose-600,
     textColor:,
   text-pink-400',
-    link: 'https://ziontechgroup.com/neural-interface-platform,
+    link: 'http,
+    s://ziontechgroup.com/neural-interface-platform,
     marketPosition:,
   Leading edge in neural interface development. Competes with Neuralink ($50000+ one-time) and CTRL-labs ($10000+ one-time) with subscription model.',
     targetAudience: Medical device companies, Gaming studios, Research institutions, Healthcare providers, Technology startups',
@@ -188,12 +197,14 @@ reviews: number;export const emergingTechServices: EmergingTechService[] = [;
   600% annual growth',
     variant: 'neural-quantum,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Full development platform with EEG processing, ML algorithms, comprehensive APIs, and medical device compliance.',
@@ -230,7 +241,8 @@ reviews: number;export const emergingTechServices: EmergingTechService[] = [;
     color: 'from-blue-600 to-cyan-600,
     textColor:,
   text-blue-400',
-    link: 'https://ziontechgroup.com/autonomous-vehicle-ai,
+    link: 'http,
+    s://ziontechgroup.com/autonomous-vehicle-ai,
     marketPosition:,
   Leading edge in autonomous vehicle AI. Competes with Waymo ($50000+/month) and Cruise ($30000+/month) with more accessible pricing.',
     targetAudience: Automotive manufacturers, Logistics companies, Transportation startups, Research institutions, Government agencies',
@@ -273,12 +285,14 @@ reviews: number;export const emergingTechServices: EmergingTechService[] = [;
   450% annual growth',
     variant: 'neural-cyberpunk,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Full autonomous vehicle platform with advanced AI, computer vision, safety systems, and comprehensive testing tools.',
@@ -315,7 +329,8 @@ reviews: number;export const emergingTechServices: EmergingTechService[] = [;
     color: 'from-purple-600 to-indigo-700,
     textColor:,
   text-purple-400',
-    link: 'https://ziontechgroup.com/space-technology-platform,
+    link: 'http,
+    s://ziontechgroup.com/space-technology-platform,
     marketPosition:,
   Leading edge in space technology development. Competes with SpaceX ($100000+ one-time) and Blue Origin ($50000+ one-time) with subscription model.',
     targetAudience: Space companies, Satellite manufacturers, Government agencies, Research institutions, Technology startups',
@@ -358,12 +373,14 @@ reviews: number;export const emergingTechServices: EmergingTechService[] = [;
   700% annual growth',
     variant: 'quantum-space,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Full space technology platform with AI algorithms, materials science, mission planning, and comprehensive development tools.',
@@ -400,7 +417,8 @@ reviews: number;export const emergingTechServices: EmergingTechService[] = [;
     color: 'from-green-600 to-emerald-600,
     textColor:,
   text-green-400',
-    link: 'https://ziontechgroup.com/biotech-ai-platform,
+    link: 'http,
+    s://ziontechgroup.com/biotech-ai-platform,
     marketPosition:,
   Leading edge in biotech AI. Competes with Insitro ($50000+/month) and Recursion ($30000+/month) with more accessible pricing.',
     targetAudience: Pharmaceutical companies, Biotech startups, Research institutions, Healthcare organizations, Government agencies',
@@ -443,12 +461,14 @@ reviews: number;export const emergingTechServices: EmergingTechService[] = [;
   350% annual growth',
     variant: 'neural-quantum,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Full biotech AI platform with advanced algorithms, computational biology tools, research collaboration, and regulatory compliance.',

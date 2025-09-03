@@ -4,3 +4,4 @@ const SecurityEnhancer = dynamic(() => import('./SecurityEnhancer'), {
 });
 
 export default SecurityEnhancer;
+'

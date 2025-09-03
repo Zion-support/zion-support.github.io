@@ -4,3 +4,4 @@ const ModernLayout = dynamic(() => import('./ModernLayout'), {
 });
 
 export default ModernLayout;
+'

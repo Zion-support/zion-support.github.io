@@ -9,9 +9,12 @@ export interface QuantumAiService2025 {
    category: string;
    realImplementation: boolean;
    contactInfo: { mobile: string;
-   email: string;
-   address: string}export const quantumAIServices2025: QuantumAiService2025[] = [{
-    id: 'quantum-ai-hybrid',
+   emai,
+    l: string;
+   addres,
+    s: string}export const quantumAIServices2025: QuantumAiService2025[] = [{
+    i,
+    d: 'quantum-ai-hybrid',
     name: 'Quantum AI Hybrid Platform',
     tagline: 'Combining quantum computing with artificial intelligence',
     price: '$299/month',
@@ -26,8 +29,9 @@ export interface QuantumAiService2025 {
     link: '/services/quantum-ai-hybrid',
     category: 'Quantum AI',
     realImplementation: true,
-    contactInfo: {
-      mobile: '+1 302 464 0950',
+    contactInfo: {'
+      mobil,
+    e: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709';
 ]}}}

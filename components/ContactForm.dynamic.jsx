@@ -4,3 +4,4 @@ const ContactForm = dynamic(() => import('./ContactForm'), {
 });
 
 export default ContactForm;
+'

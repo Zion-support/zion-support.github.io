@@ -4,3 +4,4 @@ const EnhancedFooter = dynamic(() => import('./EnhancedFooter'), {
 });
 
 export default EnhancedFooter;
+'

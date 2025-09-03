@@ -4,3 +4,4 @@ const PerformanceOptimizer = dynamic(() => import('./PerformanceOptimizer'), {
 });
 
 export default PerformanceOptimizer;
+'

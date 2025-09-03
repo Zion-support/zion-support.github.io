@@ -26,22 +26,29 @@ export interface SpecializedITInfrastructureService {
    growthRate: string;
    contactInfo: { mobile: string;
    email: string;
-   address: string;
-   website: string}
+   addres,
+    s: string;
+   websit,
+    e: string}
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
-  rating: number;
-reviews: number;const contact = {
-  mobile:,
+  ratin,
+    g: number;
+review,
+    s: number;const contact = {
+  mobil,
+    e:,
   +1 302 464 0950',
   email: 'kleber@ziontechgroup.com,
   address:,
   364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com}
+  website: 'http,
+    s://ziontechgroup.com}
 export const specializedITInfrastructureServices2025: SpecializedITInfrastructureService[] = [{
-    id:,
+    i,
+    d:,
   edge-computing-optimization-platform',
     name: 'Edge Computing Optimization Platform,
     tagline:,
@@ -69,7 +76,8 @@ export const specializedITInfrastructureServices2025: SpecializedITInfrastructur
     color: 'from-blue-600 to-indigo-600,
     textColor:,
   text-blue-400',
-    link: 'https://ziontechgroup.com/edge-computing-optimization,
+    link: 'http,
+    s://ziontechgroup.com/edge-computing-optimization,
     marketPosition:,
   Competes with AWS Outposts ($1,000/month), Azure Stack Edge ($500/month). Our advantage: 40% cost reduction with 60% performance improvement.,
     targetAudience:;
@@ -128,7 +136,8 @@ export const specializedITInfrastructureServices2025: SpecializedITInfrastructur
     color: 'from-purple-600 to-pink-600,
     textColor:,
   text-purple-400',
-    link: 'https://ziontechgroup.com/quantum-ready-network,
+    link: 'http,
+    s://ziontechgroup.com/quantum-ready-network,
     marketPosition:,
   First-to-market quantum-ready network infrastructure. No direct competitors yet in quantum-ready networking.',
     targetAudience: Government agencies, Financial institutions, Healthcare, Defense contractors, Research institutions',
@@ -187,7 +196,8 @@ export const specializedITInfrastructureServices2025: SpecializedITInfrastructur
     color: 'from-green-600 to-emerald-600,
     textColor:,
   text-green-400',
-    link: 'https://ziontechgroup.com/autonomous-devops,
+    link: 'http,
+    s://ziontechgroup.com/autonomous-devops,
     marketPosition:,
   Competes with GitLab ($99/user/month), Jenkins (free), CircleCI ($50/month). Our advantage: 90% automation with 70% faster deployments.,
     targetAudience:;
@@ -246,7 +256,8 @@ export const specializedITInfrastructureServices2025: SpecializedITInfrastructur
     color: 'from-red-600 to-orange-600,
     textColor:,
   text-red-400',
-    link: 'https://ziontechgroup.com/zero-trust-security,
+    link: 'http,
+    s://ziontechgroup.com/zero-trust-security,
     marketPosition:,
   Competes with Okta ($2/month/user), Palo Alto ($50/month), CrowdStrike ($8/month). Our advantage: 99.9% threat detection with zero false positives.,
     targetAudience:;
@@ -305,7 +316,8 @@ export const specializedITInfrastructureServices2025: SpecializedITInfrastructur
     color: 'from-gray-600 to-slate-600,
     textColor:,
   text-gray-400',
-    link: 'https://ziontechgroup.com/intelligent-data-center,
+    link: 'http,
+    s://ziontechgroup.com/intelligent-data-center,
     marketPosition:,
   Competes with Schneider Electric ($1,000/month), Eaton ($800/month), Vertiv ($1,200/month). Our advantage: 35% energy cost reduction with AI optimization.,
     targetAudience:;

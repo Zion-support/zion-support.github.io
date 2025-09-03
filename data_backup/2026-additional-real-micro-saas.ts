@@ -13,7 +13,8 @@ export const additionalRealMicroSaas2026 = [
   'Internal link and anchor text suggestions',
   'Competitor SERP snapshot and diff'
 		],
-		pricing: { starter:
+		pricing: { starte,
+    r:'
   '$99/month },
 		link:,
   https: //ziontechgroup.com/services/ai-seo-content-optimizer,
@@ -21,7 +22,7 @@ export const additionalRealMicroSaas2026 = [
 		launchDate:,
   2025-11-01'
 	},
-	{
+	{'
 		id: 'low-competition-keyword-finder,
 		name:,
   Low-Competition Keyword Finder',
@@ -35,7 +36,8 @@ export const additionalRealMicroSaas2026 = [
   'Cluster and pillar mapping',
   'Export to CSV/Google Sheets'
 		],
-		pricing: { starter:
+		pricing: { starte,
+    r:'
   '$59/month },
 		link:,
   https: //ziontechgroup.com/services/low-competition-keyword-finder,
@@ -43,7 +45,7 @@ export const additionalRealMicroSaas2026 = [
 		launchDate:,
   2025-10-15'
 	},
-	{
+	{'
 		id: 'ai-internal-linking-assistant,
 		name:,
   AI Internal Linking Assistant',
@@ -54,10 +56,11 @@ export const additionalRealMicroSaas2026 = [
   Context-aware anchor suggestions',
   'Per-page link caps and distribution rules',
   'Broken link detection and fix proposals',
-  'CMS integrations (WordPress, Headless CMS)',
+  'CMS integrations (WordPress, Headless CMS),
   'A/B test link placements'
 		],
-		pricing: { starter:
+		pricing: { starte,
+    r:'
   '$49/month },
 		link:,
   https: //ziontechgroup.com/services/ai-internal-linking-assistant,
@@ -65,14 +68,14 @@ export const additionalRealMicroSaas2026 = [
 		launchDate:,
   2025-10-20'
 	},
-	{
+	{'
 		id: 'social-proof-hub,
 		name:,
   Social Proof Hub',
 		description: Aggregate and embed testimonials, reviews, and badges to boost conversions.,
   ,
 		category: 'Conversion Optimization,
-		features[
+		features['
   'Import from G2, Capterra, Google, Trustpilot',
   'Widgets: carousels, grids, popups, banners,
   ,
@@ -80,7 +83,8 @@ export const additionalRealMicroSaas2026 = [
   'A/B testing and conversion analytics',
   'Webhook export and API access'
 		],
-		pricing: { starter:
+		pricing: { starte,
+    r:'
   '$39/month },
 		link:,
   https: //ziontechgroup.com/services/social-proof-hub,
@@ -88,7 +92,7 @@ export const additionalRealMicroSaas2026 = [
 		launchDate:,
   2025-12-01'
 	},
-	{
+	{'
 		id: 'chatgpt-integration-plugin-starter,
 		name:,
   ChatGPT Integration Plugin Starter',
@@ -102,12 +106,13 @@ export const additionalRealMicroSaas2026 = [
   'Staging and production environments',
   'Examples for Node/Next.js, Python'
 		],
-		pricing: { starter:
+		pricing: { starte,
+    r:'
   '$129/month },
 		link:,
   https: //ziontechgroup.com/services/chatgpt-integration-plugin-starter,
 		rating: 4.6,
-		launchDate:
+		launchDate:'
   '2025-11-10'
 
 ]}

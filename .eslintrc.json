@@ -1,5 +1,6 @@
 {
   "extends": ["next/core-web-vitals"],
+<<<<<<< HEAD
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": 2021,
@@ -8,30 +9,25 @@
       "jsx": true
     }
   },
+=======
+>>>>>>> main
   "rules": {
-    "react/react-in-jsx-scope": "off",
-    "react/prop-types": "off"
+    "no-unused-vars": "off",
+    "no-console": "warn",
+    "react/no-unescaped-entities": "off"
   },
   "ignorePatterns": [
     "node_modules/",
     ".next/",
     "out/",
-    "build/",
     "dist/",
-    "src.disabled/",
-    "pages.disabled/",
-    "pages_backup/",
-    "pages-backup/",
-    "pages.__backup/",
-    "api-backup/",
-    "backup-pages/",
-    "**/*.backup/",
-    "automation/",
+    "build/",
+    "*.config.js",
+    "*.config.ts",
     "scripts/",
-    "reports/",
-    "error-reports/",
-    "security-reports/",
-    "refactoring-reports/",
-    "automation-reports/"
+    "automation/",
+    "**/*.cjs",
+    "**/*.mjs",
+    "src/**"
   ]
 }

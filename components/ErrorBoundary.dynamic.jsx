@@ -4,3 +4,4 @@ const ErrorBoundary = dynamic(() => import('./ErrorBoundary'), {
 });
 
 export default ErrorBoundary;
+'

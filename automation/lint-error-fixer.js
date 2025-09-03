@@ -15,8 +15,7 @@ const __dirname = dirname(__filename);
 class LintErrorFixer {
   constructor() {
     this.logFile = path.join(__dirname,
-  'logs',
-  'lint-error-fixer.log');
+  'logs,lint-error-fixer.log');
     // // // // // // // // console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
     this.ensureLogDirectory()}
@@ -32,58 +31,62 @@ class LintErrorFixer {
     fs.appendFileSync(this.logFile, logMessage)}
   async fixUnusedImports(filePath) {
     try {
-      const content = fs.readFileSync(filePath,
+      const content = fs.readFileSync(filePath,`
   'utf8');
-      const lines = content.split(
+      const lines = content.split('
   '\n');
       const imports = [];
       const otherLines = [];
       let inImportBlock = false;
       for (const i = 0 i < lines.length i++) {
         const line = lines[i];
-        if (line.trim().startsWith(
+        if (line.trim().startsWith('
   'import ')) {
           inImportBlock = true;
-          imports.push(line)} else if (inImportBlock && line.trim() === ';
-  ') {
+          imports.push(line)} else if (inImportBlock && line.trim() === ) {
           imports.push(line)} else {
           inImportBlock = false;
           otherLines.push(line)}
       }
       // Filter out unused imports (basic check);
-      const usedImports = imports.filter(importLine => {
+      const usedImports = imports.filter(importLine => {'
         if (!importLine.trim().startsWith('import;
   ')) return true;
         // Extract import names;
         const match = importLine.match(/import\s+{([^}]+)}\s+from/);
-        if (match) {
+<<<<<<< HEAD
+        if (match) {'
           const importNames = match[1].split(',
   ').map(name => name.trim());
+=======
+        if (match) {
+          const importNames = match[1].split(,).map(name => name.trim());
+>>>>>>> main
           const fileContent = otherLines.join('\n;
   ');
-          return importNames.some(name => fileContent.includes(name))}
+          return importNames.some(name => fileContent.includes(name));
         return true})
       const newContent = [...usedImports, ...otherLines].join('\n;
   ');
       fs.writeFileSync(filePath, newContent);
       this.log(`✅ Fixed unused imports in: ${filePath}`);
-      return true} catch (error) {
+      return true} catch (error) {`
       this.log(`❌ Error fixing unused imports in ${filePath}: ${error.message}`);
       return false}
   }
   async fixTypeScriptErrors(filePath) {
     try {
-      // Run TypeScript compiler to check for errors;
+      // Run TypeScript compiler to check for errors;`
       const result = execSync(`npx tsc --noEmit --project .`, {
         encoding:,
-  utf8;
+  utf8;`
   ',
-        stdio: 'pipe})
+        stdio: 'pipe});
       this.log(`✅ TypeScript check passed for: ${filePath}`);
-      return true} catch (error) {
+      return true} catch (error) {`
       this.log(`❌ TypeScript errors in ${filePath}: ${error.stdout || error.message}`);
       // Try to fix common TypeScript issues;
-      try {
+      try {`
         const content = fs.readFileSync(filePath, 'utf8;
   ');
         let fixedContent = content;
@@ -98,23 +101,23 @@ class LintErrorFixer {
           fs.writeFileSync(filePath, fixedContent);
           this.log(`✅ Fixed TypeScript issues in: ${filePath}`);
           return true}
-      } catch (fixError) {
+      } catch (fixError) {`
         this.log(`❌ Failed to fix TypeScript issues in ${filePath}: ${fixError.message}`)}
       return false}
   }
   async fixESLintErrors(filePath) {
-    try {
-      const result = execSync(`npx eslint '${filePath}' --fix`, {
+    try {`
+      const result = execSync(`npx eslint '${filePath} --fix`, {
         encoding:,
-  utf8;
+  utf8;`
   ',
-        stdio: 'pipe})
+        stdio: 'pipe});
       this.log(`✅ Fixed ESLint errors in: ${filePath}`);
-      return true} catch (error) {
+      return true} catch (error) {`
       this.log(`❌ ESLint errors in ${filePath}: ${error.stdout || error.message}`);
       return false}
   }
-  async fixFile(filePath) {
+  async fixFile(filePath) {`
     this.log(`🔧 Fixing issues in: ${filePath}`);
     const fixes = [
       this.fixUnusedImports(filePath),
@@ -122,21 +125,18 @@ class LintErrorFixer {
       this.fixESLintErrors(filePath);
     ];
     const results = await Promise.all(fixes);
-    const successCount = results.filter(Boolean).length;
+    const successCount = results.filter(Boolean).length;`
     this.log(`📊 Fixed ${successCount}/3 issue types in: ${filePath}`);
     return successCount > 0}
   async fixAllFiles() {
     this.log(,
-  🔧 Starting comprehensive lint error fix...;
+  🔧 Starting comprehensive lint error fix...;`
   ');
-    const patterns = [
+    const patterns = ['
       'pages/**/*.{js,jsx,ts,tsx}
-  ',
-      'components/**/*.{js,jsx,ts,tsx}
-  ',
-      'utils/**/*.{js,jsx,ts,tsx}
-  ',
-      'hooks/**/*.{js,jsx,ts,tsx}
+  ,components/**/*.{js,jsx,ts,tsx}
+  ,utils/**/*.{js,jsx,ts,tsx}
+  ,hooks/**/*.{js,jsx,ts,tsx}
   ';
     ];
     let totalFiles = 0;
@@ -149,7 +149,7 @@ class LintErrorFixer {
     return { totalFiles, totalFixed }}
   glob(pattern) {
     // Simple glob implementation using fs;
-    const files = [];
+    const files = [];`
     const parts = pattern.split('/;
   ');
     const baseDir = parts[0];
@@ -180,9 +180,9 @@ class LintErrorFixer {
 const fixer = new LintErrorFixer();
 const command = process.argv[2];
 const filePath = process.argv[3];
-switch (command) {
+switch (command) {'
   case 'file;
-  ': if (filePath) {
+  ': if (filePath) {'
       // // // // // // // // console.log('Usage: node lint-error-fixer.js file <filepath>);
       fixer.fixFile(filePath)} else {
       console.log(,
@@ -192,9 +192,11 @@ switch (command) {
   all;
   ': fixer.fixAllFiles();
     break;
-  default:;
-    // // // // // // // // console.log('Usage: node lint-error-fixer.js [file <filepath>|all];
+  default: ;
+    // // // // // // // // console.log('Usag,
+    e: node lint-error-fixer.js [file <filepath>|all];
   ');
     process.exit(1);
-    console.log('Usage: node lint-error-fixer.js [file <filepath>|all]);
+    console.log('Usag,
+    e: node lint-error-fixer.js [file <filepath>|all]);
     process.exit(1)}

@@ -4,3 +4,4 @@ const MainLayout = dynamic(() => import('./MainLayout'), {
 });
 
 export default MainLayout;
+'

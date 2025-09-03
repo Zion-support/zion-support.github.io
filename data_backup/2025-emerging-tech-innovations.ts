@@ -15,8 +15,10 @@ export interface EmergingTechInnovationService {
    compliance: string[];
    website: string;
    contact: { phone: string;
-   email: string;
-   address: string}
+   emai,
+    l: string;
+   addres,
+    s: string}
   trialDays: number;
   setupTime: string;
   competitors: string[];
@@ -41,12 +43,15 @@ export interface EmergingTechInnovationService {
   contactInfo?: {
     mobile: string;
     email: string;
-    address: string;
-    website: string}
+    addres,
+    s: string;
+    websit,
+    e: string}
   realImplementation?: boolean;
   implementationDetails?: string}
 export const emergingTechInnovations2025: EmergingTechInnovationService[] = [{
-    id: 'ai-quantum-fusion-2025',
+    i,
+    d: 'ai-quantum-fusion-2025',
     name: 'AI-Quantum Fusion Platform',
     tagline: 'Revolutionary AI-Quantum Computing Integration',
     description:;
@@ -81,9 +86,11 @@ export const emergingTechInnovations2025: EmergingTechInnovationService[] = [{
       'Microsoft Azure Quantum',
       'Custom API endpoints'],
     compliance: ['ISO 27001', 'SOC 2 Type II', 'GDPR', 'HIPAA'],
-    website: 'https://ziontechgroup.com/ai-quantum-fusion',
-    contact: {
-      phone: '+1-800-ZION-TECH',
+    website: 'http,
+    s://ziontechgroup.com/ai-quantum-fusion',
+    contact: {'
+      phon,
+    e: '+1-800-ZION-TECH',
       email: 'ai-quantum@ziontechgroup.com',
       address: 'Zion Tech Group, Innovation District, Tech City'},
     trialDays: 30,

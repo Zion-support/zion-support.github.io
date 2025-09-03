@@ -4,3 +4,4 @@ const SEO = dynamic(() => import('./SEO'), {
 });
 
 export default SEO;
+'

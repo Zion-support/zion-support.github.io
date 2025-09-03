@@ -17,7 +17,7 @@ export function useWallet(...args: unknown[]): unknown {
     setError(null);
     try {
       if (!window.ethereum) {
-        throw new Error(
+        throw new Error('
   'No EIP-1193 wallet found. Please install MetaMask or a compatible wallet.')}
       const provider = new ethers.providers.Web3Provider(window.ethereum,any;
   ');
@@ -29,11 +29,12 @@ export function useWallet(...args: unknown[]): unknown {
       setState({ account, chainId: Number(network.chainId), provider })
       window.ethereum.on'accountsChanged;
   ', (accounts: string[] {
-        setState(prev: unknown ({ ...prev, account: accounts[0] ?? null }))})
+        setState(pre,
+    v: unknown ({ ...prev, account: accounts[0] ?? null }));)
       window.ethereum.on'chainChanged;
   ', (chainIdHex: string {
         const chainId = parseInt(chainIdHex, 16);
-        setState(prev: unknown ({ ...prev, chainId }))})} catch (e: unknown) {
+        setState(prev: unknown ({ ...prev, chainId }));)} catch (e: unknown) {
       setError(e?.message ??,
   Failed to connect wallet;
   ')} finally {
@@ -44,7 +45,7 @@ export function useWallet(...args: unknown[]): unknown {
       if (!state.provider) return;
       const hexChainId = '0x;
   ' + targetChainId.toString(16);
-      try {
+      try {'
         await state.provider.send('wallet_switchEthereumChain, [{ chainId: hexChainId }])} catch (switchError: unknown) {
         if (switchError.code === 4902) {
           const chain = getChainById(targetChainId);
@@ -52,7 +53,8 @@ export function useWallet(...args: unknown[]): unknown {
           await state.provider.send('wallet_addEthereumChain', [{
               chainId: hexChainId,
               chainName: chain.name,
-              nativeCurrency: { name: chain.symbol, symbol: chain.symbol, decimals: 18 },
+              nativeCurrency: { nam,
+    e: chain.symbol, symbol: chain.symbol, decimals: 18 },
               rpcUrls: [chain.rpcUrl],
               blockExplorerUrls: [chain.explorerUrl]}
           ])} else {

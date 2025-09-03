@@ -4,3 +4,4 @@ const ImageOptimizer = dynamic(() => import('./ImageOptimizer'), {
 });
 
 export default ImageOptimizer;
+'

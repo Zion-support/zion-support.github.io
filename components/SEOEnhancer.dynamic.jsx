@@ -4,3 +4,4 @@ const SEOEnhancer = dynamic(() => import('./SEOEnhancer'), {
 });
 
 export default SEOEnhancer;
+'

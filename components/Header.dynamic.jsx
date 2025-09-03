@@ -4,3 +4,4 @@ const Header = dynamic(() => import('./Header'), {
 });
 
 export default Header;
+'

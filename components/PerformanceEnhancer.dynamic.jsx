@@ -4,3 +4,4 @@ const PerformanceEnhancer = dynamic(() => import('./PerformanceEnhancer'), {
 });
 
 export default PerformanceEnhancer;
+'

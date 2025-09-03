@@ -2,11 +2,14 @@ export interface RealServiceQ22025 {
   id: string;
    name: string;
    tagline: string;
-   price: string;
-   features: string[];
+   pric,
+    e: string;
+   feature,
+    s: string[];
    category?: string}
 export const realServicesQ22025: RealServiceQ22025[] = [{
-    id:,
+    i,
+    d:,
   q2-service-1',
     name: 'Q2 Service 1,
     tagline:,

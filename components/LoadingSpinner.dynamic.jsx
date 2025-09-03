@@ -4,3 +4,4 @@ const LoadingSpinner = dynamic(() => import('./LoadingSpinner'), {
 });
 
 export default LoadingSpinner;
+'

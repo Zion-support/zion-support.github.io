@@ -4,3 +4,4 @@ const EnhancedNavigation = dynamic(() => import('./EnhancedNavigation'), {
 });
 
 export default EnhancedNavigation;
+'
