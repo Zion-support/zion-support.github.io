@@ -50,10 +50,16 @@ export default function ForumCategories() {}
               </span>
             )}
           </div>
-        </div>
-      </div>
-    </div>
-  );
-};
+        </div>))}
+    </div>)}
 
-export default ForumCategoriesJs;
+export { ForumCategories }
+
+export { ForumCategories }
+
+export { ForumCategories }
+
+export { ForumCategories }
+
+export { ForumCategories }
+"

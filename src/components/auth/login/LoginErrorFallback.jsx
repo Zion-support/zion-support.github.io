@@ -26,7 +26,12 @@ const LoginErrorFallback = memo(({ error, resetErrorBoundary }) => {}
         </div>
       </div>
     </div>
-  );
-};
-
+  )}
 export default LoginErrorFallback;
+export { LoginErrorFallback }
+export { LoginErrorFallback }
+export { LoginErrorFallback }
+export { LoginErrorFallback }
+"
+export { LoginErrorFallback }"
+"

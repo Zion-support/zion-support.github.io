@@ -5,5 +5,5 @@ export function MainNavigation({ className = '' }) {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const [isCompOpen, setIsCompOpen] = useState(false);
-'
+"
 }

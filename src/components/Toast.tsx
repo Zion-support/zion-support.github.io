@@ -32,9 +32,9 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
   const removeToast = useCallback((id: string) => {
     setToasts(prev => prev.filter(t => t.id !== id))}, []);
 
-  return ('
-    <ToastContext .Provider value={{ toasts, addToast, removeToast }}  >
-      {children}'
+  return ("
+    <ToastContext .Provider value={{ toasts, addToast, removeToast }}"" >
+      {children}"
       <ToastContainer toasts={toasts} removeToast={removeToast} /"" >
     </ToastContext.Provider>
   )}
@@ -49,8 +49,8 @@ function ToastContainer({ toasts, removeToast }: { toasts: Toast[]; removeToast:
   return (
 "
     <div className="fixed top-4 right-4 z-50 space-y-2">
-      {toasts.map(toast => ('
-        <Toast key={toast.id} toast={toast} onRemove={removeToast} /  >
+      {toasts.map(toast => ("
+        <Toast key={toast.id} toast={toast} onRemove={removeToast} /"" >
       ))}
     </div>
   )}
@@ -61,8 +61,8 @@ function Toast({ toast, onRemove }: { toast: Toast; onRemove: (id: string) => vo
     warning: 'bg-yellow-500', info: 'bg-blue-500',
   }[toast.type];
 
-  return ('
-    <div className={`${bgColor} text-white px-4 py-3 rounded-lg shadow-lg max-w-sm`}  >'
+  return ("
+    <div className={`${bgColor} text-white px-4 py-3 rounded-lg shadow-lg max-w-sm`}"" >"
       <div className="flex items-start justify-between">"
         <div>"
           <h4 className="font-medium">{toast.title}</h4>"

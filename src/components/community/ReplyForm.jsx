@@ -26,8 +26,13 @@
           Post Reply
         </Button>
       </div>
-    </div>
-  );
-};
+    </form>)}
 
-export default ReplyForm;
+export { ReplyForm }
+
+export { ReplyForm }
+
+export { ReplyForm }
+
+export { ReplyForm }
+;"

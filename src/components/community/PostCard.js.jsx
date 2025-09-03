@@ -26,8 +26,15 @@ export default function PostCard({ post }) {}
           </div>
         </div>
       </div>
-    </div>
-  );
-};
+    </div>)}
 
-export default PostCardJs;
+export { PostCard }
+
+export { PostCard }
+
+export { PostCard }
+
+export { PostCard }
+
+export { PostCard }
+"

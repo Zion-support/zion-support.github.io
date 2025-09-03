@@ -26,8 +26,16 @@
           </div>
         </div>
       </div>
-    </div>
-  );
-};
+    </div>)}
 
-export default PostCard;
+export { PostCard }
+
+export { PostCard }
+
+export { PostCard }
+
+export { PostCard }
+
+export { PostCard }
+"
+}

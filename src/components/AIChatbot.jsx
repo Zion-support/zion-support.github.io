@@ -9,14 +9,14 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
 });
     const [isOpen, setIsOpen] = useState(false);
     const [isMinimized, setIsMinimized] = useState(false);"
-    const [messages, setMessages] = useState([]);'
-    const [inputValue, setInputValue] = useState( );
+    const [messages, setMessages] = useState([]);"
+    const [inputValue, setInputValue] = useState('');
     const [isTyping, setIsTyping] = useState(false);
     const messagesEndRef = useRef(null);
     const inputRef = useRef(null);
     // Initialize chatbot
     useEffect(() => {
-        if (isOpen && messages.length === 0) {'
+        if (isOpen && messages.length === 0) {"
             addBotMessage(welcomeMessage, {"
                 intent: 'greeting',
                 confidence: 1.0, suggestions: ["
@@ -83,7 +83,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
             return "We have extensive experience across various industries including healthcare, finance, e-commerce, and enterprise solutions. Would you like me to share some case studies?";,
 }
         // Default response with suggestions"
-        return 'I understand you&apos;re asking about   + userInput + ''. Let me help you better. Could you provide more details about what you&apos;re looking for?";,
+        return "I understand you&apos;re asking about '" + userInput + "'. Let me help you better. Could you provide more details about what you&apos;re looking for?";,
 }, [responseDelay]);
     // Handle user input
     const handleUserInput = useCallback(async (input) => {
@@ -98,13 +98,13 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
             messageId: userMessage.id,
             inputLength: input.length,
 })"
-        // Clear input'
-        setInputValue( );
+        // Clear input"
+        setInputValue('');
         setIsTyping(true);
         try {
             // Get AI response
             const response = await simulateAIProcessing(input);
-            // Add bot response'
+            // Add bot response"
             addBotMessage(response, {"
                 intent: 'response',
                 confidence: 0.9, suggestions: ["
@@ -153,11 +153,11 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
         trackChatbotInteraction('conversation_cleared')}, [trackChatbotInteraction]);"
     // Get typing indicator"
     const TypingIndicator = () => (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex items-center space-x-2 p-3 bg-gray-100 dark:bg-gray-700 rounded-lg">"
-      <Bot className="w-5 h-5 text-blue-500'/  >'
+      <Bot className="w-5 h-5 text-blue-500"/"" >"
       <div className="flex space-x-1">"
-        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }}  ></div>'
-        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }}  ></div>'
-        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }}  ></div>'
+        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }}"" ></div>"
+        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }}"" ></div>"
+        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }}"" ></div>"
       </div>"
       <span className="text-sm text-gray-600 dark:text-gray-400">AI is typing...</span>
     </motion.div>);
@@ -204,15 +204,15 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
 
 "`
 ",`",`
-}} className={`fixed bottom-24 right-6 z-40 w-96 bg-white dark:bg-gray-800 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden ${isMinimized ? 'h-16' : 'h-[500px]'}`}  >'
+}} className={`fixed bottom-24 right-6 z-40 w-96 bg-white dark:bg-gray-800 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden ${isMinimized ? 'h-16' : 'h-[500px]'}`}"" >"
             {/* Header */}"
             <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-4 text-white">"
               <div className="flex items-center justify-between">"
                 <div className="flex items-center gap-2">"
-                  <Bot className="w-5 h-5'/  >'
+                  <Bot className="w-5 h-5"/"" >"
                   <span className="font-semibold">AI Assistant</span>"
                   <div className="flex items-center gap-1">"
-                    <Sparkles className="w-3 h-3 text-yellow-300'/  >'
+                    <Sparkles className="w-3 h-3 text-yellow-300"/"" >"
                     <span className="text-xs">Powered by AI</span>
                   </div>
                 </div>"
@@ -242,17 +242,17 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
 
 "`
 ",`",`
-}} className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}  >'`"`
-                      <div className={`flex items-start gap-2 max-w-[80%] ${message.type === 'user' ? 'flex-row-reverse' : 'flex-row'}`}  >'`"`
+}} className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}"" >"`"`
+                      <div className={`flex items-start gap-2 max-w-[80%] ${message.type === 'user' ? 'flex-row-reverse' : 'flex-row'}`}"" >"`"`
                         <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${message.type === 'user'`
                         ? 'bg-blue-500 text-white'`"`
-                        : 'bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300'}`}  >'
-                          {message.type === 'user' ? <User className="w-4 h-4'/  > : <Bot className='w-4 h-4'/  >}
-                        </div>'`
+                        : 'bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300'}`}"" >"
+                          {message.type === 'user' ? <User className="w-4 h-4"/"" > : <Bot className="w-4 h-4"/"" >}
+                        </div>"`
 "`"`
                         <div className={`rounded-lg p-3 ${message.type === 'user'`
                         ? 'bg-blue-500 text-white'`"`
-                        : 'bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200'}`}  >'
+                        : 'bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200'}`}"" >"
                           <p className="text-sm whitespace-pre-wrap">{message.content}</p>
 "
                           {/* Message Metadata */}"
@@ -262,19 +262,19 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
                             </div>)}
 "
                           {/* Suggestions */}"
-                          {message.type === 'bot' && message.metadata?.suggestions && enableSuggestions && (<MessageSuggestions suggestions={message.metadata.suggestions}/  >)}
+                          {message.type === 'bot' && message.metadata?.suggestions && enableSuggestions && (<MessageSuggestions suggestions={message.metadata.suggestions}/"" >)}
                         </div>
                       </div>
                     </motion.div>))}
 
-                  {/* Typing Indicator */}'
+                  {/* Typing Indicator */}"
                   {isTyping && <TypingIndicator /"" >}
 
-                  {/* Scroll anchor */}'
-                  <div ref={messagesEndRef}/  >
+                  {/* Scroll anchor */}"
+                  <div ref={messagesEndRef}/"" >
                 </div>
 
-                {/* Input Area */}'
+                {/* Input Area */}"
                 <div className="p-4 border-t border-gray-200 dark: border-gray-700">"
                   <form onSubmit={handleSubmit} className="flex gap-2">"
                     <input ref={inputRef} type="text" value={inputValue} onChange={(e) =" > setInputValue(e.target.value)} placeholder="Type your message..." className="flex-1 px-3 py-2 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100" disabled={isTyping}/>"

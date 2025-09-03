@@ -113,9 +113,9 @@ import Footer  from '../layout/Footer';export default function SimplePage() {
             </div>
           </div>
         </div>
-      </section>'
-      <Footer /  >
-    </div>'
+      </section>"
+      <Footer /"" >
+    </div>"
   )}"
 "
 }

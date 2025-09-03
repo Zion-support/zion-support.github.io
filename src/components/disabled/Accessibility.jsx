@@ -12,8 +12,9 @@ import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X import { Butt
 const AccessibilityContext = createContext(undefined);
 export const useAccessibility = () => {
     const context = useContext(AccessibilityContext);
-    if (!context) {'
-        throw new Error( useAccessibility must be used within an AccessibilityProvider');
+    if (!context) {"
+        throw new Error("
+  'useAccessibility must be used within an AccessibilityProvider');
     return context}// Accessibility Provider Component;
 export const AccessibilityProvider = memo(({ children }) => {
     const [highContrast, setHighContrast] = useState(false);
@@ -26,25 +27,36 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
     useEffect(() => {
         const root = document.documentElement;
         // High contrast mode;
-        if (highContrast) {'
-            root.classList.add( high-contrast');
-        else {'
-            root.classList.remove( high-contrast');
+        if (highContrast) {"
+            root.classList.add("
+  'high-contrast');
+        else {"
+            root.classList.remove("
+  'high-contrast');
         // Reduced motion;
-        if (reducedMotion) {'
-            root.classList.add( reduced-motion');
-        else {'
-            root.classList.remove( reduced-motion');// Font size;'
-        root.style.fontSize = fontSize ===; small' ?;"
-  '14px': fontSize ===; large' ?;"
-  '18px' :; 16px';
-        // Color blind mode;'
-        root.style.filter = colorBlindMode ===; none' ?;"
-  'none' :;'
-            colorBlindMode ===; protanopia' ?;"
+        if (reducedMotion) {"
+            root.classList.add("
+  'reduced-motion');
+        else {"
+            root.classList.remove("
+  'reduced-motion');// Font size;"
+        root.style.fontSize = fontSize ===;"
+  'small' ?;"
+  '14px': fontSize ===;"
+  'large' ?;"
+  '18px' :;"
+  '16px';
+        // Color blind mode;"
+        root.style.filter = colorBlindMode ===;"
+  'none' ?;"
+  'none' :;"
+            colorBlindMode ===;"
+  'protanopia' ?;"
   'url(#protanopia)' :;
-                colorBlindMode ===; deuteranopia' ?;"
-  'url(#deuteranopia)' :; ;url(#tritanopia)}, [highContrast, reducedMotion, fontSize, colorBlindMode]);'
+                colorBlindMode ===;"
+  'deuteranopia' ?;"
+  'url(#deuteranopia)' :;"
+';url(#tritanopia)}, [highContrast, reducedMotion, fontSize, colorBlindMode]);'
     const toggleHighContrast = () => setHighContrast(!highContrast);const toggleReducedMotion = () => setReducedMotion(!reducedMotion)
     const value = {
   highContrast, reducedMotion,
@@ -64,12 +76,14 @@ export const AccessibilityPanel = () => {
 ursor/automate-test-fix-improve-and-merge-code-48f3;
                 event.preventDefault();
                 setIsOpen(!isOpen);
-            // Ctrl/Cmd + Shift + H to toggle high contrast;'
-            if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key ===; H') {
+            // Ctrl/Cmd + Shift + H to toggle high contrast;"
+            if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key ===;"
+  'H') {
                 event.preventDefault();
                 toggleHighContrast();
-            // Ctrl/Cmd + Shift + M to toggle reduced motion;'
-            if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key ===; M') {
+            // Ctrl/Cmd + Shift + M to toggle reduced motion;"
+            if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key ===;"
+  'M') {
                 event.preventDefault();"
                 toggleReducedMotion()}
         window.addEventListener("

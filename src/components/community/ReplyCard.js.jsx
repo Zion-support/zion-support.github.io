@@ -39,8 +39,15 @@
           </div>
         </div>
       </div>
-    </div>
-  );
-};
+    </div>)}
 
-export default ReplyCardJs;
+export { ReplyCard }
+
+export { ReplyCard }
+
+export { ReplyCard }
+
+export { ReplyCard }
+
+export { ReplyCard }
+"`

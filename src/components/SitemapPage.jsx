@@ -121,8 +121,16 @@ export default function SitemapPage() {
           </div>
         </div>
       </div>
-    </div>
-  );
-};
+    </div>)}
 
-export default SitemapPage;
+export { SitemapPage }
+
+export { SitemapPage }
+
+export { SitemapPage }
+
+export { SitemapPage }
+
+export { SitemapPage }
+;"
+}

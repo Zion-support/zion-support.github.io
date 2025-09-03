@@ -2,7 +2,7 @@
 const EnhancedLoading = ({ variant = 'spinner', size = 'md', text, className = '' }) => {}
     const sizeClasses = {}"
 '
- 
+''
 '''
   sm: 'w-4 h-4,''
         md: 'w-8 h-8,''
@@ -17,10 +17,11 @@ const EnhancedLoading = ({ variant = 'spinner', size = 'md', text, className = '
 }} transition = {}
   {}
                 duration: 1.2, repeat: Infinity, delay: i * 0.1,
-}}/' >) ) }
+}}/" >) ) }
     </div>) 
     const renderVariant = () => {}
-        switch (variant) {} 
+        switch (variant) {}"
+'
             case 'dots': any"
                 return renderDots()'
             case 'pulse': any"
@@ -30,8 +31,8 @@ const EnhancedLoading = ({ variant = 'spinner', size = 'md', text, className = '
             default: any`
                 return renderSpinner()}`,`
 }`"`
-    return (<div className={`flex flex-col items-center justify-center space-y-3 ${className}`}' > '
-      {renderVariant()}' '
+    return (<div className={`flex flex-col items-center justify-center space-y-3 ${className}`}" >'''
+      {renderVariant()}''''
       {text && (<motion .p className='text-sm text-gray-400 text-center' initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}" >
           {text}
         </motion.p>)}

@@ -296,7 +296,7 @@ import {}"
         </div>
       </div>
     </div>
-  );
-};
-
-export default ServicesComparisonTableJs;
+  )",
+}'""",
+}''''
+''''''

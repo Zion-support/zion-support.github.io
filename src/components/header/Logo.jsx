@@ -8,8 +8,8 @@ export function Logo({ customLogo, customColor }) {"
     <Link to="/" className="flex items-center space-x-2 group">
       {customLogo ? (
         <img src={customLogo} "
-          alt='Zion Tech Group 
-          className='h-8 w-auto"
+          alt="Zion Tech Group" "
+          className="h-8 w-auto"
         /" >
       ) : ("
         <div className="flex items-center space-x-2">
