@@ -14,98 +14,153 @@ export function AppHeader() {;
       window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;,
 }
   };
-;
-  // Organized Services Categories;
-  const servicesCategories = [{;
-      title: 'AI & Machine Learning',;
-      icon: Brain,;
-      color: 'from-zion-cyan to-zion-purple',;
-      dropdown: [;
-        { name: 'Machine Learning', href: '/ai-solutions/machine-learning', icon: Brain, color: 'from-zion-cyan to-zion-purple' },;
-        { name: 'Computer Vision', href: '/ai-solutions/computer-vision', icon: Eye, color: 'from-zion-purple to-zion-pink' },;
-        { name: 'NLP & Chatbots', href: '/ai-solutions/nlp-chatbots', icon: MessageCircle, color: 'from-zion-green to-zion-cyan' },;
-        { name: 'Predictive Analytics', href: '/ai-solutions/predictive-analytics', icon: TrendingUp, color: 'from-zion-blue to-zion-green' },;
-        { name: 'AI Consulting', href: '/ai-solutions/consulting', icon: Users, color: 'from-zion-pink to-zion-purple' },;
-        { name: 'Custom AI Models', href: '/ai-solutions/custom-models', icon: Code, color: 'from-zion-orange to-zion-purple' }
-      ];,
-},;
-    {;
-      name: 'Innovation Lab',;
-      href: '/innovation-lab',;
-      icon: Sparkles,;
-      color: 'from-zion-purple to-zion-pink',;
-      dropdown: [;
-        { name: 'Research & Development', href: '/innovation-lab/research', icon: Sparkles, color: 'from-zion-purple to-zion-pink' },;
-        { name: 'Emerging Tech', href: '/innovation-lab/emerging-tech', icon: Rocket, color: 'from-zion-purple to-zion-cyan' },;
-        { name: 'Prototyping', href: '/innovation-lab/prototyping', icon: Code, color: 'from-zion-green to-zion-cyan' },;
-        { name: 'Innovation Consulting', href: '/innovation-lab/consulting', icon: Users, color: 'from-zion-pink to-zion-purple' },;
-        { name: 'Tech Partnerships', href: '/innovation-lab/partnerships', icon: Handshake, color: 'from-zion-blue to-zion-green' }
-      ];,
-}
+
+  const navigation = [
+    { name: 'Home', href: '/', current: true },
+    { name: 'Services', href: '/services', current: false },
+    { name: 'AI Services', href: '/ai-services', current: false },
+    { name: 'IT Services', href: '/it-services', current: false },
+    { name: 'Micro SaaS', href: '/micro-saas', current: false },
+    { name: 'About', href: '/about', current: false },
+    { name: 'Contact', href: '/contact', current: false },
+    { name: 'Blog', href: '/blog', current: false },
+    { name: 'Careers', href: '/careers', current: false },
+    { name: 'Partners', href: '/partners', current: false },
+    { name: 'News', href: '/news', current: false },
+    { name: 'Case Studies', href: '/case-studies', current: false },
+    { name: 'Help', href: '/help', current: false },
+    { name: 'FAQ', href: '/faq', current: false },
+    { name: 'Pricing', href: '/pricing', current: false },
   ];
         setServicesDropdownOpen(true);
         setSolutionsDropdownOpen(false);
         setCompanyDropdownOpen(false);
         setResourcesDropdownOpen(false)} else if(nav.name === 'Solutions') {;
 
-        setSolutionsDropdownOpen(true);
-        setServicesDropdownOpen(false);
-        setCompanyDropdownOpen(false);
-        setResourcesDropdownOpen(false)} else if(nav.name === 'Pricing') {;
-        // Use the same dropdown state as solutions for pricing;
-        setSolutionsDropdownOpen(true);
-        setServicesDropdownOpen(false);
-        setCompanyDropdownOpen(false);
-        setResourcesDropdownOpen(false)} else if(nav.name === 'Company') {;
+  // Enhanced services by category with better organization and working links
+  const services = [
+    // Featured & New Services
+    { name: '2026 Services Overview', href: '/ultimate-services-showcase-2026', icon: Star, description: 'Revolutionary AI & Quantum Solutions', category: 'Featured', featured: true, color: 'from-yellow-500 to-orange-500' },
+    { name: '2027 Services Overview', href: '/comprehensive-services-showcase-2027', icon: Star, description: 'Cutting-edge Innovation & Emerging Tech', category: 'Featured', featured: true, color: 'from-purple-500 to-pink-500' },
+    { name: '2029 Cutting-Edge Services', href: '/zion-cutting-edge-services-2029', icon: Star, description: 'Future-ready Technology Solutions', category: 'Featured', featured: true, color: 'from-indigo-500 to-purple-500' },
+    
+    // AI & Machine Learning
+    { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: Brain, description: 'Advanced analytics & ML insights', category: 'AI & ML', color: 'from-blue-500 to-indigo-500' },
+    { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', icon: Shield, description: 'Automated regulatory compliance', category: 'AI & ML', color: 'from-green-500 to-emerald-500' },
+    { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', icon: Users, description: 'Intelligent sales optimization', category: 'AI & ML', color: 'from-purple-500 to-pink-500' },
+    { name: 'AI-Powered SEO', href: '/services/ai-powered-seo', icon: Search, description: 'Machine learning SEO optimization', category: 'AI & ML', color: 'from-orange-500 to-red-500' },
+    { name: 'Interview Assessment AI', href: '/services/interview-assessment-ai', icon: Users, description: 'AI-powered candidate evaluation', category: 'AI & ML', color: 'from-blue-500 to-cyan-500' },
+    { name: 'AI Content Marketing Suite', href: '/services/ai-content-marketing-suite', icon: PenTool, description: 'Automated content creation', category: 'AI & ML', color: 'from-green-500 to-teal-500' },
+    { name: 'AI Customer Support', href: '/services/ai-customer-support-automation', icon: MessageCircle, description: 'Intelligent support automation', category: 'AI & ML', color: 'from-indigo-500 to-purple-500' },
+    { name: 'AI Project Management', href: '/services/ai-project-management', icon: Target, description: 'AI-driven project optimization', category: 'AI & ML', color: 'from-blue-500 to-indigo-500' },
+    { name: 'AI Financial Analytics', href: '/services/ai-financial-analytics', icon: BarChart3, description: 'Intelligent financial insights', category: 'AI & ML', color: 'from-green-500 to-emerald-500' },
+    
+    // Cloud & DevOps
+    { name: 'Cloud DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Infrastructure automation & scaling', category: 'Cloud & DevOps', color: 'from-blue-500 to-cyan-500' },
+    { name: 'IT Infrastructure', href: '/services/it-infrastructure', icon: Server, description: 'Enterprise infrastructure solutions', category: 'Cloud & DevOps', color: 'from-gray-500 to-slate-500' },
+    { name: 'FinOps Advisor', href: '/services/finops-advisor', icon: DollarSign, description: 'Cloud cost optimization', category: 'Cloud & DevOps', color: 'from-green-500 to-emerald-500' },
+    { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer', icon: BarChart3, description: 'Financial operations automation', category: 'Cloud & DevOps', color: 'from-blue-500 to-indigo-500' },
+    
+    // Cybersecurity
+    { name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform', icon: Shield, description: 'Advanced AI-powered security', category: 'Cybersecurity', color: 'from-red-500 to-orange-500' },
+    { name: 'Security Headers & CSP', href: '/services/security-headers-csp', icon: Lock, description: 'Web security hardening', category: 'Cybersecurity', color: 'from-red-500 to-pink-500' },
+    { name: 'DSR Privacy Portal', href: '/services/dsr-portal', icon: Shield, description: 'GDPR/CCPA compliance', category: 'Cybersecurity', color: 'from-purple-500 to-indigo-500' },
+    { name: 'Zero Trust Network Access', href: '/services/zero-trust-network-access', icon: Lock, description: 'Modern security architecture', category: 'Cybersecurity', color: 'from-red-500 to-orange-500' },
+    
+    // Digital Transformation
+    { name: 'Digital Twin', href: '/services/digital-twin', icon: Eye, description: 'Virtual system replicas', category: 'Digital Transformation', color: 'from-cyan-500 to-blue-500' },
+    { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Zap, description: 'Strategic technology consulting', category: 'Digital Transformation', color: 'from-yellow-500 to-orange-500' },
+    { name: 'IT Consulting', href: '/it-consulting', icon: Cpu, description: 'Technology strategy & planning', category: 'Digital Transformation', color: 'from-gray-500 to-slate-500' },
+    
+    // Emerging Technologies
+    { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom, description: 'Next-gen computational power', category: 'Emerging Tech', color: 'from-indigo-500 to-purple-500' },
+    { name: 'IoT Edge Computing', href: '/services/iot-edge-computing', icon: Network, description: 'Smart device networks', category: 'Emerging Tech', color: 'from-blue-500 to-cyan-500' },
+    { name: 'AI Quantum Hybrid Platform', href: '/services/ai-quantum-hybrid-platform', icon: Atom, description: 'Quantum-AI integration', category: 'Emerging Tech', color: 'from-indigo-500 to-purple-500' },
+    { name: 'Space Technology', href: '/services/space-tech', icon: Satellite, description: 'Space-based solutions', category: 'Emerging Tech', color: 'from-blue-500 to-indigo-500' },
+    
+    // Data & Analytics
+    { name: 'Data Analytics', href: '/services/data-analytics', icon: BarChart3, description: 'Business intelligence & insights', category: 'Data & Analytics', color: 'from-blue-500 to-indigo-500' },
+    { name: 'Business Intelligence', href: '/services/ai-business-intelligence', icon: TrendingUp, description: 'Performance metrics & reporting', category: 'Data & Analytics', color: 'from-green-500 to-teal-500' },
+    
+    // Micro SaaS Solutions
+    { name: 'Micro SaaS Platform', href: '/micro-saas', icon: ShoppingCart, description: 'Niche software solutions', category: 'Micro SaaS', color: 'from-purple-500 to-pink-500' },
+    { name: 'Micro CRM', href: '/services/micro-crm', icon: Users, description: 'Customer relationship management', category: 'Micro SaaS', color: 'from-blue-500 to-cyan-500' },
+    { name: 'Helpdesk Platform', href: '/services/helpdesk-platform', icon: MessageCircle, description: 'Customer support system', category: 'Micro SaaS', color: 'from-green-500 to-emerald-500' },
+    { name: 'Website Analytics', href: '/services/website-analytics', icon: BarChart3, description: 'Performance tracking & insights', category: 'Micro SaaS', color: 'from-blue-500 to-indigo-500' },
+  ];
 
-        setCompanyDropdownOpen(true);
-        setServicesDropdownOpen(false);
-        setSolutionsDropdownOpen(false);
-        setResourcesDropdownOpen(false)} else if(nav.name === 'Resources') {;
-        setResourcesDropdownOpen(true);
-        setServicesDropdownOpen(false);
-        setSolutionsDropdownOpen(false);
-        setCompanyDropdownOpen(false)}
-    } else {;
+  const quickLinks = [
+    { name: 'Blog', href: '/blog', icon: BookOpen },
+    { name: 'Request Quote', href: '/contact', icon: MessageCircle },
+    { name: 'Partners', href: '/partners', icon: Users },
+    { name: 'Careers', href: '/careers', icon: Star },
+    { name: 'FAQ', href: '/faq', icon: HelpCircle },
+    { name: 'Help Center', href: '/help', icon: HelpCircle },
+    { name: 'Pricing', href: '/pricing', icon: DollarSign },
+    { name: 'News', href: '/news', icon: BookOpen },
+    { name: 'Case Studies', href: '/case-studies', icon: FileText },
+  ];
 
-      setActiveNav(null);
-      setServicesDropdownOpen(false);
-      setSolutionsDropdownOpen(false);
-      setCompanyDropdownOpen(false);
-      setResourcesDropdownOpen(false)}
-  };
-;
-  const closeAllDropdowns = (...args: unknown[]): unknown => {;
-    setServicesDropdownOpen(false);    setSolutionsDropdownOpen(false);
-    setCompanyDropdownOpen(false);
-    setResourcesDropdownOpen(false);
-    setActiveNav(null)};
-;
-  return ();
-    <>`;
-      <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${        scrolled;
-          ? 'bg-slate-900/95 backdrop-blur-xl border-b border-cyan-400/20 shadow-2xl shadow-cyan-400/10';
-          : 'bg-slate-900/80 backdrop-blur-md border-b border-slate-700/20'      }`}>;
-        <div className="container-responsive">";
-          <div className="flex h-20 items-center justify-between">;
-            {/* Logo */}";
-            <div className="flex items-center">";
-              <Link to="/" className="flex-shrink-0 group">";
-                <div className="flex items-center space-x-3">";
-                  <div className="relative">";
-                    <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">";
-                      <Zap className="w-6 h-6 text-white"  />;
-                    </div>"                    <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-lg blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>;
-                  </div>";
-                  <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300">;
-                    Zion Tech Group;
-                  </h1>;
-                </div>;
-                <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">;
-                  Zion Tech Group;
-                </span>;
-              </Link>;
-            </div>;
+  const servicesCategories = [
+    {
+      name: 'Core Services',
+      icon: Settings,
+      color: 'from-blue-600 to-cyan-600',
+      services: [
+        { name: 'Services Overview', href: '/services-overview', description: 'Complete service portfolio' },
+        { name: 'AI Services', href: '/ai-solutions', description: 'AI-powered solutions' },
+        { name: 'IT Services', href: '/services/it-infrastructure', description: 'Enterprise IT solutions' },
+        { name: 'Micro SaaS', href: '/services/micro-saas-solutions', description: 'Scalable software solutions' }
+      ]
+    },
+    {
+      name: 'AI & Analytics',
+      icon: Brain,
+      color: 'from-purple-600 to-pink-600',
+      services: [
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'Machine Learning & Data Science' },
+        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'AI-powered sales automation' },
+        { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Regulatory compliance automation' },
+        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI content generation' },
+        { name: 'AI Sales Automation Suite', href: '/innovative-services-showcase-2025', description: 'Complete sales automation' },
+        { name: 'AI Customer Support Platform', href: '/innovative-services-showcase-2025', description: 'Intelligent support system' },
+        { name: 'AI Financial Analytics', href: '/innovative-services-showcase-2025', description: 'Financial insights platform' },
+        { name: 'AI Project Management Platform', href: '/services/ai-project-management-platform', description: 'AI-powered project optimization' },
+        { name: 'AI Cybersecurity Threat Detection', href: '/services/ai-cybersecurity-threat-detection', description: 'Advanced threat detection' },
+        { name: 'AI Financial Trading Platform', href: '/services/ai-financial-trading-platform', description: 'AI-powered trading' },
+        { name: 'AI Healthcare Analytics Platform', href: '/services/ai-healthcare-analytics-platform', description: 'Healthcare analytics platform' }
+      ]
+    },
+    {
+      name: 'Cloud & DevOps',
+      icon: Cloud,
+      color: 'from-green-600 to-emerald-600',
+      services: [
+        { name: 'Cloud DevOps', href: '/services/cloud-devops', description: 'Infrastructure & Automation' },
+        { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer', description: 'Cost optimization' },
+        { name: 'FinOps Advisor', href: '/services/finops-advisor', description: 'Financial operations' }
+      ]
+    },
+    {
+      name: 'Digital Solutions',
+      icon: Rocket,
+      color: 'from-orange-600 to-red-600',
+      services: [
+        { name: 'Digital Twin', href: '/services/digital-twin', description: 'Simulation & Monitoring' },
+        { name: 'IT Infrastructure', href: '/services/it-infrastructure', description: 'Enterprise infrastructure' },
+        { name: 'Data Analytics', href: '/services/data-analytics', description: 'Business intelligence' }
+      ]
+    },
+    {
+      name: 'Cybersecurity',
+      icon: Shield,
+      color: 'from-indigo-600 to-purple-600',
+      services: [
+        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot', description: 'AI-Powered Security' },
+        { name: 'Zero Trust Architecture', href: '/services/zero-trust-network-architecture', description: 'Advanced security' }
+      ]
+    }
+  ];
 
             {/* Desktop Navigation */}            <nav className="hidden lg:flex items-center space-x-8">;
               {navigation.map((item) => (";
@@ -115,18 +170,184 @@ export function AppHeader() {;
                       <button;
                         onClick={() => {;
 
-              <AnimatePresence>;
-                {activeDropdown === 'services' && (;
-                  <motion.div;
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    transition={{ duration: 0.2 }}
-                    className="absolute top-full left-0 mt-2 w-80 bg-zion-slate-dark border border-zion-cyan/20 rounded-xl shadow-2xl backdrop-blur-md">;
-                    <div className="p-4">;
-                      <div className="grid grid-cols-1 gap-2">;
-                        {services.map((service) => (;
-                          <Link;
+  const quickLinks = [
+    { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025', icon: Star, description: 'Latest cutting-edge solutions' },
+    { name: 'Services Showcase', href: '/revolutionary-services-showcase-2030', icon: TrendingUp, description: 'Future-ready services' },
+    { name: 'Pricing Guide 2030', href: '/pricing', icon: DollarSign, description: 'Advanced pricing strategies' },
+    { name: 'Request Quote', href: '/request-quote', icon: MessageCircle, description: 'Get custom pricing' },
+  ];
+
+  const companyCategories = [
+    {
+      name: 'About Us',
+      icon: Building,
+      color: 'from-blue-600 to-cyan-600',
+      items: [
+        { name: 'About Us', href: '/about', description: 'Our story and mission' },
+        { name: 'Team', href: '/team', description: 'Meet our experts' },
+        { name: 'Careers', href: '/careers', description: 'Join our team' },
+        { name: 'Partners', href: '/partners', description: 'Strategic partnerships' }
+      ]
+    },
+    {
+      name: 'Resources',
+      icon: BookOpen,
+      color: 'from-green-600 to-emerald-600',
+      items: [
+        { name: 'Blog', href: '/blog', description: 'Latest insights and news' },
+        { name: 'News', href: '/news', description: 'Company and industry news' },
+        { name: 'Events', href: '/events', description: 'Upcoming events and webinars' },
+        { name: 'Press', href: '/press', description: 'Media resources' },
+        { name: 'Case Studies', href: '/case-studies', description: 'Success stories' },
+        { name: 'White Papers', href: '/white-papers', description: 'In-depth research' }
+      ]
+    }
+  ];
+
+  const supportCategories = [
+    {
+      name: 'Help & Support',
+      icon: HelpCircle,
+      color: 'from-blue-600 to-cyan-600',
+      items: [
+        { name: 'Help Center', href: '/help', description: 'Find answers to questions' },
+        { name: 'Support Portal', href: '/support', description: 'Technical assistance' },
+        { name: 'FAQ', href: '/faq', description: 'Frequently asked questions' },
+        { name: 'Contact Support', href: '/contact', description: 'Get in touch' }
+      ]
+    },
+    {
+      name: 'Resources',
+      icon: BookOpen,
+      color: 'from-green-600 to-emerald-600',
+      items: [
+        { name: 'Documentation', href: '/docs', description: 'Technical guides' },
+        { name: 'Training', href: '/training', description: 'Learning resources' },
+        { name: 'Webinars', href: '/webinars', description: 'Educational sessions' },
+        { name: 'Community', href: '/community', description: 'User community' }
+      ]
+    }
+  ];
+
+  const supportLinks = [
+    { name: 'FAQ', href: '/faq', icon: HelpCircle },
+    { name: 'Blog', href: '/blog', icon: BookOpen },
+    { name: 'Support', href: '/support', icon: MessageCircle },
+    { name: 'Documentation', href: '/docs', icon: BookOpen },
+  ];
+
+  return (
+    <>
+      <header role="banner" className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+        scrolled 
+          ? 'bg-slate-900/95 backdrop-blur-xl border-b border-cyan-400/20 shadow-2xl shadow-cyan-400/10' 
+          : 'bg-slate-900/80 backdrop-blur-md border-b border-slate-700/20'
+      }`}>
+        <div className="container mx-auto px-4">
+          <div className="flex h-20 items-center justify-between">
+            {/* Logo */}
+            <div className="flex items-center">
+              <Link to="/" className="flex-shrink-0 group">
+                <div className="flex items-center space-x-3">
+                  <div className="relative">
+                    <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <Zap className="w-6 h-6 text-white" />
+                    </div>
+                    <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-lg blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
+                  </div>
+                  <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300">
+                    Zion Tech Group
+                  </h1>
+                </div>
+              </Link>
+            </div>
+
+            {/* Desktop Navigation */}
+            <nav className="hidden lg:flex items-center gap-4 xl:gap-8">
+              {mainNavigation.map((item) => (
+                <div key={item.name} className="relative">
+                  {item.hasDropdown ? (
+                    <button
+                      onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
+                      className="flex items-center space-x-1 text-slate-300 hover:text-white transition-colors py-2"
+                    >
+                      <span>{item.name}</span>
+                      <ChevronDown className={`w-4 h-4 transition-transform ${servicesDropdownOpen ? 'rotate-180' : ''}`} />
+                    </button>
+                  ) : (
+                    <Link
+                      to={item.href}
+                      className="text-slate-300 hover:text-white transition-colors py-2"
+                    >
+                      {item.name}
+                    </Link>
+                  )}
+                </div>
+              ))}
+            </nav>
+
+            {/* Right side actions */}
+            <div className="flex items-center space-x-4">
+              {/* Search */}
+              <form onSubmit={handleSearch} className="hidden md:block relative">
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400" />
+                <input
+                  type="text"
+                  placeholder="Search services..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-48 xl:w-64 pl-10 pr-4 py-2 rounded-lg bg-slate-800/70 border border-slate-600 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white placeholder-slate-400 text-sm"
+                />
+              </form>
+
+              {/* Theme Toggle */}
+              <ThemeToggle />
+
+              {/* Contact Info */}
+              <div className="hidden lg:flex items-center gap-3 xl:gap-4 text-sm text-slate-300">
+                <a href="tel:+13024640950" className="flex items-center space-x-1 hover:text-cyan-400 transition-colors">
+                  <Phone className="w-4 h-4" />
+                  <span>+1 302 464 0950</span>
+                </a>
+              </div>
+
+              {/* Mobile menu button */}
+              <button
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="lg:hidden p-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition-colors"
+              >
+                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Services Dropdown */}
+        <AnimatePresence>
+          {servicesDropdownOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+              className="bg-slate-900/95 backdrop-blur-xl border-b border-cyan-400/20"
+            >
+              <div className="container mx-auto px-4 py-8">
+                <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
+                  {servicesCategories.map((category) => (
+                    <div key={category.name} className="space-y-4">
+                      <div className="flex items-center space-x-3">
+                        <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${category.color} flex items-center justify-center`}>
+                          <category.icon className="w-5 h-5 text-white" />
+                        </div>
+                        <div>
+                          <h3 className="font-semibold text-white">{category.name}</h3>
+                          <p className="text-sm text-slate-400">{category.description}</p>
+                        </div>
+                      </div>
+                      <div className="space-y-2">
+                        {category.services.map((service) => (
+                          <Link
                             key={service.name}
                             to={service.href}
                             onClick={() => setActiveDropdown(null)}

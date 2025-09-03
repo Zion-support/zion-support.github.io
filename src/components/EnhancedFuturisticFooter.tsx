@@ -27,21 +27,24 @@ export function EnhancedFuturisticFooter() {;
         </div>;
       </div>;
 
-    { name: 'Terms of Service', href: '/terms', description: 'Service terms' },;
-    { name: 'Cookie Policy', href: '/cookies', description: 'Cookie usage' },;
-    { name: 'Accessibility', href: '/accessibility', description: 'Accessibility statement' },;
-    { name: 'Security', href: '/security', description: 'Security practices' },;
-    { name: 'Compliance', href: '/compliance', description: 'Regulatory compliance' };  ];
-;
-  // Create missing pages for broken links;
-  ;
-      </Link>;) };
-  return (";
-          <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">;
-        {/* Background Pattern */}";
-        <div className="absolute inset-0 opacity-30">";
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-800/20 to-slate-900/20"></div>;
-        </div>;
+  const quickLinks = [
+    { name: 'Services Overview', href: '/services-overview' },
+    { name: 'AI Solutions', href: '/ai-solutions' },
+    { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
+    { name: 'Healthcare Solutions', href: '/solutions/healthcare' },
+    { name: 'Research & Development', href: '/research-development' },
+    { name: 'Pricing Guide', href: '/pricing' },
+    { name: 'Help Center', href: '/help' },
+    { name: 'FAQ', href: '/faq' },
+    { name: 'About Us', href: '/about' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'News', href: '/news' },
+    { name: 'Events', href: '/events' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Sitemap', href: '/sitemap' }
+  ];
 
       <div  className="relative">;
         {/* Main Footer Content */}

@@ -53,6 +53,16 @@
     "**/*.spec.ts",
     "**/*.spec.tsx",
     "**/*.backup",
-    "**/*.disabled"
+    "**/*.disabled",
+    "temp_backup",
+    "temp_backup/**",
+    "temp_broken_components",
+    "temp_broken_components/**",
+    "src/utils/**",
+    "utils/**",
+    "types/**",
+    "tailwind.config.ts",
+    "vite.config.ts",
+    "vitest.config.ts"
   ]
 }
