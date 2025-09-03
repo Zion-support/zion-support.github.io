@@ -134,6 +134,12 @@
     "pm2:cron:restart": "node -e \"const fs=require('fs');fs.mkdirSync('automation/logs',{recursive:true})\" && (pm2 restart ecosystem.cron.local.cjs || pm2 start ecosystem.cron.local.cjs --update-env)",
     "pm2:cron:stop": "pm2 stop ecosystem.cron.local.cjs || true",
     "pm2:bootstrap:logrotate": "pm2 install pm2-logrotate || true && pm2 set pm2-logrotate:max_size 10M && pm2 set pm2-logrotate:retain 30 && pm2 set pm2-logrotate:compress true && pm2 set pm2-logrotate:workerInterval 60 && pm2 set pm2-logrotate:rotateInterval '0 0 * * *'",
+    "error-prevention:start": "node scripts/error-prevention/master-orchestrator.cjs start",
+    "error-prevention:stop": "node scripts/error-prevention/master-orchestrator.cjs stop",
+    "error-prevention:restart": "node scripts/error-prevention/master-orchestrator.cjs restart",
+    "error-prevention:status": "node scripts/error-prevention/master-orchestrator.cjs status",
+    "error-prevention:logs": "node scripts/error-prevention/master-orchestrator.cjs logs",
+    "error-prevention:check": "node scripts/error-prevention/master-orchestrator.cjs check",
     "functions:run": "node scripts/run-netlify-functions-locally.cjs",
     "functions:run:execute": "node scripts/run-netlify-functions-locally.cjs --execute",
     "front:advertise": "node automation/front-index-advertiser.cjs",
@@ -283,7 +289,7 @@
     "ts-jest": "^29.4.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2",
-    "vite": "^5.4.19"
+    "vite": "^7.1.4"
   },
   "engines": {
     "node": ">=18.0.0",
