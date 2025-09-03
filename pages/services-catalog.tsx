@@ -126,6 +126,32 @@ export default function ServicesCatalog() {
             'Continuous learning and improvement'
           ],
           link: '/ai-services'
+        },
+        {
+          name: 'Generative AI Content Studio',
+          blurb: 'Advanced AI-powered content creation platform for marketing, social media, and brand communications.',
+          price: '$2,000 – $12,000/month',
+          eta: '3–6 weeks',
+          bullets: [
+            'Multi-modal content generation (text, images, video)',
+            'Brand voice consistency and customization',
+            'Content optimization for different platforms',
+            'Automated A/B testing and performance tracking'
+          ],
+          link: '/ai-services'
+        },
+        {
+          name: 'AI-Powered Agricultural Intelligence',
+          blurb: 'Comprehensive agricultural AI platform for crop monitoring, yield optimization, and farm management.',
+          price: '$1,000 – $8,000/month',
+          eta: '3–6 weeks',
+          bullets: [
+            'Crop health monitoring and analysis',
+            'Yield prediction and optimization',
+            'Pest and disease detection',
+            'Weather impact analysis and recommendations'
+          ],
+          link: '/ai-services'
         }
       ]
     },
@@ -183,6 +209,45 @@ export default function ServicesCatalog() {
             'ETL/ELT process automation',
             'Data warehouse and lake setup',
             'Business intelligence and analytics dashboards'
+          ],
+          link: '/it-services'
+        },
+        {
+          name: 'Edge Computing Infrastructure',
+          blurb: 'Distributed edge computing solutions for low-latency applications and IoT device management.',
+          price: '$200 – $400/hour',
+          eta: '4–12 weeks',
+          bullets: [
+            'Edge server deployment and management',
+            'IoT device connectivity and management',
+            'Real-time data processing at the edge',
+            'Low-latency application hosting'
+          ],
+          link: '/it-services'
+        },
+        {
+          name: 'Zero Trust Network Architecture',
+          blurb: 'Comprehensive zero trust security implementation with micro-segmentation and continuous verification.',
+          price: '$8,000 – $50,000/project',
+          eta: '6–16 weeks',
+          bullets: [
+            'Network micro-segmentation',
+            'Identity-based access control',
+            'Continuous security monitoring',
+            'Threat detection and response'
+          ],
+          link: '/it-services'
+        },
+        {
+          name: '5G Network Infrastructure & Private Networks',
+          blurb: 'Private 5G network deployment and management for enterprise applications and IoT.',
+          price: '$250 – $500/hour',
+          eta: '12–24 weeks',
+          bullets: [
+            'Private 5G network design and deployment',
+            'Network slicing and optimization',
+            'IoT device connectivity management',
+            'Edge computing integration'
           ],
           link: '/it-services'
         }

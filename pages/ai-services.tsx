@@ -1022,6 +1022,292 @@ export default function AIServices() {
         'Personalized user experiences',
         'Better content discovery and recommendations'
       ]
+    },
+    {
+      icon: Brain,
+      name: 'Generative AI Content Studio',
+      description: 'Advanced AI-powered content creation platform for marketing, social media, and brand communications.',
+      features: [
+        'Multi-modal content generation (text, images, video)',
+        'Brand voice consistency and customization',
+        'Content optimization for different platforms',
+        'Automated A/B testing and performance tracking',
+        'Collaborative content workflows',
+        'Integration with marketing automation tools'
+      ],
+      pricing: '$2,000 – $12,000/month',
+      perUnit: '$0.05 – $0.50 per content piece',
+      timeline: '3–6 weeks',
+      benefits: [
+        '10x faster content production',
+        'Consistent brand messaging',
+        'Improved engagement rates',
+        'Reduced content creation costs'
+      ]
+    },
+    {
+      icon: Shield,
+      name: 'AI-Powered Zero Trust Security',
+      description: 'Advanced AI-driven security platform implementing zero trust architecture with behavioral analysis.',
+      features: [
+        'Continuous authentication and authorization',
+        'Behavioral anomaly detection',
+        'Risk-based access control',
+        'Automated threat response',
+        'Identity and access management',
+        'Compliance monitoring and reporting'
+      ],
+      pricing: '$5,000 – $25,000 setup',
+      perUnit: '$0.10 – $1.00 per user/month',
+      timeline: '6–12 weeks',
+      benefits: [
+        '99.9% security incident reduction',
+        'Automated threat detection',
+        'Enhanced compliance posture',
+        'Reduced security management overhead'
+      ]
+    },
+    {
+      icon: Eye,
+      name: 'AI-Powered Satellite Image Analysis',
+      description: 'Advanced satellite imagery analysis for agriculture, urban planning, and environmental monitoring.',
+      features: [
+        'High-resolution satellite image processing',
+        'Crop monitoring and yield prediction',
+        'Urban development tracking',
+        'Environmental change detection',
+        'Disaster assessment and response',
+        'Real-time monitoring and alerts'
+      ],
+      pricing: '$3,000 – $15,000 setup',
+      perUnit: '$0.01 – $0.10 per image',
+      timeline: '4–8 weeks',
+      benefits: [
+        '95% accuracy in image analysis',
+        'Automated monitoring capabilities',
+        'Early warning systems',
+        'Data-driven decision making'
+      ]
+    },
+    {
+      icon: TrendingUp,
+      name: 'AI-Powered Supply Chain Optimization',
+      description: 'Intelligent supply chain management with predictive analytics and automated optimization.',
+      features: [
+        'Demand forecasting and planning',
+        'Supplier risk assessment',
+        'Route optimization and logistics',
+        'Inventory optimization',
+        'Quality control and monitoring',
+        'Sustainability tracking and reporting'
+      ],
+      pricing: '$4,000 – $20,000 setup',
+      perUnit: '$0.05 – $0.50 per transaction',
+      timeline: '6–12 weeks',
+      benefits: [
+        '30% reduction in supply chain costs',
+        'Improved delivery performance',
+        'Enhanced risk management',
+        'Better supplier relationships'
+      ]
+    },
+    {
+      icon: Users,
+      name: 'AI-Powered Customer Experience Platform',
+      description: 'Comprehensive customer experience management with AI-driven personalization and automation.',
+      features: [
+        'Real-time customer journey mapping',
+        'Predictive customer behavior analysis',
+        'Automated personalization engines',
+        'Omnichannel experience orchestration',
+        'Customer sentiment analysis',
+        'Experience optimization recommendations'
+      ],
+      pricing: '$3,000 – $18,000/month',
+      perUnit: '$0.02 – $0.20 per interaction',
+      timeline: '4–8 weeks',
+      benefits: [
+        '40% improvement in customer satisfaction',
+        'Increased customer lifetime value',
+        'Reduced churn rates',
+        'Enhanced brand loyalty'
+      ]
+    },
+    {
+      icon: Brain,
+      name: 'AI-Powered Legal Document Analysis',
+      description: 'Advanced legal document processing with contract analysis, compliance checking, and risk assessment.',
+      features: [
+        'Contract analysis and risk assessment',
+        'Legal document summarization',
+        'Compliance monitoring and alerts',
+        'Legal research and precedent analysis',
+        'Document comparison and version control',
+        'Integration with legal management systems'
+      ],
+      pricing: '$2,000 – $10,000/month',
+      perUnit: '$0.10 – $1.00 per document',
+      timeline: '4–6 weeks',
+      benefits: [
+        '80% reduction in document review time',
+        'Improved accuracy in risk assessment',
+        'Enhanced compliance monitoring',
+        'Reduced legal costs'
+      ]
+    },
+    {
+      icon: Zap,
+      name: 'AI-Powered Energy Trading Platform',
+      description: 'Intelligent energy trading system with market prediction and automated trading strategies.',
+      features: [
+        'Energy market prediction and analysis',
+        'Automated trading algorithms',
+        'Risk management and portfolio optimization',
+        'Real-time market monitoring',
+        'Regulatory compliance management',
+        'Integration with energy markets'
+      ],
+      pricing: '$5,000 – $30,000 setup',
+      perUnit: '0.1% – 1% of trading volume',
+      timeline: '6–12 weeks',
+      benefits: [
+        'Optimized energy trading strategies',
+        'Reduced market risks',
+        'Improved profitability',
+        'Automated compliance management'
+      ]
+    },
+    {
+      icon: Eye,
+      name: 'AI-Powered Agricultural Intelligence',
+      description: 'Comprehensive agricultural AI platform for crop monitoring, yield optimization, and farm management.',
+      features: [
+        'Crop health monitoring and analysis',
+        'Yield prediction and optimization',
+        'Pest and disease detection',
+        'Weather impact analysis',
+        'Precision agriculture recommendations',
+        'Integration with farm management systems'
+      ],
+      pricing: '$1,000 – $8,000/month',
+      perUnit: '$0.05 – $0.50 per acre',
+      timeline: '3–6 weeks',
+      benefits: [
+        '20% increase in crop yields',
+        'Reduced pesticide and fertilizer use',
+        'Improved farm efficiency',
+        'Better resource utilization'
+      ]
+    },
+    {
+      icon: Shield,
+      name: 'AI-Powered Regulatory Compliance Engine',
+      description: 'Automated regulatory compliance monitoring and reporting across multiple industries and jurisdictions.',
+      features: [
+        'Multi-jurisdiction compliance monitoring',
+        'Automated regulatory reporting',
+        'Risk assessment and mitigation',
+        'Policy change tracking and alerts',
+        'Audit trail and documentation',
+        'Integration with business systems'
+      ],
+      pricing: '$2,000 – $12,000/month',
+      perUnit: '$0.10 – $1.00 per compliance check',
+      timeline: '4–8 weeks',
+      benefits: [
+        '95% reduction in compliance violations',
+        'Automated regulatory reporting',
+        'Reduced compliance costs',
+        'Enhanced risk management'
+      ]
+    },
+    {
+      icon: Brain,
+      name: 'AI-Powered Research Assistant',
+      description: 'Intelligent research platform for academic and corporate research with automated analysis and insights.',
+      features: [
+        'Automated literature review and analysis',
+        'Research gap identification',
+        'Data synthesis and insights generation',
+        'Citation and reference management',
+        'Collaborative research tools',
+        'Integration with research databases'
+      ],
+      pricing: '$1,000 – $6,000/month',
+      perUnit: '$0.05 – $0.50 per research query',
+      timeline: '3–6 weeks',
+      benefits: [
+        '70% reduction in research time',
+        'Improved research quality',
+        'Enhanced collaboration',
+        'Better insights and discoveries'
+      ]
+    },
+    {
+      icon: TrendingUp,
+      name: 'AI-Powered Market Intelligence Platform',
+      description: 'Advanced market research and competitive intelligence with real-time analysis and insights.',
+      features: [
+        'Real-time market monitoring',
+        'Competitive analysis and benchmarking',
+        'Trend identification and forecasting',
+        'Customer sentiment analysis',
+        'Market opportunity identification',
+        'Automated reporting and alerts'
+      ],
+      pricing: '$2,000 – $15,000/month',
+      perUnit: '$0.10 – $1.00 per analysis',
+      timeline: '4–6 weeks',
+      benefits: [
+        'Enhanced market understanding',
+        'Improved strategic decision making',
+        'Competitive advantage insights',
+        'Reduced market research costs'
+      ]
+    },
+    {
+      icon: Users,
+      name: 'AI-Powered Learning Management System',
+      description: 'Intelligent educational platform with personalized learning paths and automated assessment.',
+      features: [
+        'Personalized learning path generation',
+        'Automated content creation and curation',
+        'Intelligent assessment and grading',
+        'Learning analytics and insights',
+        'Adaptive learning algorithms',
+        'Integration with educational tools'
+      ],
+      pricing: '$1,500 – $10,000/month',
+      perUnit: '$0.50 – $5.00 per student',
+      timeline: '4–8 weeks',
+      benefits: [
+        'Improved learning outcomes',
+        'Personalized education experiences',
+        'Reduced administrative overhead',
+        'Enhanced student engagement'
+      ]
+    },
+    {
+      icon: Eye,
+      name: 'AI-Powered Quality Assurance Platform',
+      description: 'Comprehensive quality control system with automated testing and defect detection.',
+      features: [
+        'Automated testing and validation',
+        'Defect detection and classification',
+        'Quality metrics and reporting',
+        'Process optimization recommendations',
+        'Integration with production systems',
+        'Real-time quality monitoring'
+      ],
+      pricing: '$2,000 – $12,000/month',
+      perUnit: '$0.05 – $0.50 per test',
+      timeline: '3–6 weeks',
+      benefits: [
+        '90% reduction in quality issues',
+        'Automated quality control',
+        'Improved product reliability',
+        'Reduced testing costs'
+      ]
     }
   ];
 
