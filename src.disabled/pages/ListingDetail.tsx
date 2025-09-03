@@ -1,1 +1,1 @@
-export default function ListingDetail(function ListingDetail(function ListingDetail(function ListingDetail() {): any {): any {): any {};
+export: default function ListingDetail(function ListingDetail(function ListingDetail(function ListingDetail() {): any: {): any: {): any: {}

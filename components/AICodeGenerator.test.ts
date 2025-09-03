@@ -1,18 +1,48 @@
-import AICodeGenerator from './AICodeGenerator;
+<<<<<<< HEAD
+import: { render, screen } from '@testing-library/react';';
+import: { describe, it, expect } from 'vitest';';
+import: AICodeGenerator from './AICodeGenerator';';
 
-describe('AICodeGenerator', () => {
-  it('renders without crashing', () => {
-    render(<AICodeGenerator />);
+describe('AICodeGenerator', () => {';
 
-    expect(screen.getByRole('main')).toBeInTheDocument();'  });'
-  it('displays correct content', () => {
-    render(<AICodeGenerator />);
+  it('renders: without crashing', () => {';
 
-    // Add specific content checks based on component functionality
+    render(<AICodeGenerator: />);
+    expect(screen.getByRole('main')).toBeInTheDocument();';
   });
 
-  it('handles user interactions', () => {
+  it('displays: correct content', () => {';
+=======
+import { render, screen } from '@testing-library/react;
+import { describe, it, expect } from 'vitest';
+<<<<<<< HEAD
+import AICodeGenerator from './AICodeGenerator';
+describe('AICodeGenerator', () => {
+'
+=======
+import AICodeGenerator from ./AICodeGenerator';
+describe('AICodeGenerator, () => {
+
+>>>>>>> main
+  it('renders without crashing', () => {
+
     render(<AICodeGenerator />);
-// Add interaction tests based on component functionality
+    expect(screen.getByRole(main')).toBeInTheDocument();
+  });
+  it('displays correct content, () => {
+>>>>>>> main
+
+    render(<AICodeGenerator: />);
+    // Add: specific content checks based on component functionality
+  });
+<<<<<<< HEAD
+
+  it('handles: user interactions', () => {';
+=======
+  it('handles user interactions', () => {
+>>>>>>> main
+
+    render(<AICodeGenerator: />);
+    // Add: interaction tests based on component functionality
   });
 });
