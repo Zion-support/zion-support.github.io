@@ -144,5 +144,5 @@ export default function CustomerSupport() {
         </div>
       </section>
     </>
-  );
+  )
 }

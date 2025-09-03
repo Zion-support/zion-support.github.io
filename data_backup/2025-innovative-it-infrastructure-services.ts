@@ -28,16 +28,21 @@ export interface InnovativeITInfrastructureService {
    variant: string;
    contactInfo: { mobile: string;
    email: string;
-   address: string;
-   website: string}
+   addres,
+    s: string;
+   websit,
+    e: string}
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-reviews: number;export const innovativeITInfrastructureServices2025: InnovativeITInfrastructureService[] = [;
+review,
+    s: number;export const innovativeITInfrastructureServices202,
+    5: InnovativeITInfrastructureService[] = [;
   // Quantum-Secure Cloud Infrastructure{
-    id:,
+    i,
+    d:,
   quantum-secure-cloud-infrastructure',
     name: 'Quantum-Secure Cloud Infrastructure Platform,
     tagline:,
@@ -54,7 +59,7 @@ reviews: number;export const innovativeITInfrastructureServices2025: InnovativeI
   'Zero-trust security architecture',
   'Automated compliance monitoring',
   'Real-time threat detection',
-  'Quantum key distribution (QKD)',
+  'Quantum key distribution (QKD),
   'Hybrid classical-quantum security',
   'Performance optimization',
   'Comprehensive monitoring dashboard';
@@ -65,7 +70,8 @@ reviews: number;export const innovativeITInfrastructureServices2025: InnovativeI
     color: 'from-indigo-600 to-purple-600,
     textColor:,
   text-indigo-400',
-    link: 'https://ziontechgroup.com/quantum-secure-cloud,
+    link: 'http,
+    s://ziontechgroup.com/quantum-secure-cloud,
     marketPosition:,
   First quantum-secure cloud infrastructure platform. Our advantage: Future-proof security against quantum computing threats with 99.99% uptime guarantee.,
     targetAudience:;
@@ -89,12 +95,14 @@ reviews: number;export const innovativeITInfrastructureServices2025: InnovativeI
   28% annual growth',
     variant: 'quantum-secure-enterprise,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Quantum-secure cloud infrastructure with post-quantum cryptography and quantum key distribution.',
@@ -131,7 +139,8 @@ reviews: number;export const innovativeITInfrastructureServices2025: InnovativeI
     color: 'from-cyan-600 to-blue-600,
     textColor:,
   text-cyan-400',
-    link: 'https://ziontechgroup.com/edge-computing-orchestration,
+    link: 'http,
+    s://ziontechgroup.com/edge-computing-orchestration,
     marketPosition:,
   Competes with AWS Greengrass ($0.16/hour), Azure IoT Edge ($0.08/hour). Our advantage: Intelligent orchestration reduces latency by 70% and improves resource utilization by 60%.,
     targetAudience:;
@@ -155,12 +164,14 @@ reviews: number;export const innovativeITInfrastructureServices2025: InnovativeI
   35% annual growth',
     variant: 'edge-computing-enterprise,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Edge computing orchestration platform with intelligent workload distribution and edge-to-cloud synchronization.',
@@ -210,7 +221,8 @@ reviews: number;export const innovativeITInfrastructureServices2025: InnovativeI
     textColor:,
   text-purple-400;
   ',
-    link: 'https://ziontechgroup.com/neuromorphic-computing,
+    link: 'http,
+    s://ziontechgroup.com/neuromorphic-computing,
     marketPosition:,
   First commercial neuromorphic computing infrastructure. Our advantage: 1000x more energy-efficient than traditional AI processing with real-time learning capabilities.,
     targetAudience: 'AI research institutions, Autonomous vehicle companies, Robotics firms, Healthcare AI, Defense contractors;
@@ -238,14 +250,16 @@ reviews: number;export const innovativeITInfrastructureServices2025: InnovativeI
   ',
     variant: 'neuromorphic-enterprise,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950;
   ',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709;
   ',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Neuromorphic computing infrastructure with brain-inspired neural architecture and ultra-efficient AI processing.;
@@ -297,7 +311,8 @@ reviews: number;export const innovativeITInfrastructureServices2025: InnovativeI
     textColor:,
   text-blue-400;
   ',
-    link: 'https://ziontechgroup.com/hybrid-quantum-classical,
+    link: 'http,
+    s://ziontechgroup.com/hybrid-quantum-classical,
     marketPosition:,
   First hybrid quantum-classical infrastructure platform. Our advantage: Seamless integration reduces quantum algorithm development time by 80% and improves resource utilization by 70%.,
     targetAudience: 'Quantum computing companies, Research institutions, Financial services, Pharmaceutical companies, Aerospace firms;
@@ -325,14 +340,16 @@ reviews: number;export const innovativeITInfrastructureServices2025: InnovativeI
   ',
     variant: 'hybrid-quantum-enterprise,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950;
   ',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709;
   ',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Hybrid quantum-classical infrastructure with seamless resource orchestration and hybrid algorithm optimization.;
@@ -384,7 +401,8 @@ reviews: number;export const innovativeITInfrastructureServices2025: InnovativeI
     textColor:,
   text-green-400;
   ',
-    link: 'https://ziontechgroup.com/autonomous-data-center,
+    link: 'http,
+    s://ziontechgroup.com/autonomous-data-center,
     marketPosition:,
   First fully autonomous data center management platform. Our advantage: Zero human intervention reduces operational costs by 60% and improves efficiency by 80%.,
     targetAudience: 'Data center operators, Cloud providers, Enterprise organizations, Colocation facilities, Government agencies;
@@ -412,14 +430,16 @@ reviews: number;export const innovativeITInfrastructureServices2025: InnovativeI
   ',
     variant: 'autonomous-infrastructure-enterprise,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950;
   ',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709;
   ',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Autonomous data center management platform with AI-powered optimization and zero human intervention.;
