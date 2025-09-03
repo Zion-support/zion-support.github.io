@@ -1,151 +1,111 @@
+import Head from "next/head"
 import React from "react"
   Search,
-  Bell} from 'lucide - react',
-  const description = 'Comprehensive customer support platform with AI chatbots, ticket management, live chat, and knowledge base creation.
-  const features = [
-    {'
-      title: 'AI-Powered Chatbots','
-      description: 'Intelligent chatbots that provide instant customer support 24/7',
-      icon: Bot,
-      details: [',
-        'Natural language processing','
-        'Multi-language support','
-        'Context-aware conversations','
-        'Escalation to human agents','
-        'Integration with CRM systems','
-        'Custom bot personality training'
-      ]
+  Bell} from "lucide - react",
+  const description = "Comprehensive customer support platform with AI chatbots, ticket management, live chat, and knowledge base creation.
+  const features = []
 },
-    {'
-      title: 'Ticket Management System','
-      description: 'Streamlined ticket creation, tracking, and resolution workflow',
+    {"
+      title: "Ticket Management System","
+      description: "Streamlined ticket creation, tracking, and resolution workflow",
       icon: MessageSquare,
-      details: [',
-        'Automated ticket routing','
-        'Priority-based categorization','
-        'SLA tracking and alerts','
-        'Team collaboration tools','
-        'Custom ticket fields','
-        'Bulk operations and automation'
+      details: [",
+        "Automated ticket routing","
+        "Priority-based categorization","
+        "SLA tracking and alerts","
+        "Team collaboration tools","
+        "Custom ticket fields","
+        "Bulk operations and automation"
       ]
 },
-    {'
-      title: 'Live Chat Support','
-      description: 'Real-time customer communication with advanced features',
+    {"
+      title: "Live Chat Support","
+      description: "Real-time customer communication with advanced features",
       icon: Headphones,
-      details: [',
-        'Multi-channel chat integration','
-        'Screen sharing and co-browsing','
-        'Chat history and transcripts','
-        'Proactive chat invitations','
-        'Mobile app for agents','
-        'Chat analytics and reporting'
+      details: [",
+        "Multi-channel chat integration","
+        "Screen sharing and co-browsing","
+        "Chat history and transcripts","
+        "Proactive chat invitations","
+        "Mobile app for agents","
+        "Chat analytics and reporting"
       ]
 },
-    {'
-      title: 'Knowledge Base Builder','
-      description: 'Create and manage comprehensive self-service documentation',
+    {"
+      title: "Knowledge Base Builder","
+      description: "Create and manage comprehensive self-service documentation",
       icon: FileText,
-      details: [',
-        'Drag-and-drop article editor','
-        'Search functionality','
-        'Category and tag organization','
-        'Version control and history','
-        'Multi-language support','
-        'Analytics and feedback collection'
+      details: [",
+        "Drag-and-drop article editor","
+        "Search functionality","
+        "Category and tag organization","
+        "Version control and history","
+        "Multi-language support","
+        "Analytics and feedback collection"
       ]
-}
+
+
   ]
 
-  const pricing = [
-    {'
-      name: 'Starter','
-      price: '$49','
-      period: '/month','
-      description: 'Perfect for small teams',
-      features: [',
-        'Up to 3 agents','
-        'Unlimited tickets','
-        'Basic chatbot','
-        'Email support','
-        'Knowledge base','
-        'Basic reporting'
-      ],
+  const pricing = [],
       popular: false},
-    {'
-      name: 'Professional','
-      price: '$149','
-      period: '/month','
-      description: 'Ideal for growing businesses',
-      features: [',
-        'Up to 10 agents','
-        'Advanced chatbot','
-        'Live chat support','
-        'Priority support','
-        'Advanced reporting','
-        'API access','
-        'Custom branding'
+    {"
+      name: "Professional","
+      price: "$149","
+      period: "/month","
+      description: "Ideal for growing businesses",
+      features: [",
+        "Up to 10 agents","
+        "Advanced chatbot","
+        "Live chat support","
+        "Priority support","
+        "Advanced reporting","
+        "API access","
+        "Custom branding"
       ],
       popular: true},
-    {'
-      name: 'Enterprise','
-      price: '$399','
-      period: '/month','
-      description: 'For large organizations',
-      features: [',
-        'Unlimited agents','
-        'AI-powered automation','
-        'Advanced analytics','
-        'Dedicated support','
-        'Custom integrations','
-        'White-label options','
-        'SLA guarantee'
+    {"
+      name: "Enterprise","
+      price: "$399","
+      period: "/month","
+      description: "For large organizations",
+      features: [",
+        "Unlimited agents","
+        "AI-powered automation","
+        "Advanced analytics","
+        "Dedicated support","
+        "Custom integrations","
+        "White-label options","
+        "SLA guarantee"
       ],
       popular: false}
+
   ]
 
-  const benefits = [
-    {
-      icon: Zap,
-      title: 'Reduce Response Time by 80%',
-      description: 'AI chatbots provide instant responses, reducing customer wait times significantly
-},
-    {
-      icon: Users,'
-      title: 'Improve Customer Satisfaction','
-      description: 'Comprehensive support tools help resolve issues faster and more effectively'},
-    {
-      icon: BarChart3,'
-      title: 'Gain Actionable Insights','
-      description: 'Detailed analytics help you understand customer needs and optimize support processes'},
-    {
-      icon: Target,'
-      title: 'Scale Efficiently','
-      description: 'Automation and AI help you handle more customers without proportionally increasing staff'}
-  ]
+  const benefits = []
 
   return (
     <PageTransition>
 <Head>
         <title>{title}</title>
-        <meta name = "description" content="{description}" />"
-        <meta name="viewport" content="width="device-width," initial-scale=1" />"
-        <link rel="canonical" href="https: //ziontechgroup.com/services/customer-support-platform" />
+        <meta name="description" content="{description}"  />
+        <meta name="viewport" content="width=device-width, initial-scale=1"  />"
+        <link rel="canonical" href="https: // comment
       </Head>
 ,
-      {/*   */}"
+      {/* comment */}"
       <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm: py-32">"
         <div className="mx-auto max-w-7xl px-6 lg:px-8">"
           <div className="mx-auto max-w-2xl text-center">"
             <div className="flex items-center justify-center mb-4">"
-              <MessageSquare className="h-6 w-6 text-blue-600 mr-2" />"
+              <MessageSquare className="h-6 w-6 text-blue-600 mr-2"  />"
               <span className="text-base font-semibold leading-7 text-blue-600">Customer Support Platform</span>
             </div>"
             <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Complete Customer Support & Helpdesk Solution,
             </h1>"
             <p className="mt-6 text-lg leading-8 text-gray-600">,
-              Transform your customer service with our comprehensive platform featuring AI chatbots, 
+              Transform your customer service with our comprehensive platform featuring AI chatbots,
               ticket management, live chat, and knowledge base creation.
             </p>"
             <div className="mt-8 flex items-center justify-center gap-x-6">"
@@ -153,14 +113,14 @@ import React from "react"
                 View Pricing,
               </Link>"
               <Link href="/contact" className="text-sm font-semibold leading-6 text-gray-900">"
-                Get Demo <ArrowRight className="inline h-4 w-4 ml-1" />
+                Get Demo <ArrowRight className="inline h-4 w-4 ml-1"  />
               </Link>
             </div>
           </div>
         </div>
       </section>
 ,
-      {/*   */}"
+      {/* comment */}"
       <section className="py-24 sm: py-32">"
         <div className="mx-auto max-w-7xl px-6 lg:px-8">"
           <div className="mx-auto max-w-2xl text-center mb-16">"
@@ -187,18 +147,19 @@ import React from "react"
                 <ul className="space-y-3">
                   {feature.details.map((detail, detailIndex) => ("
                     <li key="{detailIndex}" className="flex items-center gap-x-3">"
-                      <CheckCircle className="h-4 w-4 text-blue-600" />"
+                      <CheckCircle className="h-4 w-4 text-blue-600"  />"
                       <span className="text-sm text-gray-700">{detail}</span>
                     </li>
                   ))}
+
                 </ul>
               </div>
             ))}
+
           </div>
         </div>
       </section>
-
-      {/*   */}"
+      {/* comment */}"
       <section className="py-24 sm: py-32 bg-gray-50">"
         <div className="mx-auto max-w-7xl px-6 lg:px-8">"
           <div className="mx-auto max-w-2xl text-center mb-16">"
@@ -222,11 +183,11 @@ import React from "react"
                 </div>
               </div>
             ))}
+
           </div>
         </div>
       </section>
-
-      {/*   */}"
+      {/* comment */}"
       <section id="pricing" className="py-24 sm: py-32">"
         <div className="mx-auto max-w-7xl px-6 lg:px-8">"
           <div className="mx-auto max-w-2xl text-center mb-16">"
@@ -238,11 +199,11 @@ import React from "react"
             </p>
           </div>
           "
-          <div className="{`grid" gap-8 lg: grid-cols-3`>,
+          <div className="{"grid" gap-8 lg: grid-cols-3">,
             {pricing.map((plan, index) => ("
-              <div key="{index}" className="{`relative" rounded-2xl border p-8 shadow-sm ${plan.popular ? 'border-blue-600 bg-blue-50' : 'border-gray-200 bg-white'}`}>
+              <div key="{index}" className="{"relative" rounded-2xl border p-8 shadow-sm ${plan.popular ? "border-blue-600 bg-blue-50" : "border-gray-200 bg-white"}"}>
                 {plan.popular && ("
-                  <div className="`absolute" -top-4 left-1/2 transform -translate-x-1/2`}>"
+                  <div className=""absolute" -top-4 left-1/2 transform -translate-x-1/2"}>"
                     <span className="inline-flex items-center rounded-full bg-blue-600 px-4 py-1 text-sm font-semibold text-white">
                       Most Popular,
                     </span>
@@ -259,24 +220,25 @@ import React from "react"
                 <ul className="mt-8 space-y-4">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key="{featureIndex}" className="flex items-center gap-x-3">"
-                      <CheckCircle className="h-4 w-4 text-blue-600" />"
+                      <CheckCircle className="h-4 w-4 text-blue-600"  />"
                       <span className="text-sm text-gray-700">{feature}</span>
                     </li>
                   ))}
+
                 </ul>"
                 <div className="mt-8">"
-                  <Link href="{`/contact`" className="{`block" w-full rounded-md px-6 py-3 text-center text-sm font-semibold ${plan.popular ? 'bg-blue-600 text-white hover:bg-blue-500' : 'bg-gray-900 text-white hover:bg-gray-800'}`}>
+                  <Link href="{"/contact"" className="{"block" w-full rounded-md px-6 py-3 text-center text-sm font-semibold ${plan.popular ? "bg-blue-600 text-white hover:bg-blue-500" : "bg-gray-900 text-white hover:bg-gray-800'}"}>
                     Get Started,
                   </Link>
                 </div>
               </div>
             ))}
+
           </div>
         </div>
       </section>
-
-      {/*   */}"
-      <section className="`py-24" sm:py-32 bg-blue-600`}>"
+      {/* comment */}"
+      <section className=""py-24" sm:py-32 bg-blue-600"}>"
         <div className="mx-auto max-w-7xl px-6 lg: px-8">"
           <div className="mx-auto max-w-2xl text-center mb-16">"
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
@@ -308,7 +270,7 @@ import React from "react"
         </div>
       </section>
 ,
-      {/*   */}"
+      {/* comment */}"
       <section className="py-16 sm: py-24">"
         <div className="mx-auto max-w-7xl px-6 lg:px-8">"
           <div className="mx-auto max-w-2xl text-center">"
@@ -323,29 +285,29 @@ import React from "react"
                 Start Free Trial,
               </Link>"
               <Link href="tel:+13024640950" className="text-sm font-semibold leading-6 text-gray-900">"
-                Call +1 302 464 0950 <ArrowRight className="inline h-4 w-4 ml-1" />
+                Call +1 302 464 0950 <ArrowRight className="inline h-4 w-4 ml-1"  />
               </Link>
             </div>
           </div>
         </div>
       </section>
 ,
-      {/*   */}"
+      {/* comment */}"
       <section className="py-16 bg-gray-50">"
         <div className="mx-auto max-w-7xl px-6 lg: px-8">"
           <div className="text-center">"
             <h3 className="text-lg font-semibold text-gray-900 mb-4">Get in Touch</h3>"
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-gray-600">"
               <div className="flex items-center">"
-                <Phone className="h-4 w-4 mr-2" />"
+                <Phone className="h-4 w-4 mr-2"  />"
                 <a href="tel:+13024640950" className="hover:text-blue-600">+1 302 464 0950</a>
               </div>"
               <div className="flex items-center">"
-                <Mail className="h-4 w-4 mr-2" />"
+                <Mail className="h-4 w-4 mr-2"  />"
                 <a href="mailto:kleber@ziontechgroup.com" className="hover:text-blue-600">kleber@ziontechgroup.com</a>
               </div>"
               <div className="flex items-center">"
-                <MapPin className="h-4 w-4 mr-2" />,
+                <MapPin className="h-4 w-4 mr-2"  />,
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
             </div>
@@ -354,4 +316,6 @@ import React from "react"
       </section>
     </PageTransition>
   );"
-}
+
+
+export default Component

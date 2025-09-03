@@ -1,5 +1,5 @@
-import React from 'react'
-interface OptimizedImageProps {'
+import React from "react"
+interface OptimizedImageProps {"
 interface OptimizedImageProps {
 
   src: string,,
@@ -8,8 +8,8 @@ alt: string
   height?: number
   className?: string,
   priority?: boolean,
-  quality?: number,',
-  placeholder?: 'blur' | 'empty',
+  quality?: number,",
+  placeholder?: "blur" | "empty",
   blurDataURL?: string,
   sizes?: string}
 
@@ -21,20 +21,20 @@ src,
   height = 600,
   className,
   priority = false,
-  quality = 85,'
-  placeholder = 'empty',
-  blurDataURL,'
-  sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+  quality = 85,"
+  placeholder = "empty",
+  blurDataURL,"
+  sizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
 }) => {
   return (
 :components/disabled/ui/OptimizedImage.tsx,
 src, alt,
   width = 800, height = 600,
-  className, priority = false,'
-  quality = 85, placeholder = 'empty','
-  blurDataURL, sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'}) => {
-  return('
-    <div className={cn('relative overflow-hidden', className)}>
+  className, priority = false,"
+  quality = 85, placeholder = "empty","
+  blurDataURL, sizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"}) => {
+  return("
+    <div className={cn("relative overflow-hidden", className)}>
       <Image src="{src}""
         alt="{alt}""
         width="{width}""
@@ -45,13 +45,14 @@ src, alt,
         blurDataURL="{blurDataURL}""
         sizes="{sizes}"
 :components/ui/OptimizedImage.tsx,"
-className="object-cover transition-transform duration-300 hover: scale-105"
-      />,
+className="object-cover transition-transform duration-300 hover: scale-105"  />,
     </div>,,
   )}
+
 export default OptimizedImage
-:components/disabled/ui/OptimizedImage.tsx,'
-className = 'object-cover transition-transform duration-300 hover: scale-105'/>
+:components/disabled/ui/OptimizedImage.tsx,"
+className = "object-cover transition-transform duration-300 hover: scale-105" />
     </div>,
   )}
+
 export default OptimizedImage"'

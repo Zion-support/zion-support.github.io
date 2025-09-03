@@ -1,6 +1,7 @@
-import type { NextPage } from 'next'
-const MainLayout = dynamic(() => import('../components/layout/MainLayout'), { ssr: false })
-
+import React from "react"
+import type { NextPage } from "next"
+const MainLayout = dynamic(() => import("../components/layout/MainLayout"), { ssr: false })
+}
 const TermsOfService: NextPage = () => {
   return (
     <MainLayout title="Terms of Service - Zion Tech Group""
@@ -14,17 +15,18 @@ const TermsOfService: NextPage = () => {
             <div className="prose prose-lg max-w-none">"
               <p className="text-gray-600 mb-6">,
                 <strong>Last updated:</strong> {new Date().toLocaleDateString()}
+
               </p>
               "
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Acceptance of Terms</h2>"
-              <p className="text-gray-600 mb-6">'
-                By accessing and using Zion Tech Group's services, you accept and agree to be bound by,
+              <p className="text-gray-600 mb-6">"
+                By accessing and using Zion Tech Group"s services, you accept and agree to be bound by,
 the terms and provision of this agreement.
               </p>
               "
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Use License</h2>"
-              <p className="text-gray-600 mb-6">'
-                Permission is granted to temporarily download one copy of the materials on Zion Tech Group's,
+              <p className="text-gray-600 mb-6">"
+                Permission is granted to temporarily download one copy of the materials on Zion Tech Group"s,
 website for personal, non-commercial transitory viewing only.
               </p>
               "
@@ -45,8 +47,8 @@ of the use or inability to use the materials on our website.
                 If you have any questions about these Terms of Service, please contact us: </p>"
               <div className="bg-gray-50 p-6 rounded-lg">"
                 <p className="text-gray-600">
-                  <strong>Email:</strong> kleber@ziontechgroup.com<br />
-                  <strong>Phone:</strong> +1 302 464 0950<br />,
+                  <strong>Email:</strong> kleber@ziontechgroup.com<br  />
+                  <strong>Phone:</strong> +1 302 464 0950<br  />,
                   <strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709,
                 </p>
               </div>

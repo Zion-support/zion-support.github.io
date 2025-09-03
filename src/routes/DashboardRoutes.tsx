@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 export default function Dashboardroutes() {
   return (
     <div className="min-h-screen bg-white">
@@ -7,7 +7,6 @@ export default function Dashboardroutes() {
         <p className="text-lg text-gray-600 mb-8">
           This is a placeholder component for dashboardroutes.
         </p>
-        
       </div>
     </div>
   )

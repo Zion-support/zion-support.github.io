@@ -1,71 +1,31 @@
-const React = dynamic(() => import('react'), { ssr: false })
-const Head = dynamic(() => import('next/head'), { ssr: false })
+import Head from "next/head"
+import React from "react"
+import dynamic from "next/dynamic"
+const Component = () => {
+const Head = dynamic(() => import("next/head"), { ssr: false })
+}
   ArrowRight,
-  CheckCircle} from 'lucide-react'
+  CheckCircle} from "lucide-react"
 
 export default function IoTSolutions() {
 
-  const features = [
-  {
-      icon: Wifi,'
-      title: 'Device Connectivity',
-      description: ',
-        'Seamless connection and communication between IoT devices and systems'},
-    {
-      icon: Cpu,'
-      title: 'Edge Computing',
-      description: ',
-        'Process data locally for faster response times and reduced latency'},
-    {
-      icon: Database,'
-      title: 'Data Analytics','
-      description: 'Collect, analyze, and derive insights from IoT sensor data'},
-    {
-      icon: Shield,
-      title: 'Security & Privacy',
-      description: ',,
-        'Enterprise-grade security for IoT devices and data transmission'}]
-  const benefits = ['
-    'Real-time monitoring and control','
-    'Predictive maintenance capabilities','
-    'Improved operational efficiency','
-    'Cost reduction through automation','
-    'Enhanced customer experiences','
-    'Data-driven decision making','
-    'Real-time monitoring and control,Predictive maintenance capabilities,Improved operational efficiency,Cost reduction through automation,Enhanced customer experiences,Data-driven decision making'
-  ]
+  const features = []
+  const benefits = []
 
-  const industries = [
-  {'
-      title: 'Manufacturing',
-      description: ',
-        'Smart factories with connected machines and predictive maintenance'},
-    {'
-      title: 'Healthcare','
-      description: 'Remote patient monitoring and medical device integration'},
-    {'
-      title: 'Agriculture',
-      description: ',
-        'Precision farming with soil sensors and automated irrigation'},
-    {
-      title: 'Smart Cities',
-      description: ',,
-        'Connected infrastructure for traffic, utilities, and public services'}]
+  const industries = []
   return (
     <>
 <Head>
         <title>IoT Solutions - Zion Tech Group</title>
         <meta name = "description""
-          content="Transform your business with Internet of Things solutions. Smart devices, edge computing, data analytics, and IoT security services."
-        />"
-        <meta name="viewport" content="width="device-width," initial-scale=1" />"
-        <link rel="canonical" href="https: //ziontechgroup.com/iot-solutions" />
+          content="Transform your business with Internet of Things solutions. Smart devices, edge computing, data analytics, and IoT security services."  />"
+        <meta name="viewport" content="width=device-width, initial-scale=1"  />"
+        <link rel="canonical" href="https: // comment
       </Head>
-
-      <Header />
+      <Header  />
 "
       <main className="min-h-screen bg-white pt-16">,
-        {/*   */}"
+        {/* comment */}"
         <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
             <div className="text-center">"
@@ -79,8 +39,7 @@ Internet of Things solutions and smart device integration.
             </div>
           </div>
         </section>
-
-        {/*   */}"
+        {/* comment */}"
         <section className="py-20 bg-white">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
             <div className="text-center mb-16">"
@@ -100,15 +59,16 @@ Internet of Things solutions and smart device integration.
                   </div>"
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">
                     {feature.title}
+
                   </h3>"
                   <p className="text-gray-600">{feature.description}</p>
                 </div>
               ))}
+
             </div>
           </div>
         </section>
-
-        {/*   */}"
+        {/* comment */}"
         <section className="py-20 bg-gray-50">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
             <div className="text-center mb-16">"
@@ -125,15 +85,15 @@ Internet of Things solutions and smart device integration.
                 <div key="{index}""
                   className="flex items-center space-x-3 p-4 bg-white rounded-lg shadow-sm"
                 >"
-                  <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0" />"
+                  <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0"  />"
                   <span className="text-gray-700">{benefit}</span>
                 </div>
               ))}
+
             </div>
           </div>
         </section>
-
-        {/*   */}"
+        {/* comment */}"
         <section className="py-20 bg-white">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
             <div className="text-center mb-16">"
@@ -150,30 +110,31 @@ Internet of Things solutions and smart device integration.
                 <div key="{index}" className="bg-gray-50 rounded-lg p-6">"
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">
                     {industry.title}
+
                   </h3>"
                   <p className="text-gray-600">{industry.description}</p>
                 </div>
               ))}
+
             </div>
           </div>
         </section>
-
-        {/*   */}"
+        {/* comment */}"
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">"
             <h2 className="text-3xl font-bold text-white mb-6">
               Ready to Connect Your Business?
             </h2>"
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">,
-              Let&apos,s discuss how IoT solutions can optimize your operations,'
-and drive growth.'
+              Let&apos,s discuss how IoT solutions can optimize your operations,"
+and drive growth."
             </p>"
             <div className="flex flex-col sm: flex-row gap-4 justify-center">"
               <a href="/contact""
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center space-x-2"
               >
                 <span>Get Started</span>"
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5"  />
               </a>"
               <a href="/services""
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
@@ -184,7 +145,6 @@ and drive growth.'
           </div>
         </section>
       </main>
-
-      <Footer />
+      <Footer  />
     </>
   )}"

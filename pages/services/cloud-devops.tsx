@@ -1,24 +1,24 @@
+import Head from "next/head"
+const Component = () => {
 import React from "react"
-
   return (
     <>
 <Head>
         <title>Cloud & DevOps Services - Zion Tech Group</title>
-        <meta name = "description" content="Professional cloud migration, DevOps implementation, and infrastructure management services. Scale your business with modern cloud solutions." />"
-        <meta name="viewport" content="width="device-width," initial-scale=1" />"
-        <link rel="canonical" href="https: //ziontechgroup.com/services/cloud-devops" />
+        <meta name="description" content="Professional cloud migration, DevOps implementation, and infrastructure management services. Scale your business with modern cloud solutions."  />
+        <meta name="viewport" content="width=device-width, initial-scale=1"  />"
+        <link rel="canonical" href="https: // comment
       </Head>
-      
-      <Navigation />
+      <Navigation  />
       "
       <main className="min-h-screen bg-white">,
-        {/*   */}"
+        {/* comment */}"
         <section className="bg-gradient-to-br from-blue-50 to-cyan-100 py-20">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
             <div className="text-center">"
               <div className="flex justify-center mb-6">"
                 <div className="p-4 bg-blue-100 rounded-full">"
-                  <Cloud className="w-12 h-12 text-blue-600" />
+                  <Cloud className="w-12 h-12 text-blue-600"  />
                 </div>
               </div>"
               <h1 className="text-5xl font-bold text-gray-900 mb-6">"
@@ -40,7 +40,7 @@ import React from "react"
           </div>
         </section>
 ,
-        {/*   */}"
+        {/* comment */}"
         <section className="py-20 bg-white">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">,
@@ -51,11 +51,11 @@ import React from "react"
                   <div className="text-gray-600">{stat.description}</div>
                 </div>
               ))}
+
             </div>
           </div>
         </section>
-
-        {/*   */}"
+        {/* comment */}"
         <section className="py-20 bg-gray-50">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
             <div className="text-center mb-16">"
@@ -80,18 +80,19 @@ import React from "react"
                   <ul className="space-y-3">
                     {service.features.map((feature, featureIndex) => ("
                       <li key="{featureIndex}" className="flex items-center">"
-                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />"
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0"  />"
                         <span className="text-gray-700">{feature}</span>
                       </li>
                     ))}
+
                   </ul>
                 </div>
               ))}
+
             </div>
           </div>
         </section>
-
-        {/*   */}"
+        {/* comment */}"
         <section className="py-20 bg-white">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
             <div className="text-center mb-16">"
@@ -111,11 +112,11 @@ import React from "react"
                   <p className="text-sm text-gray-600">{tech.description}</p>
                 </div>
               ))}
+
             </div>
           </div>
         </section>
-
-        {/*   */}"
+        {/* comment */}"
         <section className="py-20 bg-gray-50">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
             <div className="text-center mb-16">"
@@ -150,7 +151,7 @@ import React from "react"
           </div>
         </section>
 ,
-        {/*   */}"
+        {/* comment */}"
         <section className="py-20 bg-white">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
             <div className="text-center mb-16">"
@@ -163,21 +164,21 @@ import React from "react"
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"
               <div className="text-center">"
                 <div className="bg-green-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">"
-                  <Zap className="w-8 h-8 text-green-600" />
+                  <Zap className="w-8 h-8 text-green-600"  />
                 </div>"
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Faster Deployment</h3>"
                 <p className="text-gray-600">Deploy applications 10x faster with automated CI/CD pipelines</p>
               </div>"
               <div className="text-center">"
                 <div className="bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">"
-                  <Database className="w-8 h-8 text-blue-600" />
+                  <Database className="w-8 h-8 text-blue-600"  />
                 </div>"
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Cost Optimization</h3>"
                 <p className="text-gray-600">Reduce infrastructure costs by up to 50% with cloud optimization</p>
               </div>"
               <div className="text-center">"
                 <div className="bg-purple-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">"
-                  <Network className="w-8 h-8 text-purple-600" />
+                  <Network className="w-8 h-8 text-purple-600"  />
                 </div>"
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Scalability</h3>"
                 <p className="text-gray-600">Scale your infrastructure automatically based on demand</p>
@@ -186,7 +187,7 @@ import React from "react"
           </div>
         </section>
 ,
-        {/*   */}"
+        {/* comment */}"
         <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">"
             <h2 className="text-3xl font-bold text-white mb-6">
@@ -206,9 +207,9 @@ import React from "react"
           </div>
         </section>
       </main>
-      
-      <Footer />
+      <Footer  />
     </>
   )}
+
 "
 export default CloudDevOps

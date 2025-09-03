@@ -97,22 +97,22 @@ class ComprehensiveAutomationSuite {
       // Fix merge conflicts
       content = content.replace(/\n/g, '')
       content = content.replace(/\n/g, '')
-      content = content.replace(/      
+      content = content.replace(/\s+/g, ' ')
       // Fix unterminated strings
       content = content.replace(/&apos;s\s*"'\s*>/gm, '&apos;s>')
-      content = content.replace(/&apos;s\s*'\s*,/gm '&apos;s",')
+      content = content.replace(/&apos;s\s*'\s*,/gm, '&apos;s",')
       // Fix unterminated strings in general
       content = content.replace(/"'\s*$/gm, '')
       content = content.replace(/'\s*>/gm, '">')
-      content = content.replace(/"'\s*,/gm ',')
+      content = content.replace(/"'\s*,/gm, '",')
       // Fix missing semicolons
       content = content.replace(/([^}])\n\s*}/g, '$1;\n}')
       // Fix specific syntax errors we've seen
-      content = content.replace(/import Head from 'next\/head;/g, import Head from 'next/head';")
-      content = content.replace(/';/g, "')
-      content = content.replace(/category: 'Communication AI',/g, category: 'Communication AI',")
-      content = content.replace(/response: 'JWT token',/g, "response: 'JWT token',)
-      content = content.replace(/Award,/g, Award,")
+      content = content.replace(/import Head from 'next\/head;/g, "import Head from 'next/head';")
+      content = content.replace(/';/g, "';")
+      content = content.replace(/category: 'Communication AI',/g, "category: 'Communication AI',")
+      content = content.replace(/response: 'JWT token',/g, "response: 'JWT token',")
+      content = content.replace(/Award,/g, "Award,")
       content = content.replace(/category: 'Technology',/g, "category: 'Technology',)
       content = content.replace(/category: 'Content AI',/g, category: 'Content AI',")
       content = content.replace(/response: 'JWT token',/g, "response: 'JWT token',)

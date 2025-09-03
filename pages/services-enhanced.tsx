@@ -1,19 +1,8 @@
-const React = dynamic(() => import('react'), { ssr: false })
-  const description = 'Comprehensive AI, IT, and Micro SaaS solutions for modern businesses.
-  const mainServices = [
-    {
-      id: "ai","
-      title: "AI Autonomous Systems","
-      subtitle: "Intelligent Automation",
-      icon: Brain,"
-      color: "blue","
-      description: "Transform your operations with intelligent automation and AI-powered decision making.",
-      features: [",
-        "Sales/CS multi-agent copilots","
-        "RAG and workflow orchestration","
-        "Observability and guardrails","
-        "Intelligent process automation"
-      ],"
+import React from "react"
+import dynamic from "next/dynamic"
+const Component = () => {
+  const description = "Comprehensive AI, IT, and Micro SaaS solutions for modern businesses.
+  const mainServices = [],"
       deliveryTime: "2-4 weeks","
       href: "/ai-services"},
     {"
@@ -61,16 +50,10 @@ const React = dynamic(() => import('react'), { ssr: false })
       ],"
       deliveryTime: "6-12 weeks","
       href: "/micro-saas"}
+
   ]
 
-  const newServices = [
-    {"
-      title: "AI Email Responder","
-      description: "Automate email responses with AI-powered intelligence. Reduce response time by 80% and improve customer satisfaction.",
-      icon: Mail,"
-      color: "blue","
-      price: "From $15/month","
-      features: ["Intelligent response generation", "Smart email prioritization", "Multi-language support", "Analytics & insights"],"
+  const newServices = [],"
       href: "/services/ai-email-responder"},
     {"
       title: "Mobile Survey Tool","
@@ -112,16 +95,11 @@ const React = dynamic(() => import('react'), { ssr: false })
       price: "From $30/month","
       features: ["Custom ticketing system", "Client portals", "Knowledge bases", "IT tool integration"],"
       href: "/services/it-helpdesk-software"}
+
   ]
 
   const getColorClasses = (color: string) => {
-    const colors = {,
-      blue: {,"
-bg: "bg-blue-600","
-        hover: "hover:bg-blue-700","
-        text: "text-blue-600","
-        hoverText: "hover:text-blue-500","
-        border: "hover:border-blue-300"},
+    const colors = {},
       green: {,"
 bg: "bg-green-600","
         hover: "hover:bg-green-700","
@@ -158,16 +136,19 @@ bg: "bg-gray-600","
         text: "text-gray-600","
         hoverText: "hover:text-gray-500","
         border: "hover:border-gray-300"}
+
     }
+
     return colors[color as keyof typeof colors] || colors.blue}
+
   return (
     <PageTransition>
-      {/*   */}"
+      {/* comment */}"
       <section className = "bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm: py-32">"
         <div className="mx-auto max-w-7xl px-6 lg:px-8">"
           <div className="mx-auto max-w-2xl text-center">"
             <div className="flex items-center justify-center mb-4">"
-              <Award className="h-6 w-6 text-blue-600 mr-2" />"
+              <Award className="h-6 w-6 text-blue-600 mr-2"  />"
               <span className="text-base font-semibold leading-7 text-blue-600">
                 Our Services,
               </span>
@@ -182,8 +163,7 @@ that transform your business operations and drive growth.
           </div>
         </div>
       </section>
-
-      {/*   */}"
+      {/* comment */}"
       <section className="py-24 sm: py-32">"
         <div className="mx-auto max-w-7xl px-6 lg:px-8">"
           <div className="text-center mb-16">"
@@ -191,58 +171,65 @@ that transform your business operations and drive growth.
             <p className="text-xl text-gray-600">Our flagship technology solutions</p>
           </div>
           "
-          <div className="{`grid" gap-8 lg:grid-cols-2`>
+          <div className="{"grid" gap-8 lg:grid-cols-2">
             {mainServices.map((service) => {,
               const colors = getColorClasses(service.color),
               return ("
                 <div key="{service.id}""
-                  className="{`group" relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300 ${colors.border}`}
+                  className="{"group" relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300 ${colors.border}"}
+
                 >"
-                  <div className="`flex" items-center gap-x-3 mb-6`>"
-                    <div className="{`flex" h-12 w-12 items-center justify-center rounded-lg ${colors.bg} ${colors.hover} transition-colors`}>"
-                      <service.icon className="`h-7" w-7 text-white`} />
+                  <div className=""flex" items-center gap-x-3 mb-6">"
+                    <div className="{"flex" h-12 w-12 items-center justify-center rounded-lg ${colors.bg} ${colors.hover} transition-colors"}>"
+                      <service.icon className=""h-7" w-7 text-white"} />
                     </div>
                     <div>"
-                      <h2 className="{`text-xl" font-semibold text-gray-900`>
+                      <h2 className="{"text-xl" font-semibold text-gray-900">
                         {service.title}
+
                       </h2>"
-                      <p className="{`text-sm" ${colors.text} font-medium`}>
+                      <p className="{"text-sm" ${colors.text} font-medium"}>
                         {service.subtitle}
+
                       </p>
                     </div>
                   </div>"
-                  <p className="`text-gray-600" mb-6`}>
+                  <p className=""text-gray-600" mb-6"}>
                     {service.description}
+
                   </p>"
                   <ul className="space-y-3 mb-6">
                     {service.features.map((feature, index) => ("
-                      <li key="{index}" className="{`flex" items-center gap-x-3`>"
-                        <CheckCircle className="{`h-4" w-4 ${colors.text}`} />"
-                        <span className="`text-sm" text-gray-700`}>
+                      <li key="{index}" className="{"flex" items-center gap-x-3">"
+                        <CheckCircle className="{"h-4" w-4 ${colors.text}"}       />"
+                        <span className=""text-sm" text-gray-700"}>
                           {feature}
+
                         </span>
                       </li>
                     ))}
+
                   </ul>"
                   <div className="flex items-center justify-between">"
                     <div className="flex items-center space-x-2 text-sm text-gray-500">"
-                      <Clock className="{`h-4" w-4` />
+                      <Clock className="{"h-4" w-4"  />
                       <span>{service.deliveryTime} delivery</span>
                     </div>"
                     <Link to="{service.href}""
-                      className="{`inline-flex" items-center text-sm font-semibold ${colors.text} ${colors.hoverText} transition-colors group`}
+                      className="{"inline-flex" items-center text-sm font-semibold ${colors.text} ${colors.hoverText} transition-colors group"}
+
                     >
                       Learn More"
-                      <ArrowRight className="`ml-2" h-4 w-4 group-hover: translate-x-1 transition-transform`} />
+                      <ArrowRight className=""ml-2" h-4 w-4 group-hover: translate-x-1 transition-transform"}       />
                     </Link>
                   </div>
                 </div>
               )})}
+
           </div>
         </div>
       </section>
-
-      {/*   */}"
+      {/* comment */}"
       <section className="py-24 sm: py-32 bg-gray-50">"
         <div className="mx-auto max-w-7xl px-6 lg:px-8">"
           <div className="text-center mb-16">"
@@ -253,56 +240,63 @@ that transform your business operations and drive growth.
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,,
             {newServices.map((service, index) => {
               const colors = getColorClasses(service.color)
+}
               return ("
                 <div key = "{index}""
                   className="group relative rounded-2xl border border-gray-200 bg-white p-6 shadow-sm hover: shadow-lg transition-all duration-300 hover:border-gray-300"
                 >"
-                  <div className="{`flex" items-center gap-x-3 mb-4`>",
-                    <div className="{`flex" h-10 w-10 items-center justify-center rounded-lg ${colors.bg} ${colors.hover} transition-colors`}>"
-                      <service.icon className="`h-5" w-5 text-white`} />
+                  <div className="{"flex" items-center gap-x-3 mb-4">",
+                    <div className="{"flex" h-10 w-10 items-center justify-center rounded-lg ${colors.bg} ${colors.hover} transition-colors"}>"
+                      <service.icon className=""h-5" w-5 text-white"} />
                     </div>
                     <div>"
-                      <h3 className="{`text-lg" font-semibold text-gray-900`>
+                      <h3 className="{"text-lg" font-semibold text-gray-900">
                         {service.title}
+
                       </h3>"
-                      <p className="{`text-sm" ${colors.text} font-medium`}>
+                      <p className="{"text-sm" ${colors.text} font-medium"}>
                         {service.price}
+
                       </p>
                     </div>
                   </div>"
-                  <p className="`text-gray-600" mb-4 text-sm`}>
+                  <p className=""text-gray-600" mb-4 text-sm"}>
                     {service.description}
+
                   </p>"
                   <ul className="space-y-2 mb-6">
                     {service.features.slice(0, 2).map((feature, featureIndex) => ("
-                      <li key="{featureIndex}" className="{`flex" items-center gap-x-2`>"
-                        <CheckCircle className="{`h-3" w-3 ${colors.text}`} />"
-                        <span className="`text-xs" text-gray-700`>
+                      <li key="{featureIndex}" className="{"flex" items-center gap-x-2">"
+                        <CheckCircle className="{"h-3" w-3 ${colors.text}"}       />"
+                        <span className=""text-xs" text-gray-700">
                           {feature}
+
                         </span>
                       </li>
                     ))}
+
                   </ul>"
                   <Link to="{service.href}""
-                    className="{`inline-flex" items-center text-sm font-semibold ${colors.text} ${colors.hoverText} transition-colors group`}
+                    className="{"inline-flex" items-center text-sm font-semibold ${colors.text} ${colors.hoverText} transition-colors group"}
+
                   >
                     Learn More"
-                    <ArrowRight className="`ml-2" h-4 w-4 group-hover: translate-x-1 transition-transform`} />
+                    <ArrowRight className=""ml-2" h-4 w-4 group-hover: translate-x-1 transition-transform"}       />
                   </Link>
                 </div>
               )})}
+
           </div>
         </div>
       </section>
-
-      {/*   */}"
+      {/* comment */}"
       <section className="py-24 sm: py-32 bg-blue-600">"
         <div className="mx-auto max-w-7xl px-6 lg:px-8">"
           <div className="text-center">"
             <h2 className="text-3xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>"
-            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">'
+            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">"
               Let's discuss how our comprehensive technology solutions can drive your business forward. 
               Contact us today for a free consultation.
             </p>"
@@ -311,7 +305,7 @@ that transform your business operations and drive growth.
                 className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
               >
                 Get Started Today"
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-5 h-5"  />
               </Link>"
               <a href="tel:+13024640950""
                 className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors"
@@ -328,3 +322,5 @@ that transform your business operations and drive growth.
       </section>
     </PageTransition>",,
   )}
+
+export default Component

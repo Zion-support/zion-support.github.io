@@ -1,16 +1,10 @@
-// Health check endpoint for Zion Tech Group
+// comment
 export default function handler(req, res) {
-  const healthCheck = {
-    uptime: process.uptime(),
-    message: 'OK',
-    timestamp: Date.now(),
-    environment: process.env.NODE_ENV || 'development'
-  };
-
+  const healthCheck = {};
   try {
     res.status(200).json(healthCheck);
   } catch (error) {
-    healthCheck.message = 'ERROR';
+    healthCheck.message = "ERROR";
     res.status(503).json(healthCheck);
   }
-}
+

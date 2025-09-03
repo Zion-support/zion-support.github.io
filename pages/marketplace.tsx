@@ -1,9 +1,11 @@
-const React = dynamic(() => import('react'), { ssr: false })
-const Head = dynamic(() => import('next/head'), { ssr: false })
+import Head from "next/head"
+import React from "react"
+import dynamic from "next/dynamic"
+const Component = () => {
+const Head = dynamic(() => import("next/head"), { ssr: false })
+}
 const MarketplacePage: React.FC = () => {
-  const sections = [',,
-    { title: 'Products', href: '/marketplace/products', description: 'AI tools, software, and platforms.' }, { title: 'Talent', href: '/marketplace/talent', description: 'Expert contractors and fractional teams.' },
-    { title: 'Equipment', href: '/marketplace/equipment', description: 'Hardware and infrastructure.' }, { title: 'Services', href: '/marketplace/services', description: 'Professional and managed services.' }]
+  const sections = []
   return (
     <MainLayout title = "Marketplace - Zion Tech Group" description="Discover products, talent, equipment, and services in our marketplace.">"
       <section className="container mx-auto px-4 py-12">"
@@ -15,105 +17,70 @@ const MarketplacePage: React.FC = () => {
               <p className="text-gray-600 mt-2">{s.description}</p>
             </Link>
           ))}
+
         </div>
       </section>
     </MainLayout>
 export default function Marketplace() {
 
-  const categories = [
-    {'
-      name: 'AI Solutions','
-      count: '25+ Products','
-      description: 'Ready-to-use AI models, APIs, and automation tools','
-      icon: '🤖'},
-    {'
-      name: 'SaaS Tools','
-      count: '40+ Products','
-      description: 'Software-as-a-Service solutions for business growth','
-      icon: '💻'},
-    {'
-      name: 'IT Services','
-      count: '30+ Services','
-      description: 'Infrastructure, security, and technical support','
-      icon: '🔧'},
-    {'
-      name: 'Templates','
-      count: '50+ Templates','
-      description: 'Website templates, UI kits, and design resources','
-      icon: '🎨'}
-  ]
+  const categories = []
 
-  const featuredProducts = [
-    {
-      id: 1,'
-      name: 'AI Content Generator','
-      category: 'AI Solutions','
-      price: '$99/month',
-      rating: 4.9,
-      reviews: 128,'
-      description: 'Generate high-quality content for blogs, social media, and marketing materials using advanced AI.','
-      image: '/products/ai-content-generator.jpg','
-      features: ['Multi-language Support', 'SEO Optimized', 'Brand Voice Training', 'API Access']
+  const featuredProducts = []
 },
     {
-      id: 2,'
-      name: 'Cloud Infrastructure Manager','
-      category: 'IT Services','
-      price: '$299/month',
+      id: 2,"
+      name: "Cloud Infrastructure Manager","
+      category: "IT Services","
+      price: "$299/month",
       rating: 4.8,
-      reviews: 89,'
-      description: 'Comprehensive cloud management solution for AWS, Azure, and Google Cloud platforms.','
-      image: '/products/cloud-manager.jpg','
-      features: ['Multi-Cloud Support', 'Cost Optimization', 'Security Monitoring', 'Auto-scaling']
+      reviews: 89,"
+      description: "Comprehensive cloud management solution for AWS, Azure, and Google Cloud platforms.","
+      image: "/products/cloud-manager.jpg","
+      features: ["Multi-Cloud Support", "Cost Optimization", "Security Monitoring", "Auto-scaling"]
 },
     {
-      id: 3,'
-      name: 'E-commerce SaaS Platform','
-      category: 'SaaS Tools','
-      price: '$199/month',
+      id: 3,"
+      name: "E-commerce SaaS Platform","
+      category: "SaaS Tools","
+      price: "$199/month",
       rating: 4.7,
-      reviews: 156,'
-      description: 'Complete e-commerce solution with inventory management, payment processing, and analytics.','
-      image: '/products/ecommerce-platform.jpg','
-      features: ['Inventory Management', 'Payment Gateway', 'Analytics Dashboard', 'Mobile App']
+      reviews: 156,"
+      description: "Complete e-commerce solution with inventory management, payment processing, and analytics.","
+      image: "/products/ecommerce-platform.jpg","
+      features: ["Inventory Management", "Payment Gateway", "Analytics Dashboard", "Mobile App"]
 },
     {
-      id: 4,'
-      name: 'React Dashboard Template','
-      category: 'Templates','
-      price: '$49',
+      id: 4,"
+      name: "React Dashboard Template","
+      category: "Templates","
+      price: "$49",
       rating: 4.9,
-      reviews: 234,'
-      description: 'Modern, responsive dashboard template built with React and Tailwind CSS.','
-      image: '/products/react-dashboard.jpg','
-      features: ['Responsive Design', 'Dark/Light Mode', 'Component Library', 'Documentation']
-}
+      reviews: 234,"
+      description: "Modern, responsive dashboard template built with React and Tailwind CSS.","
+      image: "/products/react-dashboard.jpg","
+      features: ["Responsive Design", "Dark/Light Mode", "Component Library", "Documentation"]
+
+
   ]
 
-  const stats = ['
-    { number: '500+', label: 'Products Available', icon: ShoppingCart },'
-    { number: '10K+', label: 'Happy Customers', icon: Users },'
-    { number: '4.8/5', label: 'Average Rating', icon: Star },'
-    { number: '99.9%', label: 'Uptime Guarantee', icon: TrendingUp }
-  ]
+  const stats = []
 
   return (
     <>
 <Head>
         <title>Marketplace - Zion Tech Group</title>"
-        <meta name = "description" content="Discover and purchase AI solutions, SaaS tools, IT services, and templates from our comprehensive marketplace." />"
-        <meta name="viewport" content="width="device-width," initial-scale=1" />
+        <meta name="description" content="Discover and purchase AI solutions, SaaS tools, IT services, and templates from our comprehensive marketplace."  />
+        <meta name="viewport" content="width=device-width, initial-scale=1"  />
       </Head>
-      
-      <SimpleNavigation />
+      <SimpleNavigation  />
       "
       <main className="min-h-screen bg-white">
-        {/*   */}"
+        {/* comment */}"
         <section className="bg-gradient-to-br from-slate-50 to-indigo-50 py-20 sm: py-32">"
           <div className="mx-auto max-w-7xl px-6 lg:px-8">"
             <div className="mx-auto max-w-3xl text-center">"
               <div className="flex items-center justify-center mb-4">"
-                <ShoppingCart className="h-8 w-8 text-indigo-600 mr-3" />"
+                <ShoppingCart className="h-8 w-8 text-indigo-600 mr-3"  />"
                 <span className="text-base font-semibold leading-7 text-indigo-600">Marketplace</span>
               </div>"
               <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -126,21 +93,19 @@ export default function Marketplace() {
             </div>
           </div>
         </section>
-
-        {/*   */}"
+        {/* comment */}"
         <section className="py-8 bg-white border-b border-gray-200">"
           <div className="mx-auto max-w-7xl px-6 lg: px-8">"
             <div className="flex flex-col sm:flex-row gap-4">"
               <div className="flex-1 relative">"
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />"
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />"
                 <input type="text"">
                   placeholder="Search products, services, and templates...""
-                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-indigo-500 focus:border-transparent"
-                />
+                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-indigo-500 focus:border-transparent" />
               </div>"
               <div className="flex gap-2">"
                 <button className="flex items-center space-x-2 px-4 py-3 border border-gray-300 rounded-lg hover:bg-gray-50">"
-                  <Filter className="w-4 h-4" />
+                  <Filter className="w-4 h-4"  />
                   <span>Filter</span>
                 </button>"
                 <button className="flex items-center space-x-2 px-4 py-3 border border-gray-300 rounded-lg hover:bg-gray-50">
@@ -151,7 +116,7 @@ export default function Marketplace() {
           </div>
         </section>
 ,
-        {/*   */}"
+        {/* comment */}"
         <section className="py-16 bg-gray-50">"
           <div className="mx-auto max-w-7xl px-6 lg: px-8">"
             <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">,
@@ -166,11 +131,11 @@ export default function Marketplace() {
                   <div className="text-gray-600">{stat.label}</div>
                 </div>
               ))}
+
             </div>
           </div>
         </section>
-
-        {/*   */}"
+        {/* comment */}"
         <section className="py-16 sm: py-24">"
           <div className="mx-auto max-w-7xl px-6 lg:px-8">"
             <div className="text-center mb-12">"
@@ -188,11 +153,11 @@ export default function Marketplace() {
                   <p className="text-gray-600 text-sm">{category.description}</p>
                 </div>
               ))}
+
             </div>
           </div>
         </section>
-
-        {/*   */}"
+        {/* comment */}"
         <section className="py-16 sm: py-24 bg-gray-50">"
           <div className="mx-auto max-w-7xl px-6 lg:px-8">"
             <div className="text-center mb-12">"
@@ -211,9 +176,10 @@ export default function Marketplace() {
                     <div className="flex items-center justify-between mb-4">"
                       <span className="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm font-medium">,
                         {product.category}
+
                       </span>"
                       <div className="flex items-center space-x-1">"
-                        <Star className="w-4 h-4 text-yellow-400 fill-current" />"
+                        <Star className="w-4 h-4 text-yellow-400 fill-current"  />"
                         <span className="text-sm font-medium text-gray-900">{product.rating}</span>"
                         <span className="text-sm text-gray-500">({product.reviews})</span>
                       </div>
@@ -224,14 +190,16 @@ export default function Marketplace() {
                       {product.features.map((feature, index) => ("
                         <span key="{index}" className="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">
                           {feature}
+
                         </span>
                       ))}
+
                     </div>"
                     <div className="flex items-center justify-between">"
                       <div className="text-2xl font-bold text-gray-900">{product.price}</div>"
                       <div className="flex space-x-2">"
                         <button className="p-2 border border-gray-300 rounded-lg hover: bg-gray-50">"
-                          <Heart className="w-4 h-4" />
+                          <Heart className="w-4 h-4"  />
                         </button>"
                         <button className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">
                           View Details,
@@ -241,11 +209,11 @@ export default function Marketplace() {
                   </div>
                 </div>,
               ))}
+
             </div>
           </div>
         </section>
-
-        {/*   */}"
+        {/* comment */}"
         <section className="py-16 sm: py-24">"
           <div className="mx-auto max-w-7xl px-6 lg:px-8">"
             <div className="text-center mb-12">"
@@ -285,8 +253,7 @@ export default function Marketplace() {
             </div>
           </div>
         </section>
-
-        {/*   */}"
+        {/* comment */}"
         <section className="py-16 sm: py-24 bg-gradient-to-br from-indigo-600 to-purple-600">"
           <div className="mx-auto max-w-7xl px-6 lg:px-8">"
             <div className="text-center">"
@@ -301,7 +268,7 @@ export default function Marketplace() {
                   className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors flex items-center justify-center space-x-2"
                 >
                   <span>Browse Marketplace</span>"
-                  <ArrowRight className="w-5 h-5" />
+                  <ArrowRight className="w-5 h-5"  />
                 </a>"
                 <a href="/contact""
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-indigo-600 transition-colors"
@@ -313,7 +280,6 @@ export default function Marketplace() {
           </div>
         </section>
       </main>
-
-      <SimpleFooter />
+      <SimpleFooter  />
     </>",
   )}

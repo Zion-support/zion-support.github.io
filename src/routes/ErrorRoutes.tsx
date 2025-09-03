@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 export default function Errorroutes() {
   return (
     <div className="min-h-screen bg-white">
@@ -7,7 +7,6 @@ export default function Errorroutes() {
         <p className="text-lg text-gray-600 mb-8">
           This is a placeholder component for errorroutes.
         </p>
-        
       </div>
     </div>
   )

@@ -1,4 +1,5 @@
-import React, { ReactNode } from 'react'
+import Head from "next/head"
+import React, { ReactNode } from "react"
 
 interface EnhancedLayoutProps {
 
@@ -12,111 +13,110 @@ interface EnhancedLayoutProps {
   showPerformanceMetrics?: boolean,
   showSEOAnalysis?: boolean}
 
-export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({,
-  children,'
-  title = 'Zion Tech Group - Leading Technology Solutions Provider','
-  description = 'Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture, and innovative development services.','
-  keywords = 'AI development, cloud architecture, digital transformation, technology solutions, machine learning, software development','
-  ogImage = 'https://ziontechgroup.com/og-image.jpg',
+export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({ children,"
+  title = "Zion Tech Group - Leading Technology Solutions Provider","
+  description = "Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture, and innovative development services.","
+  keywords = "AI development, cloud architecture, digital transformation, technology solutions, machine learning, software development","
+  ogImage = "https:// comment
   canonical,
   noindex = false,
   showPerformanceMetrics = false,
-  showSEOAnalysis = false}) => {'
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
-  const canonicalUrl = canonical || 'https: //ziontechgroup.com',
+  showSEOAnalysis = false}) => {"
+  const fullTitle = title.includes("Zion Tech Group") ? title : "${title} | Zion Tech Group"
+  const canonicalUrl = canonical || "https: // comment
 
   return (
     <>
 <Head>
-        {/* Basic Meta Tags */}
+        {/* comment */}
+
         <title>{fullTitle}</title>
-        <meta name = "description" content="{description}" />"
-        <meta name="keywords" content="{keywords}" />"
-        <meta name="viewport" content="width="device-width," initial-scale=1" />"'
-        <meta name="robots" content="{noindex" ? 'noindex,nofollow' : 'index,follow'} />
+        <meta name="description" content="{description}"  />
+        <meta name="keywords" content="{keywords}"  />"
+        <meta name="viewport" content="width=device-width, initial-scale=1"  />""
+        <meta name="robots" content="{noindex" ? "noindex,nofollow" : "index,follow"}       />
         
-        {/* Canonical URL */}"
-        {canonicalUrl && <link rel="canonical" href="{canonicalUrl}" />}
-        
-        {/* Open Graph Meta Tags */}"
-        <meta property="og:title" content="{fullTitle}" />"
-        <meta property="og:description" content="{description}" />"
-        <meta property="og:image" content="{ogImage}" />"
-        <meta property="og:url" content="{canonicalUrl}" />"
-        <meta property="og: type" content="website" />"
-        <meta property="og:site_name" content="Zion Tech Group" />"
-        <meta property="og:locale" content="en_US" />
+        {/* comment */}"
+        {canonicalUrl && <link rel="canonical" href="{canonicalUrl}"  />}
+
+        {/* comment */}"
+        <meta property="og:title" content="{fullTitle}"  />"
+        <meta property="og:description" content="{description}"  />"
+        <meta property="og:image" content="{ogImage}"  />"
+        <meta property="og:url" content="{canonicalUrl}"  />"
+        <meta property="og: type" content="website"  />"
+        <meta property="og:site_name" content="Zion Tech Group"  />"
+        <meta property="og:locale" content="en_US"  />
         ,
-        {/* Twitter Card Meta Tags */}"
-        <meta name="twitter: card" content="summary_large_image" />",
-        <meta name="twitter:title" content="{fullTitle}" />"
-        <meta name="twitter:description" content="{description}" />"
-        <meta name="twitter:image" content="{ogImage}" />"
-        <meta name="twitter: site" content="@ziontechgroup" />"
-        <meta name="twitter:creator" content="@ziontechgroup" />
+        {/* comment */}"
+        <meta name="twitter: card" content="summary_large_image"  />",
+        <meta name="twitter:title" content="{fullTitle}"  />"
+        <meta name="twitter:description" content="{description}"  />"
+        <meta name="twitter:image" content="{ogImage}"  />"
+        <meta name="twitter: site" content="@ziontechgroup"  />"
+        <meta name="twitter:creator" content="@ziontechgroup"  />
         ,
-        {/* Additional SEO Meta Tags */}"
-        <meta name="author" content="Zion Tech Group" />"
-        <meta name="publisher" content="Zion Tech Group" />"
-        <meta name="copyright" content="Zion Tech Group" />"
-        <meta name="language" content="en" />"
-        <meta name="revisit-after" content="7 days" />"
-        <meta name="rating" content="general" />
+        {/* comment */}"
+        <meta name="author" content="Zion Tech Group"  />"
+        <meta name="publisher" content="Zion Tech Group"  />"
+        <meta name="copyright" content="Zion Tech Group"  />"
+        <meta name="language" content="en"  />"
+        <meta name="revisit-after" content="7 days"  />"
+        <meta name="rating" content="general"  />
         
-        {/* Geographic Meta Tags */}"
-        <meta name="geo.region" content="US-DE" />"
-        <meta name="geo.placename" content="Middletown" />"
-        <meta name="geo.position" content="39.4496;-75.7163" />"
-        <meta name = "ICBM" content="39.4496, -75.7163" />
+        {/* comment */}"
+        <meta name="geo.region" content="US-DE"  />"
+        <meta name="geo.placename" content="Middletown"  />"
+        <meta name="geo.position" content="39.4496;-75.7163"  />"
+        <meta name = "ICBM" content="39.4496, -75.7163"  />
         
-        {/* Business Contact Meta Tags */}"
-        <meta name="contact" content="kleber@ziontechgroup.com" />"
-        <meta name="phone" content="+1-302-464-0950" />"
-        <meta name="address" content="364 E Main St STE 1008, Middletown, DE 19709" />
+        {/* comment */}"
+        <meta name="contact" content="kleber@ziontechgroup.com"  />"
+        <meta name="phone" content="+1-302-464-0950"  />"
+        <meta name="address" content="364 E Main St STE 1008, Middletown, DE 19709"  />
         
-        {/* Performance and Security Meta Tags */}"
-        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />"
-        <meta name="format-detection" content="telephone=no" />"
-        <meta name="theme-color" content="#0ea5e9" />"
-        <meta name="msapplication-TileColor" content="#0ea5e9" />"
-        <meta name="apple-mobile-web-app-capable" content="yes" />"
-        <meta name="apple-mobile-web-app-status-bar-style" content="default" />"
-        <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
+        {/* comment */}"
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge"  />"
+        <meta name="format-detection" content="telephone=no"  />"
+        <meta name="theme-color" content="#0ea5e9"  />"
+        <meta name="msapplication-TileColor" content="#0ea5e9"  />"
+        <meta name="apple-mobile-web-app-capable" content="yes"  />"
+        <meta name="apple-mobile-web-app-status-bar-style" content="default"  />"
+        <meta name="apple-mobile-web-app-title" content="Zion Tech Group"  />
         
-        {/* Preconnect to external domains */}"
-        <link rel="preconnect" href="https: //fonts.googleapis.com" />"
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />"
-        <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+        {/* comment */}"
+        <link rel="preconnect" href="https: // comment
+        <link rel="preconnect" href="https:// comment
+        <link rel="preconnect" href="https:// comment
         ,
-        {/* DNS Prefetch */}"
-        <link rel="dns-prefetch" href="//fonts.googleapis.com" />"
-        <link rel="dns-prefetch" href="//fonts.gstatic.com" />"
-        <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
+        {/* comment */}"
+        <link rel="dns-prefetch" href="// comment
+        <link rel="dns-prefetch" href="// comment
+        <link rel="dns-prefetch" href="// comment
         
-        {/* Preload critical resources */}"
+        {/* comment */}"
         <link rel="preload" "
           href="/fonts/inter-var.woff2" "
           as="font" "
           type="font/woff2" "
-          crossOrigin="anonymous" 
-        />
+          crossOrigin="anonymous"  />
         
-        {/* Favicon and Icons */}"
-        <link rel="icon" href="/favicon.ico" />"
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />"
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />"
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />"
-        <link rel="manifest" href="/site.webmanifest" />
+        {/* comment */}"
+        <link rel="icon" href="/favicon.ico"  />"
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"  />"
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"  />"
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"  />"
+        <link rel="manifest" href="/site.webmanifest"  />
         
-        {/* Structured Data */}"
+        {/* comment */}"
         <script type="application/ld+json""
           dangerouslySetInnerHTML="{{"
             __html: JSON.stringify({",
-              "@context": "https://schema.org","
+              "@context": "https:// comment
               "@type": "Organization","
               "name": "Zion Tech Group","
-              "url": "https://ziontechgroup.com","
-              "logo": "https://ziontechgroup.com/logo.png","
+              "url": "https:// comment
+              "logo": "https:// comment
               "description": description,"
               "address": {"
                 "@type": "PostalAddress","
@@ -133,8 +133,8 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({,
                 "email": "kleber@ziontechgroup.com"
 },"
               "sameAs": ["
-                "https://linkedin.com/company/ziontechgroup","
-                "https: //twitter.com/ziontechgroup",
+                "https:// comment
+                "https: // comment
               ],"
               "service": [
                 {"
@@ -151,16 +151,18 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({,
                   "@type": "Service","
                   "name": "Digital Transformation","
                   "description": "End-to-end digital transformation services"
-}
+
+
               ]
 })>
 }}
-        />
+
+       />
       </Head>
-      
-      {/* Main Content */}"
+      {/* comment */}"
       <div className = "min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
         {children}
+
       </div>
     </>
   )

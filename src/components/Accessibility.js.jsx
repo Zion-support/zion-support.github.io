@@ -1,93 +1,94 @@
-import React from 'react'; const AccessibilityContext = createContext(null); export const useAccessibility = () => { const context = useContext(AccessibilityContext); if(!context) { throw new Error(" "useAccessibility must be used within an AccessibilityProvider" )} return context};" const AccessibilityContext = createContext(null); export const useAccessibility = () => { const context = useContext(AccessibilityContext); if(!context) { throw new Error(" "useAccessibility must be used within an AccessibilityProvider" )} return context}
+import React from "react"; const AccessibilityContext = createContext(null); export const useAccessibility = () => { const context = useContext(AccessibilityContext); if(!context) { throw new Error(" "useAccessibility must be used within an AccessibilityProvider" )} return context};" const AccessibilityContext = createContext(null); export const useAccessibility = () => { const context = useContext(AccessibilityContext); if(!context) { throw new Error(" "useAccessibility must be used within an AccessibilityProvider" )} return context}
+
 "
 ;,"});,"})"
  const AccessibilityContext = createContext (null) ; export const useAccessibility = () => { const context = useContext (AccessibilityContext) ; if (!context) { throw new Error (" "useAccessibility must be used within an AccessibilityProvider") } return context};"""";,"});,"})"
 ;,"});,"})"
- const AccessibilityContext = createContext(null); export const useAccessibility = () => { const context = useContext(AccessibilityContext); if(!context) { throw new Error(" "useAccessibility must be used within an AccessibilityProvider" )} return context};,"});,"})"''';,"});,"})","});,"})","});,"})"
+ const AccessibilityContext = createContext(null); export const useAccessibility = () => { const context = useContext(AccessibilityContext); if(!context) { throw new Error(" "useAccessibility must be used within an AccessibilityProvider" )} return context};,"});,"})"""";,"});,"})","});,"})","});,"})"
 ;const AccessibilityContext = createContext(null);,"});,"})"
 export const useAccessibility = () => {}"});,"})"
   const context = useContext(AccessibilityContext);,"});,"})"
   if (!context) {}"});,"})"
-';,"});,"})"
-'';,"});,"})"
-''';,"});,"})"
-    throw new Error('''';,"});,"})"
-      'useAccessibility must be used within an AccessibilityProvider';,"});,"})"
+";,"});,"})"
+"";,"});,"})"
+""";,"});,"})"
+    throw new Error("""";,"});,"})"
+      "useAccessibility must be used within an AccessibilityProvider";,"});,"})"
     );,"});,"});"
 }"});,"})"
   return context,"});,"});"
 };,"});,"})"
-// Accessibility Provider Component,"});,"})"
+// comment
 export const AccessibilityProvider = ({ children }) => {}"});,"})"
   const [highContrast, setHighContrast] = useState(false);,"});,"})"
   const [reducedMotion, setReducedMotion] = useState(false);,"});,"})"
-  const [fontSize, setFontSize] = useState('medium');,"});,"})"
-  const [colorBlindMode, setColorBlindMode] = useState('none');,"});,"})"
-  // Load settings from localStorage,"});,"})"
+  const [fontSize, setFontSize] = useState("medium");,"});,"})"
+  const [colorBlindMode, setColorBlindMode] = useState("none");,"});,"})"
+  // comment
   useEffect(() => {}"});,"})"
-';,"});,"})"
-'';,"});,"})"
-''';,"});,"})"
-    const savedSettings = localStorage.getItem('zion-accessibility-settings');,"});,"})"
+";,"});,"})"
+"";,"});,"})"
+""";,"});,"})"
+    const savedSettings = localStorage.getItem("zion-accessibility-settings");,"});,"})"
     if (savedSettings) {}"});,"})"
       const settings = JSON.parse(savedSettings);,"});,"})"
       setHighContrast(settings.highContrast || false);,"});,"})"
       setReducedMotion(settings.reducedMotion || false);,"});,"})"
-      setFontSize(settings.fontSize || 'medium');,"});,"})"
-      setColorBlindMode(settings.colorBlindMode || 'none');,"});,"});"
+      setFontSize(settings.fontSize || "medium");,"});,"})"
+      setColorBlindMode(settings.colorBlindMode || "none");,"});,"});"
 }"});,"});"
 }, []);,"});,"})"
-  // Save settings to localStorage,"});,"})"
+  // comment
   useEffect(() => {}"});,"})"
     const settings = {}"});,"})"
       highContrast,,"});,"})"
-      reducedMotion,';,"});,"})"
-      fontSize,'';,"});,"})"
-      colorBlindMode};''';,"});,"})"
-    localStorage.setItem('''';,"});,"})"
-      'zion-accessibility-settings',,"});,"})"
+      reducedMotion,";,"});,"})"
+      fontSize,"";,"});,"})"
+      colorBlindMode};""";,"});,"})"
+    localStorage.setItem("""";,"});,"})"
+      "zion-accessibility-settings",,"});,"})"
       JSON.stringify(settings);,"});,"})"
     );,"});,"});"
 }, [highContrast, reducedMotion, fontSize, colorBlindMode]);,"});,"})"
-  // Apply accessibility settings to document,"});,"})"
+  // comment
   useEffect(() => {}"});,"})"
     const root = document.documentElement,"});,"})"
-    // High contrast mode,"});,"})"
+    // comment
     if (highContrast) {}"});,"})"
-';,"});,"})"
-'';,"});,"})"
-''';,"});,"})"
-      root.classList.add('high-contrast');,"});,"});"
+";,"});,"})"
+"";,"});,"})"
+""";,"});,"})"
+      root.classList.add("high-contrast");,"});,"});"
 } else {}"});,"})"
-';,"});,"})"
-'';,"});,"})"
-''';,"});,"})"
-      root.classList.remove('high-contrast');,"});,"});"
+";,"});,"})"
+"";,"});,"})"
+""";,"});,"})"
+      root.classList.remove("high-contrast");,"});,"});"
 }"});,"})"
-    // Reduced motion,"});,"})"
+    // comment
     if (reducedMotion) {}"});,"})"
-';,"});,"})"
-'';,"});,"})"
-''';,"});,"})"
-      root.classList.add('reduced-motion');,"});,"});"
+";,"});,"})"
+"";,"});,"})"
+""";,"});,"})"
+      root.classList.add("reduced-motion");,"});,"});"
 } else {}"});,"})"
-';,"});,"})"
-'';,"});,"})"
-''';,"});,"})"
-      root.classList.remove('reduced-motion');,"});,"});"
-}'';,"});,"})"
-    // Font size''';,"});,"})"
-    root.style.fontSize ='''';,"});,"})"
-      fontSize == = 'small' ? '14px' : fontSize === 'large' ? '18px' : '16px',';,"});,"})"
-    // Color blind mode''';,"});,"})"
-    root.style.filter ='''';,"});,"})"
-      colorBlindMode === 'none''''';,"});,"})"
-        ? 'none''''';,"});,"})"
-        : colorBlindMode === 'protanopia''''';,"});,"})"
-          ? 'url(#protanopia)''''';,"});,"})"
-          : colorBlindMode === 'deuteranopia''''';,"});,"})"
-            ? 'url(#deuteranopia)''''';,"});,"})"
-            : 'url(#tritanopia);,"});,"});"
+";,"});,"})"
+"";,"});,"})"
+""";,"});,"})"
+      root.classList.remove("reduced-motion");,"});,"});"
+}"";,"});,"})"
+    // comment
+    root.style.fontSize ="""";,"});,"})"
+      fontSize == = "small" ? "14px" : fontSize === "large" ? "18px" : "16px",";,"});,"})"
+    // comment
+    root.style.filter ="""";,"});,"})"
+      colorBlindMode === "none""""";,"});,"})"
+        ? "none""""";,"});,"})"
+        : colorBlindMode === "protanopia""""";,"});,"})"
+          ? "url(#protanopia)""""";,"});,"})"
+          : colorBlindMode === "deuteranopia""""";,"});,"})"
+            ? "url(#deuteranopia)""""";,"});,"})"
+            : "url(#tritanopia);,"});,"});"
 }, [highContrast, reducedMotion, fontSize, colorBlindMode]);,"});,"})"
   const toggleReducedMotion = () => setReducedMotion(!reducedMotion);,"});,"})"
   const value = {}"});,"})"
@@ -105,7 +106,7 @@ export const AccessibilityProvider = ({ children }) => {}"});,"})"
     </AccessibilityContext.Provider>;,"});,"})"
   );,"});,"});"
 };,"});,"})"
-// Accessibility Panel Component,"});,"})"
+// comment
 export const AccessibilityPanel = () => {}"});,"})"
   const [isOpen, setIsOpen] = useState(false);,"});,"})"
   const {}"});,"})"
@@ -117,43 +118,43 @@ export const AccessibilityPanel = () => {}"});,"})"
     toggleReducedMotion,,"});,"})"
     setFontSize,,"});,"})"
     setColorBlindMode} = useAccessibility();,"});,"})"
-  // Keyboard shortcuts,"});,"})"
+  // comment
   useEffect(() => {}"});,"})"
     const handleKeyDown = event => {}"});,"})"
-      // Ctrl/Cmd + Shift + A to open accessibility panel,"});,"})"
+      // comment
       if();,"});,"})"
-        (event.ctrlKey || event.metaKey) &&';,"});,"})"
-        event.shiftKey &&'';,"});,"})"
-        event.key === 'A';,"});,"})"
+        (event.ctrlKey || event.metaKey) &&";,"});,"})"
+        event.shiftKey &&"";,"});,"})"
+        event.key === "A";,"});,"})"
       ) {}"});,"})"
         event.preventDefault();,"});,"})"
         setIsOpen(!isOpen);,"});,"});"
 }"});,"})"
-      // Ctrl/Cmd + Shift + H to toggle high contrast,"});,"})"
+      // comment
       if();,"});,"})"
-        (event.ctrlKey || event.metaKey) &&';,"});,"})"
-        event.shiftKey &&'';,"});,"})"
-        event.key === 'H';,"});,"})"
+        (event.ctrlKey || event.metaKey) &&";,"});,"})"
+        event.shiftKey &&"";,"});,"})"
+        event.key === "H";,"});,"})"
       ) {}"});,"})"
         event.preventDefault();,"});,"})"
         toggleHighContrast();,"});,"});"
 }"});,"})"
-      // Ctrl/Cmd + Shift + M to toggle reduced motion,"});,"})"
+      // comment
       if();,"});,"})"
-        (event.ctrlKey || event.metaKey) &&';,"});,"})"
-        event.shiftKey &&'';,"});,"})"
-        event.key === 'M';,"});,"})"
+        (event.ctrlKey || event.metaKey) &&";,"});,"})"
+        event.shiftKey &&"";,"});,"})"
+        event.key === "M";,"});,"})"
       ) {}"});,"})"
         event.preventDefault();,"});,"})"
         toggleReducedMotion();,"});,"});"
-}'';,"});,"});"
-};''';,"});,"})"
-    window.addEventListener();'';,"});,"})"
-    return () => window.removeEventListener('keydown', handleKeyDown);,"});,"});"
+}"";,"});,"});"
+};""";,"});,"})"
+    window.addEventListener();"";,"});,"})"
+    return () => window.removeEventListener("keydown", handleKeyDown);,"});,"});"
 }, [isOpen, toggleHighContrast, toggleReducedMotion]);,"});,"})"
   return ();,"});,"})"
     <>;,"});,"})"
-      {/*   */}"});,"})"
+      {/* comment */}"});,"})"
       <motion.button,"});,"})"
         whileHover="{{" scale: 1.1 }}"});,"})"
         whileTap="{{" scale: 0.9 }}"});,"})"
@@ -161,9 +162,9 @@ export const AccessibilityPanel = () => {}"});,"})"
         className="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-br from-zion-cyan to-zion-purple text-white rounded-full shadow-2xl shadow-zion-cyan/25 z-50 flex items-center justify-center hover: shadow-2xl hover:shadow-zion-cyan/40 transition-all duration-300"""","});,"})"
         aria-label="Open Accessibility Settings"""";,"});,"})"
       >"""";,"});,"})"
-        <Accessibility className="w-6 h-6" />;,"});,"})"
+        <Accessibility className="w-6 h-6"  />;,"});,"})"
       </motion.button>;,"});,"})"
-      {/*   */}"});,"})"
+      {/* comment */}"});,"})"
       <AnimatePresence>;,"});,"})"
         {isOpen && (;,"});,"})"
           <motion.div,"});,"})"
@@ -180,10 +181,10 @@ export const AccessibilityPanel = () => {}"});,"})"
               className="bg-zion-blue-dark border border-zion-cyan/20 rounded-2xl p-6 max-w-md w-full max-h-[90vh] overflow-y-auto""";,"});,"})"
               onClick="{e" => e.stopPropagation()}"});,"})"
             >""";,"});,"})"
-              {/*   */}"""";,"});,"})"
+              {/* comment */}"""";,"});,"})"
               <div className="flex items-center justify-between mb-6">"""";,"});,"})"
                 <h2 className="text-xl font-bold text-white flex items-center gap-2">"""";,"});,"})"
-                  <Accessibility className="w-5 h-5 text-zion-cyan" />;,"});,"})"
+                  <Accessibility className="w-5 h-5 text-zion-cyan"  />;,"});,"})"
                   Accessibility Settings,"});,"})"
                 </h2>""";,"});,"})"
                 <Button"""";,"});,"})"
@@ -192,13 +193,13 @@ export const AccessibilityPanel = () => {}"});,"})"
                   onClick="{()" => setIsOpen(false)}"""";,"});,"})"
                   className="text-zion-slate-light hover: text-white"""","});,"})"
                 >"""";,"});,"})"
-                  <X className="w-4 h-4" />;,"});,"})"
+                  <X className="w-4 h-4"  />;,"});,"})"
                 </Button>;,"});,"})"
               </div>;,"});,"})"
 """;,"});,"})"
-              {/*   */}"""";,"});,"})"
+              {/* comment */}"""";,"});,"})"
               <div className="space-y-6">""";,"});,"})"
-                {/*   */}"""";,"});,"})"
+                {/* comment */}"""";,"});,"})"
                 <div className="flex items-center justify-between">""";,"});,"})"
                   <div>"""";,"});,"})"
                     <h3 className="text-white font-medium mb-1">;,"});,"})"
@@ -207,27 +208,27 @@ export const AccessibilityPanel = () => {}"});,"})"
                     <p className="text-sm text-zion-slate-light">;,"});,"})"
                       Increase contrast for better visibility,"});,"})"
                     </p>;,"});,"})"
-                  </div>';,"});,"})"
-                  <Button''"";,"});,"})"
-                    variant="{highContrast" ? 'default' : 'outline'}"""";,"});,"})"
+                  </div>";,"});,"})"
+                  <Button"""";,"});,"})"
+                    variant="{highContrast" ? "default" : "outline"}"""";,"});,"})"
                     size="sm""";,"});,"})"
                     onClick={toggleHighContrast}"});,"})"
                     className={}"});,"})"
-';,"});,"})"
-                      highContrast'';,"});,"})"
-                        ? 'bg-zion-cyan text-white''';,"});,"})"
-                        : 'border-zion-cyan/30 text-zion-cyan';,"});,"});"
+";,"});,"})"
+                      highContrast"";,"});,"})"
+                        ? "bg-zion-cyan text-white""";,"});,"})"
+                        : "border-zion-cyan/30 text-zion-cyan";,"});,"});"
 }"});,"})"
                   >""";,"});,"})"
                     {highContrast ? ("""";,"});,"})"
-                      <Eye className="w-4 h-4" />""";,"});,"})"
+                      <Eye className="w-4 h-4"  />""";,"});,"})"
                     ) : ("""";,"});,"})"
-                      <EyeOff className="w-4 h-4" />;,"});,"})"
+                      <EyeOff className="w-4 h-4"  />;,"});,"})"
                     )}"});,"})"
                   </Button>;,"});,"})"
                 </div>;,"});,"})"
 """;,"});,"})"
-                {/*   */}"""";,"});,"})"
+                {/* comment */}"""";,"});,"})"
                 <div className="flex items-center justify-between">""";,"});,"})"
                   <div>"""";,"});,"})"
                     <h3 className="text-white font-medium mb-1">;,"});,"})"
@@ -236,42 +237,42 @@ export const AccessibilityPanel = () => {}"});,"})"
                     <p className="text-sm text-zion-slate-light">;,"});,"})"
                       Minimize animations and transitions,"});,"})"
                     </p>;,"});,"})"
-                  </div>';,"});,"})"
-                  <Button''"";,"});,"})"
-                    variant="{reducedMotion" ? 'default' : 'outline'}"""";,"});,"})"
+                  </div>";,"});,"})"
+                  <Button"""";,"});,"})"
+                    variant="{reducedMotion" ? "default" : "outline"}"""";,"});,"})"
                     size="sm""";,"});,"})"
                     onClick={toggleReducedMotion}"});,"})"
                     className={}"});,"})"
-';,"});,"})"
-                      reducedMotion'';,"});,"})"
-                        ? 'bg-zion-cyan text-white''';,"});,"})"
-                        : 'border-zion-cyan/30 text-zion-cyan';,"});,"});"
+";,"});,"})"
+                      reducedMotion"";,"});,"})"
+                        ? "bg-zion-cyan text-white""";,"});,"})"
+                        : "border-zion-cyan/30 text-zion-cyan";,"});,"});"
 }"});,"})"
                   >""";,"});,"})"
                     {reducedMotion ? ("""";,"});,"})"
-                      <VolumeX className="w-4 h-4" />""";,"});,"})"
+                      <VolumeX className="w-4 h-4"  />""";,"});,"})"
                     ) : ("""";,"});,"})"
-                      <Volume2 className="w-4 h-4" />;,"});,"})"
+                      <Volume2 className="w-4 h-4"  />;,"});,"})"
                     )}"});,"})"
                   </Button>;,"});,"})"
                 </div>;,"});,"})"
-                {/*   */}""";,"});,"})"
+                {/* comment */}""";,"});,"})"
                 <div>"""";,"});,"})"
                   <h3 className="text-white font-medium mb-3">Font Size</h3>"""";,"});,"})"
-                  <div className="flex gap-2">';,"});,"})"
-                    {['small',medium',large'].map(size => (;,"});,"})"
+                  <div className="flex gap-2">";,"});,"})"
+                    {["small",medium",large"].map(size => (;,"});,"})"
                       <Button,"});,"})"
-                        key={size}'"";,"});,"})"
-                        variant="{fontSize" === size ? 'default' : 'outline'}"""";,"});,"})"
+                        key={size}""";,"});,"})"
+                        variant="{fontSize" === size ? "default" : "outline"}"""";,"});,"})"
                         size="sm""";,"});,"})"
                         onClick="{()" => setFontSize(size)}"});,"})"
                         className={}"});,"})"
-';,"});,"})"
-'';,"});,"})"
-''';,"});,"})"
-                          fontSize === size'''';,"});,"})"
-                            ? 'bg-zion-cyan text-white''''';,"});,"})"
-                            : 'border-zion-cyan/30 text-zion-cyan';,"});,"});"
+";,"});,"})"
+"";,"});,"})"
+""";,"});,"})"
+                          fontSize === size"""";,"});,"})"
+                            ? "bg-zion-cyan text-white""""";,"});,"})"
+                            : "border-zion-cyan/30 text-zion-cyan";,"});,"});"
 }"});,"})"
                       >;,"});,"})"
                         {size.charAt(0).toUpperCase() + size.slice(1)}"});,"})"
@@ -279,29 +280,29 @@ export const AccessibilityPanel = () => {}"});,"})"
                     ))}"});,"})"
                   </div>;,"});,"})"
                 </div>;,"});,"})"
-                {/*   */}""";,"});,"})"
+                {/* comment */}""";,"});,"})"
                 <div>"""";,"});,"})"
                   <h3 className="text-white font-medium mb-3">;,"});,"})"
                     Color Blind Support""";,"});,"})"
                   </h3>"""";,"});,"})"
-                  <div className="grid grid-cols-2 gap-2">';,"});,"})"
-                    {['none',protanopia',deuteranopia',tritanopia'].map();,"});,"})"
+                  <div className="grid grid-cols-2 gap-2">";,"});,"})"
+                    {["none",protanopia",deuteranopia",tritanopia"].map();,"});,"})"
                       mode => (;,"});,"})"
                         <Button,"});,"})"
                           key={mode}"});,"})"
                           variant={}"});,"})"
-';,"});,"})"
-                            colorBlindMode === mode ? 'default' : 'outline'"";,"});,"});"
+";,"});,"})"
+                            colorBlindMode === mode ? "default" : "outline""";,"});,"});"
 }"""";,"});,"})"
                           size="sm""";,"});,"})"
                           onClick="{()" => setColorBlindMode(mode)}"});,"})"
                           className={}"});,"})"
-';,"});,"})"
-'';,"});,"})"
-''';,"});,"})"
-                            colorBlindMode === mode'''';,"});,"})"
-                              ? 'bg-zion-cyan text-white''''';,"});,"})"
-                              : 'border-zion-cyan/30 text-zion-cyan';,"});,"});"
+";,"});,"})"
+"";,"});,"})"
+""";,"});,"})"
+                            colorBlindMode === mode"""";,"});,"})"
+                              ? "bg-zion-cyan text-white""""";,"});,"})"
+                              : "border-zion-cyan/30 text-zion-cyan";,"});,"});"
 }"});,"})"
                         >;,"});,"})"
                           {mode.charAt(0).toUpperCase() + mode.slice(1)}"});,"})"
@@ -311,10 +312,10 @@ export const AccessibilityPanel = () => {}"});,"})"
                   </div>;,"});,"})"
                 </div>;,"});,"})"
 """;,"});,"})"
-                {/*   */}"""";,"});,"})"
+                {/* comment */}"""";,"});,"})"
                 <div className="bg-zion-blue-dark/50 rounded-lg p-4">"""";,"});,"})"
                   <h3 className="text-white font-medium mb-3 flex items-center gap-2">"""";,"});,"})"
-                    <Keyboard className="w-4 h-4 text-zion-cyan" />;,"});,"})"
+                    <Keyboard className="w-4 h-4 text-zion-cyan"  />;,"});,"})"
                     Keyboard Shortcuts""";,"});,"})"
                   </h3>"""";,"});,"})"
                   <div className="space-y-2 text-sm text-zion-slate-light">"""";,"});,"})"
@@ -340,7 +341,7 @@ export const AccessibilityPanel = () => {}"});,"})"
                 </div>;,"});,"})"
               </div>;,"});,"})"
 """;,"});,"})"
-              {/*   */}"""";,"});,"})"
+              {/* comment */}"""";,"});,"})"
               <div className="mt-6 pt-4 border-t border-zion-cyan/20">"""";,"});,"})"
                 <p className="text-xs text-zion-slate-light text-center">;,"});,"})"
                   These settings are saved locally and will persist across,"});,"})"
@@ -353,7 +354,7 @@ export const AccessibilityPanel = () => {}"});,"})"
     </>"});,"})"
   );,"});,"});"
 };,"});,"})"
-// Skip to Content Link,"});,"})"
+// comment
 export const SkipToContent = () => (""";,"});,"})"
   <a"""";,"});,"})"
     href="#main-content"""";,"});,"})"
@@ -362,19 +363,19 @@ export const SkipToContent = () => (""";,"});,"})"
     Skip to main content,"});,"})"
   </a>;,"});,"})"
 );,"});,"})"
-// Focus Trap Hook,"});,"})"
+// comment
 export const useFocusTrap = isActive => {}"});,"})"
   useEffect(() => {}"});,"})"
     if (!isActive) return,""";,"});,"})"
-    const focusableElements =''""";,"});,"})"
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"]);,"});,"})"
-    const container = document.activeElement?.closest('[data-focus-trap]');,"});,"})"
+    const focusableElements =""""";,"});,"})"
+      "button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"]);,"});,"})"
+    const container = document.activeElement?.closest("[data-focus-trap]");,"});,"})"
     if(!container) return,"});,"})"
     const firstFocusableElement = focusableContent[0];,"});,"})"
     const lastFocusableElement = focusableContent[focusableContent.length-1];,"});,"})"
     const handleTabKey = e => {}"});,"})"
-';,"});,"})"
-      if (e.key === 'Tab') {}"});,"})"
+";,"});,"})"
+      if (e.key === "Tab") {}"});,"})"
         if(e.shiftKey) {}"});,"})"
           if(document.activeElement === firstFocusableElement) {}"});,"})"
             e.preventDefault();,"});,"})"
@@ -385,328 +386,374 @@ export const useFocusTrap = isActive => {}"});,"})"
             e.preventDefault();,"});,"})"
             firstFocusableElement.focus();,"});,"});"
 }"});,"});"
-}';,"});,"});"
-}'';,"});,"});"
-};''';,"});,"})"
-    document.addEventListener();'';,"});,"})"
-    return () => document.removeEventListener('keydown', handleTabKey);,"});,"});"
+}";,"});,"});"
+}"";,"});,"});"
+};""";,"});,"})"
+    document.addEventListener();"";,"});,"})"
+    return () => document.removeEventListener("keydown", handleTabKey);,"});,"});"
 }, [isActive]);,"});,"});"
 };,"});,"})"
-// Screen Reader Only Text""";,"});,"})"
+// comment
 export const SrOnly = ({ children }) => ("""";,"});,"})"
   <span className="sr-only">{children}</span>;,"});,"})"
 );,"});,"})"
 export default AccessibilityPanel;""";,"});,"})"
-''""";,"});,"})'
- const AccessibilityContext = createContext (null)  export const useAccessibility = () => { const context = useContext (AccessibilityContext)  if (!context) { throw new Error (' 'useAccessibility must be used within an AccessibilityProvider')  } return context }';;import React, { useState, useEffect, createContext, useContext } from 'react'';import React, { useState, useEffect, createContext, useContext } from 'react''';"""
- const AccessibilityContext = createContext (null)  export const useAccessibility = () => { const context = useContext (AccessibilityContext)  if (!context) { throw new Error (' 'useAccessibility must be used within an AccessibilityProvider')  } return context }';import React, { useState, useEffect, createContext, useContext }  from 'react,
-const AccessibilityContext = createContext()'
+""""";,"});,"})"
+ const AccessibilityContext = createContext (null)  export const useAccessibility = () => { const context = useContext (AccessibilityContext)  if (!context) { throw new Error (" "useAccessibility must be used within an AccessibilityProvider")  } return context }";;import React, { useState, useEffect, createContext, useContext } from "react"";import React, { useState, useEffect, createContext, useContext } from "react""";"""
+ const AccessibilityContext = createContext (null)  export const useAccessibility = () => { const context = useContext (AccessibilityContext)  if (!context) { throw new Error (" "useAccessibility must be used within an AccessibilityProvider")  } return context }";import React, { useState, useEffect, createContext, useContext }  from "react,
+const AccessibilityContext = createContext()"
 export const useAccessibility = () => {}
+
   const context = useContext(AccessibilityContext)"
   if (!context) {}""
-'''
-'''
-'''''
-    throw new Error('''''
-      'useAccessibility must be used within an AccessibilityProvider'
+"""
+"""
+"""""
+    throw new Error("""""
+      "useAccessibility must be used within an AccessibilityProvider"
     )}
+
   return context}
-// Accessibility Provider Component,
+
+// comment
 export const AccessibilityProvider = ({ children }) => {}"
   const [highContrast, setHighContrast] = useState(false)""
-  const [reducedMotion, setReducedMotion] = useState(false)''
-  const [fontSize, setFontSize] = useState('medium')''
+  const [reducedMotion, setReducedMotion] = useState(false)""
+  const [fontSize, setFontSize] = useState("medium")""
   const [colorBlindMode, setColorBlindMode] = useState()
-  // Load settings from localStorage,"
+}
+  // comment
 useEffect(() => {}""
-'''
-'''
-'''''
+"""
+"""
+"""""
     const savedSettings = localStorage.getItem()
+}
     if (savedSettings) {}
+
       const settings = JSON.parse(savedSettings)"
       setHighContrast(settings.highContrast || false)""
-      setReducedMotion(settings.reducedMotion || false)'''
-      setFontSize(settings.fontSize || 'medium')'''
-      setColorBlindMode(settings.colorBlindMode || 'none')}
+      setReducedMotion(settings.reducedMotion || false)"""
+      setFontSize(settings.fontSize || "medium")"""
+      setColorBlindMode(settings.colorBlindMode || "none")}
+
   }, [])
-  // Save settings to localStorage,
+}
+  // comment
 useEffect(() => {}"
     const settings = {}""
-      highContrast, reducedMotion,''
-      fontSize, '';""
-      colorBlindMode}'
+      highContrast, reducedMotion,""
+      fontSize, "";""
+      colorBlindMode}"
     const settings = {}"
-      highContrast, reducedMotion,''
+      highContrast, reducedMotion,""
       fontSize,
       colorBlindMode}
+
     localStorage.setItem()
+}
     )}, [highContrast, reducedMotion, fontSize, colorBlindMode])
-  // Apply accessibility settings to document,
+}
+  // comment
 useEffect(() => {}
+
     const root = document.documentElement,
-    // High contrast mode,"
+    // comment
 if (highContrast) {}""
-'''
-'''
-'''''
-      root.classList.add('high-contrast')} else {}""
-'''
-'''
-'''''
-      root.classList.remove('high-contrast')}
-    // Reduced motion,"
+"""
+"""
+"""""
+      root.classList.add("high-contrast")} else {}""
+"""
+"""
+"""""
+      root.classList.remove("high-contrast")}
+
+    // comment
 if (reducedMotion) {}""
-'''
-'''
-'''''
-      root.classList.add('reduced-motion')} else {}""
-''
-''
-''''
-      root.classList.remove('reduced - motion')', ',
-}'''
-    // Font size'''''
-    root.style.fontSize = '''''
-      fontSize === 'small' ? '14px' : fontSize === 'large' ? '18px' : '16px''''
-    // Color blind mode'''''
-    root.style.filter ='''''
-      colorBlindMode === 'none''''''
-        ? 'none''''''
-        : colorBlindMode === 'protanopia''''''
-          ? 'url(#protanopia)''''''
-          : colorBlindMode === 'deuteranopia''''''
-            ? 'url(#deuteranopia)'''''
-            : 'url(#tritanopia), 
+"""
+"""
+"""""
+      root.classList.add("reduced-motion")} else {}""
+""
+""
+""""
+      root.classList.remove("reduced - motion")", ",
+}"""
+    // comment
+    root.style.fontSize = """""
+      fontSize === "small" ? "14px" : fontSize === "large" ? "18px" : "16px""""
+    // comment
+    root.style.filter ="""""
+      colorBlindMode === "none""""""
+        ? "none""""""
+        : colorBlindMode === "protanopia""""""
+          ? "url(#protanopia)""""""
+          : colorBlindMode === "deuteranopia""""""
+            ? "url(#deuteranopia)"""""
+            : "url(#tritanopia),
 }, [highContrast, reducedMotion, fontSize, colorBlindMode])
+}
   const toggleReducedMotion = () => setReducedMotion()
+}
   const value = {}
+
     highContrast, reducedMotion, fontSize, colorBlindMode, toggleHighContrast, toggleReducedMotion, setFontSize, setColorBlindMode}
+
   return ()"
     <AccessibilityContext .Provider value={value}" >"
       {children}
+
     </AccessibilityContext.Provider>
   )}
-// Accessibility Panel Component,
+
+// comment
 export const AccessibilityPanel = () => {}
+
   const [isOpen, setIsOpen] = useState()
+}
   const {}
+
     highContrast, reducedMotion, fontSize, colorBlindMode, toggleHighContrast, toggleReducedMotion, setFontSize, setColorBlindMode} = useAccessibility()
-  // Keyboard shortcuts,
+}
+  // comment
 useEffect(() => {}
+
     const handleKeyDown = event => {}
-      // Ctrl/Cmd + Shift + A to open accessibility panel,"
+
+      // comment
 if()""
-        (event.ctrlKey || event.metaKey) &&'''
-        event.shiftKey &&'''
-        event.key === 'A
+        (event.ctrlKey || event.metaKey) &&"""
+        event.shiftKey &&"""
+        event.key === "A
       ) {}
+
         event.preventDefault()
+}
         setIsOpen(!isOpen)}
-      // Ctrl/Cmd + Shift + H to toggle high contrast,"
+
+      // comment
 if()""
-        (event.ctrlKey || event.metaKey) &&'''
-        event.shiftKey &&'''
-        event.key === 'H'
+        (event.ctrlKey || event.metaKey) &&"""
+        event.shiftKey &&"""
+        event.key === "H"
       ) {}
+
         event.preventDefault()
+}
         toggleHighContrast()}
-      // Ctrl/Cmd + Shift + M to toggle reduced motion,"
+
+      // comment
 if()""
-        (event.ctrlKey || event.metaKey) &&'''
-        event.shiftKey &&'''
-        event.key === 'M'
+        (event.ctrlKey || event.metaKey) &&"""
+        event.shiftKey &&"""
+        event.key === "M"
       ) {}"
         event.preventDefault()""
-        toggleReducedMotion()', '
-}''}';''
-    window.addEventListener('keydown', handleKeyDown)';''
-    return () => window.removeEventListener('keydown', handleKeyDown)}, [isOpen, toggleHighContrast, toggleReducedMotion])
-}'
-    window.addEventListener('keydown', handleKeyDown)'
-    return () => window.removeEventListener('keydown', handleKeyDown)}, [isOpen, toggleHighContrast, toggleReducedMotion])
+        toggleReducedMotion()", "
+}""}";""
+    window.addEventListener("keydown", handleKeyDown)";""
+    return () => window.removeEventListener("keydown", handleKeyDown)}, [isOpen, toggleHighContrast, toggleReducedMotion])
+}
+}"
+    window.addEventListener("keydown", handleKeyDown)"
+    return () => window.removeEventListener("keydown", handleKeyDown)}, [isOpen, toggleHighContrast, toggleReducedMotion])
+}
   return()
+}
     <>
-      {/*   */}
+      {/* comment */}
+
       <motion .button,"
 whileHover = "{{" scale: 1.1 }}"
         whileTap="{{" scale: 0.9 }}"
         onClick="{()" =" > setIsOpen(true)}""
-        className="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-br from-zion-cyan to-zion-purple text-white rounded-full shadow-2xl shadow-zion-cyan/25 z-50 flex items-center justify-center hover: shadow-2xl hover:shadow-zion-cyan/40 transition-all duration-300"''''
-        aria-label='Open Accessibility Settings''''''
-        className="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-br from-zion-cyan to-zion-purple text-white rounded-full shadow-2xl shadow-zion-cyan/25 z-50 flex items-center justify-center hover:shadow-2xl hover:shadow-zion-cyan/40 transition-all duration-300"'
-        aria-label='Open Accessibility Settings'''''
-      >''''
+        className="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-br from-zion-cyan to-zion-purple text-white rounded-full shadow-2xl shadow-zion-cyan/25 z-50 flex items-center justify-center hover: shadow-2xl hover:shadow-zion-cyan/40 transition-all duration-300"""""
+        aria-label="Open Accessibility Settings""""""
+        className="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-br from-zion-cyan to-zion-purple text-white rounded-full shadow-2xl shadow-zion-cyan/25 z-50 flex items-center justify-center hover:shadow-2xl hover:shadow-zion-cyan/40 transition-all duration-300""
+        aria-label="Open Accessibility Settings"""""
+      >""""
         <Accessibility className="w-6 h-6" /" >"
       </motion.button>,
-      {/*   */}
+      {/* comment */}
+
       <AnimatePresence>
         {isOpen && (
           <motion .div,"
 initial="{{" opacity: 0 }}"""
-            animate="{{" opacity: 1 }}''''
-            exit="{{" opacity: 0 }}''''
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"'"
+            animate="{{" opacity: 1 }}""""
+            exit="{{" opacity: 0 }}""""
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"""
             onClick="{()" =" > setIsOpen(false)}""
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4""
             onClick="{()" =" > setIsOpen(false)}
+
           >
             <motion .div,"
 initial="{{" scale: 0.9, opacity: 0 }}"""
-              animate="{{" scale: 1, opacity: 1 }}''''
-              exit="{{" scale: 0.9, opacity: 0 }}''''
+              animate="{{" scale: 1, opacity: 1 }}""""
+              exit="{{" scale: 0.9, opacity: 0 }}""""
               className="bg-zion-blue-dark border border-zion-cyan/20 rounded-2xl p-6 max-w-md w-full max-h-[90vh] overflow-y-auto""
               onClick="{e" =" > e.stopPropagation()}"
-            >'''''
-              {/*   */}'''''
-              <div className="flex items-center justify-between mb-6">''''
-                <h2 className="text-xl font-bold text-white flex items-center gap-2">''''
+            >"""""
+              {/* comment */}"""""
+              <div className="flex items-center justify-between mb-6">""""
+                <h2 className="text-xl font-bold text-white flex items-center gap-2">""""
                   <Accessibility className="w-5 h-5 text-zion-cyan" /" >""
                   Accessibility Settings""
-                </h2>'''''
-                <Button '''''
-                  variant='ghost''''''
-                  size='sm''''''
-                  onClick="{()" =" > setIsOpen(false)}''''"
-                  className="text-zion-slate-light hover: text-white"''''
-                  variant='ghost'''''
-                  size='sm''''',
-                  onClick="{()" =" > setIsOpen(false)}''''
-                  className="text-zion-slate-light hover: text-white"'
-                >''''
+                </h2>"""""
+                <Button """""
+                  variant="ghost""""""
+                  size="sm""""""
+                  onClick="{()" =" > setIsOpen(false)}"""""
+                  className="text-zion-slate-light hover: text-white"""""
+                  variant="ghost"""""
+                  size="sm""""",
+                  onClick="{()" =" > setIsOpen(false)}""""
+                  className="text-zion-slate-light hover: text-white""
+                >""""
                   <X className="w-4 h-4" /" >"
                 </Button>"
               </div>""
-''''',
-              {/*   */}'''''
-              <div className="space-y-6">'''''
-                {/*   */}''''
-                <div className="flex items-center justify-between">'''''
-                  <div>''''
+""""",
+              {/* comment */}"""""
+              <div className="space-y-6">"""""
+                {/* comment */}""""
+                <div className="flex items-center justify-between">"""""
+                  <div>""""
                     <h3 className="text-white font-medium mb-1">""
-                      High Contrast'''''
-                    </h3>''''
+                      High Contrast"""""
+                    </h3>""""
                     <p className="text-sm text-zion-slate-light">
                       Increase contrast for better visibility"
                     </p>""
-                  </div>'''
-                  <Button '''''''
-                    variant="{highContrast" ? 'default' : 'outline'}'''''
-                    size='sm'''
+                  </div>"""
+                  <Button """""""
+                    variant="{highContrast" ? "default" : "outline"}"""""
+                    size="sm"""
                     onClick="{toggleHighContrast}""
                     className={}""
-'''
-                      highContrast'''
-                        ? 'bg-zion-cyan text-white''''
-                        : 'border-zion-cyan/30 text-zion-cyan'}"" >'''''
-                    {highContrast ? (''''
-                      <Eye className="w-4 h-4" /" >''''
-                    ) : (''''
+"""
+                      highContrast"""
+                        ? "bg-zion-cyan text-white""""
+                        : "border-zion-cyan/30 text-zion-cyan"}"" >"""""
+                    {highContrast ? (""""
+                      <Eye className="w-4 h-4" /" >""""
+                    ) : (""""
                       <EyeOff className="w-4 h-4" /" >"
                     )}
+
                   </Button>"
                 </div>""
-'''''
-                {/*   */}'''''
-                <div className="flex items-center justify-between">'''''
-                  <div>''''
+"""""
+                {/* comment */}"""""
+                <div className="flex items-center justify-between">"""""
+                  <div>""""
                     <h3 className="text-white font-medium mb-1">""
-                      Reduced Motion'''''
-                    </h3>''''
+                      Reduced Motion"""""
+                    </h3>""""
                     <p className="text-sm text-zion-slate-light">
                       Minimize animations and transitions"
                     </p>""
-                  </div>'''
-                  <Button '''''''
-                    variant="{reducedMotion" ? 'default' : 'outline'}'''''
-                    size='sm'''
+                  </div>"""
+                  <Button """""""
+                    variant="{reducedMotion" ? "default" : "outline"}"""""
+                    size="sm"""
                     onClick="{toggleReducedMotion}""
                     className={}""
-'''
-                      reducedMotion'''
-                        ? 'bg-zion-cyan text-white''''
-                        : 'border-zion-cyan/30 text-zion-cyan'}"" >'''''
-                    {reducedMotion ? (''''
-                      <VolumeX className="w-4 h-4" /" >''''
-                    ) : (''''
+"""
+                      reducedMotion"""
+                        ? "bg-zion-cyan text-white""""
+                        : "border-zion-cyan/30 text-zion-cyan"}"" >"""""
+                    {reducedMotion ? (""""
+                      <VolumeX className="w-4 h-4" /" >""""
+                    ) : (""""
                       <Volume2 className="w-4 h-4" /" >"
                     )}
+
                   </Button>"
                 </div>""
-                {/*   */}'''''
-                <div>'''''
-                  <h3 className="text-white font-medium mb-3">Font Size</h3>''''
-                  <div className="flex gap-2">'''
-                    {['small', medium',large'].map(size => ("
+                {/* comment */}"""""
+                <div>"""""
+                  <h3 className="text-white font-medium mb-3">Font Size</h3>""""
+                  <div className="flex gap-2">"""
+                    {["small", medium",large"].map(size => ("
                       <Button ""
-                        key={size}'''''
-                        variant="{fontSize" === size ? 'default' : 'outline'}'''''
-                        size='sm'''
+                        key={size}"""""
+                        variant="{fontSize" === size ? "default" : "outline"}"""""
+                        size="sm"""
                         onClick="{()" =" > setFontSize(size)}""
                         className={}""
-'''
-'''
-'''''
-                          fontSize === size'''''
-                            ? 'bg-zion-cyan text-white''''''
-                            : 'border-zion-cyan/30 text-zion-cyan'}
+"""
+"""
+"""""
+                          fontSize === size"""""
+                            ? "bg-zion-cyan text-white""""""
+                            : "border-zion-cyan/30 text-zion-cyan"}
+
                       >
                         {size.charAt(0).toUpperCase() + size.slice(1)}
+
                       </Button>
                     ))}
+
                   </div>"
                 </div>""
-                {/*   */}'''''
-                <div>''''
+                {/* comment */}"""""
+                <div>""""
                   <h3 className="text-white font-medium mb-3">""
-                    Color Blind Support'''''
-                  </h3>'''''
-                  <div className="grid grid-cols-2 gap-2">'''
-                    {['none', protanopia',deuteranopia', tritanopia'].map()'
+                    Color Blind Support"""""
+                  </h3>"""""
+                  <div className="grid grid-cols-2 gap-2">"""
+                    {["none", protanopia",deuteranopia", tritanopia"].map()"
                       mode => ("
                         <Button key="{mode}""
                           variant={}""
-''>
-                            colorBlindMode === mode ? 'default'  : 'outline'''', ',
-}'''''
-                          size = 'sm'''
+"">
+                            colorBlindMode === mode ? "default"  : "outline"""", ",
+}"""""
+                          size = "sm"""
                           onClick="{()" =" > setColorBlindMode(mode)}""
                           className={}""
-'''
-'''
-'''''
-                            colorBlindMode === mode'''''
-                              ? 'bg-zion-cyan text-white''''''
-                              : 'border-zion-cyan/30 text-zion-cyan'}
+"""
+"""
+"""""
+                            colorBlindMode === mode"""""
+                              ? "bg-zion-cyan text-white""""""
+                              : "border-zion-cyan/30 text-zion-cyan"}
+
                         >
                           {mode.charAt(0).toUpperCase() + mode.slice(1)}
+
                         </Button>
                       )
+}
                     )}
+
                   </div>"
                 </div>""
-'''''
-                {/*   */}'''''
-                <div className="bg-zion-blue-dark/50 rounded-lg p-4">''''
-                  <h3 className="text-white font-medium mb-3 flex items-center gap-2">''''
+"""""
+                {/* comment */}"""""
+                <div className="bg-zion-blue-dark/50 rounded-lg p-4">""""
+                  <h3 className="text-white font-medium mb-3 flex items-center gap-2">""""
                     <Keyboard className="w-4 h-4 text-zion-cyan" /" >"
-                    Keyboard Shortcuts'''''
-                  </h3>'''''
-                  <div className="space-y-2 text-sm text-zion-slate-light">''''
-                    <div className="flex justify-between">'''''
-                      <span>Open Panel: </span>''''
+                    Keyboard Shortcuts"""""
+                  </h3>"""""
+                  <div className="space-y-2 text-sm text-zion-slate-light">""""
+                    <div className="flex justify-between">"""""
+                      <span>Open Panel: </span>""""
                       <kbd className="px-2 py-1 bg-zion-blue-light/20 rounded text-xs">"
                         Ctrl/Cmd + Shift + A""
-                      </kbd>'''''
-                    </div>'''''
-                    <div className="flex justify-between">'''''
-                      <span>High Contrast:</span>''''
+                      </kbd>"""""
+                    </div>"""""
+                    <div className="flex justify-between">"""""
+                      <span>High Contrast:</span>""""
                       <kbd className="px-2 py-1 bg-zion-blue-light/20 rounded text-xs">"
                         Ctrl/Cmd + Shift + H""
-                      </kbd>'''''
-                    </div>'''''
-                    <div className="flex justify-between">'''''
-                      <span>Reduced Motion:</span>''''
+                      </kbd>"""""
+                    </div>"""""
+                    <div className="flex justify-between">"""""
+                      <span>Reduced Motion:</span>""""
                       <kbd className="px-2 py-1 bg-zion-blue-light/20 rounded text-xs">
                         Ctrl/Cmd + Shift + M,
                       </kbd>
@@ -714,9 +761,9 @@ initial="{{" scale: 0.9, opacity: 0 }}"""
                   </div>
                 </div>"
               </div>""
-''''',
-              {/*   */}'''''
-              <div className="mt-6 pt-4 border-t border-zion-cyan/20">''''
+""""",
+              {/* comment */}"""""
+              <div className="mt-6 pt-4 border-t border-zion-cyan/20">""""
                 <p className="text-xs text-zion-slate-light text-center">
                   These settings are saved locally and will persist across,
 sessions.</p>
@@ -724,57 +771,66 @@ sessions.</p>
             </motion.div>
           </motion.div>
         )}
+
       </AnimatePresence>
 </>
   )}"
-// Skip to Content Link""
-export const SkipToContent = () => ('''''
-  <a'''''
-    href='#main-content'''''
+// comment
+export const SkipToContent = () => ("""""
+  <a"""""
+    href="#main-content"""""
     className="sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-medium z-50 hover:bg-zion-cyan-light transition-colors duration-300 ">
     Skip to main content,
   </a>
 ),
-// Focus Trap Hook,
+// comment
 export const useFocusTrap = isActive => {}"
   useEffect(() => {}""
-    if (!isActive) return'';''
+    if (!isActive) return"";""
   useEffect(() => {}"
-    if (!isActive) return''
-    const focusableElements = ''''''
-      'button, [href], input, select, textarea, [tabindex]: not([tabindex='-1'])'
+    if (!isActive) return""
+    const focusableElements = """"""
+      "button, [href], input, select, textarea, [tabindex]: not([tabindex="-1"])"
     const container = document.activeElement?.closest()
+}
     if(!container) return,
 const firstFocusableElement = focusableContent[0]
     const lastFocusableElement = focusableContent[focusableContent.length-1]"
     const handleTabKey = e => {}""
-'''
-      if (e.key === 'Tab') {}
+"""
+      if (e.key === "Tab") {}
+
         if(e.shiftKey) {}
+
           if(document.activeElement === firstFocusableElement) {}
+
             e.preventDefault()
+}
             lastFocusableElement.focus()}
+
         } else {}
+
           if(document.activeElement === lastFocusableElement) {}
+
             e.preventDefault()"
             firstFocusableElement.focus()}","
-}', '
-}''}';''
-    document.addEventListener('keydown', handleTabKey)'
-    return () => document.removeEventListener('keydown', handleTabKey)}, [isActive])}""
-// Screen Reader Only Text'''''
-export const SrOnly = ({ children }) => (''''
+}", "
+}""}";""
+    document.addEventListener("keydown", handleTabKey)"
+    return () => document.removeEventListener("keydown", handleTabKey)}, [isActive])}""
+// comment
+export const SrOnly = ({ children }) => (""""
   <span className="sr-only">{children}</span>"
 )""
-export default AccessibilityPanel'';''
-''''''"
-}'
-    document.addEventListener('keydown', handleTabKey)"
-    return () => document.removeEventListener('keydown', handleTabKey)}, [isActive])}"'
-// Screen Reader Only Text''''
-export const SrOnly = ({ children }) => (''''
+export default AccessibilityPanel"";""
+"""""""
+}"
+    document.addEventListener("keydown", handleTabKey)"
+    return () => document.removeEventListener("keydown", handleTabKey)}, [isActive])}""
+// comment
+export const SrOnly = ({ children }) => (""""
   <span className="sr-only">{children}</span>"
 )"
-export default AccessibilityPanel'"
-'''''"
+export default AccessibilityPanel""
+""""'"
 "

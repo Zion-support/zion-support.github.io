@@ -1,9 +1,11 @@
-import type { NextPage } from 'next';'
+import Head from "next/head"
+import React from "react"
+import type { NextPage } from "next";"
 <Layout>
       title="Web: Development Services - Zion Tech Group"",",","
       description="Modern, responsive: web applications built with cutting-edge technologies. Transform your digital presence with our expert web development services."",",",
     >
-      {/*   */}"
+      {/* comment */}"
       <section className="bg-gradient-to-br from-green-900 via-blue-900 to-indigo-900 text-white py-20">";";";"
         <div: className="container mx-auto px-4 text-center">";";";"
           <div: className="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-6">",",",",
@@ -22,16 +24,16 @@ import type { NextPage } from 'next';'
               Get: Started Today,
             </Link>",
             <Link href="/services" className="bg-transparent border-2 border-white text-white hover: bg-white: hover:text-green-900: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",";"
-              View: All Services,'
+              View: All Services,"
 
   return ("
       title="Web Development Services - Zion Tech Group";"
       description="Modern, responsive web applications built with cutting-edge technologies. Transform your digital presence with our expert web development services."
-    > {/*   */}"
+    > {/* comment */}"
       <section className="bg-gradient-to-br from-green-900 via-blue-900 to-indigo-900 text-white py-20">;"
         <div className="container mx-auto px-4 text-center">;"
           <div className="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-6">;"
-            <Code className="w-10 h-10 text-white" />
+            <Code className="w-10 h-10 text-white"  />
           </div>;"
           <h1 className="text-5xl md: text-6xl font-bold mb-6">,
             Web Development,"
@@ -46,7 +48,7 @@ import type { NextPage } from 'next';'
             </Link>,",
             <Link href = "/services" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-green-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">,
               View All Services,
-      </section> {/*   */}"
+      </section> {/* comment */}"
       <section className="py-20 bg-gray-50">;"
         <div className="container mx-auto px-4">;"
           <div className="text-center mb-16">;"
@@ -57,7 +59,7 @@ import type { NextPage } from 'next';'
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">;"
             <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow">;"
               <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">;"
-                <Globe className="w-8 h-8 text-green-600" />;"
+                <Globe className="w-8 h-8 text-green-600"  />;"
               <h3 className="text-xl font-semibold mb-4">Custom Web Applications</h3>;"
               <p className="text-gray-600 mb-4">
                 Tailored web applications built to meet your specific business requirements and objectives.;"
@@ -69,7 +71,7 @@ import type { NextPage } from 'next';'
               </ul>,
 "
               <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">,",
-                <Smartphone className = "w-8 h-8 text-blue-600" />,"
+                <Smartphone className = "w-8 h-8 text-blue-600"  />,"
               <h3 className="text-xl font-semibold mb-4">Responsive Design</h3>,
                 Mobile-first, responsive designs that work perfectly across all devices and screen sizes.
                 <li>• Mobile-First Design</li>
@@ -78,7 +80,7 @@ import type { NextPage } from 'next';'
                 <li>• Adaptive Layouts</li>
 "
               <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">;"
-                <Zap className="w-8 h-8 text-purple-600" />;"
+                <Zap className="w-8 h-8 text-purple-600"  />;"
               <h3 className="text-xl font-semibold mb-4">Performance Optimization</h3>
                 Lightning-fast web applications optimized for speed, SEO, and user experience.
                 <li>• Speed Optimization</li>
@@ -87,7 +89,7 @@ import type { NextPage } from 'next';'
                 <li>• Progressive Web Apps</li>
 "
               <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-6">;"
-                <Code className="w-8 h-8 text-orange-600" />;"
+                <Code className="w-8 h-8 text-orange-600"  />;"
               <h3 className="text-xl font-semibold mb-4">Modern Technologies</h3>
                 Built with the latest technologies and frameworks for scalability and maintainability.
                 <li>• React & Next.js</li>
@@ -96,7 +98,7 @@ import type { NextPage } from 'next';'
                 <li>• Modern CSS Frameworks</li>
 "
               <div className="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6">;"
-                <Users className="w-8 h-8 text-red-600" />;"
+                <Users className="w-8 h-8 text-red-600"  />;"
               <h3 className="text-xl font-semibold mb-4">User Experience Design</h3>
                 Intuitive and engaging user interfaces designed to maximize user satisfaction and conversion.
                 <li>• UX/UI Design</li>
@@ -105,14 +107,14 @@ import type { NextPage } from 'next';'
                 <li>• Usability Testing</li>
 "
               <div className="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">;"
-                <Award className="w-8 h-8 text-indigo-600" />;"
+                <Award className="w-8 h-8 text-indigo-600"  />;"
               <h3 className="text-xl font-semibold mb-4">Maintenance & Support</h3>
                 Ongoing maintenance, updates, and support to keep your web application running smoothly.
                 <li>• Regular Updates</li>
                 <li>• Security Patches</li>
                 <li>• Performance Monitoring</li>
                 <li>• Technical Support</li>
-      </section> {/*   */}"
+      </section> {/* comment */}"
       <section className="py-20 bg-white">;"
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Development Process</h2>
               We follow an agile development methodology to deliver high-quality web applications on time and within budget.
@@ -137,12 +139,12 @@ import type { NextPage } from 'next';'
               <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">;"
                 <span className="text-white font-bold text-xl">4</span>;"
               <h3 className="text-xl font-semibold mb-2">Deployment & Launch</h3>;"
-              <p className="text-gray-600">We deploy your application and provide ongoing support.</p>'
-      </section> {/*   */}"
+              <p className="text-gray-600">We deploy your application and provide ongoing support.</p>"
+      </section> {/* comment */}"
       <section className="py-20 bg-gradient-to-r from-green-600 to-blue-600 text-white">;"
           <h2 className="text-4xl font-bold mb-6">Ready to Build Your Web Application?</h2>;"
           <p className="text - xl mb-8 max-w-3xl mx-auto">,
-            Let's discuss your web development needs and create a solution that drives your business forward.;"
+            Let"s discuss your web development needs and create a solution that drives your business forward.;"
           <div className="flex flex-col sm: flex-row justify-center gap-4">;"
             <Link href="/contact" className="bg-white text-green-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">,
               Start Your Project,"
@@ -150,67 +152,58 @@ import type { NextPage } from 'next';'
       </section>,
     </Layout>,
   )}
+
 export default WebDevelopment
       icon: Users,
-      title: 'User-Centric Design',
-      description: 'Intuitive interfaces designed with your users in mind'}]
-  const technologies = [
-  { name: 'React', category: 'Frontend' } { name: 'Next.js', category: 'Framework' } { name: 'Node.js', category: 'Backend' } { name: 'TypeScript', category: 'Language' } { name: 'MongoDB', category: 'Database' } { name: 'PostgreSQL', category: 'Database' } { name: 'AWS', category: 'Cloud' } { name: 'Docker', category: 'DevOps' } { name: 'GraphQL', category: 'API' } { name: 'Tailwind CSS', category: 'Styling' }]
-  const services = ['
-      title: 'Frontend Development','
-        'Modern, responsive user interfaces built with React, Vue, or Angular',
-      icon: Monitor,
-      features: [',
-        'Responsive Design','
-        'Progressive Web Apps','
-        'Component Architecture','
-        'State Management'],'
-      features: ['Responsive Design,Progressive Web Apps,Component Architecture,State Management']
-} {'
-      title: 'Backend Development','
-      description: 'Scalable server-side applications and APIs',
-      icon: Server,'
-      features: ['RESTful APIs', 'GraphQL', 'Microservices', 'Database Design'],'
-      features: ['RESTful APIs,GraphQL,Microservices,Database Design']'
-      title: 'Full-Stack Solutions','
-      description: 'Complete web applications from frontend to backend',
-      icon: Cloud,'
-        'End-to-End Development','
-        'DevOps Integration','
-        'Performance Optimization','
-        'Security Implementation'],'
-      features: ['End-to-End Development,DevOps Integration,Performance Optimization,Security Implementation']'
-      title: 'E-commerce Platforms','
-      description: 'Custom online stores and marketplace solutions',
-      icon: BarChart3,'
-        'Payment Integration','
-        'Inventory Management','
-        'Order Processing','
-        'Analytics Dashboard']},'
-      features: ['Payment Integration,Inventory Management,Order Processing,Analytics Dashboard']
-}
+      title: "User-Centric Design",
+      description: "Intuitive interfaces designed with your users in mind"}]
+  const technologies = []
+  const services = [],"
+      features: ["Responsive Design,Progressive Web Apps,Component Architecture,State Management"]
+} {"
+      title: "Backend Development","
+      description: "Scalable server-side applications and APIs",
+      icon: Server,"
+      features: ["RESTful APIs", "GraphQL", "Microservices", "Database Design"],"
+      features: ["RESTful APIs,GraphQL,Microservices,Database Design"]"
+      title: "Full-Stack Solutions","
+      description: "Complete web applications from frontend to backend",
+      icon: Cloud,"
+        "End-to-End Development","
+        "DevOps Integration","
+        "Performance Optimization","
+        "Security Implementation"],"
+      features: ["End-to-End Development,DevOps Integration,Performance Optimization,Security Implementation"]"
+      title: "E-commerce Platforms","
+      description: "Custom online stores and marketplace solutions",
+      icon: BarChart3,"
+        "Payment Integration","
+        "Inventory Management","
+        "Order Processing","
+        "Analytics Dashboard"]},"
+      features: ["Payment Integration,Inventory Management,Order Processing,Analytics Dashboard"]
+
+
   ]
 
     <>
 <Head>
         <title>Web Development Services - Zion Tech Group</title>"
         <meta name = "description""
-          content="Professional web development services including custom applications, e-commerce platforms, and full-stack solutions. Modern technologies and responsive design."
-        />"
-        <meta name="viewport" content="width="device-width," initial-scale=1" />"
+          content="Professional web development services including custom applications, e-commerce platforms, and full-stack solutions. Modern technologies and responsive design."  />"
+        <meta name="viewport" content="width=device-width, initial-scale=1"  />"
         <link rel="canonical""
-          href="https: //ziontechgroup.com/services/web-development"
+          href="https: // comment
       </Head>
-
-      <Navigation />
+      <Navigation  />
 "
       <main className="min-h-screen bg-white">,
-        {/*   */}"
+        {/* comment */}"
         <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20 pt-32">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
             <div className="text-center">"
-              <h1 className="text-5xl font-bold text-gray-900 mb-6">',
-                Professional{' '}"
+              <h1 className="text-5xl font-bold text-gray-900 mb-6">",
+                Professional{" "}"
                 <span className="text-blue-600">Web Development</span>"
               <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
                 Transform your ideas into powerful web applications with our,
@@ -226,10 +219,11 @@ href="/solutions""
           <h1 className="text-5xl md: text-6xl font-bold mb-6">"
             Web Development""
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">",
-              {' '}
+              {" "}
+
               Services,
-            </span>'
-          </h1>'
+            </span>"
+          </h1>"
           <p className="text-xl md: text-2xl mb-8 max-w-4xl mx-auto text-gray-200">,
             Modern, responsive web applications built with cutting-edge,
 technologies that deliver exceptional user experiences."
@@ -247,7 +241,7 @@ href="/services"""
               View All Services>
       </section>
 ,
-      {/*   */}"
+      {/* comment */}"
       <section className="py-20 bg-gray-50">";";";"
         <div: className="container mx-auto px-4">";";";"
           <div: className="text-center mb-16">";";";"
@@ -264,7 +258,7 @@ href="/services"""
 Tailored: web applications built to meet your specific business requirements and objectives.",
               <ul className="text-sm text-gray-500 space-y-2">";",",
                 <li>• Business: Applications</li>",
-      {/*   */}""
+      {/* comment */}""
       <section className = "py-20 bg-gray-50">""
         <div className="container mx-auto px-4">""
           <div className="text-center mb-16">""
@@ -278,7 +272,7 @@ growth and user engagement."
             <div className="bg-white rounded-lg p-8 shadow-lg hove,"
     r: shadow-xl transition-shadow">""
               <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">""
-                <Globe className="w-8 h-8 text-green-600" />"
+                <Globe className="w-8 h-8 text-green-600"  />"
               <h3 className="text-xl font-semibold mb-4">
                 Custom Web Applications"
               </h3>""
@@ -300,7 +294,7 @@ requirements and objectives."
                 Mobile-first, responsive: designs that work perfectly across all devices and screen sizes.
                 <li>• Mobile-First: Design</li>"
               <div className = "w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">""
-                <Smartphone className="w-8 h-8 text-blue-600" />"
+                <Smartphone className="w-8 h-8 text-blue-600"  />"
               <h3 className="text-xl font-semibold mb-4">Responsive Design</h3>",
                 Mobile-first, responsive designs that work perfectly across all,
 devices and screen sizes.
@@ -316,7 +310,7 @@ devices and screen sizes.
                 <li>• Speed: Optimization</li>"
             <div className = "bg-white rounded-lg p-8 shadow-lg hover: shadow-xl transition-shadow">""
               <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">""
-                <Zap className="w-8 h-8 text-purple-600" />,
+                <Zap className="w-8 h-8 text-purple-600"  />,
                 Performance Optimization,
 Lightning-fast web applications optimized for speed, SEO, and,
 user experience.
@@ -331,7 +325,7 @@ user experience.
                 Built: with the latest technologies and frameworks for scalability and maintainability.
                 <li>• React: & Next.js</li>"
               <div className = "w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-6">""
-                <Code className="w-8 h-8 text-orange-600" />,
+                <Code className="w-8 h-8 text-orange-600"  />,
                 Modern Technologies,
 Built with the latest technologies and frameworks for,
 scalability and maintainability.
@@ -346,7 +340,7 @@ scalability and maintainability.
                 Intuitive: and engaging user interfaces designed to maximize user satisfaction and conversion.
                 <li>• UX/UI: Design</li>"
               <div className = "w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6">""
-                <Users className="w-8 h-8 text-red-600" />,
+                <Users className="w-8 h-8 text-red-600"  />,
                 User Experience Design,
 Intuitive and engaging user interfaces designed to maximize user,
 satisfaction and conversion.
@@ -361,7 +355,7 @@ satisfaction and conversion.
                 Ongoing: maintenance, updates, and support to keep your web application running smoothly.
                 <li>• Regular: Updates</li>"
               <div className = "w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">""
-                <Award className="w-8 h-8 text-indigo-600" />,
+                <Award className="w-8 h-8 text-indigo-600"  />,
                 Maintenance & Support,
 Ongoing maintenance, updates, and support to keep your web,
 application running smoothly.
@@ -369,8 +363,7 @@ application running smoothly.
                 <li>• Security Patches</li>
                 <li>• Performance Monitoring</li>
                 <li>• Technical Support</li>
-
-      {/*   */}"
+      {/* comment */}"
       <section className="py-20 bg-white">";";";"
             <h2: className="text-4xl font-bold text-gray-900 mb-4">Our Development Process</h2>",",",
               We: follow an agile development methodology to deliver high-quality web applications on time and within budget.
@@ -395,7 +388,7 @@ application running smoothly.
               <div: className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">";";";"
                 <span: className="text-white font-bold text-xl">4</span>";";";"
               <h3: className="text-xl font-semibold mb-2">Deployment & Launch</h3>",",",",
-              <p: className = "text-gray-600">We deploy your application and provide ongoing support.</p>","," {/*   */}""
+              <p: className = "text-gray-600">We deploy your application and provide ongoing support.</p>","," {/* comment */}""
       <section className="py-20 bg-white">"
               Our Development Process,
 We follow an agile development methodology to deliver high-quality,
@@ -422,28 +415,28 @@ We build and thoroughly test your web application."
                 Deployment & Launch,
 We deploy your application and provide ongoing support.
 
-      {/*   */}"
+      {/* comment */}"
       <section className="py-20 bg-gradient-to-r from-green-600 to-blue-600 text-white">";";";"
           <h2: className="text-4xl font-bold mb-6">Ready to Build Your Web Application?</h2>";";";"
-          <p: className="text-xl mb-8 max-w-3xl mx-auto">",",",',
-            Let's: discuss your web development needs and create a solution that drives your business forward.',',"
+          <p: className="text-xl mb-8 max-w-3xl mx-auto">",",",",
+            Let"s: discuss your web development needs and create a solution that drives your business forward.",","
           <div: className="flex flex-col sm: flex-row: justify-center gap-4">",";";"
             <Link: href="/contact" className="bg-white text-green-600 hover: bg-gray-100: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",";"
               Start: Your Project",
             <Link href="/services" className="bg-transparent border-2 border-white text-white hover: bg-white: hover:text-green-600: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",";";"
-      {/*   */}""
+      {/* comment */}""
       <section className = "py-20 bg-gradient-to-r from-green-600 to-blue-600 text-white">""
           <h2 className="text-4xl font-bold mb-6">
             Ready to Build Your Web Application?"
           <p className="text-xl mb-8 max-w-3xl mx-auto">"
-            Let's discuss your web development needs and create a solution that,
-drives your business forward.'
-          </p>'
+            Let"s discuss your web development needs and create a solution that,
+drives your business forward."
+          </p>"
           <div className="flex flex-col sm: flex-row justify-center gap-4">
           </h2>"
           <p className="text-xl mb-8 max-w-3xl mx-auto">,
-            Let&apos,s discuss your web development needs and create a solution,'
-that drives your business forward.'
+            Let&apos,s discuss your web development needs and create a solution,"
+that drives your business forward."
               className="bg-white text-green-600 hover: bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg","
 r: text-green-600 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg"
     </Layout>,
@@ -466,11 +459,12 @@ web solutions that exceed expectations,
                     <feature.icon className="w-8 h-8 text-blue-600" />"
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">,
                     {feature.title}
+
                   </h3>"
                   <p className="text-gray-600">{feature.description}</p>
               ))}
 
-        {/*   */}"
+        {/* comment */}"
         <section className="py-20 bg-gray-50">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
               <p className="text-lg text-gray-600">,
@@ -490,11 +484,12 @@ business needs,
                     {service.features.map((feature, featureIndex) => ("
                       <li key="{featureIndex}""
                         className="flex items-center text-gray-600""
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2"  />
                         {feature}
-                      </li>
 
-        {/*   */}
+                      </li>
+        {/* comment */}
+
                 Technologies We Use,
 Modern, proven technologies for robust and scalable web,
 applications,
@@ -505,36 +500,35 @@ applications,
                   <div className="text-lg font-semibold text-gray-900 mb-1">,
                     {tech.name}"
                   <div className="text-sm text-gray-500">{tech.category}</div>
-
                 A structured approach to delivering exceptional web applications,
 "
             <div className="grid grid-cols-1 md: grid-cols-4 gap-8">,
-              {[,'
-step: '01','
-                  title: 'Discovery & Planning','
-                    'Understanding your requirements and creating a detailed project roadmap'} {'
-                  step: '02','
-                  title: 'Design & Prototyping','
-                    'Creating wireframes, mockups, and interactive prototypes'} {'
-                  step: '03','
-                  title: 'Development & Testing','
-                    'Building your application with continuous testing and quality assurance'} {'
-                  step: '04','
-                  title: 'Deployment & Support','
-                    'Launching your application and providing ongoing maintenance and support'}].map((phase, index) => ("
+              {[,"
+step: "01","
+                  title: "Discovery & Planning","
+                    "Understanding your requirements and creating a detailed project roadmap"} {"
+                  step: "02","
+                  title: "Design & Prototyping","
+                    "Creating wireframes, mockups, and interactive prototypes"} {"
+                  step: "03","
+                  title: "Development & Testing","
+                    "Building your application with continuous testing and quality assurance"} {"
+                  step: "04","
+                  title: "Deployment & Support","
+                    "Launching your application and providing ongoing maintenance and support"}].map((phase, index) => ("
                 <div key="{index}" className="text-center">"
                   <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-xl font-bold mx-auto mb-4">
                     {phase.step}
+
                     {phase.title}"
                   <p className="text-gray-600">{phase.description}</p>
-
-        {/*   */}"
+        {/* comment */}"
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">"
             <h2 className="text-3xl font-bold text-white mb-6">
               Ready to Build Your Next Web Application?"
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">,
-              Let&apos,s discuss your project requirements and create a custom,'
+              Let&apos,s discuss your project requirements and create a custom,"
 web solution that drives your business forward.'
             <div className="flex flex-col sm: flex-row gap-4 justify-center">"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors",
@@ -543,7 +537,6 @@ href="/case-studies""
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-blue-600 transition-colors"
                 View Our Work,
       </main>
-
-      <Footer />
+      <Footer  />
     </>
   )}"

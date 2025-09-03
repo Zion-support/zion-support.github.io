@@ -1,70 +1,47 @@
 import React from "react"
       icon: Server,
-      title: 'Database Administration',
-      description: '24/7 monitoring, maintenance, and optimization of your database systems
+      title: "Database Administration",
+      description: "24/7 monitoring, maintenance, and optimization of your database systems
 },
     {
-      icon: Shield,'
-      title: 'Data Security & Backup','
-      description: 'Enterprise-grade security with automated backup and disaster recovery'},
+      icon: Shield,"
+      title: "Data Security & Backup","
+      description: "Enterprise-grade security with automated backup and disaster recovery"},
     {
-      icon: Zap,'
-      title: 'Performance Optimization','
-      description: 'Advanced tuning and optimization for maximum database performance'},
+      icon: Zap,"
+      title: "Performance Optimization","
+      description: "Advanced tuning and optimization for maximum database performance"},
     {
-      icon: Cloud,'
-      title: 'Cloud Database Migration','
-      description: 'Seamless migration to cloud-based database solutions'},
+      icon: Cloud,"
+      title: "Cloud Database Migration","
+      description: "Seamless migration to cloud-based database solutions"},
     {
-      icon: BarChart3,'
-      title: 'Data Analytics & Reporting','
-      description: 'Transform your data into actionable insights with advanced analytics'}
+      icon: BarChart3,"
+      title: "Data Analytics & Reporting","
+      description: "Transform your data into actionable insights with advanced analytics'}
+
   ]
 
-  const databaseTypes = [
-    {'
-      name: 'SQL Databases','
-      description: 'MySQL, PostgreSQL, SQL Server, Oracle',
-      icon: Database},
-    {'
-      name: 'NoSQL Databases','
-      description: 'MongoDB, Cassandra, Redis, DynamoDB',
-      icon: HardDrive},
-    {'
-      name: 'Cloud Databases','
-      description: 'AWS RDS, Azure SQL, Google Cloud SQL',
-      icon: Cloud},
-    {'
-      name: 'In-Memory Databases','
-      description: 'Redis, Memcached, Hazelcast',
-      icon: Cpu}
-  ]
+  const databaseTypes = []
 
-  const benefits = ['
-    'Improved data performance and query optimization','
-    'Enhanced data security and compliance','
-    'Reduced operational costs and maintenance','
-    'Scalable architecture for business growth','
-    '24/7 monitoring and support','
-    'Automated backup and disaster recovery'
-  ]
+  const benefits = []
 
   return (
     <ErrorBoundary>
       <SEOHead title="Database Solutions - Zion Tech Group""
         description="Expert database design, administration, and optimization services. We provide comprehensive database solutions for businesses of all sizes.""
         keywords="database solutions, database administration, data management, SQL, NoSQL, cloud databases, data optimization""
-        canonicalUrl="https: //ziontechgroup.com/services/database-solutions"
-      />
-      <Navigation />
+        canonicalUrl="https: // comment
+            />
+      <Navigation  />
       ,
-      {/*   */}"
+      {/* comment */}"
       <section className="pt-24 pb-16 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">"
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
           <div className="text-center">"
             <div className="flex justify-center mb-6">"
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center">"
-                <Database className="w-8 h-8 text-white" />
+                <Database className="w-8 h-8 text-white"  />
               </div>
             </div>"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -79,7 +56,7 @@ import React from "react"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center"
               >
                 Get Started"
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-5 h-5"  />
               </Link>"
               <Link href="/case-studies""
                 className="px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-center"
@@ -91,7 +68,7 @@ import React from "react"
         </div>
       </section>
 ,
-      {/*   */}"
+      {/* comment */}"
       <section className="py-20 bg-gray-50">"
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
           <div className="text-center mb-16">"
@@ -112,17 +89,19 @@ that scale with your business needs.
                 </div>"
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">,
                   {feature.title}
+
                 </h3>"
                 <p className="text-gray-600">
                   {feature.description}
+
                 </p>
               </div>
             ))}
+
           </div>
         </div>
       </section>
-
-      {/*   */}"
+      {/* comment */}"
       <section className="py-20 bg-white">"
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
           <div className="text-center mb-16">"
@@ -142,17 +121,19 @@ that scale with your business needs.
                 </div>"
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">,
                   {type.name}
+
                 </h3>"
                 <p className="text-gray-600 text-sm">
                   {type.description}
+
                 </p>
               </div>
             ))}
+
           </div>
         </div>
       </section>
-
-      {/*   */}"
+      {/* comment */}"
       <section className="py-20 bg-gradient-to-br from-gray-900 to-blue-900">"
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -161,36 +142,37 @@ that scale with your business needs.
                 Why Choose Our Database Solutions?
               </h2>"
               <p className="text-xl text-gray-300 mb-8">,
-                Our expert team delivers database solutions that improve performance, 
+                Our expert team delivers database solutions that improve performance,
                 enhance security, and reduce operational costs.
               </p>"
               <div className="space-y-4">
                 {benefits.map((benefit, index) => ("
                   <div key="{index}" className="flex items-center space-x-3">"
-                    <CheckCircle className="w-6 h-6 text-cyan-400 flex-shrink-0" />"
+                    <CheckCircle className="w-6 h-6 text-cyan-400 flex-shrink-0"  />"
                     <span className="text-gray-300">{benefit}</span>
                   </div>
                 ))}
+
               </div>
             </div>"
             <div className="grid grid-cols-2 gap-6">"
               <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl">"
-                <TrendingUp className="w-8 h-8 text-cyan-400 mb-4" />"
+                <TrendingUp className="w-8 h-8 text-cyan-400 mb-4"  />"
                 <h3 className="text-xl font-semibold text-white mb-2">Performance</h3>"
                 <p className="text-gray-300 text-sm">Optimized queries and indexing for maximum speed</p>
               </div>"
               <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl">"
-                <Lock className="w-8 h-8 text-cyan-400 mb-4" />"
+                <Lock className="w-8 h-8 text-cyan-400 mb-4"  />"
                 <h3 className="text-xl font-semibold text-white mb-2">Security</h3>"
                 <p className="text-gray-300 text-sm">Enterprise-grade security and compliance</p>
               </div>"
               <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl">"
-                <Network className="w-8 h-8 text-cyan-400 mb-4" />"
+                <Network className="w-8 h-8 text-cyan-400 mb-4"  />"
                 <h3 className="text-xl font-semibold text-white mb-2">Scalability</h3>"
                 <p className="text-gray-300 text-sm">Architecture that grows with your business</p>
               </div>"
               <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl">"
-                <Users className="w-8 h-8 text-cyan-400 mb-4" />"
+                <Users className="w-8 h-8 text-cyan-400 mb-4"  />"
                 <h3 className="text-xl font-semibold text-white mb-2">Support</h3>"
                 <p className="text-gray-300 text-sm">24/7 monitoring and expert support</p>
               </div>
@@ -198,8 +180,7 @@ that scale with your business needs.
           </div>
         </div>
       </section>
-
-      {/*   */}"
+      {/* comment */}"
       <section className="py-20 bg-gray-50">"
         <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">"
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
@@ -214,7 +195,7 @@ the perfect database solution for your business.
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center"
             >
               Get Free Consultation"
-              <ArrowRight className="ml-2 w-5 h-5" />
+              <ArrowRight className="ml-2 w-5 h-5"  />
             </Link>"
             <Link href="/pricing""
               className="px-8 py-4 border border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center"
@@ -224,7 +205,8 @@ the perfect database solution for your business.
           </div>
         </div>
       </section>
-
-      <Footer />
+      <Footer  />
     </ErrorBoundary>";,
   )}
+
+export default Component

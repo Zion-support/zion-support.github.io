@@ -1,8 +1,6 @@
-// apiErrorHandler utility,
-export const apiErrorHandler = {
-  // Placeholder utility functions,
-init: () => {
-    console.log('apiErrorHandler initialized'),
-  }
-}
+// comment
+export const apiErrorHandler = {}
+
+
+
 export default apiErrorHandler

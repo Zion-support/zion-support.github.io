@@ -1,56 +1,27 @@
+import Head from "next/head"
 import React from "react"
   Mail,
-  Smartphone} from 'lucide-react'
+  Smartphone} from "lucide-react"
 
 export default function EventManagement() {
 
-  const features = [
-    {
-      icon: Users,'
-      title: 'Event Registration','
-      description: 'Streamlined registration process with custom forms and automated confirmations.'},
-    {
-      icon: Ticket,'
-      title: 'Ticketing System','
-      description: 'Sell tickets online with secure payment processing and digital ticket delivery.'},
-    {
-      icon: Users,
-      title: 'Attendee Management',
-      description: 'Track attendees, manage check-ins, and handle special requirements.
-},
-    {
-      icon: BarChart3,'
-      title: 'Analytics & Reporting','
-      description: 'Comprehensive analytics on attendance, engagement, and event performance.
-},
-    {
-      icon: Globe,'
-      title: 'Multi-platform Support','
-      description: 'Manage events across web, mobile, and social media platforms.
-},
-    {
-      icon: Mail,'
-      title: 'Communication Tools','
-      description: 'Send updates, reminders, and follow-ups to attendees automatically.
-}
-  ]
+  const features = []
 
   return (
     <>
       <SEO title = "Event Management Platform - Zion Tech Group""
         description="Comprehensive event management platform with registration, ticketing, and attendee management. Streamline your events.""
         keywords="event management, event registration, ticketing, attendee management, event planning">
-      />
+     />
 <Head>
         <title>Event Management Platform - Zion Tech Group</title>
       </Head>
-
-      {/*   */}"
+      {/* comment */}"
       <section className = "bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">"
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
           <div className="text-center">"
             <Badge className="mb-4 bg-blue-500 text-white">"
-              <Calendar className="w-4 h-4 mr-2" />
+              <Calendar className="w-4 h-4 mr-2"  />
               Event Management,
             </Badge>"
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -58,13 +29,13 @@ export default function EventManagement() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Platform</span>
             </h1>"
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">,
-              Streamline your events with our comprehensive platform featuring registration, 
+              Streamline your events with our comprehensive platform featuring registration,
               ticketing, attendee management, and powerful analytics.
             </p>"
             <div className="flex flex-col sm: flex-row gap-4 justify-center">"
               <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
                 Start Free Trial"
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5"  />
               </Button>"
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-gray-900">
                 Schedule Demo,
@@ -74,7 +45,7 @@ export default function EventManagement() {
         </div>
       </section>
 ,
-      {/*   */}"
+      {/* comment */}"
       <section className="py-20 bg-gray-50">"
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
           <div className="text-center mb-16">"
@@ -98,11 +69,11 @@ export default function EventManagement() {
                 <p className="text-gray-600">{feature.description}</p>
               </Card>
             ))}
+
           </div>
         </div>
       </section>
-
-      {/*   */}"
+      {/* comment */}"
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">"
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">"
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -115,7 +86,7 @@ to create memorable and successful events.
           <div className="flex flex-col sm: flex-row gap-4 justify-center">"
             <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
               Start Free Trial"
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <ArrowRight className="ml-2 h-5 w-5"  />
             </Button>"
             <Link href="/contact">"
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">

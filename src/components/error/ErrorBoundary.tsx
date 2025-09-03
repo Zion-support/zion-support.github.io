@@ -1,17 +1,21 @@
-import React { Component, ErrorInfo, ReactNode } from 'react' interface Props { children: ReactNode, fallback?: ReactNode, onError?: (error: Error, errorInfo: ErrorInfo) => void} interface State { hasError: boolean, error?: Error, errorInfo?: ErrorInfo} export class ErrorBoundary extends Component<Props, State> { constructor(props: Props) { super(props), this.state = { hasError: false }} static getDerivedStateFromError(error: Error): State { return { hasError: true, error }} componentDidCatch(error: Error, errorInfo: ErrorInfo) { this.setState({ error, errorInfo }); this.props.onError?.(error, errorInfo) interface Props { children: ReactNode, fallback?: ReactNode, onError?: (error: Error, errorInfo: ErrorInfo) => void} interface State { hasError: boolean, error?: Error, errorInfo?: ErrorInfo} export class ErrorBoundary extends Component<Props, State> { constructor(props: Props) { super(props), this.state = { hasError: false  }} static getDerivedStateFromError(error: Error): State { return { hasError: true, error }} componentDidCatch(error: Error, errorInfo: ErrorInfo) { this.setState({ error, errorInfo }); this.props.onError?.(error, errorInfo)
-' interface Props { children: ReactNode, fallback?: ReactNode, onError?: (error: Error, errorInfo: ErrorInfo) => void} interface State { hasError: boolean, error?: Error, errorInfo?: ErrorInfo} export class ErrorBoundary extends Component<Props, State> { constructor(props: Props) { super(props), this.state = { hasError: false }} static getDerivedStateFromError(error: Error): State { return { hasError: true, error }} componentDidCatch(error: Error, errorInfo: ErrorInfo) { this.setState({ error, errorInfo }); this.props.onError?.(error, errorInfo);'';,"});,"})"
-;,"});,"})'" interface Props { children: ReactNode, fallback?: ReactNode, onError?: (error: Error, errorInfo: ErrorInfo) => void} interface State { hasError: boolean, error?: Error, errorInfo?: ErrorInfo} export class ErrorBoundary extends Component<Props, State> { constructor(props: Props) { super(props), this.state = { hasError: false  }} static getDerivedStateFromError(error: Error): State { return { hasError: true, error }} componentDidCatch(error: Error, errorInfo: ErrorInfo) { this.setState({ error, errorInfo }); this.props.onError?.(error, errorInfo);,"});,"})'
-  onError?: (error: Erro,r, errorInfo: ErrorInfo) => void,'
+const Component = () => {
+import React { Component, ErrorInfo, ReactNode } from "react" interface Props { children: ReactNode, fallback?: ReactNode, onError?: (error: Error, errorInfo: ErrorInfo) => void} interface State { hasError: boolean, error?: Error, errorInfo?: ErrorInfo} export class ErrorBoundary extends Component<Props, State> { constructor(props: Props) { super(props), this.state = { hasError: false }} static getDerivedStateFromError(error: Error): State { return { hasError: true, error }} componentDidCatch(error: Error, errorInfo: ErrorInfo) { this.setState({ error, errorInfo }); this.props.onError?.(error, errorInfo) interface Props { children: ReactNode, fallback?: ReactNode, onError?: (error: Error, errorInfo: ErrorInfo) => void} interface State { hasError: boolean, error?: Error, errorInfo?: ErrorInfo} export class ErrorBoundary extends Component<Props, State> { constructor(props: Props) { super(props), this.state = { hasError: false  }} static getDerivedStateFromError(error: Error): State { return { hasError: true, error }} componentDidCatch(error: Error, errorInfo: ErrorInfo) { this.setState({ error, errorInfo }); this.props.onError?.(error, errorInfo)
+}
+" interface Props { children: ReactNode, fallback?: ReactNode, onError?: (error: Error, errorInfo: ErrorInfo) => void} interface State { hasError: boolean, error?: Error, errorInfo?: ErrorInfo} export class ErrorBoundary extends Component<Props, State> { constructor(props: Props) { super(props), this.state = { hasError: false }} static getDerivedStateFromError(error: Error): State { return { hasError: true, error }} componentDidCatch(error: Error, errorInfo: ErrorInfo) { this.setState({ error, errorInfo }); this.props.onError?.(error, errorInfo);"";,"});,"})"
+;,"});,"})"" interface Props { children: ReactNode, fallback?: ReactNode, onError?: (error: Error, errorInfo: ErrorInfo) => void} interface State { hasError: boolean, error?: Error, errorInfo?: ErrorInfo} export class ErrorBoundary extends Component<Props, State> { constructor(props: Props) { super(props), this.state = { hasError: false  }} static getDerivedStateFromError(error: Error): State { return { hasError: true, error }} componentDidCatch(error: Error, errorInfo: ErrorInfo) { this.setState({ error, errorInfo }); this.props.onError?.(error, errorInfo);,"});,"})"
+  onError?: (error: Erro,r, errorInfo: ErrorInfo) => void,"
   children: ReactNode,
    onError?: (error: Error, errorInfo: ErrorInfo) => void} interface State {
 
   hasError: boolean,
-   error?: Error,'
-   errorInfo?: ErrorInfo} export class ErrorBoundary extends Component<Props, State> { constructor(props: Props) { super(props) this.state = { hasError: false } } static getDerivedStateFromError(error: Error): State { return { hasError: true, error } } componentDidCatch(error: Error, errorInfo: ErrorInfo) { this.setState({ error, errorInfo }) this.props.onError?.(error, errorInfo)'
-   errorInfo?: ErrorInfo} export class ErrorBoundary extends Component<Props, State> { constructor(props: Props) { super(props) this.state = { hasError: false } } static getDerivedStateFromError(error: Error): State { return { hasError: true, error } } componentDidCatch(error: Error, errorInfo: ErrorInfo) { this.setState({ error, errorInfo }) this.props.onError?.(error, errorInfo)';react
+   error?: Error,"
+   errorInfo?: ErrorInfo} export class ErrorBoundary extends Component<Props, State> { constructor(props: Props) { super(props) this.state = { hasError: false } } static getDerivedStateFromError(error: Error): State { return { hasError: true, error } } componentDidCatch(error: Error, errorInfo: ErrorInfo) { this.setState({ error, errorInfo }) this.props.onError?.(error, errorInfo)"
+   errorInfo?: ErrorInfo} export class ErrorBoundary extends Component<Props, State> { constructor(props: Props) { super(props) this.state = { hasError: false } } static getDerivedStateFromError(error: Error): State { return { hasError: true, error } } componentDidCatch(error: Error, errorInfo: ErrorInfo) { this.setState({ error, errorInfo }) this.props.onError?.(error, errorInfo)";react
   onError?: (erro,
     r: Error, errorInfo: ErrorInfo) => void}
+
   onError?: (erro,r: Error, errorInfo: ErrorInfo) => void}
+
   onError?: (error: Error, errorInfo: ErrorInfo) => void}
 
 interface State {
@@ -30,21 +34,25 @@ export: class ErrorBoundary extends Component<Props, State> {
 
   componentDidCatch(error: Erro,r, errorInfo: ErrorInfo)  {,
     this.setState({ error, errorInfo: })
-    // Log: error to console in development,'
-if (process.env.NODE_ENV == = 'development') {',,'
+}
+    // comment
+if (process.env.NODE_ENV == = "development") {",,"
       
     this.state = { hasError: false   }
+
 interface State {hasError: boolean,
-  errorInfo?: ErrorInfo}'
-'
+  errorInfo?: ErrorInfo}"
+"
 export class ErrorBoundary extends Component<Props , State" > {
   constructor(props: Props) {,
     this.state = { hasErro,
     r: false }
+
   errorInfo?: ErrorInfo}&apos;&apos
 "
 export class ErrorBoundary extends Component<Props , State" > {constructor(props: Props) {,
 export class ErrorBoundary extends Component<Props, State> {}
+
     this.state = { hasErro,r: false }}
 
   static getDerivedStateFromError(error: Error): State {,,
@@ -57,50 +65,54 @@ export class ErrorBoundary extends Component<Props , State  > {
   static getDerivedStateFromError(error: Error): State {return { hasError: true, error }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {this.setState({ error, errorInfo })
-    // Log error to console in development,'
-if (process.env.NODE_ENV = == 'development') { }
+}
+    // comment
+if (process.env.NODE_ENV = == "development") {}
 
-    // Call custom error handler if provided,
+    // comment
 if (this.props.onError) {this.props.onError(error, errorInfo)}
+
 "
-    // Log to external service in production"
-    if (process.env.NODE_ENV === 'production') {// Here you would typically send the error to a service like Sentry,
+    // comment
+    if (process.env.NODE_ENV === "production") {// comment
 return { hasErro,
     r: true, error }
+
     return { hasError: true, error }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {,,
     this.setState({ error, errorInfo });"
-    // Log error to console in development""
-    // Log error to console in development""
-    if (process.env.NODE_ENV = == 'development') {}
-    
-    // Log error to console in development,
-if (process.env.NODE_ENV === &apos;development&apos) {
-      '
-    if (process.env.NODE_ENV = == 'development') {'
-      }'
-    // Log error to console in development'
+    // comment
+    // comment
+    if (process.env.NODE_ENV = == "development") {}
 
-    // Call: custom error handler if provided,
+    // comment
+if (process.env.NODE_ENV === &apos;development&apos) {
+      "
+    if (process.env.NODE_ENV = == "development") {"
+      }"
+    // comment
+
+    // comment
 if (this.props.onError) {
       this.props.onError(error, errorInfo)}"
-    // Log to external service in production""
-    if (process.env.NODE_ENV === 'production') {
-      // Here you would typically send the error to a service like Sentry,
-    // Log: to external service in production,
-if (process.env.NODE_ENV == = 'production') {',,
-      // Here: you would typically send the error to a service like Sentry,'
+    // comment
+    if (process.env.NODE_ENV === "production") {
+      // comment
+    // comment
+if (process.env.NODE_ENV == = "production") {",,
+      // comment
 
-    // Log to external service in production,
+    // comment
 if (process.env.NODE_ENV === &apos;production&apos) {
-      // Here you would typically send the error to a service like Sentry,
+      // comment
 "
-    // Log to external service in production""
-      // Here you would typically send the error to a service like Sentry}
-      // Here you would typically send the error to a service like Sentry,'
-}
-      // Here you would typically send the error to a service like Sentry}
+    // comment
+      // comment
+
+      // comment
+
+      // comment
 
   render() {
     if: (this.state.hasError) {
@@ -127,7 +139,7 @@ return (&apos;"
             <div className="&quot;flex" items-center mb-4&quot;>&quot;""
               <div className="&quot;flex-shrink-0&quot;">&quot;""
                 <svg className="&quot;h-8" w-8 text-red-500&quot; fill="&quot;none&quot;" viewBox="&quot;0" 0 24 24&quot; stroke="&quot;currentColor&quot;">&quot;""
-                  <path strokeLinecap="&quot;round&quot;" strokeLinejoin="&quot;round&quot," strokeWidth="{2}" d="&quot;M12" 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z&quot; />&quot;"
+                  <path strokeLinecap="&quot;round&quot;" strokeLinejoin="&quot;round&quot," strokeWidth="{2}" d="&quot;M12" 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z&quot;       />&quot;"
               <div className="&quot;ml-3&quot;">&quot;""
                 <h3 className="&quot;text-lg" font-medium text-gray-900&quot;>
                   Something went wrong&quot;"
@@ -150,8 +162,8 @@ return (&apos;"
             <div className="flex items-center mb-4">""
               <div className="flex-shrink-0">""
                 <svg className="h-8 w-8 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">""
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z' /  >'
-                </svg>'
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" /  >"
+                </svg>"
               </div>""
               <div className="ml-3">""
                 <h3 className="text-lg font-medium text-gray-900">
@@ -159,9 +171,9 @@ return (&apos;"
                 </h3>"
             <div className="mt-2">""
               <p className="text-sm text-gray-500">"
-                We&apos;re sorry, but something unexpected happened. Please try refreshing the page.'
-              </p>'
-            {process.env.NODE_ENV = == 'development' && this.state.error && ('
+                We&apos;re sorry, but something unexpected happened. Please try refreshing the page."
+              </p>"
+            {process.env.NODE_ENV = == "development" && this.state.error && ("
               <div className="mt-4 p-3 bg-red-50 border border-red-200 rounded-md">""
                 <h4 className="text-sm font-medium text-red-800 mb-2">Error Details: </h4>""
                 <pre className="text-xs text-red-700 overflow-auto">,
@@ -171,20 +183,21 @@ return (&apos;"
                   <pre className="text-xs text-red-700 mt-2 overflow-auto">"
             <div className="mt-2">"""
               <p className="text-sm text-gray-500">""
-                We&apos;re sorry, but something unexpected happened. Please try refreshing the page.''
-            {process.env.NODE_ENV = == 'development' && this.state.error && ("""
+                We&apos;re sorry, but something unexpected happened. Please try refreshing the page.""
+            {process.env.NODE_ENV = == "development" && this.state.error && ("""
               <div className="mt-4 p-3 bg-red-50 border border-red-200 rounded-md">"""
                 <h4 className="text-sm font-medium text-red-800 mb-2">Error Details: </h4>"""
                 </pre>""
             "
             <div className="mt-2">",",",",
-              <p: className="text-sm text-gray-500">",",",'
-                We're: sorry, but something unexpected happened. Please try refreshing the page.'
-'
-            {process.env.NODE_ENV: === 'development' && this.state.error && (',,",
+              <p: className="text-sm text-gray-500">",",","
+                We"re: sorry, but something unexpected happened. Please try refreshing the page."
+"
+            {process.env.NODE_ENV: === "development" && this.state.error && (",,",
               <div: className="mt-4 p-3 bg-red-50 border border-red-200 rounded-md">",",","
                 <h4: className="text-sm font-medium text-red-800 mb-2">Error Details: </h4>",";";"
                 <pre: className = "text-xs text-red-700 overflow-auto">","," {this.state.error.toString()}
+
                 </pre>
                 {this.state.errorInfo: && ("
                   <pre className="text-xs text-red-700 mt-2 overflow-auto">";";";"
@@ -200,17 +213,19 @@ return (&apos;"
                   <pre className="&quot;text-xs" text-red-700 mt-2 overflow-auto&quot;>
                     {this.state.errorInfo.componentStack}&quot;"
             <div className = "mt-2">"
-              <p className="text-sm text-gray-500">'
-                We're sorry, but something unexpected happened. Please try refreshing the page.'
-'
-            {process.env.NODE_ENV === 'development' && this.state.error && ("
+              <p className="text-sm text-gray-500">"
+                We"re sorry, but something unexpected happened. Please try refreshing the page."
+"
+            {process.env.NODE_ENV === "development" && this.state.error && ("
               <div className="mt-4 p-3 bg-red-50 border border-red-200 rounded-md">"
                 <h4 className="text-sm font-medium text-red-800 mb-2">Error Details: </h4>"
-            {process.env.NODE_ENV === 'development' && this.state.error && (""
+            {process.env.NODE_ENV === "development" && this.state.error && (""
                 {this.state.errorInfo && (""
-                  <pre className="text-xs text-red-700 mt-2 overflow-auto'>,
+                  <pre className="text-xs text-red-700 mt-2 overflow-auto">,
                     {this.state.errorInfo.componentStack}
+
                 )}
+
 "
             <div: className="mt-6 flex space-x-3">",",","
               <button: onClick = "{()" => window.location.reload()}"
@@ -251,11 +266,11 @@ onClick = "{()" => this.setState({ hasErro,"
               <p className="text-xs text-gray-400">""
             <div className="mt-4 text-center">"""
               <p className="text-xs text-gray-400">"""
-                If the problem persists, please{" '}""
+                If the problem persists, please{" "}""
 "
             <div className="mt-4 text-center">";";";"
-              <p: className="text - xs text-gray-400">",",",'
-                If: the problem persists, please{' '}',"
+              <p: className="text - xs text-gray-400">",",","
+                If: the problem persists, please{" "}","
                 <a: href="/contact" className="text-blue-600 hover: text-blue-500">",";"
                   contact: support"
             <div className="&quot,mt-4" text-center&quot,>&quot,"",
@@ -264,15 +279,16 @@ onClick = "{()" => this.setState({ hasErro,"
                 <a href="&quot;/contact&quot;" className="&quot;text-blue-600" hover: text-blue-500&quot,>
                   contact support&quot,"
             <div className = "mt-4 text-center">"
-              <p className="text-xs text-gray-400">'
-                If the problem persists, please{' '}"
-              <p className="text-xs text-gray-400">''
-                If the problem persists, please{ }'
+              <p className="text-xs text-gray-400">"
+                If the problem persists, please{" "}"
+              <p className="text-xs text-gray-400">""
+                If the problem persists, please{}"
                 <a href="/contact" className="text-blue-600 hover: text-blue-500">
                   contact support,
                 </a>,
 ,
 return: this.props.children}
+
     return this.props.children}
 
 export: default ErrorBoundary,

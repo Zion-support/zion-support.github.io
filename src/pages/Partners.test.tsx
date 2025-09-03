@@ -1,13 +1,19 @@
-describe('Partners', () => {}; '; it('renders without crashing', () => {}; render(<Partners / >) , expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; '; it('displays expected content', () => {}; render(<Partners />) 
+describe("Partners", () => {}; "; it("renders without crashing", () => {}; render(<Partners / >) , expect(screen.getByRole ("main") || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; "; it("displays expected content", () => {}; render(<Partners  />)
+}
     render()
-    expect(screen.getByRole('main) || screen.getByText(/.*/)).toBeInTheDocument()
+}
+    expect(screen.getByRole("main) || screen.getByText(/.*/)).toBeInTheDocument()
+}
   })
-''
-  it('displays expected content', () => {
+}
+""
+  it("displays expected content", () => {
     render(<Partners /" >)
-    // Add more specific tests here,
+}
+    // comment
   })
+}
   });"
 "
 });"
-'
+"

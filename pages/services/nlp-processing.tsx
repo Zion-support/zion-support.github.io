@@ -1,6 +1,6 @@
 import React from "react"
-
 	return()
+}
 						</h1>"
 						<p className="mt-6 text-lg leading-8 text-gray-600">
 							Unlock the power of language with advanced NLP technology. From sentiment analysis to language translation, transform text into actionable insights.
@@ -8,8 +8,7 @@ import React from "react"
 					</div>
 				</div>
 			</section>
-
-			{/*   */}"
+			{/* comment */}"
 			<section className="py-24 sm: py-32">"
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">"
 					<div className="mx-auto max-w-2xl lg:text-center mb-16">"
@@ -21,11 +20,11 @@ import React from "react"
 						</p>
 					</div>"
 					<div className="grid gap-8 lg:grid-cols-3">,
-						{/*   */}"
+						{/* comment */}"
 						<div className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shadow-lg transition-all duration-300">"
 							<div className="flex items-center gap-x-3 mb-6">"
 								<div className="flex h-12 w-12 items-center justify-center rounded-lg bg-violet-600 group-hover:bg-violet-700 transition-colors">"
-									<Brain className="h-7 w-7 text-white" />
+									<Brain className="h-7 w-7 text-white"  />
 								</div>
 								<div>"
 									<h3 className="text-xl font-semibold text-gray-900">Sentiment Analysis</h3>"
@@ -34,33 +33,33 @@ import React from "react"
 							</div>"
 							<ul className="space-y-3">"
 								<li className="flex items-center gap-x-3">"
-									<CheckCircle className="h-4 w-4 text-violet-600" />"
+									<CheckCircle className="h-4 w-4 text-violet-600"  />"
 									<span className="text-sm text-gray-700">Real-time sentiment scoring</span>
 								</li>"
 								<li className="flex items-center gap-x-3">"
-									<CheckCircle className="h-4 w-4 text-violet-600" />"
+									<CheckCircle className="h-4 w-4 text-violet-600"  />"
 									<span className="text-sm text-gray-700">Emotion classification</span>
 								</li>"
 								<li className="flex items-center gap-x-3">"
-									<CheckCircle className="h-4 w-4 text-violet-600" />"
+									<CheckCircle className="h-4 w-4 text-violet-600"  />"
 									<span className="text-sm text-gray-700">Aspect-based analysis</span>
 								</li>"
 								<li className="flex items-center gap-x-3">"
-									<CheckCircle className="h-4 w-4 text-violet-600" />"
+									<CheckCircle className="h-4 w-4 text-violet-600"  />"
 									<span className="text-sm text-gray-700">Multi-language support</span>
 								</li>"
 								<li className="flex items-center gap-x-3">"
-									<CheckCircle className="h-4 w-4 text-violet-600" />"
+									<CheckCircle className="h-4 w-4 text-violet-600"  />"
 									<span className="text-sm text-gray-700">Custom model training</span>
 								</li>
 							</ul>
 						</div>
 ,
-						{/*   */}"
+						{/* comment */}"
 						<div className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shadow-lg transition-all duration-300">"
 							<div className="flex items-center gap-x-3 mb-6">"
 								<div className="flex h-12 w-12 items-center justify-center rounded-lg bg-purple-600 group-hover:bg-purple-700 transition-colors">"
-									<FileText className="h-7 w-7 text-white" />
+									<FileText className="h-7 w-7 text-white"  />
 								</div>
 								<div>"
 									<h3 className="text-xl font-semibold text-gray-900">Text Classification</h3>"
@@ -69,33 +68,33 @@ import React from "react"
 							</div>"
 							<ul className="space-y-3">"
 								<li className="flex items-center gap-x-3">"
-									<CheckCircle className="h-4 w-4 text-purple-600" />"
+									<CheckCircle className="h-4 w-4 text-purple-600"  />"
 									<span className="text-sm text-gray-700">Topic classification</span>
 								</li>"
 								<li className="flex items-center gap-x-3">"
-									<CheckCircle className="h-4 w-4 text-purple-600" />"
+									<CheckCircle className="h-4 w-4 text-purple-600"  />"
 									<span className="text-sm text-gray-700">Intent recognition</span>
 								</li>"
 								<li className="flex items-center gap-x-3">"
-									<CheckCircle className="h-4 w-4 text-purple-600" />"
+									<CheckCircle className="h-4 w-4 text-purple-600"  />"
 									<span className="text-sm text-gray-700">Spam detection</span>
 								</li>"
 								<li className="flex items-center gap-x-3">"
-									<CheckCircle className="h-4 w-4 text-purple-600" />"
+									<CheckCircle className="h-4 w-4 text-purple-600"  />"
 									<span className="text-sm text-gray-700">Content moderation</span>
 								</li>"
 								<li className="flex items-center gap-x-3">"
-									<CheckCircle className="h-4 w-4 text-purple-600" />"
+									<CheckCircle className="h-4 w-4 text-purple-600"  />"
 									<span className="text-sm text-gray-700">Custom categories</span>
 								</li>
 							</ul>
 						</div>
 ,
-						{/*   */}"
+						{/* comment */}"
 						<div className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shadow-lg transition-all duration-300">"
 							<div className="flex items-center gap-x-3 mb-6">"
 								<div className="flex h-12 w-12 items-center justify-center rounded-lg bg-indigo-600 group-hover:bg-indigo-700 transition-colors">"
-									<Globe className="h-7 w-7 text-white" />
+									<Globe className="h-7 w-7 text-white"  />
 								</div>
 								<div>"
 									<h3 className="text-xl font-semibold text-gray-900">Language Translation</h3>"
@@ -104,23 +103,23 @@ import React from "react"
 							</div>"
 							<ul className="space-y-3">"
 								<li className="flex items-center gap-x-3">"
-									<CheckCircle className="h-4 w-4 text-indigo-600" />"
+									<CheckCircle className="h-4 w-4 text-indigo-600"  />"
 									<span className="text-sm text-gray-700">100+ language pairs</span>
 								</li>"
 								<li className="flex items-center gap-x-3">"
-									<CheckCircle className="h-4 w-4 text-indigo-600" />"
+									<CheckCircle className="h-4 w-4 text-indigo-600"  />"
 									<span className="text-sm text-gray-700">Real-time translation</span>
 								</li>"
 								<li className="flex items-center gap-x-3">"
-									<CheckCircle className="h-4 w-4 text-indigo-600" />"
+									<CheckCircle className="h-4 w-4 text-indigo-600"  />"
 									<span className="text-sm text-gray-700">Context-aware translation</span>
 								</li>"
 								<li className="flex items-center gap-x-3">"
-									<CheckCircle className="h-4 w-4 text-indigo-600" />"
+									<CheckCircle className="h-4 w-4 text-indigo-600"  />"
 									<span className="text-sm text-gray-700">Document translation</span>
 								</li>"
 								<li className="flex items-center gap-x-3">"
-									<CheckCircle className="h-4 w-4 text-indigo-600" />"
+									<CheckCircle className="h-4 w-4 text-indigo-600"  />"
 									<span className="text-sm text-gray-700">Custom terminology</span>
 								</li>
 							</ul>
@@ -129,7 +128,7 @@ import React from "react"
 				</div>
 			</section>
 ,
-			{/*   */}"
+			{/* comment */}"
 			<section className="py-24 sm: py-32 bg-gray-50">"
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">"
 					<div className="mx-auto max-w-2xl lg:text-center mb-16">"
@@ -144,7 +143,7 @@ import React from "react"
 						<div className="space-y-8">"
 							<div className="flex items-start gap-x-4">"
 								<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-violet-100">"
-									<MessageSquare className="h-6 w-6 text-violet-600" />
+									<MessageSquare className="h-6 w-6 text-violet-600"  />
 								</div>
 								<div>"
 									<h3 className="text-lg font-semibold text-gray-900">Named Entity Recognition</h3>",
@@ -153,7 +152,7 @@ import React from "react"
 							</div>"
 							<div className="flex items-start gap-x-4">"
 								<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-purple-100">"
-									<Brain className="h-6 w-6 text-purple-600" />
+									<Brain className="h-6 w-6 text-purple-600"  />
 								</div>
 								<div>"
 									<h3 className="text-lg font-semibold text-gray-900">Text Summarization</h3>"
@@ -162,7 +161,7 @@ import React from "react"
 							</div>"
 							<div className="flex items-start gap-x-4">"
 								<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-100">"
-									<FileText className="h-6 w-6 text-indigo-600" />
+									<FileText className="h-6 w-6 text-indigo-600"  />
 								</div>
 								<div>"
 									<h3 className="text-lg font-semibold text-gray-900">Question Answering</h3>"
@@ -173,7 +172,7 @@ import React from "react"
 						<div className="space-y-8">"
 							<div className="flex items-start gap-x-4">"
 								<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-100">"
-									<Zap className="h-6 w-6 text-blue-600" />
+									<Zap className="h-6 w-6 text-blue-600"  />
 								</div>
 								<div>"
 									<h3 className="text-lg font-semibold text-gray-900">Text Generation</h3>"
@@ -182,7 +181,7 @@ import React from "react"
 							</div>"
 							<div className="flex items-start gap-x-4">"
 								<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-green-100">"
-									<Globe className="h-6 w-6 text-green-600" />
+									<Globe className="h-6 w-6 text-green-600"  />
 								</div>
 								<div>"
 									<h3 className="text-lg font-semibold text-gray-900">Language Detection</h3>"
@@ -191,7 +190,7 @@ import React from "react"
 							</div>"
 							<div className="flex items-start gap-x-4">"
 								<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-orange-100">"
-									<Users className="h-6 w-6 text-orange-600" />
+									<Users className="h-6 w-6 text-orange-600"  />
 								</div>
 								<div>"
 									<h3 className="text-lg font-semibold text-gray-900">Conversational AI</h3>"
@@ -202,8 +201,7 @@ import React from "react"
 					</div>
 				</div>
 			</section>
-
-			{/*   */}"
+			{/* comment */}"
 			<section className="py-24 sm: py-32">"
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">"
 					<div className="mx-auto max-w-2xl lg:text-center mb-16">"
@@ -215,37 +213,34 @@ import React from "react"
 						</p>
 					</div>"
 					<div className="grid gap-6 lg:grid-cols-4">,
-						{/*   */}"
+						{/* comment */}"
 						<div className="text-center p-6 bg-white rounded-xl shadow-sm">"
 							<div className="mx-auto flex h-12 w-12 items-center justify-center rounded-lg bg-violet-100 mb-4">"
-								<Users className="h-6 w-6 text-violet-600" />
+								<Users className="h-6 w-6 text-violet-600"  />
 							</div>"
 							<h3 className="text-lg font-semibold text-gray-900 mb-2">Customer Service</h3>"
 							<p className="text-sm text-gray-600">Automated support, sentiment monitoring, and intelligent routing</p>
 						</div>
-
-						{/*   */}"
+						{/* comment */}"
 						<div className="text-center p-6 bg-white rounded-xl shadow-sm">"
 							<div className="mx-auto flex h-12 w-12 items-center justify-center rounded-lg bg-purple-100 mb-4">"
-								<Shield className="h-6 w-6 text-purple-600" />
+								<Shield className="h-6 w-6 text-purple-600"  />
 							</div>"
 							<h3 className="text-lg font-semibold text-gray-900 mb-2">Content Moderation</h3>"
 							<p className="text-sm text-gray-600">Automated content filtering and policy enforcement</p>
 						</div>
-
-						{/*   */}"
+						{/* comment */}"
 						<div className="text-center p-6 bg-white rounded-xl shadow-sm">"
 							<div className="mx-auto flex h-12 w-12 items-center justify-center rounded-lg bg-indigo-100 mb-4">"
-								<TrendingUp className="h-6 w-6 text-indigo-600" />
+								<TrendingUp className="h-6 w-6 text-indigo-600"  />
 							</div>"
 							<h3 className="text-lg font-semibold text-gray-900 mb-2">Market Research</h3>"
 							<p className="text-sm text-gray-600">Social media analysis and brand sentiment tracking</p>
 						</div>
-
-						{/*   */}"
+						{/* comment */}"
 						<div className="text-center p-6 bg-white rounded-xl shadow-sm">"
 							<div className="mx-auto flex h-12 w-12 items-center justify-center rounded-lg bg-green-100 mb-4">"
-								<FileText className="h-6 w-6 text-green-600" />
+								<FileText className="h-6 w-6 text-green-600"  />
 							</div>"
 							<h3 className="text-lg font-semibold text-gray-900 mb-2">Healthcare</h3>"
 							<p className="text-sm text-gray-600">Medical record analysis and clinical documentation</p>
@@ -253,8 +248,7 @@ import React from "react"
 					</div>
 				</div>
 			</section>
-
-			{/*   */}"
+			{/* comment */}"
 			<section className="py-24 sm: py-32 bg-gray-50">"
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">"
 					<div className="mx-auto max-w-2xl lg:text-center mb-16">"
@@ -266,7 +260,7 @@ import React from "react"
 						</p>
 					</div>"
 					<div className="grid gap-8 lg:grid-cols-3">,
-						{/*   */}"
+						{/* comment */}"
 						<div className="relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm">"
 							<div className="text-center mb-8">"
 								<h3 className="text-xl font-semibold text-gray-900">Starter</h3>"
@@ -278,25 +272,24 @@ import React from "react"
 							</div>"
 							<ul className="space-y-3 mb-8">"
 								<li className="flex items-center gap-x-3">"
-									<CheckCircle className="h-4 w-4 text-violet-600" />"
+									<CheckCircle className="h-4 w-4 text-violet-600"  />"
 									<span className="text-sm text-gray-700">50,000 API calls/month</span>
 								</li>"
 								<li className="flex items-center gap-x-3">"
-									<CheckCircle className="h-4 w-4 text-violet-600" />"
+									<CheckCircle className="h-4 w-4 text-violet-600"  />"
 									<span className="text-sm text-gray-700">Basic sentiment analysis</span>
 								</li>"
 								<li className="flex items-center gap-x-3">"
-									<CheckCircle className="h-4 w-4 text-violet-600" />"
+									<CheckCircle className="h-4 w-4 text-violet-600"  />"
 									<span className="text-sm text-gray-700">Text classification</span>
 								</li>"
 								<li className="flex items-center gap-x-3">"
-									<CheckCircle className="h-4 w-4 text-violet-600" />"
+									<CheckCircle className="h-4 w-4 text-violet-600"  />"
 									<span className="text-sm text-gray-700">Email support</span>
 								</li>
 							</ul>
 						</div>
-
-						{/*   */}"
+						{/* comment */}"
 						<div className="relative rounded-2xl border-2 border-violet-600 bg-white p-8 shadow-lg">"
 							<div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
 								<span className="bg-violet-600 text-white px-4 py-1 rounded-full text-sm font-medium">Most Popular</span>
@@ -311,29 +304,28 @@ import React from "react"
 							</div>"
 							<ul className="space-y-3 mb-8">"
 								<li className="flex items-center gap-x-3">"
-									<CheckCircle className="h-4 w-4 text-violet-600" />"
+									<CheckCircle className="h-4 w-4 text-violet-600"  />"
 									<span className="text-sm text-gray-700">200,000 API calls/month</span>
 								</li>"
 								<li className="flex items-center gap-x-3">"
-									<CheckCircle className="h-4 w-4 text-violet-600" />"
+									<CheckCircle className="h-4 w-4 text-violet-600"  />"
 									<span className="text-sm text-gray-700">Advanced sentiment analysis</span>
 								</li>"
 								<li className="flex items-center gap-x-3">"
-									<CheckCircle className="h-4 w-4 text-violet-600" />"
+									<CheckCircle className="h-4 w-4 text-violet-600"  />"
 									<span className="text-sm text-gray-700">Language translation</span>
 								</li>"
 								<li className="flex items-center gap-x-3">"
-									<CheckCircle className="h-4 w-4 text-violet-600" />"
+									<CheckCircle className="h-4 w-4 text-violet-600"  />"
 									<span className="text-sm text-gray-700">Named entity recognition</span>
 								</li>"
 								<li className="flex items-center gap-x-3">"
-									<CheckCircle className="h-4 w-4 text-violet-600" />"
+									<CheckCircle className="h-4 w-4 text-violet-600"  />"
 									<span className="text-sm text-gray-700">Priority support</span>
 								</li>
 							</ul>
 						</div>
-
-						{/*   */}"
+						{/* comment */}"
 						<div className="relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm">"
 							<div className="text-center mb-8">"
 								<h3 className="text-xl font-semibold text-gray-900">Enterprise</h3>"
@@ -345,23 +337,23 @@ import React from "react"
 							</div>"
 							<ul className="space-y-3 mb-8">"
 								<li className="flex items-center gap-x-3">"
-									<CheckCircle className="h-4 w-4 text-violet-600" />"
+									<CheckCircle className="h-4 w-4 text-violet-600"  />"
 									<span className="text-sm text-gray-700">Unlimited API calls</span>
 								</li>"
 								<li className="flex items-center gap-x-3">"
-									<CheckCircle className="h-4 w-4 text-violet-600" />"
+									<CheckCircle className="h-4 w-4 text-violet-600"  />"
 									<span className="text-sm text-gray-700">All NLP capabilities</span>
 								</li>"
 								<li className="flex items-center gap-x-3">"
-									<CheckCircle className="h-4 w-4 text-violet-600" />"
+									<CheckCircle className="h-4 w-4 text-violet-600"  />"
 									<span className="text-sm text-gray-700">Custom model training</span>
 								</li>"
 								<li className="flex items-center gap-x-3">"
-									<CheckCircle className="h-4 w-4 text-violet-600" />"
+									<CheckCircle className="h-4 w-4 text-violet-600"  />"
 									<span className="text-sm text-gray-700">On-premise deployment</span>
 								</li>"
 								<li className="flex items-center gap-x-3">"
-									<CheckCircle className="h-4 w-4 text-violet-600" />"
+									<CheckCircle className="h-4 w-4 text-violet-600"  />"
 									<span className="text-sm text-gray-700">Dedicated support</span>
 								</li>
 							</ul>
@@ -369,8 +361,7 @@ import React from "react"
 					</div>
 				</div>
 			</section>
-
-			{/*   */}"
+			{/* comment */}"
 			<section className="py-24 sm: py-32">"
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">"
 					<div className="mx-auto max-w-2xl lg:text-center mb-16">"
@@ -385,7 +376,7 @@ import React from "react"
 						<div className="space-y-8">"
 							<div className="flex items-start gap-x-4">"
 								<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-violet-100">"
-									<Zap className="h-6 w-6 text-violet-600" />
+									<Zap className="h-6 w-6 text-violet-600"  />
 								</div>
 								<div>"
 									<h3 className="text-lg font-semibold text-gray-900">Lightning Fast Processing</h3>"
@@ -394,7 +385,7 @@ import React from "react"
 							</div>"
 							<div className="flex items-start gap-x-4">"
 								<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-purple-100">"
-									<Shield className="h-6 w-6 text-purple-600" />
+									<Shield className="h-6 w-6 text-purple-600"  />
 								</div>
 								<div>"
 									<h3 className="text-lg font-semibold text-gray-900">Enterprise Security</h3>"
@@ -403,7 +394,7 @@ import React from "react"
 							</div>"
 							<div className="flex items-start gap-x-4">"
 								<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-100">"
-									<Star className="h-6 w-6 text-indigo-600" />
+									<Star className="h-6 w-6 text-indigo-600"  />
 								</div>
 								<div>"
 									<h3 className="text-lg font-semibold text-gray-900">State-of-the-Art Models</h3>"
@@ -414,7 +405,7 @@ import React from "react"
 						<div className="space-y-8">"
 							<div className="flex items-start gap-x-4">"
 								<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-100">"
-									<Target className="h-6 w-6 text-blue-600" />
+									<Target className="h-6 w-6 text-blue-600"  />
 								</div>
 								<div>"
 									<h3 className="text-lg font-semibold text-gray-900">Custom Model Training</h3>"
@@ -423,7 +414,7 @@ import React from "react"
 							</div>"
 							<div className="flex items-start gap-x-4">"
 								<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-green-100">"
-									<TrendingUp className="h-6 w-6 text-green-600" />
+									<TrendingUp className="h-6 w-6 text-green-600"  />
 								</div>
 								<div>"
 									<h3 className="text-lg font-semibold text-gray-900">Scalable Infrastructure</h3>"
@@ -432,7 +423,7 @@ import React from "react"
 							</div>"
 							<div className="flex items-start gap-x-4">"
 								<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-orange-100">"
-									<Globe className="h-6 w-6 text-orange-600" />
+									<Globe className="h-6 w-6 text-orange-600"  />
 								</div>
 								<div>"
 									<h3 className="text-lg font-semibold text-gray-900">Multi-Language Support</h3>"
@@ -444,7 +435,7 @@ import React from "react"
 				</div>
 			</section>
 ,
-			{/*   */}"
+			{/* comment */}"
 			<section className="bg-gradient-to-r from-violet-600 to-purple-600 py-24 sm: py-32">"
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">"
 					<div className="mx-auto max-w-2xl text-center">"
@@ -460,7 +451,7 @@ import React from "react"
 								aria-label="Start free trial"
 							>
 								Start Free Trial"
-								<ArrowRight className="ml-2 h-4 w-4 inline group-hover:translate-x-1 transition-transform" />
+								<ArrowRight className="ml-2 h-4 w-4 inline group-hover:translate-x-1 transition-transform"  />
 							</a>"
 							<a href="mailto:kleber@ziontechgroup.com""
 								className="text-sm font-semibold leading-6 text-white hover:text-violet-100 transition-colors group""

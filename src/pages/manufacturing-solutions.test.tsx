@@ -1,13 +1,19 @@
-describe('manufacturing - solutions', () => {}; '; it('renders without crashing', () => {}; render(<manufacturing - solutions />) , expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; '; it('displays expected content', () => {}; render(<manufacturing - solutions />) 
+describe("manufacturing - solutions", () => {}; "; it("renders without crashing", () => {}; render(<manufacturing - solutions       />) , expect(screen.getByRole ("main") || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; "; it("displays expected content", () => {}; render(<manufacturing - solutions       />)
+}
     render()
-    expect(screen.getByRole('main) || screen.getByText(/.*/)).toBeInTheDocument()
+}
+    expect(screen.getByRole("main) || screen.getByText(/.*/)).toBeInTheDocument()
+}
   })
-''
-  it('displays expected content', () => {
+}
+""
+  it("displays expected content", () => {
     render(<manufacturing -solutions /" >)
-    // Add more specific tests here,
+}
+    // comment
   })
+}
   });"
 "
 });"
-'
+"

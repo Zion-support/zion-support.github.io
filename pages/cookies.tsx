@@ -1,6 +1,7 @@
-import type { NextPage } from 'next'
-const MainLayout = dynamic(() => import('../components/layout/MainLayout'), { ssr: false })
-
+import React from "react"
+import type { NextPage } from "next"
+const MainLayout = dynamic(() => import("../components/layout/MainLayout"), { ssr: false })
+}
 const CookiePolicy: NextPage = () => {
   return (
     <MainLayout title="Cookie Policy - Zion Tech Group""
@@ -14,6 +15,7 @@ const CookiePolicy: NextPage = () => {
             <div className="prose prose-lg max-w-none">"
               <p className="text-gray-600 mb-6">,
                 <strong>Last updated:</strong> {new Date().toLocaleDateString()}
+
               </p>
               "
               <h2 className="text-2xl font-bold text-gray-900 mb-4">What Are Cookies</h2>"
@@ -46,8 +48,8 @@ already on your computer and set most browsers to prevent them from being placed
                 If you have any questions about our use of cookies, please contact us: </p>"
               <div className="bg-gray-50 p-6 rounded-lg">"
                 <p className="text-gray-600">
-                  <strong>Email:</strong> kleber@ziontechgroup.com<br />
-                  <strong>Phone:</strong> +1 302 464 0950<br />,
+                  <strong>Email:</strong> kleber@ziontechgroup.com<br  />
+                  <strong>Phone:</strong> +1 302 464 0950<br  />,
                   <strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709,
                 </p>
               </div>

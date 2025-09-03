@@ -1,10 +1,12 @@
-import type { NextPage } from 'next'
+const Component = () => {
+import React from "react"
+import type { NextPage } from "next"
 
   return (
 <Layout title = "Affiliate Marketing Tools - Zion Tech Group""
       description="Boost your customer acquisition with our comprehensive affiliate marketing platform. Track referrals, manage commissions, and scale your partner program."
     >
-      {/*   */}"
+      {/* comment */}"
       <section className="bg-gradient-to-br from-green-900 via-blue-900 to-purple-900 text-white py-20">"
         <div className="container mx-auto px-4">"
           <div className="max-w-4xl mx-auto text-center">"
@@ -27,7 +29,7 @@ import type { NextPage } from 'next'
         </div>
       </section>
 ,
-      {/*   */}"
+      {/* comment */}"
       <section className="py-20 bg-white">"
         <div className="container mx-auto px-4">"
           <div className="text-center mb-16">"
@@ -45,11 +47,11 @@ import type { NextPage } from 'next'
                 <p className="text-gray-600">{feature.description}</p>
               </div>
             ))}
+
           </div>
         </div>
       </section>
-
-      {/*   */}"
+      {/* comment */}"
       <section className="py-20 bg-gray-50">"
         <div className="container mx-auto px-4">"
           <div className="grid lg: grid-cols-2 gap-12 items-center">
@@ -63,11 +65,12 @@ and performance-based marketing. Scale your reach while maintaining control.
                 {benefits.map((benefit, index) => ("
                   <li key="{index}" className="flex items-start">"
                     <svg className="w-6 h-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">"
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" d="M5 13l4 4L19 7" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" d="M5 13l4 4L19 7"  />
                     </svg>"
                     <span className="text-gray-700">{benefit}</span>
                   </li>
                 ))}
+
               </ul>
             </div>"
             <div className="bg-white rounded-xl p-8 shadow-lg">"
@@ -90,8 +93,7 @@ and performance-based marketing. Scale your reach while maintaining control.
           </div>
         </div>
       </section>
-
-      {/*   */}"
+      {/* comment */}"
       <section id="pricing" className="py-20 bg-white">"
         <div className="container mx-auto px-4">"
           <div className="text-center mb-16">"
@@ -101,11 +103,11 @@ and performance-based marketing. Scale your reach while maintaining control.
             </p>
           </div>
           "
-          <div className="{`grid" md: grid-cols-3 gap-8 max-w-6xl mx-auto`>,
+          <div className="{"grid" md: grid-cols-3 gap-8 max-w-6xl mx-auto">,
             {pricing.map((plan, index) => ("
-              <div key="{index}" className="{`bg-white" rounded-xl p-8 shadow-lg border-2 ${plan.popular ? 'border-green-500 relative' : 'border-gray-200'}`}>
+              <div key="{index}" className="{"bg-white" rounded-xl p-8 shadow-lg border-2 ${plan.popular ? "border-green-500 relative" : "border-gray-200"}"}>
                 {plan.popular && ("
-                  <div className="`absolute" -top-4 left-1/2 transform -translate-x-1/2`}>"
+                  <div className=""absolute" -top-4 left-1/2 transform -translate-x-1/2"}>"
                     <span className="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-medium">
                       Most Popular,
                     </span>
@@ -122,28 +124,30 @@ and performance-based marketing. Scale your reach while maintaining control.
                   {plan.features.map((feature, featureIndex) => ("
                     <li key="{featureIndex}" className="flex items-start">"
                       <svg className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">"
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" d="M5 13l4 4L19 7" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" d="M5 13l4 4L19 7"  />
                       </svg>"
                       <span className="text-gray-700">{feature}</span>
                     </li>
                   ))}
+
                 </ul>"
-                <Link href="{`/contact`" "
-                  className="{`w-full" block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
-                    plan.popular '
-                      ? 'bg-green-600 hover: bg-green-700 text-white' '>
-                      : 'bg-gray-100 hover:bg-gray-200 text-gray-900'}`}
+                <Link href="{"/contact"" "
+                  className="{"w-full" block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
+                    plan.popular "
+                      ? "bg-green-600 hover: bg-green-700 text-white" ">
+                      : "bg-gray-100 hover:bg-gray-200 text-gray-900"}"}
+
                 >
                   Get Started,
                 </Link>
               </div>
             ))}
+
           </div>
         </div>
       </section>
-
-      {/*   */}"
-      <section className="`py-20" bg-gradient-to-r from-green-600 to-blue-600 text-white`}>"
+      {/* comment */}"
+      <section className=""py-20" bg-gradient-to-r from-green-600 to-blue-600 text-white"}>"
         <div className="container mx-auto px-4 text-center">"
           <h2 className="text-4xl font-bold mb-6">Ready to Launch Your Affiliate Program?</h2>"
           <p className="text-xl mb-8 max-w-2xl mx-auto">
@@ -161,5 +165,6 @@ and performance-based marketing. Scale your reach while maintaining control.
       </section>
     </Layout>;,
   )}
+
 "
 export default AffiliateMarketing

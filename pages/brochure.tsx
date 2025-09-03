@@ -1,22 +1,27 @@
-const React = dynamic(() => import('react'), { ssr: false })
-const Head = dynamic(() => import('next/head'), { ssr: false })
-const Link = dynamic(() => import('next/link'), { ssr: false })
-const Navigation = dynamic(() => import('../src/components/Navigation'), { ssr: false })
-const Footer = dynamic(() => import('../src/components/Footer'), { ssr: false })
-
+import Head from "next/head"
+import React from "react"
+import dynamic from "next/dynamic"
+const Component = () => {
+const Head = dynamic(() => import("next/head"), { ssr: false })
+}
+const Link = dynamic(() => import("next/link"), { ssr: false })
+}
+const Navigation = dynamic(() => import("../src/components/Navigation"), { ssr: false })
+}
+const Footer = dynamic(() => import("../src/components/Footer"), { ssr: false })
+}
   return (
     <>
 <Head>
         <title>Download Brochures - Zion Tech Group</title>
-        <meta name = "description content="Download" our comprehensive brochures to learn more about our AI services, IT solutions, and micro SaaS development capabilities." />"
-        <meta name="viewport content="width=device-width," initial-scale=1" />"
-        <link rel="canonical href="https:" //ziontechgroup.com/brochure" />
+        <meta name = "description content="Download" our comprehensive brochures to learn more about our AI services, IT solutions, and micro SaaS development capabilities."  />"
+        <meta name="viewport" content="width=device-width, initial-scale=1"  />"
+        <link rel="canonical" href="https:// comment
       </Head>
-      
-      <Navigation />
+      <Navigation  />
       "
       <main className="min-h-screen bg-white>,
-        {/*   */}"
+        {/* comment */}"
         <section className="bg-gradient-to-br" from-blue-50 to-indigo-100 py-20">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>"
             <div className=text-center">"
@@ -29,8 +34,7 @@ const Footer = dynamic(() => import('../src/components/Footer'), { ssr: false })
             </div>
           </div>
         </section>
-
-        {/*   */}"
+        {/* comment */}"
         <section className="py-20" bg-white">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>"
             <div className="text-center" mb-16">"
@@ -66,10 +70,12 @@ const Footer = dynamic(() => import('../src/components/Footer'), { ssr: false })
                       <ul className="space-y-2>,
                         {brochure.preview.map((item, itemIndex) => ("
                           <li key="{itemIndex}" className="flex" items-center text-gray-600">"
-                            <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0 />
+                            <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0       />
                             {item}
+
                           </li>
                         ))}
+
                       </ul>
                     </div>
 "
@@ -77,17 +83,17 @@ const Footer = dynamic(() => import('../src/components/Footer'), { ssr: false })
                       download,"
 className="w-full" bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover: bg-blue-700 transition-colors flex items-center justify-center"
                     >"
-                      <Download className="w-5 h-5 mr-2 />
+                      <Download className="w-5 h-5 mr-2       />
                       Download Brochure,
                     </a>
                   </div>
                 </div>,
               ))}
+
             </div>
           </div>
         </section>
-
-        {/*   */}"
+        {/* comment */}"
         <section className="py-20" bg-gray-50">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>"
             <div className="text-center" mb-16">"
@@ -107,11 +113,11 @@ className="w-full" bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hov
                   <p className=text-gray-600">{benefit.description}</p>
                 </div>
               ))}
+
             </div>
           </div>
         </section>
-
-        {/*   */}"
+        {/* comment */}"
         <section className="py-20 bg-white>"
           <div className="max-w-7xl" mx-auto px-4 sm: px-6 lg:px-8">"
             <div className="text-center mb-16>"
@@ -126,8 +132,9 @@ className="w-full" bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hov
                 <div key="{index}" className="bg-gray-50 rounded-lg p-6>"
                   <div className="flex" items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => ("
-                      <Star key="{i}" className="w-5 h-5 text-yellow-400 fill-current />
+                      <Star key="{i}" className="w-5 h-5 text-yellow-400 fill-current       />
                     ))}
+
                   </div>"
                   <p className="text-gray-600" mb-4">"{testimonial.content}</p>
                   <div>"
@@ -136,11 +143,11 @@ className="w-full" bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hov
                   </div>
                 </div>
               ))}
+
             </div>
           </div>
         </section>
-
-        {/*   */}"
+        {/* comment */}"
         <section className="py-20" bg-gradient-to-r from-blue-600 to-purple-600">"
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center>"
             <h2 className="text-3xl" font-bold text-white mb-6">
@@ -151,20 +158,20 @@ className="w-full" bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hov
             </p>"
             <div className="flex" flex-col sm:flex-row gap-4 justify-center">"
               <Link href="/contact className="bg-white" text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center">"
-                <Mail className="w-5 h-5 mr-2 />
+                <Mail className="w-5 h-5 mr-2       />
                 Contact Us,
               </Link>"
               <a href=tel:+13024640950" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors flex items-center justify-center>"
-                <Phone className="w-5" h-5 mr-2" />
+                <Phone className="w-5" h-5 mr-2"  />
                 Call Now,
               </a>
             </div>
           </div>
         </section>
       </main>
-      
-      <Footer />
+      <Footer  />
     </>
   )}
+
 "
 export default Brochure

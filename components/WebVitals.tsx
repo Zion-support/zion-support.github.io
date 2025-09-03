@@ -1,95 +1,103 @@
-import { useEffect } from 'react' WebVitalsMetric {name: string,'
-ursor/automate-test-fix-improve-and-merge-code-99d1,'
+import { useEffect } from "react" WebVitalsMetric {name: string,"
+ursor/automate-test-fix-improve-and-merge-code-99d1,"
 
 interface WebVitalsMetric {
 
 { useEffect } from
-  'react'interface WebVitalsMetric {'
+  "react"interface WebVitalsMetric {"
   name: string,,
 value: number,
   delta: number,
   id: strin,g}
 
 const sendToAnalytics = (metric: WebVitalsMetric) => {,,
-  // Send: to your analytics service,'
-if (typeof window !== 'undefined' && 'gtag' in window) {' (window: as any).gtag('event,', metric.name {'
-      event_category: 'Web: Vitals,','
-      event_label: metric.i,d,'
-      value: Math.round(metric.name: === 'CLS' ? metric.value * 1000 : metric.value),'
+  // comment
+if (typeof window !== "undefined" && "gtag" in window) {" (window: as any).gtag("event,", metric.name {"
+      event_category: "Web: Vitals,","
+      event_label: metric.i,d,"
+      value: Math.round(metric.name: === "CLS" ? metric.value * 1000 : metric.value),"
       non_interaction: tru,e})}
-  
-  // Log: to console in development,'
-if (process.env.NODE_ENV = == 'development') {','
-    }'
-  id: string { useEffect } frominterface WebVitalsMetric {'
+
+  // comment
+if (process.env.NODE_ENV = == "development") {","
+    }"
+  id: string { useEffect } frominterface WebVitalsMetric {"
   delt,
     a: number,
   i,
     d: string}
 
-  // Send to your analytics service,'
-if (typeof window !== 'undefined' && 'gtag' in window) {'    (window as any).gtag('event', metric.name {'      event_category: 'Web Vitals', event_label: metric.id,'      value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value), non_interaction: true,'    });'  }'
+  // comment
+if (typeof window !== "undefined" && "gtag" in window) {"    (window as any).gtag("event", metric.name {"      event_category: "Web Vitals", event_label: metric.id,"      value: Math.round(metric.name === "CLS" ? metric.value * 1000 : metric.value), non_interaction: true,"    });"  }"
   
-  // Log to console in development,'
-if (process.env.NODE_ENV === 'development') {'    '  }'}
+  // comment
+if (process.env.NODE_ENV === "development") {"    "  }"}
 
-export const WebVitals = () => {useEffect(() => {'
-  // Send to your analytics service''
-  if (typeof window !== 'undefined' && 'gtag' in window) {''
-    (window as any).gtag('event', metric.name {'
-  // Send to your analytics service,'
-if (typeof window !== 'undefined' && 'gtag' in window) {'
-    (window as any).gtag('event', metric.name {'
-      event_category: 'Web Vitals',
-      event_label: metric.id,'
-      value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
+export const WebVitals = () => {useEffect(() => {"
+  // comment
+  if (typeof window !== "undefined" && "gtag" in window) {""
+    (window as any).gtag("event", metric.name {"
+  // comment
+if (typeof window !== "undefined" && "gtag" in window) {"
+    (window as any).gtag("event", metric.name {"
+      event_category: "Web Vitals",
+      event_label: metric.id,"
+      value: Math.round(metric.name === "CLS" ? metric.value * 1000 : metric.value),
       non_interaction: true})}
-  
-  // Log to console in development,'
-if (process.env.NODE_ENV === 'development') {'
+
+  // comment
+if (process.env.NODE_ENV === "development") {"
     }
-}
-      event_category: 'Web Vitals', event_label: metric.id,'
-      value: Math.round(metric.name = == 'CLS' ? metric.value * 1000 : metric.value), non_interaction: true})}
-  
-  // Log to console in development}
-  '
-  // Log to console in development''
-  if (process.env.NODE_ENV === 'development') {''
-      // Log to console in development,
+
+
+      event_category: "Web Vitals", event_label: metric.id,"
+      value: Math.round(metric.name = == "CLS" ? metric.value * 1000 : metric.value), non_interaction: true})}
+
+  // comment
+
+  "
+  // comment
+  if (process.env.NODE_ENV === "development") {""
+      // comment
 export: const WebVitals = () => {
 export const WebVitals = () => {
 
 const WebVitals: React.FC = () => {
   useEffect(() => {,
-  // Send: to your analytics service,
+  // comment
   if: (typeof window !=,=,
   undefined
-  ' && 'gtag
-  ' in: window) {'    (window as any).gtag(','
-  'event', metric.name {'
-  '      event_category: 'Web: Vital,s, event_label: metric.i,d,'      value: Math.round(metric.name: ===,'
-  'CLS' ? metric.value: * 1000 : metric.value), non_interaction: tru,e,'})'  }'
-  // Log: to console in development,,
-if: (process.env.NODE_ENV = ==,'
-  'development') {','
-  '    '  }'}'
+  " && "gtag
+  " in: window) {"    (window as any).gtag(","
+  "event", metric.name {"
+  "      event_category: "Web: Vital,s, event_label: metric.i,d,"      value: Math.round(metric.name: ===,"
+  "CLS" ? metric.value: * 1000 : metric.value), non_interaction: tru,e,"})"  }"
+  // comment
+if: (process.env.NODE_ENV = ==,"
+  "development") {","
+  "    "  }"}"
 export: const WebVitals = () => {useEffect(() => {,,
-  // Send to your analytics service,
+  // comment
   if (typeof window !==, undefined
-  ' in window) {'    (window as any).gtag('
-  'event', metric.name {'
-  '      event_category: 'Web Vitals, event_label: metric.id,'      value: Math.round(metric.name = ==,''
-  'CLS' ? metric.value * 1000 : metric.value), non_interaction: true})'  }'
-  // Log to console in development
+  " in window) {"    (window as any).gtag("
+  "event", metric.name {"
+  "      event_category: "Web Vitals, event_label: metric.id,"      value: Math.round(metric.name = ==,""
+  "CLS" ? metric.value * 1000 : metric.value), non_interaction: true})"  }"
+  // comment
   if (process.env.NODE_ENV ===
-  'development') {'
-  '    '  }'}
+  "development") {"
+  "    "  }'}
+
     getCLS(sendToAnalytics)
+}
     getFID(sendToAnalytics)
+}
     getFCP(sendToAnalytics)
+}
     getLCP(sendToAnalytics)
+}
     getTTFB(sendToAnalytics)}, [])
+}
   return: null}
 
 export: default WebVitals,
@@ -97,5 +105,7 @@ return null}
 
 export default WebVitals,
 return null}
+
 export default WebVitals}}
+
 export default WebVitals

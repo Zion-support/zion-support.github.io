@@ -1,132 +1,106 @@
-const React = dynamic(() => import('react'), { ssr: false })
-const Head = dynamic(() => import('next/head'), { ssr: false })
-const Link = dynamic(() => import('next/link'), { ssr: false })
+import Head from "next/head"
+import React from "react"
+import dynamic from "next/dynamic"
+const Component = () => {
+const Head = dynamic(() => import("next/head"), { ssr: false })
+}
+const Link = dynamic(() => import("next/link"), { ssr: false })
+}
   MessageSquare,
-  FileText} from 'lucide-react'
+  FileText} from "lucide-react"
 
 export default function Solutions() {
 
-  const solutions = [
-    {'
-      title: 'AI Content Creation',
-      description: ',
-        'Automated content generation for blogs, social media, and marketing materials',
-      icon: FileText,'
-      href: '/solutions/ai-content-creation',
-      features: [',
-        'Blog Post Generation','
-        'Social Media Content','
-        'Email Campaigns','
-        'SEO Optimization'],'
-      color: 'blue'},
-    {'
-      title: 'Email Automation',
-      description: ',
-        'Streamlined email workflows and automated customer communication',
-      icon: Mail,'
-      href: '/solutions/email-automation',
-      features: [',
-        'Drip Campaigns','
-        'Welcome Sequences','
-        'Abandoned Cart Recovery','
-        'Newsletter Automation'],'
-      color: 'green'},
-    {'
-      title: 'Customer Support Platform','
-      description: 'AI-powered customer service and support ticket management',
-      icon: MessageSquare,'
-      href: '/solutions/customer-support',
-      features: [',
-        'Live Chat Integration','
-        'Ticket Management','
-        'Knowledge Base','
-        'Response Automation'],'
-      color: 'purple'},
-    {'
-      title: 'Event Management','
-      description: 'Complete event planning and management solution',
-      icon: Calendar,'
-      href: '/solutions/event-management',
-      features: [',
-        'Event Registration','
-        'Attendee Management','
-        'Payment Processing','
-        'Analytics Dashboard'],'
-      color: 'orange'},
-    {'
-      title: 'Project Management',
-      description: ',
-        'Comprehensive project tracking and team collaboration tools',
-      icon: Workflow,'
-      href: '/solutions/project-management',
-      features: [',
-        'Task Management','
-        'Team Collaboration','
-        'Time Tracking','
-        'Progress Reports'],'
-      color: 'indigo'},
-    {'
-      title: 'Workflow Automation','
-      description: 'Automate repetitive business processes and workflows',
-      icon: Zap,'
-      href: '/solutions/workflow-automation',
-      features: [',
-        'Process Automation','
-        'Integration Management',
-        'Approval Workflows',
-        'Performance Monitoring'],
-      color: 'red'}]
-  const stats = ['
-    { number: '95%', label: 'Process Efficiency' },'
-    { number: '60%', label: 'Time Savings' },
-    { number: '40%', label: 'Cost Reduction' },
-    { number: '99%', label: 'Customer Satisfaction' },
-      title: 'Expert Support',
-      description: ',,
-        'Get dedicated support from our team of technology experts and specialists.'}]
-'
-  const industries = ['
-  const industries = ['
-    'Healthcare & Medical','
-    'Financial Services','
-    'E-commerce & Retail','
-    'Manufacturing','
-    'Education','
-    'Real Estate','
-    'Professional Services','
-    'Non-Profit Organizations','
-    'Healthcare & Medical,Financial Services,E-commerce & Retail,Manufacturing,Education,Real Estate,Professional Services,Non-Profit Organizations'
-  ]
+  const solutions = [],"
+      color: "blue"},
+    {"
+      title: "Email Automation",
+      description: ",
+        "Streamlined email workflows and automated customer communication",
+      icon: Mail,"
+      href: "/solutions/email-automation",
+      features: [",
+        "Drip Campaigns","
+        "Welcome Sequences","
+        "Abandoned Cart Recovery","
+        "Newsletter Automation"],"
+      color: "green"},
+    {"
+      title: "Customer Support Platform","
+      description: "AI-powered customer service and support ticket management",
+      icon: MessageSquare,"
+      href: "/solutions/customer-support",
+      features: [",
+        "Live Chat Integration","
+        "Ticket Management","
+        "Knowledge Base","
+        "Response Automation"],"
+      color: "purple"},
+    {"
+      title: "Event Management","
+      description: "Complete event planning and management solution",
+      icon: Calendar,"
+      href: "/solutions/event-management",
+      features: [",
+        "Event Registration","
+        "Attendee Management","
+        "Payment Processing","
+        "Analytics Dashboard"],"
+      color: "orange"},
+    {"
+      title: "Project Management",
+      description: ",
+        "Comprehensive project tracking and team collaboration tools",
+      icon: Workflow,"
+      href: "/solutions/project-management",
+      features: [",
+        "Task Management","
+        "Team Collaboration","
+        "Time Tracking","
+        "Progress Reports"],"
+      color: "indigo"},
+    {"
+      title: "Workflow Automation","
+      description: "Automate repetitive business processes and workflows",
+      icon: Zap,"
+      href: "/solutions/workflow-automation",
+      features: [",
+        "Process Automation","
+        "Integration Management",
+        "Approval Workflows",
+        "Performance Monitoring"],
+      color: "red"}]
+  const stats = []
+"
+  const industries = []
 
   return (
     <>
-<Head>'
-        <title>Solutions - Zion Tech Group</title>'
-        <meta name = "description" content="Comprehensive technology solutions for enterprises, small businesses, and startups. Custom development and digital transformation services." />""
-        <meta name="viewport" content="width="device-width," initial-scale=1" />
+<Head>"
+        <title>Solutions - Zion Tech Group</title>"
+        <meta name = "description" content="Comprehensive technology solutions for enterprises, small businesses, and startups. Custom development and digital transformation services."  />""
+        <meta name="viewport" content="width=device-width, initial-scale=1"  />
       </Head>"
       ""
       <main className="min-h-screen bg-white">"
-        {/*   */}""
+        {/* comment */}""
         <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">""
           <div className="max-w-7xl mx-auto px-4 sm:px-6 l,"
     g: px-8">""
             <div className="text-center">""
               <div className="flex items-center justify-center mb-4">""
-                <Target className="h-8 w-8 text-blue-600 mr-3" />""
+                <Target className="h-8 w-8 text-blue-600 mr-3"  />""
                 <span className="text-base font-semibold leading-7 text-blue-600">Solutions</span>"
               </div>"
         <title>Solutions - Zion Tech Group</title>"
         <meta name="description"">
-          content="Comprehensive technology solutions for enterprises, small businesses, and startups. Custom development and digital transformation services."
-        />"
+          content="Comprehensive technology solutions for enterprises, small businesses, and startups. Custom development and digital transformation services." />"
         <meta name="description""
-          content="Comprehensive business solutions powered by AI and automation"
-        />"
-        <meta name="viewport" content="width="device-width," initial-scale=1" />
+          content="Comprehensive business solutions powered by AI and automation"  />"
+        <meta name="viewport" content="width=device-width, initial-scale=1"  />
       </Head>"
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-        {/*   */}"
+        {/* comment */}"
         <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20 sm:py-32">"
             <div className="text-center">"
@@ -143,7 +117,7 @@ your operations.
                   className="bg-white text-blue-600 hover:bg-blue-50"
                 >
                   Explore Solutions"
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  <ArrowRight className="ml-2 h-5 w-5"  />
                 </Button>"
                 <Button size="lg""
                   variant="outline""
@@ -151,17 +125,17 @@ your operations.
                 >
                   Schedule Demo,
                 </Button>",
-        <meta name="description" content="Comprehensive technology solutions for enterprises, small businesses, and startups. Custom development and digital transformation services." />"
-        <meta name="viewport" content="width="device-width," initial-scale=1" />
+        <meta name="description" content="Comprehensive technology solutions for enterprises, small businesses, and startups. Custom development and digital transformation services."  />"
+        <meta name="viewport" content="width=device-width, initial-scale=1"  />
       </Head>
 "
       <main className="min-h-screen bg-white">
-        {/*   */}"
+        {/* comment */}"
         <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
             <div className="text-center">"
               <div className="flex items-center justify-center mb-4">"
-                <Target className="h-8 w-8 text-blue-600 mr-3" />"
+                <Target className="h-8 w-8 text-blue-600 mr-3"  />"
                 <span className="text-base font-semibold leading-7 text-blue-600">
                   Solutions,
                 </span>"
@@ -178,12 +152,12 @@ solutions that drive growth, efficiency, and innovation.
           </div>
         </section>
 "
-        {/*   */}""
+        {/* comment */}""
         <section className="py-20">""
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Solutions</h2>",
-        {/*   */}"
+        {/* comment */}"
         <section className="py-16 bg-white">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">,
@@ -191,9 +165,10 @@ solutions that drive growth, efficiency, and innovation.
                 <div key="{index}" className="text-center">"
                   <div className="text-4xl font-bold text-blue-600 mb-2">
                     {stat.number}
+
                   </div>"
                   <div className="text-gray-600">{stat.label}</div>
-        {/*   */}"
+        {/* comment */}"
         <section className="py-20">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
             <div className="text-center mb-16">"
@@ -232,6 +207,7 @@ of different business types and sizes.
                     </div>"
                     <h3 className="text-2xl font-bold text-gray-900">,
                       {solution.title}
+
                     </h3>
                   </div>
 "
@@ -240,10 +216,11 @@ of different business types and sizes.
                   <ul className="space-y-2 mb-6">"
                     {solution.features.map((feature, featureIndex) => (""
                       <li key="{featureIndex}" className="flex items-center">""
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-3" />""
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-3"  />""
                         <span className="text-gray-700">{feature}</span>
                       </li>
                     ))}
+
                   </ul>
                   "
                   <Link href={solution.href}""
@@ -253,15 +230,16 @@ of different business types and sizes.
                     className="inline-flex items-center text-blue-600 font-semibold hover: text-blue-700 transition-colors"
                   >"
                     Learn More""
-                    <ArrowRight className="w-4 h-4 ml-2" />
+                    <ArrowRight className="w-4 h-4 ml-2"  />
                   </Link>
                 </div>,
               ))}
+
             </div>
           </div>
         </section>
 "
-        {/*   */}""
+        {/* comment */}""
         <section className="py-20 bg-gray-50">""
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">""
             <div className="text-center mb-16">""
@@ -280,7 +258,7 @@ of different business types and sizes.
                     <benefit.icon className="w-8 h-8 text-blue-600" />"
                   </div>""
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">{benefit.title}</h3>"
-        {/*   */}"
+        {/* comment */}"
         <section className="py-20">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
             <div className="text-center mb-16">"
@@ -298,15 +276,18 @@ designed to address specific challenges and drive growth.
                 <Card key="{index}""
                   className="p-8 hover: shadow-xl transition-shadow duration-300"
                 >"
-                  <div className="{`text-center" mb-6`>",
-                    <div className="{`inline-flex" items-center justify-center w-16 h-16 rounded-full bg-${solution.color}-100 mb-4`}
+                  <div className="{"text-center" mb-6">",
+                    <div className="{"inline-flex" items-center justify-center w-16 h-16 rounded-full bg-${solution.color}-100 mb-4"}
+
                     >
                       <solution.icon,"
-className="{`h-8" w-8 text-${solution.color}-600`}
-                      />
+className="{"h-8" w-8 text-${solution.color}-600"}
+
+                     />
                     </div>"
-                    <h3 className="`text-xl" font-semibold text-gray-900 mb-2`}>
+                    <h3 className=""text-xl" font-semibold text-gray-900 mb-2"}>
                       {solution.title}
+
                     </h3>"
                     <p className="text-gray-600 mb-6">{solution.description}</p>
                   </div>
@@ -316,20 +297,22 @@ className="{`h-8" w-8 text-${solution.color}-600`}
                       <li key="{featureIndex}""
                         className="flex items-center text-gray-700"
                       >"
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                        <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0"  />
                         {feature}
+
                       </li>
                     ))}
+
                   </ul>
 "
                   <Link href="{solution.href}">"
                     <Button className="w-full" variant="outline">
                       Learn More"
-                      <ArrowRight className="ml-2 h-4 w-4" />
+                      <ArrowRight className="ml-2 h-4 w-4"  />
                     </Button>
                   </Link>
                 </Card>
-        {/*   */}"
+        {/* comment */}"
         <section className="py-20 bg-gray-50">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
             <div className="text-center mb-16">"
@@ -350,15 +333,17 @@ and competitive advantage.
                   </div>"
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">
                     {benefit.title}
+
                   </h3>"
                   <p className="text-gray-600">{benefit.description}</p>
                 </div>
               ))}
+
             </div>
           </div>
         </section>
 "
-        {/*   */}""
+        {/* comment */}""
         <section className="py-20">""
           <div className="max-w-7xl mx-auto px-4 sm: px-6 l,"
     g: px-8">"",
@@ -366,7 +351,7 @@ and competitive advantage.
     g: grid-cols-2 gap-12 items-center">"
               <div>""
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">Industries We Serve</h2>",
-        {/*   */}"
+        {/* comment */}"
         <section className="py-20">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -392,14 +377,15 @@ requirements.
                       <span className="text-gray-700">{industry}</span>
                     </div>
                   ))}
+
                 </div>
               </div>"
               ""
               <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">""
                 <h3 className="text-2xl font-bold mb-6">Ready to Get Started?</h3>""
                 <p className="text-lg mb-6">"
-                  Let's discuss your specific needs and find the perfect solution for your business. Our experts are here to help you succeed.'
-                </p>'
+                  Let"s discuss your specific needs and find the perfect solution for your business. Our experts are here to help you succeed."
+                </p>"
                 <div className="space-y-4">""
                   <div className="flex items-center">"
 "
@@ -409,20 +395,20 @@ requirements.
                 </h3>"
                 <p className="text-lg mb-6">
                   Let&apos;s discuss your specific needs and find the perfect,
-solution for your business. Our experts are here to help you,'
-succeed.'
+solution for your business. Our experts are here to help you,"
+succeed."
                 </p>"
                 <div className = "space-y-4">"
                   <div className="flex items-center">"
-                    <CheckCircle className="w-5 h-5 mr-3" />
+                    <CheckCircle className="w-5 h-5 mr-3"  />
                     <span>Free consultation and assessment</span>"
                   </div>""
                   <div className="flex items-center">""
-                    <CheckCircle className="w-5 h-5 mr-3" />
+                    <CheckCircle className="w-5 h-5 mr-3"  />
                     <span>Customized solution design</span>"
                   </div>""
                   <div className="flex items-center">""
-                    <CheckCircle className="w-5 h-5 mr-3" />
+                    <CheckCircle className="w-5 h-5 mr-3"  />
                     <span>Expert implementation support</span>
                   </div>
                 </div>"
@@ -433,17 +419,17 @@ succeed.'
                   className="inline-flex items-center mt-6 bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors"
                 >"
                   Get Started""
-                  <ArrowRight className="w-4 h-4 ml-2" />
+                  <ArrowRight className="w-4 h-4 ml-2"  />
                 </Link>
               </div>
             </div>
           </div>
         </section>
 ",
-        {/*   */}""
+        {/* comment */}""
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">""
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">",
-        {/*   */}"
+        {/* comment */}"
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">"
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
@@ -459,7 +445,7 @@ business needs and implement them successfully.
                   className="bg-white text-blue-600 hover:bg-blue-50"
                 >
                   Get Started Today"
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  <ArrowRight className="ml-2 h-5 w-5"  />
                 </Button>
               </Link>"
               <Link href="/pricing">"
@@ -503,6 +489,7 @@ solution that fits your specific needs.
       </div>
     </Layout>,
   )}
+
       </main>
     </>
   );"

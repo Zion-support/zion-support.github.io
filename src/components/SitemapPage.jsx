@@ -1,4 +1,4 @@
-import React from 'react'; export default function SitemapPage() { const publicRoutes = completeSitemap.filter(route => !route.requiredAuth); const talentRoutes = completeSitemap.filter() route =>}
+import React from "react"; export default function SitemapPage() { const publicRoutes = completeSitemap.filter(route => !route.requiredAuth); const talentRoutes = completeSitemap.filter() route =>}
 
 ;,"});,"})"
  export default function SitemapPage () { const publicRoutes = completeSitemap.filter (route => !route.requiredAuth) ; const talentRoutes = completeSitemap.filter () route =>;;,"});,"})"
@@ -9,16 +9,17 @@ export default function SitemapPage() {,"});,"})"
     const publicRoutes = completeSitemap.filter(route => !route.requiredAuth);,"});,"})"
     const talentRoutes = completeSitemap.filter(route => route.requiredAuth &&;,"});,"})"
         route.requiredRoles &&;,"});,"})"
-        (route.requiredRoles.includes('jobSeeker') ||;,"});,"})"
-            route.requiredRoles.includes('creator')));,"});,"})"
+        (route.requiredRoles.includes("jobSeeker") ||;,"});,"})"
+            route.requiredRoles.includes("creator")));,"});,"})"
     const employerRoutes = completeSitemap.filter(route => route.requiredAuth &&;,"});,"})"
-        (route.requiredRoles.includes('employer') ||;,"});,"})"
-            route.requiredRoles.includes('buyer')));,"});,"})"
+        (route.requiredRoles.includes("employer") ||;,"});,"})"
+            route.requiredRoles.includes("buyer")));,"});,"})"
     const adminRoutes = completeSitemap.filter(route => route.requiredAuth &&;,"});,"})"
-        route.requiredRoles.includes('admin'));,"});,"})
+        route.requiredRoles.includes("admin"));,"});,"})
+}
     return ("
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">;,"});,"})"
-      <SEO title="Sitemap" description="Complete navigation guide for Zion Tech Group website" keywords="sitemap, navigation, website structure, Zion Tech Group" canonical="https: //ziontechgroup.com/content/sitemap-page"/>,"});,"})"
+      <SEO title="Sitemap" description="Complete navigation guide for Zion Tech Group website" keywords="sitemap, navigation, website structure, Zion Tech Group" canonical="https: // comment
       <div className="container mx-auto px-4 py-12">;,"});,"})"
         <div className="text-center mb-12">;,"});,"})"
           <h1 className="text-4xl font-bold text-white mb-4">Site Map</h1>          <p className="text-xl text-zion-slate-light">;,"});,"})"
@@ -27,7 +28,7 @@ export default function SitemapPage() {,"});,"})"
         </div>""";,"});,"})"
 """";,"});,"})"
         <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">""","});,"})"
-          {/*   */}"""";,"});,"})"
+          {/* comment */}"""";,"});,"})"
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">"""";,"});,"})"
             <h2 className="text-2xl font-semibold text-zion-cyan mb-4">;,"});,"})"
               Public Pages""";,"});,"})"
@@ -46,16 +47,16 @@ export default function SitemapPage() {,"});,"})"
             </ul>;,"});,"})"
           </div>;,"});,"})"
 """;,"});,"})"
-          {/*   */}"""";,"});,"})"
+          {/* comment */}"""";,"});,"})"
               Talent & Job Seeker Pages""";,"});,"})"
               {talentRoutes.map(route => (;,"});,"})"
-          {/*   */}"""";,"});,"})"
+          {/* comment */}"""";,"});,"})"
               Employer & Buyer Pages""";,"});,"})"
               {employerRoutes.map(route => (;,"});,"})"
-          {/*   */}"""";,"});,"})"
+          {/* comment */}"""";,"});,"})"
               Administrative Pages""";,"});,"})"
               {adminRoutes.map(route => (;,"});,"})"
-        {/*   */}"""";,"});,"})"
+        {/* comment */}"""";,"});,"})"
         <div className="mt-12 bg-white/10 backdrop-blur-sm rounded-lg p-6">"""";,"});,"})"
           <h2 className="text-2xl font-semibold text-zion-cyan mb-6">;,"});,"})"
             Complete Route List""";,"});,"})"
@@ -71,41 +72,48 @@ export default function SitemapPage() {,"});,"})"
                 <p className="text-sm text-zion-slate-light mt-1">;,"});,"})"
                   {route.description}"});,"})"
     </div>)}"});,"})"
-export { SitemapPage };,"});,"})'
- export default function SitemapPage () { const publicRoutes = completeSitemap.filter (route => !route.requiredAuth)  const talentRoutes = completeSitemap.filter () route =>';;import { Link } from 'react - router-dom',
+export { SitemapPage };,"});,"})"
+ export default function SitemapPage () { const publicRoutes = completeSitemap.filter (route => !route.requiredAuth)  const talentRoutes = completeSitemap.filter () route =>";;import { Link } from "react - router-dom",
 export default function SitemapPage() {
 
     const publicRoutes = completeSitemap.filter(route => !route.requiredAuth)
+}
     const talentRoutes = completeSitemap.filter(route => route.requiredAuth &&
-        route.requiredRoles && (route.requiredRoles.includes('jobSeeker') ||,
-            route.requiredRoles.includes('creator')))
+        route.requiredRoles && (route.requiredRoles.includes("jobSeeker") ||,
+            route.requiredRoles.includes("creator")))
+}
     const employerRoutes = completeSitemap.filter(route => route.requiredAuth &&
-        route.requiredRoles && (route.requiredRoles.includes('employer') ||,
-            route.requiredRoles.includes('buyer')))
+        route.requiredRoles && (route.requiredRoles.includes("employer") ||,
+            route.requiredRoles.includes("buyer")))
+}
     const adminRoutes = completeSitemap.filter(route => route.requiredAuth &&
         route.requiredRoles &&
-        route.requiredRoles.includes('admin'))
+        route.requiredRoles.includes("admin"))
+}
     return ("
-    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">'
-      <SEO title='Sitemap' description='Complete navigation guide for Zion Tech Group website' keywords='sitemap, navigation, website structure, Zion Tech Group' canonical='https: //ziontechgroup.com/content/sitemap-page'/>"
+    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">"
+      <SEO title="Sitemap" description="Complete navigation guide for Zion Tech Group website" keywords="sitemap, navigation, website structure, Zion Tech Group" canonical="https: // comment
       <div className="container mx-auto px-4 py-12">",,
         <div className="text-center mb-12">,"
-export: default function SitemapPage () { const publicRoutes = completeSitemap.filter (route => !route.requiredAuth)  const talentRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&' (route.requiredRoles.includes ('jobSeeker') ||' route.requiredRoles.includes ('creator') ) )  const employerRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&' (route.requiredRoles.includes ('employer') ||' route.requiredRoles.includes ('buyer') ) )  const adminRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&' route.requiredRoles.includes ('admin') )  return () <div className="min - h-screen bg - gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate - light"> <SEO' title='Sitemap' description='Complete navigation guide for Zion Tech Group website' keywords='sitemap, navigation, website structure, Zion Tech Group' canonical='https: '''',import { Link} from 'react-router-dom'';"
- export default function SitemapPage () { const publicRoutes = completeSitemap.filter (route => !route.requiredAuth)  const talentRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&' (route.requiredRoles.includes ('jobSeeker') ||' route.requiredRoles.includes ('creator') ) )  const employerRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&' (route.requiredRoles.includes ('employer') ||' route.requiredRoles.includes ('buyer') ) )  const adminRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&' route.requiredRoles.includes ('admin') )  return () <div className="min - h-screen bg - gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate - light"> <SEO' title='Sitemap' description='Complete navigation guide for Zion Tech Group website' keywords='sitemap, navigation, website structure, Zion Tech Group' canonical='https: '',import { Link } from "react-router-dom">
+export: default function SitemapPage () { const publicRoutes = completeSitemap.filter (route => !route.requiredAuth)  const talentRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&" (route.requiredRoles.includes ("jobSeeker") ||" route.requiredRoles.includes ("creator") ) )  const employerRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&" (route.requiredRoles.includes ("employer") ||" route.requiredRoles.includes ("buyer") ) )  const adminRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&" route.requiredRoles.includes ("admin") )  return () <div className="min - h-screen bg - gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate - light"> <SEO" title="Sitemap" description="Complete navigation guide for Zion Tech Group website" keywords="sitemap, navigation, website structure, Zion Tech Group" canonical="https: """",import { Link} from "react-router-dom"";"
+ export default function SitemapPage () { const publicRoutes = completeSitemap.filter (route => !route.requiredAuth)  const talentRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&" (route.requiredRoles.includes ("jobSeeker") ||" route.requiredRoles.includes ("creator") ) )  const employerRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&" (route.requiredRoles.includes ("employer") ||" route.requiredRoles.includes ("buyer") ) )  const adminRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&" route.requiredRoles.includes ("admin") )  return () <div className="min - h-screen bg - gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate - light"> <SEO" title="Sitemap" description="Complete navigation guide for Zion Tech Group website" keywords="sitemap, navigation, website structure, Zion Tech Group" canonical="https: "",import { Link } from "react-router-dom">
 ;"
- export default function SitemapPage ()   {const publicRoutes = completeSitemap.filter (route => !route.requiredAuth)  const talentRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&' (route.requiredRoles.includes ('jobSeeker') ||' route.requiredRoles.includes ('creator') ) )  const employerRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&' (route.requiredRoles.includes ('employer') ||' route.requiredRoles.includes ('buyer') ) )  const adminRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&' route.requiredRoles.includes ('admin') )  return () <div className="min - h-screen bg - gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate - light"> <SEO' title='Sitemap' description='Complete navigation guide for Zion Tech Group website' keywords='sitemap, navigation, website structure, Zion Tech Group' canonical='https: '''',import { Link } from 'react-router-dom'>"
- export default function SitemapPage ()  {} const publicRoutes = completeSitemap.filter (route => !route.requiredAuth)  const;const talentRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&' (route.requiredRoles.includes (&apos;jobSeeker&apos) ||&apos; route.requiredRoles.includes (&apos;creator&apos) ) )&apos;&apos;  const employerRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&' (route.requiredRoles.includes (&apos;employer&apos) ||&apos; route.requiredRoles.includes (&apos;buyer&apos) ) )&apos;&apos;  const adminRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&' route.requiredRoles.includes (&apos;admin&apos) )  return ()&apos;&apos; <div className="&apos;min" - h-screen bg - gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate - light&apos;>&apos, <;<SEO&apos; title="&apos;Sitemap&apos;" description="&apos;Complete" navigation guide for Zion Tech Group website&apos; keywords="&apos;sitemap," navigation, website structure, Zion Tech Group&apos; canonical="&apos;https: " &apos,&apos,'',import { Link } from &apos;react - router-dom'>./SEO>
-'
+ export default function SitemapPage ()   {const publicRoutes = completeSitemap.filter (route => !route.requiredAuth)  const talentRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&" (route.requiredRoles.includes ("jobSeeker") ||" route.requiredRoles.includes ("creator") ) )  const employerRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&" (route.requiredRoles.includes ("employer") ||" route.requiredRoles.includes ("buyer") ) )  const adminRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&" route.requiredRoles.includes ("admin") )  return () <div className="min - h-screen bg - gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate - light"> <SEO" title="Sitemap" description="Complete navigation guide for Zion Tech Group website" keywords="sitemap, navigation, website structure, Zion Tech Group" canonical="https: """",import { Link } from "react-router-dom">"
+ export default function SitemapPage ()  {} const publicRoutes = completeSitemap.filter (route => !route.requiredAuth)  const;const talentRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&" (route.requiredRoles.includes (&apos;jobSeeker&apos) ||&apos; route.requiredRoles.includes (&apos;creator&apos) ) )&apos;&apos;  const employerRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&" (route.requiredRoles.includes (&apos;employer&apos) ||&apos; route.requiredRoles.includes (&apos;buyer&apos) ) )&apos;&apos;  const adminRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&" route.requiredRoles.includes (&apos;admin&apos) )  return ()&apos;&apos; <div className="&apos;min" - h-screen bg - gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate - light&apos;>&apos, <;<SEO&apos; title="&apos;Sitemap&apos;" description="&apos;Complete" navigation guide for Zion Tech Group website&apos; keywords="&apos;sitemap," navigation, website structure, Zion Tech Group&apos; canonical="&apos;https: " &apos,&apos,"",import { Link } from &apos;react - router-dom">./SEO>
+"
 &apos,"
- export default function SitemapPage () { const publicRoutes = completeSitemap.filter (route => !route.requiredAuth)  const talentRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&' (route.requiredRoles.includes ('jobSeeker') ||' route.requiredRoles.includes ('creator') ) )  const employerRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&' (route.requiredRoles.includes ('employer') ||' route.requiredRoles.includes ('buyer') ) )  const adminRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&' route.requiredRoles.includes ('admin') )  return () <div className="min - h-screen bg - gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate - light"> <SEO ' title='Sitemap' description='Complete navigation guide for Zion Tech Group website' keywords='sitemap, navigation, website structure, Zion Tech Group' canonical='https: '''',import { Link } from 'react-router-dom';""""
- export default function SitemapPage () { const publicRoutes = completeSitemap.filter (route => !route.requiredAuth)  const talentRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&' (route.requiredRoles.includes ('jobSeeker') ||' route.requiredRoles.includes ('creator') ) )  const employerRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&' (route.requiredRoles.includes ('employer') ||' route.requiredRoles.includes ('buyer') ) )  const adminRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&' route.requiredRoles.includes ('admin') )  return () <div className="min - h-screen bg - gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate - light"> <SEO' title='Sitemap' description='Complete navigation guide for Zion Tech Group website' keywords='sitemap, navigation, website structure, Zion Tech Group' canonical='https: '''',import { Link } from 'react-router-dom';"
- export default function SitemapPage () { const publicRoutes = completeSitemap.filter (route => !route.requiredAuth)  const talentRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&' (route.requiredRoles.includes ('jobSeeker') ||' route.requiredRoles.includes ('creator') ) )  const employerRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&' (route.requiredRoles.includes ('employer') ||' route.requiredRoles.includes ('buyer') ) )  const adminRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&' route.requiredRoles.includes ('admin') )  return () <div className="min - h-screen bg - gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate - light"> <SEO ' title='Sitemap' description='Complete navigation guide for Zion Tech Group website' keywords='sitemap, navigation, website structure, Zion Tech Group' canonical='https: '''',import { Link } from "react-router-dom,">
-                </span>''''
+ export default function SitemapPage () { const publicRoutes = completeSitemap.filter (route => !route.requiredAuth)  const talentRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&" (route.requiredRoles.includes ("jobSeeker") ||" route.requiredRoles.includes ("creator") ) )  const employerRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&" (route.requiredRoles.includes ("employer") ||" route.requiredRoles.includes ("buyer") ) )  const adminRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&" route.requiredRoles.includes ("admin") )  return () <div className="min - h-screen bg - gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate - light"> <SEO " title="Sitemap" description="Complete navigation guide for Zion Tech Group website" keywords="sitemap, navigation, website structure, Zion Tech Group" canonical="https: """",import { Link } from "react-router-dom";""""
+ export default function SitemapPage () { const publicRoutes = completeSitemap.filter (route => !route.requiredAuth)  const talentRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&" (route.requiredRoles.includes ("jobSeeker") ||" route.requiredRoles.includes ("creator") ) )  const employerRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&" (route.requiredRoles.includes ("employer") ||" route.requiredRoles.includes ("buyer") ) )  const adminRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&" route.requiredRoles.includes ("admin") )  return () <div className="min - h-screen bg - gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate - light"> <SEO" title="Sitemap" description="Complete navigation guide for Zion Tech Group website" keywords="sitemap, navigation, website structure, Zion Tech Group" canonical="https: """",import { Link } from "react-router-dom";"
+ export default function SitemapPage () { const publicRoutes = completeSitemap.filter (route => !route.requiredAuth)  const talentRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&" (route.requiredRoles.includes ("jobSeeker") ||" route.requiredRoles.includes ("creator") ) )  const employerRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&" (route.requiredRoles.includes ("employer") ||" route.requiredRoles.includes ("buyer") ) )  const adminRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&" route.requiredRoles.includes ("admin") )  return () <div className="min - h-screen bg - gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate - light"> <SEO " title="Sitemap" description="Complete navigation guide for Zion Tech Group website" keywords="sitemap, navigation, website structure, Zion Tech Group" canonical="https: """",import { Link } from "react-router-dom,">
+                </span>""""
                 <p className="text-sm text-zion-slate-light mt-1">""
                   {route.description}
+
                 </p>
     </div>)}
+
 export { SitemapPage }
+
 export { SitemapPage }
 
 "

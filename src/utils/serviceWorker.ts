@@ -1,8 +1,6 @@
-// serviceWorker utility,
-export const serviceWorker = {
-  // Placeholder utility functions,
-init: () => {
-    console.log('serviceWorker initialized'),
-  }
-}
+// comment
+export const serviceWorker = {}
+
+
+
 export default serviceWorker

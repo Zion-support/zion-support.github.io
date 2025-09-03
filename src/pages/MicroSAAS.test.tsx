@@ -1,13 +1,19 @@
-describe('MicroSAAS', () => {}; '; it('renders without crashing', () => {}; render(<MicroSAAS / >) , expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; '; it('displays expected content', () => {}; render(<MicroSAAS />) 
+describe("MicroSAAS", () => {}; "; it("renders without crashing", () => {}; render(<MicroSAAS / >) , expect(screen.getByRole ("main") || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; "; it("displays expected content", () => {}; render(<MicroSAAS  />)
+}
     render()
-    expect(screen.getByRole('main) || screen.getByText(/.*/)).toBeInTheDocument()
+}
+    expect(screen.getByRole("main) || screen.getByText(/.*/)).toBeInTheDocument()
+}
   })
-''
-  it('displays expected content', () => {
+}
+""
+  it("displays expected content", () => {
     render(<MicroSAAS /" >)
-    // Add more specific tests here,
+}
+    // comment
   })
+}
   });"
 "
 });"
-'
+"

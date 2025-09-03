@@ -1,28 +1,24 @@
-const React = dynamic(() => import('react'), { ssr: false })
+import React from "react"
+import dynamic from "next/dynamic"
+const Component = () => {
   const getStatusIcon = (status: string) => {,
     switch (status) {,
-      case 'operational': return <CheckCircle className="w-5 h-5 text-green-500" />,",
-      case 'degraded': return <AlertCircle className = "w-5 h-5 text-yellow-500" />,"
-      case 'outage': return <XCircle className="w-5 h-5 text-red-500" />,"
-      default: return <Clock className="w-5 h-5 text-gray-500" />}
-  }
+      case "operational": return <CheckCircle className="w-5 h-5 text-green-500"  />,",
+      case "degraded": return <AlertCircle className = "w-5 h-5 text-yellow-500"  />,"
+      case "outage": return <XCircle className="w-5 h-5 text-red-500"  />,"
+      default: return <Clock className="w-5 h-5 text-gray-500"  />}
+
+
   const getStatusColor = (status: string) => {,
     switch (status) {,
-      case 'operational': return 'text-green-600 bg-green-100',',
-      case 'degraded': return 'text-yellow-600 bg-yellow-100','
-      case 'outage': return 'text-red-600 bg-red-100','
-      default: return 'text-gray-600 bg-gray-100'}
+      case "operational": return "text-green-600 bg-green-100",",
+      case "degraded": return "text-yellow-600 bg-yellow-100","
+      case "outage": return "text-red-600 bg-red-100","
+      default: return "text-gray-600 bg-gray-100"}
+
   }
-  const incidents = [
-    {'
-      id: 1, title: 'Scheduled Maintenance - API Services','
-      status: 'resolved', date: '2025-01-20','
-      description: 'Scheduled maintenance window for API services completed successfully.', impact: 'minor'},
-    {'
-      id: 2, title: 'Database Performance Issue','
-      status: 'resolved', date: '2025-01-15','
-      description: 'Temporary performance degradation in database queries has been resolved.', impact: 'minor'}
-  ]
+
+  const incidents = []
 
   return ("
     <MainLayout title="System Status - Zion Tech Group""
@@ -30,7 +26,7 @@ const React = dynamic(() => import('react'), { ssr: false })
       keywords="system status, uptime, service status, monitoring, incidents, performance"
     >"
       <div className="min-h-screen bg-gray-50">
-        {/*   */}"
+        {/* comment */}"
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">"
           <div className="container mx-auto px-4 text-center">"
             <h1 className="text-4xl md: text-5xl font-bold mb-6">System Status</h1>"
@@ -41,35 +37,34 @@ const React = dynamic(() => import('react'), { ssr: false })
           </div>
         </section>
 ,
-        {/*   */}"
+        {/* comment */}"
         <section className="py-16 bg-white">"
           <div className="container mx-auto px-4">"
             <div className="text-center mb-12">"
               <div className="flex items-center justify-center mb-4">"
-                <CheckCircle className="w-12 h-12 text-green-500 mr-3" />"
+                <CheckCircle className="w-12 h-12 text-green-500 mr-3"  />"
                 <h2 className="text-3xl font-bold text-gray-900">All Systems Operational</h2>
               </div>"
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                All services are running normally. We&apos;re monitoring our systems 24/7 to ensure optimal performance.''
+                All services are running normally. We&apos;re monitoring our systems 24/7 to ensure optimal performance.""
               </p>
             </div>
-            
-            {/*   */}"
+            {/* comment */}"
             <div className = "grid grid-cols-1 md: grid-cols-3 gap-8 max-w-4xl mx-auto">"
               <div className="bg-gray-50 rounded-lg p-6 text-center">"
-                <Activity className="w-12 h-12 text-blue-600 mx-auto mb-4" />"
+                <Activity className="w-12 h-12 text-blue-600 mx-auto mb-4"  />"
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">99.9%</h3>"
                 <p className="text-gray-600">Overall Uptime</p>
               </div>
               "
               <div className="bg-gray-50 rounded-lg p-6 text-center">"
-                <Clock className="w-12 h-12 text-blue-600 mx-auto mb-4" />"
+                <Clock className="w-12 h-12 text-blue-600 mx-auto mb-4"  />"
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">85ms</h3>"
                 <p className="text-gray-600">Average Response Time</p>
               </div>
               "
               <div className="bg-gray-50 rounded-lg p-6 text-center">"
-                <CheckCircle className="w-12 h-12 text-green-600 mx-auto mb-4" />"
+                <CheckCircle className="w-12 h-12 text-green-600 mx-auto mb-4"  />"
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">0</h3>"
                 <p className="text-gray-600">Active Incidents</p>
               </div>
@@ -77,7 +72,7 @@ const React = dynamic(() => import('react'), { ssr: false })
           </div>
         </section>
 ,
-        {/*   */}"
+        {/* comment */}"
         <section className="py-16 bg-gray-50">"
           <div className="container mx-auto px-4">"
             <div className="text-center mb-12">"
@@ -115,29 +110,34 @@ const React = dynamic(() => import('react'), { ssr: false })
                         <tr key="{index}" className="hover: bg-gray-50">"
                           <td className="px-6 py-4 whitespace-nowrap">"
                             <div className="flex items-center">"
-                              <Server className="w-5 h-5 text-gray-400 mr-3" />",
+                              <Server className="w-5 h-5 text-gray-400 mr-3"  />",
                               <span className="text-sm font-medium text-gray-900">{service.name}</span>
                             </div>
                           </td>"
                           <td className="px-6 py-4 whitespace-nowrap">"
-                            <div className="{`flex" items-center`>
+                            <div className="{"flex" items-center">
                               {getStatusIcon(service.status)}"
-                              <span className="{`ml-2" inline-flex px-2 py-1 text-xs font-semibold rounded-full ${getStatusColor(service.status)}`}>
+                              <span className="{"ml-2" inline-flex px-2 py-1 text-xs font-semibold rounded-full ${getStatusColor(service.status)}"}>
                                 {service.status}
+
                               </span>
                             </div>
                           </td>"
-                          <td className="`px-6" py-4 whitespace-nowrap text-sm text-gray-900`}>
+                          <td className=""px-6" py-4 whitespace-nowrap text-sm text-gray-900"}>
                             {service.uptime}
+
                           </td>"
                           <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                             {service.responseTime}
+
                           </td>"
                           <td className="px-6 py-4 text-sm text-gray-500">
                             {service.lastIncident}
+
                           </td>
                         </tr>
                       ))}
+
                     </tbody>
                   </table>
                 </div>
@@ -145,8 +145,7 @@ const React = dynamic(() => import('react'), { ssr: false })
             </div>
           </div>
         </section>
-
-        {/*   */}"
+        {/* comment */}"
         <section className="py-16 bg-white">"
           <div className="container mx-auto px-4">"
             <div className="text-center mb-12">"
@@ -163,15 +162,15 @@ const React = dynamic(() => import('react'), { ssr: false })
                     <div className="flex items-start justify-between">"
                       <div className="flex-1">"
                         <div className="flex items-center mb-2">"
-                          <CheckCircle className="w-5 h-5 text-green-500 mr-2" />"
+                          <CheckCircle className="w-5 h-5 text-green-500 mr-2"  />"
                           <h3 className="text-lg font-semibold text-gray-900">{incident.title}</h3>
                         </div>"
                         <p className="text-gray-600 mb-2">{incident.description}</p>"
                         <div className="flex items-center text-sm text-gray-500">"
-                          <span className="{`mr-4`">Date: {incident.date}</span>"
-                          <span className="{`px-2" py-1 rounded-full text-xs font-medium ${
-                            incident.impact === 'minor' ? 'bg-yellow-100 text-yellow-800' : 'bg-red-100 text-red-800>
-}`}>
+                          <span className="{"mr-4"">Date: {incident.date}</span>"
+                          <span className="{"px-2" py-1 rounded-full text-xs font-medium ${
+                            incident.impact === "minor" ? "bg-yellow-100 text-yellow-800" : "bg-red-100 text-red-800>
+}"}>
                             {incident.impact} impact,
                           </span>
                         </div>
@@ -179,13 +178,13 @@ const React = dynamic(() => import('react'), { ssr: false })
                     </div>
                   </div>
                 ))}
+
               </div>
             </div>
           </div>
         </section>
-
-        {/*   */}"
-        <section className = "`py-16" bg-gray-50`}>"
+        {/* comment */}"
+        <section className = ""py-16" bg-gray-50"}>"
           <div className="container mx-auto px-4">"
             <div className="text-center mb-12">"
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Monitoring & Alerts</h2>"
@@ -196,25 +195,25 @@ const React = dynamic(() => import('react'), { ssr: false })
             "
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto">"
               <div className="bg-white rounded-lg p-6 text-center">"
-                <Database className="w-12 h-12 text-blue-600 mx-auto mb-4" />"
+                <Database className="w-12 h-12 text-blue-600 mx-auto mb-4"  />"
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">24/7 Monitoring</h3>"
                 <p className="text-gray-600 text-sm">Continuous monitoring of all systems</p>
               </div>
               "
               <div className="bg-white rounded-lg p-6 text-center">"
-                <Activity className="w-12 h-12 text-blue-600 mx-auto mb-4" />"
+                <Activity className="w-12 h-12 text-blue-600 mx-auto mb-4"  />"
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Real-time Alerts</h3>"
                 <p className="text-gray-600 text-sm">Instant notifications for any issues</p>
               </div>
               "
               <div className="bg-white rounded-lg p-6 text-center">"
-                <Cloud className="w-12 h-12 text-blue-600 mx-auto mb-4" />"
+                <Cloud className="w-12 h-12 text-blue-600 mx-auto mb-4"  />"
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Global Monitoring</h3>"
                 <p className="text-gray-600 text-sm">Monitoring from multiple locations</p>
               </div>
               "
               <div className="bg-white rounded-lg p-6 text-center">"
-                <CheckCircle className="w-12 h-12 text-blue-600 mx-auto mb-4" />"
+                <CheckCircle className="w-12 h-12 text-blue-600 mx-auto mb-4"  />"
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">SLA Compliance</h3>"
                 <p className="text-gray-600 text-sm">99.9% uptime guarantee</p>
               </div>
@@ -222,7 +221,7 @@ const React = dynamic(() => import('react'), { ssr: false })
           </div>
         </section>
 ,
-        {/*   */}"
+        {/* comment */}"
         <section className="py-16 bg-blue-900 text-white">"
           <div className="container mx-auto px-4 text-center">"
             <h2 className="text-3xl font-bold mb-4">Stay Updated</h2>"
@@ -232,8 +231,7 @@ const React = dynamic(() => import('react'), { ssr: false })
             <div className="max-w-md mx-auto flex">"
               <input type="email""
                 placeholder="Enter your email address""
-                className="flex-1 px-4 py-3 rounded-l-lg text-gray-900 focus: outline-none focus:ring-2 focus:ring-blue-500"
-              />"
+                className="flex-1 px-4 py-3 rounded-l-lg text-gray-900 focus: outline-none focus:ring-2 focus:ring-blue-500"  />"
               <button className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-r-lg font-semibold transition-colors">
                 Subscribe,
               </button>
@@ -243,5 +241,6 @@ const React = dynamic(() => import('react'), { ssr: false })
       </div>
     </MainLayout>;,
   )}
+
 "
 export default Status

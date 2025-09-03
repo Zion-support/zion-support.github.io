@@ -1,97 +1,78 @@
 import React from "react"
-  const stats = ['
-    { number: '80+', label: 'Micro SaaS Solutions', icon: Zap }, { number: '35+', label: 'IT Services', icon: Shield },
-    { number: '30+', label: 'AI Services', icon: Globe }, { number: '500+', label: 'Projects Completed', icon: TrendingUp }]
-  const benefits = [
+  const stats = []
+  const benefits = [],"
+      href: "/services/ai-model-development-chat","
+      color: "blue"},
     {
-      icon: <DollarSign className="w-8 h-8" />, title: 'Competitive Pricing',
-      description: 'Transparent, market-competitive pricing with flexible plans to fit your budget and scale with your business.
-},
-    {"
-      icon: <Target className = "w-8 h-8" />, title: 'Proven Results','
-      description: 'Track record of successful implementations with measurable ROI and client satisfaction across all industries.'}, {"
-      icon: <Rocket className="w-8 h-8" />,
-      title: 'Fast Implementation', description: 'Rapid deployment and implementation with minimal downtime, getting you up and running quickly.
-}, {"
-      icon: <Award className = "w-8 h-8" />,'
-      title: 'Expert Support', description: '24/7 expert support from our experienced team of developers, engineers, and AI specialists.'
-const ServicesIndex: NextPage = () => {
-  const services = [,
-    {,
-icon: Brain,'
-      title: 'AI Development','
-      description: 'Custom AI solutions and machine learning models tailored to your business needs.','
-      features: ['Machine Learning Models', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],'
-      href: '/services/ai-model-development-chat','
-      color: 'blue'},
+      icon: Globe,"
+      title: "Web Development","
+      description: "Modern, responsive web applications built with cutting-edge technologies.","
+      features: ["React/Next.js Applications", "E-commerce Solutions", "Progressive Web Apps", "API Development"],"
+      href: "/services/web-application-development-chat","
+      color: "green"},
     {
-      icon: Globe,'
-      title: 'Web Development','
-      description: 'Modern, responsive web applications built with cutting-edge technologies.','
-      features: ['React/Next.js Applications', 'E-commerce Solutions', 'Progressive Web Apps', 'API Development'],'
-      href: '/services/web-application-development-chat','
-      color: 'green'},
+      icon: Smartphone,"
+      title: "Mobile Development","
+      description: "Native and cross-platform mobile applications for iOS and Android.","
+      features: ["iOS Development", "Android Development", "React Native", "Flutter Apps"],"
+      href: "/services/mobile-app-development-chat","
+      color: "purple"},
     {
-      icon: Smartphone,'
-      title: 'Mobile Development','
-      description: 'Native and cross-platform mobile applications for iOS and Android.','
-      features: ['iOS Development', 'Android Development', 'React Native', 'Flutter Apps'],'
-      href: '/services/mobile-app-development-chat','
-      color: 'purple'},
+      icon: Cloud,"
+      title: "Cloud Solutions","
+      description: "Scalable cloud infrastructure and migration services for modern applications.","
+      features: ["AWS/Azure/GCP", "Cloud Migration", "DevOps & CI/CD", "Container Orchestration"],"
+      href: "/services/cloud-migration-services-chat","
+      color: "orange"},
     {
-      icon: Cloud,'
-      title: 'Cloud Solutions','
-      description: 'Scalable cloud infrastructure and migration services for modern applications.','
-      features: ['AWS/Azure/GCP', 'Cloud Migration', 'DevOps & CI/CD', 'Container Orchestration'],'
-      href: '/services/cloud-migration-services-chat','
-      color: 'orange'},
+      icon: Shield,"
+      title: "Cybersecurity","
+      description: "Comprehensive security solutions to protect your digital assets.","
+      features: ["Security Audits", "Penetration Testing", "Compliance", "Incident Response"],"
+      href: "/services/network-security-chat","
+      color: "red"},
     {
-      icon: Shield,'
-      title: 'Cybersecurity','
-      description: 'Comprehensive security solutions to protect your digital assets.','
-      features: ['Security Audits', 'Penetration Testing', 'Compliance', 'Incident Response'],'
-      href: '/services/network-security-chat','
-      color: 'red'},
+      icon: BarChart3,"
+      title: "Data Analytics","
+      description: "Transform your data into actionable insights with advanced analytics.","
+      features: ["Business Intelligence", "Data Visualization", "Predictive Modeling", "Real-time Analytics"],"
+      href: "/services/business-intelligence-chat","
+      color: "indigo"},
     {
-      icon: BarChart3,'
-      title: 'Data Analytics','
-      description: 'Transform your data into actionable insights with advanced analytics.','
-      features: ['Business Intelligence', 'Data Visualization', 'Predictive Modeling', 'Real-time Analytics'],'
-      href: '/services/business-intelligence-chat','
-      color: 'indigo'},
+      icon: Palette,"
+      title: "UI/UX Design","
+      description: "User-centered design solutions that enhance user experience and engagement.","
+      features: ["User Research", "Wireframing", "Prototyping", "Design Systems"],"
+      href: "/services/ui-ux-design-chat","
+      color: "pink"},
     {
-      icon: Palette,'
-      title: 'UI/UX Design','
-      description: 'User-centered design solutions that enhance user experience and engagement.','
-      features: ['User Research', 'Wireframing', 'Prototyping', 'Design Systems'],'
-      href: '/services/ui-ux-design-chat','
-      color: 'pink'},
-    {
-      icon: CheckCircle,'
-      title: 'Quality Assurance','
-      description: 'Comprehensive testing services to ensure your applications perform flawlessly.','
-      features: ['Automated Testing', 'Performance Testing', 'Security Testing', 'User Acceptance Testing'],'
-      href: '/services/quality-assurance-testing-chat','
-      color: 'teal'}
+      icon: CheckCircle,"
+      title: "Quality Assurance","
+      description: "Comprehensive testing services to ensure your applications perform flawlessly.","
+      features: ["Automated Testing", "Performance Testing", "Security Testing", "User Acceptance Testing"],"
+      href: "/services/quality-assurance-testing-chat","
+      color: "teal"}
+
   ]
 
   const getColorClasses = (color: string) => {,
-    const colorMap: { [key: string]: string } = {'
-      blue: 'bg-blue-100 text-blue-600','
-      green: 'bg-green-100 text-green-600','
-      purple: 'bg-purple-100 text-purple-600','
-      orange: 'bg-orange-100 text-orange-600','
-      red: 'bg-red-100 text-red-600',
-      indigo: 'bg-indigo-100 text-indigo-600',
-      pink: 'bg-pink-100 text-pink-600',
-      teal: 'bg-teal-100 text-teal-600'},
-    return colorMap[color] || 'bg-gray-100 text-gray-600
+    const colorMap: { [key: string]: string } = {"
+      blue: "bg-blue-100 text-blue-600","
+      green: "bg-green-100 text-green-600","
+      purple: "bg-purple-100 text-purple-600","
+      orange: "bg-orange-100 text-orange-600","
+      red: "bg-red-100 text-red-600",
+      indigo: "bg-indigo-100 text-indigo-600",
+      pink: "bg-pink-100 text-pink-600",
+      teal: "bg-teal-100 text-teal-600"},
+    return colorMap[color] || "bg-gray-100 text-gray-600
   }
+
   return ("
     <MainLayout title = "Our Services - Zion Tech Group""
       description="Comprehensive technology services including AI development, web development, mobile apps, cloud solutions, cybersecurity, and more."
     >
-      {/*   */}"
+      {/* comment */}"
       <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">"
         <div className="container mx-auto px-4">"
           <div className="max-w-4xl mx-auto text-center">
@@ -100,6 +81,7 @@ className="text-5xl md: text-6xl font-bold mb-6 leading-tight"">
               initial="{{" opacity: 0, y: 30 }}"
               animate="{{" opacity: 1, y: 0 }}"
               transition="{{" duration: 0.8 }}
+
             >
               Comprehensive Technology Solutions,
             </motion.h1>
@@ -108,8 +90,9 @@ className="text-xl md: text-2xl mb-8 text-gray-200 leading-relaxed"">
               initial="{{" opacity: 0, y: 30 }}"
               animate="{{" opacity: 1, y: 0 }}"
               transition="{{" duration: 0.8, delay: 0.2 }}
+
             >
-              From innovative Micro SaaS applications to cutting-edge AI services and enterprise IT solutions, 
+              From innovative Micro SaaS applications to cutting-edge AI services and enterprise IT solutions,
               we provide the technology foundation your business needs to thrive in the digital age.
             </motion.p>
             
@@ -118,6 +101,7 @@ className="flex flex-col sm: flex-row gap-4 justify-center mb-12"">
               initial="{{" opacity: 0, y: 30 }}"
               animate="{{" opacity: 1, y: 0 }}"
               transition="{{" duration: 0.8, delay: 0.4 }}
+
             >"
               <Link href="/contact" className="bg-blue-600 hover: bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 cursor-pointer inline-block text-lg hover:scale-105 hover:shadow-lg">
                 Get Started Today,
@@ -127,12 +111,14 @@ className="flex flex-col sm: flex-row gap-4 justify-center mb-12"">
               </Link>
             </motion.div>
 ,
-            {/*   */}
+            {/* comment */}
+
             <motion.div,"
 className="grid grid-cols-2 md: grid-cols-4 gap-8"">
               initial="{{" opacity: 0, y: 30 }}"
               animate="{{" opacity: 1, y: 0 }}"
               transition="{{" duration: 0.8, delay: 0.6 }}
+
             >
               {stats.map((stat, index) => {
                 const IconComponent = stat.icon
@@ -142,21 +128,23 @@ key = "{stat.label}""
                     className="text-center group""
                     whileHover="{{" scale: 1.05 }}"
                     transition="{{" duration: 0.2 }}
+
                   >"
                     <div className="flex justify-center mb-2">"
-                      <IconComponent className="w-8 h-8 text-blue-400 group-hover: text-purple-400 transition-colors" />
+                      <IconComponent className="w-8 h-8 text-blue-400 group-hover: text-purple-400 transition-colors"  />
                     </div>",
                     <div className="text-3xl font-bold text-blue-400 group-hover:text-purple-400 transition-colors">{stat.number}</div>"
                     <div className="text-gray-300">{stat.label}</div>
                   </motion.div>
                 )
+}
               })}
+
             </motion.div>
           </div>
         </div>
       </section>
-
-      {/*   */}"
+      {/* comment */}"
       <section className = "py-20 bg-gray-50">"
         <div className="container mx-auto px-4">
           <motion.div,"
@@ -165,6 +153,7 @@ className="text-center mb-16""
             whileInView="{{" opacity: 1, y: 0 }}"
             transition="{{" duration: 0.8 }}"
             viewport="{{" once: true }}
+
           >"
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Service Categories</h2>"
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -173,7 +162,8 @@ className="text-center mb-16""
           </motion.div>
           "
           <div className="grid md: grid-cols-3 gap-8">,
-            {/*   */}
+            {/* comment */}
+
             <motion.div,"
 className="bg-white p-8 rounded-lg shadow-lg hover: shadow-xl transition-all duration-300 group"">
               initial="{{" opacity: 0, y: 30 }}"
@@ -181,9 +171,10 @@ className="bg-white p-8 rounded-lg shadow-lg hover: shadow-xl transition-all dur
               transition="{{" duration: 0.8, delay: 0.1 }}"
               viewport="{{" once: true }}"
               whileHover="{{" y: -5 }}
+
             >"
               <div className="text-blue-600 mb-4 group-hover: text-purple-600 transition-colors">"
-                <Zap className="w-12 h-12" />
+                <Zap className="w-12 h-12"  />
               </div>"
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Micro SaaS Solutions</h3>"
               <p className="text-gray-600 mb-6">,
@@ -204,11 +195,12 @@ className="bg-white p-8 rounded-lg shadow-lg hover: shadow-xl transition-all dur
                 <div className="text-lg font-semibold text-green-600">$12 - $9,999/month</div>
               </div>"
               <Link href="/services/micro-saas" className="text-blue-600 hover: text-blue-700 font-semibold group-hover:text-purple-600 transition-colors inline-flex items-center">"
-                View All Micro SaaS <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                View All Micro SaaS <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"  />
               </Link>
             </motion.div>
 ,
-            {/*   */}
+            {/* comment */}
+
             <motion.div,"
 className="bg-white p-8 rounded-lg shadow-lg hover: shadow-xl transition-all duration-300 group"">
               initial="{{" opacity: 0, y: 30 }}"
@@ -216,9 +208,10 @@ className="bg-white p-8 rounded-lg shadow-lg hover: shadow-xl transition-all dur
               transition="{{" duration: 0.8, delay: 0.2 }}"
               viewport="{{" once: true }}"
               whileHover="{{" y: -5 }}
+
             >"
               <div className="text-blue-600 mb-4 group-hover: text-purple-600 transition-colors">"
-                <Shield className="w-12 h-12" />
+                <Shield className="w-12 h-12"  />
               </div>"
               <h3 className="text-2xl font-bold text-gray-900 mb-4">IT Services</h3>"
               <p className="text-gray-600 mb-6">,
@@ -239,11 +232,12 @@ className="bg-white p-8 rounded-lg shadow-lg hover: shadow-xl transition-all dur
                 <div className="text-lg font-semibold text-green-600">$2, 000 - $500,000/project</div>
               </div>"
               <Link href="/services/it-services" className="text-blue-600 hover: text-blue-700 font-semibold group-hover:text-purple-600 transition-colors inline-flex items-center">"
-                View All IT Services <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                View All IT Services <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"  />
               </Link>
             </motion.div>
 ,
-            {/*   */}
+            {/* comment */}
+
             <motion.div,"
 className="bg-white p-8 rounded-lg shadow-lg hover: shadow-xl transition-all duration-300 group"">
               initial="{{" opacity: 0, y: 30 }}"
@@ -251,9 +245,10 @@ className="bg-white p-8 rounded-lg shadow-lg hover: shadow-xl transition-all dur
               transition="{{" duration: 0.8, delay: 0.3 }}"
               viewport="{{" once: true }}"
               whileHover="{{" y: -5 }}
+
             >"
               <div className="text-blue-600 mb-4 group-hover: text-purple-600 transition-colors">"
-                <Globe className="w-12 h-12" />
+                <Globe className="w-12 h-12"  />
               </div>"
               <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Services</h3>"
               <p className="text-gray-600 mb-6">,
@@ -274,7 +269,7 @@ className="bg-white p-8 rounded-lg shadow-lg hover: shadow-xl transition-all dur
                 <div className="text-lg font-semibold text-green-600">$4,000 - $2, 000,000/project</div>
               </div>"
               <Link href="/services/ai-services" className="text-blue-600 hover: text-blue-700 font-semibold group-hover:text-purple-600 transition-colors inline-flex items-center">"
-                View All AI Services <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                View All AI Services <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"  />
               </Link>
             </motion.div>"
           <div className="text-center">"
@@ -286,7 +281,7 @@ className="bg-white p-8 rounded-lg shadow-lg hover: shadow-xl transition-all dur
         </div>
       </section>
 ,
-      {/*   */}"
+      {/* comment */}"
       <section className="py-20">"
         <div className="container mx-auto px-4">
           <motion.div,"
@@ -295,6 +290,7 @@ className="text-center mb-16""
             whileInView="{{" opacity: 1, y: 0 }}"
             transition="{{" duration: 0.8 }}"
             viewport="{{" once: true }}
+
           >"
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Our Services?</h2>"
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -312,11 +308,13 @@ key="{benefit.title}""
                 transition="{{" duration: 0.8, delay: index * 0.1 }}"
                 viewport="{{" once: true }}"
                 whileHover="{{" scale: 1.05 }}
+
               >"
                 <div className="flex justify-center mb-4">"
                   <div className="p-4 bg-blue-100 rounded-full group-hover: bg-purple-100 transition-colors">"
                     <div className="text-blue-600 group-hover:text-purple-600 transition-colors">,
                       {benefit.icon}
+
                     </div>
                   </div>
                 </div>"
@@ -324,11 +322,11 @@ key="{benefit.title}""
                 <p className="text-gray-600">{benefit.description}</p>
               </motion.div>
             ))}
+
           </div>
         </div>
       </section>
-
-      {/*   */}"
+      {/* comment */}"
       <section className="py-16 bg-gray-50">"
         <div className="container mx-auto px-4">"
           <div className="grid md: grid-cols-3 gap-8">"
@@ -354,18 +352,18 @@ key="{benefit.title}""
             <div className="bg-white p-6 rounded-lg shadow">"
               <h3 className="text-xl font-semibold mb-2">Useful Links</h3>"
               <ul className="text-sm text-blue-700 space-y-2">"
-                <li><a className="underline" href="https: //ziontechgroup.com">Website</a></li>"
-                <li><a className="underline" href="https://ziontechgroup.com/services">All Services</a></li>"
-                <li><a className="underline" href="https://ziontechgroup.com/contact">Contact</a></li>"
-                <li><a className="underline" href="https://ziontechgroup.com/privacy">Privacy</a></li>"
-                <li><a className="underline" href="https://ziontechgroup.com/terms">Terms</a></li>
+                <li><a className="underline" href="https: // comment
+                <li><a className="underline" href="https:// comment
+                <li><a className="underline" href="https:// comment
+                <li><a className="underline" href="https:// comment
+                <li><a className="underline" href="https:// comment
               </ul>
             </div>
           </div>
         </div>
       </section>
 ,
-      {/*   */}"
+      {/* comment */}"
       <section className="py-20 bg-gray-50">"
         <div className="container mx-auto px-4">
           <motion.div,"
@@ -374,6 +372,7 @@ className="text-center mb-16""
             whileInView="{{" opacity: 1, y: 0 }}"
             transition="{{" duration: 0.8 }}"
             viewport="{{" once: true }}
+
           >"
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Featured Services</h2>"
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -391,24 +390,26 @@ key="{service.id}""
                 transition="{{" duration: 0.8, delay: index * 0.1 }}"
                 viewport="{{" once: true }}"
                 whileHover="{{" y: -5 }}
+
               >"
                 <div className="flex items-center mb-4">"
                   <span className="text-2xl mr-3">{service.icon}</span>"
                   <h3 className="text-xl font-bold text-gray-900 group-hover: text-blue-600 transition-colors">,
                     {service.name}
+
                   </h3>
                 </div>"
                 <p className="text-gray-600 mb-4 text-sm">{service.description}</p>"
                 <div className="flex justify-between items-center">"
-                  <div className="{`text-lg" font-semibold text-green-600`>
+                  <div className="{"text-lg" font-semibold text-green-600">
                     From ${service.pricing.starter}/mo"
-          <div className="`grid" md:grid-cols-2 lg:grid-cols-3 gap-8`}>
+          <div className=""grid" md:grid-cols-2 lg:grid-cols-3 gap-8"}>
             {services.map((service, index) => {
               const IconComponent = service.icon
               return ("
-                <div key = "{index}" className="{`bg-white" rounded-lg p-8 shadow-lg hover: shadow-xl transition-shadow`>",
-                  <div className="{`w-12" h-12 rounded-lg flex items-center justify-center mb-6 ${getColorClasses(service.color)}`}>"
-                    <IconComponent className="`h-6" w-6`} />
+                <div key = "{index}" className="{"bg-white" rounded-lg p-8 shadow-lg hover: shadow-xl transition-shadow">",
+                  <div className="{"w-12" h-12 rounded-lg flex items-center justify-center mb-6 ${getColorClasses(service.color)}"}>"
+                    <IconComponent className=""h-6" w-6"}       />
                   </div>
                   "
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">{service.title}</h3>"
@@ -417,25 +418,27 @@ key="{service.id}""
                   <ul className="space-y-2 mb-6">
                     {service.features.map((feature, featureIndex) => ("
                       <li key="{featureIndex}" className="flex items-center text-sm text-gray-600">"
-                        <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                        <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0"  />
                         {feature}
+
                       </li>
                     ))}
+
                   </ul>
                   "
                   <Link href="{service.href}""
                     className="inline-flex items-center text-blue-600 hover: text-blue-700 font-semibold"
                   >
                     Learn More"
-                    <ArrowRight className="ml-2 h-4 w-4" />
+                    <ArrowRight className="ml-2 h-4 w-4"  />
                   </Link>
                 </div>,
               )})}
+
           </div>
         </div>
       </section>
-
-      {/*   */}"
+      {/* comment */}"
       <section className="py-20 bg-gray-50">"
         <div className="container mx-auto px-4">"
           <div className="text-center mb-16">"
@@ -481,7 +484,7 @@ key="{service.id}""
         </div>
       </section>
 ,
-      {/*   */}"
+      {/* comment */}"
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 relative overflow-hidden">"
         <div className="absolute inset-0 bg-black opacity-10"></div>"
         <div className="container mx-auto px-4 text-center relative z-10">
@@ -490,12 +493,13 @@ initial="{{" opacity: 0, y: 30 }}"
             whileInView="{{" opacity: 1, y: 0 }}"
             transition="{{" duration: 0.8 }}"
             viewport="{{" once: true }}
+
           >"
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>"
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Let&apos;s discuss how our comprehensive technology solutions can help your business achieve its goals and stay ahead of the competition.''
+              Let&apos;s discuss how our comprehensive technology solutions can help your business achieve its goals and stay ahead of the competition."'
             </p>"
             <div className = "flex flex-col sm: flex-row justify-center gap-4">"
               <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-all duration-300 cursor-pointer inline-block text-lg hover:scale-105 hover:shadow-lg">
@@ -514,11 +518,12 @@ initial="{{" opacity: 0, y: 30 }}"
           </p>"
           <Link href="/contact" className="bg-white text-blue-600 hover: bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors inline-flex items-center">
             Start Your Project"
-            <ArrowRight className="ml-2 h-5 w-5" />
+            <ArrowRight className="ml-2 h-5 w-5"  />
           </Link>
         </div>
       </section>
     </MainLayout>,,
   )}
+
 "
 export default ServicesIndex

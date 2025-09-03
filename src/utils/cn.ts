@@ -1,8 +1,6 @@
-// cn utility,
-export const cn = {
-  // Placeholder utility functions,
-init: () => {
-    console.log('cn initialized'),
-  }
-}
+// comment
+export const cn = {}
+
+
+
 export default cn

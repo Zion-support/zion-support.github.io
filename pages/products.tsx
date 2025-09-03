@@ -1,6 +1,11 @@
-const React = dynamic(() => import('react'), { ssr: false })
-const Head = dynamic(() => import('next/head'), { ssr: false })
-const Link = dynamic(() => import('next/link'), { ssr: false })
+import Head from "next/head"
+import React from "react"
+import dynamic from "next/dynamic"
+const Component = () => {
+const Head = dynamic(() => import("next/head"), { ssr: false })
+}
+const Link = dynamic(() => import("next/link"), { ssr: false })
+}
       ],"
       category: "AI Solutions","
       pricing: "Starting at $2,999/month"
@@ -78,19 +83,20 @@ const Link = dynamic(() => import('next/link'), { ssr: false })
       ],"
       category: "Networking","
       pricing: "Starting at $999/month"}
+
   ]
 "
-  const categories = ["All", "AI Solutions", "Cloud Solutions", "Security", "IoT Solutions", "Blockchain", "Networking"]
+  const categories = []
   return (
     <PageTransition>
 <Head>
         <title>Products & Solutions — Zion Tech Group</title>"
-        <meta name = "description" content="Explore Zion Tech Group's comprehensive suite of technology products and solutions designed to transform your business." />"
-        <meta name="viewport" content="width="device-width," initial-scale=1" />"
-        <link rel="canonical" href="https: //ziontechgroup.com/products" />
+        <meta name = "description" content="Explore Zion Tech Group"s comprehensive suite of technology products and solutions designed to transform your business."  />"
+        <meta name="viewport" content="width=device-width, initial-scale=1"  />"
+        <link rel="canonical" href="https: // comment
       </Head>
 ,
-      {/*   */}"
+      {/* comment */}"
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">"
         <div className="container mx-auto px-4 text-center">"
           <h1 className="text-5xl md: text-6xl font-bold mb-6">"
@@ -112,27 +118,28 @@ transformation and drive business growth.
           </div>
         </div>
       </section>
-
-      {/*   */}"
+      {/* comment */}"
       <section className="py-8 bg-white border-b">"
         <div className="mx-auto max-w-7xl px-6 lg: px-8">"
-          <div className="{`flex" flex-wrap gap-2 justify-center`>
+          <div className="{"flex" flex-wrap gap-2 justify-center">
             {categories.map((category) => (",
               <button key="{category}""
-                className="{`px-4" py-2 rounded-full text-sm font-medium transition-colors ${"
+                className="{"px-4" py-2 rounded-full text-sm font-medium transition-colors ${"
                   category === "All""
                     ? "bg-blue-600 text-white""
-                    : "bg-gray-100 text-gray-700 hover: bg-gray-200"}`}
+                    : "bg-gray-100 text-gray-700 hover: bg-gray-200"}"}
+
               >
                 {category}
+
               </button>
             ))}
+
           </div>
         </div>
       </section>
-
-          {/*   */}"
-          <div className="`grid" md: grid-cols-2 lg:grid-cols-3 gap-8`}>
+          {/* comment */}"
+          <div className=""grid" md: grid-cols-2 lg:grid-cols-3 gap-8"}>
             {products.map((product, index) => ("
               <div key="{index}" className="bg-white rounded-lg shadow-lg overflow-hidden hover: shadow-xl transition-shadow">"
                 <div className="h-48 bg-gradient-to-br from-blue-400 to-purple-500"></div>"
@@ -140,11 +147,12 @@ transformation and drive business growth.
                   <div className="flex items-center justify-between mb-3">"
                     <span className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium">,
                       {product.category}
+
                     </span>"
                     <div className="flex items-center gap-1">"
-                      <Star className="w-4 h-4 text-yellow-400 fill-current" />"
+                      <Star className="w-4 h-4 text-yellow-400 fill-current"  />"
                       <span className="text-sm text-gray-600">{product.rating}</span>
-      {/*   */}"
+      {/* comment */}"
       <section className="py-24 sm: py-32">"
         <div className="mx-auto max-w-7xl px-6 lg:px-8">"
           <div className="grid gap-8 lg:grid-cols-2 xl:grid-cols-3">
@@ -158,6 +166,7 @@ transformation and drive business growth.
                     <div>"
                       <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-medium">,
                         {product.category}
+
                       </span>
                     </div>
                   </div>
@@ -168,37 +177,41 @@ transformation and drive business growth.
                   <ul className="space-y-3 mb-6">
                     {product.features.map((feature, index) => ("
                       <li key="{index}" className="flex items-center text-sm text-gray-700">"
-                        <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                        <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0"  />
                         {feature}
+
                       </li>
                     ))}
+
                   </ul>
                   "
                   <div className="flex items-center justify-between">"
                     <div className="text-lg font-semibold text-blue-600">
                       {product.pricing}
+
                     </span>
                   </div>
                   "
-                  <div className="{`flex" gap-3`>"
-                    <Link href="{`/products/${product.title.toLowerCase().replace(/\s+/g," '-')}`}"
-                      className="`flex-1" bg-blue-600 hover: bg-blue-700 text-white text-center py-2 px-4 rounded-lg font-semibold transition-colors`}
+                  <div className="{"flex" gap-3">"
+                    <Link href="{"/products/${product.title.toLowerCase().replace(/\s+/g," "-")}"}"
+                      className=""flex-1" bg-blue-600 hover: bg-blue-700 text-white text-center py-2 px-4 rounded-lg font-semibold transition-colors"}
+
                     </div>"
                     <Link href="/contact""
                       className="inline-flex items-center text-blue-600 hover: text-blue-700 font-medium"
                     >
                       Learn More"
-                      <ArrowRight className="h-4 w-4 ml-1" />
+                      <ArrowRight className="h-4 w-4 ml-1"  />
                     </Link>
                   </div>
                 </div>
               </div>,
             ))}
+
           </div>
         </div>
       </section>
-
-      {/*   */}"
+      {/* comment */}"
       <section className="bg-gray-50 py-24 sm: py-32">"
         <div className="mx-auto max-w-7xl px-6 lg:px-8">"
           <div className="text-center mb-16">"
@@ -215,7 +228,7 @@ transformation and drive business growth.
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">"
             <div className="bg-white p-6 rounded-xl shadow-md text-center">"
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">"
-                <Zap className="h-8 w-8 text-blue-600" />
+                <Zap className="h-8 w-8 text-blue-600"  />
               </div>"
               <h3 className="text-xl font-semibold text-gray-900 mb-3">High Performance</h3>"
               <p className="text-gray-600">
@@ -225,7 +238,7 @@ transformation and drive business growth.
             "
             <div className="bg-white p-6 rounded-xl shadow-md text-center">"
               <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">"
-                <Shield className="h-8 w-8 text-green-600" />
+                <Shield className="h-8 w-8 text-green-600"  />
               </div>"
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Enterprise Security</h3>"
               <p className="text-gray-600">,
@@ -235,7 +248,7 @@ transformation and drive business growth.
             "
             <div className="bg-white p-6 rounded-xl shadow-md text-center">"
               <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">"
-                <Star className="h-8 w-8 text-purple-600" />
+                <Star className="h-8 w-8 text-purple-600"  />
               </div>"
               <h3 className="text-xl font-semibold text-gray-900 mb-3">24/7 Support</h3>"
               <p className="text-gray-600">
@@ -245,23 +258,24 @@ transformation and drive business growth.
           </div>
         </div>
       </section>
-
-      {/*   */}"
+      {/* comment */}"
       <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-16">"
         <div className="mx-auto max-w-7xl px-6 lg: px-8 text-center">"
           <h2 className="text-3xl font-bold text-white mb-4">
             Ready to Transform Your Business?
           </h2>"
-          <p className="text-xl text-blue-100 mb-8">'
+          <p className="text-xl text-blue-100 mb-8">"
             Let's discuss how our solutions can help you achieve your technology goals.
           </p>"
           <Link href="/contact""
             className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-gray-50 transition-colors"
           >
             Get Started Today"
-            <ArrowRight className="h-4 w-4 ml-2" />
+            <ArrowRight className="h-4 w-4 ml-2"  />
           </Link>
         </div>
       </section>
     </PageTransition>",
   )}
+
+export default Component

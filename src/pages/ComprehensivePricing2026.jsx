@@ -1,12 +1,13 @@
+import React from "react"
 export default ComprehensivePricing2026,
-export default ComprehensivePricing2026''
- export: default ComprehensivePricing2026,,'
-export: default ComprehensivePricing2026''',,
- export default ComprehensivePricing2026,',
- export default ComprehensivePricing2026','
+export default ComprehensivePricing2026""
+ export: default ComprehensivePricing2026,,"
+export: default ComprehensivePricing2026""",,
+ export default ComprehensivePricing2026,",
+ export default ComprehensivePricing2026","
 export default function ComprehensivePricing2026() {return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
-      <SEO title="ComprehensivePricing2026 - Zion Tech Group" description="Professional ComprehensivePricing2026 services by Zion Tech Group" />"
+      <SEO title="ComprehensivePricing2026 - Zion Tech Group" description="Professional ComprehensivePricing2026 services by Zion Tech Group"  />"
       <div className="container mx-auto px-4 py-20">"
         <h1 className="text-4xl font-bold text-white mb-8">ComprehensivePricing2026</h1>"
         <p className="text-gray-300 text-lg">
@@ -18,14 +19,13 @@ export default function ComprehensivePricing2026() {return (
 }
  export default ComprehensivePricing2026,
 export default ComprehensivePricing2026&apos;&apos,
-'''
+"""
 const ComprehensivePricing2026: React.FC = () => {
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <SEO title="ComprehensivePricing2026 - Zion Tech Group""
         description="Professional ComprehensivePricing2026 services by Zion Tech Group"">
-        keywords="comprehensivepricing2026, technology, services"
-      />"
+        keywords="comprehensivepricing2026, technology, services" />"
       <div className="container mx-auto px-4 py-20">"
         <div className="text-center">"
           <h1 className="text-4xl font-bold text-white mb-6">ComprehensivePricing2026</h1>"
@@ -43,5 +43,6 @@ const ComprehensivePricing2026: React.FC = () => {
       </div>
     </div>;,
   )}
+
 export default ComprehensivePricing2026;"
 "

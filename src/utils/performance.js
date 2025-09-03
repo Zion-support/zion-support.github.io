@@ -1,8 +1,6 @@
-// performance utility,
-export const performance = {
-  // Placeholder utility functions,
-init: () => {
-    console.log('performance initialized'),
-  }
-}
+// comment
+export const performance = {}
+
+
+
 export default performance

@@ -7,18 +7,35 @@ console.log('🛡️ Error Prevention & Automation System')
 console.log('Process: ', process.env.PM2_PROCESS || 'unknown')
 
 class ErrorPreventionAutomation {
-const { execSync, spawn } = require('child_process')const fs = require('fs')const path = require('path')';console.log('🛡️ Error Prevention & Automation System');console.log('"Process:', process.env.PM2_PROCESS || 'unknown');';class ErrorPreventionAutomation {
   constructor() {
     this.logs = []
     this.errors = []
-    this.fixes = []}
+    this.fixes = []
+  }
 
-  log(message, type = 'info') {';    const timestamp = new Date().toISOString();    const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`;`;    console.log(logEntry)
-    this.logs.push(logEntry)}
+  log(message, type = 'info') {
+    const timestamp = new Date().toISOString()
+    const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`
+    console.log(logEntry)
+    this.logs.push(logEntry)
+  }
 
   async runCommand(command, description, options = {}) {
-    try {this.log(`Running: ${description}`);`;      const result = execSync(command, { );        encoding": 'utf8',';        "stdio: 'pipe',';        cwd: process.cwd(),;        ...options;,
-});this.log(`✅ ${description} completed successfully`, 'success');';      return result;`} catch (error) {this.log(`❌ ${description} failed: ${error.message}`, 'error');';      this.errors.push({ command, description, "error": error.message });`;      throw error;,}
+    try {
+      this.log(`Running: ${description}`)
+      const result = execSync(command, {
+        encoding: 'utf8',
+        stdio: 'pipe',
+        cwd: process.cwd(),
+        ...options
+      })
+      this.log(`✅ ${description} completed successfully`, 'success')
+      return result
+    } catch (error) {
+      this.log(`❌ ${description} failed: ${error.message}`, 'error')
+      this.errors.push({ command, description, error: error.message })
+      throw error
+    }
   }
 
   log(message, type = `info`) {    const timestamp = new Date().toISOString()

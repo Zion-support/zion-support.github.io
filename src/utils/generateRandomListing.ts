@@ -1,8 +1,6 @@
-// generateRandomListing utility,
-export const generateRandomListing = {
-  // Placeholder utility functions,
-init: () => {
-    console.log('generateRandomListing initialized'),
-  }
-}
+// comment
+export const generateRandomListing = {}
+
+
+
 export default generateRandomListing

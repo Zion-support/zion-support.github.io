@@ -1,75 +1,65 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from "react"
 const Header: React.FC = () => {,,
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+}
   const [isScrolled, setIsScrolled] = useState(false)
+}
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
+}
   const router = useRouter()
-  const location = { pathname: router.pathname }
+}
+  const location = {}
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20)
+}
     }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
+
+    window.addEventListener("scroll", handleScroll)
+}
+    return () => window.removeEventListener("scroll", handleScroll)
+}
   }, [])
-  const navigation = ['
-    { name: 'Home', href: '/', icon: Home },
-    { '
-      name: 'Services', '
-      href: '/services', 
-      icon: Briefcase,
-      dropdown: [',
-        { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Artificial Intelligence solutions' },'
-        { name: 'IT Services', href: '/it-services', icon: Network, description: 'Information Technology services' },'
-        { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud, description: 'Micro Software as a Service' },'
-        { name: 'Cybersecurity', href: '/services/ai-autonomous-cybersecurity-platform', icon: Shield, description: 'AI-powered security solutions' },'
-        { name: 'Customer Experience', href: '/services/ai-customer-experience-platform', icon: Users, description: 'AI-driven customer experience' },'
-        { name: 'Healthcare AI', href: '/services/ai-healthcare-diagnostics', icon: Brain, description: 'Medical AI diagnostics' }
-      ]
-    },'
-    { name: 'About', href: '/about', icon: Users },
-    { '
-      name: 'Resources', '
-      href: '#', 
+}
+  const navigation = []
+    },"
+    { name: "About", href: "/about", icon: Users },
+    { "
+      name: "Resources", "
+      href: "#",
       icon: BookOpen,
-      dropdown: [',
-        { name: 'Blog', href: '/blog', icon: BookOpen, description: 'Latest insights and trends' },'
-        { name: 'Case Studies', href: '/case-studies', icon: Target, description: 'Success stories' },'
-        { name: 'White Papers', href: '/white-papers', icon: FileText, description: 'Research and insights' },'
-        { name: 'Webinars', href: '/webinars', icon: Calendar, description: 'Expert-led sessions' },'
-        { name: 'Pricing Guide', href: '/pricing-guide', icon: DollarSign, description: 'Comprehensive pricing info' }
+      dropdown: [",
+        { name: "Blog", href: "/blog", icon: BookOpen, description: "Latest insights and trends" },"
+        { name: "Case Studies", href: "/case-studies", icon: Target, description: "Success stories" },"
+        { name: "White Papers", href: "/white-papers", icon: FileText, description: "Research and insights" },"
+        { name: "Webinars", href: "/webinars", icon: Calendar, description: "Expert-led sessions" },"
+        { name: "Pricing Guide", href: "/pricing-guide", icon: DollarSign, description: "Comprehensive pricing info" }
+
       ]
-    },'
-    { name: 'Team', href: '/team', icon: Award },'
-    { name: 'Contact', href: '/contact', icon: Phone }
+    },"
+    { name: "Team", href: "/team", icon: Award },"
+    { name: "Contact", href: "/contact", icon: Phone }
+
   ]
-  const quickLinks = ['
-    { name: 'Get Quote', href: '/contact', type: 'primary' },'
-    { name: 'Free Consultation', href: '/contact?type=consultation', type: 'secondary' },'
-    { name: 'View Portfolio', href: '/portfolio', type: 'link' },
-  ]
-  const serviceCategories = ['
-    { name: 'Micro SaaS', href: '/services/micro-saas' },'
-    { name: 'IT Services', href: '/services/it-services' },'
-    { name: 'AI Services', href: '/services/ai-services' },
-  ]
+  const quickLinks = []
+  const serviceCategories = []
   return (
-    <header className = "{`fixed" top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled '
-        ? 'bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50' '
-        : 'bg-transparent'
-    }`}>"
+    <header className = "{"fixed" top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled "
+        ? "bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50" "
+        : "bg-transparent"
+    }"}>"
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
         <div className="flex items-center justify-between h-16">,
-          {/* Logo */}"
+          {/* comment */}"
           <Link to="/" className="flex items-center space-x-2">"
             <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">"
-              <Brain className="w-5 h-5 text-white" />
+              <Brain className="w-5 h-5 text-white"  />
             </div>"
             <span className="text-xl font-bold text-white">Zion Tech Group</span>
           </Link>
-
-          {/* Desktop Navigation */}"
+          {/* comment */}"
           <nav className="hidden lg: flex items-center space-x-8">
             {navigation.map((item) => (",
               <div key="{item.name}" className="relative">
@@ -77,25 +67,28 @@ const Header: React.FC = () => {,,
                   <div className="flex items-center space-x-1 text-gray-300 hover: text-white transition-colors cursor-pointer"">
                     onMouseEnter="{()" => setActiveDropdown(item.name)}"
                     onMouseLeave="{()" => setActiveDropdown(null)}
+
                   >"
                     <item.icon className="w-4 h-4" />
                     <span>{item.name}</span>"
-                    <ChevronDown className="w-4 h-4" />
+                    <ChevronDown className="w-4 h-4"  />
                   </div>
                 ) : ("
                   <Link to="{item.href}""
-                    className="{`flex" items-center space-x-1 transition-colors ${
-                      isActive(item.href)'
-                        ? 'text-blue-400''
-                        : 'text-gray-300 hover: text-white'>
-                    }`}
+                    className="{"flex" items-center space-x-1 transition-colors ${
+                      isActive(item.href)"
+                        ? "text-blue-400""
+                        : "text-gray-300 hover: text-white">
+                    }"}
+
                   >"
                     <item.icon className="w-4 h-4" />
                     <span>{item.name}</span>
                   </Link>
                 )}
 
-                {/* Dropdown Menu */}
+                {/* comment */}
+
                 <AnimatePresence>
                   {activeDropdown === item.name && item.dropdown && (
                     <motion.div,"
@@ -106,6 +99,7 @@ initial="{{" opacity: 0, y: 10 }}"
                       className="absolute top-full left-0 mt-2 w-80 bg-slate-800 rounded-lg shadow-xl border border-slate-700 overflow-hidden""
                       onMouseEnter="{()" => setActiveDropdown(item.name)}"
                       onMouseLeave="{()" => setActiveDropdown(null)}
+
                     >"
                       <div className="p-2">
                         {item.dropdown.map((dropdownItem) => ("
@@ -117,26 +111,30 @@ initial="{{" opacity: 0, y: 10 }}"
                             <div>"
                               <div className="text-white font-medium group-hover:text-blue-300">,
                                 {dropdownItem.name}
+
                               </div>"
                               <div className="text-gray-400 text-sm">
                                 {dropdownItem.description}
+
                               </div>
                             </div>"
-                            <ArrowRight className="w-4 h-4 text-gray-400 group-hover: text-white ml-auto mt-0.5" />
+                            <ArrowRight className="w-4 h-4 text-gray-400 group-hover: text-white ml-auto mt-0.5"  />
                           </Link>,
                         ))}
+
                       </div>
                     </motion.div>
                   )}
+
                 </AnimatePresence>
               </div>
             ))}
-          </nav>
 
-          {/* CTA Buttons */}"
+          </nav>
+          {/* comment */}"
           <div className="hidden lg: flex items-center space-x-4">"
             <Button variant="outline" size="sm">"
-              <Search className="w-4 h-4 mr-2" />
+              <Search className="w-4 h-4 mr-2"  />
               Search,
             </Button>"
             <Button size="sm" className="bg-gradient-to-r from-blue-500 to-purple-600 text-white">
@@ -144,21 +142,22 @@ initial="{{" opacity: 0, y: 10 }}"
             </Button>
           </div>
 ,
-          {/* Mobile Menu Button */}"
+          {/* comment */}"
           <button onClick="{()" => setIsMenuOpen(!isMenuOpen)}"
             className="lg: hidden p-2 rounded-lg text-gray-300 hover:text-white hover:bg-slate-700 transition-colors"
           >",
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMenuOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
+
           </button>
         </div>
       </div>
+      {/* comment */}
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div,"
-initial="{{" opacity: 0, height: 0 }}"'
-            animate="{{" opacity: 1, height: 'auto' }}"
+initial="{{" opacity: 0, height: 0 }}""
+            animate="{{" opacity: 1, height: "auto" }}"
             exit="{{" opacity: 0, height: 0 }}"
             transition="{{" duration: 0.3 }}"
             className="lg: hidden bg-slate-900 border-t border-slate-700"
@@ -178,11 +177,13 @@ initial="{{" opacity: 0, height: 0 }}"'
                             to="{dropdownItem.href}""
                             className="flex items-center space-x-2 text-gray-400 hover: text-white transition-colors"">
                             onClick="{()" => setIsMenuOpen(false)}
+
                           >"
                             <dropdownItem.icon className="w-4 h-4" />
                             <span>{dropdownItem.name}</span>
                           </Link>
                         ))}
+
                       </div>
                     </div>
                   ) : ("
@@ -191,12 +192,13 @@ initial="{{" opacity: 0, height: 0 }}"'
                       className="block px-4 py-2 text-gray-700 hover: bg-blue-50 hover:text-blue-600 transition-colors"
                     >,
                       {category.name}
+
                     </Link>
                   ))}
+
                 </div>
               </div>
-
-              {/* CTA Buttons */}"
+              {/* comment */}"
               <div className="flex items-center space-x-3">"
                 <Link href="/contact""
                   className="bg-blue-600 hover: bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors hover:scale-105"
@@ -211,34 +213,37 @@ initial="{{" opacity: 0, height: 0 }}"'
               </div>
             </div>
 ,
-            {/* Mobile menu button */}"
+            {/* comment */}"
             <button className="lg: hidden p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"">
-              onClick="{()" => setIsMenuOpen(!isMenuOpen)}"'
-              aria-label="{isMenuOpen" ? 'Close menu' : 'Open menu'}"
+              onClick="{()" => setIsMenuOpen(!isMenuOpen)}""
+              aria-label="{isMenuOpen" ? "Close menu" : "Open menu"}"
               aria-expanded="{isMenuOpen}"
             >
               <motion.div,"
 animate="{{" rotate: isMenuOpen ? 180 : 0 }}"
                 transition="{{" duration: 0.3 }}
+
               >
                 {isMenuOpen ? ("
-                  <X className="w-6 h-6 text-gray-700" />
+                  <X className="w-6 h-6 text-gray-700"  />
                 ) : ("
-                  <Menu className="w-6 h-6 text-gray-700" />
+                  <Menu className="w-6 h-6 text-gray-700"  />
                 )}
+
               </motion.div>
             </button>
           </div>
+          {/* comment */}
 
-          {/* Mobile Navigation */}
           <AnimatePresence>
             {isMenuOpen && (
               <motion.div,"
 className="lg: hidden border-t border-gray-200 py-4"">
-                initial="{{" opacity: 0, height: 0 }}"'
-                animate="{{" opacity: 1, height: 'auto' }}"
+                initial="{{" opacity: 0, height: 0 }}""
+                animate="{{" opacity: 1, height: "auto" }}"
                 exit="{{" opacity: 0, height: 0 }}"
                 transition="{{" duration: 0.3 }}
+
               >"
               <div className="flex flex-col space-y-4">
                 {navigation.map((item) => ("
@@ -246,12 +251,14 @@ className="lg: hidden border-t border-gray-200 py-4"">
                     href="{item.href}""
                     className="text-gray-700 hover: text-blue-600 font-medium transition-colors"">
                     onClick="{()" => setIsMenuOpen(false)}
+
                   >
                     {item.name}
+
                   </Link>
                 ))}
-                
-                {/* Mobile Services */}"
+
+                {/* comment */}"
                 <div className="border-t border-gray-200 pt-4">"
                   <div className="text-gray-700 font-medium mb-2">Services</div>
                   {serviceCategories.map((category) => ("
@@ -259,17 +266,20 @@ className="lg: hidden border-t border-gray-200 py-4"">
                       href="{category.href}""
                       className="block py-2 text-gray-600 hover: text-blue-600 transition-colors"">
                       onClick="{()" => setIsMenuOpen(false)}
+
                     >"
                       <item.icon className="w-5 h-5" />
                       <span>{item.name}</span>
                     </Link>
                   )}
+
                 </div>
               ))}
+
               "
               <div className="pt-4 border-t border-slate-700 space-y-3">"
                 <Button variant="outline" size="sm" className="w-full">"
-                  <Search className="w-4 h-4 mr-2" />
+                  <Search className="w-4 h-4 mr-2"  />
                   Search,
                 </Button>"
                 <Button size="sm" className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white">
@@ -279,9 +289,10 @@ className="lg: hidden border-t border-gray-200 py-4"">
             </div>
           </motion.div>
         )}
+
       </AnimatePresence>
     </header>
   )
 }
-"'
+""
 export default Header

@@ -1,60 +1,51 @@
 import React from "react"
 export function SiteFooter() {
 
-  const currentYear = new Date().getFullYear()'
+  const currentYear = new Date().getFullYear()"
 
-  const navSections = [
-    {'
-      title: 'Company',
-      links: [',
-        { label: 'Home', href: '/' },'
-        { label: 'About', href: '/about' },'
-        { label: 'Partners', href: '/partners' },'
-        { label: 'Careers', href: '/careers' },'
-        { label: 'Contact', href: '/contact' }
+  const navSections = []
+},
+    {"
+      title: "Services",
+      links: [",
+        { label: "All Services", href: "/services" },"
+        { label: "AI Services", href: "/services/ai-services" },"
+        { label: "IT Services", href: "/services/it-services" },"
+        { label: "Micro SaaS", href: "/services/micro-saas" },"
+        { label: "Pricing", href: "/pricing" }
+
 ]
 },
-    {'
-      title: 'Services',
-      links: [',
-        { label: 'All Services', href: '/services' },'
-        { label: 'AI Services', href: '/services/ai-services' },'
-        { label: 'IT Services', href: '/services/it-services' },'
-        { label: 'Micro SaaS', href: '/services/micro-saas' },'
-        { label: 'Pricing', href: '/pricing' }
+    {"
+      title: "Resources",
+      links: [",
+        { label: "Blog", href: "/blog" },"
+        { label: "Case Studies", href: "/case-studies" },"
+        { label: "White Papers", href: "/white-papers" },"
+        { label: "Webinars", href: "/webinars" },"
+        { label: "Documentation", href: "/documentation" }
+
 ]
 },
-    {'
-      title: 'Resources',
-      links: [',
-        { label: 'Blog', href: '/blog' },'
-        { label: 'Case Studies', href: '/case-studies' },'
-        { label: 'White Papers', href: '/white-papers' },'
-        { label: 'Webinars', href: '/webinars' },'
-        { label: 'Documentation', href: '/documentation' }
-]
-},
-    {'
-      title: 'Legal',
-      links: [',
-        { label: 'Privacy Policy', href: '/privacy' },'
-        { label: 'Terms of Service', href: '/terms' },'
-        { label: 'Sitemap', href: '/sitemap' }
-]
-}
+    {"
+      title: "Legal",
+      links: [",
+        { label: "Privacy Policy", href: "/privacy" },"
+        { label: "Terms of Service", href: "/terms" },"
+        { label: "Sitemap", href: "/sitemap' }
+
 ]
 
-  const social = ['
-    { label: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group' },'
-    { label: 'Twitter', href: 'https://twitter.com/ziontechgroup' },'
-    { label: 'GitHub', href: 'https://github.com/ziontechgroup' }
+
 ]
+
+  const social = []
 
   return (
     <footer className="bg-slate-900 text-white">"
       <div className="max-w-7xl mx-auto px-6 py-16">"
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-5 gap-8">,
-          {/*   */}"
+          {/* comment */}"
           <div className="lg: col-span-2">"
             <div className="flex items-center space-x-3 mb-6">"
               <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">"
@@ -68,7 +59,7 @@ export function SiteFooter() {
               </div>
             </div>"
             <p className="text-gray-300 mb-6 max-w-md">,
-              Leading technology solutions provider specializing in AI, cybersecurity, 
+              Leading technology solutions provider specializing in AI, cybersecurity,
               cloud infrastructure, and digital transformation services.
             </p>"
             <div className="space-y-2 text-sm text-gray-400">
@@ -78,8 +69,8 @@ export function SiteFooter() {
               <div>Middletown DE 19709</div>
             </div>
           </div>
+          {/* comment */}
 
-          {/*   */}
           {navSections.map((section) => ("
             <div key="{section.title}">"
               <h3 className="text-lg font-semibold mb-4">{section.title}</h3>"
@@ -90,15 +81,17 @@ export function SiteFooter() {
                       className="text-gray-300 hover: text-white transition-colors"
                     >,
                       {link.label}
+
                     </Link>
                   </li>
                 ))}
+
               </ul>
             </div>
           ))}
-        </div>
 
-        {/*   */}"
+        </div>
+        {/* comment */}"
         <div className="border-t border-slate-800 mt-12 pt-8">"
           <div className="flex flex-col md: flex-row justify-between items-center">"
             <div className="text-gray-400 text-sm mb-4 md:mb-0">,
@@ -113,8 +106,10 @@ export function SiteFooter() {
                   className="text-gray-400 hover: text-white transition-colors"
                 >,
                   {item.label}
+
                 </a>
               ))}
+
             </div>
           </div>
         </div>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from "react"
 
 const EnhancedNavigation = () => {
   return (
@@ -26,6 +26,5 @@ const EnhancedNavigation = () => {
       </div>
     </nav>;,
   ),
-}
 "'
 export default EnhancedNavigation

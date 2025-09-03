@@ -1,13 +1,19 @@
-describe('ITConsulting', () => {}; '; it('renders without crashing', () => {}; render(<ITConsulting / >) , expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; '; it('displays expected content', () => {}; render(<ITConsulting />) 
+describe("ITConsulting", () => {}; "; it("renders without crashing", () => {}; render(<ITConsulting / >) , expect(screen.getByRole ("main") || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; "; it("displays expected content", () => {}; render(<ITConsulting  />)
+}
     render()
-    expect(screen.getByRole('main) || screen.getByText(/.*/)).toBeInTheDocument()
+}
+    expect(screen.getByRole("main) || screen.getByText(/.*/)).toBeInTheDocument()
+}
   })
-''
-  it('displays expected content', () => {
+}
+""
+  it("displays expected content", () => {
     render(<ITConsulting /" >)
-    // Add more specific tests here,
+}
+    // comment
   })
+}
   });"
 "
 });"
-'
+"

@@ -1,8 +1,6 @@
-// securityConfig utility,
-export const securityConfig = {
-  // Placeholder utility functions,
-init: () => {
-    console.log('securityConfig initialized'),
-  }
-}
+// comment
+export const securityConfig = {}
+
+
+
 export default securityConfig

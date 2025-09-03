@@ -1,17 +1,18 @@
-import React from 'react';""""""""""""""""""""""""
-// Import i18n configuration"""""""""""""""
-// Import auth and notification providers"""""""
-// Import analytics provider""""""
-// Import i18n configuration"";";"
-// Import auth and notification providers""";"
-// Import analytics provider""
-// Initialize a React Query client with global error handling,
+import React from "react";""""""""""""""""""""""""
+// comment
+// comment
+// comment
+// comment
+// comment
+// comment
+// comment
 const queryClient = new QueryClient({
     defaultOptions: {,,
         queries: {,
 retry: 1, refetchOnWindowFocus: false}}});"
 ""
-const rootElement = document.getElementById('root')
+const rootElement = document.getElementById("root")
+}
 const renderApp = () => {
     const app = ("
         <React .StrictMode" >"
@@ -40,24 +41,27 @@ const renderApp = () => {
             </HelmetProvider>
         </React.StrictMode>
     )
+}
     if (rootElement?.hasChildNodes()) {
         hydrateRoot(rootElement, app)} else if (rootElement) {
         createRoot(rootElement).render(app)}
-}
+
+
 function displayFatalError() {
 
     if (rootElement) {"
-        rootElement.innerHTML = `"""
-            <div style="{`padding: " 20px,text-align: center,font-family: sans-serif,`>
+        rootElement.innerHTML = """"
+            <div style="{"padding: " 20px,text-align: center,font-family: sans-serif,">
                 <h1>Application Error</h1>
-                <p>${message}</p>`
-            </div>`}
-}
+                <p>${message}</p>"
+            </div>"}
+
+
 
 try {
-    renderApp()} catch (error) {``}'
+    renderApp()} catch (error) {""}"
         displayFatalError(error.message)}"
 """
-window.addEventListener('error', (e) => {""
-        displayFatalError(e.message)});"'
-"`""
+window.addEventListener("error", (e) => {""
+        displayFatalError(e.message)});""
+""""

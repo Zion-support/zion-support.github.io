@@ -1,85 +1,62 @@
+import Head from "next/head"
 import React from "react"
   Lightbulb,
-  TrendingUp} from 'lucide-react'
+  TrendingUp} from "lucide-react"
 
 export default function Solutions() {
 
-  const solutions = [
+  const solutions = [],"
+      pricing: "Starting at $299/month"},
     {
-      icon: Brain,'
-      title: 'AI Content Creation','
-      description: 'Automated content generation using advanced AI models for blogs, social media, and marketing materials.','
-      href: '/solutions/ai-content-creation','
-      features: ['Blog Post Generation', 'Social Media Content', 'SEO Optimization', 'Multi-language Support'],'
-      pricing: 'Starting at $299/month'},
+      icon: Mail,"
+      title: "Email Automation","
+      description: "Intelligent email marketing automation with personalized campaigns and advanced analytics.","
+      href: "/solutions/email-automation","
+      features: ["Drip Campaigns", "Personalization", "A/B Testing", "Analytics Dashboard"],"
+      pricing: "Starting at $199/month"},
     {
-      icon: Mail,'
-      title: 'Email Automation','
-      description: 'Intelligent email marketing automation with personalized campaigns and advanced analytics.','
-      href: '/solutions/email-automation','
-      features: ['Drip Campaigns', 'Personalization', 'A/B Testing', 'Analytics Dashboard'],'
-      pricing: 'Starting at $199/month'},
+      icon: Headphones,"
+      title: "Customer Support Platform","
+      description: "AI-powered customer support system with chatbots, ticket management, and knowledge base.","
+      href: "/solutions/customer-support","
+      features: ["AI Chatbots", "Ticket Management", "Knowledge Base", "Multi-channel Support"],"
+      pricing: "Starting at $399/month"},
     {
-      icon: Headphones,'
-      title: 'Customer Support Platform','
-      description: 'AI-powered customer support system with chatbots, ticket management, and knowledge base.','
-      href: '/solutions/customer-support','
-      features: ['AI Chatbots', 'Ticket Management', 'Knowledge Base', 'Multi-channel Support'],'
-      pricing: 'Starting at $399/month'},
+      icon: Calendar,"
+      title: "Event Management","
+      description: "Comprehensive event management platform with registration, ticketing, and attendee management.","
+      href: "/solutions/event-management","
+      features: ["Event Registration", "Ticketing System", "Attendee Management", "Analytics"],"
+      pricing: "Starting at $149/month"},
     {
-      icon: Calendar,'
-      title: 'Event Management','
-      description: 'Comprehensive event management platform with registration, ticketing, and attendee management.','
-      href: '/solutions/event-management','
-      features: ['Event Registration', 'Ticketing System', 'Attendee Management', 'Analytics'],'
-      pricing: 'Starting at $149/month'},
+      icon: FolderKanban,"
+      title: "Project Management","
+      description: "Advanced project management tools with team collaboration, task tracking, and reporting.","
+      href: "/solutions/project-management","
+      features: ["Task Management", "Team Collaboration", "Time Tracking", "Reporting"],"
+      pricing: "Starting at $99/month"},
     {
-      icon: FolderKanban,'
-      title: 'Project Management','
-      description: 'Advanced project management tools with team collaboration, task tracking, and reporting.','
-      href: '/solutions/project-management','
-      features: ['Task Management', 'Team Collaboration', 'Time Tracking', 'Reporting'],'
-      pricing: 'Starting at $99/month'},
-    {
-      icon: Workflow,'
-      title: 'Workflow Automation','
-      description: 'Streamline business processes with custom workflow automation and integration capabilities.','
-      href: '/solutions/workflow-automation','
-      features: ['Process Automation', 'Integration APIs', 'Custom Workflows', 'Monitoring'],'
-      pricing: 'Starting at $249/month'}
+      icon: Workflow,"
+      title: "Workflow Automation","
+      description: "Streamline business processes with custom workflow automation and integration capabilities.","
+      href: "/solutions/workflow-automation","
+      features: ["Process Automation", "Integration APIs", "Custom Workflows", "Monitoring"],"
+      pricing: "Starting at $249/month"}
+
   ]
 
-  const benefits = [
-    {
-      icon: Zap,
-      title: 'Lightning Fast Setup',
-      description: 'Get your solution up and running in minutes, not months.
-},
-    {
-      icon: Shield,'
-      title: 'Enterprise Security','
-      description: 'Bank-level security with 99.9% uptime guarantee.'},
-    {
-      icon: Users,'
-      title: '24/7 Support','
-      description: 'Round-the-clock support from our expert team.'},
-    {
-      icon: TrendingUp,'
-      title: 'Scalable Solutions','
-      description: 'Grow with confidence as your business expands.'}
-  ]
+  const benefits = []
 
   return (
     <>
       <SEO title = "Solutions - Zion Tech Group""
         description="Comprehensive technology solutions for modern businesses. AI-powered tools, automation platforms, and custom software solutions.""
         keywords="solutions, AI tools, automation, software, business solutions, technology">
-      />
+     />
 <Head>
         <title>Solutions - Zion Tech Group</title>
       </Head>
-
-      {/*   */}"
+      {/* comment */}"
       <section className = "bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">"
         <div className="container mx-auto px-4 text-center">"
           <h1 className="text-5xl md: text-6xl font-bold mb-6">
@@ -102,7 +79,7 @@ export default function Solutions() {
         </div>
       </section>
 ,
-      {/*   */}"
+      {/* comment */}"
       <section className="py-20 bg-white">"
         <div className="container mx-auto px-4">"
           <div className="text-center mb-16">"
@@ -113,10 +90,10 @@ export default function Solutions() {
           </div>
           "
           <div className="grid md: grid-cols-3 gap-8">,
-            {/*   */}"
+            {/* comment */}"
             <div className="bg-gradient-to-br from-blue-50 to-indigo-100 p-8 rounded-xl text-center">"
               <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">"
-                <Zap className="w-10 h-10 text-white" />
+                <Zap className="w-10 h-10 text-white"  />
               </div>"
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Micro SaaS Solutions</h3>"
               <p className="text-gray-600 mb-6">
@@ -133,10 +110,10 @@ export default function Solutions() {
               </Link>
             </div>
 ,
-            {/*   */}"
+            {/* comment */}"
             <div className="bg-gradient-to-br from-purple-50 to-pink-100 p-8 rounded-xl text-center">"
               <div className="w-20 h-20 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">"
-                <Shield className="w-10 h-10 text-white" />
+                <Shield className="w-10 h-10 text-white"  />
               </div>"
               <h3 className="text-2xl font-bold text-gray-900 mb-4">IT Services & Solutions</h3>"
               <p className="text-gray-600 mb-6">
@@ -153,10 +130,10 @@ export default function Solutions() {
               </Link>
             </div>
 ,
-            {/*   */}"
+            {/* comment */}"
             <div className="bg-gradient-to-br from-green-50 to-emerald-100 p-8 rounded-xl text-center">"
               <div className="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-6">"
-                <Brain className="w-10 h-10 text-white" />
+                <Brain className="w-10 h-10 text-white"  />
               </div>"
               <h3 className="text-2xl font-bold text-gray-900 mb-4">AI & Machine Learning</h3>"
               <p className="text-gray-600 mb-6">
@@ -174,7 +151,7 @@ export default function Solutions() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
           <div className="text-center">"
             <Badge className="mb-4 bg-blue-500 text-white">"
-              <Lightbulb className="w-4 h-4 mr-2" />
+              <Lightbulb className="w-4 h-4 mr-2"  />
               Innovative Solutions,
             </Badge>"
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -182,13 +159,13 @@ export default function Solutions() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Modern Business</span>
             </h1>"
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">,
-              Transform your business with our comprehensive suite of AI-powered tools, automation platforms, 
+              Transform your business with our comprehensive suite of AI-powered tools, automation platforms,
               and custom software solutions designed to drive growth and efficiency.
             </p>"
             <div className="flex flex-col sm: flex-row gap-4 justify-center">"
               <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
                 Explore Solutions"
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5"  />
               </Button>"
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-gray-900">
                 Schedule Demo,
@@ -198,7 +175,7 @@ export default function Solutions() {
         </div>
       </section>
 ,
-      {/*   */}"
+      {/* comment */}"
       <section className="py-20 bg-gray-50">"
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
           <div className="text-center mb-16">"
@@ -231,26 +208,28 @@ your specific business needs and challenges.
                   <ul className="space-y-1">,
                     {solution.features.map((feature, idx) => ("
                       <li key="{idx}" className="flex items-center text-sm text-gray-600">"
-                        <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                        <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0"  />
                         {feature}
+
                       </li>
                     ))}
+
                   </ul>
                 </div>
                 "
                 <Link href="{solution.href}">"
                   <Button className="w-full">
                     Learn More"
-                    <ArrowRight className="ml-2 h-4 w-4" />
+                    <ArrowRight className="ml-2 h-4 w-4"  />
                   </Button>
                 </Link>
               </Card>
             ))}
+
           </div>
         </div>
       </section>
-
-      {/*   */}"
+      {/* comment */}"
       <section className="py-20 bg-white">"
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
           <div className="text-center mb-16">"
@@ -284,7 +263,7 @@ your specific business needs and challenges.
 "
             <div className="bg-gray-50 rounded-lg p-6">"
               <div className="flex items-center space-x-3 mb-4">"
-                <Building className="w-6 h-6 text-blue-600" />"
+                <Building className="w-6 h-6 text-blue-600"  />"
                 <h3 className="text-lg font-semibold text-gray-900">Manufacturing</h3>
               </div>"
               <p className="text-gray-600 mb-4">
@@ -300,7 +279,7 @@ your specific business needs and challenges.
 "
             <div className="bg-gray-50 rounded-lg p-6">"
               <div className="flex items-center space-x-3 mb-4">"
-                <Globe className="w-6 h-6 text-purple-600" />"
+                <Globe className="w-6 h-6 text-purple-600"  />"
                 <h3 className="text-lg font-semibold text-gray-900">Retail & E-commerce</h3>
               </div>"
               <p className="text-gray-600 mb-4">
@@ -316,7 +295,7 @@ your specific business needs and challenges.
 "
             <div className="bg-gray-50 rounded-lg p-6">"
               <div className="flex items-center space-x-3 mb-4">"
-                <Rocket className="w-6 h-6 text-orange-600" />"
+                <Rocket className="w-6 h-6 text-orange-600"  />"
                 <h3 className="text-lg font-semibold text-gray-900">Energy & Utilities</h3>
               </div>"
               <p className="text-gray-600 mb-4">
@@ -332,7 +311,7 @@ your specific business needs and challenges.
 "
             <div className="bg-gray-50 rounded-lg p-6">"
               <div className="flex items-center space-x-3 mb-4">"
-                <Users className="w-6 h-6 text-indigo-600" />"
+                <Users className="w-6 h-6 text-indigo-600"  />"
                 <h3 className="text-lg font-semibold text-gray-900">Government</h3>
               </div>"
               <p className="text-gray-600 mb-4">
@@ -348,8 +327,7 @@ your specific business needs and challenges.
           </div>
         </div>
       </section>
-
-      {/*   */}"
+      {/* comment */}"
       <section className="py-20 bg-gray-50">"
         <div className="container mx-auto px-4">"
           <div className="text-center mb-16">"
@@ -362,7 +340,7 @@ your specific business needs and challenges.
           <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">"
             <div className="text-center">"
               <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">"
-                <CheckCircle className="w-10 h-10 text-blue-600" />
+                <CheckCircle className="w-10 h-10 text-blue-600"  />
               </div>"
               <h3 className="text-xl font-semibold mb-4">Industry Expertise</h3>"
               <p className="text-gray-600">,
@@ -372,7 +350,7 @@ your specific business needs and challenges.
 "
             <div className="text-center">"
               <div className="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">"
-                <CheckCircle className="w-10 h-10 text-purple-600" />
+                <CheckCircle className="w-10 h-10 text-purple-600"  />
               </div>"
               <h3 className="text-xl font-semibold mb-4">Customized Approach</h3>"
               <p className="text-gray-600">
@@ -382,7 +360,7 @@ your specific business needs and challenges.
 "
             <div className="text-center">"
               <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">"
-                <CheckCircle className="w-10 h-10 text-green-600" />
+                <CheckCircle className="w-10 h-10 text-green-600"  />
               </div>"
               <h3 className="text-xl font-semibold mb-4">Scalable Architecture</h3>"
               <p className="text-gray-600">
@@ -392,7 +370,7 @@ your specific business needs and challenges.
 "
             <div className="text-center">"
               <div className="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">"
-                <CheckCircle className="w-10 h-10 text-orange-600" />
+                <CheckCircle className="w-10 h-10 text-orange-600"  />
               </div>"
               <h3 className="text-xl font-semibold mb-4">Ongoing Support</h3>"
               <p className="text-gray-600">
@@ -402,8 +380,7 @@ your specific business needs and challenges.
           </div>
         </div>
       </section>
-
-      {/*   */}"
+      {/* comment */}"
       <section className="py-20 bg-white">"
         <div className="container mx-auto px-4">"
           <div className="text-center mb-16">"
@@ -464,16 +441,16 @@ your specific business needs and challenges.
               </p>
             </div>
             ))}
+
           </div>
         </div>
       </section>
-
-      {/*   */}"
+      {/* comment */}"
       <section className="py-20 bg-gray-900 text-white">"
         <div className="container mx-auto px-4 text-center">"
           <h2 className="text-4xl font-bold mb-6">Ready to Find Your Solution?</h2>"
           <p className="text-xl mb-8 text-gray-300 max-w-3xl mx-auto">
-            Let&apos;s discuss your business needs and find the perfect technology solution to drive your success.''
+            Let&apos;s discuss your business needs and find the perfect technology solution to drive your success.""
           </p>"
           <div className = "flex flex-col sm: flex-row justify-center gap-4">"
             <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
@@ -491,7 +468,7 @@ your specific business needs and challenges.
             <Link href="/contact">"
               <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
                 Get Free Consultation"
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5"  />
               </Button>
             </Link>"
             <Link href="/pricing">"

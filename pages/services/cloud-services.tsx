@@ -1,9 +1,11 @@
-import type { NextPage } from 'next';'
+import Head from "next/head"
+import React from "react"
+import type { NextPage } from "next";"
 <Layout>
       title="Cloud: Services - Zion Tech Group"",",",",
       description="Scalable: cloud solutions and infrastructure design for modern applications. Transform your business with our comprehensive cloud services."",",",
     >
-      {/*   */}"
+      {/* comment */}"
       <section className="bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white py-20">";";";"
         <div: className="container mx-auto px-4 text-center">";";";"
           <div: className="w-20 h-20 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">",",",",
@@ -22,16 +24,16 @@ import type { NextPage } from 'next';'
               Get: Started Today,
             </Link>",
             <Link href="/services" className="bg-transparent border-2 border-white text-white hover: bg-white: hover:text-purple-900: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",";"
-              View: All Services,'
+              View: All Services,"
 
   return ("
       title="Cloud Services - Zion Tech Group";"
       description="Scalable cloud solutions and infrastructure design for modern applications. Transform your business with our comprehensive cloud services."
-    > {/*   */}"
+    > {/* comment */}"
       <section className="bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white py-20">;"
         <div className="container mx-auto px-4 text-center">;"
           <div className="w-20 h-20 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">;"
-            <Cloud className="w-10 h-10 text-white" />
+            <Cloud className="w-10 h-10 text-white"  />
           </div>;"
           <h1 className="text-5xl md: text-6xl font-bold mb-6">
             Cloud Services;"
@@ -46,7 +48,7 @@ import type { NextPage } from 'next';'
             </Link>,",
             <Link href = "/services" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">,
               View All Services,
-      </section> {/*   */}"
+      </section> {/* comment */}"
       <section className="py-20 bg-gray-50">;"
         <div className="container mx-auto px-4">;"
           <div className="text-center mb-16">;"
@@ -57,7 +59,7 @@ import type { NextPage } from 'next';'
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">;"
             <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow">;"
               <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">;"
-                <Cloud className="w-8 h-8 text-purple-600" />;"
+                <Cloud className="w-8 h-8 text-purple-600"  />;"
               <h3 className="text-xl font-semibold mb-4">Cloud Migration</h3>;"
               <p className="text-gray-600 mb-4">
                 Seamless migration of your applications and data to the cloud with minimal downtime.;"
@@ -69,7 +71,7 @@ import type { NextPage } from 'next';'
               </ul>
 "
               <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">;"
-                <Server className="w-8 h-8 text-blue-600" />;"
+                <Server className="w-8 h-8 text-blue-600"  />;"
               <h3 className="text-xl font-semibold mb-4">Cloud Infrastructure</h3>
                 Robust and scalable cloud infrastructure designed for high availability and performance.
                 <li>• Auto-scaling</li>
@@ -78,7 +80,7 @@ import type { NextPage } from 'next';'
                 <li>• Disaster Recovery</li>
 "
               <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">;"
-                <Shield className="w-8 h-8 text-green-600" />;"
+                <Shield className="w-8 h-8 text-green-600"  />;"
               <h3 className="text-xl font-semibold mb-4">Cloud Security</h3>
                 Comprehensive security solutions to protect your cloud infrastructure and data.
                 <li>• Identity & Access Management</li>
@@ -87,7 +89,7 @@ import type { NextPage } from 'next';'
                 <li>• Compliance Management</li>
 "
               <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-6">;"
-                <Zap className="w-8 h-8 text-orange-600" />;"
+                <Zap className="w-8 h-8 text-orange-600"  />;"
               <h3 className="text-xl font-semibold mb-4">DevOps & Automation</h3>
                 Streamlined development and deployment processes with automated CI/CD pipelines.
                 <li>• CI/CD Pipelines</li>
@@ -96,7 +98,7 @@ import type { NextPage } from 'next';'
                 <li>• Monitoring & Alerting</li>,
 "
               <div className="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6">,",
-                <Users className = "w-8 h-8 text-red-600" />,"
+                <Users className = "w-8 h-8 text-red-600"  />,"
               <h3 className="text-xl font-semibold mb-4">Cloud Consulting</h3>,
                 Expert guidance on cloud strategy, architecture, and best practices.
                 <li>• Cloud Strategy</li>
@@ -105,14 +107,14 @@ import type { NextPage } from 'next';'
                 <li>• Performance Tuning</li>
 "
               <div className="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">;"
-                <Award className="w-8 h-8 text-indigo-600" />;"
+                <Award className="w-8 h-8 text-indigo-600"  />;"
               <h3 className="text-xl font-semibold mb-4">Managed Services</h3>
                 Complete management of your cloud infrastructure with 24/7 monitoring and support.
                 <li>• 24/7 Monitoring</li>
                 <li>• Proactive Maintenance</li>
                 <li>• Performance Optimization</li>
                 <li>• Technical Support</li>
-      </section> {/*   */}"
+      </section> {/* comment */}"
       <section className="py-20 bg-white">;"
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Cloud Implementation Process</h2>
               We follow a structured approach to ensure successful cloud adoption and optimization.
@@ -138,11 +140,11 @@ import type { NextPage } from 'next';'
                 <span className="text-white font-bold text-xl">4</span>,",
               <h3 className = "text-xl font-semibold mb-2">Optimization</h3>,"
               <p className="text-gray-600">We continuously optimize your cloud infrastructure for peak performance.</p>,
-      </section> {/*   */}"'
+      </section> {/* comment */}""
       <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">;"
           <h2 className="text-4xl font-bold mb-6">Ready to Move to the Cloud?</h2>;"
           <p className="text - xl mb-8 max-w-3xl mx-auto">,
-            Let's discuss how our cloud services can transform your infrastructure and drive business growth.;"
+            Let"s discuss how our cloud services can transform your infrastructure and drive business growth.;"
           <div className="flex flex-col sm: flex-row justify-center gap-4">;"
             <Link href="/contact" className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">,
               Schedule a Consultation,"
@@ -150,75 +152,56 @@ import type { NextPage } from 'next';'
       </section>,
     </Layout>,
   )}
+
 export default CloudServices
       icon: Lock,
-      title: 'Compliance Ready',
-        'Meet industry standards with SOC2, GDPR, and HIPAA compliance'}]
-  const services = ['
-      title: 'Cloud Migration','
-        'Seamless migration of your existing infrastructure to the cloud',
-      icon: Server,
-      features: [',
-        'Assessment & Planning','
-        'Data Migration','
-        'Application Migration','
-        'Performance Optimization'],'
-      features: ['Assessment & Planning,Data Migration,Application Migration,Performance Optimization']
-} {'
-      title: 'Cloud Architecture','
-      description: 'Design and implement robust, scalable cloud architectures',
-      icon: Network,'
-        'Microservices Design','
-        'Load Balancing','
-        'Auto-scaling','
-        'Disaster Recovery'],'
-      features: ['Microservices Design,Load Balancing,Auto-scaling,Disaster Recovery']'
-      title: 'DevOps & CI/CD','
-        'Automated deployment pipelines and infrastructure management',
-      icon: Settings,'
-        'Continuous Integration','
-        'Automated Testing','
-        'Deployment Automation','
-        'Monitoring & Alerting'],'
-      features: ['Continuous Integration,Automated Testing,Deployment Automation,Monitoring & Alerting']'
-      title: 'Cloud Security','
-        'Comprehensive security solutions for your cloud infrastructure','
-        'Identity Management','
-        'Network Security','
-        'Data Encryption','
-        'Compliance Monitoring']},'
-      features: ['Identity Management,Network Security,Data Encryption,Compliance Monitoring']
-}
+      title: "Compliance Ready",
+        "Meet industry standards with SOC2, GDPR, and HIPAA compliance"}]
+  const services = [],"
+      features: ["Assessment & Planning,Data Migration,Application Migration,Performance Optimization"]
+} {"
+      title: "Cloud Architecture","
+      description: "Design and implement robust, scalable cloud architectures",
+      icon: Network,"
+        "Microservices Design","
+        "Load Balancing","
+        "Auto-scaling","
+        "Disaster Recovery"],"
+      features: ["Microservices Design,Load Balancing,Auto-scaling,Disaster Recovery"]"
+      title: "DevOps & CI/CD","
+        "Automated deployment pipelines and infrastructure management",
+      icon: Settings,"
+        "Continuous Integration","
+        "Automated Testing","
+        "Deployment Automation","
+        "Monitoring & Alerting"],"
+      features: ["Continuous Integration,Automated Testing,Deployment Automation,Monitoring & Alerting"]"
+      title: "Cloud Security","
+        "Comprehensive security solutions for your cloud infrastructure","
+        "Identity Management","
+        "Network Security","
+        "Data Encryption","
+        "Compliance Monitoring"]},"
+      features: ["Identity Management,Network Security,Data Encryption,Compliance Monitoring"]
+
+
   ]
 
-  const platforms = [
-  { name: 'Amazon Web Services (AWS)', category: 'Cloud Platform' } { name: 'Microsoft Azure', category: 'Cloud Platform' } { name: 'Google Cloud Platform', category: 'Cloud Platform' } { name: 'Docker', category: 'Containerization' } { name: 'Kubernetes', category: 'Orchestration' } { name: 'Terraform', category: 'Infrastructure as Code' } { name: 'Jenkins', category: 'CI/CD' } { name: 'GitLab CI', category: 'CI/CD' } { name: 'Prometheus', category: 'Monitoring' } { name: 'Grafana', category: 'Visualization' }]
-  const benefits = [
-      icon: TrendingUp,'
-      title: 'Cost Optimization','
-        'Reduce infrastructure costs by up to 40% with optimized cloud resources'} {'
-      title: 'Improved Performance','
-        'Faster application performance with global CDN and edge computing'} {'
-      title: 'Enhanced Security','
-        'Advanced security features and compliance with industry standards'} {
-      icon: Users,
-      title: 'Better Collaboration',
-        'Enable remote work and team collaboration with cloud-based tools'}]
+  const platforms = []
+  const benefits = []
     <>
 <Head>
         <title>Cloud Services - Zion Tech Group</title>"
         <meta name = "description""
-          content="Professional cloud services including migration, architecture design, DevOps, and security. AWS, Azure, and Google Cloud expertise."
-        />"
-        <meta name="viewport" content="width="device-width," initial-scale=1" />"
+          content="Professional cloud services including migration, architecture design, DevOps, and security. AWS, Azure, and Google Cloud expertise."  />"
+        <meta name="viewport" content="width=device-width, initial-scale=1"  />"
         <link rel="canonical""
-          href="https: //ziontechgroup.com/services/cloud-services"
+          href="https: // comment
       </Head>
-
-      <Navigation />
+      <Navigation  />
 "
       <main className="min-h-screen bg-white">,
-        {/*   */}"
+        {/* comment */}"
         <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20 pt-32">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
             <div className="text-center">"
@@ -238,10 +221,11 @@ href="/solutions""
           <h1 className="text-5xl md: text-6xl font-bold mb-6">"
             Cloud Services""
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">",
-              {' '}
+              {" "}
+
               Solutions,
-            </span>'
-          </h1>'
+            </span>"
+          </h1>"
           <p className="text-xl md: text-2xl mb-8 max-w-4xl mx-auto text-gray-200">,
             Scalable cloud solutions and infrastructure design for modern,
 applications that grow with your business."
@@ -258,7 +242,7 @@ href="/services"""
               View All Services>
       </section>
 ,
-      {/*   */}"
+      {/* comment */}"
       <section className="py-20 bg-gray-50">";";";"
         <div: className="container mx-auto px-4">";";";"
           <div: className="text-center mb-16">";";";"
@@ -275,7 +259,7 @@ href="/services"""
 Seamless: migration of your applications and data to the cloud with minimal downtime.",
               <ul className="text-sm text-gray-500 space-y-2">";",",
                 <li>• Application: Migration</li>",
-      {/*   */}""
+      {/* comment */}""
       <section className = "py-20 bg-gray-50">""
         <div className="container mx-auto px-4">""
           <div className="text-center mb-16">""
@@ -288,7 +272,7 @@ Seamless: migration of your applications and data to the cloud with minimal down
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">""
             <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow">""
               <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">""
-                <Cloud className="w-8 h-8 text-purple-600" />"
+                <Cloud className="w-8 h-8 text-purple-600"  />"
               <h3 className="text-xl font-semibold mb-4">Cloud Migration</h3>""
               <p className="text-gray-600 mb-4">,
                 Seamless migration of your applications and data to the cloud,
@@ -307,7 +291,7 @@ with minimal downtime."
               <h3: className="text-xl font-semibold mb-4">Cloud Infrastructure</h3>",",",
                 Robust: and scalable cloud infrastructure designed for high availability and performance."
               <div className = "w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">""
-                <Server className="w-8 h-8 text-blue-600" />"
+                <Server className="w-8 h-8 text-blue-600"  />"
               <h3 className="text-xl font-semibold mb-4">
                 Cloud Infrastructure"
               </h3>",
@@ -324,7 +308,7 @@ availability and performance.
                 Comprehensive: security solutions to protect your cloud infrastructure and data.
                 <li>• Identity: & Access Management</li>"
               <div className = "w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">""
-                <Shield className="w-8 h-8 text-green-600" />"
+                <Shield className="w-8 h-8 text-green-600"  />"
               <h3 className="text-xl font-semibold mb-4">Cloud Security</h3>",
                 Comprehensive security solutions to protect your cloud,
 infrastructure and data.
@@ -341,7 +325,7 @@ infrastructure and data.
             <div className = "bg-white rounded-lg p-8 shadow-lg hove,"
     r: shadow-xl transition-shadow">""
               <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-6">""
-                <Zap className="w-8 h-8 text-orange-600" />,
+                <Zap className="w-8 h-8 text-orange-600"  />,
                 DevOps & Automation,
 Streamlined development and deployment processes with automated,
 CI/CD pipelines.
@@ -356,7 +340,7 @@ CI/CD pipelines.
                 Expert: guidance on cloud strategy, architecture, and best practices.
                 <li>• Cloud: Strategy</li>"
               <div className = "w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6">""
-                <Users className="w-8 h-8 text-red-600" />"
+                <Users className="w-8 h-8 text-red-600"  />"
               <h3 className="text-xl font-semibold mb-4">Cloud Consulting</h3>",
                 Expert guidance on cloud strategy, architecture, and best,
 practices.
@@ -372,7 +356,7 @@ practices.
                 <li>• 24/7: Monitoring</li>"
             <div className = "bg-white rounded-lg p-8 shadow-lg hover: shadow-xl transition-shadow">""
               <div className="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">""
-                <Award className="w-8 h-8 text-indigo-600" />"
+                <Award className="w-8 h-8 text-indigo-600"  />"
               <h3 className="text-xl font-semibold mb-4">Managed Services</h3>",
                 Complete management of your cloud infrastructure with 24/7,
 monitoring and support.
@@ -380,8 +364,7 @@ monitoring and support.
                 <li>• Proactive Maintenance</li>
                 <li>• Performance Optimization</li>
                 <li>• Technical Support</li>
-
-      {/*   */}"
+      {/* comment */}"
       <section className="py-20 bg-white">";";";"
             <h2: className="text-4xl font-bold text-gray-900 mb-4">Our Cloud Implementation Process</h2>",",",
               We: follow a structured approach to ensure successful cloud adoption and optimization.
@@ -406,7 +389,7 @@ monitoring and support.
               <div: className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">";";";"
                 <span: className="text-white font-bold text-xl">4</span>";";";"
               <h3: className="text-xl font-semibold mb-2">Optimization</h3>",",",",
-              <p: className = "text-gray-600">We continuously optimize your cloud infrastructure for peak performance.</p>","," {/*   */}""
+              <p: className = "text-gray-600">We continuously optimize your cloud infrastructure for peak performance.</p>","," {/* comment */}""
       <section className="py-20 bg-white">"
               Our Cloud Implementation Process,
 We follow a structured approach to ensure successful cloud,
@@ -434,28 +417,28 @@ opportunities."
                 We continuously optimize your cloud infrastructure for peak,
 performance.
 
-      {/*   */}"
+      {/* comment */}"
       <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">";";";"
           <h2: className="text-4xl font-bold mb-6">Ready to Move to the Cloud?</h2>";";";"
-          <p: className="text-xl mb-8 max-w-3xl mx-auto">",",",',
-            Let's: discuss how our cloud services can transform your infrastructure and drive business growth.',',"
+          <p: className="text-xl mb-8 max-w-3xl mx-auto">",",",",
+            Let"s: discuss how our cloud services can transform your infrastructure and drive business growth.",","
           <div: className="flex flex-col sm: flex-row: justify-center gap-4">",";";"
             <Link: href="/contact" className="bg-white text-purple-600 hover: bg-gray-100: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",";"
               Schedule: a Consultation",
             <Link href="/services" className="bg-transparent border-2 border-white text-white hover: bg-white: hover:text-purple-600: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",";";"
-      {/*   */}""
+      {/* comment */}""
       <section className = "py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">""
           <h2 className="text-4xl font-bold mb-6">
             Ready to Move to the Cloud?"
           <p className="text-xl mb-8 max-w-3xl mx-auto">"
-            Let's discuss how our cloud services can transform your,
-infrastructure and drive business growth.'
-          </p>'
+            Let"s discuss how our cloud services can transform your,
+infrastructure and drive business growth."
+          </p>"
           <div className="flex flex-col sm: flex-row justify-center gap-4">
           </h2>"
           <p className="text-xl mb-8 max-w-3xl mx-auto">,
-            Let&apos,s discuss how our cloud services can transform your,'
-infrastructure and drive business growth.'
+            Let&apos,s discuss how our cloud services can transform your,"
+infrastructure and drive business growth."
               className="bg-white text-purple-600 hover: bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg",
               Schedule a Consultation,"
 r: text-purple-600 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg"
@@ -479,11 +462,12 @@ export: default CloudServices,
                     <feature.icon className="w-8 h-8 text-blue-600" />"
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">,
                     {feature.title}
+
                   </h3>"
                   <p className="text-gray-600">{feature.description}</p>
               ))}
 
-        {/*   */}"
+        {/* comment */}"
         <section className="py-20 bg-gray-50">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
               <p className="text-lg text-gray-600">
@@ -502,11 +486,12 @@ export: default CloudServices,
                     {service.features.map((feature, featureIndex) => ("
                       <li key="{featureIndex}""
                         className="flex items-center text-gray-600""
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2"  />
                         {feature}
-                      </li>
 
-        {/*   */}
+                      </li>
+        {/* comment */}
+
                 Benefits of Cloud Migration,
 Transform your business with cloud technology,
 "
@@ -517,8 +502,8 @@ Transform your business with cloud technology,
                     <benefit.icon className="w-8 h-8 text-white" />
                     {benefit.title}"
                   <p className="text-gray-600">{benefit.description}</p>
+        {/* comment */}
 
-        {/*   */}
                 Cloud Technologies We Use,
 Leading cloud platforms and tools for optimal performance,
 "
@@ -534,30 +519,30 @@ Leading cloud platforms and tools for optimal performance,
 A proven methodology for successful cloud transformation,
 "
             <div className="grid grid-cols-1 md: grid-cols-4 gap-8">,
-              {[,'
-step: '01','
-                  title: 'Assessment','
-                    'Analyze your current infrastructure and identify migration opportunities'} {'
-                  step: '02','
-                  title: 'Strategy','
-                    'Develop a comprehensive cloud strategy and migration roadmap'} {'
-                  step: '03','
-                  title: 'Migration','
-                    'Execute the migration with minimal downtime and maximum efficiency'} {'
-                  step: '04','
-                  title: 'Optimization','
-                    'Monitor, optimize, and continuously improve your cloud environment'}].map((phase, index) => ("
+              {[,"
+step: "01","
+                  title: "Assessment","
+                    "Analyze your current infrastructure and identify migration opportunities"} {"
+                  step: "02","
+                  title: "Strategy","
+                    "Develop a comprehensive cloud strategy and migration roadmap"} {"
+                  step: "03","
+                  title: "Migration","
+                    "Execute the migration with minimal downtime and maximum efficiency"} {"
+                  step: "04","
+                  title: "Optimization","
+                    "Monitor, optimize, and continuously improve your cloud environment"}].map((phase, index) => ("
                   <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-xl font-bold mx-auto mb-4">
                     {phase.step}
+
                     {phase.title}"
                   <p className="text-gray-600">{phase.description}</p>
-
-        {/*   */}"
+        {/* comment */}"
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">"
             <h2 className="text-3xl font-bold text-white mb-6">"
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">,
-              Let&apos,s discuss your cloud strategy and create a migration plan,'
+              Let&apos,s discuss your cloud strategy and create a migration plan,"
 that transforms your business.'
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors",
                 Get Free Cloud Assessment,"
@@ -565,7 +550,6 @@ href="/case-studies""
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-blue-600 transition-colors"
                 View Success Stories,
       </main>
-
-      <Footer />
+      <Footer  />
     </>
   )}"

@@ -1,59 +1,54 @@
-import React, { useState } from 'react'
+import React, { useState } from "react"
   User, Building,
-  MessageSquare} from 'lucide-react'
+  MessageSquare} from "lucide-react"
 
 export const ContactForm: React.FC = () => {,
-  const [formData, setFormData] = useState({'
-    firstName: '', lastName: '','
-    email: '', company: '','
-    phone: '', service: '','
-    message: '', budget: '',
-    timeline: ''})
+  const [formData, setFormData] = useState({"
+    firstName: "", lastName: "","
+    email: "", company: "","
+    phone: "", service: "","
+    message: "", budget: "",
+    timeline: ""})
+}
   const [isSubmitting, setIsSubmitting] = useState()
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+}
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle")
+}
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {,,
     const { name, value } = e.target
     setFormData(prev = > ({
       ...prev, [name]: value}))
-  }
+}
   const handleSubmit = async (e: React.FormEvent) => {,
     e.preventDefault(),
     setIsSubmitting(true),
-    
-    // Simulate form submission,
+    // comment
 try {
       await new Promise(resolve = > setTimeout(resolve, 2000)),
-      setSubmitStatus('success')
-      setFormData({'
-        firstName: '', lastName: '','
-        email: '', company: '','
-        phone: '', service: '','
-        message: '', budget: '','
-        timeline: ''})
-    } catch (error) {'
-      setSubmitStatus('error')
+      setSubmitStatus("success")
+}
+      setFormData({"
+        firstName: "", lastName: "","
+        email: "", company: "","
+        phone: "", service: "","
+        message: "", budget: "","
+        timeline: ""})
+}
+    } catch (error) {"
+      setSubmitStatus("error")
+}
     } finally {
       setIsSubmitting(false)
-    }
+}
   }
-  const services = ['
-    'AI & Machine Learning', 'Cloud & DevOps','
-    'Enterprise Security', 'Digital Transformation','
-    'Micro SAAS Services', 'IT Onsite Services','
-    'Custom Development', 'Other'
-  ]
 
-  const budgets = ['
-    'Under $10K', '$10K - $50K','
-    '$50K - $100K', '$100K - $500K','
-    'Over $500K'
-  ]
+  const services = []
 
-  const timelines = ['
-    'Immediate (1-2 weeks)', 'Quick (1-2 months)', 'Standard (3-6 months)', 'Long-term (6+ months)'
-  ]
-'
-  if (submitStatus === 'success') {
+  const budgets = []
+
+  const timelines = []
+"
+  if (submitStatus === "success") {
     return (
       <motion.div>
 initial="{{" opacity: 0, scale: 0.9 }}"
@@ -61,13 +56,13 @@ initial="{{" opacity: 0, scale: 0.9 }}"
         className="text-center py-12"
       >"
         <div className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">"
-          <CheckCircle className="w-10 h-10 text-white" />
+          <CheckCircle className="w-10 h-10 text-white"  />
         </div>"
         <h3 className="text-2xl font-bold text-white mb-4">Thank You!</h3>"
         <p className="text-zion-slate-light mb-6">
-          Your message has been sent successfully. We&apos;ll get back to you within 24 hours.''
+          Your message has been sent successfully. We&apos;ll get back to you within 24 hours.""
         </p>"
-        <button onClick = "{()" => setSubmitStatus('idle')}"
+        <button onClick = "{()" => setSubmitStatus("idle")}"
           className="px-6 py-3 bg-zion-cyan text-white rounded-lg hover: bg-zion-cyan/90 transition-colors"
         >
           Send Another Message,
@@ -80,16 +75,16 @@ initial="{{" opacity: 0, scale: 0.9 }}"
       <div className="text-center mb-8">"
         <h2 className="text-3xl font-bold text-white mb-4">Get In Touch</h2>"
         <p className="text-zion-slate-light">
-          Ready to transform your business? Let&apos;s discuss how we can help you achieve your goals.''
+          Ready to transform your business? Let&apos;s discuss how we can help you achieve your goals.""
         </p>
       </div>
 "
       <div className = "grid grid-cols-1 lg: grid-cols-2 gap-8 mb-8">,
-        {/*   */}"
+        {/* comment */}"
         <div className="space-y-6">"
           <div className="flex items-center gap-4">"
             <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center">"
-              <Mail className="w-6 h-6 text-zion-cyan" />
+              <Mail className="w-6 h-6 text-zion-cyan"  />
             </div>
             <div>"
               <div className="text-white font-semibold">Email</div>"
@@ -99,7 +94,7 @@ initial="{{" opacity: 0, scale: 0.9 }}"
 "
           <div className="flex items-center gap-4">"
             <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center">"
-              <Phone className="w-6 h-6 text-zion-cyan" />
+              <Phone className="w-6 h-6 text-zion-cyan"  />
             </div>
             <div>"
               <div className="text-white font-semibold">Phone</div>"
@@ -109,7 +104,7 @@ initial="{{" opacity: 0, scale: 0.9 }}"
 "
           <div className="flex items-center gap-4">"
             <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center">"
-              <MapPin className="w-6 h-6 text-zion-cyan" />
+              <MapPin className="w-6 h-6 text-zion-cyan"  />
             </div>
             <div>"
               <div className="text-white font-semibold">Location</div>"
@@ -124,8 +119,7 @@ initial="{{" opacity: 0, scale: 0.9 }}"
             </p>
           </div>
         </div>
-
-        {/*   */}"
+        {/* comment */}"
         <form onSubmit="{handleSubmit}" className="space-y-4">"
           <div className="grid grid-cols-1 md: grid-cols-2 gap-4">
             <div>"
@@ -139,8 +133,7 @@ initial="{{" opacity: 0, scale: 0.9 }}"
                 onChange="{handleInputChange}"
                 required,"
 className="w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 rounded-lg text-white placeholder-zion-slate-light focus: outline-none focus:border-zion-cyan/50 transition-colors""
-                placeholder="Enter your first name"
-              />
+                placeholder="Enter your first name" />
             </div>
             <div>"
               <label htmlFor="lastName" className="block text-sm font-medium text-white mb-2">
@@ -153,8 +146,7 @@ className="w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 r
                 onChange="{handleInputChange}"
                 required,"
 className="w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 rounded-lg text-white placeholder-zion-slate-light focus: outline-none focus:border-zion-cyan/50 transition-colors""
-                placeholder="Enter your last name"
-              />
+                placeholder="Enter your last name" />
             </div>
           </div>
 "
@@ -170,8 +162,7 @@ className="w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 r
                 onChange="{handleInputChange}"
                 required,"
 className="w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 rounded-lg text-white placeholder-zion-slate-light focus: outline-none focus:border-zion-cyan/50 transition-colors""
-                placeholder="Enter your email"
-              />
+                placeholder="Enter your email" />
             </div>
             <div>"
               <label htmlFor="phone" className="block text-sm font-medium text-white mb-2">
@@ -183,11 +174,9 @@ className="w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 r
                 value="{formData.phone}""
                 onChange="{handleInputChange}""
                 className="w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 rounded-lg text-white placeholder-zion-slate-light focus: outline-none focus:border-zion-cyan/50 transition-colors""
-                placeholder="Enter your phone number"
-              />
+                placeholder="Enter your phone number" />
             </div>
           </div>
-
           <div>"
             <label htmlFor="company" className="block text-sm font-medium text-white mb-2">
               Company,
@@ -198,8 +187,7 @@ className="w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 r
               value="{formData.company}""
               onChange="{handleInputChange}""
               className="w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 rounded-lg text-white placeholder-zion-slate-light focus: outline-none focus:border-zion-cyan/50 transition-colors""
-              placeholder="Enter your company name"
-            />
+              placeholder="Enter your company name" />
           </div>
 "
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -218,6 +206,7 @@ className="w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 r
                 {services.map((service) => (",
                   <option key="{service}" value="{service}">{service}</option>
                 ))}
+
               </select>
             </div>
             <div>"
@@ -234,10 +223,10 @@ className="w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 r
                 {budgets.map((budget) => (",
                   <option key="{budget}" value="{budget}">{budget}</option>
                 ))}
+
               </select>
             </div>
           </div>
-
           <div>"
             <label htmlFor="timeline" className="block text-sm font-medium text-white mb-2">
               Project Timeline,
@@ -252,9 +241,9 @@ className="w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 r
               {timelines.map((timeline) => (",
                 <option key="{timeline}" value="{timeline}">{timeline}</option>
               ))}
+
             </select>
           </div>
-
           <div>"
             <label htmlFor="message" className="block text-sm font-medium text-white mb-2">
               Message *
@@ -266,13 +255,12 @@ className="w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 r
               required,"
 rows="{4}""
               className="w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 rounded-lg text-white placeholder-zion-slate-light focus: outline-none focus:border-zion-cyan/50 transition-colors resize-none""
-              placeholder="Tell us about your project and how we can help..."
-            />
+              placeholder="Tell us about your project and how we can help..."  />
           </div>
-'
-          {submitStatus === 'error' && ("
+"
+          {submitStatus === "error" && ("
             <div className="flex items-center gap-2 text-red-400 bg-red-400/10 border border-red-400/20 rounded-lg p-3">"
-              <AlertCircle className="w-5 h-5" />
+              <AlertCircle className="w-5 h-5"  />
               <span>There was an error sending your message. Please try again.</span>
             </div>,
           )}
@@ -291,13 +279,16 @@ type="submit""
 </>
             ) : (
               <>"
-                <Send className="w-5 h-5" />
+                <Send className="w-5 h-5"  />
                 Send Message,
 </>
             )}
+
           </motion.button>
         </form>
       </div>
     </div>
   );"
 };"
+
+export default Component

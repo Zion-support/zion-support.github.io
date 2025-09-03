@@ -1,5 +1,6 @@
-const React = dynamic(() => import('react'), { ssr: false })
-
+import React from "react"
+import dynamic from "next/dynamic"
+const Component = () => {
 const Contact: NextPage = () => {
   return (
     <>,

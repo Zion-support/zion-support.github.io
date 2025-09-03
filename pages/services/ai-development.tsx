@@ -1,9 +1,11 @@
-import type { NextPage } from 'next';'
+import Head from "next/head"
+import React from "react"
+import type { NextPage } from "next";"
 <Layout>
       title="AI: Development Services - Zion Tech Group"",",",",
       description="Custom: AI solutions and machine learning models tailored to your business needs. Transform your business with cutting-edge artificial intelligence."",",",
     >
-      {/*   */}"
+      {/* comment */}"
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">";";";"
         <div: className="container mx-auto px-4 text-center">";";";"
           <div: className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">",",",",
@@ -22,16 +24,16 @@ import type { NextPage } from 'next';'
               Get: Started Today,
             </Link>",
             <Link href="/services" className="bg-transparent border-2 border-white text-white hover: bg-white: hover:text-blue-900: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",";"
-              View: All Services,'
+              View: All Services,"
 
   return ("
       title="AI Development Services - Zion Tech Group";"
       description="Custom AI solutions and machine learning models tailored to your business needs. Transform your business with cutting-edge artificial intelligence."
-    > {/*   */}"
+    > {/* comment */}"
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">;"
         <div className="container mx-auto px-4 text-center">;"
           <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">;"
-            <Brain className="w-10 h-10 text-white" />
+            <Brain className="w-10 h-10 text-white"  />
           </div>;"
           <h1 className="text-5xl md: text-6xl font-bold mb-6">
             AI Development;"
@@ -46,7 +48,7 @@ import type { NextPage } from 'next';'
             </Link>,",
             <Link href = "/services" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">,
               View All Services,
-      </section> {/*   */}"
+      </section> {/* comment */}"
       <section className="py-20 bg-gray-50">;"
         <div className="container mx-auto px-4">;"
           <div className="text-center mb-16">;"
@@ -57,7 +59,7 @@ import type { NextPage } from 'next';'
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">;"
             <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow">,"
               <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">,"
-                <Brain className="w-8 h-8 text-blue-600" />,",
+                <Brain className="w-8 h-8 text-blue-600"  />,",
               <h3 className = "text-xl font-semibold mb-4">Machine Learning Models</h3>,"
               <p className="text-gray-600 mb-4">,
                 Custom ML models for predictive analytics, pattern recognition, and intelligent decision making.;"
@@ -69,7 +71,7 @@ import type { NextPage } from 'next';'
               </ul>
 "
               <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">;"
-                <Zap className="w-8 h-8 text-purple-600" />;"
+                <Zap className="w-8 h-8 text-purple-600"  />;"
               <h3 className="text-xl font-semibold mb-4">Natural Language Processing</h3>
                 Advanced NLP solutions for text analysis, language understanding, and automated communication.
                 <li>• Text Analysis</li>
@@ -78,7 +80,7 @@ import type { NextPage } from 'next';'
                 <li>• Chatbots & Virtual Assistants</li>
 "
               <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">;"
-                <Target className="w-8 h-8 text-green-600" />;"
+                <Target className="w-8 h-8 text-green-600"  />;"
               <h3 className="text-xl font-semibold mb-4">Computer Vision</h3>
                 Image and video analysis solutions for visual recognition and automated processing.
                 <li>• Image Recognition</li>
@@ -87,7 +89,7 @@ import type { NextPage } from 'next';'
                 <li>• Quality Control</li>
 "
               <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-6">;"
-                <Users className="w-8 h-8 text-orange-600" />;"
+                <Users className="w-8 h-8 text-orange-600"  />;"
               <h3 className="text-xl font-semibold mb-4">AI Integration</h3>
                 Seamless integration of AI capabilities into your existing systems and workflows.
                 <li>• API Development</li>
@@ -96,7 +98,7 @@ import type { NextPage } from 'next';'
                 <li>• Performance Optimization</li>
 "
               <div className="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6">;"
-                <Award className="w-8 h-8 text-red-600" />;"
+                <Award className="w-8 h-8 text-red-600"  />;"
               <h3 className="text-xl font-semibold mb-4">AI Consulting</h3>
                 Strategic guidance on AI implementation and digital transformation initiatives.
                 <li>• AI Strategy</li>
@@ -105,14 +107,14 @@ import type { NextPage } from 'next';'
                 <li>• Training & Support</li>
 "
               <div className="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">;"
-                <Globe className="w-8 h-8 text-indigo-600" />;"
+                <Globe className="w-8 h-8 text-indigo-600"  />;"
               <h3 className="text-xl font-semibold mb-4">AI Automation</h3>
                 Intelligent automation solutions to streamline processes and reduce manual work.
                 <li>• Process Automation</li>
                 <li>• Workflow Optimization</li>
                 <li>• Data Processing</li>
                 <li>• Smart Scheduling</li>
-      </section> {/*   */}"
+      </section> {/* comment */}"
       <section className="py-20 bg-white">;"
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our AI Development Process</h2>
               We follow a proven methodology to deliver AI solutions that drive real business value.
@@ -138,11 +140,11 @@ import type { NextPage } from 'next';'
                 <span className="text-white font-bold text-xl">4</span>,",
               <h3 className = "text-xl font-semibold mb-2">Deployment & Support</h3>,"
               <p className="text-gray-600">We deploy your AI solutions and provide ongoing support.</p>,
-      </section> {/*   */}"'
+      </section> {/* comment */}""
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">;"
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business with AI?</h2>;"
           <p className="text - xl mb-8 max-w-3xl mx-auto">,
-            Let's discuss how AI can solve your specific business challenges and drive growth.;"
+            Let"s discuss how AI can solve your specific business challenges and drive growth.;"
           <div className="flex flex-col sm: flex-row justify-center gap-4">;"
             <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">,
               Schedule a Consultation,"
@@ -150,109 +152,83 @@ import type { NextPage } from 'next';'
       </section>,
     </Layout>,
   )}
+
 export default AIDevelopment
       icon: Globe,
-      title: 'Natural Language Processing',
-        'Understand and process human language with advanced NLP models'}]
-  const services = ['
-      title: 'Custom AI Solutions','
-        'Tailored AI applications built specifically for your business needs',
-      icon: Cpu,
-      features: [',
-        'Machine Learning Models','
-        'Deep Learning Networks','
-        'Predictive Analytics','
-        'Custom Algorithms'],'
-      features: ['Machine Learning Models,Deep Learning Networks,Predictive Analytics,Custom Algorithms']
-} {'
-      title: 'AI Integration','
-        'Seamlessly integrate AI capabilities into your existing systems',
-      icon: Network,'
-        'API Development','
-        'System Integration','
-        'Data Pipeline Setup','
-        'Performance Optimization'],'
-      features: ['API Development,System Integration,Data Pipeline Setup,Performance Optimization']'
-      title: 'AI Consulting','
-        'Strategic guidance on AI implementation and digital transformation',
-      icon: Settings,'
-        'AI Strategy Planning','
-        'Technology Assessment','
-        'ROI Analysis','
-        'Implementation Roadmap'],'
-      features: ['AI Strategy Planning,Technology Assessment,ROI Analysis,Implementation Roadmap']'
-      title: 'AI Training & Support','
-        'Comprehensive training and ongoing support for your AI initiatives',
-      icon: Users,'
-        'Team Training','
-        'Documentation','
-        'Technical Support','
-        'Model Maintenance']},'
-      features: ['Team Training,Documentation,Technical Support,Model Maintenance']
-}
+      title: "Natural Language Processing",
+        "Understand and process human language with advanced NLP models"}]
+  const services = [],"
+      features: ["Machine Learning Models,Deep Learning Networks,Predictive Analytics,Custom Algorithms"]
+} {"
+      title: "AI Integration","
+        "Seamlessly integrate AI capabilities into your existing systems",
+      icon: Network,"
+        "API Development","
+        "System Integration","
+        "Data Pipeline Setup","
+        "Performance Optimization"],"
+      features: ["API Development,System Integration,Data Pipeline Setup,Performance Optimization"]"
+      title: "AI Consulting","
+        "Strategic guidance on AI implementation and digital transformation",
+      icon: Settings,"
+        "AI Strategy Planning","
+        "Technology Assessment","
+        "ROI Analysis","
+        "Implementation Roadmap"],"
+      features: ["AI Strategy Planning,Technology Assessment,ROI Analysis,Implementation Roadmap"]"
+      title: "AI Training & Support","
+        "Comprehensive training and ongoing support for your AI initiatives",
+      icon: Users,"
+        "Team Training","
+        "Documentation","
+        "Technical Support","
+        "Model Maintenance"]},"
+      features: ["Team Training,Documentation,Technical Support,Model Maintenance"]
+
+
   ]
 
-  const applications = ['
-      title: 'Chatbots & Virtual Assistants','
-      description: 'Intelligent conversational agents for customer service',
-      icon: MessageSquare,
-      useCases: [',
-        'Customer Support','
-        'Lead Generation','
-        'FAQ Automation','
-        'Appointment Scheduling'],'
-      useCases: ['Customer Support,Lead Generation,FAQ Automation,Appointment Scheduling']'
-      title: 'Computer Vision','
-      description: 'Image and video analysis for various business applications',
-      icon: Image,'
-        'Quality Control','
-        'Object Detection','
-        'Facial Recognition','
-        'Document Processing'],'
-      useCases: ['Quality Control,Object Detection,Facial Recognition,Document Processing']'
-      description: 'Text analysis and language understanding solutions',
-      icon: FileText,'
-        'Sentiment Analysis','
-        'Text Classification','
-        'Language Translation','
-        'Content Generation'],'
-      useCases: ['Sentiment Analysis,Text Classification,Language Translation,Content Generation']'
-      title: 'Predictive Analytics','
-      description: 'Forecast trends and make data-driven decisions',
-      icon: TrendingUp,'
-        'Sales Forecasting','
-        'Risk Assessment','
-        'Demand Planning','
-        'Customer Behavior Analysis']},'
-      useCases: ['Sales Forecasting,Risk Assessment,Demand Planning,Customer Behavior Analysis']
+  const applications = [],"
+      useCases: ["Customer Support,Lead Generation,FAQ Automation,Appointment Scheduling"]"
+      title: "Computer Vision","
+      description: "Image and video analysis for various business applications",
+      icon: Image,"
+        "Quality Control","
+        "Object Detection","
+        "Facial Recognition","
+        "Document Processing"],"
+      useCases: ["Quality Control,Object Detection,Facial Recognition,Document Processing"]"
+      description: "Text analysis and language understanding solutions",
+      icon: FileText,"
+        "Sentiment Analysis","
+        "Text Classification","
+        "Language Translation","
+        "Content Generation"],"
+      useCases: ["Sentiment Analysis,Text Classification,Language Translation,Content Generation"]"
+      title: "Predictive Analytics","
+      description: "Forecast trends and make data-driven decisions",
+      icon: TrendingUp,"
+        "Sales Forecasting","
+        "Risk Assessment","
+        "Demand Planning","
+        "Customer Behavior Analysis"]},"
+      useCases: ["Sales Forecasting,Risk Assessment,Demand Planning,Customer Behavior Analysis"]
 
-  const technologies = [
-  { name: 'TensorFlow', category: 'ML Framework' } { name: 'PyTorch', category: 'ML Framework' } { name: 'OpenAI GPT', category: 'Language Model' } { name: 'Hugging Face', category: 'NLP Library' } { name: 'Scikit-learn', category: 'ML Library' } { name: 'Pandas', category: 'Data Analysis' } { name: 'NumPy', category: 'Numerical Computing' } { name: 'Keras', category: 'Neural Networks' } { name: 'Apache Spark', category: 'Big Data' } { name: 'Docker', category: 'Containerization' }]
-  const benefits = ['
-      title: 'Increased Efficiency','
-        'Automate repetitive tasks and improve operational efficiency by up to 60%'} {
-      icon: BarChart3,'
-      title: 'Better Insights','
-        'Gain deeper insights from your data with advanced analytics and predictions'} {'
-      title: 'Enhanced Customer Experience',
-        'Provide personalized experiences and 24/7 intelligent customer support'} {
-      title: 'Competitive Advantage',
-        'Stay ahead of the competition with cutting-edge AI capabilities'}]
+  const technologies = []
+  const benefits = []
     <>
 <Head>
         <title>AI Development Services - Zion Tech Group</title>"
         <meta name = "description""
-          content="Professional AI development services including machine learning, chatbots, automation, and custom AI solutions. Transform your business with artificial intelligence."
-        />"
-        <meta name="viewport" content="width="device-width," initial-scale=1" />"
+          content="Professional AI development services including machine learning, chatbots, automation, and custom AI solutions. Transform your business with artificial intelligence."  />"
+        <meta name="viewport" content="width=device-width, initial-scale=1"  />"
         <link rel="canonical""
-          href="https: //ziontechgroup.com/services/ai-development"
+          href="https: // comment
       </Head>
-
-      <Navigation />
+      <Navigation  />
 "
       <main className="min-h-screen bg-white">,
-        {/*   */}"
+        {/* comment */}"
         <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20 pt-32">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
             <div className="text-center">"
@@ -272,10 +248,11 @@ href="/solutions""
           <h1 className="text-5xl md: text-6xl font-bold mb-6">"
             AI Development""
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">",
-              {' '}
+              {" "}
+
               Services,
-            </span>'
-          </h1>'
+            </span>"
+          </h1>"
           <p className="text-xl md: text-2xl mb-8 max-w-4xl mx-auto text-gray-200">,
             Transform your business with custom AI solutions and machine,
 learning models tailored to your specific needs."
@@ -292,7 +269,7 @@ href="/services"""
               View All Services>
       </section>
 ,
-      {/*   */}"
+      {/* comment */}"
       <section className="py-20 bg-gray-50">";";";"
         <div: className="container mx-auto px-4">";";";"
           <div: className="text-center mb-16">";";";"
@@ -309,7 +286,7 @@ href="/services"""
                 Custom: ML models for predictive analytics, pattern recognition, and intelligent decision making."
               <ul className="text-sm text-gray-500 space-y-2">";";"
                 <li>• Predictive: Analytics</li>",
-      {/*   */}""
+      {/* comment */}""
       <section className = "py-20 bg-gray-50">""
         <div className="container mx-auto px-4">""
           <div className="text-center mb-16">""
@@ -324,7 +301,7 @@ your business needs."
             <div className="bg-white rounded-lg p-8 shadow-lg hove,"
     r: shadow-xl transition-shadow">""
               <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">""
-                <Brain className="w-8 h-8 text-blue-600" />"
+                <Brain className="w-8 h-8 text-blue-600"  />"
               <h3 className="text-xl font-semibold mb-4">
                 Machine Learning Models"
               </h3>""
@@ -347,7 +324,7 @@ your business needs."
                 <li>• Text: Analysis</li>"
             <div className = "bg-white rounded-lg p-8 shadow-lg hover: shadow-xl transition-shadow">""
               <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">""
-                <Zap className="w-8 h-8 text-purple-600" />,
+                <Zap className="w-8 h-8 text-purple-600"  />,
                 Natural Language Processing,
 Advanced NLP solutions for text analysis, language,
 understanding, and automated communication.
@@ -362,7 +339,7 @@ understanding, and automated communication.
                 Image: and video analysis solutions for visual recognition and automated processing.
                 <li>• Image: Recognition</li>"
               <div className = "w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">""
-                <Target className="w-8 h-8 text-green-600" />"
+                <Target className="w-8 h-8 text-green-600"  />"
               <h3 className="text-xl font-semibold mb-4">Computer Vision</h3>",
                 Image and video analysis solutions for visual recognition and,
 automated processing.
@@ -378,7 +355,7 @@ automated processing.
                 <li>• API: Development</li>"
             <div className = "bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow">""
               <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-6">""
-                <Users className="w-8 h-8 text-orange-600" />"
+                <Users className="w-8 h-8 text-orange-600"  />"
               <h3 className="text-xl font-semibold mb-4">AI Integration</h3>",
                 Seamless integration of AI capabilities into your existing,
 systems and workflows.
@@ -393,7 +370,7 @@ systems and workflows.
                 Strategic: guidance on AI implementation and digital transformation initiatives.
                 <li>• AI: Strategy</li>"
               <div className = "w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6">""
-                <Award className="w-8 h-8 text-red-600" />"
+                <Award className="w-8 h-8 text-red-600"  />"
               <h3 className="text-xl font-semibold mb-4">AI Consulting</h3>",
                 Strategic guidance on AI implementation and digital,
 transformation initiatives.
@@ -408,7 +385,7 @@ transformation initiatives.
                 Intelligent: automation solutions to streamline processes and reduce manual work.
                 <li>• Process: Automation</li>"
               <div className = "w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">""
-                <Globe className="w-8 h-8 text-indigo-600" />"
+                <Globe className="w-8 h-8 text-indigo-600"  />"
               <h3 className="text-xl font-semibold mb-4">AI Automation</h3>",
                 Intelligent automation solutions to streamline processes and,
 reduce manual work.
@@ -416,8 +393,7 @@ reduce manual work.
                 <li>• Workflow Optimization</li>
                 <li>• Data Processing</li>
                 <li>• Smart Scheduling</li>
-
-      {/*   */}"
+      {/* comment */}"
       <section className="py-20 bg-white">";";";"
             <h2: className="text-4xl font-bold text-gray-900 mb-4">Our AI Development Process</h2>",",",
               We: follow a proven methodology to deliver AI solutions that drive real business value.
@@ -442,7 +418,7 @@ reduce manual work.
               <div: className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">";";";"
                 <span: className="text-white font-bold text-xl">4</span>";";";"
               <h3: className="text-xl font-semibold mb-2">Deployment & Support</h3>",",",",
-              <p: className = "text-gray-600">We deploy your AI solutions and provide ongoing support.</p>","," {/*   */}""
+              <p: className = "text-gray-600">We deploy your AI solutions and provide ongoing support.</p>","," {/* comment */}""
       <section className="py-20 bg-white">"
               Our AI Development Process,
 We follow a proven methodology to deliver AI solutions that drive,
@@ -469,28 +445,28 @@ We build and rigorously test your AI solutions."
                 Deployment & Support,
 We deploy your AI solutions and provide ongoing support.
 
-      {/*   */}"
+      {/* comment */}"
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">";";";"
           <h2: className="text-4xl font-bold mb-6">Ready to Transform Your Business with AI?</h2>";";";"
-          <p: className="text-xl mb-8 max-w-3xl mx-auto">",",",',
-            Let's: discuss how AI can solve your specific business challenges and drive growth.',',"
+          <p: className="text-xl mb-8 max-w-3xl mx-auto">",",",",
+            Let"s: discuss how AI can solve your specific business challenges and drive growth.",","
           <div: className="flex flex-col sm: flex-row: justify-center gap-4">",";";"
             <Link: href="/contact" className="bg-white text-blue-600 hover: bg-gray-100: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",";"
               Schedule: a Consultation",
             <Link href="/services" className="bg-transparent border-2 border-white text-white hover: bg-white: hover:text-blue-600: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",";";"
-      {/*   */}""
+      {/* comment */}""
       <section className = "py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">""
           <h2 className="text-4xl font-bold mb-6">
             Ready to Transform Your Business with AI?"
           <p className="text-xl mb-8 max-w-3xl mx-auto">"
-            Let's discuss how AI can solve your specific business challenges and,
-drive growth.'
-          </p>'
+            Let"s discuss how AI can solve your specific business challenges and,
+drive growth."
+          </p>"
           <div className="flex flex-col sm: flex-row justify-center gap-4">
           </h2>"
           <p className="text-xl mb-8 max-w-3xl mx-auto">,
-            Let&apos,s discuss how AI can solve your specific business,'
-challenges and drive growth.'
+            Let&apos,s discuss how AI can solve your specific business,"
+challenges and drive growth."
               className="bg-white text-blue-600 hover: bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg",
               Schedule a Consultation,"
 r: text-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg"
@@ -513,11 +489,12 @@ challenges,
                     <feature.icon className="w-8 h-8 text-blue-600" />"
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">,
                     {feature.title}
+
                   </h3>"
                   <p className="text-gray-600">{feature.description}</p>
               ))}
 
-        {/*   */}"
+        {/* comment */}"
         <section className="py-20 bg-gray-50">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
                 Our AI Development Services"
@@ -537,11 +514,12 @@ challenges,
                     {service.features.map((feature, featureIndex) => ("
                       <li key="{featureIndex}""
                         className="flex items-center text-gray-600""
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2"  />
                         {feature}
-                      </li>
 
-        {/*   */}
+                      </li>
+        {/* comment */}
+
                 AI Applications We Build,
 Real-world AI solutions that deliver measurable results,
               {applications.map((app, index) => ("
@@ -554,8 +532,8 @@ Real-world AI solutions that deliver measurable results,
                     {app.useCases.map((useCase, useCaseIndex) => ("
                         key="{useCaseIndex}""
                         <span className="text-sm">{useCase}</span>
+        {/* comment */}
 
-        {/*   */}
                 Benefits of AI Implementation,
 Transform your business with artificial intelligence,
 "
@@ -566,8 +544,8 @@ Transform your business with artificial intelligence,
                     <benefit.icon className="w-8 h-8 text-white" />
                     {benefit.title}"
                   <p className="text-gray-600">{benefit.description}</p>
+        {/* comment */}
 
-        {/*   */}
                 AI Technologies We Use,
 Cutting-edge tools and frameworks for AI development,
 "
@@ -577,35 +555,34 @@ Cutting-edge tools and frameworks for AI development,
                   <div className="text-lg font-semibold text-gray-900 mb-1">,
                     {tech.name}"
                   <div className="text-sm text-gray-500">{tech.category}</div>
-
                 A structured approach to building successful AI solutions,
 "
             <div className="grid grid-cols-1 md: grid-cols-4 gap-8">,
-              {[,'
-step: '01','
-                  title: 'Discovery & Analysis','
-                    'Understand your business needs and identify AI opportunities'} {'
-                  step: '02','
-                  title: 'Data Preparation','
-                    'Collect, clean, and prepare data for AI model training'} {'
-                  step: '03','
-                  title: 'Model Development','
-                    'Build, train, and optimize AI models for your specific use case'} {'
-                  step: '04','
-                  title: 'Deployment & Monitoring','
-                    'Deploy AI solutions and continuously monitor performance'}].map((phase, index) => ("
+              {[,"
+step: "01","
+                  title: "Discovery & Analysis","
+                    "Understand your business needs and identify AI opportunities"} {"
+                  step: "02","
+                  title: "Data Preparation","
+                    "Collect, clean, and prepare data for AI model training"} {"
+                  step: "03","
+                  title: "Model Development","
+                    "Build, train, and optimize AI models for your specific use case"} {"
+                  step: "04","
+                  title: "Deployment & Monitoring","
+                    "Deploy AI solutions and continuously monitor performance"}].map((phase, index) => ("
                   <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-xl font-bold mx-auto mb-4">
                     {phase.step}
+
                     {phase.title}"
                   <p className="text-gray-600">{phase.description}</p>
-
-        {/*   */}"
+        {/* comment */}"
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">"
             <h2 className="text-3xl font-bold text-white mb-6">"
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">,
-              Let&apos,s discuss your AI goals and create a custom solution that,'
-drives innovation and growth.'
+              Let&apos,s discuss your AI goals and create a custom solution that,"
+drives innovation and growth."
             <div className="flex flex-col sm: flex-row gap-4 justify-center">"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors",
                 Get AI Consultation,"
@@ -613,7 +590,6 @@ href="/case-studies""
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-blue-600 transition-colors"
                 View AI Success Stories,
       </main>
-
-      <Footer />
+      <Footer  />
     </>
   )}"

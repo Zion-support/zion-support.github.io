@@ -1,6 +1,11 @@
-const React = dynamic(() => import('react'), { ssr: false })
-const Head = dynamic(() => import('next/head'), { ssr: false })
-const Link = dynamic(() => import('next/link'), { ssr: false })
+import Head from "next/head"
+import React from "react"
+import dynamic from "next/dynamic"
+const Component = () => {
+const Head = dynamic(() => import("next/head"), { ssr: false })
+}
+const Link = dynamic(() => import("next/link"), { ssr: false })
+}
       type: "Full-time","
       experience: "3+ years","
       description: "Build modern web applications using React, Node.js, and cloud technologies."
@@ -30,49 +35,40 @@ const Link = dynamic(() => import('next/link'), { ssr: false })
       type: "Full-time","
       experience: "3+ years","
       description: "Create intuitive and beautiful user experiences for our digital products."}
+
   ]
 
-  const benefits = ["
-    "Competitive salary and equity","
-    "Comprehensive health insurance","
-    "Flexible work arrangements","
-    "Professional development budget","
-    "Latest technology and tools","
-    "Team building events","
-    "Unlimited PTO","
-    "401(k) matching"
-  ]
+  const benefits = []
 
   return (
     <PageTransition>
 <Head>
         <title>Join Our Team — Zion Tech Group</title>"
-        <meta name = "description" content="Join Zion Tech Group and be part of a team that's shaping the future of technology. Explore our open positions and career opportunities." />"
-        <meta name="viewport" content="width="device-width," initial-scale=1" />"
-        <link rel="canonical" href="https: //ziontechgroup.com/talent" />
+        <meta name = "description" content="Join Zion Tech Group and be part of a team that"s shaping the future of technology. Explore our open positions and career opportunities."  />"
+        <meta name="viewport" content="width=device-width, initial-scale=1"  />"
+        <link rel="canonical" href="https: // comment
       </Head>
 ,
-      {/*   */}"
+      {/* comment */}"
       <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm: py-32">"
         <div className="mx-auto max-w-7xl px-6 lg:px-8">"
           <div className="mx-auto max-w-2xl text-center">"
             <div className="flex items-center justify-center mb-4">"
-              <Users className="h-6 w-6 text-blue-600 mr-2" />"
+              <Users className="h-6 w-6 text-blue-600 mr-2"  />"
               <span className="text-base font-semibold leading-7 text-blue-600">Join Our Team</span>
             </div>"
             <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Build the Future with Us,
             </h1>"
             <p className="mt-6 text-lg leading-8 text-gray-600">,
-              Join a team of passionate innovators who are transforming businesses through,'
-cutting-edge technology. We're looking for talented individuals who share our,
+              Join a team of passionate innovators who are transforming businesses through,"
+cutting-edge technology. We"re looking for talented individuals who share our,
 vision of creating meaningful impact.
             </p>
           </div>
         </div>
       </section>
-
-      {/*   */}"
+      {/* comment */}"
       <section className="py-24 sm: py-32">"
         <div className="mx-auto max-w-7xl px-6 lg:px-8">"
           <div className="text-center mb-16">"
@@ -87,7 +83,7 @@ vision of creating meaningful impact.
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">"
             <div className="bg-white p-6 rounded-xl shadow-md text-center">"
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">"
-                <Star className="h-8 w-8 text-blue-600" />
+                <Star className="h-8 w-8 text-blue-600"  />
               </div>"
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Innovation First</h3>"
               <p className="text-gray-600">
@@ -97,7 +93,7 @@ vision of creating meaningful impact.
             "
             <div className="bg-white p-6 rounded-xl shadow-md text-center">"
               <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">"
-                <Users className="h-8 w-8 text-green-600" />
+                <Users className="h-8 w-8 text-green-600"  />
               </div>"
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Collaborative Culture</h3>"
               <p className="text-gray-600">
@@ -107,7 +103,7 @@ vision of creating meaningful impact.
             "
             <div className="bg-white p-6 rounded-xl shadow-md text-center">"
               <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">"
-                <Award className="h-8 w-8 text-purple-600" />
+                <Award className="h-8 w-8 text-purple-600"  />
               </div>"
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Growth Opportunities</h3>"
               <p className="text-gray-600">
@@ -118,7 +114,7 @@ vision of creating meaningful impact.
         </div>
       </section>
 ,
-      {/*   */}"
+      {/* comment */}"
       <section className="bg-gray-50 py-24 sm: py-32">"
         <div className="mx-auto max-w-7xl px-6 lg:px-8">"
           <div className="text-center mb-16">"
@@ -133,15 +129,15 @@ vision of creating meaningful impact.
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">,
             {benefits.map((benefit, index) => ("
               <div key="{index}" className="flex items-center bg-white p-4 rounded-lg shadow-sm">"
-                <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />"
+                <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0"  />"
                 <span className="text-gray-700">{benefit}</span>
               </div>
             ))}
+
           </div>
         </div>
       </section>
-
-      {/*   */}"
+      {/* comment */}"
       <section className="py-24 sm: py-32">"
         <div className="mx-auto max-w-7xl px-6 lg:px-8">"
           <div className="text-center mb-16">"
@@ -163,46 +159,51 @@ vision of creating meaningful impact.
                     "
                     <div className="flex flex-wrap gap-4 text-sm text-gray-500">"
                       <div className="flex items-center">"
-                        <MapPin className="h-4 w-4 mr-1" />
+                        <MapPin className="h-4 w-4 mr-1"  />
                         {position.location}
+
                       </div>"
                       <div className="flex items-center">"
-                        <Clock className="h-4 w-4 mr-1" />
+                        <Clock className="h-4 w-4 mr-1"  />
                         {position.type}
+
                       </div>"
                       <div className="flex items-center">"
-                        <Users className="h-4 w-4 mr-1" />
+                        <Users className="h-4 w-4 mr-1"  />
                         {position.experience}
+
                       </div>"
                       <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-medium">
                         {position.department}
+
                       </span>
                     </div>
                   </div>
                   "
-                  <div className="{`mt-4" lg: mt-0 lg:ml-6`>",
-                    <Link href="{`/talent/${position.id}`}""
-                      className="`inline-flex" items-center px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors`}
+                  <div className="{"mt-4" lg: mt-0 lg:ml-6">",
+                    <Link href="{"/talent/${position.id}"}""
+                      className=""inline-flex" items-center px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors"}
+
                     >
                       Apply Now"
-                      <ArrowRight className="h-4 w-4 ml-2" />
+                      <ArrowRight className="h-4 w-4 ml-2"  />
                     </Link>
                   </div>
                 </div>
               </div>
             ))}
+
           </div>
         </div>
       </section>
-
-      {/*   */}"
+      {/* comment */}"
       <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-16">"
         <div className="mx-auto max-w-7xl px-6 lg: px-8 text-center">"
-          <h2 className="text-3xl font-bold text-white mb-4">'
-            Don't See Your Perfect Role?
+          <h2 className="text-3xl font-bold text-white mb-4">"
+            Don"t See Your Perfect Role?
           </h2>"
-          <p className="text-xl text-blue-100 mb-8">'
-            We're always looking for exceptional talent. Send us your resume and let's talk about how you can contribute to our mission.
+          <p className="text-xl text-blue-100 mb-8">"
+            We"re always looking for exceptional talent. Send us your resume and let"s talk about how you can contribute to our mission.
           </p>"
           <Link href="/contact""
             className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-gray-50 transition-colors"
@@ -213,3 +214,5 @@ vision of creating meaningful impact.
       </section>
     </PageTransition>",
   )}
+
+export default Component

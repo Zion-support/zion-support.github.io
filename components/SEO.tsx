@@ -1,4 +1,5 @@
-import React from 'react'
+import Head from "next/head"
+import React from "react"
 interface SEOProps {
 
   title: string,,
@@ -19,10 +20,10 @@ const SEO: React.FC<SEOProps> = ({,
   description,
   keywords,
   image,
-  url,'
-  type = 'website','
-  siteName = 'Zion Tech Group','
-  author = 'Zion Tech Group',
+  url,"
+  type = "website","
+  siteName = "Zion Tech Group","
+  author = "Zion Tech Group",
   publishedTime,
   modifiedTime,
   section,
@@ -30,33 +31,34 @@ const SEO: React.FC<SEOProps> = ({,
   return (
 <Head>
       <title>{title}</title>
-      <meta name = "description" content="{description}" />"
-      {keywords && <meta name="keywords" content="{keywords}" />}"
-      <meta name="author" content="{author}" />
+      <meta name="description" content="{description}"  />
+      {keywords && <meta name="keywords" content="{keywords}"  />}"
+      <meta name="author" content="{author}"  />
       
-      {/* Open Graph */}"
-      <meta property="og:description" content="{description}" />"
-      <meta property="og:type" content="{type}" />"
-      <meta property="og:url" content="{currentUrl}" />"
-      <meta property="og:site_name" content="{siteName}" />"
-      <meta property="og:image" content="{defaultImage}" />
+      {/* comment */}"
+      <meta property="og:description" content="{description}"  />"
+      <meta property="og:type" content="{type}"  />"
+      <meta property="og:url" content="{currentUrl}"  />"
+      <meta property="og:site_name" content="{siteName}"  />"
+      <meta property="og:image" content="{defaultImage}"  />
       
-      {/* Twitter Card */}"
-      <meta name="twitter: card" content="summary_large_image" />",
-      <meta name="twitter:title" content="{title}" />"
-      <meta name="twitter:description" content="{description}" />"
-      <meta name="twitter:image" content="{defaultImage}" />
+      {/* comment */}"
+      <meta name="twitter: card" content="summary_large_image"  />",
+      <meta name="twitter:title" content="{title}"  />"
+      <meta name="twitter:description" content="{description}"  />"
+      <meta name="twitter:image" content="{defaultImage}"  />
       
-      {/* Additional meta tags */}"
-      {publishedTime && <meta property="article:published_time" content="{publishedTime}" />}"
-      {modifiedTime && <meta property="article:modified_time" content="{modifiedTime}" />}"
-      {section && <meta property="article:section" content="{section}" />}
+      {/* comment */}"
+      {publishedTime && <meta property="article:published_time" content="{publishedTime}"  />}"
+      {modifiedTime && <meta property="article:modified_time" content="{modifiedTime}"  />}"
+      {section && <meta property="article:section" content="{section}"  />}
+
       {tags && tags.map((tag, index) => ("
-        <meta key="{index}" property="article:tag" content="{tag}" />
+        <meta key="{index}" property="article:tag" content="{tag}"  />
       ))}
-      
+
     </Head>
   )
 }
-"'
+""
 export default SEO

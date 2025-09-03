@@ -1,8 +1,6 @@
-// serviceWorkerRegistration utility,
-export const serviceWorkerRegistration = {
-  // Placeholder utility functions,
-init: () => {
-    console.log('serviceWorkerRegistration initialized'),
-  }
-}
+// comment
+export const serviceWorkerRegistration = {}
+
+
+
 export default serviceWorkerRegistration

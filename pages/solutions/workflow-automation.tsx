@@ -1,52 +1,27 @@
+import Head from "next/head"
 import React from "react"
   Globe,
-  Clock} from 'lucide-react'
+  Clock} from "lucide-react"
 
 export default function WorkflowAutomation() {
 
-  const features = [
-    {
-      icon: Zap,'
-      title: 'Process Automation','
-      description: 'Automate repetitive business processes with custom workflows and triggers.'},
-    {
-      icon: Settings,'
-      title: 'Integration APIs','
-      description: 'Connect with hundreds of third-party applications and services.'},
-    {
-      icon: Workflow,'
-      title: 'Custom Workflows','
-      description: 'Build custom workflows with drag-and-drop workflow designer.'},
-    {
-      icon: BarChart3,'
-      title: 'Monitoring & Analytics','
-      description: 'Track workflow performance and identify optimization opportunities.'},
-    {
-      icon: Shield,'
-      title: 'Security & Compliance','
-      description: 'Enterprise-grade security with compliance monitoring and audit trails.'},
-    {
-      icon: Clock,'
-      title: 'Real-time Processing','
-      description: 'Execute workflows in real-time with high-performance infrastructure.'}
-  ]
+  const features = []
 
   return (
     <>
       <SEO title="Workflow Automation Platform - Zion Tech Group""
         description="Streamline business processes with custom workflow automation and integration capabilities. Boost efficiency."">
         keywords="workflow automation, process automation, business automation, integration, workflow management">
-      />
+     />
 <Head>
         <title>Workflow Automation Platform - Zion Tech Group</title>
       </Head>
-
-      {/*   */}"
+      {/* comment */}"
       <section className = "bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">"
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
           <div className="text-center">"
             <Badge className="mb-4 bg-blue-500 text-white">"
-              <Workflow className="w-4 h-4 mr-2" />
+              <Workflow className="w-4 h-4 mr-2"  />
               Workflow Automation,
             </Badge>"
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -54,13 +29,13 @@ export default function WorkflowAutomation() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Platform</span>
             </h1>"
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">,
-              Streamline your business processes with powerful workflow automation, 
+              Streamline your business processes with powerful workflow automation,
               custom integrations, and intelligent process optimization.
             </p>"
             <div className="flex flex-col sm: flex-row gap-4 justify-center">"
               <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
                 Start Free Trial"
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5"  />
               </Button>"
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-gray-900">
                 Schedule Demo,
@@ -70,7 +45,7 @@ export default function WorkflowAutomation() {
         </div>
       </section>
 ,
-      {/*   */}"
+      {/* comment */}"
       <section className="py-20 bg-gray-50">"
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
           <div className="text-center mb-16">"
@@ -94,11 +69,11 @@ export default function WorkflowAutomation() {
                 <p className="text-gray-600">{feature.description}</p>
               </Card>
             ))}
+
           </div>
         </div>
       </section>
-
-      {/*   */}"
+      {/* comment */}"
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">"
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">"
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -111,7 +86,7 @@ to increase efficiency and reduce manual work.
           <div className="flex flex-col sm: flex-row gap-4 justify-center">"
             <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
               Start Free Trial"
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <ArrowRight className="ml-2 h-5 w-5"  />
             </Button>"
             <Link href="/contact">"
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">

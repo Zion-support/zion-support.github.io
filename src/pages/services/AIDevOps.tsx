@@ -1,14 +1,13 @@
-import React from 'react'
-import Link from 'next/link'
-import Head from 'next/head'
+import React from "react"
+import Link from "next/link"
+import Head from "next/head"
 const AIDevOps = () => {
   return (
     <>
       <Head>
         <title>Dev Ops - AI Services</title>
-        <meta name="description" content="Professional Dev Ops services powered by AI" />
+        <meta name="description" content="Professional Dev Ops services powered by AI"  />
       </Head>
-      
       <div className="min-h-screen bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
           <div className="text-center">
@@ -18,7 +17,6 @@ const AIDevOps = () => {
             <p className="text-xl text-gray-600 mb-12">
               Professional Dev Ops services powered by artificial intelligence
             </p>
-            
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h2 className="text-2xl font-semibold mb-4">Our Services</h2>
@@ -29,7 +27,6 @@ const AIDevOps = () => {
                   <li>• Expert Consultation</li>
                 </ul>
               </div>
-              
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>
                 <ul className="text-gray-600 space-y-2">
@@ -40,7 +37,6 @@ const AIDevOps = () => {
                 </ul>
               </div>
             </div>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
                 View Pricing
@@ -54,5 +50,4 @@ const AIDevOps = () => {
       </div>
     </>
   ),
-}
 export default AIDevOps

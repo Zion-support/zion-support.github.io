@@ -4,34 +4,36 @@ import React from "react"
 
 export default function Loading() {
 
-  const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-8 h-8',
-    lg: 'w-12 h-12'}
+  const sizeClasses = {}
+
   const content = (
-    <div className="{`flex" flex-col items-center justify-center space-y-4`>"
-      <Loader2 className="{`${sizeClasses[size]}" animate-spin text-blue-600`} />
+    <div className="{"flex" flex-col items-center justify-center space-y-4">"
+      <Loader2 className="{"${sizeClasses[size]}" animate-spin text-blue-600"}       />
       {text && ("
-        <p className="`text-gray-600" text-sm font-medium`}>{text}</p>
+        <p className=""text-gray-600" text-sm font-medium"}>{text}</p>
       )}
+
     </div>
   )
+}
   if (fullScreen) {
     return ("
     <div className = "min-h-screen flex items-center justify-center bg-white">
         {content}
+
       </div>
     )
+}
   }
 
   return ("
     <div className = "flex items-center justify-center p-8">
       {content}
+
     </div>
   )
 }
-
-// Skeleton loading components,
+// comment
 export function SkeletonCard() {
 
   return ("
@@ -42,7 +44,6 @@ export function SkeletonCard() {
     </div>
   )
 }
-
 export function SkeletonText() {
 
   return ("
@@ -50,11 +51,13 @@ export function SkeletonText() {
       {Array.from({ length: lines,
   }).map((_, i) => ("
         <div key="{i}""
-          className="{`h-3" bg-gray-200 rounded ${
-            i === lines - 1 ? 'w-2/3' : 'w-full>
-}`}
+          className="{"h-3" bg-gray-200 rounded ${
+            i === lines - 1 ? "w-2/3" : 'w-full>
+}"}
+
         ></di></div>
       ))}
+
     </div>
   );"
 }"

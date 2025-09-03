@@ -1,24 +1,25 @@
+import Head from "next/head"
+const Component = () => {
 import React from "react"
 >
   return (
     <>
 <Head>
         <title>Cybersecurity Services - Zion Tech Group</title>
-        <meta name = "description" content="Comprehensive cybersecurity services including security assessment, network protection, data security, and incident response. Protect your business from cyber threats." />"
-        <meta name="viewport" content="width="device-width," initial-scale=1" />"
-        <link rel="canonical" href="https: //ziontechgroup.com/services/cybersecurity" />
+        <meta name="description" content="Comprehensive cybersecurity services including security assessment, network protection, data security, and incident response. Protect your business from cyber threats."  />
+        <meta name="viewport" content="width=device-width, initial-scale=1"  />"
+        <link rel="canonical" href="https: // comment
       </Head>
-      
-      <Navigation />
+      <Navigation  />
       "
       <main className="min-h-screen bg-white">,
-        {/*   */}"
+        {/* comment */}"
         <section className="bg-gradient-to-br from-red-50 to-orange-100 py-20">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
             <div className="text-center">"
               <div className="flex justify-center mb-6">"
                 <div className="p-4 bg-red-100 rounded-full">"
-                  <Shield className="w-12 h-12 text-red-600" />
+                  <Shield className="w-12 h-12 text-red-600"  />
                 </div>
               </div>"
               <h1 className="text-5xl font-bold text-gray-900 mb-6">"
@@ -40,7 +41,7 @@ import React from "react"
           </div>
         </section>
 ,
-        {/*   */}"
+        {/* comment */}"
         <section className="py-20 bg-white">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">,
@@ -51,11 +52,11 @@ import React from "react"
                   <div className="text-gray-600">{stat.description}</div>
                 </div>
               ))}
+
             </div>
           </div>
         </section>
-
-        {/*   */}"
+        {/* comment */}"
         <section className="py-20 bg-gray-50">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
             <div className="text-center mb-16">"
@@ -80,18 +81,19 @@ import React from "react"
                   <ul className="space-y-3">
                     {service.features.map((feature, featureIndex) => ("
                       <li key="{featureIndex}" className="flex items-center">"
-                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />"
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0"  />"
                         <span className="text-gray-700">{feature}</span>
                       </li>
                     ))}
+
                   </ul>
                 </div>
               ))}
+
             </div>
           </div>
         </section>
-
-        {/*   */}"
+        {/* comment */}"
         <section className="py-20 bg-white">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
             <div className="text-center mb-16">"
@@ -111,11 +113,11 @@ import React from "react"
                   <p className="text-gray-600">{item.description}</p>
                 </div>
               ))}
+
             </div>
           </div>
         </section>
-
-        {/*   */}"
+        {/* comment */}"
         <section className="py-20 bg-gray-50">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
             <div className="text-center mb-16">"
@@ -150,14 +152,14 @@ import React from "react"
           </div>
         </section>
 ,
-        {/*   */}"
+        {/* comment */}"
         <section className="py-20 bg-gradient-to-r from-red-600 to-orange-600">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">"
             <h2 className="text-3xl font-bold text-white mb-6">
               Secure Your Business Today,
             </h2>"
-            <p className="text-xl text-red-100 mb-8 max-w-2xl mx-auto">'
-              Don't wait for a security breach. Get professional cybersecurity protection for your business.
+            <p className="text-xl text-red-100 mb-8 max-w-2xl mx-auto">"
+              Don"t wait for a security breach. Get professional cybersecurity protection for your business.
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <Link href="/contact" className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
@@ -170,9 +172,9 @@ import React from "react"
           </div>
         </section>
       </main>
-      
-      <Footer />
+      <Footer  />
     </>
   )}
+
 "
 export default Cybersecurity

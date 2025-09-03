@@ -1,27 +1,32 @@
-const React = dynamic(() => import('react'), { ssr: false })
-const Head = dynamic(() => import('next/head'), { ssr: false })
-const Link = dynamic(() => import('next/link'), { ssr: false })
-const Navigation = dynamic(() => import('../src/components/Navigation'), { ssr: false })
-const Footer = dynamic(() => import('../src/components/Footer'), { ssr: false })
-
+import Head from "next/head"
+import React from "react"
+import dynamic from "next/dynamic"
+const Component = () => {
+const Head = dynamic(() => import("next/head"), { ssr: false })
+}
+const Link = dynamic(() => import("next/link"), { ssr: false })
+}
+const Navigation = dynamic(() => import("../src/components/Navigation"), { ssr: false })
+}
+const Footer = dynamic(() => import("../src/components/Footer"), { ssr: false })
+}
   return (
     <div className="min-h-screen bg-gray-900 text-white">
 <Head>
         <title>Cloud & DevOps Services | Zion Tech Group</title>"
-        <meta name = "description" content="Expert cloud migration, DevOps automation, and infrastructure management services. Scale your applications with our cloud and DevOps solutions." />"
-        <meta name="keywords" content="cloud migration, devops, infrastructure as code, CI/CD, AWS, Azure, GCP, Kubernetes" />"
-        <link rel="canonical" href="https: //ziontechgroup.com/cloud-devops" />
+        <meta name="description" content="Expert cloud migration, DevOps automation, and infrastructure management services. Scale your applications with our cloud and DevOps solutions."  />
+        <meta name="keywords" content="cloud migration, devops, infrastructure as code, CI/CD, AWS, Azure, GCP, Kubernetes"  />"
+        <link rel="canonical" href="https: // comment
       </Head>
-
-      <Navigation />
+      <Navigation  />
 ,
-      {/*   */}"
+      {/* comment */}"
       <section className="pt-20 pb-16 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">"
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
           <div className="text-center">"
             <div className="flex items-center justify-center mb-6">"
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center">"
-                <Cloud className="w-8 h-8 text-white" />
+                <Cloud className="w-8 h-8 text-white"  />
               </div>
             </div>"
             <h1 className="text-4xl md:text-6xl font-bold mb-6">"
@@ -38,7 +43,7 @@ const Footer = dynamic(() => import('../src/components/Footer'), { ssr: false })
                 className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25"
               >
                 Start Cloud Migration"
-                <ArrowRight className="w-5 h-5 ml-2 inline" />
+                <ArrowRight className="w-5 h-5 ml-2 inline"  />
               </Link>"
               <Link href="/contact""
                 className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
@@ -50,7 +55,7 @@ const Footer = dynamic(() => import('../src/components/Footer'), { ssr: false })
         </div>
       </section>
 ,
-      {/*   */}"
+      {/* comment */}"
       <section className="py-16 bg-gray-800">"
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">,
@@ -63,11 +68,11 @@ const Footer = dynamic(() => import('../src/components/Footer'), { ssr: false })
                 <div className="text-gray-400">{stat.label}</div>
               </div>
             ))}
+
           </div>
         </div>
       </section>
-
-      {/*   */}"
+      {/* comment */}"
       <section className="py-20 bg-gray-900">"
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
           <div className="text-center mb-16">"
@@ -92,18 +97,20 @@ const Footer = dynamic(() => import('../src/components/Footer'), { ssr: false })
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => ("
                     <li key="{featureIndex}" className="flex items-center text-gray-400">"
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-3" />
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-3"  />
                       {feature}
+
                     </li>
                   ))}
+
                 </ul>
               </div>
             ))}
+
           </div>
         </div>
       </section>
-
-      {/*   */}"
+      {/* comment */}"
       <section className="py-20 bg-gray-800">"
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
           <div className="text-center mb-16">"
@@ -122,11 +129,11 @@ const Footer = dynamic(() => import('../src/components/Footer'), { ssr: false })
                 <p className="text-gray-400 text-sm">{tech.description}</p>
               </div>
             ))}
+
           </div>
         </div>
       </section>
-
-      {/*   */}"
+      {/* comment */}"
       <section className="py-20 bg-gradient-to-r from-blue-900/20 to-cyan-900/20">"
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">"
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -140,18 +147,19 @@ const Footer = dynamic(() => import('../src/components/Footer'), { ssr: false })
               className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25"
             >
               Get Started Today"
-              <ArrowRight className="w-5 h-5 ml-2 inline" />
+              <ArrowRight className="w-5 h-5 ml-2 inline"  />
             </Link>"
             <a href="tel:+13024640950""
               className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300 flex items-center justify-center"
             >"
-              <Phone className="w-5 h-5 mr-2" />
+              <Phone className="w-5 h-5 mr-2"  />
               Call Now,
             </a>
           </div>
         </div>
       </section>
-
-      <Footer />
+      <Footer  />
     </div>",
   )}
+
+export default Component

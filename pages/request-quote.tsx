@@ -1,93 +1,60 @@
-import React, { useState } from 'react'
-const Head = dynamic(() => import('next/head'), { ssr: false })
+import Head from "next/head"
+import React, { useState } from "react"
+const Head = dynamic(() => import("next/head"), { ssr: false })
+}
   Mail,
-  MapPin} from 'lucide-react'
+  MapPin} from "lucide-react"
 
 export default function RequestQuote() {
 
-  const [formData, setFormData] = useState({'
-    name: '','
-    email: '','
-    company: '','
-    phone: '','
-    serviceType: '','
-    projectSize: '','
-    timeline: '','
-    budget: '','
-    description: '','
-    requirements: ''})
+  const [formData, setFormData] = useState({"
+    name: "","
+    email: "","
+    company: "","
+    phone: "","
+    serviceType: "","
+    projectSize: "","
+    timeline: "","
+    budget: "","
+    description: "","
+    requirements: ""})
+}
   const [isSubmitting, setIsSubmitting] = useState(false)
+}
   const [isSubmitted, setIsSubmitted] = useState(false)
+}
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {,,
     const { name, value } = e.target
     setFormData(prev = > ({
       ...prev,
       [name]: value}))
-  }
+}
   const handleSubmit = async (e: React.FormEvent) => {,
     e.preventDefault(),
     setIsSubmitting(true),
-    
-    // Simulate API call,
+    // comment
 await new Promise(resolve => setTimeout(resolve, 2000))
+}
     setIsSubmitting(false)
+}
     setIsSubmitted(true)
+}
   }
-  const serviceTypes = ['
-    'AI & Machine Learning','
-    'Micro SAAS Development','
-    'IT Services & Infrastructure','
-    'Digital Transformation','
-    'Cybersecurity','
-    'Cloud Solutions','
-    'Custom Software Development','
-    'Data Analytics','
-    'Mobile App Development','
-    'Web Development','
-    'Other'
-  ]
 
-  const projectSizes = ['
-    'Small Project (< $10K)','
-    'Medium Project ($10K - $50K)','
-    'Large Project ($50K - $200K)','
-    'Enterprise Project (> $200K)'
-  ]
+  const serviceTypes = []
 
-  const timelines = ['
-    'ASAP','
-    '1-2 weeks','
-    '1 month','
-    '2-3 months','
-    '3-6 months','
-    '6+ months'
-  ]
+  const projectSizes = []
 
-  const benefits = [
-    {
-      icon: Clock,'
-      title: 'Fast Response','
-      description: 'Get your quote within 24 hours'},
-    {
-      icon: DollarSign,'
-      title: 'Competitive Pricing','
-      description: 'Best value for your investment'},
-    {
-      icon: Users,'
-      title: 'Expert Team','
-      description: 'Certified professionals'},
-    {
-      icon: Zap,'
-      title: 'Quick Start','
-      description: 'Begin your project immediately'}
-  ]
+  const timelines = []
+
+  const benefits = []
 
   if (isSubmitted) {
     return (
       <>
 <Head>
-          <title>Quote Request Submitted - Zion Tech Group</title>'
-          <meta name = "description" content="Your quote request has been submitted successfully. We'll get back to you within 24 hours." />
+          <title>Quote Request Submitted - Zion Tech Group</title>"
+          <meta name = "description" content="Your quote request has been submitted successfully. We"ll get back to you within 24 hours."  />
         </Head>
         "
         <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
@@ -102,24 +69,24 @@ initial="{{" scale: 0 }}"
               transition="{{" delay: 0.2, type: "spring", stiffness: 200 }}"
               className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6"
             >"
-              <CheckCircle className="w-10 h-10 text-green-600" />
+              <CheckCircle className="w-10 h-10 text-green-600"  />
             </motion.div>
             "
             <h1 className="text-3xl font-bold text-gray-900 mb-4">
               Quote Request Submitted!
             </h1>
             "
-            <p className="text-lg text-gray-600 mb-8">'
-              Thank you for your interest in Zion Tech Group. We've received your quote request and will get back to you within 24 hours with a detailed proposal.
+            <p className="text-lg text-gray-600 mb-8">"
+              Thank you for your interest in Zion Tech Group. We"ve received your quote request and will get back to you within 24 hours with a detailed proposal.
             </p>
             "
             <div className="bg-blue-50 rounded-lg p-6 mb-8">"
               <h3 className="font-semibold text-blue-900 mb-2">What happens next?</h3>"
               <ul className="text-left text-blue-800 space-y-2">
-                <li>• Our team will review your requirements</li>'
-                <li>• We'll prepare a detailed proposal</li>'
-                <li>• You'll receive your quote within 24 hours</li>'
-                <li>• We'll schedule a consultation call if needed</li>
+                <li>• Our team will review your requirements</li>"
+                <li>• We"ll prepare a detailed proposal</li>"
+                <li>• You"ll receive your quote within 24 hours</li>"
+                <li>• We"ll schedule a consultation call if needed</li>
               </ul>
             </div>
             "
@@ -128,7 +95,7 @@ initial="{{" scale: 0 }}"
                 className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
               >
                 Contact Us"
-                <ArrowRight className="ml-2 w-4 h-4" />
+                <ArrowRight className="ml-2 w-4 h-4"  />
               </a>"
               <a href="/""
                 className="inline-flex items-center px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
@@ -145,11 +112,11 @@ initial="{{" scale: 0 }}"
     <>
 <Head>
         <title>Request a Quote - Zion Tech Group</title>"
-        <meta name = "description" content="Get a personalized quote for your technology project. Fast response, competitive pricing, expert team." />
+        <meta name = "description" content="Get a personalized quote for your technology project. Fast response, competitive pricing, expert team."  />
       </Head>
 "
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-        {/*   */}"
+        {/* comment */}"
         <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
             <motion.div,"
@@ -167,7 +134,7 @@ initial="{{" opacity: 0, y: 20 }}"
           </div>
         </div>
 ,
-        {/*   */}"
+        {/* comment */}"
         <div className="py-16 bg-white">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,
@@ -184,17 +151,19 @@ key="{index}""
                   </div>"
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">
                     {benefit.title}
+
                   </h3>"
                   <p className="text-gray-600">
                     {benefit.description}
+
                   </p>
                 </motion.div>
               ))}
+
             </div>
           </div>
         </div>
-
-        {/*   */}"
+        {/* comment */}"
         <div className="py-16">"
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8">,
             <motion.div,"
@@ -206,8 +175,8 @@ initial="{{" opacity: 0, y: 20 }}"
                 <h2 className="text-3xl font-bold text-gray-900 mb-4">
                   Tell Us About Your Project,
                 </h2>"
-                <p className="text-gray-600">'
-                  Fill out the form below and we'll get back to you with a detailed quote within 24 hours.
+                <p className="text-gray-600">"
+                  Fill out the form below and we"ll get back to you with a detailed quote within 24 hours.
                 </p>
               </div>
 "
@@ -224,10 +193,8 @@ initial="{{" opacity: 0, y: 20 }}"
 value="{formData.name}""
                       onChange="{handleInputChange}""
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent""
-                      placeholder="Your full name"
-                    />
+                      placeholder="Your full name" />
                   </div>
-
                   <div>"
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                       Email Address *
@@ -239,10 +206,8 @@ value="{formData.name}""
 value="{formData.email}""
                       onChange="{handleInputChange}""
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent""
-                      placeholder="your@email.com"
-                    />
+                      placeholder="your@email.com" />
                   </div>
-
                   <div>"
                     <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
                       Company Name,
@@ -253,10 +218,8 @@ value="{formData.email}""
                       value="{formData.company}""
                       onChange="{handleInputChange}""
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent""
-                      placeholder="Your company name"
-                    />
+                      placeholder="Your company name" />
                   </div>
-
                   <div>"
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
                       Phone Number,
@@ -267,8 +230,7 @@ value="{formData.email}""
                       value="{formData.phone}""
                       onChange="{handleInputChange}""
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent""
-                      placeholder="+1 (555) 123-4567"
-                    />
+                      placeholder="+1 (555) 123-4567" />
                   </div>
                 </div>
 "
@@ -288,11 +250,12 @@ value="{formData.serviceType}""
                       {serviceTypes.map((service) => (",
                         <option key="{service}" value="{service}">
                           {service}
+
                         </option>
                       ))}
+
                     </select>
                   </div>
-
                   <div>"
                     <label htmlFor="projectSize" className="block text-sm font-medium text-gray-700 mb-2">
                       Project Size,
@@ -307,8 +270,10 @@ value="{formData.serviceType}""
                       {projectSizes.map((size) => (",
                         <option key="{size}" value="{size}">
                           {size}
+
                         </option>
                       ))}
+
                     </select>
                   </div>
                 </div>
@@ -328,11 +293,12 @@ value="{formData.serviceType}""
                       {timelines.map((time) => (",
                         <option key="{time}" value="{time}">
                           {time}
+
                         </option>
                       ))}
+
                     </select>
                   </div>
-
                   <div>"
                     <label htmlFor="budget" className="block text-sm font-medium text-gray-700 mb-2">
                       Budget Range,
@@ -343,11 +309,9 @@ value="{formData.serviceType}""
                       value="{formData.budget}""
                       onChange="{handleInputChange}""
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent"">
-                      placeholder="e.g., $10,000 - $50,000"
-                    />
+                      placeholder="e.g., $10,000 - $50,000" />
                   </div>
                 </div>
-
                 <div>"
                   <label htmlFor="description" className="block text-sm font-medium text-gray-700 mb-2">
                     Project Description *
@@ -359,10 +323,8 @@ rows="{4}""
                     value="{formData.description}""
                     onChange="{handleInputChange}""
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent""
-                    placeholder="Describe your project in detail..."
-                  />
+                    placeholder="Describe your project in detail..."  />
                 </div>
-
                 <div>"
                   <label htmlFor="requirements" className="block text-sm font-medium text-gray-700 mb-2">
                     Specific Requirements,
@@ -373,8 +335,7 @@ rows="{4}""
                     value="{formData.requirements}""
                     onChange="{handleInputChange}""
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent"">
-                    placeholder="Any specific requirements, technologies, or constraints..."
-                  />
+                    placeholder="Any specific requirements, technologies, or constraints..." />
                 </div>
 "
                 <div className="text-center">"
@@ -390,17 +351,17 @@ rows="{4}""
                     ) : (
                       <>
                         Submit Quote Request"
-                        <ArrowRight className="ml-2 w-5 h-5" />
+                        <ArrowRight className="ml-2 w-5 h-5"  />
                       </>
                     )}
+
                   </button>
                 </div>
               </form>
             </motion.div>
           </div>
         </div>
-
-        {/*   */}"
+        {/* comment */}"
         <div className="py-16 bg-gray-50">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
             <div className="text-center mb-12">"
@@ -415,7 +376,7 @@ rows="{4}""
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"
               <div className="text-center">"
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">"
-                  <Phone className="w-8 h-8 text-blue-600" />
+                  <Phone className="w-8 h-8 text-blue-600"  />
                 </div>"
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Call Us</h3>"
                 <p className="text-gray-600">+1 302 464 0950</p>
@@ -423,7 +384,7 @@ rows="{4}""
 "
               <div className="text-center">"
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">"
-                  <Mail className="w-8 h-8 text-green-600" />
+                  <Mail className="w-8 h-8 text-green-600"  />
                 </div>"
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Email Us</h3>"
                 <p className="text-gray-600">kleber@ziontechgroup.com</p>
@@ -431,10 +392,10 @@ rows="{4}""
 "
               <div className="text-center">"
                 <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">"
-                  <MapPin className="w-8 h-8 text-purple-600" />
+                  <MapPin className="w-8 h-8 text-purple-600"  />
                 </div>"
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Visit Us</h3>"
-                <p className="text-gray-600">364 E Main St STE 1008<br />Middletown DE 19709</p>
+                <p className="text-gray-600">364 E Main St STE 1008<br  />Middletown DE 19709</p>
               </div>
             </div>
           </div>

@@ -1,131 +1,109 @@
+import Head from "next/head"
 import React from "react"
   FileText,
-  MessageSquare} from 'lucide - react',
-  const description = 'Advanced affiliate marketing tracking platform with fraud detection, cross-device attribution, and automated commission payouts.
-  const features = [
-    {'
-      title: 'Advanced Attribution Tracking','
-      description: 'Cross-device and cross-platform attribution with 99.9% accuracy',
-      icon: Target,
-      details: [',
-        'Multi-touch attribution modeling','
-        'Cross-device user journey tracking','
-        'Real-time conversion attribution','
-        'Custom attribution windows','
-        'Fraud detection and prevention','
-        'Cookie-less tracking solutions'
-      ]
+  MessageSquare} from "lucide - react",
+  const description = "Advanced affiliate marketing tracking platform with fraud detection, cross-device attribution, and automated commission payouts.
+  const features = []
 },
-    {'
-      title: 'Commission Management','
-      description: 'Automated commission calculation and payout processing',
+    {"
+      title: "Commission Management","
+      description: "Automated commission calculation and payout processing",
       icon: DollarSign,
-      details: [',
-        'Flexible commission structures','
-        'Automated payout scheduling','
-        'Multi-currency support','
-        'Tax reporting and compliance','
-        'Performance-based bonuses','
-        'Real-time earnings tracking'
+      details: [",
+        "Flexible commission structures","
+        "Automated payout scheduling","
+        "Multi-currency support","
+        "Tax reporting and compliance","
+        "Performance-based bonuses","
+        "Real-time earnings tracking"
       ]
 },
-    {'
-      title: 'Fraud Detection & Prevention','
-      description: 'AI-powered fraud detection with real-time monitoring',
+    {"
+      title: "Fraud Detection & Prevention","
+      description: "AI-powered fraud detection with real-time monitoring",
       icon: Shield,
-      details: [',
-        'Machine learning fraud algorithms','
-        'Real-time risk scoring','
-        'IP and device fingerprinting','
-        'Click fraud detection','
-        'Bot traffic filtering','
-        'Chargeback prevention'
+      details: [",
+        "Machine learning fraud algorithms","
+        "Real-time risk scoring","
+        "IP and device fingerprinting","
+        "Click fraud detection","
+        "Bot traffic filtering","
+        "Chargeback prevention"
       ]
 },
-    {'
-      title: 'Analytics & Reporting','
-      description: 'Comprehensive analytics dashboard with actionable insights',
+    {"
+      title: "Analytics & Reporting","
+      description: "Comprehensive analytics dashboard with actionable insights",
       icon: BarChart3,
-      details: [',
-        'Real-time performance metrics','
-        'Custom report builder','
-        'ROI and LTV calculations','
-        'A/B testing capabilities','
-        'Export to popular BI tools','
-        'White-label reporting'
+      details: [",
+        "Real-time performance metrics","
+        "Custom report builder","
+        "ROI and LTV calculations","
+        "A/B testing capabilities","
+        "Export to popular BI tools","
+        "White-label reporting"
       ]
-}
+
+
   ]
 
-  const pricing = [
-    {'
-      name: 'Starter','
-      price: '$299','
-      period: '/month','
-      description: 'Perfect for small businesses',
-      features: [',
-        'Up to 10,000 clicks/month','
-        'Basic fraud detection','
-        'Standard reporting','
-        'Email support','
-        '1 admin user','
-        'Basic integrations'
-      ],
+  const pricing = [],
       popular: false},
-    {'
-      name: 'Professional','
-      price: '$799','
-      period: '/month','
-      description: 'Ideal for growing businesses',
-      features: [',
-        'Up to 100,000 clicks/month','
-        'Advanced fraud detection','
-        'Custom reporting','
-        'Priority support','
-        '5 admin users','
-        'API access','
-        'White-label options'
+    {"
+      name: "Professional","
+      price: "$799","
+      period: "/month","
+      description: "Ideal for growing businesses",
+      features: [",
+        "Up to 100,000 clicks/month","
+        "Advanced fraud detection","
+        "Custom reporting","
+        "Priority support","
+        "5 admin users","
+        "API access","
+        "White-label options"
       ],
       popular: true},
-    {'
-      name: 'Enterprise','
-      price: 'Custom','
-      period: '','
-      description: 'For large-scale operations',
-      features: [',
-        'Unlimited clicks','
-        'AI-powered fraud prevention','
-        'Custom analytics','
-        'Dedicated support','
-        'Unlimited users','
-        'Custom integrations','
-        'SLA guarantee'
+    {"
+      name: "Enterprise","
+      price: "Custom","
+      period: "","
+      description: "For large-scale operations",
+      features: [",
+        "Unlimited clicks","
+        "AI-powered fraud prevention","
+        "Custom analytics","
+        "Dedicated support","
+        "Unlimited users","
+        "Custom integrations","
+        "SLA guarantee"
       ],
       popular: false}
+
   ]
 
   return (
     <PageTransition>
 <Head>
         <title>{title}</title>
-        <meta name = "description" content="{description}" />"
-        <meta name="viewport" content="width="device-width," initial-scale=1" />"
-        <link rel="canonical" href="https: //ziontechgroup.com/services/affiliate-marketing-tracking" />
+        <meta name="description" content="{description}"  />
+        <meta name="viewport" content="width=device-width, initial-scale=1"  />"
+        <link rel="canonical" href="https: // comment
       </Head>
 ,
-      {/*   */}"
+      {/* comment */}"
       <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm: py-32">"
         <div className="mx-auto max-w-7xl px-6 lg:px-8">"
           <div className="mx-auto max-w-2xl text-center">"
             <div className="flex items-center justify-center mb-4">"
-              <Link2 className="h-6 w-6 text-blue-600 mr-2" />"
+              <Link2 className="h-6 w-6 text-blue-600 mr-2"  />"
               <span className="text-base font-semibold leading-7 text-blue-600">Affiliate Marketing Platform</span>
             </div>"
             <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Advanced Affiliate Marketing Tracking Software,
             </h1>"
             <p className="mt-6 text-lg leading-8 text-gray-600">,
-              Maximize your affiliate program ROI with our comprehensive tracking platform featuring fraud detection, 
+              Maximize your affiliate program ROI with our comprehensive tracking platform featuring fraud detection,
               cross-device attribution, and automated commission management.
             </p>"
             <div className="mt-8 flex items-center justify-center gap-x-6">"
@@ -133,14 +111,14 @@ import React from "react"
                 View Pricing,
               </Link>"
               <Link href="/contact" className="text-sm font-semibold leading-6 text-gray-900">"
-                Get Demo <ArrowRight className="inline h-4 w-4 ml-1" />
+                Get Demo <ArrowRight className="inline h-4 w-4 ml-1"  />
               </Link>
             </div>
           </div>
         </div>
       </section>
 ,
-      {/*   */}"
+      {/* comment */}"
       <section className="py-24 sm: py-32">"
         <div className="mx-auto max-w-7xl px-6 lg:px-8">"
           <div className="mx-auto max-w-2xl text-center mb-16">"
@@ -167,18 +145,19 @@ import React from "react"
                 <ul className="space-y-3">
                   {feature.details.map((detail, detailIndex) => ("
                     <li key="{detailIndex}" className="flex items-center gap-x-3">"
-                      <CheckCircle className="h-4 w-4 text-blue-600" />"
+                      <CheckCircle className="h-4 w-4 text-blue-600"  />"
                       <span className="text-sm text-gray-700">{detail}</span>
                     </li>
                   ))}
+
                 </ul>
               </div>
             ))}
+
           </div>
         </div>
       </section>
-
-      {/*   */}"
+      {/* comment */}"
       <section id="pricing" className="py-24 sm: py-32 bg-gray-50">"
         <div className="mx-auto max-w-7xl px-6 lg:px-8">"
           <div className="mx-auto max-w-2xl text-center mb-16">"
@@ -190,11 +169,11 @@ import React from "react"
             </p>
           </div>
           "
-          <div className="{`grid" gap-8 lg: grid-cols-3`>,
+          <div className="{"grid" gap-8 lg: grid-cols-3">,
             {pricing.map((plan, index) => ("
-              <div key="{index}" className="{`relative" rounded-2xl border p-8 shadow-sm ${plan.popular ? 'border-blue-600 bg-blue-50' : 'border-gray-200 bg-white'}`}>
+              <div key="{index}" className="{"relative" rounded-2xl border p-8 shadow-sm ${plan.popular ? "border-blue-600 bg-blue-50" : "border-gray-200 bg-white"}"}>
                 {plan.popular && ("
-                  <div className="`absolute" -top-4 left-1/2 transform -translate-x-1/2`}>"
+                  <div className=""absolute" -top-4 left-1/2 transform -translate-x-1/2"}>"
                     <span className="inline-flex items-center rounded-full bg-blue-600 px-4 py-1 text-sm font-semibold text-white">
                       Most Popular,
                     </span>
@@ -211,24 +190,25 @@ import React from "react"
                 <ul className="mt-8 space-y-4">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key="{featureIndex}" className="flex items-center gap-x-3">"
-                      <CheckCircle className="h-4 w-4 text-blue-600" />"
+                      <CheckCircle className="h-4 w-4 text-blue-600"  />"
                       <span className="text-sm text-gray-700">{feature}</span>
                     </li>
                   ))}
+
                 </ul>"
                 <div className="mt-8">"
-                  <Link href="{`/contact`" className="{`block" w-full rounded-md px-6 py-3 text-center text-sm font-semibold ${plan.popular ? 'bg-blue-600 text-white hover:bg-blue-500' : 'bg-gray-900 text-white hover:bg-gray-800'}`}>
+                  <Link href="{"/contact"" className="{"block" w-full rounded-md px-6 py-3 text-center text-sm font-semibold ${plan.popular ? "bg-blue-600 text-white hover:bg-blue-500" : "bg-gray-900 text-white hover:bg-gray-800'}"}>
                     Get Started,
                   </Link>
                 </div>
               </div>
             ))}
+
           </div>
         </div>
       </section>
-
-      {/*   */}"
-      <section className="`py-24" sm:py-32`}>"
+      {/* comment */}"
+      <section className=""py-24" sm:py-32"}>"
         <div className="mx-auto max-w-7xl px-6 lg: px-8">"
           <div className="mx-auto max-w-2xl text-center mb-16">"
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -242,21 +222,21 @@ import React from "react"
           <div className="grid gap-8 lg:grid-cols-3">"
             <div className="text-center">"
               <div className="flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 mx-auto mb-4">"
-                <TrendingUp className="h-8 w-8 text-blue-600" />
+                <TrendingUp className="h-8 w-8 text-blue-600"  />
               </div>"
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Increase ROI by 40%</h3>"
               <p className="text-gray-600">Our advanced tracking and fraud prevention helps you maximize affiliate program returns</p>
             </div>"
             <div className="text-center">"
               <div className="flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 mx-auto mb-4">"
-                <Shield className="h-8 w-8 text-blue-600" />
+                <Shield className="h-8 w-8 text-blue-600"  />
               </div>"
               <h3 className="text-xl font-semibold text-gray-900 mb-2">99.9% Fraud Prevention</h3>"
               <p className="text-gray-600">AI-powered fraud detection protects your program from invalid clicks and conversions</p>
             </div>"
             <div className="text-center">"
               <div className="flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 mx-auto mb-4">"
-                <Zap className="h-8 w-8 text-blue-600" />
+                <Zap className="h-8 w-8 text-blue-600"  />
               </div>"
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Real-time Analytics</h3>"
               <p className="text-gray-600">Get instant insights into your affiliate program performance with live dashboards</p>
@@ -265,7 +245,7 @@ import React from "react"
         </div>
       </section>
 ,
-      {/*   */}"
+      {/* comment */}"
       <section className="bg-blue-600 py-16 sm: py-24">"
         <div className="mx-auto max-w-7xl px-6 lg:px-8">"
           <div className="mx-auto max-w-2xl text-center">"
@@ -280,29 +260,29 @@ import React from "react"
                 Start Free Trial,
               </Link>"
               <Link href="tel:+13024640950" className="text-sm font-semibold leading-6 text-white">"
-                Call +1 302 464 0950 <ArrowRight className="inline h-4 w-4 ml-1" />
+                Call +1 302 464 0950 <ArrowRight className="inline h-4 w-4 ml-1"  />
               </Link>
             </div>
           </div>
         </div>
       </section>
 ,
-      {/*   */}"
+      {/* comment */}"
       <section className="py-16 bg-gray-50">"
         <div className="mx-auto max-w-7xl px-6 lg: px-8">"
           <div className="text-center">"
             <h3 className="text-lg font-semibold text-gray-900 mb-4">Get in Touch</h3>"
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-gray-600">"
               <div className="flex items-center">"
-                <Phone className="h-4 w-4 mr-2" />"
+                <Phone className="h-4 w-4 mr-2"  />"
                 <a href="tel:+13024640950" className="hover:text-blue-600">+1 302 464 0950</a>
               </div>"
               <div className="flex items-center">"
-                <Mail className="h-4 w-4 mr-2" />"
+                <Mail className="h-4 w-4 mr-2"  />"
                 <a href="mailto:kleber@ziontechgroup.com" className="hover:text-blue-600">kleber@ziontechgroup.com</a>
               </div>"
               <div className="flex items-center">"
-                <MapPin className="h-4 w-4 mr-2" />,
+                <MapPin className="h-4 w-4 mr-2"  />,
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
             </div>
@@ -311,4 +291,6 @@ import React from "react"
       </section>
     </PageTransition>
   );"
-}
+
+
+export default Component

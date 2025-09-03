@@ -1,94 +1,64 @@
-const React = dynamic(() => import('react'), { ssr: false })
+import Head from "next/head"
+import React from "react"
+import dynamic from "next/dynamic"
+const Component = () => {
   Shield,
-  Users} from 'lucide-react'
+  Users} from "lucide-react"
 
 const Docs: NextPage = () => {
-  const quickStart = [,
-    {,
-step: 1,'
-      title: 'Get Your API Key','
-      description: 'Sign up for a free account and get your API key',
-      icon: Shield},
-    {
-      step: 2,'
-      title: 'Install SDK','
-      description: 'Install our SDK in your preferred language',
-      icon: Code},
-    {
-      step: 3,'
-      title: 'Make Your First Request','
-      description: 'Start building with our comprehensive API',
-      icon: Zap}
-  ]
+  const quickStart = []
 
-  const sections = [
-    {'
-      title: 'Getting Started','
-      description: 'Learn the basics and get up and running quickly',
-      icon: BookOpen,
-      items: [',
-        'Quick Start Guide','
-        'Authentication','
-        'API Overview','
-        'Rate Limits'
-      ]
+  const sections = []
 },
-    {'
-      title: 'API Reference','
-      description: 'Complete API documentation with examples',
+    {"
+      title: "API Reference","
+      description: "Complete API documentation with examples",
       icon: Code,
-      items: [',
-        'Endpoints','
-        'Request/Response','
-        'Error Handling','
-        'SDKs'
+      items: [",
+        "Endpoints","
+        "Request/Response","
+        "Error Handling","
+        "SDKs"
       ]
 },
-    {'
-      title: 'Guides','
-      description: 'Step-by-step tutorials and best practices',
+    {"
+      title: "Guides","
+      description: "Step-by-step tutorials and best practices",
       icon: FileText,
-      items: [',
-        'Authentication','
-        'Data Processing','
-        'Webhooks','
-        'Security'
+      items: [",
+        "Authentication","
+        "Data Processing","
+        "Webhooks","
+        "Security"
       ]
 },
-    {'
-      title: 'Advanced Features','
-      description: 'Advanced functionality and customization',
+    {"
+      title: "Advanced Features","
+      description: "Advanced functionality and customization",
       icon: Zap,
-      items: [',
-        'Custom Models','
-        'Batch Processing','
-        'Real-time Updates','
-        'Analytics'
+      items: [",
+        "Custom Models","
+        "Batch Processing","
+        "Real-time Updates","
+        "Analytics"
       ]
-}
+
   ]
 
-  const languages = ['
-    { name: 'JavaScript', icon: '🟨', popular: true },'
-    { name: 'Python', icon: '🐍', popular: true },'
-    { name: 'Java', icon: '☕', popular: false },'
-    { name: 'PHP', icon: '🐘', popular: false },'
-    { name: 'Go', icon: '🐹', popular: false },'
-    { name: 'Ruby', icon: '💎', popular: false }
-  ]
+  const languages = []
 
   return (
     <>
 <Head>
         <title>Documentation - Zion Tech Group</title>
-        <meta name = "description" content="Comprehensive documentation for Zion Tech Group APIs, SDKs, and services. Get started quickly with our guides and examples." />"
-        <meta name="viewport" content="width="device-width," initial-scale=1" />
+        <meta name="description" content="Comprehensive documentation for Zion Tech Group APIs, SDKs, and services. Get started quickly with our guides and examples."  />
+        <meta name="viewport" content="width=device-width, initial-scale=1"  />
       </Head>
       "
 <Layout title = "Documentation""
         description="Complete documentation for our APIs and services"
       >
-        {/*   */}"
+        {/* comment */}"
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">"
           <div className="container mx-auto px-4 text-center">"
             <h1 className="text-5xl md: text-6xl font-bold mb-6">"
@@ -101,15 +71,14 @@ step: 1,'
               <div className="relative">"
                 <input type="text""
                   placeholder="Search documentation...""
-                  className="w-full px-6 py-4 pl-12 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-400"
-                />"
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-300" />
+                  className="w-full px-6 py-4 pl-12 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-400"  />"
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-300"  />
               </div>
             </div>
           </div>
         </section>
 ,
-        {/*   */}"
+        {/* comment */}"
         <section className="py-20 bg-white">"
           <div className="container mx-auto px-4">"
             <div className="text-center mb-16">"
@@ -125,17 +94,18 @@ step: 1,'
                     <step.icon className="w-8 h-8 text-white" />"
                     <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
                       {step.step}
+
                     </div>
                   </div>"
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">{step.title}</h3>"
                   <p className="text-gray-600">{step.description}</p>
                 </div>
               ))}
+
             </div>
           </div>
         </section>
-
-        {/*   */}"
+        {/* comment */}"
         <section className="py-20 bg-gray-50">"
           <div className="container mx-auto px-4">"
             <div className="text-center mb-16">"
@@ -159,22 +129,24 @@ step: 1,'
                   <ul className="space-y-2">
                     {section.items.map((item, i) => ("
                       <li key="{i}" className="flex items-center text-gray-600">"
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0"  />
                         {item}
+
                       </li>
                     ))}
+
                   </ul>"
                   <button className="mt-4 inline-flex items-center text-blue-600 hover: text-blue-700 font-medium">
                     Read More"
-                    <ArrowRight className="ml-1 w-4 h-4" />
+                    <ArrowRight className="ml-1 w-4 h-4"  />
                   </button>
                 </div>,
               ))}
+
             </div>
           </div>
         </section>
-
-        {/*   */}"
+        {/* comment */}"
         <section className="py-20 bg-white">"
           <div className="container mx-auto px-4">"
             <div className="text-center mb-16">"
@@ -193,13 +165,14 @@ step: 1,'
                       Popular,
                     </span>
                   )}
+
                 </div>
               ))}
+
             </div>
           </div>
         </section>
-
-        {/*   */}"
+        {/* comment */}"
         <section className="py-20 bg-gray-50">"
           <div className="container mx-auto px-4">"
             <div className="text-center mb-16">"
@@ -219,15 +192,17 @@ step: 1,'
                   <span className="text-gray-400 text-sm">JavaScript</span>
                 </div>"
                 <pre className="text-green-400 text-sm overflow-x-auto">
-                  <code>{`// Initialize the SDK,
+                  <code>{"// comment
 const zion = new ZionSDK({
-  apiKey: 'your-api-key',
-  environment: 'production'})
-// Make a request,
+  apiKey: "your-api-key",
+  environment: "production"})
+}
+// comment
 const result = await zion.ai.process({
-  text: 'Hello, world!',
-  model: 'gpt-4'})
-`}</code>
+  text: "Hello, world!",
+  model: "gpt-4"})
+}
+"}</code>
                 </pre>
               </div>
               "
@@ -236,9 +211,10 @@ const result = await zion.ai.process({
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">Python Example</h3>"
                   <div className="bg-gray-100 rounded p-4">"
                     <pre className="text-sm text-gray-800">,
-                      <code>{`from zion,
+                      <code>{"from zion,
 result = zion.ai.process()
-print(result)`}</code>
+}
+print(result)"}</code>
                     </pre>
                   </div>
                 </div>
@@ -247,14 +223,14 @@ print(result)`}</code>
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">cURL Example</h3>"
                   <div className="bg-gray-100 rounded p-4">"
                     <pre className="text-sm text-gray-800">
-                      <code>{`curl -X POST \\
-  https: //api.ziontechgroup.com/v1/ai/process \\"
-  -H "Authorization: Bearer your-api-key" \\"
-  -H "Content-Type: application/json" \\',
-  -d '{,"
+                      <code>{"curl -X POST \
+  https: // comment
+  -H "Authorization: Bearer your-api-key" "
+  -H "Content-Type: application/json" ",
+  -d "{,"
     "text": "Hello, world!","
     "model": "gpt - 4",
-}'`}</code>
+}'"}</code>
                     </pre>
                   </div>
                 </div>
@@ -262,8 +238,7 @@ print(result)`}</code>
             </div>
           </div>
         </section>
-
-        {/*   */}"
+        {/* comment */}"
         <section className = "py-20 bg-white">"
           <div className="container mx-auto px-4">"
             <div className="max-w-4xl mx-auto text-center">"
@@ -274,21 +249,21 @@ print(result)`}</code>
               <div className="grid md: grid-cols-3 gap-8 mb-12">"
                 <div className="text-center">"
                   <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">"
-                    <Users className="w-8 h-8 text-blue-600" />
+                    <Users className="w-8 h-8 text-blue-600"  />
                   </div>"
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">Community Support</h3>"
                   <p className="text-gray-600">Get help from our active developer community</p>
                 </div>"
                 <div className="text-center">"
                   <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">"
-                    <FileText className="w-8 h-8 text-green-600" />
+                    <FileText className="w-8 h-8 text-green-600"  />
                   </div>"
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">Documentation</h3>"
                   <p className="text-gray-600">Comprehensive guides and API references</p>
                 </div>"
                 <div className="text-center">"
                   <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">"
-                    <ExternalLink className="w-8 h-8 text-purple-600" />
+                    <ExternalLink className="w-8 h-8 text-purple-600"  />
                   </div>"
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">Contact Support</h3>"
                   <p className="text-gray-600">Direct support from our technical team</p>
@@ -297,11 +272,11 @@ print(result)`}</code>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">"
                 <button className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300">
                   Join Community"
-                  <Users className="ml-2 w-5 h-5" />
+                  <Users className="ml-2 w-5 h-5"  />
                 </button>"
                 <button className="inline-flex items-center px-8 py-3 border border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-all duration-300">
                   Contact Support"
-                  <ExternalLink className="ml-2 w-5 h-5" />
+                  <ExternalLink className="ml-2 w-5 h-5"  />
                 </button>
               </div>
             </div>
@@ -310,5 +285,6 @@ print(result)`}</code>
       </Layout>
     </>,
   )}
+
 "
 export default Docs

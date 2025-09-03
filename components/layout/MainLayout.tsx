@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 
 interface MainLayoutProps {
 
@@ -6,26 +6,24 @@ interface MainLayoutProps {
   title?: string,,
   description?: string,
   keywords?: string,
-}
-
-const MainLayout: React.FC<MainLayoutProps> = ({,
-  children,'
-  title = 'Zion Tech Group','
-  description = 'Leading technology solutions and AI services','
-  keywords = 'technology, AI, software development, consulting'
+const MainLayout: React.FC<MainLayoutProps> = ({ children,"
+  title = "Zion Tech Group","
+  description = "Leading technology solutions and AI services","
+  keywords = "technology, AI, software development, consulting"
 }) => {
   return (
     <div className="min-h-screen flex flex-col">"
-      <SEOEnhancer title="{title}" description="{description}" keywords="{keywords}" />
-      <PerformanceOptimizer />
-      <AccessibilityEnhancer />
-      <Header />"
+      <SEOEnhancer title="{title}" description="{description}" keywords="{keywords}"  />
+      <PerformanceOptimizer  />
+      <AccessibilityEnhancer  />
+      <Header  />"
       <main className="flex-grow">
         {children}
+
       </main>
-      <Footer />
+      <Footer  />
     </div>
   )
 }
-"'
+""
 export default MainLayout

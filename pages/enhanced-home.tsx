@@ -1,82 +1,53 @@
-const React = dynamic(() => import('react'), { ssr: false })
+import Head from "next/head"
+import React from "react"
+import dynamic from "next/dynamic"
+const Component = () => {
   Award,
-} from 'lucide-react'
+} from "lucide-react"
 
 const EnhancedHome: NextPage = () => {
-  const features = [,
-    {,
-icon: Brain,'
-      title: 'AI-Powered Solutions','
-      description: 'Cutting-edge artificial intelligence to transform your business operations','
-      color: 'from-blue-500 to-cyan-500'},
-    {
-      icon: Cloud,'
-      title: 'Cloud Infrastructure','
-      description: 'Scalable and secure cloud solutions for modern applications','
-      color: 'from-purple-500 to-pink-500'},
-    {
-      icon: Shield,'
-      title: 'Enterprise Security','
-      description: 'Advanced security measures to protect your data and systems','
-      color: 'from-green-500 to-emerald-500'},
-    {
-      icon: Zap,'
-      title: 'Lightning Fast','
-      description: 'Optimized performance for the best user experience','
-      color: 'from-yellow-500 to-orange-500'}
+  const features = []
+
+  const services = []
+},
+    {"
+      title: "Cloud Services","
+      description: "Comprehensive cloud infrastructure and management",
+      icon: Cloud,"
+      features: ["AWS/Azure/GCP", "DevOps", "Microservices", "Containerization"]
+},
+    {"
+      title: "Web Development","
+      description: "Modern, responsive web applications",
+      icon: Code,"
+      features: ["React/Next.js", "Node.js", "TypeScript", "Progressive Web Apps"]
+},
+    {"
+      title: "Mobile Development","
+      description: "Native and cross-platform mobile solutions",
+      icon: Globe,"
+      features: ["iOS/Android", "React Native", "Flutter", "App Store Optimization"]
+
   ]
 
-  const services = [
-    {'
-      title: 'AI Development','
-      description: 'Custom AI solutions tailored to your business needs',
-      icon: Brain,'
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
-},
-    {'
-      title: 'Cloud Services','
-      description: 'Comprehensive cloud infrastructure and management',
-      icon: Cloud,'
-      features: ['AWS/Azure/GCP', 'DevOps', 'Microservices', 'Containerization']
-},
-    {'
-      title: 'Web Development','
-      description: 'Modern, responsive web applications',
-      icon: Code,'
-      features: ['React/Next.js', 'Node.js', 'TypeScript', 'Progressive Web Apps']
-},
-    {'
-      title: 'Mobile Development','
-      description: 'Native and cross-platform mobile solutions',
-      icon: Globe,'
-      features: ['iOS/Android', 'React Native', 'Flutter', 'App Store Optimization']
-}
-  ]
-
-  const stats = ['
-    { number: '500+', label: 'Projects Completed' },'
-    { number: '98%', label: 'Client Satisfaction' },'
-    { number: '50+', label: 'Countries Served' },'
-    { number: '24/7', label: 'Support Available' }
-  ]
+  const stats = []
 
   return (
     <>
 <Head>
         <title>Zion Tech Group - Leading Technology Solutions</title>
-        <meta name = "description" content="Transform your business with cutting-edge AI, cloud solutions, and innovative technology services from Zion Tech Group." />"
-        <meta name="viewport" content="width="device-width," initial-scale=1" />
+        <meta name="description" content="Transform your business with cutting-edge AI, cloud solutions, and innovative technology services from Zion Tech Group."  />
+        <meta name="viewport" content="width=device-width, initial-scale=1"  />
       </Head>
       "
 <Layout title = "Zion Tech Group - Leading Technology Solutions""
         description="Transform your business with cutting-edge AI, cloud solutions, and innovative technology services"
       >
-        {/*   */}"
+        {/* comment */}"
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden">"
           <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900"></div>"
           <div className="absolute inset-0 bg-black/20"></div>
-          
-          {/*   */}"
+          {/* comment */}"
           <div className="absolute inset-0">
             <motion.div,"
 className="absolute top-20 left-20 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl""
@@ -88,7 +59,8 @@ className="absolute top-20 left-20 w-72 h-72 bg-blue-500/20 rounded-full blur-3x
                 duration: 20,
                 repeat: Infinity,"
                 ease: "linear"}}
-            />
+
+           />
             <motion.div,"
 className="absolute bottom-20 right-20 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl""
               animate="{{"
@@ -99,7 +71,8 @@ className="absolute bottom-20 right-20 w-96 h-96 bg-purple-500/20 rounded-full b
                 duration: 25,
                 repeat: Infinity,"
                 ease: "linear"}}
-            />
+
+           />
           </div>
 "
           <div className="relative z-10 container mx-auto px-4 text-center text-white">
@@ -107,6 +80,7 @@ className="absolute bottom-20 right-20 w-96 h-96 bg-purple-500/20 rounded-full b
 initial="{{" opacity: 0, y: 30 }}"
               animate="{{" opacity: 1, y: 0 }}"
               transition="{{" duration: 0.8 }}
+
             >"
               <h1 className="text-6xl md: text-8xl font-bold mb-6">"
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
@@ -123,7 +97,7 @@ whileHover="{{" scale: 1.05 }}"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover: shadow-lg hover:shadow-blue-500/25 transition-all duration-300"
                 >
                   Get Started"
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                  <ArrowRight className="ml-2 w-5 h-5"  />
                 </motion.button>,
                 <motion.button,"
 whileHover="{{" scale: 1.05 }}"
@@ -137,7 +111,7 @@ whileHover="{{" scale: 1.05 }}"
           </div>
         </section>
 ,
-        {/*   */}"
+        {/* comment */}"
         <section className="py-20 bg-white">"
           <div className="container mx-auto px-4">"
             <div className="text-center mb-16">"
@@ -154,20 +128,20 @@ key="{index}""
                   whileInView="{{" opacity: 1, y: 0 }}"
                   transition="{{" duration: 0.6, delay: index * 0.1 }}"
                   viewport="{{" once: true }}"
-                  className="{`text-center" group`
+                  className="{"text-center" group"
                 >"
-                  <div className="{`w-20" h-20 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>"
-                    <feature.icon className="`w-10" h-10 text-white`} />
+                  <div className="{"w-20" h-20 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300"}>"
+                    <feature.icon className=""w-10" h-10 text-white"} />
                   </div>"
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>"
                   <p className="text-gray-600">{feature.description}</p>
                 </motion.div>
               ))}
+
             </div>
           </div>
         </section>
-
-        {/*   */}"
+        {/* comment */}"
         <section className="py-20 bg-gray-50">"
           <div className="container mx-auto px-4">"
             <div className="text-center mb-16">"
@@ -198,18 +172,20 @@ key="{index}""
                   <ul className="space-y-2">
                     {service.features.map((feature, i) => ("
                       <li key="{i}" className="flex items-center text-gray-600">"
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0"  />
                         {feature}
+
                       </li>
                     ))}
+
                   </ul>
                 </motion.div>
               ))}
+
             </div>
           </div>
         </section>
-
-        {/*   */}"
+        {/* comment */}"
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">"
           <div className="container mx-auto px-4">"
             <div className="text-center mb-16">"
@@ -232,11 +208,11 @@ key="{index}""
                   <div className="text-gray-200">{stat.label}</div>
                 </motion.div>
               ))}
+
             </div>
           </div>
         </section>
-
-        {/*   */}"
+        {/* comment */}"
         <section className="py-20 bg-white">"
           <div className="container mx-auto px-4 text-center">
             <motion.div,"
@@ -244,9 +220,10 @@ initial="{{" opacity: 0, y: 30 }}"
               whileInView="{{" opacity: 1, y: 0 }}"
               transition="{{" duration: 0.8 }}"
               viewport="{{" once: true }}
+
             >"
               <h2 className="text-4xl font-bold text-gray-900 mb-6">Ready to Transform Your Business?</h2>"
-              <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">'
+              <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">"
                 Let's work together to build innovative solutions that drive your success,
               </p>"
               <div className="flex flex-col sm: flex-row gap-4 justify-center">,
@@ -256,7 +233,7 @@ whileHover="{{" scale: 1.05 }}"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover: shadow-lg hover:shadow-blue-500/25 transition-all duration-300"
                 >
                   Start Your Project"
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                  <ArrowRight className="ml-2 w-5 h-5"  />
                 </motion.button>,
                 <motion.button,"
 whileHover="{{" scale: 1.05 }}"
@@ -272,5 +249,6 @@ whileHover="{{" scale: 1.05 }}"
       </Layout>
     </>
   )}
+
 "
 export default EnhancedHome
