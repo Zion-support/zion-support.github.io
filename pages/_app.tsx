@@ -217,7 +217,6 @@ function Footer(): any {
             <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Main Website</a>
           </div>
         </div>
-        </div>
 
         {/* Contact CTA */}
         <div style={{ display: 'grid', gap: 12 }}>
@@ -247,7 +246,8 @@ function Footer(): any {
       
       <div style={{ 
         borderTop: '1px solid rgba(255,255,255,0.1)', 
-        padding: '20px', textAlign: 'center' 
+        padding: '20px', 
+        textAlign: 'center' 
       }}>
         <small style={{ opacity: 0.7 }}>
           © {new Date().getFullYear()} Zion Tech Group. All rights reserved. | 
