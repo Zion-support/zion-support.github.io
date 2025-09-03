@@ -1,282 +1,297 @@
 import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../../components/layout/MainLayout';
-import { CheckCircle, Star, Users, Zap, Shield, Globe, DollarSign, Clock } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, DollarSign, Target, Cloud } from 'lucide-react';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 const SmallBusiness: NextPage = () => {
   const solutions = [
     {
-      title: 'Cloud-Based Business Management',
-      description: 'Complete business management suite in the cloud',
-      icon: <Globe className="w-8 h-8" />,
-      features: [
-        'Customer relationship management',
-        'Inventory tracking',
-        'Financial reporting',
-        'Team collaboration tools'
-      ]
+      title: 'Affordable Cloud Solutions',
+      description: 'Cost-effective cloud infrastructure designed for small businesses',
+      features: ['Scalable hosting', 'Data backup', 'Security monitoring', '24/7 support'],
+      icon: Cloud,
+      price: 'Starting at $99/month'
     },
     {
-      title: 'AI-Powered Customer Support',
-      description: 'Automated customer service with human touch',
-      icon: <Users className="w-8 h-8" />,
-      features: [
-        '24/7 chatbot support',
-        'Ticket management system',
-        'Knowledge base integration',
-        'Performance analytics'
-      ]
+      title: 'Business Automation',
+      description: 'Streamline operations with intelligent automation tools',
+      features: ['Workflow automation', 'Email marketing', 'Customer management', 'Reporting'],
+      icon: Zap,
+      price: 'Starting at $49/month'
     },
     {
-      title: 'Digital Marketing Automation',
-      description: 'Streamline your marketing efforts with AI',
-      icon: <Zap className="w-8 h-8" />,
-      features: [
-        'Email marketing campaigns',
-        'Social media management',
-        'Content generation',
-        'Lead nurturing automation'
-      ]
+      title: 'Digital Marketing Suite',
+      description: 'Complete digital marketing tools for growth',
+      features: ['SEO optimization', 'Social media management', 'Analytics dashboard', 'Content creation'],
+      icon: Target,
+      price: 'Starting at $79/month'
     },
     {
-      title: 'Cybersecurity Protection',
-      description: 'Comprehensive security for your business data',
-      icon: <Shield className="w-8 h-8" />,
-      features: [
-        'Data encryption',
-        'Regular security audits',
-        'Backup and recovery',
-        'Employee training'
-      ]
+      title: 'E-commerce Platform',
+      description: 'Professional online store with payment processing',
+      features: ['Online store setup', 'Payment integration', 'Inventory management', 'Order tracking'],
+      icon: Globe,
+      price: 'Starting at $129/month'
     }
   ];
 
   const benefits = [
     {
-      icon: <DollarSign className="w-6 h-6" />,
-      title: 'Cost Effective',
-      description: 'Reduce operational costs by up to 40% with our efficient solutions'
+      title: 'Cost-Effective',
+      description: 'Affordable solutions that fit your budget',
+      icon: DollarSign
     },
     {
-      icon: <Clock className="w-6 h-6" />,
-      title: 'Quick Implementation',
-      description: 'Get up and running in weeks, not months'
+      title: 'Quick Setup',
+      description: 'Get up and running in days, not months',
+      icon: Clock
     },
     {
-      icon: <Shield className="w-6 h-6" />,
       title: 'Scalable Growth',
-      description: 'Solutions that grow with your business'
+      description: 'Solutions that grow with your business',
+      icon: TrendingUp
     },
     {
-      icon: <Users className="w-6 h-6" />,
-      title: 'Dedicated Support',
-      description: 'Personal support team for your business needs'
-    }
-  ];
-
-  const pricing = [
-    {
-      name: 'Starter',
-      price: '$299',
-      period: '/month',
-      description: 'Perfect for small businesses just getting started',
-      features: [
-        'Up to 5 users',
-        'Basic CRM functionality',
-        'Email support',
-        'Standard security features',
-        'Monthly reporting'
-      ]
-    },
-    {
-      name: 'Growth',
-      price: '$599',
-      period: '/month',
-      description: 'Ideal for growing small businesses',
-      features: [
-        'Up to 15 users',
-        'Advanced CRM features',
-        'AI customer support',
-        'Priority support',
-        'Advanced analytics',
-        'Custom integrations'
-      ]
-    },
-    {
-      name: 'Professional',
-      price: '$999',
-      period: '/month',
-      description: 'Complete solution for established small businesses',
-      features: [
-        'Unlimited users',
-        'Full feature access',
-        'Dedicated account manager',
-        '24/7 phone support',
-        'Custom development',
-        'Advanced security features'
-      ]
+      title: 'Expert Support',
+      description: 'Dedicated support team for small businesses',
+      icon: Users
     }
   ];
 
   return (
     <MainLayout
       title="Small Business Solutions - Zion Tech Group"
-      description="Comprehensive technology solutions designed specifically for small businesses. Streamline operations, reduce costs, and accelerate growth."
+      description="Affordable technology solutions designed specifically for small businesses. Get professional-grade tools without the enterprise price tag."
+      keywords="small business solutions, affordable technology, business automation, cloud solutions, digital marketing"
     >
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-black opacity-10"></div>
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <motion.h1 
+            className="text-5xl md:text-6xl font-bold mb-6"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
             Small Business <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
-            Comprehensive technology solutions designed specifically for small businesses. 
-            Streamline operations, reduce costs, and accelerate growth with our tailored approach.
-          </p>
+          </motion.h1>
+          <motion.p 
+            className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            Professional technology solutions designed specifically for small businesses. 
+            Get enterprise-grade tools without the enterprise price tag.
+          </motion.p>
           
-          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
-            <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
+          <motion.div 
+            className="flex flex-col sm:flex-row justify-center gap-4"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            <Link
+              href="/contact"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 cursor-pointer inline-block text-lg hover:scale-105 hover:shadow-lg"
+            >
               Get Started Today
             </Link>
-            <Link href="/contact" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
-              Schedule Consultation
+            <Link
+              href="/solutions"
+              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-all duration-300 cursor-pointer inline-block text-lg hover:scale-105"
+            >
+              View All Solutions
             </Link>
-          </div>
-
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-400">500+</div>
-              <div className="text-gray-300">Small Businesses Served</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-purple-400">40%</div>
-              <div className="text-gray-300">Average Cost Reduction</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-indigo-400">98%</div>
-              <div className="text-gray-300">Client Satisfaction</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-cyan-400">2-4</div>
-              <div className="text-gray-300">Weeks Implementation</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Solutions Overview */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Complete Business Solutions</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Everything your small business needs to compete and thrive in the digital age.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            {solutions.map((solution, index) => (
-              <div key={index} className="bg-white p-8 rounded-lg shadow-lg">
-                <div className="text-blue-600 mb-4">
-                  {solution.icon}
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">{solution.title}</h3>
-                <p className="text-gray-600 mb-6">{solution.description}</p>
-                <ul className="space-y-2">
-                  {solution.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-600">
-                      <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20">
+      <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Our Solutions?</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Why Choose Our Small Business Solutions?</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Designed specifically for small businesses with your unique needs in mind.
+              We understand the unique challenges small businesses face and have designed solutions 
+              that address your specific needs while staying within your budget.
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
-              <div key={index} className="text-center">
-                <div className="text-blue-600 mb-4 flex justify-center">
-                  {benefit.icon}
+              <motion.div
+                key={benefit.title}
+                className="text-center"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <benefit.icon className="w-8 h-8 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">{benefit.title}</h3>
                 <p className="text-gray-600">{benefit.description}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section className="py-20 bg-gray-50" id="pricing">
+      {/* Solutions Grid */}
+      <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Simple, Affordable Pricing</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Small Business Solutions</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Choose the plan that fits your business size and needs.
+              Comprehensive technology solutions designed to help your small business thrive in the digital age.
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricing.map((plan, index) => (
-              <div key={index} className="bg-white p-8 rounded-lg shadow-lg">
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
-                  <div className="text-4xl font-bold text-blue-600 mb-1">
-                    {plan.price}
-                    <span className="text-lg text-gray-500">{plan.period}</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {solutions.map((solution, index) => (
+              <motion.div
+                key={solution.title}
+                className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
+                <div className="flex items-center mb-6">
+                  <div className="p-3 bg-blue-100 rounded-lg mr-4">
+                    <solution.icon className="w-8 h-8 text-blue-600" />
                   </div>
-                  <p className="text-gray-600">{plan.description}</p>
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900">{solution.title}</h3>
+                    <p className="text-blue-600 font-semibold">{solution.price}</p>
+                  </div>
                 </div>
                 
-                <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                      <span className="text-gray-600">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
+                <p className="text-gray-600 mb-6 leading-relaxed">{solution.description}</p>
                 
-                <Link
-                  href="/contact"
-                  className="w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors bg-blue-600 hover:bg-blue-700 text-white"
-                >
-                  Get Started
-                </Link>
-              </div>
+                <div className="mb-6">
+                  <h4 className="font-semibold text-gray-900 mb-3">What's Included:</h4>
+                  <ul className="space-y-2">
+                    {solution.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center text-gray-600">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                
+                <div className="flex space-x-3">
+                  <Link
+                    href="/contact"
+                    className="flex-1 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors text-center"
+                  >
+                    Get Started
+                  </Link>
+                  <Link
+                    href="/contact"
+                    className="flex-1 bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-6 py-3 rounded-lg font-semibold transition-colors text-center"
+                  >
+                    Learn More
+                  </Link>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Success Stories */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Small Business Success Stories</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              See how we've helped small businesses like yours achieve their goals.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                company: "Local Bakery",
+                result: "300% increase in online orders",
+                quote: "Zion Tech Group helped us build an online presence that transformed our business."
+              },
+              {
+                company: "Consulting Firm",
+                result: "50% reduction in administrative time",
+                quote: "Their automation solutions freed up our time to focus on what we do best."
+              },
+              {
+                company: "Retail Store",
+                result: "200% growth in customer base",
+                quote: "The digital marketing tools helped us reach customers we never knew existed."
+              }
+            ].map((story, index) => (
+              <motion.div
+                key={story.company}
+                className="bg-white rounded-xl shadow-lg p-8 text-center"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Award className="w-8 h-8 text-green-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">{story.company}</h3>
+                <p className="text-green-600 font-semibold mb-4">{story.result}</p>
+                <p className="text-gray-600 italic">"{story.quote}"</p>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-blue-600">
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Small Business?
-          </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Join hundreds of small businesses that have already transformed their operations with our solutions.
-          </p>
-          <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
-            Start Your Transformation
-          </Link>
+          <motion.h2 
+            className="text-4xl md:text-5xl font-bold mb-6"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            Ready to Grow Your Small Business?
+          </motion.h2>
+          <motion.p 
+            className="text-xl mb-8 max-w-3xl mx-auto"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            Let us help you implement the right technology solutions to take your business to the next level.
+          </motion.p>
+          <motion.div 
+            className="flex flex-col sm:flex-row justify-center gap-4"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            viewport={{ once: true }}
+          >
+            <Link
+              href="/contact"
+              className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-all duration-300 cursor-pointer inline-block text-lg hover:scale-105 hover:shadow-lg"
+            >
+              Start Your Journey
+            </Link>
+            <Link
+              href="/contact"
+              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-all duration-300 cursor-pointer inline-block text-lg hover:scale-105"
+            >
+              Schedule Consultation
+            </Link>
+          </motion.div>
         </div>
       </section>
     </MainLayout>

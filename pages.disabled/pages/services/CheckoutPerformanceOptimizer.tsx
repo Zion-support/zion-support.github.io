@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {}
   Zap,
   CheckCircle,
@@ -38,7 +39,31 @@ export default function CheckoutPerformanceOptimizer(...args: any[]): any {}
               title: 'Analytics & alerts','
               desc: 'Error budgets, drop‑off heatmaps and Slack alerts.'},
           ].map(f => (
-            <div"key={f.title}""
+            <div"
+          <CreditCard className="w-8 h-8 text-cyan-400"  /> Checkout Performance;
+          Optimizer;
+        </h1>""
+        <p className="mt-4 text-slate-300">
+          Reduce friction and boost conversion with real‑user monitoring, A/B;
+          tested layouts, and payment retries. Works with Stripe, PayPal, Adyen.
+        </p>""
+        <div className="mt-8 grid gap-4 sm: anygrid-cols-2">
+          {[]
+            {}
+              title: 'RUM & Session Replay',
+              desc: 'Find slow steps and rage clicks across funnels.'},
+            {}
+              title: 'Experimentation',
+              desc: 'One‑click A/B templates for forms, shipping, and offers.'},
+            {}
+              title: 'Payment resilience',
+              desc: 'Smart retries, 3DS prompts, and dunning flows.'},
+            {}
+              title: 'Analytics & alerts',
+              desc: 'Error budgets, drop‑off heatmaps and Slack alerts.'}
+          ].map(f => (
+            <div;
+              key={f.title}""
               className="rounded-xl border border-white/10 bg-white/5 p-5""
             >""
               <div className="flex items-center gap-2 text-cyan-300 font-semibold">""
@@ -52,7 +77,18 @@ export default function CheckoutPerformanceOptimizer(...args: any[]): any {}
           Typical pricing:{' '}""
           <span className="font-semibold text-cyan-300">$99–$399/mo</span>."
         </div>""
-        <div className="mt-4 flex gap-4 text-sm">"<a""
+        <div className="mt-4 flex gap-4 text-sm">"
+                <CheckCircle className="w-4 h-4"  /> {f.title}
+              </div>"              <div className="mt-1 text-sm text-slate-300">{f.desc}</div>
+            </div>
+          ))}
+        </div>""
+        <div className="mt-8 text-sm text-slate-300">
+          Typical pricing:{' '}""
+          <span className="font-semibold text-cyan-300">$99–$399/mo</span>.
+        </div>""
+        <div className="mt-4 flex gap-4 text-sm">
+          <a""
             className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200""
             href="https://www.optimizely.com/pricing/""
             target="_blank""
@@ -67,21 +103,41 @@ export default function CheckoutPerformanceOptimizer(...args: any[]): any {}
             className="rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 px-4 py-2 text-sm font-semibold hover:from-cyan-400 hover:to-blue-500"
           >
             Request audit
-          </Link>"<a""
+          </Link>"
+          </a>
+        </div>""
+        <div className="mt-10 flex flex-wrap gap-3">
+          <Link""
+            to="/contact""
+            className="rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 px-4 py-2 text-sm font-semibold hover:from-cyan-400 hover:to-blue-500""
+          >
+            Request audit;
+          </Link>
+          <a""
             href="mailto:kleber@ziontechgroup.com""
             className="rounded-lg border border-cyan-400/40 px-4 py-2 text-sm font-semibold text-cyan-300 hover:bg-white/5 inline-flex items-center gap-2""
           >""
 :pages.disabled/pages/services/CheckoutPerformanceOptimizer.tsx
             <Mail className="w-4 h-4"  /> kleber@ziontechgroup.com
-          </a>"<a""
+          </a>"
+            <Mail className="w-4 h-4"  /> kleber@ziontechgroup.com;
+          </a>
+          <a""
             href="tel:+13024640950""
             className="rounded-lg border border-cyan-400/40 px-4 py-2 text-sm font-semibold text-cyan-300 hover:bg-white/5 inline-flex items-center gap-2""
           >""
 :pages.disabled/pages/services/CheckoutPerformanceOptimizer.tsx
-            <Phone className="w-4 h-4"  /> +1 302 464 0950</a>
+            <Phone className="w-4 h-4"  /> +1 302 464 0950
+            <Phone className="w-4 h-4"  /> +1 302 464 0950;
+          </a>
         </div>
       </section>
     </div>
 :pages.disabled/pages/services/CheckoutPerformanceOptimizer.tsx
   )}'"
 '"'"
+  )}
+'""
+=======
+>>>>>>> 92e970263e01302a6ec9ed9848ce724c6698ab78;
+>>>>>>> main

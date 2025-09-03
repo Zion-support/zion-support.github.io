@@ -1,120 +1,127 @@
 {
   "compilerOptions": {
-    "target": "ES2022",
+<<<<<<< HEAD
+    "target": "es5",
     "useDefineForClassFields": true,
+=======
+    "target": "ES2020",
+>>>>>>> main
     "lib": [
-      "ES2022",
-      "DOM",
-      "DOM.Iterable"
+      "dom",
+      "dom.iterable",
+      "es6"
     ],
     "allowJs": true,
     "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "module": "ESNext",
+<<<<<<< HEAD
+=======
+    "noEmit": true,
+    "esModuleInterop": true,
+>>>>>>> main
+    "module": "esnext",
     "moduleResolution": "node",
-    "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
     "jsx": "preserve",
     "incremental": true,
-    "declaration": true,
-    "declarationMap": true,
-    "sourceMap": true,
-    "removeComments": false,
-    "noImplicitAny": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "exactOptionalPropertyTypes": true,
-    "noImplicitOverride": true,
-    "noPropertyAccessFromIndexSignature": true,
-    "noUncheckedIndexedAccess": true,
-    "allowUnusedLabels": false,
-    "allowUnreachableCode": false,
-    "noFallthroughCasesInSwitch": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "src/*"
-      ],
-      "@components/*": [
-        "src/components/*"
-      ],
-      "@pages/*": [
-        "src/pages/*"
-      ],
-      "@layout/*": [
-        "src/layout/*"
-      ],
-      "@utils/*": [
-        "src/utils/*"
-      ],
-      "@hooks/*": [
-        "src/hooks/*"
-      ],
-      "@types/*": [
-        "src/types/*"
-      ],
-      "@assets/*": [
-        "src/assets/*"
-      ],
-      "@styles/*": [
-        "src/styles/*"
-      ],
-      "@data/*": [
-        "src/data/*"
-      ],
-      "@services/*": [
-        "src/services/*"
-      ],
-      "@context/*": [
-        "src/context/*"
-      ],
-      "@constants/*": [
-        "src/constants/*"
-      ]
-    },
-    "typeRoots": [
-      "./node_modules/@types",
-      "./types"
-    ],
-    "types": [
-      "node"
-    ],
     "plugins": [
       {
         "name": "next"
       }
     ],
-    "strictNullChecks": true,
-    "strictFunctionTypes": true,
-    "strictBindCallApply": true,
-    "strictPropertyInitialization": true,
-    "alwaysStrict": true
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ],
+      "@/components/*": [
+        "./src/components/*"
+      ],
+      "@/pages/*": [
+        "./src/pages/*"
+      ],
+      "@/styles/*": [
+        "./src/styles/*"
+      ],
+      "@/utils/*": [
+        "./src/utils/*"
+      ],
+      "@/types/*": [
+        "./src/types/*"
+      ],
+      "@/services/*": [
+        "./src/services/*"
+      ],
+      "@/store/*": [
+        "./src/store/*"
+      ]
+    }
   },
   "include": [
+<<<<<<< HEAD
+    "src/main.tsx",
+    "src/App.tsx",
+    "tailwind.config.js",
+    "postcss.config.js"
+=======
     "next-env.d.ts",
+<<<<<<< HEAD
+    "pages/**/*",
+    "components/**/*.ts",
+    "components/**/*.tsx",
+    "data/services.ts",
+    "styles/**/*",
+    "types/**/*",
+    "utils/**/*",
+<<<<<<< HEAD
     "**/*.ts",
     "**/*.tsx",
+=======
+>>>>>>> origin/main
+=======
+    "**/*.ts",
+    "**/*.tsx",
+>>>>>>> main
     ".next/types/**/*.ts"
+>>>>>>> main
   ],
   "exclude": [
     "node_modules",
+<<<<<<< HEAD
     "api-backup",
     "pages.disabled",
     "backup-pages",
     "automation/backups",
     "automation_backup",
     "broken_files_backup",
-    "components",
     "contracts",
     "cypress",
+<<<<<<< HEAD
+    "**/*.backup",
+    "**/*.disabled",
+    "temp_working/**",
+    "src/pages/**",
+    "src/utils/**",
+    "src/routes/**",
+    "supabase/functions/**",
+    "src/services/**",
+    "src/types/**"
+=======
+    "temp_working",
+    "supabase/functions",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
     "**/*.backup",
     "**/*.disabled"
+=======
+    ".next",
+    "out",
+    "dist"
+>>>>>>> main
+>>>>>>> main
   ]
 }

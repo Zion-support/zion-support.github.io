@@ -1,1 +1,15 @@
-describe ("Accessibility", () => { it ("renders without crashing", () => { render (<Accessibility />) ; expect (screen.getByRole ("main") || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; it ("displays expected content", () => { render (<Accessibility />) ;
+<<<<<<< HEAD
+=======
+import React from "react"
+import { SEO } from "@/components/SEO"
+export default function Accessibility.test() {return (
+    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
+      <SEO title="Accessibility.test - Zion Tech Group" description="Professional Accessibility.test services by Zion Tech Group"  />"
+      <div className="container mx-auto px-4 py-20">"
+        <h1 className="text-4xl font-bold text-white mb-8">Accessibility.test</h1>"
+        <p className="text-gray-300 text-lg">
+          Professional Accessibility.test services to help your business grow.
+        </p>
+      </div>
+  );"}"
+>>>>>>> main

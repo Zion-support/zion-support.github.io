@@ -24,11 +24,9 @@
       "axios": ["./src/lib/axios.ts"],
       "next": ["../types/next"],
       "next/*": ["../types/next/*"]
-    },
+},
     "typeRoots": ["./src/types", "./node_modules/@types"],
     "types": ["node"],
     "composite": true,
     "noEmit": true
-  },
-  "include": ["src", "types"]
 }
