@@ -1,344 +1,262 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Zap, 
-  Database, 
-  Network, 
-  Code, 
-  Smartphone,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  TrendingUp,
-  Users,
-  Globe,
-  Lock,
-  BarChart3
-} from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Zap, Shield, Globe, Database, Network, Brain, Cloud } from 'lucide-react';
+import PageTransition from '../src/components/PageTransition';
 
 export default function Products() {
   const products = [
     {
       id: 1,
-      name: 'AI Copilot Suite',
-      category: 'Artificial Intelligence',
-      description: 'Comprehensive AI-powered tools for development, operations, and business intelligence.',
+      name: "AI-Powered Analytics Platform",
+      description: "Transform your data into actionable insights with our advanced AI analytics platform.",
       icon: Brain,
       features: [
-        'Code generation and optimization',
-        'Automated testing and deployment',
-        'Intelligent monitoring and alerting',
-        'Natural language query interface'
+        "Real-time data processing",
+        "Predictive analytics",
+        "Custom dashboards",
+        "API integrations",
+        "Automated reporting"
       ],
-      pricing: 'Starting at $99/month',
-      popular: true
+      category: "AI Solutions",
+      pricing: "Starting at $2,999/month"
     },
     {
       id: 2,
-      name: 'Cloud Infrastructure Platform',
-      category: 'Cloud Solutions',
-      description: 'Scalable, secure cloud infrastructure with automated management and monitoring.',
+      name: "Cloud Infrastructure Suite",
+      description: "Scalable, secure, and reliable cloud infrastructure tailored to your business needs.",
       icon: Cloud,
       features: [
-        'Multi-cloud deployment support',
-        'Auto-scaling and load balancing',
-        'Advanced security and compliance',
-        '24/7 monitoring and support'
+        "Multi-cloud deployment",
+        "Auto-scaling capabilities",
+        "99.9% uptime guarantee",
+        "24/7 monitoring",
+        "Disaster recovery"
       ],
-      pricing: 'Starting at $199/month',
-      popular: false
+      category: "Cloud Solutions",
+      pricing: "Starting at $1,999/month"
     },
     {
       id: 3,
-      name: 'Security Operations Center',
-      category: 'Cybersecurity',
-      description: 'Enterprise-grade security monitoring and threat detection platform.',
+      name: "Cybersecurity Shield",
+      description: "Comprehensive security solution protecting your digital assets from modern threats.",
       icon: Shield,
       features: [
-        'Real-time threat detection',
-        'Automated incident response',
-        'Compliance reporting',
-        'Security analytics dashboard'
+        "Threat detection",
+        "Vulnerability scanning",
+        "Incident response",
+        "Compliance monitoring",
+        "Security training"
       ],
-      pricing: 'Starting at $299/month',
-      popular: false
+      category: "Security",
+      pricing: "Starting at $1,499/month"
     },
     {
       id: 4,
-      name: 'Data Analytics Platform',
-      category: 'Data & Analytics',
-      description: 'Advanced analytics and business intelligence platform with AI-powered insights.',
-      icon: BarChart3,
+      name: "IoT Management Platform",
+      description: "Connect, monitor, and manage your IoT devices with our intelligent platform.",
+      icon: Network,
       features: [
-        'Real-time data processing',
-        'Machine learning insights',
-        'Custom dashboard creation',
-        'API integration capabilities'
+        "Device management",
+        "Data visualization",
+        "Remote monitoring",
+        "Predictive maintenance",
+        "Custom integrations"
       ],
-      pricing: 'Starting at $149/month',
-      popular: false
+      category: "IoT Solutions",
+      pricing: "Starting at $2,499/month"
     },
     {
       id: 5,
-      name: 'Mobile App Development Kit',
-      category: 'Mobile Solutions',
-      description: 'Complete toolkit for building, testing, and deploying mobile applications.',
-      icon: Smartphone,
+      name: "Blockchain Solutions",
+      description: "Leverage blockchain technology for secure, transparent, and efficient operations.",
+      icon: Database,
       features: [
-        'Cross-platform development',
-        'Automated testing suite',
-        'App store deployment',
-        'Performance monitoring'
+        "Smart contracts",
+        "Decentralized applications",
+        "Tokenization",
+        "Supply chain tracking",
+        "Digital identity"
       ],
-      pricing: 'Starting at $79/month',
-      popular: false
+      category: "Blockchain",
+      pricing: "Custom pricing"
     },
     {
       id: 6,
-      name: 'IoT Management Platform',
-      category: 'Internet of Things',
-      description: 'Comprehensive platform for managing and monitoring IoT devices and data.',
-      icon: Network,
+      name: "Global Connectivity Suite",
+      description: "Seamless global connectivity and communication solutions for modern businesses.",
+      icon: Globe,
       features: [
-        'Device management and provisioning',
-        'Real-time data collection',
-        'Edge computing capabilities',
-        'Predictive maintenance'
+        "Global network access",
+        "Low-latency connections",
+        "Load balancing",
+        "CDN integration",
+        "Performance optimization"
       ],
-      pricing: 'Starting at $179/month',
-      popular: false
+      category: "Networking",
+      pricing: "Starting at $999/month"
     }
   ];
 
-  const categories = [
-    { name: 'All Products', count: products.length },
-    { name: 'Artificial Intelligence', count: 1 },
-    { name: 'Cloud Solutions', count: 1 },
-    { name: 'Cybersecurity', count: 1 },
-    { name: 'Data & Analytics', count: 1 },
-    { name: 'Mobile Solutions', count: 1 },
-    { name: 'Internet of Things', count: 1 }
-  ];
-
-  const stats = [
-    { number: '500+', label: 'Active Customers' },
-    { number: '99.9%', label: 'Uptime SLA' },
-    { number: '24/7', label: 'Support Available' },
-    { number: '30+', label: 'Countries Served' }
-  ];
+  const categories = ["All", "AI Solutions", "Cloud Solutions", "Security", "IoT Solutions", "Blockchain", "Networking"];
 
   return (
-    <>
+    <PageTransition>
       <Head>
-        <title>Products - Zion Tech Group</title>
-        <meta name="description" content="Explore our comprehensive suite of technology products including AI solutions, cloud platforms, cybersecurity tools, and more." />
+        <title>Products & Solutions — Zion Tech Group</title>
+        <meta name="description" content="Explore Zion Tech Group's comprehensive suite of technology products and solutions designed to transform your business." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="canonical" href="https://ziontechgroup.com/products" />
       </Head>
 
-      <main className="min-h-screen bg-white">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <h1 className="text-4xl font-bold text-gray-900 mb-6">
-                Our Products
-              </h1>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-                Comprehensive technology solutions designed to accelerate your digital transformation 
-                and drive business growth.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact">
-                  <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center">
-                    Schedule a Demo
-                    <ArrowRight className="w-5 h-5 ml-2" />
-                  </button>
-                </Link>
-                <button className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors">
-                  Download Brochure
-                </button>
-              </div>
-            </div>
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center">
+            <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              Innovative Technology Solutions
+            </h1>
+            <p className="mt-6 text-lg leading-8 text-gray-600">
+              Discover our comprehensive suite of products designed to accelerate your digital 
+              transformation and drive business growth.
+            </p>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Stats Section */}
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-4xl font-bold text-blue-600 mb-2">{stat.number}</div>
-                  <div className="text-lg text-gray-600">{stat.label}</div>
-                </div>
-              ))}
-            </div>
+      {/* Category Filter */}
+      <section className="py-8 bg-white border-b">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="flex flex-wrap gap-2 justify-center">
+            {categories.map((category) => (
+              <button
+                key={category}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                  category === "All"
+                    ? "bg-blue-600 text-white"
+                    : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                }`}
+              >
+                {category}
+              </button>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Categories Filter */}
-        <section className="py-8 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-wrap gap-2 justify-center">
-              {categories.map((category, index) => (
-                <button
-                  key={index}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                    index === 0 
-                      ? 'bg-blue-600 text-white' 
-                      : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
-                  }`}
-                >
-                  {category.name} ({category.count})
-                </button>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Products Grid */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {products.map((product) => (
-                <div key={product.id} className={`bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow relative ${product.popular ? 'ring-2 ring-blue-500' : ''}`}>
-                  {product.popular && (
-                    <div className="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                      Most Popular
+      {/* Products Grid */}
+      <section className="py-24 sm:py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="grid gap-8 lg:grid-cols-2 xl:grid-cols-3">
+            {products.map((product) => (
+              <div key={product.id} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                <div className="p-8">
+                  <div className="flex items-center mb-6">
+                    <div className="bg-blue-100 p-3 rounded-lg mr-4">
+                      <product.icon className="h-8 w-8 text-blue-600" />
                     </div>
-                  )}
-                  <div className="p-6">
-                    <div className="flex items-center mb-4">
-                      <div className="bg-blue-100 rounded-full p-3 mr-4">
-                        <product.icon className="w-8 h-8 text-blue-600" />
-                      </div>
-                      <div>
-                        <span className="text-sm text-blue-600 font-medium">{product.category}</span>
-                        <h3 className="text-xl font-bold text-gray-900">{product.name}</h3>
-                      </div>
-                    </div>
-                    <p className="text-gray-600 mb-6">{product.description}</p>
-                    <ul className="space-y-2 mb-6">
-                      {product.features.map((feature, index) => (
-                        <li key={index} className="flex items-start">
-                          <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                          <span className="text-gray-700 text-sm">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <p className="text-2xl font-bold text-gray-900">{product.pricing}</p>
-                      </div>
-                      <div className="flex space-x-2">
-                        <button className="bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-sm">
-                          Try Free
-                        </button>
-                        <button className="border border-gray-300 text-gray-700 px-4 py-2 rounded-lg font-semibold hover:bg-gray-50 transition-colors text-sm">
-                          Learn More
-                        </button>
-                      </div>
+                    <div>
+                      <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-medium">
+                        {product.category}
+                      </span>
                     </div>
                   </div>
+                  
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">{product.name}</h3>
+                  <p className="text-gray-600 mb-6">{product.description}</p>
+                  
+                  <ul className="space-y-3 mb-6">
+                    {product.features.map((feature, index) => (
+                      <li key={index} className="flex items-center text-sm text-gray-700">
+                        <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <div className="flex items-center justify-between">
+                    <div className="text-lg font-semibold text-blue-600">
+                      {product.pricing}
+                    </div>
+                    <Link
+                      href="/contact"
+                      className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
+                    >
+                      Learn More
+                      <ArrowRight className="h-4 w-4 ml-1" />
+                    </Link>
+                  </div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Enterprise Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-            <h2 className="text-3xl font-bold mb-6">Enterprise Solutions</h2>
-            <p className="text-xl mb-8 max-w-3xl mx-auto">
-              Need a custom solution? Our enterprise team can help you build, deploy, 
-              and scale technology solutions tailored to your specific requirements.
+      {/* Features Section */}
+      <section className="bg-gray-50 py-24 sm:py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              Why Choose Our Solutions?
+            </h2>
+            <p className="mt-4 text-lg text-gray-600">
+              Built with cutting-edge technology and designed for enterprise-grade performance
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              <div className="text-center">
-                <div className="bg-white bg-opacity-20 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <Users className="w-8 h-8" />
-                </div>
-                <h3 className="text-xl font-semibold mb-2">Dedicated Support</h3>
-                <p className="text-blue-100">24/7 dedicated support team and account manager</p>
-              </div>
-              <div className="text-center">
-                <div className="bg-white bg-opacity-20 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <Shield className="w-8 h-8" />
-                </div>
-                <h3 className="text-xl font-semibold mb-2">Enterprise Security</h3>
-                <p className="text-blue-100">Advanced security features and compliance certifications</p>
-              </div>
-              <div className="text-center">
-                <div className="bg-white bg-opacity-20 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <TrendingUp className="w-8 h-8" />
-                </div>
-                <h3 className="text-xl font-semibold mb-2">Custom Integration</h3>
-                <p className="text-blue-100">Seamless integration with your existing systems</p>
-              </div>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact">
-                <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                  Contact Sales
-                </button>
-              </Link>
-              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                View Case Studies
-              </button>
-            </div>
           </div>
-        </section>
-
-        {/* Integration Section */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Seamless Integrations</h2>
-              <p className="text-lg text-gray-600">
-                Our products integrate with the tools you already use
+          
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <div className="bg-white p-6 rounded-xl shadow-md text-center">
+              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Zap className="h-8 w-8 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">High Performance</h3>
+              <p className="text-gray-600">
+                Optimized for speed and efficiency with enterprise-grade infrastructure and cutting-edge technology.
               </p>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
-              {['AWS', 'Azure', 'GCP', 'Salesforce', 'Slack', 'Microsoft Teams', 'GitHub', 'Docker', 'Kubernetes', 'MongoDB', 'PostgreSQL', 'Redis'].map((integration, index) => (
-                <div key={index} className="bg-gray-100 rounded-lg p-6 text-center hover:bg-gray-200 transition-colors">
-                  <div className="text-gray-600 font-semibold">{integration}</div>
-                </div>
-              ))}
+            
+            <div className="bg-white p-6 rounded-xl shadow-md text-center">
+              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="h-8 w-8 text-green-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Enterprise Security</h3>
+              <p className="text-gray-600">
+                Bank-level security with encryption, compliance, and advanced threat protection.
+              </p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-xl shadow-md text-center">
+              <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Star className="h-8 w-8 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">24/7 Support</h3>
+              <p className="text-gray-600">
+                Round-the-clock expert support to ensure your systems run smoothly at all times.
+              </p>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* CTA Section */}
-        <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              Choose the perfect solution for your business needs. Start with a free trial 
-              or schedule a personalized demo with our experts.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact">
-                <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center">
-                  Start Free Trial
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </button>
-              </Link>
-              <Link href="/pricing-guide">
-                <button className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors">
-                  View Pricing
-                </button>
-              </Link>
-            </div>
-          </div>
-        </section>
-      </main>
-    </>
+      {/* CTA Section */}
+      <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-16">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Let's discuss how our solutions can help you achieve your technology goals.
+          </p>
+          <Link
+            href="/contact"
+            className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-gray-50 transition-colors"
+          >
+            Get Started Today
+            <ArrowRight className="h-4 w-4 ml-2" />
+          </Link>
+        </div>
+      </section>
+    </PageTransition>
   );
 }

@@ -1,12 +1,11 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
 class LintErrorFixer {
   constructor() {
-    this.logFile = path.join(__dirname, 'logs', 'lint-error-fixer.log');
+    this.logFile = path.join(__dirname, 'logs', `lint-error-fixer.log`);
     this.ensureLogDirectory();
   }
 
@@ -26,7 +25,7 @@ class LintErrorFixer {
 
   async fixUnusedImports(filePath) {
     try {
-      const content = fs.readFileSync(filePath, 'utf8');
+      const content = fs.readFileSync(filePath, `utf8`);
       const lines = content.split('\n');
       const imports = [];
       const otherLines = [];
@@ -49,7 +48,7 @@ class LintErrorFixer {
       const usedImports = imports.filter(importLine => {
         if (!importLine.trim().startsWith('import ')) return true;
 
-        // Extract import names
+        // Extract import names;
         const match = importLine.match(/import\s+{([^}]+)}\s+from/);
         if (match) {
           const importNames = match[1].split(',').map(name => name.trim());
@@ -59,13 +58,13 @@ class LintErrorFixer {
         return true;
       });
 
-      const newContent = [...usedImports, ...otherLines].join('\n');
+      const newContent = [...usedImports, ...otherLines].join(`\n`);
       fs.writeFileSync(filePath, newContent);
       this.log(`✅ Fixed unused imports in: ${filePath}`);
       return true;
-    } catch (error) {
+    } catch (error) { 
       this.log(
-        `❌ Error fixing unused imports in ${filePath}: ${error.message}`
+        `❌ Error fixing unused imports in ${filePath }: ${error.message}`
       );
       return false;
     }
@@ -73,24 +72,24 @@ class LintErrorFixer {
 
   async fixTypeScriptErrors(filePath) {
     try {
-      // Run TypeScript compiler to check for errors
+      // Run TypeScript compiler to check for errors;
       const result = execSync(`npx tsc --noEmit --project .`, {
-        encoding: 'utf8',
-        stdio: 'pipe',
+        encoding: `utf8`,
+        stdio: `pipe`,
       });
       this.log(`✅ TypeScript check passed for: ${filePath}`);
       return true;
-    } catch (error) {
+    } catch (error) { 
       this.log(
-        `❌ TypeScript errors in ${filePath}: ${error.stdout || error.message}`
+        `❌ TypeScript errors in ${filePath }: ${error.stdout || error.message}`
       );
 
-      // Try to fix common TypeScript issues
+      // Try to fix common TypeScript issues;
       try {
-        const content = fs.readFileSync(filePath, 'utf8');
+        const content = fs.readFileSync(filePath, `utf8`);
         let fixedContent = content;
 
-        // Fix common TypeScript issues
+        // Fix common TypeScript issues;
         fixedContent = fixedContent.replace(
           /const\s+(\w+)\s*:\s*any\s*=/g,
           'const $1 ='
@@ -99,7 +98,7 @@ class LintErrorFixer {
           /function\s+(\w+)\s*\(\s*\)\s*:\s*any/g,
           'function $1()'
         );
-        fixedContent = fixedContent.replace(/:\s*any\s*[,)]/g, '$1');
+        fixedContent = fixedContent.replace(/:\s*any\s*[,)]/g, `$1`);
 
         if (fixedContent !== content) {
           fs.writeFileSync(filePath, fixedContent);
@@ -118,14 +117,14 @@ class LintErrorFixer {
   async fixESLintErrors(filePath) {
     try {
       const result = execSync(`npx eslint "${filePath}" --fix`, {
-        encoding: 'utf8',
-        stdio: 'pipe',
+        encoding: `utf8`,
+        stdio: `pipe`,
       });
       this.log(`✅ Fixed ESLint errors in: ${filePath}`);
       return true;
-    } catch (error) {
+    } catch (error) { 
       this.log(
-        `❌ ESLint errors in ${filePath}: ${error.stdout || error.message}`
+        `❌ ESLint errors in ${filePath }: ${error.stdout || error.message}`
       );
       return false;
     }
@@ -148,13 +147,13 @@ class LintErrorFixer {
   }
 
   async fixAllFiles() {
-    this.log('🔧 Starting comprehensive lint error fix...');
+    this.log(`🔧 Starting comprehensive lint error fix...`);
 
     const patterns = [
       'pages/**/*.{js,jsx,ts,tsx}',
       'components/**/*.{js,jsx,ts,tsx}',
       'utils/**/*.{js,jsx,ts,tsx}',
-      'hooks/**/*.{js,jsx,ts,tsx}',
+      `hooks/**/*.{js,jsx,ts,tsx}`,
     ];
 
     let totalFixed = 0;
@@ -174,9 +173,9 @@ class LintErrorFixer {
   }
 
   glob(pattern) {
-    // Simple glob implementation using fs
+    // Simple glob implementation using fs;
     const files = [];
-    const parts = pattern.split('/');
+    const parts = pattern.split(`/`);
     const baseDir = parts[0];
 
     if (fs.existsSync(baseDir)) {
@@ -212,10 +211,10 @@ class LintErrorFixer {
   async startContinuousMode() {
     this.log('🔄 Starting continuous lint error fixing mode...');
 
-    // Run initial fix
+    // Run initial fix;
     await this.fixAllFiles();
 
-    // Set up file watcher
+    // Set up file watcher;
     const patterns = [
       'pages/**/*.{js,jsx,ts,tsx}',
       'components/**/*.{js,jsx,ts,tsx}',
@@ -228,21 +227,21 @@ class LintErrorFixer {
       persistent: true,
     });
 
-    watcher.on('change', async filePath => {
+    watcher.on(`change`, async filePath => {
       this.log(`📝 File changed: ${filePath}`);
       await this.fixFile(filePath);
     });
 
-    watcher.on('add', async filePath => {
+    watcher.on(`add`, async filePath => {
       this.log(`📝 New file detected: ${filePath}`);
       await this.fixFile(filePath);
     });
 
-    this.log('✅ Continuous mode started - watching for file changes');
+    this.log(`✅ Continuous mode started - watching for file changes`);
   }
 }
 
-// CLI handling
+// CLI handling;
 const fixer = new LintErrorFixer();
 const command = process.argv[2];
 const filePath = process.argv[3];
@@ -262,6 +261,6 @@ switch (command) {
     fixer.startContinuousMode();
     break;
   default:
-    // If no arguments provided, run in continuous mode
+    // If no arguments provided, run in continuous mode;
     fixer.startContinuousMode();
 }
