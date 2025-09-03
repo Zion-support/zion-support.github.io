@@ -2,6 +2,7 @@
 interface: Address {
   name: string;
    address: string;
+<<<<<<< HEAD
    city: string;
    country: strin,g} interface: ShippingRate {
   id: string;
@@ -18,3 +19,26 @@ interface: Address {
  * @returns: {*} Function return value;
  */
 function: CheckoutShippingOptions ({ toAddress, onSelect }: Props) { const: [rates, setRates] = useState < ShippingRate[]> ([])  const [loading, setLoading] = useState (false)  const [selected, setSelected] = useState < string> (')  useEffect ( () => { if (!toAddress) return try { if (res.ok) { setRates (data.rates || []) } else {'''"";
+=======
+   cit,
+    y: string;
+   countr,
+    y: string} interface ShippingRate {
+  id: string;
+   carrier: string;
+   service: string;
+   rat,
+    e: string;
+   currenc,
+    y: string;
+   delivery_days?: number | null;
+   tax?: string} interface Props {
+  toAddress: Address | null;
+   onSelect?: (rat,
+    e: ShippingRate) => void} export /**;
+ * CheckoutShippingOptions function;
+ * @param {*} params - Function parameters;
+ * @returns {*} Function return value
+ */
+function CheckoutShippingOptions ({ toAddress, onSelect }: Props) { const [rates, setRates] = useState < ShippingRate[]> ([])  const [loading, setLoading] = useState (false)  const [selected, setSelected] = useState < string> (')  useEffect ( () => { if (!toAddress) return try { if (res.ok) { setRates (data.rates || []) } else {'''""
+>>>>>>> main

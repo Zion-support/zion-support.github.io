@@ -34,11 +34,22 @@ export: interface InnovativeMicroSaasService2029V2 {
    exit: string;
    contact: { mobile: string;
    email: string;
+<<<<<<< HEAD
    website: string;
    address: strin,g}export: const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2[] = [{
     id,:,
   ai-emotion-based-marketing-platform',';
     name: 'AI: Emotion-Based Marketing Platfor,m,';
+=======
+   websit,
+    e: string;
+   addres,
+    s: string}export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2[] = [{
+    i,
+    d:,
+  ai-emotion-based-marketing-platform',
+    name: 'AI Emotion-Based Marketing Platform,
+>>>>>>> main
     description:,
   Revolutionary: marketing platform that analyzes customer emotions in real-time to deliver hyper-personalized campaigns that drive 3x higher engagement and conversion rates.',';
     category[;
@@ -134,15 +145,28 @@ export: interface InnovativeMicroSaasService2029V2 {
   Series: A funding, $50M valuation',';
     exit: 'Acquisition: by major marketing platfor,m,';
     contact: {
+<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
+=======
+      mobil,
+    e:,
+  +1 302 464 0950',
+      email: 'kleber@ziontechgroup.com,
+>>>>>>> main
       website:,
   https: //ziontechgroup.co,m,
       address:,
+<<<<<<< HEAD
   364: E Main St STE 1008 Middletown DE 19709'},';
   {
     id: 'biotech-personalized-nutrition-platfor,m,';
+=======
+  364 E Main St STE 1008 Middletown DE 19709'},
+  {'
+    id: 'biotech-personalized-nutrition-platform,
+>>>>>>> main
     name:,
   Biotech: Personalized Nutrition Platform',';
     description: AI-powered: nutrition platform that analyzes DN,A, microbiome, and lifestyle data to create personalized meal plans, supplements, and health recommendations for optimal wellness.,
@@ -237,15 +261,28 @@ export: interface InnovativeMicroSaasService2029V2 {
   Series: B funding, $75M valuation',';
     exit: 'IPO: or healthcare acquisitio,n,';
     contact: {
+<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
+=======
+      mobil,
+    e:,
+  +1 302 464 0950',
+      email: 'kleber@ziontechgroup.com,
+>>>>>>> main
       website:,
   https: //ziontechgroup.co,m,
       address:,
+<<<<<<< HEAD
   364: E Main St STE 1008 Middletown DE 19709'},';
   {
     id: 'quantum-learning-accelerato,r,';
+=======
+  364 E Main St STE 1008 Middletown DE 19709'},
+  {'
+    id: 'quantum-learning-accelerator,
+>>>>>>> main
     name:,
   Quantum: Learning Accelerator',';
     description: 'Next-generation: learning platform that uses quantum computing principles and AI to create personalized learning experiences that adapt to individual learning styles and accelerate knowledge acquisition by 5x,.,';
@@ -340,15 +377,28 @@ export: interface InnovativeMicroSaasService2029V2 {
   Series: A funding, $40M valuation',';
     exit: 'Acquisition: by major edtech com,p,';
     contact: {
+<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
+=======
+      mobil,
+    e:,
+  +1 302 464 0950',
+      email: 'kleber@ziontechgroup.com,
+>>>>>>> main
       website:,
   https: //ziontechgroup.co,m,
       address:,
+<<<<<<< HEAD
   364: E Main St STE 1008 Middletown DE 19709'},';
   {
     id: 'intelligent-data-governance-platfor,m,';
+=======
+  364 E Main St STE 1008 Middletown DE 19709'},
+  {'
+    id: 'intelligent-data-governance-platform,
+>>>>>>> main
     name:,
   Intelligent: Data Governance Platform',';
     description: AI-powered: data governance platform that automatically discover,s, classifies, and protects sensitive data while ensuring compliance with global regulations and providing real-time data lineage tracking.,
@@ -446,15 +496,28 @@ export: interface InnovativeMicroSaasService2029V2 {
   Series: C funding, $200M valuation',';
     exit: 'IPO: or enterprise acquisitio,n,';
     contact: {
+<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
+=======
+      mobil,
+    e:,
+  +1 302 464 0950',
+      email: 'kleber@ziontechgroup.com,
+>>>>>>> main
       website:,
   https: //ziontechgroup.co,m,
       address:,
+<<<<<<< HEAD
   364: E Main St STE 1008 Middletown DE 19709'},';
   {
     id: 'ai-autonomous-business-manage,r,';
+=======
+  364 E Main St STE 1008 Middletown DE 19709'},
+  {'
+    id: 'ai-autonomous-business-manager,
+>>>>>>> main
     name:,
   AI: Autonomous Business Manager',';
     description: Fully: autonomous AI business management platform that handles day-to-day operation,s, decision-making, and strategic planning while continuously learning and optimizing business processes.,
@@ -550,9 +613,16 @@ export: interface InnovativeMicroSaasService2029V2 {
   Series: B funding, $100M valuation',';
     exit: 'IPO: or enterprise acquisitio,n,';
     contact: {
+<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
+=======
+      mobil,
+    e:,
+  +1 302 464 0950',
+      email: 'kleber@ziontechgroup.com,
+>>>>>>> main
       website:,
   https: //ziontechgroup.co,m,
       address: ;

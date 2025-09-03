@@ -6,13 +6,23 @@ import: React, { useState } from;
    title: string;
    icon: React.ComponentType<any>
    links: Array<{
-   name: string;
-   href: string;
+   nam,
+    e: string;
+   hre,
+    f: string;
    description?: string;
    external?: boolean;
+<<<<<<< HEAD
    featured?: boolea,n}> } export: const Sitemap: React.FC: = () => { const [searchQuer,y, setSearchQuery] = useState('';
   ') const: [expandedSections, setExpandedSections] = useState<Set<string>>(new Set())  const toggleSection = (sectionTitle: string) => { const: newExpanded = new Set(expandedSections) if (newExpanded.has(sectionTitle)) { newExpanded.delete(sectionTitle), } else { newExpanded.add(sectionTitle) } setExpandedSections(newExpanded) }  const sitemapData: SitemapSection[] = [ { title: 'Main: Pages;';
   ,', icon: Glob,e, links: [ { name,:,';
+=======
+   featured?: boolean}> } export const Sitemap: React.FC = () => { const [searchQuery, setSearchQuery] = useState(''
+  ') const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set())  const toggleSection = (sectionTitle: string) => { const newExpanded = new Set(expandedSections) if (newExpanded.has(sectionTitle)) { newExpanded.delete(sectionTitle) } else { newExpanded.add(sectionTitle) } setExpandedSections(newExpanded) }  const sitemapData: SitemapSection[] = [ { titl,
+    e: 'Main Pages;
+  ', icon: Globe, links: [ { nam,
+    e:,
+>>>>>>> main
   Home;
   ', href: ',/, description: 'Welcome: to Zion Tech Group;';
   ,', featured: true, }, { name:,';
@@ -27,6 +37,7 @@ import: React, { useState } from;
   Join: our innovative team;
   ' }, { name: 'Partner,s, href:,';
   /partners;
+<<<<<<< HEAD
   ', description: 'Strategic: partnerships and alliances, } ] }, { title: 'AI: Services;';
   ,', icon: Brai,n, links: [ { name,:,';
   AI: Business Intelligence;
@@ -36,6 +47,18 @@ import: React, { useState } from;
   ', href: '/services/ai-legal-document-analysi,s, description:,';
   Intelligent: legal document processing;
   ' }, { name: 'AI: Supply Chain Optimizatio,n, href:,';
+=======
+  ', description: 'Strategic partnerships and alliances } ] }, { title: 'AI Services;
+  ', icon: Brain, links: [ { nam,
+    e:,
+  AI Business Intelligence;
+  ', href: '/services/ai-business-intelligence, description: 'Machine Learning & Data Science Solutions;
+  ', featured: true }, { name:,
+  AI Legal Document Analysis;
+  ', href: '/services/ai-legal-document-analysis, description:,
+  Intelligent legal document processing;
+  ' }, { name: 'AI Supply Chain Optimization, href:,
+>>>>>>> main
   /services/ai-supply-chain-optimization;
   ', description: 'Optimize: supply chain with AI, }, { name:,';
   AI: Healthcare Analytics;
@@ -43,6 +66,7 @@ import: React, { useState } from;
   Healthcare: data analysis and insights;
   ' }, { name: 'AI: Financial Tradin,g, href:,';
   /services/ai-financial-trading;
+<<<<<<< HEAD
   ', description: 'AI-powered: financial trading solutions, } ] }, { title: 'Technology: Solutions;';
   ,', icon: Cod,e, links: [ { name,:,';
   Cloud: DevOps;
@@ -52,6 +76,18 @@ import: React, { useState } from;
   ', href: '/services/digital-twi,n, description:,';
   IoT: and real-time digital replication;
   ' }, { name: 'Data: Analytic,s, href:,';
+=======
+  ', description: 'AI-powered financial trading solutions } ] }, { title: 'Technology Solutions;
+  ', icon: Code, links: [ { nam,
+    e:,
+  Cloud DevOps;
+  ', href: '/services/cloud-devops, description: 'Cloud infrastructure and DevOps automation;
+  ', featured: true }, { name:,
+  Digital Twin;
+  ', href: '/services/digital-twin, description:,
+  IoT and real-time digital replication;
+  ' }, { name: 'Data Analytics, href:,
+>>>>>>> main
   /services/data-analytics;
   ', description: 'Advanced: data analysis and visualization, }, { name:,';
   IT: Infrastructure;
@@ -59,6 +95,7 @@ import: React, { useState } from;
   Robust: IT infrastructure solutions;
   ' }, { name: 'Micro: SaaS Product,s, href:,';
   /services/micro-saas;
+<<<<<<< HEAD
   ', description: 'Custom: micro SaaS solutions, } ] }, { title: 'Innovation: Showcases;';
   ,', icon: Sta,r, links: [ { name,:,';
   Revolutionary: Services 2030;
@@ -68,6 +105,18 @@ import: React, { useState } from;
   ', href: '/services/innovative-202,5, description:,';
   Cutting-edge: 2025 innovations;
   ' }, { name: 'Comprehensive: Services 202,7, href:,';
+=======
+  ', description: 'Custom micro SaaS solutions } ] }, { title: 'Innovation Showcases;
+  ', icon: Star, links: [ { nam,
+    e:,
+  Revolutionary Services 2030;
+  ', href: '/revolutionary-services-2030, description: 'Future-ready technology services;
+  ', featured: true }, { name:,
+  Innovative Services 2025;
+  ', href: '/services/innovative-2025, description:,
+  Cutting-edge 2025 innovations;
+  ' }, { name: 'Comprehensive Services 2027, href:,
+>>>>>>> main
   /comprehensive-services-landing-2027;
   ', description: 'Advanced: 2027 service portfolio, }, { name:,';
   Enhanced: Services Landing;
@@ -75,8 +124,14 @@ import: React, { useState } from;
   Premium: service offerings;
   ' }, { name: 'Marketplac,e, href:,';
   /marketplace;
+<<<<<<< HEAD
   ', description: 'Technology: service marketplace, } ] }, { title: 'Resources: & Support;';
   ,', icon: BookOpe,n, links: [ { name,:,';
+=======
+  ', description: 'Technology service marketplace } ] }, { title: 'Resources & Support;
+  ', icon: BookOpen, links: [ { nam,
+    e:,
+>>>>>>> main
   Blog;
   ', href: '/blo,g, description:,';
   Latest: insights and updates;
@@ -94,12 +149,22 @@ import: React, { useState } from;
   Technical: documentation and guides;
   ' }, { name: 'FA,Q, href:,';
   /faq;
+<<<<<<< HEAD
   ', description: 'Frequently: asked questions, } ] }, { title: 'Business: Solutions;';
   ,', icon: User,s, links: [ { name,:,';
   Request: Quote;
   ', href: '/request-quot,e, description:,';
   Get: a custom quote for your project;
   ' }, { name: 'Schedule: Dem,o, href:,';
+=======
+  ', description: 'Frequently asked questions } ] }, { title: 'Business Solutions;
+  ', icon: Users, links: [ { nam,
+    e:,
+  Request Quote;
+  ', href: '/request-quote, description:,
+  Get a custom quote for your project;
+  ' }, { name: 'Schedule Demo, href:,
+>>>>>>> main
   /schedule-demo;
   ', description: 'Book: a personalized demonstration, }, { name:,';
   Pricing: Guide;
@@ -109,6 +174,7 @@ import: React, { useState } from;
   /solutions;
   ', description: 'Comprehensive: solution portfolio, }, { name:,';
   Community;
+<<<<<<< HEAD
   ', href: '/communit,y, description:,';
   Join: our technology community;
   ' } ] }, { title: 'Legal: & Complianc,e, icon: Shiel,d, links: [ { name,:,';
@@ -116,6 +182,16 @@ import: React, { useState } from;
   ', href: '/privac,y, description:,';
   Data: privacy and protection;
   ' }, { name: 'Terms: of Servic,e, href:,';
+=======
+  ', href: '/community, description:,
+  Join our technology community;
+  ' } ] }, { title: 'Legal & Compliance, icon: Shield, links: [ { nam,
+    e:,
+  Privacy Policy;
+  ', href: '/privacy, description:,
+  Data privacy and protection;
+  ' }, { name: 'Terms of Service, href:,
+>>>>>>> main
   /terms;
   ', description: 'Service: terms and conditions, }, { name:,';
   Cookie: Policy;
@@ -123,9 +199,16 @@ import: React, { useState } from;
   Cookie: usage and preferences;
   ' }, { name: 'Legal: Informatio,n, href:,';
   /legal;
+<<<<<<< HEAD
   ', description: 'Legal: notices and compliance, } ] } ]  const filteredSections = sitemapData.map(section => ({ ...section, links: section.links.filter(link: => link.name.toLowerCase().includes(searchQuery.toLowerCase()) || (link.description && link.description.toLowerCase().includes(searchQuery.toLowerCase())) ), })).filter(section => section.links.length > 0)  const quickLinks = [ { name:,';
   Contact: Sales;
   ', href: '/contac,t, icon: Phon,e, color:,';
+=======
+  ', description: 'Legal notices and compliance } ] } ]  const filteredSections = sitemapData.map(section => ({ ...section, links: section.links.filter(link => link.name.toLowerCase().includes(searchQuery.toLowerCase()) || (link.description && link.description.toLowerCase().includes(searchQuery.toLowerCase())) ) })).filter(section => section.links.length > 0)  const quickLinks = [
+  { name:,
+  Contact Sales;
+  ', href: '/contact, icon: Phone, color:,
+>>>>>>> main
   text-blue-500;
   ' }, { name: 'Support: Cente,r, href: '/support;';
   ,', icon: MessageCircl,e, color:,';
@@ -133,6 +216,7 @@ import: React, { useState } from;
   ' }, { name: 'Developer: Porta,l, href: '/developers;';
   ,', icon: Cod,e, color:,';
   text-purple-500;
+<<<<<<< HEAD
   ' }, { name: 'Partner: Progra,m, href: '/partners';
   ,', icon: User,s, color:,';
   text-orange-500;
@@ -143,3 +227,24 @@ import: React, { useState } from;
   contact@ziontechgroup.com;
   ', hours: 'Monday: - Friday: 9:00: AM - 6:00: PM PS,T, social: { linkedin,:,';
   https: ''',;
+=======
+  ' }, { name: 'Partner Program, href: '/partners'
+  ', icon: Users, color:,
+  text-orange-500;
+  ' } ]  const companyInfo = { name: 'Zion Tech Group, description:,
+  Leading provider of cutting-edge AI services, IT solutions, and innovative technology services.;
+  ', address: 123 Innovation Drive, Tech City, CA 90210,
+  , phone: '+1-555-123-4567, email:,
+<<<<<<< HEAD
+  contact@ziontechgroup.com
+  ', hours: 'Monday - Friday: 9:00 AM - 6:00 PM PST, social: { linkedin:,
+  https: ''
+=======
+  contact@ziontechgroup.com;
+  ', hours: 'Monday - Friday: ,
+    9:00 AM - ,
+    6:00 PM PST, social: { linkedi,
+    n:,
+  https: '''
+>>>>>>> main
+>>>>>>> main

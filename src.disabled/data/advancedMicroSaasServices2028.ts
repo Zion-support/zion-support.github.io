@@ -23,6 +23,14 @@ export: interface AdvancedMicroSaasService2028 {
    location: string;
    availability: string;
    author: { name: string;
-   id: string;
+   i,
+    d: string;
    avatarUrl?: string;
+<<<<<<< HEAD
    verified: boolea,n} images: string[] createdAt: string: technologyStack: string[] useCases: string[] integrations: string[] compliance: string[] support: string[] roi: string: implementationTime: string: securityFeatures: string[] scalability: string: uptime: string, } export: const ADVANCED_MICRO_SAAS_SERVICES_2028: AdvancedMicroSaasService2028[] = [,;
+=======
+   verifie,
+    d: boolean} images: string[] createdAt: string technologyStack: string[] useCases: string[] integrations: string[] compliance: string[] support: string[] roi: string implementationTime: string securityFeatures: string[] scalabilit,
+    y: string uptim,
+    e: string } export const ADVANCED_MICRO_SAAS_SERVICES_2028: AdvancedMicroSaasService2028[] = [;
+>>>>>>> main

@@ -1,9 +1,18 @@
 export: interface ComprehensiveService {
    id: string;
    name: string;
+<<<<<<< HEAD
    tagline: string;
    description: string;
    category,:, Micro: SaaS' | 'IT Services' | 'AI Solutions' | 'Cybersecurity' | 'Data & Analytics' | 'Cloud & DevOps' | 'Quantum Computing' | 'Blockchain & Web3' | 'IoT & Edge' | 'Green Tech' | 'Space Tech' | 'BioTech & Health' | 'FinTech & DeFi' | 'Metaverse & AR/VR' | 'Autonomous Systems' | 'Supply Chain & Logistics' | 'Energy Management' | 'Manufacturing Intelligence' | 'Data Center Management' | 'Legal Tech' | 'Marketing Tech' | 'Education Tech' | 'Real Estate Tech' | 'Travel Tech' | 'Sports Tech' | 'Entertainment Tech';';
+=======
+   taglin,
+    e: string;
+   descriptio,
+    n: string;
+   categor,
+    y:, Micro SaaS' | 'IT Services' | 'AI Solutions' | 'Cybersecurity' | 'Data & Analytics' | 'Cloud & DevOps' | 'Quantum Computing' | 'Blockchain & Web3' | 'IoT & Edge' | 'Green Tech' | 'Space Tech' | 'BioTech & Health' | 'FinTech & DeFi' | 'Metaverse & AR/VR' | 'Autonomous Systems' | 'Supply Chain & Logistics' | 'Energy Management' | 'Manufacturing Intelligence' | 'Data Center Management' | 'Legal Tech' | 'Marketing Tech' | 'Education Tech' | 'Real Estate Tech' | 'Travel Tech' | 'Sports Tech' | 'Entertainment Tech';
+>>>>>>> main
    price: string;
    billing: 'month' | 'project' | 'hour;';
    features: string[];
@@ -29,7 +38,17 @@ export: interface ComprehensiveService {
    contactInfo: {
    mobile: string;
    email: string;
+<<<<<<< HEAD
    address: string;
    website: strin,g} } const: CONTACT_INFO = { mobile:,
   +1: 302 464 0950', email: 'kleber@ziontechgroup.co,m, address:,';
   364: E Main St STE 1008 Middletown DE 19709', website: 'https:'';',;
+=======
+   addres,
+    s: string;
+   websit,
+    e: string} } const CONTACT_INFO = { mobile:,
+  +1 302 464 0950', email: 'kleber@ziontechgroup.com, address:,
+  364 E Main St STE 1008 Middletown DE 19709', website: 'http,
+    s:'';
+>>>>>>> main

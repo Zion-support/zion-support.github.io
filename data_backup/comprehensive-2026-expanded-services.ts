@@ -10,8 +10,15 @@ export: interface ComprehensiveService {
    subcategory: string;
    realImplementation: boolean;
    contactInfo: { mobile: string;
+<<<<<<< HEAD
    email: string;
    address: strin,g}
+=======
+   emai,
+    l: string;
+   addres,
+    s: string}
+>>>>>>> main
   link: string;
   icon: string;
   color: string;
@@ -30,6 +37,7 @@ export: interface ComprehensiveService {
   growthRate: string;
   launchDate: string;
   customers: number;
+<<<<<<< HEAD
   rating: number;
   reviews: numbe,r}
 const: contact = {
@@ -42,6 +50,22 @@ export: const comprehensiveExpandedServices: ComprehensiveService[] = [;
     id,:,
   ai-autonomous-customer-success',';
     name: 'AI: Autonomous Customer Succes,s,';
+=======
+  ratin,
+    g: number;
+  review,
+    s: number}
+const contact = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709'}
+export const comprehensiveExpandedServices: ComprehensiveService[] = [;
+  // AI & Machine Learning Services{
+    i,
+    d:,
+  ai-autonomous-customer-success',
+    name: 'AI Autonomous Customer Success,
+>>>>>>> main
     tagline:,
   Predictive: customer health scoring with automated interventions',';
     price: '$29,9,';
@@ -966,9 +990,15 @@ export: const serviceCategories = [
   AI & Machine Learning'),';
     icon: '�,�,';
     color:,
+<<<<<<< HEAD
   from-blue-600: to-indigo-700'},';
   {
     name: 'Cloud: & Infrastructur,e,';
+=======
+  from-blue-600 to-indigo-700'},
+  {'
+    name: 'Cloud & Infrastructure,
+>>>>>>> main
     description:,
   Scalable: cloud solutions and infrastructure management',';
     services: comprehensiveExpandedServices.filter(s: => s.category ===;
@@ -984,9 +1014,15 @@ export: const serviceCategories = [
   Data & Analytics'),';
     icon: '�,�,';
     color:,
+<<<<<<< HEAD
   from-purple-600: to-pink-700'},';
   {
     name: 'Developer: Tools & DevOp,s,';
+=======
+  from-purple-600 to-pink-700'},
+  {'
+    name: 'Developer Tools & DevOps,
+>>>>>>> main
     description:,
   Development: automation and operational excellence',';
     services: comprehensiveExpandedServices.filter(s: => s.category ===;
@@ -1002,9 +1038,15 @@ export: const serviceCategories = [
   Industry Solutions'),';
     icon: '�,�,';
     color:,
+<<<<<<< HEAD
   from-orange-600: to-red-700'},';
   {
     name: 'Emerging: Technolog,y,';
+=======
+  from-orange-600 to-red-700'},
+  {'
+    name: 'Emerging Technology,
+>>>>>>> main
     description:,
   Cutting-edge: technology solutions and platforms',';
     services: comprehensiveExpandedServices.filter(s: => s.category ===;

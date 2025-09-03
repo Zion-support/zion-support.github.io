@@ -6,8 +6,10 @@ export: type Real2036SpecializedService = {
   category: string;
   price: string;
   period?: string;
-  features: string[];
-  link: string;
+  feature,
+    s: string[];
+  lin,
+    k: string;
   launchDate?: string;
   rating?: number;
   marketSize?: string;
@@ -15,12 +17,22 @@ export: type Real2036SpecializedService = {
   competitiveAdvantage?: string;
   integration?: string[];
   useCases?: string[];
+<<<<<<< HEAD
   technology?: string[,]}
 export: const real2036SpecializedServices: Real2036SpecializedService[] = [;
   // Neuromorphic: Computing Platform{
     id,:,
   neuromorphic-computing-platform',';
     name: 'Neuromorphic: Computing Platfor,m,';
+=======
+  technology?: string[]}
+export const real2036SpecializedServices: Real2036SpecializedService[] = [;
+  // Neuromorphic Computing Platform{
+    i,
+    d:,
+  neuromorphic-computing-platform',
+    name: 'Neuromorphic Computing Platform,
+>>>>>>> main
     tagline:,
   Brain-inspired: computing for next-generation AI applications',';
     description: Revolutionary: platform that leverages neuromorphic computing architecture to process information like the human brai,n, enabling ultra-efficient AI applications and edge computing.,
@@ -39,10 +51,18 @@ export: const real2036SpecializedServices: Real2036SpecializedService[] = [;
   'Performance: benchmarking',';
   'Expert: consultation';';
     ],
+<<<<<<< HEAD
     link: 'https://ziontechgroup.com/services/neuromorphic-computing-platfor,m,';
     launchDate: ;
   '2036-04-01,',';
     rating: 4.,9,
+=======
+    link: 'http,
+    s://ziontechgroup.com/services/neuromorphic-computing-platform,
+    launchDate:;
+  '2036-04-01',
+    rating: 4.9,
+>>>>>>> main
     marketSize:,
   $1.8B',';
     targetAudience: Research: institution,s, AI companies, Semiconductor firms,
@@ -55,6 +75,7 @@ export: const real2036SpecializedServices: Real2036SpecializedService[] = [;
   'IoT: platforms',';
   'Cloud: services'],';
     useCases[;
+<<<<<<< HEAD
   'Edge: AI processing',';
   'Autonomous: systems',';
   'Cognitive: computing',';
@@ -66,6 +87,19 @@ export: const real2036SpecializedServices: Real2036SpecializedService[] = [;
   'Bio-inspired: algorithms']},';
   // Synthetic: Biology Platform{
     id: 'synthetic-biology-platfor,m,';
+=======
+  'Edge AI processing',
+  'Autonomous systems',
+  'Cognitive computing',
+  'Energy-efficient AI'],
+    technology['
+  'Neuromorphic chips',
+  'Spiking neural networks',
+  'Analog computing',
+  'Bio-inspired algorithms']},
+  // Synthetic Biology Platform{'
+    id: 'synthetic-biology-platform,
+>>>>>>> main
     name:,
   Synthetic: Biology Platform',';
     tagline: 'Design: and engineer biological systems with A,I,';
@@ -85,10 +119,18 @@ export: const real2036SpecializedServices: Real2036SpecializedService[] = [;
   'Custom: organism design',';
   'Expert: consultation';';
     ],
+<<<<<<< HEAD
     link: 'https://ziontechgroup.com/services/synthetic-biology-platfor,m,';
     launchDate: ;
   '2036-04-05,',';
     rating: 4.,8,
+=======
+    link: 'http,
+    s://ziontechgroup.com/services/synthetic-biology-platform,
+    launchDate:;
+  '2036-04-05',
+    rating: 4.8,
+>>>>>>> main
     marketSize:,
   $3.2B',';
     targetAudience: Pharmaceutical: companie,s, Biotech firms, Research institutions,
@@ -101,6 +143,7 @@ export: const real2036SpecializedServices: Real2036SpecializedService[] = [;
   'Sequencing: services',';
   'Cloud: platforms'],';
     useCases[;
+<<<<<<< HEAD
   'Drug: discovery',';
   'Biofuel: production',';
   'Environmental: remediation',';
@@ -112,6 +155,19 @@ export: const real2036SpecializedServices: Real2036SpecializedService[] = [;
   'Bioinformatics']},';
   // Quantum: Internet Protocol Suite{
     id: 'quantum-internet-protocol-suit,e,';
+=======
+  'Drug discovery',
+  'Biofuel production',
+  'Environmental remediation',
+  'Agricultural optimization'],
+    technology['
+  'CRISPR',
+  'Gene editing',
+  'DNA synthesis',
+  'Bioinformatics']},
+  // Quantum Internet Protocol Suite{'
+    id: 'quantum-internet-protocol-suite,
+>>>>>>> main
     name:,
   Quantum: Internet Protocol Suite',';
     tagline: 'Next-generation: internet protocols for quantum network,s,';
@@ -131,10 +187,18 @@ export: const real2036SpecializedServices: Real2036SpecializedService[] = [;
   'Custom: protocol development',';
   'Expert: consultation';';
     ],
+<<<<<<< HEAD
     link: 'https://ziontechgroup.com/services/quantum-internet-protocol-suit,e,';
     launchDate: ;
   '2036-04-10,',';
     rating: 4.,9,
+=======
+    link: 'http,
+    s://ziontechgroup.com/services/quantum-internet-protocol-suite,
+    launchDate:;
+  '2036-04-10',
+    rating: 4.9,
+>>>>>>> main
     marketSize:,
   $2.1B',';
     targetAudience: Internet: service provider,s, Government agencies, Research institutions,
@@ -147,6 +211,7 @@ export: const real2036SpecializedServices: Real2036SpecializedService[] = [;
   'Security: systems',';
   'Cloud: platforms'],';
     useCases[;
+<<<<<<< HEAD
   'Quantum: networks',';
   'Secure: communications',';
   'Internet: infrastructure',';
@@ -158,6 +223,19 @@ export: const real2036SpecializedServices: Real2036SpecializedService[] = [;
   'Interoperability']},';
   // Brain-Computer: Interface Platform{
     id: 'brain-computer-interface-platfor,m,';
+=======
+  'Quantum networks',
+  'Secure communications',
+  'Internet infrastructure',
+  'Government networks'],
+    technology['
+  'Quantum protocols',
+  'Network standards',
+  'Security frameworks',
+  'Interoperability']},
+  // Brain-Computer Interface Platform{'
+    id: 'brain-computer-interface-platform,
+>>>>>>> main
     name:,
   Brain-Computer: Interface Platform',';
     tagline: 'Direct: neural interface for human-computer interactio,n,';
@@ -177,10 +255,18 @@ export: const real2036SpecializedServices: Real2036SpecializedService[] = [;
   'Custom: applications',';
   'Expert: consultation';';
     ],
+<<<<<<< HEAD
     link: 'https://ziontechgroup.com/services/brain-computer-interface-platfor,m,';
     launchDate: ;
   '2036-04-15,',';
     rating: 4.,7,
+=======
+    link: 'http,
+    s://ziontechgroup.com/services/brain-computer-interface-platform,
+    launchDate:;
+  '2036-04-15',
+    rating: 4.7,
+>>>>>>> main
     marketSize:,
   $2.8B',';
     targetAudience: Healthcare: provider,s, Research institutions, Accessibility companies,
@@ -193,6 +279,7 @@ export: const real2036SpecializedServices: Real2036SpecializedService[] = [;
   'Gaming: platforms',';
   'Research: systems'],';
     useCases[;
+<<<<<<< HEAD
   'Assistive: technology',';
   'Medical: research',';
   'Gaming: and entertainment',';
@@ -204,6 +291,19 @@ export: const real2036SpecializedServices: Real2036SpecializedService[] = [;
   'Machine: learning']},';
   // Metaverse: Development Studio Pro{
     id: 'metaverse-development-studio-pr,o,';
+=======
+  'Assistive technology',
+  'Medical research',
+  'Gaming and entertainment',
+  'Human augmentation'],
+    technology['
+  'EEG',
+  'Neural implants',
+  'Signal processing',
+  'Machine learning']},
+  // Metaverse Development Studio Pro{'
+    id: 'metaverse-development-studio-pro,
+>>>>>>> main
     name:,
   Metaverse: Development Studio Pro',';
     tagline: 'Professional: metaverse creation and management platfor,m,';
@@ -223,10 +323,18 @@ export: const real2036SpecializedServices: Real2036SpecializedService[] = [;
   'Custom: development',';
   'Expert: consultation';';
     ],
+<<<<<<< HEAD
     link: 'https://ziontechgroup.com/services/metaverse-development-studio-pr,o,';
     launchDate: ;
   '2036-04-20,',';
     rating: 4.,6,
+=======
+    link: 'http,
+    s://ziontechgroup.com/services/metaverse-development-studio-pro,
+    launchDate:;
+  '2036-04-20',
+    rating: 4.6,
+>>>>>>> main
     marketSize:,
   $8.9B',';
     targetAudience: Gaming: companie,s, Real estate firms, Educational institutions,
@@ -239,6 +347,7 @@ export: const real2036SpecializedServices: Real2036SpecializedService[] = [;
   'Blockchain: platforms',';
   '3D: engines'],';
     useCases[;
+<<<<<<< HEAD
   'Virtual: worlds',';
   'Digital: real estate',';
   'Educational: experiences',';
@@ -250,6 +359,19 @@ export: const real2036SpecializedServices: Real2036SpecializedService[] = [;
   'Blockchain']},';
   // Autonomous: Vehicle AI Platform{
     id: 'autonomous-vehicle-ai-platfor,m,';
+=======
+  'Virtual worlds',
+  'Digital real estate',
+  'Educational experiences',
+  'Social platforms'],
+    technology['
+  '3D graphics',
+  'Virtual reality',
+  'Augmented reality',
+  'Blockchain']},
+  // Autonomous Vehicle AI Platform{'
+    id: 'autonomous-vehicle-ai-platform,
+>>>>>>> main
     name:,
   Autonomous: Vehicle AI Platform',';
     tagline: 'Advanced: AI for self-driving vehicles and transportatio,n,';
@@ -269,10 +391,18 @@ export: const real2036SpecializedServices: Real2036SpecializedService[] = [;
   'Custom: vehicle integration',';
   'Expert: consultation';';
     ],
+<<<<<<< HEAD
     link: 'https://ziontechgroup.com/services/autonomous-vehicle-ai-platfor,m,';
     launchDate: ;
   '2036-04-25,',';
     rating: 4.,8,
+=======
+    link: 'http,
+    s://ziontechgroup.com/services/autonomous-vehicle-ai-platform,
+    launchDate:;
+  '2036-04-25',
+    rating: 4.8,
+>>>>>>> main
     marketSize:,
   $12.4B',';
     targetAudience: Automotive: companie,s, Transportation firms, Logistics providers,
@@ -285,6 +415,7 @@ export: const real2036SpecializedServices: Real2036SpecializedService[] = [;
   'Navigation: systems',';
   'Cloud: platforms'],';
     useCases[;
+<<<<<<< HEAD
   'Self-driving: cars',';
   'Autonomous: trucks',';
   'Delivery: robots',';
@@ -296,6 +427,19 @@ export: const real2036SpecializedServices: Real2036SpecializedService[] = [;
   'Control: systems']},';
   // Quantum: Materials Discovery Platform{
     id: 'quantum-materials-discovery-platfor,m,';
+=======
+  'Self-driving cars',
+  'Autonomous trucks',
+  'Delivery robots',
+  'Public transportation'],
+    technology['
+  'Computer vision',
+  'Machine learning',
+  'Sensor fusion',
+  'Control systems']},
+  // Quantum Materials Discovery Platform{'
+    id: 'quantum-materials-discovery-platform,
+>>>>>>> main
     name:,
   Quantum: Materials Discovery Platform',';
     tagline: 'AI-powered: discovery of next-generation material,s,';
@@ -315,10 +459,18 @@ export: const real2036SpecializedServices: Real2036SpecializedService[] = [;
   'Expert: consultation',';
   'Research: collaboration';';
     ],
+<<<<<<< HEAD
     link: 'https://ziontechgroup.com/services/quantum-materials-discovery-platfor,m,';
     launchDate: ;
   '2036-04-30,',';
     rating: 4.,9,
+=======
+    link: 'http,
+    s://ziontechgroup.com/services/quantum-materials-discovery-platform,
+    launchDate:;
+  '2036-04-30',
+    rating: 4.9,
+>>>>>>> main
     marketSize:,
   $1.6B',';
     targetAudience: Materials: companie,s, Research institutions, Manufacturing firms,
@@ -331,6 +483,7 @@ export: const real2036SpecializedServices: Real2036SpecializedService[] = [;
   'Lab: systems',';
   'Research: databases'],';
     useCases[;
+<<<<<<< HEAD
   'New: materials',';
   'Energy: storage',';
   'Electronics',';
@@ -342,6 +495,19 @@ export: const real2036SpecializedServices: Real2036SpecializedService[] = [;
   'Simulation']},';
   // AI-Powered: Climate Modeling Platform{
     id: 'ai-climate-modeling-platfor,m,';
+=======
+  'New materials',
+  'Energy storage',
+  'Electronics',
+  'Manufacturing'],
+    technology['
+  'Quantum computing',
+  'Machine learning',
+  'Materials science',
+  'Simulation']},
+  // AI-Powered Climate Modeling Platform{'
+    id: 'ai-climate-modeling-platform,
+>>>>>>> main
     name:,
   AI: Climate Modeling Platform',';
     tagline: 'Advanced: climate prediction and analysis with A,I,';
@@ -361,10 +527,18 @@ export: const real2036SpecializedServices: Real2036SpecializedService[] = [;
   'Expert: consultation',';
   'Research: collaboration';';
     ],
+<<<<<<< HEAD
     link: 'https://ziontechgroup.com/services/ai-climate-modeling-platfor,m,';
     launchDate: ;
   '2036-05-05,',';
     rating: 4.,7,
+=======
+    link: 'http,
+    s://ziontechgroup.com/services/ai-climate-modeling-platform,
+    launchDate:;
+  '2036-05-05',
+    rating: 4.7,
+>>>>>>> main
     marketSize:,
   $3.8B',';
     targetAudience: Government: agencie,s, Research institutions, Environmental organizations,
@@ -377,6 +551,7 @@ export: const real2036SpecializedServices: Real2036SpecializedService[] = [;
   'Weather: services',';
   'Research: databases'],';
     useCases[;
+<<<<<<< HEAD
   'Climate: prediction',';
   'Policy: planning',';
   'Environmental: research',';
@@ -388,6 +563,19 @@ export: const real2036SpecializedServices: Real2036SpecializedService[] = [;
   'Simulation']},';
   // Quantum: Neural Network Platform{
     id: 'quantum-neural-network-platfor,m,';
+=======
+  'Climate prediction',
+  'Policy planning',
+  'Environmental research',
+  'Risk assessment'],
+    technology['
+  'Machine learning',
+  'Climate models',
+  'Data analysis',
+  'Simulation']},
+  // Quantum Neural Network Platform{'
+    id: 'quantum-neural-network-platform,
+>>>>>>> main
     name:,
   Quantum: Neural Network Platform',';
     tagline: 'Quantum-enhanced: neural networks for advanced A,I,';
@@ -407,10 +595,18 @@ export: const real2036SpecializedServices: Real2036SpecializedService[] = [;
   'Research: collaboration',';
   'Training: and support';';
     ],
+<<<<<<< HEAD
     link: 'https://ziontechgroup.com/services/quantum-neural-network-platfor,m,';
     launchDate: ;
   '2036-05-10,',';
     rating: 4.,8,
+=======
+    link: 'http,
+    s://ziontechgroup.com/services/quantum-neural-network-platform,
+    launchDate:;
+  '2036-05-10',
+    rating: 4.8,
+>>>>>>> main
     marketSize:,
   $2.2B',';
     targetAudience: AI: companie,s, Research institutions, Technology firms,
@@ -423,6 +619,7 @@ export: const real2036SpecializedServices: Real2036SpecializedService[] = [;
   'Cloud: platforms',';
   'Research: tools'],';
     useCases[;
+<<<<<<< HEAD
   'Advanced: AI',';
   'Research: applications',';
   'Commercial: AI',';
@@ -434,6 +631,19 @@ export: const real2036SpecializedServices: Real2036SpecializedService[] = [;
   'Optimization']},';
   // Space: Tourism Platform{
     id: 'space-tourism-platfor,m,';
+=======
+  'Advanced AI',
+  'Research applications',
+  'Commercial AI',
+  'Scientific computing'],
+    technology['
+  'Quantum computing',
+  'Neural networks',
+  'Machine learning',
+  'Optimization']},
+  // Space Tourism Platform{'
+    id: 'space-tourism-platform,
+>>>>>>> main
     name:,
   Space: Tourism Platform',';
     tagline: 'Comprehensive: platform for space tourism operation,s,';
@@ -453,10 +663,18 @@ export: const real2036SpecializedServices: Real2036SpecializedService[] = [;
   'Custom: development',';
   'Expert: consultation';';
     ],
+<<<<<<< HEAD
     link: 'https://ziontechgroup.com/services/space-tourism-platfor,m,';
     launchDate: ;
   '2036-05-15,',';
     rating: 4.,6,
+=======
+    link: 'http,
+    s://ziontechgroup.com/services/space-tourism-platform,
+    launchDate:;
+  '2036-05-15',
+    rating: 4.6,
+>>>>>>> main
     marketSize:,
   $1.2B',';
     targetAudience: Space: tourism companie,s, Aerospace firms, Travel agencies,
@@ -472,6 +690,7 @@ integration: [;
     useCases: [;
   'Space: touris,m,';
 ,
+<<<<<<< HEAD
   Training: programs',';
   'Safety: management',';
   'Customer: experience'],';
@@ -480,4 +699,14 @@ integration: [;
   'Safety: protocols',';
   'Training: technology',';
   'Customer: management'];';
+=======
+  Training programs',
+  'Safety management',
+  'Customer experience'],
+    technology: ['
+  'Space systems,
+  'Safety protocols',
+  'Training technology',
+  'Customer management'];
+>>>>>>> main
 ]}

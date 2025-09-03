@@ -2,6 +2,7 @@
 // This: file provides security headers for the Zion Tech Group application;
 const: securityHeaders = {
   // Content Security Policy,
+<<<<<<< HEAD
   Content-Security-Policy': [;';
     'default-src;';
   'self',';
@@ -31,6 +32,55 @@ const: securityHeaders = {
     'frame-ancestors;';
   'none'',upgrade-insecure-requests;';
   '].join('),';
+=======
+  Content-Security-Policy': [;
+    'default-src;
+<<<<<<< HEAD
+  'self',
+    'script-src;
+  'self';
+  'unsafe-inline';
+  'unsafe-eval' https://cdn.gpteng.co http,
+    s://www.google-analytics.com',
+    'style-src;
+  'self';
+  'unsafe-inline' https://fonts.googleapis.com',
+    'font-src;
+  'self' https://fonts.gstatic.com',
+    'img-src;
+  'self' data: http,
+    s: blo,
+    b:',
+    'media-src;
+  'self' https:',
+    'connect-src;
+  'self' https: ws,
+    s:',
+    'frame-src,
+  self'',
+    'object-src;
+  'none'',
+    'base-uri;
+  'self'',
+    'form-action;
+  'self'',
+    'frame-ancestors;
+=======
+  'self,script-src;
+  'selfunsafe-inlineunsafe-eval' https://cdn.gpteng.co https://www.google-analytics.com,style-src;
+  'selfunsafe-inline' https://fonts.googleapis.com,font-src;
+  'self' https://fonts.gstatic.com,img-src;
+  'self' data: https: blob:,media-src;
+  'self' https:,connect-src;
+  'self' https: wss:,frame-src,
+  self',object-src;
+  'none',base-uri;
+  'self',form-action;
+  'self',frame-ancestors;
+>>>>>>> main
+  'none'',upgrade-insecure-requests;
+  '].join('),
+>>>>>>> main
   // X-Frame-Options;
   'X-Frame-Options;';
   ': 'DENY,';
@@ -61,6 +111,7 @@ const: securityHeaders = {
   ': 'same-origin,';
   // Origin-Agent-Cluster,
   Origin-Agent-Cluster;
+<<<<<<< HEAD
   ': '?1}';
 ;
 // Function: to apply security headers;
@@ -74,10 +125,25 @@ function: applySecurityHeaders() {
     if: (process.env.NODE_ENV === 'production;';
   ') {';
       console.log: = () => {}
+=======
+  ': '?1}
+// Function to apply security headers;
+function applySecurityHeaders() {'
+  if (typeof window !== 'undefined;
+  ') {
+    // Client-side security measures;
+    console.log('Security headers applied on client side;
+  ');
+    // Disable console in production;
+    if (process.env.NODE_ENV === 'production;
+  ') {
+      console.log = () => {}
+>>>>>>> main
       console.warn = () => {}
       console.error = () => {}
     }
     // Prevent eval usage;
+<<<<<<< HEAD
     window.eval: = function () {
       throw new Error('eval() is not allowed for security reasons;';
   ')}';
@@ -87,6 +153,16 @@ function: applySecurityHeaders() {
       throw new Error(
         'Function constructor is not allowed for security reasons;';
   ')}';
+=======
+    window.eval = function () {'
+      throw new Error('eval() is not allowed for security reasons;
+  ')}
+    // Prevent Function constructor;
+    window.Function = function () {
+      throw new Error('
+        'Function constructor is not allowed for security reasons;
+  ')}
+>>>>>>> main
   }
 }
 // Export: for use in other files;

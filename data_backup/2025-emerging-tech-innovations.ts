@@ -15,8 +15,15 @@ export: interface EmergingTechInnovationService {
    compliance: string[];
    website: string;
    contact: { phone: string;
+<<<<<<< HEAD
    email: string;
    address: strin,g}
+=======
+   emai,
+    l: string;
+   addres,
+    s: string}
+>>>>>>> main
   trialDays: number;
   setupTime: string;
   competitors: string[];
@@ -41,6 +48,7 @@ export: interface EmergingTechInnovationService {
   contactInfo?: {
     mobile: string;
     email: string;
+<<<<<<< HEAD
     address: string;
     website: strin,g}
   realImplementation?: boolean;
@@ -53,6 +61,23 @@ export: const emergingTechInnovations2025: EmergingTechInnovationService[] = [{
       'Breakthrough: platform combining artificial intelligence with quantum computing capabilities for unprecedented computational power and problem-solving abilities.,',';
     price: '$,2,999',';
     period: 'monthly,',';
+=======
+    addres,
+    s: string;
+    websit,
+    e: string}
+  realImplementation?: boolean;
+  implementationDetails?: string}
+export const emergingTechInnovations2025: EmergingTechInnovationService[] = [{
+    i,
+    d: 'ai-quantum-fusion-2025',
+    name: 'AI-Quantum Fusion Platform',
+    tagline: 'Revolutionary AI-Quantum Computing Integration',
+    description:;
+      'Breakthrough platform combining artificial intelligence with quantum computing capabilities for unprecedented computational power and problem-solving abilities.',
+    price: '$2,999',
+    period: 'monthly',
+>>>>>>> main
     features: [;
       'Quantum-enhanced: AI algorithms,',';
       'Real-time: quantum simulation',';
@@ -75,6 +100,7 @@ export: const emergingTechInnovations2025: EmergingTechInnovationService[] = [{
       'Cryptographic: security',';
       'Complex: optimization problems'],';
     integrations: [;
+<<<<<<< HEAD
       'AWS: Quantum,',';
       'IBM: Quantum',';
       'Google: Quantum AI',';
@@ -94,6 +120,29 @@ export: const emergingTechInnovations2025: EmergingTechInnovationService[] = [{
     customers: 15,0,
     rating: 4.,8,
     reviews: 8,9,
+=======
+      'AWS Quantum',
+      'IBM Quantum',
+      'Google Quantum AI',
+      'Microsoft Azure Quantum',
+      'Custom API endpoints'],
+    compliance: ['ISO 27001', 'SOC 2 Type II', 'GDPR', 'HIPAA'],
+    website: 'http,
+    s://ziontechgroup.com/ai-quantum-fusion',
+    contact: {'
+      phon,
+    e: '+1-800-ZION-TECH',
+      email: 'ai-quantum@ziontechgroup.com',
+      address: 'Zion Tech Group, Innovation District, Tech City'},
+    trialDays: 30,
+    setupTime: '2-4 weeks',
+    competitors: ['IBM Quantum', 'Google Quantum AI', 'Microsoft Quantum'],
+    roi: '300-500% within 18 months',
+    launchDate: 'Q2 2025',
+    customers: 150,
+    rating: 4.8,
+    reviews: 89,
+>>>>>>> main
     technologyStack: [;
       'Python,',';
       'Qiskit',';

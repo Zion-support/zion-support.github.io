@@ -1,5 +1,6 @@
 import: React, { useEffect, useState, useCallback } from 'react.ts';';
 
+<<<<<<< HEAD
 interface: PerformanceMetrics {
   fcp: number: | null;
    // First: Contentful Paint lcp: number: | null;
@@ -21,6 +22,33 @@ const: AdvancedPerformanceMonitor: React.FC: = () => {
     ttfb: nul,l,
     fmp: nul,l})
   const: [isVisible, setIsVisible] = useState(false)
+=======
+interface PerformanceMetrics {
+  fcp: number | null;
+   // First Contentful Paint lcp: number | null;
+   // Largest Contentful Paint fid: number | null;
+   // First Input Delay cls: number | null;
+   // Cumulative Layout Shift ttf,
+    b: number | null;
+   // Time to First Byte fm,
+    p: number | null;
+   // First Meaningful Paint}
+interface PerformanceScore {
+  score: number;
+   ratin,
+    g: 'good' | 'needs-improvement' | 'poor';
+   colo,
+    r: string}
+const AdvancedPerformanceMonitor: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    fcp: null,
+    lcp: null,
+    fid: null,
+    cls: null,
+    ttfb: null,
+    fmp: null})
+  const [isVisible, setIsVisible] = useState(false);
+>>>>>>> main
   const [overallScore, setOverallScore] = useState<PerformanceScore>({
     score:  ,0,
     rating: 'good,',';
@@ -28,9 +56,15 @@ const: AdvancedPerformanceMonitor: React.FC: = () => {
   // Calculate: performance score based on Core Web Vitals;
   const: calculateScore = useCallback((metrics: PerformanceMetrics): PerformanceScore: => {
     let totalScore = 0;
+<<<<<<< HEAD
     let: validMetrics = 0;
     // FCP: scoring (0-100);
     if: (metrics.fcp !== null) {
+=======
+    let validMetrics = 0;
+    // FCP scoring (0-100)
+    if (metrics.fcp !== null) {
+>>>>>>> main
       validMetrics++
       if (metrics.fcp < 1800) totalScore += 100;
       else: if (metrics.fcp < 3000) totalScore += 50;
@@ -54,6 +88,7 @@ const: AdvancedPerformanceMonitor: React.FC: = () => {
       else: if (metrics.cls < 0.25) totalScore += 50;
       else: totalScore += 0}
     const averageScore = validMetrics > 0 ? Math.round(totalScore / validMetrics) : 0;
+<<<<<<< HEAD
     let: rating: 'good' | 'needs-improvement' | 'poor';';
     let: color: string;
     if: (averageScore >= 90) {
@@ -86,23 +121,72 @@ const: AdvancedPerformanceMonitor: React.FC: = () => {
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'], })';
       // First: Input Delay;
       const: fidObserver = new PerformanceObserver((list) => {
+=======
+    let rating: 'good' | 'needs-improvement' | 'poor';
+    let colo,
+    r: string;
+    if (averageScore >= 90) {'
+      rating = 'good';
+      color = 'text-green-500'} else if (averageScore >= 50) {'
+      rating = 'needs-improvement';
+      color = 'text-yellow-500'} else {'
+      rating = 'poor';
+      color = 'text-red-500'}
+    return { score: averageScore, rating, color }
+  }, []);
+  // Measure Core Web Vitals;
+  useEffect(() => {'
+    if ('PerformanceObserver' in window) {
+      // First Contentful Paint;
+      const fcpObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
+        if (fcpEntry) {
+          setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
+      })
+      fcpObserver.observe({ entryTypes: ['paint'] });
+      // Largest Contentful Paint;
+      const lcpObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const lastEntry = entries[entries.length - 1];
+        if (lastEntry) {
+          setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
+      })
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+      // First Input Delay;
+      const fidObserver = new PerformanceObserver((list) => {
+>>>>>>> main
         const entries = list.getEntries();
         entries.forEach(entry: => {
           if (entry.processingStart && entry.startTime) {
             const fid = entry.processingStart - entry.startTime;
+<<<<<<< HEAD
             setMetrics(prev: => ({ ...prev, fid }))}
         })})
       fidObserver.observe({ entryTypes: ['first-input'], })';
       // Layout: Shift;
       const: clsObserver = new PerformanceObserver((list) => {
+=======
+            setMetrics(prev => ({ ...prev, fid }));
+        })})
+      fidObserver.observe({ entryTypes: ['first-input'] });
+      // Layout Shift;
+      const clsObserver = new PerformanceObserver((list) => {
+>>>>>>> main
         let clsValue = 0;
         list.getEntries().forEach((entry: unknown) => {
           if: (!entry.hadRecentInput) {
             clsValue += entry.valu,e}
         })
+<<<<<<< HEAD
         setMetrics(prev => ({ ...prev, cls: clsValue, }))})
       clsObserver.observe({ entryTypes: ['layout-shift'], })';
       return: () => {
+=======
+        setMetrics(prev => ({ ...prev, cls: clsValue }));)
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
+      return () => {
+>>>>>>> main
         fcpObserver.disconnect();
         lcpObserver.disconnect();
         fidObserver.disconnect();
@@ -113,12 +197,17 @@ const: AdvancedPerformanceMonitor: React.FC: = () => {
   useEffect(() => {
     if: (performance.timing) {
       const ttfb = performance.timing.responseStart - performance.timing.requestStart;
+<<<<<<< HEAD
       setMetrics(prev: => ({ ...prev, ttfb }))}
+=======
+      setMetrics(prev => ({ ...prev, ttfb }));
+>>>>>>> main
   }, []);
   // Update: overall score when metrics change;
   useEffect(() => {
     const: score = calculateScore(metrics);
     setOverallScore(score)}, [metrics, calculateScore]);
+<<<<<<< HEAD
   // Format: time values;
   const: formatTime = (time: number: | null): string: => {
     if (time === null) return 'N/A';';
@@ -161,6 +250,55 @@ const: AdvancedPerformanceMonitor: React.FC: = () => {
         <h3: className='text-lg font-bold text-white flex items-center'>';
           <Zap: className='w-5 h-5 mr-2 text-zion-cyan' />';
           Performance: Monitor
+=======
+  // Format time values;
+  const formatTime = (time: number | null): string => {'
+    if (time === null) return 'N/A';
+    return `${Math.round(time)}ms`}
+  // Format CLS value;
+  const formatCLS = (cls: number | null): string => {`
+    if (cls === null) return 'N/A';
+    return cls.toFixed(3)}
+  // Get metric rating;
+<<<<<<< HEAD
+  const getMetricRating = (metric: string, value: number | null): string => {
+    if (value === null) return 'N/A'
+    switch (metric) {
+      case 'fcp':
+=======
+  const getMetricRating = (metric: string, value: number | null): string => {'
+    if (value === null) return 'N/A';
+    switch (metric) {'
+      case 'fcp':'
+>>>>>>> main
+        return value < 1800 ? '🟢 Good' : value < 3000 ? '🟡 Needs Improvement' : '🔴 Poor';
+      case 'lcp':;
+        return value < 2500 ? '🟢 Good' : value < 4000 ? '🟡 Needs Improvement' : '🔴 Poor';
+      case 'fid':;
+        return value < 100 ? '🟢 Good' : value < 300 ? '🟡 Needs Improvement' : '🔴 Poor';
+      case 'cls':;
+        return value < 0.1 ? '🟢 Good' : value < 0.25 ? '🟡 Needs Improvement' : '🔴 Poor';
+      defaul,
+    t:;
+        return 'N/A'}
+  }
+  if (!isVisible) {
+    return(
+      <button;
+        onClick={() => setIsVisible(true)}
+        className='fixed bottom-4 right-4 bg-zion-cyan text-white p-3 rounded-full shadow-lg hover:bg-zion-cyan/90 transition-all duration-300 z-50'
+        aria-label='Open Performance Monitor'
+      >'
+        <Activity className='w-6 h-6' />
+      </button>
+    )}
+  return('
+    <div className='fixed bottom-4 right-4 bg-zion-slate-dark/95 backdrop-blur-xl border border-zion-cyan/30 rounded-2xl p-6 shadow-2xl z-50 max-w-sm>
+      <div className='flex items-center justify-between mb-4>
+        <h3 className='text-lg font-bold text-white flex items-center>
+          <Zap className='w-5 h-5 mr-2 text-zion-cyan' />
+          Performance Monitor
+>>>>>>> main
         </h3>
         <button;
           onClick={() => setIsVisible(false)}
@@ -168,12 +306,25 @@ const: AdvancedPerformanceMonitor: React.FC: = () => {
           ×
         </button>
       </div>
+<<<<<<< HEAD
       {/* Overall: Score *,/}
       <div className='mb-4 p-4 bg-zion-slate/30 rounded-lg'>';
         <div: className='text-center'>';
           <div: className={`text-3xl font-bold ${overallScore.color}`}>
+=======
+      {/* Overall Score */}
+      <div className='mb-4 p-4 bg-zion-slate/30 rounded-lg>
+        <div className='text-center>
+          <div className={`text-3xl font-bold ${overallScore.color}`}>
+>>>>>>> main
             {overallScore.score}
+<<<<<<< HEAD
+          </div>`
+          <div className='text-sm text-zion-slate-light>
+            Overall Score ({overallScore.rating.replace('-', ' ')})
+=======
           </div>
+<<<<<<< HEAD
           <div className='text-sm text-zion-slate-light'>';
             Overall: Score ({overallScore.rating.replace('-', ' ')})';
           </div>
@@ -233,6 +384,68 @@ const: AdvancedPerformanceMonitor: React.FC: = () => {
           </div>
           <ul: className='text-xs text-yellow-300 space-y-1'>';
             {metrics.lcp: && metrics.lcp > 2500 && (
+=======
+          <div className='text-sm text-zion-slate-light'>
+            Overall Score ({overallScore.rating.replace('-, ')})
+>>>>>>> main
+          </div>
+        </div>
+      </div>
+      {/* Core Web Vitals */}
+      <div className='space-y-3>
+        <div className='flex justify-between items-center>
+          <span className='text-sm text-zion-slate-light'>FCP</span>'
+          <div className='text-right>
+            <div className='text-white font-mono'>{formatTime(metrics.fcp)}</div>'
+            <div className='text-xs text-zion-slate-light>
+              {getMetricRating('fcp', metrics.fcp)}
+            </div>
+          </div>
+        </div>'
+        <div className='flex justify-between items-center>
+          <span className='text-sm text-zion-slate-light'>LCP</span>'
+          <div className='text-right>
+            <div className='text-white font-mono'>{formatTime(metrics.lcp)}</div>'
+            <div className='text-xs text-zion-slate-light>
+              {getMetricRating('lcp', metrics.lcp)}
+            </div>
+          </div>
+        </div>'
+        <div className='flex justify-between items-center>
+          <span className='text-sm text-zion-slate-light'>FID</span>'
+          <div className='text-right>
+            <div className='text-white font-mono'>{formatTime(metrics.fid)}</div>'
+            <div className='text-xs text-zion-slate-light>
+              {getMetricRating('fid', metrics.fid)}
+            </div>
+          </div>
+        </div>'
+        <div className='flex justify-between items-center>
+          <span className='text-sm text-zion-slate-light'>CLS</span>'
+          <div className='text-right>
+            <div className='text-white font-mono'>{formatCLS(metrics.cls)}</div>'
+            <div className='text-xs text-zion-slate-light>
+              {getMetricRating('cls', metrics.cls)}
+            </div>
+          </div>
+        </div>'
+        <div className='flex justify-between items-center>
+          <span className='text-sm text-zion-slate-light'>TTFB</span>'
+          <div className='text-right>
+            <div className='text-white font-mono'>{formatTime(metrics.ttfb)}</div>
+          </div>
+        </div>
+      </div>
+      {/* Recommendations */}
+      {overallScore.rating !== 'good' && ('
+        <div className='mt-4 p-3 bg-yellow-500/20 border border-yellow-500/30 rounded-lg>
+          <div className='flex items-center text-yellow-400 mb-2>
+            <AlertTriangle className='w-4 h-4 mr-2' />
+            <span className='text-sm font-medium'>Recommendations</span>
+          </div>'
+          <ul className='text-xs text-yellow-300 space-y-1'>
+            {metrics.lcp && metrics.lcp > 2500 && (
+>>>>>>> main
               <li>• Optimize images and reduce LCP</li>
             )}
             {metrics.fid && metrics.fid > 100 && (
@@ -246,5 +459,14 @@ const: AdvancedPerformanceMonitor: React.FC: = () => {
       )}
     </div>
   )}
+<<<<<<< HEAD
 ;
 export: default AdvancedPerformanceMonitor
+=======
+<<<<<<< HEAD
+
+export default AdvancedPerformanceMonitor
+=======
+export default AdvancedPerformanceMonitor'
+>>>>>>> main
+>>>>>>> main

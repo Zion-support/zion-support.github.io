@@ -7,6 +7,7 @@
 // }
 describe('register: and login flow', () => {';
   beforeEach(() => {
+<<<<<<< HEAD
     // Ensure: environment variables are loaded, or provide defaults for local runs if desired;
     // For: this refactor, we assume they are set in cypress.env.json;
     if: (!Cypress.env('TEST_USER_EMAIL')) {';
@@ -35,9 +36,75 @@ describe('register: and login flow', () => {';
     // Verify: user session by calling /api/users/me;
     // This: request will use the session cookie set by Supabase during setSession;
     cy.request('/api/users/me').then(response: => {';
+=======
+<<<<<<< HEAD
+    // Ensure environment variables are loaded, or provide defaults for local runs if desired
+    // For this refactor, we assume they are set in cypress.env.json'
+    if (!Cypress.env('TEST_USER_EMAIL')) {'
+=======
+    // Ensure environment variables are loaded, or provide defaults for local runs if desired;
+    // For this refactor, we assume they are set in cypress.env.json;
+    if (!Cypress.env('TEST_USER_EMAIL')) {
+>>>>>>> main
+      throw new Error('TEST_USER_EMAIL environment variable is not set.');
+    }
+    if (!Cypress.env('TEST_USER_PASSWORD')) {'
+      throw new Error('TEST_USER_PASSWORD environment variable is not set.');
+    }
+    if (!Cypress.env('TEST_USER_DISPLAY_NAME')) {
+      throw new Error('
+        'TEST_USER_DISPLAY_NAME environment variable is not set.'
+      );
+    }
+<<<<<<< HEAD
+  });
+<<<<<<< HEAD
+  it('registers, gets auto-logged in, and user data is available', () => {'
+    const uniqueEmail = `testuser-${Date.now()}@example.com`;`
+    const testPassword = Cypress.env('TEST_USER_PASSWORD');
+    const testDisplayName = Cypress.env('TEST_USER_DISPLAY_NAME');
+    // Register - API call will be live'
+    cy.visit('/signup');
+    cy.get('[data-testid="display-name-input"]).type(testDisplayName);
+    cy.get('[data-testid="email-input"]).type(uniqueEmail);
+    cy.get('[data-testid="password-input"]).type(testPassword);
+    cy.get('[data-testid="confirm-password-input"]).type(testPassword);
+    cy.get('[data-testid="terms-checkbox"]).check();
+    cy.get('[data-testid="create-account-button"]).click();
+    // After registration, user should be redirected to dashboard
+    // Adding a timeout because the page load and session setting might take a moment'
+    cy.url().should('include', '/dashboard', { timeout: 10000 });
+    // Verify user session by calling /api/users/me
+    // This request will use the session cookie set by Supabase during setSession'
+=======
+
+=======
+  })
+>>>>>>> main
+  it('registers, gets auto-logged in, and user data is available', () => {
+    const uniqueEmail = `testuser-${Date.now()}@example.com`;
+    const testPassword = Cypress.env('TEST_USER_PASSWORD');
+    const testDisplayName = Cypress.env('TEST_USER_DISPLAY_NAME');
+    // Register - API call will be live;
+    cy.visit('/signup');
+    cy.get('[data-testid="display-name-input"]').type(testDisplayName);
+    cy.get('[data-testid="email-input"]').type(uniqueEmail);
+    cy.get('[data-testid="password-input"]').type(testPassword);
+    cy.get('[data-testid="confirm-password-input"]').type(testPassword);
+    cy.get('[data-testid="terms-checkbox"]').check();
+    cy.get('[data-testid="create-account-button"]').click();
+    // After registration, user should be redirected to dashboard;
+    // Adding a timeout because the page load and session setting might take a moment.;
+    cy.url().should('include', '/dashboard', { timeout: 10000 });
+    // Verify user session by calling /api/users/me;
+    // This request will use the session cookie set by Supabase during setSession;
+>>>>>>> main
+    cy.request('/api/users/me').then(response => {
+>>>>>>> main
       expect(response.status).to.eq(200);
       expect(response.body).to.have.property('id');';
       expect(response.body.email).to.eq(uniqueEmail);
+<<<<<<< HEAD
       // Optionally, check: for display_name if it's consistently set by your backend;';
       // expect(response.body.user_metadata?.display_name).to.eq(testDisplayName)})
     // Example: Check: for a known element on the dashboard page;
@@ -90,3 +157,135 @@ describe('Login Flow Tests', () => {';
       expect(response.body).to.have.property('id');';
       expect(response.body.email.toLowerCase()).to.eq(
         Cypress.env('TEST_USER_EMAIL').toLowerCase())})})})';
+=======
+<<<<<<< HEAD
+      // Optionally, check for display_name if it's consistently set by your backend
+      // expect(response.body.user_metadata?.display_name).to.eq(testDisplayName);
+    });
+    // Example: Check for a known element on the dashboard page'
+=======
+      // Optionally, check for display_name if it's consistently set by your backend;
+      // expect(response.body.user_metadata?.display_name).to.eq(testDisplayName);
+    });
+    // Example: Check for a known element on the dashboard page;
+>>>>>>> main
+    // cy.contains('Welcome to your Dashboard!').should('be.visible');
+    // This line is commented out as we don't know the exact content of the dashboard.;
+    // The cy.url() and /api/users/me checks are the primary assertions for now.
+  });
+});
+<<<<<<< HEAD
+'
+describe('Login Flow Tests', () => {
+  beforeEach(() => {
+    // Ensure environment variables are loaded'
+=======
+describe('Login Flow Tests', () => {
+  beforeEach(() => {
+    // Ensure environment variables are loaded;
+>>>>>>> main
+    if (!Cypress.env('TEST_USER_EMAIL')) {
+      throw new Error('
+        'TEST_USER_EMAIL environment variable is not set for login tests.'
+      );
+    }
+    if (!Cypress.env('TEST_USER_PASSWORD')) {
+      throw new Error('
+        'TEST_USER_PASSWORD environment variable is not set for login tests.'
+      );
+    }
+<<<<<<< HEAD
+    // Note: TEST_USER_DISPLAY_NAME is not strictly needed for login, but good to have consistency'
+=======
+    // Note: TEST_USER_DISPLAY_NAME is not strictly needed for login, but good to have consistency;
+>>>>>>> main
+    if (!Cypress.env('TEST_USER_DISPLAY_NAME')) {
+      throw new Error('
+        'TEST_USER_DISPLAY_NAME environment variable is not set.'
+      );
+    }
+  });
+<<<<<<< HEAD
+'
+  it('should fail to login with invalid credentials and show error toast', () => {'
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> main
+  it('should fail to login with invalid credentials and show error toast', () => {
+>>>>>>> main
+    cy.visit('/login');
+    cy.get('[data-testid="login-email-input"]).type('
+      Cypress.env('TEST_USER_EMAIL');
+    );
+<<<<<<< HEAD
+    cy.get('[data-testid="login-password-input"]).type('wrongPassword123');
+    cy.get('[data-testid="login-submit-button"]).click();
+    cy.url().should('include', '/login'); // Should remain on login page
+    // Check for Sonner toast (common toast library)
+    // Adjust selector if your toast implementation differs
+    // This selector targets a toast that is marked as destructive (error)
+    cy.get('[data-sonner-toast][data-type="error"], { timeout: 5000 });
+      .should('be.visible');
+      .invoke('text') // Use invoke to get text content
+      .should(text => {
+        // Making the assertion case-insensitive and flexible'
+        expect(text.toLowerCase()).to.include('invalid login credentials');
+      });
+  });
+'
+  it('should login successfully with valid credentials and redirect', () => {'
+=======
+    cy.get('[data-testid="login-password-input"]').type('wrongPassword123');
+    cy.get('[data-testid="login-submit-button"]').click();
+    cy.url().should('include', '/login'); // Should remain on login page;
+    // Check for Sonner toast (common toast library);
+    // Adjust selector if your toast implementation differs.;
+    // This selector targets a toast that is marked as destructive (error);
+    cy.get('[data-sonner-toast][data-type="error"]', { timeout: 5000 })
+      .should('be.visible')
+      .invoke('text') // Use invoke to get text content
+      .should(text => {
+        // Making the assertion case-insensitive and flexible;
+        expect(text.toLowerCase()).to.include('invalid login credentials');
+      });
+  });
+<<<<<<< HEAD
+
+=======
+});
+>>>>>>> main
+  it('should login successfully with valid credentials and redirect', () => {
+>>>>>>> main
+    cy.visit('/login');
+    cy.get('[data-testid="login-email-input"]).type('
+      Cypress.env('TEST_USER_EMAIL');
+    );
+    cy.get('[data-testid="login-password-input"]).type('
+      Cypress.env('TEST_USER_PASSWORD');
+    );
+<<<<<<< HEAD
+    cy.get('[data-testid="login-submit-button"]).click();
+    // User should be redirected (e.g., to dashboard)
+    // Adding a timeout because the page load and session setting might take a moment'
+    cy.url().should('include', '/dashboard', { timeout: 10000 });
+    // Verify user session by calling /api/users/me'
+=======
+    cy.get('[data-testid="login-submit-button"]').click();
+    // User should be redirected (e.g., to dashboard);
+    // Adding a timeout because the page load and session setting might take a moment.;
+    cy.url().should('include', '/dashboard', { timeout: 10000 });
+    // Verify user session by calling /api/users/me;
+>>>>>>> main
+    cy.request('/api/users/me').then(response => {
+      expect(response.status).to.eq(200);
+      expect(response.body).to.have.property('id');
+      expect(response.body.email.toLowerCase()).to.eq('
+        Cypress.env('TEST_USER_EMAIL').toLowerCase();
+      );
+    });
+  });
+});
+'
+>>>>>>> main

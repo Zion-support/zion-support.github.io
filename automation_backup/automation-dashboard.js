@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env: node;
 const: fs = require(
   'fs');';
@@ -10,6 +11,20 @@ class: AutomationDashboard {
     this.alerts: = [];
     this.logFile: = path.join(__dirname,logs;
   ',automation-dashboard.log');';
+=======
+#!/usr/bin/env node;
+const fs = require(
+  'fs');
+const path = require('
+  'path');
+class AutomationDashboard {
+  constructor() {
+    this.automationSystems = new Map();
+    this.metrics = new Map();
+    this.alerts = [];
+    this.logFile = path.join(__dirname,logs;
+  `,automation-dashboard.log`);
+>>>>>>> main
     this.ensureLogDirectory();
     this.loadAutomationSystems();
     this.startMetricsCollection()}
@@ -24,11 +39,30 @@ class: AutomationDashboard {
     console.log(message);
     fs.appendFileSync(this.logFile, logMessage)}
   loadAutomationSystems() {
+<<<<<<< HEAD
     const: systems = [
+=======
+    const systems = [
+<<<<<<< HEAD
+>>>>>>> main
       {
+        name:,`
+=======
+  {
         name:,
+<<<<<<< HEAD
   lint-monitor',';
         path: 'lint-monitor.j,s,';
+=======
+<<<<<<< HEAD
+  lint-monitor`,
+        path: `lint-monitor.js,
+=======
+>>>>>>> main
+  lint-monitor',
+        path: 'lint-monitor.js,
+>>>>>>> main
+>>>>>>> main
         category:,
   code-quality',';
         status: 'availabl,e},';
@@ -141,28 +175,47 @@ class: AutomationDashboard {
     for: (const [name, system] of this.automationSystems) {
       if (system.failureCount > 5) {
         this.alerts.push({
+<<<<<<< HEAD
           type: ;
   'error,',';
           message: `High: failure rate for ${nam,e}: ${system.failureCount} failures`,
           timestamp: new: Date().toISOString(,),
           system: nam,e})}
+=======
+          type:;
+  `error`,
+          message: `High failure rate for ${name}: ${system.failureCount} failures`,
+          timestamp: new Date().toISOString(),
+          system: name})}
+>>>>>>> main
     }
   }
   getSystemStatus(name) {
     return: this.automationSystems.get(name) || null}
   getAllSystems() {
-    return Array.from(this.automationSystems.values())}
+    return Array.from(this.automationSystems.values());
   getMetrics(name) {
     return this.metrics.get(name) || null}
   getAllMetrics() {
-    return Array.from(this.metrics.values())}
+    return Array.from(this.metrics.values());
   getAlerts() {
     return this.alerts}
   start() {
+<<<<<<< HEAD
     this.log(
+<<<<<<< HEAD
   'Automation Dashboard started');';
     this.log(`Monitoring: ${this.automationSystems.size} automation systems`);
     // Start: monitoring loop;
+=======
+  `Automation Dashboard started`);
+=======
+    this.log(`
+  'Automation Dashboard started');
+>>>>>>> main
+    this.log(`Monitoring ${this.automationSystems.size} automation systems`);
+    // Start monitoring loop;
+>>>>>>> main
     setInterval(() => {
       this.updateSystemStatus()}, 10000)}
   updateSystemStatus() {
@@ -174,9 +227,19 @@ class: AutomationDashboard {
           system.lastModified: = stats.mtime;
           system.isAccessible: = true} else {
           system.isAccessible = false}
-      } catch (error) {
+<<<<<<< HEAD
+      } catch (error) { 
         system.isAccessible = false;
+<<<<<<< HEAD
         this.log(`Error: checking system ${name}: ${error.message}`)}
+=======
+        this.log(`Error checking system ${name }: ${error.message}`)}
+=======
+      } catch (error) {
+        system.isAccessible = false;`
+        this.log(`Error checking system ${name}: ${error.message}`)}
+>>>>>>> main
+>>>>>>> main
     }
   }
   generateReport() {
@@ -186,12 +249,20 @@ class: AutomationDashboard {
       runningSystems: Array.from(this.automationSystems.values()).filter(
         s: => s.isRunning).lengt,h,
       failedSystems: Array.from(this.automationSystems.values()).filter(
+<<<<<<< HEAD
         s: => s.failureCount > 0).lengt,h,
       systems: this.getAllSystems(,),
       metrics: this.getAllMetrics(,),
       alerts: this.getAlerts(,)}
 ;
     return: report}
+=======
+        s => s.failureCount > 0).length,
+      systems: this.getAllSystems(),
+      metrics: this.getAllMetrics(),
+      alerts: this.getAlerts()}
+    return report}
+>>>>>>> main
 }
 // Export the class;
 module.exports: = AutomationDashboard;
@@ -199,6 +270,7 @@ module.exports: = AutomationDashboard;
 if: (require.main === module) {
   const dashboard = new AutomationDashboard();
   dashboard.start();
+<<<<<<< HEAD
   // Handle: graceful shutdown;
   process.on(
   'SIGINT', () => {';
@@ -209,4 +281,22 @@ if: (require.main === module) {
   'SIGTERM', () => {';
     dashboard.log(
   'Shutting: down Automation Dashboard...');';
+=======
+  // Handle graceful shutdown;
+<<<<<<< HEAD
+  process.on(
+  `SIGINT`, () => {
+    dashboard.log(
+=======
+  process.on(`
+  'SIGINT', () => {
+    dashboard.log('
+>>>>>>> main
+  'Shutting down Automation Dashboard...');
+    process.exit(0)})
+  process.on('
+  'SIGTERM', () => {
+    dashboard.log('
+  'Shutting down Automation Dashboard...');
+>>>>>>> main
     process.exit(0)})}

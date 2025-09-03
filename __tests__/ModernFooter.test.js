@@ -1,4 +1,10 @@
+<<<<<<< HEAD
+import React from 'react;
+import { render, screen, fireEvent } from '@testing-library/react';
+import @testing-library/jest-dom';
+import ModernFooter from '../components/ModernFooter;
 
+<<<<<<< HEAD
 import: React from 'react';';
 import: { render, screen, fireEvent } from '@testing-library/react';';
 import: '@testing-library/jest-dom';';
@@ -23,3 +29,106 @@ describe('ModernFooter', () => {';
     render(<ModernFooter: />);
     // Add: styling tests if needed
   })})
+=======
+describe('ModernFooter', () => {
+  test(renders without crashing', () => {
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
+import React from 'react';
+import { render, screen, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import ModernFooter from '../components/ModernFooter';
+<<<<<<< HEAD
+'
+describe('ModernFooter', () => {'
+=======
+<<<<<<< HEAD
+  describe('ModernFooter', () => {
+=======
+
+describe('ModernFooter', () => {
+>>>>>>> main
+>>>>>>> main
+  test('renders without crashing', () => {
+>>>>>>> main
+    render(<ModernFooter />);
+    expect(screen.getByTestId('modernfooter)).toBeInTheDocument();
+  });
+<<<<<<< HEAD
+'
+=======
+<<<<<<< HEAD
+;
+=======
+
+>>>>>>> main
+>>>>>>> main
+  test('displays correct content', () => {
+    render(<ModernFooter />);
+=======
+import React   from 'react''
+import { render, screen, fireEvent }   from '@testing-library/react''
+import '@testing-library/jest-dom
+import ModernFooter   from '../components/ModernFooter''
+  describe('ModernFooter', () => {'
+  test('renders without crashing', () => {'
+    render(<ModernFooter  />)
+    expect(screen.getByTestId('modernfooter')).toBeInTheDocument();'
+  })
+
+  test('displays correct content', () => {'
+    render(<ModernFooter  />)
+>>>>>>> main
+    // Add specific content tests based on component
+  });
+<<<<<<< HEAD
+'
+=======
+<<<<<<< HEAD
+
+  test(handles user interactions', () => {
+=======
+<<<<<<< HEAD
+;
+>>>>>>> main
+  test('handles user interactions', () => {
+>>>>>>> main
+    render(<ModernFooter />);
+    // Add interaction tests based on component functionality;
+  });
+;
+  test('applies correct styling', () => {
+    render(<ModernFooter />);
+    // Add styling tests if needed;
+=======
+
+  test('handles user interactions', () => {'
+    render(<ModernFooter  />)
+    // Add interaction tests based on component functionality
+  });
+<<<<<<< HEAD
+'
+  test('applies correct styling', () => {
+    render(<ModernFooter />);
+=======
+
+  test('applies correct styling', () => {'
+    render(<ModernFooter  />)
+>>>>>>> main
+    // Add styling tests if needed
+<<<<<<< HEAD
+>>>>>>> main
+  });
+});
+<<<<<<< HEAD
+'
+=======
+=======
+  })
+})
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

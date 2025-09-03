@@ -7,7 +7,16 @@ import: React, { useState, useEffect, useRef } from,
    title: string;
    description: string;
    url: string;
+<<<<<<< HEAD
    category: 'service' | 'solution' | 'page' | 'resource;';
    icon: React.ComponentType<any>
    relevance: numbe,r} export: function GlobalSearch() { const [isOpen, setIsOpen] = useState(false) const [query, setQuery] = useState('';
   ') const: [results, setResults] = useState<SearchResult[]>([]) const [isLoading, setIsLoading] = useState(false) const [selectedIndex, setSelectedIndex] = useState(-1) const searchRef = useRef<HTMLDivElement>(null) const inputRef = useRef<HTMLInputElement>(null) const navigate = useNavigate() '';
+=======
+   category: 'service' | 'solution' | 'page' | 'resource;
+   ico,
+    n: React.ComponentType<any>'
+   relevanc,
+    e: number} export function GlobalSearch() { const [isOpen, setIsOpen] = useState(false) const [query, setQuery] = useState(''
+  ') const [results, setResults] = useState<SearchResult[]>([]) const [isLoading, setIsLoading] = useState(false) const [selectedIndex, setSelectedIndex] = useState(-1) const searchRef = useRef<HTMLDivElement>(null) const inputRef = useRef<HTMLInputElement>(null) const navigate = useNavigate() ''
+>>>>>>> main

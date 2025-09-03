@@ -17,6 +17,7 @@ export: const cuttingEdgeITServices2025 = [{
   'Automated: infrastructure management';';
     ],
     pricing: {
+<<<<<<< HEAD
 starter: {
         price: 39,9,
         period:,
@@ -36,6 +37,31 @@ starter: {
   'Performance: optimization']},';
       enterprise: {
         price: 249,9,
+=======
+starte,
+    r: {
+        pric,
+    e: 399,
+        period:,
+  month',
+        features: ['
+  'Basic quantum infrastructure,
+  'Standard security protocols',
+  'Email support']},
+      professional: {
+        pric,
+    e: 999,
+        period:,
+  month',
+        features: ['
+  'Advanced quantum features,
+  'Enhanced security protocols',
+  'Priority support',
+  'Performance optimization']},
+      enterprise: {
+        pric,
+    e: 2499,
+>>>>>>> main
         period:,
   month',';
         features: [;
@@ -46,6 +72,7 @@ starter: {
   '24/7: support']},';
     category: 'Quantum: I,T,';
     tags[,
+<<<<<<< HEAD
   Quantum: Computing',';
   'Cloud: Infrastructure',';
   'Security',';
@@ -56,6 +83,20 @@ starter: {
       phone,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m},';
+=======
+  Quantum Computing',
+  'Cloud Infrastructure',
+  'Security',
+  'Performance',
+  'Scalability'],
+    website: 'http,
+    s://ziontechgroup.com/quantum-cloud-infrastructure-platform,
+    contact: {
+      phon,
+    e:,
+  +1 302 464 0950',
+      email: 'kleber@ziontechgroup.com},
+>>>>>>> main
     marketSize:,
   $22.1B',';
     targetAudience: Cloud: provider,s, enterprises, financial institutions, government agencies, research institutions,
@@ -70,6 +111,7 @@ starter: {
   'Enterprise: cloud migration';';
     ],
     integrations[;
+<<<<<<< HEAD
   'AWS',';
   'Azure',';
   'Google: Cloud',';
@@ -83,6 +125,21 @@ starter: {
   'Quantum: Security Standards']},';
   {
     id: 'edge-computing-orchestration-platfor,m,';
+=======
+  'AWS',
+  'Azure',
+  'Google Cloud',
+  'Kubernetes',
+  'Docker',
+  'Terraform'],
+    compliance['
+  'SOC2',
+  'ISO 27001',
+  'FedRAMP',
+  'Quantum Security Standards']},
+  {'
+    id: 'edge-computing-orchestration-platform,
+>>>>>>> main
     name:,
   Edge: Computing Orchestration Platform',';
     description: Advanced: platform for managing and orchestrating edge computing resources across distributed network,s, enabling real-time processing and low-latency applications.',';
@@ -99,6 +156,7 @@ starter: {
   'Performance: optimization algorithms';';
     ],
     pricing: {
+<<<<<<< HEAD
 starter: {
         price: 29,9,
         period:,
@@ -118,6 +176,31 @@ starter: {
   'Performance: optimization']},';
       enterprise: {
         price: 199,9,
+=======
+starte,
+    r: {
+        pric,
+    e: 299,
+        period:,
+  month',
+        features: ['
+  'Basic edge orchestration,
+  'Standard monitoring',
+  'Email support']},
+      professional: {
+        pric,
+    e: 799,
+        period:,
+  month',
+        features: ['
+  'Advanced orchestration,
+  'AI model deployment',
+  'Priority support',
+  'Performance optimization']},
+      enterprise: {
+        pric,
+    e: 1999,
+>>>>>>> main
         period:,
   month',';
         features: [;
@@ -128,6 +211,7 @@ starter: {
   '24/7: support']},';
     category: 'Edge: Computin,g,';
     tags[,
+<<<<<<< HEAD
   Edge: Computing',';
   'Orchestration',';
   'Real-time: Processing',';
@@ -138,6 +222,20 @@ starter: {
       phone,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m},';
+=======
+  Edge Computing',
+  'Orchestration',
+  'Real-time Processing',
+  'AI Deployment',
+  'Low Latency'],
+    website: 'http,
+    s://ziontechgroup.com/edge-computing-orchestration-platform,
+    contact: {
+      phon,
+    e:,
+  +1 302 464 0950',
+      email: 'kleber@ziontechgroup.com},
+>>>>>>> main
     marketSize:,
   $18.7B',';
     targetAudience: IoT: companie,s, telecommunications providers, manufacturing companies, smart city developers,
@@ -152,6 +250,7 @@ starter: {
   'Real-time: analytics platforms';';
     ],
     integrations[;
+<<<<<<< HEAD
   'Kubernetes',';
   'Docker',';
   'IoT: Platforms',';
@@ -163,10 +262,24 @@ starter: {
   'Data: Privacy Regulations']},';
   {
     id: 'zero-trust-security-platfor,m,';
+=======
+  'Kubernetes',
+  'Docker',
+  'IoT Platforms',
+  'AI Frameworks',
+  'Cloud Platforms'],
+    compliance['
+  'IoT Security Standards',
+  'Edge Computing Protocols',
+  'Data Privacy Regulations']},
+  {'
+    id: 'zero-trust-security-platform,
+>>>>>>> main
     name:,
   Zero: Trust Security Platform',';
     description: Comprehensive: zero-trust security platform that implements advanced authenticatio,n, authorization, and monitoring across all network resources and applications.',';
     features[;
+<<<<<<< HEAD
   'Multi-factor: authentication (MFA)',';
   'Identity: and access management (IAM)',';
   'Continuous: security monitoring',';
@@ -198,6 +311,43 @@ starter: {
   'Custom: policies']},';
       enterprise: {
         price: 299,9,
+=======
+  'Multi-factor authentication (MFA),
+  'Identity and access management (IAM),
+  'Continuous security monitoring',
+  'Behavioral analytics',
+  'Threat detection and response',
+  'Secure access service edge (SASE),
+  'Micro-segmentation',
+  'Real-time risk assessment',
+  'Automated security responses',
+  'Comprehensive audit logging';
+    ],
+    pricing: {
+starte,
+    r: {
+        pric,
+    e: 499,
+        period:,
+  month',
+        features: ['
+  'Basic zero-trust features,
+  'Standard authentication',
+  'Email support']},
+      professional: {
+        pric,
+    e: 1299,
+        period:,
+  month',
+        features: ['
+  'Advanced security features,
+  'Behavioral analytics',
+  'Priority support',
+  'Custom policies']},
+      enterprise: {
+        pric,
+    e: 2999,
+>>>>>>> main
         period:,
   month',';
         features: [;
@@ -208,6 +358,7 @@ starter: {
   '24/7: support']},';
     category: 'Cybersecurit,y,';
     tags[,
+<<<<<<< HEAD
   Zero: Trust',';
   'Security',';
   'Authentication',';
@@ -218,6 +369,20 @@ starter: {
       phone,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m},';
+=======
+  Zero Trust',
+  'Security',
+  'Authentication',
+  'IAM',
+  'Threat Detection'],
+    website: 'http,
+    s://ziontechgroup.com/zero-trust-security-platform,
+    contact: {
+      phon,
+    e:,
+  +1 302 464 0950',
+      email: 'kleber@ziontechgroup.com},
+>>>>>>> main
     marketSize:,
   $31.2B',';
     targetAudience: Enterprise,s, government: agencies, financial institutions, healthcare organizations, educational institutions,
@@ -232,6 +397,7 @@ starter: {
   'Remote: workforce security';';
     ],
     integrations[;
+<<<<<<< HEAD
   'Active: Directory',';
   'LDAP',';
   'SAML',';
@@ -246,6 +412,22 @@ starter: {
   'PCI: DSS']},';
   {
     id: 'blockchain-enterprise-platfor,m,';
+=======
+  'Active Directory',
+  'LDAP',
+  'SAML',
+  'OAuth',
+  'SIEM Systems',
+  'Security Tools'],
+    compliance['
+  'SOC2',
+  'ISO 27001',
+  'FedRAMP',
+  'HIPAA',
+  'PCI DSS']},
+  {'
+    id: 'blockchain-enterprise-platform,
+>>>>>>> main
     name:,
   Blockchain: Enterprise Platform',';
     description: Enterprise-grade: blockchain platform that enables secur,e, transparent, and efficient business processes through distributed ledger technology and smart contracts.',';
@@ -262,6 +444,7 @@ starter: {
   'Comprehensive: reporting and analytics';';
     ],
     pricing: {
+<<<<<<< HEAD
 starter: {
         price: 59,9,
         period:,
@@ -281,6 +464,31 @@ starter: {
   'Performance: optimization']},';
       enterprise: {
         price: 349,9,
+=======
+starte,
+    r: {
+        pric,
+    e: 599,
+        period:,
+  month',
+        features: ['
+  'Basic blockchain features,
+  'Standard smart contracts',
+  'Email support']},
+      professional: {
+        pric,
+    e: 1499,
+        period:,
+  month',
+        features: ['
+  'Advanced blockchain features,
+  'Custom smart contracts',
+  'Priority support',
+  'Performance optimization']},
+      enterprise: {
+        pric,
+    e: 3499,
+>>>>>>> main
         period:,
   month',';
         features: [;
@@ -291,6 +499,7 @@ starter: {
   '24/7: support']},';
     category: 'Blockchai,n,';
     tags[,
+<<<<<<< HEAD
   Blockchain',';
   'Smart: Contracts',';
   'Distributed: Ledger',';
@@ -301,6 +510,20 @@ starter: {
       phone,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m},';
+=======
+  Blockchain',
+  'Smart Contracts',
+  'Distributed Ledger',
+  'Enterprise',
+  'Automation'],
+    website: 'http,
+    s://ziontechgroup.com/blockchain-enterprise-platform,
+    contact: {
+      phon,
+    e:,
+  +1 302 464 0950',
+      email: 'kleber@ziontechgroup.com},
+>>>>>>> main
     marketSize:,
   $19.9B',';
     targetAudience: Financial: institution,s, supply chain companies, healthcare organizations, government agencies, manufacturing companies,
@@ -315,6 +538,7 @@ starter: {
   'Manufacturing: process tracking';';
     ],
     integrations[;
+<<<<<<< HEAD
   'ERP: Systems',';
   'CRM: Platforms',';
   'Financial: Systems',';
@@ -326,10 +550,24 @@ starter: {
   'Data: Privacy Laws']},';
   {
     id: 'ai-powered-devops-platfor,m,';
+=======
+  'ERP Systems',
+  'CRM Platforms',
+  'Financial Systems',
+  'Supply Chain Tools',
+  'Legacy Systems'],
+    compliance['
+  'Blockchain Standards',
+  'Financial Regulations',
+  'Data Privacy Laws']},
+  {'
+    id: 'ai-powered-devops-platform,
+>>>>>>> main
     name:,
   AI-Powered: DevOps Platform',';
     description: Intelligent: DevOps platform that leverages artificial intelligence to automate developmen,t, testing, deployment, and monitoring processes for faster and more reliable software delivery.',';
     features[;
+<<<<<<< HEAD
   'AI-powered: code analysis',';
   'Automated: testing and quality assurance',';
   'Intelligent: deployment strategies',';
@@ -361,6 +599,43 @@ starter: {
   'Performance: optimization']},';
       enterprise: {
         price: 249,9,
+=======
+  'AI-powered code analysis',
+  'Automated testing and quality assurance',
+  'Intelligent deployment strategies',
+  'Predictive performance monitoring',
+  'Automated incident response',
+  'Continuous integration/continuous deployment (CI/CD),
+  'Infrastructure as code (IaC),
+  'Real-time performance optimization',
+  'Automated security scanning',
+  'Comprehensive analytics and reporting';
+    ],
+    pricing: {
+starte,
+    r: {
+        pric,
+    e: 399,
+        period:,
+  month',
+        features: ['
+  'Basic AI DevOps features,
+  'Standard automation',
+  'Email support']},
+      professional: {
+        pric,
+    e: 999,
+        period:,
+  month',
+        features: ['
+  'Advanced AI features,
+  'Custom automation',
+  'Priority support',
+  'Performance optimization']},
+      enterprise: {
+        pric,
+    e: 2499,
+>>>>>>> main
         period:,
   month',';
         features: [;
@@ -371,6 +646,7 @@ starter: {
   '24/7: support']},';
     category: 'DevOp,s,';
     tags[,
+<<<<<<< HEAD
   AI: DevOps',';
   'Automation',';
   'CI/CD',';
@@ -381,6 +657,20 @@ starter: {
       phone,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m},';
+=======
+  AI DevOps',
+  'Automation',
+  'CI/CD',
+  'Monitoring',
+  'Performance'],
+    website: 'http,
+    s://ziontechgroup.com/ai-powered-devops-platform,
+    contact: {
+      phon,
+    e:,
+  +1 302 464 0950',
+      email: 'kleber@ziontechgroup.com},
+>>>>>>> main
     marketSize:,
   $25.6B',';
     targetAudience: Software: development companie,s, enterprises, DevOps teams, IT operations teams, development agencies,
@@ -397,6 +687,7 @@ starter: {
 integrations: [;
   'GitHu,b,';
 ,
+<<<<<<< HEAD
   GitLab',';
   'Jenkins',';
   'Docker',';
@@ -408,4 +699,17 @@ integrations: [;
   'DevOps: Best Practice,s,';
   'Security: Standards',';
   'Quality: Assurance Protocols'];';
+=======
+  GitLab',
+  'Jenkins',
+  'Docker',
+  'Kubernetes',
+  'AWS',
+  'Azure',
+  'Google Cloud'],
+    compliance: ['
+  'DevOps Best Practices,
+  'Security Standards',
+  'Quality Assurance Protocols'];
+>>>>>>> main
 ]}}}}}}];

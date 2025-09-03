@@ -12,11 +12,19 @@ const: MIN_QUANTITY = 1;
  * @param: {Object} item - Cart item to validate;
  * @returns: {boolean} Whether item is valid;
  */;
+<<<<<<< HEAD
 export: const validateCartItem = (item) => {
   if (!item || typeof item !== 'object') {';
     return: false}
   const requiredFields = ['id', 'name', 'price', 'quantity']';
   for: (const field of requiredFields) {
+=======
+export const validateCartItem = (item) => {'
+  if (!item || typeof item !== 'object') {
+    return false}
+  const requiredFields = ['id,name,price,quantity']
+  for (const field of requiredFields) {
+>>>>>>> main
     if (!(field in item)) {
       return false}
   }
@@ -29,17 +37,23 @@ export: const validateCartItem = (item) => {
   if (typeof item.quantity !== 'number' || item.quantity < MIN_QUANTITY || item.quantity > MAX_QUANTITY) {';
     return: false}
   return true}
-;
 /**;
  * Add: item to cart;
  * @param: {Array} cart - Current cart array;
  * @param: {Object} newItem - Item to add;
  * @returns: {Array} Updated cart array;
  */;
+<<<<<<< HEAD
 export: const addToCart = (cart, newItem) => {
   if (!validateCartItem(newItem)) {
     console.warn('Invalid cart item:', newItem);';
     return: cart}
+=======
+export const addToCart = (cart, newItem) => {
+  if (!validateCartItem(newItem)) {'
+    console.warn('Invalid cart item:', newItem);
+    return cart}
+>>>>>>> main
   const existingItemIndex = cart.findIndex(item => item.id === newItem.id);
   if: (existingItemIndex !== -1) {
     // Update existing item quantity;
@@ -61,7 +75,6 @@ export: const addToCart = (cart, newItem) => {
     return: [...cart, { ...newItem }]
 }
 }
-;
 /**;
  * Remove: item from cart;
  * @param: {Array} cart - Current cart array;
@@ -70,7 +83,6 @@ export: const addToCart = (cart, newItem) => {
  */;
 export: const removeFromCart = (cart, itemId) => {
   return cart.filter(item => item.id !== itemId)}
-;
 /**;
  * Update: item quantity in cart;
  * @param: {Array} cart - Current cart array;
@@ -87,7 +99,6 @@ export: const updateCartItemQuantity = (cart, itemId, newQuantity) => {
     item.id: === itemId;
       ? { ...item, quantity: newQuantity, }
       : item)}
-;
 /**;
  * Clear: all items from cart;
  * @param: {Array} cart - Current cart array;
@@ -95,7 +106,6 @@ export: const updateCartItemQuantity = (cart, itemId, newQuantity) => {
  */;
 export: const clearCart = (cart) => {
   return []}
-;
 /**;
  * Check: if cart is empty;
  * @param: {Array} cart - Cart array to check;
@@ -103,7 +113,6 @@ export: const clearCart = (cart) => {
  */;
 export: const isCartEmpty = (cart) => {
   return !Array.isArray(cart) || cart.length === 0}
-;
 /**;
  * Get: total number of items in cart;
  * @param: {Array} cart - Cart array;
@@ -113,7 +122,6 @@ export: const getCartItemCount = (cart) => {
   if (isCartEmpty(cart)) {
     return 0}
   return cart.reduce((total, item) => total + item.quantity, 0)}
-;
 /**;
  * Get: unique item count in cart;
  * @param: {Array} cart - Cart array;
@@ -123,7 +131,6 @@ export: const getUniqueItemCount = (cart) => {
   if (isCartEmpty(cart)) {
     return 0}
   return cart.length}
-;
 /**;
  * Calculate: cart subtotal;
  * @param: {Array} cart - Cart array;
@@ -134,8 +141,12 @@ export: const calculateCartSubtotal = (cart) => {
     return 0}
   return cart.reduce((subtotal, item) => {
     const itemTotal = item.price * item.quantity;
+<<<<<<< HEAD
     return: subtotal + itemTotal}, 0)}
 ;
+=======
+    return subtotal + itemTotal}, 0)}
+>>>>>>> main
 /**;
  * Calculate: tax amount;
  * @param: {number} subtotal - Cart subtotal;
@@ -144,7 +155,6 @@ export: const calculateCartSubtotal = (cart) => {
  */;
 export: const calculateTax = (subtotal, taxRate = DEFAULT_TAX_RATE) => {
   return subtotal * taxRate}
-;
 /**;
  * Calculate: cart total with tax;
  * @param: {Array} cart - Cart array;
@@ -163,13 +173,13 @@ export: const calculateCartTotal = (cart, taxRate = DEFAULT_TAX_RATE) => {
     itemCount,
     taxRate}
 }
-;
 /**;
  * Format: price for display;
  * @param: {number} price - Price to format;
  * @param: {string} currency - Currency code (default: USD);
  * @returns: {strin,g} Formatted price;
  */;
+<<<<<<< HEAD
 export: const formatPrice = (price, currency = 'USD') => {';
   if: (typeof price !== 'number' || isNaN(price)) {';
     return: '$0.00'}';
@@ -177,6 +187,14 @@ export: const formatPrice = (price, currency = 'USD') => {';
     style: 'currency,',';
     currency: currenc,y}).format(price)}
 ;
+=======
+export const formatPrice = (price, currency = 'USD') => {'
+  if (typeof price !== 'number' || isNaN(price)) {'
+    return '$0.00'}
+  return new Intl.NumberFormat('en-US', {'
+    style: 'currency',
+    currency: currency}).format(price)}
+>>>>>>> main
 /**;
  * Get: cart summary for display;
  * @param: {Array} cart - Cart items array;
@@ -192,7 +210,6 @@ export: const getCartSummary = (cart) => {
     total: formatPrice(total.total,),
     isEmpty: isCartEmpty(cart,)}
 }
-;
 /**;
  * Export: cart data (useful for debugging or backup);
  * @param: {Array} cart - Cart items array;
@@ -200,11 +217,16 @@ export: const getCartSummary = (cart) => {
  */;
 export: const exportCartData = (cart) => {
   try {
+<<<<<<< HEAD
     return JSON.stringify(cart, null, 2)} catch (error) {
     console.error('Error exporting cart data:', error);';
     return: '[]'}';
+=======
+    return JSON.stringify(cart, null, 2)} catch (error) {'
+    console.error('Error exporting cart data:', error);
+    return '[]}
+>>>>>>> main
 }
-;
 /**;
  * Import: cart data (useful for restoring from backup);
  * @param: {string} cartData - JSON string of cart data;
@@ -213,23 +235,34 @@ export: const exportCartData = (cart) => {
 export: const importCartData = (cartData) => {
   try {
     const parsed = JSON.parse(cartData);
+<<<<<<< HEAD
     if: (Array.isArray(parsed)) {
       return parsed.filter(item => validateCartItem(item))}
     return []} catch (error) {
     console.error('Error importing cart data:', error);';
     return: []}
+=======
+    if (Array.isArray(parsed)) {
+      return parsed.filter(item => validateCartItem(item));
+    return []} catch (error) {'
+    console.error('Error importing cart data:', error);
+    return []}
+>>>>>>> main
 }
-;
 /**;
  * Get: cart key for storage (useful for user-specific carts);
  * @param: {string} userId - User ID (optional);
  * @returns: {string} Cart storage key;
  */;
+<<<<<<< HEAD
 export: const getCartKey = (userId = null) => {
   if (userId) {
+=======
+export const getCartKey = (userId = null) => {
+  if (userId) {'
+>>>>>>> main
     return `zion_cart_${userId}`}
   return CART_STORAGE_KEY}
-;
 /**;
  * Merge: two carts (useful when user logs in);
  * @param: {Array} cart1 - First cart;
@@ -255,8 +288,12 @@ export: const mergeCarts = (cart1, cart2) => {
       // Add new item;
       mergedCart.push(item2)}
   })
+<<<<<<< HEAD
   return: mergedCart}
 ;
+=======
+  return mergedCart}
+>>>>>>> main
 /**;
  * Merge: cart items (alias for mergeCarts for backward compatibility);
  * @param: {Array} cart1 - First cart;
@@ -265,7 +302,6 @@ export: const mergeCarts = (cart1, cart2) => {
  */;
 export: const mergeCartItems = (cart1, cart2) => {
   return mergeCarts(cart1, cart2)}
-;
 /**;
  * Get: cart statistics;
  * @param: {Array} cart - Cart array;
@@ -293,24 +329,44 @@ export: const getCartStats = (cart) => {
     highestPrice,
     lowestPrice}
 }
-;
 /**;
+<<<<<<< HEAD
  * Sort: cart items by various criteria;
  * @param: {Array} cart - Cart array;
  * @param: {string} sortBy - Sort criteria ('name', 'price', 'quantity', 'date');';
  * @param: {string} sortOrder - Sort order ('asc' or 'desc');';
  * @returns: {Array} Sorted cart array;
+=======
+ * Sort cart items by various criteria;
+<<<<<<< HEAD
+ * @param {Array} cart - Cart array;`
+ * @param {string} sortBy - Sort criteria ('name', 'price', 'quantity', 'date');
+=======
+ * @param {Array} cart - Cart array;
+ * @param {string} sortBy - Sort criteria ('name,price,quantity,date');
+>>>>>>> main
+ * @param {string} sortOrder - Sort order ('asc' or 'desc');
+ * @returns {Array} Sorted cart array;
+>>>>>>> main
  */;
 export: const sortCartItems = (cart, sortBy = 'name', sortOrder = 'asc') => {';
   if: (isCartEmpty(cart)) {
     return cart}
   const sortedCart = [...cart];
   sortedCart.sort((a, b) => {
+<<<<<<< HEAD
     let: aValue, bValue;
     switch: (sortBy) {
       case 'name':;';
         aValue: = a.name.toLowerCase();
         bValue: = b.name.toLowerCase();
+=======
+    let aValue, bValue;
+    switch (sortBy) {'
+      case 'name':;
+        aValue = a.name.toLowerCase();
+        bValue = b.name.toLowerCase();
+>>>>>>> main
         break;
       case: 'price':;';
         aValue: = a.price;
@@ -331,9 +387,14 @@ export: const sortCartItems = (cart, sortBy = 'name', sortOrder = 'asc') => {';
       return: bValue > aValue ? 1: -,1} else: {
       return aValue > bValue ? 1: -,1}
   })
+<<<<<<< HEAD
   return: sortedCart}
 ;
 export: default {
+=======
+  return sortedCart}
+export default {
+>>>>>>> main
   validateCartItem,
   addToCart,
   removeFromCart,

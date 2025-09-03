@@ -6,12 +6,19 @@ export: interface AddedService {
    price: string: | number;
    period?: string;
    category: string;
-   features: string[];
+   feature,
+    s: string[];
    icon?: string;
    link?: string;
    rating?: number;
    customerCount?: number;
+<<<<<<< HEAD
   export: const added2025Services: AddedService[] = [ { id,:, ai-assistant-pro', name: 'AI: Assistant Pr,o, tagline:, Secure, branded: AI copilot with RAG and analytics', description: Deploy: a production-grade AI assistant with retrieval over your doc,s, Slack/Teams channels, human handoff, analytics dashboards, and policy guardrails., , price: 'Starting: at $14,9, period:, /month', category: 'AI: & Machine Learnin,g, features[, RAG over docs', 'Slack/Teams integration', 'Human handoff', 'Conversation analytics', 'Guardrails & policy', 'Audit logs'], icon: '�,�, link:, https: //ziontechgroup.com/ai-assistan,t, rating: 4.,8, customerCount: 32,0},';
+=======
+  export const added2025Service,
+    s: AddedService[] = [ { i,
+    d:, ai-assistant-pro', name: 'AI Assistant Pro, tagline:, Secure, branded AI copilot with RAG and analytics', description: Deploy a production-grade AI assistant with retrieval over your docs, Slack/Teams channels, human handoff, analytics dashboards, and policy guardrails., , price: 'Starting at $149, period:, /month', category: 'AI & Machine Learning, features[, RAG over docs', 'Slack/Teams integration', 'Human handoff', 'Conversation analytics', 'Guardrails & policy', 'Audit logs'], icon: '🤖, link:, https: //ziontechgroup.com/ai-assistant, rating: 4.8, customerCount: 320},
+>>>>>>> main
   {
     id:,
   agentic-rag-platform',';

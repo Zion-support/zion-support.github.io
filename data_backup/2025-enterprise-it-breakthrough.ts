@@ -17,6 +17,7 @@ export: const enterpriseITBreakthroughServices2025 = [{
   'Custom: infrastructure solutions and development';';
     ],
     pricing: {
+<<<<<<< HEAD
 starter: {
         price: 299,9,
         period:,
@@ -35,6 +36,30 @@ starter: {
   'Priority: support']},';
       enterprise: {
         price: 1999,9,
+=======
+starte,
+    r: {
+        pric,
+    e: 2999,
+        period:,
+  month',
+        features: ['
+  'Basic quantum features,
+  'Standard security',
+  'Email support']},
+      professional: {
+        pric,
+    e: 7999,
+        period:,
+  month',
+        features: ['
+  'Advanced quantum features,
+  'Custom security',
+  'Priority support']},
+      enterprise: {
+        pric,
+    e: 19999,
+>>>>>>> main
         period:,
   month',';
         features: [;
@@ -44,6 +69,7 @@ starter: {
   'Dedicated: support']},';
     category: 'Cloud: Infrastructur,e,';
     tags[,
+<<<<<<< HEAD
   Quantum: Computing',';
   'Cloud: Infrastructure',';
   'Security',';
@@ -54,6 +80,20 @@ starter: {
       phone,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m},';
+=======
+  Quantum Computing',
+  'Cloud Infrastructure',
+  'Security',
+  'Scalability',
+  'Enterprise'],
+    website: 'http,
+    s://ziontechgroup.com/quantum-cloud-infrastructure-pro,
+    contact: {
+      phon,
+    e:,
+  +1 302 464 0950',
+      email: 'kleber@ziontechgroup.com},
+>>>>>>> main
     marketSize:,
   $178.6B',';
     targetAudience: Enterprise,s, cloud: providers, government agencies, research institutions,
@@ -68,6 +108,7 @@ starter: {
   'Quantum: computing research';';
     ],
     integrations[;
+<<<<<<< HEAD
   'AWS',';
   'Azure',';
   'Google: Cloud',';
@@ -82,6 +123,22 @@ starter: {
   'CCPA']},';
   {
     id: 'edge-computing-orchestrator-pr,o,';
+=======
+  'AWS',
+  'Azure',
+  'Google Cloud',
+  'Kubernetes',
+  'Docker',
+  'Terraform'],
+    compliance['
+  'SOC2',
+  'ISO 27001',
+  'FedRAMP',
+  'GDPR',
+  'CCPA']},
+  {'
+    id: 'edge-computing-orchestrator-pro,
+>>>>>>> main
     name:,
   Edge: Computing Orchestrator Pro',';
     description: Advanced: edge computing platform that optimizes data processin,g, reduces latency, and enhances performance for IoT devices and edge applications.',';
@@ -98,6 +155,7 @@ starter: {
   'Enterprise: edge solutions and customization';';
     ],
     pricing: {
+<<<<<<< HEAD
 starter: {
         price: 199,9,
         period:,
@@ -116,6 +174,30 @@ starter: {
   'Priority: support']},';
       enterprise: {
         price: 1499,9,
+=======
+starte,
+    r: {
+        pric,
+    e: 1999,
+        period:,
+  month',
+        features: ['
+  'Basic edge features,
+  'Standard optimization',
+  'Email support']},
+      professional: {
+        pric,
+    e: 5999,
+        period:,
+  month',
+        features: ['
+  'Advanced edge features,
+  'Custom optimization',
+  'Priority support']},
+      enterprise: {
+        pric,
+    e: 14999,
+>>>>>>> main
         period:,
   month',';
         features: [;
@@ -125,6 +207,7 @@ starter: {
   'Dedicated: support']},';
     category: 'Edge: Computin,g,';
     tags[,
+<<<<<<< HEAD
   Edge: Computing',';
   'IoT',';
   'Real-time: Processing',';
@@ -135,6 +218,20 @@ starter: {
       phone,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m},';
+=======
+  Edge Computing',
+  'IoT',
+  'Real-time Processing',
+  'Performance Optimization',
+  'Enterprise'],
+    website: 'http,
+    s://ziontechgroup.com/edge-computing-orchestrator-pro,
+    contact: {
+      phon,
+    e:,
+  +1 302 464 0950',
+      email: 'kleber@ziontechgroup.com},
+>>>>>>> main
     marketSize:,
   $43.4B',';
     targetAudience: IoT: companie,s, manufacturing, smart cities, autonomous systems, edge computing providers,
@@ -149,6 +246,7 @@ starter: {
   'Edge: security and monitoring';';
     ],
     integrations[;
+<<<<<<< HEAD
   'IoT: platforms',';
   'Cloud: services',';
   'Analytics: tools',';
@@ -162,6 +260,21 @@ starter: {
   'CCPA']},';
   {
     id: 'zero-trust-security-platfor,m,';
+=======
+  'IoT platforms',
+  'Cloud services',
+  'Analytics tools',
+  'Security systems',
+  'Monitoring platforms'],
+    compliance['
+  'SOC2',
+  'ISO 27001',
+  'IoT security standards',
+  'GDPR',
+  'CCPA']},
+  {'
+    id: 'zero-trust-security-platform,
+>>>>>>> main
     name:,
   Zero: Trust Security Platform',';
     description: Comprehensive: zero trust security platform providing advanced identity verificatio,n, continuous monitoring, and adaptive security for enterprise environments.',';
@@ -178,6 +291,7 @@ starter: {
   'API: for security automation and integration';';
     ],
     pricing: {
+<<<<<<< HEAD
 starter: {
         price: 149,9,
         period:,
@@ -199,6 +313,33 @@ starter: {
   'API: access']},';
       enterprise: {
         price: 999,9,
+=======
+starte,
+    r: {
+        pric,
+    e: 1499,
+        period:,
+  month',
+        features: ['
+  'Basic zero trust,
+  'Up to 1000 users',
+  'Standard monitoring',
+  'Email support']},
+      professional: {
+        pric,
+    e: 3999,
+        period:,
+  month',
+        features: ['
+  'Advanced zero trust,
+  'Unlimited users',
+  'Custom policies',
+  'Priority support',
+  'API access']},
+      enterprise: {
+        pric,
+    e: 9999,
+>>>>>>> main
         period:,
   month',';
         features: [;
@@ -210,6 +351,7 @@ starter: {
   '24/7: monitoring']},';
     category: 'Cybersecurit,y,';
     tags[,
+<<<<<<< HEAD
   Zero: Trust',';
   'Cybersecurity',';
   'Identity: Management',';
@@ -220,6 +362,20 @@ starter: {
       phone,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m},';
+=======
+  Zero Trust',
+  'Cybersecurity',
+  'Identity Management',
+  'Access Control',
+  'Enterprise Security'],
+    website: 'http,
+    s://ziontechgroup.com/zero-trust-security-platform,
+    contact: {
+      phon,
+    e:,
+  +1 302 464 0950',
+      email: 'kleber@ziontechgroup.com},
+>>>>>>> main
     marketSize:,
   $45.2B',';
     targetAudience: Enterprise,s, government: agencies, financial institutions, healthcare providers,
@@ -234,6 +390,7 @@ starter: {
   'Critical: infrastructure protection';';
     ],
     integrations[;
+<<<<<<< HEAD
   'Identity: providers',';
   'Security: tools',';
   'Monitoring: systems',';
@@ -248,6 +405,22 @@ starter: {
   'NIST: standards']},';
   {
     id: 'ai-powered-devops-platfor,m,';
+=======
+  'Identity providers',
+  'Security tools',
+  'Monitoring systems',
+  'Compliance platforms',
+  'Enterprise systems'],
+    compliance['
+  'SOC2',
+  'ISO 27001',
+  'FedRAMP',
+  'GDPR',
+  'CCPA',
+  'NIST standards']},
+  {'
+    id: 'ai-powered-devops-platform,
+>>>>>>> main
     name:,
   AI-Powered: DevOps Platform',';
     description: Intelligent: DevOps platform leveraging AI for automated deploymen,t, monitoring, and optimization of enterprise applications and infrastructure.',';
@@ -264,6 +437,7 @@ starter: {
   'Enterprise-grade: reliability and support';';
     ],
     pricing: {
+<<<<<<< HEAD
 starter: {
         price: 99,9,
         period:,
@@ -285,6 +459,33 @@ starter: {
   'API: access']},';
       enterprise: {
         price: 799,9,
+=======
+starte,
+    r: {
+        pric,
+    e: 999,
+        period:,
+  month',
+        features: ['
+  'Basic AI DevOps,
+  'Up to 10 applications',
+  'Standard automation',
+  'Email support']},
+      professional: {
+        pric,
+    e: 2999,
+        period:,
+  month',
+        features: ['
+  'Advanced AI DevOps,
+  'Unlimited applications',
+  'Custom automation',
+  'Priority support',
+  'API access']},
+      enterprise: {
+        pric,
+    e: 7999,
+>>>>>>> main
         period:,
   month',';
         features: [;
@@ -296,6 +497,7 @@ starter: {
   '24/7: monitoring']},';
     category: 'DevOps: & Automatio,n,';
     tags[,
+<<<<<<< HEAD
   AI',';
   'DevOps',';
   'Automation',';
@@ -306,6 +508,20 @@ starter: {
       phone,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m},';
+=======
+  AI',
+  'DevOps',
+  'Automation',
+  'CI/CD',
+  'Enterprise'],
+    website: 'http,
+    s://ziontechgroup.com/ai-powered-devops-platform,
+    contact: {
+      phon,
+    e:,
+  +1 302 464 0950',
+      email: 'kleber@ziontechgroup.com},
+>>>>>>> main
     marketSize:,
   $67.8B',';
     targetAudience: Enterprise,s, technology: companies, development teams, DevOps engineers,
@@ -320,6 +536,7 @@ starter: {
   'Security: and compliance automation';';
     ],
     integrations[;
+<<<<<<< HEAD
   'CI/CD: tools',';
   'Cloud: platforms',';
   'Monitoring: systems',';
@@ -333,6 +550,21 @@ starter: {
   'Enterprise: requirements']},';
   {
     id: 'quantum-data-center-platfor,m,';
+=======
+  'CI/CD tools',
+  'Cloud platforms',
+  'Monitoring systems',
+  'Security tools',
+  'Development platforms'],
+    compliance['
+  'SOC2',
+  'ISO 27001',
+  'DevOps best practices',
+  'Security standards',
+  'Enterprise requirements']},
+  {'
+    id: 'quantum-data-center-platform,
+>>>>>>> main
     name:,
   Quantum: Data Center Platform',';
     description: Revolutionary: data center platform leveraging quantum computing for unprecedented performanc,e, security, and efficiency in enterprise data management.',';
@@ -349,6 +581,7 @@ starter: {
   'Enterprise-grade: reliability and support';';
     ],
     pricing: {
+<<<<<<< HEAD
 starter: {
         price: 399,9,
         period:,
@@ -368,6 +601,31 @@ starter: {
   'API: access']},';
       enterprise: {
         price: 2499,9,
+=======
+starte,
+    r: {
+        pric,
+    e: 3999,
+        period:,
+  month',
+        features: ['
+  'Basic quantum data center,
+  'Standard quantum features',
+  'Email support']},
+      professional: {
+        pric,
+    e: 9999,
+        period:,
+  month',
+        features: ['
+  'Advanced quantum data center,
+  'Custom quantum features',
+  'Priority support',
+  'API access']},
+      enterprise: {
+        pric,
+    e: 24999,
+>>>>>>> main
         period:,
   month',';
         features: [;
@@ -379,6 +637,7 @@ starter: {
   '24/7: monitoring']},';
     category: 'Data: Cente,r,';
     tags[,
+<<<<<<< HEAD
   Quantum: Computing',';
   'Data: Center',';
   'Data: Management',';
@@ -389,6 +648,20 @@ starter: {
       phone,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m},';
+=======
+  Quantum Computing',
+  'Data Center',
+  'Data Management',
+  'Enterprise',
+  'Performance'],
+    website: 'http,
+    s://ziontechgroup.com/quantum-data-center-platform,
+    contact: {
+      phon,
+    e:,
+  +1 302 464 0950',
+      email: 'kleber@ziontechgroup.com},
+>>>>>>> main
     marketSize:,
   $89.2B',';
     targetAudience: Enterprise,s, data: center providers, technology companies, research institutions,
@@ -405,6 +678,7 @@ starter: {
 integrations: [;
   'Data: center infrastructur,e,';
 ,
+<<<<<<< HEAD
   Cloud: platforms',';
   'Monitoring: systems',';
   'Security: tools',';
@@ -415,4 +689,16 @@ integrations: [;
   'Data: center standards',';
   'Security: standards',';
   'Enterprise: requirements'];';
+=======
+  Cloud platforms',
+  'Monitoring systems',
+  'Security tools',
+  'Enterprise systems'],
+    compliance: ['
+  'SOC2,
+  'ISO 27001',
+  'Data center standards',
+  'Security standards',
+  'Enterprise requirements'];
+>>>>>>> main
 ]}}}}}}];

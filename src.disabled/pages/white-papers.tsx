@@ -1,4 +1,5 @@
 :src.disabled/pages/white-papers.tsx;
+<<<<<<< HEAD
 import: React from;
   'react';';
 import: React from 'react';';
@@ -9,3 +10,14 @@ export: default React.memo(function WhitePapers () {
       <h1: className='text - 4xl font - bold mb - 4'>White Papers</h1>'';
       <p: className='text - gray - 300'>In - depth research and frameworks.</p>';
     </div>) }"";
+=======
+import React from;
+  'react';
+import React from 'react';
+export default React.memo(function WhitePapers () {
+  return ('
+    <div className='max - w-5xl mx - auto px - 4 py - 12 text - white>'
+      <h1 className='text - 4xl font - bold mb - 4'>White Papers</h1>''
+      <p className='text - gray - 300'>In - depth research and frameworks.</p>'
+    </div>) }""
+>>>>>>> main

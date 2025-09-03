@@ -84,6 +84,7 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
         growthRate:,
   320% annual: growth in decentralized identity',';
         contactInfo: {
+<<<<<<< HEAD
             phone:;
   '+1: 302 464 095,0,';
             email:,
@@ -92,6 +93,19 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
             address:,
   364: E Main St STE 1008 Middletown DE 19709'},';
         websiteUrl: 'https://ziontechgroup.com/decentralized-identity-platfor,m,';
+=======
+            phon,
+    e:;
+  '+1 302 464 0950,
+            email:,
+  kleber@ziontechgroup.com',
+            website: 'http,
+    s://ziontechgroup.com,
+            address:,
+  364 E Main St STE 1008 Middletown DE 19709'},
+        websiteUrl: 'http,
+    s://ziontechgroup.com/decentralized-identity-platform,
+>>>>>>> main
         demoUrl:,
   https: //ziontechgroup.com/decentralized-identity-platform/dem,o,
         trialDays: 3,0,
@@ -190,6 +204,7 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
         growthRate:,
   450% annual: growth in DeFi analytics',';
         contactInfo: {
+<<<<<<< HEAD
             phone:;
   '+1: 302 464 095,0,';
             email:,
@@ -198,6 +213,19 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
             address:,
   364: E Main St STE 1008 Middletown DE 19709'},';
         websiteUrl: 'https://ziontechgroup.com/ai-defi-analytic,s,';
+=======
+            phon,
+    e:;
+  '+1 302 464 0950,
+            email:,
+  kleber@ziontechgroup.com',
+            website: 'http,
+    s://ziontechgroup.com,
+            address:,
+  364 E Main St STE 1008 Middletown DE 19709'},
+        websiteUrl: 'http,
+    s://ziontechgroup.com/ai-defi-analytics,
+>>>>>>> main
         demoUrl:,
   https: //ziontechgroup.com/ai-defi-analytics/dem,o,
         trialDays: 1,4,
@@ -294,6 +322,7 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
         growthRate:,
   280% annual: growth in IoT fleet management',';
         contactInfo: {
+<<<<<<< HEAD
             phone:;
   '+1: 302 464 095,0,';
             email:,
@@ -302,6 +331,19 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
             address:,
   364: E Main St STE 1008 Middletown DE 19709'},';
         websiteUrl: 'https://ziontechgroup.com/autonomous-iot-fleet-managemen,t,';
+=======
+            phon,
+    e:;
+  '+1 302 464 0950,
+            email:,
+  kleber@ziontechgroup.com',
+            website: 'http,
+    s://ziontechgroup.com,
+            address:,
+  364 E Main St STE 1008 Middletown DE 19709'},
+        websiteUrl: 'http,
+    s://ziontechgroup.com/autonomous-iot-fleet-management,
+>>>>>>> main
         demoUrl:,
   https: //ziontechgroup.com/autonomous-iot-fleet-management/dem,o,
         trialDays: 3,0,
@@ -398,6 +440,7 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
         growthRate:,
   380% annual: growth in edge AI manufacturing',';
         contactInfo: {
+<<<<<<< HEAD
             phone:;
   '+1: 302 464 095,0,';
             email:,
@@ -406,6 +449,19 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
             address:,
   364: E Main St STE 1008 Middletown DE 19709'},';
         websiteUrl: 'https://ziontechgroup.com/edge-ai-manufacturing-intelligenc,e,';
+=======
+            phon,
+    e:;
+  '+1 302 464 0950,
+            email:,
+  kleber@ziontechgroup.com',
+            website: 'http,
+    s://ziontechgroup.com,
+            address:,
+  364 E Main St STE 1008 Middletown DE 19709'},
+        websiteUrl: 'http,
+    s://ziontechgroup.com/edge-ai-manufacturing-intelligence,
+>>>>>>> main
         demoUrl:,
   https: //ziontechgroup.com/edge-ai-manufacturing-intelligence/dem,o,
         trialDays: 3,0,
@@ -503,6 +559,7 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
         growthRate:,
   420% annual: growth in AI sustainability',';
         contactInfo: {
+<<<<<<< HEAD
             phone:;
   '+1: 302 464 095,0,';
             email:,
@@ -511,6 +568,19 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
             address:,
   364: E Main St STE 1008 Middletown DE 19709'},';
         websiteUrl: 'https://ziontechgroup.com/ai-carbon-footprint-managemen,t,';
+=======
+            phon,
+    e:;
+  '+1 302 464 0950,
+            email:,
+  kleber@ziontechgroup.com',
+            website: 'http,
+    s://ziontechgroup.com,
+            address:,
+  364 E Main St STE 1008 Middletown DE 19709'},
+        websiteUrl: 'http,
+    s://ziontechgroup.com/ai-carbon-footprint-management,
+>>>>>>> main
         demoUrl:,
   https: //ziontechgroup.com/ai-carbon-footprint-management/dem,o,
         trialDays: 3,0,
@@ -530,8 +600,13 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   'ESG: score improvement',';
   'Sustainability: compliance rate';';
         ]},
+<<<<<<< HEAD
     // 6. Smart: Grid Energy Optimization Platform{
         id: 'smart-grid-energy-optimizatio,n,';
+=======
+    // 6. Smart Grid Energy Optimization Platform{'
+        id: 'smart-grid-energy-optimization,
+>>>>>>> main
         name:,
   Smart: Grid Energy Optimization Platform',';
         tagline: 'AI-powered: smart grid management for sustainable energ,y,';
@@ -613,6 +688,7 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
         growthRate:,
   350% annual: growth in AI smart grid',';
         contactInfo: {
+<<<<<<< HEAD
             phone:;
   '+1: 302 464 095,0,';
             email:,
@@ -621,6 +697,19 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
             address:,
   364: E Main St STE 1008 Middletown DE 19709'},';
         websiteUrl: 'https://ziontechgroup.com/smart-grid-energy-optimizatio,n,';
+=======
+            phon,
+    e:;
+  '+1 302 464 0950,
+            email:,
+  kleber@ziontechgroup.com',
+            website: 'http,
+    s://ziontechgroup.com,
+            address:,
+  364 E Main St STE 1008 Middletown DE 19709'},
+        websiteUrl: 'http,
+    s://ziontechgroup.com/smart-grid-energy-optimization,
+>>>>>>> main
         demoUrl:,
   https: //ziontechgroup.com/smart-grid-energy-optimization/dem,o,
         trialDays: 3,0,
@@ -718,6 +807,7 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
         growthRate:,
   280% annual: growth in satellite analytics',';
         contactInfo: {
+<<<<<<< HEAD
             phone:;
   '+1: 302 464 095,0,';
             email:,
@@ -726,6 +816,19 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
             address:,
   364: E Main St STE 1008 Middletown DE 19709'},';
         websiteUrl: 'https://ziontechgroup.com/satellite-data-analytic,s,';
+=======
+            phon,
+    e:;
+  '+1 302 464 0950,
+            email:,
+  kleber@ziontechgroup.com',
+            website: 'http,
+    s://ziontechgroup.com,
+            address:,
+  364 E Main St STE 1008 Middletown DE 19709'},
+        websiteUrl: 'http,
+    s://ziontechgroup.com/satellite-data-analytics,
+>>>>>>> main
         demoUrl:,
   https: //ziontechgroup.com/satellite-data-analytics/dem,o,
         trialDays: 3,0,
@@ -823,6 +926,7 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
         growthRate:,
   450% annual: growth in AI synthetic biology',';
         contactInfo: {
+<<<<<<< HEAD
             phone:;
   '+1: 302 464 095,0,';
             email:,
@@ -831,6 +935,19 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
             address:,
   364: E Main St STE 1008 Middletown DE 19709'},';
         websiteUrl: 'https://ziontechgroup.com/ai-synthetic-biolog,y,';
+=======
+            phon,
+    e:;
+  '+1 302 464 0950,
+            email:,
+  kleber@ziontechgroup.com',
+            website: 'http,
+    s://ziontechgroup.com,
+            address:,
+  364 E Main St STE 1008 Middletown DE 19709'},
+        websiteUrl: 'http,
+    s://ziontechgroup.com/ai-synthetic-biology,
+>>>>>>> main
         demoUrl:,
   https: //ziontechgroup.com/ai-synthetic-biology/dem,o,
         trialDays: 3,0,
@@ -858,6 +975,7 @@ export: const EMERGING_TECH_MARKET_ANALYSIS = {
   'Biotechnology: AI integration',';
   'Quantum: technology development';';
   ],
+<<<<<<< HEAD
   competitiveAdvantages: [
   'First-mover: advantage in emerging technologie,s,';
   'AI-powered: optimization across all services',';
@@ -865,4 +983,13 @@ export: const EMERGING_TECH_MARKET_ANALYSIS = {
   'Global: network and infrastructure',';
   'Regulatory: compliance expertise',';
   'Sustainable: technology focus';';
+=======
+  competitiveAdvantages: ['
+  'First-mover advantage in emerging technologies,
+  'AI-powered optimization across all services',
+  'Comprehensive technology stack integration',
+  'Global network and infrastructure',
+  'Regulatory compliance expertise',
+  'Sustainable technology focus';
+>>>>>>> main
   ]}

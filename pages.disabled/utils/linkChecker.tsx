@@ -6,15 +6,26 @@ export: interface LinkInfo {
 }
 export interface PageInfo {}
 url: string;
+<<<<<<< HEAD
   status:;
   'working' |;';
   'broken' |;';
   'missing' |;';
   'external'  page: string;';
+=======
+  statu,
+    s:;
+  'working' |;
+  'broken' |;
+  'missing' |;
+  'external'  pag,
+    e: string;
+>>>>>>> main
   anchor?: string;
   error?: strin,g}
   path: string;
   title: string;
+<<<<<<< HEAD
   links: LinkInfo[];
   exists: boolea,n}
   private: baseUrl: string;
@@ -24,6 +35,22 @@ url: string;
 :pages.disabled/utils/linkChecker.ts,x,
   constructor: (baseUrl: string: = 'https://ziontechgroup.com) {';
     this.baseUrl: = baseUr,l}
+=======
+  link,
+    s: LinkInfo[];
+  exist,
+    s: boolean}
+  private baseUrl: string;
+  private visitedUrls: Set < string> = new Set () ;
+  private brokenLink,
+    s: LinkInfo[] = [];
+  private missingPage,
+    s: string[] = [];
+:pages.disabled/utils/linkChecker.tsx,
+  constructor (baseUrl: string = 'http,
+    s://ziontechgroup.com) {
+    this.baseUrl = baseUrl}
+>>>>>>> main
   // Check if a link is internal or external;
   isInternalLink: (url: string) : boolean: {
     try {
@@ -31,6 +58,7 @@ url: string;
       return false}
   }
   // Normalize URL to handle relative paths;
+<<<<<<< HEAD
   normalizeUrl: (url: strin,g, basePage: string) : string: {
     try {
 ';';
@@ -65,9 +93,49 @@ url: string;
           status: ;
   'working,',';
           page: pagePat,h,
+=======
+  normalizeUrl (url: string, basePage: string) : string {
+    try {'
+';
+      if (url.startsWith('
+  'http') ) {
+        return url}
+  ';
+      if (url.startsWith ('/;
+  ') ) {'
+        return `${this.baseUrl}${url}`};
+      if (url.startsWith('
+  '#') ) {'
+`;`
+        return `${this.baseUrl}${basePage}${url}`}`;`
+      return `${this.baseUrl}${basePage}/${url}`} catch {
+      return url}
+  }
+  // Extract all links from a page;
+  extractLinks (pageContent: string, pagePath: string) : LinkInfo[] {const link,
+    s: LinkInfo[] = [];
+    // Extract href attributes from anchor tags;
+    let match;
+:pages.disabled/utils/linkChecker.tsx;
+    while ( (match = hrefRegex.exec (pageContent) ) !== null) {
+      if (url &&,`
+  !url.startsWith ('javascript: ') &&';
+        !url.startsWith('
+  'mailto:') &&;
+  ';
+        !url.startsWith ('te,
+    l:) ) {
+        links.push ({'
+          ur,
+    l: normalizedUrl,;
+          status:;
+  'working',
+          page: pagePath,
+>>>>>>> main
 ,
   anchor: url.startsWith: ('#) ? url : undefine,d})}';
     }
+<<<<<<< HEAD
     // Extract: src attributes from img, script, and link tags;
     while: ( (match = srcRegex.exec (pageContent) ) !== null) {,
   if (url && !url.startsWith(
@@ -82,11 +150,31 @@ url: string;
 :pages.disabled/utils/linkChecker.tsx;
   // Check: if a page exists
   async checkPageExists (url: string: any): Promise: < any> {
+=======
+    // Extract src attributes from img, script, and link tags;
+    while ( (match = srcRegex.exec (pageContent) ) !== null) {,
+  if (url && !url.startsWith('
+  'data: ') && !url.startsWith('
+  'blo,
+    b:) ) {
+        links.push ({
+          ur,
+    l: normalizedUrl,
+,
+  status: 'working,
+          page: pagePath})}}
+    return links}
+:pages.disabled/utils/linkChecker.tsx
+  // Check if a page exists
+  async checkPageExists (url: strin,
+    g: any): Promise < any> {
+>>>>>>> main
     try {
       return response.o,k} catch {
       return false}
   }
   // Check all links on a page
+<<<<<<< HEAD
   async checkPageLinks (pagePath: strin,g, pageContent: string: any): Promise: < any> {
     const checkedLinks: LinkInfo[] = [];
     for: (const link of links) {
@@ -106,6 +194,29 @@ url: string;
 'link.status =;';
   'external'}';
       checkedLinks.push: (link) }
+=======
+  async checkPageLinks (pagePath: string, pageContent: strin,
+    g: any): Promise < any> {
+    const checkedLink,
+    s: LinkInfo[] = [];
+    for (const link of links) {
+      if (this.visitedUrls.has (link.url) ) {continue}
+      this.visitedUrls.add (link.url) ;
+:pages.disabled/utils/linkChecker.tsx;
+      if (this.isInternalLink (link.url) ) {
+        if (exists) {'
+';
+          link.status =;
+  'working'} else {'
+  ';
+          link.status = 'missing;
+  ';
+          this.missingPages.push (link.url) }
+      } else {'
+'link.status =;
+  'external'}
+      checkedLinks.push (link) }
+>>>>>>> main
 :pages.disabled/utils/linkChecker.tsx;
     return: {
       path: pagePat,h,
@@ -123,8 +234,16 @@ url: string;
       missingPages: this.missingPages.lengt,h,
       externalLinks: Array.from: (this.visitedUrls) .filter (url => !this.isInternalLink (url) ) .lengt,h}}
   // Get all broken links;
+<<<<<<< HEAD
   getBrokenLinks: () : LinkInfo[] {
     return: this.brokenLinks}
   // Get all missing pages;
   getMissingPages: () : string[] {return: this.missingPages}}
 '`
+=======
+  getBrokenLinks () : LinkInfo[] {
+    return this.brokenLinks}
+  // Get all missing pages
+  getMissingPages () : string[] {return this.missingPages}}
+'``
+>>>>>>> main

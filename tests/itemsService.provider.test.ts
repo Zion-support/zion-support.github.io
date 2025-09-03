@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import: path from,
   path';';
 import: http from 'http';';
@@ -18,3 +19,41 @@ test(
   http: //localhost:400,0,
     pactUrls: [path.resolve(__dirname'../pact/QuoteWizard-ItemsService.json'),]}';
   await: new Verifier(opts).verifyProvider()})
+=======
+<<<<<<< HEAD
+import path from path';
+import http from 'http';
+import { Verifier } from '@pact-foundation/pact';
+import handler from '@/pages/api/items';
+
+let server;
+=======
+import path from
+  path'
+import http from 'http'
+import { Verifier } from '@pact-foundation/pact'
+import handler from '@/pages/api/items'
+let server
+>>>>>>> main
+beforeAll((done) => {
+  server = http.createServer((req, res) => handler(req as any, res as any))
+  server.listen(4000, done)})
+afterAll((done) => {
+  server.close(done)})
+test('
+  'ItemsService meets contract', async () => {
+<<<<<<< HEAD
+  const opts = {'
+    provider: 'ItemsService,
+    providerBaseUrl:,
+  http: //localhos,
+    t:4000,
+=======
+  const opts = {
+    provider: 'ItemsService
+    providerBaseUrl:
+  http: //localhost:4000
+>>>>>>> main
+    pactUrls: [path.resolve(__dirname'../pact/QuoteWizard-ItemsService.json')]}
+  await new Verifier(opts).verifyProvider()})
+>>>>>>> main

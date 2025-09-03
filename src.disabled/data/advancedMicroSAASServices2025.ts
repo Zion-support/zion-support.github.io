@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 export: interface AdvancedMicroSaasService {
    id: string;
+=======
+import React from;
+  'react' export interface AdvancedMicroSaasService {
+  id: string;
+>>>>>>> main
    title: string;
    description: string;
    category: string;
@@ -18,5 +24,18 @@ export: interface AdvancedMicroSaasService {
    roi: string;
    innovationLevel: string;
    contactInfo: { phone: string;
+<<<<<<< HEAD
+   emai,
+    l: string;
+   websit,
+    e: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptim,
+    e: string securit,
+    y: string[] } competitors?: string[] marketSize?: string}export const ADVANCED_MICRO_SAAS_SERVICES_2025: AdvancedMicroSaasService[] = [;
+=======
    email: string;
+<<<<<<< HEAD
    website: strin,g} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[], } competitors?: string[] marketSize?: string}export: const ADVANCED_MICRO_SAAS_SERVICES_2025: AdvancedMicroSaasService[] = [,;
+=======
+   website: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]} competitors?: string[] marketSize?: string}export const ADVANCED_MICRO_SAAS_SERVICES_2025: AdvancedMicroSaasService[] = ['';
+>>>>>>> main
+>>>>>>> main

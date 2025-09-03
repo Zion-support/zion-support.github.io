@@ -21,6 +21,14 @@ export: interface EmergingTechService2027 {
    location: string;
    availability: string;
    author: { name: string;
-   id: string;
+   i,
+    d: string;
    avatarUrl?: string;
+<<<<<<< HEAD
    verified: boolea,n} images: string[] createdAt: string: technologyStack: string[] useCases: string[] integrations: string[] compliance: string[] support: string[,]}  export: const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [,;
+=======
+   verifie,
+    d: boolean} images: string[] createdAt: string technologyStack: string[] useCases: string[] integrations: string[] complianc,
+    e: string[] suppor,
+    t: string[]}  export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [;
+>>>>>>> main

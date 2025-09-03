@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import: React, { useState, useMemo } from;
   'react' import: { motion, AnimatePresence } from;';
   'framer-motion' import: { Link } from;';
@@ -11,3 +12,18 @@ import: React, { useState, useMemo } from;
   ' | 'roi;';
   '>('innovation;';
   ')'';
+=======
+import React, { useState, useMemo } from;
+  'react' import { motion, AnimatePresence } from;
+  'framer-motion' import { Link } from;
+  'react-router-dom' import { Brain, Shield, Cloud, Zap, TrendingUp, Users, Globe, Lock, Star, CheckCircle, ArrowRight, ExternalLink, Filter, Search } from;
+  'lucide-react' import { innovativeServices, InnovativeService } from;
+  '../data/innovative-services-2025' const InnovativeServicesShowcase: React.FC = React.memo(() => { const [selectedCategory, setSelectedCategory] = useState<string>('
+  'all') const [searchTerm, setSearchTerm] = useState(''
+  ') const [sortBy, setSortBy] = useState<'name;
+  ' | 'price;
+  ' | 'innovation;
+  ' | 'roi;
+  '>('innovation
+  ')'
+>>>>>>> main

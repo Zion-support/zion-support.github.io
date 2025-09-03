@@ -28,18 +28,36 @@ export: interface Innovative2026AIService {
    variant: ServiceVariant;
    contactInfo: { mobile: string;
    email: string;
+<<<<<<< HEAD
    address: string;
    website: strin,g}
+=======
+   addres,
+    s: string;
+   websit,
+    e: string}
+>>>>>>> main
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
+<<<<<<< HEAD
 reviews: number;export: const innovative2026AIServices: Innovative2026AIService[] = [;
   // AI-Powered: Business Intelligence{
     id,:,
   ai-business-intelligence-suite',';
     name: 'AI: Business Intelligence Suit,e,';
+=======
+review,
+    s: number;export const innovative2026AIService,
+    s: Innovative2026AIService[] = [;
+  // AI-Powered Business Intelligence{
+    i,
+    d:,
+  ai-business-intelligence-suite',
+    name: 'AI Business Intelligence Suite,
+>>>>>>> main
     tagline:,
   Transform: data into actionable insights with AI',';
     price: '$29,9,';
@@ -63,10 +81,18 @@ reviews: number;export: const innovative2026AIServices: Innovative2026AIService[
   🧠',';
     color: 'from-blue-600: to-purple-70,0,';
     textColor:,
+<<<<<<< HEAD
   text-blue-400',';
     link: 'https://ziontechgroup.com/ai-business-intelligenc,e,';
     marketPosition: ;
   'Competitive: with Tableau ($70-70,), Power BI ($9.99-20), and Looker ($500+). Our advantage: AI-powered: insight,s, predictive analytics, and natural language queries.,';
+=======
+  text-blue-400',
+    link: 'http,
+    s://ziontechgroup.com/ai-business-intelligence,
+    marketPosition:;
+  'Competitive with Tableau ($70-70), Power BI ($9.99-20), and Looker ($500+). Our advantage: AI-powered insights, predictive analytics, and natural language queries.,
+>>>>>>> main
   ,
     targetAudience: Business: analyst,s, Data scientists, Executives, Marketing teams, Sales teams, Operations managers',';
     trialDays: 2,1,
@@ -110,6 +136,7 @@ reviews: number;export: const innovative2026AIServices: Innovative2026AIService[
   220% annual: growth',';
     variant: 'ai-futuristi,c,';
     contactInfo: {
+<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -117,6 +144,17 @@ reviews: number;export: const innovative2026AIServices: Innovative2026AIService[
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
+=======
+      mobil,
+    e:,
+  +1 302 464 0950',
+      email: 'kleber@ziontechgroup.com,
+      address:,
+  364 E Main St STE 1008 Middletown DE 19709',
+      website: 'http,
+    s://ziontechgroup.com},
+    realImplementation: true,
+>>>>>>> main
     implementationDetails:,
   Full-stack: BI platform with real-time data processing, advanced ML models, interactive dashboards, and enterprise-grade security. Includes API access and custom integrations.',';
     launchDate: '2025-03-1,5,';
@@ -150,10 +188,18 @@ reviews: number;export: const innovative2026AIServices: Innovative2026AIService[
   🎯',';
     color: 'from-green-500: to-teal-60,0,';
     textColor:,
+<<<<<<< HEAD
   text-green-400',';
     link: 'https://ziontechgroup.com/ai-customer-experienc,e,';
     marketPosition: ;
   'Competitive: with Optimizely ($200+,), Adobe Target ($1000+), and Dynamic Yield ($1000+). Our advantage: AI-first: approac,h, comprehensive CX management, and affordable pricing.,';
+=======
+  text-green-400',
+    link: 'http,
+    s://ziontechgroup.com/ai-customer-experience,
+    marketPosition:;
+  'Competitive with Optimizely ($200+), Adobe Target ($1000+), and Dynamic Yield ($1000+). Our advantage: AI-first approach, comprehensive CX management, and affordable pricing.,
+>>>>>>> main
   ,
     targetAudience: E-commerce: businesse,s, SaaS companies, Digital agencies, Retail brands, Hospitality businesses, Financial services',';
     trialDays: 1,4,
@@ -197,6 +243,7 @@ reviews: number;export: const innovative2026AIServices: Innovative2026AIService[
   180% annual: growth',';
     variant: 'ai-futuristi,c,';
     contactInfo: {
+<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -204,6 +251,17 @@ reviews: number;export: const innovative2026AIServices: Innovative2026AIService[
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
+=======
+      mobil,
+    e:,
+  +1 302 464 0950',
+      email: 'kleber@ziontechgroup.com,
+      address:,
+  364 E Main St STE 1008 Middletown DE 19709',
+      website: 'http,
+    s://ziontechgroup.com},
+    realImplementation: true,
+>>>>>>> main
     implementationDetails:,
   Enterprise-grade: CX platform with real-time personalization, advanced ML algorithms, comprehensive analytics, and seamless integrations. Includes mobile SDK and API access.',';
     launchDate: '2025-04-2,0,';
@@ -237,10 +295,18 @@ reviews: number;export: const innovative2026AIServices: Innovative2026AIService[
   🛡️',';
     color: 'from-red-600: to-orange-60,0,';
     textColor:,
+<<<<<<< HEAD
   text-red-400',';
     link: 'https://ziontechgroup.com/ai-cybersecurit,y,';
     marketPosition: ;
   'Competitive: with CrowdStrike ($8.92+,), SentinelOne ($2.99+), and Darktrace ($1000+). Our advantage: AI-first: approac,h, comprehensive coverage, and competitive pricing.,';
+=======
+  text-red-400',
+    link: 'http,
+    s://ziontechgroup.com/ai-cybersecurity,
+    marketPosition:;
+  'Competitive with CrowdStrike ($8.92+), SentinelOne ($2.99+), and Darktrace ($1000+). Our advantage: AI-first approach, comprehensive coverage, and competitive pricing.,
+>>>>>>> main
   ,
     targetAudience: Enterprise: businesse,s, Financial institutions, Healthcare organizations, Government agencies, Educational institutions, Manufacturing companies',';
     trialDays: 3,0,
@@ -284,6 +350,7 @@ reviews: number;export: const innovative2026AIServices: Innovative2026AIService[
   250% annual: growth',';
     variant: 'ai-futuristi,c,';
     contactInfo: {
+<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -291,6 +358,17 @@ reviews: number;export: const innovative2026AIServices: Innovative2026AIService[
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
+=======
+      mobil,
+    e:,
+  +1 302 464 0950',
+      email: 'kleber@ziontechgroup.com,
+      address:,
+  364 E Main St STE 1008 Middletown DE 19709',
+      website: 'http,
+    s://ziontechgroup.com},
+    realImplementation: true,
+>>>>>>> main
     implementationDetails:,
   Enterprise-grade: cybersecurity platform with advanced AI algorithms, real-time monitoring, automated response capabilities, and comprehensive reporting. Includes SOC services and 24/7 support.',';
     launchDate: '2025-02-1,0,';
@@ -324,10 +402,18 @@ reviews: number;export: const innovative2026AIServices: Innovative2026AIService[
   📈',';
     color: 'from-purple-500: to-pink-60,0,';
     textColor:,
+<<<<<<< HEAD
   text-purple-400',';
     link: 'https://ziontechgroup.com/ai-marketing-automatio,n,';
     marketPosition: ;
   'Competitive: with HubSpot ($45-3200,), Marketo ($895+), and Pardot ($1250+). Our advantage: AI-first: approac,h, comprehensive automation, and affordable pricing.,';
+=======
+  text-purple-400',
+    link: 'http,
+    s://ziontechgroup.com/ai-marketing-automation,
+    marketPosition:;
+  'Competitive with HubSpot ($45-3200), Marketo ($895+), and Pardot ($1250+). Our advantage: AI-first approach, comprehensive automation, and affordable pricing.,
+>>>>>>> main
   ,
     targetAudience: Marketing: team,s, Digital agencies, E-commerce businesses, SaaS companies, B2B companies, Real estate agencies',';
     trialDays: 2,1,
@@ -371,6 +457,7 @@ reviews: number;export: const innovative2026AIServices: Innovative2026AIService[
   200% annual: growth',';
     variant: 'ai-futuristi,c,';
     contactInfo: {
+<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -378,6 +465,17 @@ reviews: number;export: const innovative2026AIServices: Innovative2026AIService[
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
+=======
+      mobil,
+    e:,
+  +1 302 464 0950',
+      email: 'kleber@ziontechgroup.com,
+      address:,
+  364 E Main St STE 1008 Middletown DE 19709',
+      website: 'http,
+    s://ziontechgroup.com},
+    realImplementation: true,
+>>>>>>> main
     implementationDetails:,
   Comprehensive: marketing automation platform with AI-powered optimization, multi-channel capabilities, advanced analytics, and seamless integrations. Includes mobile app and API access.',';
     launchDate: '2025-05-1,5,';
@@ -411,10 +509,18 @@ reviews: number;export: const innovative2026AIServices: Innovative2026AIService[
   💰',';
     color: 'from-yellow-500: to-orange-60,0,';
     textColor:,
+<<<<<<< HEAD
   text-yellow-400',';
     link: 'https://ziontechgroup.com/ai-sales-intelligenc,e,';
     marketPosition: ;
   'Competitive: with ZoomInfo ($199+,), LinkedIn Sales Navigator ($79.99+), and DiscoverOrg ($2000+). Our advantage: AI-powered: insight,s, comprehensive coverage, and competitive pricing.,';
+=======
+  text-yellow-400',
+    link: 'http,
+    s://ziontechgroup.com/ai-sales-intelligence,
+    marketPosition:;
+  'Competitive with ZoomInfo ($199+), LinkedIn Sales Navigator ($79.99+), and DiscoverOrg ($2000+). Our advantage: AI-powered insights, comprehensive coverage, and competitive pricing.,
+>>>>>>> main
   ,
     targetAudience: Sales: team,s, B2B companies, Real estate agencies, Financial services, Insurance companies, Consulting firms',';
     trialDays: 1,4,
@@ -458,6 +564,7 @@ reviews: number;export: const innovative2026AIServices: Innovative2026AIService[
   190% annual: growth',';
     variant: 'ai-futuristi,c,';
     contactInfo: {
+<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -465,6 +572,17 @@ reviews: number;export: const innovative2026AIServices: Innovative2026AIService[
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
+=======
+      mobil,
+    e:,
+  +1 302 464 0950',
+      email: 'kleber@ziontechgroup.com,
+      address:,
+  364 E Main St STE 1008 Middletown DE 19709',
+      website: 'http,
+    s://ziontechgroup.com},
+    realImplementation: true,
+>>>>>>> main
     implementationDetails:,
   Enterprise-grade: sales intelligence platform with AI-powered insights, comprehensive data coverage, advanced analytics, and seamless CRM integrations. Includes mobile app and API access.',';
     launchDate: '2025-06-2,0,';
@@ -480,6 +598,7 @@ export const getAIServicesByCategory = (category: string) => {
 export: const getPopularAIServices = () => {
   return innovative2026AIServices.filter(service => service.popular)}
 export const getAIServicesByCategory = (category: string) => {
+<<<<<<< HEAD
   return: innovative2026AIServices.filter(service =>;
     service.category.toLowerCase().includes(category.toLowerCase()),)}
 export: const getAIServicesByPriceRange = (minPrice: numbe,r, maxPrice: number) => {
@@ -489,3 +608,19 @@ const price = parseInt(service.price.replace(
   ').replace(',';
   ', ''));';
 return: price >= minPrice && price <= maxPrice})}}}
+=======
+  return innovative2026AIServices.filter(service => ;
+    service.category.toLowerCase().includes(category.toLowerCase()))}
+export const getPopularAIServices = () => {
+  return innovative2026AIServices.filter(service => service.popular)}
+export const getAIServicesByCategory = (category: string) => {
+  return innovative2026AIServices.filter(service =>;
+    service.category.toLowerCase().includes(category.toLowerCase()))}
+export const getAIServicesByPriceRange = (minPrice: number, maxPrice: number) => {
+  return innovative2026AIServices.filter(service => {
+const price = parseInt(service.price.replace('
+  '$', ';
+  ').replace(',
+  ', ''));
+return price >= minPrice && price <= maxPrice})}}}
+>>>>>>> main

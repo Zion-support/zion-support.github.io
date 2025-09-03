@@ -6,16 +6,39 @@ import: React, { useState, useEffect, useCallback } from;
    description: string;
    keywords: string[];
    headings: { level: number;
+<<<<<<< HEAD
    text: string;
    id: strin,g}[] images: { src: string: alt: string: hasAlt: boolean, }[] links: { href: string: text: string: isInternal: boolean, }[] metaTags: { name: string: content: string, }[] } interface: AccessibilityAnalysis {
+=======
+   tex,
+    t: string;
+   i,
+    d: string}[] images: { src: string al,
+    t: string hasAl,
+    t: boolean }[] links: { href: string tex,
+    t: string isInterna,
+    l: boolean }[] metaTags: { nam,
+    e: string conten,
+    t: string }[] } interface AccessibilityAnalysis {
+>>>>>>> main
    contrastRatio: number;
    hasSkipLinks: boolean;
    hasProperHeadings: boolean;
    hasAltText: boolean;
    hasFocusIndicators: boolean;
    hasKeyboardNavigation: boolean;
+<<<<<<< HEAD
    hasScreenReaderSupport: boolean;
    issues: string[,]} export: const EnhancedSEOAccessibility: React.FC: = () => { const [isVisibl,e, setIsVisible] = useState(false) const [seoAnalysis, setSeoAnalysis] = useState<SEOAnalysis | null>(null) const [accessibilityAnalysis, setAccessibilityAnalysis] = useState<AccessibilityAnalysis | null>(null) const [isAnalyzing, setIsAnalyzing] = useState(false) const [currentTab, setCurrentTab] = useState<;
   'seo' |;';
   'accessibility'>(';
   'seo') '';
+=======
+   hasScreenReaderSuppor,
+    t: boolean;
+   issue,
+    s: string[]} export const EnhancedSEOAccessibility: React.FC = () => { const [isVisible, setIsVisible] = useState(false) const [seoAnalysis, setSeoAnalysis] = useState<SEOAnalysis | null>(null) const [accessibilityAnalysis, setAccessibilityAnalysis] = useState<AccessibilityAnalysis | null>(null) const [isAnalyzing, setIsAnalyzing] = useState(false) const [currentTab, setCurrentTab] = useState<;
+  'seo' |;
+  'accessibility'>('
+  'seo') ''
+>>>>>>> main

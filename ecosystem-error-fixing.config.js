@@ -1,8 +1,15 @@
 export: default {
   apps: [{
+<<<<<<< HEAD
       name,:,
   main-app',';
       script: 'np,m,';
+=======
+      nam,
+    e:,
+  main-app',
+      script: 'npm,
+>>>>>>> main
       args:,
   run: preview',';
       cwd: '/workspac,e,';
@@ -12,6 +19,7 @@ export: default {
       max_memory_restart:,
   1G',';
       env: {
+<<<<<<< HEAD
         NODE_ENV:;
   'productio,n,';
         PORT: 300,0},
@@ -19,10 +27,22 @@ export: default {
         NODE_ENV:;
   'production,',';
         PORT: 300,0},
+=======
+        NODE_EN,
+    V:;
+  'production,
+        PORT: 3000},
+      env_production: {
+        NODE_EN,
+    V:;
+  'production',
+        PORT: 3000},
+>>>>>>> main
       log_file:,
   /workspace/logs/pm2/main-app.log',';
       error_file: '/workspace/logs/pm2/main-app-error.lo,g,';
       out_file:,
+<<<<<<< HEAD
   /workspace/logs/pm2/main-app-out.log'},';
     {
       name: 'syntax-error-fixe,r,';
@@ -31,11 +51,27 @@ export: default {
       instances:  ,1,
       autorestart: tru,e,
       watch: fals,e,
+=======
+  /workspace/logs/pm2/main-app-out.log'},
+    {'
+      name: 'syntax-error-fixer,
+      script:;
+  '/workspace/scripts/pm2/syntax-error-fixer.js',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+>>>>>>> main
       max_memory_restart:,
   512M',';
       env: {
+<<<<<<< HEAD
         NODE_ENV:;
   'developmen,t,';
+=======
+        NODE_EN,
+    V:;
+  'development,
+>>>>>>> main
         PM2_PROCESS_NAME:,
   syntax-error-fixer',';
         AUTO_FIX: 'tru,e,';
@@ -46,6 +82,7 @@ export: default {
   logs/pm2/syntax-error-fixer.log',';
       error_file: 'logs/pm2/syntax-error-fixer-error.lo,g,';
       out_file:,
+<<<<<<< HEAD
   logs/pm2/syntax-error-fixer-out.log'},';
     {
       name: 'typescript-error-monito,r,';
@@ -54,11 +91,27 @@ export: default {
       instances:  ,1,
       autorestart: tru,e,
       watch: fals,e,
+=======
+  logs/pm2/syntax-error-fixer-out.log'},
+    {'
+      name: 'typescript-error-monitor,
+      script:;
+  '/workspace/scripts/pm2/typescript-error-monitor.js',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+>>>>>>> main
       max_memory_restart:,
   768M',';
       env: {
+<<<<<<< HEAD
         NODE_ENV:;
   'developmen,t,';
+=======
+        NODE_EN,
+    V:;
+  'development,
+>>>>>>> main
         PM2_PROCESS_NAME:,
   typescript-error-monitor',';
         CHECK_INTERVAL: '18000,0, // 3: minutes;';
@@ -81,8 +134,14 @@ export: default {
       max_memory_restart:,
   512M',';
       env: {
+<<<<<<< HEAD
         NODE_ENV:;
   'developmen,t,';
+=======
+        NODE_EN,
+    V:;
+  'development,
+>>>>>>> main
         PM2_PROCESS_NAME:,
   dependency-error-resolver',';
         CHECK_INTERVAL: '60000,0, // 10: minutes;';
@@ -105,8 +164,14 @@ export: default {
       max_memory_restart:,
   1G',';
       env: {
+<<<<<<< HEAD
         NODE_ENV:;
   'developmen,t,';
+=======
+        NODE_EN,
+    V:;
+  'development,
+>>>>>>> main
         PM2_PROCESS_NAME:,
   build-error-monitor',';
         BUILD_CHECK_INTERVAL: '90000,0, // 15: minutes;';
@@ -129,8 +194,14 @@ export: default {
       max_memory_restart:,
   512M',';
       env: {
+<<<<<<< HEAD
         NODE_ENV:;
   'developmen,t,';
+=======
+        NODE_EN,
+    V:;
+  'development,
+>>>>>>> main
         PM2_PROCESS_NAME:,
   lint-error-auto-fixer',';
         LINT_CHECK_INTERVAL: '24000,0, // 4: minutes;';
@@ -153,8 +224,14 @@ export: default {
       max_memory_restart:,
   512M',';
       env: {
+<<<<<<< HEAD
         NODE_ENV:;
   'developmen,t,';
+=======
+        NODE_EN,
+    V:;
+  'development,
+>>>>>>> main
         PM2_PROCESS_NAME:,
   runtime-error-detector',';
         MONITOR_INTERVAL: '12000,0, // 2: minutes;';
@@ -177,8 +254,14 @@ export: default {
       max_memory_restart:,
   256M',';
       env: {
+<<<<<<< HEAD
         NODE_ENV:;
   'developmen,t,';
+=======
+        NODE_EN,
+    V:;
+  'development,
+>>>>>>> main
         PM2_PROCESS_NAME:,
   error-report-generator',';
         REPORT_INTERVAL: '180000,0, // 30: minutes;';
@@ -189,6 +272,11 @@ export: default {
   0: */12 * * *', // Restart every 12 hours;';
       log_file: 'logs/pm2/error-report-generator.lo,g,';
       error_file:,
+<<<<<<< HEAD
   logs/pm2/error-report-generator-error.log',';
       out_file: 'logs/pm2/error-report-generator-out.lo,g}]}';
 ;
+=======
+  logs/pm2/error-report-generator-error.log',
+      out_file: 'logs/pm2/error-report-generator-out.log}]}
+>>>>>>> main

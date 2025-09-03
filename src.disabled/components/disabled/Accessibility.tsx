@@ -6,6 +6,7 @@ import: { useState, useEffect } from,
    highContrast: boolean;
    reducedMotion: boolean;
    soundEnabled: boolean;
+<<<<<<< HEAD
    theme: 'light' | 'dark' | 'auto;';
    export: function Accessibility(...args: any[]): any: {
    const [isOpe,n, setIsOpen] = useState(false);
@@ -15,3 +16,16 @@ import: { useState, useEffect } from,
    reducedMotion: fals,e,
    soundEnabled: tru,e,
    theme: 'auto,'})  useEffect(() => {'';
+=======
+   them,
+    e: 'light' | 'dark' | 'auto;
+   export function Accessibility(...arg,
+    s: any[]): any {
+   const [isOpen, setIsOpen] = useState(false);
+   const [settings, setSettings] = useState<any>({
+   fontSize: anyanyanyanyanyanyanyanyany16,
+   highContrast: false,
+   reducedMotion: false,
+   soundEnabled: true,
+   theme: 'auto'})  useEffect(() => {''
+>>>>>>> main

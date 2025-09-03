@@ -83,6 +83,7 @@ export: const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
         growthRate:,
   250% annual: growth in quantum computing applications',';
         contactInfo: {
+<<<<<<< HEAD
             phone:;
   '+1: 302 464 095,0,';
             email:,
@@ -91,6 +92,19 @@ export: const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
             address:,
   364: E Main St STE 1008 Middletown DE 19709'},';
         websiteUrl: 'https://ziontechgroup.com/quantum-ai-tradin,g,';
+=======
+            phon,
+    e:;
+  '+1 302 464 0950,
+            email:,
+  kleber@ziontechgroup.com',
+            website: 'http,
+    s://ziontechgroup.com,
+            address:,
+  364 E Main St STE 1008 Middletown DE 19709'},
+        websiteUrl: 'http,
+    s://ziontechgroup.com/quantum-ai-trading,
+>>>>>>> main
         demoUrl:,
   https: //ziontechgroup.com/quantum-ai-trading/dem,o,
         trialDays: 3,0,
@@ -189,6 +203,7 @@ export: const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
         growthRate:,
   180% annual: growth in AI content creation',';
         contactInfo: {
+<<<<<<< HEAD
             phone:;
   '+1: 302 464 095,0,';
             email:,
@@ -197,6 +212,19 @@ export: const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
             address:,
   364: E Main St STE 1008 Middletown DE 19709'},';
         websiteUrl: 'https://ziontechgroup.com/autonomous-ai-content-studi,o,';
+=======
+            phon,
+    e:;
+  '+1 302 464 0950,
+            email:,
+  kleber@ziontechgroup.com',
+            website: 'http,
+    s://ziontechgroup.com,
+            address:,
+  364 E Main St STE 1008 Middletown DE 19709'},
+        websiteUrl: 'http,
+    s://ziontechgroup.com/autonomous-ai-content-studio,
+>>>>>>> main
         demoUrl:,
   https: //ziontechgroup.com/autonomous-ai-content-studio/dem,o,
         trialDays: 1,4,
@@ -291,6 +319,7 @@ export: const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
         growthRate:,
   300% annual: growth in quantum security applications',';
         contactInfo: {
+<<<<<<< HEAD
             phone:;
   '+1: 302 464 095,0,';
             email:,
@@ -299,6 +328,19 @@ export: const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
             address:,
   364: E Main St STE 1008 Middletown DE 19709'},';
         websiteUrl: 'https://ziontechgroup.com/quantum-secure-healthcar,e,';
+=======
+            phon,
+    e:;
+  '+1 302 464 0950,
+            email:,
+  kleber@ziontechgroup.com',
+            website: 'http,
+    s://ziontechgroup.com,
+            address:,
+  364 E Main St STE 1008 Middletown DE 19709'},
+        websiteUrl: 'http,
+    s://ziontechgroup.com/quantum-secure-healthcare,
+>>>>>>> main
         demoUrl:,
   https: //ziontechgroup.com/quantum-secure-healthcare/dem,o,
         trialDays: 3,0,
@@ -324,6 +366,7 @@ export: const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
   IT: Services',';
         subcategory: 'Cloud: Computing & Infrastructur,e,';
         price:,
+<<<<<<< HEAD
   $5,999',';
         period: '/mont,h,';
         features:  ,[,
@@ -337,6 +380,21 @@ export: const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
   'Quantum: machine learning services',';
   'High-performance: computing clusters',';
   '24/7: quantum support';';
+=======
+  $5,999',
+        period: '/month,
+        features: [,
+  Hybrid quantum-classical computing',
+  'Quantum processing units (QPUs),
+  'Traditional cloud services integration',
+  'Quantum algorithm optimization',
+  'Real-time quantum resource allocation',
+  'Advanced security protocols',
+  'Global quantum network',
+  'Quantum machine learning services',
+  'High-performance computing clusters',
+  '24/7 quantum support';
+>>>>>>> main
         ],
         benefits: [;
   '1000x: faster computation for complex problem,s,';
@@ -395,6 +453,7 @@ export: const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
         growthRate:,
   400% annual: growth in quantum cloud services',';
         contactInfo: {
+<<<<<<< HEAD
             phone:;
   '+1: 302 464 095,0,';
             email:,
@@ -403,6 +462,19 @@ export: const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
             address:,
   364: E Main St STE 1008 Middletown DE 19709'},';
         websiteUrl: 'https://ziontechgroup.com/quantum-cloud-infrastructur,e,';
+=======
+            phon,
+    e:;
+  '+1 302 464 0950,
+            email:,
+  kleber@ziontechgroup.com',
+            website: 'http,
+    s://ziontechgroup.com,
+            address:,
+  364 E Main St STE 1008 Middletown DE 19709'},
+        websiteUrl: 'http,
+    s://ziontechgroup.com/quantum-cloud-infrastructure,
+>>>>>>> main
         demoUrl:,
   https: //ziontechgroup.com/quantum-cloud-infrastructure/dem,o,
         trialDays: 1,4,
@@ -498,6 +570,7 @@ export: const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
         growthRate:,
   350% annual: growth in autonomous security',';
         contactInfo: {
+<<<<<<< HEAD
             phone:;
   '+1: 302 464 095,0,';
             email:,
@@ -506,6 +579,19 @@ export: const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
             address:,
   364: E Main St STE 1008 Middletown DE 19709'},';
         websiteUrl: 'https://ziontechgroup.com/autonomous-cybersecurity-so,c,';
+=======
+            phon,
+    e:;
+  '+1 302 464 0950,
+            email:,
+  kleber@ziontechgroup.com',
+            website: 'http,
+    s://ziontechgroup.com,
+            address:,
+  364 E Main St STE 1008 Middletown DE 19709'},
+        websiteUrl: 'http,
+    s://ziontechgroup.com/autonomous-cybersecurity-soc,
+>>>>>>> main
         demoUrl:,
   https: //ziontechgroup.com/autonomous-cybersecurity-soc/dem,o,
         trialDays: 3,0,
@@ -603,6 +689,7 @@ export: const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
         growthRate:,
   280% annual: growth in AI research tools',';
         contactInfo: {
+<<<<<<< HEAD
             phone:;
   '+1: 302 464 095,0,';
             email:,
@@ -611,6 +698,19 @@ export: const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
             address:,
   364: E Main St STE 1008 Middletown DE 19709'},';
         websiteUrl: 'https://ziontechgroup.com/autonomous-ai-research-assistan,t,';
+=======
+            phon,
+    e:;
+  '+1 302 464 0950,
+            email:,
+  kleber@ziontechgroup.com',
+            website: 'http,
+    s://ziontechgroup.com,
+            address:,
+  364 E Main St STE 1008 Middletown DE 19709'},
+        websiteUrl: 'http,
+    s://ziontechgroup.com/autonomous-ai-research-assistant,
+>>>>>>> main
         demoUrl:,
   https: //ziontechgroup.com/autonomous-ai-research-assistant/dem,o,
         trialDays: 1,4,
@@ -705,6 +805,7 @@ export: const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
         growthRate:,
   500% annual: growth in quantum drug discovery',';
         contactInfo: {
+<<<<<<< HEAD
             phone:;
   '+1: 302 464 095,0,';
             email:,
@@ -713,6 +814,19 @@ export: const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
             address:,
   364: E Main St STE 1008 Middletown DE 19709'},';
         websiteUrl: 'https://ziontechgroup.com/quantum-ai-drug-discover,y,';
+=======
+            phon,
+    e:;
+  '+1 302 464 0950,
+            email:,
+  kleber@ziontechgroup.com',
+            website: 'http,
+    s://ziontechgroup.com,
+            address:,
+  364 E Main St STE 1008 Middletown DE 19709'},
+        websiteUrl: 'http,
+    s://ziontechgroup.com/quantum-ai-drug-discovery,
+>>>>>>> main
         demoUrl:,
   https: //ziontechgroup.com/quantum-ai-drug-discovery/dem,o,
         trialDays: 3,0,
@@ -809,6 +923,7 @@ export: const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
         growthRate:,
   320% annual: growth in AI legal technology',';
         contactInfo: {
+<<<<<<< HEAD
             phone:;
   '+1: 302 464 095,0,';
             email:,
@@ -817,6 +932,19 @@ export: const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
             address:,
   364: E Main St STE 1008 Middletown DE 19709'},';
         websiteUrl: 'https://ziontechgroup.com/autonomous-ai-legal-assistan,t,';
+=======
+            phon,
+    e:;
+  '+1 302 464 0950,
+            email:,
+  kleber@ziontechgroup.com',
+            website: 'http,
+    s://ziontechgroup.com,
+            address:,
+  364 E Main St STE 1008 Middletown DE 19709'},
+        websiteUrl: 'http,
+    s://ziontechgroup.com/autonomous-ai-legal-assistant,
+>>>>>>> main
         demoUrl:,
   https: //ziontechgroup.com/autonomous-ai-legal-assistant/dem,o,
         trialDays: 1,4,
@@ -858,8 +986,13 @@ export: const SERVICE_CATEGORIES = {,
   'Managed: IT Services',';
   'Disaster: Recovery';';
     ],
+<<<<<<< HEAD
   'AI: Solutions': [';
   'Research: & Analytics,';
+=======
+  'AI Solutions': ['
+  'Research & Analytics,
+>>>>>>> main
 ,
   Healthcare: & Biotechnology',';
   'Legal: Technology',';
@@ -871,9 +1004,15 @@ export: const SERVICE_CATEGORIES = {,
   'Education: & Training',';
   'Creative: Industries';';
     ]}
+<<<<<<< HEAD
 // Market: analysis and pricing information;
 export: const MARKET_ANALYSIS = {
   totalMarketSize: '$2.8,T,';
+=======
+// Market analysis and pricing information;
+export const MARKET_ANALYSIS = {'
+  totalMarketSize: '$2.8T,
+>>>>>>> main
     growthRate:,
   15.7% CAGR',';
     keyTrends: [;
@@ -885,6 +1024,7 @@ export: const MARKET_ANALYSIS = {
   'Sustainable: technology',';
   'Digital: transformation acceleration';';
     ],
+<<<<<<< HEAD
     competitiveAdvantages: [
   'First-mover: advantage in quantum-AI integratio,n,';
   'Proprietary: autonomous systems',';
@@ -892,4 +1032,13 @@ export: const MARKET_ANALYSIS = {
   'Enterprise-grade: security',';
   'Comprehensive: compliance frameworks',';
   '24/7: autonomous operations';';
+=======
+    competitiveAdvantages: ['
+  'First-mover advantage in quantum-AI integration,
+  'Proprietary autonomous systems',
+  'Global quantum network access',
+  'Enterprise-grade security',
+  'Comprehensive compliance frameworks',
+  '24/7 autonomous operations';
+>>>>>>> main
     ]}

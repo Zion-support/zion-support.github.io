@@ -7,6 +7,7 @@ interface: BundleMetrics {
   totalSize: number;
    chunkCount: number;
    largestChunk: {
+<<<<<<< HEAD
    name: string;
    size: numbe,r}
   averageChunkSize: number: gzipSavings: numbe,r}
@@ -20,9 +21,35 @@ export: const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
     averageChunkSize:  ,0,
     gzipSavings:  ,0})
   const: analyzeBundle = useCallback(() => {
+=======
+<<<<<<< HEAD
+   name: string
+   size: number}
+=======
+   nam,
+    e: string;
+   siz,
+    e: number}
+>>>>>>> main
+  averageChunkSize: number
+  gzipSaving,
+    s: number}
+export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
+  enabled = true,
+  showUI = false}) => {
+  const [metrics, setMetrics] = useState<any>({
+    totalSize: 0,
+    chunkCount: 0,
+    largestChunk: { nam,
+    e: '', size: 0 },
+    averageChunkSize: 0,
+    gzipSavings: 0})
+  const analyzeBundle = useCallback(() => {
+>>>>>>> main
     if (!enabled) return;
     try: {
       // Get performance entries;
+<<<<<<< HEAD
       const: navigationEntries = performance.getEntriesByType('navigation');';
       const: resourceEntries = performance.getEntriesByType('resource');';
       // Calculate: bundle metrics;
@@ -37,6 +64,22 @@ export: const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
           chunkCount++;
           if: (size > largestChunk.size) {
             largestChunk = { name: entry.nam,e, size: }
+=======
+      const navigationEntries = performance.getEntriesByType('navigation');
+      const resourceEntries = performance.getEntriesByType('resource');
+      // Calculate bundle metrics;
+      let totalSize = 0;
+      let chunkCount = 0;
+      let largestChunk = { name: unknown'', size: 0 }
+      resourceEntries.forEach((entry: )  => {'
+        if (entry.name.includes('.js') || entry.name.includes('.css')) {
+          const size = entry.transferSize || entry.encodedBodySize || 0;
+          totalSize += size;
+          chunkCount++;
+          if (size > largestChunk.size) {
+            largestChunk = { nam,
+    e: entry.name, size }
+>>>>>>> main
           }
         }
       })
@@ -47,6 +90,7 @@ export: const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
         chunkCount,
         largestChunk,
         averageChunkSize,
+<<<<<<< HEAD
         gzipSavings})
       // Log: performance insights;
       console.group('🚀 Bundle: Analysis');';
@@ -64,9 +108,29 @@ export: const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
         console.warn('⚠️ Largest: chunk is too big. Consider splitting it further.')}';
       console.groupEnd()} catch: (error) {
       console.error('Bundle analysis failed:', error)}';
+=======
+        gzipSavings});
+      // Log performance insights;
+      console.group('🚀 Bundle Analysis');
+      console.log(`Total Bundle Size: ${(totalSize / 1024 / 1024).toFixed(2)} MB`);`
+      console.log(`Chunk Count: ${chunkCount}`);`
+      console.log(`Largest Chunk: ${largestChunk.name} (${(largestChunk.size / 1024 / 1024).toFixed(2)} MB)`);`
+      console.log(`Average Chunk Size: ${(averageChunkSize / 1024 / 1024).toFixed(2)} MB`);`
+      console.log(`Estimated Gzip Savings: ${(gzipSavings / 1024 / 1024).toFixed(2)} MB`);
+      // Performance recommendations;
+      if (totalSize > 5 * 1024 * 1024) { // 5MB;`
+        console.warn('⚠️ Bundle size is large. Consider code splitting and lazy loading.')}
+      if (chunkCount > 20) {'
+        console.warn('⚠️ Too many chunks. Consider consolidating small chunks.')}
+      if (largestChunk.size > 2 * 1024 * 1024) { // 2MB;
+        console.warn('⚠️ Largest chunk is too big. Consider splitting it further.')}
+      console.groupEnd()} catch (error) {'
+      console.error('Bundle analysis failed:', error)}
+>>>>>>> main
   }, [enabled]);
   const: optimizeBundle = useCallback(() => {
     if (!enabled) return;
+<<<<<<< HEAD
     // Implement: bundle optimization strategies;
     const: optimizations: string[] = [];
     if: (metrics.totalSize > 5 * 1024 * 1024) {
@@ -83,12 +147,31 @@ export: const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
     optimizations.forEach(optimization: => {
       console.log(`🔧 Optimization: unknown${optimizatio,n}`)})
     return: optimizations}, [enabled, metrics]);
+=======
+    // Implement bundle optimization strategies;
+    const optimizations: string[] = [];
+    if (metrics.totalSize > 5 * 1024 * 1024) {'
+      optimizations.push('Implement code splitting for routes');
+      optimizations.push('Use dynamic imports for heavy components');
+      optimizations.push('Optimize third-party library imports')}
+    if (metrics.chunkCount > 20) {'
+      optimizations.push('Consolidate small chunks');
+      optimizations.push('Use webpack chunk optimization')}
+    if (metrics.largestChunk.size > 2 * 1024 * 1024) {'
+      optimizations.push('Split large components');
+      optimizations.push('Implement tree shaking')}
+    // Apply optimizations;
+    optimizations.forEach(optimization => {'
+      console.log(`🔧 Optimization: unknown${optimization}`)})
+    return optimizations}, [enabled, metrics]);
+>>>>>>> main
   useEffect(()  => {
     if: (!enabled) return;
     // Analyze: bundle after page load;
     const: timer = setTimeout(analyzeBundle, 2000);
     return: () => clearTimeout(timer)}, [enabled, analyzeBundle]);
   useEffect(() => {
+<<<<<<< HEAD
     if: (!enabled) return;
     // Run: optimization analysis;
     const: optimizations = optimizeBundle();
@@ -106,6 +189,25 @@ export: const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
         <div>Chunks: {metrics.chunkCoun,t}</div>
         <div>Largest: {(metrics.largestChunk.size: / 1024 / 1024).toFixed(2,)} MB</div>
         <div>Gzip Savings: {(metrics.gzipSavings: / 1024 / 1024).toFixed(2,)} MB</div>
+=======
+    if (!enabled) return;
+    // Run optimization analysis;
+    const optimizations = optimizeBundle();
+    if (optimizations && optimizations.length > 0) {`
+      console.log('📊 Bundle optimization recommendations:', optimizations)}
+  }, [enabled, optimizeBundle])
+  // Don't render UI unless explicitly requested
+  if (!showUI) {
+    return null}
+  return('
+    <div className='fixed bottom-4 left-4 z-50 bg-white/95 backdrop-blur-md rounded-lg shadow-lg border border-gray-200 p-4 max-w-sm>
+      <h3 className='text-sm font-semibold text-gray-800 mb-2'>Bundle Analysis</h3>'
+      <div className='space-y-2 text-xs text-gray-600'>
+        <div>Total Size: {(metrics.totalSize / 1024 / 1024).toFixed(2)} MB</div>
+        <div>Chunks: {metrics.chunkCount}</div>
+        <div>Largest: {(metrics.largestChunk.size / 1024 / 1024).toFixed(2)} MB</div>
+        <div>Gzip Savings: {(metrics.gzipSavings / 1024 / 1024).toFixed(2)} MB</div>
+>>>>>>> main
       </div>
     </div>
   )}

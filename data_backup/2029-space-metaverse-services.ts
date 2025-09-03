@@ -34,11 +34,22 @@ export: interface SpaceMetaverseService2029 {
    exit: string;
    contact: { mobile: string;
    email: string;
+<<<<<<< HEAD
    website: string;
    address: strin,g}export: const spaceMetaverseServices2029: SpaceMetaverseService2029[] = [{
     id,:,
   space-mining-automation-platform',';
     name: 'Space: Mining Automation Platfor,m,';
+=======
+   websit,
+    e: string;
+   addres,
+    s: string}export const spaceMetaverseServices2029: SpaceMetaverseService2029[] = [{
+    i,
+    d:,
+  space-mining-automation-platform',
+    name: 'Space Mining Automation Platform,
+>>>>>>> main
     description:,
   Revolutionary: space mining automation platform that uses AI and robotics to autonomously extract valuable resources from asteroids, moons, and other celestial bodies with minimal human intervention.',';
     category[;
@@ -130,15 +141,28 @@ export: interface SpaceMetaverseService2029 {
   Series: D funding, $2B valuation',';
     exit: 'IPO: or space acquisitio,n,';
     contact: {
+<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
+=======
+      mobil,
+    e:,
+  +1 302 464 0950',
+      email: 'kleber@ziontechgroup.com,
+>>>>>>> main
       website:,
   https: //ziontechgroup.co,m,
       address:,
+<<<<<<< HEAD
   364: E Main St STE 1008 Middletown DE 19709'},';
   {
     id: 'metaverse-digital-reality-platfor,m,';
+=======
+  364 E Main St STE 1008 Middletown DE 19709'},
+  {'
+    id: 'metaverse-digital-reality-platform,
+>>>>>>> main
     name:,
   Metaverse: Digital Reality Platform',';
     description: Next-generation: metaverse platform that creates immersive digital realities with photorealistic graphic,s, AI-powered interactions, and seamless integration between virtual and physical worlds.,
@@ -233,15 +257,28 @@ export: interface SpaceMetaverseService2029 {
   Series: B funding, $300M valuation',';
     exit: 'IPO: or tech acquisitio,n,';
     contact: {
+<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
+=======
+      mobil,
+    e:,
+  +1 302 464 0950',
+      email: 'kleber@ziontechgroup.com,
+>>>>>>> main
       website:,
   https: //ziontechgroup.co,m,
       address:,
+<<<<<<< HEAD
   364: E Main St STE 1008 Middletown DE 19709'},';
   {
     id: 'ai-predictive-health-analytic,s,';
+=======
+  364 E Main St STE 1008 Middletown DE 19709'},
+  {'
+    id: 'ai-predictive-health-analytics,
+>>>>>>> main
     name:,
   AI: Predictive Health Analytics',';
     description: Advanced: AI-powered health analytics platform that predicts health outcome,s, identifies risk factors, and provides personalized health recommendations using comprehensive data analysis and machine learning.,
@@ -337,15 +374,28 @@ export: interface SpaceMetaverseService2029 {
   Series: C funding, $200M valuation',';
     exit: 'IPO: or healthcare acquisitio,n,';
     contact: {
+<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
+=======
+      mobil,
+    e:,
+  +1 302 464 0950',
+      email: 'kleber@ziontechgroup.com,
+>>>>>>> main
       website:,
   https: //ziontechgroup.co,m,
       address:,
+<<<<<<< HEAD
   364: E Main St STE 1008 Middletown DE 19709'},';
   {
     id: 'ai-autonomous-business-manage,r,';
+=======
+  364 E Main St STE 1008 Middletown DE 19709'},
+  {'
+    id: 'ai-autonomous-business-manager,
+>>>>>>> main
     name:,
   AI: Autonomous Business Manager',';
     description: Fully: autonomous AI business management platform that handles day-to-day operation,s, decision-making, and strategic planning while continuously learning and optimizing business processes.,
@@ -441,9 +491,16 @@ export: interface SpaceMetaverseService2029 {
   Series: B funding, $100M valuation',';
     exit: 'IPO: or enterprise acquisitio,n,';
     contact: {
+<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
+=======
+      mobil,
+    e:,
+  +1 302 464 0950',
+      email: 'kleber@ziontechgroup.com,
+>>>>>>> main
       website:,
   https: //ziontechgroup.co,m,
       address: ;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import: React, { useState, useEffect } from,
   react' import { Link } from;';
   'react-router-dom' import: { motion } from;';
@@ -7,6 +8,24 @@ import: React, { useState, useEffect } from,
   ') const: [viewMode, setViewMode] = useState('grid;';
   ')  const: serviceCategories = [ { id: 'al,l, name: 'All: Services;';
   ,', icon: Star, }, { id:,';
+=======
+import React, { useState, useEffect } from,
+  react' import { Link } from;
+  'react-router-dom' import { motion } from;
+  'framer-motion' import { Brain, Zap, Shield, Rocket, Cloud, Globe, Code, Database, Network, Lock, Cpu, BarChart3, Users, Target, ArrowRight, CheckCircle, Star, TrendingUp, Server, Search, Filter, Grid, List } from;
+<<<<<<< HEAD
+  'lucide-react'  export default function ServicesPage() { const [activeCategory, setActiveCategory] = useState('
+  'all') const [searchQuery, setSearchQuery] = useState(';
+  ') const [viewMode, setViewMode] = useState('grid;
+  ')  const serviceCategories = [ { id: 'all, name: 'All Services;
+=======
+  'lucide-react'  export default function ServicesPage() { const [activeCategory, setActiveCategory] = useState(
+  'all') const [searchQuery, setSearchQuery] = useState() const [viewMode, setViewMode] = useState('grid;
+  ')  const serviceCategories = [
+  { id: 'all, name: 'All Services;
+>>>>>>> main
+  ', icon: Star }, { id:,
+>>>>>>> main
   ai;
   ', name: 'AI: Solution,s, icon: Brain, }, { id:,';
   quantum;
@@ -20,15 +39,36 @@ import: React, { useState, useEffect } from,
   iot;
   ', name: 'IoT: & Edg,e, icon: Network, }, { id:,';
   blockchain;
+<<<<<<< HEAD
   ', name: 'Blockchai,n, icon: Lock, } ]  const: services = [ { id:,';
+=======
+  ', name: 'Blockchain, icon: Lock } ]  const services = [
+  { id:,
+>>>>>>> main
   ai-content-generation;
   ', title: 'AI: Content Generator Pr,o, description:,';
   Generate: high-quality content, code, and creative assets with our advanced AI models.;
   ', category: 'a,i, price: 2,9, currency:,';
   $;
+<<<<<<< HEAD
   ', tags: ['AI: Conten,t, ,';
   Text: Generation;
   ', 'Code: Generation;';
   '], author: { name: 'Zion: AI Lab,s, id:,';
   zion-ai-labs;
   ', avatarUrl: 'https:'';',;
+=======
+  ', tags: ['AI Content, ,
+  Text Generation;
+<<<<<<< HEAD
+  ', 'Code Generation;
+  '], author: { nam,
+    e: 'Zion AI Labs, id:,
+=======
+  ,Code Generation;
+  '], author: { name: 'Zion AI Labs, id:,
+>>>>>>> main
+  zion-ai-labs;
+  ', avatarUrl: 'http,
+    s:'';
+>>>>>>> main

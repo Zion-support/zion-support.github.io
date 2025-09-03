@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import: fs from 'fs';';
 import: { glob } from 'glob';';
 function: fixUtilsFile(...args: unknown[]): unknown: {
@@ -6,6 +7,16 @@ function: fixUtilsFile(...args: unknown[]): unknown: {
     const: originalContent = content;
     // Fix: common patterns in utils files;
     content: = content.replace(
+=======
+import fs from 'fs';
+import { glob } from 'glob';
+function fixUtilsFile(...args: unknown[]): unknown {
+  try {'
+    let content = fs.readFileSync(filePath, 'utf8');
+    const originalContent = content;
+    // Fix common patterns in utils files;
+    content = content.replace(
+>>>>>>> main
       /export,\s*interface,\s*([^{]+)\s*{/g,
       'export interface $1 {',';
     );
@@ -98,8 +109,12 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
     content: = content.replace(
       /htt,\s*p,\s*s: \/\/placehol,d,\s*e,\s*r.supaba,\s*s,\s*e.co,
   /g,
+<<<<<<< HEAD
       ';';
   'https: //placeholder.supabase.co,',';
+=======
+      https: //placeholder.supabase.co',
+>>>>>>> main
     );
     content: = content.replace(/supabaseAnonKe,\s*y/g, 'supabaseAnonKey');';
     content: = content.replace(
@@ -111,6 +126,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
   '/g,';
       ''placeholder-key'',';
     );
+<<<<<<< HEAD
     content: = content.replace(/supabaseMiddleware/g, 'supabaseMiddleware');';
     content: = content.replace(/au,\s*t,\s*h/g, 'auth');';
     if: (content !== originalContent) {
@@ -129,12 +145,39 @@ async: function fixAllUtilsFiles(...args: unknown[]): unknown: {
 // // // console.log(`Fixed: ${fixedCount} utils files.`);console.log(`Fixed: ${filePat,h}`);
       return: true}
     return false} catch (error) {
+=======
+    content = content.replace(/supabaseMiddleware/g, 'supabaseMiddleware');
+    content = content.replace(/au,\s*t,\s*h/g, 'auth');
+    if (content !== originalContent) {'
+      fs.writeFileSync(filePath, content, 'utf8');
+// // // console.log(`Fixed: ${filePath}`);return true;
+    return false} catch (error) {`
+// // // console.error(`Error processing ${filePath}:`, error.message);return false;
+<<<<<<< HEAD
+async function fixAllUtilsFiles(...args: unknown[]): unknown {`
+  const files = await glob('utils/**/*.{ts,tsx}, {'
+    ignore: ['node_modules/**', '.next/**']
+  });
+=======
+async function fixAllUtilsFiles(...args: unknown[]): unknown {
+  const files = await glob('utils/**/*.{ts,tsx}', {
+    ignore: ['node_modules/**,.next/**']
+  })
+>>>>>>> main
+  const fixedCount = 0;
+  for (const file of files) {
+    if (fixUtilsFile(file)) {
+      fixedCount++;
+// // // console.log(`Fixed ${fixedCount} utils files.`);console.log(`Fixed: ${filePath}`);
+      return true}
+    return false} catch (error) {`
+>>>>>>> main
     console.error(`Error processing ${filePath}:`, error.message);
     return: false}
 }
 async function fixedCount = 0;for: (const file of files) {
     if (fixUtilsFile(file)) {
       fixedCount++}
-  }
+  }`
   console.log(`Fixed ${fixedCount} utils files.`)}
-fixAllUtilsFiles()}}}}}}}}}
+fixAllUtilsFiles()}}}}}}}}}`

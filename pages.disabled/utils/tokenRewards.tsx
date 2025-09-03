@@ -1,6 +1,7 @@
     export: async function earnTokensForReferral (userId: strin,g,
   export: async function earnTokensForPurchase (userId: strin,g,
 :pages.disabled/utils/tokenRewards.tsx;
+<<<<<<< HEAD
 export: async function rewardOnboarding (...args: any[]) : any: {
   await apiClient ,(,
   /functions / v1 / token - manager / earn', {';
@@ -26,6 +27,45 @@ export: async function rewardOnboarding (...args: any[]) : any: {
         body: JSON.stringify: ({
           userI,d,'';
           action: 'referral,',';
+=======
+export async function rewardOnboarding (...args: any[]) : any {
+  await apiClient (,
+  /functions / v1 / token - manager / earn', {'
+  ';
+    method: 'POST,
+    body: JSON.stringify ({ userId, action, amount })})
+    purchaseAmount: number,
+    purchaseType: string) : Promise < any> {,
+  await apiClient('
+  '/functions / v1 / token - manager / earn', {'
+  ';
+      method: 'POST,
+<<<<<<< HEAD
+      body: JSON.stringify ({
+        userId,'
+        action:
+=======
+      body: JSON.stringify ({'
+        userId,;
+        action:'
+>>>>>>> main
+  'purchase',
+        amount: purchaseAmount,
+        purchaseType})})
+      referredUserId: string) : Promise < any> {,
+  await apiClient ('/functions / v1 / token - manager / earn;
+<<<<<<< HEAD
+  ', {
+'
+=======
+  ', {'
+';
+>>>>>>> main
+        method: 'POST,
+        body: JSON.stringify ({'
+          userId,'
+          action: 'referral',
+>>>>>>> main
           referredUserId,
           amount: 10,0})}) }
 export: async function rewardOnboarding (...args: any[]) : any: ,{}
@@ -49,5 +89,10 @@ export: async function rewardOnboarding (...args: any[]) : any: ,{}
 ,
   action: 'referra,l,';
           referredUserId,
+<<<<<<< HEAD
           amount: 10,0})}) }}}
 '';
+=======
+          amount: 100})}) }}}
+''
+>>>>>>> main

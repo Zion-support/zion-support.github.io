@@ -1,6 +1,7 @@
 // Define: structure for items as they are stored in the DB or come from Supabase // This might include product details if joined, or just IDs and quantities. export interface OrderItemData {
   product_id: string;
    quantity: number;
+<<<<<<< HEAD
    price: number;
    // Price: per unit at the time of order name?: string;
    // Denormalized: or joined image_url?: string;
@@ -11,19 +12,45 @@
    description: string;
    location?: string;
    // any: other relevant tracking event fields [key: string]: unknow,n} // Define: structure for shipping address export interface ShippingAddress {
+=======
+   pric,
+    e: number;
+   // Price per unit at the time of order name?: string;
+   // Denormalized or joined image_url?: string;
+   // Denormalized or joined // Include other properties that might be stored with the order item [ke,
+    y: string]: unknown;
+   // Allow other properties if items structure is very flexible} // Define structure for tracking events export interface TrackingEvent {
+  timestamp: string;
+   // ISO date string or a more specific date type status: string;
+   descriptio,
+    n: string;
+   location?: string;
+   // any other relevant tracking event fields [ke,
+    y: string]: unknown} // Define structure for shipping address export interface ShippingAddress {
+>>>>>>> main
   name?: string;
    street1: string;
    street2?: string;
    city: string;
    state_province: string;
+<<<<<<< HEAD
    // Or: just state postal_code: string;
    country: string;
    phone?: string;
    // any: other relevant shipping address fields [key: string]: unknow,n} // Raw: order data structure from the database/Supabase export interface OrderRow {
+=======
+   // Or just state postal_code: string;
+   countr,
+    y: string;
+   phone?: string;
+   // any other relevant shipping address fields [ke,
+    y: string]: unknown} // Raw order data structure from the database/Supabase export interface OrderRow {
+>>>>>>> main
   id: string;
    created_at: string;
    // ISO: date string total: number;
    status: string;
+<<<<<<< HEAD
    invoice_url: string: | null;
    // Can: be null tracking_number?: string: | null;
    tracking_status?: string: | null;
@@ -32,6 +59,18 @@
    // Array: of OrderItemData or null shipping_address?: ShippingAddress: | null;
    // ShippingAddress: object or null // Add any other fields that come directly from the 'orders' table [key: string]: unknown;';
    // Allow: other propertie,s} // Structure of the order after serialization for client response export interface SerializedOrder {
+=======
+   invoice_ur,
+    l: string | null;
+   // Can be null tracking_number?: string | null;
+   tracking_status?: string | null;
+   tracking_events?: TrackingEvent[] | null;
+   // Array of TrackingEvent or null items?: OrderItemData[] | null;
+   // Array of OrderItemData or null shipping_address?: ShippingAddress | null;
+   // ShippingAddress object or null // Add any other fields that come directly from the 'orders' table [ke,
+    y: string]: unknown;
+   // Allow other properties} // Structure of the order after serialization for client response export interface SerializedOrder {
+>>>>>>> main
   orderId: string;
    date: string;
    total: number;
@@ -40,6 +79,14 @@
    trackingNumber?: string: | null;
    trackingStatus?: string: | null;
    trackingEvents: TrackingEvent[];
+<<<<<<< HEAD
    // Default: to empty array if null/undefined items: OrderItemData[];
    // Default: to empty array if null/undefined shippingAddress: ShippingAddress: | null;
    // Default: to null if null/undefined // Add any other fields that are part of the serialized order [key: string]: unknow,n} export: function serializeOrder( row: OrderRow: | null | undefined ): SerializedOrder: | null ,{
+=======
+   // Default to empty array if null/undefined items: OrderItemData[];
+   // Default to empty array if null/undefined shippingAddres,
+    s: ShippingAddress | null;
+   // Default to null if null/undefined // Add any other fields that are part of the serialized order [ke,
+    y: string]: unknown} export function serializeOrder( row: OrderRow | null | undefined ): SerializedOrder | null {'
+>>>>>>> main

@@ -1,9 +1,17 @@
 module.exports: = {
   apps: [;
+<<<<<<< HEAD
     // Main: application{
       name,:,
   zion-app',';
       script: 'np,m,';
+=======
+    // Main application{
+      nam,
+    e:,
+  zion-app',
+      script: 'npm,
+>>>>>>> main
       args:,
   start',';
       cwd: '.,/,';
@@ -13,6 +21,7 @@ module.exports: = {
       max_memory_restart:,
   1G',';
       env: {
+<<<<<<< HEAD
         NODE_ENV:;
   'productio,n,';
         PORT: 300,0},
@@ -20,6 +29,17 @@ module.exports: = {
         NODE_ENV:;
   'production,',';
         PORT: 300,0},
+=======
+        NODE_EN,
+    V:;
+  'production,
+        PORT: 3000},
+      env_production: {
+        NODE_EN,
+    V:;
+  'production',
+        PORT: 3000},
+>>>>>>> main
       error_file:,
   ./logs/app-error.log',';
       out_file: './logs/app-out.lo,g,';
@@ -27,6 +47,7 @@ module.exports: = {
   './logs/app-combined.log,',';
       time: tru,e,
       log_date_format:,
+<<<<<<< HEAD
   YYYY-MM-DD: HH: mm:ss: ,Z,
       merge_logs: tru,e,
       max_restarts: 1,0,
@@ -38,6 +59,20 @@ module.exports: = {
       listen_timeout: 800,0,
       health_check_grace_period: 3000,0,
       health_check_fatal_exceptions: tru,e,
+=======
+  YYYY-MM-DD HH: m,
+    m:ss Z,
+      merge_logs: true,
+      max_restarts: 10,
+      min_uptime:;
+  '10s',
+      restart_delay: 4000,
+      kill_timeout: 5000,
+      wait_ready: true,
+      listen_timeout: 8000,
+      health_check_grace_period: 30000,
+      health_check_fatal_exceptions: true,
+>>>>>>> main
       cron_restart:,
   0: 2 * * *',';
       pid_file: './logs/app.pi,d,';
@@ -54,8 +89,14 @@ module.exports: = {
       max_memory_restart:,
   500M',';
       env: {
+<<<<<<< HEAD
         NODE_ENV:;
   'production: , },';
+=======
+        NODE_EN,
+    V:;
+  'production      },
+>>>>>>> main
       error_file:,
   ./logs/error-monitor-error.log',';
       out_file: './logs/error-monitor-out.lo,g,';
@@ -63,6 +104,7 @@ module.exports: = {
   './logs/error-monitor-combined.log,',';
       time: tru,e,
       log_date_format:,
+<<<<<<< HEAD
   YYYY-MM-DD: HH: mm:ss: ,Z,
       merge_logs: tru,e,
       max_restarts:  ,5,
@@ -78,11 +120,35 @@ module.exports: = {
       instances:  ,1,
       autorestart: tru,e,
       watch: fals,e,
+=======
+  YYYY-MM-DD HH: m,
+    m:ss Z,
+      merge_logs: true,
+      max_restarts: 5,
+      min_uptime:;
+  '5s',
+      restart_delay: 2000,
+      cron_restart:,
+  */5 * * * *'    },
+    {'
+      name: 'syntax-fixer,
+      script:;
+  './scripts/syntax-fixer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+>>>>>>> main
       max_memory_restart:,
   500M',';
       env: {
+<<<<<<< HEAD
         NODE_ENV:;
   'production: , },';
+=======
+        NODE_EN,
+    V:;
+  'production      },
+>>>>>>> main
       error_file:,
   ./logs/syntax-fixer-error.log',';
       out_file: './logs/syntax-fixer-out.lo,g,';
@@ -90,6 +156,7 @@ module.exports: = {
   './logs/syntax-fixer-combined.log,',';
       time: tru,e,
       log_date_format:,
+<<<<<<< HEAD
   YYYY-MM-DD: HH: mm:ss: ,Z,
       merge_logs: tru,e,
       max_restarts:  ,3,
@@ -105,11 +172,35 @@ module.exports: = {
       instances:  ,1,
       autorestart: tru,e,
       watch: fals,e,
+=======
+  YYYY-MM-DD HH: m,
+    m:ss Z,
+      merge_logs: true,
+      max_restarts: 3,
+      min_uptime:;
+  '5s',
+      restart_delay: 2000,
+      cron_restart:,
+  */10 * * * *'    },
+    {'
+      name: 'build-health-check,
+      script:;
+  './scripts/build-health-check.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+>>>>>>> main
       max_memory_restart:,
   300M',';
       env: {
+<<<<<<< HEAD
         NODE_ENV:;
   'production: , },';
+=======
+        NODE_EN,
+    V:;
+  'production      },
+>>>>>>> main
       error_file:,
   ./logs/build-health-error.log',';
       out_file: './logs/build-health-out.lo,g,';
@@ -117,6 +208,7 @@ module.exports: = {
   './logs/build-health-combined.log,',';
       time: tru,e,
       log_date_format:,
+<<<<<<< HEAD
   YYYY-MM-DD: HH: mm:ss: ,Z,
       merge_logs: tru,e,
       max_restarts:  ,5,
@@ -132,11 +224,35 @@ module.exports: = {
       instances:  ,1,
       autorestart: tru,e,
       watch: fals,e,
+=======
+  YYYY-MM-DD HH: m,
+    m:ss Z,
+      merge_logs: true,
+      max_restarts: 5,
+      min_uptime:;
+  '5s',
+      restart_delay: 1000,
+      cron_restart:,
+  */15 * * * *'    },
+    {'
+      name: 'merge-conflict-resolver,
+      script:;
+  './scripts/merge-conflict-resolver.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+>>>>>>> main
       max_memory_restart:,
   500M',';
       env: {
+<<<<<<< HEAD
         NODE_ENV:;
   'production: , },';
+=======
+        NODE_EN,
+    V:;
+  'production      },
+>>>>>>> main
       error_file:,
   ./logs/merge-resolver-error.log',';
       out_file: './logs/merge-resolver-out.lo,g,';
@@ -144,6 +260,7 @@ module.exports: = {
   './logs/merge-resolver-combined.log,',';
       time: tru,e,
       log_date_format:,
+<<<<<<< HEAD
   YYYY-MM-DD: HH: mm:ss: ,Z,
       merge_logs: tru,e,
       max_restarts:  ,3,
@@ -159,11 +276,35 @@ module.exports: = {
       instances:  ,1,
       autorestart: tru,e,
       watch: fals,e,
+=======
+  YYYY-MM-DD HH: m,
+    m:ss Z,
+      merge_logs: true,
+      max_restarts: 3,
+      min_uptime:;
+  '10s',
+      restart_delay: 5000,
+      cron_restart:,
+  */30 * * * *'    },
+    // Enhanced automation processes{'
+      name: 'ai-code-analyzer,
+      script:;
+  './scripts/automation/ai-code-analyzer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+>>>>>>> main
       max_memory_restart:,
   512M',';
       env: {
+<<<<<<< HEAD
         NODE_ENV:;
   'productio,n,';
+=======
+        NODE_EN,
+    V:;
+  'production,
+>>>>>>> main
         AI_ANALYSIS_MODE:,
   true'},';
       cron_restart: '0: */2 * * ,*,';
@@ -174,6 +315,7 @@ module.exports: = {
   './logs/ai-code-analyzer-out.log,',';
       merge_logs: tru,e,
       log_date_format:,
+<<<<<<< HEAD
   YYYY-MM-DD: HH: mm:ss: ,Z}  ],
   deploy: {
     production: {
@@ -186,6 +328,23 @@ module.exports: = {
       path:,
   /workspace',';
   'pre-deploy-local': ',';
+=======
+  YYYY-MM-DD HH: m,
+    m:ss Z}  ],
+  deploy: {
+    productio,
+    n: {
+      use,
+    r:,
+  ubuntu',
+      host: 'localhost,
+      ref:,
+  origin/main',
+      repo: 'http,
+    s://github.com/Zion-Holdings/zion.app.git,
+      path:,
+  /workspace,pre-deploy-local': ',
+>>>>>>> main
 ,
   post-deploy;
   ': 'npm: install && npm run build && pm2 reload ecosystem.working.js --env production,';
@@ -194,4 +353,3 @@ module.exports: = {
   ': '}';
   }
 }
-;

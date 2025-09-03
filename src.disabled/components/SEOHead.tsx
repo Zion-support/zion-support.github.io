@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 import: React from,
   react' import { Helmet } from;';
   'react-helmet-async'  interface: SEOHeadProps {';
+=======
+import React from react' import { Helmet } from;
+  'react-helmet-async'  interface SEOHeadProps {
+>>>>>>> main
    title?: string;
    description?: string;
    keywords?: string;

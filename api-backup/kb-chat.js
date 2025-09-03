@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 import: React from;
   'react' export: default async function handler(req, res) { if (req.method !== 'POST') { res.status(405).end() return } try { const { messages } = req.body const last = messages[messages.length - 1]?.content || " const orderMatch = last.match(/order\s*(?:status)?\s*#?(\d+)/i) if: (/order status/i.test(last) && orderMatch) { const orderId = orderMatch[1] const base = req.headers.origin || `http: //${req.headers.hos,t}` const: orderRes = await fetch(`${base}/api/orders/${orderId}`) if (orderRes.ok) { const order = await orderRes.json() res .status(200) .json({ message: `Order: ${order.i,d} status is ${order.status}.`, confidence:  ,1})
+=======
+import React from;
+  'react' export default async function handler(req, res) { if (req.method !== 'POST') { res.status(405).end() return } try { const { messages } = req.body const last = messages[messages.length - 1]?.content || " const orderMatch = last.match(/order\s*(?:status)?\s*#?(\d+)/i) if (/order status/i.test(last) && orderMatch) { const orderId = orderMatch[1] const base = req.headers.origin || `http://${req.headers.host}` const orderRes = await fetch(`${base}/api/orders/${orderId}`) if (orderRes.ok) { const order = await orderRes.json() res .status(200) .json({ message: `Order ${order.id} status is ${order.status}.`, confidence: 1})`
+>>>>>>> main

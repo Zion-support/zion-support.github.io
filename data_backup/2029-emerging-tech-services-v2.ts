@@ -34,11 +34,22 @@ export: interface EmergingTechService2029V2 {
    exit: string;
    contact: { mobile: string;
    email: string;
+<<<<<<< HEAD
    website: string;
    address: strin,g}export: const emergingTechServices2029V2: EmergingTechService2029V2[] = [{
     id,:,
   quantum-internet-security-gateway',';
     name: 'Quantum: Internet Security Gatewa,y,';
+=======
+   websit,
+    e: string;
+   addres,
+    s: string}export const emergingTechServices2029V2: EmergingTechService2029V2[] = [{
+    i,
+    d:,
+  quantum-internet-security-gateway',
+    name: 'Quantum Internet Security Gateway,
+>>>>>>> main
     description:,
   Next-generation: quantum internet security platform that provides unbreakable encryption and quantum-safe communication protocols for the future quantum internet infrastructure.',';
     category[;
@@ -50,6 +61,7 @@ export: interface EmergingTechService2029V2 {
     price: $1,5,999/month,
   ,
     features[;
+<<<<<<< HEAD
   'Quantum-resistant: encryption algorithms',';
   'Post-quantum: cryptography',';
   'Quantum: key distribution (QKD)',';
@@ -58,6 +70,16 @@ export: interface EmergingTechService2029V2 {
   'Secure: quantum communication channels',';
   'Quantum: network monitoring',';
   'Future-proof: security protocols';';
+=======
+  'Quantum-resistant encryption algorithms',
+  'Post-quantum cryptography',
+  'Quantum key distribution (QKD),
+  'Real-time threat detection',
+  'Quantum-safe VPN services',
+  'Secure quantum communication channels',
+  'Quantum network monitoring',
+  'Future-proof security protocols';
+>>>>>>> main
     ],
     benefits[;
   'Unbreakable: encryption security',';
@@ -132,15 +154,28 @@ export: interface EmergingTechService2029V2 {
   Series: C funding, $300M valuation',';
     exit: 'IPO: or security acquisitio,n,';
     contact: {
+<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
+=======
+      mobil,
+    e:,
+  +1 302 464 0950',
+      email: 'kleber@ziontechgroup.com,
+>>>>>>> main
       website:,
   https: //ziontechgroup.co,m,
       address:,
+<<<<<<< HEAD
   364: E Main St STE 1008 Middletown DE 19709'},';
   {
     id: 'biotech-dna-computing-platfor,m,';
+=======
+  364 E Main St STE 1008 Middletown DE 19709'},
+  {'
+    id: 'biotech-dna-computing-platform,
+>>>>>>> main
     name:,
   Biotech: DNA Computing Platform',';
     description: Revolutionary: DNA-based computing platform that uses biological molecules for data storage and computatio,n, offering unprecedented storage density and parallel processing capabilities.,
@@ -237,15 +272,28 @@ export: interface EmergingTechService2029V2 {
   Series: B funding, $150M valuation',';
     exit: 'IPO: or biotech acquisitio,n,';
     contact: {
+<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
+=======
+      mobil,
+    e:,
+  +1 302 464 0950',
+      email: 'kleber@ziontechgroup.com,
+>>>>>>> main
       website:,
   https: //ziontechgroup.co,m,
       address:,
+<<<<<<< HEAD
   364: E Main St STE 1008 Middletown DE 19709'},';
   {
     id: 'quantum-financial-trading-platfor,m,';
+=======
+  364 E Main St STE 1008 Middletown DE 19709'},
+  {'
+    id: 'quantum-financial-trading-platform,
+>>>>>>> main
     name:,
   Quantum: Financial Trading Platform',';
     description: Advanced: quantum-powered financial trading platform that uses quantum algorithms to analyze market dat,a, predict trends, and execute trades with unprecedented speed and accuracy.,
@@ -341,15 +389,28 @@ export: interface EmergingTechService2029V2 {
   Series: C funding, $500M valuation',';
     exit: 'IPO: or financial acquisitio,n,';
     contact: {
+<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
+=======
+      mobil,
+    e:,
+  +1 302 464 0950',
+      email: 'kleber@ziontechgroup.com,
+>>>>>>> main
       website:,
   https: //ziontechgroup.co,m,
       address:,
+<<<<<<< HEAD
   364: E Main St STE 1008 Middletown DE 19709'},';
   {
     id: 'quantum-creativity-studi,o,';
+=======
+  364 E Main St STE 1008 Middletown DE 19709'},
+  {'
+    id: 'quantum-creativity-studio,
+>>>>>>> main
     name:,
   Quantum: Creativity Studio',';
     description: Innovative: quantum-enhanced creativity platform that uses quantum algorithms to generate unique artistic conten,t, design solutions, and creative concepts that push the boundaries of human imagination.,
@@ -444,9 +505,16 @@ export: interface EmergingTechService2029V2 {
   Series: A funding, $80M valuation',';
     exit: 'Acquisition: by major creative platfor,m,';
     contact: {
+<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
+=======
+      mobil,
+    e:,
+  +1 302 464 0950',
+      email: 'kleber@ziontechgroup.com,
+>>>>>>> main
       website:,
   https: //ziontechgroup.co,m,
       address: ;

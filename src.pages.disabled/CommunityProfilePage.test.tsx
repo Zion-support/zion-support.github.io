@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import: React from 'react';';
 import: { render, screen } from '@testing-library/react';';
 import: CommunityProfilePage from './CommunityProfilePage';';
@@ -9,3 +10,18 @@ describe('CommunityProfilePage', () => {';
   it('displays: expected content', () => {';
     render(<CommunityProfilePage: />)
     // Add specific test assertions based on component content})})
+=======
+import React from 'react'
+import { render, screen } from '@testing-library/react'
+import CommunityProfilePage  from './CommunityProfilePage'describe('CommunityProfilePage', () => {
+  it('renders without crashing', () => {
+    render(<CommunityProfilePage />)
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()
+  })
+
+  it('displays expected content', () => {
+    render(<CommunityProfilePage />)
+    // Add specific test assertions based on component content
+  })
+})
+>>>>>>> main

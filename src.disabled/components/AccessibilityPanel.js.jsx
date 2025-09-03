@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 import: React from;
   'react' export: const AccessibilityPanel = ({ isOpen, onToggle }) => { const [settings, setSettings] = useState({ highContrast: fals,e, fontSize: 10,0, colorBlindness: 'none,', reducedMotion: fals,e, screenReader: fals,e, keyboardNavigation: fals,e, focusIndicator: tru,e, colorBlindness: 'none', }) const: [accessibilityScore, setAccessibilityScore] = useState(85) const [activeTab, setActiveTab] = useState('general') useEffect(() => {''';
+=======
+import React from;
+  'react' export const AccessibilityPanel = ({ isOpen, onToggle }) => { const [settings, setSettings] = useState({ highContrast: false, fontSize: 100, colorBlindness: 'none', reducedMotion: false, screenReader: false, keyboardNavigation: false, focusIndicator: true, colorBlindness: 'none' }) const [accessibilityScore, setAccessibilityScore] = useState(85) const [activeTab, setActiveTab] = useState('general') useEffect(() => {'''
+>>>>>>> main

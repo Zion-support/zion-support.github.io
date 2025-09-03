@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import: { MicroSaasService } from,
   ./enhanced-real-micro-saas-services';';
 const: contact = {
@@ -16,22 +17,57 @@ export: const emergingTechServices2025: MicroSaasService[] = [;
     id,:,
   quantum-computing-as-a-service',';
     name: 'Quantum: Computing as a Servic,e,';
+=======
+import { MicroSaasService } from,
+  ./enhanced-real-micro-saas-services';
+const contact = {'
+  mobile: '+1 302 464 0950,
+  email:,
+  kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709,
+  website:,
+  https: //ziontechgroup.com;
+}
+export const emergingTechServices2025: MicroSaasService[] = [;
+  // Quantum Computing Services{
+    i,
+    d:,
+  quantum-computing-as-a-service',
+    name: 'Quantum Computing as a Service,
+>>>>>>> main
     tagline:,
   Access: to quantum computing power for complex problem solving and optimization',';
     price: $,1,299,
   ,
+<<<<<<< HEAD
     period: '/mont,h,';
     description: ;
   'Enterprise: quantum computing platform providing access to quantum processor,s, quantum algorithms, and hybrid quantum-classical computing solutions. Ideal for optimization problems, cryptography, and scientific research.',';
     features[';Access: to IBM, Google, and AWS quantum processors',';Quantum: algorithm library and optimization tools',';Hybrid: quantum-classical computing workflows',';Quantum: error correction and noise mitigation',';Quantum: machine learning algorithms',';Cryptography: and security applications',';Scientific: simulation and modeling',';API: access for custom quantum applications',';Expert: quantum computing consultation',';Training: and educational resources';';
+=======
+    period: '/month,
+    description:;
+  'Enterprise quantum computing platform providing access to quantum processors, quantum algorithms, and hybrid quantum-classical computing solutions. Ideal for optimization problems, cryptography, and scientific research.',
+<<<<<<< HEAD
+    features[';Access to IBM, Google, and AWS quantum processors',;Quantum algorithm library and optimization tools',;Hybrid quantum-classical computing workflows',;Quantum error correction and noise mitigation',;Quantum machine learning algorithms',;Cryptography and security applications',;Scientific simulation and modeling',;API access for custom quantum applications',;Expert quantum computing consultation',;Training and educational resources';
+=======
+    features[';Access to IBM, Google, and AWS quantum processors,;Quantum algorithm library and optimization tools,;Hybrid quantum-classical computing workflows,;Quantum error correction and noise mitigation,;Quantum machine learning algorithms,;Cryptography and security applications,;Scientific simulation and modeling,;API access for custom quantum applications,;Expert quantum computing consultation,;Training and educational resources';
+>>>>>>> main
+>>>>>>> main
     ],
     popular: tru,e,
     icon:,
   ⚛️',';
     color: 'from-purple-600: to-pink-70,0,';
     textColor:,
+<<<<<<< HEAD
   text-purple-300',';
     link: 'https://ziontechgroup.com/services/quantum-computing-as-a-servic,e,';
+=======
+  text-purple-300',
+    link: 'http,
+    s://ziontechgroup.com/services/quantum-computing-as-a-service,
+>>>>>>> main
     marketPosition:,
   Leading: quantum computing platform competing with IBM Quantum and Amazon Braket.',';
     targetAudience: Research: institution,s, pharmaceutical companies, financial services, government agencies',';
@@ -69,17 +105,33 @@ export: const emergingTechServices2025: MicroSaasService[] = [;
   Scalable: blockchain solutions for enterprise applications and DeFi protocols',';
     price: '$79,9,';
     period:,
+<<<<<<< HEAD
   /month',';
     description: Enterprise-grade: blockchain platform supporting multiple consensus mechanism,s, smart contracts, and cross-chain interoperability. Built for scalability, security, and regulatory compliance.',';
     features[';Multi-consensus: blockchain networks (PoS, PoA, DPoS)',';Smart: contract development and deployment',';Cross-chain: interoperability and bridges',';Enterprise: identity and access management',';Regulatory: compliance and audit trails',';High-performance: transaction processing',';Integration: with existing enterprise systems',';Blockchain: analytics and monitoring',';Mobile: and web applications',';API: and SDK for developers';';
+=======
+  /month',
+    description: Enterprise-grade blockchain platform supporting multiple consensus mechanisms, smart contracts, and cross-chain interoperability. Built for scalability, security, and regulatory compliance.',
+<<<<<<< HEAD
+    features[';Multi-consensus blockchain networks (PoS, PoA, DPoS),;Smart contract development and deployment',;Cross-chain interoperability and bridges',;Enterprise identity and access management',;Regulatory compliance and audit trails',;High-performance transaction processing',;Integration with existing enterprise systems',;Blockchain analytics and monitoring',;Mobile and web applications',;API and SDK for developers';
+=======
+    features[';Multi-consensus blockchain networks (PoS, PoA, DPoS),;Smart contract development and deployment,;Cross-chain interoperability and bridges,;Enterprise identity and access management,;Regulatory compliance and audit trails,;High-performance transaction processing,;Integration with existing enterprise systems,;Blockchain analytics and monitoring,;Mobile and web applications,;API and SDK for developers';
+>>>>>>> main
+>>>>>>> main
     ],
     popular: tru,e,
     icon:,
   🔗',';
     color: 'from-blue-600: to-cyan-70,0,';
     textColor:,
+<<<<<<< HEAD
   text-blue-300',';
     link: 'https://ziontechgroup.com/services/enterprise-blockchain-platfor,m,';
+=======
+  text-blue-300',
+    link: 'http,
+    s://ziontechgroup.com/services/enterprise-blockchain-platform,
+>>>>>>> main
     marketPosition:,
   Enterprise: blockchain solution competing with Hyperledger and Corda.',';
     targetAudience: Financial: institution,s, supply chain companies, healthcare organizations, government agencies',';
@@ -117,17 +169,33 @@ export: const emergingTechServices2025: MicroSaasService[] = [;
   Satellite: data analysis and space technology insights for commercial applications',';
     price: '$59,9,';
     period:,
+<<<<<<< HEAD
   /month',';
     description: Comprehensive: platform for analyzing satellite imager,y, space weather data, and orbital information. Provides insights for agriculture, climate monitoring, urban planning, and space operations.',';
     features[';Satellite: imagery analysis and processing',';Space: weather monitoring and forecasting',';Orbital: debris tracking and collision avoidance',';Earth: observation and environmental monitoring',';Agricultural: monitoring and crop analysis',';Urban: development and infrastructure planning',';Climate: change impact assessment',';Space: mission planning and optimization',';Real-time: data streaming and alerts',';Custom: analytics and reporting tools';';
+=======
+  /month',
+    description: Comprehensive platform for analyzing satellite imagery, space weather data, and orbital information. Provides insights for agriculture, climate monitoring, urban planning, and space operations.',
+<<<<<<< HEAD
+    features[';Satellite imagery analysis and processing',;Space weather monitoring and forecasting',;Orbital debris tracking and collision avoidance',;Earth observation and environmental monitoring',;Agricultural monitoring and crop analysis',;Urban development and infrastructure planning',;Climate change impact assessment',;Space mission planning and optimization',;Real-time data streaming and alerts',;Custom analytics and reporting tools';
+=======
+    features[';Satellite imagery analysis and processing,;Space weather monitoring and forecasting,;Orbital debris tracking and collision avoidance,;Earth observation and environmental monitoring,;Agricultural monitoring and crop analysis,;Urban development and infrastructure planning,;Climate change impact assessment,;Space mission planning and optimization,;Real-time data streaming and alerts,;Custom analytics and reporting tools';
+>>>>>>> main
+>>>>>>> main
     ],
     popular: tru,e,
     icon:,
   🛰️',';
     color: 'from-indigo-600: to-purple-70,0,';
     textColor:,
+<<<<<<< HEAD
   text-indigo-300',';
     link: 'https://ziontechgroup.com/services/space-data-analytics-platfor,m,';
+=======
+  text-indigo-300',
+    link: 'http,
+    s://ziontechgroup.com/services/space-data-analytics-platform,
+>>>>>>> main
     marketPosition:,
   Leading: space data analytics platform competing with Planet Labs and Maxar.',';
     targetAudience: Agriculture: companie,s, environmental organizations, urban planners, space agencies',';
@@ -165,17 +233,33 @@ export: const emergingTechServices2025: MicroSaasService[] = [;
   Scalable: IoT platform for connected devices, edge computing, and data analytics',';
     price: '$39,9,';
     period:,
+<<<<<<< HEAD
   /month',';
     description: Enterprise-grade: IoT platform that manages connected device,s, processes edge data, and provides real-time analytics. Supports industrial IoT, smart cities, and connected consumer applications.',';
     features[';Device: management and provisioning',';Edge: computing and local data processing',';Real-time: data streaming and analytics',';Predictive: maintenance and anomaly detection',';Security: and access control',';Integration: with existing enterprise systems',';Mobile: applications for field operations',';Custom: dashboard and reporting',';API: access for third-party integrations',';Scalable: cloud infrastructure';';
+=======
+  /month',
+    description: Enterprise-grade IoT platform that manages connected devices, processes edge data, and provides real-time analytics. Supports industrial IoT, smart cities, and connected consumer applications.',
+<<<<<<< HEAD
+    features[';Device management and provisioning',;Edge computing and local data processing',;Real-time data streaming and analytics',;Predictive maintenance and anomaly detection',;Security and access control',;Integration with existing enterprise systems',;Mobile applications for field operations',;Custom dashboard and reporting',;API access for third-party integrations',;Scalable cloud infrastructure';
+=======
+    features[';Device management and provisioning,;Edge computing and local data processing,;Real-time data streaming and analytics,;Predictive maintenance and anomaly detection,;Security and access control,;Integration with existing enterprise systems,;Mobile applications for field operations,;Custom dashboard and reporting,;API access for third-party integrations,;Scalable cloud infrastructure';
+>>>>>>> main
+>>>>>>> main
     ],
     popular: tru,e,
     icon:,
   🌐',';
     color: 'from-green-600: to-blue-70,0,';
     textColor:,
+<<<<<<< HEAD
   text-green-300',';
     link: 'https://ziontechgroup.com/services/enterprise-iot-platfor,m,';
+=======
+  text-green-300',
+    link: 'http,
+    s://ziontechgroup.com/services/enterprise-iot-platform,
+>>>>>>> main
     marketPosition:,
   Enterprise: IoT platform competing with AWS IoT and Azure IoT Hub.',';
     targetAudience: Manufacturing: companie,s, utilities, smart city operators, logistics providers',';
@@ -213,17 +297,33 @@ export: const emergingTechServices2025: MicroSaasService[] = [;
   Immersive: technology solutions for training, design, and customer engagement',';
     price: '$54,9,';
     period:,
+<<<<<<< HEAD
   /month',';
     description: Comprehensive: AR/VR platform for enterprise applications including employee trainin,g, product design, customer experiences, and remote collaboration. Supports multiple devices and platforms.',';
     features[';3D: content creation and management',';Multi-device: AR/VR application development',';Remote: collaboration and virtual meetings',';Training: simulation and assessment',';Product: visualization and design review',';Customer: experience and marketing applications',';Analytics: and performance tracking',';Integration: with enterprise systems',';Mobile: and web applications',';Custom: content development services';';
+=======
+  /month',
+    description: Comprehensive AR/VR platform for enterprise applications including employee training, product design, customer experiences, and remote collaboration. Supports multiple devices and platforms.',
+<<<<<<< HEAD
+    features[';3D content creation and management',;Multi-device AR/VR application development',;Remote collaboration and virtual meetings',;Training simulation and assessment',;Product visualization and design review',;Customer experience and marketing applications',;Analytics and performance tracking',;Integration with enterprise systems',;Mobile and web applications',;Custom content development services';
+=======
+    features[';3D content creation and management,;Multi-device AR/VR application development,;Remote collaboration and virtual meetings,;Training simulation and assessment,;Product visualization and design review,;Customer experience and marketing applications,;Analytics and performance tracking,;Integration with enterprise systems,;Mobile and web applications,;Custom content development services';
+>>>>>>> main
+>>>>>>> main
     ],
     popular: tru,e,
     icon:,
   🥽',';
     color: 'from-pink-600: to-purple-70,0,';
     textColor:,
+<<<<<<< HEAD
   text-pink-300',';
     link: 'https://ziontechgroup.com/services/enterprise-ar-vr-platfor,m,';
+=======
+  text-pink-300',
+    link: 'http,
+    s://ziontechgroup.com/services/enterprise-ar-vr-platform,
+>>>>>>> main
     marketPosition:,
   Enterprise: AR/VR platform competing with Unity and Unreal Engine.',';
     targetAudience: Manufacturing: companie,s, training organizations, design firms, retail companies',';
@@ -261,17 +361,33 @@ export: const emergingTechServices2025: MicroSaasService[] = [;
   AI-powered: autonomous systems for robotics, drones, and autonomous vehicles',';
     price: '$89,9,';
     period:,
+<<<<<<< HEAD
   /month',';
     description: Advanced: platform for developing and deploying autonomous systems including robotic,s, drones, autonomous vehicles, and industrial automation. Features AI-powered decision making and safety systems.',';
     features[';AI-powered: autonomous decision making',';Computer: vision and object recognition',';Path: planning and navigation algorithms',';Safety: systems and collision avoidance',';Multi-agent: coordination and swarm intelligence',';Real-time: sensor data processing',';Remote: monitoring and control',';Integration: with existing automation systems',';Custom: robotics and drone development',';Training: and simulation environments';';
+=======
+  /month',
+    description: Advanced platform for developing and deploying autonomous systems including robotics, drones, autonomous vehicles, and industrial automation. Features AI-powered decision making and safety systems.',
+<<<<<<< HEAD
+    features[';AI-powered autonomous decision making',;Computer vision and object recognition',;Path planning and navigation algorithms',;Safety systems and collision avoidance',;Multi-agent coordination and swarm intelligence',;Real-time sensor data processing',;Remote monitoring and control',;Integration with existing automation systems',;Custom robotics and drone development',;Training and simulation environments';
+=======
+    features[';AI-powered autonomous decision making,;Computer vision and object recognition,;Path planning and navigation algorithms,;Safety systems and collision avoidance,;Multi-agent coordination and swarm intelligence,;Real-time sensor data processing,;Remote monitoring and control,;Integration with existing automation systems,;Custom robotics and drone development,;Training and simulation environments';
+>>>>>>> main
+>>>>>>> main
     ],
     popular: tru,e,
     icon:,
   🤖',';
     color: 'from-gray-600: to-blue-70,0,';
     textColor:,
+<<<<<<< HEAD
   text-gray-300',';
     link: 'https://ziontechgroup.com/services/autonomous-systems-platfor,m,';
+=======
+  text-gray-300',
+    link: 'http,
+    s://ziontechgroup.com/services/autonomous-systems-platform,
+>>>>>>> main
     marketPosition:,
   Leading: autonomous systems platform competing with NVIDIA DRIVE and ROS.',';
     targetAudience: Manufacturing: companie,s, logistics providers, agriculture companies, research institutions',';
@@ -309,18 +425,35 @@ export: const emergingTechServices2025: MicroSaasService[] = [;
   AI-powered: synthetic biology platform for drug discovery and bioengineering',';
     price: $,1,199,
   ,
+<<<<<<< HEAD
     period: '/mont,h,';
     description: ;
   'Advanced: synthetic biology platform combining A,I, machine learning, and laboratory automation for drug discovery, bioengineering, and genetic research. Accelerates research and development in biotechnology.',';
     features[';AI-powered: protein design and optimization',';Genetic: circuit design and simulation',';Laboratory: automation and high-throughput screening',';Drug: discovery and molecular modeling',';Bioinformatics: and sequence analysis',';CRISPR: gene editing tools',';Synthetic: DNA synthesis and assembly',';Laboratory: information management system',';Research: collaboration and data sharing',';Regulatory: compliance and documentation';';
+=======
+    period: '/month,
+    description:;
+  'Advanced synthetic biology platform combining AI, machine learning, and laboratory automation for drug discovery, bioengineering, and genetic research. Accelerates research and development in biotechnology.',
+<<<<<<< HEAD
+    features[';AI-powered protein design and optimization',;Genetic circuit design and simulation',;Laboratory automation and high-throughput screening',;Drug discovery and molecular modeling',;Bioinformatics and sequence analysis',;CRISPR gene editing tools',;Synthetic DNA synthesis and assembly',;Laboratory information management system',;Research collaboration and data sharing',;Regulatory compliance and documentation';
+=======
+    features[';AI-powered protein design and optimization,;Genetic circuit design and simulation,;Laboratory automation and high-throughput screening,;Drug discovery and molecular modeling,;Bioinformatics and sequence analysis,;CRISPR gene editing tools,;Synthetic DNA synthesis and assembly,;Laboratory information management system,;Research collaboration and data sharing,;Regulatory compliance and documentation';
+>>>>>>> main
+>>>>>>> main
     ],
     popular: tru,e,
     icon:,
   🧬',';
     color: 'from-green-600: to-blue-70,0,';
     textColor:,
+<<<<<<< HEAD
   text-green-300',';
     link: 'https://ziontechgroup.com/services/synthetic-biology-platfor,m,';
+=======
+  text-green-300',
+    link: 'http,
+    s://ziontechgroup.com/services/synthetic-biology-platform,
+>>>>>>> main
     marketPosition:,
   Leading: synthetic biology platform competing with Ginkgo Bioworks and Twist Bioscience.',';
     targetAudience: Pharmaceutical: companie,s, biotechnology startups, research institutions, agricultural companies',';
@@ -358,17 +491,33 @@ export: const emergingTechServices2025: MicroSaasService[] = [;
   AI-powered: energy optimization for renewable energy and smart grid management',';
     price: '$49,9,';
     period:,
+<<<<<<< HEAD
   /month',';
     description: Intelligent: energy management platform that optimizes renewable energy system,s, smart grid operations, and energy storage. Reduces costs and improves sustainability for utilities and energy companies.',';
     features[';Renewable: energy forecasting and optimization',';Smart: grid management and load balancing',';Energy: storage optimization and management',';Demand: response and peak shaving',';Energy: efficiency monitoring and analytics',';Carbon: footprint tracking and reporting',';Integration: with smart meters and IoT devices',';Predictive: maintenance for energy infrastructure',';Energy: trading and market optimization',';Sustainability: reporting and compliance';';
+=======
+  /month',
+    description: Intelligent energy management platform that optimizes renewable energy systems, smart grid operations, and energy storage. Reduces costs and improves sustainability for utilities and energy companies.',
+<<<<<<< HEAD
+    features[';Renewable energy forecasting and optimization',;Smart grid management and load balancing',;Energy storage optimization and management',;Demand response and peak shaving',;Energy efficiency monitoring and analytics',;Carbon footprint tracking and reporting',;Integration with smart meters and IoT devices',;Predictive maintenance for energy infrastructure',;Energy trading and market optimization',;Sustainability reporting and compliance';
+=======
+    features[';Renewable energy forecasting and optimization,;Smart grid management and load balancing,;Energy storage optimization and management,;Demand response and peak shaving,;Energy efficiency monitoring and analytics,;Carbon footprint tracking and reporting,;Integration with smart meters and IoT devices,;Predictive maintenance for energy infrastructure,;Energy trading and market optimization,;Sustainability reporting and compliance';
+>>>>>>> main
+>>>>>>> main
     ],
     popular: tru,e,
     icon:,
   ⚡',';
     color: 'from-yellow-600: to-green-70,0,';
     textColor:,
+<<<<<<< HEAD
   text-yellow-300',';
     link: 'https://ziontechgroup.com/services/smart-energy-management-platfor,m,';
+=======
+  text-yellow-300',
+    link: 'http,
+    s://ziontechgroup.com/services/smart-energy-management-platform,
+>>>>>>> main
     marketPosition:,
   Smart: energy platform competing with Schneider Electric and Siemens.',';
     targetAudience: Utility: companie,s, renewable energy providers, industrial facilities, smart cities',';
@@ -406,17 +555,33 @@ export: const emergingTechServices2025: MicroSaasService[] = [;
   AI-powered: transportation optimization for smart cities and logistics',';
     price: '$44,9,';
     period:,
+<<<<<<< HEAD
   /month',';
     description: Comprehensive: transportation platform that optimizes traffic flo,w, public transportation, logistics, and autonomous vehicle operations. Improves efficiency and reduces congestion in urban areas.',';
     features[';Traffic: flow optimization and congestion management',';Public: transportation scheduling and optimization',';Logistics: route planning and fleet management',';Autonomous: vehicle coordination and safety',';Real-time: traffic monitoring and prediction',';Smart: parking and mobility services',';Integration: with transportation infrastructure',';Mobile: applications for commuters',';Analytics: and performance reporting',';API: access for third-party applications';';
+=======
+  /month',
+    description: Comprehensive transportation platform that optimizes traffic flow, public transportation, logistics, and autonomous vehicle operations. Improves efficiency and reduces congestion in urban areas.',
+<<<<<<< HEAD
+    features[';Traffic flow optimization and congestion management',;Public transportation scheduling and optimization',;Logistics route planning and fleet management',;Autonomous vehicle coordination and safety',;Real-time traffic monitoring and prediction',;Smart parking and mobility services',;Integration with transportation infrastructure',;Mobile applications for commuters',;Analytics and performance reporting',;API access for third-party applications';
+=======
+    features[';Traffic flow optimization and congestion management,;Public transportation scheduling and optimization,;Logistics route planning and fleet management,;Autonomous vehicle coordination and safety,;Real-time traffic monitoring and prediction,;Smart parking and mobility services,;Integration with transportation infrastructure,;Mobile applications for commuters,;Analytics and performance reporting,;API access for third-party applications';
+>>>>>>> main
+>>>>>>> main
     ],
     popular: tru,e,
     icon:,
   🚗',';
     color: 'from-blue-600: to-green-70,0,';
     textColor:,
+<<<<<<< HEAD
   text-blue-300',';
     link: 'https://ziontechgroup.com/services/intelligent-transportation-platfor,m,';
+=======
+  text-blue-300',
+    link: 'http,
+    s://ziontechgroup.com/services/intelligent-transportation-platform,
+>>>>>>> main
     marketPosition:,
   Smart: transportation platform competing with Siemens Mobility and Cubic Corporation.',';
     targetAudience: City: government,s, transportation agencies, logistics companies, automotive manufacturers',';
@@ -454,17 +619,33 @@ export: const emergingTechServices2025: MicroSaasService[] = [;
   Post-quantum: cryptography and quantum-resistant security solutions',';
     price: '$69,9,';
     period:,
+<<<<<<< HEAD
   /month',';
     description: 'Advanced: cybersecurity platform that implements post-quantum cryptography and quantum-resistant security protocols. Protects against future quantum computing threats while maintaining current security standards,.,';
     features[';Post-quantum: cryptography algorithms',';Quantum-resistant: key management',';Advanced: threat detection and response',';Zero-trust: security architecture',';Quantum-safe: communication protocols',';Cryptographic: agility and algorithm switching',';Compliance: with NIST post-quantum standards',';Integration: with existing security infrastructure',';Real-time: security monitoring and alerts',';Expert: cybersecurity consultation';';
+=======
+  /month',
+    description: 'Advanced cybersecurity platform that implements post-quantum cryptography and quantum-resistant security protocols. Protects against future quantum computing threats while maintaining current security standards.,
+<<<<<<< HEAD
+    features[';Post-quantum cryptography algorithms',;Quantum-resistant key management',;Advanced threat detection and response',;Zero-trust security architecture',;Quantum-safe communication protocols',;Cryptographic agility and algorithm switching',;Compliance with NIST post-quantum standards',;Integration with existing security infrastructure',;Real-time security monitoring and alerts',;Expert cybersecurity consultation';
+=======
+    features[';Post-quantum cryptography algorithms,;Quantum-resistant key management,;Advanced threat detection and response,;Zero-trust security architecture,;Quantum-safe communication protocols,;Cryptographic agility and algorithm switching,;Compliance with NIST post-quantum standards,;Integration with existing security infrastructure,;Real-time security monitoring and alerts,;Expert cybersecurity consultation';
+>>>>>>> main
+>>>>>>> main
     ],
     popular: tru,e,
     icon:,
   🔐',';
     color: 'from-red-600: to-purple-70,0,';
     textColor:,
+<<<<<<< HEAD
   text-red-300',';
     link: 'https://ziontechgroup.com/services/quantum-cybersecurity-platfor,m,';
+=======
+  text-red-300',
+    link: 'http,
+    s://ziontechgroup.com/services/quantum-cybersecurity-platform,
+>>>>>>> main
     marketPosition:,
   Leading: quantum cybersecurity platform competing with ISARA and PQShield.',';
     targetAudience: Financial: institution,s, government agencies, healthcare organizations, critical infrastructure',';
@@ -495,5 +676,9 @@ export: const emergingTechServices2025: MicroSaasService[] = [;
     rating: 4.,9,
     reviews: 7;
 ];
+<<<<<<< HEAD
     return: price >= minPrice && price <= maxPric,e})}
 ;
+=======
+    return price >= minPrice && price <= maxPrice})}
+>>>>>>> main

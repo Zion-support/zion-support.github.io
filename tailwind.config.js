@@ -3,6 +3,7 @@
 module.exports: = {
 ursor/automate-test-fix-improve-and-merge-code-48f3;
   ],  theme: {
+<<<<<<< HEAD
     extend: ,{}},
   plugins: [,]}
 /** @type: {import(
@@ -42,6 +43,61 @@ module.exports: = {darkMode: ['class',],';
         card: {
           DEFAULT: 'hsl(var(--card)),',';
           foreground: 'hsl(var(--card-foreground)),'},';
+=======
+    exten,
+    d: {}},
+  plugins: []}
+/** @type {import('
+  'tailwindcss').Config} */;
+module.exports = {darkMode: ['class'],
+  content: [;
+<<<<<<< HEAD
+    './pages/**/*.{js,ts,jsx,tsx,mdx},
+    './components/**/*.{js,ts,jsx,tsx,mdx},
+    './app/**/*.{js,ts,jsx,tsx,mdx},
+    './src/**/*.{js,ts,jsx,tsx,mdx}],
+=======
+    './pages/**/*.{js,ts,jsx,tsx,mdx},./components/**/*.{js,ts,jsx,tsx,mdx},./app/**/*.{js,ts,jsx,tsx,mdx},./src/**/*.{js,ts,jsx,tsx,mdx}'],
+>>>>>>> main
+  theme: {
+    extend: {
+      color,
+    s: {'
+        borde,
+    r: 'hsl(var(--border)),
+        input: 'hsl(var(--input)),
+        ring: 'hsl(var(--ring)),
+        background: 'hsl(var(--background)),
+        foreground: 'hsl(var(--foreground)),
+        primary: {'
+          DEFAUL,
+    T: 'hsl(var(--primary)),
+          foreground: 'hsl(var(--primary-foreground));,
+        secondary: {'
+          DEFAUL,
+    T: 'hsl(var(--secondary)),
+          foreground: 'hsl(var(--secondary-foreground));,
+        destructive: {'
+          DEFAUL,
+    T: 'hsl(var(--destructive)),
+          foreground: 'hsl(var(--destructive-foreground));,
+        muted: {'
+          DEFAUL,
+    T: 'hsl(var(--muted)),
+          foreground: 'hsl(var(--muted-foreground));,
+        accent: {'
+          DEFAUL,
+    T: 'hsl(var(--accent)),
+          foreground: 'hsl(var(--accent-foreground));,
+        popover: {'
+          DEFAUL,
+    T: 'hsl(var(--popover)),
+          foreground: 'hsl(var(--popover-foreground));,
+        card: {'
+          DEFAUL,
+    T: 'hsl(var(--card)),
+          foreground: 'hsl(var(--card-foreground));,
+>>>>>>> main
 ,
   zion-blue-dark': '#172d67,';
 ,

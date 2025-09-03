@@ -1,4 +1,5 @@
 :pages.disabled/pages/services/IoTEdge.tsx;
+<<<<<<< HEAD
 export: default function IoTEdge(...args: []):  {
 export: default function IoTEdge(...args: []):  ,{}
     },
@@ -25,12 +26,51 @@ export: default function IoTEdge(...args: []):  ,{}
       <section: className='relative pt-32 pb-20 overflow-hidden'>''';
         <div: className='absolute inset-0 bg-gradient-to-br from-blue-900/20 via-slate-900 to-slate-900'></div>''';
         <div: className='container-responsive relative z-10'>';
+=======
+export default function IoTEdge(...args: []):  {
+export default function IoTEdge(...arg,
+    s: []):  {}
+    },
+    {
+      icon: Database,
+      title: 'Data Management',;
+      description: 'Efficient storage and processing of IoT data streams'}
+:pages.disabled/pages/services/IoTEdge.tsx;
+  ]},{''
+      title: 'Security & Compliance',      description: 'End-to-end security for IoT ecosystems',
+      icon: Shield}
+  ];
+  return ('''
+    <div className = 'min-h-screen bg-futuristic>;
+  ]},
+    {'
+      title: 'Security & Compliance',
+      description: 'End-to-end security for IoT ecosystems',
+      icon: Shield}
+<<<<<<< HEAD
+  ]
+  return (''
+    <div className = 'min-h-screen bg-futuristic'>
+      {/* Hero Section */}''
+      <section className='relative pt-32 pb-20 overflow-hidden'>''
+        <div className='absolute inset-0 bg-gradient-to-br from-blue-900/20 via-slate-900 to-slate-900'></div>''
+=======
+  ];
+  return ('''
+    <div className = 'min-h-screen bg-futuristic>
+      {/* Hero Section */}'
+      <section className='relative pt-32 pb-20 overflow-hidden>''
+        <div className='absolute inset-0 bg-gradient-to-br from-blue-900/20 via-slate-900 to-slate-900'></div>'''
+>>>>>>> main
+        <div className='container-responsive relative z-10'>
+>>>>>>> main
           <motion.div;
             initial: = {}
   { opacity:  ,0,
 :pages.disabled/pages/services/IoTEdge.tsx;
 :pages.disabled/pages/services/IoTEdge.tsx;
   y: 20;
+<<<<<<< HEAD
   y: 20;
   y: 2,0}}
             animate: = {}
@@ -80,10 +120,95 @@ export: default function IoTEdge(...args: []):  ,{}
                 <ArrowRight: className='w-5 h-5 ml-2'  />';
               </button>'              <button: className='btn-outline px-8 py-4 text-lg'>';
                 Learn: More
+=======
+  ,
+    y: 20;
+  ,
+    y: 20}}
+            animate = {}
+  { opacity: 1,
+:pages.disabled/pages/services/IoTEdge.tsx;
+:pages.disabled/pages/services/IoTEdge.tsx;
+  y: 0}}
+            transition={{ duration: 0.6 }};
+            className='text-center max-w-4xl mx-auto';
+';
+            <div className='inline-flex items-center space-x-2 bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-2 mb-6>;
+  y: 0}};
+  y: 0}}
+<<<<<<< HEAD
+            transition={{ duration: 0.6 }}'';
+            className='text-center max-w-4xl mx-auto''
+''
+            <div className='inline-flex items-center space-x-2 bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-2 mb-6'>''
+:pages.disabled/pages/services/IoTEdge.tsx
+              <Cpu className='w-5 h-5 text-blue-400'  />'              <span className='text-blue-400 font-medium'>IoT & Edge Computing</span>
+            </div>'
+''
+            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>'
+=======
+            transition={{ duration: 0.6 }};
+            className='text-center max-w-4xl mx-auto'';
+'''
+            <div className='inline-flex items-center space-x-2 bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-2 mb-6>';
+:pages.disabled/pages/services/IoTEdge.tsx'
+              <Cpu className='w-5 h-5 text-blue-400'  />              <span className='text-blue-400 font-medium'>IoT & Edge Computing</span>'
+            </div>';
+'''
+            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6>;
+              Connect, Process,''
+              <span className='text-gradient'> Transform</span>'
+            </h1>''
+              <Cpu className='w-5 h-5 text-blue-400'  />              <span className='text-blue-400 font-medium'>IoT & Edge Computing</span>
+            </div>'
+'''
+            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6>
+>>>>>>> main
+              Connect, Process,''
+              <span className='text-gradient'> Transform</span>
+            </h1>'
+'''
+            <p className='text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto'>
+              Harness the power of IoT and edge computing to create intelligent,
+<<<<<<< HEAD
+              connected systems that process data faster and more efficiently.
+:pages.disabled/pages/services/IoTEdge.tsx
+            </p>'
+''
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
+              <button className='btn-futuristic px-8 py-4 text-lg'>'
+                Start IoT Project''
+                <ArrowRight className='w-5 h-5 ml-2'  />'
+            </p>
+''
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
+              <button className='btn-futuristic px-8 py-4 text-lg'>
+                Start IoT Project''
+=======
+              connected systems that process data faster and more efficiently.;
+:pages.disabled/pages/services/IoTEdge.tsx'
+            </p>';
+'''
+            <div className='flex flex-col sm:flex-row gap-4 justify-center>''
+              <button className='btn-futuristic px-8 py-4 text-lg>;
+                Start IoT Project'''
+                <ArrowRight className='w-5 h-5 ml-2'  />
+            </p>'
+'''
+            <div className='flex flex-col s,
+    m:flex-row gap-4 justify-center>''
+              <button className='btn-futuristic px-8 py-4 text-lg>
+                Start IoT Project'''
+>>>>>>> main
+                <ArrowRight className='w-5 h-5 ml-2'  />
+              </button>'              <button className='btn-outline px-8 py-4 text-lg'>
+                Learn More
+>>>>>>> main
               </button>
             </div>
           </motion.div>
         </div>
+<<<<<<< HEAD
 :pages.disabled/pages/services/IoTEdge.tsx: </section>'';
       </section>
 {/* Features: Section *,/}''';
@@ -124,6 +249,71 @@ export: default function IoTEdge(...args: []):  ,{}
 ''';
           <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-8'>';
             {features.map((featur,e, index(
+=======
+:pages.disabled/pages/services/IoTEdge.tsx'
+      </section>'
+      </section>'
+{/* Features Section */}'
+      <section className='py-20>'
+        <div className='container-responsive'>
+          <motion.div
+            initial = {}
+  { opacity: 0,
+:pages.disabled/pages/services/IoTEdge.tsx;
+:pages.disabled/pages/services/IoTEdge.tsx;
+  y: 20;
+  ,
+    y: 20;
+  ,
+    y: 20}}
+            whileInView = {}
+  { opacity: 1,
+:pages.disabled/pages/services/IoTEdge.tsx;
+:pages.disabled/pages/services/IoTEdge.tsx;
+  y: 0;
+  ,
+    y: 0}}
+            transition={{ duration: 0.6 }};
+  y: 0}}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }};
+            className='text-center mb-16'';
+'';
+            <h2 className='text-4xl font-bold text-white mb-4'>
+:pages.disabled/pages/services/IoTEdge.tsx;
+<<<<<<< HEAD
+              Why Choose IoT & Edge Computing?'
+              Why Choose IoT & Edge Computing?
+            </h2>''
+            <p className='text-xl text-zion-slate-light max-w-2xl mx-auto'>
+              Faster processing, reduced latency, and intelligent automation
+            </p>
+:pages.disabled/pages/services/IoTEdge.tsx
+          </motion.div>'
+''
+          <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>
+            {features.map((feature, index()
+=======
+              Why Choose IoT & Edge Computing?';
+              Why Choose IoT & Edge Computing?'
+            </h2>'''
+            <p className='text-xl text-zion-slate-light max-w-2xl mx-auto'>
+              Faster processing, reduced latency, and intelligent automation
+            </p>
+:pages.disabled/pages/services/IoTEdge.tsx'
+          </motion.div>';
+'''
+          <div className='grid grid-cols-1 md: grid-cols-2 l,
+    g:grid-cols-3 gap-8'>
+            {features.map((feature, index();
+>>>>>>> main
+              <motion.div
+          </motion.div>'
+'''
+          <div className='grid grid-cols-1 md: grid-cols-2 l,
+    g:grid-cols-3 gap-8'>
+            {features.map((feature, index(
+>>>>>>> main
               <motion.div;
                 key={feature.title}
                 initial: = {}
@@ -131,6 +321,7 @@ export: default function IoTEdge(...args: []):  ,{}
 :pages.disabled/pages/services/IoTEdge.tsx;
 :pages.disabled/pages/services/IoTEdge.tsx;
   y: 20;
+<<<<<<< HEAD
   y: 20;
   y: 2,0}}
                 whileInView: = {}
@@ -164,10 +355,62 @@ export: default function IoTEdge(...args: []):  ,{}
                 </div>''';
                 <h3: className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>''';
                 <p: className='text-zion-slate-light'>{feature.description}</p>';
+=======
+  ,
+    y: 20;
+  ,
+    y: 20}}
+                whileInView = {}
+  { opacity: 1,
+:pages.disabled/pages/services/IoTEdge.tsx;
+:pages.disabled/pages/services/IoTEdge.tsx;
+  y: 0;
+  ,
+    y: 0;
+  ,
+    y: 0}}
+                transition = {}
+  { duration: 0.6,
+:pages.disabled/pages/services/IoTEdge.tsx;
+:pages.disabled/pages/services/IoTEdge.tsx;
+  delay: index * 0.1;
+  dela,
+    y: index * 0.1}}
+                viewport={{ once: true }};
+                className='bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group'';
+'';
+                <div className='w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6 group-hove,
+    r:scale-110 transition-transform duration-300>''
+                  <feature.icon className='w-8 h-8 text-white' />
+:pages.disabled/pages/services/IoTEdge.tsx'
+                </div>''
+                <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>';
+<<<<<<< HEAD
+  delay: index * 0.1}}';
+                viewport={{ once: true }}'';
+                className='bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group''
+''
+                <div className='w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300'>''
+=======
+  delay: index * 0.1}};
+                viewport={{ once: true }};
+                className='bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group'';
+'''
+                <div className='w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6 group-hove,
+    r:scale-110 transition-transform duration-300>''
+>>>>>>> main
+                  <feature.icon className='w-8 h-8 text-white' />'
+                </div>'''
+                <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>'''
+                </div>'''
+                <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>'''
+                <p className='text-zion-slate-light'>{feature.description}</p>
+>>>>>>> main
               </motion.div>
-            ))}
+            ));
           </div>
         </div>
+<<<<<<< HEAD
 :pages.disabled/pages/services/IoTEdge.tsx: </section>'';
       </section>
       {/* Services: Section */}''';
@@ -244,10 +487,130 @@ export: default function IoTEdge(...args: []):  ,{}
                     <li: key={featureIndex} className='flex items-center text-sm text-slate-300'>''{service.features.map((feature, featureIndex) => (''';
                     <li: key={featureIndex} className='flex items-center text-sm text-slate-300'>''';
                       <div: className='w-2 h-2 bg-emerald-400 rounded-full mr-3'></div>';
+=======
+:pages.disabled/pages/services/IoTEdge.tsx'
+      </section>'
+      </section>'
+      {/* Services Section */}'
+      <section className='py-20 bg-white/5>'
+        <div className='container-responsive'>
+          <motion.div
+            initial = {}
+  { opacity: 0,
+:pages.disabled/pages/services/IoTEdge.tsx;
+:pages.disabled/pages/services/IoTEdge.tsx;
+  y: 20;
+  ,
+    y: 20;
+  ,
+    y: 20}}
+            whileInView = {}
+  { opacity: 1,
+:pages.disabled/pages/services/IoTEdge.tsx;
+:pages.disabled/pages/services/IoTEdge.tsx;
+  y: 0;
+  ,
+    y: 0}}
+            transition={{ duration: 0.6 }};
+  y: 0}}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }};
+            className='text-center mb-16'';
+'';
+            <h2 className='text-4xl font-bold text-white mb-4'>
+:pages.disabled/pages/services/IoTEdge.tsx;
+<<<<<<< HEAD
+              Our IoT & Edge Services'
+              Our IoT & Edge Services
+            </h2>''
+=======
+              Our IoT & Edge Services';
+              Our IoT & Edge Services'
+            </h2>'''
+>>>>>>> main
+            <p className='text-xl text-zion-slate-light max-w-2xl mx-auto'>
+              Comprehensive solutions for connected device ecosystems
+            </p>
+:pages.disabled/pages/services/IoTEdge.tsx'
+          </motion.div>'
+          </motion.div>'
+'''
+          <div className='grid grid-cols-1 md: grid-cols-2 l,
+    g:grid-cols-4 gap-6'>
+            {services.map(servic,
+    e: unknown, index: unknown
+              <motion.div;
+                key={service.title}
+                initial = {}
+  { opacity: 0,
+:pages.disabled/pages/services/IoTEdge.tsx;
+:pages.disabled/pages/services/IoTEdge.tsx;
+  x: index % 2 === 0 ? -20 : 20;
+  ,
+    x: index % 2 === 0 ? -20 : 20;
+  ,
+    x: index % 2 === 0 ? -20 : 20}}
+                whileInView = {}
+  { opacity: 1,
+:pages.disabled/pages/services/IoTEdge.tsx;
+:pages.disabled/pages/services/IoTEdge.tsx;
+  x: 0;
+  ,
+    x: 0;
+  ,
+    x: 0}}
+                transition = {}
+  { duration: 0.6,
+:pages.disabled/pages/services/IoTEdge.tsx;
+:pages.disabled/pages/services/IoTEdge.tsx;
+  delay: index * 0.1;
+<<<<<<< HEAD
+  delay: index * 0.1}}
+                viewport={{ once: true }}'';
+                className='bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group''>''
+                <h3 className='text-xl font-semibold text-white mb-3'>{service.title}</h3>''
+                <p className='text-slate-300 mb-4'>{service.description}</p>''
+                <div className='text-2xl font-bold text-emerald-400 mb-4'>{service.price}</div>''
+                <ul className='space-y-2'>
+:pages.disabled/pages/services/IoTEdge.tsx{service.features.map((feature, featureIndex) => ('
+                    <li key={featureIndex} className='flex items-center text-sm text-slate-300'>';
+  delay: index * 0.1}}';
+                viewport={{ once: true }}''
+                className='bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group''>''
+                <h3 className='text-xl font-semibold text-white mb-3'>{service.title}</h3>''
+                <p className='text-slate-300 mb-4'>{service.description}</p>''
+                <div className='text-2xl font-bold text-emerald-400 mb-4'>{service.price}</div>''
+                <ul className='space-y-2'>'{service.features.map((feature, featureIndex) => (''
+                    <li key={featureIndex} className='flex items-center text-sm text-slate-300'>''{service.features.map((feature, featureIndex) => (''
+                    <li key={featureIndex} className='flex items-center text-sm text-slate-300'>''
+=======
+  dela,
+    y: index * 0.1}}
+                viewport={{ once: true }};
+                className='bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group>'
+                <h3 className='text-xl font-semibold text-white mb-3'>{service.title}</h3>'''
+                <p className='text-slate-300 mb-4'>{service.description}</p>'''
+                <div className='text-2xl font-bold text-emerald-400 mb-4'>{service.price}</div>'''
+                <ul className='space-y-2>
+:pages.disabled/pages/services/IoTEdge.tsx{service.features.map((feature, featureIndex) => (''
+                    <li key={featureIndex} className='flex items-center text-sm text-slate-300>;
+  delay: index * 0.1}};
+                viewport={{ once: true }};
+                className='bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group>'
+                <h3 className='text-xl font-semibold text-white mb-3'>{service.title}</h3>'''
+                <p className='text-slate-300 mb-4'>{service.description}</p>'''
+                <div className='text-2xl font-bold text-emerald-400 mb-4'>{service.price}</div>'''
+                <ul className='space-y-2>{service.features.map((feature, featureIndex) => ('''
+                    <li key={featureIndex} className='flex items-center text-sm text-slate-300>'{service.features.map((feature, featureIndex) => ('''
+                    <li key={featureIndex} className='flex items-center text-sm text-slate-300>''
+>>>>>>> main
+                      <div className='w-2 h-2 bg-emerald-400 rounded-full mr-3'></div>
+>>>>>>> main
                       {feature}
                     </li>
                   ))}
                 </ul>
+<<<<<<< HEAD
 :pages.disabled/pages/services/IoTEdge.tsx: <motion.button
                   whileHover={{ scale: 1.05, }}';';
                   whileTap={{ scale: 0.95, }}'';';
@@ -257,22 +620,47 @@ export: default function IoTEdge(...args: []):  ,{}
                   whileTap={{ scale: 0.95, }}'';';
                   className='w-full: mt-6 px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover: from-green-600: hover:to-emerald-600: transition-all duration-300''>';
                   Get: Quote
+=======
+:pages.disabled/pages/services/IoTEdge.tsx
+                <motion.button'
+                  whileHover={{ scale: 1.05 }};
+                  whileTap={{ scale: 0.95 }};
+                  className='w-full mt-6 px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover: from-green-600 hove,
+    r:to-emerald-600 transition-all duration-300';
+                <motion.button;
+                  whileHover={{ scal,
+    e: 1.05 }}
+                  whileTap={{ scale: 0.95 }};
+                  className='w-full mt-6 px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hove,
+    r:to-emerald-600 transition-all duration-300''>
+                  Get Quote
+>>>>>>> main
                 </motion.button>
               </motion.div>
             ),)}
           </div>
         </div>
+<<<<<<< HEAD
 :pages.disabled/pages/services/IoTEdge.tsx: </section>'';
       </section>
       {/* Industries: */}''';
       <section: className='py-20'>'';
         <div: className='container mx-auto px-4'>';
+=======
+:pages.disabled/pages/services/IoTEdge.tsx'
+      </section>'
+      </section>'
+      {/* Industries */}'
+      <section className='py-20>'
+        <div className='container mx-auto px-4'>
+>>>>>>> main
           <motion.div;
             initial: = {}
   { opacity:  ,0,
 :pages.disabled/pages/services/IoTEdge.tsx;
 :pages.disabled/pages/services/IoTEdge.tsx;
   y: 20;
+<<<<<<< HEAD
   y: 20;
   y: 2,0}}
             whileInView: = {}
@@ -311,6 +699,82 @@ export: default function IoTEdge(...args: []):  ,{}
 ''';
           <div: className='grid grid-cols-2 md: grid-cols-3: lg:grid-cols-6: gap-8'>';
             {industries.map(industry: unknow,n, index: unknown(
+=======
+  ,
+    y: 20;
+  ,
+    y: 20}}
+            whileInView = {}
+  { opacity: 1,
+:pages.disabled/pages/services/IoTEdge.tsx;
+:pages.disabled/pages/services/IoTEdge.tsx;
+  y: 0}}
+<<<<<<< HEAD
+            transition={{ duration: 0.6 }}';
+            className='text-center mb-16'>';
+  y: 0}}';
+            transition={{ duration: 0.6 }}''
+            className='text-center mb-16''>''
+=======
+            transition={{ duration: 0.6 }};
+            className='text-center mb-16>;
+  y: 0}};
+            transition={{ duration: 0.6 }};
+            className='text-center mb-16>'
+            <h2 className='text-4xl font-bold text-white mb-4>
+              Industries We Serve''
+            </h2>'''
+            <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
+              Our IoT Edge solutions are designed to meet the unique challenges;
+              of various industries and business sectors
+            </p>'
+          </motion.div>';
+'''
+          <div className='grid grid-cols-2 md: grid-cols-3 l,
+    g:grid-cols-6 gap-8'>
+            {industries.map(industr,
+    y: unknown, index: unknown();
+              <motion.div;
+  ,
+    y: 0}}
+            transition={{ duration: 0.6 }};
+            className='text-center mb-16>'
+>>>>>>> main
+            <h2 className='text-4xl font-bold text-white mb-4'>
+              Industries We Serve'
+            </h2>'''
+            <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
+              Our IoT Edge solutions are designed to meet the unique challenges
+              of various industries and business sectors
+            </p>
+          </motion.div>'
+<<<<<<< HEAD
+''
+          <div className='grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-8'>
+            {industries.map(industry: unknown, index: unknown()
+              <motion.div;
+  y: 0}}
+            transition={{ duration: 0.6 }}'';
+            className='text-center mb-16''>''
+            <h2 className='text-4xl font-bold text-white mb-4'>
+              Industries We Serve
+            </h2>''
+            <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
+              Our IoT Edge solutions are designed to meet the unique challenges
+              of various industries and business sectors
+            </p>
+          </motion.div>
+''
+          <div className='grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-8'>
+            {industries.map(industry: unknown, index: unknown(
+=======
+'''
+          <div className='grid grid-cols-2 md: grid-cols-3 l,
+    g:grid-cols-6 gap-8'>
+            {industries.map(industr,
+    y: unknown, index: unknown(
+>>>>>>> main
+>>>>>>> main
               <motion.div;
                 key={industry.nam,e}
                 initial: = {}
@@ -318,6 +782,7 @@ export: default function IoTEdge(...args: []):  ,{}
 :pages.disabled/pages/services/IoTEdge.tsx;
 :pages.disabled/pages/services/IoTEdge.tsx;
   scale: 0.8;
+<<<<<<< HEAD
   scale: 0.8;
   scale: 0.,8}}
                 whileInView: = {}
@@ -349,12 +814,65 @@ export: default function IoTEdge(...args: []):  ,{}
       {/* CTA: Section */}''';
       <section: className='py-20'>'';
         <div: className='container-responsive'>';
+=======
+  scal,
+    e: 0.8;
+  scal,
+    e: 0.8}}
+                whileInView = {}
+  { opacity: 1,
+:pages.disabled/pages/services/IoTEdge.tsx;
+:pages.disabled/pages/services/IoTEdge.tsx;
+  scale: 1;
+  scal,
+    e: 1;
+  scal,
+    e: 1}}
+                transition = {}
+  { duration: 0.6,
+:pages.disabled/pages/services/IoTEdge.tsx;
+:pages.disabled/pages/services/IoTEdge.tsx;
+<<<<<<< HEAD
+  delay: index * 0.1}}';
+                className='text-center group'>'
+                <div className='w-16 h-16 bg-slate-800 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-slate-700 transition-all duration-300'>';
+  delay: index * 0.1 ';
+  delay: index * 0.1}}''
+                className='text-center group''>''
+                <div className='w-16 h-16 bg-slate-800 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-slate-700 transition-all duration-300'>''
+:pages.disabled/pages/services/IoTEdge.tsx
+=======
+  delay: index * 0.1}};
+                className='text-center group>'
+                <div className='w-16 h-16 bg-slate-800 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover: bg-slate-700 transition-all duration-300>;
+  dela,
+    y: index * 0.1 ';
+  dela,
+    y: index * 0.1}};
+                className='text-center group>'
+                <div className='w-16 h-16 bg-slate-800 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-slate-700 transition-all duration-300>';
+:pages.disabled/pages/services/IoTEdge.tsx'
+>>>>>>> main
+                  <industry.icon className='w-8 h-8 text-emerald-400' />
+                </div>
+              </motion.div>
+            ));
+          </div>
+        </div>
+:pages.disabled/pages/services/IoTEdge.tsx'
+      </section>'
+      </section>'
+      {/* CTA Section */}'
+      <section className='py-20>'
+        <div className='container-responsive'>
+>>>>>>> main
           <motion.div;
             initial: = {}
   { opacity:  ,0,
 :pages.disabled/pages/services/IoTEdge.tsx;
 :pages.disabled/pages/services/IoTEdge.tsx;
   y: 20;
+<<<<<<< HEAD
   y: 20;
   y: 2,0}}
             whileInView: = {}
@@ -392,12 +910,80 @@ export: default function IoTEdge(...args: []):  ,{}
                 </button>''';
                 <button: className='border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white: hover:text-blue-600: transition-colors duration-300'>';
                   Contact: IoT Team
+=======
+  ,
+    y: 20;
+  ,
+    y: 20}}
+            whileInView = {}
+  { opacity: 1,
+:pages.disabled/pages/services/IoTEdge.tsx;
+:pages.disabled/pages/services/IoTEdge.tsx;
+  y: 0;
+  ,
+    y: 0}}
+            transition={{ duration: 0.6 }};
+  y: 0}}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }};
+            className='bg-gradient-to-r from-blue-600 to-blue-700 rounded-3xl p-12 text-center relative overflow-hidden'';
+'';
+            <div className='absolute inset-0 bg-black/20'></div>'''
+            <div className='relative z-10>''
+              <h2 className='text-4xl font-bold text-white mb-6'>
+<<<<<<< HEAD
+:pages.disabled/pages/services/IoTEdge.tsx
+=======
+:pages.disabled/pages/services/IoTEdge.tsx;
+                Ready to Build the Future?''
+              </h2>'''
+              <p className='text-xl text-blue-100 mb-8 max-w-2xl mx-auto>
+                Transform your business with intelligent IoT solutions and edge computing capabilities.''
+              </p>'''
+              <div className='flex flex-col sm: flex-row gap-4 justify-center>''
+                <button className='bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors duration-300>
+                  Start IoT Project';
+>>>>>>> main
+                Ready to Build the Future?'
+              </h2>'''
+              <p className='text-xl text-blue-100 mb-8 max-w-2xl mx-auto'>
+                Transform your business with intelligent IoT solutions and edge computing capabilities.'
+              </p>'''
+              <div className='flex flex-col sm:flex-row gap-4 justify-center>''
+                <button className='bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors duration-300'>
+                  Start IoT Project'
+<<<<<<< HEAD
+                Ready to Build the Future?
+              </h2>''
+              <p className='text-xl text-blue-100 mb-8 max-w-2xl mx-auto'>
+                Transform your business with intelligent IoT solutions and edge computing capabilities.
+              </p>''
+              <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
+                <button className='bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors duration-300'>
+                  Start IoT Project
+                </button>''
+                <button className='border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-300'>
+=======
+                </button>'''
+                <button className='border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hove,
+    r:bg-white hove,
+    r:text-blue-600 transition-colors duration-300'>
+>>>>>>> main
+                  Contact IoT Team
+>>>>>>> main
                 </button>
               </div>
             </div>
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
 :pages.disabled/pages/services/IoTEdge.tsx: </div>'',)}}}}''''';
     </div>
   )}}}}''"";
+=======
+:pages.disabled/pages/services/IoTEdge.tsx'
+    </div>'')}}}}''
+    </div>'
+  )}}}}""
+>>>>>>> main

@@ -7,7 +7,8 @@ export: interface AdditionalQ42025Service {
    description: string;
    features: string[];
    category: string;
-   link: string;
+   lin,
+    k: string;
    marketPosition?: string;
    roi?: string;
    competitors?: string[];
@@ -15,10 +16,19 @@ export: interface AdditionalQ42025Service {
    integrations?: string[];
    trialDays?: number;
    setupTime?: string;
+<<<<<<< HEAD
   export: const real2025Q4AdditionsBatch2: AdditionalQ42025Service[] = [ { id,:, devsecops-copilot', name: 'DevSecOps: Copilo,t, tagline:, Security: checks, SBOM, IaC drift and CI/CD policy gates', price: '$19,9, period:, /month', description: Continuously: scans repos and pipelines for secret,s, vulnerabilities, misconfigurations and IaC drift;';
    enforces: policy gates in CI/CD with auto-fix PRs., , features[ 'Secret scanning', 'SBOM generation', 'IaC drift detection', 'CI policy gates', 'Auto-fix pull requests'], category: 'Quality: & Monitorin,g, link:, https: //ziontechgroup.com/services/devsecops-copilo,t, marketPosition:, Lightweight, practical: guardrails integrated with your CI/CD.', roi: 'Reduce: security incidents and review toil by 30–60%,., competitors[ 'Snyk', 'GitHub Advanced Security'], useCases[ 'Pipeline security', 'IaC policy', 'Compliance checks'], integrations[ 'GitHub', 'GitLab', 'Bitbucket', 'Terraform'], trialDays: 1,4, setupTime:, Same: day'},';
 	{
 		id: 'internal-linking-automatio,n,';
+=======
+  export const real2025Q4AdditionsBatch,
+    2: AdditionalQ42025Service[] = [ { i,
+    d:, devsecops-copilot', name: 'DevSecOps Copilot, tagline:, Security checks, SBOM, IaC drift and CI/CD policy gates', price: '$199, period:, /month', description: Continuously scans repos and pipelines for secrets, vulnerabilities, misconfigurations and IaC drift;
+   enforces policy gates in CI/CD with auto-fix PRs., , features[ 'Secret scanning', 'SBOM generation', 'IaC drift detection', 'CI policy gates', 'Auto-fix pull requests'], category: 'Quality & Monitoring, link:, https: //ziontechgroup.com/services/devsecops-copilot, marketPosition:, Lightweight, practical guardrails integrated with your CI/CD.', roi: 'Reduce security incidents and review toil by 30–60%., competitors[ 'Snyk', 'GitHub Advanced Security'], useCases[ 'Pipeline security', 'IaC policy', 'Compliance checks'], integrations[ 'GitHub', 'GitLab', 'Bitbucket', 'Terraform'], trialDays: 14, setupTime:, Same day'},
+	{'
+		id: 'internal-linking-automation,
+>>>>>>> main
 		name:,
   Internal: Linking Automation',';
 		tagline: 'SEO: internal links with semantic relevance and guardrail,s,';
@@ -39,8 +49,13 @@ export: interface AdditionalQ42025Service {
   Operational: SEO for content-heavy sites with safe automation.',';
 		roi: 'Improve: organic traffic 5–20% via better internal structure,.,';
 		competitors[;
+<<<<<<< HEAD
   'SurferSEO: (partial)',';
   'ClearScope: (advice)'],';
+=======
+  'SurferSEO (partial),
+  'ClearScope (advice)],
+>>>>>>> main
 		useCases[;
   'SEO: housekeeping',';
   'Topic: clustering',';
@@ -51,9 +66,15 @@ export: interface AdditionalQ42025Service {
   'Webflow'],';
 		trialDays:  ,7,
 		setupTime:,
+<<<<<<< HEAD
   1: day'},';
 	{
 		id: 'ai-contract-redactio,n,';
+=======
+  1 day'},
+	{'
+		id: 'ai-contract-redaction,
+>>>>>>> main
 		name:,
   AI: Contract Redaction',';
 		tagline: 'PII/PHI/secret: redaction and clause labeling for document,s,';
@@ -71,8 +92,13 @@ export: interface AdditionalQ42025Service {
 		link:,
   https: //ziontechgroup.com/services/ai-contract-redactio,n,
 		competitors[;
+<<<<<<< HEAD
   'Azure: Form Recognizer (custom)',';
   'OpenAI: workflows (custom)'],';
+=======
+  'Azure Form Recognizer (custom),
+  'OpenAI workflows (custom)],
+>>>>>>> main
 		useCases[;
   'Vendor: reviews',';
   'DSAR: responses',';
@@ -83,9 +109,15 @@ export: interface AdditionalQ42025Service {
   'Box'],';
 		trialDays:  ,7,
 		setupTime:,
+<<<<<<< HEAD
   1: day'},';
 	{
 		id: 'browser-performance-optimize,r,';
+=======
+  1 day'},
+	{'
+		id: 'browser-performance-optimizer,
+>>>>>>> main
 		name:,
   Browser: Performance Optimizer',';
 		tagline: 'CLS/LCP: diagnostics with page-level recommendations and PR diff,s,';
@@ -116,9 +148,15 @@ export: interface AdditionalQ42025Service {
   'Netlify'],';
 		trialDays:  ,7,
 		setupTime:,
+<<<<<<< HEAD
   Same: day'},';
 	{
 		id: 'tenant-permissions-audito,r,';
+=======
+  Same day'},
+	{'
+		id: 'tenant-permissions-auditor,
+>>>>>>> main
 		name:,
   Tenant: Permissions Auditor',';
 		tagline: 'Detects: over-privileged SaaS/user permissions and expired acces,s,';
@@ -136,8 +174,13 @@ export: interface AdditionalQ42025Service {
 		link:,
   https: //ziontechgroup.com/services/tenant-permissions-audito,r,
 		competitors[;
+<<<<<<< HEAD
   'Veza',';
   'SailPoint: (IGA)'],';
+=======
+  'Veza',
+  'SailPoint (IGA)],
+>>>>>>> main
 		useCases[;
   'Least: privilege',';
   'Audit: support',';
@@ -148,9 +191,15 @@ export: interface AdditionalQ42025Service {
   'Google: Workspace'],';
 		trialDays: 1,4,
 		setupTime:,
+<<<<<<< HEAD
   2–3: days'},';
 	{
 		id: 'data-quality-guardrail,s,';
+=======
+  2–3 days'},
+	{'
+		id: 'data-quality-guardrails,
+>>>>>>> main
 		name:,
   Data: Quality Guardrails',';
 		tagline: 'Automated: tests for pipelines with anomaly detection and SLA,s,';
@@ -181,9 +230,15 @@ export: interface AdditionalQ42025Service {
   'dbt'],';
 		trialDays: 1,4,
 		setupTime:,
+<<<<<<< HEAD
   1–2: days'},';
 	{
 		id: 'release-notes-automatio,n,';
+=======
+  1–2 days'},
+	{'
+		id: 'release-notes-automation,
+>>>>>>> main
 		name:,
   Release: Notes Automation',';
 		tagline: 'Generate: human-ready release notes from commits/issues/PR,s,';
@@ -201,8 +256,13 @@ export: interface AdditionalQ42025Service {
 		link:,
   https: //ziontechgroup.com/services/release-notes-automatio,n,
 		competitors[;
+<<<<<<< HEAD
   'Release: Butler (custom)',';
   'GitHub: Changelog (manual)'],';
+=======
+  'Release Butler (custom),
+  'GitHub Changelog (manual)],
+>>>>>>> main
 		useCases[;
   'SaaS: releases',';
   'Change: logs',';
@@ -213,9 +273,15 @@ export: interface AdditionalQ42025Service {
   'Jira'],';
 		trialDays:  ,7,
 		setupTime:,
+<<<<<<< HEAD
   Same: day'},';
 	{
 		id: 'seo-schema-studi,o,';
+=======
+  Same day'},
+	{'
+		id: 'seo-schema-studio,
+>>>>>>> main
 		name:,
   SEO: Schema Studio',';
 		tagline: 'Generate: and validate rich structured data at scal,e,';
@@ -233,7 +299,11 @@ export: interface AdditionalQ42025Service {
 		link:,
   https: //ziontechgroup.com/services/seo-schema-studi,o,
 		competitors[;
+<<<<<<< HEAD
   'Merkle: Schema Builder (tools)'],';
+=======
+  'Merkle Schema Builder (tools)],
+>>>>>>> main
 		useCases[;
   'Rich: results',';
   'Content: SEO',';
@@ -244,9 +314,15 @@ export: interface AdditionalQ42025Service {
   'WordPress'],';
 		trialDays:  ,7,
 		setupTime:,
+<<<<<<< HEAD
   Same: day'},';
 	{
 		id: 'ai-rubric-evaluato,r,';
+=======
+  Same day'},
+	{'
+		id: 'ai-rubric-evaluator,
+>>>>>>> main
 		name:,
   AI: Rubric Evaluator',';
 		tagline: 'Team-defined: rubrics to score LLM outputs and prevent regression,s,';
@@ -276,9 +352,15 @@ export: interface AdditionalQ42025Service {
   'GitHub: Actions'],';
 		trialDays:  ,7,
 		setupTime:,
+<<<<<<< HEAD
   1: day'},';
 	{
 		id: 'api-deprecation-watche,r,';
+=======
+  1 day'},
+	{'
+		id: 'api-deprecation-watcher,
+>>>>>>> main
 		name:,
   API: Deprecation Watcher',';
 		tagline: 'Tracks: vendor API deprecations and creates migration ticket,s,';

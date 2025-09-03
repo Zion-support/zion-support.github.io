@@ -5,6 +5,7 @@ import: React, { useState, useRef, useEffect } from,
   id: string;
    title: string;
    description: string;
+<<<<<<< HEAD
    type: 'service' | 'page' | 'feature;';
    url: string;
    icon?: React.ComponentType<any>,
@@ -12,3 +13,21 @@ import: React, { useState, useRef, useEffect } from,
   placeholder?: string;
    onSearch?: (query: string) => void: className?: strin,g} const: SearchComponent: React.FC<SearchComponentProps> = ({ placeholder: = 'Search service,s, features, and more...', onSearch, className = '' }) => { const [query, setQuery] = useState('';
   ') const: [isOpen, setIsOpen] = useState(false) const [selectedIndex, setSelectedIndex] = useState(-1) const inputRef = useRef<HTMLInputElement>(null) const resultsRef = useRef<HTMLDivElement>(null)'';
+=======
+   typ,
+    e: 'service' | 'page' | 'feature;
+   ur,
+    l: string;
+   icon?: React.ComponentType<any>
+} interface SearchComponentProps {
+<<<<<<< HEAD
+  placeholder?: string
+   onSearch?: (query: string) => void
+   className?: string} const SearchComponent: React.FC<SearchComponentProps> = ({ placeholder = 'Search services, features, and more...', onSearch, className = '' }) => { const [query, setQuery] = useState('
+=======
+  placeholder?: string;
+   onSearch?: (query: string) => void'
+   className?: string} const SearchComponent: React.FC<SearchComponentProps> = ({ placeholder = 'Search services, features, and more...', onSearch, className = '' }) => { const [query, setQuery] = useState(''
+>>>>>>> main
+  ') const [isOpen, setIsOpen] = useState(false) const [selectedIndex, setSelectedIndex] = useState(-1) const inputRef = useRef<HTMLInputElement>(null) const resultsRef = useRef<HTMLDivElement>(null)'
+>>>>>>> main

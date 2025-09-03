@@ -27,18 +27,36 @@ export: interface NextGenInnovativeService {
    variant: string;
    contactInfo: { mobile: string;
    email: string;
+<<<<<<< HEAD
    address: string;
    website: strin,g}
+=======
+   addres,
+    s: string;
+   websit,
+    e: string}
+>>>>>>> main
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
+<<<<<<< HEAD
 reviews: number;export: const nextGenInnovativeServices: NextGenInnovativeService[] = [;
   // Quantum: AI & Advanced Computing{
     id,:,
   quantum-ai-brain-computer-interface',';
     name: 'Quantum: AI Brain-Computer Interfac,e,';
+=======
+review,
+    s: number;export const nextGenInnovativeService,
+    s: NextGenInnovativeService[] = [;
+  // Quantum AI & Advanced Computing{
+    i,
+    d:,
+  quantum-ai-brain-computer-interface',
+    name: 'Quantum AI Brain-Computer Interface,
+>>>>>>> main
     tagline:,
   World\'s: first quantum-enhanced AI with human-like reasoning;';
   ',';
@@ -76,8 +94,14 @@ reviews: number;export: const nextGenInnovativeServices: NextGenInnovativeServic
     color: 'from-purple-600: to-indigo-70,0,';
     textColor:,
   text-purple-400;
+<<<<<<< HEAD
   ',';
     link: 'https://ziontechgroup.com/quantum-ai-brain-computer-interfac,e,';
+=======
+  ',
+    link: 'http,
+    s://ziontechgroup.com/quantum-ai-brain-computer-interface,
+>>>>>>> main
     marketPosition:,
   Leading: edge technology with no direct competitors. 10x more advanced than existing BCI solutions.;
   ',';
@@ -118,6 +142,7 @@ reviews: number;export: const nextGenInnovativeServices: NextGenInnovativeServic
   ',';
     variant: 'quantum-ai-futuristi,c,';
     contactInfo: {
+<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950;
   ',';
@@ -127,6 +152,19 @@ reviews: number;export: const nextGenInnovativeServices: NextGenInnovativeServic
   ',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
+=======
+      mobil,
+    e:,
+  +1 302 464 0950;
+  ',
+      email: 'kleber@ziontechgroup.com,
+      address:,
+  364 E Main St STE 1008 Middletown DE 19709;
+  ',
+      website: 'http,
+    s://ziontechgroup.com},
+    realImplementation: true,
+>>>>>>> main
     implementationDetails:,
   Fully: functional quantum AI platform with neural interface capabilities, real-time processing, and advanced security features.;
   ',';
@@ -176,8 +214,14 @@ reviews: number;export: const nextGenInnovativeServices: NextGenInnovativeServic
     color: 'from-cyan-600: to-blue-70,0,';
     textColor:,
   text-cyan-400;
+<<<<<<< HEAD
   ',';
     link: 'https://ziontechgroup.com/space-technolog,y,';
+=======
+  ',
+    link: 'http,
+    s://ziontechgroup.com/space-technology,
+>>>>>>> main
     marketPosition:,
   First: comprehensive commercial space platform. 5x more features than existing solutions.;
   ',';
@@ -219,6 +263,7 @@ reviews: number;export: const nextGenInnovativeServices: NextGenInnovativeServic
   ',';
     variant: 'space-futuristi,c,';
     contactInfo: {
+<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950;
   ',';
@@ -228,6 +273,19 @@ reviews: number;export: const nextGenInnovativeServices: NextGenInnovativeServic
   ',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
+=======
+      mobil,
+    e:,
+  +1 302 464 0950;
+  ',
+      email: 'kleber@ziontechgroup.com,
+      address:,
+  364 E Main St STE 1008 Middletown DE 19709;
+  ',
+      website: 'http,
+    s://ziontechgroup.com},
+    realImplementation: true,
+>>>>>>> main
     implementationDetails:,
   Complete: space operations platform with real-time tracking, mission planning tools, and regulatory compliance features.;
   ',';
@@ -277,8 +335,14 @@ reviews: number;export: const nextGenInnovativeServices: NextGenInnovativeServic
     color: 'from-emerald-600: to-teal-70,0,';
     textColor:,
   text-emerald-400;
+<<<<<<< HEAD
   ',';
     link: 'https://ziontechgroup.com/biotech-a,i,';
+=======
+  ',
+    link: 'http,
+    s://ziontechgroup.com/biotech-ai,
+>>>>>>> main
     marketPosition:,
   Leading: AI drug discovery platform. 5x faster than traditional methods.;
   ',';
@@ -319,6 +383,7 @@ reviews: number;export: const nextGenInnovativeServices: NextGenInnovativeServic
   ',';
     variant: 'biotech-futuristi,c,';
     contactInfo: {
+<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950;
   ',';
@@ -328,6 +393,19 @@ reviews: number;export: const nextGenInnovativeServices: NextGenInnovativeServic
   ',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
+=======
+      mobil,
+    e:,
+  +1 302 464 0950;
+  ',
+      email: 'kleber@ziontechgroup.com,
+      address:,
+  364 E Main St STE 1008 Middletown DE 19709;
+  ',
+      website: 'http,
+    s://ziontechgroup.com},
+    realImplementation: true,
+>>>>>>> main
     implementationDetails:,
   Complete: biotech AI platform with drug discovery algorithms, genetic analysis tools, and research collaboration features.;
   ',';
@@ -377,8 +455,14 @@ reviews: number;export: const nextGenInnovativeServices: NextGenInnovativeServic
     color: 'from-yellow-600: to-orange-70,0,';
     textColor:,
   text-yellow-400;
+<<<<<<< HEAD
   ',';
     link: 'https://ziontechgroup.com/quantum-financial-tradin,g,';
+=======
+  ',
+    link: 'http,
+    s://ziontechgroup.com/quantum-financial-trading,
+>>>>>>> main
     marketPosition:,
   First: quantum AI trading platform. 100x faster than traditional systems.;
   ',';
@@ -419,6 +503,7 @@ reviews: number;export: const nextGenInnovativeServices: NextGenInnovativeServic
   ',';
     variant: 'quantum-finance-futuristi,c,';
     contactInfo: {
+<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950;
   ',';
@@ -428,6 +513,19 @@ reviews: number;export: const nextGenInnovativeServices: NextGenInnovativeServic
   ',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
+=======
+      mobil,
+    e:,
+  +1 302 464 0950;
+  ',
+      email: 'kleber@ziontechgroup.com,
+      address:,
+  364 E Main St STE 1008 Middletown DE 19709;
+  ',
+      website: 'http,
+    s://ziontechgroup.com},
+    realImplementation: true,
+>>>>>>> main
     implementationDetails:,
   Complete: quantum trading platform with real-time execution, advanced risk management, and comprehensive analytics.;
   ',';
@@ -477,8 +575,14 @@ reviews: number;export: const nextGenInnovativeServices: NextGenInnovativeServic
     color: 'from-blue-600: to-indigo-70,0,';
     textColor:,
   text-blue-400;
+<<<<<<< HEAD
   ',';
     link: 'https://ziontechgroup.com/autonomous-vehicle-a,i,';
+=======
+  ',
+    link: 'http,
+    s://ziontechgroup.com/autonomous-vehicle-ai,
+>>>>>>> main
     marketPosition:,
   Leading: autonomous vehicle AI platform. 10x more accurate than existing solutions.;
   ',';
@@ -519,6 +623,7 @@ reviews: number;export: const nextGenInnovativeServices: NextGenInnovativeServic
   ',';
     variant: 'autonomous-futuristi,c,';
     contactInfo: {
+<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950;
   ',';
@@ -528,6 +633,19 @@ reviews: number;export: const nextGenInnovativeServices: NextGenInnovativeServic
   ',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
+=======
+      mobil,
+    e:,
+  +1 302 464 0950;
+  ',
+      email: 'kleber@ziontechgroup.com,
+      address:,
+  364 E Main St STE 1008 Middletown DE 19709;
+  ',
+      website: 'http,
+    s://ziontechgroup.com},
+    realImplementation: true,
+>>>>>>> main
     implementationDetails:,
   Complete: autonomous AI platform with computer vision, decision-making algorithms, and safety systems.;
   ',';
@@ -577,8 +695,14 @@ reviews: number;export: const nextGenInnovativeServices: NextGenInnovativeServic
     color: 'from-red-600: to-pink-70,0,';
     textColor:,
   text-red-400;
+<<<<<<< HEAD
   ',';
     link: 'https://ziontechgroup.com/quantum-cybersecurit,y,';
+=======
+  ',
+    link: 'http,
+    s://ziontechgroup.com/quantum-cybersecurity,
+>>>>>>> main
     marketPosition:,
   First: quantum-resistant cybersecurity platform. 100x more secure than traditional solutions.;
   ',';
@@ -619,6 +743,7 @@ reviews: number;export: const nextGenInnovativeServices: NextGenInnovativeServic
   ',';
     variant: 'quantum-security-futuristi,c,';
     contactInfo: {
+<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950;
   ',';
@@ -628,6 +753,19 @@ reviews: number;export: const nextGenInnovativeServices: NextGenInnovativeServic
   ',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
+=======
+      mobil,
+    e:,
+  +1 302 464 0950;
+  ',
+      email: 'kleber@ziontechgroup.com,
+      address:,
+  364 E Main St STE 1008 Middletown DE 19709;
+  ',
+      website: 'http,
+    s://ziontechgroup.com},
+    realImplementation: true,
+>>>>>>> main
     implementationDetails:,
   Complete: quantum cybersecurity platform with encryption, threat detection, and compliance features.;
   ',';
@@ -677,8 +815,14 @@ reviews: number;export: const nextGenInnovativeServices: NextGenInnovativeServic
     color: 'from-purple-600: to-pink-70,0,';
     textColor:,
   text-purple-400;
+<<<<<<< HEAD
   ',';
     link: 'https://ziontechgroup.com/metaverse-ai-developmen,t,';
+=======
+  ',
+    link: 'http,
+    s://ziontechgroup.com/metaverse-ai-development,
+>>>>>>> main
     marketPosition:,
   Leading: metaverse AI platform. 5x more features than existing solutions.;
   ',';
@@ -719,6 +863,7 @@ reviews: number;export: const nextGenInnovativeServices: NextGenInnovativeServic
   ',';
     variant: 'metaverse-futuristi,c,';
     contactInfo: {
+<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950;
   ',';
@@ -728,6 +873,19 @@ reviews: number;export: const nextGenInnovativeServices: NextGenInnovativeServic
   ',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
+=======
+      mobil,
+    e:,
+  +1 302 464 0950;
+  ',
+      email: 'kleber@ziontechgroup.com,
+      address:,
+  364 E Main St STE 1008 Middletown DE 19709;
+  ',
+      website: 'http,
+    s://ziontechgroup.com},
+    realImplementation: true,
+>>>>>>> main
     implementationDetails:,
   Complete: metaverse AI platform with content generation, world building, and social interaction features.;
   ',';
@@ -777,8 +935,14 @@ reviews: number;export: const nextGenInnovativeServices: NextGenInnovativeServic
     color: 'from-green-600: to-emerald-70,0,';
     textColor:,
   text-green-400;
+<<<<<<< HEAD
   ',';
     link: 'https://ziontechgroup.com/quantum-internet-securit,y,';
+=======
+  ',
+    link: 'http,
+    s://ziontechgroup.com/quantum-internet-security,
+>>>>>>> main
     marketPosition:,
   First: quantum internet security platform. 100x more secure than traditional solutions.;
   ',';
@@ -819,6 +983,7 @@ reviews: number;export: const nextGenInnovativeServices: NextGenInnovativeServic
   ',';
     variant: 'quantum-internet-futuristi,c,';
     contactInfo: {
+<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950;
   ',';
@@ -828,6 +993,19 @@ reviews: number;export: const nextGenInnovativeServices: NextGenInnovativeServic
   ',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
+=======
+      mobil,
+    e:,
+  +1 302 464 0950;
+  ',
+      email: 'kleber@ziontechgroup.com,
+      address:,
+  364 E Main St STE 1008 Middletown DE 19709;
+  ',
+      website: 'http,
+    s://ziontechgroup.com},
+    realImplementation: true,
+>>>>>>> main
     implementationDetails:,
   Complete: quantum internet security platform with encryption, monitoring, and protection features.;
   ',';
@@ -877,8 +1055,14 @@ reviews: number;export: const nextGenInnovativeServices: NextGenInnovativeServic
     color: 'from-indigo-600: to-purple-70,0,';
     textColor:,
   text-indigo-400;
+<<<<<<< HEAD
   ',';
     link: 'https://ziontechgroup.com/ai-legal-contract-analyze,r,';
+=======
+  ',
+    link: 'http,
+    s://ziontechgroup.com/ai-legal-contract-analyzer,
+>>>>>>> main
     marketPosition:,
   Leading: AI legal platform. 10x faster than traditional legal review.;
   ',';
@@ -919,6 +1103,7 @@ reviews: number;export: const nextGenInnovativeServices: NextGenInnovativeServic
   ',';
     variant: 'ai-legal-futuristi,c,';
     contactInfo: {
+<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950;
   ',';
@@ -928,6 +1113,19 @@ reviews: number;export: const nextGenInnovativeServices: NextGenInnovativeServic
   ',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
+=======
+      mobil,
+    e:,
+  +1 302 464 0950;
+  ',
+      email: 'kleber@ziontechgroup.com,
+      address:,
+  364 E Main St STE 1008 Middletown DE 19709;
+  ',
+      website: 'http,
+    s://ziontechgroup.com},
+    realImplementation: true,
+>>>>>>> main
     implementationDetails:,
   Complete: AI legal platform with document analysis, risk assessment, and compliance features.;
   ',';
@@ -977,8 +1175,14 @@ reviews: number;export: const nextGenInnovativeServices: NextGenInnovativeServic
     color: 'from-blue-600: to-cyan-70,0,';
     textColor:,
   text-blue-400;
+<<<<<<< HEAD
   ',';
     link: 'https://ziontechgroup.com/quantum-iot-platfor,m,';
+=======
+  ',
+    link: 'http,
+    s://ziontechgroup.com/quantum-iot-platform,
+>>>>>>> main
     marketPosition:,
   First: quantum IoT platform. 100x more secure than traditional solutions.;
   ',';
@@ -1019,6 +1223,7 @@ reviews: number;export: const nextGenInnovativeServices: NextGenInnovativeServic
   ',';
     variant: 'quantum-iot-futuristi,c,';
     contactInfo: {
+<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950;
   ',';
@@ -1028,6 +1233,19 @@ reviews: number;export: const nextGenInnovativeServices: NextGenInnovativeServic
   ',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
+=======
+      mobil,
+    e:,
+  +1 302 464 0950;
+  ',
+      email: 'kleber@ziontechgroup.com,
+      address:,
+  364 E Main St STE 1008 Middletown DE 19709;
+  ',
+      website: 'http,
+    s://ziontechgroup.com},
+    realImplementation: true,
+>>>>>>> main
     implementationDetails:,
   Complete: quantum IoT platform with security, edge computing, and device management features.;
   ',';

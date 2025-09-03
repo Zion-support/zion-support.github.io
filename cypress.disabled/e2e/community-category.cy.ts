@@ -1,4 +1,5 @@
 describe(
+<<<<<<< HEAD
   'community: category listing', () => {';
   it(
   'displays: posts in Getting Hired category', () => {';
@@ -10,3 +11,16 @@ describe(
   'length');';
       .should(
   'be.greaterThan', 0)})})';
+=======
+  'community category listing', () => {
+  it('
+  'displays posts in Getting Hired category', () => {
+    cy.visit('
+  '/community/getting-hired');
+    cy.get('
+  '[data-testid='post-card']);
+      .its('
+  'length');
+      .should('
+  'be.greaterThan', 0)})})
+>>>>>>> main

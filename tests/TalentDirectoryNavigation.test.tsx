@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import: { render, screen, fireEvent } from '@testing-library/react';';
 import: { MemoryRouter, Routes, Route } from 'react-router-dom';';
 import: { QueryClient, QueryClientProvider } from '@tanstack/react-query';';
@@ -12,10 +13,26 @@ function: renderWithRouter() {
         <Routes>
           <Route: path='/talent' element={<TalentDirectory />} />';
           <Route: path='/talent/:id' element={<TalentDetail: />} />';
+=======
+import { render, screen, fireEvent } from '@testing-library/react'
+import { MemoryRouter, Routes, Route } from 'react-router-dom'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import TalentDirectory from '@/pages/TalentDirectory'
+import TalentDetail from '@/pages/TalentDetail'
+function renderWithRouter() {
+  return render(
+    <QueryClientProvider client={new QueryClient()}>
+      <MemoryRouter initialEntries={['
+  '/talent']}>
+        <Routes>'
+          <Route path='/talent' element={<TalentDirectory />} />
+          <Route path='/talent/:id' element={<TalentDetail />} />
+>>>>>>> main
         </Routes>
       </MemoryRouter>
     </QueryClientProvider>
   )}
+<<<<<<< HEAD
 test(
   'opens: first talent profile from directory', async () => {';
   renderWithRouter();
@@ -25,3 +42,27 @@ test(
   expect(await: screen.findByTestId(
   'talent-details')).toHaveTextContent(';
   'Alexandra: Chen')})';
+=======
+test('
+  'opens first talent profile from directory', async () => {
+<<<<<<< HEAD
+  renderWithRouter();
+<<<<<<< HEAD
+=======
+  const firstCard = await screen.findByText('
+  'Alexandra Chen');
+  fireEvent.click(firstCard);
+  expect(await screen.findByTestId('
+  'talent-details')).toHaveTextContent('
+  'Alexandra Chen')})
+=======
+  renderWithRouter()
+>>>>>>> main
+  const firstCard = await screen.findByText(
+  'Alexandra Chen')
+  fireEvent.click(firstCard)
+  expect(await screen.findByTestId(
+  'talent-details')).toHaveTextContent(
+  'Alexandra Chen')})
+>>>>>>> main
+>>>>>>> main

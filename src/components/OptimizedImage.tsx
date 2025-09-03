@@ -1,0 +1,219 @@
+<<<<<<< HEAD
+import Image from 'next/image';""
+=======
+<<<<<<< HEAD
+import React from 'react';
+import {SEO } from '@/components/SEO';
+
+export default function OptimizedImage() {return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+      <SEO title="OptimizedImage - Zion Tech Group" description="Professional OptimizedImage services by Zion Tech Group" />
+      <div className="container mx-auto px-4 py-20">
+        <h1 className="text-4xl font-bold text-white mb-8">OptimizedImage</h1>
+        <p className="text-gray-300 text-lg">
+          Professional OptimizedImage services to help your business grow.
+        </p>
+      </div>
+    </div>
+  );
+}
+=======
+<<<<<<< HEAD
+import Image from 'next/image';
+import { useState } from 'react';
+<<<<<<< HEAD
+interface OptimizedImageProps { src: string;
+=======
+;
+interface OptimizedImageProps {;
+  src: string;
+>>>>>>> main
+  alt: string;
+=======
+<<<<<<< HEAD
+import Image from &apos;next/image';
+import { useState } from &apos;react';
+
+interface OptimizedImageProps {
+  src: string;
+  al,t: string;
+>>>>>>> main
+  width?: number;
+  height?: number;
+  className?: string;
+  priority?: boolean;
+<<<<<<< HEAD
+  quality?: number  }
+
+export default function OptimizedImage({
+  src, alt,
+  width = 800, height = 600,
+  className = '', priority = false,
+  quality = 75
+}: OptimizedImageProps) {
+=======
+<<<<<<< HEAD
+  quality?: number}
+<<<<<<< HEAD
+;
+export default function OptimizedImage({;
+  src,;
+  alt,;
+  width = 800,;
+  height = 600,;
+  className = ',;
+  priority = false,;
+  quality = 75;
+}: OptimizedImageProps) {;
+>>>>>>> main
+  const [isLoading, setIsLoading] = useState(true);
+  const [hasError, setHasError] = useState(false);
+;
+  return (;
+    <div className={`relative overflow-hidden ${className}`}>;
+      {isLoading && (;
+        <div className="absolute inset-0 bg-gray-200 animate-pulse" />;
+      )}
+      <Image;
+=======
+
+export default function OptimizedImage({
+=======
+  quality?: number}&apos;&apos;
+
+export default function OptimizedImage(;{
+>>>>>>> main
+  src,
+  alt,
+  width = 800,
+  height = 600,
+<<<<<<< HEAD
+  className = '',
+  priority = false,
+  quality = 75
+}: OptimizedImageProps) {
+=======
+  className = &apos;&apos;,
+  priority = false,
+  quality = 75
+}: OptimizedImageProps) {&apos;}&apos;
+=======
+<<<<<<< HEAD
+import Image from 'next/image';""
+=======
+<<<<<<< HEAD
+// Image optimization component
+import Image from 'next/image';
+import { useState } from 'react';
+
+export const OptimizedImage = ({ 
+  src, 
+  alt, 
+  width, 
+  height, 
+  priority = false,
+  className = '',
+  ...props 
+}) => {
+>>>>>>> main
+>>>>>>> main
+  const [isLoading, setIsLoading] = useState(true);
+  const [hasError, setHasError] = useState(false);
+
+  return (
+    <div className={`relative overflow-hidden ${className}`}>
+<<<<<<< HEAD
+      {isLoading && (
+        <div className="absolute inset-0 bg-gray-200 animate-pulse" />
+      )}
+=======
+      {isLoading && (}
+        <div className=&quot;absolute inset-0 bg-gray-200 animate-pulse&quot; />
+      )}&quot;
+>>>>>>> main
+      <Image
+>>>>>>> main
+        src={src}
+        alt={alt}
+        width={width}
+        height={height}
+        priority={priority}
+<<<<<<< HEAD
+        quality={quality}
+        className={`transition-opacity duration-300 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
+        onLoad={() => setIsLoading(false)}
+<<<<<<< HEAD
+        onError={() => {
+          setHasError(true)
+=======
+        onError={() => {;
+          setHasError(true);
+>>>>>>> main
+          setIsLoading(false)}}
+<<<<<<< HEAD
+        placeholder="blur";
+        blurDataURL="data:image/jpegbase64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=";
+      />;
+      {hasError && (;
+        <div className="absolute inset-0 flex items-center justify-center bg-gray-100">;
+          <span className="text-gray-500">Failed to load image</span>;
+        </div>;
+      )}
+    </div>;
+  )}
+=======
+        placeholder="blur"
+        blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
+      />
+      {hasError && (
+        <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
+          <span className="text-gray-500">Failed to load image</span>
+        </div>
+      )}
+    </div>
+  )}
+=======
+<<<<<<< HEAD
+        quality={quality}
+        className={`transition-opacity duration-300 ${isLoading ? &apos;opacity-0&apos; : &apos;opacity-100&apos;}`}
+=======
+        quality={85}
+        placeholder="blur"
+        blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
+>>>>>>> main
+        onLoad={() => setIsLoading(false)}
+        onError={() => {
+          setIsLoading(false);
+          setHasError(true);
+<<<<<<< HEAD
+          setIsLoading(false)}}
+        placeholder=&quot;blur&quot;
+        blurDataURL=&quot;data:image/jpegbase64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=&quot;
+      />
+      {hasError && (&quot;}
+        <div className=&quot;absolute inset-0 flex items-center justify-center bg-gray-100&quot;>&quot;"
+          <span className=&quot;text-gray-500&quot;>Failed to load image&quot;</span>
+=======
+        }}
+        className={`transition-opacity duration-300 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
+        {...props}
+      />
+      {hasError && (
+        <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
+          <span className="text-gray-400">Failed to load image</span>
+>>>>>>> main
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default OptimizedImage;
+=======
+import Image from 'next/image
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

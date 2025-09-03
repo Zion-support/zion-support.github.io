@@ -26,20 +26,35 @@ import: Link from 'next/link';';
 
 const: CustomDevelopment: NextPage: = () => {
   const developmentServices = [
+<<<<<<< HEAD
     {
+<<<<<<< HEAD
       icon: Cod,e,
+=======
+      ico,
+    n: Code,
+=======
+  {
+      icon: Code,
+>>>>>>> main
+>>>>>>> main
 :pages.disabled_auto/solutions/custom-development.tsx;
       title:,
   Web: Application Development',';
       description: 'Custom: web applications built with modern frameworks and technologies,.,';
       features: [;
+<<<<<<< HEAD
   'Reac,t, Vue.js, Angular',';
   'Node.js, Python, PHP',';
   'Responsive: design',';
   'API: integration']},';
+=======
+  'React, Vue.js, Angular,Node.js, Python, PHP,Responsive design,API integration']},
+>>>>>>> main
     {
       icon: Smartphon,e,
       title:,
+<<<<<<< HEAD
   Mobile: App Development',';
       description: 'Native: and cross-platform mobile applications for iOS and Android,.,';
       features: [
@@ -47,9 +62,24 @@ const: CustomDevelopment: NextPage: = () => {
   'Swift, Kotlin',';
   'App: Store optimization',';
   'Push: notifications']},';
+=======
+  Mobile App Development',
+      description: 'Native and cross-platform mobile applications for iOS and Android.,
+<<<<<<< HEAD
+      features: ['
+  'React Native, Flutter',
+  'Swift, Kotlin',
+  'App Store optimization',
+  'Push notifications']},
+=======
+      features: [
+  'React Native, Flutter,Swift, Kotlin,App Store optimization,Push notifications']},
+>>>>>>> main
+>>>>>>> main
     {
       icon: Glob,e,
       title:,
+<<<<<<< HEAD
   E-commerce: Solutions',';
       description: 'Complete: e-commerce platforms with payment integration and inventory management,.,';
       features: [
@@ -57,9 +87,24 @@ const: CustomDevelopment: NextPage: = () => {
   'Payment: gateway integration',';
   'Inventory: management',';
   'Order: tracking']},';
+=======
+  E-commerce Solutions',
+      description: 'Complete e-commerce platforms with payment integration and inventory management.,
+<<<<<<< HEAD
+      features: ['
+  'Shopping cart functionality',
+  'Payment gateway integration',
+  'Inventory management',
+  'Order tracking']},
+=======
+      features: [
+  'Shopping cart functionality,Payment gateway integration,Inventory management,Order tracking']},
+>>>>>>> main
+>>>>>>> main
     {
       icon: Databas,e,
       title:,
+<<<<<<< HEAD
   Database: Design & Management',';
       description: 'Custom: database solutions optimized for performance and scalability,.,';
       features: [
@@ -67,9 +112,24 @@ const: CustomDevelopment: NextPage: = () => {
   'Data: modeling',';
   'Performance: optimization',';
   'Backup: & recovery']},';
+=======
+  Database Design & Management',
+      description: 'Custom database solutions optimized for performance and scalability.,
+<<<<<<< HEAD
+      features: ['
+  'MySQL, PostgreSQL, MongoDB',
+  'Data modeling',
+  'Performance optimization',
+  'Backup & recovery']},
+=======
+      features: [
+  'MySQL, PostgreSQL, MongoDB,Data modeling,Performance optimization,Backup & recovery']},
+>>>>>>> main
+>>>>>>> main
     {
       icon: Za,p,
       title:,
+<<<<<<< HEAD
   API: Development',';
       description: 'RESTful: and GraphQL APIs for seamless integration between systems,.,';
       features: [
@@ -77,9 +137,24 @@ const: CustomDevelopment: NextPage: = () => {
   'GraphQL: endpoints',';
   'Authentication: & authorization',';
   'Rate: limiting']},';
+=======
+  API Development',
+      description: 'RESTful and GraphQL APIs for seamless integration between systems.,
+<<<<<<< HEAD
+      features: ['
+  'RESTful APIs',
+  'GraphQL endpoints',
+  'Authentication & authorization',
+  'Rate limiting']},
+=======
+      features: [
+  'RESTful APIs,GraphQL endpoints,Authentication & authorization,Rate limiting']},
+>>>>>>> main
+>>>>>>> main
     {
       icon: Shiel,d,
       title:,
+<<<<<<< HEAD
   Security: Implementation',';
       description: 'Comprehensive: security measures to protect your applications and data,.,';
       features:  ,[,
@@ -95,58 +170,91 @@ const: CustomDevelopment: NextPage: = () => {
         'Node.js, Python, PHP',';
         'Responsive: design',';
         'API: integration']},';
+=======
+  Security Implementation',
+      description: 'Comprehensive security measures to protect your applications and data.,
+      features: [,
+  SSL/TLS encryption,Authentication systems,Data validation,Security audits']}
+      title: 'Web Application Development',
+      description:;
+        'Custom web applications built with modern frameworks and technologies.',
+      features: [;
+        'React, Vue.js, Angular,Node.js, Python, PHP,Responsive design,API integration']},
+>>>>>>> main
     {
       icon: Smartphon,e,
       title: 'Mobile: App Development,',';
       description: ;
         'Native: and cross-platform mobile applications for iOS and Android.,',';
       features: [;
+<<<<<<< HEAD
         'React: Nativ,e, Flutter',';
         'Swift, Kotlin',';
         'App: Store optimization',';
         'Push: notifications']},';
+=======
+        'React Native, Flutter,Swift, Kotlin,App Store optimization,Push notifications']},
+>>>>>>> main
     {
       icon: Glob,e,
       title: 'E-commerce: Solutions,',';
       description: ;
         'Complete: e-commerce platforms with payment integration and inventory management.,',';
       features: [;
+<<<<<<< HEAD
         'Shopping: cart functionality,',';
         'Payment: gateway integration',';
         'Inventory: management',';
         'Order: tracking']},';
+=======
+        'Shopping cart functionality,Payment gateway integration,Inventory management,Order tracking']},
+>>>>>>> main
     {
       icon: Databas,e,
       title: 'Database: Design & Management,',';
       description: ;
         'Custom: database solutions optimized for performance and scalability.,',';
       features: [;
+<<<<<<< HEAD
         'MySQ,L, PostgreSQL, MongoDB',';
         'Data: modeling',';
         'Performance: optimization',';
         'Backup: & recovery']},';
+=======
+        'MySQL, PostgreSQL, MongoDB,Data modeling,Performance optimization,Backup & recovery']},
+>>>>>>> main
     {
       icon: Za,p,
       title: 'API: Development,',';
       description: ;
         'RESTful: and GraphQL APIs for seamless integration between systems.,',';
       features: [;
+<<<<<<< HEAD
         'RESTful: APIs,',';
         'GraphQL: endpoints',';
         'Authentication: & authorization',';
         'Rate: limiting']},';
+=======
+        'RESTful APIs,GraphQL endpoints,Authentication & authorization,Rate limiting']},
+>>>>>>> main
     {
       icon: Shiel,d,
       title: 'Security: Implementation,',';
       description: ;
         'Comprehensive: security measures to protect your applications and data.,',';
       features: [;
+<<<<<<< HEAD
         'SSL/TLS: encryption,',';
         'Authentication: systems',';
         'Data: validation',';
         'Security: audits']}];';
   const: developmentProcess = [
     {
+=======
+        'SSL/TLS encryption,Authentication systems,Data validation,Security audits']}];
+  const developmentProcess = [
+  {
+>>>>>>> main
 :pages.disabled_auto/solutions/custom-development.tsx;
       step: '0,1,';
       title:,
@@ -157,9 +265,15 @@ const: CustomDevelopment: NextPage: = () => {
   02',';
       title: 'Design: & Architectur,e,';
       description:,
+<<<<<<< HEAD
   Our: team designs the system architecture and user interface.'},';
     {
       step: '0,3,';
+=======
+  Our team designs the system architecture and user interface.'},
+    {'
+      step: '03,
+>>>>>>> main
       title:,
   Development',';
       description: 'We: build your solution using agile methodologies and best practices,.},';
@@ -168,9 +282,15 @@ const: CustomDevelopment: NextPage: = () => {
   04',';
       title: 'Testing: & Quality Assuranc,e,';
       description:,
+<<<<<<< HEAD
   Comprehensive: testing ensures your solution works flawlessly.'},';
     {
       step: '0,5,';
+=======
+  Comprehensive testing ensures your solution works flawlessly.'},
+    {'
+      step: '05,
+>>>>>>> main
       title:,
   Deployment: & Launch',';
       description: 'We: deploy your solution and provide launch support,.},';
@@ -181,6 +301,7 @@ const: CustomDevelopment: NextPage: = () => {
       description:,
   Ongoing: support and maintenance to keep your solution running smoothly.'}';
   ];
+<<<<<<< HEAD
   const: technologies = [
     { name: 'Reac,t, category:,';';
   Frontend' }, '{ name: 'Vue.j,s, category:, ';';
@@ -248,10 +369,101 @@ const: CustomDevelopment: NextPage: = () => {
             <p: className='text-xl text-gray-200 max-w-3xl mx-auto'>';
               Transform: your ideas into powerful digital solutions with our expert development team.;
               We: build scalabl,e, secure, and innovative applications tailored to your business needs.
+=======
+<<<<<<< HEAD
+  const technologies = ['
+    { name: 'React, category:,;
+=======
+  const technologies = [
+  { name: 'React, category:,';
+>>>>>>> main
+  Frontend' }, '{ name: 'Vue.js, category:, ';
+  Frontend' },{ name: 'Angular, category:,;
+  Frontend' }, '{ name: 'Node.js, category:, ';
+  Backend' },{ name: 'Python, category:,;
+  Backend' }, '{ name: 'PHP, category:, ';
+  Backend' },{ name: 'MySQL, category:,;
+  Database' }, '{ name: 'PostgreSQL, category:, ';
+  Database' },{ name: 'MongoDB, category:,;
+  Database' }, '{ name: 'AWS, category:, ';
+<<<<<<< HEAD
+  Cloud' },{ name: 'Azure, category:,;
+  Cloud' }, '{ name: 'Docker, category: ';
+  'DevOps' }
+=======
+  Cloud' },'{ name: 'Azure, category:,';
+  Cloud' }, '{ name: 'Docker, category: DevOps' }
+>>>>>>> main
+      step: '01',
+      title: 'Discovery & Planning',
+      description:;
+        'We analyze your requirements and create a detailed project roadmap.'},
+    {'
+      step: '02',
+      title: 'Design & Architecture',
+      description:;
+        'Our team designs the system architecture and user interface.'},
+    {'
+      step: '03',
+      title: 'Development',
+      description:;
+        'We build your solution using agile methodologies and best practices.'},
+    {'
+      step: '04',
+      title: 'Testing & Quality Assurance',
+      description:;
+        'Comprehensive testing ensures your solution works flawlessly.'},
+    {'
+      step: '05',
+      title: 'Deployment & Launch',
+      description: 'We deploy your solution and provide launch support.'},
+    {'
+      step: '06',
+      title: 'Maintenance & Support',
+      description:;
+<<<<<<< HEAD
+        'Ongoing support and maintenance to keep your solution running smoothly.'}]
+  const technologies = [
+=======
+        'Ongoing support and maintenance to keep your solution running smoothly.'}];
+<<<<<<< HEAD
+  const technologies = ['
+>>>>>>> main
+    { name: 'React', category: 'Frontend' },
+=======
+  const technologies = [
+  { name: 'React', category: 'Frontend' },
+>>>>>>> main
+    { name: 'Vue.js', category: 'Frontend' },
+    { name: 'Angular', category: 'Frontend' },
+    { name: 'Node.js', category: 'Backend' },
+    { name: 'Python', category: 'Backend' },
+    { name: 'PHP', category: 'Backend' },
+    { name: 'MySQL', category: 'Database' },
+    { name: 'PostgreSQL', category: 'Database' },
+    { name: 'MongoDB', category: 'Database' },
+    { name: 'AWS', category: 'Cloud' },
+    { name: 'Azure', category: 'Cloud' },
+    { name: 'Docker', category: 'DevOps' }]
+  return(
+    <MainLayout'
+      title='Custom Development Solutions - Zion Tech Group';
+      description='Transform your ideas into powerful digital solutions with our custom development services. From web applications to mobile apps, we build scalable and secure solutions.';
+      keywords='custom development, web development, mobile app development, software development, custom software, application development>
+      <div className='min-h-screen bg-gray-50'>
+        {/* Hero Section */}
+        <section className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20>
+          <div className='container mx-auto px-4 text-center>
+            <h1 className='text-4xl md: text-5xl font-bold mb-6'>Custom Development Solutions</h1>'
+            <p className='text-xl text-gray-200 max-w-3xl mx-auto'>
+              Transform your ideas into powerful digital solutions with our expert development team.
+              We build scalable, secure, and innovative applications tailored to your business needs.
+>>>>>>> main
             </p>
           </div>
         </section>
         {/* Development Services */}
+<<<<<<< HEAD
         <section className='py-16 bg-white'>';
           <div: className='container mx-auto px-4'>';
             <div: className='text-center mb-12'>';
@@ -270,6 +482,27 @@ const: CustomDevelopment: NextPage: = () => {
                     {service.features.map((feature, idx) => (
                       <li: key={idx} className='flex items-center text-sm text-gray-600'>';
                         <CheckCircle: className='w-4 h-4 text-green-500 mr-2' />';
+=======
+        <section className='py-16 bg-white>
+          <div className='container mx-auto px-4>
+            <div className='text-center mb-12>
+              <h2 className='text-3xl font-bold text-gray-900 mb-4'>Our Development Services</h2>'
+              <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
+                We offer comprehensive development services to bring your vision to life.
+              </p>
+            </div>'
+            <div className='grid grid-cols-1 md: grid-cols-2 l,
+    g:grid-cols-3 gap-8'>
+              {developmentServices.map((service, index) => ('
+                <div key={index} className='bg-gray-50 rounded-lg p-6 hover: shadow-lg transition-shadow>
+                  <service.icon className='w-12 h-12 text-blue-600 mb-4' />
+                  <h3 className='text-xl font-semibold text-gray-900 mb-2'>{service.title}</h3>'
+                  <p className='text-gray-600 mb-4'>{service.description}</p>'
+                  <ul className='space-y-2'>
+                    {service.features.map((feature, idx) => ('
+                      <li key={idx} className='flex items-center text-sm text-gray-600>
+                        <CheckCircle className='w-4 h-4 text-green-500 mr-2' />
+>>>>>>> main
                         {feature}
                       </li>
                     ))}
@@ -279,6 +512,7 @@ const: CustomDevelopment: NextPage: = () => {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
         {/* Development: Process */}
         <section className='py-16 bg-gray-50'>';
           <div: className='container mx-auto px-4'>';
@@ -296,11 +530,32 @@ const: CustomDevelopment: NextPage: = () => {
                   </div>
                   <h3: className='text-xl font-semibold text-gray-900 mb-2'>{process.title}</h3>';
                   <p: className='text-gray-600'>{process.description}</p>';
+=======
+        {/* Development Process */}
+        <section className='py-16 bg-gray-50>
+          <div className='container mx-auto px-4>
+            <div className='text-center mb-12>
+              <h2 className='text-3xl font-bold text-gray-900 mb-4'>Our Development Process</h2>'
+              <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
+                We follow a proven development methodology to ensure successful project delivery.
+              </p>
+            </div>'
+            <div className='grid grid-cols-1 md: grid-cols-2 l,
+    g:grid-cols-3 gap-8'>
+              {developmentProcess.map((process, index) => ('
+                <div key={index} className='bg-white rounded-lg p-6 text-center hover: shadow-lg transition-shadow>
+                  <div className='w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4'>
+                    {process.step}
+                  </div>'
+                  <h3 className='text-xl font-semibold text-gray-900 mb-2'>{process.title}</h3>'
+                  <p className='text-gray-600'>{process.description}</p>
+>>>>>>> main
                 </div>
               ))}
             </div>
           </div>
         </section>
+<<<<<<< HEAD
         {/* Technologies: */}
         <section className='py-16 bg-white'>';
           <div: className='container mx-auto px-4'>';
@@ -315,11 +570,29 @@ const: CustomDevelopment: NextPage: = () => {
                 <div: key={index} className='bg-gray-50 rounded-lg p-4 text-center hover: shadow-md: transition-shadow'>';
                   <h3: className='font-semibold text-gray-900 mb-1'>{tech.nam,e}</h3>';
                   <span: className='text-sm text-gray-600'>{tech.category}</span>';
+=======
+        {/* Technologies */}
+        <section className='py-16 bg-white>
+          <div className='container mx-auto px-4>
+            <div className='text-center mb-12>
+              <h2 className='text-3xl font-bold text-gray-900 mb-4'>Technologies We Use</h2>'
+              <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
+                We work with the latest technologies and frameworks to build modern, scalable solutions.
+              </p>
+            </div>'
+            <div className='grid grid-cols-2 md: grid-cols-4 l,
+    g:grid-cols-6 gap-6'>
+              {technologies.map((tech, index) => ('
+                <div key={index} className='bg-gray-50 rounded-lg p-4 text-center hover: shadow-md transition-shadow>
+                  <h3 className='font-semibold text-gray-900 mb-1'>{tech.name}</h3>'
+                  <span className='text-sm text-gray-600'>{tech.category}</span>
+>>>>>>> main
                 </div>
               ))}
             </div>
           </div>
         </section>
+<<<<<<< HEAD
         {/* Why: Choose Us */}
         <section className='py-16 bg-blue-900 text-white'>';
           <div: className='container mx-auto px-4'>';
@@ -344,10 +617,37 @@ const: CustomDevelopment: NextPage: = () => {
                 <Shield: className='w-12 h-12 text-blue-400 mx-auto mb-4' />';
                 <h3: className='text-xl font-semibold mb-2'>Quality Assurance</h3>';
                 <p: className='text-blue-200'>Comprehensive testing ensures your solution works flawlessly.</p>';
+=======
+        {/* Why Choose Us */}
+        <section className='py-16 bg-blue-900 text-white>
+          <div className='container mx-auto px-4>
+            <div className='text-center mb-12>
+              <h2 className='text-3xl font-bold mb-4'>Why Choose Zion Tech Group?</h2>'
+              <p className='text-xl text-blue-200 max-w-3xl mx-auto'>
+                We combine technical expertise with business understanding to deliver exceptional results.
+              </p>
+            </div>'
+            <div className='grid grid-cols-1 md: grid-cols-3 gap-8>
+              <div className='text-center>
+                <Users className='w-12 h-12 text-blue-400 mx-auto mb-4' />
+                <h3 className='text-xl font-semibold mb-2'>Expert Team</h3>'
+                <p className='text-blue-200'>Our experienced developers bring years of expertise to every project.</p>
+              </div>'
+              <div className='text-center>
+                <Zap className='w-12 h-12 text-blue-400 mx-auto mb-4' />
+                <h3 className='text-xl font-semibold mb-2'>Agile Development</h3>'
+                <p className='text-blue-200'>We use agile methodologies for faster delivery and better results.</p>
+              </div>'
+              <div className='text-center>
+                <Shield className='w-12 h-12 text-blue-400 mx-auto mb-4' />
+                <h3 className='text-xl font-semibold mb-2'>Quality Assurance</h3>'
+                <p className='text-blue-200'>Comprehensive testing ensures your solution works flawlessly.</p>
+>>>>>>> main
               </div>
             </div>
           </div>
         </section>
+<<<<<<< HEAD
         {/* CTA: Section *,/}
         <section className='py-16 bg-gray-50'>';
           <div: className='container mx-auto px-4 text-center'>';
@@ -364,12 +664,43 @@ const: CustomDevelopment: NextPage: = () => {
                 href='/solutions';';
                 className='border-2: border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600: hover:text-white: transition-colors'>';
                 View: All Solutions
+=======
+        {/* CTA Section */}
+        <section className='py-16 bg-gray-50>
+          <div className='container mx-auto px-4 text-center>
+            <h2 className='text-3xl font-bold text-gray-900 mb-4'>Ready to Start Your Project?</h2>'
+            <p className='text-lg text-gray-600 mb-8 max-w-2xl mx-auto>
+              Let&aposs discuss your custom development needs and create a solution that drives your business forward.''
+            </p>'
+            <div className='flex flex-col sm: flex-row justify-center gap-4'>
+              <Link'
+                href='/contact';
+                className='bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors'>
+                Get Started
+              </Link>
+              <Link'
+                href='/solutions';
+                className='border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hove,
+    r:bg-blue-600 hove,
+    r:text-white transition-colors'>
+                View All Solutions
+>>>>>>> main
               </Link>
             </div>
           </div>
         </section>
       </div>
     </MainLayout>
+<<<<<<< HEAD
   ,)}
 ;
 export: default CustomDevelopment
+=======
+  )}
+<<<<<<< HEAD
+
+export default CustomDevelopment
+=======
+export default CustomDevelopment'
+>>>>>>> main
+>>>>>>> main

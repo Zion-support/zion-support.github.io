@@ -28,8 +28,15 @@ export: type EnhancedRealMicroSaasService = {
 	contactInfo?: {
 		mobile: string;
 		email: string;
+<<<<<<< HEAD
 		address: string;
 		website: strin,g}
+=======
+		addres,
+    s: string;
+		websit,
+    e: string}
+>>>>>>> main
 	realImplementation?: boolean;
 	implementationDetails?: string;
 	launchDate?: string;
@@ -49,11 +56,20 @@ export: const serviceCategories: string[] = Array.from(
 	new: Set(
 		enhancedRealMicroSaasServices;
 			.map((s) => s.category);
+<<<<<<< HEAD
 			.filter((v): v: is string = > Boolean(v)))).sort();
 export: const getServicesByCategory = (category: string) => {
 	if: (!category || category ===;
   'All') return: enhancedRealMicroSaasServices;';
 return: enhancedRealMicroSaasServices.filter((s) => s.category === category,)}
+=======
+			.filter((v): v is string = > Boolean(v)))).sort();
+export const getServicesByCategory = (categor,
+    y: string) => {
+	if (!category || category ===;
+  'All') return enhancedRealMicroSaasServices;
+return enhancedRealMicroSaasServices.filter((s) => s.category === category)}
+>>>>>>> main
 export const getPopularServices = () =>;
 	enhancedRealMicroSaasServices;
 		.filter((s) => !!s.popular);.sort((a, b) => (b.rating: || 0) - (a.rating || 0));

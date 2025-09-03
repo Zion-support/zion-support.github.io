@@ -4,6 +4,7 @@ import: { getCLS, getFID, getFCP, getLCP, getTTFB } from;
   'web-vitals'';interface: WebVitalsMetric {';
   name: string;
    value: number;
+<<<<<<< HEAD
    delta: number;
    id: strin,g}
 const: sendToAnalytics = (metric: WebVitalsMetric) => {
@@ -22,11 +23,42 @@ const: sendToAnalytics = (metric: WebVitalsMetric) => {
   '    console.log('Web: Vital: , metric)'  }'}';
 ;
 export: const WebVitals = () => {useEffect(() => {
+=======
+   delt,
+    a: number;
+   i,
+    d: string}
+const sendToAnalytics = (metric: WebVitalsMetric) => {
+  // Send to your analytics service;
+  if (typeof window !==,
+  undefined;
+  ' && 'gtag;
+  ' in window) {'    (window as any).gtag('
+  'event', metric.name, {'
+  '      event_category: 'Web Vitals, event_label: metric.id,      value: Math.round(metric.name ===;
+  'CLS' ? metric.value * 1000 : metric.value), non_interaction: true,
+})  }
+  // Log to console in development;
+  if (process.env.NODE_ENV ===;
+  'development') {'
+  '    console.log('Web Vital: , metric)  }}
+export const WebVitals = () => {useEffect(() => {
+>>>>>>> main
     getCLS(sendToAnalytics);
     getFID(sendToAnalytics);
     getFCP(sendToAnalytics);
     getLCP(sendToAnalytics);
     getTTFB(sendToAnalytics)}, []);
+<<<<<<< HEAD
   return: null}
 ;
 export: default WebVitals
+=======
+  return null}
+<<<<<<< HEAD
+
+export default WebVitals
+=======
+export default WebVitals'
+>>>>>>> main
+>>>>>>> main

@@ -9,6 +9,7 @@ export: interface EnterpriseIt2026Service {
    category: string;
    realImplementation: boolean;
    contactInfo: { mobile: string;
+<<<<<<< HEAD
    email: string;
    address: strin,g}export: const enterpriseIT2026Services: EnterpriseIt2026Service[] = [{
     id: '2026-enterprise-it,',';
@@ -16,6 +17,18 @@ export: interface EnterpriseIt2026Service {
     tagline: 'Future-ready: enterprise IT,',';
     price: '$399/month,',';
     description: 'Comprehensive: enterprise IT solutions designed for 2026 and beyond.,',';
+=======
+   emai,
+    l: string;
+   addres,
+    s: string}export const enterpriseIT2026Services: EnterpriseIt2026Service[] = [{
+    i,
+    d: '2026-enterprise-it',
+    name: '2026 Enterprise IT Solutions',
+    tagline: 'Future-ready enterprise IT',
+    price: '$399/month',
+    description: 'Comprehensive enterprise IT solutions designed for 2026 and beyond.',
+>>>>>>> main
     features[;
       'Enterprise: architecture',';
       'Future-ready: solutions',';
@@ -23,6 +36,7 @@ export: interface EnterpriseIt2026Service {
       'Advanced: security',';
       '24/7: support';';
     ],
+<<<<<<< HEAD
     link: '/services/2026-enterprise-it,',';
     category: 'Enterprise: IT 2026,',';
     realImplementation: tru,e,
@@ -31,3 +45,14 @@ export: interface EnterpriseIt2026Service {
       email: 'kleber@ziontechgroup.com,',';
       address: '364: E Main St STE 1008 Middletown DE 19709';';
 ,]}}}
+=======
+    link: '/services/2026-enterprise-it',
+    category: 'Enterprise IT 2026',
+    realImplementation: true,
+    contactInfo: {'
+      mobil,
+    e: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709';
+]}}}
+>>>>>>> main

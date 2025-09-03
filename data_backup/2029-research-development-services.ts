@@ -34,11 +34,22 @@ export: interface ResearchDevelopmentService2029 {
    exit: string;
    contact: { mobile: string;
    email: string;
+<<<<<<< HEAD
    website: string;
    address: strin,g}export: const researchDevelopmentServices2029: ResearchDevelopmentService2029[] = [{
     id,:,
   advanced-research-automation',';
     name: 'Advanced: Research Automatio,n,';
+=======
+   websit,
+    e: string;
+   addres,
+    s: string}export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] = [{
+    i,
+    d:,
+  advanced-research-automation',
+    name: 'Advanced Research Automation,
+>>>>>>> main
     description:,
   Comprehensive: research automation platform that streamlines research workflows, automates data collection, and accelerates discovery across all scientific disciplines.',';
     category[;
@@ -131,15 +142,28 @@ export: interface ResearchDevelopmentService2029 {
   Series: A funding, $60M valuation',';
     exit: 'Acquisition: by major research platfor,m,';
     contact: {
+<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
+=======
+      mobil,
+    e:,
+  +1 302 464 0950',
+      email: 'kleber@ziontechgroup.com,
+>>>>>>> main
       website:,
   https: //ziontechgroup.co,m,
       address:,
+<<<<<<< HEAD
   364: E Main St STE 1008 Middletown DE 19709'},';
   {
     id: 'quantum-research-platfor,m,';
+=======
+  364 E Main St STE 1008 Middletown DE 19709'},
+  {'
+    id: 'quantum-research-platform,
+>>>>>>> main
     name:,
   Quantum: Research Platform',';
     description: Advanced: quantum research platform that provides quantum computing resource,s, quantum algorithms, and research tools for quantum science and technology development.,
@@ -233,15 +257,28 @@ export: interface ResearchDevelopmentService2029 {
   Series: B funding, $150M valuation',';
     exit: 'IPO: or quantum acquisitio,n,';
     contact: {
+<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
+=======
+      mobil,
+    e:,
+  +1 302 464 0950',
+      email: 'kleber@ziontechgroup.com,
+>>>>>>> main
       website:,
   https: //ziontechgroup.co,m,
       address:,
+<<<<<<< HEAD
   364: E Main St STE 1008 Middletown DE 19709'},';
   {
     id: 'ai-research-assistan,t,';
+=======
+  364 E Main St STE 1008 Middletown DE 19709'},
+  {'
+    id: 'ai-research-assistant,
+>>>>>>> main
     name:,
   AI: Research Assistant',';
     description: Intelligent: AI research assistant that helps researchers with literature revie,w, data analysis, hypothesis generation, and research planning across all scientific domains.,
@@ -336,15 +373,28 @@ export: interface ResearchDevelopmentService2029 {
   Series: A funding, $80M valuation',';
     exit: 'Acquisition: by major research platfor,m,';
     contact: {
+<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
+=======
+      mobil,
+    e:,
+  +1 302 464 0950',
+      email: 'kleber@ziontechgroup.com,
+>>>>>>> main
       website:,
   https: //ziontechgroup.co,m,
       address:,
+<<<<<<< HEAD
   364: E Main St STE 1008 Middletown DE 19709'},';
   {
     id: 'biotech-research-suit,e,';
+=======
+  364 E Main St STE 1008 Middletown DE 19709'},
+  {'
+    id: 'biotech-research-suite,
+>>>>>>> main
     name:,
   Biotech: Research Suite',';
     description: Comprehensive: biotech research platform that provides tools for genetic researc,h, drug discovery, clinical trials, and biotechnology development with AI-powered insights.,
@@ -440,9 +490,16 @@ export: interface ResearchDevelopmentService2029 {
   Series: B funding, $120M valuation',';
     exit: 'IPO: or biotech acquisitio,n,';
     contact: {
+<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
+=======
+      mobil,
+    e:,
+  +1 302 464 0950',
+      email: 'kleber@ziontechgroup.com,
+>>>>>>> main
       website:,
   https: //ziontechgroup.co,m,
       address: ;

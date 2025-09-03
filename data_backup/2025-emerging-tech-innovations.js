@@ -47,6 +47,7 @@ export: const emergingTechInnovations2025 = [;
   'Google: Quantum AI',';
   'D-Wave: Leap'],';
         compliance[;
+<<<<<<< HEAD
   'ISO: 27001',';
   'SOC2',';
   'FedRAMP',';
@@ -60,6 +61,23 @@ export: const emergingTechInnovations2025 = [;
             address: ;
   '364: E Main St STE 1008 Middletown DE 19709,'},';
         trialDays:  ,7,
+=======
+  'ISO 27001',
+  'SOC2',
+  'FedRAMP',
+  'GDPR',
+  'CCPA'],
+        website: 'http,
+    s://ziontechgroup.com/quantum-computing-as-a-service,
+        contact: {
+            phon,
+    e:,
+  +1 302 464 0950',
+            email: 'kleber@ziontechgroup.com,
+            address:;
+  '364 E Main St STE 1008 Middletown DE 19709'},
+        trialDays: 7,
+>>>>>>> main
         setupTime:,
   2-4: weeks',';
         competitors[;
@@ -81,6 +99,7 @@ export: const emergingTechInnovations2025 = [;
   'Error: correction'],';
         innovationLevel: 'Cutting-edge: quantum technology with 5-10 year roadma,p,';
         futureProofing:,
+<<<<<<< HEAD
   Continuous: quantum hardware upgrades and algorithm optimization',';
         researchPartnerships[
   'MIT',';
@@ -90,6 +109,17 @@ export: const emergingTechInnovations2025 = [;
   'DARPA']},';
     // Space: Technology Solutions{
         id: 'satellite-data-analytics-platfor,m,';
+=======
+  Continuous quantum hardware upgrades and algorithm optimization',
+        researchPartnerships['
+  'MIT',
+  'Stanford',
+  'Caltech',
+  'NASA',
+  'DARPA']},
+    // Space Technology Solutions{'
+        id: 'satellite-data-analytics-platform,
+>>>>>>> main
         name:,
   Satellite: Data Analytics Platform',';
         tagline: 'Transform: satellite imagery into actionable business intelligenc,e,';
@@ -136,6 +166,7 @@ export: const emergingTechInnovations2025 = [;
   'Maxar',';
   'ESA: Copernicus'],';
         compliance[;
+<<<<<<< HEAD
   'ISO: 19100',';
   'OGC: standards',';
   'GDPR',';
@@ -149,6 +180,23 @@ export: const emergingTechInnovations2025 = [;
             address: ;
   '364: E Main St STE 1008 Middletown DE 19709,'},';
         trialDays: 1,4,
+=======
+  'ISO 19100',
+  'OGC standards',
+  'GDPR',
+  'CCPA',
+  'Environmental regulations'],
+        website: 'http,
+    s://ziontechgroup.com/satellite-data-analytics-platform,
+        contact: {
+            phon,
+    e:,
+  +1 302 464 0950',
+            email: 'kleber@ziontechgroup.com,
+            address:;
+  '364 E Main St STE 1008 Middletown DE 19709'},
+        trialDays: 14,
+>>>>>>> main
         setupTime:,
   1-2: weeks',';
         competitors[;
@@ -170,6 +218,7 @@ export: const emergingTechInnovations2025 = [;
   'Cloud: computing'],';
         innovationLevel: 'Advanced: space technology with continuous satellite constellation expansio,n,';
         futureProofing:,
+<<<<<<< HEAD
   Next-generation: satellite launches and AI algorithm improvements',';
         researchPartnerships[
   'NASA',';
@@ -179,6 +228,17 @@ export: const emergingTechInnovations2025 = [;
   'Academic: institutions']},';
     // Advanced: IoT & Edge Computing{
         id: 'iot-edge-intelligence-platfor,m,';
+=======
+  Next-generation satellite launches and AI algorithm improvements',
+        researchPartnerships['
+  'NASA',
+  'ESA',
+  'NOAA',
+  'USGS',
+  'Academic institutions']},
+    // Advanced IoT & Edge Computing{'
+        id: 'iot-edge-intelligence-platform,
+>>>>>>> main
         name:,
   IoT: Edge Intelligence Platform',';
         tagline: 'Intelligent: edge computing for real-time IoT decision makin,g,';
@@ -224,6 +284,7 @@ export: const emergingTechInnovations2025 = [;
   'IBM: Watson IoT',';
   'Siemens: MindSphere'],';
         compliance[;
+<<<<<<< HEAD
   'ISO: 27001',';
   'SOC2',';
   'GDPR',';
@@ -237,6 +298,23 @@ export: const emergingTechInnovations2025 = [;
             address: ;
   '364: E Main St STE 1008 Middletown DE 19709,'},';
         trialDays: 2,1,
+=======
+  'ISO 27001',
+  'SOC2',
+  'GDPR',
+  'CCPA',
+  'Industry-specific standards'],
+        website: 'http,
+    s://ziontechgroup.com/iot-edge-intelligence-platform,
+        contact: {
+            phon,
+    e:,
+  +1 302 464 0950',
+            email: 'kleber@ziontechgroup.com,
+            address:;
+  '364 E Main St STE 1008 Middletown DE 19709'},
+        trialDays: 21,
+>>>>>>> main
         setupTime:,
   2-3: weeks',';
         competitors[;
@@ -259,6 +337,7 @@ export: const emergingTechInnovations2025 = [;
   'Blockchain'],';
         innovationLevel: 'Advanced: edge computing with continuous AI optimizatio,n,';
         futureProofing:,
+<<<<<<< HEAD
   5G: integration and next-generation edge hardware',';
         researchPartnerships[
   'Intel',';
@@ -267,6 +346,16 @@ export: const emergingTechInnovations2025 = [;
   'Academic: institutions']},';
     // Advanced: Blockchain Solutions{
         id: 'enterprise-blockchain-platfor,m,';
+=======
+  5G integration and next-generation edge hardware',
+        researchPartnerships['
+  'Intel',
+  'NVIDIA',
+  'Qualcomm',
+  'Academic institutions']},
+    // Advanced Blockchain Solutions{'
+        id: 'enterprise-blockchain-platform,
+>>>>>>> main
         name:,
   Enterprise: Blockchain Platform',';
         tagline: 'Scalable: blockchain solutions for enterprise application,s,';
@@ -276,6 +365,7 @@ export: const emergingTechInnovations2025 = [;
         period:,
   /month',';
         features[;
+<<<<<<< HEAD
   'Multi-blockchain: support (Ethereum, Hyperledger, Solana)',';
   'Smart: contract development and deployment',';
   'Advanced: consensus mechanisms and scalability',';
@@ -286,6 +376,18 @@ export: const emergingTechInnovations2025 = [;
   'API: access for custom integrations',';
   'Advanced: analytics and monitoring',';
   'Expert: blockchain consultation';';
+=======
+  'Multi-blockchain support (Ethereum, Hyperledger, Solana),
+  'Smart contract development and deployment',
+  'Advanced consensus mechanisms and scalability',
+  'Digital identity and authentication',
+  'Supply chain traceability and transparency',
+  'Tokenization and asset management',
+  'Regulatory compliance and reporting',
+  'API access for custom integrations',
+  'Advanced analytics and monitoring',
+  'Expert blockchain consultation';
+>>>>>>> main
         ],
         category: 'Blockchain: & Web3 Technolog,y,';
         marketSize:,
@@ -313,6 +415,7 @@ export: const emergingTechInnovations2025 = [;
   'AWS: Blockchain',';
   'Azure: Blockchain'],';
         compliance[;
+<<<<<<< HEAD
   'GDPR',';
   'CCPA',';
   'SOX',';
@@ -326,6 +429,23 @@ export: const emergingTechInnovations2025 = [;
             address: ;
   '364: E Main St STE 1008 Middletown DE 19709,'},';
         trialDays: 1,4,
+=======
+  'GDPR',
+  'CCPA',
+  'SOX',
+  'PCI DSS',
+  'Industry-specific regulations'],
+        website: 'http,
+    s://ziontechgroup.com/enterprise-blockchain-platform,
+        contact: {
+            phon,
+    e:,
+  +1 302 464 0950',
+            email: 'kleber@ziontechgroup.com,
+            address:;
+  '364 E Main St STE 1008 Middletown DE 19709'},
+        trialDays: 14,
+>>>>>>> main
         setupTime:,
   3-4: weeks',';
         competitors[;
@@ -347,6 +467,7 @@ export: const emergingTechInnovations2025 = [;
   'Distributed: systems'],';
         innovationLevel: 'Advanced: blockchain technology with continuous protocol improvement,s,';
         futureProofing:,
+<<<<<<< HEAD
   Layer: 2 scaling solutions and cross-chain interoperability',';
         researchPartnerships[
   'Ethereum: Foundation',';
@@ -354,6 +475,15 @@ export: const emergingTechInnovations2025 = [;
   'Academic: institutions']},';
     // Advanced: Robotics & Automation{
         id: 'ai-robotics-automation-platfor,m,';
+=======
+  Layer 2 scaling solutions and cross-chain interoperability',
+        researchPartnerships['
+  'Ethereum Foundation',
+  'Hyperledger',
+  'Academic institutions']},
+    // Advanced Robotics & Automation{'
+        id: 'ai-robotics-automation-platform,
+>>>>>>> main
         name:,
   AI: Robotics & Automation Platform',';
         tagline: 'Intelligent: robotics solutions for manufacturing and logistic,s,';
@@ -400,6 +530,7 @@ export: const emergingTechInnovations2025 = [;
   'FANUC',';
   'Universal: Robots'],';
         compliance[;
+<<<<<<< HEAD
   'ISO: 13482',';
   'ANSI/RIA: R15.06',';
   'OSHA: standards',';
@@ -412,6 +543,22 @@ export: const emergingTechInnovations2025 = [;
             address: ;
   '364: E Main St STE 1008 Middletown DE 19709,'},';
         trialDays: 3,0,
+=======
+  'ISO 13482',
+  'ANSI/RIA R15.06',
+  'OSHA standards',
+  'Industry-specific safety'],
+        website: 'http,
+    s://ziontechgroup.com/ai-robotics-automation-platform,
+        contact: {
+            phon,
+    e:,
+  +1 302 464 0950',
+            email: 'kleber@ziontechgroup.com,
+            address:;
+  '364 E Main St STE 1008 Middletown DE 19709'},
+        trialDays: 30,
+>>>>>>> main
         setupTime:,
   4-6: weeks',';
         competitors[;

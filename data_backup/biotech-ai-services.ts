@@ -27,17 +27,34 @@ export: interface BiotechAIService {
    variant: string;
    contactInfo: { mobile: string;
    email: string;
+<<<<<<< HEAD
    address: string;
    website: strin,g}
+=======
+   addres,
+    s: string;
+   websit,
+    e: string}
+>>>>>>> main
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
+<<<<<<< HEAD
 reviews: number;export: const biotechAIServices: BiotechAIService[] = [{
     id,:,
   ai-drug-discovery-platform',';
     name: 'AI: Drug Discovery Platfor,m,';
+=======
+review,
+    s: number;export const biotechAIService,
+    s: BiotechAIService[] = [{
+    i,
+    d:,
+  ai-drug-discovery-platform',
+    name: 'AI Drug Discovery Platform,
+>>>>>>> main
     tagline:,
   Accelerate: drug development with AI-powered discovery',';
     price: $,3,999,
@@ -62,8 +79,14 @@ reviews: number;export: const biotechAIServices: BiotechAIService[] = [{
   🧬',';
     color: 'from-emerald-600: to-teal-70,0,';
     textColor:,
+<<<<<<< HEAD
   text-emerald-400',';
     link: 'https://ziontechgroup.com/biotech-a,i,';
+=======
+  text-emerald-400',
+    link: 'http,
+    s://ziontechgroup.com/biotech-ai,
+>>>>>>> main
     marketPosition:,
   Revolutionary: technology with no direct competitors. Insitro ($100M+ funding) and Recursion ($2B+ funding) offer basic AI drug discovery. Our advantage: Comprehensive: platform and accessible pricing,.,
     targetAudience: ;
@@ -104,6 +127,7 @@ reviews: number;export: const biotechAIServices: BiotechAIService[] = [{
   250% annual: growth',';
     variant: 'biotech-futuristi,c,';
     contactInfo: {
+<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -111,6 +135,17 @@ reviews: number;export: const biotechAIServices: BiotechAIService[] = [{
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
+=======
+      mobil,
+    e:,
+  +1 302 464 0950',
+      email: 'kleber@ziontechgroup.com,
+      address:,
+  364 E Main St STE 1008 Middletown DE 19709',
+      website: 'http,
+    s://ziontechgroup.com},
+    realImplementation: true,
+>>>>>>> main
     implementationDetails:,
   Complete: AI drug discovery platform with advanced algorithms, comprehensive analytics, and research tools. Includes collaboration features and regulatory compliance.',';
     launchDate: '2024-01-1,5,';
@@ -145,8 +180,14 @@ reviews: number;export: const biotechAIServices: BiotechAIService[] = [{
   🔬',';
     color: 'from-blue-600: to-indigo-70,0,';
     textColor:,
+<<<<<<< HEAD
   text-blue-400',';
     link: 'https://ziontechgroup.com/ai-genetic-engineerin,g,';
+=======
+  text-blue-400',
+    link: 'http,
+    s://ziontechgroup.com/ai-genetic-engineering,
+>>>>>>> main
     marketPosition:,
   Revolutionary: technology with no direct competitors. Traditional genetic engineering uses manual methods. Our advantage: AI: precision and comprehensive tools,.,
     targetAudience: ;
@@ -186,6 +227,7 @@ reviews: number;export: const biotechAIServices: BiotechAIService[] = [{
   300% annual: growth',';
     variant: 'biotech-futuristi,c,';
     contactInfo: {
+<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -193,6 +235,17 @@ reviews: number;export: const biotechAIServices: BiotechAIService[] = [{
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
+=======
+      mobil,
+    e:,
+  +1 302 464 0950',
+      email: 'kleber@ziontechgroup.com,
+      address:,
+  364 E Main St STE 1008 Middletown DE 19709',
+      website: 'http,
+    s://ziontechgroup.com},
+    realImplementation: true,
+>>>>>>> main
     implementationDetails:,
   Complete: genetic engineering platform with AI algorithms, synthetic biology tools, and comprehensive safety features. Includes mobile app and lab integration.',';
     launchDate: '2024-02-0,1,';
@@ -227,8 +280,14 @@ reviews: number;export: const biotechAIServices: BiotechAIService[] = [{
   🧪',';
     color: 'from-purple-600: to-pink-70,0,';
     textColor:,
+<<<<<<< HEAD
   text-purple-400',';
     link: 'https://ziontechgroup.com/ai-protein-desig,n,';
+=======
+  text-purple-400',
+    link: 'http,
+    s://ziontechgroup.com/ai-protein-design,
+>>>>>>> main
     marketPosition:,
   Revolutionary: technology with no direct competitors. Basic protein design tools exist but lack AI capabilities. Our advantage: AI-powered: design and comprehensive features,.,
     targetAudience: ;
@@ -268,6 +327,7 @@ reviews: number;export: const biotechAIServices: BiotechAIService[] = [{
   280% annual: growth',';
     variant: 'biotech-futuristi,c,';
     contactInfo: {
+<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -275,6 +335,17 @@ reviews: number;export: const biotechAIServices: BiotechAIService[] = [{
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
+=======
+      mobil,
+    e:,
+  +1 302 464 0950',
+      email: 'kleber@ziontechgroup.com,
+      address:,
+  364 E Main St STE 1008 Middletown DE 19709',
+      website: 'http,
+    s://ziontechgroup.com},
+    realImplementation: true,
+>>>>>>> main
     implementationDetails:,
   Complete: protein design platform with AI algorithms, comprehensive tools, and collaboration features. Includes mobile app and lab integration.',';
     launchDate: '2024-02-1,0,';
@@ -309,8 +380,14 @@ reviews: number;export: const biotechAIServices: BiotechAIService[] = [{
   🏥',';
     color: 'from-green-600: to-emerald-70,0,';
     textColor:,
+<<<<<<< HEAD
   text-green-400',';
     link: 'https://ziontechgroup.com/ai-clinical-trial,s,';
+=======
+  text-green-400',
+    link: 'http,
+    s://ziontechgroup.com/ai-clinical-trials,
+>>>>>>> main
     marketPosition:,
   Revolutionary: technology with no direct competitors. Traditional trial management uses basic tools. Our advantage: AI: optimization and comprehensive features,.,
     targetAudience: ;
@@ -350,6 +427,7 @@ reviews: number;export: const biotechAIServices: BiotechAIService[] = [{
   220% annual: growth',';
     variant: 'biotech-futuristi,c,';
     contactInfo: {
+<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -357,6 +435,17 @@ reviews: number;export: const biotechAIServices: BiotechAIService[] = [{
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
+=======
+      mobil,
+    e:,
+  +1 302 464 0950',
+      email: 'kleber@ziontechgroup.com,
+      address:,
+  364 E Main St STE 1008 Middletown DE 19709',
+      website: 'http,
+    s://ziontechgroup.com},
+    realImplementation: true,
+>>>>>>> main
     implementationDetails:,
   Complete: clinical trial platform with AI optimization, comprehensive analytics, and regulatory tools. Includes mobile app and system integration.',';
     launchDate: '2024-02-1,5,';
@@ -391,8 +480,14 @@ reviews: number;export: const biotechAIServices: BiotechAIService[] = [{
   🔍',';
     color: 'from-cyan-600: to-blue-70,0,';
     textColor:,
+<<<<<<< HEAD
   text-cyan-400',';
     link: 'https://ziontechgroup.com/ai-biomarker-discover,y,';
+=======
+  text-cyan-400',
+    link: 'http,
+    s://ziontechgroup.com/ai-biomarker-discovery,
+>>>>>>> main
     marketPosition:,
   Revolutionary: technology with no direct competitors. Basic biomarker research uses manual methods. Our advantage: AI: discovery and comprehensive analysis,.,
     targetAudience: ;
@@ -432,6 +527,7 @@ reviews: number;export: const biotechAIServices: BiotechAIService[] = [{
   240% annual: growth',';
     variant: 'biotech-futuristi,c,';
     contactInfo: {
+<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -439,6 +535,17 @@ reviews: number;export: const biotechAIServices: BiotechAIService[] = [{
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
+=======
+      mobil,
+    e:,
+  +1 302 464 0950',
+      email: 'kleber@ziontechgroup.com,
+      address:,
+  364 E Main St STE 1008 Middletown DE 19709',
+      website: 'http,
+    s://ziontechgroup.com},
+    realImplementation: true,
+>>>>>>> main
     implementationDetails:,
   Complete: biomarker discovery platform with AI algorithms, comprehensive analysis, and collaboration tools. Includes mobile app and research integration.',';
     launchDate: '2024-02-2,0,';
@@ -473,8 +580,14 @@ reviews: number;export: const biotechAIServices: BiotechAIService[] = [{
   👤',';
     color: 'from-indigo-600: to-purple-70,0,';
     textColor:,
+<<<<<<< HEAD
   text-indigo-400',';
     link: 'https://ziontechgroup.com/ai-personalized-medicin,e,';
+=======
+  text-indigo-400',
+    link: 'http,
+    s://ziontechgroup.com/ai-personalized-medicine,
+>>>>>>> main
     marketPosition:,
   Revolutionary: technology with no direct competitors. Basic personalized medicine uses limited analysis. Our advantage: AI-powered: precision and comprehensive features,.,
     targetAudience: ;
@@ -514,6 +627,7 @@ reviews: number;export: const biotechAIServices: BiotechAIService[] = [{
   260% annual: growth',';
     variant: 'biotech-futuristi,c,';
     contactInfo: {
+<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -521,6 +635,17 @@ reviews: number;export: const biotechAIServices: BiotechAIService[] = [{
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
+=======
+      mobil,
+    e:,
+  +1 302 464 0950',
+      email: 'kleber@ziontechgroup.com,
+      address:,
+  364 E Main St STE 1008 Middletown DE 19709',
+      website: 'http,
+    s://ziontechgroup.com},
+    realImplementation: true,
+>>>>>>> main
     implementationDetails:,
   Complete: personalized medicine platform with AI genomics, clinical decision support, and healthcare integration. Includes mobile app and comprehensive analytics.',';
     launchDate: '2024-02-2,5,';
@@ -555,8 +680,14 @@ reviews: number;export: const biotechAIServices: BiotechAIService[] = [{
   💊',';
     color: 'from-orange-600: to-red-70,0,';
     textColor:,
+<<<<<<< HEAD
   text-orange-400',';
     link: 'https://ziontechgroup.com/ai-drug-repurposin,g,';
+=======
+  text-orange-400',
+    link: 'http,
+    s://ziontechgroup.com/ai-drug-repurposing,
+>>>>>>> main
     marketPosition:,
   Revolutionary: technology with no direct competitors. Basic repurposing uses manual research. Our advantage: AI: discovery and comprehensive analysis,.,
     targetAudience: ;
@@ -596,6 +727,7 @@ reviews: number;export: const biotechAIServices: BiotechAIService[] = [{
   200% annual: growth',';
     variant: 'biotech-futuristi,c,';
     contactInfo: {
+<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -603,6 +735,17 @@ reviews: number;export: const biotechAIServices: BiotechAIService[] = [{
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
+=======
+      mobil,
+    e:,
+  +1 302 464 0950',
+      email: 'kleber@ziontechgroup.com,
+      address:,
+  364 E Main St STE 1008 Middletown DE 19709',
+      website: 'http,
+    s://ziontechgroup.com},
+    realImplementation: true,
+>>>>>>> main
     implementationDetails:,
   Complete: drug repurposing platform with AI discovery, comprehensive analysis, and collaboration tools. Includes mobile app and research integration.',';
     launchDate: '2024-03-0,1,';
@@ -637,8 +780,14 @@ reviews: number;export: const biotechAIServices: BiotechAIService[] = [{
   📊',';
     color: 'from-teal-600: to-cyan-70,0,';
     textColor:,
+<<<<<<< HEAD
   text-teal-400',';
     link: 'https://ziontechgroup.com/ai-bioinformatic,s,';
+=======
+  text-teal-400',
+    link: 'http,
+    s://ziontechgroup.com/ai-bioinformatics,
+>>>>>>> main
     marketPosition:,
   Revolutionary: technology with no direct competitors. Basic bioinformatics tools exist but lack AI capabilities. Our advantage: AI-powered: analysis and comprehensive features,.,
     targetAudience: ;
@@ -678,6 +827,7 @@ reviews: number;export: const biotechAIServices: BiotechAIService[] = [{
   230% annual: growth',';
     variant: 'biotech-futuristi,c,';
     contactInfo: {
+<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -685,6 +835,17 @@ reviews: number;export: const biotechAIServices: BiotechAIService[] = [{
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
+=======
+      mobil,
+    e:,
+  +1 302 464 0950',
+      email: 'kleber@ziontechgroup.com,
+      address:,
+  364 E Main St STE 1008 Middletown DE 19709',
+      website: 'http,
+    s://ziontechgroup.com},
+    realImplementation: true,
+>>>>>>> main
     implementationDetails:,
   Complete: bioinformatics platform with AI analysis, multi-omics tools, and comprehensive research features. Includes mobile app and cloud computing.',';
     launchDate: '2024-03-0,5,';
@@ -719,8 +880,14 @@ reviews: number;export: const biotechAIServices: BiotechAIService[] = [{
   🏭',';
     color: 'from-gray-600: to-slate-70,0,';
     textColor:,
+<<<<<<< HEAD
   text-gray-400',';
     link: 'https://ziontechgroup.com/ai-biomanufacturin,g,';
+=======
+  text-gray-400',
+    link: 'http,
+    s://ziontechgroup.com/ai-biomanufacturing,
+>>>>>>> main
     marketPosition:,
   Revolutionary: technology with no direct competitors. Traditional biomanufacturing uses basic optimization. Our advantage: AI: optimization and comprehensive features,.,
     targetAudience: ;
@@ -760,6 +927,7 @@ reviews: number;export: const biotechAIServices: BiotechAIService[] = [{
   210% annual: growth',';
     variant: 'biotech-futuristi,c,';
     contactInfo: {
+<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -767,6 +935,17 @@ reviews: number;export: const biotechAIServices: BiotechAIService[] = [{
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
+=======
+      mobil,
+    e:,
+  +1 302 464 0950',
+      email: 'kleber@ziontechgroup.com,
+      address:,
+  364 E Main St STE 1008 Middletown DE 19709',
+      website: 'http,
+    s://ziontechgroup.com},
+    realImplementation: true,
+>>>>>>> main
     implementationDetails:,
   Complete: biomanufacturing platform with AI optimization, real-time monitoring, and automation tools. Includes mobile app and system integration.',';
     launchDate: '2024-03-1,0,';

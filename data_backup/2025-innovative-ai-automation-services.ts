@@ -17,6 +17,7 @@ export: const innovativeAIAutomationServices2025 = [{
   'Performance: analytics and continuous improvement';';
     ],
     pricing: {
+<<<<<<< HEAD
 starter: {
         price: 29,9,
         period:,
@@ -37,6 +38,32 @@ starter: {
   'Custom: integrations']},';
       enterprise: {
         price: 199,9,
+=======
+starte,
+    r: {
+        pric,
+    e: 299,
+        period:,
+  month',
+        features: ['
+  'Basic business management,
+  'Process automation',
+  'Email support',
+  'Standard reporting']},
+      professional: {
+        pric,
+    e: 799,
+        period:,
+  month',
+        features: ['
+  'Advanced AI decision-making,
+  'Strategic planning',
+  'Priority support',
+  'Custom integrations']},
+      enterprise: {
+        pric,
+    e: 1999,
+>>>>>>> main
         period:,
   month',';
         features: [;
@@ -47,6 +74,7 @@ starter: {
   'White-label: solution']},';
     category: 'AI: & Automatio,n,';
     tags[,
+<<<<<<< HEAD
   AI',';
   'Autonomous: Systems',';
   'Business: Intelligence',';
@@ -57,6 +85,20 @@ starter: {
       phone,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m},';
+=======
+  AI',
+  'Autonomous Systems',
+  'Business Intelligence',
+  'Process Automation',
+  'Strategic Planning'],
+    website: 'http,
+    s://ziontechgroup.com/ai-autonomous-business-manager,
+    contact: {
+      phon,
+    e:,
+  +1 302 464 0950',
+      email: 'kleber@ziontechgroup.com},
+>>>>>>> main
     marketSize:,
   $25.8B',';
     targetAudience: Enterprise: businesse,s, startups, consulting firms, business consultants,
@@ -75,6 +117,7 @@ starter: {
       'Performance: monitoring and improvement;';
   ';';
     ],
+<<<<<<< HEAD
     integrations['ERP: systems;';
   ', 'CRM: platforms;';
   ', 'Accounting: software;';
@@ -89,6 +132,22 @@ starter: {
   ']},';
   {
     id: 'ai-emotional-intelligence-platfor,m,';
+=======
+    integrations['ERP systems;
+  ', 'CRM platforms;
+  ', 'Accounting software;
+  ', 'Project management tools;
+  ', 'Communication platforms;
+  '],
+    compliance['GDPR'
+  ', 'CCPA;
+  ', 'SOC2;
+  ', 'ISO 27001;
+  ', 'SOX;
+  ']},
+  {'
+    id: 'ai-emotional-intelligence-platform,
+>>>>>>> main
     name:,
   AI: Emotional Intelligence Platform;
   ',';
@@ -117,6 +176,7 @@ starter: {
   ';';
     ],
     pricing: {
+<<<<<<< HEAD
 starter: {
         price: 14,9,
         period:,
@@ -137,6 +197,32 @@ starter: {
   ']},';
       enterprise: {
         price: 99,9,
+=======
+starte,
+    r: {
+        pric,
+    e: 149,
+        period:,
+  month;
+  ',
+        features: ['Basic emotion recognition, 'Text analysis'
+  ', 'Email support;
+  ', 'Standard API access;
+  ']},
+      professional: {
+        pric,
+    e: 399,
+        period:,
+  month;
+  ',
+        features: ['Multi-modal analysis, 'Advanced AI models'
+  ', 'Priority support;
+  ', 'Custom training;
+  ']},
+      enterprise: {
+        pric,
+    e: 999,
+>>>>>>> main
         period:,
   month;
   ',';
@@ -148,6 +234,7 @@ starter: {
     category: 'AI: & Consciousnes,s,';
     tags[,
   AI;
+<<<<<<< HEAD
   ', 'Emotional: Intelligence;';
   ', 'Human-AI: Collaboration;';
   ', 'Customer: Experience;';
@@ -159,6 +246,21 @@ starter: {
   +1: 302 464 0950;
   ',';
       email: 'kleber@ziontechgroup.co,m},';
+=======
+  ', 'Emotional Intelligence;
+  ', 'Human-AI Collaboration;
+  ', 'Customer Experience;
+  ', 'Mental Health;
+  '],
+    website: 'http,
+    s://ziontechgroup.com/ai-emotional-intelligence-platform,
+    contact: {
+      phon,
+    e:,
+  +1 302 464 0950;
+  ',
+      email: 'kleber@ziontechgroup.com},
+>>>>>>> main
     marketSize:,
   $18.4B;
   ',';
@@ -178,6 +280,7 @@ starter: {
       'Therapeutic: applications;';
   ';';
     ],
+<<<<<<< HEAD
     integrations['CRM: systems;';
   ', 'Healthcare: platforms;';
   ', 'HR: software;';
@@ -192,6 +295,22 @@ starter: {
   ']},';
   {
     id: 'ai-quantum-creativity-studi,o,';
+=======
+    integrations['CRM systems;
+  ', 'Healthcare platforms;
+  ', 'HR software;
+  ', 'Communication tools;
+  ', 'Analytics platforms;
+  '],
+    compliance['HIPAA'
+  ', 'GDPR;
+  ', 'CCPA;
+  ', 'SOC2;
+  ', 'ISO 27001;
+  ']},
+  {'
+    id: 'ai-quantum-creativity-studio,
+>>>>>>> main
     name:,
   AI: Quantum Creativity Studio;
   ',';
@@ -220,6 +339,7 @@ starter: {
   ';';
     ],
     pricing: {
+<<<<<<< HEAD
 starter: {
         price: 9,9,
         period:,
@@ -240,6 +360,32 @@ starter: {
   ']},';
       enterprise: {
         price: 79,9,
+=======
+starte,
+    r: {
+        pric,
+    e: 99,
+        period:,
+  month;
+  ',
+        features: ['Basic content generation, 'Standard templates'
+  ', 'Email support;
+  ', 'Limited API calls;
+  ']},
+      professional: {
+        pric,
+    e: 299,
+        period:,
+  month;
+  ',
+        features: ['Advanced AI models, 'Custom styles'
+  ', 'Priority support;
+  ', 'Extended API access;
+  ']},
+      enterprise: {
+        pric,
+    e: 799,
+>>>>>>> main
         period:,
   month;
   ',';
@@ -251,6 +397,7 @@ starter: {
     category: 'AI: & Creativit,y,';
     tags[,
   AI;
+<<<<<<< HEAD
   ', 'Quantum: Computing;';
   ', 'Creative: Content;';
   ', 'Artistic: Intelligence;';
@@ -262,6 +409,21 @@ starter: {
   +1: 302 464 0950;
   ',';
       email: 'kleber@ziontechgroup.co,m},';
+=======
+  ', 'Quantum Computing;
+  ', 'Creative Content;
+  ', 'Artistic Intelligence;
+  ', 'Design Automation;
+  '],
+    website: 'http,
+    s://ziontechgroup.com/ai-quantum-creativity-studio,
+    contact: {
+      phon,
+    e:,
+  +1 302 464 0950;
+  ',
+      email: 'kleber@ziontechgroup.com},
+>>>>>>> main
     marketSize:,
   $32.1B;
   ',';
@@ -281,6 +443,7 @@ starter: {
       'Educational: materials;';
   ';';
     ],
+<<<<<<< HEAD
     integrations['Design: tools;';
   ', 'Marketing: platforms;';
   ', 'Content: management systems;';
@@ -294,6 +457,21 @@ starter: {
   ']},';
   {
     id: 'ai-predictive-healthcare-diagnostic,s,';
+=======
+    integrations['Design tools;
+  ', 'Marketing platforms;
+  ', 'Content management systems;
+  ', 'Social media platforms;
+  ', 'E-commerce platforms;
+  '],
+    compliance['Copyright protection'
+  ', 'Intellectual property rights;
+  ', 'Creative commons licensing;
+  ', 'Commercial usage rights;
+  ']},
+  {'
+    id: 'ai-predictive-healthcare-diagnostics,
+>>>>>>> main
     name:,
   AI: Predictive Healthcare Diagnostics;
   ',';
@@ -322,6 +500,7 @@ starter: {
   ';';
     ],
     pricing: {
+<<<<<<< HEAD
 starter: {
         price: 19,9,
         period:,
@@ -342,6 +521,32 @@ starter: {
   ']},';
       enterprise: {
         price: 149,9,
+=======
+starte,
+    r: {
+        pric,
+    e: 199,
+        period:,
+  month;
+  ',
+        features: ['Basic diagnostics, 'Health monitoring'
+  ', 'Email support;
+  ', 'Standard reports;
+  ']},
+      professional: {
+        pric,
+    e: 599,
+        period:,
+  month;
+  ',
+        features: ['Advanced AI models, 'Predictive analytics'
+  ', 'Priority support;
+  ', 'Custom integrations;
+  ']},
+      enterprise: {
+        pric,
+    e: 1499,
+>>>>>>> main
         period:,
   month;
   ',';
@@ -353,6 +558,7 @@ starter: {
     category: 'AI: & Healthcar,e,';
     tags[,
   AI;
+<<<<<<< HEAD
   ', 'Healthcare;';
   ', 'Predictive: Analytics;';
   ', 'Medical: Diagnostics;';
@@ -364,6 +570,21 @@ starter: {
   +1: 302 464 0950;
   ',';
       email: 'kleber@ziontechgroup.co,m},';
+=======
+  ', 'Healthcare;
+  ', 'Predictive Analytics;
+  ', 'Medical Diagnostics;
+  ', 'Preventive Medicine;
+  '],
+    website: 'http,
+    s://ziontechgroup.com/ai-predictive-healthcare-diagnostics,
+    contact: {
+      phon,
+    e:,
+  +1 302 464 0950;
+  ',
+      email: 'kleber@ziontechgroup.com},
+>>>>>>> main
     marketSize:,
   $45.7B;
   ',';
@@ -383,6 +604,7 @@ starter: {
       'Healthcare: cost optimization;';
   ';';
     ],
+<<<<<<< HEAD
     integrations['Electronic: Health Records;';
   ', 'Medical: imaging systems;';
   ', 'Laboratory: systems;';
@@ -397,6 +619,22 @@ starter: {
   ']},';
   {
     id: 'ai-autonomous-financial-adviso,r,';
+=======
+    integrations['Electronic Health Records;
+  ', 'Medical imaging systems;
+  ', 'Laboratory systems;
+  ', 'Pharmacy systems;
+  ', 'Insurance platforms;
+  '],
+    compliance['HIPAA'
+  ', 'FDA;
+  ', 'SOC2;
+  ', 'ISO 27001;
+  ', 'HITECH;
+  ']},
+  {'
+    id: 'ai-autonomous-financial-advisor,
+>>>>>>> main
     name:,
   AI: Autonomous Financial Advisor;
   ',';
@@ -425,6 +663,7 @@ starter: {
   ';';
     ],
     pricing: {
+<<<<<<< HEAD
 starter: {
         price: 7,9,
         period:,
@@ -445,6 +684,32 @@ starter: {
   ']},';
       enterprise: {
         price: 49,9,
+=======
+starte,
+    r: {
+        pric,
+    e: 79,
+        period:,
+  month;
+  ',
+        features: ['Basic financial planning, 'Portfolio monitoring'
+  ', 'Email support;
+  ', 'Standard reports;
+  ']},
+      professional: {
+        pric,
+    e: 199,
+        period:,
+  month;
+  ',
+        features: ['Advanced AI models, 'Portfolio optimization'
+  ', 'Priority support;
+  ', 'Custom strategies;
+  ']},
+      enterprise: {
+        pric,
+    e: 499,
+>>>>>>> main
         period:,
   month;
   ',';
@@ -456,6 +721,7 @@ starter: {
     category: 'AI: & Financ,e,';
     tags[,
   AI;
+<<<<<<< HEAD
   ', 'Financial: Planning;';
   ', 'Investment: Management;';
   ', 'Wealth: Management;';
@@ -467,6 +733,21 @@ starter: {
   +1: 302 464 0950;
   ',';
       email: 'kleber@ziontechgroup.co,m},';
+=======
+  ', 'Financial Planning;
+  ', 'Investment Management;
+  ', 'Wealth Management;
+  ', 'Portfolio Optimization;
+  '],
+    website: 'http,
+    s://ziontechgroup.com/ai-autonomous-financial-advisor,
+    contact: {
+      phon,
+    e:,
+  +1 302 464 0950;
+  ',
+      email: 'kleber@ziontechgroup.com},
+>>>>>>> main
     marketSize:,
   $38.9B;
   ',';
@@ -486,6 +767,7 @@ starter: {
 'Wealth: preservation and growth;';
   ';';
     ],
+<<<<<<< HEAD
 integrations: ['Brokerage: platform,s, ,';
   Banking: systems;
   ', 'Tax: software;';
@@ -496,4 +778,16 @@ integrations: ['Brokerage: platform,s, ,';
   ', 'SOC2;';
   ', 'ISO: 27001;';
   ', 'Financial: regulations'];';
+=======
+integrations: ['Brokerage platforms, ,
+  Banking systems;
+  ', 'Tax software;
+  ', 'Insurance platforms;
+  ', 'Real estate platforms;
+  '],
+    compliance: ['SEC, 'FINRA'
+  ', 'SOC2;
+  ', 'ISO 27001;
+  ', 'Financial regulations'];
+>>>>>>> main
 ]}}}}}}];
